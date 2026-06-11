@@ -1,1 +1,48 @@
-[]
+[
+ {
+  "topic": "xiaomi releases open source ai coding assistant mimo code",
+  "headline_marked": "Xiaomi open-sources MiMo Code, [[AI coding assistant]] that beats Claude Code",
+  "headline": "Xiaomi open-sources MiMo Code, AI coding assistant that beats Claude Code",
+  "summary": "Xiaomi's new open-source AI coding harness MiMo Code V0.1.0 claims to outperform Claude Code on ultra-long, 200+ step coding tasks.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Xiaomi's MiMo AI team has released MiMo Code V0.1.0 as open-source. This terminal-native AI coding assistant is designed to handle complex, multi-step coding tasks, with Xiaomi claiming it outperforms Anthropic's Claude Code on benchmarks involving over 200 steps.",
+   "The tool is available now on GitHub under an MIT license and can be installed via a single terminal command for macOS and Linux, or via npm for Windows. MiMo Code is a fork of the OpenCode agent, enhanced with Xiaomi's custom memory architecture, workflow modes, and model harness.",
+   "A key innovation in MiMo Code is its cross-session memory system, powered by SQLite FTS5. This system addresses the degradation of AI coding agents over long sessions by implementing an explicit storage-and-retrieval mechanism, ensuring that earlier decisions and task states are not lost.",
+   "The system utilizes a four-layer memory structure: project memory (MEMORY.md), session checkpoints, scratch notes, and per-task progress logs. It also employs an independent 'checkpoint-writer' subagent to manage notes and blueprints in real-time, allowing the primary coding agent to maintain its operational momentum.",
+   "MiMo Code also features self-improvement mechanisms, including a '/dream' command for reviewing and compressing historical sessions into long-term memory, and a 'distill' function to automate repeated workflows, similar to approaches by OpenAI and Anthropic.",
+   "According to Xiaomi's internal benchmarks, MiMo Code paired with MiMo-V2.5-Pro showed superior performance on SWE-bench Pro and Terminal Bench 2 compared to Claude Code with Claude Sonnet 4.6. The harness itself contributed a measurable performance gain.",
+   "While Xiaomi exclusively benchmarks against Claude Code, independent comparisons suggest OpenAI's Codex CLI running GPT-5.5 scores higher on the Terminal-Bench 2.0 leaderboard. However, on SWE-Bench Pro, MiMo Code's claimed performance surpasses that of OpenAI's GPT-5.5."
+  ],
+  "caption": "Xiaomi drops open-source AI coding assistant MiMo Code, claiming it beats Claude Code on complex, 200+ step tasks.\n\nXiaomi's MiMo AI team has released MiMo Code V0.1.0 as open-source. This terminal-native AI coding assistant is designed to handle complex, multi-step coding tasks, with Xiaomi claiming it outperforms Anthropic's Claude Code on benchmarks involving over 200 steps.\n\nThe tool is available now on GitHub under an MIT license and can be installed via a single terminal command for macOS and Linux, or via npm for Windows. MiMo Code is a fork of the OpenCode agent, enhanced with Xiaomi's custom memory architecture, workflow modes, and model harness.\n\nA key innovation in MiMo Code is its cross-session memory system, powered by SQLite FTS5. This system addresses the degradation of AI coding agents over long sessions by implementing an explicit storage-and-retrieval mechanism, ensuring that earlier decisions and task states are not lost.\n\nThe system utilizes a four-layer memory structure: project memory (MEMORY.md), session checkpoints, scratch notes, and per-task progress logs. It also employs an independent 'checkpoint-writer' subagent to manage notes and blueprints in real-time, allowing the primary coding agent to maintain its operational momentum.\n\nMiMo Code also features self-improvement mechanisms, including a '/dream' command for reviewing and compressing historical sessions into long-term memory, and a 'distill' function to automate repeated workflows, similar to approaches by OpenAI and Anthropic.\n\nAccording to Xiaomi's internal benchmarks, MiMo Code paired with MiMo-V2.5-Pro showed superior performance on SWE-bench Pro and Terminal Bench 2 compared to Claude Code with Claude Sonnet 4.6. The harness itself contributed a measurable performance gain.\n\nAI coding assistant #MiMoCode #Xiaomi #OpenSource #AICoding\n\nSource: Hacker News, VentureBeat, DEV",
+  "tweet": "Xiaomi has open-sourced MiMo Code, an AI coding assistant designed to tackle complex, multi-step tasks. The company claims it outperforms Claude Code on benchmarks involving over 200 steps. Available now on GitHub! #MiMoCode #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "Hacker News, VentureBeat, DEV",
+  "url": "https://mimo.xiaomi.com/mimocode",
+  "image": "",
+  "orig_title": "MiMo Code is now released and open-source",
+  "cluster_urls": [
+   "https://mimo.xiaomi.com/mimocode",
+   "https://venturebeat.com/technology/xiaomis-new-open-source-agentic-ai-coding-harness-mimo-code-beats-claude-code-at-ultra-long-200-step-tasks",
+   "https://dev.to/borhen_saidi_e40cc073c673/agentforge-28-production-grade-skills-that-make-ai-agents-ship-reliable-code-4o6i",
+   "https://dev.to/etairos/openclaw-ai-agent-exploited-through-hidden-contact-prompts-and-social-engineering-21di"
+  ],
+  "cluster_titles": [
+   "MiMo Code is now released and open-source",
+   "Xiaomi's new open source, agentic AI coding harness MiMo Code beats Claude Code at ultra-long, 200+ step tasks",
+   "AgentForge – 28 production grade skills that make AI agents ship reliable code",
+   "OpenClaw AI Agent Exploited Through Hidden Contact Prompts and Social Engineering"
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260612-0548-0-xiaomi-open-sources-mimo-code-ai-coding-assi.png",
+   "20260612-0548-0-xiaomi-open-sources-mimo-code-ai-coding-assi-d1.png",
+   "20260612-0548-0-xiaomi-open-sources-mimo-code-ai-coding-assi-d2.png",
+   "20260612-0548-0-xiaomi-open-sources-mimo-code-ai-coding-assi-d3.png",
+   "20260612-0548-0-xiaomi-open-sources-mimo-code-ai-coding-assi-d4.png"
+  ]
+ }
+]

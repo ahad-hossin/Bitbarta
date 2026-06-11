@@ -126,6 +126,9 @@ def generate() -> int:
         if image_uri and (post["story_risk"] == "graphic" or not post["image_safe"]):
             print(f"  [policy] dropping photo for '{post['headline'][:60]}' (risk={post['story_risk']}, image_safe={post['image_safe']})")
             image_uri, photo_credit = "", ""
+        if image_uri and not post.get("image_good", True):
+            print(f"  [image] dropping weak/generic photo for '{post['headline'][:60]}' — rendering text-led")
+            image_uri, photo_credit = "", ""
 
         post["image_data_uri"] = image_uri
         post["photo_credit"] = photo_credit

@@ -77,12 +77,13 @@ _COMPOSE_SCHEMA = {
             "description": "short English paragraphs (2-3 sentences each) telling the full story — as many as the story needs, typically 4-10. They flow across the details slides.",
         },
         "hook": {"type": "string", "description": "1-2 punchy factual lines that open the caption — what shows before '...more', impossible to scroll past"},
-        "hashtags": {"type": "string", "description": "4-6 widely-used, non-restricted hashtags separated by spaces, mixing broad reach (#Bangladesh #News) with story-specific tags"},
+        "hashtags": {"type": "string", "description": "4-6 widely-used, non-restricted hashtags separated by spaces, mixing broad reach (#Tech #AI) with story-specific tags (#OpenAI #GPT5)"},
         "tweet": {"type": "string", "description": "standalone X post, max 270 chars incl. 1-3 hashtags"},
         "story_risk": {"type": "string", "enum": ["clean", "sensitive", "graphic", "do_not_post"]},
         "image_safe": {"type": "boolean", "description": "false if the attached photo shows blood, corpses, graphic injury, weapons in use, or nudity; true otherwise or when no photo is attached"},
+        "image_good": {"type": "boolean", "description": "true ONLY if the attached photo is a real, good-looking, on-topic image worth featuring (a real photograph, an official product shot/render, a relevant app screenshot, a headshot of someone in the story, or a chart that illustrates THIS story). false for generic or decorative stock illustrations, abstract AI/tech vector art, clipart, plain logos/wordmarks, blurry/tiny/watermarked images, or anything only loosely related. When false the post is rendered text-only (cleaner than a weak image). true when no photo is attached."},
     },
-    "required": ["headline", "summary", "category", "template", "details", "hook", "hashtags", "tweet", "story_risk", "image_safe"],
+    "required": ["headline", "summary", "category", "template", "details", "hook", "hashtags", "tweet", "story_risk", "image_safe", "image_good"],
 }
 
 _COMPOSE_PROMPT = """You are the editor of "{brand}", a TECH NEWS page that posts in ENGLISH.
@@ -107,6 +108,8 @@ Platform safety (this page must never violate Facebook/Instagram policies):
 - story_risk: "clean" for normal tech news; "sensitive" for major breaches, harassment, or stories with unproven allegations (word carefully and attribute); "graphic" is rare here (only genuinely disturbing content); "do_not_post" ONLY if the story cannot be covered without violating platform policy (explicit content, doxxing, actionable hacking instructions).
 - Never mask words with symbols or slang: masking looks spammy and platforms detect it anyway. Keep wording neutral and the story stays postable.
 - image_safe: a photo may be attached to this message. Set image_safe=false only if it shows nudity, gore or otherwise clearly violates Meta's image policy. Product shots, screenshots, logos and headshots are safe. If no photo is attached, set true.
+
+Image quality (image_good): also judge whether the attached photo is actually worth featuring. Our templates put the photo front and centre, so a generic or decorative image looks worse than no image at all (we render those posts cleanly as text only). Set image_good=false for stock illustrations, abstract "AI/tech" vector art, clipart, gradient/3D-render decorations, plain logos or wordmarks, blurry/tiny/heavily-watermarked images, and anything only loosely related to the story. Set image_good=true only for a real photograph, an official product photo or render, a relevant screenshot, a headshot of a person in the story, or a chart/figure that illustrates THIS specific story. If no photo is attached, set image_good=true.
 
 STORY HEADLINES (from the outlets):
 {titles}
@@ -264,6 +267,7 @@ def compose_post(story: dict, article_text: str, image_data_uri: str = "") -> di
         "tweet": p["tweet"][:275],
         "story_risk": p.get("story_risk", "clean"),
         "image_safe": bool(p.get("image_safe", True)),
+        "image_good": bool(p.get("image_good", True)),
         "source": sources,
         "url": primary["url"],
         "image": primary.get("image", ""),

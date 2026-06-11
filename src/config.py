@@ -92,6 +92,20 @@ SOURCES = [
      "url": "https://www.tomshardware.com/feeds/all", "lang": "en", "beat": "gadgets"},
 ]
 
+# --- Featured-image source preference ---
+# When one story is covered by several outlets, pull the featured photo from the
+# outlet that ships the best imagery. Lower number = preferred (real editorial
+# photos); higher = tends toward generic/abstract art or no image.
+SOURCE_IMAGE_RANK = {
+    "theverge": 0, "wired": 0, "arstechnica": 0,
+    "techcrunch": 1, "engadget": 1, "ninetofivemac": 1, "androidpolice": 1, "tomshardware": 1,
+    "techreview": 2,
+    "hackernews": 5,   # links out; og:image varies
+    "devto": 7,        # author-uploaded covers, often generic
+    "venturebeat": 9,  # mostly abstract AI/tech art
+}
+SOURCE_IMAGE_RANK_DEFAULT = 4
+
 # --- Social credentials (set as GitHub secrets; pipeline dry-runs without them) ---
 IG_USER_ID = os.environ.get("IG_USER_ID", "")            # Instagram Business account ID
 META_ACCESS_TOKEN = os.environ.get("META_ACCESS_TOKEN", "")  # long-lived Page token (works for IG + FB)

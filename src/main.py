@@ -23,6 +23,32 @@ def _summary(lines: list) -> None:
             f.write(text + "\n")
 
 
+def _pick_image(cluster: list, art_cache: dict):
+    """Pick the featured photo from the cluster, preferring outlets known for
+    real editorial imagery over ones that ship generic/abstract art. Tries each
+    outlet (best-ranked first) by RSS thumbnail then article og:image, and
+    returns the first that downloads — so e.g. Ars Technica's real header beats
+    VentureBeat's abstract illustration. Returns (data_uri, credit)."""
+    ranked = sorted(
+        cluster,
+        key=lambda c: config.SOURCE_IMAGE_RANK.get(c["source_id"], config.SOURCE_IMAGE_RANK_DEFAULT),
+    )
+    for c in ranked:
+        urls = []
+        if c.get("image"):
+            urls.append(article.upgrade_thumb(c["image"]))
+        if c["url"] not in art_cache:
+            art_cache[c["url"]] = article.fetch_article(c["url"])
+        og = art_cache[c["url"]].get("og_image")
+        if og:
+            urls.append(og)
+        for u in urls:
+            uri = article.fetch_as_data_uri(u)
+            if uri:
+                return uri, c["source"]
+    return "", ""
+
+
 def generate() -> int:
     # --- budget check: each run costs 1 Gemini call to select + 1 per post ---
     print(f"API budgets: {budget.summary()}")
@@ -72,35 +98,20 @@ def generate() -> int:
         cluster = story["cluster"]
         primary = next((c for c in cluster if c["lang"] == "en"), cluster[0])
         art = article.fetch_article(primary["url"])
-        art_provider = primary["source"]
+        art_cache = {primary["url"]: art}
         # fall back to another cluster member's page if the primary gave nothing
         if not art["text"] and len(cluster) > 1:
             for c in cluster:
                 if c["url"] != primary["url"]:
-                    art = article.fetch_article(c["url"])
-                    if art["text"]:
-                        art_provider = c["source"]
+                    alt = article.fetch_article(c["url"])
+                    art_cache[c["url"]] = alt
+                    if alt["text"]:
+                        art = alt
                         break
-        # photo first (RSS thumbnail -> primary og:image -> other outlets in
-        # the cluster), so the compose call can safety-check it for free
-        image_uri, photo_credit = "", ""
-        if primary.get("image"):
-            image_uri = article.fetch_as_data_uri(article.upgrade_thumb(primary["image"]))
-            photo_credit = primary["source"]
-        if not image_uri and art.get("og_image"):
-            image_uri = article.fetch_as_data_uri(art["og_image"])
-            photo_credit = art_provider
-        if not image_uri:
-            for c in cluster:
-                if c["url"] == primary["url"]:
-                    continue
-                img_url = article.upgrade_thumb(c.get("image", "")) or \
-                    article.fetch_article(c["url"]).get("og_image", "")
-                if img_url:
-                    image_uri = article.fetch_as_data_uri(img_url)
-                    if image_uri:
-                        photo_credit = c["source"]
-                        break
+        # featured photo: pick the best image across the cluster (preferring
+        # outlets with real editorial photos), so the compose call can also
+        # safety-check it for free
+        image_uri, photo_credit = _pick_image(cluster, art_cache)
 
         try:
             post = brain.compose_post(story, art["text"], image_uri)

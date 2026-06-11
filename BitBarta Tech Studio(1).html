@@ -913,7 +913,7 @@
 
     pCat.textContent = (state.cat || '').toUpperCase();
     pCat.style.display = state.cat ? 'inline-block' : 'none';
-    pBanner.textContent = state.tpl === 'terminal' ? 'bitbarta@news:~$ cat story.md' : (state.cat || 'LEAK').toUpperCase();
+    pBanner.textContent = state.tpl === 'terminal' ? 'bitbarta ~ tech news' : (state.cat || 'LEAK').toUpperCase();
     if(state.tpl === 'leak' && !state.cat){ pCat.textContent = 'LEAK'; pCat.style.display = 'inline-block'; }
 
     var rawTitle = state.title || 'Your headline goes here';

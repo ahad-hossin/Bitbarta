@@ -1,4 +1,4 @@
-"""One-off demo: pick the best most-recent story from EACH outlet, compose the
+"""One-off demo: pick the top few most-viral fresh tech stories, compose the
 full carousel (cover + details slides) and render it. Doesn't touch posting
 history; renders into preview/ (gitignored) so demo images never end up in the
 repo next to the bot's real output."""
@@ -10,18 +10,12 @@ from src import article, brain, config, feeds, render
 
 config.OUTPUT_DIR = os.path.join(config.ROOT, "preview")
 config.MAX_POSTS_PER_RUN = 4
-brain._SELECT_PROMPT = brain._SELECT_PROMPT.replace(
-    "3. SELECT the {max_posts} most newsworthy remaining stories",
-    "3. SELECT exactly ONE story per outlet (Dhaka Tribune, The Daily Star, "
-    "Somoy News, Jamuna TV) — the most recent genuinely newsworthy story from "
-    "each, {max_posts} total",
-)
 
-print("== Fetching feeds (official sites) ==")
+print("== Fetching feeds (tech outlets) ==")
 candidates = feeds.fetch_all()
 print(f"Total: {len(candidates)}")
 
-print("== Phase 1: Gemini selecting one per source ==")
+print("== Phase 1: Gemini selecting the top tech stories ==")
 stories = brain.select_stories(feeds.interleave_cap(candidates, 150), history=[])
 
 print("== Phase 2: composing posts from article text ==")

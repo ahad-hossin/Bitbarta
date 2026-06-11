@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sandesh Post Studio</title>
+<title>BitBarta Tech Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=JetBrains+Mono:wght@500&family=Noto+Sans+Bengali:wght@400;500;700;800&family=Noto+Serif+Bengali:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+Bengali:wght@400;500;700;800&family=Noto+Serif+Bengali:wght@500;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
 <script src="https://unpkg.com/jszip@3.10.1/dist/jszip.min.js"></script>
 <style>
   :root{
     --bg:#f3f2ef; --panel:#ffffff; --ink:#181715; --muted:#7a766f;
-    --line:#e4e1db; --accent:oklch(0.55 0.19 27);
+    --line:#e4e1db; --accent:oklch(0.55 0.19 257);
     --ctrl:#faf9f7;
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
@@ -65,38 +65,37 @@
   .th-img{ flex:1; background:repeating-linear-gradient(45deg,#d8d4cc 0 6px,#cfcbc2 6px 12px); }
   .th-band{ height:42%; display:flex; flex-direction:column; gap:4px; padding:6px; justify-content:center; }
   .th-band i{ display:block; height:4px; border-radius:1px; }
-  .tpl[data-tpl="editorial"] .th-band{ background:#faf6ee; }
-  .tpl[data-tpl="editorial"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
-  .tpl[data-tpl="editorial"] .th-band i:nth-child(2){ width:85%; background:#23211d; }
-  .tpl[data-tpl="editorial"] .th-band i:nth-child(3){ width:65%; background:#a9a399; height:3px; }
-  .tpl[data-tpl="impact"] .th-band{ background:#15151a; }
-  .tpl[data-tpl="impact"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
-  .tpl[data-tpl="impact"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
-  .tpl[data-tpl="impact"] .th-band i:nth-child(3){ width:65%; background:#6e6e78; height:3px; }
-  .tpl[data-tpl="overlay"] .thumb{ position:relative; }
-  .tpl[data-tpl="overlay"] .th-img{ position:absolute; inset:0; }
-  .tpl[data-tpl="overlay"] .th-band{ position:absolute; left:0; right:0; bottom:0; background:linear-gradient(180deg,rgba(10,10,12,0) 0%,rgba(10,10,12,.92) 70%); height:55%; justify-content:flex-end; padding-bottom:8px; }
-  .tpl[data-tpl="overlay"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
-  .tpl[data-tpl="overlay"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
-  .tpl[data-tpl="overlay"] .th-band i:nth-child(3){ width:65%; background:#9c9ca4; height:3px; }
+  .tpl[data-tpl="launch"] .th-band{ background:#f5f5f7; }
+  .tpl[data-tpl="launch"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
+  .tpl[data-tpl="launch"] .th-band i:nth-child(2){ width:85%; background:#23211d; }
+  .tpl[data-tpl="launch"] .th-band i:nth-child(3){ width:65%; background:#a9a399; height:3px; }
+  .tpl[data-tpl="neon"] .th-band{ background:#15151a; }
+  .tpl[data-tpl="neon"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
+  .tpl[data-tpl="neon"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
+  .tpl[data-tpl="neon"] .th-band i:nth-child(3){ width:65%; background:#6e6e78; height:3px; }
+  .tpl[data-tpl="ainews"] .thumb{ position:relative; }
+  .tpl[data-tpl="ainews"] .th-img{ position:absolute; inset:0; }
+  .tpl[data-tpl="ainews"] .th-band{ position:absolute; left:0; right:0; bottom:0; background:linear-gradient(180deg,rgba(10,10,12,0) 0%,rgba(10,10,12,.92) 70%); height:55%; justify-content:flex-end; padding-bottom:8px; }
+  .tpl[data-tpl="ainews"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
+  .tpl[data-tpl="ainews"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
+  .tpl[data-tpl="ainews"] .th-band i:nth-child(3){ width:65%; background:#9c9ca4; height:3px; }
   .th-banner{ height:10%; background:var(--accent); }
-  .tpl[data-tpl="breaking"] .th-band{ background:#15151a; }
-  .tpl[data-tpl="breaking"] .th-band i:nth-child(1){ display:none; }
-  .tpl[data-tpl="breaking"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
-  .tpl[data-tpl="breaking"] .th-band i:nth-child(3){ width:65%; background:#6e6e78; height:3px; }
-  .tpl[data-tpl="sport"] .thumb{ background:#12151b; }
-  .tpl[data-tpl="sport"] .th-img{ clip-path:polygon(0 0,100% 0,100% 100%,0 82%); background:repeating-linear-gradient(45deg,#3f4754 0 6px,#39404c 6px 12px); }
-  .tpl[data-tpl="sport"] .th-band{ background:transparent; }
-  .tpl[data-tpl="sport"] .th-band i{ transform:skew(-12deg); }
-  .tpl[data-tpl="sport"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
-  .tpl[data-tpl="sport"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
-  .tpl[data-tpl="sport"] .th-band i:nth-child(3){ width:65%; background:#6f7780; height:3px; }
-  .tpl[data-tpl="tribute"] .thumb{ background:#0b0b0c; }
-  .tpl[data-tpl="tribute"] .th-img{ background:repeating-linear-gradient(45deg,#5c5c5c 0 6px,#4e4e4e 6px 12px); }
-  .tpl[data-tpl="tribute"] .th-band{ background:#0b0b0c; }
-  .tpl[data-tpl="tribute"] .th-band i:nth-child(1){ width:30%; background:#6f6d68; height:3px; }
-  .tpl[data-tpl="tribute"] .th-band i:nth-child(2){ width:85%; background:#f1efe9; }
-  .tpl[data-tpl="tribute"] .th-band i:nth-child(3){ width:65%; background:#6f6d68; height:3px; }
+  .tpl[data-tpl="leak"] .th-band{ background:#15151a; }
+  .tpl[data-tpl="leak"] .th-band i:nth-child(1){ display:none; }
+  .tpl[data-tpl="leak"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
+  .tpl[data-tpl="leak"] .th-band i:nth-child(3){ width:65%; background:#6e6e78; height:3px; }
+  .tpl[data-tpl="review"] .thumb{ background:#12151b; }
+  .tpl[data-tpl="review"] .th-img{ clip-path:polygon(0 0,100% 0,100% 100%,0 82%); background:repeating-linear-gradient(45deg,#3f4754 0 6px,#39404c 6px 12px); }
+  .tpl[data-tpl="review"] .th-band{ background:transparent; }
+  .tpl[data-tpl="review"] .th-band i:nth-child(1){ width:30%; background:var(--accent); height:3px; }
+  .tpl[data-tpl="review"] .th-band i:nth-child(2){ width:85%; background:#f2f2f2; }
+  .tpl[data-tpl="review"] .th-band i:nth-child(3){ width:65%; background:#6f7780; height:3px; }
+  .tpl[data-tpl="terminal"] .thumb{ background:#071009; }
+  .tpl[data-tpl="terminal"] .th-img{ background:repeating-linear-gradient(45deg,#5c5c5c 0 6px,#4e4e4e 6px 12px); }
+  .tpl[data-tpl="terminal"] .th-band{ background:#071009; }
+  .tpl[data-tpl="terminal"] .th-band i:nth-child(1){ width:30%; background:#6f8577; height:3px; }
+  .tpl[data-tpl="terminal"] .th-band i:nth-child(2){ width:85%; background:#E8F5EC; }
+  .tpl[data-tpl="terminal"] .th-band i:nth-child(3){ width:65%; background:#6f8577; height:3px; }
 
   /* accent swatches */
   .swatches{ display:flex; gap:9px; }
@@ -221,7 +220,7 @@
   }
   .p-title{ margin-top:26px; font-weight:800; }
   .p-title .hl{ color:var(--accent); }
-  #post.t-impact .p-title .hl, #post.t-overlay .p-title .hl, #post.t-breaking .p-title .hl, #post.t-sport .p-title .hl{
+  #post.t-neon .p-title .hl, #post.t-ainews .p-title .hl, #post.t-leak .p-title .hl, #post.t-review .p-title .hl{
     color:#fff; background:var(--accent); padding:2px 16px 6px;
     -webkit-box-decoration-break:clone; box-decoration-break:clone;
   }
@@ -236,84 +235,119 @@
   .p-meta span{ white-space:nowrap; }
   .p-newsrc{ max-width:380px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 
-  /* — Editorial — */
-  #post.t-editorial{ background:#FAF6EE; }
-  #post.t-editorial .p-img-wrap{ height:704px; }
-  #post.t-editorial .p-body{ height:646px; background:#FAF6EE; border-top:8px solid var(--accent); }
-  #post.t-editorial .p-cat{ color:var(--accent); }
-  #post.t-editorial .p-title{ font-family:'Newsreader','Noto Serif Bengali',serif; font-weight:600; color:#181610; line-height:1.06; letter-spacing:-0.005em; }
-  #post.t-editorial .p-desc{ color:#5c574d; }
-  #post.t-editorial .p-foot{ border-top:1.5px solid #ddd6c8; padding-top:30px; }
-  #post.t-editorial .p-brand{ color:#181610; }
-  #post.t-editorial .p-meta{ color:#8f8a7e; }
+  /* — Launch: centered keynote on white — */
+  #post.t-launch{ background:#F5F5F7; }
+  #post.t-launch .p-img-wrap{ left:56px; right:56px; top:56px; height:610px; border-radius:28px; background:#e8e8ed; }
+  #post.t-launch .p-body{ top:716px; bottom:auto; text-align:center; padding:62px 90px 0; }
+  #post.t-launch .p-cat{ color:var(--accent); letter-spacing:0.3em; }
+  #post.t-launch .p-title{ font-weight:800; color:#1d1d1f; line-height:1.04; letter-spacing:-0.022em; }
+  #post.t-launch .p-desc{ color:#6e6e73; }
+  #post.t-launch .p-foot{ border-top:1.5px solid #d2d2d7; padding-top:30px; }
+  #post.t-launch .p-brand{ color:#1d1d1f; }
+  #post.t-launch .p-meta{ color:#86868b; }
+  #post.t-launch .p-title .hl{ color:var(--accent); background:none; padding:0; }
 
-  /* — Impact — */
-  #post.t-impact{ background:#101013; }
-  #post.t-impact .p-img-wrap{ height:660px; }
-  #post.t-impact .p-body{ height:690px; background:#101013; padding-top:74px; }
-  #post.t-impact .p-cat{ background:var(--accent); color:#fff; padding:14px 26px; position:absolute; top:-31px; left:64px; }
-  #post.t-impact .p-title{ color:#f4f4f2; line-height:1.04; letter-spacing:-0.012em; margin-top:34px; }
-  #post.t-impact .p-desc{ color:#a3a3ab; }
-  #post.t-impact .p-foot{ border-top:1.5px solid #2a2a30; padding-top:30px; }
-  #post.t-impact .p-brand{ color:#f4f4f2; }
-  #post.t-impact .p-meta{ color:#76767e; }
+  /* — Neon: framed image card on cyber grid — */
+  #post.t-neon{
+    background-color:#0B0E17;
+    background-image:linear-gradient(rgba(125,150,255,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(125,150,255,0.055) 1px, transparent 1px);
+    background-size:54px 54px;
+  }
+  #post.t-neon .p-img-wrap{
+    left:64px; right:64px; top:64px; height:600px; border-radius:12px;
+    border:3px solid color-mix(in oklab, var(--accent) 80%, white 8%);
+    box-shadow:0 0 60px color-mix(in oklab, var(--accent) 38%, transparent);
+  }
+  #post.t-neon .p-body{ top:714px; bottom:auto; padding:54px 64px 0; }
+  #post.t-neon .p-cat{ background:var(--accent); color:#fff; padding:12px 24px; box-shadow:0 0 38px color-mix(in oklab, var(--accent) 60%, transparent); }
+  #post.t-neon .p-title{ color:#f2f4ff; line-height:1.05; letter-spacing:-0.012em; }
+  #post.t-neon .p-desc{ color:#9aa2b8; }
+  #post.t-neon .p-foot{ border-top:1.5px solid #1d2435; padding-top:30px; }
+  #post.t-neon .p-brand{ color:#f2f4ff; }
+  #post.t-neon .p-meta{ color:#6b7388; }
 
-  /* — Overlay — */
-  #post.t-overlay .p-img-wrap{ height:1350px; }
-  #post.t-overlay .p-scrim{
+  /* — AI: full-bleed photo, text over scrim — */
+  #post.t-ainews .p-img-wrap{ height:1350px; }
+  #post.t-ainews .p-scrim{
     position:absolute; inset:0;
     background:linear-gradient(180deg, rgba(8,8,10,0) 30%, rgba(8,8,10,.52) 55%, rgba(8,8,10,.94) 88%);
   }
-  #post.t-overlay .p-body{ background:none; }
-  #post.t-overlay .p-cat{ color:#fff; border:3px solid var(--accent); border-color:var(--accent); background:color-mix(in oklab, var(--accent) 88%, black); padding:12px 24px; }
-  #post.t-overlay .p-title{ color:#fff; line-height:1.05; letter-spacing:-0.008em; text-shadow:0 2px 24px rgba(0,0,0,.35); }
-  #post.t-overlay .p-desc{ color:rgba(255,255,255,.84); }
-  #post.t-overlay .p-foot{ border-top:1.5px solid rgba(255,255,255,.22); padding-top:30px; }
-  #post.t-overlay .p-brand{ color:#fff; }
-  #post.t-overlay .p-meta{ color:rgba(255,255,255,.62); }
-  #post.t-overlay .p-credit{ bottom:auto; top:0; }
+  #post.t-ainews .p-body{ background:none; }
+  #post.t-ainews .p-cat{ color:#fff; border:3px solid var(--accent); background:color-mix(in oklab, var(--accent) 88%, black); padding:12px 24px; }
+  #post.t-ainews .p-title{ color:#fff; line-height:1.05; letter-spacing:-0.008em; text-shadow:0 2px 24px rgba(0,0,0,.35); }
+  #post.t-ainews .p-desc{ color:rgba(255,255,255,.84); }
+  #post.t-ainews .p-foot{ border-top:1.5px solid rgba(255,255,255,.22); padding-top:30px; }
+  #post.t-ainews .p-brand{ color:#fff; }
+  #post.t-ainews .p-meta{ color:rgba(255,255,255,.62); }
+  #post.t-ainews .p-credit{ bottom:auto; top:0; }
 
-  /* — Breaking — */
+  /* — Leak: blurred full-bleed, centered stamp — */
   .p-banner{
     display:none; position:absolute; top:0; left:0; right:0; height:72px; z-index:2;
     background:var(--accent); color:#fff; align-items:center; justify-content:center;
     font-size:32px; font-weight:900; letter-spacing:0.28em; text-transform:uppercase;
   }
-  #post.t-breaking{ background:#101013; }
-  #post.t-breaking .p-banner{ display:flex; }
-  #post.t-breaking .p-img-wrap{ top:72px; height:632px; }
-  #post.t-breaking .p-body{ height:646px; background:#101013; padding-top:64px; }
-  #post.t-breaking .p-cat{ display:none; }
-  #post.t-breaking .p-title{ color:#f4f4f2; line-height:1.04; letter-spacing:-0.012em; margin-top:0; }
-  #post.t-breaking .p-desc{ color:#a3a3ab; }
-  #post.t-breaking .p-foot{ border-top:1.5px solid #2a2a30; padding-top:30px; }
-  #post.t-breaking .p-brand{ color:#f4f4f2; }
-  #post.t-breaking .p-meta{ color:#76767e; }
+  #post.t-leak{ background:#101013; }
+  #post.t-leak .p-img-wrap{ height:1350px; }
+  #post.t-leak .p-img{ filter:blur(22px) brightness(.42) saturate(1.1); }
+  #post.t-leak .p-body{
+    top:0; bottom:0; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    text-align:center; padding:0 84px 120px;
+  }
+  #post.t-leak .p-cat{
+    color:#fff; border:3px dashed color-mix(in oklab, var(--accent) 85%, white 10%);
+    padding:14px 30px; letter-spacing:0.34em; background:rgba(10,10,14,.4);
+  }
+  #post.t-leak .p-title{ color:#fff; line-height:1.06; letter-spacing:-0.01em; text-shadow:0 4px 40px rgba(0,0,0,.5); }
+  #post.t-leak .p-desc{ color:rgba(255,255,255,.78); }
+  #post.t-leak .p-foot{ border-top:1.5px solid rgba(255,255,255,.2); padding-top:30px; }
+  #post.t-leak .p-brand{ color:#fff; }
+  #post.t-leak .p-meta{ color:rgba(255,255,255,.6); }
+  #post.t-leak .p-credit{ background:rgba(12,12,14,.4); }
 
-  /* — Sport — */
-  #post.t-sport{ background:#12151b; }
-  #post.t-sport .p-img-wrap{ height:700px; clip-path:polygon(0 0,100% 0,100% 100%,0 88%); background:#12151b; }
-  #post.t-sport .p-body{ height:650px; background:none; }
-  #post.t-sport .p-cat{ background:var(--accent); color:#fff; padding:12px 26px; font-style:italic; transform:skew(-10deg); transform-origin:left bottom; }
-  #post.t-sport .p-title{ color:#fff; font-weight:900; font-style:italic; text-transform:uppercase; line-height:1.06; letter-spacing:0; }
-  #post.t-sport .p-desc{ color:#9aa3ad; }
-  #post.t-sport .p-foot{ border-top:1.5px solid #262b33; padding-top:30px; }
-  #post.t-sport .p-brand{ color:#fff; }
-  #post.t-sport .p-meta{ color:#6f7780; }
+  /* — Review: vertical split, image left — */
+  #post.t-review{ background:#14161a; }
+  #post.t-review .p-img-wrap{ left:0; top:0; right:auto; width:540px; height:1198px; }
+  #post.t-review .p-img-wrap::after{ content:''; position:absolute; top:0; right:0; bottom:0; width:6px; background:var(--accent); }
+  #post.t-review .p-body{
+    left:584px; right:56px; top:0; bottom:150px; padding:0;
+    display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+  }
+  #post.t-review .p-cat{ background:var(--accent); color:#fff; padding:12px 22px; }
+  #post.t-review .p-title{ color:#fff; font-weight:800; line-height:1.08; letter-spacing:-0.01em; }
+  #post.t-review .p-desc{ color:#9aa3ad; }
+  #post.t-review .p-foot{ border-top:1.5px solid #262b33; padding-top:30px; }
+  #post.t-review .p-brand{ color:#fff; }
+  #post.t-review .p-meta{ color:#6f7780; }
+  #post.has-spon:not(.pos-top).t-review .p-body{ bottom:calc(150px + var(--sponH, 80px)); }
 
-  /* — Tribute — */
-  #post.t-tribute{ background:#0b0b0c; }
-  #post.t-tribute .p-img{ filter:grayscale(1) contrast(1.05); }
-  #post.t-tribute .p-img-wrap{ height:704px; }
-  #post.t-tribute .p-body{ height:646px; background:#0b0b0c; border-top:1.5px solid #33333a; }
-  #post.t-tribute .p-cat{ color:#9a958c; font-weight:600; letter-spacing:0.3em; }
-  #post.t-tribute .p-title{ font-family:'Newsreader','Noto Serif Bengali',serif; font-weight:500; color:#f1efe9; line-height:1.1; }
-  #post.t-tribute .p-desc{ color:#8e8c86; }
-  #post.t-tribute .p-foot{ border-top:1.5px solid #26262a; padding-top:30px; }
-  #post.t-tribute .p-brand{ color:#f1efe9; }
-  #post.t-tribute .p-brand i{ background:#6f6d68; }
-  #post.t-tribute .p-meta{ color:#6f6d68; }
-  #post.t-tribute .p-title .hl{ color:#fff; }
+  /* — Terminal: full window chrome — */
+  #post.t-terminal{ background:#04080a; }
+  #post.t-terminal::before{
+    content:''; position:absolute; left:44px; right:44px; top:44px; bottom:44px;
+    border:2px solid #1f2e25; border-radius:18px; background:#071009;
+  }
+  #post.t-terminal .p-banner{
+    display:flex; top:44px; left:44px; right:44px; height:68px;
+    background:#0b1410; border-bottom:2px solid #1f2e25; border-radius:18px 18px 0 0;
+    color:#6f8577; font-family:'JetBrains Mono',monospace; font-size:24px; font-weight:500;
+    letter-spacing:0.06em; text-transform:none; justify-content:flex-start; padding-left:152px; align-items:center; }
+  #post.t-terminal .p-banner::before{
+    content:''; position:absolute; left:48px; top:50%; transform:translateY(-50%);
+    width:18px; height:18px; border-radius:50%; background:#ff5f57;
+    box-shadow:30px 0 0 #febc2e, 60px 0 0 #28c840;
+  }
+  #post.t-terminal .p-img-wrap{ left:92px; right:92px; top:724px; height:486px; border-radius:12px; }
+  #post.t-terminal .p-body{ top:112px; bottom:auto; left:44px; right:44px; padding:52px 48px 0; }
+  #post.t-terminal .p-cat{ color:#56E07F; font-family:'JetBrains Mono',monospace; font-weight:700; letter-spacing:0.2em; }
+  #post.t-terminal .p-cat::before{ content:'> '; }
+  #post.t-terminal .p-title{ font-family:'JetBrains Mono','Noto Sans Bengali',monospace; font-weight:700; color:#E8F5EC; line-height:1.18; letter-spacing:-0.015em; }
+  #post.t-terminal .p-desc{ color:#8FA899; }
+  #post.t-terminal .p-title .hl{ color:#071009; background:#56E07F; padding:0 14px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }
+  #post.t-terminal .p-foot{ left:92px; right:92px; bottom:78px; border-top:1.5px solid #1f2e25; padding-top:26px; }
+  #post.t-terminal .p-brand{ color:#E8F5EC; }
+  #post.t-terminal .p-brand i{ background:#56E07F; }
+  #post.t-terminal .p-meta{ color:#6f8577; }
 
   /* — Bangla text: taller line-height so matras & conjuncts don't clip — */
   #post.bn .p-title{ line-height:1.3 !important; letter-spacing:0 !important; }
@@ -322,31 +356,25 @@
 
   /* — video export capture: punch a transparent hole where the media goes — */
   #post.vexp{ background:transparent !important; box-shadow:none !important; }
-  #post.vexp .p-img-wrap{ background:transparent !important; }
+  #post.vexp .p-img-wrap{ background:transparent !important; border-color:transparent; box-shadow:none !important; }
   #post.vexp .p-img, #post.vexp .p-img-ph{ display:none !important; }
+  #post.t-neon.vexp .p-img-wrap{ border-color:color-mix(in oklab, var(--accent) 80%, white 8%); }
 
-  /* — details panel on top — */
-  #post.pos-top .p-foot{ top:52px; bottom:auto; }
-  #post.pos-top .p-body{ top:0; bottom:auto; padding-top:170px; padding-bottom:58px; }
-  #post.pos-top.t-editorial .p-img-wrap{ top:auto; bottom:0; height:704px; }
-  #post.pos-top.t-editorial .p-body{ height:646px; border-top:none; border-bottom:8px solid var(--accent); }
-  #post.pos-top.t-editorial .p-foot{ border-top:none; border-bottom:1.5px solid #ddd6c8; padding-top:0; padding-bottom:26px; }
-  #post.pos-top.t-impact .p-img-wrap{ top:auto; bottom:0; height:660px; }
-  #post.pos-top.t-impact .p-body{ height:690px; }
-  #post.pos-top.t-impact .p-cat{ top:auto; bottom:-31px; }
-  #post.pos-top.t-impact .p-foot{ border-top:none; border-bottom:1.5px solid #2a2a30; padding-top:0; padding-bottom:26px; }
-  #post.pos-top.t-overlay .p-scrim{ background:linear-gradient(0deg, rgba(8,8,10,0) 30%, rgba(8,8,10,.52) 55%, rgba(8,8,10,.94) 88%); }
-  #post.pos-top.t-overlay .p-foot{ border-top:none; border-bottom:1.5px solid rgba(255,255,255,.22); padding-top:0; padding-bottom:26px; }
-  #post.pos-top.t-overlay .p-credit{ top:auto; bottom:0; }
-  #post.pos-top.t-breaking .p-img-wrap{ top:auto; bottom:0; height:632px; }
-  #post.pos-top.t-breaking .p-body{ top:72px; bottom:auto; height:646px; }
-  #post.pos-top.t-breaking .p-foot{ top:102px; border-top:none; border-bottom:1.5px solid #2a2a30; padding-top:0; padding-bottom:26px; }
-  #post.pos-top.t-sport .p-img-wrap{ top:auto; bottom:0; height:700px; clip-path:polygon(0 12%,100% 0,100% 100%,0 100%); }
-  #post.pos-top.t-sport .p-body{ height:650px; }
-  #post.pos-top.t-sport .p-foot{ border-top:none; border-bottom:1.5px solid #262b33; padding-top:0; padding-bottom:26px; }
-  #post.pos-top.t-tribute .p-img-wrap{ top:auto; bottom:0; height:704px; }
-  #post.pos-top.t-tribute .p-body{ height:646px; border-top:none; border-bottom:1.5px solid #33333a; }
-  #post.pos-top.t-tribute .p-foot{ border-top:none; border-bottom:1.5px solid #26262a; padding-top:0; padding-bottom:26px; }
+  /* — details position: top (Launch, Neon, AI mirror; Review flips columns) — */
+  #post.pos-top.t-launch .p-foot, #post.pos-top.t-neon .p-foot, #post.pos-top.t-ainews .p-foot{ top:52px; bottom:auto; }
+  #post.pos-top.t-launch .p-img-wrap{ top:684px; }
+  #post.pos-top.t-launch .p-body{ top:150px; bottom:auto; padding-top:56px; }
+  #post.pos-top.t-launch .p-foot{ border-top:none; border-bottom:1.5px solid #d2d2d7; padding-top:0; padding-bottom:26px; }
+  #post.pos-top.t-neon .p-img-wrap{ top:686px; }
+  #post.pos-top.t-neon .p-body{ top:150px; bottom:auto; padding-top:48px; }
+  #post.pos-top.t-neon .p-foot{ border-top:none; border-bottom:1.5px solid #1d2435; padding-top:0; padding-bottom:26px; }
+  #post.pos-top.t-ainews .p-body{ top:0; bottom:auto; padding-top:170px; padding-bottom:58px; }
+  #post.pos-top.t-ainews .p-scrim{ background:linear-gradient(0deg, rgba(8,8,10,0) 30%, rgba(8,8,10,.52) 55%, rgba(8,8,10,.94) 88%); }
+  #post.pos-top.t-ainews .p-foot{ border-top:none; border-bottom:1.5px solid rgba(255,255,255,.22); padding-top:0; padding-bottom:26px; }
+  #post.pos-top.t-ainews .p-credit{ top:auto; bottom:0; }
+  #post.pos-top.t-review .p-img-wrap{ left:auto; right:0; }
+  #post.pos-top.t-review .p-img-wrap::after{ right:auto; left:0; }
+  #post.pos-top.t-review .p-body{ left:56px; right:596px; }
 
   /* ---------- STORY PAGES (carousel) ---------- */
   #story{
@@ -365,45 +393,52 @@
   }
   #story .s-body{ position:absolute; top:248px; left:64px; right:64px; bottom:150px; overflow:hidden; }
   .s-body p{ font-size:34px; line-height:1.6; margin:0 0 34px; }
-  .t-editorial .s-body p{ font-family:'Newsreader','Noto Serif Bengali',serif; font-weight:500; }
+  .t-launch .s-body p{ font-weight:400; }
   .bn .s-body p{ line-height:1.78; }
   #story .s-foot{
     position:absolute; bottom:52px; left:64px; right:64px;
     display:flex; justify-content:space-between; font-size:24px; font-weight:500; padding-top:28px;
   }
   #story .s-foot span{ white-space:nowrap; }
-  #story.t-editorial{ background:#FAF6EE; }
-  #story.t-editorial .s-head{ border-bottom:1.5px solid #ddd6c8; }
-  #story.t-editorial .p-brand{ color:#181610; }
-  #story.t-editorial .s-date, #story.t-editorial .s-foot{ color:#8f8a7e; }
-  #story.t-editorial .s-body p{ color:#3a362e; }
-  #story.t-editorial .s-foot{ border-top:1.5px solid #ddd6c8; }
-  #story.t-impact, #story.t-overlay{ background:#101013; }
-  #story.t-impact .s-head, #story.t-overlay .s-head{ border-bottom:1.5px solid #2a2a30; }
-  #story.t-impact .p-brand, #story.t-overlay .p-brand{ color:#f4f4f2; }
-  #story.t-impact .s-date, #story.t-overlay .s-date,
-  #story.t-impact .s-foot, #story.t-overlay .s-foot{ color:#76767e; }
-  #story.t-impact .s-body p, #story.t-overlay .s-body p{ color:#c6c6cc; }
-  #story.t-impact .s-foot, #story.t-overlay .s-foot{ border-top:1.5px solid #2a2a30; }
+  #story.t-launch{ background:#F5F5F7; }
+  #story.t-launch .s-head{ border-bottom:1.5px solid #d2d2d7; }
+  #story.t-launch .p-brand{ color:#1d1d1f; }
+  #story.t-launch .s-date, #story.t-launch .s-foot{ color:#86868b; }
+  #story.t-launch .s-body p{ color:#3a362e; }
+  #story.t-launch .s-foot{ border-top:1.5px solid #d2d2d7; }
+  #story.t-neon{ background:#0B0E17; }
+  #story.t-ainews{ background:#101013; }
+  #story.t-neon .s-head, #story.t-ainews .s-head{ border-bottom:1.5px solid #2a2a30; }
+  #story.t-neon .p-brand, #story.t-ainews .p-brand{ color:#f4f4f2; }
+  #story.t-neon .s-date, #story.t-ainews .s-date,
+  #story.t-neon .s-foot, #story.t-ainews .s-foot{ color:#76767e; }
+  #story.t-neon .s-body p, #story.t-ainews .s-body p{ color:#c6c6cc; }
+  #story.t-neon .s-foot, #story.t-ainews .s-foot{ border-top:1.5px solid #2a2a30; }
   .s-spon{ display:none; position:absolute; left:0; bottom:0; width:100%; }
   #story.has-spon .s-spon{ display:block; }
   #story.has-spon .s-foot{ bottom:calc(52px + var(--sponH, 108px)); }
   #story.has-spon .s-body{ bottom:calc(150px + var(--sponH, 108px)); }
   /* story pages for new templates */
-  #story.t-breaking, #story.t-sport{ background:#101013; }
-  #story.t-breaking .s-head, #story.t-sport .s-head{ border-bottom:1.5px solid #2a2a30; }
-  #story.t-breaking .p-brand, #story.t-sport .p-brand{ color:#f4f4f2; }
-  #story.t-breaking .s-date, #story.t-sport .s-date{ color:#76767e; }
-  #story.t-breaking .s-body p, #story.t-sport .s-body p{ color:#c6c6cc; }
-  #story.t-breaking .s-foot, #story.t-sport .s-foot{ border-top:1.5px solid #2a2a30; color:#76767e; }
-  #story.t-tribute{ background:#0b0b0c; }
-  #story.t-tribute .s-head{ border-bottom:1.5px solid #26262a; }
-  #story.t-tribute .p-brand{ color:#f1efe9; }
-  #story.t-tribute .p-brand i{ background:#6f6d68; }
-  #story.t-tribute .s-date{ color:#6f6d68; }
-  #story.t-tribute .s-cat{ color:#9a958c; }
-  .t-tribute .s-body p{ font-family:'Newsreader','Noto Serif Bengali',serif; color:#c9c7c1; }
-  #story.t-tribute .s-foot{ border-top:1.5px solid #26262a; color:#6f6d68; }
+  #story.t-leak, #story.t-review{ background:#101013; }
+  #story.t-leak .s-head, #story.t-review .s-head{ border-bottom:1.5px solid #2a2a30; }
+  #story.t-leak .p-brand, #story.t-review .p-brand{ color:#f4f4f2; }
+  #story.t-leak .s-date, #story.t-review .s-date{ color:#76767e; }
+  #story.t-leak .s-body p, #story.t-review .s-body p{ color:#c6c6cc; }
+  #story.t-leak .s-foot, #story.t-review .s-foot{ border-top:1.5px solid #2a2a30; color:#76767e; }
+  #story.t-terminal{ background:#071009; }
+  #story.t-terminal .s-head{ border-bottom:1.5px solid #16241b; }
+  #story.t-terminal .p-brand{ color:#E8F5EC; }
+  #story.t-terminal .p-brand i{ background:#6f8577; }
+  #story.t-terminal .s-date{ color:#6f8577; }
+  #story.t-terminal .s-cat{ color:#56E07F; }
+  .t-terminal .s-body p{ font-family:'JetBrains Mono','Noto Sans Bengali',monospace; color:#BCD3C2; font-size:30px; }
+  #story.t-terminal .s-foot{ border-top:1.5px solid #16241b; color:#6f8577; }
+  /* — tech flavor — */
+  #post.t-terminal .p-cat::before, #story.t-terminal .s-cat::before{ content:'> '; }
+  #story.t-terminal .s-cat{ font-family:'JetBrains Mono',monospace; letter-spacing:0.2em; }
+  #post.t-neon .p-cat{ box-shadow:0 0 38px color-mix(in oklab, var(--accent) 60%, transparent); }
+  #post.t-neon .p-title .hl{ box-shadow:0 0 46px color-mix(in oklab, var(--accent) 50%, transparent); }
+  #post.t-leak .p-banner{ box-shadow:0 0 44px color-mix(in oklab, var(--accent) 45%, transparent); }
   /* offscreen measurer */
   #storyMeas{ position:absolute; left:-99999px; top:0; width:952px; visibility:hidden; }
 </style>
@@ -413,8 +448,8 @@
 <aside>
   <div class="side-head">
     <div class="mark" id="headMark"></div>
-    <h1>Sandesh</h1>
-    <span>Post Studio</span>
+    <h1>BitBarta</h1>
+    <span>Tech Studio</span>
   </div>
 
   <div class="side-scroll">
@@ -434,9 +469,9 @@
         <select class="ai-sel" id="aiTone">
           <option value="auto">Tone: Auto</option>
           <option value="engaging">Engaging &amp; human</option>
-          <option value="serious">Serious &amp; formal</option>
+          <option value="analytical">Analyst take</option>
           <option value="breaking">Urgent breaking</option>
-          <option value="sporty">Energetic sports</option>
+          <option value="hype">Launch-day hype</option>
         </select>
         <select class="ai-sel" id="aiLang">
           <option value="match">Match input</option>
@@ -457,12 +492,12 @@
     <div class="field">
       <label>Template</label>
       <div class="tpl-row" id="tplRow">
-        <div class="tpl on" data-tpl="editorial"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Editorial</div></div>
-        <div class="tpl" data-tpl="impact"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Impact</div></div>
-        <div class="tpl" data-tpl="overlay"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Overlay</div></div>
-        <div class="tpl" data-tpl="breaking"><div class="thumb"><div class="th-banner"></div><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Breaking</div></div>
-        <div class="tpl" data-tpl="sport"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Sport</div></div>
-        <div class="tpl" data-tpl="tribute"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Tribute</div></div>
+        <div class="tpl on" data-tpl="launch"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Launch</div></div>
+        <div class="tpl" data-tpl="neon"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Neon</div></div>
+        <div class="tpl" data-tpl="ainews"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">AI</div></div>
+        <div class="tpl" data-tpl="leak"><div class="thumb"><div class="th-banner"></div><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Leak</div></div>
+        <div class="tpl" data-tpl="review"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Review</div></div>
+        <div class="tpl" data-tpl="terminal"><div class="thumb"><div class="th-img"></div><div class="th-band"><i></i><i></i><i></i></div></div><div class="nm">Terminal</div></div>
       </div>
     </div>
 
@@ -481,7 +516,7 @@
 
     <div class="field">
       <label>Category tag</label>
-      <input type="text" id="inCat" placeholder="POLITICS" maxlength="24">
+      <input type="text" id="inCat" placeholder="GADGETS" maxlength="24">
     </div>
 
     <div class="field">
@@ -547,12 +582,12 @@
 
     <div class="field">
       <label>News source <span class="hint">shown in footer</span></label>
-      <input type="text" id="inNewsSrc" placeholder="BBC News" maxlength="40">
+      <input type="text" id="inNewsSrc" placeholder="The Verge" maxlength="40">
     </div>
 
     <div class="field">
       <label>Photo credit</label>
-      <input type="text" id="inSource" placeholder="Photo: Reuters" maxlength="60">
+      <input type="text" id="inSource" placeholder="Photo: Collected" maxlength="60">
     </div>
 
     <div class="field">
@@ -576,7 +611,7 @@
 
 <main>
   <div id="stage">
-    <div id="post" class="t-editorial" data-screen-label="Post preview">
+    <div id="post" class="t-launch" data-screen-label="Post preview">
       <div class="p-banner" id="pBanner"></div>
       <div class="p-img-wrap">
         <div class="p-img-ph" id="imgPh"><span>PASTE LINK OR UPLOAD IMAGE</span></div>
@@ -592,7 +627,7 @@
       </div>
       <div class="p-spon" id="pSpon"><img id="pSponLogo" alt=""></div>
       <div class="p-foot">
-        <div class="p-brand"><i></i>SANDESH</div>
+        <div class="p-brand"><i></i>BITBARTA</div>
         <div class="p-meta">
           <span class="p-newsrc" id="pNewsSrc"></span>
           <span class="p-sep" id="pSep">·</span>
@@ -600,9 +635,9 @@
         </div>
       </div>
     </div>
-    <div id="story" class="t-editorial" data-screen-label="Story page">
+    <div id="story" class="t-launch" data-screen-label="Story page">
       <div class="s-head">
-        <div class="p-brand"><i></i>SANDESH</div>
+        <div class="p-brand"><i></i>BITBARTA</div>
         <div class="s-date" id="sDate"></div>
       </div>
       <div class="s-cat" id="sCat"></div>
@@ -617,20 +652,20 @@
 <script>
 (function(){
   var ACCENTS = [
-    { name:'News Red',   val:'oklch(0.55 0.19 27)'  },
-    { name:'Ink Blue',   val:'oklch(0.55 0.19 257)' },
-    { name:'Field Green',val:'oklch(0.55 0.15 152)' },
-    { name:'Signal Amber',val:'oklch(0.62 0.15 65)' },
-    { name:'Deep Violet',val:'oklch(0.55 0.19 305)' },
-    { name:'Charcoal',   val:'oklch(0.30 0.01 80)'  }
+    { name:'Electric Blue', val:'oklch(0.55 0.19 257)' },
+    { name:'Neon Green',  val:'oklch(0.65 0.17 150)' },
+    { name:'Cyber Violet',val:'oklch(0.55 0.19 305)' },
+    { name:'Signal Amber',val:'oklch(0.65 0.15 70)' },
+    { name:'Hot Magenta', val:'oklch(0.58 0.21 350)' },
+    { name:'Tech Red',    val:'oklch(0.55 0.19 27)' }
   ];
-  var LS_KEY = 'sandesh-post-state-v1';
+  var LS_KEY = 'bitbarta-tech-state-v1';
 
   var state = {
-    tpl:'editorial', accent:ACCENTS[0].val, pos:'bottom',
-    cat:'WORLD', title:'Historic climate accord reached as 40 nations commit to carbon-free grids',
-    desc:'Delegates sealed the agreement after a final overnight session, setting binding targets that take effect from 2030.',
-    date: todayStr(), imgUrl:'', imgData:'', focus:50, focusX:50, zoom:100, source:'Photo: Reuters', newsSrc:'', story:'', caption:'', sponLogo:'', sponOn:true
+    tpl:'launch', accent:ACCENTS[0].val, pos:'bottom',
+    cat:'GADGETS', title:'The *foldable iPhone* is finally real \u2014 and it folds both ways',
+    desc:'A liquid-metal hinge and a crease-free 7.8-inch display headline the biggest iPhone redesign in a decade.',
+    date: todayStr(), imgUrl:'', imgData:'', focus:50, focusX:50, zoom:100, source:'Photo: Collected', newsSrc:'', story:'', caption:'', sponLogo:'', sponOn:true
   };
 
   // ---- restore ----
@@ -862,10 +897,11 @@
   function titleSize(len, tpl){
     var s;
     if(len<=40) s=92; else if(len<=70) s=78; else if(len<=100) s=66; else s=56;
-    if(tpl==='editorial') s=Math.round(s*1.02);
-    if(tpl==='overlay') s=Math.round(s*0.95);
-    if(tpl==='breaking') s=Math.round(s*0.92);
-    if(tpl==='sport') s=Math.round(s*0.82);
+    if(tpl==='launch') s=Math.round(s*1.02);
+    if(tpl==='ainews') s=Math.round(s*0.95);
+    if(tpl==='leak') s=Math.round(s*0.92);
+    if(tpl==='review') s=Math.round(s*0.72);
+    if(tpl==='terminal') s=Math.round(s*0.72);
     return s;
   }
 
@@ -877,7 +913,8 @@
 
     pCat.textContent = (state.cat || '').toUpperCase();
     pCat.style.display = state.cat ? 'inline-block' : 'none';
-    pBanner.textContent = (state.cat || 'BREAKING NEWS').toUpperCase();
+    pBanner.textContent = state.tpl === 'terminal' ? 'bitbarta@news:~$ cat story.md' : (state.cat || 'LEAK').toUpperCase();
+    if(state.tpl === 'leak' && !state.cat){ pCat.textContent = 'LEAK'; pCat.style.display = 'inline-block'; }
 
     var rawTitle = state.title || 'Your headline goes here';
     var plainTitle = rawTitle.replace(/\*/g, '');
@@ -898,7 +935,7 @@
     if(!credit && (state.imgData || state.imgUrl || vidUrl)) credit = 'Photo: Collected';
     pCredit.textContent = credit || '';
     pCredit.style.display = credit ? 'block' : 'none';
-    pScrim.style.display = (state.tpl === 'overlay') ? 'block' : 'none';
+    pScrim.style.display = (state.tpl === 'ainews') ? 'block' : 'none';
     pImg.style.objectPosition = state.focusX + '% ' + state.focus + '%';
     pImg.style.transform = 'scale(' + (state.zoom || 100) / 100 + ')';
     pImg.style.transformOrigin = state.focusX + '% ' + state.focus + '%';
@@ -1034,9 +1071,13 @@
       var bottomEl = (state.desc ? pDesc : pTitle);
       var contentBottom = bottomEl.getBoundingClientRect().bottom;
       var limit;
-      if(state.pos === 'top'){
-        if(state.tpl === 'overlay') limit = postRect.top + 920 * scale;
-        else limit = body.getBoundingClientRect().bottom - 48 * scale;
+      var wrapRect = post.querySelector('.p-img-wrap').getBoundingClientRect();
+      if(state.tpl === 'terminal'){
+        limit = wrapRect.top - 20 * scale;
+      } else if(state.pos === 'top'){
+        if(state.tpl === 'ainews') limit = postRect.top + 920 * scale;
+        else if(state.tpl === 'leak' || state.tpl === 'review') limit = foot.getBoundingClientRect().top;
+        else limit = wrapRect.top - 36 * scale;
       } else {
         limit = foot.getBoundingClientRect().top;
       }
@@ -1079,44 +1120,42 @@
 
   function mediaRect(){
     var top = state.pos === 'top';
-    if(state.tpl === 'editorial') return top ? { y:646, h:704 } : { y:0, h:704 };
-    if(state.tpl === 'impact') return top ? { y:690, h:660 } : { y:0, h:660 };
-    if(state.tpl === 'breaking') return top ? { y:718, h:632 } : { y:72, h:632 };
-    if(state.tpl === 'sport') return top ? { y:650, h:700 } : { y:0, h:700 };
-    if(state.tpl === 'tribute') return top ? { y:646, h:704 } : { y:0, h:704 };
-    return { y:0, h:1350 };
+    if(state.tpl === 'launch') return top ? { x:56, y:684, w:968, h:610, r:28 } : { x:56, y:56, w:968, h:610, r:28 };
+    if(state.tpl === 'neon') return top ? { x:64, y:686, w:952, h:600, r:12 } : { x:64, y:64, w:952, h:600, r:12 };
+    if(state.tpl === 'review') return top ? { x:540, y:0, w:540, h:1198, r:0 } : { x:0, y:0, w:540, h:1198, r:0 };
+    if(state.tpl === 'terminal') return { x:92, y:724, w:896, h:486, r:12 };
+    return { x:0, y:0, w:1080, h:1350, r:0 };
   }
   function baseBg(){
-    if(state.tpl === 'editorial') return '#FAF6EE';
-    if(state.tpl === 'sport') return '#12151b';
-    if(state.tpl === 'tribute') return '#0b0b0c';
+    if(state.tpl === 'launch') return '#F5F5F7';
+    if(state.tpl === 'neon') return '#0B0E17';
+    if(state.tpl === 'review') return '#14161a';
+    if(state.tpl === 'terminal') return '#04080a';
     return '#101013';
   }
   function drawCover(ctx, media, mw, mh, rect){
     if(!mw || !mh) return;
     var z = (state.zoom || 100) / 100;
-    var s = Math.max(1080 / mw, rect.h / mh) * z;
+    var s = Math.max(rect.w / mw, rect.h / mh) * z;
     var sw = mw * s, sh = mh * s;
     var fx = (state.focusX || 50) / 100, fy = (state.focus || 50) / 100;
-    var x = (1080 - sw) * fx, y = rect.y + (rect.h - sh) * fy;
+    var x = rect.x + (rect.w - sw) * fx, y = rect.y + (rect.h - sh) * fy;
     ctx.save();
     ctx.beginPath();
-    if(state.tpl === 'sport'){
-      // match the diagonal clip-path (12% wedge = 84px of 700)
-      if(state.pos === 'top'){
-        ctx.moveTo(0, rect.y + 84); ctx.lineTo(1080, rect.y);
-        ctx.lineTo(1080, rect.y + rect.h); ctx.lineTo(0, rect.y + rect.h);
-      } else {
-        ctx.moveTo(0, rect.y); ctx.lineTo(1080, rect.y);
-        ctx.lineTo(1080, rect.y + rect.h); ctx.lineTo(0, rect.y + rect.h - 84);
-      }
+    if(rect.r){
+      var r = rect.r;
+      ctx.moveTo(rect.x + r, rect.y);
+      ctx.arcTo(rect.x + rect.w, rect.y, rect.x + rect.w, rect.y + rect.h, r);
+      ctx.arcTo(rect.x + rect.w, rect.y + rect.h, rect.x, rect.y + rect.h, r);
+      ctx.arcTo(rect.x, rect.y + rect.h, rect.x, rect.y, r);
+      ctx.arcTo(rect.x, rect.y, rect.x + rect.w, rect.y, r);
       ctx.closePath();
     } else {
-      ctx.rect(0, rect.y, 1080, rect.h);
+      ctx.rect(rect.x, rect.y, rect.w, rect.h);
     }
     ctx.clip();
-    ctx.fillStyle = '#23221f'; ctx.fillRect(0, rect.y, 1080, rect.h); // matches preview letterbox when zoomed out
-    if(state.tpl === 'tribute') ctx.filter = 'grayscale(1) contrast(1.05)';
+    ctx.fillStyle = '#23221f'; ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
+    if(state.tpl === 'leak') ctx.filter = 'blur(22px) brightness(0.42) saturate(1.1)';
     ctx.drawImage(media, x, y, sw, sh);
     ctx.restore();
   }
@@ -1157,8 +1196,9 @@
     });
   }
   function storyBg(){
-    if(state.tpl === 'editorial') return '#FAF6EE';
-    if(state.tpl === 'tribute') return '#0b0b0c';
+    if(state.tpl === 'launch') return '#F5F5F7';
+    if(state.tpl === 'terminal') return '#071009';
+    if(state.tpl === 'neon') return '#0B0E17';
     return '#101013';
   }
   function captureStory(){
@@ -1227,7 +1267,7 @@
 
   function fileSlug(){
     var slug = (state.title || 'post').toLowerCase().replace(/[^a-z0-9\u0980-\u09FF]+/g,'-').replace(/^-|-$/g,'').slice(0,40);
-    return 'sandesh-' + new Date().toISOString().slice(0,10) + '-' + slug;
+    return 'bitbarta-' + new Date().toISOString().slice(0,10) + '-' + slug;
   }
 
   // ---- video export ----
@@ -1369,11 +1409,11 @@
   });
 
   var TONES = {
-    auto: 'Choose the tone yourself \u2014 read the story and decide what serves it best: engaging-human for features, formal for politics and economy, urgent for breaking events, energetic for sports, restrained and dignified for deaths and tragedies.',
-    engaging: 'Engaging and human \u2014 conversational yet credible. Make the reader feel why this story matters to them. Warm, vivid, alive.',
-    serious:  'Serious, formal and measured \u2014 the register of a respected broadsheet. Restrained, precise, authoritative.',
+    auto: 'Choose the tone yourself \u2014 read the story and decide what serves it best: launch-day excitement for new products, sharp analysis for industry moves and funding, urgent for security incidents and breaking events, clearly-hedged caution for leaks and rumors.',
+    engaging: 'Engaging and human \u2014 conversational yet credible. Make the reader feel why this tech story matters to their daily life. Warm, vivid, alive.',
+    analytical: 'Sharp analyst take \u2014 explain what it means and why it matters, with measured confidence. Numbers and context over adjectives. No hype.',
     breaking: 'Urgent and immediate \u2014 breaking-news energy. Present tense where natural, high stakes, every word earns its place.',
-    sporty:   'Energetic and vivid \u2014 sports-desk excitement. Momentum, drama and color in every line, without losing accuracy.'
+    hype: 'Launch-day energy \u2014 fast, excited, gadget-lover enthusiasm. Bold claims only where the specs back them up; never fanboyish.'
   };
   var LANGS = {
     match: 'Write in the SAME language as the source material (if the source is in Bangla, write everything in Bangla; if English, in English).',
@@ -1382,11 +1422,11 @@
   };
 
   function buildPrompt(material){
-    return 'You are the senior digital editor of "Sandesh", a news page on Instagram known for posts that feel written by a sharp human journalist \u2014 never by a machine.\n\n' +
+    return 'You are the senior editor of "BitBarta", a technology news page on Instagram covering gadgets, AI, apps, startups, cybersecurity, gaming and science for a Bangladeshi audience. Posts must feel written by a sharp human tech journalist \u2014 never by a machine.\n\n' +
     'TONE: ' + TONES[aiTone.value] + '\n' +
     'LANGUAGE: ' + LANGS[aiLang.value] + '\n\n' +
     'Writing rules:\n' +
-    '- Decide the writing STRUCTURE yourself based on the story type: hard-news inverted pyramid for breaking events, narrative arc for features, results-first recap for sports, measured chronology for tributes. Vary paragraph count (2-6) and length to fit the story \u2014 never pad\n' +
+    '- Decide the writing STRUCTURE yourself based on the story type: spec-led recap for product launches, verdict-first for reviews and comparisons, claim-then-evidence for leaks and rumors (say clearly what is unconfirmed), plain-language explainer for AI and research, urgency-first for security incidents. Vary paragraph count (2-6) and length to fit the story \u2014 never pad\n' +
     '- Hook the reader in the first words; lead with the single most striking, concrete fact\n' +
     '- Short, punchy sentences. Active voice. Everyday words over jargon\n' +
     '- Be specific: real numbers, names, places \u2014 never vague filler like "recently" or "various issues"\n' +
@@ -1396,13 +1436,13 @@
     '- No emojis, no hashtags, no AI-sounding phrases like "in a significant development"\n\n' +
     'Return ONLY a valid JSON object with exactly these fields:\n' +
     '{\n' +
-    ' "category": "one or two words, English uppercase, e.g. POLITICS / SPORTS / INTERNATIONAL / TECH",\n' +
+    ' "category": "one or two words, English uppercase, e.g. AI / GADGETS / APPS / STARTUPS / SECURITY / GAMING / SCIENCE",\n' +
     ' "title": "headline, max 12 words; wrap the 1-3 most powerful words in *asterisks* for visual highlight",\n' +
     ' "description": "1-2 sentences, max 220 characters, adding context beyond the title",\n' +
     ' "story": ["2 to 6 short paragraphs telling the full story for carousel pages, structured as you judge best for this story type"],\n' +
-    ' "caption": "a ready-to-post Instagram caption: a strong hook line, then the full story summarized in 2-4 short paragraphs with the key details, a credit line naming the original outlet, then a blank line followed by 10-15 relevant hashtags — mix broad reach tags with topic-specific ones, in the same language as the post plus English staples like #news",\n' +
+    ' "caption": "a ready-to-post Instagram caption: a strong hook line, then the full story summarized in 2-4 short paragraphs with the key details, a credit line naming the original outlet, then a blank line followed by 10-15 relevant hashtags — mix broad reach tags with topic-specific ones, in the same language as the post plus English staples like #tech #technology",\n' +
     ' "news_source": "short name of the original outlet, e.g. Reuters, or empty string if unknown",\n' +
-    ' "template": "the best visual template for this story \u2014 exactly one of: editorial (analysis, politics, economy, culture), impact (hard news, strong statements), overlay (when a dramatic full-bleed photo carries the post), breaking (urgent just-happened events), sport (matches and results), tribute (deaths, mourning)",\n' +
+    ' "template": "the best visual template for this story \u2014 exactly one of: launch (product launches, new devices and app releases), neon (general tech and business news, funding, big statements), ainews (AI and research stories, or when one dramatic full-bleed photo carries the post), leak (leaks, rumors, unconfirmed reports), review (reviews, comparisons, benchmarks), terminal (cybersecurity, hacking, breaches, developer stories)",\n' +
     ' "image_url": "if the source material contains image URLs (in markdown or links ending .jpg/.jpeg/.png/.webp), the full URL of the single best news photo for this story \u2014 skip logos, icons, ads and author headshots; empty string if none",\n' +
     ' "image_credit": "photographer or agency credit for that image if stated in the source (e.g. AFP, Reuters); the word Collected if not stated",\n' +
     ' "video_url": "full URL of a direct video file (.mp4/.webm) only if one appears in the source material; empty string otherwise"\n' +
@@ -1512,7 +1552,7 @@
 
       // AI-chosen template
       var tpl = String(r.template || '').toLowerCase().trim();
-      if(['editorial','impact','overlay','breaking','sport','tribute'].indexOf(tpl) > -1) state.tpl = tpl;
+      if(['launch','neon','ainews','leak','review','terminal'].indexOf(tpl) > -1) state.tpl = tpl;
 
       // media from the source page
       var vu = String(r.video_url || '').trim();

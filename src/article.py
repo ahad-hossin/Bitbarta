@@ -25,15 +25,10 @@ def fetch_article(url: str) -> dict:
     soup = BeautifulSoup(html, "html.parser")
 
     og = soup.find("meta", attrs={"property": "og:image"}) or \
-         soup.find("meta", attrs={"name": "og:image"})
+         soup.find("meta", attrs={"name": "og:image"}) or \
+         soup.find("meta", attrs={"name": "twitter:image"})
     if og and og.get("content"):
-        img = og["content"].strip()
-        # Some outlets bake their branding into the share image; the same
-        # photo exists unbranded at a sibling path.
-        if "thedailystar.net" in img:
-            img = img.replace("/styles/social_share/", "/styles/big_4/")
-        img = re.sub(r"(cloudfront\.net)/meta-top/meta_", r"\1/", img)  # Somoy News
-        out["og_image"] = img
+        out["og_image"] = og["content"].strip()
 
     # body text: prefer <article>/known body containers, else all decent <p>s
     scope = (soup.find("article")
@@ -55,8 +50,12 @@ def fetch_article(url: str) -> dict:
 
 
 def upgrade_thumb(url: str) -> str:
-    # Dhaka Tribune RSS ships 300x300 cache thumbs; ask the CDN for a big one.
-    return re.sub(r"/cache/images/\d+x\d+x\d+/", "/cache/images/1100x617x1/", url or "")
+    # RSS feeds often ship small cache thumbs; nudge the common WordPress/CDN
+    # patterns toward a larger render. No-op for URLs that don't match.
+    u = url or ""
+    u = re.sub(r"[?&](w|width|h|height|resize|fit)=[^&]+", "", u)  # strip size query params
+    u = re.sub(r"-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp))", r"\1", u)  # WP -300x200 suffix
+    return u
 
 
 def fetch_as_data_uri(image_url: str) -> str:

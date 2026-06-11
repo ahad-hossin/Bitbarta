@@ -45,54 +45,51 @@ X_DAILY_LIMIT = int(os.environ.get("X_DAILY_LIMIT", "16"))      # keeps X free t
 X_MONTHLY_LIMIT = int(os.environ.get("X_MONTHLY_LIMIT", "480")) # X free tier: ~500 writes/month
 
 # --- Brand (shown on the rendered post image) ---
-BRAND_NAME = os.environ.get("BRAND_NAME", "SANDESH")
-ACCENT = os.environ.get("ACCENT", "oklch(0.55 0.19 27)")  # News Red
+BRAND_NAME = os.environ.get("BRAND_NAME", "BITBARTA")
+ACCENT = os.environ.get("ACCENT", "oklch(0.55 0.19 257)")  # Electric Blue (studio default)
 BRAND_TZ_OFFSET_HOURS = int(os.environ.get("BRAND_TZ_OFFSET_HOURS", "6"))  # Bangladesh = UTC+6
+# cover layout: "top" = headline above the image, "bottom" = headline below it
+DETAILS_POSITION = os.environ.get("DETAILS_POSITION", "top")
 
 # --- History / dedup ---
 HISTORY_KEEP = 600          # entries kept in posted.json
 HISTORY_FOR_DEDUP = 120     # recent topics shown to Gemini for dedup
 
-# --- Sources (all official-site channels) ---
-# kind "rss"              -> direct RSS feed
-# kind "news_sitemap"     -> the site's Google-News sitemap XML
-# kind "html_todays_news" -> The Daily Star's /todays-news index page
+# --- Sources (global tech-news RSS feeds) ---
+# kind "rss" -> direct RSS/Atom feed. Every source below is English.
+# "beat" is a coarse tag (press / dev / ai / gadgets) used only for logging.
 SOURCES = [
-    {
-        "id": "dhakatribune",
-        "name": "Dhaka Tribune",
-        "kind": "rss",
-        "url": "https://www.dhakatribune.com/feed/bangladesh",
-        "lang": "en",
-    },
-    {
-        "id": "thedailystar",
-        "name": "The Daily Star",
-        "kind": "html_todays_news",
-        "url": "https://www.thedailystar.net/todays-news",
-        "lang": "en",
-    },
-    {
-        "id": "somoynews",
-        "name": "Somoy News",
-        "kind": "news_sitemap",
-        "url": "https://www.somoynews.tv/news-sitemap.xml",
-        "lang": "bn",
-    },
-    {
-        "id": "jamuna",
-        "name": "Jamuna TV",
-        "kind": "news_sitemap",
-        "url": "https://www.jamuna.tv/news_sitemap.xml",
-        "lang": "bn",
-    },
-    {
-        "id": "prothomalo",
-        "name": "Prothom Alo",
-        "kind": "rss",
-        "url": "https://www.prothomalo.com/feed",
-        "lang": "bn",
-    },
+    # Major EN tech press
+    {"id": "techcrunch", "name": "TechCrunch", "kind": "rss",
+     "url": "https://techcrunch.com/feed/", "lang": "en", "beat": "press"},
+    {"id": "theverge", "name": "The Verge", "kind": "rss",
+     "url": "https://www.theverge.com/rss/index.xml", "lang": "en", "beat": "press"},
+    {"id": "arstechnica", "name": "Ars Technica", "kind": "rss",
+     "url": "https://feeds.arstechnica.com/arstechnica/index", "lang": "en", "beat": "press"},
+    {"id": "wired", "name": "Wired", "kind": "rss",
+     "url": "https://www.wired.com/feed/rss", "lang": "en", "beat": "press"},
+    {"id": "engadget", "name": "Engadget", "kind": "rss",
+     "url": "https://www.engadget.com/rss.xml", "lang": "en", "beat": "press"},
+
+    # Hacker News + developer
+    {"id": "hackernews", "name": "Hacker News", "kind": "hn_algolia",
+     "url": "https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=50", "lang": "en", "beat": "dev"},
+    {"id": "devto", "name": "DEV", "kind": "rss",
+     "url": "https://dev.to/feed", "lang": "en", "beat": "dev"},
+
+    # AI-focused
+    {"id": "venturebeat", "name": "VentureBeat", "kind": "rss",
+     "url": "https://venturebeat.com/feed/", "lang": "en", "beat": "ai"},
+    {"id": "techreview", "name": "MIT Technology Review", "kind": "rss",
+     "url": "https://www.technologyreview.com/feed/", "lang": "en", "beat": "ai"},
+
+    # Gadgets / consumer
+    {"id": "ninetofivemac", "name": "9to5Mac", "kind": "rss",
+     "url": "https://9to5mac.com/feed/", "lang": "en", "beat": "gadgets"},
+    {"id": "androidpolice", "name": "Android Police", "kind": "rss",
+     "url": "https://www.androidpolice.com/feed/", "lang": "en", "beat": "gadgets"},
+    {"id": "tomshardware", "name": "Tom's Hardware", "kind": "rss",
+     "url": "https://www.tomshardware.com/feeds/all", "lang": "en", "beat": "gadgets"},
 ]
 
 # --- Social credentials (set as GitHub secrets; pipeline dry-runs without them) ---

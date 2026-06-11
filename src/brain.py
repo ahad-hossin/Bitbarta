@@ -1,8 +1,7 @@
 """Gemini does the thinking, in two phases.
 
-Phase 1 (one call): look at every fresh headline, cluster duplicates across
-outlets (including Bangla <-> English), drop topics already posted, pick the
-top stories.
+Phase 1 (one call): look at every fresh tech headline, cluster duplicates
+across outlets, drop topics already posted, pick the top stories.
 
 Phase 2 (one call per selected story): read the article's actual body text and
 write the post — headline with a [[highlighted]] key phrase, summary, the
@@ -31,7 +30,7 @@ _SELECT_SCHEMA = {
                         "items": {"type": "integer"},
                         "description": "indices of ALL candidates covering this same story",
                     },
-                    "topic": {"type": "string", "description": "short unique English topic key, e.g. 'iran downs us helicopter'"},
+                    "topic": {"type": "string", "description": "short unique English topic key, e.g. 'openai launches gpt-5'"},
                 },
                 "required": ["candidate_ids", "topic"],
             },
@@ -40,19 +39,20 @@ _SELECT_SCHEMA = {
     "required": ["stories"],
 }
 
-_SELECT_PROMPT = """You are the editor of "{brand}", a Bangladeshi news page that posts in ENGLISH on Instagram, Facebook and X.
+_SELECT_PROMPT = """You are the editor of "{brand}", a TECH NEWS page that posts in ENGLISH on Instagram, Facebook and X.
 
-Below are fresh candidate stories from 4 Bangladeshi outlets (some headlines in Bangla), plus topics we already posted.
+Below are fresh candidate stories from major global tech outlets, plus topics we already posted.
 
-1. CLUSTER candidates covering the SAME story (it often appears on multiple outlets, sometimes Bangla on one, English on another). One cluster = one post.
-2. DROP any story we already posted (see list). Same event = duplicate even if worded differently or in another language. This INCLUDES new stages of an event we already covered (announced -> approved -> presented -> reactions are ALL one story, not four). Only re-cover an ongoing event if the development is itself a major standalone story (a verdict, a dramatic reversal, a big new toll) — and even then, at most once.
-3. SELECT the {max_posts} remaining stories with the HIGHEST VIRAL POTENTIAL. Rank by how likely Bangladeshi social media users are to share, comment and react:
-   - breaking events and big developments in ongoing national dramas
-   - stories that affect millions (prices, jobs, transport, weather, disasters)
-   - dramatic human stories, big names (politicians, stars, cricketers), surprising numbers
-   - national-pride moments and major international news with local relevance
+1. CLUSTER candidates covering the SAME story (a big launch or acquisition appears on several outlets at once). One cluster = one post.
+2. DROP any story we already posted (see list). Same event = duplicate even if worded differently. This INCLUDES new stages of one story we already covered (rumor -> announced -> released -> reactions / benchmarks are ALL one story, not four). Only re-cover an ongoing story if the development is itself a major standalone event (a shock pricing reversal, a recall, a launch after we only covered the rumor) — and even then, at most once.
+3. SELECT the {max_posts} remaining stories with the HIGHEST VIRAL POTENTIAL for a tech audience. Rank by how likely tech-interested social media users are to share, comment and react:
+   - major product launches and updates (phones, chips, GPUs, OS, flagship apps, models)
+   - AI breakthroughs and big model/feature releases (OpenAI, Anthropic, Google, Meta, etc.)
+   - big-tech business drama: acquisitions, layoffs, lawsuits, antitrust, leadership shake-ups, earnings shocks
+   - security: major breaches, hacks, zero-days, outages affecting millions
+   - surprising benchmarks, prices, funding rounds, or first-of-its-kind tech
    - a story covered by several outlets at once is a strong viral signal
-   Among equally strong stories prefer the most RECENT. Skip ads, horoscopes, recipes, TV schedules, live-stream pages, opinion teasers and trivial routine items. Fewer than {max_posts} — or zero — is fine if nothing is genuinely share-worthy.
+   Among equally strong stories prefer the most RECENT. Skip sponsored posts, deals/coupon roundups, "best X of 2024" listicles, opinion/how-to teasers, minor app point-releases and routine trivia. Fewer than {max_posts} — or zero — is fine if nothing is genuinely share-worthy.
 4. Give each selected story a short English topic key for future dedup.
 
 RECENTLY POSTED TOPICS (do not repeat):
@@ -65,10 +65,10 @@ CANDIDATES (index | source | lang | published | category | title | snippet):
 _COMPOSE_SCHEMA = {
     "type": "object",
     "properties": {
-        "headline": {"type": "string", "description": "English headline, max 95 chars, with the core message — the part that alone tells the story — wrapped in [[ ]], e.g. '[[Iran downs US military helicopter]] near Gulf, Trump warns'"},
+        "headline": {"type": "string", "description": "English headline, max 95 chars, with the core message — the part that alone tells the story — wrapped in [[ ]], e.g. '[[OpenAI launches GPT-5]] with real-time video, rolling out today'"},
         "summary": {"type": "string", "description": "1-2 English sentences, max 220 chars, for the cover image subtext"},
-        "category": {"type": "string", "description": "one word: BANGLADESH, WORLD, POLITICS, SPORT, BUSINESS, TECH, ENTERTAINMENT, HEALTH, ..."},
-        "template": {"type": "string", "enum": ["editorial", "impact", "breaking", "sport", "tribute"]},
+        "category": {"type": "string", "description": "one word: AI, APPLE, ANDROID, GADGETS, HARDWARE, SOFTWARE, SECURITY, GAMING, STARTUPS, BIGTECH, SCIENCE, CRYPTO, ..."},
+        "template": {"type": "string", "enum": ["launch", "neon", "ainews", "leak", "review", "terminal"]},
         "details": {
             "type": "array",
             "items": {"type": "string"},
@@ -83,31 +83,33 @@ _COMPOSE_SCHEMA = {
     "required": ["headline", "summary", "category", "template", "details", "hook", "hashtags", "tweet", "story_risk", "image_safe"],
 }
 
-_COMPOSE_PROMPT = """You are the editor of "{brand}", a Bangladeshi news page that posts in ENGLISH.
+_COMPOSE_PROMPT = """You are the editor of "{brand}", a TECH NEWS page that posts in ENGLISH.
 
-Write the social post for this story (translate to English where the source is Bangla). Make it as engaging as possible — but FACTS ONLY: never invent, exaggerate or editorialize beyond what the material below supports. No clickbait that the article can't back up.
+Write the social post for this story. Make it as engaging as possible — but FACTS ONLY: never invent, exaggerate or editorialize beyond what the material below supports. No clickbait the article can't back up, and don't overstate specs, prices, dates or benchmarks. Keep tech terms accurate; spell product and company names exactly right.
 
-Headline rules: scroll-stopping, concrete and factual, max 95 chars. Lead with the most striking fact or number. Wrap the headline's CORE MESSAGE in [[ ]] — the contiguous phrase (typically 4-8 words, can be half the headline) that on its own tells the viewer what happened, so reading just the highlight gives the main point and the rest of the headline adds context. Never highlight a fragment that's meaningless alone, and never highlight the entire headline.
-Summary rules: the second punch — the detail that makes people need to know more.
-Template rules (pick exactly by these):
-- "tribute" — the story is about someone dying (death, obituary, tribute, killed)
-- "sport" — sports stories
-- "breaking" — new and important for everyone to know right now (major national events, emergencies, big sudden developments)
-- otherwise pick the better fit for the story's tone: "editorial" (light, clean — calm news, business, policy, culture, human interest) or "impact" (dark, bold — dramatic, hard-hitting, tense stories)
-Details rules: short paragraphs (2-3 sentences each) telling the FULL story — what/who/where/numbers/background/what's next. Use as many paragraphs as the story needs (typically 4-10); they flow across the details slides of the carousel. Put the most gripping facts in the first paragraph.
-Hook rules: 1-2 lines that open the caption — it's all people see before "...more", so make it impossible to scroll past (a striking fact, number or question; still factual). The full story details follow it automatically, so don't repeat them.
+Headline rules: scroll-stopping, concrete and factual, max 95 chars. Lead with the most striking fact, spec or number. Wrap the headline's CORE MESSAGE in [[ ]] — the contiguous phrase (typically 4-8 words, can be half the headline) that on its own tells the viewer what happened, so reading just the highlight gives the main point and the rest adds context. Never highlight a fragment that's meaningless alone, and never highlight the entire headline.
+Summary rules: the second punch — the detail (a price, a date, a spec, a catch) that makes people need to know more.
+Template rules — each template is a VISUAL STYLE matched to a kind of story. Go down this list and pick the FIRST one that fits; if none of 1-5 clearly fit, use "neon" (6). Pick by the story's nature, not by how big it is. Do NOT default to "ainews" — it is only for rule 5.
+1. "terminal" — code/terminal window. Use for anything DEVELOPER- or CODE-flavored: programming languages, frameworks, SDKs, APIs, open-source projects, developer tools, AND all security stories — breaches, hacks, data leaks (security sense), zero-days/vulnerabilities, malware, ransomware, outages, cloud/infrastructure, Linux. (e.g. "Apple opens its Foundation Models framework to any LLM", "Critical OpenSSH zero-day patched", "AWS outage takes down half the web".)
+2. "review" — split layout, product photo on one side. Use when the story EVALUATES or DISSECTS a specific physical product: hands-on reviews, first impressions, teardowns, build-quality or spec comparisons, "we tested", phone/laptop/GPU/gadget benchmarks. Needs a product photo. (e.g. "iFixit teardown: the Trump phone is a rebadged HTC", "RTX 5090 review: fastest GPU ever, at a brutal price".)
+3. "leak" — blurred background, stamp. Use ONLY for UNCONFIRMED information: leaks, rumors, "reportedly", "sources say", "allegedly", early/leaked renders, speculation about unannounced products. If it's officially confirmed, it is NOT a leak. (e.g. "iPhone 18 Pro reportedly drops the notch entirely, leak suggests".)
+4. "launch" — clean, light keynote look. Use for OFFICIAL, CONFIRMED launches and releases: a new device/chip/app/OS/feature is announced, unveiled, released or now available. Positive, polished, official product news. (e.g. "Apple unveils the foldable iPhone with a crease-free display", "Spotify rolls out lossless audio to all users".)
+5. "ainews" — dramatic full-bleed photo, headline over it. RESERVED for two things only: (a) a major AI MODEL release or research breakthrough (a new frontier model, a landmark benchmark result), or (b) a genuinely dramatic/high-stakes story — a major lawsuit, antitrust action, scandal, mass layoffs, or a multi-billion-dollar acquisition. Use sparingly and only when there is a strong photo. (e.g. "GPT-5.5 tops the Agents' Last Exam benchmark", "EU hits Apple with record $20B antitrust fine".)
+6. "neon" — futuristic dark grid. The DEFAULT for everything else: general tech and business news, funding rounds, partnerships, company moves, policy, market trends, analysis, and any story that doesn't clearly match 1-5.
+Details rules: short paragraphs (2-3 sentences each) telling the FULL story — what/who/specs/price/availability/why it matters/what's next. Use as many paragraphs as the story needs (typically 4-10); they flow across the details slides of the carousel. Put the most gripping facts (the key spec, price or number) in the first paragraph.
+Hook rules: 1-2 lines that open the caption — it's all people see before "...more", so make it impossible to scroll past (a striking spec, number or question; still factual). The full story details follow it automatically, so don't repeat them.
 Tweet rules: standalone, lead with the hook, under 270 chars, 1-3 hashtags.
 
 Platform safety (this page must never violate Facebook/Instagram policies):
-- Never glorify or sensationalize violence; report it neutrally. Attribute every health/medical claim to its source (e.g. "according to the DGHS"). Use strictly neutral wording on political and communal stories.
-- story_risk: "clean" for normal news; "sensitive" for violent crime, disasters, communal or health stories (your wording must be extra careful); "graphic" if the story centers on gory/disturbing details (it will be posted without a photo); "do_not_post" ONLY if the story cannot be covered at all without violating platform policy (gratuitous gore, glorifying violence or terrorism, explicit content).
-- Soften, never censor: for sensitive/graphic stories use plain clinical wording ("killed", "injured") and skip gory specifics (method details, wound descriptions, suffering) — but keep every word intact and factual. Never mask words with symbols or slang ("k*lled", "unalived"): masking looks spammy and platforms detect it anyway. The goal is that almost every story remains postable through neutral wording.
-- image_safe: a photo may be attached to this message. Set image_safe=false if it shows blood, dead bodies, graphic injuries, weapons being used on people, or nudity — anything Meta's filters would flag. If no photo is attached, set true.
+- Stay neutral and factual; don't make unverified accusations against named people or companies. Attribute claims (leaks, rumors, "according to <source>") rather than stating them as confirmed fact. Don't post how-to instructions for exploiting a vulnerability — report that it exists and its impact.
+- story_risk: "clean" for normal tech news; "sensitive" for major breaches, harassment, or stories with unproven allegations (word carefully and attribute); "graphic" is rare here (only genuinely disturbing content); "do_not_post" ONLY if the story cannot be covered without violating platform policy (explicit content, doxxing, actionable hacking instructions).
+- Never mask words with symbols or slang: masking looks spammy and platforms detect it anyway. Keep wording neutral and the story stays postable.
+- image_safe: a photo may be attached to this message. Set image_safe=false only if it shows nudity, gore or otherwise clearly violates Meta's image policy. Product shots, screenshots, logos and headshots are safe. If no photo is attached, set true.
 
 STORY HEADLINES (from the outlets):
 {titles}
 
-ARTICLE TEXT (may be partial or Bangla; primary source: {primary_source}):
+ARTICLE TEXT (may be partial; primary source: {primary_source}):
 {article}
 """
 
@@ -253,8 +255,8 @@ def compose_post(story: dict, article_text: str, image_data_uri: str = "") -> di
         "headline_marked": marked,                      # with [[highlight]] for the image
         "headline": marked.replace("[[", "").replace("]]", ""),
         "summary": p["summary"][:260],
-        "category": (p.get("category") or "NEWS").upper()[:18],
-        "template": p.get("template", "editorial"),
+        "category": (p.get("category") or "TECH").upper()[:18],
+        "template": p.get("template", "neon"),
         "details": details,
         "caption": caption,
         "tweet": p["tweet"][:275],

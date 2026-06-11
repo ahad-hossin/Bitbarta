@@ -42,10 +42,11 @@ def render_posts(posts: list) -> list:
 
             page.goto(template_url, wait_until="domcontentloaded")
             cover = {
-                "template": post.get("template", "editorial"),
+                "template": post.get("template", "neon"),
+                "pos": config.DETAILS_POSITION,
                 "accent": config.ACCENT,
                 "brand": config.BRAND_NAME,
-                "category": post.get("category", "NEWS"),
+                "category": post.get("category", "TECH"),
                 "title": post.get("headline_marked") or post.get("headline", ""),
                 "desc": post.get("summary", ""),
                 "date": date_label,
@@ -58,10 +59,10 @@ def render_posts(posts: list) -> list:
 
             if post.get("details"):
                 story_base = {
-                    "template": post.get("template", "editorial"),
+                    "template": post.get("template", "neon"),
                     "accent": config.ACCENT,
                     "brand": config.BRAND_NAME,
-                    "category": post.get("category", "NEWS"),
+                    "category": post.get("category", "TECH"),
                     "date": date_label,
                     "source": post.get("source", ""),
                 }

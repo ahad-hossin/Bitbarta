@@ -34,6 +34,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           BRAND_NAME: ${{ vars.BRAND_NAME || 'BITBARTA' }}
           MAX_POSTS_PER_RUN: ${{ vars.MAX_POSTS_PER_RUN || '2' }}
         run: python -m src.main generate

@@ -184,10 +184,72 @@ def _call_gemini(parts: list, schema: dict) -> dict:
     raise RuntimeError(f"Gemini unavailable after retries ({last_err})")
 
 
+_GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
+
+
+def _schema_hint(schema: dict) -> str:
+    """Terse spec of the wanted JSON, since Groq's json_object mode enforces
+    valid JSON but not a strict schema the way Gemini's responseSchema does."""
+    lines = []
+    for k, v in schema.get("properties", {}).items():
+        desc = v.get("description", "")
+        if v.get("enum"):
+            desc += " (one of: " + ", ".join(v["enum"]) + ")"
+        if v.get("type") == "array":
+            desc = "array — " + desc
+        lines.append(f'  "{k}": {desc}')
+    return "Respond with ONLY a single valid JSON object (no markdown, no prose) with these keys:\n" + "\n".join(lines)
+
+
+def _call_groq(parts: list, schema: dict) -> dict:
+    """Fallback LLM. Converts the Gemini-style parts (text + optional inline
+    image) into an OpenAI-style multimodal message and asks Groq for JSON."""
+    if not config.GROQ_API_KEY:
+        raise RuntimeError("GROQ_API_KEY not set")
+    text = "\n".join(p["text"] for p in parts if "text" in p)
+    content = [{"type": "text", "text": text + "\n\n" + _schema_hint(schema)}]
+    for p in parts:
+        if "inline_data" in p:
+            d = p["inline_data"]
+            content.append({"type": "image_url",
+                            "image_url": {"url": f"data:{d['mime_type']};base64,{d['data']}"}})
+    body = {
+        "model": config.GROQ_MODEL,
+        "messages": [{"role": "user", "content": content}],
+        "temperature": 0.4,
+        "max_tokens": 4000,
+        "response_format": {"type": "json_object"},
+    }
+    headers = {"Authorization": "Bearer " + config.GROQ_API_KEY}
+    last = None
+    for attempt in range(4):
+        if attempt:
+            time.sleep(2 ** attempt)
+        resp = requests.post(_GROQ_ENDPOINT, headers=headers, json=body, timeout=120)
+        if resp.status_code == 200:
+            return json.loads(resp.json()["choices"][0]["message"]["content"])
+        last = f"HTTP {resp.status_code}: {resp.text[:160]}"
+        if resp.status_code not in (429, 500, 502, 503, 504):
+            break
+    raise RuntimeError(f"Groq unavailable ({last})")
+
+
+def _call_llm(parts: list, schema: dict) -> dict:
+    """Gemini first; if every Gemini key/model is exhausted or erroring, fall
+    back to Groq so a run is never lost to a Gemini outage."""
+    try:
+        return _call_gemini(parts, schema)
+    except Exception as e:
+        if config.GROQ_API_KEY:
+            print(f"  [fallback] Gemini unavailable ({e}); using Groq ({config.GROQ_MODEL})")
+            return _call_groq(parts, schema)
+        raise
+
+
 def select_stories(candidates: list, history: list) -> list:
     """Phase 1 -> [{cluster: [items], topic: str}], newest stories first."""
-    if not config.GEMINI_API_KEY:
-        raise RuntimeError("GEMINI_API_KEY is not set")
+    if not config.GEMINI_API_KEY and not config.GROQ_API_KEY:
+        raise RuntimeError("No LLM key set (need GEMINI_API_KEY or GROQ_API_KEY)")
 
     recent = [e for e in history if e.get("topic")][-config.HISTORY_FOR_DEDUP:]
     history_lines = "\n".join(
@@ -203,7 +265,7 @@ def select_stories(candidates: list, history: list) -> list:
         history=history_lines,
         candidates=cand_lines,
     )
-    result = _call_gemini([{"text": prompt}], _SELECT_SCHEMA)
+    result = _call_llm([{"text": prompt}], _SELECT_SCHEMA)
     stories = []
     for s in result.get("stories", [])[: config.MAX_POSTS_PER_RUN]:
         ids = [i for i in s.get("candidate_ids", []) if 0 <= i < len(candidates)]
@@ -248,7 +310,7 @@ def compose_post(story: dict, article_text: str, image_data_uri: str = "") -> di
         header, b64 = image_data_uri.split(",", 1)
         mime = header.split(":", 1)[1].split(";", 1)[0]
         parts.append({"inline_data": {"mime_type": mime, "data": b64}})
-    p = _call_gemini(parts, _COMPOSE_SCHEMA)
+    p = _call_llm(parts, _COMPOSE_SCHEMA)
     details = [d.strip() for d in p.get("details", []) if d.strip()][:14]
     marked = p["headline"][:130]
     sources = ", ".join(dict.fromkeys(c["source"] for c in cluster))

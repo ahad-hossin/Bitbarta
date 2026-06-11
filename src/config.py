@@ -17,6 +17,11 @@ GEMINI_API_KEY_2 = os.environ.get("GEMINI_API_KEY_2", "")  # backup keys
 GEMINI_API_KEY_3 = os.environ.get("GEMINI_API_KEY_3", "")
 GEMINI_API_KEYS = [k for k in (GEMINI_API_KEY, GEMINI_API_KEY_2, GEMINI_API_KEY_3) if k]
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+
+# --- Groq (fallback when every Gemini key/model is unavailable) ---
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+# a multimodal + JSON-capable model so the compose call can still safety-check images
+GROQ_MODEL = os.environ.get("GROQ_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
 # tried in order when the primary model keeps returning 429/5xx
 GEMINI_FALLBACK_MODELS = [
     m.strip() for m in os.environ.get(

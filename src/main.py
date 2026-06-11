@@ -53,14 +53,19 @@ def generate() -> int:
     # --- budget check: each run costs 1 Gemini call to select + 1 per post ---
     print(f"API budgets: {budget.summary()}")
     gem_left = budget.gemini_remaining_total()
-    if gem_left < 2:
-        _summary(["## News bot", f"Skipped: Gemini daily budget exhausted ({budget.summary()})"])
-        state.save_queue([])
-        return 0
-    affordable = min(config.MAX_POSTS_PER_RUN, gem_left - 1)
-    if affordable < config.MAX_POSTS_PER_RUN:
-        print(f"[budget] capping run at {affordable} post(s) (Gemini calls left: {gem_left})")
-        config.MAX_POSTS_PER_RUN = affordable
+    if config.GROQ_API_KEY:
+        # Groq backs us up, so a spent Gemini budget never blocks or caps a run
+        if gem_left < 2:
+            print("[budget] Gemini budget low — Groq will handle this run")
+    else:
+        if gem_left < 2:
+            _summary(["## News bot", f"Skipped: Gemini daily budget exhausted ({budget.summary()})"])
+            state.save_queue([])
+            return 0
+        affordable = min(config.MAX_POSTS_PER_RUN, gem_left - 1)
+        if affordable < config.MAX_POSTS_PER_RUN:
+            print(f"[budget] capping run at {affordable} post(s) (Gemini calls left: {gem_left})")
+            config.MAX_POSTS_PER_RUN = affordable
 
     print("== Fetching feeds ==")
     candidates = feeds.fetch_all()

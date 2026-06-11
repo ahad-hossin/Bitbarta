@@ -1,1 +1,72 @@
-[]
+[
+ {
+  "topic": "LLM context compression breakthrough",
+  "headline_marked": "[[New research cuts LLM input 16x]] without accuracy hit, speeding up AI models",
+  "headline": "New research cuts LLM input 16x without accuracy hit, speeding up AI models",
+  "summary": "Researchers from multiple universities have developed Latent Context Language Models (LCLMs) that compress LLM input context by up to 16x, significantly reducing memory and compute costs while maintaining high accuracy.",
+  "category": "AI",
+  "template": "ainews",
+  "details": [
+   "Context windows are a growing computational bottleneck for LLMs, with accumulating tokens demanding more memory and compute. Existing compression solutions often degrade accuracy or fail to provide real-world speedups.",
+   "A research team from NYU, Columbia, Princeton, and other institutions introduced Latent Context Language Models (LCLMs), a family of encoder-decoder models that compress input context before it reaches the decoder. These models are open-sourced on HuggingFace.",
+   "Unlike traditional KV cache methods, LCLMs compress the input token sequence directly, leading to higher compression ratios that reduce decoder-side compute and memory. The paper reports LCLMs with 16x compression produced output 8.8 times faster than KV cache baselines on the RULER long-context benchmark.",
+   "At 4x compression, LCLMs maintained 91.76% accuracy on the RULER benchmark, a less than 3-point drop from no compression. Even at 16x compression, where 93.75% of input tokens are removed, accuracy was 75.06%, outperforming all tested KV cache methods.",
+   "LCLMs are designed to integrate into existing LLM stacks; users can simply run documents through the LCLM's compressor before feeding them into their model's context. This allows models to process much longer contexts efficiently without significant accuracy degradation.",
+   "The architecture pairs a 0.6B encoder with a 4B decoder, trained on over 350 billion tokens. This approach addresses the tradeoff between reconstruction accuracy and general task performance that limited earlier compression efforts."
+  ],
+  "caption": "LLM context windows are a major bottleneck. New research achieves 16x input compression, making AI models 8.8x faster on benchmarks.\n\nContext windows are a growing computational bottleneck for LLMs, with accumulating tokens demanding more memory and compute. Existing compression solutions often degrade accuracy or fail to provide real-world speedups.\n\nA research team from NYU, Columbia, Princeton, and other institutions introduced Latent Context Language Models (LCLMs), a family of encoder-decoder models that compress input context before it reaches the decoder. These models are open-sourced on HuggingFace.\n\nUnlike traditional KV cache methods, LCLMs compress the input token sequence directly, leading to higher compression ratios that reduce decoder-side compute and memory. The paper reports LCLMs with 16x compression produced output 8.8 times faster than KV cache baselines on the RULER long-context benchmark.\n\nAt 4x compression, LCLMs maintained 91.76% accuracy on the RULER benchmark, a less than 3-point drop from no compression. Even at 16x compression, where 93.75% of input tokens are removed, accuracy was 75.06%, outperforming all tested KV cache methods.\n\nLCLMs are designed to integrate into existing LLM stacks; users can simply run documents through the LCLM's compressor before feeding them into their model's context. This allows models to process much longer contexts efficiently without significant accuracy degradation.\n\nThe architecture pairs a 0.6B encoder with a 4B decoder, trained on over 350 billion tokens. This approach addresses the tradeoff between reconstruction accuracy and general task performance that limited earlier compression efforts.\n\n#AI #LLM #MachineLearning #Research #TechNews #OpenSource\n\nSource: VentureBeat",
+  "tweet": "New research introduces LCLMs, cutting LLM input context by up to 16x without significant accuracy loss. This makes AI models up to 8.8x faster, addressing a critical computational bottleneck. #AI #LLM #Research",
+  "story_risk": "clean",
+  "image_safe": true,
+  "source": "VentureBeat",
+  "url": "https://venturebeat.com/data/context-compression-finally-works-in-production-new-research-cuts-llm-input-16x-without-the-accuracy-hit",
+  "image": "https://images.ctfassets.net/jdtwqhzvc2n1/6qlsHksCPVIoyjZyhIPxo6/bf15c572b97b15956f3b452b6b544c92/context-compression.jpg?w=300&q=30",
+  "orig_title": "Context compression finally works in production: new research cuts LLM input 16x without the accuracy hit",
+  "cluster_urls": [
+   "https://venturebeat.com/data/context-compression-finally-works-in-production-new-research-cuts-llm-input-16x-without-the-accuracy-hit"
+  ],
+  "cluster_titles": [
+   "Context compression finally works in production: new research cuts LLM input 16x without the accuracy hit"
+  ],
+  "photo_credit": "VentureBeat",
+  "image_files": [
+   "20260611-2332-0-new-research-cuts-llm-input-16x-without-accu.png",
+   "20260611-2332-0-new-research-cuts-llm-input-16x-without-accu-d1.png",
+   "20260611-2332-0-new-research-cuts-llm-input-16x-without-accu-d2.png"
+  ]
+ },
+ {
+  "topic": "Amazon data centers massive water consumption",
+  "headline_marked": "[[Amazon data centers consumed 2.5 billion gallons of water]] in 2025, down 2% from 2024",
+  "headline": "Amazon data centers consumed 2.5 billion gallons of water in 2025, down 2% from 2024",
+  "summary": "Amazon released its annual water usage data for the first time, claiming its operations are more efficient than some rivals like Google and Microsoft. The company primarily uses air cooling, reserving evaporative cooling for the hottest days.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Amazon disclosed its global data center water usage for the first time, reporting 2.5 billion gallons consumed in 2025. This figure represents a two percent drop from its 2024 total, even as operations expanded, and follows a recent data center moratorium in Seattle.",
+   "The company claims its water efficiency surpasses some Big Tech rivals, including Microsoft, Google, and Meta, based on a graphic in its report. While Google reportedly used the most, its cited data may be specific to Gemini AI data centers, unlike Amazon's comprehensive report.",
+   "Amazon's data excludes indirect water usage from power plants and new data center construction. The company states 90% of its data centers use air cooling, with evaporative cooling reserved for the hottest days.",
+   "Amazon further asserts its data centers are seven times more water-efficient than the industry average, referencing an adjusted number from a peer-reviewed research paper. The company also raises its servers' tolerances for heat to minimize water use."
+  ],
+  "caption": "Amazon's global data centers consumed 2.5 billion gallons of water in 2025, a 2% reduction from 2024. This marks the first time the company has disclosed such figures.\n\nAmazon disclosed its global data center water usage for the first time, reporting 2.5 billion gallons consumed in 2025. This figure represents a two percent drop from its 2024 total, even as operations expanded, and follows a recent data center moratorium in Seattle.\n\nThe company claims its water efficiency surpasses some Big Tech rivals, including Microsoft, Google, and Meta, based on a graphic in its report. While Google reportedly used the most, its cited data may be specific to Gemini AI data centers, unlike Amazon's comprehensive report.\n\nAmazon's data excludes indirect water usage from power plants and new data center construction. The company states 90% of its data centers use air cooling, with evaporative cooling reserved for the hottest days.\n\nAmazon further asserts its data centers are seven times more water-efficient than the industry average, referencing an adjusted number from a peer-reviewed research paper. The company also raises its servers' tolerances for heat to minimize water use.\n\n#Amazon #DataCenters #WaterUsage #Sustainability #TechNews #AWS\n\nSource: The Verge",
+  "tweet": "Amazon's data centers used 2.5 billion gallons of water in 2025, a 2% drop from 2024. The company released this data for the first time, claiming higher efficiency than rivals. #Amazon #DataCenters #Sustainability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "source": "The Verge",
+  "url": "https://www.theverge.com/tech/948534/amazon-data-centers-water-use",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/STKS528_DATA_CENTERS2_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Amazon&#8217;s data centers used 2.5 billion gallons of water last year",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/948534/amazon-data-centers-water-use"
+  ],
+  "cluster_titles": [
+   "Amazon&#8217;s data centers used 2.5 billion gallons of water last year"
+  ],
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260611-2332-1-amazon-data-centers-consumed-2-5-billion-gal.png",
+   "20260611-2332-1-amazon-data-centers-consumed-2-5-billion-gal-d1.png",
+   "20260611-2332-1-amazon-data-centers-consumed-2-5-billion-gal-d2.png"
+  ]
+ }
+]

@@ -314,7 +314,13 @@ def compose_post(story: dict, article_text: str, image_data_uri: str = "") -> di
     details = [d.strip() for d in p.get("details", []) if d.strip()][:14]
     marked = p["headline"][:130]
     sources = ", ".join(dict.fromkeys(c["source"] for c in cluster))
-    caption = _build_caption(p.get("hook", ""), details, p.get("hashtags", ""), sources)
+    # guarantee hashtags even when the model (esp. the Groq fallback) omits them
+    hashtags = (p.get("hashtags") or "").strip()
+    if "#" not in hashtags:
+        cat = "".join(ch for ch in (p.get("category") or "Tech") if ch.isalnum())
+        cat = cat.upper() if len(cat) <= 3 else cat.title()  # AI stays AI, SOFTWARE -> Software
+        hashtags = f"#TechNews #{cat} #Tech #BitBarta"
+    caption = _build_caption(p.get("hook", ""), details, hashtags, sources)
     return {
         "topic": story["topic"],
         "headline_marked": marked,                      # with [[highlight]] for the image

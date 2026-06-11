@@ -45,15 +45,17 @@ Below are fresh candidate stories from major global tech outlets, plus topics we
 
 1. CLUSTER candidates covering the SAME story (a big launch or acquisition appears on several outlets at once). One cluster = one post.
 2. DROP any story we already posted (see list). Same event = duplicate even if worded differently. This INCLUDES new stages of one story we already covered (rumor -> announced -> released -> reactions / benchmarks are ALL one story, not four). Only re-cover an ongoing story if the development is itself a major standalone event (a shock pricing reversal, a recall, a launch after we only covered the rumor) — and even then, at most once.
-3. SELECT the {max_posts} remaining stories with the HIGHEST VIRAL POTENTIAL for a tech audience. Rank by how likely tech-interested social media users are to share, comment and react:
-   - major product launches and updates (phones, chips, GPUs, OS, flagship apps, models)
-   - AI breakthroughs and big model/feature releases (OpenAI, Anthropic, Google, Meta, etc.)
-   - big-tech business drama: acquisitions, layoffs, lawsuits, antitrust, leadership shake-ups, earnings shocks
-   - security: major breaches, hacks, zero-days, outages affecting millions
-   - surprising benchmarks, prices, funding rounds, or first-of-its-kind tech
-   - a story covered by several outlets at once is a strong viral signal
-   Among equally strong stories prefer the most RECENT. Skip sponsored posts, deals/coupon roundups, "best X of 2024" listicles, opinion/how-to teasers, minor app point-releases and routine trivia. Fewer than {max_posts} — or zero — is fine if nothing is genuinely share-worthy.
-4. Give each selected story a short English topic key for future dedup.
+3. SELECT the {max_posts} most ENGAGING and FRESH stories — these two things decide everything:
+   a) ENGAGEMENT (primary): pick the stories tech-interested people are most likely to share, comment on and react to. Strongest signals, roughly in order:
+      - AI breakthroughs and big model/feature releases (OpenAI, Anthropic, Google, Meta, etc.)
+      - major product launches and updates with real "wow" (phones, chips, GPUs, OS, flagship apps)
+      - big-tech drama: acquisitions, layoffs, lawsuits, antitrust, leadership shake-ups, earnings shocks
+      - security: major breaches, hacks, zero-days, outages affecting millions
+      - surprising benchmarks, prices, funding rounds, first-of-its-kind tech, or a jaw-dropping fact/number
+      - a story covered by several outlets at once is a strong virality signal
+   b) FRESHNESS: strongly prefer what just broke. Look at the published time — favor stories from the last few hours, and between two comparably interesting stories ALWAYS take the newer one. A story already a day old needs to be clearly more engaging to beat a brand-new one.
+   Pick the single most share-worthy, most recent stories available — never settle for a dull or stale item just to fill the quota. Skip sponsored posts, deals/coupon roundups, "best X" listicles, opinion/how-to teasers, minor point-releases and routine trivia. Fewer than {max_posts} — or zero — is fine if nothing is genuinely share-worthy.
+4. For each selected story, build the cluster around its MOST ENGAGING ANGLE: if several related items are bundled (e.g. many iOS 27 features), lead with the single most viral one (the surprising Siri behaviour), not the dullest (a recovery-mode tweak). Give each story a short English topic key for future dedup.
 
 RECENTLY POSTED TOPICS (do not repeat):
 {history}

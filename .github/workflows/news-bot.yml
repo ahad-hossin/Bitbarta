@@ -3,7 +3,12 @@ name: News bot
 on:
   schedule:
     - cron: "5 * * * *"       # hourly at :05 — near the top of each hour (12:05am, 1:05am, ... BDT) while dodging the congested :00 slot GitHub tends to drop
-  workflow_dispatch: {}       # manual run button
+  workflow_dispatch:          # manual run button
+    inputs:
+      max_posts:
+        description: "Posts to make this run (blank = default)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -36,7 +41,7 @@ jobs:
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           BRAND_NAME: ${{ vars.BRAND_NAME || 'BITBARTA' }}
-          MAX_POSTS_PER_RUN: ${{ vars.MAX_POSTS_PER_RUN || '2' }}
+          MAX_POSTS_PER_RUN: ${{ github.event.inputs.max_posts || vars.MAX_POSTS_PER_RUN || '2' }}
         run: python -m src.main generate
 
       - name: Commit state to main, push images to the orphan branch

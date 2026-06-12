@@ -124,9 +124,12 @@ def generate() -> int:
             print(f"  [warn] compose failed for '{story['topic']}': {e}")
             continue
 
-        # deterministic dedup backstop — Gemini occasionally re-selects an
-        # already-posted story with different wording
-        if state.is_duplicate(post["headline"], post["topic"], history):
+        # deterministic dedup backstop — checks BOTH past posts (history) and the
+        # posts already accepted earlier in THIS run, since the model sometimes
+        # returns the same story as two separate clusters in one run
+        run_seen = history + [{"headline": q["headline"], "topic": q["topic"]} for q in posts]
+        if state.is_duplicate(post["headline"], post["topic"], run_seen):
+            print(f"  [dedup] skipping duplicate of an earlier story: {post['headline'][:60]}")
             continue
 
         # content safety verdicts (came back in the same compose call)

@@ -8,6 +8,7 @@ write the post — headline with a [[highlighted]] key phrase, summary, the
 details-slide paragraphs, caption and tweet, all in English."""
 import json
 import time
+from datetime import datetime, timezone
 
 import requests
 
@@ -53,14 +54,19 @@ Below are fresh candidate stories from major global tech outlets, plus topics we
       - security: major breaches, hacks, zero-days, outages affecting millions
       - surprising benchmarks, prices, funding rounds, first-of-its-kind tech, or a jaw-dropping fact/number
       - a story covered by several outlets at once is a strong virality signal
-   b) FRESHNESS: strongly prefer what just broke. Look at the published time — favor stories from the last few hours, and between two comparably interesting stories ALWAYS take the newer one. A story already a day old needs to be clearly more engaging to beat a brand-new one.
-   Pick the single most share-worthy, most recent stories available — never settle for a dull or stale item just to fill the quota. Skip sponsored posts, deals/coupon roundups, "best X" listicles, opinion/how-to teasers, minor point-releases and routine trivia. Fewer than {max_posts} — or zero — is fine if nothing is genuinely share-worthy.
+   b) FRESHNESS (strict): each candidate shows how many hours ago it broke. Rank strictly by age:
+      - under 2h  -> BEST: strongly prefer these
+      - 2-5h      -> good: fine to post
+      - 5-12h     -> weak: only pick if it's a genuinely major story AND nothing fresher is worth posting
+      - over 12h  -> NEVER post (too stale), skip entirely
+   Between two comparably engaging stories, ALWAYS take the newer one. Freshness outranks a slightly-more-interesting-but-older story.
+   Pick the most share-worthy, freshest stories available — never settle for a dull or stale item just to fill the quota. Skip sponsored posts, deals/coupon roundups, "best X" listicles, opinion/how-to teasers, minor point-releases and routine trivia. Fewer than {max_posts} — or zero — is fine if nothing fresh is genuinely share-worthy.
 4. For each selected story, build the cluster around its MOST ENGAGING ANGLE: if several related items are bundled (e.g. many iOS 27 features), lead with the single most viral one (the surprising Siri behaviour), not the dullest (a recovery-mode tweak). Give each story a short English topic key for future dedup.
 
 RECENTLY POSTED TOPICS (do not repeat):
 {history}
 
-CANDIDATES (index | source | lang | published | category | title | snippet):
+CANDIDATES (index | source | age | category | title | snippet):
 {candidates}
 """
 
@@ -255,8 +261,17 @@ def select_stories(candidates: list, history: list) -> list:
     history_lines = "\n".join(
         f"- {e['topic']} ({e.get('headline', '')})" for e in recent
     ) or "(nothing posted yet)"
+    now = datetime.now(timezone.utc)
+
+    def _age_h(pub: str) -> float:
+        try:
+            dt = datetime.strptime(pub, "%Y-%m-%dT%H:%M:%SZ").replace(tzinfo=timezone.utc)
+            return (now - dt).total_seconds() / 3600
+        except Exception:
+            return 99.0
+
     cand_lines = "\n".join(
-        f"{i} | {c['source']} | {c['lang']} | {c['published']} | {c.get('category','')} | {c['title']} | {c['description'][:140]}"
+        f"{i} | {c['source']} | {_age_h(c['published']):.1f}h ago | {c.get('category','')} | {c['title']} | {c['description'][:140]}"
         for i, c in enumerate(candidates)
     )
     prompt = _SELECT_PROMPT.format(

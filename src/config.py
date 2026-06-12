@@ -20,8 +20,9 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 # --- Groq (fallback when every Gemini key/model is unavailable) ---
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
-# strong text model for the select phase; multimodal model when an image rides along
-GROQ_TEXT_MODEL = os.environ.get("GROQ_TEXT_MODEL", "llama-3.3-70b-versatile")
+# llama-4-scout handles big prompts (high TPM limit) and is multimodal, so it
+# serves both the large select prompt and the image-aware compose call
+GROQ_TEXT_MODEL = os.environ.get("GROQ_TEXT_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
 GROQ_VISION_MODEL = os.environ.get("GROQ_VISION_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
 # tried in order when the primary model keeps returning 429/5xx
 GEMINI_FALLBACK_MODELS = [

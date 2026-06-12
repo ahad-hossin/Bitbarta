@@ -281,7 +281,7 @@ def select_stories(candidates: list, history: list) -> list:
             return 99.0
 
     cand_lines = "\n".join(
-        f"{i} | {c['source']} | {_age_h(c['published']):.1f}h ago | {c.get('category','')} | {c['title']} | {c['description'][:140]}"
+        f"{i} | {c['source']} | {_age_h(c['published']):.1f}h ago | {c.get('category','')} | {c['title']} | {c['description'][:110]}"
         for i, c in enumerate(candidates)
     )
     prompt = _SELECT_PROMPT.format(

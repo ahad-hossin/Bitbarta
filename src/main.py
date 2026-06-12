@@ -85,7 +85,7 @@ def generate() -> int:
 
     print("== Phase 1: Gemini selects and dedupes stories ==")
     try:
-        stories = brain.select_stories(feeds.interleave_cap(fresh, 150), history)
+        stories = brain.select_stories(feeds.interleave_cap(fresh, 90), history)
     except Exception as e:
         # a Gemini outage shouldn't fail the whole run — skip this hour
         _summary(["## News bot", f"Skipped this hour: Gemini unavailable ({e})"])

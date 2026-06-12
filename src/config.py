@@ -20,8 +20,9 @@ GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 # --- Groq (fallback when every Gemini key/model is unavailable) ---
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
-# a multimodal + JSON-capable model so the compose call can still safety-check images
-GROQ_MODEL = os.environ.get("GROQ_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
+# strong text model for the select phase; multimodal model when an image rides along
+GROQ_TEXT_MODEL = os.environ.get("GROQ_TEXT_MODEL", "llama-3.3-70b-versatile")
+GROQ_VISION_MODEL = os.environ.get("GROQ_VISION_MODEL", "meta-llama/llama-4-scout-17b-16e-instruct")
 # tried in order when the primary model keeps returning 429/5xx
 GEMINI_FALLBACK_MODELS = [
     m.strip() for m in os.environ.get(

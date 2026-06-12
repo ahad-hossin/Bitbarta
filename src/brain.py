@@ -160,7 +160,6 @@ def _call_gemini(parts: list, schema: dict) -> dict:
                     json=body,
                     timeout=120,
                 )
-                budget.spend(pair)
                 if resp.status_code == 429:
                     # could be the per-minute limit, not the daily one: cool
                     # off and retry once before benching this key+model pair
@@ -184,6 +183,7 @@ def _call_gemini(parts: list, schema: dict) -> dict:
                 if resp.status_code != 200:
                     last_err = f"HTTP {resp.status_code} on {model} (key {ki + 1})"
                     break
+                budget.spend(pair)  # only count calls that actually succeeded
                 data = resp.json()
                 text = data["candidates"][0]["content"]["parts"][0]["text"]
                 return json.loads(text)
@@ -195,14 +195,21 @@ _GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
 
 def _schema_hint(schema: dict) -> str:
     """Terse spec of the wanted JSON, since Groq's json_object mode enforces
-    valid JSON but not a strict schema the way Gemini's responseSchema does."""
+    valid JSON but not a strict schema the way Gemini's responseSchema does.
+    Describes nested array-of-object item shapes so the model knows the layout."""
     lines = []
     for k, v in schema.get("properties", {}).items():
         desc = v.get("description", "")
         if v.get("enum"):
             desc += " (one of: " + ", ".join(v["enum"]) + ")"
         if v.get("type") == "array":
-            desc = "array — " + desc
+            items = v.get("items", {})
+            if items.get("type") == "object":
+                sub = ", ".join(items.get("properties", {}).keys())
+                desc = f"array of objects, each with keys {{{sub}}}. " + desc
+            else:
+                itype = items.get("type", "string")
+                desc = f"array of {itype}s. " + desc
         lines.append(f'  "{k}": {desc}')
     return "Respond with ONLY a single valid JSON object (no markdown, no prose) with these keys:\n" + "\n".join(lines)
 
@@ -214,13 +221,16 @@ def _call_groq(parts: list, schema: dict) -> dict:
         raise RuntimeError("GROQ_API_KEY not set")
     text = "\n".join(p["text"] for p in parts if "text" in p)
     content = [{"type": "text", "text": text + "\n\n" + _schema_hint(schema)}]
+    has_image = False
     for p in parts:
         if "inline_data" in p:
+            has_image = True
             d = p["inline_data"]
             content.append({"type": "image_url",
                             "image_url": {"url": f"data:{d['mime_type']};base64,{d['data']}"}})
+    model = config.GROQ_VISION_MODEL if has_image else config.GROQ_TEXT_MODEL
     body = {
-        "model": config.GROQ_MODEL,
+        "model": model,
         "messages": [{"role": "user", "content": content}],
         "temperature": 0.4,
         "max_tokens": 4000,
@@ -247,7 +257,7 @@ def _call_llm(parts: list, schema: dict) -> dict:
         return _call_gemini(parts, schema)
     except Exception as e:
         if config.GROQ_API_KEY:
-            print(f"  [fallback] Gemini unavailable ({e}); using Groq ({config.GROQ_MODEL})")
+            print(f"  [fallback] Gemini unavailable ({e}); using Groq")
             return _call_groq(parts, schema)
         raise
 
@@ -283,7 +293,14 @@ def select_stories(candidates: list, history: list) -> list:
     result = _call_llm([{"text": prompt}], _SELECT_SCHEMA)
     stories = []
     for s in result.get("stories", [])[: config.MAX_POSTS_PER_RUN]:
-        ids = [i for i in s.get("candidate_ids", []) if 0 <= i < len(candidates)]
+        ids = []
+        for i in s.get("candidate_ids", []):
+            try:
+                i = int(i)  # Groq sometimes returns ids as strings
+            except (ValueError, TypeError):
+                continue
+            if 0 <= i < len(candidates):
+                ids.append(i)
         if not ids:
             continue
         stories.append({"cluster": [candidates[i] for i in ids], "topic": s.get("topic", "")})

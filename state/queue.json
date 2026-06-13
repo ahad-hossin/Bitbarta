@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "shopify scripts silently fail after june 30 deadline",
+  "headline_marked": "[[Shopify Scripts stop executing June 30, 2026]] leading to silent checkout failures and full price charges",
+  "headline": "Shopify Scripts stop executing June 30, 2026 leading to silent checkout failures and full price charges",
+  "summary": "On June 30, 2026, all Shopify Scripts will cease to execute, a final deadline after two postponements. This change will not trigger errors but will silently complete checkouts at full price, potentially impacting revenue.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "On June 30, 2026, all Shopify Scripts will stop executing, a firm deadline after two previous postponements. Editing and publishing new Scripts was already disabled on April 15, 2026, making migration to Shopify Functions urgent.",
+   "Unlike other system retirements that result in loud, error-driven failures, a Shopify Script ceasing to run produces no error. The checkout process simply completes as if the Script's logic never existed.",
+   "Shopify Scripts are Ruby scripts that modify checkout behavior, such as applying discounts, changing shipping rates, or customizing payment options. Without them, these modifications will silently disappear.",
+   "This silent failure means businesses won't see errors in dashboards; instead, the impact will appear weeks later in margin reports, customer support tickets, or chargebacks due to incorrect pricing.",
+   "Migrating to Shopify Functions, the official WebAssembly replacement, requires more than just deploying the function. A discount Function, for example, only executes when an active discount node is explicitly attached and enabled in the Shopify Admin.",
+   "Forgetting to create or activate the necessary discount node results in a 'half-migration' failure mode. The Function exists, but it's never invoked, leading to full-price checkouts without any error indication.",
+   "Scripts and Functions also handle cart data differently. Scripts received the entire cart, while Functions only get data explicitly requested in their GraphQL input query. Any unrequested field will be null.",
+   "This difference can lead to silent logic errors: a Function might correctly implement a discount condition, but if the required data (e.g., customer tags) isn't requested in the input query, it will be null and the condition will fail silently, resulting in full price.",
+   "To avoid these hidden failures, developers must meticulously audit every field a Script's logic reads and ensure each is explicitly included in the corresponding Function's input query. The absence of data, not an error, is the critical risk."
+  ],
+  "caption": "Shopify Scripts will silently stop executing on June 30, 2026. This means checkouts will complete at full price, with no error messages, potentially costing businesses revenue.\n\nOn June 30, 2026, all Shopify Scripts will stop executing, a firm deadline after two previous postponements. Editing and publishing new Scripts was already disabled on April 15, 2026, making migration to Shopify Functions urgent.\n\nUnlike other system retirements that result in loud, error-driven failures, a Shopify Script ceasing to run produces no error. The checkout process simply completes as if the Script's logic never existed.\n\nShopify Scripts are Ruby scripts that modify checkout behavior, such as applying discounts, changing shipping rates, or customizing payment options. Without them, these modifications will silently disappear.\n\nThis silent failure means businesses won't see errors in dashboards; instead, the impact will appear weeks later in margin reports, customer support tickets, or chargebacks due to incorrect pricing.\n\nMigrating to Shopify Functions, the official WebAssembly replacement, requires more than just deploying the function. A discount Function, for example, only executes when an active discount node is explicitly attached and enabled in the Shopify Admin.\n\nForgetting to create or activate the necessary discount node results in a 'half-migration' failure mode. The Function exists, but it's never invoked, leading to full-price checkouts without any error indication.\n\nScripts and Functions also handle cart data differently. Scripts received the entire cart, while Functions only get data explicitly requested in their GraphQL input query. Any unrequested field will be null.\n\nThis difference can lead to silent logic errors: a Function might correctly implement a discount condition, but if the required data (e.g., customer tags) isn't requested in the input query, it will be null and the condition will fail silently, resulting in full price.\n\n#Shopify #Developer #Ecommerce #WebDev #SoftwareUpdate #TechNews\n\nSource: DEV",
+  "tweet": "Shopify Scripts will silently stop executing on June 30, 2026. Checkouts will complete at full price with no errors, potentially impacting revenue. Developers must migrate to Shopify Functions carefully to avoid hidden losses. #Shopify #Developer #Ecommerce",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/flarecanary/shopify-scripts-stop-executing-june-30-and-the-failure-is-silent-checkout-completes-at-full-pmb",
+  "image": "",
+  "orig_title": "Shopify Scripts stop executing June 30 — and the failure is silent: checkout completes at full price, no error",
+  "cluster_urls": [
+   "https://dev.to/flarecanary/shopify-scripts-stop-executing-june-30-and-the-failure-is-silent-checkout-completes-at-full-pmb"
+  ],
+  "cluster_titles": [
+   "Shopify Scripts stop executing June 30 — and the failure is silent: checkout completes at full price, no error"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260613-1107-0-shopify-scripts-stop-executing-june-30-2026-.png",
+   "20260613-1107-0-shopify-scripts-stop-executing-june-30-2026--d1.png",
+   "20260613-1107-0-shopify-scripts-stop-executing-june-30-2026--d2.png",
+   "20260613-1107-0-shopify-scripts-stop-executing-june-30-2026--d3.png"
+  ]
+ }
+]

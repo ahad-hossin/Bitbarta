@@ -1,1 +1,76 @@
-[]
+[
+ {
+  "topic": "Meta employees revolt against AI hackathon",
+  "headline_marked": "Meta employees [[express widespread frustration]] over companywide AI hackathon after recent layoffs",
+  "headline": "Meta employees express widespread frustration over companywide AI hackathon after recent layoffs",
+  "summary": "Meta CEO Mark Zuckerberg's call for a companywide AI hackathon sparked disbelief among employees, who cited increased workloads post-layoffs and low morale as reasons they couldn't participate.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Meta CEO Mark Zuckerberg's announcement of a \"large\" companywide AI hackathon in July quickly met with frustration and disbelief from employees. Many cited increased responsibilities following recent mass layoffs, leaving them with little time for such activities.",
+   "Workers expressed feeling discouraged due to low morale and declining trust in management. Some employees stated they were \"literally preoccupied with keeping the lights on for my team\" and had \"no incentive to participate.\"",
+   "The hackathon, scheduled for July 14-16 and focused \"exclusively on AI Innovation,\" was framed by Zuckerberg as a way to build camaraderie. However, a VP's post detailing the event drew swift pushback, including angry messages and sarcastic memes.",
+   "One employee's comment, \"I’m not sure that this company supports a hackathon culture anymore,\" garnered over 200 reactions. Concerns were raised that hackathon efforts would not count toward performance evaluations, further fueling frustration about diverting from regular projects.",
+   "This marks the first companywide hackathon since 8,000 people were laid off last month, a significant change from Meta's long history of internal hackathons. Employees feel they are being asked to \"cover more work with less support.\"",
+   "Despite management's encouragement, employees noted that \"every org I know has super aggressive goals, with efficiency gains expected and significantly less staffing.\" This leaves \"less time for focusing on other axis.\"",
+   "The hackathon is one of several initiatives Zuckerberg introduced to reenergize the workforce and address internal criticism. Other changes include increased budgets for team offsites and the elimination of hot-desking in some offices."
+  ],
+  "caption": "Meta employees are pushing back against CEO Mark Zuckerberg's companywide AI hackathon. Many cite increased workloads after recent layoffs and low morale as reasons they cannot participate.\n\nMeta CEO Mark Zuckerberg's announcement of a \"large\" companywide AI hackathon in July quickly met with frustration and disbelief from employees. Many cited increased responsibilities following recent mass layoffs, leaving them with little time for such activities.\n\nWorkers expressed feeling discouraged due to low morale and declining trust in management. Some employees stated they were \"literally preoccupied with keeping the lights on for my team\" and had \"no incentive to participate.\"\n\nThe hackathon, scheduled for July 14-16 and focused \"exclusively on AI Innovation,\" was framed by Zuckerberg as a way to build camaraderie. However, a VP's post detailing the event drew swift pushback, including angry messages and sarcastic memes.\n\nOne employee's comment, \"I’m not sure that this company supports a hackathon culture anymore,\" garnered over 200 reactions. Concerns were raised that hackathon efforts would not count toward performance evaluations, further fueling frustration about diverting from regular projects.\n\nThis marks the first companywide hackathon since 8,000 people were laid off last month, a significant change from Meta's long history of internal hackathons. Employees feel they are being asked to \"cover more work with less support.\"\n\nDespite management's encouragement, employees noted that \"every org I know has super aggressive goals, with efficiency gains expected and significantly less staffing.\" This leaves \"less time for focusing on other axis.\"\n\nThe hackathon is one of several initiatives Zuckerberg introduced to reenergize the workforce and address internal criticism. Other changes include increased budgets for team offsites and the elimination of hot-desking in some offices.\n\n#Meta #AI #TechNews #BigTech #CorporateCulture #EmployeeRelations\n\nSource: Wired",
+  "tweet": "Meta employees are reportedly frustrated with CEO Mark Zuckerberg's new companywide AI hackathon. Many feel they lack time due to increased workloads post-layoffs and low morale. #Meta #AI #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "Wired",
+  "url": "https://www.wired.com/story/meta-employees-absolutely-hate-mark-zuckerbergs-hackathon-idea/",
+  "image": "https://media.wired.com/photos/6a29a9c94fc22a32725fb4b6/master/pass/Meta-Employee-Interrupts-AI-Business-AP-26085781053500.jpg",
+  "orig_title": "Meta Employees Absolutely Hate Mark Zuckerberg’s Plan for a Companywide AI Hackathon",
+  "cluster_urls": [
+   "https://www.wired.com/story/meta-employees-absolutely-hate-mark-zuckerbergs-hackathon-idea/"
+  ],
+  "cluster_titles": [
+   "Meta Employees Absolutely Hate Mark Zuckerberg’s Plan for a Companywide AI Hackathon"
+  ],
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260613-0906-0-meta-employees-express-widespread-frustratio.png",
+   "20260613-0906-0-meta-employees-express-widespread-frustratio-d1.png",
+   "20260613-0906-0-meta-employees-express-widespread-frustratio-d2.png",
+   "20260613-0906-0-meta-employees-express-widespread-frustratio-d3.png"
+  ]
+ },
+ {
+  "topic": "Developer builds local LLM rig, still pays OpenAI",
+  "headline_marked": "[[Local LLM rig builder returns to OpenAI]] for batch processing after cost analysis",
+  "headline": "Local LLM rig builder returns to OpenAI for batch processing after cost analysis",
+  "summary": "A developer's local LLM setup couldn't handle batch processing for thousands of single-document extractions efficiently, leading to a return to OpenAI's API for that specific workflow. The decision was driven by a critical \"no cross-document attention\" rule.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A developer who built a local LLM rig to avoid API costs has decided to move a critical batch processing pipeline back to OpenAI. This shift affects 2asy.ai's filing pipeline, which requires thousands of single-document extractions per cycle.",
+   "The primary reason for the switch was a strict \"no cross-document attention\" rule, meaning each filing needed its own prompt window without string concatenation. The local rig proved less efficient for this specific requirement compared to OpenAI Batch.",
+   "Despite this change, the local LLM rig will not be decommissioned entirely. It will continue to serve other functions, including live serving, acting as an ER API LLM gate, handling multimodal tasks, and supporting ablations.",
+   "This case highlights the complex cost-benefit analysis developers face when deciding between on-premise AI infrastructure and cloud-based API services for different workloads."
+  ],
+  "caption": "A developer built a local LLM rig to cut API costs but ultimately returned to OpenAI for a crucial batch processing pipeline. The decision highlights the nuanced challenges of on-prem vs. cloud AI.\n\nA developer who built a local LLM rig to avoid API costs has decided to move a critical batch processing pipeline back to OpenAI. This shift affects 2asy.ai's filing pipeline, which requires thousands of single-document extractions per cycle.\n\nThe primary reason for the switch was a strict \"no cross-document attention\" rule, meaning each filing needed its own prompt window without string concatenation. The local rig proved less efficient for this specific requirement compared to OpenAI Batch.\n\nDespite this change, the local LLM rig will not be decommissioned entirely. It will continue to serve other functions, including live serving, acting as an ER API LLM gate, handling multimodal tasks, and supporting ablations.\n\nThis case highlights the complex cost-benefit analysis developers face when deciding between on-premise AI infrastructure and cloud-based API services for different workloads.\n\n#AI #LLM #OpenAI #CloudComputing #Tech #Developer\n\nSource: DEV",
+  "tweet": "A developer built a local LLM rig to cut API costs but ultimately returned to OpenAI for a crucial batch processing pipeline. The decision highlights the nuanced challenges of on-prem vs. cloud AI, especially for specific workloads like single-document extractions. #AI #LLM ",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "DEV",
+  "url": "https://dev.to/hannune/i-built-a-local-llm-rig-to-escape-api-bills-then-i-paid-openai-again-4bi7",
+  "image": "",
+  "orig_title": "I Built a Local LLM Rig to Escape API Bills. Then I Paid OpenAI Again.",
+  "cluster_urls": [
+   "https://dev.to/hannune/i-built-a-local-llm-rig-to-escape-api-bills-then-i-paid-openai-again-4bi7"
+  ],
+  "cluster_titles": [
+   "I Built a Local LLM Rig to Escape API Bills. Then I Paid OpenAI Again."
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260613-0906-1-local-llm-rig-builder-returns-to-openai-for-.png",
+   "20260613-0906-1-local-llm-rig-builder-returns-to-openai-for--d1.png",
+   "20260613-0906-1-local-llm-rig-builder-returns-to-openai-for--d2.png"
+  ]
+ }
+]

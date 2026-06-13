@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "anthropic models fable 5 mythos 5 blocked by us government order",
+  "headline_marked": "[[OpenAI faces investigation]] by state attorneys general, subpoena issued",
+  "headline": "OpenAI faces investigation by state attorneys general, subpoena issued",
+  "summary": "New York's attorney general served OpenAI with a subpoena seeking documents on user data, advertising, and safety practices.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A coalition of state attorneys general has reportedly launched an investigation into OpenAI, the company behind ChatGPT. The probe reportedly includes a subpoena issued by New York's attorney general, seeking extensive documentation.",
+   "The subpoena reportedly covers a wide range of topics, including OpenAI's advertising practices, user engagement and retention strategies, model sycophancy, handling of consumer and health data, and its treatment of minors and seniors.",
+   "OpenAI has stated that it is cooperating with the investigation. A company spokesperson emphasized their commitment to safely and responsibly bringing AI benefits to people, and that they take the concerns raised by state attorneys general seriously.",
+   "The investigation comes amid growing scrutiny of AI companies regarding data privacy, safety, and ethical considerations. OpenAI has recently implemented enhanced safeguards for minors and individuals experiencing difficult situations.",
+   "This news follows OpenAI's recent victory in a high-profile trial against co-founder Elon Musk, who had accused the company of violating its founding agreement. The company also recently filed confidentially to go public."
+  ],
+  "caption": "OpenAI is under investigation by state attorneys general, with a subpoena demanding documents on data handling and safety practices.\n\nA coalition of state attorneys general has reportedly launched an investigation into OpenAI, the company behind ChatGPT. The probe reportedly includes a subpoena issued by New York's attorney general, seeking extensive documentation.\n\nThe subpoena reportedly covers a wide range of topics, including OpenAI's advertising practices, user engagement and retention strategies, model sycophancy, handling of consumer and health data, and its treatment of minors and seniors.\n\nOpenAI has stated that it is cooperating with the investigation. A company spokesperson emphasized their commitment to safely and responsibly bringing AI benefits to people, and that they take the concerns raised by state attorneys general seriously.\n\nThe investigation comes amid growing scrutiny of AI companies regarding data privacy, safety, and ethical considerations. OpenAI has recently implemented enhanced safeguards for minors and individuals experiencing difficult situations.\n\nThis news follows OpenAI's recent victory in a high-profile trial against co-founder Elon Musk, who had accused the company of violating its founding agreement. The company also recently filed confidentially to go public.\n\n#OpenAI #AI #ChatGPT #Regulation #DataPrivacy\n\nSource: TechCrunch, Tom's Hardware",
+  "tweet": "OpenAI is reportedly facing an investigation from state attorneys general, with New York's AG issuing a subpoena for documents on data, safety, and more. #OpenAI #AI #Regulation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "TechCrunch, Tom's Hardware",
+  "url": "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
+  "image": "",
+  "orig_title": "OpenAI faces investigation from state attorneys general",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-attorneys-general/",
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/us-export-control-order-forces-anthropic-to-disable-claude-fable-5-and-mythos-5-worldwide"
+  ],
+  "cluster_titles": [
+   "OpenAI faces investigation from state attorneys general",
+   "U.S. gov't orders Anthropic to disable its newest AI models worldwide due to security threats — ban on Claude Fable 5 and Mythos 5 bars access by any foreign national, even its own employees"
+  ],
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260614-0005-0-openai-faces-investigation-by-state-attorney.png",
+   "20260614-0005-0-openai-faces-investigation-by-state-attorney-d1.png",
+   "20260614-0005-0-openai-faces-investigation-by-state-attorney-d2.png"
+  ]
+ },
+ {
+  "topic": "silent pandas pipeline failures and mac word processor",
+  "headline_marked": "[[dframe-trace]] automates debugging of silent pandas pipeline failures",
+  "headline": "dframe-trace automates debugging of silent pandas pipeline failures",
+  "summary": "A new open-source tool, dframe-trace, helps developers pinpoint why dataframes lose rows or gain nulls without raising errors, saving hours of manual debugging.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Silent bugs in data pipelines, where data silently changes without errors, are the most dangerous. These issues can lead to incorrect dashboards, skewed models, and flawed reports that go unnoticed for extended periods.",
+   "Common silent failures include rows disappearing due to inner merges or aggressive filters, nulls appearing from incomplete joins, and data type drifts that prevent future matches.",
+   "Traditionally, debugging these issues involves tedious print statements and manual inspection of vast amounts of data, a process that is time-consuming and error-prone.",
+   "dframe-trace offers an automated solution by recording the effects of DataFrame operations. Developers can run their code normally and then interrogate the recorded trace to understand exactly what happened at each step.",
+   "The tool integrates seamlessly by patching DataFrame methods or using a decorator, allowing developers to ask questions about data shape changes after execution, acting more like a profiler for data transformations.",
+   "Unlike schema validation tools like Great Expectations or Pandera, dframe-trace doesn't require pre-defined rules. It focuses on recording and enabling post-hoc analysis of data modifications.",
+   "Once a bug is identified, dframe-trace can be used to create build-failing assertions, ensuring that regressions are caught immediately in future pipeline runs.",
+   "The tool prioritizes performance and trust, with no row values being copied or stored. Its overhead is minimal, making it suitable for continuous use in development environments without performance concerns."
+  ],
+  "caption": "Tired of silent pandas bugs that ship wrong data? A new tool automates the debugging process.\n\nSilent bugs in data pipelines, where data silently changes without errors, are the most dangerous. These issues can lead to incorrect dashboards, skewed models, and flawed reports that go unnoticed for extended periods.\n\nCommon silent failures include rows disappearing due to inner merges or aggressive filters, nulls appearing from incomplete joins, and data type drifts that prevent future matches.\n\nTraditionally, debugging these issues involves tedious print statements and manual inspection of vast amounts of data, a process that is time-consuming and error-prone.\n\ndframe-trace offers an automated solution by recording the effects of DataFrame operations. Developers can run their code normally and then interrogate the recorded trace to understand exactly what happened at each step.\n\nThe tool integrates seamlessly by patching DataFrame methods or using a decorator, allowing developers to ask questions about data shape changes after execution, acting more like a profiler for data transformations.\n\nUnlike schema validation tools like Great Expectations or Pandera, dframe-trace doesn't require pre-defined rules. It focuses on recording and enabling post-hoc analysis of data modifications.\n\nOnce a bug is identified, dframe-trace can be used to create build-failing assertions, ensuring that regressions are caught immediately in future pipeline runs.\n\nThe tool prioritizes performance and trust, with no row values being copied or stored. Its overhead is minimal, making it suitable for continuous use in development environments without performance concerns.\n\n#TechNews #Software #Tech #BitBarta\n\nSource: DEV, Hacker News",
+  "tweet": "Silent pandas bugs can ship wrong data for weeks. [[dframe-trace]] automates debugging by recording pipeline changes, letting you ask questions after execution. #python #pandas #dataengineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV, Hacker News",
+  "url": "https://dev.to/vimal_nakrani/why-did-my-dataframe-lose-rows-debugging-silent-pandas-pipeline-failures-4i0",
+  "image": "",
+  "orig_title": "Why did my DataFrame lose rows? Debugging silent pandas pipeline failures",
+  "cluster_urls": [
+   "https://dev.to/vimal_nakrani/why-did-my-dataframe-lose-rows-debugging-silent-pandas-pipeline-failures-4i0",
+   "https://www.versowriter.app"
+  ],
+  "cluster_titles": [
+   "Why did my DataFrame lose rows? Debugging silent pandas pipeline failures",
+   "Show HN: Verso – A $14.99 Mac word processor with no subscription"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260614-0005-1-dframe-trace-automates-debugging-of-silent-p.png",
+   "20260614-0005-1-dframe-trace-automates-debugging-of-silent-p-d1.png",
+   "20260614-0005-1-dframe-trace-automates-debugging-of-silent-p-d2.png",
+   "20260614-0005-1-dframe-trace-automates-debugging-of-silent-p-d3.png"
+  ]
+ }
+]

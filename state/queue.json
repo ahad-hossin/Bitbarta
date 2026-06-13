@@ -1,1 +1,72 @@
-[]
+[
+ {
+  "topic": "Valve imports 13 tons of VR headsets",
+  "headline_marked": "[[Valve imported 13 tons of VR headsets]] in a single day, likely for the Steam Frame",
+  "headline": "Valve imported 13 tons of VR headsets in a single day, likely for the Steam Frame",
+  "summary": "Valve's distribution partner offloaded nearly 32 metric tons of \"Virtual Reality Devices\" in Los Angeles, suggesting the first mass production shipment of the upcoming Steam Frame headset.",
+  "category": "GAMING",
+  "template": "neon",
+  "details": [
+   "On June 10th, a German container ship docked in Los Angeles, offloading nearly 32 metric tons of \"Virtual Reality Devices\" for Valve. After subtracting container weight, this amounts to roughly 13 tons of actual product, likely the first mass production shipment of the Steam Frame headset.",
+   "This substantial import, noted by Valve watcher Brad Lynch, suggests fewer than 20,000 Steam Frame units, given each headset with controllers weighs about 654g. Valve has confirmed the Steam Frame will launch this summer.",
+   "In parallel, import records indicate Valve's stockpile of \"Game Consoles,\" likely the Steam Machine, has grown to an estimated 141 metric tons since April 23rd. This could represent fewer than 50,000 units, considering each console weighs 2.6kg.",
+   "Valve previously announced both the Steam Machine and Steam Frame will launch this summer. The company also indicated it had to re-evaluate pricing due to component costs, but anticipates quick sell-outs despite potential higher prices."
+  ],
+  "caption": "Valve just received a massive shipment: 13 tons of VR headsets arrived in Los Angeles in one day. This is believed to be the first mass production delivery for the Steam Frame.\n\nOn June 10th, a German container ship docked in Los Angeles, offloading nearly 32 metric tons of \"Virtual Reality Devices\" for Valve. After subtracting container weight, this amounts to roughly 13 tons of actual product, likely the first mass production shipment of the Steam Frame headset.\n\nThis substantial import, noted by Valve watcher Brad Lynch, suggests fewer than 20,000 Steam Frame units, given each headset with controllers weighs about 654g. Valve has confirmed the Steam Frame will launch this summer.\n\nIn parallel, import records indicate Valve's stockpile of \"Game Consoles,\" likely the Steam Machine, has grown to an estimated 141 metric tons since April 23rd. This could represent fewer than 50,000 units, considering each console weighs 2.6kg.\n\nValve previously announced both the Steam Machine and Steam Frame will launch this summer. The company also indicated it had to re-evaluate pricing due to component costs, but anticipates quick sell-outs despite potential higher prices.\n\n#Valve #SteamFrame #VR #Gaming #Tech #Hardware\n\nSource: The Verge",
+  "tweet": "Valve just imported 13 tons of VR headsets in one day, likely the first mass production shipment of the Steam Frame. This suggests fewer than 20,000 units. Steam Frame and Steam Machine are confirmed for a summer launch. #Valve #VR #Gaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "The Verge",
+  "url": "https://www.theverge.com/news/949517/valve-vr-headset-import-records-steam-frame-steam-machine-game-console",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/11/258049_Valve_2025_EverythingTimeStudio_0057.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Valve just imported 13 tons of VR headsets in one day",
+  "cluster_urls": [
+   "https://www.theverge.com/news/949517/valve-vr-headset-import-records-steam-frame-steam-machine-game-console"
+  ],
+  "cluster_titles": [
+   "Valve just imported 13 tons of VR headsets in one day"
+  ],
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260613-0806-0-valve-imported-13-tons-of-vr-headsets-in-a-s.png",
+   "20260613-0806-0-valve-imported-13-tons-of-vr-headsets-in-a-s-d1.png",
+   "20260613-0806-0-valve-imported-13-tons-of-vr-headsets-in-a-s-d2.png"
+  ]
+ },
+ {
+  "topic": "LLMs don't read, use weird trick instead",
+  "headline_marked": "[[Your LLM can't read]]. Here's the weird trick it uses instead",
+  "headline": "Your LLM can't read. Here's the weird trick it uses instead",
+  "summary": "Large Language Models never actually \"read\" your words. Instead, they convert text into numerical tokens using a process called Byte Pair Encoding, which dictates how they process and are billed for input.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A core fact about Large Language Models is that they never truly \"see\" your words; they only process numbers. When you input text, it's first chopped into chunks called tokens, and each chunk is converted into an integer ID. The LLM then functions as a complex system mapping these integers to other integers.",
+   "Tokens are frequent text chunks, not always whole words or single letters. This process, known as Byte Pair Encoding, starts by combining the most common neighboring character pairs to build a vocabulary of 50k–100k chunks. Common words become single tokens, while rarer words are broken into multiple pieces.",
+   "This tokenization has significant practical implications, especially for billing and context window limits. Users are billed in tokens, not characters or words, and exceeding context windows is also measured by token count. Understanding tokenization is crucial for managing costs and preventing unexpected errors in production.",
+   "Many confusing behaviors observed in LLMs can be traced back to their tokenization process. Once you understand how text is broken down into tokens, seemingly strange model responses often become logical. This fundamental understanding is key to effectively working with and troubleshooting LLMs."
+  ],
+  "caption": "Your LLM doesn't read words. It only sees numbers. This fundamental mechanism, called tokenization, is key to how all large language models operate.\n\nA core fact about Large Language Models is that they never truly \"see\" your words; they only process numbers. When you input text, it's first chopped into chunks called tokens, and each chunk is converted into an integer ID. The LLM then functions as a complex system mapping these integers to other integers.\n\nTokens are frequent text chunks, not always whole words or single letters. This process, known as Byte Pair Encoding, starts by combining the most common neighboring character pairs to build a vocabulary of 50k–100k chunks. Common words become single tokens, while rarer words are broken into multiple pieces.\n\nThis tokenization has significant practical implications, especially for billing and context window limits. Users are billed in tokens, not characters or words, and exceeding context windows is also measured by token count. Understanding tokenization is crucial for managing costs and preventing unexpected errors in production.\n\nMany confusing behaviors observed in LLMs can be traced back to their tokenization process. Once you understand how text is broken down into tokens, seemingly strange model responses often become logical. This fundamental understanding is key to effectively working with and troubleshooting LLMs.\n\n#AI #LLM #Tokenization #MachineLearning #NLP #Tech\n\nSource: DEV",
+  "tweet": "Your LLM doesn't read words, it sees numbers! Text is chopped into numerical tokens before processing. Understanding tokenization is key to managing costs & predicting LLM behavior. #AI #LLM #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "DEV",
+  "url": "https://dev.to/xplaination/your-llm-cant-read-heres-the-weird-trick-it-uses-instead-47bi",
+  "image": "",
+  "orig_title": "Your LLM can't read. Here's the weird trick it uses instead",
+  "cluster_urls": [
+   "https://dev.to/xplaination/your-llm-cant-read-heres-the-weird-trick-it-uses-instead-47bi"
+  ],
+  "cluster_titles": [
+   "Your LLM can't read. Here's the weird trick it uses instead"
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260613-0806-1-your-llm-can-t-read-here-s-the-weird-trick-i.png",
+   "20260613-0806-1-your-llm-can-t-read-here-s-the-weird-trick-i-d1.png",
+   "20260613-0806-1-your-llm-can-t-read-here-s-the-weird-trick-i-d2.png"
+  ]
+ }
+]

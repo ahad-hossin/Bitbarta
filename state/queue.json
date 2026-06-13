@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai costs spike firms turn to cheaper llms",
+  "headline_marked": "[[AI costs spike]] as subscriptions hit pricing wall, forcing firms to use cheaper models",
+  "headline": "AI costs spike as subscriptions hit pricing wall, forcing firms to use cheaper models",
+  "summary": "A $200 ChatGPT subscription could cost up to $14,000 in API pricing, revealing an unsustainable model for AI providers.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI firms face escalating costs for serving AI via subscription models, as token usage outpaces the decrease in cost per token. Research by SemiAnalysis shows that maximizing a $200/month ChatGPT Pro 20x subscription could incur up to $14,000 in API token spend.",
+   "Anthropic and OpenAI's top-tier subscriptions operate at extremely low gross margins, or even losses, at moderate utilization rates. OpenAI's ChatGPT Pro 20x plan, for instance, becomes unprofitable if usage exceeds 5.7% of its maximum API equivalent.",
+   "This unsustainable model is pushing companies to seek alternatives rather than cutting features or raising prices. While future cost reductions for existing models are predicted, frontier models will likely remain expensive and reserved for per-token API access.",
+   "Powerful agentic AI systems consume significantly more tokens, causing budgets to spiral for large firms. One unnamed company reportedly spent $500 million in a single month due to unchecked employee AI usage.",
+   "To mitigate these costs, some firms are adopting tools that dynamically switch between expensive frontier models and cheaper, more affordable options. This includes utilizing Chinese open-source models like DeepSeek, which can reduce costs by up to 95%.",
+   "Flo Crivello, founder of AI assistant startup Lindy, confirmed a shift to DeepSeek V4 for general tasks, reserving Anthropic models for advanced coding. This strategy has reportedly saved the company millions of dollars.",
+   "Other companies are building custom AI solutions using open-source models, trained on their in-house data. While initially complex, this approach promises long-term savings and potentially superior performance tailored to specific business needs.",
+   "The increasing availability of cost-effective models and AI agents that optimize operational expenses is intensifying pressure on major providers like OpenAI and Anthropic to lower their pricing."
+  ],
+  "caption": "A $200 AI subscription could actually cost you $14,000. AI firms are losing money on popular plans.\n\nAI firms face escalating costs for serving AI via subscription models, as token usage outpaces the decrease in cost per token. Research by SemiAnalysis shows that maximizing a $200/month ChatGPT Pro 20x subscription could incur up to $14,000 in API token spend.\n\nAnthropic and OpenAI's top-tier subscriptions operate at extremely low gross margins, or even losses, at moderate utilization rates. OpenAI's ChatGPT Pro 20x plan, for instance, becomes unprofitable if usage exceeds 5.7% of its maximum API equivalent.\n\nThis unsustainable model is pushing companies to seek alternatives rather than cutting features or raising prices. While future cost reductions for existing models are predicted, frontier models will likely remain expensive and reserved for per-token API access.\n\nPowerful agentic AI systems consume significantly more tokens, causing budgets to spiral for large firms. One unnamed company reportedly spent $500 million in a single month due to unchecked employee AI usage.\n\nTo mitigate these costs, some firms are adopting tools that dynamically switch between expensive frontier models and cheaper, more affordable options. This includes utilizing Chinese open-source models like DeepSeek, which can reduce costs by up to 95%.\n\nFlo Crivello, founder of AI assistant startup Lindy, confirmed a shift to DeepSeek V4 for general tasks, reserving Anthropic models for advanced coding. This strategy has reportedly saved the company millions of dollars.\n\nOther companies are building custom AI solutions using open-source models, trained on their in-house data. While initially complex, this approach promises long-term savings and potentially superior performance tailored to specific business needs.\n\nThe increasing availability of cost-effective models and AI agents that optimize operational expenses is intensifying pressure on major providers like OpenAI and Anthropic to lower their pricing.\n\n#AI #TechNews #OpenAI #Anthropic #DeepSeek #CostSaving\n\nSource: Tom's Hardware",
+  "tweet": "AI subscriptions are hitting a pricing wall! A $200 ChatGPT plan can cost $14,000 in API usage, forcing firms to switch to cheaper, open-source models like DeepSeek to save millions. #AI #TechCosts",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-costs-spike-as-subscriptions-hit-pricing-wall-firms-turn-towards-chinese-llms-open-source-models-to-extend-budget",
+  "image": "https://cdn.mos.cms.futurecdn.net/GmvyqCNV9mHBsmzZ2QcW2f-1280-80.png",
+  "orig_title": "AI costs spike as subscriptions hit pricing wall — firms turn towards Chinese LLMs, open-source models to extend budget",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-costs-spike-as-subscriptions-hit-pricing-wall-firms-turn-towards-chinese-llms-open-source-models-to-extend-budget"
+  ],
+  "cluster_titles": [
+   "AI costs spike as subscriptions hit pricing wall — firms turn towards Chinese LLMs, open-source models to extend budget"
+  ],
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260613-1808-0-ai-costs-spike-as-subscriptions-hit-pricing-.png",
+   "20260613-1808-0-ai-costs-spike-as-subscriptions-hit-pricing--d1.png",
+   "20260613-1808-0-ai-costs-spike-as-subscriptions-hit-pricing--d2.png",
+   "20260613-1808-0-ai-costs-spike-as-subscriptions-hit-pricing--d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent rag memory poisoning attack",
+  "headline_marked": "[[Memory poisoning in Agentic RAG]] captures 48% of future retrievals with just 10 records",
+  "headline": "Memory poisoning in Agentic RAG captures 48% of future retrievals with just 10 records",
+  "summary": "New research reveals 'memory poisoning' attacks can inject false experiences into Agentic RAG systems, influencing future behavior without detection. As of early 2026, no fully reliable defense exists.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Memory poisoning allows attackers to inject false experiences into Agentic RAG systems, making them learn from fabricated data. Experiments with MetaGPT's DataInterpreter and GPT-4o showed just 10 poisoned records captured approximately 48% of all future retrievals, persisting across sessions.",
+   "Unlike standard RAG, which retrieves from static knowledge bases, Agentic RAG systems dynamically grow their memory with every interaction. This continuous self-updating store of experiences is treated as ground truth by the agent, creating a dynamic attack surface.",
+   "Vulnerabilities arise because agents apply a semantic imitation heuristic, repeating past behaviors that seem relevant, and memory entries are not verified for provenance. The agent cannot distinguish between legitimate and planted memories, leading to self-reinforcing poisoning.",
+   "One attack, MemoryGraft (Dec 2025), works by embedding hidden code and fabricated experiences within benign-looking files like READMEs. When the agent processes the file, it executes the code and writes poisoned entries into its memory without needing special access or trigger phrases.",
+   "Another attack, MINJA (early 2025), requires only normal user interaction. Attackers craft specific queries during ordinary conversations, causing the agent to process, respond, and store the malicious interaction in its memory, making the poisoned entry part of its experience.",
+   "As of early 2026, researchers note there is no fully reliable way to stop memory poisoning. Even with the best available defenses, such as A-MemGuard, a 2.13% attack success rate can still remain."
+  ],
+  "caption": "AI systems are learning from fabricated experiences. New research shows 'memory poisoning' attacks can inject false memories into Agentic RAG models with high success.\n\nMemory poisoning allows attackers to inject false experiences into Agentic RAG systems, making them learn from fabricated data. Experiments with MetaGPT's DataInterpreter and GPT-4o showed just 10 poisoned records captured approximately 48% of all future retrievals, persisting across sessions.\n\nUnlike standard RAG, which retrieves from static knowledge bases, Agentic RAG systems dynamically grow their memory with every interaction. This continuous self-updating store of experiences is treated as ground truth by the agent, creating a dynamic attack surface.\n\nVulnerabilities arise because agents apply a semantic imitation heuristic, repeating past behaviors that seem relevant, and memory entries are not verified for provenance. The agent cannot distinguish between legitimate and planted memories, leading to self-reinforcing poisoning.\n\nOne attack, MemoryGraft (Dec 2025), works by embedding hidden code and fabricated experiences within benign-looking files like READMEs. When the agent processes the file, it executes the code and writes poisoned entries into its memory without needing special access or trigger phrases.\n\nAnother attack, MINJA (early 2025), requires only normal user interaction. Attackers craft specific queries during ordinary conversations, causing the agent to process, respond, and store the malicious interaction in its memory, making the poisoned entry part of its experience.\n\nAs of early 2026, researchers note there is no fully reliable way to stop memory poisoning. Even with the best available defenses, such as A-MemGuard, a 2.13% attack success rate can still remain.\n\n#AISecurity #MemoryPoisoning #RAG #LLMs #Cybersecurity #TechNews\n\nSource: DEV",
+  "tweet": "New research reveals 'memory poisoning' attacks can inject false memories into Agentic RAG systems, influencing future AI behavior. Attacks like MINJA achieve 95% success via normal conversation. A critical threat with no reliable defense yet. #AISecurity #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "DEV",
+  "url": "https://dev.to/soohan_abbasi/-memory-poisoning-in-agentic-rag-the-attack-nobody-is-defending-against-4f8i",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fi76sxbju3ny38laiztno.jpg",
+  "orig_title": "# Memory Poisoning in Agentic RAG: The Attack Nobody Is Defending Against",
+  "cluster_urls": [
+   "https://dev.to/soohan_abbasi/-memory-poisoning-in-agentic-rag-the-attack-nobody-is-defending-against-4f8i"
+  ],
+  "cluster_titles": [
+   "# Memory Poisoning in Agentic RAG: The Attack Nobody Is Defending Against"
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260613-1808-1-memory-poisoning-in-agentic-rag-captures-48-.png",
+   "20260613-1808-1-memory-poisoning-in-agentic-rag-captures-48--d1.png",
+   "20260613-1808-1-memory-poisoning-in-agentic-rag-captures-48--d2.png",
+   "20260613-1808-1-memory-poisoning-in-agentic-rag-captures-48--d3.png"
+  ]
+ }
+]

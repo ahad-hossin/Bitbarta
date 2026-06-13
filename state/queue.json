@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "Copilot audit trail implications",
+  "headline_marked": "[[Co-authored-by: Copilot]]\" is not an audit trail for AI code; here's what one looks like",
+  "headline": "Co-authored-by: Copilot\" is not an audit trail for AI code; here's what one looks like",
+  "summary": "Microsoft's default change to add \"Co-authored-by: Copilot\" to commits sparked backlash, revealing the inadequacy of simple labels for AI code provenance and security audits.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "In April 2026, VS Code 1.117 defaulted to silently adding \"Co-authored-by: Copilot\" to all commit messages, even when AI features were disabled or code was manually written. This change sparked significant developer backlash.",
+   "Microsoft quickly reverted the default in VS Code 1.119 and added a consent requirement, apologizing for the oversight. However, the incident highlighted a deeper issue beyond just attribution credit.",
+   "The core problem is that a \"Co-authored-by\" git trailer provides almost no useful information for governance or security audits. It only indicates Copilot's presence during some work, not which lines were AI-generated, what prompts were used, or any associated risk.",
+   "A true audit trail, like LineageLens, captures provenance at the insertion time, not commit time. Each AI code insertion generates a structured \"ProviderAgnosticProvenanceEvent\" record.",
+   "This record includes details like the model used, prompt body, raw model response, timing data, and a \"capture.capabilities\" array with 10 named assessments. These assessments explicitly state what is known or missing, making gaps auditable.",
+   "The crucial difference is that by commit time, much of this evidence is lost. LineageLens captures data at the moment text enters the buffer, ensuring prompt, model, and timing information is stored before it becomes irrecoverable.",
+   "While Microsoft's fix addressed consent for labeling, it didn't solve the underlying problem of recording what the AI actually did. Teams shipping AI-generated code still need robust provenance to answer critical questions for security and compliance."
+  ],
+  "caption": "Microsoft's Copilot recently defaulted to silently adding \"Co-authored-by: Copilot\" to all VS Code commits, sparking developer outrage. This exposed a critical flaw in how AI code is attributed.\n\nIn April 2026, VS Code 1.117 defaulted to silently adding \"Co-authored-by: Copilot\" to all commit messages, even when AI features were disabled or code was manually written. This change sparked significant developer backlash.\n\nMicrosoft quickly reverted the default in VS Code 1.119 and added a consent requirement, apologizing for the oversight. However, the incident highlighted a deeper issue beyond just attribution credit.\n\nThe core problem is that a \"Co-authored-by\" git trailer provides almost no useful information for governance or security audits. It only indicates Copilot's presence during some work, not which lines were AI-generated, what prompts were used, or any associated risk.\n\nA true audit trail, like LineageLens, captures provenance at the insertion time, not commit time. Each AI code insertion generates a structured \"ProviderAgnosticProvenanceEvent\" record.\n\nThis record includes details like the model used, prompt body, raw model response, timing data, and a \"capture.capabilities\" array with 10 named assessments. These assessments explicitly state what is known or missing, making gaps auditable.\n\nThe crucial difference is that by commit time, much of this evidence is lost. LineageLens captures data at the moment text enters the buffer, ensuring prompt, model, and timing information is stored before it becomes irrecoverable.\n\nWhile Microsoft's fix addressed consent for labeling, it didn't solve the underlying problem of recording what the AI actually did. Teams shipping AI-generated code still need robust provenance to answer critical questions for security and compliance.\n\n#SoftwareDevelopment #AI #GitHubCopilot #VSCode #CodeAudit #DeveloperTools\n\nSource: DEV",
+  "tweet": "Microsoft's Copilot silently added \"Co-authored-by\" to all VS Code commits by default, causing developer backlash. This incident highlights that simple labels aren't enough for AI code provenance. A true audit trail needs far more detail than a git trailer. #AI #DeveloperToo",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/pn_28428886923dfc665/co-authored-by-copilot-is-not-an-audit-trail-heres-what-one-actually-looks-like-65a",
+  "image": "",
+  "orig_title": "\"Co-authored-by: Copilot\" Is Not an Audit Trail — Here's What One Actually Looks Like",
+  "cluster_urls": [
+   "https://dev.to/pn_28428886923dfc665/co-authored-by-copilot-is-not-an-audit-trail-heres-what-one-actually-looks-like-65a"
+  ],
+  "cluster_titles": [
+   "\"Co-authored-by: Copilot\" Is Not an Audit Trail — Here's What One Actually Looks Like"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260613-1207-0-co-authored-by-copilot-is-not-an-audit-trail.png",
+   "20260613-1207-0-co-authored-by-copilot-is-not-an-audit-trail-d1.png",
+   "20260613-1207-0-co-authored-by-copilot-is-not-an-audit-trail-d2.png",
+   "20260613-1207-0-co-authored-by-copilot-is-not-an-audit-trail-d3.png"
+  ]
+ },
+ {
+  "topic": "local LLM setup hidden costs and failures",
+  "headline_marked": "[[Local LLM setups are costly for production]], despite free appearance and high GitHub stars",
+  "headline": "Local LLM setups are costly for production, despite free appearance and high GitHub stars",
+  "summary": "While local LLM tools like Ollama offer great value for experimentation, using them in production incurs significant hidden costs in hardware, maintenance, and opportunity cost, often outweighing perceived savings.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The local LLM paradox suggests that while these setups appear free and empowering, the math stops working when moving from experimentation to production deployment. Despite tools like Ollama garnering 169,477 GitHub stars, their real-world production costs are often underestimated.",
+   "Local LLM inference offers genuine value for developers needing to experiment without high API bills, process sensitive data locally, or understand model behavior in a controlled environment. This is particularly crucial for solo developers and small teams in cost-sensitive markets.",
+   "The model support in local runtimes is impressive, including models like MiniMax, DeepSeek, and Kimi, which haven't achieved widespread Western adoption. This capability is valuable for multilingual development and research into non-English language models, a topic often overlooked in English-language discourse.",
+   "However, the GitHub stars don't reveal the full picture: GPU memory is finite, model management is a full-time job, and a 'works on my machine' approach is not a viable production deployment strategy. These factors lead to significant hidden costs.",
+   "One developer spent three weeks debugging a broken model quantization after a library update for an automated code review pipeline. The issue had zero English documentation, highlighting the maintenance overhead and lack of support for local setups.",
+   "A GPU utilization reality check on an M2 Max with 32GB RAM shows a 7B parameter model requires 16-24GB of unified memory, while a 13B model pushes to 24-28GB. A 70B model is effectively unusable without a high-end workstation, making the 'local is free' assumption ignore a $3,000+ hardware investment.",
+   "Performance is another critical factor; a 7B model generating roughly 25 tokens per second is adequate for experimentation but unusable for production user-facing applications. Such applications typically demand 60+ tokens per second as a minimum acceptable threshold.",
+   "The true cost isn't just the hardware, but the opportunity cost of building infrastructure around constraints that cloud providers have already solved at scale. Committing to local inference means spending engineering resources on model quantization, dependency management, deployment, and monitoring.",
+   "While these are valuable skills, they are expensive to develop and do not compound, diverting engineering hours from product features, user research, or actual differentiation. This can significantly slow down product development cycles.",
+   "Local inference is the right call for specific contexts, such as learning, experimentation, or workflows with strict data privacy requirements. However, teams treating it as a production cost-saving measure rather than a research and development tool often face unexpected challenges and expenses."
+  ],
+  "caption": "Local LLM setups like Ollama boast 169,477 GitHub stars, appearing free and empowering. But for production, they hide significant costs in hardware, maintenance, and lost engineering time.\n\nThe local LLM paradox suggests that while these setups appear free and empowering, the math stops working when moving from experimentation to production deployment. Despite tools like Ollama garnering 169,477 GitHub stars, their real-world production costs are often underestimated.\n\nLocal LLM inference offers genuine value for developers needing to experiment without high API bills, process sensitive data locally, or understand model behavior in a controlled environment. This is particularly crucial for solo developers and small teams in cost-sensitive markets.\n\nThe model support in local runtimes is impressive, including models like MiniMax, DeepSeek, and Kimi, which haven't achieved widespread Western adoption. This capability is valuable for multilingual development and research into non-English language models, a topic often overlooked in English-language discourse.\n\nHowever, the GitHub stars don't reveal the full picture: GPU memory is finite, model management is a full-time job, and a 'works on my machine' approach is not a viable production deployment strategy. These factors lead to significant hidden costs.\n\nOne developer spent three weeks debugging a broken model quantization after a library update for an automated code review pipeline. The issue had zero English documentation, highlighting the maintenance overhead and lack of support for local setups.\n\nA GPU utilization reality check on an M2 Max with 32GB RAM shows a 7B parameter model requires 16-24GB of unified memory, while a 13B model pushes to 24-28GB. A 70B model is effectively unusable without a high-end workstation, making the 'local is free' assumption ignore a $3,000+ hardware investment.\n\n#LLM #AI #Developer #Tech #Ollama #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Local LLM setups seem free but hide major costs for production. An M2 Max struggles with a 7B model at 25 tokens/sec, while debugging can cost weeks. The real expense is engineering time diverted from product features. #LLM #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/xu_xu_b2179aa8fc958d531d1/why-your-local-llm-setup-is-costing-more-than-you-think-and-what-happens-when-it-breaks-513b",
+  "image": "",
+  "orig_title": "Why Your Local LLM Setup Is Costing More Than You Think — And What Happens When It Breaks",
+  "cluster_urls": [
+   "https://dev.to/xu_xu_b2179aa8fc958d531d1/why-your-local-llm-setup-is-costing-more-than-you-think-and-what-happens-when-it-breaks-513b"
+  ],
+  "cluster_titles": [
+   "Why Your Local LLM Setup Is Costing More Than You Think — And What Happens When It Breaks"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260613-1207-1-local-llm-setups-are-costly-for-production-d.png",
+   "20260613-1207-1-local-llm-setups-are-costly-for-production-d-d1.png",
+   "20260613-1207-1-local-llm-setups-are-costly-for-production-d-d2.png",
+   "20260613-1207-1-local-llm-setups-are-costly-for-production-d-d3.png",
+   "20260613-1207-1-local-llm-setups-are-costly-for-production-d-d4.png",
+   "20260613-1207-1-local-llm-setups-are-costly-for-production-d-d5.png"
+  ]
+ }
+]

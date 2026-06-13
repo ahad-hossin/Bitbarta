@@ -1,1 +1,74 @@
-[]
+[
+ {
+  "topic": "US government suspends Fable 5 and Mythos 5 access",
+  "headline_marked": "[[US Government suspends access to Fable 5 and Mythos 5]] citing national security concerns",
+  "headline": "US Government suspends access to Fable 5 and Mythos 5 citing national security concerns",
+  "summary": "Anthropic has been ordered to disable its Fable 5 and Mythos 5 models for all users due to a US government export control directive. The government cites national security concerns over a potential 'jailbreak' method, which Anthropic disputes as a minor, widel",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The US government has issued an export control directive, ordering Anthropic to immediately suspend all access to its Fable 5 and Mythos 5 AI models. This directive applies to all foreign nationals, both inside and outside the United States, including Anthropic's own foreign national employees. The company received the order today at 5:21 PM ET and has complied by disabling access for all customers.",
+   "The government cited national security authorities but did not provide specific details, though Anthropic understands it relates to a method of bypassing, or \"jailbreaking,\" Fable 5. Anthropic reviewed a demonstration of this technique, finding it identified a small number of previously known, minor vulnerabilities. They noted that other publicly available models can discover these same vulnerabilities without requiring a bypass.",
+   "Anthropic disagrees that a narrow, non-universal jailbreak should lead to recalling a commercial model deployed to hundreds of millions. They argue that applying such a standard across the industry would essentially halt all new model deployments for frontier AI providers. The company believes this action does not adhere to principles of transparency, fairness, clarity, and technical facts.",
+   "Anthropic is complying with the legal directive but views this as a misunderstanding and is working to restore access as soon as possible. They publicly advocate for government ability to block unsafe deployments, but only as part of a transparent and technically grounded statutory process."
+  ],
+  "caption": "The US government has ordered Anthropic to immediately suspend access to its Fable 5 and Mythos 5 AI models for all users. This unprecedented directive cites national security concerns over a potential 'jailbreak'.\n\nThe US government has issued an export control directive, ordering Anthropic to immediately suspend all access to its Fable 5 and Mythos 5 AI models. This directive applies to all foreign nationals, both inside and outside the United States, including Anthropic's own foreign national employees. The company received the order today at 5:21 PM ET and has complied by disabling access for all customers.\n\nThe government cited national security authorities but did not provide specific details, though Anthropic understands it relates to a method of bypassing, or \"jailbreaking,\" Fable 5. Anthropic reviewed a demonstration of this technique, finding it identified a small number of previously known, minor vulnerabilities. They noted that other publicly available models can discover these same vulnerabilities without requiring a bypass.\n\nAnthropic disagrees that a narrow, non-universal jailbreak should lead to recalling a commercial model deployed to hundreds of millions. They argue that applying such a standard across the industry would essentially halt all new model deployments for frontier AI providers. The company believes this action does not adhere to principles of transparency, fairness, clarity, and technical facts.\n\nAnthropic is complying with the legal directive but views this as a misunderstanding and is working to restore access as soon as possible. They publicly advocate for government ability to block unsafe deployments, but only as part of a transparent and technically grounded statutory process.\n\n#AI #TechNews #Anthropic #Fable5 #Mythos5 #Government\n\nSource: Hacker News",
+  "tweet": "US government orders Anthropic to suspend access to Fable 5 & Mythos 5 AI models for all users, citing national security concerns over a 'jailbreak'. Anthropic disputes the severity, calling it a minor, widely available vulnerability. #AI #TechNews #Anthropic",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "Hacker News",
+  "url": "https://www.anthropic.com/news/fable-mythos-access",
+  "image": "",
+  "orig_title": "US Government directive to suspend access to Fable 5 and Mythos 5",
+  "cluster_urls": [
+   "https://www.anthropic.com/news/fable-mythos-access"
+  ],
+  "cluster_titles": [
+   "US Government directive to suspend access to Fable 5 and Mythos 5"
+  ],
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260613-0706-0-us-government-suspends-access-to-fable-5-and.png",
+   "20260613-0706-0-us-government-suspends-access-to-fable-5-and-d1.png",
+   "20260613-0706-0-us-government-suspends-access-to-fable-5-and-d2.png"
+  ]
+ },
+ {
+  "topic": "AMD accused of stiffing researcher on $10k bug bounty",
+  "headline_marked": "AMD's auto-updater had a critical RCE flaw; [[researcher denied $10k bounty]]",
+  "headline": "AMD's auto-updater had a critical RCE flaw; researcher denied $10k bounty",
+  "summary": "A researcher discovered a critical remote code execution flaw in AMD's auto-updater, allowing malware delivery via insecure HTTP. Despite fixing the vulnerability after 124 days, AMD refused to pay the expected $10,000 bug bounty.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Paul LaRosa discovered a critical remote code execution (RCE) flaw in AMD’s Windows auto-updater, which downloaded software over insecure HTTP. This allowed network attackers to slip malicious code onto systems during routine updates, but AMD refused to pay the expected $10,000 bounty.",
+   "The flaw meant that anyone on the same network could perform a man-in-the-middle attack, replacing legitimate driver downloads with malware. Users' systems would then install the malicious software, believing it originated from AMD.",
+   "AMD acknowledged the flaw and asked LaRosa to delay public disclosure, promising a fix within 90 days. However, the final patch arrived 124 days after the initial report, significantly exceeding standard security best practices.",
+   "AMD cited policy exclusions for man-in-the-middle attacks as the reason for denying the bounty. This decision has raised questions about the company's commitment to rewarding security researchers.",
+   "While AMD reengineered the auto-updater to use encrypted downloads, the fix still relies on CRC32 for file validation. This checksum is easily manipulated, leaving a deeper security weakness unaddressed as modern software should use cryptographically signed updates.",
+   "This incident highlights how some major vendors handle security: fixing immediate problems while avoiding researcher payments and leaving underlying weaknesses. It raises concerns about the security of other auto-update mechanisms and corporate priorities."
+  ],
+  "caption": "AMD refused to pay a $10,000 bug bounty for a critical RCE flaw in its auto-updater. The vulnerability allowed attackers to deliver malware via insecure HTTP connections.\n\nPaul LaRosa discovered a critical remote code execution (RCE) flaw in AMD’s Windows auto-updater, which downloaded software over insecure HTTP. This allowed network attackers to slip malicious code onto systems during routine updates, but AMD refused to pay the expected $10,000 bounty.\n\nThe flaw meant that anyone on the same network could perform a man-in-the-middle attack, replacing legitimate driver downloads with malware. Users' systems would then install the malicious software, believing it originated from AMD.\n\nAMD acknowledged the flaw and asked LaRosa to delay public disclosure, promising a fix within 90 days. However, the final patch arrived 124 days after the initial report, significantly exceeding standard security best practices.\n\nAMD cited policy exclusions for man-in-the-middle attacks as the reason for denying the bounty. This decision has raised questions about the company's commitment to rewarding security researchers.\n\nWhile AMD reengineered the auto-updater to use encrypted downloads, the fix still relies on CRC32 for file validation. This checksum is easily manipulated, leaving a deeper security weakness unaddressed as modern software should use cryptographically signed updates.\n\nThis incident highlights how some major vendors handle security: fixing immediate problems while avoiding researcher payments and leaving underlying weaknesses. It raises concerns about the security of other auto-update mechanisms and corporate priorities.\n\n#AMD #Security #BugBounty #Vulnerability #Cybersecurity #TechNews\n\nSource: Hacker News",
+  "tweet": "AMD refused to pay a $10,000 bug bounty for a critical RCE flaw in its auto-updater. The vulnerability allowed attackers to deliver malware via insecure HTTP. The fix was delayed & incomplete, raising concerns about update security. #AMD #Security #BugBounty",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "Hacker News",
+  "url": "https://www.gadgetreview.com/amd-stiffs-researcher-10000-bug-bounty-after-critical-security-flaw-takes-124-days-to-fix",
+  "image": "",
+  "orig_title": "AMD Stiffs Researcher $10k Bug Bounty",
+  "cluster_urls": [
+   "https://www.gadgetreview.com/amd-stiffs-researcher-10000-bug-bounty-after-critical-security-flaw-takes-124-days-to-fix"
+  ],
+  "cluster_titles": [
+   "AMD Stiffs Researcher $10k Bug Bounty"
+  ],
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260613-0706-1-amd-s-auto-updater-had-a-critical-rce-flaw-r.png",
+   "20260613-0706-1-amd-s-auto-updater-had-a-critical-rce-flaw-r-d1.png",
+   "20260613-0706-1-amd-s-auto-updater-had-a-critical-rce-flaw-r-d2.png"
+  ]
+ }
+]

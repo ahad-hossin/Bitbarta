@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "i cut rag costs 65% with deepseek chromadb",
+  "headline_marked": "[[Cut RAG Costs 65%]] with DeepSeek + ChromaDB: Full Data & Benchmarks",
+  "headline": "Cut RAG Costs 65% with DeepSeek + ChromaDB: Full Data & Benchmarks",
+  "summary": "A data scientist reduced their RAG workload costs by 65% after benchmarking 184 models. DeepSeek V4 Pro even outperformed GPT-4o in their custom evaluation suite, offering significant savings.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A data scientist slashed their RAG workload costs by 65% after facing a $14,800 quarterly bill. This significant reduction was achieved by rigorously benchmarking 184 different models.",
+   "The extensive six-week study involved testing each model with 500 queries, repeated three times for variance control. All pricing data was sourced directly from the Global API catalog at the time of the study.",
+   "The original RAG stack used a flagship OpenAI-class model, leading to brutal per-million-token costs. GPT-4o, for example, cost $10.00 per million output tokens, quickly escalating expenses at scale.",
+   "Switching to a DeepSeek + ChromaDB combination showed an almost perfectly linear correlation with total spend (R² = 0.94). This confirmed that model selection is the most significant lever for cost reduction, aligning with the 40-65% savings reported.",
+   "A custom evaluation suite assessed factual recall, citation accuracy, refusal behavior, latency, and output coherence. DeepSeek V4 Pro surprisingly outperformed GPT-4o by about 4.4 percentage points in these tests.",
+   "The full RAG pipeline achieved an average latency of 1.2 seconds (retrieval + generation) and throughput of approximately 320 tokens/second on the Flash tier. This speed is suitable for most user-facing applications.",
+   "The optimal configuration identified for the best quality-per-dollar ratio led to an 88.6% reduction in overall costs. This conservative estimate includes embedding costs, highlighting the massive potential for savings.",
+   "The developer noted that vendor SDKs can be misleading about compatibility. The OpenAI Python client worked reliably with Global API's OpenAI-compatible endpoint, ensuring smooth production deployment.",
+   "Setting temperature=0.1 was crucial for RAG, as higher temperatures significantly reduced citation accuracy. Simple, clear prompt templates also consistently outperformed elaborate few-shot examples in benchmarks.",
+   "Many 'best practices' were found to be ineffective or even detrimental. Five key changes, including aggressive caching, yielded statistically significant improvements (p < 0.05) in the RAG pipeline's performance."
+  ],
+  "caption": "One data scientist slashed RAG costs by 65%, saving thousands quarterly. Their benchmarks across 184 models revealed DeepSeek V4 Pro outperformed GPT-4o in key evaluations.\n\nA data scientist slashed their RAG workload costs by 65% after facing a $14,800 quarterly bill. This significant reduction was achieved by rigorously benchmarking 184 different models.\n\nThe extensive six-week study involved testing each model with 500 queries, repeated three times for variance control. All pricing data was sourced directly from the Global API catalog at the time of the study.\n\nThe original RAG stack used a flagship OpenAI-class model, leading to brutal per-million-token costs. GPT-4o, for example, cost $10.00 per million output tokens, quickly escalating expenses at scale.\n\nSwitching to a DeepSeek + ChromaDB combination showed an almost perfectly linear correlation with total spend (R² = 0.94). This confirmed that model selection is the most significant lever for cost reduction, aligning with the 40-65% savings reported.\n\nA custom evaluation suite assessed factual recall, citation accuracy, refusal behavior, latency, and output coherence. DeepSeek V4 Pro surprisingly outperformed GPT-4o by about 4.4 percentage points in these tests.\n\nThe full RAG pipeline achieved an average latency of 1.2 seconds (retrieval + generation) and throughput of approximately 320 tokens/second on the Flash tier. This speed is suitable for most user-facing applications.\n\nThe optimal configuration identified for the best quality-per-dollar ratio led to an 88.6% reduction in overall costs. This conservative estimate includes embedding costs, highlighting the massive potential for savings.\n\nThe developer noted that vendor SDKs can be misleading about compatibility. The OpenAI Python client worked reliably with Global API's OpenAI-compatible endpoint, ensuring smooth production deployment.\n\n#AI #RAG #DeepSeek #ChromaDB #LLM #Tech\n\nSource: DEV",
+  "tweet": "A data scientist cut RAG costs by 65% after benchmarking 184 models. DeepSeek V4 Pro beat GPT-4o in their tests, offering massive savings and efficiency. Full data breakdown available. #AI #RAG #DeepSeek",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/rileykim/i-cut-rag-costs-65-with-deepseek-chromadb-full-data-lcc",
+  "image": "",
+  "orig_title": "I Cut RAG Costs 65% With DeepSeek + ChromaDB — Full Data",
+  "cluster_urls": [
+   "https://dev.to/rileykim/i-cut-rag-costs-65-with-deepseek-chromadb-full-data-lcc"
+  ],
+  "cluster_titles": [
+   "I Cut RAG Costs 65% With DeepSeek + ChromaDB — Full Data"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260614-0806-0-cut-rag-costs-65-with-deepseek-chromadb-full.png",
+   "20260614-0806-0-cut-rag-costs-65-with-deepseek-chromadb-full-d1.png",
+   "20260614-0806-0-cut-rag-costs-65-with-deepseek-chromadb-full-d2.png",
+   "20260614-0806-0-cut-rag-costs-65-with-deepseek-chromadb-full-d3.png",
+   "20260614-0806-0-cut-rag-costs-65-with-deepseek-chromadb-full-d4.png"
+  ]
+ }
+]

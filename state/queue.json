@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "claude surpasses chatgpt us business spend",
+  "headline_marked": "[[Claude just passed ChatGPT in US business spend]] — Claude Code agents start billing separately",
+  "headline": "Claude just passed ChatGPT in US business spend — Claude Code agents start billing separately",
+  "summary": "Ramp's AI Index shows Claude now accounts for 34.4% of US business AI spend. Additionally, Claude Code agent usage will move to a separate paid credit pool starting June 15.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Claude has surpassed ChatGPT in US business AI spend, according to Ramp's AI Index. Claude now holds 34.4% of the market, while ChatGPT accounts for 32.3%, marking the first time Claude has taken the lead.",
+   "This shift highlights that spend share and active usage can differ. While Claude leads in budget allocation, businesses should also consider which tools their teams actively use daily.",
+   "Starting June 15, usage of agentic Claude Code will no longer be covered by subscriptions. It will transition to a separate paid credit pool, with costs ranging from $20 to $200 per month depending on the tier.",
+   "This change will primarily impact heavy command-line and CI users. It is advisable to audit agent runs before the new billing system takes effect, as scripts currently running for free will incur charges.",
+   "Separately, Microsoft has launched seven new self-built models that do not use OpenAI distillation. This move indicates a diversification in the AI model landscape.",
+   "For builders considering switching models, it's crucial to await independent benchmarks. Vendor-reported wins should be treated as a starting point, not a definitive verdict, before migrating real workloads."
+  ],
+  "caption": "Claude has surpassed ChatGPT in US business AI spend, now holding 34.4% of the market. Heavy users of Claude Code agents will soon face separate billing.\n\nClaude has surpassed ChatGPT in US business AI spend, according to Ramp's AI Index. Claude now holds 34.4% of the market, while ChatGPT accounts for 32.3%, marking the first time Claude has taken the lead.\n\nThis shift highlights that spend share and active usage can differ. While Claude leads in budget allocation, businesses should also consider which tools their teams actively use daily.\n\nStarting June 15, usage of agentic Claude Code will no longer be covered by subscriptions. It will transition to a separate paid credit pool, with costs ranging from $20 to $200 per month depending on the tier.\n\nThis change will primarily impact heavy command-line and CI users. It is advisable to audit agent runs before the new billing system takes effect, as scripts currently running for free will incur charges.\n\nSeparately, Microsoft has launched seven new self-built models that do not use OpenAI distillation. This move indicates a diversification in the AI model landscape.\n\nFor builders considering switching models, it's crucial to await independent benchmarks. Vendor-reported wins should be treated as a starting point, not a definitive verdict, before migrating real workloads.\n\n#AI #Claude #ChatGPT #BusinessTech #TechNews #ArtificialIntelligence\n\nSource: DEV",
+  "tweet": "Claude now leads ChatGPT in US business AI spend, capturing 34.4% of the market. Developers using Claude Code agents, note: separate billing for agent usage starts June 15. Audit your scripts! #AI #Claude #ChatGPT",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/danio_dev/claude-just-passed-chatgpt-in-us-business-spend-and-claude-code-agents-start-billing-separately-2f2g",
+  "image": "",
+  "orig_title": "Claude just passed ChatGPT in US business spend — and Claude Code agents start billing separately",
+  "cluster_urls": [
+   "https://dev.to/danio_dev/claude-just-passed-chatgpt-in-us-business-spend-and-claude-code-agents-start-billing-separately-2f2g"
+  ],
+  "cluster_titles": [
+   "Claude just passed ChatGPT in US business spend — and Claude Code agents start billing separately"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260614-1906-0-claude-just-passed-chatgpt-in-us-business-sp.png",
+   "20260614-1906-0-claude-just-passed-chatgpt-in-us-business-sp-d1.png",
+   "20260614-1906-0-claude-just-passed-chatgpt-in-us-business-sp-d2.png"
+  ]
+ },
+ {
+  "topic": "axios supply chain attack npm",
+  "headline_marked": "[[axios npm package compromised]]: versions 1.14.1 & 0.30.4 dropped RAT on infected machines",
+  "headline": "axios npm package compromised: versions 1.14.1 & 0.30.4 dropped RAT on infected machines",
+  "summary": "axios versions 1.14.1 and 0.30.4 were compromised on npm, deploying a remote access trojan (RAT). Users who installed these versions must treat machines as compromised and rotate all credentials immediately.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "On March 30–31, 2026, axios versions 1.14.1 and 0.30.4 were compromised on npm, introducing a malicious dependency. This dependency dropped a remote access trojan (RAT) on infected machines. Both compromised versions have since been unpublished, with 1.14.0 being the safe alternative.",
+   "axios is a critical component in the JavaScript ecosystem, boasting approximately 100 million weekly npm downloads. Its widespread use across frontend apps, backend services, and enterprise systems makes this supply chain attack exceptionally high-impact. Developers who installed these versions during the affected window may have unknowingly pulled malicious code.",
+   "The attack involved a malicious package named plain-crypto-js@4.2.1, which mimicked the legitimate crypto-js library. This package was published to npm by a compromised account that had higher npm permissions than legitimate axios maintainers. A long-lived npm token was exploited to publish the malicious axios versions outside the normal release process.",
+   "Socket's automated malware detection flagged plain-crypto-js@4.2.1 shortly after its publication. The malicious package executed code during installation via npm lifecycle scripts, deploying a multi-stage payload. This payload established a persistent backdoor on infected machines.",
+   "If axios@1.14.1, axios@0.30.4, or plain-crypto-js@4.2.1 was installed, machines should be considered compromised. Users must immediately rotate all credentials accessible from the affected machine. For CI runners or production servers, re-imaging is recommended over manual cleaning.",
+   "Developers should verify their installed axios versions, clean lock files, and regenerate them to ensure safe versions are used. It's crucial to inspect lock file diffs for unexpected package additions before committing changes. After updating, verify API integrations to ensure expected behavior.",
+   "This incident highlights the ongoing risk of supply chain attacks targeting package publishing trust. Multiple layers of defense are essential, as no single control is sufficient. Implementing dependency change reviews in pull requests can help detect unexpected package additions.",
+   "If infection is suspected, preserve logs and report the incident to npm security. This helps in further investigation and mitigation efforts across the broader developer community."
+  ],
+  "caption": "Critical supply chain attack: axios npm package versions 1.14.1 and 0.30.4 were compromised. They installed a remote access trojan (RAT) on developer machines.\n\nOn March 30–31, 2026, axios versions 1.14.1 and 0.30.4 were compromised on npm, introducing a malicious dependency. This dependency dropped a remote access trojan (RAT) on infected machines. Both compromised versions have since been unpublished, with 1.14.0 being the safe alternative.\n\naxios is a critical component in the JavaScript ecosystem, boasting approximately 100 million weekly npm downloads. Its widespread use across frontend apps, backend services, and enterprise systems makes this supply chain attack exceptionally high-impact. Developers who installed these versions during the affected window may have unknowingly pulled malicious code.\n\nThe attack involved a malicious package named plain-crypto-js@4.2.1, which mimicked the legitimate crypto-js library. This package was published to npm by a compromised account that had higher npm permissions than legitimate axios maintainers. A long-lived npm token was exploited to publish the malicious axios versions outside the normal release process.\n\nSocket's automated malware detection flagged plain-crypto-js@4.2.1 shortly after its publication. The malicious package executed code during installation via npm lifecycle scripts, deploying a multi-stage payload. This payload established a persistent backdoor on infected machines.\n\nIf axios@1.14.1, axios@0.30.4, or plain-crypto-js@4.2.1 was installed, machines should be considered compromised. Users must immediately rotate all credentials accessible from the affected machine. For CI runners or production servers, re-imaging is recommended over manual cleaning.\n\n#Security #SupplyChainAttack #npm #JavaScript #DevSecOps #Cybersecurity\n\nSource: DEV",
+  "tweet": "ALERT: axios npm package versions 1.14.1 & 0.30.4 were compromised, dropping a RAT on infected machines. If installed, treat your system as compromised & rotate all credentials immediately. #Security #npm #JavaScript",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "DEV",
+  "url": "https://dev.to/preecha/axios1141-supply-chain-attack-what-to-do-now-3dla",
+  "image": "",
+  "orig_title": "axios@1.14.1 Supply Chain Attack: What to Do Now",
+  "cluster_urls": [
+   "https://dev.to/preecha/axios1141-supply-chain-attack-what-to-do-now-3dla"
+  ],
+  "cluster_titles": [
+   "axios@1.14.1 Supply Chain Attack: What to Do Now"
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260614-1906-1-axios-npm-package-compromised-versions-1-14-.png",
+   "20260614-1906-1-axios-npm-package-compromised-versions-1-14--d1.png",
+   "20260614-1906-1-axios-npm-package-compromised-versions-1-14--d2.png",
+   "20260614-1906-1-axios-npm-package-compromised-versions-1-14--d3.png",
+   "20260614-1906-1-axios-npm-package-compromised-versions-1-14--d4.png"
+  ]
+ }
+]

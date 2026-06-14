@@ -1,1 +1,75 @@
-[]
+[
+ {
+  "topic": "run docker on android with qemu",
+  "headline_marked": "[[Run Real Docker on Android]] without root, using QEMU and Termux",
+  "headline": "Run Real Docker on Android without root, using QEMU and Termux",
+  "summary": "Leverage your old Android phone as a free Docker host. This method uses QEMU in Termux to run a full Docker daemon, bypassing Android's kernel limitations without rooting your device.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "Many developers pay for VPS to run Docker containers, while old Android phones with 8-12 GB RAM and fast SSDs sit unused. Android's kernel lacks the necessary cgroups, namespaces, and overlay filesystem for Docker, preventing a real daemon without rooting.",
+   "Common workarounds like udocker or proot-distro don't provide a full Docker API. The only way to get a real Docker daemon on a non-rooted Android is by running Debian in a QEMU virtual machine inside Termux, though it introduces a 10-25x performance overhead.",
+   "To set this up, install Termux and Termux:Boot from F-Droid (not Google Play Store due to outdated versions and security vulnerabilities). Termux:Boot ensures QEMU auto-starts after phone reboots, making the setup persistent.",
+   "For easier management, configure SSH access from your computer to Termux. Crucially, use `termux-wake-lock` to prevent Android's Doze mode from killing the QEMU VM when the phone screen is off, ensuring continuous operation.",
+   "This setup transforms an idle Android device into a functional, free Docker server. For phones plugged in 24/7, enable 'Protect Battery' or 'Maximum 85%' settings to double battery lifespan by capping the charge."
+  ],
+  "caption": "Turn your old Android phone into a free Docker host! Run real Docker containers without rooting your device, using QEMU and Termux.\n\nMany developers pay for VPS to run Docker containers, while old Android phones with 8-12 GB RAM and fast SSDs sit unused. Android's kernel lacks the necessary cgroups, namespaces, and overlay filesystem for Docker, preventing a real daemon without rooting.\n\nCommon workarounds like udocker or proot-distro don't provide a full Docker API. The only way to get a real Docker daemon on a non-rooted Android is by running Debian in a QEMU virtual machine inside Termux, though it introduces a 10-25x performance overhead.\n\nTo set this up, install Termux and Termux:Boot from F-Droid (not Google Play Store due to outdated versions and security vulnerabilities). Termux:Boot ensures QEMU auto-starts after phone reboots, making the setup persistent.\n\nFor easier management, configure SSH access from your computer to Termux. Crucially, use `termux-wake-lock` to prevent Android's Doze mode from killing the QEMU VM when the phone screen is off, ensuring continuous operation.\n\nThis setup transforms an idle Android device into a functional, free Docker server. For phones plugged in 24/7, enable 'Protect Battery' or 'Maximum 85%' settings to double battery lifespan by capping the charge.\n\n#Docker #Android #QEMU #Termux #Developer #Tech\n\nSource: DEV",
+  "tweet": "Turn your old Android phone into a free Docker host! Run real Docker containers without rooting your device, using QEMU and Termux. It's slow (10-25x overhead), but it works and survives reboots. #Docker #Android #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/sulthonzh/run-real-docker-on-android-no-root-no-tricks-just-qemu-15jn",
+  "image": "",
+  "orig_title": "Run Real Docker on Android — No Root, No Tricks, Just QEMU",
+  "cluster_urls": [
+   "https://dev.to/sulthonzh/run-real-docker-on-android-no-root-no-tricks-just-qemu-15jn"
+  ],
+  "cluster_titles": [
+   "Run Real Docker on Android — No Root, No Tricks, Just QEMU"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260614-1006-0-run-real-docker-on-android-without-root-usin.png",
+   "20260614-1006-0-run-real-docker-on-android-without-root-usin-d1.png",
+   "20260614-1006-0-run-real-docker-on-android-without-root-usin-d2.png"
+  ]
+ },
+ {
+  "topic": "ai for debugging production issues",
+  "headline_marked": "[[AI reduces incident resolution time by up to 95%]] in production debugging, correlating diverse signals.",
+  "headline": "AI reduces incident resolution time by up to 95% in production debugging, correlating diverse signals.",
+  "summary": "AI tools like Datadog's Bits AI SRE are proving effective in correlating logs, traces, and metrics to identify root causes during critical incidents, significantly speeding up problem resolution.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI is transforming how engineers debug production issues, especially during critical 2 AM outages. Its core \"superpowers\" are reading vast amounts of data quickly and correlating heterogeneous signals, tasks humans struggle with under pressure.",
+   "Companies like Datadog are leveraging this with tools like Bits AI SRE, which benchmarks show can reduce time-to-resolution by up to 95% in certain scenarios. Other solutions include Honeycomb's Query Assistant and open-source toolkits like OpenSRE.",
+   "The AI's role isn't to replace engineers but to handle the most cognitively expensive and boring parts of debugging. It excels at holding complex system states in mind and identifying patterns across logs, traces, and metrics simultaneously.",
+   "However, AI has significant limitations. It struggles to determine if an incident is genuinely real, often constructing elaborate failure narratives even for simple events like a metrics agent restart. It will always find a root cause if prompted.",
+   "The \"chain-of-thought trap\" is another concern. Research indicates that while models reasoning out loud can reduce hallucinated facts, they make remaining hallucinations harder to detect, as the fabricated conclusions appear more credible.",
+   "Therefore, AI output should be treated like a junior engineer's first guess: take it seriously, investigate its source, and verify all findings before taking action. Piping recent logs into an LLM works surprisingly well for surfacing patterns."
+  ],
+  "caption": "Imagine reducing incident resolution time by up to 95% during a critical outage. AI is transforming how engineers debug complex production issues.\n\nAI is transforming how engineers debug production issues, especially during critical 2 AM outages. Its core \"superpowers\" are reading vast amounts of data quickly and correlating heterogeneous signals, tasks humans struggle with under pressure.\n\nCompanies like Datadog are leveraging this with tools like Bits AI SRE, which benchmarks show can reduce time-to-resolution by up to 95% in certain scenarios. Other solutions include Honeycomb's Query Assistant and open-source toolkits like OpenSRE.\n\nThe AI's role isn't to replace engineers but to handle the most cognitively expensive and boring parts of debugging. It excels at holding complex system states in mind and identifying patterns across logs, traces, and metrics simultaneously.\n\nHowever, AI has significant limitations. It struggles to determine if an incident is genuinely real, often constructing elaborate failure narratives even for simple events like a metrics agent restart. It will always find a root cause if prompted.\n\nThe \"chain-of-thought trap\" is another concern. Research indicates that while models reasoning out loud can reduce hallucinated facts, they make remaining hallucinations harder to detect, as the fabricated conclusions appear more credible.\n\nTherefore, AI output should be treated like a junior engineer's first guess: take it seriously, investigate its source, and verify all findings before taking action. Piping recent logs into an LLM works surprisingly well for surfacing patterns.\n\n#AI #Debugging #DevOps #SoftwareEngineering #IncidentResponse #Tech\n\nSource: DEV",
+  "tweet": "AI is revolutionizing production debugging, helping engineers cut incident resolution time by up to 95%. Tools like Datadog's Bits AI SRE correlate diverse signals to identify root causes faster, especially during those 2 AM alerts. #AI #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "DEV",
+  "url": "https://dev.to/nazar_boyko/ai-for-debugging-production-issues-3m23",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8pq9gx39obcj3hxkmub9.webp",
+  "orig_title": "AI For Debugging Production Issues",
+  "cluster_urls": [
+   "https://dev.to/nazar_boyko/ai-for-debugging-production-issues-3m23"
+  ],
+  "cluster_titles": [
+   "AI For Debugging Production Issues"
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260614-1006-1-ai-reduces-incident-resolution-time-by-up-to.png",
+   "20260614-1006-1-ai-reduces-incident-resolution-time-by-up-to-d1.png",
+   "20260614-1006-1-ai-reduces-incident-resolution-time-by-up-to-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "anthropic refused to fix fable 5 jailbreak after us warning",
+  "headline_marked": "US government [[warned Anthropic of Fable 5 jailbreak]], firm 'refused' to fix before export controls",
+  "headline": "US government warned Anthropic of Fable 5 jailbreak, firm 'refused' to fix before export controls",
+  "summary": "The US government ordered Anthropic's Fable 5 and Mythos 5 disabled worldwide after the company reportedly refused to patch a critical jailbreak that could expose advanced cyber capabilities.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The US government issued export controls on Anthropic's Claude Fable 5 and Mythos 5, ordering them disabled worldwide. This action followed a warning to Anthropic that Fable 5 had been jailbroken, a flaw the company reportedly refused to fix.",
+   "David Sacks, co-chair of the President's Council of Advisors on Science and Technology, stated the administration acted \"reluctantly.\" He claims a trusted partner discovered a bypass to the guardrails separating Fable from the unrestricted cyber capabilities of its underlying model, Mythos.",
+   "Sacks alleges that Anthropic CEO Dario Amodei declined to fix the bypass or de-deploy the model, prioritizing its consumer model over safety. Anthropic has positioned itself as a safety-first lab and previously lobbied for Mythos to be regulated as a cyberweapon.",
+   "Anthropic's public stance is that the bypass is narrow and non-universal, amounting to identifying software flaws from a codebase. They argue similar results can be produced on other public models, including OpenAI's GPT-5.5, and that a narrow jailbreak shouldn't necessitate recalling a model used by hundreds of millions.",
+   "The White House's action was partly driven by suspicion that a China-linked group had accessed Mythos, raising concerns about reverse-engineering. Anthropic, however, told Semafor that the White House did not raise Chinese access in its conversations about the Fable jailbreak and that it blocks access from China.",
+   "Amazon reportedly flagged the jailbreak to the government, with CEO Andy Jassy in contact with the administration. Amazon, a major investor and cloud provider for Anthropic, did not confirm details but noted governments often seek its counsel on security risks."
+  ],
+  "caption": "The US government ordered Anthropic's Fable 5 and Mythos 5 disabled worldwide. This came after Anthropic reportedly refused to fix a jailbreak.\n\nThe US government issued export controls on Anthropic's Claude Fable 5 and Mythos 5, ordering them disabled worldwide. This action followed a warning to Anthropic that Fable 5 had been jailbroken, a flaw the company reportedly refused to fix.\n\nDavid Sacks, co-chair of the President's Council of Advisors on Science and Technology, stated the administration acted \"reluctantly.\" He claims a trusted partner discovered a bypass to the guardrails separating Fable from the unrestricted cyber capabilities of its underlying model, Mythos.\n\nSacks alleges that Anthropic CEO Dario Amodei declined to fix the bypass or de-deploy the model, prioritizing its consumer model over safety. Anthropic has positioned itself as a safety-first lab and previously lobbied for Mythos to be regulated as a cyberweapon.\n\nAnthropic's public stance is that the bypass is narrow and non-universal, amounting to identifying software flaws from a codebase. They argue similar results can be produced on other public models, including OpenAI's GPT-5.5, and that a narrow jailbreak shouldn't necessitate recalling a model used by hundreds of millions.\n\nThe White House's action was partly driven by suspicion that a China-linked group had accessed Mythos, raising concerns about reverse-engineering. Anthropic, however, told Semafor that the White House did not raise Chinese access in its conversations about the Fable jailbreak and that it blocks access from China.\n\nAmazon reportedly flagged the jailbreak to the government, with CEO Andy Jassy in contact with the administration. Amazon, a major investor and cloud provider for Anthropic, did not confirm details but noted governments often seek its counsel on security risks.\n\n#AI #Anthropic #Cybersecurity #ExportControl #TechNews #Government\n\nSource: Tom's Hardware",
+  "tweet": "US government ordered Anthropic's Fable 5 and Mythos 5 disabled globally after the company reportedly refused to fix a critical jailbreak. Concerns cited over advanced cyber capabilities. #AI #Cybersecurity #Anthropic",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/trump-adviser-david-sacks-says-anthropic-refused-to-fix-fable-5-jailbreak-before-us-export-controls",
+  "image": "https://cdn.mos.cms.futurecdn.net/vwNWCxU9yN5AxeG7Tfut3B-1280-80.jpg",
+  "orig_title": "US government warned Anthropic that Chinese group had accessed model, but firm 'refused' to fix Fable 5 jailbreak before US export controls — Anthropic defended its decision by saying the jailbreak isn’t serious",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/trump-adviser-david-sacks-says-anthropic-refused-to-fix-fable-5-jailbreak-before-us-export-controls"
+  ],
+  "cluster_titles": [
+   "US government warned Anthropic that Chinese group had accessed model, but firm 'refused' to fix Fable 5 jailbreak before US export controls — Anthropic defended its decision by saying the jailbreak isn’t serious"
+  ],
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260614-1807-0-us-government-warned-anthropic-of-fable-5-ja.png",
+   "20260614-1807-0-us-government-warned-anthropic-of-fable-5-ja-d1.png",
+   "20260614-1807-0-us-government-warned-anthropic-of-fable-5-ja-d2.png",
+   "20260614-1807-0-us-government-warned-anthropic-of-fable-5-ja-d3.png"
+  ]
+ },
+ {
+  "topic": "ai cryptomining network wastes 112mw on useless computation",
+  "headline_marked": "[[AI cryptomining network with 320,000 GPUs]] allegedly burns 112MW on ‘zero useful AI computation’",
+  "headline": "AI cryptomining network with 320,000 GPUs allegedly burns 112MW on ‘zero useful AI computation’",
+  "summary": "A new study claims the Pearl Layer-1 blockchain, marketed for useful AI computation, is instead performing random matrix math, driving GPU rental prices up by 38% for no real AI benefit.",
+  "category": "CRYPTO",
+  "template": "neon",
+  "details": [
+   "A recent research preprint alleges that Pearl, a Layer-1 blockchain claiming to turn crypto mining into useful AI computation, is doing no such thing. The study estimates Pearl's network utilizes roughly 320,000 RTX 3090-class GPUs, consuming an estimated 112 megawatts, all while producing 'zero useful AI computation'.",
+   "Pearl's cuPOW scheme asks miners to compute noised integer matrix multiplications, which are the arithmetic foundation of neural networks. However, the study argues that the protocol's verification step only confirms correct multiplication, not whether the input matrices originate from a real AI model or workload.",
+   "To demonstrate this 'usefulness gap,' researcher Abhinaba Basu built a miner that fed the network uniformly random matrices, which were accepted and earned on-chain payouts. This suggests the network cannot differentiate between genuine AI work and random numbers, incentivizing miners to bypass actual AI tasks.",
+   "Analysis of 8,012 workers in one pool showed hardware capable of AI inference, but the dominant mining binary lacked identifiable machine-learning framework code. Runtime profiling further indicated heavy compute use with light memory bandwidth, consistent with pure matrix math rather than memory-intensive transformer inference.",
+   "The study attributes a 38% jump in budget GPU rental prices on vast.ai to Pearl mining, with utilization climbing from 57% to 94% since May. This could lead to an estimated $600,000 per year in additional rental costs for independent researchers competing for the same hardware.",
+   "The research also demonstrated Pearl shares mined on non-Nvidia hardware, including an AMD Instinct MI300X and Apple M2 via Metal compute shaders. This indicates that the computation, being commodity integer arithmetic, is not exclusive to Nvidia GPUs."
+  ],
+  "caption": "A cryptomining network with 320,000 GPUs is allegedly burning 112MW of power on \"zero useful AI computation.\" This has reportedly driven GPU rental prices up by 38%.\n\nA recent research preprint alleges that Pearl, a Layer-1 blockchain claiming to turn crypto mining into useful AI computation, is doing no such thing. The study estimates Pearl's network utilizes roughly 320,000 RTX 3090-class GPUs, consuming an estimated 112 megawatts, all while producing 'zero useful AI computation'.\n\nPearl's cuPOW scheme asks miners to compute noised integer matrix multiplications, which are the arithmetic foundation of neural networks. However, the study argues that the protocol's verification step only confirms correct multiplication, not whether the input matrices originate from a real AI model or workload.\n\nTo demonstrate this 'usefulness gap,' researcher Abhinaba Basu built a miner that fed the network uniformly random matrices, which were accepted and earned on-chain payouts. This suggests the network cannot differentiate between genuine AI work and random numbers, incentivizing miners to bypass actual AI tasks.\n\nAnalysis of 8,012 workers in one pool showed hardware capable of AI inference, but the dominant mining binary lacked identifiable machine-learning framework code. Runtime profiling further indicated heavy compute use with light memory bandwidth, consistent with pure matrix math rather than memory-intensive transformer inference.\n\nThe study attributes a 38% jump in budget GPU rental prices on vast.ai to Pearl mining, with utilization climbing from 57% to 94% since May. This could lead to an estimated $600,000 per year in additional rental costs for independent researchers competing for the same hardware.\n\nThe research also demonstrated Pearl shares mined on non-Nvidia hardware, including an AMD Instinct MI300X and Apple M2 via Metal compute shaders. This indicates that the computation, being commodity integer arithmetic, is not exclusive to Nvidia GPUs.\n\n#Crypto #AI #GPU #Blockchain #TechNews #Mining\n\nSource: Tom's Hardware",
+  "tweet": "A new study claims the Pearl cryptomining network, using 320,000 GPUs & 112MW, produces \"zero useful AI computation.\" This alleged waste has reportedly driven GPU rental prices up 38%. #Crypto #AI #GPU",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-cryptomining-networks-320-000-rtx-3090-class-gpus-allegedly-burn-112-megawatts-of-power-on-zero-useful-ai-computation-pearls-gpus-are-doing-random-matrix-math-study-claims",
+  "image": "https://cdn.mos.cms.futurecdn.net/YjX8TJVFkFDKzjssdLLNod-1280-80.png",
+  "orig_title": "AI cryptomining network's 320,000 RTX 3090-class GPUs allegedly burn 112 megawatts of power on ‘zero useful AI computation’ — GPU rental costs jump 38%, but Pearl’s cards are doing random matrix math, study claims",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-cryptomining-networks-320-000-rtx-3090-class-gpus-allegedly-burn-112-megawatts-of-power-on-zero-useful-ai-computation-pearls-gpus-are-doing-random-matrix-math-study-claims"
+  ],
+  "cluster_titles": [
+   "AI cryptomining network's 320,000 RTX 3090-class GPUs allegedly burn 112 megawatts of power on ‘zero useful AI computation’ — GPU rental costs jump 38%, but Pearl’s cards are doing random matrix math, study claims"
+  ],
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260614-1807-1-ai-cryptomining-network-with-320-000-gpus-al.png",
+   "20260614-1807-1-ai-cryptomining-network-with-320-000-gpus-al-d1.png",
+   "20260614-1807-1-ai-cryptomining-network-with-320-000-gpus-al-d2.png",
+   "20260614-1807-1-ai-cryptomining-network-with-320-000-gpus-al-d3.png"
+  ]
+ }
+]

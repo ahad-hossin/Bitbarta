@@ -58,6 +58,24 @@ def upgrade_thumb(url: str) -> str:
     return u
 
 
+def fetch_logo(domain: str) -> str:
+    """Best-effort brand logo as a data URI, by domain. Tries Clearbit (clean
+    transparent logos) then unavatar, then a high-res Google favicon. Returns
+    "" if none work."""
+    domain = (domain or "").strip().lower()
+    if not domain or "." not in domain:
+        return ""
+    for url in (
+        f"https://logo.clearbit.com/{domain}?size=512&format=png",
+        f"https://unavatar.io/{domain}?fallback=false",
+        f"https://www.google.com/s2/favicons?domain={domain}&sz=256",
+    ):
+        uri = fetch_as_data_uri(url)
+        if uri:
+            return uri
+    return ""
+
+
 def fetch_as_data_uri(image_url: str) -> str:
     """Download the image and inline it, so the headless renderer never
     depends on a CDN allowing hotlinks from a CI box."""

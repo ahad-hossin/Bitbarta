@@ -88,6 +88,7 @@ _COMPOSE_SCHEMA = {
         "story_risk": {"type": "string", "enum": ["clean", "sensitive", "graphic", "do_not_post"]},
         "image_safe": {"type": "boolean", "description": "false if the attached photo shows blood, corpses, graphic injury, weapons in use, or nudity; true otherwise or when no photo is attached"},
         "image_good": {"type": "boolean", "description": "true ONLY if the image carries real VISUAL value: a real photograph, a product shot/render, an app/UI screenshot, a chart/graph/diagram, a headshot, a standalone brand logo, or a genuinely visual illustration. false if the image is essentially JUST TEXT or mostly empty: a statement/quote card, a 'breaking news' or press-release text graphic, a headline-on-colour card, a screenshot that is only a block of words, OR a near-blank author/byline cover (e.g. a DEV.to-style card that is mostly empty space with just an author name, avatar, date, and/or a small site logo). Also false for blank/placeholder/solid-colour, broken/tiny/heavily-watermarked, or unrelated images. If most of the frame is empty space or text, it is NOT good. true when no photo is attached."},
+        "brand_domain": {"type": "string", "description": "The website domain of the MAIN company/brand/product in the headline, lowercase, no scheme or path, e.g. 'openai.com', 'huggingface.co', 'apple.com', 'valvesoftware.com'. Used to fetch a logo when no usable photo is available. Empty string if the story has no single clear company/brand (e.g. general policy or science stories)."},
     },
     "required": ["headline", "summary", "category", "template", "details", "hook", "hashtags", "tweet", "story_risk", "image_safe", "image_good"],
 }
@@ -114,6 +115,7 @@ Platform safety (this page must never violate Facebook/Instagram policies):
 - image_safe: a photo may be attached to this message. Set image_safe=false only if it shows nudity, gore or otherwise clearly violates Meta's image policy. Product shots, screenshots, logos and headshots are safe. If no photo is attached, set true.
 
 Image quality (image_good): we put the photo front and centre, so it must add real VISUAL value. Set image_good=FALSE when the attached image is essentially just TEXT or mostly empty — a statement card, a quote graphic, a "breaking news" or press-release text image, a headline-on-colour card, a screenshot that is only a block of words, OR a near-blank author/byline cover (e.g. a DEV.to-style card that is mostly white/empty space with just an author name, avatar, date, and/or a small site logo). If most of the frame is empty space or text, it is NOT good — the post renders cleaner as text-only instead. Set image_good=true for a real photograph, a product photo/render, an app/UI screenshot, a chart/graph/diagram, a headshot, a standalone brand logo, or a genuinely visual illustration. Also set false for a blank/placeholder/solid-colour image, a broken/tiny/heavily-watermarked image, or an image unrelated to the story. If no photo is attached, set image_good=true.
+brand_domain: give the website domain of the main company/brand/product in the headline (lowercase, domain only) so we can show its logo if the photo is unusable — e.g. 'openai.com', 'huggingface.co', 'valvesoftware.com', 'apple.com'. Leave empty if there is no single clear brand.
 
 STORY HEADLINES (from the outlets):
 {titles}
@@ -366,6 +368,7 @@ def compose_post(story: dict, article_text: str, image_data_uri: str = "") -> di
         "story_risk": p.get("story_risk", "clean"),
         "image_safe": bool(p.get("image_safe", True)),
         "image_good": bool(p.get("image_good", True)),
+        "brand_domain": (p.get("brand_domain") or "").strip().lower().replace("https://", "").replace("http://", "").strip("/"),
         "source": sources,
         "url": primary["url"],
         "image": primary.get("image", ""),

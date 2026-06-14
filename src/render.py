@@ -52,7 +52,8 @@ def render_posts(posts: list) -> list:
                 "date": date_label,
                 "source": post.get("source", ""),
                 "image": post.get("image_data_uri", ""),
-                "credit": f"Photo: {post.get('photo_credit') or post['source'].split(',')[0]}" if post.get("image_data_uri") else "",
+                "logo": post.get("is_logo", False),
+                "credit": "" if post.get("is_logo") else (f"Photo: {post.get('photo_credit') or post['source'].split(',')[0]}" if post.get("image_data_uri") else ""),
             }
             _shoot(page, cover, "renderPost", "#post", os.path.join(config.OUTPUT_DIR, base + ".png"))
             files.append(base + ".png")

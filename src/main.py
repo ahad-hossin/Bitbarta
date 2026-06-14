@@ -146,8 +146,17 @@ def generate() -> int:
             print(f"  [policy] dropping photo for '{post['headline'][:60]}' (risk={post['story_risk']}, image_safe={post['image_safe']})")
             image_uri, photo_credit = "", ""
         if image_uri and not post.get("image_good", True):
-            print(f"  [image] dropping weak/generic photo for '{post['headline'][:60]}' — rendering text-led")
+            print(f"  [image] dropping weak/generic photo for '{post['headline'][:60]}' — trying brand logo / text-led")
             image_uri, photo_credit = "", ""
+
+        # no usable photo but the story has a clear brand -> use the brand logo
+        post["is_logo"] = False
+        if not image_uri and post.get("brand_domain"):
+            logo = article.fetch_logo(post["brand_domain"])
+            if logo:
+                image_uri, photo_credit = logo, ""
+                post["is_logo"] = True
+                print(f"  [logo] using {post['brand_domain']} logo (no usable photo)")
 
         post["image_data_uri"] = image_uri
         post["photo_credit"] = photo_credit

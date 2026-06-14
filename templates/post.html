@@ -188,6 +188,12 @@
   #post.no-photo.t-terminal .p-body{ top:112px; bottom:78px; }
   #post.no-photo.t-terminal .p-banner{ display:flex; }
 
+  /* — Brand logo as the image: contain on white, never cropped/stretched — */
+  #post.logo-img .p-img-wrap{ background:#fff; }
+  #post.logo-img .p-img{ object-fit:contain; padding:7%; background:#fff; filter:none; }
+  #post.logo-img.t-leak .p-img{ filter:none; }
+  #post.logo-img .p-scrim{ display:none !important; }
+
   /* — Bangla text: taller line-height so matras & conjuncts don't clip — */
   #post.bn .p-title{ line-height:1.3 !important; letter-spacing:0 !important; }
   #post.bn .p-desc{ line-height:1.6; }
@@ -309,7 +315,7 @@
 
     // "top" position (headline above image) only applies when there IS an image
     var posTop = (data.pos === 'top') && !!img;
-    post.className = 't-' + tpl + (hasBn ? ' bn' : '') + (img ? '' : ' no-photo') + (posTop ? ' pos-top' : '');
+    post.className = 't-' + tpl + (hasBn ? ' bn' : '') + (img ? '' : ' no-photo') + (posTop ? ' pos-top' : '') + (data.logo ? ' logo-img' : '');
     if(data.accent) document.documentElement.style.setProperty('--accent', data.accent);
 
     // terminal shows a window chrome banner; everything else hides it

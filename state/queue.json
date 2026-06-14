@@ -1,1 +1,74 @@
-[]
+[
+ {
+  "topic": "zero markup ai api gateway provider cost",
+  "headline_marked": "[[New AI API Gateway offers 18 models at provider cost]], eliminating hidden markups",
+  "headline": "New AI API Gateway offers 18 models at provider cost, eliminating hidden markups",
+  "summary": "A new open-source AI API gateway, aipossword.cn, provides access to 18 AI models at their original provider cost, promising to end hidden fees for developers. It includes $5 in free credits to start.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Many existing AI API gateways, including major players like OpenRouter, add invisible margins to model costs, meaning developers pay more than the actual provider charges without knowing the exact markup. This practice led to frustration among users seeking transparent pricing for AI services.",
+   "In response, a developer has launched aipossword.cn, an open-source AI API gateway designed with zero markup pricing. This new platform aims to provide direct access to AI models at their true provider cost, ensuring full transparency for users.",
+   "The gateway currently connects to 18 different AI models, offering a wide range of options for developers. Its sustainability model relies on enterprise users paying for features like SSO, SLA, and dedicated infrastructure, while individual developers can use it at cost or for free.",
+   "Individual developers can visit aipossword.cn to access the service, with $5 in free credits provided upon sign-up. No credit card is required to begin using the platform and explore its offerings."
+  ],
+  "caption": "Tired of hidden fees on AI API calls? A new open-source gateway offers 18 AI models at provider cost, with zero markup.\n\nMany existing AI API gateways, including major players like OpenRouter, add invisible margins to model costs, meaning developers pay more than the actual provider charges without knowing the exact markup. This practice led to frustration among users seeking transparent pricing for AI services.\n\nIn response, a developer has launched aipossword.cn, an open-source AI API gateway designed with zero markup pricing. This new platform aims to provide direct access to AI models at their true provider cost, ensuring full transparency for users.\n\nThe gateway currently connects to 18 different AI models, offering a wide range of options for developers. Its sustainability model relies on enterprise users paying for features like SSO, SLA, and dedicated infrastructure, while individual developers can use it at cost or for free.\n\nIndividual developers can visit aipossword.cn to access the service, with $5 in free credits provided upon sign-up. No credit card is required to begin using the platform and explore its offerings.\n\n#AI #APIGateway #OpenSource #DeveloperTools #TechNews #AIModels\n\nSource: DEV",
+  "tweet": "Tired of hidden fees on AI API calls? A new open-source gateway, aipossword.cn, offers 18 AI models at provider cost with zero markup. Individual developers get free access and $5 credits. #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/lyx19951121/i-built-a-zero-markup-ai-api-gateway-18-models-at-provider-cost-4jf7",
+  "image": "",
+  "orig_title": "I Built a Zero-Markup AI API Gateway - 18 Models at Provider Cost",
+  "cluster_urls": [
+   "https://dev.to/lyx19951121/i-built-a-zero-markup-ai-api-gateway-18-models-at-provider-cost-4jf7"
+  ],
+  "cluster_titles": [
+   "I Built a Zero-Markup AI API Gateway - 18 Models at Provider Cost"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260614-1506-0-new-ai-api-gateway-offers-18-models-at-provi.png",
+   "20260614-1506-0-new-ai-api-gateway-offers-18-models-at-provi-d1.png",
+   "20260614-1506-0-new-ai-api-gateway-offers-18-models-at-provi-d2.png"
+  ]
+ },
+ {
+  "topic": "ai agent runtime governance gate rust",
+  "headline_marked": "[[Nanogate provides sub-microsecond runtime governance]] for AI agents in Rust",
+  "headline": "Nanogate provides sub-microsecond runtime governance for AI agents in Rust",
+  "summary": "This new Rust library re-tests agent admissibility before every action in ~530 nanoseconds, preventing stale authority contexts in AI governance systems.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Traditional AI governance systems often fail by assuming continuous authorization after an initial approval. Policy changes, revocations, or expired evidence can leave agents executing under stale authority contexts, creating a critical vulnerability.",
+   "A new principle, \"Continuous Admissibility,\" proposes that every action must re-prove its admissibility immediately before execution. This involves re-testing an agent's identity, active reference frame, and timestamp to prevent replay attacks and ensure real-time compliance.",
+   "Nanogate is a Rust library and CLI that implements this gate, achieving a median evaluation time of just 530 nanoseconds. It is designed to be fast, deterministic, and adversarially validated, showing zero false admits or denies in 100,000 test cases.",
+   "This performance translates to approximately 1.9 million evaluations per second per CPU core, leveraging Rust's zero-runtime overhead. It uses xxHash64 for fast non-cryptographic hashing and BLAKE3 for hardware-accelerated proof generation.",
+   "Nanogate is the reference implementation for the upcoming Continuous Admissibility Protocol (CAP), an open standard for runtime admissibility proofs. CAP aims to provide vendor-neutral, transparent criteria for agent frameworks.",
+   "The project is open source under MIT/Apache-2.0 for non-commercial and internal use. Commercial licenses, including perpetual use and support, are available for proprietary agent runtimes for a one-time fee of $5,000."
+  ],
+  "caption": "Nanogate re-tests AI agent authorization in ~530 nanoseconds, preventing stale approvals. It ensures continuous admissibility for every action.\n\nTraditional AI governance systems often fail by assuming continuous authorization after an initial approval. Policy changes, revocations, or expired evidence can leave agents executing under stale authority contexts, creating a critical vulnerability.\n\nA new principle, \"Continuous Admissibility,\" proposes that every action must re-prove its admissibility immediately before execution. This involves re-testing an agent's identity, active reference frame, and timestamp to prevent replay attacks and ensure real-time compliance.\n\nNanogate is a Rust library and CLI that implements this gate, achieving a median evaluation time of just 530 nanoseconds. It is designed to be fast, deterministic, and adversarially validated, showing zero false admits or denies in 100,000 test cases.\n\nThis performance translates to approximately 1.9 million evaluations per second per CPU core, leveraging Rust's zero-runtime overhead. It uses xxHash64 for fast non-cryptographic hashing and BLAKE3 for hardware-accelerated proof generation.\n\nNanogate is the reference implementation for the upcoming Continuous Admissibility Protocol (CAP), an open standard for runtime admissibility proofs. CAP aims to provide vendor-neutral, transparent criteria for agent frameworks.\n\nThe project is open source under MIT/Apache-2.0 for non-commercial and internal use. Commercial licenses, including perpetual use and support, are available for proprietary agent runtimes for a one-time fee of $5,000.\n\n#Rust #AI #Governance #Security #SoftwareDevelopment #OpenSource\n\nSource: DEV",
+  "tweet": "Nanogate re-tests AI agent authorization in ~530ns, preventing stale approvals. This Rust library implements \"Continuous Admissibility\" for real-time governance, crucial for agent frameworks. #AI #Rust #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "DEV",
+  "url": "https://dev.to/akhilesh_warik_8032f0fd9d/approval-is-not-enough-building-a-sub-microsecond-runtime-governance-gate-in-rust-pf4",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Flh0k9zlojlu9c6y7zx59.png",
+  "orig_title": "Approval Is Not Enough: Building a Sub‑Microsecond Runtime Governance Gate in Rust",
+  "cluster_urls": [
+   "https://dev.to/akhilesh_warik_8032f0fd9d/approval-is-not-enough-building-a-sub-microsecond-runtime-governance-gate-in-rust-pf4"
+  ],
+  "cluster_titles": [
+   "Approval Is Not Enough: Building a Sub‑Microsecond Runtime Governance Gate in Rust"
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260614-1506-1-nanogate-provides-sub-microsecond-runtime-go.png",
+   "20260614-1506-1-nanogate-provides-sub-microsecond-runtime-go-d1.png",
+   "20260614-1506-1-nanogate-provides-sub-microsecond-runtime-go-d2.png"
+  ]
+ }
+]

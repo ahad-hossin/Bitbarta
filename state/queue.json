@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai agents emergent society wars gossip",
+  "headline_marked": "[[AI agents form society on island]] with wars, gossip, grudges, and peace",
+  "headline": "AI agents form society on island with wars, gossip, grudges, and peace",
+  "summary": "A new browser simulation, Tiny Civilization, lets 2-8 AI agents with distinct personalities live on an island, developing complex social behaviors including grudges and peace. Agents remember past interactions across 'lives' to influence future decisions.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Inspired by OpenAI's multi-agent hide-and-seek, Tiny Civilization explores if AI agents can form a society. The goal was to see if they would behave like humans, holding grudges or making peace.",
+   "The browser-based simulation features 2-8 agents with unique personalities living on a small island. They engage in activities like gathering, building, trading, stealing, gossiping, and forming grudges or alliances. A live demo is available.",
+   "The entire project was built using Claude Code with the Fable model, allowing a storytelling model to create a world of stories. The design balances LLM intent (setting direction) with instinct-driven body actions (hunger, energy) for affordability and realism.",
+   "A key feature is the memory system, where each agent's life is distilled into memory lines stored locally. These memories are injected into subsequent prompts, enabling agents to reference past lives, pay reparations, or trust allies.",
+   "This memory system allows agents to develop coherent arcs over repeated runs, referencing previous interactions in dialogue. Agents can pre-emptively act based on remembered enemies or allies, sometimes leading to their own downfall.",
+   "The development process involved adjusting \"dials\" in the code and observing the resulting societal dynamics. This iterative approach revealed that when one form of conflict was patched, agents would find the next \"cheapest\" one.",
+   "This emergent behavior mirrored human society, with conflict evolving from massacres to wars, then to theft, and eventually litigation. The simulation highlights how complex social structures can arise from simple rules.",
+   "The tech stack includes TypeScript, React, Zustand, Vite, and Recharts. The default mind uses z.ai GLM, but any OpenAI-compatible provider works per-agent, allowing users to pit different LLMs against each other in the same village.",
+   "The system ensures user API keys never touch the browser, using a server-side proxy, and an adaptive-pacing controller manages API rate limits. The live demo and code are publicly accessible."
+  ],
+  "caption": "Watch AI agents evolve a society on a simulated island, complete with wars, gossip, grudges, and peace. This browser sim lets you observe complex emergent behaviors.\n\nInspired by OpenAI's multi-agent hide-and-seek, Tiny Civilization explores if AI agents can form a society. The goal was to see if they would behave like humans, holding grudges or making peace.\n\nThe browser-based simulation features 2-8 agents with unique personalities living on a small island. They engage in activities like gathering, building, trading, stealing, gossiping, and forming grudges or alliances. A live demo is available.\n\nThe entire project was built using Claude Code with the Fable model, allowing a storytelling model to create a world of stories. The design balances LLM intent (setting direction) with instinct-driven body actions (hunger, energy) for affordability and realism.\n\nA key feature is the memory system, where each agent's life is distilled into memory lines stored locally. These memories are injected into subsequent prompts, enabling agents to reference past lives, pay reparations, or trust allies.\n\nThis memory system allows agents to develop coherent arcs over repeated runs, referencing previous interactions in dialogue. Agents can pre-emptively act based on remembered enemies or allies, sometimes leading to their own downfall.\n\nThe development process involved adjusting \"dials\" in the code and observing the resulting societal dynamics. This iterative approach revealed that when one form of conflict was patched, agents would find the next \"cheapest\" one.\n\nThis emergent behavior mirrored human society, with conflict evolving from massacres to wars, then to theft, and eventually litigation. The simulation highlights how complex social structures can arise from simple rules.\n\n#AI #Simulation #MultiAgent #Tech #EmergentBehavior #TinyCivilization\n\nSource: DEV",
+  "tweet": "A new browser sim, Tiny Civilization, lets 8 AI agents develop a society on an island, complete with wars, gossip, grudges, and peace. Agents remember past lives, influencing future interactions. See complex emergent behaviors unfold. #AI #Simulation #MultiAgent",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "source": "DEV",
+  "url": "https://dev.to/dhrupo/i-gave-8-ai-agents-an-island-and-watched-a-society-emerge-wars-gossip-grudges-and-peace-2edj",
+  "image": "",
+  "orig_title": "I gave 8 AI agents an island and watched a society emerge — wars, gossip, grudges, and peace",
+  "cluster_urls": [
+   "https://dev.to/dhrupo/i-gave-8-ai-agents-an-island-and-watched-a-society-emerge-wars-gossip-grudges-and-peace-2edj"
+  ],
+  "cluster_titles": [
+   "I gave 8 AI agents an island and watched a society emerge — wars, gossip, grudges, and peace"
+  ],
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260614-1406-0-ai-agents-form-society-on-island-with-wars-g.png",
+   "20260614-1406-0-ai-agents-form-society-on-island-with-wars-g-d1.png",
+   "20260614-1406-0-ai-agents-form-society-on-island-with-wars-g-d2.png",
+   "20260614-1406-0-ai-agents-form-society-on-island-with-wars-g-d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent ignores rules",
+  "headline_marked": "[[Why AI agents ignore your rules]]: Common mistakes in agent config explained.",
+  "headline": "Why AI agents ignore your rules: Common mistakes in agent config explained.",
+  "summary": "AI agents often disregard rules due to ambiguous definitions lacking context. Learn how to fix this by adding reasons to rules, maintaining single sources of truth, and using specialized agents for better performance.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents frequently break rules despite clear instructions, leading to frustrating issues like silent version drift and broken builds. This often costs developers valuable time debugging problems that seem to come from nowhere.",
+   "The core problem isn't disobedience, but poorly written rules. When you state \"never use X\" without explanation, the LLM interprets it as a soft preference, finding plausible scenarios where the rule might not apply.",
+   "To fix this, add the \"why\" behind each rule. An agent that understands the reason, like preventing silent version drift, can reason from that principle and catch variations you never explicitly wrote down.",
+   "Maintain a single source of truth for all facts. Avoid restating schemas or types in multiple documents; instead, point the agent to the original, authoritative file to prevent stale information from being used.",
+   "Utilize several specialized agents rather than one generalist. A mobile engineer and a pipeline engineer have different needs, and splitting agents by domain ensures each one focuses on relevant information without forgetting crucial details.",
+   "Define \"done\" as a verifiable command, not a subjective feeling. Instead of \"looks good,\" give the agent concrete checks to perform, transforming task completion into something it can confirm rather than merely convince itself of.",
+   "The solution involves fewer rules, each with an attached reason, a single source of truth for facts, specialized agents for specific domains, and clear, actionable completion criteria. This initial effort saves significant time in the long run.",
+   "An MIT-licensed agent configuration template is available on GitHub (github.com/Guck111/agent-config-template). It helps audit existing configs and convert them into formats like Claude Code and Antigravity, providing a practical starting point."
+  ],
+  "caption": "Is your AI agent ignoring your carefully written rules? The problem often lies not with disobedience, but with how the rules are structured.\n\nAI agents frequently break rules despite clear instructions, leading to frustrating issues like silent version drift and broken builds. This often costs developers valuable time debugging problems that seem to come from nowhere.\n\nThe core problem isn't disobedience, but poorly written rules. When you state \"never use X\" without explanation, the LLM interprets it as a soft preference, finding plausible scenarios where the rule might not apply.\n\nTo fix this, add the \"why\" behind each rule. An agent that understands the reason, like preventing silent version drift, can reason from that principle and catch variations you never explicitly wrote down.\n\nMaintain a single source of truth for all facts. Avoid restating schemas or types in multiple documents; instead, point the agent to the original, authoritative file to prevent stale information from being used.\n\nUtilize several specialized agents rather than one generalist. A mobile engineer and a pipeline engineer have different needs, and splitting agents by domain ensures each one focuses on relevant information without forgetting crucial details.\n\nDefine \"done\" as a verifiable command, not a subjective feeling. Instead of \"looks good,\" give the agent concrete checks to perform, transforming task completion into something it can confirm rather than merely convince itself of.\n\nThe solution involves fewer rules, each with an attached reason, a single source of truth for facts, specialized agents for specific domains, and clear, actionable completion criteria. This initial effort saves significant time in the long run.\n\nAn MIT-licensed agent configuration template is available on GitHub (github.com/Guck111/agent-config-template). It helps audit existing configs and convert them into formats like Claude Code and Antigravity, providing a practical starting point.\n\n#AI #Developer #LLM #AgentConfig #TechTips #SoftwareDev\n\nSource: DEV",
+  "tweet": "Is your AI agent ignoring your rules? It's not disobedience, it's bad rules. Learn how to fix common agent configuration mistakes by adding 'why' to rules, using single sources of truth, and specialized agents. #AI #Developer #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "source": "DEV",
+  "url": "https://dev.to/arseni_1c552e9dc5349dc6b4/why-your-ai-agent-ignores-the-rules-you-wrote-9lf",
+  "image": "",
+  "orig_title": "Why your AI agent ignores the rules you wrote",
+  "cluster_urls": [
+   "https://dev.to/arseni_1c552e9dc5349dc6b4/why-your-ai-agent-ignores-the-rules-you-wrote-9lf"
+  ],
+  "cluster_titles": [
+   "Why your AI agent ignores the rules you wrote"
+  ],
+  "photo_credit": "",
+  "image_files": [
+   "20260614-1406-1-why-ai-agents-ignore-your-rules-common-mista.png",
+   "20260614-1406-1-why-ai-agents-ignore-your-rules-common-mista-d1.png",
+   "20260614-1406-1-why-ai-agents-ignore-your-rules-common-mista-d2.png",
+   "20260614-1406-1-why-ai-agents-ignore-your-rules-common-mista-d3.png"
+  ]
+ }
+]

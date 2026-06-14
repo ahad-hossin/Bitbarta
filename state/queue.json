@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai agent builds region-survivable system",
+  "headline_marked": "Quorum: [[Region-survivable incident command]] built on Aurora DSQL",
+  "headline": "Quorum: Region-survivable incident command built on Aurora DSQL",
+  "summary": "An incident command plane designed to survive a region loss, Quorum demonstrates multi-region Aurora DSQL's ability to maintain strong consistency even when a region fails.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The core challenge for incident response tools is that they often reside in the same region as the system they are monitoring. When that region fails, the tools to manage the incident go down with it. Quorum addresses this by being an incident command plane designed to survive a region loss, leveraging AWS's multi-region Aurora DSQL.",
+   "Quorum utilizes a multi-region Aurora DSQL cluster with two full regions (us-east-1, us-east-2) and a log-only witness in us-west-2. This setup provides 99.999% multi-region availability with automated failure recovery, ensuring strong consistency for reads and writes even if one region becomes unreachable.",
+   "The application-level routing in Quorum, built with Next.js on Vercel, detects an unreachable region and automatically redirects traffic to the healthy endpoint. Crucially, the health panel itself is failover-protected, reading from the same resilient DSQL database it reports on, preventing it from becoming a casualty of the outage.",
+   "Ingestion of monitoring events into Quorum also follows a failover-protected path. CloudWatch alarms trigger EventBridge, which routes events to an ingest Lambda that writes them into DSQL. This ensures that monitoring events can become incidents without depending on a single region's data layer.",
+   "Quorum includes a recursive failover drill feature. Running this drill simulates a region impairment (us-east-1), allowing users to coordinate a real incident from the surviving region using the same tools and database. This exercises the exact failover flow without leaving residual data due to its idempotent event UUID.",
+   "The demo proves that Quorum can detect an unreachable region, route traffic to the survivor, maintain incident record integrity, and coordinate a real incident from the surviving side. Its recovery point is effectively zero, as strong consistency means no committed data is lost during failover.",
+   "However, the demo simulates region endpoint failure via a chaos toggle and does not partition DSQL's internal commit quorum. The latencies shown are happy-path, where commits only require acknowledgment from the two fastest of three cluster members. In a real single-region failure, commits would need to reach the surviving region and the witness, potentially exposing slower links."
+  ],
+  "caption": "Incident response tools often fail when the region they serve goes down.\nQuorum is built to survive region loss using multi-region Aurora DSQL.\n\nThe core challenge for incident response tools is that they often reside in the same region as the system they are monitoring. When that region fails, the tools to manage the incident go down with it. Quorum addresses this by being an incident command plane designed to survive a region loss, leveraging AWS's multi-region Aurora DSQL.\n\nQuorum utilizes a multi-region Aurora DSQL cluster with two full regions (us-east-1, us-east-2) and a log-only witness in us-west-2. This setup provides 99.999% multi-region availability with automated failure recovery, ensuring strong consistency for reads and writes even if one region becomes unreachable.\n\nThe application-level routing in Quorum, built with Next.js on Vercel, detects an unreachable region and automatically redirects traffic to the healthy endpoint. Crucially, the health panel itself is failover-protected, reading from the same resilient DSQL database it reports on, preventing it from becoming a casualty of the outage.\n\nIngestion of monitoring events into Quorum also follows a failover-protected path. CloudWatch alarms trigger EventBridge, which routes events to an ingest Lambda that writes them into DSQL. This ensures that monitoring events can become incidents without depending on a single region's data layer.\n\nQuorum includes a recursive failover drill feature. Running this drill simulates a region impairment (us-east-1), allowing users to coordinate a real incident from the surviving region using the same tools and database. This exercises the exact failover flow without leaving residual data due to its idempotent event UUID.\n\n#DevOps #CloudComputing #Database #AuroraDSQL #IncidentResponse\n\nSource: DEV",
+  "tweet": "Incident response tools often fail when the region they serve goes down. Quorum is built to survive region loss using multi-region Aurora DSQL. It demonstrates failover and strong consistency even when a region is unreachable. #DevOps #CloudComputing #AuroraDSQL",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aws.amazon.com",
+  "source": "DEV",
+  "url": "https://dev.to/hocmemini/surviving-the-region-you-run-in-failover-on-aurora-dsql-and-what-the-demo-proves-5chc",
+  "image": "",
+  "orig_title": "Surviving the region you run in: failover on Aurora DSQL, and what the demo proves",
+  "cluster_urls": [
+   "https://dev.to/hocmemini/surviving-the-region-you-run-in-failover-on-aurora-dsql-and-what-the-demo-proves-5chc",
+   "https://dev.to/hocmemini/optimistic-concurrency-is-the-whole-design-event-sourcing-on-aurora-dsql-m63",
+   "https://dev.to/hocmemini/i-built-a-region-survivable-system-by-directing-an-ai-agent-an-append-only-decision-log-kept-it-2bkg",
+   "https://dev.to/salim_rutaganda_ce5d33cda/how-to-design-a-mobile-app-with-ai-the-full-workflow-start-to-finish-3h19"
+  ],
+  "cluster_titles": [
+   "Surviving the region you run in: failover on Aurora DSQL, and what the demo proves",
+   "Optimistic concurrency is the whole design: event sourcing on Aurora DSQL",
+   "I built a region-survivable system by directing an AI agent. An append-only decision log kept it coherent.",
+   "How to Design a Mobile App With AI: The Full Workflow (Start to Finish)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260615-0522-0-quorum-region-survivable-incident-command-bu.png",
+   "20260615-0522-0-quorum-region-survivable-incident-command-bu-d1.png",
+   "20260615-0522-0-quorum-region-survivable-incident-command-bu-d2.png",
+   "20260615-0522-0-quorum-region-survivable-incident-command-bu-d3.png",
+   "20260615-0522-0-quorum-region-survivable-incident-command-bu-d4.png"
+  ]
+ },
+ {
+  "topic": "stanford grads walk out on google ceo speech",
+  "headline_marked": "Stanford graduates [[walk out]] on Google CEO Sundar Pichai's commencement speech",
+  "headline": "Stanford graduates walk out on Google CEO Sundar Pichai's commencement speech",
+  "summary": "Students departed as Pichai began his address, with no mention of AI, a stark contrast to other commencement speeches this year.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "During Stanford University's commencement ceremony, a number of graduating students chose to walk out as CEO Sundar Pichai took the stage to deliver his speech.",
+   "This action occurred as Pichai began his address, with attendees noting the absence of any discussion about artificial intelligence in his remarks.",
+   "The event marks a notable moment for Pichai, who is the CEO of one of the world's leading technology companies, Google.",
+   "Unlike some other university commencement speeches this year, which have seen speakers facing protests or boos related to AI, the Stanford situation appears to be a direct protest against Pichai's presence or message."
+  ],
+  "caption": "Dozens of Stanford graduates walked out during Sundar Pichai's commencement speech.\n\nDuring Stanford University's commencement ceremony, a number of graduating students chose to walk out as CEO Sundar Pichai took the stage to deliver his speech.\n\nThis action occurred as Pichai began his address, with attendees noting the absence of any discussion about artificial intelligence in his remarks.\n\nThe event marks a notable moment for Pichai, who is the CEO of one of the world's leading technology companies, Google.\n\nUnlike some other university commencement speeches this year, which have seen speakers facing protests or boos related to AI, the Stanford situation appears to be a direct protest against Pichai's presence or message.\n\n#Stanford #SundarPichai #Google #Commencement #TechProtest\n\nSource: Hacker News",
+  "tweet": "Dozens of Stanford graduates walked out during Sundar Pichai's commencement speech. No mention of AI in his address, unlike other university speakers this year. #Stanford #Google #TechProtest",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "google.com",
+  "source": "Hacker News",
+  "url": "https://twitter.com/maattttbrown/status/2066215255987163246",
+  "image": "",
+  "orig_title": "Stanford grads walk out on Google CEO Sundar Pichai speech",
+  "cluster_urls": [
+   "https://twitter.com/maattttbrown/status/2066215255987163246"
+  ],
+  "cluster_titles": [
+   "Stanford grads walk out on Google CEO Sundar Pichai speech"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260615-0522-1-stanford-graduates-walk-out-on-google-ceo-su.png",
+   "20260615-0522-1-stanford-graduates-walk-out-on-google-ceo-su-d1.png"
+  ]
+ }
+]

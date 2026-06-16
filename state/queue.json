@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "banned book library wifi light bulb",
+  "headline_marked": "[[Hacker builds 'Banned Book Library']] into a Wi-Fi smart light bulb for stealthy digital dead drops",
+  "headline": "Hacker builds 'Banned Book Library' into a Wi-Fi smart light bulb for stealthy digital dead drops",
+  "summary": "A developer created a portable, undetectable Wi-Fi access point inside a smart bulb to host banned books, offering a way to circumvent censorship.",
+  "category": "GADGETS",
+  "template": "terminal",
+  "details": [
+   "A developer has created a \"Banned Book Library\" by hacking a Wi-Fi smart light bulb. This device acts as an open Wi-Fi access point and web server, hosting digital copies of banned books. The goal is to provide a discreet way to share censored material in communities where books are restricted.",
+   "The inspiration for the project came from Ben Brown's short story \"Library,\" which depicts a digital archive of important works. This concept aims to preserve and distribute information that might otherwise be lost or suppressed, echoing themes of digital resilience and freedom of access.",
+   "The project leverages Tasmota, an open-source firmware that allows local control over smart devices, freeing them from cloud services. This approach ensures the \"library\" remains accessible and functional independently, aligning with the idea of untethered digital archives.",
+   "The developer sourced Wi-Fi light bulbs pre-installed with Tasmota and featuring an ESP32C3 chip with 4MB flash. This made it easier to develop custom firmware without needing to physically break open and flash the devices via serial programming.",
+   "A key challenge is the limited 4MB flash memory, which must accommodate the firmware, web server, and all books. The developer is exploring options to overcome this, such as adding external storage like a microSD card reader, to expand the library's capacity."
+  ],
+  "caption": "A hacker has turned a common Wi-Fi smart light bulb into a covert \"Banned Book Library.\" It broadcasts censored texts via an open Wi-Fi network, designed to bypass restrictions.\n\nA developer has created a \"Banned Book Library\" by hacking a Wi-Fi smart light bulb. This device acts as an open Wi-Fi access point and web server, hosting digital copies of banned books. The goal is to provide a discreet way to share censored material in communities where books are restricted.\n\nThe inspiration for the project came from Ben Brown's short story \"Library,\" which depicts a digital archive of important works. This concept aims to preserve and distribute information that might otherwise be lost or suppressed, echoing themes of digital resilience and freedom of access.\n\nThe project leverages Tasmota, an open-source firmware that allows local control over smart devices, freeing them from cloud services. This approach ensures the \"library\" remains accessible and functional independently, aligning with the idea of untethered digital archives.\n\nThe developer sourced Wi-Fi light bulbs pre-installed with Tasmota and featuring an ESP32C3 chip with 4MB flash. This made it easier to develop custom firmware without needing to physically break open and flash the devices via serial programming.\n\nA key challenge is the limited 4MB flash memory, which must accommodate the firmware, web server, and all books. The developer is exploring options to overcome this, such as adding external storage like a microSD card reader, to expand the library's capacity.\n\n#Tech #Cybersecurity #FreedomOfInformation #DIYTech #SmartHomeHack #Censorship\n\nSource: Hacker News",
+  "tweet": "A hacker built a \"Banned Book Library\" into a Wi-Fi smart light bulb. This covert device hosts censored texts on an open Wi-Fi network, offering a stealthy way to bypass restrictions. A true cyberpunk digital dead drop. #Tech #FreedomOfInformation #DIYTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.richardosgood.com/posts/banned-book-library/",
+  "image": "",
+  "orig_title": "Banned Book Library in a Wi-Fi Smart Light Bulb",
+  "cluster_urls": [
+   "https://www.richardosgood.com/posts/banned-book-library/"
+  ],
+  "cluster_titles": [
+   "Banned Book Library in a Wi-Fi Smart Light Bulb"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260616-0607-0-hacker-builds-banned-book-library-into-a-wi-.png",
+   "20260616-0607-0-hacker-builds-banned-book-library-into-a-wi--d1.png",
+   "20260616-0607-0-hacker-builds-banned-book-library-into-a-wi--d2.png"
+  ]
+ },
+ {
+  "topic": "m31a terminal native ai coding agent",
+  "headline_marked": "[[M31A is a terminal-native AI coding agent]] that ships verified git commits end-to-end",
+  "headline": "M31A is a terminal-native AI coding agent that ships verified git commits end-to-end",
+  "summary": "M31A is an autonomous AI coding agent built in Go, designed to handle the entire development workflow from initialization to shipping, ensuring every run ends with a verified git commit. It runs as a static binary with zero telemetry on any POSIX shell.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "M31A (M31 Autonomous) is a terminal-based AI coding agent written in Go, designed to manage the entire development workflow. Unlike other assistants, it doesn't just suggest code; it handles testing, verification, and shipping changes end-to-end. Every session concludes with a verified git commit and a learning ledger entry.",
+   "The agent follows a six-phase workflow: Initialize, Discuss, Plan, Execute, Verify, and Ship. It operates as a single static binary, ensuring zero telemetry and compatibility with any POSIX shell environment. This open-source project focuses on true autonomy in coding.",
+   "During the \"Discuss\" phase, M31A uses LLM streaming and embedded prompt templates to ask clarifying questions, preventing misinterpretations of user requests. The \"Plan\" phase generates a structured markdown plan, which a custom parser refines with retry logic and classifies by complexity.",
+   "The \"Execute\" phase uses a task runner with Kahn's algorithm for topological sorting, allowing bounded parallelism for tasks. It includes a self-heal loop that retries recoverable failures, enhancing reliability.",
+   "M31A features a provider layer with automatic fallback logic to switch to healthy LLM providers if one degrades due to rate limits or service unavailability. A model arbitrage system also automatically selects the cheapest model that meets the task's complexity requirements.",
+   "Tools within M31A are aggressively sandboxed, with every tool call gated by a permission modal with configurable timeouts. This system uses permission levels (e.g., Bash is dangerous, FileWrite is medium, FileRead is safe) to determine when user prompting is required.",
+   "A cross-session learning ledger records structured data from every session, allowing the agent to learn from past experiences, such as common frameworks, task failure types, and typical completion times. This feedback loop helps M31A become more efficient over time.",
+   "To manage long conversations, M31A implements AutoDream, an automatic context consolidation system. It triggers at 60% context usage, using role-sampled summarization while preserving recent messages for continuity. Git-bisect integration is also available for rolling back commit chains if verification fails."
+  ],
+  "caption": "M31A is an autonomous AI coding agent that doesn't just suggest code – it ships verified git commits. It handles the entire development workflow from start to finish.\n\nM31A (M31 Autonomous) is a terminal-based AI coding agent written in Go, designed to manage the entire development workflow. Unlike other assistants, it doesn't just suggest code; it handles testing, verification, and shipping changes end-to-end. Every session concludes with a verified git commit and a learning ledger entry.\n\nThe agent follows a six-phase workflow: Initialize, Discuss, Plan, Execute, Verify, and Ship. It operates as a single static binary, ensuring zero telemetry and compatibility with any POSIX shell environment. This open-source project focuses on true autonomy in coding.\n\nDuring the \"Discuss\" phase, M31A uses LLM streaming and embedded prompt templates to ask clarifying questions, preventing misinterpretations of user requests. The \"Plan\" phase generates a structured markdown plan, which a custom parser refines with retry logic and classifies by complexity.\n\nThe \"Execute\" phase uses a task runner with Kahn's algorithm for topological sorting, allowing bounded parallelism for tasks. It includes a self-heal loop that retries recoverable failures, enhancing reliability.\n\nM31A features a provider layer with automatic fallback logic to switch to healthy LLM providers if one degrades due to rate limits or service unavailability. A model arbitrage system also automatically selects the cheapest model that meets the task's complexity requirements.\n\nTools within M31A are aggressively sandboxed, with every tool call gated by a permission modal with configurable timeouts. This system uses permission levels (e.g., Bash is dangerous, FileWrite is medium, FileRead is safe) to determine when user prompting is required.\n\n#AI #Coding #DeveloperTools #OpenSource #Terminal #GoLang\n\nSource: DEV",
+  "tweet": "M31A is a terminal-native AI coding agent that handles the entire dev workflow, from planning to shipping verified git commits. It learns from every session and runs on any POSIX shell. #AI #DeveloperTools #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/eshanized/building-m31a-a-terminal-native-ai-coding-agent-that-ships-not-just-suggests-2p0m",
+  "image": "",
+  "orig_title": "Building M31A: A Terminal-Native AI Coding Agent That Ships, Not Just Suggests",
+  "cluster_urls": [
+   "https://dev.to/eshanized/building-m31a-a-terminal-native-ai-coding-agent-that-ships-not-just-suggests-2p0m"
+  ],
+  "cluster_titles": [
+   "Building M31A: A Terminal-Native AI Coding Agent That Ships, Not Just Suggests"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260616-0607-1-m31a-is-a-terminal-native-ai-coding-agent-th.png",
+   "20260616-0607-1-m31a-is-a-terminal-native-ai-coding-agent-th-d1.png",
+   "20260616-0607-1-m31a-is-a-terminal-native-ai-coding-agent-th-d2.png",
+   "20260616-0607-1-m31a-is-a-terminal-native-ai-coding-agent-th-d3.png",
+   "20260616-0607-1-m31a-is-a-terminal-native-ai-coding-agent-th-d4.png"
+  ]
+ }
+]

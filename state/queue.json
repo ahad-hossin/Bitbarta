@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "typescript 6.0 last javascript based version",
+  "headline_marked": "[[TypeScript 6.0 Released]]: The Last JavaScript-Based Version Before Go Compiler Transition",
+  "headline": "TypeScript 6.0 Released: The Last JavaScript-Based Version Before Go Compiler Transition",
+  "summary": "TypeScript 6.0 marks the final release built on JavaScript before the team transitions to a Go-based compiler for 7.0. Teams delaying upgrades past mid-2027 will face a double migration.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "TypeScript 6.0 is a pivotal release, representing the final version built on the JavaScript codebase. The team plans to transition to a Go-based compiler for TypeScript 7.0, making this a critical migration window for developers.",
+   "Delaying upgrades beyond mid-2027 could force teams into a double migration, first to 6.0's breaking changes, then to 7.0's fundamentally different compilation model. This release focuses on clearing technical debt to enable the Go compiler transition.",
+   "Key improvements include stricter inference, a new `using` keyword for explicit resource management, and 30% faster incremental builds. The `using` keyword, based on the TC39 Explicit Resource Management proposal, guarantees cleanup of resources like file handles and database connections without `finally` blocks.",
+   "Method inference now preserves `this` context through generic constraints, reducing 'implicit any' errors in fluent APIs. Variadic tuple improvements also allow type-safe spreading at any position, enhancing function composition patterns.",
+   "TypeScript 6.0 introduces several breaking changes, removing patterns that survived deprecation warnings in 5.x. High-impact changes include namespace merging restrictions, implicit index signature narrowing, and stricter `--strict` defaults.",
+   "Namespace merging with classes now requires explicit `export` keywords, affecting code relying on ambient namespace declarations. Implicit index signatures no longer allow arbitrary property access, breaking common `Record<string, unknown>` assumptions.",
+   "The `--strict` flag now enables `noUncheckedIndexedAccess` by default, requiring nullability checks for array and object property lookups. While catching real bugs, this change can introduce 40-200+ errors per 10,000 lines during migration, depending on strict mode usage.",
+   "The migration path involves running the 6.0 compiler with `--noEmit` to identify errors. Codemods are available for index signature fixes and strict mode migrations, but namespace merging requires manual intervention. Developers should also audit `node_modules` dependencies for 6.0 compatibility."
+  ],
+  "caption": "TypeScript 6.0 is out, but it's more than just an update: it's the LAST JavaScript-based version. A major compiler rewrite to Go is coming in 7.0, making this a critical migration.\n\nTypeScript 6.0 is a pivotal release, representing the final version built on the JavaScript codebase. The team plans to transition to a Go-based compiler for TypeScript 7.0, making this a critical migration window for developers.\n\nDelaying upgrades beyond mid-2027 could force teams into a double migration, first to 6.0's breaking changes, then to 7.0's fundamentally different compilation model. This release focuses on clearing technical debt to enable the Go compiler transition.\n\nKey improvements include stricter inference, a new `using` keyword for explicit resource management, and 30% faster incremental builds. The `using` keyword, based on the TC39 Explicit Resource Management proposal, guarantees cleanup of resources like file handles and database connections without `finally` blocks.\n\nMethod inference now preserves `this` context through generic constraints, reducing 'implicit any' errors in fluent APIs. Variadic tuple improvements also allow type-safe spreading at any position, enhancing function composition patterns.\n\nTypeScript 6.0 introduces several breaking changes, removing patterns that survived deprecation warnings in 5.x. High-impact changes include namespace merging restrictions, implicit index signature narrowing, and stricter `--strict` defaults.\n\nNamespace merging with classes now requires explicit `export` keywords, affecting code relying on ambient namespace declarations. Implicit index signatures no longer allow arbitrary property access, breaking common `Record<string, unknown>` assumptions.\n\nThe `--strict` flag now enables `noUncheckedIndexedAccess` by default, requiring nullability checks for array and object property lookups. While catching real bugs, this change can introduce 40-200+ errors per 10,000 lines during migration, depending on strict mode usage.\n\n#TypeScript #Programming #SoftwareDevelopment #WebDev #JavaScript #TechNews\n\nSource: DEV",
+  "tweet": "TypeScript 6.0 is out, but it's more than just an update: it's the LAST JavaScript-based version. A major compiler rewrite to Go is coming in 7.0, making this a critical migration. Get ready for new features like `using` keyword & faster builds. #TypeScript #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "typescriptlang.org",
+  "source": "DEV",
+  "url": "https://dev.to/jsmanifest/typescript-60-released-the-last-javascript-based-version-new-features-breaking-changes-and-48a0",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fp2t2126p0qkv3ndpk23f.jpg",
+  "orig_title": "TypeScript 6.0 Released: The Last JavaScript-Based Version — New Features, Breaking Changes, and Migration Guide",
+  "cluster_urls": [
+   "https://dev.to/jsmanifest/typescript-60-released-the-last-javascript-based-version-new-features-breaking-changes-and-48a0"
+  ],
+  "cluster_titles": [
+   "TypeScript 6.0 Released: The Last JavaScript-Based Version — New Features, Breaking Changes, and Migration Guide"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260616-0807-0-typescript-6-0-released-the-last-javascript-.png",
+   "20260616-0807-0-typescript-6-0-released-the-last-javascript--d1.png",
+   "20260616-0807-0-typescript-6-0-released-the-last-javascript--d2.png",
+   "20260616-0807-0-typescript-6-0-released-the-last-javascript--d3.png"
+  ]
+ },
+ {
+  "topic": "amazon multibillion dollar data center missouri",
+  "headline_marked": "[[Amazon announces multibillion-dollar data center]] in Missouri, creating 400+ jobs",
+  "headline": "Amazon announces multibillion-dollar data center in Missouri, creating 400+ jobs",
+  "summary": "Amazon Web Services is investing billions in a new data center campus in Montgomery County, Missouri, projected to create over 400 full-time jobs.",
+  "category": "BIGTECH",
+  "template": "launch",
+  "details": [
+   "Amazon Web Services (AWS) is making a significant investment in Missouri, announcing a new multibillion-dollar data center campus in Montgomery County. This major project aims to expand AWS's cloud computing and AI capabilities.",
+   "The initiative is expected to generate over 400 full-time data center jobs, covering roles like electricians, HVAC technicians, and network specialists. Additionally, thousands of construction jobs will be created during the build-out phase.",
+   "The new campus will power essential AWS cloud and AI workloads, supporting services used daily by millions in remote work, streaming, healthcare, and finance. This builds on Amazon's existing footprint in Missouri, where it already employs over 10,000 people.",
+   "Amazon has secured agreements with Ameren Missouri to ensure that costs associated with the new campus are not passed on to other ratepayers. The company has also invested in a 138 MW carbon-free energy project within the state.",
+   "Water efficiency is a key focus for the new facilities, with Amazon projecting usage of less than 0.1% of the local aquifer’s annual recharge volume. This emphasizes sustainable resource management.",
+   "The investment is anticipated to generate hundreds of millions in new tax revenue for Montgomery County and the region. Amazon is also committing over $7 million in direct community contributions, including donating completed water infrastructure to the local public water supply district.",
+   "Missouri Governor Mike Kehoe praised the announcement, highlighting its positive impact on infrastructure, tax revenue, and economic growth. This development positions Montgomery County as a growing data center hub in the Midwest."
+  ],
+  "caption": "Amazon is pouring billions into a new data center campus in Missouri, promising over 400 full-time jobs and significant economic growth.\n\nAmazon Web Services (AWS) is making a significant investment in Missouri, announcing a new multibillion-dollar data center campus in Montgomery County. This major project aims to expand AWS's cloud computing and AI capabilities.\n\nThe initiative is expected to generate over 400 full-time data center jobs, covering roles like electricians, HVAC technicians, and network specialists. Additionally, thousands of construction jobs will be created during the build-out phase.\n\nThe new campus will power essential AWS cloud and AI workloads, supporting services used daily by millions in remote work, streaming, healthcare, and finance. This builds on Amazon's existing footprint in Missouri, where it already employs over 10,000 people.\n\nAmazon has secured agreements with Ameren Missouri to ensure that costs associated with the new campus are not passed on to other ratepayers. The company has also invested in a 138 MW carbon-free energy project within the state.\n\nWater efficiency is a key focus for the new facilities, with Amazon projecting usage of less than 0.1% of the local aquifer’s annual recharge volume. This emphasizes sustainable resource management.\n\nThe investment is anticipated to generate hundreds of millions in new tax revenue for Montgomery County and the region. Amazon is also committing over $7 million in direct community contributions, including donating completed water infrastructure to the local public water supply district.\n\nMissouri Governor Mike Kehoe praised the announcement, highlighting its positive impact on infrastructure, tax revenue, and economic growth. This development positions Montgomery County as a growing data center hub in the Midwest.\n\n#AWS #Amazon #DataCenter #CloudComputing #Missouri #TechInvestment\n\nSource: Hacker News",
+  "tweet": "Amazon is investing billions in a new data center campus in Missouri, set to create over 400 full-time jobs and boost the local economy. This major AWS expansion will support cloud and AI workloads. #AWS #DataCenter #Missouri",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "amazon.com",
+  "source": "Hacker News",
+  "url": "https://www.narracomm.com/amazon-announces-multibillion-dollar-data-center-in-missouri/",
+  "image": "",
+  "orig_title": "Amazon Announces Multibillion-Dollar Data Center in Missouri",
+  "cluster_urls": [
+   "https://www.narracomm.com/amazon-announces-multibillion-dollar-data-center-in-missouri/"
+  ],
+  "cluster_titles": [
+   "Amazon Announces Multibillion-Dollar Data Center in Missouri"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260616-0807-1-amazon-announces-multibillion-dollar-data-ce.png",
+   "20260616-0807-1-amazon-announces-multibillion-dollar-data-ce-d1.png",
+   "20260616-0807-1-amazon-announces-multibillion-dollar-data-ce-d2.png",
+   "20260616-0807-1-amazon-announces-multibillion-dollar-data-ce-d3.png"
+  ]
+ }
+]

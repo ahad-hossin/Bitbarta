@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "xai doj national security lawsuit",
+  "headline_marked": "DOJ: [[xAI's Grok is 'vital' for national security]], used in strikes against Iran",
+  "headline": "DOJ: xAI's Grok is 'vital' for national security, used in strikes against Iran",
+  "summary": "The Department of Justice intervened in a lawsuit against xAI, arguing that attempts to shut down its data center's gas turbines threaten national security due to Grok's military applications.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The Department of Justice (DOJ) has formally sided with Elon Musk's xAI in a lawsuit filed by the NAACP. The DOJ stated that stopping xAI's natural gas turbines would jeopardize American national, economic, and energy security by cutting off power for AI innovation supporting military operations.",
+   "The NAACP's lawsuit, filed in April, alleges that xAI is violating the Clean Air Act by operating unpermitted natural gas turbines at its Colossus 2 data center in Southaven, Mississippi. They argue that the continued use of these turbines without a permit endangers public health in communities already burdened by pollution.",
+   "According to a DOJ memorandum, xAI's Grok is one of only four AI models supporting mission-critical operations across Secret and Top-Secret classified networks. A declaration from the Department of Defense's chief digital and AI officer, Cameron Stanley, specified that the military relies on Grok's Gov model for vital national security missions, including recent strikes against Iran.",
+   "xAI, part of SpaceX, previously faced complaints in Memphis regarding unpermitted gas turbines at its first data center. The Memphis region has high asthma rates, raising concerns about additional pollution, though state agencies claimed xAI had a year to operate without clean air permits.",
+   "Emails obtained by the Southern Environmental Law Center (SELC) reveal that the number of unpermitted turbines at the Colossus 2 site increased from 27 to 57 by mid-May, weeks after the NAACP's lawsuit. This expansion led to a 111% increase in nitrogen oxide, 83% in PM2.5, and 88% in formaldehyde emissions since April."
+  ],
+  "caption": "The US Department of Justice just declared xAI's Grok model 'vital' for national security, citing its use in military operations, including recent strikes against Iran.\n\nThe Department of Justice (DOJ) has formally sided with Elon Musk's xAI in a lawsuit filed by the NAACP. The DOJ stated that stopping xAI's natural gas turbines would jeopardize American national, economic, and energy security by cutting off power for AI innovation supporting military operations.\n\nThe NAACP's lawsuit, filed in April, alleges that xAI is violating the Clean Air Act by operating unpermitted natural gas turbines at its Colossus 2 data center in Southaven, Mississippi. They argue that the continued use of these turbines without a permit endangers public health in communities already burdened by pollution.\n\nAccording to a DOJ memorandum, xAI's Grok is one of only four AI models supporting mission-critical operations across Secret and Top-Secret classified networks. A declaration from the Department of Defense's chief digital and AI officer, Cameron Stanley, specified that the military relies on Grok's Gov model for vital national security missions, including recent strikes against Iran.\n\nxAI, part of SpaceX, previously faced complaints in Memphis regarding unpermitted gas turbines at its first data center. The Memphis region has high asthma rates, raising concerns about additional pollution, though state agencies claimed xAI had a year to operate without clean air permits.\n\nEmails obtained by the Southern Environmental Law Center (SELC) reveal that the number of unpermitted turbines at the Colossus 2 site increased from 27 to 57 by mid-May, weeks after the NAACP's lawsuit. This expansion led to a 111% increase in nitrogen oxide, 83% in PM2.5, and 88% in formaldehyde emissions since April.\n\n#xAI #DOJ #NationalSecurity #AI #Grok #TechNews\n\nSource: Wired",
+  "tweet": "The DOJ is backing xAI in a lawsuit, stating Grok is 'vital' for national security and used in military strikes against Iran. This intervention highlights the growing role of AI in defense, despite environmental concerns. #xAI #AI #NationalSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "x.ai",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/doj-lawyers-argue-xai-vital-national-security-naacp-lawsuit/",
+  "image": "https://media.wired.com/photos/6a30b0678f3c861b578bab3f/master/pass/GettyImages-2217198328.jpg",
+  "orig_title": "DOJ Lawyers Argue xAI Is ‘Vital’ for National Security in NAACP Lawsuit",
+  "cluster_urls": [
+   "https://www.wired.com/story/doj-lawyers-argue-xai-vital-national-security-naacp-lawsuit/"
+  ],
+  "cluster_titles": [
+   "DOJ Lawyers Argue xAI Is ‘Vital’ for National Security in NAACP Lawsuit"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260616-1127-0-doj-xai-s-grok-is-vital-for-national-securit.png",
+   "20260616-1127-0-doj-xai-s-grok-is-vital-for-national-securit-d1.png",
+   "20260616-1127-0-doj-xai-s-grok-is-vital-for-national-securit-d2.png",
+   "20260616-1127-0-doj-xai-s-grok-is-vital-for-national-securit-d3.png"
+  ]
+ },
+ {
+  "topic": "llm speed benchmarks",
+  "headline_marked": "[[42 LLMs benchmarked for speed]] with live, continuous results on Ollama Cloud",
+  "headline": "42 LLMs benchmarked for speed with live, continuous results on Ollama Cloud",
+  "summary": "An independent tracker measures both Time to First Token (TTFT) and Tokens Per Second (TPS) for 42 Ollama Cloud models, revealing up to 80x difference in initial response times.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "While most LLM leaderboards focus on intelligence, a new independent tracker, ollamatps.com, benchmarks 42 Ollama Cloud models specifically for speed. It measures both the initial wait time and the subsequent generation speed, providing crucial data often overlooked by developers.",
+   "The benchmark distinguishes between two critical speed metrics: Time to First Token (TTFT), which is the delay before the first word appears, and Tokens Per Second (TPS), which measures how fast the model writes once it starts. A model can excel at one and fail at the other.",
+   "The methodology ensures comparability by using the same prompt, same cap, and same schedule for all models. The system is built with robust testing principles, including retries on failure, a reliability score per model, and a circuit breaker for consistently failing models.",
+   "Findings show significant performance disparities. The fastest model, a 30B variant, achieves over 200 tokens per second, while a model literally named \"ultra\" is last at under 8 TPS. TTFT varies even more wildly, ranging from 0.3 seconds to 23 seconds across the 42 models on the same cloud, an 80x difference.",
+   "The engine was recently rebuilt (v2) to support multiple providers and continuous testing. The live leaderboard updates every 10 minutes, offering up-to-date insights into model performance.",
+   "The project is led by Anton Gulin, an AI QA Architect and former Apple SDET, who applies his expertise in building AI-powered test automation systems to this public benchmark."
+  ],
+  "caption": "LLM speed isn't just one number. A new benchmark reveals up to an 80x difference in how long you wait for the first word from 42 models.\n\nWhile most LLM leaderboards focus on intelligence, a new independent tracker, ollamatps.com, benchmarks 42 Ollama Cloud models specifically for speed. It measures both the initial wait time and the subsequent generation speed, providing crucial data often overlooked by developers.\n\nThe benchmark distinguishes between two critical speed metrics: Time to First Token (TTFT), which is the delay before the first word appears, and Tokens Per Second (TPS), which measures how fast the model writes once it starts. A model can excel at one and fail at the other.\n\nThe methodology ensures comparability by using the same prompt, same cap, and same schedule for all models. The system is built with robust testing principles, including retries on failure, a reliability score per model, and a circuit breaker for consistently failing models.\n\nFindings show significant performance disparities. The fastest model, a 30B variant, achieves over 200 tokens per second, while a model literally named \"ultra\" is last at under 8 TPS. TTFT varies even more wildly, ranging from 0.3 seconds to 23 seconds across the 42 models on the same cloud, an 80x difference.\n\nThe engine was recently rebuilt (v2) to support multiple providers and continuous testing. The live leaderboard updates every 10 minutes, offering up-to-date insights into model performance.\n\nThe project is led by Anton Gulin, an AI QA Architect and former Apple SDET, who applies his expertise in building AI-powered test automation systems to this public benchmark.\n\n#LLMs #AISpeed #Benchmarking #Ollama #Tech #AI\n\nSource: DEV",
+  "tweet": "LLM speed varies wildly! A new independent benchmark, ollamatps.com, measures 42 Ollama Cloud models for Time to First Token (TTFT) and Tokens Per Second (TPS). Discover which models are truly fast, with some showing an 80x difference in initial response time. #AI #LLMs #Ben",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ollamatps.com",
+  "source": "DEV",
+  "url": "https://dev.to/aiwithanton/i-measure-how-fast-42-llms-actually-answer-heres-the-honest-method-3gap",
+  "image": "",
+  "orig_title": "I measure how fast 42 LLMs actually answer. Here's the honest method.",
+  "cluster_urls": [
+   "https://dev.to/aiwithanton/i-measure-how-fast-42-llms-actually-answer-heres-the-honest-method-3gap"
+  ],
+  "cluster_titles": [
+   "I measure how fast 42 LLMs actually answer. Here's the honest method."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260616-1127-1-42-llms-benchmarked-for-speed-with-live-cont.png",
+   "20260616-1127-1-42-llms-benchmarked-for-speed-with-live-cont-d1.png",
+   "20260616-1127-1-42-llms-benchmarked-for-speed-with-live-cont-d2.png"
+  ]
+ }
+]

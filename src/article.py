@@ -58,21 +58,59 @@ def upgrade_thumb(url: str) -> str:
     return u
 
 
+def _img_min_dim(content: bytes) -> int:
+    """Smaller of (width, height) for PNG/JPEG/GIF, parsed from the header
+    without PIL. Returns 0 if the format/size can't be determined."""
+    try:
+        if content[:8] == b"\x89PNG\r\n\x1a\n" and content[12:16] == b"IHDR":
+            return min(int.from_bytes(content[16:20], "big"), int.from_bytes(content[20:24], "big"))
+        if content[:2] == b"\xff\xd8":  # JPEG: find a start-of-frame marker
+            i = 2
+            while i < len(content) - 9:
+                if content[i] != 0xFF:
+                    i += 1
+                    continue
+                if content[i + 1] in (0xC0, 0xC1, 0xC2, 0xC3):
+                    return min(int.from_bytes(content[i + 5:i + 7], "big"),
+                               int.from_bytes(content[i + 7:i + 9], "big"))
+                i += 2 + int.from_bytes(content[i + 2:i + 4], "big")
+        if content[:6] in (b"GIF87a", b"GIF89a"):
+            return min(int.from_bytes(content[6:8], "little"), int.from_bytes(content[8:10], "little"))
+    except Exception:
+        pass
+    return 0
+
+
+_LOGO_MIN_DIM = 384  # upscaling a smaller logo into the big frame looks blurry
+
+
 def fetch_logo(domain: str) -> str:
-    """Best-effort brand logo as a data URI, by domain. Tries Clearbit (clean
-    transparent logos) then unavatar, then a high-res Google favicon. Returns
-    "" if none work."""
+    """Best-effort, HIGH-RES brand logo as a data URI, by domain. Tries Clearbit
+    (clean transparent logos) then unavatar. Rejects low-res images so we never
+    upscale a tiny favicon into a blurry mess. SVG (vector) always accepted.
+    Returns "" if no crisp logo is found (caller then goes text-led)."""
     domain = (domain or "").strip().lower()
     if not domain or "." not in domain:
         return ""
     for url in (
         f"https://logo.clearbit.com/{domain}?size=512&format=png",
         f"https://unavatar.io/{domain}?fallback=false",
-        f"https://www.google.com/s2/favicons?domain={domain}&sz=256",
     ):
-        uri = fetch_as_data_uri(url)
-        if uri:
-            return uri
+        try:
+            resp = http_get(url)
+        except Exception:
+            continue
+        if resp.status_code != 200 or not resp.content:
+            continue
+        ctype = resp.headers.get("Content-Type", "").split(";")[0]
+        if not ctype.startswith("image/") or len(resp.content) > 8_000_000:
+            continue
+        dim = _img_min_dim(resp.content)
+        ok = ctype == "image/svg+xml" or dim >= _LOGO_MIN_DIM  # vector, or genuinely hi-res
+        if not ok:
+            continue
+        b64 = base64.b64encode(resp.content).decode("ascii")
+        return f"data:{ctype};base64,{b64}"
     return ""
 
 

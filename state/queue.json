@@ -1,1 +1,106 @@
-[]
+[
+ {
+  "topic": "mastra npm packages compromised in supply chain attack",
+  "headline_marked": "[[144 Mastra npm packages compromised]] in massive JavaScript supply chain attack",
+  "headline": "144 Mastra npm packages compromised in massive JavaScript supply chain attack",
+  "summary": "The \"easy-day-js\" incident exploited a single hijacked contributor account, placing countless downstream AI projects at risk.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The compromise of 144 Mastra npm packages marks one of the largest and fastest supply chain attacks on JavaScript AI frameworks to date. Known as the “easy-day-js” incident, this breach exploited a single hijacked contributor account and triggered a chain reaction placing countless downstream projects at risk.",
+   "The central attack vector was the hijacking of a legitimate npm account, ehindero. With access to this single account, the attacker was able to mass-publish malicious versions of nearly every major Mastra package in rapid succession, abusing contributor credentials to publish malicious code across the entire module set.",
+   "Security researchers have flagged the event and codenamed it “easy-day-js.” All findings converge on one key fact: the attacker’s access to an authentic maintainer account enabled undetected malicious code publication across a key AI app framework’s entire module set.",
+   "This incident is a textbook example of a software supply chain attack in the npm ecosystem, weaponizing the trust developers place in open-source maintainers. The root failure is npm’s dependence on maintainer credential integrity, as the registry cannot inherently distinguish between legitimate and malicious intent from a compromised account.",
+   "Mitigations like 2FA, credential auditing, and requiring multiple publisher approvals are best practices, but adoption is not universal. The Mastra incident surfaces that gap, as none of these mechanisms are foolproof if contributors aren’t vigilant or if processes are bypassed for perceived convenience.",
+   "What makes supply chain attacks so damaging in npm is the speed and breadth: 144 separate packages, multiplied across hundreds or thousands of projects in which each is used. As the chain expands, so do the possible victims.",
+   "The Mastra namespace is widely adopted for JavaScript and TypeScript libraries dedicated to artificial intelligence application construction. Popular among both open-source tinkerers and production AI teams, these packages often serve as foundational dependencies—core building blocks in larger project stacks.",
+   "Any downstream project with direct or transitive dependencies on compromised Mastra packages was at risk of importing, building, or shipping malicious code. Any project pulling these versions should consider itself exposed."
+  ],
+  "caption": "A single compromised account led to the \"easy-day-js\" attack, compromising 144 Mastra npm packages and putting countless downstream AI projects at risk.\n\nThe compromise of 144 Mastra npm packages marks one of the largest and fastest supply chain attacks on JavaScript AI frameworks to date. Known as the “easy-day-js” incident, this breach exploited a single hijacked contributor account and triggered a chain reaction placing countless downstream projects at risk.\n\nThe central attack vector was the hijacking of a legitimate npm account, ehindero. With access to this single account, the attacker was able to mass-publish malicious versions of nearly every major Mastra package in rapid succession, abusing contributor credentials to publish malicious code across the entire module set.\n\nSecurity researchers have flagged the event and codenamed it “easy-day-js.” All findings converge on one key fact: the attacker’s access to an authentic maintainer account enabled undetected malicious code publication across a key AI app framework’s entire module set.\n\nThis incident is a textbook example of a software supply chain attack in the npm ecosystem, weaponizing the trust developers place in open-source maintainers. The root failure is npm’s dependence on maintainer credential integrity, as the registry cannot inherently distinguish between legitimate and malicious intent from a compromised account.\n\nMitigations like 2FA, credential auditing, and requiring multiple publisher approvals are best practices, but adoption is not universal. The Mastra incident surfaces that gap, as none of these mechanisms are foolproof if contributors aren’t vigilant or if processes are bypassed for perceived convenience.\n\nWhat makes supply chain attacks so damaging in npm is the speed and breadth: 144 separate packages, multiplied across hundreds or thousands of projects in which each is used. As the chain expands, so do the possible victims.\n\n#npm #SupplyChainAttack #JavaScript #AI #Security\n\nSource: DEV",
+  "tweet": "A massive supply chain attack, dubbed \"easy-day-js,\" has compromised 144 Mastra npm packages. A single hijacked contributor account was exploited, putting numerous AI projects at risk. #npm #Security #JavaScript",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/davekurian/144-mastra-npm-packages-compromised-in-software-supply-chain-attack-4ddn",
+  "image": "",
+  "orig_title": "144 Mastra npm packages compromised in software supply chain attack",
+  "cluster_urls": [
+   "https://dev.to/davekurian/144-mastra-npm-packages-compromised-in-software-supply-chain-attack-4ddn"
+  ],
+  "cluster_titles": [
+   "144 Mastra npm packages compromised in software supply chain attack"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260617-1807-0-144-mastra-npm-packages-compromised-in-massi.png",
+   "20260617-1807-0-144-mastra-npm-packages-compromised-in-massi-d1.png",
+   "20260617-1807-0-144-mastra-npm-packages-compromised-in-massi-d2.png",
+   "20260617-1807-0-144-mastra-npm-packages-compromised-in-massi-d3.png",
+   "20260617-1807-0-144-mastra-npm-packages-compromised-in-massi-d4.png"
+  ]
+ },
+ {
+  "topic": "us government xai lawsuit and ai model benchmarks",
+  "headline_marked": "[[HTTP QUERY]] Method Proposed for Safe, Idempotent Requests",
+  "headline": "HTTP QUERY Method Proposed for Safe, Idempotent Requests",
+  "summary": "A new HTTP method, QUERY, is proposed to bridge the gap between GET and POST, offering safe and idempotent request processing for complex queries.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The Internet Engineering Task Force (IETF) has published RFC 10008, proposing a new HTTP request method called QUERY. This method is designed to handle complex queries that are too voluminous to be encoded in a URI, offering a safer and more idempotent alternative to POST for such operations.",
+   "Unlike POST, which can result in partial state changes and requires specific server knowledge to ensure idempotency, the QUERY method is explicitly defined as safe and idempotent. This allows for automatic retries and caching mechanisms to function correctly, improving reliability and efficiency.",
+   "The QUERY method allows the request target to process enclosed content in a safe and idempotent manner. The content of the request and its media type define the query, with the origin server determining the scope of the operation based on the target resource.",
+   "This new method aims to solve the problem of using GET for simple queries and POST for more complex ones, where the latter lacks clear indications of idempotency. QUERY provides a standardized solution for server-side query initiation, enabling URIs to be assigned to queries or their results for later retrieval via GET.",
+   "The specification emphasizes that servers MUST fail requests if the Content-Type header is missing or inconsistent with the request content, ensuring proper handling of query data. This RFC represents the consensus of the IETF community and has undergone public review."
+  ],
+  "caption": "A new HTTP method, QUERY, is proposed to make complex requests safe and idempotent, bridging the gap between GET and POST.\n\nThe Internet Engineering Task Force (IETF) has published RFC 10008, proposing a new HTTP request method called QUERY. This method is designed to handle complex queries that are too voluminous to be encoded in a URI, offering a safer and more idempotent alternative to POST for such operations.\n\nUnlike POST, which can result in partial state changes and requires specific server knowledge to ensure idempotency, the QUERY method is explicitly defined as safe and idempotent. This allows for automatic retries and caching mechanisms to function correctly, improving reliability and efficiency.\n\nThe QUERY method allows the request target to process enclosed content in a safe and idempotent manner. The content of the request and its media type define the query, with the origin server determining the scope of the operation based on the target resource.\n\nThis new method aims to solve the problem of using GET for simple queries and POST for more complex ones, where the latter lacks clear indications of idempotency. QUERY provides a standardized solution for server-side query initiation, enabling URIs to be assigned to queries or their results for later retrieval via GET.\n\nThe specification emphasizes that servers MUST fail requests if the Content-Type header is missing or inconsistent with the request content, ensuring proper handling of query data. This RFC represents the consensus of the IETF community and has undergone public review.\n\n#HTTP #RFC10008 #WebDevelopment #APIs #IETF\n\nSource: Hacker News, Tom's Hardware, DEV",
+  "tweet": "New HTTP QUERY method proposed in RFC 10008! Aims to provide safe, idempotent request processing for complex queries, bridging the gap between GET and POST. #HTTP #WebDevelopment #APIs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News, Tom's Hardware, DEV",
+  "url": "https://www.rfc-editor.org/info/rfc10008/",
+  "image": "",
+  "orig_title": "RFC 10008: The new HTTP Query Method",
+  "cluster_urls": [
+   "https://www.rfc-editor.org/info/rfc10008/",
+   "https://www.tomshardware.com/tech-industry/big-tech/u-s-govt-asks-court-to-dismiss-naacp-lawsuit-against-elon-musks-xai-over-use-of-unpermitted-gas-turbines-doj-says-grok-model-running-at-colossus-2-supports-mission-critical-operations",
+   "https://www.scientificamerican.com/article/americas-compact-between-science-and-politics-is-broken/",
+   "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index",
+   "https://honeylabs.net/blog/the-cloud-fleet-behind-cve-2026-4020",
+   "https://bubbles.town/",
+   "https://artificialanalysis.ai/models/glm-5-2",
+   "https://claude.com/blog/the-founders-playbook",
+   "https://stephantul.github.io/blog/unfence/",
+   "https://arxiv.org/abs/2606.14806",
+   "https://dev.to/shijing/glm-52-made-it-official-9-of-the-top-10-open-source-llms-are-chinese-519k",
+   "https://www.dexerto.com/gaming/stop-killing-games-fails-to-secure-eu-law-despite-1-3m-signatures-3376431/"
+  ],
+  "cluster_titles": [
+   "RFC 10008: The new HTTP Query Method",
+   "U.S. gov't asks court to dismiss NAACP lawsuit against Elon Musk's xAI over use of unpermitted gas turbines — DOJ says Grok model running at Colossus 2 ‘supports mission-critical operations’",
+   "U.S. Science Is in Chaos",
+   "GLM-5.2 is the new leading open weights model on Artificial Analysis",
+   "Most of the CVE-2026-4020 attackers are the same client",
+   "Hacker News but for Independent Blogs",
+   "GLM 5.2 Performance Benchmarks",
+   "The founder's playbook: Building an AI-native startup",
+   "From Chesterton's fence to Chesterton's gap",
+   "Semiclassical Gravity Efficiently Solves NP-Complete Problems",
+   "GLM-5.2 Made It Official: 9 of the Top 10 Open-Source LLMs Are Chinese",
+   "Stop Killing Games fails to secure EU law despite 1.3M signatures"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260617-1807-1-http-query-method-proposed-for-safe-idempote.png",
+   "20260617-1807-1-http-query-method-proposed-for-safe-idempote-d1.png",
+   "20260617-1807-1-http-query-method-proposed-for-safe-idempote-d2.png",
+   "20260617-1807-1-http-query-method-proposed-for-safe-idempote-d3.png"
+  ]
+ }
+]

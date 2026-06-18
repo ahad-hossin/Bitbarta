@@ -1,1 +1,108 @@
-[]
+[
+ {
+  "topic": "uk asylum seekers face flawed facial age scans",
+  "headline_marked": "[[UK to use flawed facial AI]] for asylum-seeker age checks, internal report shows",
+  "headline": "UK to use flawed facial AI for asylum-seeker age checks, internal report shows",
+  "summary": "An internal UK government report reveals facial age estimation (FAE) systems regularly mistake children for adults and show serious bias, especially against Sub-Saharan Africans. This could strip children of legal protections at the border.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Starting next year, the British government plans to introduce facial age estimation (FAE) to help determine the age of asylum seekers arriving at the UK border. This AI scans faces to predict age, a move believed to be the first time such a system has been used in this way.",
+   "Many asylum seekers lack age documents. If children are incorrectly classed as adults by the FAE system, they can be stripped of legal protections and placed in adult-only detention centers, leading to potentially life-changing consequences.",
+   "An investigation by WIRED and Lighthouse Reports, in collaboration with The Independent, obtained an internal UK government report on FAE tests. It reveals these systems regularly mistake children for adults and exhibit serious bias problems.",
+   "The report found the system performed significantly worse when estimating the ages of Sub-Saharan Africans, who are the largest group of migrants entering the UK. For female Sub-Saharan Africans, the age estimate was off by an average of 4.6 years.",
+   "This means a 13.5-year-old girl could be assessed as an 18-year-old adult. The findings raise critical questions about the technology's effectiveness and its deployment in high-stakes scenarios.",
+   "The Home Office, which oversees UK immigration, disbanded a scientific committee designed to advise on age estimation methods while exploring AI. A former committee member called the face scans \"hideously inaccurate\" and stated their concerns were not presented.",
+   "Years of test results from the US National Institute of Standards and Technology also show FAE systems' accuracy often depends on the race of the person and photo quality. This highlights inherent limitations and biases in the technology.",
+   "A Home Office spokesperson stated they have \"rigorous processes\" and are modernizing with \"fast and effective\" FAE technology. They claim the committee was disbanded due to requiring \"different fields of expertise.\"",
+   "The Home Office maintains FAE is an \"additional\" tool that won't \"replace or overrule human judgment.\" However, they did not clarify real-world usage, only stating individuals will be treated as children in cases of uncertainty until further assessment."
+  ],
+  "caption": "The UK plans to use AI to determine the age of asylum seekers, but an internal government report reveals the technology is flawed and biased. Children could be wrongly classified as adults.\n\nStarting next year, the British government plans to introduce facial age estimation (FAE) to help determine the age of asylum seekers arriving at the UK border. This AI scans faces to predict age, a move believed to be the first time such a system has been used in this way.\n\nMany asylum seekers lack age documents. If children are incorrectly classed as adults by the FAE system, they can be stripped of legal protections and placed in adult-only detention centers, leading to potentially life-changing consequences.\n\nAn investigation by WIRED and Lighthouse Reports, in collaboration with The Independent, obtained an internal UK government report on FAE tests. It reveals these systems regularly mistake children for adults and exhibit serious bias problems.\n\nThe report found the system performed significantly worse when estimating the ages of Sub-Saharan Africans, who are the largest group of migrants entering the UK. For female Sub-Saharan Africans, the age estimate was off by an average of 4.6 years.\n\nThis means a 13.5-year-old girl could be assessed as an 18-year-old adult. The findings raise critical questions about the technology's effectiveness and its deployment in high-stakes scenarios.\n\nThe Home Office, which oversees UK immigration, disbanded a scientific committee designed to advise on age estimation methods while exploring AI. A former committee member called the face scans \"hideously inaccurate\" and stated their concerns were not presented.\n\nYears of test results from the US National Institute of Standards and Technology also show FAE systems' accuracy often depends on the race of the person and photo quality. This highlights inherent limitations and biases in the technology.\n\n#TechNews #AI #UKPolitics #BorderSecurity #FacialRecognition #HumanRights\n\nSource: Wired",
+  "tweet": "The UK government will use flawed facial AI for asylum seeker age checks, an internal report reveals. The tech misclassifies children as adults and shows bias against Sub-Saharan Africans, potentially stripping vulnerable individuals of legal protections. #AI #UKPolitics #Hu",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/facial-age-estimate-uk-asylum-seekers/",
+  "image": "https://media.wired.com/photos/6a32f1cdd9e60209eb61b7f3/master/pass/GettyImages-2151441286.jpg",
+  "orig_title": "The UK Will Scan Asylum-Seekers’ Faces for Age Checks—Despite Knowing the Tech Is Flawed",
+  "cluster_urls": [
+   "https://www.wired.com/story/facial-age-estimate-uk-asylum-seekers/"
+  ],
+  "cluster_titles": [
+   "The UK Will Scan Asylum-Seekers’ Faces for Age Checks—Despite Knowing the Tech Is Flawed"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260618-1209-0-uk-to-use-flawed-facial-ai-for-asylum-seeker.png",
+   "20260618-1209-0-uk-to-use-flawed-facial-ai-for-asylum-seeker-d1.png",
+   "20260618-1209-0-uk-to-use-flawed-facial-ai-for-asylum-seeker-d2.png",
+   "20260618-1209-0-uk-to-use-flawed-facial-ai-for-asylum-seeker-d3.png"
+  ]
+ },
+ {
+  "topic": "developers share tips on cutting ai api costs and improving ai agent performance",
+  "headline_marked": "[[Cut AI API Bill by 40%]] without changing a single line of application code",
+  "headline": "Cut AI API Bill by 40% without changing a single line of application code",
+  "summary": "A developer slashed their AI API costs by 40% for GPT and Claude requests. The key was using a unified API gateway, providing visibility and enabling model optimization without code changes.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer reduced their monthly AI API bill by 40%, from around $800, for a mid-size SaaS product using GPT and Claude. This significant saving was achieved without rewriting application code, optimizing prompts, or switching models directly.",
+   "The core strategy involved changing only the base_url in their OpenAI client to route requests through a unified API gateway. This gateway normalized access to various LLM providers, simplifying management.",
+   "Initial savings of 15% across both providers came simply from using the gateway. The larger cost reduction stemmed from improved visibility into usage across all models from a single dashboard.",
+   "By centralizing usage data, the developer identified that classification tasks were hitting an expensive GPT-5.5 model. Switching these tasks to DeepSeek-V4-Flash, a 35x cheaper alternative, drastically cut costs for 30% of their volume.",
+   "This approach enables quick model testing by changing an environment variable instead of integration code. It centralizes billing and usage monitoring, eliminating the overhead of managing multiple provider dashboards.",
+   "Potential trade-offs include an added latency of 50-150ms per request, which is often negligible for most applications. Provider-specific beta features might not be supported, and adding a new dependency requires trust and privacy policy review.",
+   "However, the method offers a low-risk, high-reward proposition: if savings aren't realized, reverting the base_url change takes only minutes. It provides a flexible way to manage and optimize LLM costs."
+  ],
+  "caption": "Slash your AI API bill by 40% without touching your application code! Discover how a simple base_url change can centralize LLM management and unlock massive savings.\n\nA developer reduced their monthly AI API bill by 40%, from around $800, for a mid-size SaaS product using GPT and Claude. This significant saving was achieved without rewriting application code, optimizing prompts, or switching models directly.\n\nThe core strategy involved changing only the base_url in their OpenAI client to route requests through a unified API gateway. This gateway normalized access to various LLM providers, simplifying management.\n\nInitial savings of 15% across both providers came simply from using the gateway. The larger cost reduction stemmed from improved visibility into usage across all models from a single dashboard.\n\nBy centralizing usage data, the developer identified that classification tasks were hitting an expensive GPT-5.5 model. Switching these tasks to DeepSeek-V4-Flash, a 35x cheaper alternative, drastically cut costs for 30% of their volume.\n\nThis approach enables quick model testing by changing an environment variable instead of integration code. It centralizes billing and usage monitoring, eliminating the overhead of managing multiple provider dashboards.\n\nPotential trade-offs include an added latency of 50-150ms per request, which is often negligible for most applications. Provider-specific beta features might not be supported, and adding a new dependency requires trust and privacy policy review.\n\nHowever, the method offers a low-risk, high-reward proposition: if savings aren't realized, reverting the base_url change takes only minutes. It provides a flexible way to manage and optimize LLM costs.\n\n#AI #APIOptimization #DeveloperTools #LLM #TechSavings #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Slash your AI API bill by 40% without touching your application code! A developer shares how a simple base_url change to an API gateway centralized LLM management, provided usage visibility, and enabled significant cost savings. #AI #DeveloperTools #APIOptimization",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/plasma_01/how-i-cut-my-ai-api-bill-by-40-without-changing-a-single-line-of-application-code-7dp",
+  "image": "",
+  "orig_title": "How I Cut My AI API Bill by 40% Without Changing a Single Line of Application Code",
+  "cluster_urls": [
+   "https://dev.to/plasma_01/how-i-cut-my-ai-api-bill-by-40-without-changing-a-single-line-of-application-code-7dp",
+   "https://dev.to/aviasoletechnologies/ai-automation-gives-you-different-answers-than-your-old-software-heres-why-that-matters-2i4o",
+   "https://dev.to/abda_net/new-dba-founder-joining-e0",
+   "https://dev.to/calvin_369/how-mechanic-became-my-go-to-shopify-automation-tool-385f",
+   "https://dev.to/james_oconnor_dev/i-put-6-llm-guardrail-tools-inline-and-measured-what-they-cost-me-here-is-the-latency-vs-recall-433g",
+   "https://dev.to/flux8labs/building-minyut-an-embeddable-rag-chatbot-in-one-script-tag-c1h",
+   "https://dev.to/hendrixxcnc/push-vs-pull-memory-a-better-way-to-think-about-ai-agent-memory-3lnp",
+   "https://dev.to/dalirnet/no-name-no-bio-no-rest-meet-githubs-busiest-account-45g8",
+   "https://dev.to/disann/vibe-coding-101-catatan-seorang-developer-yang-capek-nulis-kode-manual-1e4l",
+   "https://dev.to/sahiravoice/whats-your-free-pick-today-11f7",
+   "https://dev.to/tauseedzaman/10-things-i-wish-i-knew-before-building-a-social-network-4cii",
+   "https://dev.to/shashank_ms_6a35baa4be138/integrating-llm-with-other-machine-learning-models-c0o"
+  ],
+  "cluster_titles": [
+   "How I Cut My AI API Bill by 40% Without Changing a Single Line of Application Code",
+   "AI Automation Gives You Different Answers Than Your Old Software - Here's Why That Matters",
+   "New DBA & Founder joining",
+   "How Mechanic Became My Go-To Shopify Automation Tool",
+   "I put 6 LLM guardrail tools inline and measured what they cost me. Here is the latency-vs-recall tradeoff.",
+   "Building Minyut: An Embeddable RAG Chatbot in One Script Tag",
+   "Push vs Pull Memory: A Better Way to Think About AI Agent Memory",
+   "No Name, No Bio, No Face: Meet GitHub's Busiest Account",
+   "Vibe Coding 101: Notes from a Developer Who Got Tired of Writing Code by Hand",
+   "What's Your Free Pick Today?",
+   "10 Things I Wish I Knew Before Building a Social Network",
+   "Integrating LLM with Other Machine Learning Models"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260618-1209-1-cut-ai-api-bill-by-40-without-changing-a-sin.png",
+   "20260618-1209-1-cut-ai-api-bill-by-40-without-changing-a-sin-d1.png",
+   "20260618-1209-1-cut-ai-api-bill-by-40-without-changing-a-sin-d2.png",
+   "20260618-1209-1-cut-ai-api-bill-by-40-without-changing-a-sin-d3.png"
+  ]
+ }
+]

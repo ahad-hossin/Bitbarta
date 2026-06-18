@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "nvidia nemotron 3 ultra ai model release",
+  "headline_marked": "[[NVIDIA shipped Nemotron 3 Ultra]] on June 4, 2026, its largest open-weights model to date",
+  "headline": "NVIDIA shipped Nemotron 3 Ultra on June 4, 2026, its largest open-weights model to date",
+  "summary": "This 550-billion-parameter hybrid MoE model boasts a 1M-token context window and achieves over 300 tokens/second, topping US open models.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "NVIDIA officially released Nemotron 3 Ultra on June 4, 2026, marking its largest open-weights model and a new benchmark for US open releases. This 550-billion-parameter hybrid Mamba-Transformer MoE model features roughly 55B active parameters per token, achieving about 90% sparsity.",
+   "Ultra boasts a 1M-token context window and uses NVFP4 training on NVIDIA's Blackwell architecture, along with a \"LatentMoE\" hardware-aware expert router. It is specifically post-trained for agent harnesses like Hermes Agent, LangChain Deep Agents, OpenHands, and OpenCode.",
+   "On the Artificial Analysis Intelligence Index, Nemotron 3 Ultra scored 48, making it the most capable open model from a US lab. Crucially, it achieves over 300 tokens/second on DeepInfra, significantly faster than similarly sized Chinese open models.",
+   "General availability is through build.nvidia.com (as NIM microservices), Hugging Face, OpenRouter, ModelScope, and various cloud partners. To get started, users need an NVIDIA NGC account and API key for build.nvidia.com, or an OpenRouter account key.",
+   "Users must mind the compute floor; Ultra requires data-center hardware or a hosted endpoint, with the smaller Nemotron 3 Super already needing an 8xH100-80GB minimum. It's also critical to use the post-trained instruct checkpoint, not the base weights, which lack instruction tuning.",
+   "The fastest way to call Nemotron 3 Ultra is via the OpenAI-compatible Chat Completions API. The same client works across NVIDIA's hosted NIM, OpenRouter, and self-hosted NIM containers, requiring only changes to the base_url and model slug.",
+   "For hosted NIM, generate an NGC API key and use base_url=\"https://integrate.api.nvidia.com/v1\". For OpenRouter, use https://openrouter.ai/api/v1 with an OpenRouter key. Self-hosting involves running a Docker container and POSTing to http://0.0.0.0:8000/v1/chat/completions.",
+   "Inference defaults include temperature=1.0 and top_p=0.95. Extended reasoning can be toggled with enable_thinking=True/False in chat-template kwargs, with reasoning tokens appearing in the reasoning_content field."
+  ],
+  "caption": "NVIDIA's Nemotron 3 Ultra, a 550B-parameter model, is now live. It's the most capable open model from a US lab, hitting over 300 tokens/second.\n\nNVIDIA officially released Nemotron 3 Ultra on June 4, 2026, marking its largest open-weights model and a new benchmark for US open releases. This 550-billion-parameter hybrid Mamba-Transformer MoE model features roughly 55B active parameters per token, achieving about 90% sparsity.\n\nUltra boasts a 1M-token context window and uses NVFP4 training on NVIDIA's Blackwell architecture, along with a \"LatentMoE\" hardware-aware expert router. It is specifically post-trained for agent harnesses like Hermes Agent, LangChain Deep Agents, OpenHands, and OpenCode.\n\nOn the Artificial Analysis Intelligence Index, Nemotron 3 Ultra scored 48, making it the most capable open model from a US lab. Crucially, it achieves over 300 tokens/second on DeepInfra, significantly faster than similarly sized Chinese open models.\n\nGeneral availability is through build.nvidia.com (as NIM microservices), Hugging Face, OpenRouter, ModelScope, and various cloud partners. To get started, users need an NVIDIA NGC account and API key for build.nvidia.com, or an OpenRouter account key.\n\nUsers must mind the compute floor; Ultra requires data-center hardware or a hosted endpoint, with the smaller Nemotron 3 Super already needing an 8xH100-80GB minimum. It's also critical to use the post-trained instruct checkpoint, not the base weights, which lack instruction tuning.\n\nThe fastest way to call Nemotron 3 Ultra is via the OpenAI-compatible Chat Completions API. The same client works across NVIDIA's hosted NIM, OpenRouter, and self-hosted NIM containers, requiring only changes to the base_url and model slug.\n\nFor hosted NIM, generate an NGC API key and use base_url=\"https://integrate.api.nvidia.com/v1\". For OpenRouter, use https://openrouter.ai/api/v1 with an OpenRouter key. Self-hosting involves running a Docker container and POSTing to http://0.0.0.0:8000/v1/chat/completions.\n\n#NVIDIA #Nemotron3Ultra #AI #LLM #OpenSource #TechNews\n\nSource: DEV",
+  "tweet": "NVIDIA's Nemotron 3 Ultra is live! This 550B-parameter open-weights model is the most capable from a US lab, boasting 1M-token context and 300+ tok/s. Get the details on how to use it. #NVIDIA #AI #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "nvidia.com",
+  "source": "DEV",
+  "url": "https://dev.to/creeta/nemotron-3-ultra-went-live-june-4-heres-the-call-that-works-55g7",
+  "image": "",
+  "orig_title": "Nemotron 3 Ultra went live June 4. Here's the call that works.",
+  "cluster_urls": [
+   "https://dev.to/creeta/nemotron-3-ultra-went-live-june-4-heres-the-call-that-works-55g7"
+  ],
+  "cluster_titles": [
+   "Nemotron 3 Ultra went live June 4. Here's the call that works."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260618-1406-0-nvidia-shipped-nemotron-3-ultra-on-june-4-20.png",
+   "20260618-1406-0-nvidia-shipped-nemotron-3-ultra-on-june-4-20-d1.png",
+   "20260618-1406-0-nvidia-shipped-nemotron-3-ultra-on-june-4-20-d2.png",
+   "20260618-1406-0-nvidia-shipped-nemotron-3-ultra-on-june-4-20-d3.png",
+   "20260618-1406-0-nvidia-shipped-nemotron-3-ultra-on-june-4-20-d4.png"
+  ]
+ },
+ {
+  "topic": "ai language generation drm emitter",
+  "headline_marked": "[[DRM Language Emitter]] models language generation as motion through learned geometry",
+  "headline": "DRM Language Emitter models language generation as motion through learned geometry",
+  "summary": "This experimental model challenges the Transformer paradigm by treating language generation as controlled motion through a learned relational manifold, rather than attention over a context window.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "DRM Language Emitter is an experimental, geometry-first language model lab that proposes a new paradigm for language generation. Instead of attention over a context window, it models language as controlled motion through a learned relational manifold.",
+   "The model's key feature is an explicit internal geometry, making it interesting for study beyond just generation. This approach opens doors to new diagnostics that are difficult to express with standard black-box token predictors.",
+   "The project includes comparisons against tiny Transformers and uses a deterministic symbolic gridworld serialized as text for benchmarking. This benchmark is designed to test how models learn discrete dynamics expressed as language, not to compete with large multimodal world models.",
+   "While not claiming general superiority, DRM shows an early signal on symbolic next-state prediction in this specific benchmark. The research emphasizes that low token-level loss doesn't automatically imply correct symbolic dynamics or valid state transitions."
+  ],
+  "caption": "What if language generation wasn't about Transformers? A new experimental model treats it as motion through learned geometry.\n\nDRM Language Emitter is an experimental, geometry-first language model lab that proposes a new paradigm for language generation. Instead of attention over a context window, it models language as controlled motion through a learned relational manifold.\n\nThe model's key feature is an explicit internal geometry, making it interesting for study beyond just generation. This approach opens doors to new diagnostics that are difficult to express with standard black-box token predictors.\n\nThe project includes comparisons against tiny Transformers and uses a deterministic symbolic gridworld serialized as text for benchmarking. This benchmark is designed to test how models learn discrete dynamics expressed as language, not to compete with large multimodal world models.\n\nWhile not claiming general superiority, DRM shows an early signal on symbolic next-state prediction in this specific benchmark. The research emphasizes that low token-level loss doesn't automatically imply correct symbolic dynamics or valid state transitions.\n\n#AI #LanguageModels #MachineLearning #TechResearch #DRMLanguageEmitter #DeepLearning\n\nSource: DEV",
+  "tweet": "What if language generation wasn't about Transformers? DRM Language Emitter is an experimental model treating language as motion through learned geometry. It shows early signals on symbolic next-state prediction in a new benchmark. #AI #LanguageModels #TechResearch",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/felipe_muniz_grsba/introducing-drm-language-emitter-language-generation-as-motion-through-learned-geometry-3a5l",
+  "image": "",
+  "orig_title": "Introducing DRM Language Emitter: Language Generation as Motion Through Learned Geometry",
+  "cluster_urls": [
+   "https://dev.to/felipe_muniz_grsba/introducing-drm-language-emitter-language-generation-as-motion-through-learned-geometry-3a5l"
+  ],
+  "cluster_titles": [
+   "Introducing DRM Language Emitter: Language Generation as Motion Through Learned Geometry"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260618-1406-1-drm-language-emitter-models-language-generat.png",
+   "20260618-1406-1-drm-language-emitter-models-language-generat-d1.png",
+   "20260618-1406-1-drm-language-emitter-models-language-generat-d2.png"
+  ]
+ }
+]

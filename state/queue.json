@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "litellm cve rce vulnerability",
+  "headline_marked": "[[LiteLLM command injection flaw]] enables unauthenticated RCE, actively exploited",
+  "headline": "LiteLLM command injection flaw enables unauthenticated RCE, actively exploited",
+  "summary": "A critical command injection vulnerability (CVE-2026-42271) in LiteLLM, chained with a Starlette bypass, allows unauthenticated remote code execution. CISA has confirmed active exploitation in the wild.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "CVE-2026-42271 is a command injection flaw in LiteLLM's MCP test endpoints, carrying a CVSS score of 8.7. When chained with the Starlette host-header bypass (CVE-2026-48710), it becomes an unauthenticated remote code execution vulnerability.",
+   "The flaw allowed LiteLLM to spawn supplied commands as subprocesses on the proxy host without sandboxing. This turned a convenience feature for testing MCP servers into arbitrary code execution as the LiteLLM process.",
+   "CISA added CVE-2026-42271 to its Known Exploited Vulnerabilities catalog on June 9, 2026, citing confirmed active exploitation. This mandates remediation for US federal agencies and signals an urgent threat for all users.",
+   "The Starlette \"BadHost\" bypass (CVE-2026-48710, CVSS 6.5) is a host-header parsing flaw. It allows an attacker to bypass path-based authentication by making the framework compute the request path as public while dispatching to administrative endpoints.",
+   "When combined, the Starlette bypass removes the authentication requirement for the LiteLLM command injection. This effectively elevates the 8.7 CVSS bug to a critical unauthenticated RCE, behaving like a 10.0.",
+   "The fix requires upgrading to LiteLLM 1.83.7 and Starlette 1.0.1 immediately. Additionally, all credentials that the gateway touched must be rotated due to potential compromise.",
+   "Users are vulnerable if running LiteLLM versions 1.74.2 through 1.83.6 with the proxy reachable by untrusted clients. It is crucial to check versions, confirm exposed test routes, and hunt access logs for suspicious activity.",
+   "This is LiteLLM's second critical incident in three months, following a poisoned dependency in March 2026. It underscores the importance of treating AI gateways with the same security rigor as secrets vaults."
+  ],
+  "caption": "An unauthenticated Remote Code Execution (RCE) vulnerability in LiteLLM, the popular AI model gateway, is being actively exploited. This critical flaw allows attackers to run arbitrary code on affected systems.\n\nCVE-2026-42271 is a command injection flaw in LiteLLM's MCP test endpoints, carrying a CVSS score of 8.7. When chained with the Starlette host-header bypass (CVE-2026-48710), it becomes an unauthenticated remote code execution vulnerability.\n\nThe flaw allowed LiteLLM to spawn supplied commands as subprocesses on the proxy host without sandboxing. This turned a convenience feature for testing MCP servers into arbitrary code execution as the LiteLLM process.\n\nCISA added CVE-2026-42271 to its Known Exploited Vulnerabilities catalog on June 9, 2026, citing confirmed active exploitation. This mandates remediation for US federal agencies and signals an urgent threat for all users.\n\nThe Starlette \"BadHost\" bypass (CVE-2026-48710, CVSS 6.5) is a host-header parsing flaw. It allows an attacker to bypass path-based authentication by making the framework compute the request path as public while dispatching to administrative endpoints.\n\nWhen combined, the Starlette bypass removes the authentication requirement for the LiteLLM command injection. This effectively elevates the 8.7 CVSS bug to a critical unauthenticated RCE, behaving like a 10.0.\n\nThe fix requires upgrading to LiteLLM 1.83.7 and Starlette 1.0.1 immediately. Additionally, all credentials that the gateway touched must be rotated due to potential compromise.\n\nUsers are vulnerable if running LiteLLM versions 1.74.2 through 1.83.6 with the proxy reachable by untrusted clients. It is crucial to check versions, confirm exposed test routes, and hunt access logs for suspicious activity.\n\nThis is LiteLLM's second critical incident in three months, following a poisoned dependency in March 2026. It underscores the importance of treating AI gateways with the same security rigor as secrets vaults.\n\n#LiteLLM #CyberSecurity #RCE #Vulnerability #AI #DevSecOps\n\nSource: DEV",
+  "tweet": "Unauthenticated RCE in LiteLLM (CVE-2026-42271) is actively exploited. Combined with a Starlette bypass, it allows arbitrary code execution. Patch immediately to LiteLLM 1.83.7 & Starlette 1.0.1, then rotate credentials. #CyberSecurity #LiteLLM #RCE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "litellm.ai",
+  "source": "DEV",
+  "url": "https://dev.to/aavisangle/litellm-cve-2026-42271-patch-rotate-and-harden-the-rce-4d9l",
+  "image": "",
+  "orig_title": "LiteLLM CVE-2026-42271: Patch, Rotate, and Harden the RCE",
+  "cluster_urls": [
+   "https://dev.to/aavisangle/litellm-cve-2026-42271-patch-rotate-and-harden-the-rce-4d9l"
+  ],
+  "cluster_titles": [
+   "LiteLLM CVE-2026-42271: Patch, Rotate, and Harden the RCE"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260618-1506-0-litellm-command-injection-flaw-enables-unaut.png",
+   "20260618-1506-0-litellm-command-injection-flaw-enables-unaut-d1.png",
+   "20260618-1506-0-litellm-command-injection-flaw-enables-unaut-d2.png",
+   "20260618-1506-0-litellm-command-injection-flaw-enables-unaut-d3.png"
+  ]
+ },
+ {
+  "topic": "honor watch 6 launch undercuts apple samsung",
+  "headline_marked": "[[Honor Watch 6 arrives, undercutting Apple and Samsung's prices]] with a 1.46-inch AMOLED display",
+  "headline": "Honor Watch 6 arrives, undercutting Apple and Samsung's prices with a 1.46-inch AMOLED display",
+  "summary": "The Honor Watch 6 launches with a 1.46-inch AMOLED display, IP69 rating, and up to 35-day battery life. It offers a significantly lower price point than competing smartwatches from Apple and Samsung.",
+  "category": "GADGETS",
+  "template": "launch",
+  "details": [
+   "After an 18-month hiatus, Honor has released the Watch 6, priced from £230 (approx. $308) for the black rubber strap and £250 (approx. $335) for the brown leather. Early bird pricing before July 17 drops these to £150 (approx. $201) and £170 (approx. $228) respectively, making it considerably cheaper than rivals.",
+   "The Watch 6 features a round 46mm case, available in aluminum with a stainless steel bezel or full stainless steel, in Shadow Black or Twilight Brown. Its 50-gram weight and 10.8mm thickness offer a substantial feel without being overly bulky under cuffs.",
+   "It boasts a 1.46-inch AMOLED screen with 464 x 464 pixel resolution, a 980mAh battery, and 4GB of memory. The smartwatch is compatible with both Android and iOS devices.",
+   "For fitness, it tracks over 120 sports with dual-band GPS. Health features include sleep, stress, blood oxygen, heart rate monitoring, and a Quick Health Scan.",
+   "The device is rated IP69 for dust and water resistance, ensuring durability in various environments. Currently, the Honor Watch 6 is confirmed for release in the UK, with no US launch details yet."
+  ],
+  "caption": "Honor's new Watch 6 arrives with a 1.46-inch AMOLED display and IP69 durability. It significantly undercuts Apple and Samsung's smartwatch prices, starting at just £150 for early buyers.\n\nAfter an 18-month hiatus, Honor has released the Watch 6, priced from £230 (approx. $308) for the black rubber strap and £250 (approx. $335) for the brown leather. Early bird pricing before July 17 drops these to £150 (approx. $201) and £170 (approx. $228) respectively, making it considerably cheaper than rivals.\n\nThe Watch 6 features a round 46mm case, available in aluminum with a stainless steel bezel or full stainless steel, in Shadow Black or Twilight Brown. Its 50-gram weight and 10.8mm thickness offer a substantial feel without being overly bulky under cuffs.\n\nIt boasts a 1.46-inch AMOLED screen with 464 x 464 pixel resolution, a 980mAh battery, and 4GB of memory. The smartwatch is compatible with both Android and iOS devices.\n\nFor fitness, it tracks over 120 sports with dual-band GPS. Health features include sleep, stress, blood oxygen, heart rate monitoring, and a Quick Health Scan.\n\nThe device is rated IP69 for dust and water resistance, ensuring durability in various environments. Currently, the Honor Watch 6 is confirmed for release in the UK, with no US launch details yet.\n\n#HonorWatch6 #Smartwatch #WearableTech #Gadgets #TechNews #Honor\n\nSource: Android Police",
+  "tweet": "Honor's new Watch 6 launches, featuring a 1.46-inch AMOLED screen, IP69 rating, and up to 35-day battery life. Starting at £150 with early bird offers, it's a strong challenger to Apple & Samsung on price. #HonorWatch6 #Smartwatch",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "honor.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/honor-watch-6-arrives-and-if-you-are-quick-it-will-be-much-cheaper-than-apple-and-samsung/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/06/honor-watch-6-brown-1.jpg",
+  "orig_title": "Honor Watch 6 arrives, and immediately undercuts Apple and Samsung's prices",
+  "cluster_urls": [
+   "https://www.androidpolice.com/honor-watch-6-arrives-and-if-you-are-quick-it-will-be-much-cheaper-than-apple-and-samsung/"
+  ],
+  "cluster_titles": [
+   "Honor Watch 6 arrives, and immediately undercuts Apple and Samsung's prices"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260618-1506-1-honor-watch-6-arrives-undercutting-apple-and.png",
+   "20260618-1506-1-honor-watch-6-arrives-undercutting-apple-and-d1.png",
+   "20260618-1506-1-honor-watch-6-arrives-undercutting-apple-and-d2.png"
+  ]
+ }
+]

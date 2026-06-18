@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ollama local ai tooling controversy",
+  "headline_marked": "[[1,175 Redditors say stop using Ollama]] due to proprietary storage and performance issues",
+  "headline": "1,175 Redditors say stop using Ollama due to proprietary storage and performance issues",
+  "summary": "A viral Reddit post sparked a community discussion on local AI tooling, highlighting Ollama's proprietary model storage and performance drawbacks compared to open-source alternatives.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A viral Reddit post titled \"Stop using Ollama\" garnered 1,175 upvotes and 345 comments, revealing a widespread sentiment in the r/LocalLLaMA community. Users expressed relief that someone finally addressed the tool's limitations for local AI model deployment.",
+   "Ollama initially simplified local LLM setup, making it accessible with just two commands and a curated model registry. This ease of use introduced many to running LLMs on their own hardware, a significant achievement.",
+   "However, a key criticism is Ollama's initial lack of clear attribution to llama.cpp, its underlying inference engine. This oversight damaged community trust, as the local LLM ecosystem thrives on open-source goodwill and collaboration.",
+   "Another major issue is Ollama's proprietary model storage format, which locks downloaded GGUF files within its ecosystem. This prevents users from easily accessing or using models with other compatible tools like llama.cpp or LM Studio without re-downloading.",
+   "Performance is also a concern; Ollama's default conservative settings often lead to slower inference and higher memory usage. Users report that llama.cpp consistently outperforms Ollama, especially on AMD GPUs, and offers more control over parameters.",
+   "The community now suggests alternatives like the improved llama.cpp, which offers similar two-command simplicity with an OpenAI-compatible API and web UI. For desktop users seeking a GUI, LM Studio is a leading option."
+  ],
+  "caption": "Over 1,100 Redditors agree: it's time to stop using Ollama for local AI. The community is raising serious concerns about proprietary storage and performance.\n\nA viral Reddit post titled \"Stop using Ollama\" garnered 1,175 upvotes and 345 comments, revealing a widespread sentiment in the r/LocalLLaMA community. Users expressed relief that someone finally addressed the tool's limitations for local AI model deployment.\n\nOllama initially simplified local LLM setup, making it accessible with just two commands and a curated model registry. This ease of use introduced many to running LLMs on their own hardware, a significant achievement.\n\nHowever, a key criticism is Ollama's initial lack of clear attribution to llama.cpp, its underlying inference engine. This oversight damaged community trust, as the local LLM ecosystem thrives on open-source goodwill and collaboration.\n\nAnother major issue is Ollama's proprietary model storage format, which locks downloaded GGUF files within its ecosystem. This prevents users from easily accessing or using models with other compatible tools like llama.cpp or LM Studio without re-downloading.\n\nPerformance is also a concern; Ollama's default conservative settings often lead to slower inference and higher memory usage. Users report that llama.cpp consistently outperforms Ollama, especially on AMD GPUs, and offers more control over parameters.\n\nThe community now suggests alternatives like the improved llama.cpp, which offers similar two-command simplicity with an OpenAI-compatible API and web UI. For desktop users seeking a GUI, LM Studio is a leading option.\n\n#LocalAI #Ollama #LLaMA #OpenSource #TechNews #AI\n\nSource: DEV",
+  "tweet": "Over 1,100 Redditors are saying \"Stop using Ollama\" for local AI. Concerns include proprietary model storage and performance issues compared to alternatives like llama.cpp. The local LLM tooling landscape is evolving fast. #LocalAI #Ollama #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "ollama.com",
+  "source": "DEV",
+  "url": "https://dev.to/jamilxt/1175-redditors-just-told-you-to-stop-using-ollama-heres-why-local-ai-tooling-got-serious-2eia",
+  "image": "",
+  "orig_title": "1,175 Redditors Just Told You to Stop Using Ollama — Here's Why Local AI Tooling Got Serious",
+  "cluster_urls": [
+   "https://dev.to/jamilxt/1175-redditors-just-told-you-to-stop-using-ollama-heres-why-local-ai-tooling-got-serious-2eia"
+  ],
+  "cluster_titles": [
+   "1,175 Redditors Just Told You to Stop Using Ollama — Here's Why Local AI Tooling Got Serious"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260618-0906-0-1-175-redditors-say-stop-using-ollama-due-to.png",
+   "20260618-0906-0-1-175-redditors-say-stop-using-ollama-due-to-d1.png",
+   "20260618-0906-0-1-175-redditors-say-stop-using-ollama-due-to-d2.png"
+  ]
+ },
+ {
+  "topic": "claude code codex local token usage logging",
+  "headline_marked": "[[Claude Code and Codex are logging your token usage locally]]. Here is how to read it.",
+  "headline": "Claude Code and Codex are logging your token usage locally. Here is how to read it.",
+  "summary": "AI coding agents like Claude Code and Codex store detailed token usage logs on your local machine. These logs reveal uncached input, cache hits, and output, offering insights into your prompt cache hit rate without API calls.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Your AI coding agent's token data is already on your machine. Claude Code and Codex both write local logs after every session, including detailed token breakdowns like uncached input, cache hits, cache writes, and output. This data is available without needing API calls or provider dashboards.",
+   "For Claude Code, a JSONL transcript is written for every session under ~/.claude/projects/. Each assistant message contains a usage block, detailing input_tokens, cache_read_input_tokens, cache_creation_input_tokens, and output_tokens.",
+   "Codex writes rollouts under ~/.codex/sessions/, emitting token_count events with a cumulative running total per session. To get individual event usage, the delta between these cumulative counts must be calculated.",
+   "The most crucial metric revealed is your prompt cache hit rate. A high hit rate indicates efficient context reuse, while a low rate means you're repeatedly paying for the same context, burning through usage limits.",
+   "Improving a low cache hit rate typically involves structural changes, such as stabilizing prompt prefixes, keeping tool definitions lean, and avoiding reshuffling system context between turns. This helps ensure the cache prefix remains intact.",
+   "While token counts are useful, on a flat subscription plan, dollar figures derived from API list prices are only an equivalent scale, not actual costs. The genuine signals for efficiency are token volume and cache hit rate.",
+   "Tools like ModelMeter can aggregate these local logs, providing a dashboard for cache hit rates and token usage rankings. It works for Claude Code, Codex, or both, and can also accept usage from metered API keys or CSV exports."
+  ],
+  "caption": "Your AI coding agent is logging detailed token usage on your machine after every session. Discover your prompt cache hit rate and optimize your token spend.\n\nYour AI coding agent's token data is already on your machine. Claude Code and Codex both write local logs after every session, including detailed token breakdowns like uncached input, cache hits, cache writes, and output. This data is available without needing API calls or provider dashboards.\n\nFor Claude Code, a JSONL transcript is written for every session under ~/.claude/projects/. Each assistant message contains a usage block, detailing input_tokens, cache_read_input_tokens, cache_creation_input_tokens, and output_tokens.\n\nCodex writes rollouts under ~/.codex/sessions/, emitting token_count events with a cumulative running total per session. To get individual event usage, the delta between these cumulative counts must be calculated.\n\nThe most crucial metric revealed is your prompt cache hit rate. A high hit rate indicates efficient context reuse, while a low rate means you're repeatedly paying for the same context, burning through usage limits.\n\nImproving a low cache hit rate typically involves structural changes, such as stabilizing prompt prefixes, keeping tool definitions lean, and avoiding reshuffling system context between turns. This helps ensure the cache prefix remains intact.\n\nWhile token counts are useful, on a flat subscription plan, dollar figures derived from API list prices are only an equivalent scale, not actual costs. The genuine signals for efficiency are token volume and cache hit rate.\n\nTools like ModelMeter can aggregate these local logs, providing a dashboard for cache hit rates and token usage rankings. It works for Claude Code, Codex, or both, and can also accept usage from metered API keys or CSV exports.\n\n#AICoding #DeveloperTools #TokenUsage #AI #SoftwareDevelopment #PromptEngineering\n\nSource: DEV",
+  "tweet": "Your AI coding agent logs detailed token usage locally after every session. Learn how to read these logs to uncover your prompt cache hit rate and optimize your token spend. Stop burning through limits unnecessarily! #AICoding #DeveloperTools #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/newtorob/claude-code-and-codex-are-logging-your-token-usage-locally-here-is-how-to-read-it-580",
+  "image": "",
+  "orig_title": "Claude Code and Codex are logging your token usage locally. Here is how to read it.",
+  "cluster_urls": [
+   "https://dev.to/newtorob/claude-code-and-codex-are-logging-your-token-usage-locally-here-is-how-to-read-it-580"
+  ],
+  "cluster_titles": [
+   "Claude Code and Codex are logging your token usage locally. Here is how to read it."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260618-0906-1-claude-code-and-codex-are-logging-your-token.png",
+   "20260618-0906-1-claude-code-and-codex-are-logging-your-token-d1.png",
+   "20260618-0906-1-claude-code-and-codex-are-logging-your-token-d2.png",
+   "20260618-0906-1-claude-code-and-codex-are-logging-your-token-d3.png"
+  ]
+ }
+]

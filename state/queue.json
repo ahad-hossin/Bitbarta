@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "apple beats eavesdropping vulnerability",
+  "headline_marked": "[[Apple patches high-severity eavesdropping vulnerability]] in Beats Studio Buds",
+  "headline": "Apple patches high-severity eavesdropping vulnerability in Beats Studio Buds",
+  "summary": "Apple has released a firmware update for its Beats Studio Buds to fix a critical flaw. This vulnerability could have allowed unauthorized eavesdropping on users.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Apple has rolled out a critical firmware update for its Beats Studio Buds. This patch addresses a high-severity vulnerability that could have allowed unauthorized eavesdropping.",
+   "The flaw specifically impacted the Beats Studio Buds, potentially enabling malicious actors to listen in on conversations or audio without the user's knowledge. This type of vulnerability poses a significant privacy risk.",
+   "Users are advised to ensure their Beats Studio Buds are updated to the latest firmware version. Typically, these updates are delivered automatically when the earbuds are connected to an Apple device or through the Beats app on Android."
+  ],
+  "caption": "A high-severity eavesdropping flaw in Beats Studio Buds has been patched by Apple.\n\nApple has rolled out a critical firmware update for its Beats Studio Buds. This patch addresses a high-severity vulnerability that could have allowed unauthorized eavesdropping.\n\nThe flaw specifically impacted the Beats Studio Buds, potentially enabling malicious actors to listen in on conversations or audio without the user's knowledge. This type of vulnerability poses a significant privacy risk.\n\nUsers are advised to ensure their Beats Studio Buds are updated to the latest firmware version. Typically, these updates are delivered automatically when the earbuds are connected to an Apple device or through the Beats app on Android.\n\n#Apple #BeatsStudioBuds #SecurityPatch #Cybersecurity #TechNews #Privacy\n\nSource: 9to5Mac, Ars Technica",
+  "tweet": "A high-severity eavesdropping flaw in Beats Studio Buds has been patched by Apple. Update your firmware to protect against unauthorized audio access. #Apple #Security #Beats",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac, Ars Technica",
+  "url": "https://9to5mac.com/2026/06/18/daily-june-18-2026/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2021/12/9to5Mac-Daily-art-lead.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "9to5Mac Daily: June 18, 2026 – iOS 27 app features, Beats firmware fix",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/06/18/daily-june-18-2026/",
+   "https://arstechnica.com/apple/2026/06/apple-patches-high-severity-eavesdropping-vulnerability-in-beats-studio-buds/"
+  ],
+  "cluster_titles": [
+   "9to5Mac Daily: June 18, 2026 – iOS 27 app features, Beats firmware fix",
+   "Apple patches high-severity eavesdropping vulnerability in Beats Studio Buds"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260619-0607-0-apple-patches-high-severity-eavesdropping-vu.png",
+   "20260619-0607-0-apple-patches-high-severity-eavesdropping-vu-d1.png"
+  ]
+ },
+ {
+  "topic": "cancelled chatgpt subscription local ai",
+  "headline_marked": "[[Replaced ChatGPT with local AI]] for $0/year, now knows my work better than GPT-4",
+  "headline": "Replaced ChatGPT with local AI for $0/year, now knows my work better than GPT-4",
+  "summary": "After cancelling a $240/year ChatGPT subscription, one developer built a private, local AI system on an aging laptop. This custom setup now outperforms cloud AI for personal knowledge retrieval, running entirely offline.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The author cancelled a $240/year ChatGPT subscription, questioning why they paid for a system that forgot previous interactions. This led to exploring local AI solutions to create a private, persistent knowledge base.",
+   "The goal was to run AI models locally without subscriptions or data leaving the machine, giving them access to personal documents, notes, and research. This contrasts with cloud AI's ephemeral memory.",
+   "The setup involved Ollama for running models like mistral:7b for reasoning, and nomic-embed-text for creating semantic embeddings. The tiny 274MB embedding model was crucial for capturing meaning, not just words.",
+   "To give the AI memory, a pipeline was built: parse files (PDF, Word, HTML), chunk them into ~300-word pieces, embed each chunk into a 768-dimensional vector using nomic-embed-text, and store these vectors in Qdrant, a local vector database.",
+   "This system allows dropping files into an inbox folder, which are then processed and stored as \"memories\" based on semantic similarity. The AI can then answer questions about personal data more effectively than cloud models.",
+   "The process wasn't without challenges, including Docker Desktop issues requiring frequent restarts and obscure console encoding crashes. These debugging hurdles highlighted why many users opt for paid cloud services.",
+   "Despite the difficulties, the author successfully ingested dozens of documents, including business plans, meeting notes, and research. The local AI now provides superior, private access to their personal knowledge base."
+  ],
+  "caption": "Tired of paying $240/year for an AI that forgets everything? One developer built a private, local AI on an old laptop that knows their work better than GPT-4.\n\nThe author cancelled a $240/year ChatGPT subscription, questioning why they paid for a system that forgot previous interactions. This led to exploring local AI solutions to create a private, persistent knowledge base.\n\nThe goal was to run AI models locally without subscriptions or data leaving the machine, giving them access to personal documents, notes, and research. This contrasts with cloud AI's ephemeral memory.\n\nThe setup involved Ollama for running models like mistral:7b for reasoning, and nomic-embed-text for creating semantic embeddings. The tiny 274MB embedding model was crucial for capturing meaning, not just words.\n\nTo give the AI memory, a pipeline was built: parse files (PDF, Word, HTML), chunk them into ~300-word pieces, embed each chunk into a 768-dimensional vector using nomic-embed-text, and store these vectors in Qdrant, a local vector database.\n\nThis system allows dropping files into an inbox folder, which are then processed and stored as \"memories\" based on semantic similarity. The AI can then answer questions about personal data more effectively than cloud models.\n\nThe process wasn't without challenges, including Docker Desktop issues requiring frequent restarts and obscure console encoding crashes. These debugging hurdles highlighted why many users opt for paid cloud services.\n\nDespite the difficulties, the author successfully ingested dozens of documents, including business plans, meeting notes, and research. The local AI now provides superior, private access to their personal knowledge base.\n\n#LocalAI #SelfHosted #AI #Tech #ChatGPT #Ollama\n\nSource: DEV",
+  "tweet": "Tired of paying $240/year for an AI that forgets everything? This developer cancelled ChatGPT & built a private, local AI on an old laptop that knows their work better than GPT-4, all for $0. #LocalAI #SelfHosted #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/theonaiao/i-cancelled-my-240year-chatgpt-subscription-30-days-later-my-laptop-knows-me-better-than-gpt-4-3cal",
+  "image": "",
+  "orig_title": "I Cancelled My $240/Year ChatGPT Subscription. 30 Days Later, My Laptop Knows Me Better Than GPT-4 Ever Did.",
+  "cluster_urls": [
+   "https://dev.to/theonaiao/i-cancelled-my-240year-chatgpt-subscription-30-days-later-my-laptop-knows-me-better-than-gpt-4-3cal"
+  ],
+  "cluster_titles": [
+   "I Cancelled My $240/Year ChatGPT Subscription. 30 Days Later, My Laptop Knows Me Better Than GPT-4 Ever Did."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260619-0607-1-replaced-chatgpt-with-local-ai-for-0-year-no.png",
+   "20260619-0607-1-replaced-chatgpt-with-local-ai-for-0-year-no-d1.png",
+   "20260619-0607-1-replaced-chatgpt-with-local-ai-for-0-year-no-d2.png",
+   "20260619-0607-1-replaced-chatgpt-with-local-ai-for-0-year-no-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "microsoft crypto backdoor discovered",
+  "headline_marked": "Microsoft detects [[Crypto Clipper, a new backdoor]] stealing crypto via USB drives",
+  "headline": "Microsoft detects Crypto Clipper, a new backdoor stealing crypto via USB drives",
+  "summary": "This self-propagating malware monitors clipboards for wallet addresses and seed phrases, exfiltrating them and screenshots via Tor, and can divert cryptocurrency payments.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Microsoft has identified \"Crypto Clipper,\" a new self-propagating malware that spreads via USB drives. It targets cryptocurrency credentials, exfiltrating them to attacker-controlled servers.",
+   "The worm monitors device clipboards for patterns matching wallet addresses or seed phrases. Upon detection, it also captures five screenshots over a 10-second period.",
+   "Both the stolen credentials and screenshots are sent to attackers through Tor, using a SOCKS5 proxy for anonymous routing. This method avoids traditional installers or exposed IP-based command-and-control infrastructure.",
+   "Crypto Clipper spreads through .lnk files on USB drives. When an infected drive is plugged in, the malware checks for existing installations and downloads itself if absent, concealing its presence by naming .lnk files similarly to legitimate ones.",
+   "Beyond stealing seed phrases and addresses, the malware replaces legitimate crypto addresses in the clipboard with attacker-controlled ones. Microsoft believes the screenshots provide useful context for the attackers.",
+   "Microsoft notes this malware demonstrates how lightweight, script-based stealers can have significant impact when combined with anonymized communications and remote code execution. It offers immediate monetization and continued control over compromised devices.",
+   "Microsoft Defender for Endpoint detects Crypto Clipper components as suspicious JavaScript processes and possible data exfiltrations. Microsoft Defender Antivirus identifies it as Trojan:Win32/CryptoBandits.A."
+  ],
+  "caption": "A new lightweight backdoor, Crypto Clipper, is spreading via USB drives. It steals cryptocurrency credentials and even diverts payments.\n\nMicrosoft has identified \"Crypto Clipper,\" a new self-propagating malware that spreads via USB drives. It targets cryptocurrency credentials, exfiltrating them to attacker-controlled servers.\n\nThe worm monitors device clipboards for patterns matching wallet addresses or seed phrases. Upon detection, it also captures five screenshots over a 10-second period.\n\nBoth the stolen credentials and screenshots are sent to attackers through Tor, using a SOCKS5 proxy for anonymous routing. This method avoids traditional installers or exposed IP-based command-and-control infrastructure.\n\nCrypto Clipper spreads through .lnk files on USB drives. When an infected drive is plugged in, the malware checks for existing installations and downloads itself if absent, concealing its presence by naming .lnk files similarly to legitimate ones.\n\nBeyond stealing seed phrases and addresses, the malware replaces legitimate crypto addresses in the clipboard with attacker-controlled ones. Microsoft believes the screenshots provide useful context for the attackers.\n\nMicrosoft notes this malware demonstrates how lightweight, script-based stealers can have significant impact when combined with anonymized communications and remote code execution. It offers immediate monetization and continued control over compromised devices.\n\nMicrosoft Defender for Endpoint detects Crypto Clipper components as suspicious JavaScript processes and possible data exfiltrations. Microsoft Defender Antivirus identifies it as Trojan:Win32/CryptoBandits.A.\n\n#Cybersecurity #Malware #Crypto #Microsoft #TechNews #SecurityAlert\n\nSource: Ars Technica",
+  "tweet": "Microsoft warns of \"Crypto Clipper,\" a new backdoor spreading via USB drives. It steals crypto wallet credentials, takes screenshots, and can divert payments. Stay vigilant! #Cybersecurity #Malware #Crypto",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Ars Technica",
+  "url": "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/02/cryptocurrency-theft-heist-1152x648.jpg",
+  "orig_title": "Microsoft discovers new lightweight backdoor that steals cryptocurrency",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/06/microsoft-spots-new-self-propagating-malware-for-stealing-cryptocurrency/"
+  ],
+  "cluster_titles": [
+   "Microsoft discovers new lightweight backdoor that steals cryptocurrency"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260619-0707-0-microsoft-detects-crypto-clipper-a-new-backd.png",
+   "20260619-0707-0-microsoft-detects-crypto-clipper-a-new-backd-d1.png",
+   "20260619-0707-0-microsoft-detects-crypto-clipper-a-new-backd-d2.png",
+   "20260619-0707-0-microsoft-detects-crypto-clipper-a-new-backd-d3.png"
+  ]
+ },
+ {
+  "topic": "anthropic claude code artifacts update",
+  "headline_marked": "[[Anthropic's Claude Code Artifacts update brings live, shared dashboards]] and interactive workspaces to enterprises",
+  "headline": "Anthropic's Claude Code Artifacts update brings live, shared dashboards and interactive workspaces to enterprises",
+  "summary": "Anthropic's Claude Code now generates interactive, shareable HTML webpages from coding sessions, enabling real-time collaboration on dashboards and app designs for internal enterprise use.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Anthropic has introduced Artifacts for Claude Code users on Team and Enterprise plans. This new feature transforms a Claude Code session's work into a live, interactive, and shareable custom HTML webpage. It allows users to plug in live code and multiple data sources, surfacing them on a unique URL.",
+   "These generated webpages can be sent to teammates, enabling real-time updates as Claude Code works autonomously or under user guidance. This capability, previously a consumer feature, is now integrated into the Claude Code CLI and desktop app. It bridges the gap between deep back-end engineering and non-technical stakeholders.",
+   "Claude Code Artifacts act as a dynamic translation layer, building specialized web pages directly from the user's session context, local repository, and monitoring tools. Engineers no longer need to wire up external data sources or temporary infrastructure, as the AI builds the UI from existing elements.",
+   "Crucially, these web pages are not static exports; they refresh instantly at the same URL as the AI works through a terminal session. Every update publishes a new version history, allowing secure tracking and rollbacks. This update follows OpenAI's similar \"Sites\" feature for its Codex platform.",
+   "While OpenAI's Sites aims to generate durable, full-stack web applications with persistent backend infrastructure, Anthropic's Artifacts deliberately avoids this. Artifacts are designed as a \"capture of work, not an application,\" focusing on ephemeral, highly secure technical workflows.",
+   "Each Artifact is a single, self-contained HTML page capped at 16 MiB, wrapped in a strict Content Security Policy that blocks all external network requests. This ensures security by preventing external scripts, fonts, stylesheets, or API calls, keeping the focus on replacing internal diagrams and reports rather than building full software."
+  ],
+  "caption": "Anthropic's Claude Code now generates live, interactive dashboards directly from your coding sessions, shareable with teammates in real-time.\n\nAnthropic has introduced Artifacts for Claude Code users on Team and Enterprise plans. This new feature transforms a Claude Code session's work into a live, interactive, and shareable custom HTML webpage. It allows users to plug in live code and multiple data sources, surfacing them on a unique URL.\n\nThese generated webpages can be sent to teammates, enabling real-time updates as Claude Code works autonomously or under user guidance. This capability, previously a consumer feature, is now integrated into the Claude Code CLI and desktop app. It bridges the gap between deep back-end engineering and non-technical stakeholders.\n\nClaude Code Artifacts act as a dynamic translation layer, building specialized web pages directly from the user's session context, local repository, and monitoring tools. Engineers no longer need to wire up external data sources or temporary infrastructure, as the AI builds the UI from existing elements.\n\nCrucially, these web pages are not static exports; they refresh instantly at the same URL as the AI works through a terminal session. Every update publishes a new version history, allowing secure tracking and rollbacks. This update follows OpenAI's similar \"Sites\" feature for its Codex platform.\n\nWhile OpenAI's Sites aims to generate durable, full-stack web applications with persistent backend infrastructure, Anthropic's Artifacts deliberately avoids this. Artifacts are designed as a \"capture of work, not an application,\" focusing on ephemeral, highly secure technical workflows.\n\n#AI #Anthropic #ClaudeCode #EnterpriseTech #SoftwareDevelopment #Workflows\n\nSource: VentureBeat",
+  "tweet": "Anthropic's Claude Code now generates live, interactive dashboards directly from your coding sessions, shareable with teammates in real-time. This new 'Artifacts' feature streamlines enterprise workflows, offering a secure, ephemeral canvas for technical insights. #AI #Anthr",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "VentureBeat",
+  "url": "https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises",
+  "image": "https://images.ctfassets.net/jdtwqhzvc2n1/2rGZZLXFe3kRoiPC50Ycwv/a32853493a91cece13baf19f06f38fbb/ChatGPT_Image_Jun_18__2026__07_12_17_PM.png?w=300&q=30",
+  "orig_title": "Anthropic's Claude Code Artifacts update brings live, shared dashboards and interactive workspaces to enterprises",
+  "cluster_urls": [
+   "https://venturebeat.com/data/anthropics-claude-code-artifacts-update-brings-live-shared-dashboards-and-interactive-workspaces-to-enterprises"
+  ],
+  "cluster_titles": [
+   "Anthropic's Claude Code Artifacts update brings live, shared dashboards and interactive workspaces to enterprises"
+  ],
+  "is_logo": false,
+  "photo_credit": "VentureBeat",
+  "image_files": [
+   "20260619-0707-1-anthropic-s-claude-code-artifacts-update-bri.png",
+   "20260619-0707-1-anthropic-s-claude-code-artifacts-update-bri-d1.png",
+   "20260619-0707-1-anthropic-s-claude-code-artifacts-update-bri-d2.png",
+   "20260619-0707-1-anthropic-s-claude-code-artifacts-update-bri-d3.png"
+  ]
+ }
+]

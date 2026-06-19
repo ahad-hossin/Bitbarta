@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "pnpm workspaces monorepo setup problems",
+  "headline_marked": "[[pnpm workspaces]] best practices for TypeScript monorepos in CI",
+  "headline": "pnpm workspaces best practices for TypeScript monorepos in CI",
+  "summary": "Avoid common CI pitfalls with pnpm workspaces. Learn how to configure your monorepo for stable builds on platforms like Railway.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "While pnpm workspaces offer a robust solution for TypeScript monorepos, the official documentation often glosses over critical CI-specific issues. This post dives into the common traps developers encounter after initial setup, particularly when deploying to platforms like Railway, where a fresh build environment exposes resolution errors not seen in local development.",
+   "A key challenge arises from pnpm's strict dependency resolution, which differs from npm and Yarn Classic. Unlike the flat node_modules approach, pnpm ensures packages only access explicitly declared dependencies. This strictness, while beneficial for clarity, can lead to 'phantom dependency' errors in CI when a package relies on a transitive dependency that isn't directly declared, a problem masked by local caches.",
+   "The 'shamefully-hoist' setting in .npmrc is a compatibility concession, but its behavior can be unpredictable, especially on platforms like Railway where builds might not originate from the monorepo root. A more stable approach involves identifying specific packages that require hoisting (like linters or root-level TypeScript compilers) and declaring them correctly, rather than a blanket hoist for all dependencies.",
+   "For Railway deployments, a stable configuration involves building from the root and using `pnpm --filter` with the correct syntax to manage inter-workspace dependencies. Specifically, using `pnpm --filter=package...` ensures topological order, preventing build failures that can occur when scripts run in parallel without respecting the dependency graph.",
+   "Crucially, always use `--frozen-lockfile` in CI to prevent unintended lockfile updates and ensure reproducible builds. This flag guarantees that pnpm adheres strictly to the versions specified in the lockfile, avoiding inconsistencies that can arise in a clean build environment."
+  ],
+  "caption": "pnpm workspaces are great for monorepos, but CI can be a nightmare. Here's how to fix it.\n\nWhile pnpm workspaces offer a robust solution for TypeScript monorepos, the official documentation often glosses over critical CI-specific issues. This post dives into the common traps developers encounter after initial setup, particularly when deploying to platforms like Railway, where a fresh build environment exposes resolution errors not seen in local development.\n\nA key challenge arises from pnpm's strict dependency resolution, which differs from npm and Yarn Classic. Unlike the flat node_modules approach, pnpm ensures packages only access explicitly declared dependencies. This strictness, while beneficial for clarity, can lead to 'phantom dependency' errors in CI when a package relies on a transitive dependency that isn't directly declared, a problem masked by local caches.\n\nThe 'shamefully-hoist' setting in .npmrc is a compatibility concession, but its behavior can be unpredictable, especially on platforms like Railway where builds might not originate from the monorepo root. A more stable approach involves identifying specific packages that require hoisting (like linters or root-level TypeScript compilers) and declaring them correctly, rather than a blanket hoist for all dependencies.\n\nFor Railway deployments, a stable configuration involves building from the root and using `pnpm --filter` with the correct syntax to manage inter-workspace dependencies. Specifically, using `pnpm --filter=package...` ensures topological order, preventing build failures that can occur when scripts run in parallel without respecting the dependency graph.\n\nCrucially, always use `--frozen-lockfile` in CI to prevent unintended lockfile updates and ensure reproducible builds. This flag guarantees that pnpm adheres strictly to the versions specified in the lockfile, avoiding inconsistencies that can arise in a clean build environment.\n\n#pnpm #monorepo #typescript #CI #development\n\nSource: DEV",
+  "tweet": "pnpm workspaces for TypeScript monorepos can be tricky in CI. Avoid phantom dependencies and hoisting issues with these fixes for stable builds on platforms like Railway. #pnpm #monorepo #CI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jtorchia/pnpm-workspaces-in-a-monorepo-the-setup-that-survived-ci-on-railway-and-the-problems-the-docs-3aph",
+  "image": "",
+  "orig_title": "pnpm workspaces in a monorepo: the setup that survived CI on Railway and the problems the docs don't warn you about",
+  "cluster_urls": [
+   "https://dev.to/jtorchia/pnpm-workspaces-in-a-monorepo-the-setup-that-survived-ci-on-railway-and-the-problems-the-docs-3aph",
+   "https://dev.to/jtorchia/pnpm-workspaces-en-monorepo-el-setup-que-sobrevivio-ci-en-railway-y-los-problemas-que-los-docs-no-3ji6"
+  ],
+  "cluster_titles": [
+   "pnpm workspaces in a monorepo: the setup that survived CI on Railway and the problems the docs don't warn you about",
+   "pnpm workspaces en monorepo: el setup que sobrevivió CI en Railway y los problemas que los docs no anticipan"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260619-1806-0-pnpm-workspaces-best-practices-for-typescrip.png",
+   "20260619-1806-0-pnpm-workspaces-best-practices-for-typescrip-d1.png",
+   "20260619-1806-0-pnpm-workspaces-best-practices-for-typescrip-d2.png",
+   "20260619-1806-0-pnpm-workspaces-best-practices-for-typescrip-d3.png"
+  ]
+ },
+ {
+  "topic": "gemini google photos instagram engagement boost",
+  "headline_marked": "[[Gemini helps you find photos]] for Instagram from Google Photos",
+  "headline": "Gemini helps you find photos for Instagram from Google Photos",
+  "summary": "AI assistant connects to your photo library to surface best shots and suggest captions, streamlining social media content creation.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Gemini is now capable of accessing your Google Photos library, allowing users to find specific images for social media posts without endless scrolling. This integration streamlines the process of selecting the best photos and generating relevant captions.",
+   "The analyst found that Gemini significantly reduced the time spent searching for photos, especially after trips with thousands of images. By connecting Gemini to Google Photos through Personal Intelligence settings, users can ask for top photos from specific locations or events.",
+   "For example, a prompt like 'Get me my top three photos from Phu Quoc Island and give me a catchy caption for an Instagram post' yields relevant images and tailored captions. This feature is particularly useful for organizing content from vacations or events.",
+   "Gemini's ability to recognize faces further enhances its utility. Users can request specific photos of individuals, such as 'Get me Aavyan’s top two shots from the Vietnam trip and give me a good caption with lots of emojis,' and Gemini can deliver.",
+   "This integration moves beyond simple caption generation; it actively assists in content discovery. The AI can now leverage details from your photo library, including recognized faces and locations, to provide a more personalized and efficient workflow for social media content creators."
+  ],
+  "caption": "Tired of scrolling through thousands of photos to find the perfect one for Instagram? Gemini can now help.\n\nGemini is now capable of accessing your Google Photos library, allowing users to find specific images for social media posts without endless scrolling. This integration streamlines the process of selecting the best photos and generating relevant captions.\n\nThe analyst found that Gemini significantly reduced the time spent searching for photos, especially after trips with thousands of images. By connecting Gemini to Google Photos through Personal Intelligence settings, users can ask for top photos from specific locations or events.\n\nFor example, a prompt like 'Get me my top three photos from Phu Quoc Island and give me a catchy caption for an Instagram post' yields relevant images and tailored captions. This feature is particularly useful for organizing content from vacations or events.\n\nGemini's ability to recognize faces further enhances its utility. Users can request specific photos of individuals, such as 'Get me Aavyan’s top two shots from the Vietnam trip and give me a good caption with lots of emojis,' and Gemini can deliver.\n\nThis integration moves beyond simple caption generation; it actively assists in content discovery. The AI can now leverage details from your photo library, including recognized faces and locations, to provide a more personalized and efficient workflow for social media content creators.\n\n#Gemini #GooglePhotos #AI #SocialMedia #ContentCreation\n\nSource: Android Police",
+  "tweet": "Gemini now connects to Google Photos to help you find the best shots for Instagram! Streamline your content creation by asking the AI to surface top photos and generate captions. #Gemini #GooglePhotos #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/started-using-gemini-with-google-photos-instagram-boosted-engagement-levels/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/06/using-gemini-with-google-photos-instagram.png",
+  "orig_title": "I started using Gemini with Google Photos and Instagram, and found the best photos to boost my engagement levels",
+  "cluster_urls": [
+   "https://www.androidpolice.com/started-using-gemini-with-google-photos-instagram-boosted-engagement-levels/"
+  ],
+  "cluster_titles": [
+   "I started using Gemini with Google Photos and Instagram, and found the best photos to boost my engagement levels"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260619-1806-1-gemini-helps-you-find-photos-for-instagram-f.png",
+   "20260619-1806-1-gemini-helps-you-find-photos-for-instagram-f-d1.png",
+   "20260619-1806-1-gemini-helps-you-find-photos-for-instagram-f-d2.png"
+  ]
+ }
+]

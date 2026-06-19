@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "topic": "llm pii firewall prevents data leak",
+  "headline_marked": "[[Built a PII Firewall for LLMs in a Weekend]] after accidentally leaking customer data to GPT-4o",
+  "headline": "Built a PII Firewall for LLMs in a Weekend after accidentally leaking customer data to GPT-4o",
+  "summary": "A developer created an open-source governance engine that blocks sensitive data like names and credit card numbers from reaching LLMs, preventing potential GDPR breaches.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "While benchmarking GPT-4o against a local Llama model using real support ticket data, a developer accidentally sent a customer's name and credit card number to OpenAI. This incident highlighted a critical gap in existing LLM observability tools.",
+   "Unlike current tools that only log what happened after the fact, this new firewall enforces policies *before* the model call. This distinction is crucial for compliance with regulations like GDPR, HIPAA, and the EU AI Act, where blocking data before it leaves infrastructure is key.",
+   "The core of the system is an `enforce_governance_policy` function, implemented as a FastAPI `Depends()`. If a blocking rule is triggered, it raises an HTTP 403 error, preventing the prompt from ever reaching the LLM API.",
+   "Governance policies are defined in a YAML file, allowing for dynamic updates without code changes or restarts. Rules can be reloaded instantly via an API endpoint, making policy management flexible and responsive.",
+   "The engine supports four conditions: `pii_detected`, `safety_score_below`, `cost_exceeds`, and `model_is`. It offers three actions: `block` (HTTP 403), `warn` (audit + continue), and `alert` (webhook + continue).",
+   "PII detection is powered by Microsoft's open-source Presidio library, which runs locally and identifies over 50 entity types including credit cards, SSNs, and email addresses. It uses regex, checksums, and a spaCy NLP model.",
+   "Each detected entity receives a confidence score, which is compared against a rule's threshold. A separate safety score combines PII confidence, entity density, and sensitive keyword presence to trigger broader safety warnings.",
+   "The system follows a Chain of Responsibility pattern, evaluating rules independently. Block rules short-circuit the process, while warn and alert rules accumulate into a final verdict, ensuring comprehensive policy enforcement.",
+   "Every violation, whether blocked or not, is persisted to a PostgreSQL database for audit purposes. Webhook delivery for alerts is handled asynchronously to avoid adding latency to the response path.",
+   "A user-friendly dashboard allows testing governance blocks, such as entering a fake SSN to see it immediately blocked before reaching GPT-4o. The Audit Vault page provides filterable records and PDF export for compliance reports.",
+   "The orchestrator supports five provider types through a single interface, with API keys securely stored and Fernet-encrypted in PostgreSQL. This design ensures broad compatibility and robust security for LLM integrations."
+  ],
+  "caption": "Accidentally sent customer PII to GPT-4o? This developer built an open-source firewall to prevent it from ever happening again.\n\nWhile benchmarking GPT-4o against a local Llama model using real support ticket data, a developer accidentally sent a customer's name and credit card number to OpenAI. This incident highlighted a critical gap in existing LLM observability tools.\n\nUnlike current tools that only log what happened after the fact, this new firewall enforces policies *before* the model call. This distinction is crucial for compliance with regulations like GDPR, HIPAA, and the EU AI Act, where blocking data before it leaves infrastructure is key.\n\nThe core of the system is an `enforce_governance_policy` function, implemented as a FastAPI `Depends()`. If a blocking rule is triggered, it raises an HTTP 403 error, preventing the prompt from ever reaching the LLM API.\n\nGovernance policies are defined in a YAML file, allowing for dynamic updates without code changes or restarts. Rules can be reloaded instantly via an API endpoint, making policy management flexible and responsive.\n\nThe engine supports four conditions: `pii_detected`, `safety_score_below`, `cost_exceeds`, and `model_is`. It offers three actions: `block` (HTTP 403), `warn` (audit + continue), and `alert` (webhook + continue).\n\nPII detection is powered by Microsoft's open-source Presidio library, which runs locally and identifies over 50 entity types including credit cards, SSNs, and email addresses. It uses regex, checksums, and a spaCy NLP model.\n\nEach detected entity receives a confidence score, which is compared against a rule's threshold. A separate safety score combines PII confidence, entity density, and sensitive keyword presence to trigger broader safety warnings.\n\nThe system follows a Chain of Responsibility pattern, evaluating rules independently. Block rules short-circuit the process, while warn and alert rules accumulate into a final verdict, ensuring comprehensive policy enforcement.\n\n#LLMSecurity #PII #GDPR #OpenSource #AI\n\nSource: DEV",
+  "tweet": "Accidentally sent customer PII to GPT-4o? This developer built an open-source firewall in a weekend to prevent future leaks. It blocks sensitive data *before* it reaches LLMs, ensuring compliance with GDPR and HIPAA. #LLMSecurity #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sochaty/i-built-a-pii-firewall-for-llms-in-a-weekend-and-caught-my-own-leak-1mh0",
+  "image": "",
+  "orig_title": "I Built a PII Firewall for LLMs in a Weekend (and Caught My Own Leak)",
+  "cluster_urls": [
+   "https://dev.to/sochaty/i-built-a-pii-firewall-for-llms-in-a-weekend-and-caught-my-own-leak-1mh0"
+  ],
+  "cluster_titles": [
+   "I Built a PII Firewall for LLMs in a Weekend (and Caught My Own Leak)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260619-0906-0-built-a-pii-firewall-for-llms-in-a-weekend-a.png",
+   "20260619-0906-0-built-a-pii-firewall-for-llms-in-a-weekend-a-d1.png",
+   "20260619-0906-0-built-a-pii-firewall-for-llms-in-a-weekend-a-d2.png",
+   "20260619-0906-0-built-a-pii-firewall-for-llms-in-a-weekend-a-d3.png",
+   "20260619-0906-0-built-a-pii-firewall-for-llms-in-a-weekend-a-d4.png"
+  ]
+ },
+ {
+  "topic": "agentic rag infrastructure challenges",
+  "headline_marked": "Agentic RAG Isn't Just Fancy Autocomplete. [[It's a Whole New Infrastructure Problem]].",
+  "headline": "Agentic RAG Isn't Just Fancy Autocomplete. It's a Whole New Infrastructure Problem.",
+  "summary": "Building Agentic RAG systems goes beyond simple RAG, presenting significant challenges in system design, tool routing, and latency, making it a complex infrastructure problem.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The hype around Agentic RAG often suggests it's a simple extension of RAG, but developers find the reality far more complex. Moving from a 'smart librarian' to a 'personal project manager' creates an infrastructure nightmare.",
+   "Agentic RAG gives an LLM 'hands' by enabling an 'observe-think-act' loop. This means the system analyzes a query, decides which data sources to use, writes queries, retrieves results, and then acts on that information repeatedly until a task is complete.",
+   "This multi-turn process transforms prompt engineering into building a state machine. For instance, a system might analyze an invoice query, call a tool to get customer data, then another to get invoice details, and finally check a knowledge base for policies.",
+   "Building these systems introduces significant design headaches, starting with tool routing. Unlike simple RAG, the LLM must dynamically decide which of many databases or APIs to query on the fly, adding a layer of hidden complexity.",
+   "Agents can also get stuck in infinite loops without careful boundaries, continuously calling tools without returning a final answer. Furthermore, each 'observe-think-act' loop involves a round trip to the LLM, causing substantial latency, often turning a 2-second task into 15-20 seconds.",
+   "A key lesson is that a simpler architecture with a more powerful LLM often outperforms complex Agentic systems for straightforward tasks. Agentic RAG is best suited for problems requiring multi-step reasoning and extensive tool use.",
+   "Ultimately, diving into Agentic RAG means becoming a systems engineer for an AI. You're not just building a smarter chatbot; you're orchestrating a distributed system with an AI that has a mind of its own."
+  ],
+  "caption": "Agentic RAG isn't just a smarter chatbot; it's a distributed system. Developers face significant infrastructure challenges beyond simple prompting.\n\nThe hype around Agentic RAG often suggests it's a simple extension of RAG, but developers find the reality far more complex. Moving from a 'smart librarian' to a 'personal project manager' creates an infrastructure nightmare.\n\nAgentic RAG gives an LLM 'hands' by enabling an 'observe-think-act' loop. This means the system analyzes a query, decides which data sources to use, writes queries, retrieves results, and then acts on that information repeatedly until a task is complete.\n\nThis multi-turn process transforms prompt engineering into building a state machine. For instance, a system might analyze an invoice query, call a tool to get customer data, then another to get invoice details, and finally check a knowledge base for policies.\n\nBuilding these systems introduces significant design headaches, starting with tool routing. Unlike simple RAG, the LLM must dynamically decide which of many databases or APIs to query on the fly, adding a layer of hidden complexity.\n\nAgents can also get stuck in infinite loops without careful boundaries, continuously calling tools without returning a final answer. Furthermore, each 'observe-think-act' loop involves a round trip to the LLM, causing substantial latency, often turning a 2-second task into 15-20 seconds.\n\nA key lesson is that a simpler architecture with a more powerful LLM often outperforms complex Agentic systems for straightforward tasks. Agentic RAG is best suited for problems requiring multi-step reasoning and extensive tool use.\n\nUltimately, diving into Agentic RAG means becoming a systems engineer for an AI. You're not just building a smarter chatbot; you're orchestrating a distributed system with an AI that has a mind of its own.\n\n#AgenticRAG #AI #LLM #SoftwareDevelopment #TechInfrastructure #Developer\n\nSource: DEV",
+  "tweet": "Agentic RAG isn't just a smarter chatbot; it's a distributed system. Developers face significant infrastructure challenges like tool routing, infinite loops, and latency. It's a systems engineering problem, not just fancy autocomplete. #AgenticRAG #AI #Dev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/venu_varma/agentic-rag-isnt-just-fancy-autocomplete-its-a-whole-new-infrastructure-problem-4d9i",
+  "image": "",
+  "orig_title": "Agentic RAG Isn't Just Fancy Autocomplete. It's a Whole New Infrastructure Problem.",
+  "cluster_urls": [
+   "https://dev.to/venu_varma/agentic-rag-isnt-just-fancy-autocomplete-its-a-whole-new-infrastructure-problem-4d9i"
+  ],
+  "cluster_titles": [
+   "Agentic RAG Isn't Just Fancy Autocomplete. It's a Whole New Infrastructure Problem."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260619-0906-1-agentic-rag-isn-t-just-fancy-autocomplete-it.png",
+   "20260619-0906-1-agentic-rag-isn-t-just-fancy-autocomplete-it-d1.png",
+   "20260619-0906-1-agentic-rag-isn-t-just-fancy-autocomplete-it-d2.png",
+   "20260619-0906-1-agentic-rag-isn-t-just-fancy-autocomplete-it-d3.png"
+  ]
+ }
+]

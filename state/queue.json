@@ -1,1 +1,42 @@
-[]
+[
+ {
+  "topic": "tiny neural network medical data 8kb",
+  "headline_marked": "[[Neural Network trained on real medical data fits in 8.9 kB of Pure C]]",
+  "headline": "Neural Network trained on real medical data fits in 8.9 kB of Pure C",
+  "summary": "A developer trained a neural network on 3,658 real patient records to predict systolic blood pressure, achieving an average error of 7.8 mmHg and a 1.4 mmHg error on a specific sample, comparable to clinical devices.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A neural network designed for embedded systems successfully predicted systolic blood pressure from 14 patient vitals, fitting into just 8.9 kB of flash memory. On a specific patient sample, it achieved an impressive error of only 1.4 mmHg, close to clinical-grade monitors.",
+   "The model was built using Hasaki, a command-line neural network trainer that exports a self-contained C header, including weights, biases, and a predict() function. This allows it to be dropped directly into any microcontroller project without external dependencies like TensorFlow.",
+   "The training utilized the Framingham Heart Study dataset from Kaggle, comprising 3,658 cleaned patient records. The goal was to predict a continuous value (systolic blood pressure) rather than the typical binary classification for which Hasaki was initially designed.",
+   "Extensive data preprocessing was required, including dropping rows with missing values and normalizing all features and the target variable. This ensures the model receives consistent input, although the developer notes this process should be simpler for future users.",
+   "The network, with a 14,32,16,1 architecture, trained in just 23 seconds. While the mean absolute error across the validation set was approximately 7.8 mmHg, the accuracy metric was misleading for regression and had to be ignored.",
+   "The project revealed an unexpected regression capability within Hasaki, which was primarily documented and demonstrated for classification tasks. This highlights the versatility of the tool beyond its initial intended purpose."
+  ],
+  "caption": "A neural network predicting blood pressure fits in just 8.9 kB of C code. It achieved an error of 1.4 mmHg on a real patient sample, rivaling clinical devices.\n\nA neural network designed for embedded systems successfully predicted systolic blood pressure from 14 patient vitals, fitting into just 8.9 kB of flash memory. On a specific patient sample, it achieved an impressive error of only 1.4 mmHg, close to clinical-grade monitors.\n\nThe model was built using Hasaki, a command-line neural network trainer that exports a self-contained C header, including weights, biases, and a predict() function. This allows it to be dropped directly into any microcontroller project without external dependencies like TensorFlow.\n\nThe training utilized the Framingham Heart Study dataset from Kaggle, comprising 3,658 cleaned patient records. The goal was to predict a continuous value (systolic blood pressure) rather than the typical binary classification for which Hasaki was initially designed.\n\nExtensive data preprocessing was required, including dropping rows with missing values and normalizing all features and the target variable. This ensures the model receives consistent input, although the developer notes this process should be simpler for future users.\n\nThe network, with a 14,32,16,1 architecture, trained in just 23 seconds. While the mean absolute error across the validation set was approximately 7.8 mmHg, the accuracy metric was misleading for regression and had to be ignored.\n\nThe project revealed an unexpected regression capability within Hasaki, which was primarily documented and demonstrated for classification tasks. This highlights the versatility of the tool beyond its initial intended purpose.\n\n#TinyML #EmbeddedSystems #NeuralNetworks #CProgramming #MachineLearning #HealthTech\n\nSource: DEV",
+  "tweet": "A neural network predicting blood pressure fits in just 8.9 kB of C code, achieving 1.4 mmHg error on a real patient sample. This tinyML model, built with Hasaki, runs without TensorFlow or a runtime, perfect for embedded systems. #TinyML #EmbeddedSystems #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/alexrosito67/i-trained-a-neural-network-on-real-medical-data-and-fit-it-in-89-kb-of-pure-c-4e40",
+  "image": "",
+  "orig_title": "I Trained a Neural Network on Real Medical Data and Fit It in 8.9 kB of Pure C",
+  "cluster_urls": [
+   "https://dev.to/alexrosito67/i-trained-a-neural-network-on-real-medical-data-and-fit-it-in-89-kb-of-pure-c-4e40"
+  ],
+  "cluster_titles": [
+   "I Trained a Neural Network on Real Medical Data and Fit It in 8.9 kB of Pure C"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260620-1106-0-neural-network-trained-on-real-medical-data-.png",
+   "20260620-1106-0-neural-network-trained-on-real-medical-data--d1.png",
+   "20260620-1106-0-neural-network-trained-on-real-medical-data--d2.png",
+   "20260620-1106-0-neural-network-trained-on-real-medical-data--d3.png"
+  ]
+ }
+]

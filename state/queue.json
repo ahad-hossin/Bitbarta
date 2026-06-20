@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "gemini 3.5 pro 2m context deep think",
+  "headline_marked": "[[Gemini 3.5 Pro: 2M Context, Deep Think]] and the Post-Fable-5 Frontier",
+  "headline": "Gemini 3.5 Pro: 2M Context, Deep Think and the Post-Fable-5 Frontier",
+  "summary": "Google's Gemini 3.5 Pro, launching late June 2026, features a 2-million-token context window and a Deep Think reasoning mode. It arrives as competitors like Claude Fable 5 are offline, creating a significant market opening.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Gemini 3.5 Pro is set for general availability in late June 2026, boasting a 2-million-token context window and a Deep Think reasoning mode. This positions it as a frontier model, entering a market with limited top-tier competition. It's already live for select enterprise customers on Vertex AI.",
+   "The model's launch comes after Anthropic's Claude Fable 5 was globally disabled on June 12 due to export control. While Claude Opus 4.8 remains, its 200K context limit restricts codebase-scale and multi-document workloads. GPT-5.6 is still a release candidate.",
+   "The 2M token context window allows for massive inputs, such as an entire 2,000-file TypeScript monorepo, three years of Slack history for a 30-person team, or four SEC S-1 filings simultaneously. This eliminates the need for workarounds like vector retrieval layers for many complex developer tasks.",
+   "Unlike Gemini 3.1 Pro, whose 2M context degraded past 500K, Gemini 3.5 Pro is expected to maintain quality across its full 2M range. This architectural improvement ensures consistent performance for large-scale applications.",
+   "Deep Think is an API parameter toggle that enables the model to spend additional compute on internal chain-of-thought reasoning before generating output. This mode targets hard reasoning gaps, aiming for performance in the GPT-5.5 range, though it increases latency."
+  ],
+  "caption": "Google's Gemini 3.5 Pro launches with a massive 2M token context window and a new 'Deep Think' reasoning mode. It's set to redefine large-scale AI workloads.\n\nGemini 3.5 Pro is set for general availability in late June 2026, boasting a 2-million-token context window and a Deep Think reasoning mode. This positions it as a frontier model, entering a market with limited top-tier competition. It's already live for select enterprise customers on Vertex AI.\n\nThe model's launch comes after Anthropic's Claude Fable 5 was globally disabled on June 12 due to export control. While Claude Opus 4.8 remains, its 200K context limit restricts codebase-scale and multi-document workloads. GPT-5.6 is still a release candidate.\n\nThe 2M token context window allows for massive inputs, such as an entire 2,000-file TypeScript monorepo, three years of Slack history for a 30-person team, or four SEC S-1 filings simultaneously. This eliminates the need for workarounds like vector retrieval layers for many complex developer tasks.\n\nUnlike Gemini 3.1 Pro, whose 2M context degraded past 500K, Gemini 3.5 Pro is expected to maintain quality across its full 2M range. This architectural improvement ensures consistent performance for large-scale applications.\n\nDeep Think is an API parameter toggle that enables the model to spend additional compute on internal chain-of-thought reasoning before generating output. This mode targets hard reasoning gaps, aiming for performance in the GPT-5.5 range, though it increases latency.\n\n#AI #GoogleAI #Gemini #LLM #TechNews #DeepLearning\n\nSource: DEV",
+  "tweet": "Google's Gemini 3.5 Pro is coming late June 2026 with a 2M token context window & 'Deep Think' mode. It arrives as competitors like Claude Fable 5 are offline, creating a huge opening for advanced AI applications. #GoogleAI #Gemini #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "google.com",
+  "source": "DEV",
+  "url": "https://dev.to/akaranjkar08/gemini-35-pro-2m-context-deep-think-and-the-post-fable-5-frontier-2p60",
+  "image": "",
+  "orig_title": "Gemini 3.5 Pro: 2M Context, Deep Think, and the Post-Fable-5 Frontier",
+  "cluster_urls": [
+   "https://dev.to/akaranjkar08/gemini-35-pro-2m-context-deep-think-and-the-post-fable-5-frontier-2p60"
+  ],
+  "cluster_titles": [
+   "Gemini 3.5 Pro: 2M Context, Deep Think, and the Post-Fable-5 Frontier"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260620-0706-0-gemini-3-5-pro-2m-context-deep-think-and-the.png",
+   "20260620-0706-0-gemini-3-5-pro-2m-context-deep-think-and-the-d1.png",
+   "20260620-0706-0-gemini-3-5-pro-2m-context-deep-think-and-the-d2.png"
+  ]
+ },
+ {
+  "topic": "chinese ai models api access",
+  "headline_marked": "[[Access 50+ Chinese AI Models With One API]] — No Code Changes Required",
+  "headline": "Access 50+ Chinese AI Models With One API — No Code Changes Required",
+  "summary": "AIWave unifies over 50 Chinese AI models from eight labs into a single OpenAI-compatible API. This allows developers to cut costs significantly, with models like DeepSeek V4 costing just 3% of GPT-4o.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Chinese AI models like DeepSeek V4 and GLM-4 offer significant cost advantages, costing as little as 3% of GPT-4o or 1/20th of GPT-4, while delivering competitive performance. Qwen also provides multilingual capabilities comparable to Claude for a fraction of the price.",
+   "Despite these economic benefits, developers face substantial friction integrating these models. This includes navigating Chinese-language dashboards, managing multiple payment wallets, handling diverse API key formats, and dealing with inconsistent SDKs, often leading teams to stick with more expensive Western providers.",
+   "AIWave addresses this by providing a single API key and endpoint to access over 50 models from eight Chinese labs. It normalizes all APIs to an OpenAI-compatible format, allowing developers to switch between models like DeepSeek, GLM, and Qwen with zero code changes.",
+   "The platform acts as a protocol-normalizing proxy, translating standard OpenAI requests into the specific dialect expected by each target provider. This is possible because core functionalities like chat completions, streaming, and function calling are semantically similar across models, despite syntactic differences.",
+   "For existing OpenAI SDK users, integrating Chinese models via AIWave requires only changing two strings: the base_url to AIWave's endpoint and the model parameter using a {provider}/{model} naming convention. All other parameters pass through as expected.",
+   "AIWave also offers API-side routing for model aliasing, decoupling model strings from application code. This allows teams to A/B test new models or switch between providers by simply updating an alias in the AIWave dashboard, bypassing full deployment cycles.",
+   "The cost difference is substantial; a workload processing 10 million tokens daily could save enough annually to hire one or two junior engineers. These Chinese models are not \"discount\" quality, with DeepSeek V4-Pro performing comparably to GPT-4o on key benchmarks.",
+   "The platform includes configurable fallback chains to handle production issues like rate limits, provider downtime, or model deprecations. If a primary model fails, AIWave automatically retries with the next model in the chain, ensuring application stability without requiring client-side error handling."
+  ],
+  "caption": "Access 50+ Chinese AI models at a fraction of the cost of Western alternatives, with zero code changes.\n\nChinese AI models like DeepSeek V4 and GLM-4 offer significant cost advantages, costing as little as 3% of GPT-4o or 1/20th of GPT-4, while delivering competitive performance. Qwen also provides multilingual capabilities comparable to Claude for a fraction of the price.\n\nDespite these economic benefits, developers face substantial friction integrating these models. This includes navigating Chinese-language dashboards, managing multiple payment wallets, handling diverse API key formats, and dealing with inconsistent SDKs, often leading teams to stick with more expensive Western providers.\n\nAIWave addresses this by providing a single API key and endpoint to access over 50 models from eight Chinese labs. It normalizes all APIs to an OpenAI-compatible format, allowing developers to switch between models like DeepSeek, GLM, and Qwen with zero code changes.\n\nThe platform acts as a protocol-normalizing proxy, translating standard OpenAI requests into the specific dialect expected by each target provider. This is possible because core functionalities like chat completions, streaming, and function calling are semantically similar across models, despite syntactic differences.\n\nFor existing OpenAI SDK users, integrating Chinese models via AIWave requires only changing two strings: the base_url to AIWave's endpoint and the model parameter using a {provider}/{model} naming convention. All other parameters pass through as expected.\n\nAIWave also offers API-side routing for model aliasing, decoupling model strings from application code. This allows teams to A/B test new models or switch between providers by simply updating an alias in the AIWave dashboard, bypassing full deployment cycles.\n\n#AI #APIs #Developers #Tech #LLMs #AIWave\n\nSource: DEV",
+  "tweet": "Devs: Access 50+ Chinese AI models like DeepSeek & GLM-4 via one OpenAI-compatible API, with zero code changes. Cut costs by up to 97% compared to GPT-4o, without sacrificing quality. Simplify multi-provider routing and A/B testing. #AI #APIs #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/aiwave/how-to-access-50-chinese-ai-models-with-one-api-no-code-changes-required-2e7f",
+  "image": "",
+  "orig_title": "How to Access 50+ Chinese AI Models With One API — No Code Changes Required",
+  "cluster_urls": [
+   "https://dev.to/aiwave/how-to-access-50-chinese-ai-models-with-one-api-no-code-changes-required-2e7f",
+   "https://dev.to/aiwave/how-to-access-50-chinese-ai-models-through-one-api-no-code-changes-required-3f2l"
+  ],
+  "cluster_titles": [
+   "How to Access 50+ Chinese AI Models With One API — No Code Changes Required",
+   "How to Access 50+ Chinese AI Models Through One API — No Code Changes Required"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260620-0706-1-access-50-chinese-ai-models-with-one-api-no-.png",
+   "20260620-0706-1-access-50-chinese-ai-models-with-one-api-no--d1.png",
+   "20260620-0706-1-access-50-chinese-ai-models-with-one-api-no--d2.png",
+   "20260620-0706-1-access-50-chinese-ai-models-with-one-api-no--d3.png",
+   "20260620-0706-1-access-50-chinese-ai-models-with-one-api-no--d4.png"
+  ]
+ }
+]

@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "windows linux security boot keys expire",
+  "headline_marked": "[[Windows & Linux users face June 24 deadline]] to update security keys protecting against UEFI bootkits",
+  "headline": "Windows & Linux users face June 24 deadline to update security keys protecting against UEFI bootkits",
+  "summary": "Three critical Microsoft-signed certificates for Secure Boot expire on June 24, leaving systems vulnerable to persistent UEFI firmware malware if not updated. This update is crucial for protecting against sophisticated bootkits.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Windows and Linux users face a critical deadline of June 24 to update cryptographic keys. These updates are essential to protect systems against pernicious firmware-based UEFI infections, which load before the operating system and antimalware protections can start.",
+   "This urgency stems from the expiration of three Microsoft-signed certificates on June 24. These certificates are crucial for Secure Boot, a Microsoft-designed chain of trust that verifies the digital signatures of all firmware loaded during system startup.",
+   "Secure Boot's purpose is to thwart UEFI bootkits, a form of malware that alters the Unified Extensible Firmware Interface. Because these bootkits load so early, they are notoriously difficult to detect and can reinfect a system even after an OS reinstallation.",
+   "The need for new cryptographic signatures arose from the 2023 discovery of LogoFail. This series of critical vulnerabilities, found in UEFIs across nearly all Windows and Linux systems, allowed attackers to bypass Secure Boot via an image-parsing bug during bootup.",
+   "UEFI bootkits represent a sophisticated threat, with real-world attacks like LoJax (2018) and MosaicRegressor (2020) demonstrating their danger. These malware types can steal credentials, backdoor systems, and persist across OS reinstalls."
+  ],
+  "caption": "Windows and Linux users must update critical security keys by June 24. Failure to do so leaves systems open to advanced UEFI firmware attacks.\n\nWindows and Linux users face a critical deadline of June 24 to update cryptographic keys. These updates are essential to protect systems against pernicious firmware-based UEFI infections, which load before the operating system and antimalware protections can start.\n\nThis urgency stems from the expiration of three Microsoft-signed certificates on June 24. These certificates are crucial for Secure Boot, a Microsoft-designed chain of trust that verifies the digital signatures of all firmware loaded during system startup.\n\nSecure Boot's purpose is to thwart UEFI bootkits, a form of malware that alters the Unified Extensible Firmware Interface. Because these bootkits load so early, they are notoriously difficult to detect and can reinfect a system even after an OS reinstallation.\n\nThe need for new cryptographic signatures arose from the 2023 discovery of LogoFail. This series of critical vulnerabilities, found in UEFIs across nearly all Windows and Linux systems, allowed attackers to bypass Secure Boot via an image-parsing bug during bootup.\n\nUEFI bootkits represent a sophisticated threat, with real-world attacks like LoJax (2018) and MosaicRegressor (2020) demonstrating their danger. These malware types can steal credentials, backdoor systems, and persist across OS reinstalls.\n\n#Cybersecurity #Windows #Linux #SecureBoot #UEFI #TechNews\n\nSource: Wired",
+  "tweet": "Critical deadline approaching for Windows & Linux users: Update cryptographic keys by June 24 to protect against UEFI firmware infections. Expiring Secure Boot certificates could leave systems vulnerable. Don't delay! #Cybersecurity #Windows #Linux",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/a-critical-deadline-is-approaching-for-windows-and-linux-security/",
+  "image": "https://media.wired.com/photos/6a342b0819ec74e5dcd4e6ca/master/pass/GettyImages-1091064696.jpg",
+  "orig_title": "A Critical Deadline Is Approaching for Windows and Linux Security",
+  "cluster_urls": [
+   "https://www.wired.com/story/a-critical-deadline-is-approaching-for-windows-and-linux-security/"
+  ],
+  "cluster_titles": [
+   "A Critical Deadline Is Approaching for Windows and Linux Security"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260621-1506-0-windows-linux-users-face-june-24-deadline-to.png",
+   "20260621-1506-0-windows-linux-users-face-june-24-deadline-to-d1.png",
+   "20260621-1506-0-windows-linux-users-face-june-24-deadline-to-d2.png"
+  ]
+ },
+ {
+  "topic": "ai coding agents tool limitations critique",
+  "headline_marked": "[[Coding Agents Suck at Tools]]: Inefficient tools pollute context, leading to errors and wasted tokens",
+  "headline": "Coding Agents Suck at Tools: Inefficient tools pollute context, leading to errors and wasted tokens",
+  "summary": "AI coding agents struggle with numerous tools, causing context pollution, inefficient operations, and corrupted codebases. A new approach using a single Elixir Eval tool aims to significantly improve precision and reduce errors.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Current AI agent frameworks like Hermes, Copilot, and Opencode are heavily reliant on numerous tools such as bash hooks, file viewers, and web search. These tools and their individual instructions are injected into the model's context, leading to unnecessarily large token requests, sometimes up to 10,000 tokens for initial operations.",
+   "Many of these tools are buggy, miscounting lines, truncating files to save tokens, or invalidating caches, which worsens the token-to-dollar ratio. Furthermore, tool signatures vary significantly between different harnesses, a complexity that models struggle to manage.",
+   "As a coding session progresses, models tend to 'forget' the noisy tool descriptions, causing basic operations like file finding to fail. This often leads to models entering endless loops, consuming computational budget without producing any useful output.",
+   "Forcing a model to constantly context-switch between writing clean code and formatting rigid JSON payloads for tool interaction is highly inefficient and frequently causes breakdowns. Models are primarily trained on bash and general coding, not on every specific harness's tool implementation.",
+   "File editing is a particularly problematic area; it requires models to maintain an exact mental map of the Abstract Syntax Tree (AST), perfectly match whitespace, and calculate precise line differences. Attempts at search-and-replace edits often miss critical details, leading to corrupted codebases.",
+   "The proliferation of tools generates 'garbage' that pollutes the context window, degrading model performance. A new approach, called 'eeva', proposes a harness with only one tool: Elixir Eval, aiming to streamline the process.",
+   "Elixir is presented as an ideal language for models, resembling bash in syntax and piping behavior, and offering similar out-of-the-box functions like `File.ls` or `File.read`. Its clean functional nature allows models to combine their knowledge of bash and Elixir for more effective task resolution.",
+   "When an operation fails, the harness consistently feeds the model with Elixir error traces, effectively 'fine-tuning' it on the fly with high-quality outputs. This method significantly improves precision and operations over longer agent working times, raising the performance ceiling for coding agents.",
+   "While even this improved approach eventually faces limitations with extremely large contexts, its ceiling is much higher than traditional methods. Developers interested in trying this single-tool approach can find the implementation on GitHub."
+  ],
+  "caption": "AI coding agents are struggling with basic operations like file editing, leading to corrupted codebases and wasted tokens.\n\nCurrent AI agent frameworks like Hermes, Copilot, and Opencode are heavily reliant on numerous tools such as bash hooks, file viewers, and web search. These tools and their individual instructions are injected into the model's context, leading to unnecessarily large token requests, sometimes up to 10,000 tokens for initial operations.\n\nMany of these tools are buggy, miscounting lines, truncating files to save tokens, or invalidating caches, which worsens the token-to-dollar ratio. Furthermore, tool signatures vary significantly between different harnesses, a complexity that models struggle to manage.\n\nAs a coding session progresses, models tend to 'forget' the noisy tool descriptions, causing basic operations like file finding to fail. This often leads to models entering endless loops, consuming computational budget without producing any useful output.\n\nForcing a model to constantly context-switch between writing clean code and formatting rigid JSON payloads for tool interaction is highly inefficient and frequently causes breakdowns. Models are primarily trained on bash and general coding, not on every specific harness's tool implementation.\n\nFile editing is a particularly problematic area; it requires models to maintain an exact mental map of the Abstract Syntax Tree (AST), perfectly match whitespace, and calculate precise line differences. Attempts at search-and-replace edits often miss critical details, leading to corrupted codebases.\n\nThe proliferation of tools generates 'garbage' that pollutes the context window, degrading model performance. A new approach, called 'eeva', proposes a harness with only one tool: Elixir Eval, aiming to streamline the process.\n\n#AICoding #DeveloperTools #LLMs #SoftwareDevelopment #Elixir #Tech\n\nSource: DEV",
+  "tweet": "AI coding agents are failing at basic operations like file editing, polluting context with 'garbage' tools and wasting tokens. A new approach using a single Elixir Eval tool aims to fix this. #AICoding #DeveloperTools #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/6e2baa41a8b2856/coding-agents-suck-at-tools-3jon",
+  "image": "",
+  "orig_title": "Coding Agents Suck at Tools",
+  "cluster_urls": [
+   "https://dev.to/6e2baa41a8b2856/coding-agents-suck-at-tools-3jon"
+  ],
+  "cluster_titles": [
+   "Coding Agents Suck at Tools"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260621-1506-1-coding-agents-suck-at-tools-inefficient-tool.png",
+   "20260621-1506-1-coding-agents-suck-at-tools-inefficient-tool-d1.png",
+   "20260621-1506-1-coding-agents-suck-at-tools-inefficient-tool-d2.png",
+   "20260621-1506-1-coding-agents-suck-at-tools-inefficient-tool-d3.png",
+   "20260621-1506-1-coding-agents-suck-at-tools-inefficient-tool-d4.png"
+  ]
+ }
+]

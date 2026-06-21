@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "how ai search engines cite sources",
+  "headline_marked": "[[How AI engines decide what to cite]] (ChatGPT, Perplexity, Gemini, AI Overviews)",
+  "headline": "How AI engines decide what to cite (ChatGPT, Perplexity, Gemini, AI Overviews)",
+  "summary": "New research reveals how ChatGPT, Perplexity, Gemini, and AI Overviews select sources, with some citing as little as 15% of retrieved pages and others favoring community content.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI search engines no longer just provide ten blue links; instead, they generate a single answer, often naming only a few brands. This shift makes understanding their citation methods crucial for online visibility.",
+   "ChatGPT operates in two modes: default, which uses trained memory, and search, which browses the web and attaches citations. When browsing, it cites only about 15% of the pages it pulls and names brands roughly three times more often than it links them.",
+   "Perplexity performs live retrieval and grounds every answer in sources, heavily relying on community content. A 2025 study found Reddit was its most-cited source, accounting for approximately 47% of top citations. It also prioritizes 'answer-first' pages where information is cleanly extractable.",
+   "Gemini, powered by Google's live index and Knowledge Graph, still values classical SEO. However, ranking #1 is no longer sufficient; only about 38% of Google's AI Overview citations now come from the top 10 results, a significant drop from 76% a year prior, indicating deeper source retrieval.",
+   "AI Overviews uses 'query fan-out,' splitting questions into 8-12 sub-queries. Most citations (roughly 63%) come from results below the top 10. Counterintuitively, it exhibits the weakest freshness bias among major engines, often citing established, authoritative pages even without recent updates.",
+   "A free tool called FixAEO has been developed to help users see how AI engines describe and recommend their brands across eight platforms, alongside a free llms.txt validator."
+  ],
+  "caption": "Ever wondered how AI search engines like ChatGPT and Gemini pick their sources? New data reveals surprising citation patterns, with some models citing less than 15% of pages they browse.\n\nAI search engines no longer just provide ten blue links; instead, they generate a single answer, often naming only a few brands. This shift makes understanding their citation methods crucial for online visibility.\n\nChatGPT operates in two modes: default, which uses trained memory, and search, which browses the web and attaches citations. When browsing, it cites only about 15% of the pages it pulls and names brands roughly three times more often than it links them.\n\nPerplexity performs live retrieval and grounds every answer in sources, heavily relying on community content. A 2025 study found Reddit was its most-cited source, accounting for approximately 47% of top citations. It also prioritizes 'answer-first' pages where information is cleanly extractable.\n\nGemini, powered by Google's live index and Knowledge Graph, still values classical SEO. However, ranking #1 is no longer sufficient; only about 38% of Google's AI Overview citations now come from the top 10 results, a significant drop from 76% a year prior, indicating deeper source retrieval.\n\nAI Overviews uses 'query fan-out,' splitting questions into 8-12 sub-queries. Most citations (roughly 63%) come from results below the top 10. Counterintuitively, it exhibits the weakest freshness bias among major engines, often citing established, authoritative pages even without recent updates.\n\nA free tool called FixAEO has been developed to help users see how AI engines describe and recommend their brands across eight platforms, alongside a free llms.txt validator.\n\n#AI #TechNews #ChatGPT #PerplexityAI #Gemini #SEO\n\nSource: DEV",
+  "tweet": "How do AI engines like ChatGPT, Perplexity, and Gemini decide what to cite? New research uncovers their surprising citation behaviors, from low link rates to favoring community content. Essential for anyone in SEO or content creation! #AI #SEO",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/nitishyadav/how-ai-engines-actually-decide-what-to-cite-chatgpt-perplexity-gemini-ai-overviews-6bh",
+  "image": "",
+  "orig_title": "How AI engines actually decide what to cite (ChatGPT, Perplexity, Gemini, AI Overviews)",
+  "cluster_urls": [
+   "https://dev.to/nitishyadav/how-ai-engines-actually-decide-what-to-cite-chatgpt-perplexity-gemini-ai-overviews-6bh"
+  ],
+  "cluster_titles": [
+   "How AI engines actually decide what to cite (ChatGPT, Perplexity, Gemini, AI Overviews)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260621-1208-0-how-ai-engines-decide-what-to-cite-chatgpt-p.png",
+   "20260621-1208-0-how-ai-engines-decide-what-to-cite-chatgpt-p-d1.png",
+   "20260621-1208-0-how-ai-engines-decide-what-to-cite-chatgpt-p-d2.png"
+  ]
+ },
+ {
+  "topic": "ai agent loop mechanics explained",
+  "headline_marked": "[[What is an Agent Loop?]] How AI agents reason, act, and iterate for complex tasks",
+  "headline": "What is an Agent Loop? How AI agents reason, act, and iterate for complex tasks",
+  "summary": "Agent loops enable AI models to perform multi-step tasks by continuously analyzing, acting, and adjusting, moving beyond single-shot answers. This iterative process is crucial for complex AI agent functionality.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Agent loops enable AI agents to perform useful, multi-step work, unlike models that stop after a single answer. This iterative cycle allows agents to analyze tasks, take action, inspect results, and decide next steps. It forms the basic shape of agentic AI.",
+   "For complex tasks involving multiple steps, dependencies, and feedback, a single model call is insufficient. An agent loop allows the system to recover and adjust when circumstances change midway through a sequence of actions. This makes the loop more critical than the initial prompt.",
+   "The ReAct (Reason + Act) pattern is a common implementation, encouraging models to alternate between thinking and doing. This simple loop structure is why agent frameworks consistently converge on this basic shape, regardless of specific tooling.",
+   "A robust loop requires practical limits and guardrails to remain useful. Without these, agents can get stuck in repetitive actions, burn tokens, or perform irrelevant tasks, amplifying mistakes as easily as productivity.",
+   "Common failures include agents not knowing when to stop, making wrong actions due to vague tasks or broad tools, or repeating bad plans due to weak verification. Agents with write access and weak guardrails pose significant risks, potentially causing real damage.",
+   "The solution is not to avoid loops, but to implement them with strong boundaries. Low-risk tasks can run autonomously, but high-risk actions like deleting data or changing permissions should require human approval. This \"human in the loop\" approach is crucial.",
+   "Guardrails like permissions, approvals, secret handling, and audit trails ensure transparency and control around the loop. This makes agent loops valuable for tasks like research, code review, summarization, and repetitive workflows, provided they are designed with proper stopping and checking mechanisms."
+  ],
+  "caption": "AI agents don't just answer; they *do*. The secret? An agent loop that lets them reason, act, and iterate through complex tasks.\n\nAgent loops enable AI agents to perform useful, multi-step work, unlike models that stop after a single answer. This iterative cycle allows agents to analyze tasks, take action, inspect results, and decide next steps. It forms the basic shape of agentic AI.\n\nFor complex tasks involving multiple steps, dependencies, and feedback, a single model call is insufficient. An agent loop allows the system to recover and adjust when circumstances change midway through a sequence of actions. This makes the loop more critical than the initial prompt.\n\nThe ReAct (Reason + Act) pattern is a common implementation, encouraging models to alternate between thinking and doing. This simple loop structure is why agent frameworks consistently converge on this basic shape, regardless of specific tooling.\n\nA robust loop requires practical limits and guardrails to remain useful. Without these, agents can get stuck in repetitive actions, burn tokens, or perform irrelevant tasks, amplifying mistakes as easily as productivity.\n\nCommon failures include agents not knowing when to stop, making wrong actions due to vague tasks or broad tools, or repeating bad plans due to weak verification. Agents with write access and weak guardrails pose significant risks, potentially causing real damage.\n\nThe solution is not to avoid loops, but to implement them with strong boundaries. Low-risk tasks can run autonomously, but high-risk actions like deleting data or changing permissions should require human approval. This \"human in the loop\" approach is crucial.\n\nGuardrails like permissions, approvals, secret handling, and audit trails ensure transparency and control around the loop. This makes agent loops valuable for tasks like research, code review, summarization, and repetitive workflows, provided they are designed with proper stopping and checking mechanisms.\n\n#AI #AgentLoops #MachineLearning #TechExplained #ArtificialIntelligence #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "AI agents can perform complex, multi-step tasks by continuously reasoning, acting, and iterating. This \"agent loop\" is key to moving beyond simple answers to real-world problem-solving. #AI #AgentLoops #TechExplained",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rish_poddar/what-is-an-agent-loop-how-ai-agents-reason-act-and-iterate-1675",
+  "image": "",
+  "orig_title": "What Is an Agent Loop? How AI Agents Reason, Act, and Iterate",
+  "cluster_urls": [
+   "https://dev.to/rish_poddar/what-is-an-agent-loop-how-ai-agents-reason-act-and-iterate-1675"
+  ],
+  "cluster_titles": [
+   "What Is an Agent Loop? How AI Agents Reason, Act, and Iterate"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260621-1208-1-what-is-an-agent-loop-how-ai-agents-reason-a.png",
+   "20260621-1208-1-what-is-an-agent-loop-how-ai-agents-reason-a-d1.png",
+   "20260621-1208-1-what-is-an-agent-loop-how-ai-agents-reason-a-d2.png",
+   "20260621-1208-1-what-is-an-agent-loop-how-ai-agents-reason-a-d3.png"
+  ]
+ }
+]

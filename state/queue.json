@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "tesco sues vmware breach of contract",
+  "headline_marked": "[[Tesco sues Broadcom/VMware for breach of contract]], warns of food supply risk",
+  "headline": "Tesco sues Broadcom/VMware for breach of contract, warns of food supply risk",
+  "summary": "UK supermarket giant Tesco claims Broadcom's new VMware subscription model forces \"excessive and inflated prices\" for licenses it already owns, potentially impacting its ability to supply groceries.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "UK supermarket giant Tesco has sued Broadcom (VMware) and co-defendant Computacenter for breach of contract, seeking at least £100 million ($134 million) in damages. The lawsuit warns that the dispute could hinder its ability to supply groceries across the UK and Ireland.",
+   "Tesco acquired perpetual licenses for VMware's vSphere Foundation and Cloud Foundation products in January 2021, along with Tanzu subscriptions and support services valid until 2026. The contract also included an option for a four-year support extension.",
+   "The core of the dispute stems from Broadcom's acquisition of VMware, after which it ceased selling support services for software under perpetual licenses. Broadcom now requires customers to sign up for new, subscription-based software support.",
+   "Tesco alleges that Broadcom's new policy forces it to pay \"excessive and inflated prices\" for virtualisation software it already owns. It claims it cannot purchase standalone support for its perpetually licensed software without also buying duplicative subscriptions.",
+   "The retailer also states that its contracts entitle it to software upgrades, but Broadcom is preventing updates to its perpetual licenses for new Cloud Foundation versions. Furthermore, Tesco cannot receive all security updates and fixes without a subscription.",
+   "VMware software is critical to Tesco's operations, underpinning servers and data systems that enable its stores and functions, hosting approximately 40,000 server workloads and connecting to tills.",
+   "Tesco is not the first to take legal action; US telco AT&T filed a similar complaint in September 2024, and a dispute between Broadcom and Siemens covers comparable issues regarding VMware licensing changes.",
+   "Broadcom maintains that its Cloud Foundation offers significant value, quickly paying for itself, and points to strong adoption among its largest customers. Meanwhile, rival private cloud vendors report increased interest from migrating VMware customers."
+  ],
+  "caption": "UK supermarket giant Tesco is suing Broadcom (VMware) for over £100 million, warning the dispute could impact its ability to supply groceries.\n\nUK supermarket giant Tesco has sued Broadcom (VMware) and co-defendant Computacenter for breach of contract, seeking at least £100 million ($134 million) in damages. The lawsuit warns that the dispute could hinder its ability to supply groceries across the UK and Ireland.\n\nTesco acquired perpetual licenses for VMware's vSphere Foundation and Cloud Foundation products in January 2021, along with Tanzu subscriptions and support services valid until 2026. The contract also included an option for a four-year support extension.\n\nThe core of the dispute stems from Broadcom's acquisition of VMware, after which it ceased selling support services for software under perpetual licenses. Broadcom now requires customers to sign up for new, subscription-based software support.\n\nTesco alleges that Broadcom's new policy forces it to pay \"excessive and inflated prices\" for virtualisation software it already owns. It claims it cannot purchase standalone support for its perpetually licensed software without also buying duplicative subscriptions.\n\nThe retailer also states that its contracts entitle it to software upgrades, but Broadcom is preventing updates to its perpetual licenses for new Cloud Foundation versions. Furthermore, Tesco cannot receive all security updates and fixes without a subscription.\n\nVMware software is critical to Tesco's operations, underpinning servers and data systems that enable its stores and functions, hosting approximately 40,000 server workloads and connecting to tills.\n\nTesco is not the first to take legal action; US telco AT&T filed a similar complaint in September 2024, and a dispute between Broadcom and Siemens covers comparable issues regarding VMware licensing changes.\n\n#Tesco #Broadcom #VMware #TechNews #Software #LegalTech\n\nSource: Hacker News",
+  "tweet": "Tesco is suing Broadcom/VMware for £100M+ over software license breaches, claiming it's forced to pay \"excessive\" prices for existing software and risks food supply disruption. This follows similar suits from AT&T & Siemens. #Tesco #Broadcom #VMware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tesco.com",
+  "source": "Hacker News",
+  "url": "https://www.theregister.com/software/2025/09/03/supermarket-giant-tesco-sues-vmware-for-breach-of-contract/1420651",
+  "image": "",
+  "orig_title": "Supermarket giant Tesco sues VMware for breach of contract",
+  "cluster_urls": [
+   "https://www.theregister.com/software/2025/09/03/supermarket-giant-tesco-sues-vmware-for-breach-of-contract/1420651"
+  ],
+  "cluster_titles": [
+   "Supermarket giant Tesco sues VMware for breach of contract"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260621-0619-0-tesco-sues-broadcom-vmware-for-breach-of-con.png",
+   "20260621-0619-0-tesco-sues-broadcom-vmware-for-breach-of-con-d1.png",
+   "20260621-0619-0-tesco-sues-broadcom-vmware-for-breach-of-con-d2.png",
+   "20260621-0619-0-tesco-sues-broadcom-vmware-for-breach-of-con-d3.png"
+  ]
+ },
+ {
+  "topic": "ai model pen tests instead of refusing",
+  "headline_marked": "[[argusred AI model performs pen tests]], actively exploiting vulnerabilities instead of refusing",
+  "headline": "argusred AI model performs pen tests, actively exploiting vulnerabilities instead of refusing",
+  "summary": "Cosine's argusred offers a unique AI-powered security tool with two modes: Security Scan for code analysis and Pen Test for actively exploiting vulnerabilities on authorized systems, complete with exploit verification.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Cosine has launched argusred, an AI-powered security tool that offers both a Security Scan mode for code analysis and a Pen Test mode for actively attempting exploits against authorized systems. New accounts receive 2 million free tokens upon sign-up.",
+   "The Security Scan mode reads code and generates a markdown report detailing findings by location, severity, cause, and fix direction. Users can enable Exploit Verification, where the agent attempts a safe reproduction of each finding to confirm its validity.",
+   "The Pen Test mode operates offensively against authorized systems, going beyond code analysis to attempt exploits. Access to this mode is gated, requiring booking, scope definition, and written authorization due to the real security implications.",
+   "The model powering argusred is custom post-trained by Cosine specifically for offensive security tasks, unlike off-the-shelf models that often refuse such work. This ensures it can effectively identify and prove exploitable vulnerabilities.",
+   "Safety is managed by a Go harness that intercepts every tool call before execution. In Security Scan mode, it deterministically blocks mutating tools like file writes, ensuring read-only operation. For Pen Test mode, the harness limits network egress strictly to the targets authorized during booking.",
+   "The argusred binary, installed via brew or curl, runs locally on the user's machine and is not open source. Users can run it behind a firewall and monitor its network activity with tools like tcpdump before deploying it on critical code."
+  ],
+  "caption": "This new AI model doesn't just find vulnerabilities; it actively attempts to exploit them on authorized systems, providing confirmed proof.\n\nCosine has launched argusred, an AI-powered security tool that offers both a Security Scan mode for code analysis and a Pen Test mode for actively attempting exploits against authorized systems. New accounts receive 2 million free tokens upon sign-up.\n\nThe Security Scan mode reads code and generates a markdown report detailing findings by location, severity, cause, and fix direction. Users can enable Exploit Verification, where the agent attempts a safe reproduction of each finding to confirm its validity.\n\nThe Pen Test mode operates offensively against authorized systems, going beyond code analysis to attempt exploits. Access to this mode is gated, requiring booking, scope definition, and written authorization due to the real security implications.\n\nThe model powering argusred is custom post-trained by Cosine specifically for offensive security tasks, unlike off-the-shelf models that often refuse such work. This ensures it can effectively identify and prove exploitable vulnerabilities.\n\nSafety is managed by a Go harness that intercepts every tool call before execution. In Security Scan mode, it deterministically blocks mutating tools like file writes, ensuring read-only operation. For Pen Test mode, the harness limits network egress strictly to the targets authorized during booking.\n\nThe argusred binary, installed via brew or curl, runs locally on the user's machine and is not open source. Users can run it behind a firewall and monitor its network activity with tools like tcpdump before deploying it on critical code.\n\n#Cybersecurity #AI #PenTesting #SecurityTools #DevSecOps #HackerNews\n\nSource: Hacker News",
+  "tweet": "This new AI model doesn't just find vulnerabilities; it actively attempts to exploit them on authorized systems, providing confirmed proof. argusred by Cosine offers both security scanning and offensive pen testing modes. #Cybersecurity #AI #PenTesting",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "cosine.com",
+  "source": "Hacker News",
+  "url": "https://www.argusred.com/cli",
+  "image": "",
+  "orig_title": "Show HN: We post-trained a model that pen tests instead of refusing",
+  "cluster_urls": [
+   "https://www.argusred.com/cli"
+  ],
+  "cluster_titles": [
+   "Show HN: We post-trained a model that pen tests instead of refusing"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260621-0619-1-argusred-ai-model-performs-pen-tests-activel.png",
+   "20260621-0619-1-argusred-ai-model-performs-pen-tests-activel-d1.png",
+   "20260621-0619-1-argusred-ai-model-performs-pen-tests-activel-d2.png"
+  ]
+ }
+]

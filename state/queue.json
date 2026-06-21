@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "topic": "ai coding agents limitations ethics authorship",
+  "headline_marked": "[[AI fixed a bug, but two more appeared]] due to a recurring pattern it missed",
+  "headline": "AI fixed a bug, but two more appeared due to a recurring pattern it missed",
+  "summary": "An engineer found that AI consistently fixed individual bug instances but failed to identify and resolve the underlying pattern, leading to the same mistake reappearing across the codebase. This highlights a key limitation in AI's current debugging approach.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "An engineer reported a bug, which AI promptly fixed. However, the same root cause led to two more identical bugs surfacing in different parts of the codebase days and weeks later.",
+   "The core issue stemmed from a project rule: monetary values must be stored as integers, not floating-point numbers, to avoid precision errors. Despite documentation, AI repeatedly used double.tryParse for text input.",
+   "While AI correctly fixed each reported instance, it did not audit the entire codebase for similar patterns. This highlights a 'failure of scope,' as AI only addresses what it's shown, unlike an experienced human engineer who might anticipate recurring issues.",
+   "This dynamic wasn't isolated to the double.tryParse bug. Similar patterns emerged with race conditions, leaked internal exception details, and missing invalidation calls in database operations.",
+   "The author notes this happens more with AI because their mental map of AI-generated code is thinner. AI consistently applies its habits, meaning a 'bad habit' like using double.tryParse gets distributed across many features.",
+   "To counter this, the engineer now first searches the entire codebase for the problematic pattern before showing AI the specific fix. This ensures all instances are addressed in one pass, preventing silent recurrences.",
+   "This experience suggests that while AI excels at code generation and review, the role of an engineer with a global view — understanding system invariants and recurring patterns — becomes even more crucial."
+  ],
+  "caption": "AI fixed a bug, but the same mistake reappeared twice more. It highlights a critical limitation in how AI approaches code fixes.\n\nAn engineer reported a bug, which AI promptly fixed. However, the same root cause led to two more identical bugs surfacing in different parts of the codebase days and weeks later.\n\nThe core issue stemmed from a project rule: monetary values must be stored as integers, not floating-point numbers, to avoid precision errors. Despite documentation, AI repeatedly used double.tryParse for text input.\n\nWhile AI correctly fixed each reported instance, it did not audit the entire codebase for similar patterns. This highlights a 'failure of scope,' as AI only addresses what it's shown, unlike an experienced human engineer who might anticipate recurring issues.\n\nThis dynamic wasn't isolated to the double.tryParse bug. Similar patterns emerged with race conditions, leaked internal exception details, and missing invalidation calls in database operations.\n\nThe author notes this happens more with AI because their mental map of AI-generated code is thinner. AI consistently applies its habits, meaning a 'bad habit' like using double.tryParse gets distributed across many features.\n\nTo counter this, the engineer now first searches the entire codebase for the problematic pattern before showing AI the specific fix. This ensures all instances are addressed in one pass, preventing silent recurrences.\n\nThis experience suggests that while AI excels at code generation and review, the role of an engineer with a global view — understanding system invariants and recurring patterns — becomes even more crucial.\n\n#AI #SoftwareDevelopment #Debugging #CodeReview #DeveloperTools #Tech\n\nSource: DEV",
+  "tweet": "AI fixed a bug, but the same underlying mistake reappeared twice more across the codebase. This reveals a critical limitation in AI's debugging scope: it fixes the specific instance, not the pattern. #AI #SoftwareDevelopment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/antonio_zhu_e726fd856cd86/ai-fixed-the-bug-then-i-found-two-more-just-like-it-1e5b",
+  "image": "",
+  "orig_title": "AI Fixed The Bug. Then I Found Two More Just Like It.",
+  "cluster_urls": [
+   "https://dev.to/antonio_zhu_e726fd856cd86/ai-fixed-the-bug-then-i-found-two-more-just-like-it-1e5b",
+   "https://dev.to/antonio_zhu_e726fd856cd86/the-design-doc-was-wrong-ai-trusted-it-anyway-4309",
+   "https://dev.to/matrixscroll/who-actually-wrote-that-commit-you-or-your-ai-agent-513g"
+  ],
+  "cluster_titles": [
+   "AI Fixed The Bug. Then I Found Two More Just Like It.",
+   "The Design Doc Was Wrong. AI Trusted It Anyway.",
+   "Who actually wrote that commit... you, or your AI agent?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260621-1907-0-ai-fixed-a-bug-but-two-more-appeared-due-to-.png",
+   "20260621-1907-0-ai-fixed-a-bug-but-two-more-appeared-due-to--d1.png",
+   "20260621-1907-0-ai-fixed-a-bug-but-two-more-appeared-due-to--d2.png",
+   "20260621-1907-0-ai-fixed-a-bug-but-two-more-appeared-due-to--d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent sudo access security tool",
+  "headline_marked": "[[New tool AgentPerms removes sudo]] from AI agents, enforcing least-privilege security via MCP",
+  "headline": "New tool AgentPerms removes sudo from AI agents, enforcing least-privilege security via MCP",
+  "summary": "AgentPerms is a CLI tool that gives Model Context Protocol (MCP) agents least-privilege permissions, preventing malicious actions like data exfiltration or system deletion. It works by transparently proxying agent commands.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI agents often operate with excessive permissions, including `sudo` access, posing significant security risks. A compromised agent or a prompt injection could lead to critical system damage, such as deleting files (`rm -rf /`) or dropping database tables (`DROP TABLE users`).",
+   "AgentPerms is a new open-source CLI tool designed to address this by enforcing least-privilege permissions for AI agents. It applies standard security workflows, observing agent behavior to derive and enforce the minimum necessary access.",
+   "The Model Context Protocol (MCP) is becoming a standard for AI tooling, used by platforms like Claude Desktop, Cursor, VS Code, and Gemini CLI. This widespread adoption means agents are often just a config file away from accessing sensitive data like filesystems, repositories, and inboxes.",
+   "AgentPerms operates as a transparent stdio proxy, rewriting the MCP client's config so every server launches through it. It intercepts tool calls and captures responses without the agent being aware of its presence, ensuring security without agent cooperation or client patching.",
+   "The tool simplifies policy creation with `record` and `infer` commands. Users run their agent normally in record mode, then `infer` analyzes the traces to generate a minimal policy that allows only the observed, necessary actions.",
+   "Enforcement is consistent across live operation and offline testing, using a single `evaluate` function. This ensures that what is tested in replay is byte-for-byte what runs in production, preventing policy drift.",
+   "AgentPerms also locks tool identity, preventing a sneaky MCP attack where a server silently changes a tool's description or schema. If a poisoned tool is detected, it fails the build in CI, protecting users.",
+   "By committing `mcp.policy.yaml` and `mcp.lock` to version control, an agent's permissions become a reviewable, enforceable artifact. This integrates agent security into existing development and security postures."
+  ],
+  "caption": "Your AI agent might have `sudo` access to your machine, capable of `rm -rf /` or `DROP TABLE users`. A new tool, AgentPerms, takes that power away.\n\nAI agents often operate with excessive permissions, including `sudo` access, posing significant security risks. A compromised agent or a prompt injection could lead to critical system damage, such as deleting files (`rm -rf /`) or dropping database tables (`DROP TABLE users`).\n\nAgentPerms is a new open-source CLI tool designed to address this by enforcing least-privilege permissions for AI agents. It applies standard security workflows, observing agent behavior to derive and enforce the minimum necessary access.\n\nThe Model Context Protocol (MCP) is becoming a standard for AI tooling, used by platforms like Claude Desktop, Cursor, VS Code, and Gemini CLI. This widespread adoption means agents are often just a config file away from accessing sensitive data like filesystems, repositories, and inboxes.\n\nAgentPerms operates as a transparent stdio proxy, rewriting the MCP client's config so every server launches through it. It intercepts tool calls and captures responses without the agent being aware of its presence, ensuring security without agent cooperation or client patching.\n\nThe tool simplifies policy creation with `record` and `infer` commands. Users run their agent normally in record mode, then `infer` analyzes the traces to generate a minimal policy that allows only the observed, necessary actions.\n\nEnforcement is consistent across live operation and offline testing, using a single `evaluate` function. This ensures that what is tested in replay is byte-for-byte what runs in production, preventing policy drift.\n\nAgentPerms also locks tool identity, preventing a sneaky MCP attack where a server silently changes a tool's description or schema. If a poisoned tool is detected, it fails the build in CI, protecting users.\n\n#AI #Security #DeveloperTools #OpenSource #AgentPerms #LeastPrivilege\n\nSource: DEV",
+  "tweet": "Your AI agent has sudo? A new open-source tool, AgentPerms, ensures least-privilege permissions for agents using the Model Context Protocol (MCP). It transparently intercepts commands to prevent malicious actions like `rm -rf /`. #AI #Security #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hasanmehmood/your-ai-agent-has-sudo-i-built-a-tool-to-take-it-away-46mk",
+  "image": "",
+  "orig_title": "Your AI agent has sudo. I built a tool to take it away.",
+  "cluster_urls": [
+   "https://dev.to/hasanmehmood/your-ai-agent-has-sudo-i-built-a-tool-to-take-it-away-46mk"
+  ],
+  "cluster_titles": [
+   "Your AI agent has sudo. I built a tool to take it away."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260621-1907-1-new-tool-agentperms-removes-sudo-from-ai-age.png",
+   "20260621-1907-1-new-tool-agentperms-removes-sudo-from-ai-age-d1.png",
+   "20260621-1907-1-new-tool-agentperms-removes-sudo-from-ai-age-d2.png",
+   "20260621-1907-1-new-tool-agentperms-removes-sudo-from-ai-age-d3.png"
+  ]
+ }
+]

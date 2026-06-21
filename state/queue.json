@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai agent mcp server security risk",
+  "headline_marked": "[[Connecting an MCP server gives your agent hands, and a stranger a way in.]]",
+  "headline": "Connecting an MCP server gives your agent hands, and a stranger a way in.",
+  "summary": "Connecting an MCP server gives coding agents external access, but introduces two critical security risks: destructive command execution and agents being tricked by planted instructions. Effective defense requires both OS-level sandboxing and strict input valid",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The appeal of MCP servers is enabling coding agents to interact with external services like databases and APIs. However, this connectivity simultaneously creates significant security vulnerabilities, as the agent can now \"reach out and act.\"",
+   "One major threat is the agent believing something it shouldn't. Untrusted data from a connected server can contain instructions that an LLM cannot reliably distinguish from legitimate directives, leading the agent to execute unintended commands.",
+   "The other half of the threat involves agents running destructive commands, such as deleting files or exfiltrating data. While this fear is real, it requires a separate set of defenses from the \"planted instruction\" problem.",
+   "The key defense against planted instructions is treating all data from an MCP server as untrusted input, similar to user-typed form data. This means inspecting payloads, escaping output, and never passing raw output directly as arguments or rendering it without validation.",
+   "For destructive commands, OS-level sandboxing is crucial. Tools like Claude Code's sandbox isolate Bash execution and restrict writes to the working directory, preventing agents from performing harmful actions.",
+   "Crucially, sandboxes often allow reads across most of the machine by default, meaning sensitive credentials like ~/.aws/credentials are still accessible. Developers must explicitly add deny rules to prevent agents from reading these secrets.",
+   "The most effective security combines both defenses: read-deny rules stop agents from accessing secrets, and network-command deny rules prevent exfiltration. Neither defense alone is sufficient; they work together to mitigate both types of threats.",
+   "Beyond technical controls, developers must vet MCP server sources before connecting them, as they become part of the trust boundary. Regularly dropping unused connections is also vital to minimize attack surface."
+  ],
+  "caption": "Connecting an MCP server gives your coding agent powerful capabilities, but it also creates a direct channel for attackers. Are your agents truly safe from both executing harmful commands and being tricked by malicious data?\n\nThe appeal of MCP servers is enabling coding agents to interact with external services like databases and APIs. However, this connectivity simultaneously creates significant security vulnerabilities, as the agent can now \"reach out and act.\"\n\nOne major threat is the agent believing something it shouldn't. Untrusted data from a connected server can contain instructions that an LLM cannot reliably distinguish from legitimate directives, leading the agent to execute unintended commands.\n\nThe other half of the threat involves agents running destructive commands, such as deleting files or exfiltrating data. While this fear is real, it requires a separate set of defenses from the \"planted instruction\" problem.\n\nThe key defense against planted instructions is treating all data from an MCP server as untrusted input, similar to user-typed form data. This means inspecting payloads, escaping output, and never passing raw output directly as arguments or rendering it without validation.\n\nFor destructive commands, OS-level sandboxing is crucial. Tools like Claude Code's sandbox isolate Bash execution and restrict writes to the working directory, preventing agents from performing harmful actions.\n\nCrucially, sandboxes often allow reads across most of the machine by default, meaning sensitive credentials like ~/.aws/credentials are still accessible. Developers must explicitly add deny rules to prevent agents from reading these secrets.\n\nThe most effective security combines both defenses: read-deny rules stop agents from accessing secrets, and network-command deny rules prevent exfiltration. Neither defense alone is sufficient; they work together to mitigate both types of threats.\n\n#AgentSecurity #LLMSecurity #Cybersecurity #DeveloperTools #AI #DevSecOps\n\nSource: DEV",
+  "tweet": "Connecting an MCP server gives your coding agent powerful capabilities, but it also creates a direct channel for attackers. Learn how to protect your agents from both executing harmful commands and being tricked by malicious data with proper sandboxing and input validation. ",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rapls/connecting-an-mcp-server-gives-your-agent-hands-it-also-gives-a-stranger-a-way-in-3mgi",
+  "image": "",
+  "orig_title": "Connecting an MCP server gives your agent hands. It also gives a stranger a way in.",
+  "cluster_urls": [
+   "https://dev.to/rapls/connecting-an-mcp-server-gives-your-agent-hands-it-also-gives-a-stranger-a-way-in-3mgi"
+  ],
+  "cluster_titles": [
+   "Connecting an MCP server gives your agent hands. It also gives a stranger a way in."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260621-0806-0-connecting-an-mcp-server-gives-your-agent-ha.png",
+   "20260621-0806-0-connecting-an-mcp-server-gives-your-agent-ha-d1.png",
+   "20260621-0806-0-connecting-an-mcp-server-gives-your-agent-ha-d2.png",
+   "20260621-0806-0-connecting-an-mcp-server-gives-your-agent-ha-d3.png"
+  ]
+ },
+ {
+  "topic": "white house delays voting machine vulnerability report",
+  "headline_marked": "[[White House delays]] US voting-machine vulnerability report",
+  "headline": "White House delays US voting-machine vulnerability report",
+  "summary": "The decision postpones the release of critical findings regarding security flaws in election equipment, impacting transparency and public awareness.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The White House has officially postponed the release of a significant report detailing vulnerabilities in US voting machines. This decision impacts the transparency surrounding the security of election infrastructure.",
+   "The report was expected to outline critical security flaws that could potentially be exploited, raising concerns among cybersecurity experts and election integrity advocates. Its delay means these findings will not be publicly available as anticipated.",
+   "While the exact reasons for the delay were not immediately specified, such postponements often involve ongoing assessments, policy considerations, or further review processes. The move could affect public confidence in election systems.",
+   "Stakeholders are now awaiting further clarification from the White House regarding the new timeline for the report's publication. The delay underscores the complex challenges in securing electoral processes against potential threats."
+  ],
+  "caption": "A crucial report on US voting machine vulnerabilities has been delayed by the White House.\n\nThe White House has officially postponed the release of a significant report detailing vulnerabilities in US voting machines. This decision impacts the transparency surrounding the security of election infrastructure.\n\nThe report was expected to outline critical security flaws that could potentially be exploited, raising concerns among cybersecurity experts and election integrity advocates. Its delay means these findings will not be publicly available as anticipated.\n\nWhile the exact reasons for the delay were not immediately specified, such postponements often involve ongoing assessments, policy considerations, or further review processes. The move could affect public confidence in election systems.\n\nStakeholders are now awaiting further clarification from the White House regarding the new timeline for the report's publication. The delay underscores the complex challenges in securing electoral processes against potential threats.\n\n#ElectionSecurity #Cybersecurity #WhiteHouse #VotingMachines #TechNews #USPolitics\n\nSource: Hacker News",
+  "tweet": "A crucial report on US voting machine vulnerabilities has been delayed by the White House, postponing critical findings on election equipment security. #ElectionSecurity #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.reuters.com/world/white-house-delays-release-us-voting-machine-study-midterms-near-2026-06-19/",
+  "image": "",
+  "orig_title": "White House delays US voting-machine vulnerability report",
+  "cluster_urls": [
+   "https://www.reuters.com/world/white-house-delays-release-us-voting-machine-study-midterms-near-2026-06-19/"
+  ],
+  "cluster_titles": [
+   "White House delays US voting-machine vulnerability report"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260621-0806-1-white-house-delays-us-voting-machine-vulnera.png",
+   "20260621-0806-1-white-house-delays-us-voting-machine-vulnera-d1.png",
+   "20260621-0806-1-white-house-delays-us-voting-machine-vulnera-d2.png"
+  ]
+ }
+]

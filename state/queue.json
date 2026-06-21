@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "north korean hackers npm ai dev tooling attack",
+  "headline_marked": "[[North Korean Hackers Poisoned 140+ npm Packages]] in AI Dev Tooling Attack",
+  "headline": "North Korean Hackers Poisoned 140+ npm Packages in AI Dev Tooling Attack",
+  "summary": "Microsoft attributes a supply chain attack to North Korean state-sponsored hackers, compromising over 140 npm packages within the Mastra AI ecosystem. The attack leveraged AI-powered coding assistants to auto-install malicious dependencies.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Microsoft's threat intelligence team has attributed a supply chain attack targeting the Mastra AI ecosystem to Sapphire Sleet (also tracked as BlueNoroff), a North Korean state-sponsored hacking group. The attackers compromised over 140 npm packages.",
+   "These were not obscure packages, but ones embedded in the Mastra AI dependency graph that developers and AI coding tools actively pull. The attack vector specifically targeted AI-powered coding assistants like Copilot and Cursor.",
+   "These LLM-backed IDEs suggest and sometimes auto-install dependencies. If an AI assistant recommends a compromised package, malicious code could run on a developer's machine before they finish reading the suggestion.",
+   "Standard defenses often fail here; npm audit only flags packages with published CVEs, which a freshly poisoned package lacks. Lockfiles help only after a malicious version has been installed and committed.",
+   "LLM-based coding assistants are particularly vulnerable as they are trained to suggest packages, not validate them. They may recommend newly registered or unverified packages without human oversight.",
+   "In agentic workflows where AI has shell access and auto-installs dependencies, there's no human in the loop to notice suspicious details like a package published just days ago with no version history.",
+   "Sentinel's SlopScan integration is designed to counter this by extracting package names from LLM responses and checking them against live PyPI and npm registry data. It flags packages as SUSPICIOUS or DANGEROUS.",
+   "A DANGEROUS hit means the package is blocked, while a SUSPICIOUS hit flags the name for review. In an agentic workflow, this flag acts as a critical circuit breaker before `npm install` commands are executed."
+  ],
+  "caption": "North Korean state-sponsored hackers compromised over 140 npm packages, targeting AI development tools. Microsoft attributes the supply chain attack to Sapphire Sleet.\n\nMicrosoft's threat intelligence team has attributed a supply chain attack targeting the Mastra AI ecosystem to Sapphire Sleet (also tracked as BlueNoroff), a North Korean state-sponsored hacking group. The attackers compromised over 140 npm packages.\n\nThese were not obscure packages, but ones embedded in the Mastra AI dependency graph that developers and AI coding tools actively pull. The attack vector specifically targeted AI-powered coding assistants like Copilot and Cursor.\n\nThese LLM-backed IDEs suggest and sometimes auto-install dependencies. If an AI assistant recommends a compromised package, malicious code could run on a developer's machine before they finish reading the suggestion.\n\nStandard defenses often fail here; npm audit only flags packages with published CVEs, which a freshly poisoned package lacks. Lockfiles help only after a malicious version has been installed and committed.\n\nLLM-based coding assistants are particularly vulnerable as they are trained to suggest packages, not validate them. They may recommend newly registered or unverified packages without human oversight.\n\nIn agentic workflows where AI has shell access and auto-installs dependencies, there's no human in the loop to notice suspicious details like a package published just days ago with no version history.\n\nSentinel's SlopScan integration is designed to counter this by extracting package names from LLM responses and checking them against live PyPI and npm registry data. It flags packages as SUSPICIOUS or DANGEROUS.\n\nA DANGEROUS hit means the package is blocked, while a SUSPICIOUS hit flags the name for review. In an agentic workflow, this flag acts as a critical circuit breaker before `npm install` commands are executed.\n\n#CyberSecurity #SupplyChainAttack #NPM #AI #DeveloperTools #NorthKorea\n\nSource: DEV",
+  "tweet": "North Korean state-sponsored hackers compromised over 140 npm packages, targeting AI development tools. Microsoft attributes the supply chain attack to Sapphire Sleet, leveraging AI coding assistants for malicious dependency auto-installation. #CyberSecurity #AI #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/coridev/north-korean-hackers-poisoned-140-npm-packages-in-an-ai-dev-tooling-attack-heres-what-would-have-4c25",
+  "image": "",
+  "orig_title": "North Korean Hackers Poisoned 140+ npm Packages in an AI Dev Tooling Attack. Here's What Would Have Caught It.",
+  "cluster_urls": [
+   "https://dev.to/coridev/north-korean-hackers-poisoned-140-npm-packages-in-an-ai-dev-tooling-attack-heres-what-would-have-4c25"
+  ],
+  "cluster_titles": [
+   "North Korean Hackers Poisoned 140+ npm Packages in an AI Dev Tooling Attack. Here's What Would Have Caught It."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260621-0606-0-north-korean-hackers-poisoned-140-npm-packag.png",
+   "20260621-0606-0-north-korean-hackers-poisoned-140-npm-packag-d1.png",
+   "20260621-0606-0-north-korean-hackers-poisoned-140-npm-packag-d2.png",
+   "20260621-0606-0-north-korean-hackers-poisoned-140-npm-packag-d3.png"
+  ]
+ },
+ {
+  "topic": "ai credits new lines of code metric",
+  "headline_marked": "[[AI credits are the new lines of code]] metric in GitHub Copilot reports",
+  "headline": "AI credits are the new lines of code metric in GitHub Copilot reports",
+  "summary": "GitHub Copilot's new ai_credits_used metric offers insights into AI consumption for enterprise admins. However, it raises concerns about being misused as a productivity measure, echoing past issues with \"lines of code.\"",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "GitHub has introduced an 'ai_credits_used' field to its Copilot usage metrics API, providing enterprise and organization admins with new data. This per-user field is available in single-day and 28-day reports, intended as a consumption signal rather than a billed total.",
+   "The new metric allows AI usage to be integrated into existing dashboards alongside adoption, activity, and cost centers. This marks a significant step where a tool consumption signal could evolve into a management metric.",
+   "While valuable for understanding budget and adoption, treating AI credit usage as a direct productivity signal presents risks. High usage could indicate valuable work or a developer struggling, while low usage might mean efficiency or lack of tool familiarity.",
+   "Software development has a history of misinterpreting easily countable metrics, like lines of code, as proxies for actual engineering quality. This often leads to unintended behaviors and misjudgments of developer performance.",
+   "The most impactful AI work isn't always the most visible or credit-intensive. Managers who focus solely on consumption might mistake activity for genuine leverage, overlooking nuanced contributions and effective problem-solving.",
+   "A more effective approach is to assess how AI usage demonstrably improves workflows and outcomes. This includes reductions in review time, cheaper migrations, better feedback for junior engineers, and faster incident resolution."
+  ],
+  "caption": "GitHub Copilot now reports \"ai_credits_used\" to enterprise admins. This new metric could fundamentally change how developer productivity is measured.\n\nGitHub has introduced an 'ai_credits_used' field to its Copilot usage metrics API, providing enterprise and organization admins with new data. This per-user field is available in single-day and 28-day reports, intended as a consumption signal rather than a billed total.\n\nThe new metric allows AI usage to be integrated into existing dashboards alongside adoption, activity, and cost centers. This marks a significant step where a tool consumption signal could evolve into a management metric.\n\nWhile valuable for understanding budget and adoption, treating AI credit usage as a direct productivity signal presents risks. High usage could indicate valuable work or a developer struggling, while low usage might mean efficiency or lack of tool familiarity.\n\nSoftware development has a history of misinterpreting easily countable metrics, like lines of code, as proxies for actual engineering quality. This often leads to unintended behaviors and misjudgments of developer performance.\n\nThe most impactful AI work isn't always the most visible or credit-intensive. Managers who focus solely on consumption might mistake activity for genuine leverage, overlooking nuanced contributions and effective problem-solving.\n\nA more effective approach is to assess how AI usage demonstrably improves workflows and outcomes. This includes reductions in review time, cheaper migrations, better feedback for junior engineers, and faster incident resolution.\n\n#Tech #AI #Developers #GitHubCopilot #SoftwareDevelopment #Metrics\n\nSource: DEV",
+  "tweet": "GitHub Copilot's new \"ai_credits_used\" metric is here. While great for tracking consumption, it risks becoming the next \"lines of code\" for measuring developer productivity, potentially creating \"weird behavior\" in teams. #AI #Developers #GitHubCopilot",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/pvgomes/ai-credits-are-the-new-lines-of-code-metric-4pgb",
+  "image": "",
+  "orig_title": "AI credits are the new lines of code metric",
+  "cluster_urls": [
+   "https://dev.to/pvgomes/ai-credits-are-the-new-lines-of-code-metric-4pgb"
+  ],
+  "cluster_titles": [
+   "AI credits are the new lines of code metric"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260621-0606-1-ai-credits-are-the-new-lines-of-code-metric-.png",
+   "20260621-0606-1-ai-credits-are-the-new-lines-of-code-metric--d1.png",
+   "20260621-0606-1-ai-credits-are-the-new-lines-of-code-metric--d2.png"
+  ]
+ }
+]

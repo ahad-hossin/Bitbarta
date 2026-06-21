@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "nvidia skillspector ai agent skill security",
+  "headline_marked": "[[NVIDIA launches SkillSpector]], an open-source security scanner for AI agent skills",
+  "headline": "NVIDIA launches SkillSpector, an open-source security scanner for AI agent skills",
+  "summary": "SkillSpector helps identify risks like data exfiltration and prompt injection in AI agent skills, providing a clear risk score and severity label. It supports LLM-enhanced analysis for higher precision.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "NVIDIA's new open-source tool, SkillSpector, addresses the risk of installing unverified AI agent skills from marketplaces or GitHub. It's a security scanner purpose-built for AI agent skills, not general source code.",
+   "The tool runs a two-stage pipeline: a static analysis stage covering a wide range of issues like prompt injection, data exfiltration, and privilege escalation. An optional LLM pass significantly improves precision by reducing over-flagging.",
+   "Every scan provides a risk score from 0-100 and a severity label (safe, use caution, do not install), offering a clear signal instead of a wall of findings. It targets Python 3.12+ and is Apache 2.0 licensed for commercial use.",
+   "Setup is low-cost; a basic static scan requires only a Python virtual environment and no API keys. SkillSpector supports three LLM providers out of the box, plus OpenAI-compatible models, including local options via Ollama or vLLM.",
+   "Its SARIF output integrates directly with GitHub code scanning, VS Code, and most CI pipelines, making it suitable for automated pull request checks. Findings point to exact file and line, naming the pattern and explaining its importance.",
+   "The project is upfront about its limitations, noting it's a strong filter, not a guarantee, and cannot detect all runtime issues or complex logic flaws. As a young project, its pattern set and accuracy will continue to evolve."
+  ],
+  "caption": "Unsure about the safety of your AI agent skills? NVIDIA's new open-source SkillSpector scans for critical vulnerabilities like data exfiltration and prompt injection.\n\nNVIDIA's new open-source tool, SkillSpector, addresses the risk of installing unverified AI agent skills from marketplaces or GitHub. It's a security scanner purpose-built for AI agent skills, not general source code.\n\nThe tool runs a two-stage pipeline: a static analysis stage covering a wide range of issues like prompt injection, data exfiltration, and privilege escalation. An optional LLM pass significantly improves precision by reducing over-flagging.\n\nEvery scan provides a risk score from 0-100 and a severity label (safe, use caution, do not install), offering a clear signal instead of a wall of findings. It targets Python 3.12+ and is Apache 2.0 licensed for commercial use.\n\nSetup is low-cost; a basic static scan requires only a Python virtual environment and no API keys. SkillSpector supports three LLM providers out of the box, plus OpenAI-compatible models, including local options via Ollama or vLLM.\n\nIts SARIF output integrates directly with GitHub code scanning, VS Code, and most CI pipelines, making it suitable for automated pull request checks. Findings point to exact file and line, naming the pattern and explaining its importance.\n\nThe project is upfront about its limitations, noting it's a strong filter, not a guarantee, and cannot detect all runtime issues or complex logic flaws. As a young project, its pattern set and accuracy will continue to evolve.\n\n#AISecurity #NVIDIA #SkillSpector #OpenSource #DevTools #Cybersecurity\n\nSource: DEV",
+  "tweet": "Unsure about the safety of your AI agent skills? NVIDIA's new open-source SkillSpector scans for critical vulnerabilities like data exfiltration and prompt injection, providing a clear risk score. Integrates with CI. #AISecurity #NVIDIA #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "DEV",
+  "url": "https://dev.to/arshtechpro/nvidia-skillspector-should-you-scan-your-ai-agent-skills-before-installing-them-3am7",
+  "image": "",
+  "orig_title": "NVIDIA SkillSpector: Should You Scan Your AI Agent Skills Before Installing Them?",
+  "cluster_urls": [
+   "https://dev.to/arshtechpro/nvidia-skillspector-should-you-scan-your-ai-agent-skills-before-installing-them-3am7"
+  ],
+  "cluster_titles": [
+   "NVIDIA SkillSpector: Should You Scan Your AI Agent Skills Before Installing Them?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260621-1106-0-nvidia-launches-skillspector-an-open-source-.png",
+   "20260621-1106-0-nvidia-launches-skillspector-an-open-source--d1.png",
+   "20260621-1106-0-nvidia-launches-skillspector-an-open-source--d2.png"
+  ]
+ },
+ {
+  "topic": "ai app underlying tech rag mcp agentic systems",
+  "headline_marked": "[[RAG, MCP, & Agentic Systems]] are the hidden layer powering smart AI apps",
+  "headline": "RAG, MCP, & Agentic Systems are the hidden layer powering smart AI apps",
+  "summary": "These techniques bridge the gap between impressive LLM demos and real-world production applications by providing access to data and external tools, enabling AI to understand your business and act on the world.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Large Language Models (LLMs) like ChatGPT excel at general tasks but struggle with specific business data or real-time actions. This gap between demo capabilities and production needs is addressed by techniques like Retrieval Augmented Generation (RAG), Model Context Protocol (MCP), and agentic architectures. These systems give AI access to proprietary data and the ability to interact with the external world.",
+   "RAG allows LLMs to access your specific data by retrieving relevant information from your documents or databases. This context is then added to the model's prompt, enabling it to generate accurate responses grounded in your unique information. Crucially, RAG does not retrain the model; it simply augments the input it receives.",
+   "Consider RAG as providing a brilliant student with an open-book exam, allowing them to reference updated material. For instance, a support bot can answer questions about your refund policy by pulling the relevant section from your internal documents. This results in completely different, accurate responses from the same underlying LLM.",
+   "While RAG solves the memory problem, the Model Context Protocol (MCP) addresses the need for AI to act on the world. Introduced by Anthropic, MCP is an open standard that gives AI models a structured way to connect to external APIs, live databases, and third-party services. It acts as a bridge, allowing the AI to \"make calls\" to the outside world.",
+   "In practice, your application exposes capabilities (e.g., get_weather(), search_inventory()) through an MCP server. The LLM reasons which capability is needed, the MCP server executes it, and the model incorporates the live data into its response. This design ensures the model never directly accesses your database or API keys, maintaining security.",
+   "This pattern is already evident in tools like GitHub Copilot, which understands specific repositories, and Gemini, which surfaces live search results. MCP formalizes this coordination layer, bridging the gap between the model's knowledge and current real-world data. It aims to be a universal standard for AI integrations, akin to USB-C."
+  ],
+  "caption": "Discover the essential architectures – RAG, MCP, and Agentic Systems – that transform LLMs from impressive demos into powerful, data-aware production applications.\n\nLarge Language Models (LLMs) like ChatGPT excel at general tasks but struggle with specific business data or real-time actions. This gap between demo capabilities and production needs is addressed by techniques like Retrieval Augmented Generation (RAG), Model Context Protocol (MCP), and agentic architectures. These systems give AI access to proprietary data and the ability to interact with the external world.\n\nRAG allows LLMs to access your specific data by retrieving relevant information from your documents or databases. This context is then added to the model's prompt, enabling it to generate accurate responses grounded in your unique information. Crucially, RAG does not retrain the model; it simply augments the input it receives.\n\nConsider RAG as providing a brilliant student with an open-book exam, allowing them to reference updated material. For instance, a support bot can answer questions about your refund policy by pulling the relevant section from your internal documents. This results in completely different, accurate responses from the same underlying LLM.\n\nWhile RAG solves the memory problem, the Model Context Protocol (MCP) addresses the need for AI to act on the world. Introduced by Anthropic, MCP is an open standard that gives AI models a structured way to connect to external APIs, live databases, and third-party services. It acts as a bridge, allowing the AI to \"make calls\" to the outside world.\n\nIn practice, your application exposes capabilities (e.g., get_weather(), search_inventory()) through an MCP server. The LLM reasons which capability is needed, the MCP server executes it, and the model incorporates the live data into its response. This design ensures the model never directly accesses your database or API keys, maintaining security.\n\n#AI #LLMs #RAG #MCP #Developer #Tech\n\nSource: DEV",
+  "tweet": "Unlock the full potential of LLMs! Learn how RAG, MCP, and Agentic Systems bridge the gap between AI demos and real-world applications, giving models access to your data and external tools. #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/prasunchakra/the-hidden-layer-behind-every-smart-ai-app-rag-mcp-and-agentic-systems-15p4",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fupw2c5mtfa64pg6uh8jq.png",
+  "orig_title": "The Hidden Layer Behind Every Smart AI App: RAG, MCP, and Agentic Systems",
+  "cluster_urls": [
+   "https://dev.to/prasunchakra/the-hidden-layer-behind-every-smart-ai-app-rag-mcp-and-agentic-systems-15p4"
+  ],
+  "cluster_titles": [
+   "The Hidden Layer Behind Every Smart AI App: RAG, MCP, and Agentic Systems"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260621-1106-1-rag-mcp-agentic-systems-are-the-hidden-layer.png",
+   "20260621-1106-1-rag-mcp-agentic-systems-are-the-hidden-layer-d1.png",
+   "20260621-1106-1-rag-mcp-agentic-systems-are-the-hidden-layer-d2.png",
+   "20260621-1106-1-rag-mcp-agentic-systems-are-the-hidden-layer-d3.png"
+  ]
+ }
+]

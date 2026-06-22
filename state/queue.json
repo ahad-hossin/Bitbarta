@@ -1,1 +1,104 @@
-[]
+[
+ {
+  "topic": "developer tools and workflows (environment variable validation)",
+  "headline_marked": "[[CtroEnv]] vs Zod, envalid, t3-env: Which Env Validator?",
+  "headline": "CtroEnv vs Zod, envalid, t3-env: Which Env Validator?",
+  "summary": "A comparison of four popular environment variable validation tools, highlighting their strengths and weaknesses for developers.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Choosing the right environment variable validator is crucial for preventing silent configuration errors. Tools like Zod, envalid, t3-env, and CtroEnv offer different approaches to this problem, each with its own set of pros and cons.",
+   "Zod excels if you're already using it for general validation, offering excellent type inference and detailed error formatting with zero extra dependencies. However, it lacks a CLI, .env.example generation, and manual coercion for numbers/booleans can be cumbersome.",
+   "Envalid, a long-standing option, provides a simple API and reports all errors at once. Its drawbacks include being Node-only, basic error messages, and several legacy dependencies. It's a good choice for simple Node backends but can be outgrown quickly.",
+   "T3-env, built by the t3-stack team, is tightly integrated with Next.js, offering a smart server/client split. Its main limitation is its Next.js exclusivity and a dependency on Zod, adding to the bundle size. It also lacks built-in secret masking.",
+   "CtroEnv, the author's creation, is a zero-dependency, framework-agnostic tool with a CLI, .env.example and docs generation, and built-in secret masking. While newer, it aims to cover the entire lifecycle of environment variable management without large dependencies.",
+   "The best choice depends on your project's needs. If you're deep in the Next.js ecosystem and use Zod, t3-env is viable. For simple Node projects, envalid works. If you prefer Zod and manual control, use it. For a comprehensive, dependency-light solution across frameworks, CtroEnv is a strong contender."
+  ],
+  "caption": "Environment variable validation: Zod, envalid, t3-env, or CtroEnv? Here's a breakdown to help you choose the right tool for your project.\n\nChoosing the right environment variable validator is crucial for preventing silent configuration errors. Tools like Zod, envalid, t3-env, and CtroEnv offer different approaches to this problem, each with its own set of pros and cons.\n\nZod excels if you're already using it for general validation, offering excellent type inference and detailed error formatting with zero extra dependencies. However, it lacks a CLI, .env.example generation, and manual coercion for numbers/booleans can be cumbersome.\n\nEnvalid, a long-standing option, provides a simple API and reports all errors at once. Its drawbacks include being Node-only, basic error messages, and several legacy dependencies. It's a good choice for simple Node backends but can be outgrown quickly.\n\nT3-env, built by the t3-stack team, is tightly integrated with Next.js, offering a smart server/client split. Its main limitation is its Next.js exclusivity and a dependency on Zod, adding to the bundle size. It also lacks built-in secret masking.\n\nCtroEnv, the author's creation, is a zero-dependency, framework-agnostic tool with a CLI, .env.example and docs generation, and built-in secret masking. While newer, it aims to cover the entire lifecycle of environment variable management without large dependencies.\n\nThe best choice depends on your project's needs. If you're deep in the Next.js ecosystem and use Zod, t3-env is viable. For simple Node projects, envalid works. If you prefer Zod and manual control, use it. For a comprehensive, dependency-light solution across frameworks, CtroEnv is a strong contender.\n\n#Developer #Programming #SoftwareDevelopment #DevTools #EnvValidation\n\nSource: DEV",
+  "tweet": "Choosing an env validator? [[CtroEnv]] vs Zod, envalid, t3-env: A deep dive into their features, pros, and cons. Find the best fit for your project! #DevTools #Programming #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ctrotech/ctroenv-vs-zod-envalid-t3-env-which-env-validator-should-you-use-4aln",
+  "image": "",
+  "orig_title": "CtroEnv vs Zod, envalid, t3-env, Which Env Validator Should You Use?",
+  "cluster_urls": [
+   "https://dev.to/ctrotech/ctroenv-vs-zod-envalid-t3-env-which-env-validator-should-you-use-4aln",
+   "https://dev.to/arianna/how-do-you-get-real-world-experience-before-your-first-job-59eg",
+   "https://dev.to/akoladefaj/running-async-python-inside-celery-is-harder-than-you-think-2046",
+   "https://dev.to/stinklewinks/building-a-design-system-without-recreating-css-1a41",
+   "https://dev.to/jonasbarros/automate-creation-of-amazon-cloudwatch-alarms-43o1",
+   "https://dev.to/martin_palopoli/cron-jobs-sin-celery-sin-redis-sin-beat-como-fitz-mete-un-scheduler-distribuido-adentro-del-bj9",
+   "https://dev.to/martin_palopoli/cron-jobs-without-celery-redis-or-beat-how-fitz-puts-a-distributed-scheduler-inside-the-language-57if",
+   "https://dev.to/codexmingle_community/why-your-django-application-becomes-slow-and-how-experienced-developers-prevent-it-3bm7",
+   "https://dev.to/jonoherrington/the-team-already-knows-1cba",
+   "https://dev.to/adeolaokunola/how-to-prove-your-ai-did-what-it-said-a-developers-guide-to-verifiable-ai-outputs-3ik3",
+   "https://dev.to/rabeh_arch/when-a-constructor-became-a-security-boundary-1caj"
+  ],
+  "cluster_titles": [
+   "CtroEnv vs Zod, envalid, t3-env, Which Env Validator Should You Use?",
+   "how do you get real-world experience before your first job?",
+   "Running Async Python Inside Celery Is Harder Than You Think.",
+   "Building a Design System Without Recreating CSS",
+   "Automate creation of Amazon CloudWatch alarms",
+   "Cron jobs sin Celery, sin Redis, sin Beat: cómo Fitz mete un scheduler distribuido adentro del lenguaje",
+   "Cron jobs without Celery, Redis, or Beat: how Fitz puts a distributed scheduler inside the language",
+   "Why Your Django Application Becomes Slow — And How Experienced Developers Prevent It",
+   "The Team Already Knows",
+   "How to Prove Your AI Did What It Said: A Developer's Guide to Verifiable AI Outputs",
+   "When a Constructor Became a Security Boundary"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260623-0540-0-ctroenv-vs-zod-envalid-t3-env-which-env-vali.png",
+   "20260623-0540-0-ctroenv-vs-zod-envalid-t3-env-which-env-vali-d1.png",
+   "20260623-0540-0-ctroenv-vs-zod-envalid-t3-env-which-env-vali-d2.png",
+   "20260623-0540-0-ctroenv-vs-zod-envalid-t3-env-which-env-vali-d3.png"
+  ]
+ },
+ {
+  "topic": "data center sustainability and water use",
+  "headline_marked": "Nvidia's [[liquid-cooled data center design]] uses near-zero water",
+  "headline": "Nvidia's liquid-cooled data center design uses near-zero water",
+  "summary": "Nvidia claims its new reference design for AI data centers can reduce water usage by up to 100%, by running servers hotter and using 100% liquid cooling.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Nvidia has unveiled a new reference design for AI data centers that it claims can drastically cut water consumption. By switching to 100 percent liquid cooling and operating servers at higher temperatures, the company states water usage can be reduced to \"near zero.\"",
+   "The design captures heat directly at the chip and transports it through liquid loops. These loops operate at higher temperatures, allowing outdoor dry coolers to efficiently reject heat for most of the year. This approach offers greater flexibility with ambient air temperatures compared to traditional cooling methods.",
+   "According to Nvidia's head of sustainability, Josh Parker, this system can reduce water use from approximately 2.6 million gallons per megawatt per year for conventional cooling-tower systems to virtually none. This represents a potential 100 percent reduction in water consumption.",
+   "While this innovation addresses water usage, it doesn't fully resolve all concerns surrounding AI data centers, such as their construction impact and power generation requirements. Additionally, the cost implications of this liquid-cooled design compared to air-cooled systems are not detailed in Nvidia's announcement.",
+   "Despite these caveats, Nvidia indicates that \"every cloud provider and data center operator building for [Rubin] is making the transition\" to this new cooling technology."
+  ],
+  "caption": "Nvidia's new AI data center design aims to slash water usage by up to 100% through 100% liquid cooling and running servers hotter.\n\nNvidia has unveiled a new reference design for AI data centers that it claims can drastically cut water consumption. By switching to 100 percent liquid cooling and operating servers at higher temperatures, the company states water usage can be reduced to \"near zero.\"\n\nThe design captures heat directly at the chip and transports it through liquid loops. These loops operate at higher temperatures, allowing outdoor dry coolers to efficiently reject heat for most of the year. This approach offers greater flexibility with ambient air temperatures compared to traditional cooling methods.\n\nAccording to Nvidia's head of sustainability, Josh Parker, this system can reduce water use from approximately 2.6 million gallons per megawatt per year for conventional cooling-tower systems to virtually none. This represents a potential 100 percent reduction in water consumption.\n\nWhile this innovation addresses water usage, it doesn't fully resolve all concerns surrounding AI data centers, such as their construction impact and power generation requirements. Additionally, the cost implications of this liquid-cooled design compared to air-cooled systems are not detailed in Nvidia's announcement.\n\nDespite these caveats, Nvidia indicates that \"every cloud provider and data center operator building for [Rubin] is making the transition\" to this new cooling technology.\n\n#Nvidia #AI #DataCenter #Sustainability #Tech\n\nSource: The Verge, TechCrunch",
+  "tweet": "Nvidia's new AI data center design uses 100% liquid cooling and runs servers hotter, claiming to reduce water usage to near zero. #Nvidia #AI #DataCenter",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "The Verge, TechCrunch",
+  "url": "https://www.theverge.com/tech/954139/nvidia-data-centers-rubin-liquid-cooling",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/06/STKS528_DATA_CENTERS2_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Nvidia says its AI data center design runs hotter to use a lot less water",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/954139/nvidia-data-centers-rubin-liquid-cooling",
+   "https://techcrunch.com/2026/06/22/microsoft-and-chevron-plan-one-of-the-largest-gas-powered-data-center-projects-in-us/",
+   "https://techcrunch.com/2026/06/22/nvidia-wants-to-cut-data-center-water-use-but-thats-not-the-same-as-fixing-ais-water-problem/"
+  ],
+  "cluster_titles": [
+   "Nvidia says its AI data center design runs hotter to use a lot less water",
+   "Microsoft and Chevron plan one of the largest gas-powered data center projects in US",
+   "Nvidia wants to cut data center water use, but that’s not the same as fixing AI’s water problem"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260623-0540-1-nvidia-s-liquid-cooled-data-center-design-us.png",
+   "20260623-0540-1-nvidia-s-liquid-cooled-data-center-design-us-d1.png",
+   "20260623-0540-1-nvidia-s-liquid-cooled-data-center-design-us-d2.png"
+  ]
+ }
+]

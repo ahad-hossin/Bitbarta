@@ -1,1 +1,76 @@
-[]
+[
+ {
+  "topic": "danish privacy activist police raid",
+  "headline_marked": "[[Danish police raid privacy activist Lars Andersen]], cut power to avoid filming",
+  "headline": "Danish police raid privacy activist Lars Andersen, cut power to avoid filming",
+  "summary": "Police reportedly targeted the circuit breaker panel at Andersen's home to prevent documentation of their actions. Andersen, a former police officer, views this as an attempt to silence his privacy advocacy.",
+  "category": "SECURITY",
+  "template": "neon",
+  "details": [
+   "Danish police reportedly raided the home of privacy activist Lars Andersen, a former police officer, and immediately targeted the circuit breaker panel. This action was allegedly taken to prevent any filming or documentation of the raid.",
+   "Andersen, known for his libertarian views and privacy advocacy, shared details of the incident, stating there is significant public interest in what happened. He runs a privacy-focused website.",
+   "He interprets the police's actions, particularly cutting power to disable cameras, as a direct attempt to silence his work and intimidate him. The raid raises concerns about privacy rights and police conduct."
+  ],
+  "caption": "Danish police reportedly cut power to privacy activist Lars Andersen's home during a raid. They allegedly targeted the circuit breaker panel to prevent filming, an act Andersen calls an attempt to silence him.\n\nDanish police reportedly raided the home of privacy activist Lars Andersen, a former police officer, and immediately targeted the circuit breaker panel. This action was allegedly taken to prevent any filming or documentation of the raid.\n\nAndersen, known for his libertarian views and privacy advocacy, shared details of the incident, stating there is significant public interest in what happened. He runs a privacy-focused website.\n\nHe interprets the police's actions, particularly cutting power to disable cameras, as a direct attempt to silence his work and intimidate him. The raid raises concerns about privacy rights and police conduct.\n\n#Privacy #HumanRights #Denmark #PoliceRaid #TechNews #Activism\n\nSource: Hacker News",
+  "tweet": "Danish police reportedly cut power to privacy activist Lars Andersen's home during a raid, aiming to stop filming. Andersen, a former officer, calls it an attempt to silence him. #Privacy #Denmark #Police",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://twitter.com/LarsAnders1620/status/2068208864747540516#m",
+  "image": "",
+  "orig_title": "Danish privacy activist Lars Andersen raided by police",
+  "cluster_urls": [
+   "https://twitter.com/LarsAnders1620/status/2068208864747540516#m"
+  ],
+  "cluster_titles": [
+   "Danish privacy activist Lars Andersen raided by police"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260622-1406-0-danish-police-raid-privacy-activist-lars-and.png",
+   "20260622-1406-0-danish-police-raid-privacy-activist-lars-and-d1.png"
+  ]
+ },
+ {
+  "topic": "codex logging bug ssd fill",
+  "headline_marked": "[[Codex logging bug]] could write 640 TB/year to SSDs, drastically shortening their lifespan",
+  "headline": "Codex logging bug could write 640 TB/year to SSDs, drastically shortening their lifespan",
+  "summary": "A bug in OpenAI's Codex continuously writes massive amounts of data to local SQLite feedback logs, potentially consuming a consumer SSD's entire warranted write endurance in less than a year. This issue stems from a default global TRACE logging level.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "OpenAI's Codex is experiencing a significant logging bug that can write an estimated 640 terabytes of data to local SSDs annually. This continuous data writing was observed to consume 37 TB over 21 days on one machine, primarily from SQLite feedback logs.",
+   "This extreme write volume translates to approximately 640 full-drive writes per year for a 1 TB SSD. Given that many consumer SSDs are rated for around 600 TBW (Terabytes Written), this bug could exhaust a drive's warranted write endurance in less than a year.",
+   "The issue is attributed to a global TRACE logging default in the SQLite feedback log sink, which persists all targets at a very verbose level. This includes dependency/internal logs and large raw protocol payloads.",
+   "Analysis shows that TRACE logs account for 70.7% of retained bytes, with additional OpenTelemetry mirror events and raw websocket/SSE payload logging contributing significantly. Filtering these categories could remove roughly 96% of the retained log bytes without fully disabling feedback logs.",
+   "The problem is exacerbated by continuous insert-and-prune write amplification, where over 36,000 rows were inserted in a 15-second sample, even as the retained row count remained flat. This process involves rows being inserted, indexed, written to WAL, and then pruned.",
+   "Suggested solutions include implementing better default filtering for the feedback logs to reduce verbosity. An optional escape hatch, such as a `sqlite_logs_enabled = false` setting, would also provide users with direct control over the logging."
+  ],
+  "caption": "OpenAI's Codex has a logging bug that can write up to 640 terabytes of data to your SSD annually. This could wear out a typical consumer SSD in under a year.\n\nOpenAI's Codex is experiencing a significant logging bug that can write an estimated 640 terabytes of data to local SSDs annually. This continuous data writing was observed to consume 37 TB over 21 days on one machine, primarily from SQLite feedback logs.\n\nThis extreme write volume translates to approximately 640 full-drive writes per year for a 1 TB SSD. Given that many consumer SSDs are rated for around 600 TBW (Terabytes Written), this bug could exhaust a drive's warranted write endurance in less than a year.\n\nThe issue is attributed to a global TRACE logging default in the SQLite feedback log sink, which persists all targets at a very verbose level. This includes dependency/internal logs and large raw protocol payloads.\n\nAnalysis shows that TRACE logs account for 70.7% of retained bytes, with additional OpenTelemetry mirror events and raw websocket/SSE payload logging contributing significantly. Filtering these categories could remove roughly 96% of the retained log bytes without fully disabling feedback logs.\n\nThe problem is exacerbated by continuous insert-and-prune write amplification, where over 36,000 rows were inserted in a 15-second sample, even as the retained row count remained flat. This process involves rows being inserted, indexed, written to WAL, and then pruned.\n\nSuggested solutions include implementing better default filtering for the feedback logs to reduce verbosity. An optional escape hatch, such as a `sqlite_logs_enabled = false` setting, would also provide users with direct control over the logging.\n\n#Codex #OpenAI #SSD #SoftwareBug #Developer #TechNews\n\nSource: Hacker News",
+  "tweet": "OpenAI's Codex has a logging bug that can write up to 640 TB/year to local SSDs, potentially wearing out a drive in less than a year. Developers should check their configurations. #Codex #OpenAI #SSD",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Hacker News",
+  "url": "https://github.com/openai/codex/issues/28224",
+  "image": "",
+  "orig_title": "Codex logging bug may write TBs to local SSDs",
+  "cluster_urls": [
+   "https://github.com/openai/codex/issues/28224"
+  ],
+  "cluster_titles": [
+   "Codex logging bug may write TBs to local SSDs"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260622-1406-1-codex-logging-bug-could-write-640-tb-year-to.png",
+   "20260622-1406-1-codex-logging-bug-could-write-640-tb-year-to-d1.png",
+   "20260622-1406-1-codex-logging-bug-could-write-640-tb-year-to-d2.png"
+  ]
+ }
+]

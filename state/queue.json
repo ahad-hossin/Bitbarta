@@ -1,1 +1,102 @@
-[]
+[
+ {
+  "topic": "ai agent platform comparison",
+  "headline_marked": "[[AI Fails to Self-Correct]] Four Times in One Day, Operator Notes Reveal",
+  "headline": "AI Fails to Self-Correct Four Times in One Day, Operator Notes Reveal",
+  "summary": "An AI agent repeatedly ignored its own rules and failed to use available tools, highlighting the need for external checks.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI agent demonstrated a critical failure in self-correction, ignoring its own rule to run checks before live deployment multiple times within a single day.",
+   "The AI documented a rule to not promote anything to live without running a check, yet later proposed a promotion without performing the check, despite having fresh evidence.",
+   "In another instance, the AI suggested a fix for a configuration that had already been updated days prior, as evidenced by a backup file, but failed to check the actual state of the system.",
+   "The investigation also revealed that a related configuration, marked as 'armed' in documentation, had been failing for eight days due to an external mismatch, a fact not apparent from its internal records.",
+   "Furthermore, the AI bypassed a custom skill built specifically for analysis, instead writing ad-hoc queries that encountered multiple schema bugs, effectively reinventing a wheel that already existed.",
+   "The AI also repeated a methodology bug within eleven hours: picking a threshold after looking at the data, a mistake it had identified and corrected earlier the same day.",
+   "These failures highlight a common structural issue where the layer intended to catch problems reads from the same source as the layer that produces them, creating a false sense of security.",
+   "The author emphasizes that the AI itself was earnest and helpful, but fundamentally incapable of catching its own errors because each failure appeared correct from within its own reasoning loop.",
+   "The solution proposed is to ensure the 'second view' or checking mechanism comes from outside the AI's direct reasoning path, such as external timestamps or independently maintained systems."
+  ],
+  "caption": "AI fails to self-correct, ignoring its own rules and tools multiple times in one day. The critical issue? The checks weren't truly external.\n\nAn AI agent demonstrated a critical failure in self-correction, ignoring its own rule to run checks before live deployment multiple times within a single day.\n\nThe AI documented a rule to not promote anything to live without running a check, yet later proposed a promotion without performing the check, despite having fresh evidence.\n\nIn another instance, the AI suggested a fix for a configuration that had already been updated days prior, as evidenced by a backup file, but failed to check the actual state of the system.\n\nThe investigation also revealed that a related configuration, marked as 'armed' in documentation, had been failing for eight days due to an external mismatch, a fact not apparent from its internal records.\n\nFurthermore, the AI bypassed a custom skill built specifically for analysis, instead writing ad-hoc queries that encountered multiple schema bugs, effectively reinventing a wheel that already existed.\n\nThe AI also repeated a methodology bug within eleven hours: picking a threshold after looking at the data, a mistake it had identified and corrected earlier the same day.\n\nThese failures highlight a common structural issue where the layer intended to catch problems reads from the same source as the layer that produces them, creating a false sense of security.\n\nThe author emphasizes that the AI itself was earnest and helpful, but fundamentally incapable of catching its own errors because each failure appeared correct from within its own reasoning loop.\n\nThe solution proposed is to ensure the 'second view' or checking mechanism comes from outside the AI's direct reasoning path, such as external timestamps or independently maintained systems.\n\n#TechNews #AI #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "AI agent fails to self-correct, ignoring its own rules and tools multiple times in one day. The critical issue? Checks weren't truly external. #AI #AIdevelopment #AIfailures",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jugeni/you-cant-be-your-own-second-view-four-ai-failures-from-one-day-of-operator-work-2e5o",
+  "image": "",
+  "orig_title": "You can't be your own second view: four AI failures from one day of operator work",
+  "cluster_urls": [
+   "https://dev.to/jugeni/you-cant-be-your-own-second-view-four-ai-failures-from-one-day-of-operator-work-2e5o",
+   "https://dev.to/pardnchiu/agenvoy-hermes-pi-an-ai-agent-platform-comparison-3p7p",
+   "https://dev.to/yuvraj_sthakur_34eeb2d3/create-a-chrome-extension-called-jarvis-ai-features-floating-jarvis-button-on-every-webpage-acl"
+  ],
+  "cluster_titles": [
+   "You can't be your own second view: four AI failures from one day of operator work",
+   "Agenvoy, Hermes, Pi — An AI Agent Platform Comparison",
+   "Create a Chrome Extension called JARVIS AI. Features: - Floating JARVIS button on every webpage (bottom-right). - Futuristic Iron Man-style dark blue UI with animations. - Click button to open JARVIS panel and start voice recognition. - Listen continuousl"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260623-0207-0-ai-fails-to-self-correct-four-times-in-one-d.png",
+   "20260623-0207-0-ai-fails-to-self-correct-four-times-in-one-d-d1.png",
+   "20260623-0207-0-ai-fails-to-self-correct-four-times-in-one-d-d2.png",
+   "20260623-0207-0-ai-fails-to-self-correct-four-times-in-one-d-d3.png"
+  ]
+ },
+ {
+  "topic": "ios 27 beta 2 features",
+  "headline_marked": "[[iOS 27 beta 2]] upgrades Messages app with new RCS features",
+  "headline": "iOS 27 beta 2 upgrades Messages app with new RCS features",
+  "summary": "Apple's latest beta for iOS 27 introduces significant improvements to the Messages app, focusing on enhanced RCS conversation capabilities.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "Apple has released the second beta version of iOS 27, making it available for developers and public testers. This update brings a host of new features and refinements across various Apple platforms, including significant upgrades to the Messages application.",
+   "A key highlight of iOS 27 beta 2 is the enhancement of Rich Communication Services (RCS) within the Messages app. This update aims to improve the cross-platform messaging experience, bringing it closer to the functionality users expect from modern messaging platforms.",
+   "Beyond Messages, iOS 27 beta 2 also includes updates for Apple Intelligence, specifically a new feature called 'Write with Siri' which enhances the AI writing tools. This suggests a continued focus on integrating advanced AI capabilities into the core user experience.",
+   "The beta release also extends to other Apple operating systems, with beta 2 versions now available for iPadOS 27, macOS 27 Golden Gate, tvOS 27, and visionOS 27, indicating a broad rollout of new features and improvements across the Apple ecosystem."
+  ],
+  "caption": "iOS 27 beta 2 is here, bringing major upgrades to the Messages app with enhanced RCS support and new AI writing tools.\n\nApple has released the second beta version of iOS 27, making it available for developers and public testers. This update brings a host of new features and refinements across various Apple platforms, including significant upgrades to the Messages application.\n\nA key highlight of iOS 27 beta 2 is the enhancement of Rich Communication Services (RCS) within the Messages app. This update aims to improve the cross-platform messaging experience, bringing it closer to the functionality users expect from modern messaging platforms.\n\nBeyond Messages, iOS 27 beta 2 also includes updates for Apple Intelligence, specifically a new feature called 'Write with Siri' which enhances the AI writing tools. This suggests a continued focus on integrating advanced AI capabilities into the core user experience.\n\nThe beta release also extends to other Apple operating systems, with beta 2 versions now available for iPadOS 27, macOS 27 Golden Gate, tvOS 27, and visionOS 27, indicating a broad rollout of new features and improvements across the Apple ecosystem.\n\n#iOS17 #Apple #RCS #MessagesApp #Tech\n\nSource: 9to5Mac",
+  "tweet": "iOS 27 beta 2 has landed, featuring key upgrades for the Messages app, including improved RCS support. Also includes new 'Write with Siri' AI tools! #iOS17 #Apple",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/06/22/ios-27-upgrades-messages-app-with-key-new-features-for-rcs/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/06/messages-app-icon-ios-27.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "iOS 27 upgrades Messages app with key new features for RCS",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/06/22/ios-27-upgrades-messages-app-with-key-new-features-for-rcs/",
+   "https://9to5mac.com/2026/06/22/ios-27-makes-it-easier-to-update-your-apple-tv-software/",
+   "https://9to5mac.com/2026/06/22/airpods-max-2-firmware-beta-updates-now-available-with-ios-27-and-macos-27-beta-2/",
+   "https://9to5mac.com/2026/06/22/heres-whats-new-with-ios-27-beta-2/",
+   "https://9to5mac.com/2026/06/22/ios-27-beta-write-with-siri/",
+   "https://9to5mac.com/2026/06/22/ios-27-beta-2-now-available-as-apple-tests-major-siri-ai-upgrade/",
+   "https://9to5mac.com/2026/06/22/ipados-27-beta-2-now-available-for-ipad/",
+   "https://9to5mac.com/2026/06/22/apple-releases-beta-2-for-tvos-27-visionos-27-and-more/",
+   "https://9to5mac.com/2026/06/22/macos-27-golden-gate-beta-2-now-available/"
+  ],
+  "cluster_titles": [
+   "iOS 27 upgrades Messages app with key new features for RCS",
+   "iOS 27 makes it easier to update your Apple TV software",
+   "AirPods Max 2 firmware beta updates now available with iOS 27 and macOS 27 beta 2",
+   "Here’s what’s new with iOS 27 beta 2",
+   "iOS 27 beta 2 includes Write with Siri, the new version of Apple Intelligence writing tools",
+   "iOS 27 beta 2 now available as Apple tests major Siri AI upgrade",
+   "iPadOS 27 beta 2 now available for iPad",
+   "Apple releases beta 2 for tvOS 27, visionOS 27, and more",
+   "macOS 27 Golden Gate beta 2 now available"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260623-0207-1-ios-27-beta-2-upgrades-messages-app-with-new.png",
+   "20260623-0207-1-ios-27-beta-2-upgrades-messages-app-with-new-d1.png",
+   "20260623-0207-1-ios-27-beta-2-upgrades-messages-app-with-new-d2.png"
+  ]
+ }
+]

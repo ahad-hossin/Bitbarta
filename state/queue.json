@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "pydantic ai type safe agent framework prevents data loss",
+  "headline_marked": "[[Pydantic AI prevents database deletion]] by AI agents with human approval flows",
+  "headline": "Pydantic AI prevents database deletion by AI agents with human approval flows",
+  "summary": "Pydantic AI, used by OpenAI and Google SDKs, brings type-safe validation to AI agents, enabling human approval for critical actions and reducing token costs by 60-80%.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI agent recently deleted a production database, sparking widespread discussion on Hacker News. This highlights the critical gap between \"runs on my machine\" and \"safely runs my business\" for AI agents moving into production.",
+   "Pydantic AI, a Python agent framework with 17,895 GitHub stars, aims to bridge this gap. Built by the team behind Pydantic Validation (used in OpenAI, Anthropic, Google ADK, LangChain), it brings type-safety and production-readiness to agent development.",
+   "Unlike most frameworks treating LLMs as black boxes, Pydantic AI views them as type-safe, verifiable, and composable systems. Its \"deferred tools\" feature allows marking certain tool calls for human approval before execution, preventing accidental destructive operations like database writes or financial transactions.",
+   "Pydantic AI also includes pydantic_graph, a graph framework where nodes are typed Python classes and edges are determined by return types. This enables visual, debuggable, and type-safe workflows, allowing static analysis to verify logic before deployment.",
+   "The framework supports full MCP (Model Context Protocol) integration, enabling advanced capabilities like server-initiated sampling and interactive forms. This transforms static tool calls into dynamic, interactive agent experiences, accessing a wider MCP ecosystem.",
+   "\"Deferred capabilities\" allow tools to be loaded into the agent's context only when explicitly called by the LLM. This \"lazy loading\" keeps the initial context lean, reducing token costs by 60-80% and improving LLM focus.",
+   "Pydantic AI offers out-of-the-box observability with Pydantic Logfire and built-in usage tracking. Configurable hard limits for tokens, requests, and costs ensure agents stop gracefully before exceeding API budgets, preventing unexpected expenses."
+  ],
+  "caption": "An AI agent recently deleted a production database. Pydantic AI offers a solution with human approval flows for critical actions.\n\nAn AI agent recently deleted a production database, sparking widespread discussion on Hacker News. This highlights the critical gap between \"runs on my machine\" and \"safely runs my business\" for AI agents moving into production.\n\nPydantic AI, a Python agent framework with 17,895 GitHub stars, aims to bridge this gap. Built by the team behind Pydantic Validation (used in OpenAI, Anthropic, Google ADK, LangChain), it brings type-safety and production-readiness to agent development.\n\nUnlike most frameworks treating LLMs as black boxes, Pydantic AI views them as type-safe, verifiable, and composable systems. Its \"deferred tools\" feature allows marking certain tool calls for human approval before execution, preventing accidental destructive operations like database writes or financial transactions.\n\nPydantic AI also includes pydantic_graph, a graph framework where nodes are typed Python classes and edges are determined by return types. This enables visual, debuggable, and type-safe workflows, allowing static analysis to verify logic before deployment.\n\nThe framework supports full MCP (Model Context Protocol) integration, enabling advanced capabilities like server-initiated sampling and interactive forms. This transforms static tool calls into dynamic, interactive agent experiences, accessing a wider MCP ecosystem.\n\n\"Deferred capabilities\" allow tools to be loaded into the agent's context only when explicitly called by the LLM. This \"lazy loading\" keeps the initial context lean, reducing token costs by 60-80% and improving LLM focus.\n\nPydantic AI offers out-of-the-box observability with Pydantic Logfire and built-in usage tracking. Configurable hard limits for tokens, requests, and costs ensure agents stop gracefully before exceeding API budgets, preventing unexpected expenses.\n\n#AI #PydanticAI #AgentFramework #Python #DeveloperTools #TechNews\n\nSource: DEV",
+  "tweet": "An AI agent deleted a production database, sparking major concerns. Pydantic AI offers a type-safe framework with human approval for critical actions, preventing such incidents and cutting token costs by 60-80%. #AI #PydanticAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "pydantic.ai",
+  "source": "DEV",
+  "url": "https://dev.to/_cbd692d476c5faf3b61bcf/pydantic-ai-de-5-ge-yin-cang-yong-fa-lei-xing-an-quan-de-agent-kuang-jia-451k",
+  "image": "",
+  "orig_title": "Pydantic AI 的 5 个隐藏用法：类型安全的 Agent 框架",
+  "cluster_urls": [
+   "https://dev.to/_cbd692d476c5faf3b61bcf/pydantic-ai-de-5-ge-yin-cang-yong-fa-lei-xing-an-quan-de-agent-kuang-jia-451k"
+  ],
+  "cluster_titles": [
+   "Pydantic AI 的 5 个隐藏用法：类型安全的 Agent 框架"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260622-1006-0-pydantic-ai-prevents-database-deletion-by-ai.png",
+   "20260622-1006-0-pydantic-ai-prevents-database-deletion-by-ai-d1.png",
+   "20260622-1006-0-pydantic-ai-prevents-database-deletion-by-ai-d2.png",
+   "20260622-1006-0-pydantic-ai-prevents-database-deletion-by-ai-d3.png"
+  ]
+ },
+ {
+  "topic": "github copilot switches to usage based billing",
+  "headline_marked": "[[GitHub Copilot shifts to usage-based billing]] with token-metered AI Credits for developers",
+  "headline": "GitHub Copilot shifts to usage-based billing with token-metered AI Credits for developers",
+  "summary": "As of June 1, 2026, GitHub Copilot's pricing now runs on AI Credits, where interactions are charged based on tokens consumed, replacing the old premium request units. This change primarily impacts agentic and CLI-heavy workflows.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Starting June 1, 2026, GitHub Copilot has transitioned to usage-based billing, replacing premium request units with GitHub AI Credits. One credit equals one cent, with costs tied to input, output, and cached tokens consumed by each model interaction.",
+   "This new model addresses the previous flat rate, which no longer matched the compute behind varied Copilot uses, especially with the rise of agentic workflows. The change aims to align pricing more closely with actual resource consumption.",
+   "For users primarily relying on inline completions and Next Edit Suggestions, costs remain unchanged as these features are still unlimited and free. However, chat and agentic runs, which involve opening files, planning, and executing commands, are now metered.",
+   "CLI users now face cost decisions based on the AI model chosen, as per-token prices vary significantly between models. Selecting a powerful model for a simple task can lead to higher, billable waste.",
+   "Paid plans include monthly credit pools: 1,500 for Pro, 7,000 for Pro+, and 20,000 for Max, with similar allowances for Business and Enterprise. Users can set budgets for usage beyond these pools or opt for pay-as-you-go.",
+   "Annual subscribers will remain on the request-based model until their term ends, though several model multipliers increased on June 1. This postpones the full transition but makes stronger models consume more of the old allowance.",
+   "A significant change affects Copilot code review, which now uses an agentic architecture. This means it consumes both AI Credits and GitHub Actions minutes on private repositories, potentially hitting two parts of the bill."
+  ],
+  "caption": "GitHub Copilot's billing just changed to a usage-based model with AI Credits, effective June 1, 2026. This impacts developers, especially those using agentic and CLI features.\n\nStarting June 1, 2026, GitHub Copilot has transitioned to usage-based billing, replacing premium request units with GitHub AI Credits. One credit equals one cent, with costs tied to input, output, and cached tokens consumed by each model interaction.\n\nThis new model addresses the previous flat rate, which no longer matched the compute behind varied Copilot uses, especially with the rise of agentic workflows. The change aims to align pricing more closely with actual resource consumption.\n\nFor users primarily relying on inline completions and Next Edit Suggestions, costs remain unchanged as these features are still unlimited and free. However, chat and agentic runs, which involve opening files, planning, and executing commands, are now metered.\n\nCLI users now face cost decisions based on the AI model chosen, as per-token prices vary significantly between models. Selecting a powerful model for a simple task can lead to higher, billable waste.\n\nPaid plans include monthly credit pools: 1,500 for Pro, 7,000 for Pro+, and 20,000 for Max, with similar allowances for Business and Enterprise. Users can set budgets for usage beyond these pools or opt for pay-as-you-go.\n\nAnnual subscribers will remain on the request-based model until their term ends, though several model multipliers increased on June 1. This postpones the full transition but makes stronger models consume more of the old allowance.\n\nA significant change affects Copilot code review, which now uses an agentic architecture. This means it consumes both AI Credits and GitHub Actions minutes on private repositories, potentially hitting two parts of the bill.\n\n#GitHubCopilot #AI #DeveloperTools #Programming #Software #TechNews\n\nSource: DEV",
+  "tweet": "GitHub Copilot's billing shifts to usage-based AI Credits starting June 1, 2026. This change impacts developers using agentic and CLI features, with costs now tied to token consumption. Inline completions remain free. #GitHubCopilot #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/rapls/github-copilot-is-usage-based-now-heres-what-that-changes-for-terminal-users-3c2p",
+  "image": "",
+  "orig_title": "GitHub Copilot is usage-based now. Here's what that changes for terminal users.",
+  "cluster_urls": [
+   "https://dev.to/rapls/github-copilot-is-usage-based-now-heres-what-that-changes-for-terminal-users-3c2p"
+  ],
+  "cluster_titles": [
+   "GitHub Copilot is usage-based now. Here's what that changes for terminal users."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260622-1006-1-github-copilot-shifts-to-usage-based-billing.png",
+   "20260622-1006-1-github-copilot-shifts-to-usage-based-billing-d1.png",
+   "20260622-1006-1-github-copilot-shifts-to-usage-based-billing-d2.png",
+   "20260622-1006-1-github-copilot-shifts-to-usage-based-billing-d3.png"
+  ]
+ }
+]

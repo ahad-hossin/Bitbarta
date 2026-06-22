@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai agent model comparison anthropic openai cursor",
+  "headline_marked": "[[Agent skills boost LLM performance by up to 23.1 points]] across Anthropic, OpenAI, and Cursor models in 880 evals",
+  "headline": "Agent skills boost LLM performance by up to 23.1 points across Anthropic, OpenAI, and Cursor models in 880 evals",
+  "summary": "A new study evaluating 9 frontier coding models with 11 Node.js development skills shows that skills consistently improve performance, with Haiku 4.5 seeing the largest gain of 23.1 percentage points.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A comprehensive study involving 880 evaluations across nine frontier coding models, including Claude Opus 4.7, various GPT-5 models, and Cursor's Composer-2, explored the impact of agent skills. The research focused on 11 Node.js development skills, revealing significant performance improvements across the board. Haiku 4.5 demonstrated the largest lift, gaining an impressive 23.1 percentage points.",
+   "The evaluation methodology involved solving up to five realistic tasks per skill with an agent, under two conditions: with and without access to the specific skill. This 'with vs without' skill performance comparison provided a clear signal on the effectiveness of integrating external knowledge. The tasks were paired with full evaluation criteria to ensure robust and consistent measurement.",
+   "A key finding was that every single configuration tested posted a positive average lift when a skill was loaded. This indicates a universal benefit of agent skills, transcending individual model strengths. The study emphasizes that the choice of model may become less critical than the skills it is equipped with, pointing to a future where context development is paramount.",
+   "Specific models showed substantial gains; for instance, Cursor's Composer-2 lifted from 73.6% to 90.5%, a +16.9 point bump. Within the Codex family, lifts ranged from +11.3 for gpt-5-codex to +16.8 for gpt-5.4. This consistent improvement across different vendors, tiers, and model generations highlights the transformative potential of skills.",
+   "Notably, Haiku 4.5, a smaller and cheaper model, achieved 84.3% adherence with a skill loaded, outperforming every single baseline configuration tested, including Opus 4.7 at 80.5%. This suggests that skills can empower smaller models to rival the performance of larger, more expensive counterparts, offering a cost-effective path to higher adherence.",
+   "Among frontier models, Opus 4.7 (94.5%), Opus 4.6 (93.8%), and Sonnet 4.6 (93.3%) landed within 1.2 points of each other with skills loaded. Without skills, their spread was closer to 5 points. This compression of the adherence gap between different model tiers further confirms that context, particularly agent skills, can significantly level the playing field.",
+   "The single largest skill lift observed was with 'snipgrapher,' a niche Node.js CLI, which saw a +36 point increase (51.9% to 88.0%). Skills encoding knowledge that models couldn't easily pick up from pre-training, such as private APIs or uncommon domains, proved most effective. Conversely, skills that merely wrapped material already known by frontier models rarely justified their token cost.",
+   "While adding a skill can increase operational costs, sometimes up to 3x for a +2 percentage point performance gain, the benefits in adherence are clear. Skills at this capability level function less like brief hints and more like importing significant dependencies, fundamentally altering how models process and respond to tasks."
+  ],
+  "caption": "LLM agent skills can boost performance by up to 23.1 percentage points. A study of 9 frontier coding models and 11 Node.js skills reveals consistent gains.\n\nA comprehensive study involving 880 evaluations across nine frontier coding models, including Claude Opus 4.7, various GPT-5 models, and Cursor's Composer-2, explored the impact of agent skills. The research focused on 11 Node.js development skills, revealing significant performance improvements across the board. Haiku 4.5 demonstrated the largest lift, gaining an impressive 23.1 percentage points.\n\nThe evaluation methodology involved solving up to five realistic tasks per skill with an agent, under two conditions: with and without access to the specific skill. This 'with vs without' skill performance comparison provided a clear signal on the effectiveness of integrating external knowledge. The tasks were paired with full evaluation criteria to ensure robust and consistent measurement.\n\nA key finding was that every single configuration tested posted a positive average lift when a skill was loaded. This indicates a universal benefit of agent skills, transcending individual model strengths. The study emphasizes that the choice of model may become less critical than the skills it is equipped with, pointing to a future where context development is paramount.\n\nSpecific models showed substantial gains; for instance, Cursor's Composer-2 lifted from 73.6% to 90.5%, a +16.9 point bump. Within the Codex family, lifts ranged from +11.3 for gpt-5-codex to +16.8 for gpt-5.4. This consistent improvement across different vendors, tiers, and model generations highlights the transformative potential of skills.\n\n#AI #LLMs #AgentSkills #MachineLearning #TechNews #DeveloperTools\n\nSource: DEV",
+  "tweet": "New study: Agent skills significantly boost LLM performance! 880 evals across 9 models (Anthropic, OpenAI, Cursor) show gains up to 23.1 points. Smaller models with skills can even outperform larger baselines. #AI #LLMs #AgentSkills",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tessl-io/anthropic-openai-or-cursor-model-for-your-agent-skills-7-learnings-from-running-880-evals-5gh6",
+  "image": "",
+  "orig_title": "Anthropic, OpenAI, or Cursor model for your agent skills? 7 learnings from running 880 evals (including Opus 4.7)",
+  "cluster_urls": [
+   "https://dev.to/tessl-io/anthropic-openai-or-cursor-model-for-your-agent-skills-7-learnings-from-running-880-evals-5gh6"
+  ],
+  "cluster_titles": [
+   "Anthropic, OpenAI, or Cursor model for your agent skills? 7 learnings from running 880 evals (including Opus 4.7)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260622-1307-0-agent-skills-boost-llm-performance-by-up-to-.png",
+   "20260622-1307-0-agent-skills-boost-llm-performance-by-up-to--d1.png",
+   "20260622-1307-0-agent-skills-boost-llm-performance-by-up-to--d2.png",
+   "20260622-1307-0-agent-skills-boost-llm-performance-by-up-to--d3.png",
+   "20260622-1307-0-agent-skills-boost-llm-performance-by-up-to--d4.png"
+  ]
+ },
+ {
+  "topic": "ai agent framework comparison pydanticai langchain",
+  "headline_marked": "[[PydanticAI vs LangChain]] for production AI agents: why validation matters",
+  "headline": "PydanticAI vs LangChain for production AI agents: why validation matters",
+  "summary": "Demos often hide critical flaws in AI agents, like invented UI paths. Production-ready frameworks like PydanticAI prioritize structured, validated outputs and testability, unlike LangChain's default approach.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents built for demos often fail in production, inventing non-existent UI paths or data. This gap becomes a liability when models produce unvalidated outputs. The key is choosing a framework that fails loudly in development and gracefully in production.",
+   "The article audits five crucial aspects often skipped in tutorials: structured outputs, dependency injection for testing, retry/error handling, observability hooks, and type-checker support. These elements are vital for ensuring an agent's production readiness.",
+   "Structured, validated outputs are paramount. A common task involves an agent querying sales data and returning a structured answer. LangChain's default often returns a simple string, requiring manual validation downstream in your application code.",
+   "PydanticAI, however, makes validation a core contract with `output_type=SalesAnswer`. If the model's output doesn't match the defined Pydantic model, it raises an error immediately. This ensures type-checked objects, not raw strings, reach your application.",
+   "Dependency injection is another critical difference. Production agents rely on real databases and APIs, but tests need fast, predictable mocks. PydanticAI explicitly supports this via `deps_type` and `RunContext`, making testing much more robust.",
+   "This explicit dependency management in PydanticAI allows for robust testing. Tools pull dependencies from `ctx.deps`, enabling easy swapping of real implementations with fakes in CI. Type checkers enforce these contracts, catching issues before deployment."
+  ],
+  "caption": "AI agents built for demos often fail silently in production, inventing non-existent data or UI paths. Choosing the right framework is critical to avoid costly errors.\n\nAI agents built for demos often fail in production, inventing non-existent UI paths or data. This gap becomes a liability when models produce unvalidated outputs. The key is choosing a framework that fails loudly in development and gracefully in production.\n\nThe article audits five crucial aspects often skipped in tutorials: structured outputs, dependency injection for testing, retry/error handling, observability hooks, and type-checker support. These elements are vital for ensuring an agent's production readiness.\n\nStructured, validated outputs are paramount. A common task involves an agent querying sales data and returning a structured answer. LangChain's default often returns a simple string, requiring manual validation downstream in your application code.\n\nPydanticAI, however, makes validation a core contract with `output_type=SalesAnswer`. If the model's output doesn't match the defined Pydantic model, it raises an error immediately. This ensures type-checked objects, not raw strings, reach your application.\n\nDependency injection is another critical difference. Production agents rely on real databases and APIs, but tests need fast, predictable mocks. PydanticAI explicitly supports this via `deps_type` and `RunContext`, making testing much more robust.\n\nThis explicit dependency management in PydanticAI allows for robust testing. Tools pull dependencies from `ctx.deps`, enabling easy swapping of real implementations with fakes in CI. Type checkers enforce these contracts, catching issues before deployment.\n\n#AI #LLM #AgentFramework #PydanticAI #LangChain #DeveloperTools\n\nSource: DEV",
+  "tweet": "AI agents built for demos can invent data in production. Learn why PydanticAI's structured outputs & dependency injection make it more robust than LangChain for production-ready systems. #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/devasservice/pydanticai-vs-langchain-choosing-an-agent-framework-for-production-not-demos-3fj",
+  "image": "",
+  "orig_title": "PydanticAI vs LangChain - Choosing an Agent Framework for Production, Not Demos",
+  "cluster_urls": [
+   "https://dev.to/devasservice/pydanticai-vs-langchain-choosing-an-agent-framework-for-production-not-demos-3fj"
+  ],
+  "cluster_titles": [
+   "PydanticAI vs LangChain - Choosing an Agent Framework for Production, Not Demos"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260622-1307-1-pydanticai-vs-langchain-for-production-ai-ag.png",
+   "20260622-1307-1-pydanticai-vs-langchain-for-production-ai-ag-d1.png",
+   "20260622-1307-1-pydanticai-vs-langchain-for-production-ai-ag-d2.png"
+  ]
+ }
+]

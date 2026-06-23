@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "AI Agent Security",
+  "headline_marked": "Fake AI Skill [[Reached 26,000 Agents]] After Slipping Past Scanners",
+  "headline": "Fake AI Skill Reached 26,000 Agents After Slipping Past Scanners",
+  "summary": "A fake AI agent skill evaded detection by popular scanners and reached 26,000 agents. The skill was designed to collect user email addresses.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A security firm called AIR created a fake AI agent skill and successfully deployed it to approximately 26,000 agents. The skill was designed to look credible and evade detection by popular scanners.",
+   "The skill, named brand-landingpage, claimed to build a landing page using Google's Stitch design tool and was aimed at non-technical users. AIR exploited a structural blind spot in the scanners to avoid detection.",
+   "The scanners tested by AIR, including those from Cisco and NVIDIA, analyzed the package submitted to them but did not check the external link that the skill pointed to. This allowed AIR to swap the page behind the link and deliver a payload that collected user email addresses.",
+   "The experiment shows that current skill-scanning tools are checking the wrong thing and that a scanner's verdict is only as good as the moment it was taken. The payload can be rewritten at any time after the check clears.",
+   "The read for defenders is to treat skills as software, not text, and to vet what a skill points to, not just what ships inside it. Most add-ons get installed with no review, so finding what is already running in the environment is crucial."
+  ],
+  "caption": "Can a fake AI skill really evade every scanner? A security firm says it reached 26,000 agents undetected.\n\nA security firm called AIR created a fake AI agent skill and successfully deployed it to approximately 26,000 agents. The skill was designed to look credible and evade detection by popular scanners.\n\nThe skill, named brand-landingpage, claimed to build a landing page using Google's Stitch design tool and was aimed at non-technical users. AIR exploited a structural blind spot in the scanners to avoid detection.\n\nThe scanners tested by AIR, including those from Cisco and NVIDIA, analyzed the package submitted to them but did not check the external link that the skill pointed to. This allowed AIR to swap the page behind the link and deliver a payload that collected user email addresses.\n\nThe experiment shows that current skill-scanning tools are checking the wrong thing and that a scanner's verdict is only as good as the moment it was taken. The payload can be rewritten at any time after the check clears.\n\nThe read for defenders is to treat skills as software, not text, and to vet what a skill points to, not just what ships inside it. Most add-ons get installed with no review, so finding what is already running in the environment is crucial.\n\n#AI #SECURITY #TECH #SCANNERS #CYBERSECURITY\n\nSource: DEV",
+  "tweet": "Fake AI skill evades scanners, reaches 26,000 agents! #SECURITY #AI",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/etairos/fake-ai-agent-skill-slipped-past-every-scanner-and-reached-26000-agents-1ef9",
+  "image": "",
+  "orig_title": "Fake AI Agent Skill Slipped Past Every Scanner and Reached 26,000 Agents",
+  "cluster_urls": [
+   "https://dev.to/etairos/fake-ai-agent-skill-slipped-past-every-scanner-and-reached-26000-agents-1ef9"
+  ],
+  "cluster_titles": [
+   "Fake AI Agent Skill Slipped Past Every Scanner and Reached 26,000 Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260624-0106-0-fake-ai-skill-reached-26-000-agents-after-sl.png",
+   "20260624-0106-0-fake-ai-skill-reached-26-000-agents-after-sl-d1.png",
+   "20260624-0106-0-fake-ai-skill-reached-26-000-agents-after-sl-d2.png"
+  ]
+ }
+]

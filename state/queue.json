@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "spacex reportedly buying cursor ai anthropic claude code updates",
+  "headline_marked": "[[Claude Code vs Cursor 2026]]: The Honest Comparison for Developers",
+  "headline": "Claude Code vs Cursor 2026: The Honest Comparison for Developers",
+  "summary": "An in-depth comparison reveals that these AI coding tools excel at different tasks: Cursor for flow-state coding, Claude Code for agentic, investigative work.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "Developers are often torn between Claude Code and Cursor for AI-assisted coding. This 90-day comparison, based on shipping real production code, reveals their true strengths and weaknesses, moving beyond toy projects and benchmarks.",
+   "Cursor excels at IDE-centric tasks like tab completion, cross-file refactoring (renaming a service across 23 files in one prompt), and inline edits (Cmd+K for surgical changes). Its Composer is also fast for multi-file generation from a spec.",
+   "However, Cursor fails at autonomous work. It predicts tokens, often masking bugs rather than fixing them. An example showed a Cursor \"fix\" that hid a real race condition for days, demonstrating it doesn't truly \"read\" code.",
+   "Claude Code operates on a different paradigm: a CLI-first AI agent. It actually reads the codebase, traces call graphs, and investigates bugs. It successfully identified a real race condition where Cursor had failed.",
+   "Claude Code's agent loop is robust: it suggests fixes, runs the code, executes tests, and catches its own mistakes. This comprehensive approach goes far beyond Cursor's capabilities, handling complex refactors with full validation.",
+   "The author concludes that Cursor and Claude Code aren't competitors but tools for different jobs. Cursor is the best AI-powered code editor for staying in flow, while Claude Code is the best AI agent for deep, agentic work.",
+   "While Cursor's tab completion saves an hour daily, the agentic power of Claude Code is transformative. If forced to choose, Claude Code offers more long-term value, though using both for their respective strengths is ideal."
+  ],
+  "caption": "Cursor excels at IDE-centric tasks like tab completion and refactoring, but Claude Code's agentic approach actually reads code and finds bugs. Which one should you use?\n\nDevelopers are often torn between Claude Code and Cursor for AI-assisted coding. This 90-day comparison, based on shipping real production code, reveals their true strengths and weaknesses, moving beyond toy projects and benchmarks.\n\nCursor excels at IDE-centric tasks like tab completion, cross-file refactoring (renaming a service across 23 files in one prompt), and inline edits (Cmd+K for surgical changes). Its Composer is also fast for multi-file generation from a spec.\n\nHowever, Cursor fails at autonomous work. It predicts tokens, often masking bugs rather than fixing them. An example showed a Cursor \"fix\" that hid a real race condition for days, demonstrating it doesn't truly \"read\" code.\n\nClaude Code operates on a different paradigm: a CLI-first AI agent. It actually reads the codebase, traces call graphs, and investigates bugs. It successfully identified a real race condition where Cursor had failed.\n\nClaude Code's agent loop is robust: it suggests fixes, runs the code, executes tests, and catches its own mistakes. This comprehensive approach goes far beyond Cursor's capabilities, handling complex refactors with full validation.\n\nThe author concludes that Cursor and Claude Code aren't competitors but tools for different jobs. Cursor is the best AI-powered code editor for staying in flow, while Claude Code is the best AI agent for deep, agentic work.\n\nWhile Cursor's tab completion saves an hour daily, the agentic power of Claude Code is transformative. If forced to choose, Claude Code offers more long-term value, though using both for their respective strengths is ideal.\n\n#AI #DeveloperTools #Coding #ClaudeCode #Cursor #Programming\n\nSource: DEV",
+  "tweet": "Cursor boosts coding flow with superior tab completion & refactoring, but Claude Code's agentic AI *reads* code to find and fix bugs. They're not competitors, but tools for different jobs. Which is right for you? #DeveloperTools #AI #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/susiloharjo/claude-code-vs-cursor-2026-the-honest-comparison-27pi",
+  "image": "",
+  "orig_title": "Claude Code vs Cursor 2026: The Honest Comparison",
+  "cluster_urls": [
+   "https://dev.to/susiloharjo/claude-code-vs-cursor-2026-the-honest-comparison-27pi"
+  ],
+  "cluster_titles": [
+   "Claude Code vs Cursor 2026: The Honest Comparison"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260623-0707-0-claude-code-vs-cursor-2026-the-honest-compar.png",
+   "20260623-0707-0-claude-code-vs-cursor-2026-the-honest-compar-d1.png",
+   "20260623-0707-0-claude-code-vs-cursor-2026-the-honest-compar-d2.png",
+   "20260623-0707-0-claude-code-vs-cursor-2026-the-honest-compar-d3.png"
+  ]
+ },
+ {
+  "topic": "openai launches open source bug patching initiative",
+  "headline_marked": "[[OpenAI launches 'Patch the Planet']] initiative to fix open-source bugs with Trail of Bits",
+  "headline": "OpenAI launches 'Patch the Planet' initiative to fix open-source bugs with Trail of Bits",
+  "summary": "The new program aims to bolster cybersecurity across critical open-source projects, leveraging AI tools like Codex Security and security experts to assist maintainers.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "OpenAI has announced \"Patch the Planet,\" a new initiative to enhance cybersecurity for the open-source community. This program partners OpenAI with the security company Trail of Bits to help maintainers secure their projects.",
+   "Security staff from Trail of Bits will work directly with open-source maintainers, reviewing potential code issues. OpenAI's own security tools, including Codex Security, will be utilized to assist in this process.",
+   "The initiative aims to alleviate the burden on maintainers, who often face increasing reports with limited resources. Engineers will pre-review findings, develop patches and tests, and create reusable workflows for long-term security improvements.",
+   "Open-source projects form the foundation of much commercial software, yet their decentralized nature often leads to security vulnerabilities. Bugs in these projects can cause significant issues for commercial codebases, as seen with the Log4j vulnerability.",
+   "While AI tools like Anthropic's Mythos can identify bugs and create exploits, OpenAI is flipping this dynamic. They are using AI to help the open-source community proactively protect itself against such threats.",
+   "This move can be seen as a competitive response to other AI security tools, but it also addresses a critical need within the open-source ecosystem. The long-term scalability and function of the ambitious project are still being clarified."
+  ],
+  "caption": "OpenAI is stepping up to secure the digital bedrock of the software industry. Their new 'Patch the Planet' initiative aims to fix critical open-source bugs.\n\nOpenAI has announced \"Patch the Planet,\" a new initiative to enhance cybersecurity for the open-source community. This program partners OpenAI with the security company Trail of Bits to help maintainers secure their projects.\n\nSecurity staff from Trail of Bits will work directly with open-source maintainers, reviewing potential code issues. OpenAI's own security tools, including Codex Security, will be utilized to assist in this process.\n\nThe initiative aims to alleviate the burden on maintainers, who often face increasing reports with limited resources. Engineers will pre-review findings, develop patches and tests, and create reusable workflows for long-term security improvements.\n\nOpen-source projects form the foundation of much commercial software, yet their decentralized nature often leads to security vulnerabilities. Bugs in these projects can cause significant issues for commercial codebases, as seen with the Log4j vulnerability.\n\nWhile AI tools like Anthropic's Mythos can identify bugs and create exploits, OpenAI is flipping this dynamic. They are using AI to help the open-source community proactively protect itself against such threats.\n\nThis move can be seen as a competitive response to other AI security tools, but it also addresses a critical need within the open-source ecosystem. The long-term scalability and function of the ambitious project are still being clarified.\n\n#OpenAI #Cybersecurity #OpenSource #SoftwareSecurity #AI #TechNews\n\nSource: TechCrunch, Wired",
+  "tweet": "OpenAI launches 'Patch the Planet' to secure open-source projects. Partnering with Trail of Bits, they'll use AI tools like Codex Security to help maintainers fix bugs and bolster cybersecurity. #OpenAI #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "TechCrunch, Wired",
+  "url": "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+  "image": "",
+  "orig_title": "OpenAI launches new initiative to help find and patch open-source bugs",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/",
+   "https://www.wired.com/story/openai-launches-full-scale-effort-to-patch-open-source-bugs-as-it-takes-on-anthropics-mythos/"
+  ],
+  "cluster_titles": [
+   "OpenAI launches new initiative to help find and patch open-source bugs",
+   "OpenAI Launches Full-Scale Effort to Patch Open-Source Bugs as It Takes on Anthropic’s Mythos"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260623-0707-1-openai-launches-patch-the-planet-initiative-.png",
+   "20260623-0707-1-openai-launches-patch-the-planet-initiative--d1.png",
+   "20260623-0707-1-openai-launches-patch-the-planet-initiative--d2.png"
+  ]
+ }
+]

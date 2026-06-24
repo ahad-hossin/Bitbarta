@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai model fixes bug then overreaches",
+  "headline_marked": "[[27B model on AMD mini-PC fixed an operator bug]], then overreached with extra code",
+  "headline": "27B model on AMD mini-PC fixed an operator bug, then overreached with extra code",
+  "summary": "A Qwopus3.6-27B-Coder model, running on a consumer AMD Strix Halo machine, successfully identified and fixed a critical bug in the LLMKube operator, but also generated unrelated code.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "LLMKube, an open-source Kubernetes operator, uses an agentic harness called Foreman for self-hosted LLM inference. An experiment replaced a frontier model with a local 27B model, Qwopus3.6-27B-Coder, running on an AMD Strix Halo mini-PC with 128 GB unified memory.",
+   "The agent encountered an opaque API error during a long task. The issue was traced to a bug in the operator's ModelRouter, which hardcoded a 60-second per-attempt timeout in the Envoy AI Gateway, silently capping all requests despite longer route-level timeouts.",
+   "Foreman was tasked with fixing the bug. The Qwopus3.6-27B-Coder model, a 27B Qwen3.6 distill, ran 4-bit quantized via llama.cpp's TurboQuant fork on the AMD machine. It identified the function and correctly derived the per-attempt timeout from configured router rules.",
+   "The model wrote the correct fix and two corresponding tests, which passed all verification gates including gofmt, go vet, go build, and golangci-lint. However, it also generated two additional tests for a completely unrelated function, demonstrating a lack of scope judgment.",
+   "This highlights the importance of human oversight and well-designed harnesses. While the 27B model reliably produced a correct, compiling, and tested change, human judgment was required to trim the extraneous code and ensure the change was precisely scoped.",
+   "The patched operator was built in-cluster and deployed. Verification confirmed the per-attempt timeout flipped from 60 seconds to 30 minutes live. A request that previously failed at the one-minute mark successfully generated for over two minutes, confirming the fix."
+  ],
+  "caption": "A 27B AI model running on a consumer AMD mini-PC fixed a critical bug in its own operator.\n\nLLMKube, an open-source Kubernetes operator, uses an agentic harness called Foreman for self-hosted LLM inference. An experiment replaced a frontier model with a local 27B model, Qwopus3.6-27B-Coder, running on an AMD Strix Halo mini-PC with 128 GB unified memory.\n\nThe agent encountered an opaque API error during a long task. The issue was traced to a bug in the operator's ModelRouter, which hardcoded a 60-second per-attempt timeout in the Envoy AI Gateway, silently capping all requests despite longer route-level timeouts.\n\nForeman was tasked with fixing the bug. The Qwopus3.6-27B-Coder model, a 27B Qwen3.6 distill, ran 4-bit quantized via llama.cpp's TurboQuant fork on the AMD machine. It identified the function and correctly derived the per-attempt timeout from configured router rules.\n\nThe model wrote the correct fix and two corresponding tests, which passed all verification gates including gofmt, go vet, go build, and golangci-lint. However, it also generated two additional tests for a completely unrelated function, demonstrating a lack of scope judgment.\n\nThis highlights the importance of human oversight and well-designed harnesses. While the 27B model reliably produced a correct, compiling, and tested change, human judgment was required to trim the extraneous code and ensure the change was precisely scoped.\n\nThe patched operator was built in-cluster and deployed. Verification confirmed the per-attempt timeout flipped from 60 seconds to 30 minutes live. A request that previously failed at the one-minute mark successfully generated for over two minutes, confirming the fix.\n\n#AI #LLM #Kubernetes #SoftwareDevelopment #AMD #OpenSource\n\nSource: DEV",
+  "tweet": "A 27B AI model on an AMD mini-PC fixed a bug in its own operator, then overreached with extra code. This highlights the power of local LLMs and the need for human oversight in agentic workflows. #AI #LLM #SoftwareDevelopment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "llmkube.com",
+  "source": "DEV",
+  "url": "https://dev.to/defilan/a-27b-model-on-an-amd-mini-pc-fixed-a-bug-in-our-operator-then-it-overreached-39ob",
+  "image": "",
+  "orig_title": "A 27B model on an AMD mini-PC fixed a bug in our operator. Then it overreached.",
+  "cluster_urls": [
+   "https://dev.to/defilan/a-27b-model-on-an-amd-mini-pc-fixed-a-bug-in-our-operator-then-it-overreached-39ob"
+  ],
+  "cluster_titles": [
+   "A 27B model on an AMD mini-PC fixed a bug in our operator. Then it overreached."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260624-0906-0-27b-model-on-amd-mini-pc-fixed-an-operator-b.png",
+   "20260624-0906-0-27b-model-on-amd-mini-pc-fixed-an-operator-b-d1.png",
+   "20260624-0906-0-27b-model-on-amd-mini-pc-fixed-an-operator-b-d2.png",
+   "20260624-0906-0-27b-model-on-amd-mini-pc-fixed-an-operator-b-d3.png"
+  ]
+ },
+ {
+  "topic": "malleable coding agent desktop app",
+  "headline_marked": "[[y: a malleable coding-agent desktop app]] built with Electron, reshapes its own UI live",
+  "headline": "y: a malleable coding-agent desktop app built with Electron, reshapes its own UI live",
+  "summary": "y is a desktop app that allows coding agents like Claude Code and OpenAI Codex to reshape its own UI live. It provides a local, chat-first workspace without proxying agent calls.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "y is a new desktop application built with Electron, centered on the concept of malleable software. Its main interface is a chat, but the app can reshape its own UI through a protected 'Modify' surface.",
+   "Users can instruct y to change its own functionality and interface. These changes can be kept if they render safely or rolled back if issues arise, giving developers direct control over their tool.",
+   "Unlike other agent models, y is not a new AI agent itself. Instead, it acts as a local, chat-first workspace for existing coding agents such as Claude Code, OpenAI Codex, and other CLI-native agents.",
+   "The 'Modify' feature is a dedicated chat for altering the app's interface, not project code. Changes go through a code and diff review process, editing the local Userland UI for user approval.",
+   "Crucially, 'Modify' cannot access the protected app core, known as the 'Kernel'. This separation ensures trust boundaries are maintained, preventing agents from controlling authentication, analytics, or privileged host APIs.",
+   "y keeps the coding workflow entirely local, running agents directly on the user's machine. Project files, terminal commands, and agent prompts are not sent to y's product analytics, ensuring privacy.",
+   "Product analytics are limited to app usage health, such as sign-in state and feature usage, with structured reports for missing capabilities that do not include private prompts or source code.",
+   "Currently, y is under active development, with a primary focus on achieving launch-readiness for macOS. This includes work on packaging, authentication, analytics, local app-state durability, and refining the self-modifying 'Modify' workflow."
+  ],
+  "caption": "Imagine a coding agent app that reshapes its own UI live, letting you customize its functionality on the fly. y is a new desktop app that brings this malleability to your existing coding agents, all running locally.\n\ny is a new desktop application built with Electron, centered on the concept of malleable software. Its main interface is a chat, but the app can reshape its own UI through a protected 'Modify' surface.\n\nUsers can instruct y to change its own functionality and interface. These changes can be kept if they render safely or rolled back if issues arise, giving developers direct control over their tool.\n\nUnlike other agent models, y is not a new AI agent itself. Instead, it acts as a local, chat-first workspace for existing coding agents such as Claude Code, OpenAI Codex, and other CLI-native agents.\n\nThe 'Modify' feature is a dedicated chat for altering the app's interface, not project code. Changes go through a code and diff review process, editing the local Userland UI for user approval.\n\nCrucially, 'Modify' cannot access the protected app core, known as the 'Kernel'. This separation ensures trust boundaries are maintained, preventing agents from controlling authentication, analytics, or privileged host APIs.\n\ny keeps the coding workflow entirely local, running agents directly on the user's machine. Project files, terminal commands, and agent prompts are not sent to y's product analytics, ensuring privacy.\n\nProduct analytics are limited to app usage health, such as sign-in state and feature usage, with structured reports for missing capabilities that do not include private prompts or source code.\n\nCurrently, y is under active development, with a primary focus on achieving launch-readiness for macOS. This includes work on packaging, authentication, analytics, local app-state durability, and refining the self-modifying 'Modify' workflow.\n\n#Tech #AI #DeveloperTools #Coding #OpenSource #Software\n\nSource: Hacker News",
+  "tweet": "Imagine a coding agent app that reshapes its own UI live! y is a new desktop app that brings malleability to your existing coding agents (Claude Code, OpenAI Codex), running them all locally. Customize its functionality on the fly. #AI #DeveloperTools #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/y-times-y/y",
+  "image": "",
+  "orig_title": "Show HN: Y – A malleable coding-agent desktop app built with Electron",
+  "cluster_urls": [
+   "https://github.com/y-times-y/y"
+  ],
+  "cluster_titles": [
+   "Show HN: Y – A malleable coding-agent desktop app built with Electron"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260624-0906-1-y-a-malleable-coding-agent-desktop-app-built.png",
+   "20260624-0906-1-y-a-malleable-coding-agent-desktop-app-built-d1.png",
+   "20260624-0906-1-y-a-malleable-coding-agent-desktop-app-built-d2.png",
+   "20260624-0906-1-y-a-malleable-coding-agent-desktop-app-built-d3.png"
+  ]
+ }
+]

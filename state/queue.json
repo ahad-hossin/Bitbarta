@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "snyk launches evo ads for ai coding agent security",
+  "headline_marked": "[[Snyk launches Evo ADS]] to secure AI coding agents with real-time governance",
+  "headline": "Snyk launches Evo ADS to secure AI coding agents with real-time governance",
+  "summary": "Snyk's Evo ADS is the first tool to provide real-time security governance for autonomous AI coding agents, intercepting actions *during* workflow execution to prevent risks.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI coding agents are now generating and shipping production code unsupervised in enterprise environments, creating new security perimeters that traditional scanners cannot address. Snyk Evo Agentic Development Security (Evo ADS) is the first tool designed to control this live within the agent's workflow.",
+   "Evo ADS acts as a security governance layer for autonomous AI coding agents. Instead of passively scanning output, it actively enforces rules around the tools, connections, and code actions agents attempt during workflow execution, securing the entire perimeter.",
+   "What sets Evo ADS apart is its placement directly in the agent runtime loop. It intercepts actions before an agent can invoke an external tool or connect to an MCP server, applying policy and preventing execution if checks fail.",
+   "Autonomous agents don't just write code; they operate as developers or ops, calling shell tools, installing packages, and connecting via Model Context Protocol (MCP) servers. This shifts security from static code analysis to active workflow governance.",
+   "Legacy scanners lack visibility into agent-initiated external actions, the origin of \"skills,\" or data flow across MCP boundaries. Attackers exploit this shadow supply chain, where skills can reference arbitrary dependencies often invisible to primary dev teams.",
+   "Evo ADS operates at three pivotal layers: pre-execution vetting, real-time policy enforcement on agent actions, and real-time scanning and fixing of AI-generated code. Enforcement happens directly within the workflow, not post-hoc.",
+   "Stage 1 blocks unvetted components before use. Stage 2 injects runtime policy hooks to enforce controls immediately if an agent attempts unapproved endpoints or package installations. Stage 3 catches CVEs and risky patterns in new code as it lands, even auto-applying patches.",
+   "The key advantage is putting security controls *in the loop*, preventing the attack surface from widening beyond the agent boundary. This makes compliance, incident response, and real-time rollback tractable for organizations."
+  ],
+  "caption": "AI coding agents are shipping production code unsupervised, creating massive security gaps. Snyk's new Evo ADS secures these agents in real-time, *before* damage lands.\n\nAI coding agents are now generating and shipping production code unsupervised in enterprise environments, creating new security perimeters that traditional scanners cannot address. Snyk Evo Agentic Development Security (Evo ADS) is the first tool designed to control this live within the agent's workflow.\n\nEvo ADS acts as a security governance layer for autonomous AI coding agents. Instead of passively scanning output, it actively enforces rules around the tools, connections, and code actions agents attempt during workflow execution, securing the entire perimeter.\n\nWhat sets Evo ADS apart is its placement directly in the agent runtime loop. It intercepts actions before an agent can invoke an external tool or connect to an MCP server, applying policy and preventing execution if checks fail.\n\nAutonomous agents don't just write code; they operate as developers or ops, calling shell tools, installing packages, and connecting via Model Context Protocol (MCP) servers. This shifts security from static code analysis to active workflow governance.\n\nLegacy scanners lack visibility into agent-initiated external actions, the origin of \"skills,\" or data flow across MCP boundaries. Attackers exploit this shadow supply chain, where skills can reference arbitrary dependencies often invisible to primary dev teams.\n\nEvo ADS operates at three pivotal layers: pre-execution vetting, real-time policy enforcement on agent actions, and real-time scanning and fixing of AI-generated code. Enforcement happens directly within the workflow, not post-hoc.\n\nStage 1 blocks unvetted components before use. Stage 2 injects runtime policy hooks to enforce controls immediately if an agent attempts unapproved endpoints or package installations. Stage 3 catches CVEs and risky patterns in new code as it lands, even auto-applying patches.\n\n#AI #Cybersecurity #DevSecOps #Snyk #AICoding #SoftwareSecurity\n\nSource: DEV",
+  "tweet": "AI coding agents are now writing and shipping production code unsupervised, but security hasn't kept up. Snyk Evo ADS offers real-time governance, intercepting agent actions and vetting components *during* workflow execution. #AI #Cybersecurity #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "snyk.io",
+  "source": "DEV",
+  "url": "https://dev.to/davekurian/snyk-launches-evo-ads-to-secure-ai-coding-agents-with-real-time-governance-2i34",
+  "image": "",
+  "orig_title": "Snyk launches Evo ADS to secure AI coding agents with real-time governance",
+  "cluster_urls": [
+   "https://dev.to/davekurian/snyk-launches-evo-ads-to-secure-ai-coding-agents-with-real-time-governance-2i34"
+  ],
+  "cluster_titles": [
+   "Snyk launches Evo ADS to secure AI coding agents with real-time governance"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260625-1020-0-snyk-launches-evo-ads-to-secure-ai-coding-ag.png",
+   "20260625-1020-0-snyk-launches-evo-ads-to-secure-ai-coding-ag-d1.png",
+   "20260625-1020-0-snyk-launches-evo-ads-to-secure-ai-coding-ag-d2.png",
+   "20260625-1020-0-snyk-launches-evo-ads-to-secure-ai-coding-ag-d3.png"
+  ]
+ },
+ {
+  "topic": "uid2 replaces tracking cookie",
+  "headline_marked": "[[UID2 replaces tracking cookies]] with email-based identifiers, posing new privacy risks",
+  "headline": "UID2 replaces tracking cookies with email-based identifiers, posing new privacy risks",
+  "summary": "Unified ID 2.0 (UID2) standardizes email-based tracking for open-web advertising, but its public algorithm makes users vulnerable to targeted phishing if databases are breached.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "While third-party cookies are fading, advertising platforms have adopted Unified ID 2.0 (UID2), a persistent, standardized identity system. Created by The Trade Desk and open-sourced, UID2 converts email addresses into stable identifiers for open-web advertising.",
+   "Although rotating tokens protect the bidstream, the raw UID2 hash is stored in backend databases across various platforms. This hash forms the fundamental backbone of the identity graph, linking user data.",
+   "UID2's normalization rules strip everything after the '+' sign and remove dots for Gmail addresses. This means common privacy workarounds like user+shopping@gmail.com and user@gmail.com produce the identical UID2 hash, rendering them ineffective.",
+   "The algorithm is public (SHA-256 + normalization), allowing anyone to generate UID2 hashes from email lists. This enables attackers with breached UID2 databases to map services a user employs and craft highly targeted phishing emails. Hashing in this context creates a reproducible lookup key, not anonymity.",
+   "The European variant, EUID, improves consent flows under GDPR but does not address the underlying structural vulnerability of the system. The core issue of reproducible identifiers remains.",
+   "The most effective defense against this tracking is simple: never use your real email address directly on sites. Instead, use unique email aliases for each service you sign up for.",
+   "Each unique alias generates a completely different UID2 hash, breaking the mathematical link to your real identity or other aliases. Services like EMail Parrot further enhance privacy by stripping tracking pixels and cleaning metadata at the relay layer."
+  ],
+  "caption": "The 'death of the third-party cookie' led to UID2, an email-based tracking standard. Its public algorithm creates a persistent identity graph, making users vulnerable to targeted phishing.\n\nWhile third-party cookies are fading, advertising platforms have adopted Unified ID 2.0 (UID2), a persistent, standardized identity system. Created by The Trade Desk and open-sourced, UID2 converts email addresses into stable identifiers for open-web advertising.\n\nAlthough rotating tokens protect the bidstream, the raw UID2 hash is stored in backend databases across various platforms. This hash forms the fundamental backbone of the identity graph, linking user data.\n\nUID2's normalization rules strip everything after the '+' sign and remove dots for Gmail addresses. This means common privacy workarounds like user+shopping@gmail.com and user@gmail.com produce the identical UID2 hash, rendering them ineffective.\n\nThe algorithm is public (SHA-256 + normalization), allowing anyone to generate UID2 hashes from email lists. This enables attackers with breached UID2 databases to map services a user employs and craft highly targeted phishing emails. Hashing in this context creates a reproducible lookup key, not anonymity.\n\nThe European variant, EUID, improves consent flows under GDPR but does not address the underlying structural vulnerability of the system. The core issue of reproducible identifiers remains.\n\nThe most effective defense against this tracking is simple: never use your real email address directly on sites. Instead, use unique email aliases for each service you sign up for.\n\nEach unique alias generates a completely different UID2 hash, breaking the mathematical link to your real identity or other aliases. Services like EMail Parrot further enhance privacy by stripping tracking pixels and cleaning metadata at the relay layer.\n\n#UID2 #Privacy #AdTech #Security #DataPrivacy #TechNews\n\nSource: DEV",
+  "tweet": "The 'death of the third-party cookie' led to UID2, an email-based tracking standard. Its public algorithm creates a persistent identity graph, making users vulnerable to targeted phishing. Protect yourself with unique email aliases. #UID2 #Privacy #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "thetradedesk.com",
+  "source": "DEV",
+  "url": "https://dev.to/wadco/uid2-the-standard-that-quietly-replaced-the-tracking-cookie-2e12",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1hmb183x7y72eh95gv0f.jpeg",
+  "orig_title": "UID2: The Standard That Quietly Replaced the Tracking Cookie",
+  "cluster_urls": [
+   "https://dev.to/wadco/uid2-the-standard-that-quietly-replaced-the-tracking-cookie-2e12"
+  ],
+  "cluster_titles": [
+   "UID2: The Standard That Quietly Replaced the Tracking Cookie"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260625-1020-1-uid2-replaces-tracking-cookies-with-email-ba.png",
+   "20260625-1020-1-uid2-replaces-tracking-cookies-with-email-ba-d1.png",
+   "20260625-1020-1-uid2-replaces-tracking-cookies-with-email-ba-d2.png",
+   "20260625-1020-1-uid2-replaces-tracking-cookies-with-email-ba-d3.png"
+  ]
+ }
+]

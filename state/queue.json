@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "ai agent reliability and testing",
+  "headline_marked": "[[AI Agents fail silently in multi-step LLM systems]] due to observability gaps; Ajah offers a fix",
+  "headline": "AI Agents fail silently in multi-step LLM systems due to observability gaps; Ajah offers a fix",
+  "summary": "AI agents can silently hallucinate or contradict themselves across multiple steps, leading to incorrect outputs without error flags. Ajah, an open-source LLM observability gateway, aims to detect these issues with real-time scoring and circuit breakers.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Multi-step AI agents, like customer support bots, can fail silently by hallucinating critical data early in a process. For example, an agent might incorrectly determine a return policy, leading to an undeserved refund denial, yet report \"success\" at every step.",
+   "This silent failure is a default behavior in multi-step LLM systems due to their stateful, multi-model, and non-deterministic nature. Traditional observability tools designed for single request-response interactions cannot effectively monitor these complex workflows.",
+   "The problem leads to invisible errors, unexpected costs from runaway loops, and contradictory outputs that undermine user trust. Teams often lack visibility into what truly happens between an agent's initial input and final output.",
+   "To address this, Ajah was developed as an open-source LLM observability gateway. It sits between an application and any LLM provider, scoring every response for hallucination risk, grounding, factual consistency, and claim density.",
+   "Ajah provides detailed RAG verdicts, checking each claim against source documents and identifying supported, contradicted, or unsupported claims. This pinpoints exactly which piece of information was wrong, not just that an error occurred.",
+   "Every multi-agent session is grouped and rendered as a step tree in a dashboard, showing quality scores, latency, cost, and hallucination risk for each step. Developers can click any node to view masked prompts, responses, RAG verification, and replay traces.",
+   "The gateway also includes a circuit breaker feature to prevent expensive runaway agent loops. Users can set limits for steps per session or maximum cost, automatically tripping the breaker and signaling the agent to stop if limits are exceeded.",
+   "Ajah also detects internal contradictions within a single agent session. By comparing each response against prior turns, it flags when an agent provides conflicting advice, ensuring consistent and reliable interactions."
+  ],
+  "caption": "AI agents can silently fail, hallucinating critical data or contradicting themselves across steps, leading to incorrect outcomes and unexpected costs. This \"observability gap\" is a default behavior in multi-step LLM systems.\n\nMulti-step AI agents, like customer support bots, can fail silently by hallucinating critical data early in a process. For example, an agent might incorrectly determine a return policy, leading to an undeserved refund denial, yet report \"success\" at every step.\n\nThis silent failure is a default behavior in multi-step LLM systems due to their stateful, multi-model, and non-deterministic nature. Traditional observability tools designed for single request-response interactions cannot effectively monitor these complex workflows.\n\nThe problem leads to invisible errors, unexpected costs from runaway loops, and contradictory outputs that undermine user trust. Teams often lack visibility into what truly happens between an agent's initial input and final output.\n\nTo address this, Ajah was developed as an open-source LLM observability gateway. It sits between an application and any LLM provider, scoring every response for hallucination risk, grounding, factual consistency, and claim density.\n\nAjah provides detailed RAG verdicts, checking each claim against source documents and identifying supported, contradicted, or unsupported claims. This pinpoints exactly which piece of information was wrong, not just that an error occurred.\n\nEvery multi-agent session is grouped and rendered as a step tree in a dashboard, showing quality scores, latency, cost, and hallucination risk for each step. Developers can click any node to view masked prompts, responses, RAG verification, and replay traces.\n\nThe gateway also includes a circuit breaker feature to prevent expensive runaway agent loops. Users can set limits for steps per session or maximum cost, automatically tripping the breaker and signaling the agent to stop if limits are exceeded.\n\n#AI #LLM #Observability #DevTools #OpenSource #Tech\n\nSource: DEV",
+  "tweet": "AI agents are failing silently in multi-step LLM systems, leading to hidden errors and spiraling costs. A new open-source tool, Ajah, provides crucial observability, detecting hallucinations, contradictions, and preventing runaway loops. #AI #LLM #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vignesh_reddy_53e403f62d2/why-ai-agents-fail-silently-and-how-to-fix-it-a-technical-deep-dive-into-the-observability-gap-in-jjk",
+  "image": "",
+  "orig_title": "Why AI Agents Fail Silently — And How to Fix It A technical deep-dive into the observability gap in multi-step LLM systems",
+  "cluster_urls": [
+   "https://dev.to/vignesh_reddy_53e403f62d2/why-ai-agents-fail-silently-and-how-to-fix-it-a-technical-deep-dive-into-the-observability-gap-in-jjk",
+   "https://dev.to/stoefln6/ai-coding-agents-need-tests-more-than-prompts-11pm"
+  ],
+  "cluster_titles": [
+   "Why AI Agents Fail Silently — And How to Fix It A technical deep-dive into the observability gap in multi-step LLM systems",
+   "AI Coding Agents Need Tests More Than Prompts"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260625-1506-0-ai-agents-fail-silently-in-multi-step-llm-sy.png",
+   "20260625-1506-0-ai-agents-fail-silently-in-multi-step-llm-sy-d1.png",
+   "20260625-1506-0-ai-agents-fail-silently-in-multi-step-llm-sy-d2.png",
+   "20260625-1506-0-ai-agents-fail-silently-in-multi-step-llm-sy-d3.png"
+  ]
+ },
+ {
+  "topic": "secrets sprawl and token leaks",
+  "headline_marked": "[[412 leaked tokens cleaned up]] after a $1.2M potential breach, stopping critical latency bleed.",
+  "headline": "412 leaked tokens cleaned up after a $1.2M potential breach, stopping critical latency bleed.",
+  "summary": "A CI pipeline failure exposed 412 API tokens across 37 repositories, leading to a $1.2M potential breach and significant latency issues. An automated system was developed to detect, revoke, and manage secrets, reducing new leaks by 62%.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "When a CI pipeline failed at 02:13 AM on March 3, 412 distinct API tokens were discovered leaked across 37 repositories. This triggered a $1.2M potential breach estimate within minutes, alongside a significant increase in system latency.",
+   "Many teams assume installing a Vault solves secret management, but it often becomes a single point of failure and latency. Stray tokens outside the vault force fallbacks to hard-coded values or environment variables, which are invisible to audit logs, causing average secret retrieval times to balloon from 48ms to 187ms.",
+   "This latency isn't just an inconvenience; it's a major cost center, multiplying across thousands of CI jobs daily. A risk model assigned a $3,400/month exposure per leaked token, totaling $1.4M over a year, far exceeding the initial breach estimate.",
+   "Static scanners, relying on regexes, often miss tokens generated on the fly and never committed to repository history. For example, 78% of tokens were missed because they only existed in build artifacts or Docker layers, silently exposing credentials for weeks.",
+   "The key lesson was the necessity of runtime visibility, not just static inspection. A Lambda-driven engine was built to watch CloudTrail for new secrets, cross-reference them with a vault inventory, and automatically trigger revocation.",
+   "This engine successfully rotated 412 tokens in just 27 minutes with a 99.97% success rate. A 'Secret Hygiene Dashboard' was introduced, tracking secret age and integrating checks into pipelines, leading to a 62% drop in new leaks.",
+   "Further enhancements include an isolation-forest model to flag 94% of anomalous token usage before production and a Terraform provider with a `secret_age` meta-argument. This embeds secret hygiene directly into infrastructure code, addressing gaps in industry standards."
+  ],
+  "caption": "A CI pipeline failure exposed 412 API tokens, leading to a $1.2M potential breach and ballooning secret retrieval times from 48ms to 187ms.\n\nWhen a CI pipeline failed at 02:13 AM on March 3, 412 distinct API tokens were discovered leaked across 37 repositories. This triggered a $1.2M potential breach estimate within minutes, alongside a significant increase in system latency.\n\nMany teams assume installing a Vault solves secret management, but it often becomes a single point of failure and latency. Stray tokens outside the vault force fallbacks to hard-coded values or environment variables, which are invisible to audit logs, causing average secret retrieval times to balloon from 48ms to 187ms.\n\nThis latency isn't just an inconvenience; it's a major cost center, multiplying across thousands of CI jobs daily. A risk model assigned a $3,400/month exposure per leaked token, totaling $1.4M over a year, far exceeding the initial breach estimate.\n\nStatic scanners, relying on regexes, often miss tokens generated on the fly and never committed to repository history. For example, 78% of tokens were missed because they only existed in build artifacts or Docker layers, silently exposing credentials for weeks.\n\nThe key lesson was the necessity of runtime visibility, not just static inspection. A Lambda-driven engine was built to watch CloudTrail for new secrets, cross-reference them with a vault inventory, and automatically trigger revocation.\n\nThis engine successfully rotated 412 tokens in just 27 minutes with a 99.97% success rate. A 'Secret Hygiene Dashboard' was introduced, tracking secret age and integrating checks into pipelines, leading to a 62% drop in new leaks.\n\nFurther enhancements include an isolation-forest model to flag 94% of anomalous token usage before production and a Terraform provider with a `secret_age` meta-argument. This embeds secret hygiene directly into infrastructure code, addressing gaps in industry standards.\n\n#Cybersecurity #DevOps #SecretManagement #DataLeak #CloudSecurity #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "A CI pipeline failure exposed 412 API tokens, costing $1.2M and causing severe latency. Learn how one team built an automated system to clean up the sprawl, rotate secrets in minutes, and prevent future leaks. #Cybersecurity #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/isabelle_dubuis_d858453d7/secrets-sprawl-how-we-cleaned-up-412-leaked-tokens-and-stopped-the-latency-bleed-k71",
+  "image": "",
+  "orig_title": "Secrets sprawl: how we cleaned up 412 leaked tokens and stopped the latency bleed",
+  "cluster_urls": [
+   "https://dev.to/isabelle_dubuis_d858453d7/secrets-sprawl-how-we-cleaned-up-412-leaked-tokens-and-stopped-the-latency-bleed-k71"
+  ],
+  "cluster_titles": [
+   "Secrets sprawl: how we cleaned up 412 leaked tokens and stopped the latency bleed"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260625-1506-1-412-leaked-tokens-cleaned-up-after-a-1-2m-po.png",
+   "20260625-1506-1-412-leaked-tokens-cleaned-up-after-a-1-2m-po-d1.png",
+   "20260625-1506-1-412-leaked-tokens-cleaned-up-after-a-1-2m-po-d2.png",
+   "20260625-1506-1-412-leaked-tokens-cleaned-up-after-a-1-2m-po-d3.png"
+  ]
+ }
+]

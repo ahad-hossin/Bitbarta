@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "AI agent long-term memory and information digestion system",
+  "headline_marked": "[[Developer builds AI long-term memory system]] with knowledge acquisition and digestion",
+  "headline": "Developer builds AI long-term memory system with knowledge acquisition and digestion",
+  "summary": "A new custom-built system, Knowledge-and-Memory-Management v0.0.2, equips AI agents with persistent knowledge across sessions, integrating 40+ data collection engines and a three-layer memory structure.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Addressing a common challenge for AI agents, a developer has created a custom Knowledge-and-Memory-Management system (v0.0.2) built on the Hermes Memory Installer. This system aims to solve the full lifecycle of knowledge for AI: where it comes from, how it's stored, and how it's retrieved across different conversations.",
+   "The acquisition layer integrates over 40 engines, categorized into 9 groups. It handles web content with Scrapling and Chrome DevTools, video with yt-dlp, Whisper ASR, and EasyOCR, and documents using SenseNova for full extraction from PDFs, PPTs, and Word files, including scanned documents. A key improvement is the `book_cache_manager`, which automatically refines downloaded books, splitting PDFs into chapters, extracting knowledge points, and generating skills and notes.",
+   "The storage layer features a three-tiered approach: Hot (immediate injection via memory tools), Warm (Hindsight vector memory with 10,000 nodes), and Cold (gbrain knowledge graph with 11,000 pages). The `lightweight_recall` function automatically performs a tiered search from FTS5 to vector to knowledge graph, with each result indicating its source.",
+   "For synchronization, `rclone` provides a unified interface for bi-directional incremental syncing with OneDrive every four hours. Additionally, `knowledge_discovery` automatically scans cloud notes every Sunday, ingesting new files into the gbrain knowledge graph.",
+   "The entire workflow is streamlined into three core steps: acquisition, note creation, and synchronization. An `AugmentedSearch` feature automatically extends local searches (with a score below 0.6) to specialized vertical domains like finance, academic, or legal via AnySearch, marking sources and allowing one-click import into the note library.",
+   "Current limitations include instability in the book refinement pipeline, with occasional data loss during PDF chart extraction, though a dual-engine fallback (pdfplumber → pdftotext → pdfminer) is in place. Video batch transcription sometimes encounters Whisper memory OOM errors when processing 10 concurrent tasks, with queue throttling planned for the next version."
+  ],
+  "caption": "AI agents often struggle with long-term memory and cross-session knowledge. This new custom system gives AI a persistent \"brain\" for information digestion.\n\nAddressing a common challenge for AI agents, a developer has created a custom Knowledge-and-Memory-Management system (v0.0.2) built on the Hermes Memory Installer. This system aims to solve the full lifecycle of knowledge for AI: where it comes from, how it's stored, and how it's retrieved across different conversations.\n\nThe acquisition layer integrates over 40 engines, categorized into 9 groups. It handles web content with Scrapling and Chrome DevTools, video with yt-dlp, Whisper ASR, and EasyOCR, and documents using SenseNova for full extraction from PDFs, PPTs, and Word files, including scanned documents. A key improvement is the `book_cache_manager`, which automatically refines downloaded books, splitting PDFs into chapters, extracting knowledge points, and generating skills and notes.\n\nThe storage layer features a three-tiered approach: Hot (immediate injection via memory tools), Warm (Hindsight vector memory with 10,000 nodes), and Cold (gbrain knowledge graph with 11,000 pages). The `lightweight_recall` function automatically performs a tiered search from FTS5 to vector to knowledge graph, with each result indicating its source.\n\nFor synchronization, `rclone` provides a unified interface for bi-directional incremental syncing with OneDrive every four hours. Additionally, `knowledge_discovery` automatically scans cloud notes every Sunday, ingesting new files into the gbrain knowledge graph.\n\nThe entire workflow is streamlined into three core steps: acquisition, note creation, and synchronization. An `AugmentedSearch` feature automatically extends local searches (with a score below 0.6) to specialized vertical domains like finance, academic, or legal via AnySearch, marking sources and allowing one-click import into the note library.\n\n#AI #Developer #KnowledgeManagement #MemorySystem #Tech #Software\n\nSource: DEV",
+  "tweet": "A developer built a custom Knowledge-and-Memory-Management system (v0.0.2) to give AI agents long-term memory across sessions. It integrates 40+ engines for data collection, a 3-layer storage, and automated syncing. #AI #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/manoir_yantai_f22f01340f0/zhi-shi-cai-ji-yu-ji-yi-guan-li-wo-zhong-yu-gei-aizhuang-shang-liao-chang-qi-ji-yi-he-xin-xi-xiao-hua-xi-tong--o45",
+  "image": "",
+  "orig_title": "知识采集与记忆管理：我终于给AI装上了「长期记忆」和「信息消化系统」",
+  "cluster_urls": [
+   "https://dev.to/manoir_yantai_f22f01340f0/zhi-shi-cai-ji-yu-ji-yi-guan-li-wo-zhong-yu-gei-aizhuang-shang-liao-chang-qi-ji-yi-he-xin-xi-xiao-hua-xi-tong--o45"
+  ],
+  "cluster_titles": [
+   "知识采集与记忆管理：我终于给AI装上了「长期记忆」和「信息消化系统」"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260625-0606-0-developer-builds-ai-long-term-memory-system-.png",
+   "20260625-0606-0-developer-builds-ai-long-term-memory-system--d1.png",
+   "20260625-0606-0-developer-builds-ai-long-term-memory-system--d2.png",
+   "20260625-0606-0-developer-builds-ai-long-term-memory-system--d3.png"
+  ]
+ },
+ {
+  "topic": "Faraday Future pivots to humanoid robots",
+  "headline_marked": "[[Faraday Future pivots to robots]], selling humanoids for $89,900 after 15 car sales",
+  "headline": "Faraday Future pivots to robots, selling humanoids for $89,900 after 15 car sales",
+  "summary": "After selling only 15-16 cars, Faraday Future is now selling a lineup of robots, including humanoids for $89,900 and quadrupeds for $2,000, as part of a new strategy.",
+  "category": "ROBOTICS",
+  "template": "launch",
+  "details": [
+   "Faraday Future, an electric car company that reported selling only 15 or 16 vehicles, is now pitching a lineup of robots. This includes humanoids, quadrupeds, and a robotic arm, with a 5'8\" humanoid model named Futurist priced at nearly $90,000.",
+   "The company has faced significant financial turmoil and internal struggles since its highly anticipated debut at CES 2017. Its founder, YT Jia, also experienced financial difficulties, leading to numerous lawsuits and layoffs.",
+   "Despite a recent promise of a \"fresh start\" and a new electric minivan in pre-production, Faraday Future appears to be shifting its focus. The return of founder YT Jia as sole global CEO in May signals a new direction, with increased energy directed towards robotics.",
+   "The new robotics lineup features Navi, a quadruped model aimed at children for learning embodied AI, starting at just under $2,000. An optional 3D-printed canine head is available for Navi, while the Futurist humanoid is equipped with NVIDIA Sonic's full-body motion control system.",
+   "Faraday Future also offers an industrial-grade robotic arm, dubbed a \"mobile manipulator product,\" though public pricing for this unit is not available. The company claims to expect shipments of over 100 robotics units in June, with total shipments for the first half of the year projected to exceed 220 units."
+  ],
+  "caption": "Electric car maker Faraday Future, known for selling just 15 cars, is now selling an $89,900 humanoid robot.\n\nFaraday Future, an electric car company that reported selling only 15 or 16 vehicles, is now pitching a lineup of robots. This includes humanoids, quadrupeds, and a robotic arm, with a 5'8\" humanoid model named Futurist priced at nearly $90,000.\n\nThe company has faced significant financial turmoil and internal struggles since its highly anticipated debut at CES 2017. Its founder, YT Jia, also experienced financial difficulties, leading to numerous lawsuits and layoffs.\n\nDespite a recent promise of a \"fresh start\" and a new electric minivan in pre-production, Faraday Future appears to be shifting its focus. The return of founder YT Jia as sole global CEO in May signals a new direction, with increased energy directed towards robotics.\n\nThe new robotics lineup features Navi, a quadruped model aimed at children for learning embodied AI, starting at just under $2,000. An optional 3D-printed canine head is available for Navi, while the Futurist humanoid is equipped with NVIDIA Sonic's full-body motion control system.\n\nFaraday Future also offers an industrial-grade robotic arm, dubbed a \"mobile manipulator product,\" though public pricing for this unit is not available. The company claims to expect shipments of over 100 robotics units in June, with total shipments for the first half of the year projected to exceed 220 units.\n\n#FaradayFuture #Robotics #HumanoidRobot #TechNews #EVs #AI\n\nSource: Engadget",
+  "tweet": "After selling only 15 cars, Faraday Future pivots to robotics, launching an $89,900 humanoid robot and a $2,000 quadruped. A dramatic new direction for the embattled EV company. #FaradayFuture #Robotics #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "faradayfuture.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2201189/after-successfully-selling-over-15-cars-faraday-future-would-now-like-you-to-buy-its-robots/",
+  "image": "https://www.engadget.com/img/gallery/after-successfully-selling-over-15-cars-faraday-future-would-now-like-you-to-buy-its-robots/l-intro-1782343149.jpg",
+  "orig_title": "After successfully selling over 15 cars, Faraday Future would now like you to buy its robots",
+  "cluster_urls": [
+   "https://www.engadget.com/2201189/after-successfully-selling-over-15-cars-faraday-future-would-now-like-you-to-buy-its-robots/"
+  ],
+  "cluster_titles": [
+   "After successfully selling over 15 cars, Faraday Future would now like you to buy its robots"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260625-0606-1-faraday-future-pivots-to-robots-selling-huma.png",
+   "20260625-0606-1-faraday-future-pivots-to-robots-selling-huma-d1.png",
+   "20260625-0606-1-faraday-future-pivots-to-robots-selling-huma-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "windows real time audio translation app",
+  "headline_marked": "[[Real-time Windows audio translation]] now driverless, no virtual cable needed",
+  "headline": "Real-time Windows audio translation now driverless, no virtual cable needed",
+  "summary": "An open-source Windows app, Voxis, translates system audio in real time without requiring virtual audio cables or bots. This post details the driverless capture engine built in Python.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Voxis, an open-source Windows app, translates system audio from any source – videos, games, calls – and plays it back as spoken voice. Crucially, it achieves this without needing virtual audio cables like VB-CABLE or VoiceMeeter, or requiring a bot in your meetings. This post details the driverless capture engine built in Python.",
+   "The core of this driverless capture relies on the Windows 10 version 2004's ApplicationLoopback API. This API allows activating an IAudioClient in loopback mode, specifically excluding Voxis's own process tree to capture everything the user hears without feedback.",
+   "Activating the audio interface involves a 'magic string' device name and an asynchronous COM activation. A key challenge was ensuring the completion handler for ActivateAudioInterfaceAsync also implemented IAgileObject, a marker interface, to prevent E_ILLEGAL_METHOD_CALL errors.",
+   "WASAPI allows direct initialization of the loopback client with a specific WAVEFORMATEX. Voxis requests 16 kHz, mono, 16-bit PCM, which matches the translation model's input requirements, eliminating the need for a separate resampling step.",
+   "To avoid audio glitches caused by downstream processing delays, capture and processing are split into two threads with a bounded collections.deque queue. If the processor falls behind, older audio is dropped to maintain low latency, ensuring the capture thread is never blocked.",
+   "Instead of mixing and replaying audio, Voxis ducks the original audio at its source using the Windows session-volume API (ISimpleAudioVolume via pycaw). This lowers the volume of the playing app's audio session, allowing the translation to be heard clearly without altering the original audio path.",
+   "The translation isn't instant due to the nature of simultaneous interpretation models. These models are designed to balance quality and sync, waiting for enough context to translate clauses correctly, resulting in an intentional few-second delay that cannot be sped up by the client."
+  ],
+  "caption": "Translate any Windows system audio in real time, driverless. No virtual cables, no bots, just pure system audio capture.\n\nVoxis, an open-source Windows app, translates system audio from any source – videos, games, calls – and plays it back as spoken voice. Crucially, it achieves this without needing virtual audio cables like VB-CABLE or VoiceMeeter, or requiring a bot in your meetings. This post details the driverless capture engine built in Python.\n\nThe core of this driverless capture relies on the Windows 10 version 2004's ApplicationLoopback API. This API allows activating an IAudioClient in loopback mode, specifically excluding Voxis's own process tree to capture everything the user hears without feedback.\n\nActivating the audio interface involves a 'magic string' device name and an asynchronous COM activation. A key challenge was ensuring the completion handler for ActivateAudioInterfaceAsync also implemented IAgileObject, a marker interface, to prevent E_ILLEGAL_METHOD_CALL errors.\n\nWASAPI allows direct initialization of the loopback client with a specific WAVEFORMATEX. Voxis requests 16 kHz, mono, 16-bit PCM, which matches the translation model's input requirements, eliminating the need for a separate resampling step.\n\nTo avoid audio glitches caused by downstream processing delays, capture and processing are split into two threads with a bounded collections.deque queue. If the processor falls behind, older audio is dropped to maintain low latency, ensuring the capture thread is never blocked.\n\nInstead of mixing and replaying audio, Voxis ducks the original audio at its source using the Windows session-volume API (ISimpleAudioVolume via pycaw). This lowers the volume of the playing app's audio session, allowing the translation to be heard clearly without altering the original audio path.\n\n#WindowsDev #AudioTech #OpenSource #Python #WASAPI #RealtimeTranslation\n\nSource: DEV",
+  "tweet": "Translate any Windows system audio in real time with Voxis, an open-source app. It uses a driverless capture engine, no virtual cables or bots needed. Learn how it works with Windows APIs and Python. #WindowsDev #AudioTech #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/davutakca/translating-windows-system-audio-in-real-time-driverless-with-no-virtual-cable-2842",
+  "image": "",
+  "orig_title": "Translating Windows system audio in real time — driverless, with no virtual cable",
+  "cluster_urls": [
+   "https://dev.to/davutakca/translating-windows-system-audio-in-real-time-driverless-with-no-virtual-cable-2842"
+  ],
+  "cluster_titles": [
+   "Translating Windows system audio in real time — driverless, with no virtual cable"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260625-1006-0-real-time-windows-audio-translation-now-driv.png",
+   "20260625-1006-0-real-time-windows-audio-translation-now-driv-d1.png",
+   "20260625-1006-0-real-time-windows-audio-translation-now-driv-d2.png",
+   "20260625-1006-0-real-time-windows-audio-translation-now-driv-d3.png"
+  ]
+ },
+ {
+  "topic": "aws lambda microvms launch",
+  "headline_marked": "[[AWS launches stateful Lambda MicroVMs]] with 8-hour runtime and no cold boots",
+  "headline": "AWS launches stateful Lambda MicroVMs with 8-hour runtime and no cold boots",
+  "summary": "A new compute primitive, MicroVMs offer persistent state, suspend/resume functionality, and instant warm starts, bridging the gap between stateless Lambda functions and full EC2 instances.",
+  "category": "CLOUD",
+  "template": "launch",
+  "details": [
+   "AWS has quietly launched Lambda MicroVMs, a new compute primitive that bridges the gap between stateless Lambda functions and full EC2 instances. These MicroVMs are stateful, can run for up to 8 hours, and offer suspend/resume capabilities.",
+   "Each MicroVM is an isolated Firecracker VM with its own HTTPS endpoint, running code from a pre-built snapshot. Crucially, they resume from their exact pre-initialized state, eliminating cold boot delays and preserving full memory and disk state across suspensions.",
+   "Measured warm latency is around 340ms, including network round-trip from Hamburg to us-east-1. Security is handled via short-lived, scoped tokens in the X-aws-proxy-auth header, ensuring isolation between MicroVMs.",
+   "This new offering is ideal for use cases requiring VM-level isolation with a serverless operational model. These include AI agent code execution sandboxes, browser-based IDEs, CI/CD isolated runners, data analytics sessions, and vulnerability scanning.",
+   "The billing model is cost-effective: suspended MicroVMs incur charges only for snapshot storage, with no compute costs while idle. This allows for efficient resource management without capacity planning or kernel patching.",
+   "To get started, users need AWS CLI v2.35.10+ and can interact with the lambda-microvms service via a separate command namespace. The base image is Amazon Linux 2023 minimal, allowing for custom Dockerfile additions."
+  ],
+  "caption": "AWS just launched Lambda MicroVMs, a game-changer for serverless compute. Get stateful execution, 8-hour runtime, and zero cold boots.\n\nAWS has quietly launched Lambda MicroVMs, a new compute primitive that bridges the gap between stateless Lambda functions and full EC2 instances. These MicroVMs are stateful, can run for up to 8 hours, and offer suspend/resume capabilities.\n\nEach MicroVM is an isolated Firecracker VM with its own HTTPS endpoint, running code from a pre-built snapshot. Crucially, they resume from their exact pre-initialized state, eliminating cold boot delays and preserving full memory and disk state across suspensions.\n\nMeasured warm latency is around 340ms, including network round-trip from Hamburg to us-east-1. Security is handled via short-lived, scoped tokens in the X-aws-proxy-auth header, ensuring isolation between MicroVMs.\n\nThis new offering is ideal for use cases requiring VM-level isolation with a serverless operational model. These include AI agent code execution sandboxes, browser-based IDEs, CI/CD isolated runners, data analytics sessions, and vulnerability scanning.\n\nThe billing model is cost-effective: suspended MicroVMs incur charges only for snapshot storage, with no compute costs while idle. This allows for efficient resource management without capacity planning or kernel patching.\n\nTo get started, users need AWS CLI v2.35.10+ and can interact with the lambda-microvms service via a separate command namespace. The base image is Amazon Linux 2023 minimal, allowing for custom Dockerfile additions.\n\n#AWS #Lambda #Serverless #CloudComputing #Developers #TechNews\n\nSource: DEV",
+  "tweet": "AWS just launched Lambda MicroVMs, a game-changer for serverless compute. Get stateful execution, 8-hour runtime, and zero cold boots. Bridges the gap between Lambda & EC2, ideal for AI sandboxes & browser IDEs. #AWS #Serverless #Cloud",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aws.amazon.com",
+  "source": "DEV",
+  "url": "https://dev.to/aws-builders/aws-lambda-microvms-i-tested-the-new-stateful-serverless-primitive-40jf",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4dgxkyb4ysr2sbpy3emc.png",
+  "orig_title": "AWS Lambda MicroVMs: I Tested the New Stateful Serverless Primitive",
+  "cluster_urls": [
+   "https://dev.to/aws-builders/aws-lambda-microvms-i-tested-the-new-stateful-serverless-primitive-40jf"
+  ],
+  "cluster_titles": [
+   "AWS Lambda MicroVMs: I Tested the New Stateful Serverless Primitive"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260625-1006-1-aws-launches-stateful-lambda-microvms-with-8.png",
+   "20260625-1006-1-aws-launches-stateful-lambda-microvms-with-8-d1.png",
+   "20260625-1006-1-aws-launches-stateful-lambda-microvms-with-8-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai replaced junior tasks not developers",
+  "headline_marked": "[[AI Didn't Replace Junior Developers]]",
+  "headline": "AI Didn't Replace Junior Developers",
+  "summary": "Contrary to popular belief, AI hasn't replaced junior developers. Instead, it's shifting their focus from repetitive coding to complex problem-solving, potentially accelerating their professional growth.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Despite recurring predictions that AI coding models would eliminate entry-level software engineering roles, the reality for those building software with AI daily tells a different story.",
+   "Software engineering encompasses much more than just writing syntax; code is merely the outcome of strategic decisions. Becoming a great engineer involves more than just implementing repetitive features.",
+   "As technology automates one layer of work, another layer gains value. AI is removing repetitive tasks, allowing future engineers to spend less time memorizing syntax and more on higher-level problem-solving.",
+   "This shift can accelerate professional growth, as the quality of a software solution increasingly depends on the quality of the initial question. The ability to transform ambiguous business problems into reliable software systems will become highly valuable.",
+   "The most effective engineers will be those who excel at making critical decisions before any code is written, rather than simply writing the most code. AI is enabling a faster path to senior-level thinking."
+  ],
+  "caption": "AI was supposed to replace junior developers. The reality is far more nuanced, shifting their role towards higher-value tasks.\n\nDespite recurring predictions that AI coding models would eliminate entry-level software engineering roles, the reality for those building software with AI daily tells a different story.\n\nSoftware engineering encompasses much more than just writing syntax; code is merely the outcome of strategic decisions. Becoming a great engineer involves more than just implementing repetitive features.\n\nAs technology automates one layer of work, another layer gains value. AI is removing repetitive tasks, allowing future engineers to spend less time memorizing syntax and more on higher-level problem-solving.\n\nThis shift can accelerate professional growth, as the quality of a software solution increasingly depends on the quality of the initial question. The ability to transform ambiguous business problems into reliable software systems will become highly valuable.\n\nThe most effective engineers will be those who excel at making critical decisions before any code is written, rather than simply writing the most code. AI is enabling a faster path to senior-level thinking.\n\n#AI #SoftwareDevelopment #TechNews #JuniorDevs #FutureOfWork #Coding\n\nSource: DEV",
+  "tweet": "AI was supposed to replace junior developers, but it's actually changing their role. Instead of repetitive coding, AI helps them focus on complex problem-solving, accelerating growth. #AI #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/uigerhana/ai-didnt-replace-junior-developers-20a0",
+  "image": "",
+  "orig_title": "AI Didn't Replace Junior Developers.",
+  "cluster_urls": [
+   "https://dev.to/uigerhana/ai-didnt-replace-junior-developers-20a0"
+  ],
+  "cluster_titles": [
+   "AI Didn't Replace Junior Developers."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260625-0906-0-ai-didn-t-replace-junior-developers.png",
+   "20260625-0906-0-ai-didn-t-replace-junior-developers-d1.png",
+   "20260625-0906-0-ai-didn-t-replace-junior-developers-d2.png"
+  ]
+ },
+ {
+  "topic": "adversarial claude reviewer for code",
+  "headline_marked": "[[Adversarial Claude reviewer reads your codebase]] before approving plans in new multi-agent loop",
+  "headline": "Adversarial Claude reviewer reads your codebase before approving plans in new multi-agent loop",
+  "summary": "A new open-source multi-agent system, agent-plan-review-loop, uses an independent Claude agent to critically evaluate implementation plans directly from the repository, avoiding the typical optimism of LLM reviewers.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Large language models often approve objectively wrong implementation plans because they reason from training data and conversation context, not the actual repository. This new open-source system, agent-plan-review-loop, aims to solve this by defaulting to skepticism.",
+   "The system employs a multi-agent orchestration where an adversarial Claude reviewer repeatedly challenges implementation plans. Each agent runs as a fresh process using Claude Code CLI, forcing the reviewer to evaluate the plan on its own merits by reading markdown artifacts from the repository.",
+   "This approach yields far more useful feedback than generic AI approval, as the reviewer acts like an independent engineer. It also prevents the system from inventing business requirements; when a genuine product decision is encountered, the Author agent stops and asks for clarification.",
+   "To manage costs, a lightweight classification step using Haiku reserves expensive reasoning for genuinely difficult work. Once a plan is approved, a separate Coder agent performs the implementation without touching the developer's active working tree, making experimentation safer. Failed validations result in automatic rollbacks."
+  ],
+  "caption": "LLMs are too optimistic as code reviewers. This new open-source multi-agent system uses an adversarial Claude reviewer to challenge plans directly from your codebase.\n\nLarge language models often approve objectively wrong implementation plans because they reason from training data and conversation context, not the actual repository. This new open-source system, agent-plan-review-loop, aims to solve this by defaulting to skepticism.\n\nThe system employs a multi-agent orchestration where an adversarial Claude reviewer repeatedly challenges implementation plans. Each agent runs as a fresh process using Claude Code CLI, forcing the reviewer to evaluate the plan on its own merits by reading markdown artifacts from the repository.\n\nThis approach yields far more useful feedback than generic AI approval, as the reviewer acts like an independent engineer. It also prevents the system from inventing business requirements; when a genuine product decision is encountered, the Author agent stops and asks for clarification.\n\nTo manage costs, a lightweight classification step using Haiku reserves expensive reasoning for genuinely difficult work. Once a plan is approved, a separate Coder agent performs the implementation without touching the developer's active working tree, making experimentation safer. Failed validations result in automatic rollbacks.\n\n#AI #DeveloperTools #OpenSource #ClaudeAI #CodeReview #LLMs\n\nSource: DEV",
+  "tweet": "LLMs too optimistic for code reviews? This new open-source multi-agent system, agent-plan-review-loop, uses an adversarial Claude reviewer to challenge plans directly from your codebase, providing far more critical feedback. #AI #DeveloperTools #CodeReview",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/execute25/i-built-a-multi-agent-loop-where-an-adversarial-claude-reviewer-reads-your-actual-codebase-before-2d8n",
+  "image": "",
+  "orig_title": "I built a multi-agent loop where an adversarial Claude reviewer reads your actual codebase before approving plans",
+  "cluster_urls": [
+   "https://dev.to/execute25/i-built-a-multi-agent-loop-where-an-adversarial-claude-reviewer-reads-your-actual-codebase-before-2d8n"
+  ],
+  "cluster_titles": [
+   "I built a multi-agent loop where an adversarial Claude reviewer reads your actual codebase before approving plans"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260625-0906-1-adversarial-claude-reviewer-reads-your-codeb.png",
+   "20260625-0906-1-adversarial-claude-reviewer-reads-your-codeb-d1.png",
+   "20260625-0906-1-adversarial-claude-reviewer-reads-your-codeb-d2.png"
+  ]
+ }
+]

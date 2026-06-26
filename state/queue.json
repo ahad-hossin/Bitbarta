@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai agent memory persistence",
+  "headline_marked": "[[AI coding agents need two types of memory]]: automatic observation vs. intentional logging",
+  "headline": "AI coding agents need two types of memory: automatic observation vs. intentional logging",
+  "summary": "AI coding agents often lack persistent memory, forcing developers to reconstruct context. Two distinct tools, AgentMemory and Qiju, offer different approaches for capturing session observations versus developer-judged decisions, each with unique benefits.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI coding agents often lack persistent memory, forcing developers to reconstruct context in every new session. This article clarifies the distinction between two approaches: AgentMemory and Qiju, which aim to reduce this overhead.",
+   "AgentMemory operates as a local server, automatically capturing prompts, tool calls, and results from agents like Claude Code or Codex. These observations are compressed, embedded, and indexed, then retrieved automatically for subsequent sessions. It boasts 95.2% recall accuracy on LongMemEval-S.",
+   "In contrast, Qiju requires intentional invocation (/qiju-log) by the developer or agent to store records. These are plain JSONL files on the machine, using deterministic keyword and tag search for retrieval, with no embedding or external data transfer.",
+   "The key difference lies in their purpose: AgentMemory records what the agent observed, while Qiju preserves what the developer judged worth preserving. This means AgentMemory provides background observations, while Qiju stores structured decisions, evidence, and rejected approaches.",
+   "Operationally, AgentMemory requires a Rust binary, Node.js, and an embedding model (local or cloud, which can send content off-machine). It supports over twenty agents on macOS, Linux, and Windows.",
+   "Qiju, on the other hand, only needs Python 3.11+ and keeps all records locally in JSONL files, which can be committed to Git. It supports Claude Code, Codex, Kiro, and Cursor on macOS and Linux, with Windows not yet supported.",
+   "A combined approach is possible: AgentMemory for automatic background capture of agent actions, and Qiju for the intentional layer of decisions and rationale. This dual memory system addresses both observational context and deliberate project records."
+  ],
+  "caption": "AI coding agents often forget past sessions. Learn how two distinct memory systems, AgentMemory and Qiju, tackle this challenge.\n\nAI coding agents often lack persistent memory, forcing developers to reconstruct context in every new session. This article clarifies the distinction between two approaches: AgentMemory and Qiju, which aim to reduce this overhead.\n\nAgentMemory operates as a local server, automatically capturing prompts, tool calls, and results from agents like Claude Code or Codex. These observations are compressed, embedded, and indexed, then retrieved automatically for subsequent sessions. It boasts 95.2% recall accuracy on LongMemEval-S.\n\nIn contrast, Qiju requires intentional invocation (/qiju-log) by the developer or agent to store records. These are plain JSONL files on the machine, using deterministic keyword and tag search for retrieval, with no embedding or external data transfer.\n\nThe key difference lies in their purpose: AgentMemory records what the agent observed, while Qiju preserves what the developer judged worth preserving. This means AgentMemory provides background observations, while Qiju stores structured decisions, evidence, and rejected approaches.\n\nOperationally, AgentMemory requires a Rust binary, Node.js, and an embedding model (local or cloud, which can send content off-machine). It supports over twenty agents on macOS, Linux, and Windows.\n\nQiju, on the other hand, only needs Python 3.11+ and keeps all records locally in JSONL files, which can be committed to Git. It supports Claude Code, Codex, Kiro, and Cursor on macOS and Linux, with Windows not yet supported.\n\nA combined approach is possible: AgentMemory for automatic background capture of agent actions, and Qiju for the intentional layer of decisions and rationale. This dual memory system addresses both observational context and deliberate project records.\n\n#AICoding #DeveloperTools #AgentMemory #Qiju #Tech #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "AI coding agents struggle with persistent memory. Discover the difference between automatic observation (AgentMemory) and intentional logging (Qiju) to give your agents the right kind of memory. #AICoding #DeveloperTools #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/timetxt/when-your-coding-agent-needs-a-scribe-not-a-memory-engine-3bj",
+  "image": "",
+  "orig_title": "When Your Coding Agent Needs a Scribe, Not a Memory Engine",
+  "cluster_urls": [
+   "https://dev.to/timetxt/when-your-coding-agent-needs-a-scribe-not-a-memory-engine-3bj",
+   "https://dev.to/sasidhar_prathipati_/the-day-my-research-assistant-finally-got-a-memoryby-prathipati-sasidhar-2en4",
+   "https://dev.to/bob_lee_2d29b22cee96eb65f/how-i-built-a-self-verifying-ai-agent-with-dynamodb-and-react-reasoning-6dp"
+  ],
+  "cluster_titles": [
+   "When Your Coding Agent Needs a Scribe, Not a Memory Engine",
+   "The Day My Research Assistant Finally Got a Memory",
+   "How I Built a Self-Verifying AI Agent with DynamoDB and ReAct Reasoning"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260626-1111-0-ai-coding-agents-need-two-types-of-memory-au.png",
+   "20260626-1111-0-ai-coding-agents-need-two-types-of-memory-au-d1.png",
+   "20260626-1111-0-ai-coding-agents-need-two-types-of-memory-au-d2.png",
+   "20260626-1111-0-ai-coding-agents-need-two-types-of-memory-au-d3.png"
+  ]
+ },
+ {
+  "topic": "internet privacy erosion",
+  "headline_marked": "[[Internet's 'papers, please' era]] will decimate privacy, experts warn",
+  "headline": "Internet's 'papers, please' era will decimate privacy, experts warn",
+  "summary": "A new era of online verification could lead to widespread privacy erosion, according to analysis of emerging internet trends.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Experts are sounding the alarm about a potential future for the internet where users are required to provide extensive personal identification for basic online activities.",
+   "This shift, often described as the 'papers, please' era, mirrors systems where individuals must present identification for access or services.",
+   "The concern is that widespread implementation of such verification methods could lead to unprecedented levels of data collection and surveillance.",
+   "Such a system would fundamentally alter the anonymous nature of the internet, making it difficult to engage in private communication or research."
+  ],
+  "caption": "The internet may soon require you to show your ID for everything.\n\nExperts are sounding the alarm about a potential future for the internet where users are required to provide extensive personal identification for basic online activities.\n\nThis shift, often described as the 'papers, please' era, mirrors systems where individuals must present identification for access or services.\n\nThe concern is that widespread implementation of such verification methods could lead to unprecedented levels of data collection and surveillance.\n\nSuch a system would fundamentally alter the anonymous nature of the internet, making it difficult to engage in private communication or research.\n\n#Privacy #Cybersecurity #Internet #Surveillance #Tech\n\nSource: Hacker News",
+  "tweet": "The internet's future could be a 'papers, please' era, leading to significant privacy erosion. Experts warn this shift could decimate online anonymity and enable widespread surveillance. #Privacy #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://expression.fire.org/p/the-papers-please-era-of-the-internet",
+  "image": "",
+  "orig_title": "The 'papers, please' era of the internet will decimate your privacy",
+  "cluster_urls": [
+   "https://expression.fire.org/p/the-papers-please-era-of-the-internet"
+  ],
+  "cluster_titles": [
+   "The 'papers, please' era of the internet will decimate your privacy"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260626-1111-1-internet-s-papers-please-era-will-decimate-p.png",
+   "20260626-1111-1-internet-s-papers-please-era-will-decimate-p-d1.png"
+  ]
+ }
+]

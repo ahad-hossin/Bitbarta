@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "apple xcode gemini integration",
+  "headline_marked": "[[Apple adds Google Gemini coding assistant]] in Xcode 26.6 update",
+  "headline": "Apple adds Google Gemini coding assistant in Xcode 26.6 update",
+  "summary": "Apple's latest Xcode 26.6 update now integrates Google Gemini, marking it as the third coding assistant available in the IDE. This expands developer options for AI-powered code generation and assistance.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Apple has officially released Xcode 26.6, its integrated development environment for macOS. This update introduces support for Google Gemini, making it the third coding assistant available to developers within the platform.",
+   "The integration of Gemini aims to enhance the development workflow by providing AI-powered code generation, suggestions, and debugging assistance. This move offers Apple developers more choices for leveraging artificial intelligence in their projects."
+  ],
+  "caption": "Apple's Xcode 26.6 update now includes Google Gemini, expanding AI coding assistance options for developers.\n\nApple has officially released Xcode 26.6, its integrated development environment for macOS. This update introduces support for Google Gemini, making it the third coding assistant available to developers within the platform.\n\nThe integration of Gemini aims to enhance the development workflow by providing AI-powered code generation, suggestions, and debugging assistance. This move offers Apple developers more choices for leveraging artificial intelligence in their projects.\n\n#Apple #Xcode #GoogleGemini #AI #Developers #SoftwareUpdate\n\nSource: 9to5Mac",
+  "tweet": "Apple's Xcode 26.6 update now includes Google Gemini, expanding AI coding assistance options for developers. This marks Gemini as the third coding assistant integrated into Apple's IDE. #Apple #Xcode #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/06/25/apple-adds-google-gemini-coding-assistant-in-xcode-26-6-update/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/06/xcode.webp?w=1600",
+  "orig_title": "Apple adds Google Gemini coding assistant in Xcode 26.6 update",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/06/25/apple-adds-google-gemini-coding-assistant-in-xcode-26-6-update/"
+  ],
+  "cluster_titles": [
+   "Apple adds Google Gemini coding assistant in Xcode 26.6 update"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260626-0806-0-apple-adds-google-gemini-coding-assistant-in.png",
+   "20260626-0806-0-apple-adds-google-gemini-coding-assistant-in-d1.png"
+  ]
+ },
+ {
+  "topic": "ai agent security and learning data",
+  "headline_marked": "[[WasmAgent turns agent runs into training data]] without human labeling, improving reliability by +8.7pp",
+  "headline": "WasmAgent turns agent runs into training data without human labeling, improving reliability by +8.7pp",
+  "summary": "WasmAgent's Trace-to-Training method converts every agent run into valuable learning data, evaluated by a compliance engine and ready for SFT or DPO training, significantly reducing variance in production.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "WasmAgent introduces Trace-to-Training, a novel method that converts every agent run into a data point for AI model training. Unlike most frameworks that discard this data, WasmAgent's compliance engine evaluates and ranks it by outcome.",
+   "This process generates a typed ComplianceEvalRecord, suitable for SFT or DPO training without requiring human labeling. The full repair loop, `full_pcl`, records the entire trace from run to re-evaluation, including all attempts.",
+   "When `full_pcl` repairs a failing output, RepairPlanner captures the complete sequence of what failed, what was tried, and what ultimately worked. This detailed failure trace is crucial for feeding DPO training.",
+   "By learning from these failure traces, models improve beyond just final outputs. The compliance verifier acts as the direct reward signal, eliminating the need for any human annotation in the training data generation process."
+  ],
+  "caption": "WasmAgent's new Trace-to-Training method converts every AI agent run into valuable learning data. It improves reliability by +8.7pp and reduces variance from \b2.0 to \b1.2.\n\nWasmAgent introduces Trace-to-Training, a novel method that converts every agent run into a data point for AI model training. Unlike most frameworks that discard this data, WasmAgent's compliance engine evaluates and ranks it by outcome.\n\nThis process generates a typed ComplianceEvalRecord, suitable for SFT or DPO training without requiring human labeling. The full repair loop, `full_pcl`, records the entire trace from run to re-evaluation, including all attempts.\n\nWhen `full_pcl` repairs a failing output, RepairPlanner captures the complete sequence of what failed, what was tried, and what ultimately worked. This detailed failure trace is crucial for feeding DPO training.\n\nBy learning from these failure traces, models improve beyond just final outputs. The compliance verifier acts as the direct reward signal, eliminating the need for any human annotation in the training data generation process.\n\n#AI #MachineLearning #DeveloperTools #WasmAgent #AITraining #DeepLearning\n\nSource: DEV",
+  "tweet": "WasmAgent's Trace-to-Training method turns every AI agent run into valuable learning data, boosting reliability by +8.7pp. No human labeling needed! #AI #MachineLearning #WasmAgent",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/telleroutlook/trace-to-training-how-agent-runs-become-learning-data-31c4",
+  "image": "",
+  "orig_title": "Trace-to-Training: how agent runs become learning data",
+  "cluster_urls": [
+   "https://dev.to/telleroutlook/trace-to-training-how-agent-runs-become-learning-data-31c4",
+   "https://dev.to/telleroutlook/mcp-trust-pack-a-security-layer-for-mcp-tool-calls-3c3o",
+   "https://dev.to/telleroutlook/your-ai-agent-called-a-tool-can-you-prove-it-followed-the-rules-2bgn"
+  ],
+  "cluster_titles": [
+   "Trace-to-Training: how agent runs become learning data",
+   "MCP Trust Pack: a security layer for MCP tool calls",
+   "Your AI agent called a tool. Can you prove it followed the rules?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260626-0806-1-wasmagent-turns-agent-runs-into-training-dat.png",
+   "20260626-0806-1-wasmagent-turns-agent-runs-into-training-dat-d1.png",
+   "20260626-0806-1-wasmagent-turns-agent-runs-into-training-dat-d2.png"
+  ]
+ }
+]

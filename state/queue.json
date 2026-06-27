@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai_agent_model_size_benchmark",
+  "headline_marked": "[[Agent models have a capability size floor]] below which they fail entirely, study finds",
+  "headline": "Agent models have a capability size floor below which they fail entirely, study finds",
+  "summary": "A study on NVIDIA's Nemotron models reveals that smaller agent models below a certain threshold cannot complete tasks, making size a critical barrier, not just a performance dial.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A study on NVIDIA's open-weight Nemotron family (Nano 30B to Super 120B) tested real-world coding agent tasks. It found that model size isn't a continuous dial for quality, but a critical threshold. The smallest variant, Nemotron Nano 12B, produced no scorable results.",
+   "Below this \"agent size floor,\" a model cannot reliably complete the act-observe-decide loop an agent needs. Instead of a slower agent, you get a non-agent that fails to converge on tasks. This shifts the focus from \"cheapest\" to \"clears the floor for my work.\"",
+   "Nemotron Nano 30B serves as an extremely cheap workhorse for narrow, well-scoped jobs. However, it struggles with reliable task completion, with 43% of its baseline attempts yielding near-zero results. Its proximity to the floor makes the agent loop itself a bottleneck.",
+   "Nemotron Super 120B, conversely, excels at demanding multi-step agent work, achieving nearly 69% goal completion. What it struggles with is doing the task the prescribed way, where skills significantly improve its instruction-following performance by 17.9 points.",
+   "The study highlights that agent performance isn't a gentle improvement with scale. Instead, models tend to either mostly succeed or mostly fail. With skills, Super 120B scores 75 or above on 40% of tasks, while Nano 30B only reaches this on 11%, missing badly on 38%.",
+   "This means Nano 30B isn't uniformly weak; on well-scoped tasks like calling a documented API, it clears the usable bar often enough to be worth a look. Its limitations become apparent in longer, multi-step work. The research suggests scale and skills address different aspects of agent performance."
+  ],
+  "caption": "Agent models have a critical \"size floor.\" Below this threshold, they don't just get worse; they fail entirely to complete tasks.\n\nA study on NVIDIA's open-weight Nemotron family (Nano 30B to Super 120B) tested real-world coding agent tasks. It found that model size isn't a continuous dial for quality, but a critical threshold. The smallest variant, Nemotron Nano 12B, produced no scorable results.\n\nBelow this \"agent size floor,\" a model cannot reliably complete the act-observe-decide loop an agent needs. Instead of a slower agent, you get a non-agent that fails to converge on tasks. This shifts the focus from \"cheapest\" to \"clears the floor for my work.\"\n\nNemotron Nano 30B serves as an extremely cheap workhorse for narrow, well-scoped jobs. However, it struggles with reliable task completion, with 43% of its baseline attempts yielding near-zero results. Its proximity to the floor makes the agent loop itself a bottleneck.\n\nNemotron Super 120B, conversely, excels at demanding multi-step agent work, achieving nearly 69% goal completion. What it struggles with is doing the task the prescribed way, where skills significantly improve its instruction-following performance by 17.9 points.\n\nThe study highlights that agent performance isn't a gentle improvement with scale. Instead, models tend to either mostly succeed or mostly fail. With skills, Super 120B scores 75 or above on 40% of tasks, while Nano 30B only reaches this on 11%, missing badly on 38%.\n\nThis means Nano 30B isn't uniformly weak; on well-scoped tasks like calling a documented API, it clears the usable bar often enough to be worth a look. Its limitations become apparent in longer, multi-step work. The research suggests scale and skills address different aspects of agent performance.\n\n#AI #AgentModels #NVIDIA #LLMs #TechResearch #MachineLearning\n\nSource: DEV",
+  "tweet": "Agent models have a critical \"size floor.\" Below this threshold, they don't just get worse; they fail entirely to complete tasks. A new study on NVIDIA's Nemotron family reveals that size is a barrier, not just a dial for quality. #AI #AgentModels #NVIDIA",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "DEV",
+  "url": "https://dev.to/tessl-io/how-small-can-an-agent-model-get-the-nemotron-floor-5gne",
+  "image": "",
+  "orig_title": "How Small Can an Agent Model Get? The Nemotron Floor",
+  "cluster_urls": [
+   "https://dev.to/tessl-io/how-small-can-an-agent-model-get-the-nemotron-floor-5gne"
+  ],
+  "cluster_titles": [
+   "How Small Can an Agent Model Get? The Nemotron Floor"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260627-1306-0-agent-models-have-a-capability-size-floor-be.png",
+   "20260627-1306-0-agent-models-have-a-capability-size-floor-be-d1.png",
+   "20260627-1306-0-agent-models-have-a-capability-size-floor-be-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_api_model_comparison",
+  "headline_marked": "[[DeepSeek, Qwen, Kimi, GLM: Which AI API wins]] for cost & performance in 2025?",
+  "headline": "DeepSeek, Qwen, Kimi, GLM: Which AI API wins for cost & performance in 2025?",
+  "summary": "A deep dive compares DeepSeek, Qwen, Kimi, and GLM AI APIs, revealing massive cost savings over Western models and highlighting their unique strengths for developers.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new analysis rigorously compares four major Chinese AI model families: DeepSeek, Qwen, Kimi, and GLM. The comparison focuses on real-world API costs and performance, aiming to identify the best value for developers.",
+   "The price range across these APIs is enormous, from $0.01 per million tokens for Qwen and GLM's smallest models to $3.50 per million for Kimi's premium tier. This 350x price spread means model selection is critical for cost optimization.",
+   "DeepSeek V4 Flash stands out with an output cost of $0.25 per million tokens, representing a 97.5% discount compared to GPT-4o. It delivers impressive speed, consistently achieving around 60 tokens per second, and offers strong English language and code generation performance.",
+   "While DeepSeek's vision capabilities are limited and it's not optimal for pure Chinese tasks, its V4 Flash model is highly recommended for the majority of developer use cases involving English text and code generation.",
+   "Qwen is presented as a versatile \"Swiss Army knife\" option, with Alibaba offering a wide array of models from $0.01/M to $3.20/M. Its multimodal VL (vision-language) and Omni models natively handle audio, video, and images, making it suitable for diverse applications.",
+   "Despite a somewhat confusing naming convention for its various versions, Qwen provides solid consistency once a specific model is chosen. The Qwen3-32B model at $0.28/M is highlighted as a sweet spot for production use without excessive cost.",
+   "Kimi is the most expensive family in the roundup, priced between $3.00 and $3.50 per million tokens. However, its K2.5 model at $3.00/M is recognized as a powerful reasoning engine, excelling in complex logic puzzles, advanced math, and chain-of-thought planning."
+  ],
+  "caption": "DeepSeek V4 Flash offers a 97.5% discount over GPT-4o at $0.25/M output. This in-depth comparison reveals which Chinese AI API truly wins for developers.\n\nA new analysis rigorously compares four major Chinese AI model families: DeepSeek, Qwen, Kimi, and GLM. The comparison focuses on real-world API costs and performance, aiming to identify the best value for developers.\n\nThe price range across these APIs is enormous, from $0.01 per million tokens for Qwen and GLM's smallest models to $3.50 per million for Kimi's premium tier. This 350x price spread means model selection is critical for cost optimization.\n\nDeepSeek V4 Flash stands out with an output cost of $0.25 per million tokens, representing a 97.5% discount compared to GPT-4o. It delivers impressive speed, consistently achieving around 60 tokens per second, and offers strong English language and code generation performance.\n\nWhile DeepSeek's vision capabilities are limited and it's not optimal for pure Chinese tasks, its V4 Flash model is highly recommended for the majority of developer use cases involving English text and code generation.\n\nQwen is presented as a versatile \"Swiss Army knife\" option, with Alibaba offering a wide array of models from $0.01/M to $3.20/M. Its multimodal VL (vision-language) and Omni models natively handle audio, video, and images, making it suitable for diverse applications.\n\nDespite a somewhat confusing naming convention for its various versions, Qwen provides solid consistency once a specific model is chosen. The Qwen3-32B model at $0.28/M is highlighted as a sweet spot for production use without excessive cost.\n\nKimi is the most expensive family in the roundup, priced between $3.00 and $3.50 per million tokens. However, its K2.5 model at $3.00/M is recognized as a powerful reasoning engine, excelling in complex logic puzzles, advanced math, and chain-of-thought planning.\n\n#AI #APIs #DeepSeek #Qwen #Kimi #GLM #DevTools\n\nSource: DEV",
+  "tweet": "DeepSeek V4 Flash offers a 97.5% discount over GPT-4o at $0.25/M output. A new analysis compares DeepSeek, Qwen, Kimi, and GLM AI APIs, revealing surprising performance and cost leaders for developers. Find out which one wins. #AI #APIs #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/loyaldash/deepseek-vs-qwen-vs-kimi-vs-glm-which-ai-api-wins-in-2025-2al5",
+  "image": "",
+  "orig_title": "DeepSeek vs Qwen vs Kimi vs GLM: Which AI API Wins in 2025?",
+  "cluster_urls": [
+   "https://dev.to/loyaldash/deepseek-vs-qwen-vs-kimi-vs-glm-which-ai-api-wins-in-2025-2al5"
+  ],
+  "cluster_titles": [
+   "DeepSeek vs Qwen vs Kimi vs GLM: Which AI API Wins in 2025?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260627-1306-1-deepseek-qwen-kimi-glm-which-ai-api-wins-for.png",
+   "20260627-1306-1-deepseek-qwen-kimi-glm-which-ai-api-wins-for-d1.png",
+   "20260627-1306-1-deepseek-qwen-kimi-glm-which-ai-api-wins-for-d2.png",
+   "20260627-1306-1-deepseek-qwen-kimi-glm-which-ai-api-wins-for-d3.png"
+  ]
+ }
+]

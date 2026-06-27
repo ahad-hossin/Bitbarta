@@ -1,1 +1,104 @@
-[]
+[
+ {
+  "topic": "ai_agent_memory_and_control",
+  "headline_marked": "[[AI Agents Get Physical Hands]] with new PAL open standard",
+  "headline": "AI Agents Get Physical Hands with new PAL open standard",
+  "summary": "A freshman's proposal for an open standard that allows AI agents to directly control hardware, bypassing complex frameworks.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents can already write code, browse the web, and manage servers, but they lack the ability to interact with the physical world. This new proposal, PAL (Physical Abstraction Layer), aims to change that by enabling AI agents to control hardware directly.",
+   "The core idea is to leverage the Python REPL (Read-Eval-Print Loop) as the simplest form of Inter-Process Communication (IPC). This approach avoids the need for complex tool registries or JSON schemas, allowing agents to send Python code directly to hardware.",
+   "PAL utilizes a dual-core architecture on microcontrollers. Core 0, written in C, acts as a stable foundation that never changes, handling critical functions like a watchdog timer. Core 1, running MicroPython, serves as the agent's playground, executing commands received over WebSocket with low latency.",
+   "This architecture ensures determinism and stability for physical control while allowing the AI agent the flexibility it needs for reasoning and iteration. The system is designed to be robust, with Core 0 automatically restarting Core 1 if the agent misbehaves or crashes.",
+   "The reference implementation is currently under development for the ESP32-S3, but the specification is designed to be hardware-agnostic. A single cloud-based AI agent can manage numerous PAL terminals across various devices, offering a scalable solution.",
+   "The proposal emphasizes that AI agents don't need to be smarter; they need to be idempotent and capable of interacting with the real world. PAL provides a standardized way for them to gain these physical 'hands'.",
+   "The PAL specification is currently at version 0.1, and the developer, a freshman at Anhui University of Science and Technology, is seeking community input and collaboration."
+  ],
+  "caption": "AI agents can control hardware directly. A freshman's proposal for an open standard, PAL, uses Python REPL to give AI physical 'hands'.\n\nAI agents can already write code, browse the web, and manage servers, but they lack the ability to interact with the physical world. This new proposal, PAL (Physical Abstraction Layer), aims to change that by enabling AI agents to control hardware directly.\n\nThe core idea is to leverage the Python REPL (Read-Eval-Print Loop) as the simplest form of Inter-Process Communication (IPC). This approach avoids the need for complex tool registries or JSON schemas, allowing agents to send Python code directly to hardware.\n\nPAL utilizes a dual-core architecture on microcontrollers. Core 0, written in C, acts as a stable foundation that never changes, handling critical functions like a watchdog timer. Core 1, running MicroPython, serves as the agent's playground, executing commands received over WebSocket with low latency.\n\nThis architecture ensures determinism and stability for physical control while allowing the AI agent the flexibility it needs for reasoning and iteration. The system is designed to be robust, with Core 0 automatically restarting Core 1 if the agent misbehaves or crashes.\n\nThe reference implementation is currently under development for the ESP32-S3, but the specification is designed to be hardware-agnostic. A single cloud-based AI agent can manage numerous PAL terminals across various devices, offering a scalable solution.\n\nThe proposal emphasizes that AI agents don't need to be smarter; they need to be idempotent and capable of interacting with the real world. PAL provides a standardized way for them to gain these physical 'hands'.\n\nThe PAL specification is currently at version 0.1, and the developer, a freshman at Anhui University of Science and Technology, is seeking community input and collaboration.\n\n#AI #OpenSource #Hardware #IoT #Dev\n\nSource: DEV",
+  "tweet": "AI agents can now control hardware directly! A freshman's proposal for an open standard, PAL, uses Python REPL to give AI physical 'hands'. <10ms latency over WiFi. #AI #OpenSource #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hanasite/pal-giving-ai-agents-hands-in-the-physical-world-48mj",
+  "image": "",
+  "orig_title": "PAL: Giving AI Agents Hands in the Physical World",
+  "cluster_urls": [
+   "https://dev.to/hanasite/pal-giving-ai-agents-hands-in-the-physical-world-48mj",
+   "https://dev.to/prabhakaranjm/building-failuredna-an-agent-memory-that-knows-when-not-to-trust-itself-fbn",
+   "https://dev.to/maliano63717738/contextvault-own-your-ai-context-across-models-agents-and-time-555i",
+   "https://dev.to/phoenix911/selfhosted-scratchpad-4kcc",
+   "https://dev.to/wztr2025_65d26961c90e4a74/databench-4pco",
+   "https://dev.to/soulcrancerdev/i-open-sourced-open-source-solana-prediction-market-smart-contract-built-with-anchor-648",
+   "https://dev.to/sunvic567/how-do-ai-agents-remember-things-between-conversations-5216",
+   "https://dev.to/devengers/why-every-software-engineer-should-read-the-psychology-of-money-2b6e",
+   "https://dev.to/manolito99/i-got-tired-of-rewriting-ai-api-wrappers-so-i-built-a-gateway-58n5",
+   "https://dev.to/ntorresdev/death-by-a-thousand-cuts-2lme",
+   "https://dev.to/gs_sanjana_3e822112e14f8/your-ai-agent-doesnt-need-to-be-smarter-it-needs-to-be-idempotent-2736"
+  ],
+  "cluster_titles": [
+   "PAL: Giving AI Agents Hands in the Physical World",
+   "Building FailureDNA: an agent memory that knows when not to trust itself",
+   "ContextVault: Own Your AI Context Across Models, Agents, and Time",
+   "Selfhosted scratchpad",
+   "DataBench",
+   "I open-sourced Open-source Solana Prediction Market smart contract built with Anchor",
+   "How Do AI Agents Remember Things Between Conversations?",
+   "Why Every Software Engineer Should Read \"The Psychology of Money\"",
+   "I Got Tired of Rewriting AI API Wrappers, So I Built a Gateway",
+   "Death by a Thousand Cuts",
+   "Your AI Agent Doesn't Need to Be Smarter. It Needs to Be Idempotent"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260628-0217-0-ai-agents-get-physical-hands-with-new-pal-op.png",
+   "20260628-0217-0-ai-agents-get-physical-hands-with-new-pal-op-d1.png",
+   "20260628-0217-0-ai-agents-get-physical-hands-with-new-pal-op-d2.png",
+   "20260628-0217-0-ai-agents-get-physical-hands-with-new-pal-op-d3.png"
+  ]
+ },
+ {
+  "topic": "apple_device_software_updates",
+  "headline_marked": "[[Mirage app]] streams your Mac display to iPhone, iPad, and Vision Pro",
+  "headline": "Mirage app streams your Mac display to iPhone, iPad, and Vision Pro",
+  "summary": "A new indie app allows users to extend their Mac's desktop to other Apple devices, including the Vision Pro headset.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "The new app, called Mirage, enables users to stream their Mac's display to an iPhone, iPad, or even the Apple Vision Pro headset.",
+   "This allows for a seamless extension of the Mac workspace across multiple devices, offering increased flexibility for productivity and multitasking.",
+   "Mirage is developed by an indie developer and aims to provide a powerful yet simple solution for users who want to leverage their existing Apple hardware in new ways.",
+   "The app supports streaming to other Macs as well, effectively turning them into secondary displays for your primary Mac.",
+   "While specific performance metrics and pricing details are not yet widely available, the app is positioned as a tool for developers and power users looking to enhance their workflow."
+  ],
+  "caption": "Stream your Mac's display to your iPhone, iPad, and even Apple Vision Pro with the new Mirage app.\n\nThe new app, called Mirage, enables users to stream their Mac's display to an iPhone, iPad, or even the Apple Vision Pro headset.\n\nThis allows for a seamless extension of the Mac workspace across multiple devices, offering increased flexibility for productivity and multitasking.\n\nMirage is developed by an indie developer and aims to provide a powerful yet simple solution for users who want to leverage their existing Apple hardware in new ways.\n\nThe app supports streaming to other Macs as well, effectively turning them into secondary displays for your primary Mac.\n\nWhile specific performance metrics and pricing details are not yet widely available, the app is positioned as a tool for developers and power users looking to enhance their workflow.\n\n#MirageApp #Mac #Apple #iPad #VisionPro\n\nSource: 9to5Mac",
+  "tweet": "Stream your Mac's display to your iPhone, iPad, and Apple Vision Pro with the new Mirage app. Extend your workspace across devices seamlessly. #MirageApp #Mac #Apple",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/06/27/indie-app-spotlight-mirage-brings-your-mac-display-to-your-iphone-ipad-vision-pro-and-other-macs/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/06/Mirage-header.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Indie App Spotlight: ‘Mirage’ brings your Mac display to your iPhone, iPad, Vision Pro, and other Macs",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/06/27/indie-app-spotlight-mirage-brings-your-mac-display-to-your-iphone-ipad-vision-pro-and-other-macs/",
+   "https://9to5mac.com/2026/06/27/these-five-ipad-models-wont-run-ipados-27-but-deserve-better/",
+   "https://9to5mac.com/2026/06/27/apple-work-deploying-a-new-pc-made-me-appreciate-everything-apple-built-into-macos/"
+  ],
+  "cluster_titles": [
+   "Indie App Spotlight: ‘Mirage’ brings your Mac display to your iPhone, iPad, Vision Pro, and other Macs",
+   "iPadOS 27: Apple is leaving these five iPad models behind, but owners deserve better",
+   "Apple @ Work: Deploying a new PC made me appreciate everything Apple built into macOS"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260628-0217-1-mirage-app-streams-your-mac-display-to-iphon.png",
+   "20260628-0217-1-mirage-app-streams-your-mac-display-to-iphon-d1.png"
+  ]
+ }
+]

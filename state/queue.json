@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai finds security bugs in open source app",
+  "headline_marked": "[[AINAScan Found Two Security Bugs]] in a Real Open-Source App",
+  "headline": "AINAScan Found Two Security Bugs in a Real Open-Source App",
+  "summary": "AINAScan identified an IDOR vulnerability and a subtle data exposure risk in FlaskBlog, a popular open-source Flask project. The maintainer has acknowledged the findings and is bundling fixes.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Our AI-powered static analysis tool, AINAScan, recently uncovered two security issues in FlaskBlog, a popular open-source Flask project. The findings included a critical IDOR vulnerability and a more subtle data exposure risk.",
+   "The IDOR (Insecure Direct Object Reference) vulnerability, tracked as issue #254, allowed unauthorized users to access other users' resources by directly referencing their IDs. This is a common but severe flaw.",
+   "The second issue, #258, involved the search results query fetching the full user row, including the sensitive password_hash field. Although not currently displayed, this data is passed to the template, creating a potential leak risk with future template edits.",
+   "AINAScan's strength lies in tracing data flow from query results to template rendering calls. It specifically flags instances where sensitive fields are queried but not explicitly filtered before being passed to a render function.",
+   "This highlights the 'Principle of Least Privilege' for data: only pass what the template truly needs. Developers often select all columns for convenience, but every exposed field increases the surface area for potential data leaks.",
+   "The FlaskBlog maintainer has acknowledged both findings and plans to bundle the fixes together in an upcoming v3 release. The data exposure issue will be closed as a duplicate of the IDOR patch.",
+   "AINAScan is an open-source and free-to-try tool available on GitHub. Developers can submit their repository URLs to scan for similar vulnerabilities and improve their application's security posture."
+  ],
+  "caption": "AI-powered AINAScan found two critical security bugs in a popular open-source Flask app. One bug could expose user password hashes.\n\nOur AI-powered static analysis tool, AINAScan, recently uncovered two security issues in FlaskBlog, a popular open-source Flask project. The findings included a critical IDOR vulnerability and a more subtle data exposure risk.\n\nThe IDOR (Insecure Direct Object Reference) vulnerability, tracked as issue #254, allowed unauthorized users to access other users' resources by directly referencing their IDs. This is a common but severe flaw.\n\nThe second issue, #258, involved the search results query fetching the full user row, including the sensitive password_hash field. Although not currently displayed, this data is passed to the template, creating a potential leak risk with future template edits.\n\nAINAScan's strength lies in tracing data flow from query results to template rendering calls. It specifically flags instances where sensitive fields are queried but not explicitly filtered before being passed to a render function.\n\nThis highlights the 'Principle of Least Privilege' for data: only pass what the template truly needs. Developers often select all columns for convenience, but every exposed field increases the surface area for potential data leaks.\n\nThe FlaskBlog maintainer has acknowledged both findings and plans to bundle the fixes together in an upcoming v3 release. The data exposure issue will be closed as a duplicate of the IDOR patch.\n\nAINAScan is an open-source and free-to-try tool available on GitHub. Developers can submit their repository URLs to scan for similar vulnerabilities and improve their application's security posture.\n\n#Security #AINAScan #OpenSource #Vulnerability #DevSecOps #StaticAnalysis\n\nSource: DEV",
+  "tweet": "AI-powered AINAScan found two critical security bugs in a popular open-source Flask app, including an IDOR and a potential password hash exposure. Developers, check your data flow! #Security #DevTools #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/ainascan/ainascan-found-two-security-bugs-in-a-real-open-source-app-here-is-what-happened-8ng",
+  "image": "",
+  "orig_title": "AINAScan Found Two Security Bugs in a Real Open-Source App — Here Is What Happened",
+  "cluster_urls": [
+   "https://dev.to/ainascan/ainascan-found-two-security-bugs-in-a-real-open-source-app-here-is-what-happened-8ng"
+  ],
+  "cluster_titles": [
+   "AINAScan Found Two Security Bugs in a Real Open-Source App — Here Is What Happened"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260627-0606-0-ainascan-found-two-security-bugs-in-a-real-o.png",
+   "20260627-0606-0-ainascan-found-two-security-bugs-in-a-real-o-d1.png",
+   "20260627-0606-0-ainascan-found-two-security-bugs-in-a-real-o-d2.png",
+   "20260627-0606-0-ainascan-found-two-security-bugs-in-a-real-o-d3.png"
+  ]
+ },
+ {
+  "topic": "playstation deletes purchased movies from accounts",
+  "headline_marked": "PlayStation [[deleting 551 movies]] from customer accounts, including Terminator 2 and Total Recall",
+  "headline": "PlayStation deleting 551 movies from customer accounts, including Terminator 2 and Total Recall",
+  "summary": "Users who purchased StudioCanal films on the PlayStation Store will lose access to them on September 1, with no refunds or compensation mentioned.",
+  "category": "GAMING",
+  "template": "neon",
+  "details": [
+   "Sony is notifying PlayStation Store users that 551 movies and TV series purchased from StudioCanal will be removed from their libraries on September 1. Titles include classics like Terminator 2, Total Recall, and From Dusk Till Dawn.",
+   "The company cited \"content licensing agreements\" as the reason for the deletions. The notification, shared by an X user, does not mention any refunds or make-goods for affected customers.",
+   "This move reaffirms that digital purchases are often temporary licenses rather than true ownership. PlayStation's terms of service, agreed upon by users, allow for content to be removed at any time.",
+   "The incident highlights the inherent risk in digital storefronts, where access to purchased content is ultimately controlled by the platform provider. This principle extends to digital games as well as movies."
+  ],
+  "caption": "PlayStation is deleting 551 movies from customer accounts on September 1. No refunds are being offered for these previously purchased titles.\n\nSony is notifying PlayStation Store users that 551 movies and TV series purchased from StudioCanal will be removed from their libraries on September 1. Titles include classics like Terminator 2, Total Recall, and From Dusk Till Dawn.\n\nThe company cited \"content licensing agreements\" as the reason for the deletions. The notification, shared by an X user, does not mention any refunds or make-goods for affected customers.\n\nThis move reaffirms that digital purchases are often temporary licenses rather than true ownership. PlayStation's terms of service, agreed upon by users, allow for content to be removed at any time.\n\nThe incident highlights the inherent risk in digital storefronts, where access to purchased content is ultimately controlled by the platform provider. This principle extends to digital games as well as movies.\n\n#PlayStation #DigitalRights #GamingNews #Sony #ConsumerRights #Tech\n\nSource: Hacker News",
+  "tweet": "PlayStation is deleting 551 movies from customer accounts on September 1, with no refunds offered for previously purchased titles. This highlights the risks of digital ownership. #PlayStation #DigitalRights #Gaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "playstation.com",
+  "source": "Hacker News",
+  "url": "https://kotaku.com/playstation-store-movies-digital-studio-canal-terminator-2000711013",
+  "image": "",
+  "orig_title": "PlayStation Is Deleting 551 Movies from Customers' Accounts",
+  "cluster_urls": [
+   "https://kotaku.com/playstation-store-movies-digital-studio-canal-terminator-2000711013"
+  ],
+  "cluster_titles": [
+   "PlayStation Is Deleting 551 Movies from Customers' Accounts"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260627-0606-1-playstation-deleting-551-movies-from-custome.png",
+   "20260627-0606-1-playstation-deleting-551-movies-from-custome-d1.png",
+   "20260627-0606-1-playstation-deleting-551-movies-from-custome-d2.png"
+  ]
+ }
+]

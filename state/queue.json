@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_open_source_security_alliance",
+  "headline_marked": "[[Anthropic, Google, Microsoft form shared security team]] for open source, driven by AI",
+  "headline": "Anthropic, Google, Microsoft form shared security team for open source, driven by AI",
+  "summary": "19 organizations, including tech giants, launched Akrites under the Linux Foundation to tackle AI-accelerated vulnerability discovery and patching in critical open-source software.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI can now quickly scan open-source projects and identify exploitable vulnerabilities, a defensive advantage also available to attackers. To counter this, Anthropic, Google, Microsoft, OpenAI, AWS, and 15 other organizations launched Akrites.",
+   "Akrites, under the Linux Foundation, is a coordinated body specifically designed for AI-era vulnerability discovery, remediation, and disclosure in critical open-source software. Its name, Akritai, refers to Byzantine border guards.",
+   "The traditional coordinated disclosure model was built for a time when finding vulnerabilities took weeks of expert work. AI has drastically shortened this timeline, creating an urgent need for faster, more coordinated patching efforts.",
+   "Endor Labs CEO Varun Badhwar noted that AI has surfaced thousands of validated open-source vulnerabilities in recent months, with fewer than 5% patched. The old model exacerbates the problem by allowing multiple organizations to independently hold knowledge of unpatched flaws.",
+   "Anthropic's deputy CISO Jason Clinton emphasized that coordinated disclosure has not kept pace with AI's speed in uncovering problems. The primary goal of Akrites is to get patches upstream *before* public disclosure, rather than after.",
+   "This initiative comes after Anthropic's own cybersecurity models, Fable 5 and Mythos 5, were suspended by the US government in early June. Researchers demonstrated these models, initially built for defense, could also assist with cyberattacks, highlighting the dual-use nature of AI in security."
+  ],
+  "caption": "AI is finding open-source vulnerabilities faster than ever, and attackers have the same tools. Now, 19 major tech organizations are uniting to fight back.\n\nAI can now quickly scan open-source projects and identify exploitable vulnerabilities, a defensive advantage also available to attackers. To counter this, Anthropic, Google, Microsoft, OpenAI, AWS, and 15 other organizations launched Akrites.\n\nAkrites, under the Linux Foundation, is a coordinated body specifically designed for AI-era vulnerability discovery, remediation, and disclosure in critical open-source software. Its name, Akritai, refers to Byzantine border guards.\n\nThe traditional coordinated disclosure model was built for a time when finding vulnerabilities took weeks of expert work. AI has drastically shortened this timeline, creating an urgent need for faster, more coordinated patching efforts.\n\nEndor Labs CEO Varun Badhwar noted that AI has surfaced thousands of validated open-source vulnerabilities in recent months, with fewer than 5% patched. The old model exacerbates the problem by allowing multiple organizations to independently hold knowledge of unpatched flaws.\n\nAnthropic's deputy CISO Jason Clinton emphasized that coordinated disclosure has not kept pace with AI's speed in uncovering problems. The primary goal of Akrites is to get patches upstream *before* public disclosure, rather than after.\n\nThis initiative comes after Anthropic's own cybersecurity models, Fable 5 and Mythos 5, were suspended by the US government in early June. Researchers demonstrated these models, initially built for defense, could also assist with cyberattacks, highlighting the dual-use nature of AI in security.\n\n#Cybersecurity #OpenSource #AI #Security #LinuxFoundation #TechNews\n\nSource: DEV",
+  "tweet": "AI is accelerating vulnerability discovery in open-source software. Anthropic, Google, Microsoft, and 16 other orgs have launched Akrites under the Linux Foundation to coordinate faster patching. #Cybersecurity #OpenSource #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/thegatewayguy/anthropic-google-and-microsoft-just-built-a-shared-security-team-for-open-source-ai-is-why-446i",
+  "image": "",
+  "orig_title": "Anthropic, Google, and Microsoft just built a shared security team for open source. AI is why.",
+  "cluster_urls": [
+   "https://dev.to/thegatewayguy/anthropic-google-and-microsoft-just-built-a-shared-security-team-for-open-source-ai-is-why-446i"
+  ],
+  "cluster_titles": [
+   "Anthropic, Google, and Microsoft just built a shared security team for open source. AI is why."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260627-2206-0-anthropic-google-microsoft-form-shared-secur.png",
+   "20260627-2206-0-anthropic-google-microsoft-form-shared-secur-d1.png",
+   "20260627-2206-0-anthropic-google-microsoft-form-shared-secur-d2.png",
+   "20260627-2206-0-anthropic-google-microsoft-form-shared-secur-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_cost_reduction_chinese_models",
+  "headline_marked": "[[Cut OpenAI bill by 94%]] using Chinese AI models for summarization",
+  "headline": "Cut OpenAI bill by 94% using Chinese AI models for summarization",
+  "summary": "A developer slashed their OpenAI API costs from $480/month to $28/month by switching to alternative Chinese AI models like DeepSeek V4 Flash, with users reporting no noticeable drop in quality.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer dramatically cut their OpenAI API bill by 94%, reducing monthly costs from $480 to just $28. This significant saving was achieved by switching from GPT-4o to alternative Chinese AI models for a content summarization tool.",
+   "The project, processing 15-20 million tokens monthly, was initially a heavy drain on resources. Despite initial assumptions about access and quality, the developer found Chinese models to be easily accessible and high-performing.",
+   "Benchmarking included DeepSeek V4 Flash, Qwen-Plus, GLM-4 Plus, and DeepSeek V3.1 against GPT-4o. Tests involved 500 real summarization tasks, with output quality, speed, and cost rigorously measured.",
+   "DeepSeek V4 Flash achieved an 8.8/10 quality score compared to GPT-4o's 9.2/10, representing only a 4% quality gap for 92% less cost. For summarization specifically, human reviewers often couldn't distinguish between the models.",
+   "The transition was smooth, with the OpenAI SDK proving fully compatible for function calling, streaming, and response formatting. This allowed for a seamless integration of the new models.",
+   "The developer now leverages an intelligent routing engine behind a single API base_url, dynamically dispatching requests to optimal models based on task type and latency. This routing alone can save an additional 20-60% on token costs.",
+   "This approach offers access to over 100 models through one API, providing flexibility and avoiding vendor lock-in. The developer advises others to test with small workloads first, noting free credits are available for thousands of test queries."
+  ],
+  "caption": "Slash your OpenAI API bill by 94%? One developer did, dropping from $480 to $28/month using Chinese AI models.\n\nA developer dramatically cut their OpenAI API bill by 94%, reducing monthly costs from $480 to just $28. This significant saving was achieved by switching from GPT-4o to alternative Chinese AI models for a content summarization tool.\n\nThe project, processing 15-20 million tokens monthly, was initially a heavy drain on resources. Despite initial assumptions about access and quality, the developer found Chinese models to be easily accessible and high-performing.\n\nBenchmarking included DeepSeek V4 Flash, Qwen-Plus, GLM-4 Plus, and DeepSeek V3.1 against GPT-4o. Tests involved 500 real summarization tasks, with output quality, speed, and cost rigorously measured.\n\nDeepSeek V4 Flash achieved an 8.8/10 quality score compared to GPT-4o's 9.2/10, representing only a 4% quality gap for 92% less cost. For summarization specifically, human reviewers often couldn't distinguish between the models.\n\nThe transition was smooth, with the OpenAI SDK proving fully compatible for function calling, streaming, and response formatting. This allowed for a seamless integration of the new models.\n\nThe developer now leverages an intelligent routing engine behind a single API base_url, dynamically dispatching requests to optimal models based on task type and latency. This routing alone can save an additional 20-60% on token costs.\n\nThis approach offers access to over 100 models through one API, providing flexibility and avoiding vendor lock-in. The developer advises others to test with small workloads first, noting free credits are available for thousands of test queries.\n\n#AI #APICosts #DeepSeek #OpenAI #Developer #TechSavings\n\nSource: DEV",
+  "tweet": "Slash your OpenAI API bill by 94%? One developer did, dropping from $480 to $28/month using Chinese AI models for summarization. Quality difference was negligible. Learn how to save big on your AI projects. #AI #APICosts #TechSavings",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tokencnn/i-cut-my-openai-bill-by-94-using-chinese-ai-models-heres-exactly-how-2ngm",
+  "image": "",
+  "orig_title": "I Cut My OpenAI Bill by 94% Using Chinese AI Models — Here's Exactly How",
+  "cluster_urls": [
+   "https://dev.to/tokencnn/i-cut-my-openai-bill-by-94-using-chinese-ai-models-heres-exactly-how-2ngm"
+  ],
+  "cluster_titles": [
+   "I Cut My OpenAI Bill by 94% Using Chinese AI Models — Here's Exactly How"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260627-2206-1-cut-openai-bill-by-94-using-chinese-ai-model.png",
+   "20260627-2206-1-cut-openai-bill-by-94-using-chinese-ai-model-d1.png",
+   "20260627-2206-1-cut-openai-bill-by-94-using-chinese-ai-model-d2.png",
+   "20260627-2206-1-cut-openai-bill-by-94-using-chinese-ai-model-d3.png"
+  ]
+ }
+]

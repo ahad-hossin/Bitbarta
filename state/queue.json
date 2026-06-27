@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "llm_hidden_costs",
+  "headline_marked": "[[Your LLM bill is hiding 5 major costs]] your monitoring stack can't see",
+  "headline": "Your LLM bill is hiding 5 major costs your monitoring stack can't see",
+  "summary": "Many teams unknowingly overspend on LLMs due to a lack of granular cost attribution. Discover five overlooked areas where costs accumulate, often without any error alerts.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many teams are unknowingly overspending on LLM usage, with one company discovering 74% of their total spend was on a single, unoptimized batch report generator. Standard model-level dashboards fail to provide the necessary feature-level attribution to identify such issues. Instrumenting every LLM call with a feature tag at the point of invocation is crucial for accurate cost visibility.",
+   "Flat pricing models can conceal significant losses on power users, as unit economics gaps only become visible when costs are rolled up per user and per plan tier. One company found they were losing money on their best customers for 14 months due to this blind spot. Attributing costs per user, per feature, per month allows for data-driven repricing discussions.",
+   "Duplicate LLM calls across different services for the same input can silently inflate bills, with one example costing $180 a month for redundant compliance checks. These issues are often invisible when monitoring individual services. Tagging calls with the originating service name, alongside feature and user, helps uncover system-level duplicates.",
+   "Excessive call frequency from broken triggers, not just high cost per call, can lead to substantial hidden expenses. An autosave feature running a compliance check every 30 seconds for 40 users resulted in 4,800 GPT-4o calls per hour, costing $5,400 a month. Fixing this trigger with one line of code reduced costs from $1,890 to $190 per month without impacting users.",
+   "Traditional infrastructure monitoring tools like Datadog or CloudWatch are not designed to answer 'which feature, which user, which service' triggered an LLM call. They confirm request success but lack the application-level context needed for cost optimization. Implementing instrumentation between application code and the provider API to tag calls at the moment they happen is essential to address these blind spots."
+  ],
+  "caption": "Your LLM bill could be hiding thousands in unnecessary costs. Standard monitoring tools miss 5 critical areas of overspend.\n\nMany teams are unknowingly overspending on LLM usage, with one company discovering 74% of their total spend was on a single, unoptimized batch report generator. Standard model-level dashboards fail to provide the necessary feature-level attribution to identify such issues. Instrumenting every LLM call with a feature tag at the point of invocation is crucial for accurate cost visibility.\n\nFlat pricing models can conceal significant losses on power users, as unit economics gaps only become visible when costs are rolled up per user and per plan tier. One company found they were losing money on their best customers for 14 months due to this blind spot. Attributing costs per user, per feature, per month allows for data-driven repricing discussions.\n\nDuplicate LLM calls across different services for the same input can silently inflate bills, with one example costing $180 a month for redundant compliance checks. These issues are often invisible when monitoring individual services. Tagging calls with the originating service name, alongside feature and user, helps uncover system-level duplicates.\n\nExcessive call frequency from broken triggers, not just high cost per call, can lead to substantial hidden expenses. An autosave feature running a compliance check every 30 seconds for 40 users resulted in 4,800 GPT-4o calls per hour, costing $5,400 a month. Fixing this trigger with one line of code reduced costs from $1,890 to $190 per month without impacting users.\n\nTraditional infrastructure monitoring tools like Datadog or CloudWatch are not designed to answer 'which feature, which user, which service' triggered an LLM call. They confirm request success but lack the application-level context needed for cost optimization. Implementing instrumentation between application code and the provider API to tag calls at the moment they happen is essential to address these blind spots.\n\n#LLM #CostOptimization #SoftwareDevelopment #AI #Tech #DevOps\n\nSource: DEV",
+  "tweet": "Your LLM bill is likely hiding major costs. Learn 5 critical blind spots your current monitoring tools miss, from duplicate calls to excessive triggers. One fix saved $1,700/month with a single line of code. #LLM #CostOptimization #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/arpitstack/5-things-your-llm-bill-is-hiding-from-you-and-how-to-find-them-5ala",
+  "image": "",
+  "orig_title": "5 Things Your LLM Bill Is Hiding From You (And How to Find Them)",
+  "cluster_urls": [
+   "https://dev.to/arpitstack/5-things-your-llm-bill-is-hiding-from-you-and-how-to-find-them-5ala"
+  ],
+  "cluster_titles": [
+   "5 Things Your LLM Bill Is Hiding From You (And How to Find Them)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260627-1906-0-your-llm-bill-is-hiding-5-major-costs-your-m.png",
+   "20260627-1906-0-your-llm-bill-is-hiding-5-major-costs-your-m-d1.png",
+   "20260627-1906-0-your-llm-bill-is-hiding-5-major-costs-your-m-d2.png",
+   "20260627-1906-0-your-llm-bill-is-hiding-5-major-costs-your-m-d3.png"
+  ]
+ },
+ {
+  "topic": "nasa_in_orbit_refueling_test",
+  "headline_marked": "[[NASA tests in-orbit refueling device]] for deep space missions, handling -321°F liquid nitrogen",
+  "headline": "NASA tests in-orbit refueling device for deep space missions, handling -321°F liquid nitrogen",
+  "summary": "The L3Harris-developed \"cryocoupler\" is designed to transfer extremely cold propellants like liquid hydrogen and oxygen, enabling spacecraft to refuel in space for longer missions.",
+  "category": "SCIENCE",
+  "template": "neon",
+  "details": [
+   "NASA is advancing deep space exploration with a new \"cryocoupler\" developed by L3Harris, designed to facilitate in-orbit refueling. This technology is crucial for future missions that will require spacecraft to top up their fuel tanks before heading to distant destinations.",
+   "The cryocoupler acts like a gas pump nozzle, allowing spacecraft to link with orbiting fuel stations. The primary engineering challenge is transferring extremely cold fluids, such as liquid hydrogen and oxygen, which must remain chilled at hundreds of degrees below Fahrenheit without leaking.",
+   "Travis Belcher, cryocoupler project manager at NASA's Marshall Space Flight Center, emphasized that the device must attach and detach multiple times and be fully automated. This eliminates the need for astronauts to perform dangerous spacewalks for propellant transfer.",
+   "Initial tests involved running liquid nitrogen at -321 degrees Fahrenheit through various connected and disconnected configurations. These trials provided critical data on the device's reaction to significant temperature differences and its ability to accommodate misaligned dockings.",
+   "While these tests are foundational, future assessments will be tailored to specific mission requirements. The cryocoupler represents a vital step towards making extended deep space travel a reality by solving one of spaceflight's toughest engineering challenges."
+  ],
+  "caption": "NASA is testing a \"cryocoupler\" that could revolutionize deep space travel by enabling spacecraft to refuel in orbit. This device handles liquid nitrogen at -321°F.\n\nNASA is advancing deep space exploration with a new \"cryocoupler\" developed by L3Harris, designed to facilitate in-orbit refueling. This technology is crucial for future missions that will require spacecraft to top up their fuel tanks before heading to distant destinations.\n\nThe cryocoupler acts like a gas pump nozzle, allowing spacecraft to link with orbiting fuel stations. The primary engineering challenge is transferring extremely cold fluids, such as liquid hydrogen and oxygen, which must remain chilled at hundreds of degrees below Fahrenheit without leaking.\n\nTravis Belcher, cryocoupler project manager at NASA's Marshall Space Flight Center, emphasized that the device must attach and detach multiple times and be fully automated. This eliminates the need for astronauts to perform dangerous spacewalks for propellant transfer.\n\nInitial tests involved running liquid nitrogen at -321 degrees Fahrenheit through various connected and disconnected configurations. These trials provided critical data on the device's reaction to significant temperature differences and its ability to accommodate misaligned dockings.\n\nWhile these tests are foundational, future assessments will be tailored to specific mission requirements. The cryocoupler represents a vital step towards making extended deep space travel a reality by solving one of spaceflight's toughest engineering challenges.\n\n#NASA #SpaceTech #DeepSpace #Cryogenic #L3Harris #Innovation\n\nSource: Engadget",
+  "tweet": "NASA is testing a \"cryocoupler\" by L3Harris, a crucial step for in-orbit refueling of deep space missions. This device can handle liquid nitrogen at -321°F and is fully automated. #NASA #SpaceTech #Innovation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "l3harris.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2203145/nasa-tests-in-orbit-refueling-device-deep-space-missions/",
+  "image": "https://www.engadget.com/img/gallery/nasa-tests-an-in-orbit-refueling-device-for-deep-space-missions/l-intro-1782564424.jpg",
+  "orig_title": "NASA tests an in-orbit refueling device for deep space missions",
+  "cluster_urls": [
+   "https://www.engadget.com/2203145/nasa-tests-in-orbit-refueling-device-deep-space-missions/"
+  ],
+  "cluster_titles": [
+   "NASA tests an in-orbit refueling device for deep space missions"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260627-1906-1-nasa-tests-in-orbit-refueling-device-for-dee.png",
+   "20260627-1906-1-nasa-tests-in-orbit-refueling-device-for-dee-d1.png",
+   "20260627-1906-1-nasa-tests-in-orbit-refueling-device-for-dee-d2.png"
+  ]
+ }
+]

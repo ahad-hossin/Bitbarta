@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "qwen cloud multi-agent ai system for blue collar workers",
+  "headline_marked": "Carpenter [[builds JING, an 8-agent AI system]] for blue-collar businesses, leveraging Qwen Cloud",
+  "headline": "Carpenter builds JING, an 8-agent AI system for blue-collar businesses, leveraging Qwen Cloud",
+  "summary": "A carpenter developed JING, an 8-agent AI system, to automate administrative tasks for trade businesses. It uses Qwen Cloud, making it 12.5x cheaper than GPT-4o for comparable performance.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A carpenter developed JING, an 8-agent AI system, to automate administrative burdens for trade businesses like budgeting and material sourcing. This allows artisans to focus on their craft, boosting productivity and efficiency.",
+   "JING aims to extend beyond carpentry to assist all artisans, including electricians, plumbers, and welders. The system comprises 8 specialized AI agents, each designed for a specific task, featuring built-in debate and conflict resolution.",
+   "Key agents include JING-MASTER for strategic planning (Qwen-Max), JING-FOREMAN for execution (Qwen-Plus), JING-EYE for vision tasks (Qwen-VL-Max), and JING-STEWARD for financial management (Qwen-Plus). They coordinate through task decomposition and structured debate.",
+   "The creator chose Qwen Cloud for its cost-effectiveness, with Qwen-Plus being 12.5x cheaper than GPT-4o and 7.5x cheaper than Claude 3.5 Sonnet for comparable technical task performance. A complete 8-agent workflow costs approximately $0.056.",
+   "Qwen-VL-Max, used by JING-EYE, excels at identifying components from imperfect real-world photos, providing structured JSON output. This is crucial for technicians working in challenging environments, ensuring actionable data for other agents.",
+   "JING-MASTER uses Qwen-Max to generate complex execution plans with task dependencies and fallback strategies, validated via Pydantic. This ensures robust and reliable operation, making JING viable as a real product."
+  ],
+  "caption": "A carpenter built an 8-agent AI system called JING to automate administrative tasks for blue-collar workers. It costs just $0.056 per workflow.\n\nA carpenter developed JING, an 8-agent AI system, to automate administrative burdens for trade businesses like budgeting and material sourcing. This allows artisans to focus on their craft, boosting productivity and efficiency.\n\nJING aims to extend beyond carpentry to assist all artisans, including electricians, plumbers, and welders. The system comprises 8 specialized AI agents, each designed for a specific task, featuring built-in debate and conflict resolution.\n\nKey agents include JING-MASTER for strategic planning (Qwen-Max), JING-FOREMAN for execution (Qwen-Plus), JING-EYE for vision tasks (Qwen-VL-Max), and JING-STEWARD for financial management (Qwen-Plus). They coordinate through task decomposition and structured debate.\n\nThe creator chose Qwen Cloud for its cost-effectiveness, with Qwen-Plus being 12.5x cheaper than GPT-4o and 7.5x cheaper than Claude 3.5 Sonnet for comparable technical task performance. A complete 8-agent workflow costs approximately $0.056.\n\nQwen-VL-Max, used by JING-EYE, excels at identifying components from imperfect real-world photos, providing structured JSON output. This is crucial for technicians working in challenging environments, ensuring actionable data for other agents.\n\nJING-MASTER uses Qwen-Max to generate complex execution plans with task dependencies and fallback strategies, validated via Pydantic. This ensures robust and reliable operation, making JING viable as a real product.\n\n#AI #MultiAgentAI #QwenCloud #TechForTrades #Productivity #Startups\n\nSource: DEV",
+  "tweet": "A carpenter built JING, an 8-agent AI system, to automate admin for blue-collar businesses. Using Qwen Cloud, it costs ~$0.056 per workflow, making advanced AI accessible for trades. #AI #TechForTrades #QwenCloud",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/xenwithcode/building-jing-how-a-carpenter-used-qwen-cloud-to-create-a-multi-agent-ai-system-for-blue-collar-1imh",
+  "image": "",
+  "orig_title": "Building JING: How a Carpenter Used Qwen Cloud to Create a Multi-Agent AI System for Blue-Collar Workers",
+  "cluster_urls": [
+   "https://dev.to/xenwithcode/building-jing-how-a-carpenter-used-qwen-cloud-to-create-a-multi-agent-ai-system-for-blue-collar-1imh"
+  ],
+  "cluster_titles": [
+   "Building JING: How a Carpenter Used Qwen Cloud to Create a Multi-Agent AI System for Blue-Collar Workers"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260627-0806-0-carpenter-builds-jing-an-8-agent-ai-system-f.png",
+   "20260627-0806-0-carpenter-builds-jing-an-8-agent-ai-system-f-d1.png",
+   "20260627-0806-0-carpenter-builds-jing-an-8-agent-ai-system-f-d2.png"
+  ]
+ },
+ {
+  "topic": "ai agent security stripe key leak prevention",
+  "headline_marked": "[[AI Agent leaked Stripe key]], costing $12,000; here's how to stop it before the commit",
+  "headline": "AI Agent leaked Stripe key, costing $12,000; here's how to stop it before the commit",
+  "summary": "Automated bots scraped a public GitHub commit, exploiting a Stripe key hardcoded by an AI agent, leading to $12,000 in fraudulent charges in under four hours.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A developer recently lost $12,000 in fraudulent Stripe charges within four hours after an AI agent hardcoded an API key into a configuration file. Automated bots quickly scraped the public GitHub commit, exploiting the exposed secret before the developer could even delete it.",
+   "This incident highlights a new reality in software engineering: AI agents, empowered with Model Context Protocol (MCP) to interact with APIs and modify infrastructure, can automate catastrophe if not given a way to reason about security.",
+   "Current industry defenses, such as post-build scanners like SonarQube or Snyk, are reactive. They operate in the CI/CD pipeline, often minutes or hours after a vulnerability has been merged, which is too slow for the rapid pace of AI agent development.",
+   "When agents like Claude or Cursor can refactor entire modules in seconds, insecure code can be written faster than human-centric linting rules can catch it. The security gate needs to shift from 'post-build scan' to 'pre-coding reasoning'.",
+   "The Security Audit Prover MCP server was developed to address this by auditing the intent and strategy of an AI agent before it interacts with the filesystem. It is not a scanner but a forcing function for secure design.",
+   "Agents often default to the path of least resistance, such as directly passing user-provided paths into filesystem calls, assuming internal tools are trusted. This mindset creates vulnerabilities like path traversal attacks, allowing attackers to escalate privileges.",
+   "The Prover forces agents to validate implementations against five specific axes of decision-making, using a structured reasoning engine. It rejects configurations without explicit proof of a security strategy.",
+   "For input validation, vague claims like 'I've checked the input format' are rejected. The Prover demands proof of sanitization methods, such as using DOMPurify for HTML or regex constraints, and requires the agent to assume all input is hostile.",
+   "Regarding secrets management, the Prover flags any attempt to hardcode keys, forcing agents to use environment variables or dedicated secret managers like AWS Secrets Manager or HashiCorp Vault. Once a secret is in Git history, it is compromised.",
+   "For authorization, agents often fail to implement proper ownership checks, leading to Insecure Direct Object Reference (IDOR) vulnerabilities. The Prover requires agents to explicitly define these checks, preventing unauthorized access to user data."
+  ],
+  "caption": "An AI agent just cost a developer $12,000 by leaking a Stripe key to automated bots. This is the new reality of AI-driven development.\n\nA developer recently lost $12,000 in fraudulent Stripe charges within four hours after an AI agent hardcoded an API key into a configuration file. Automated bots quickly scraped the public GitHub commit, exploiting the exposed secret before the developer could even delete it.\n\nThis incident highlights a new reality in software engineering: AI agents, empowered with Model Context Protocol (MCP) to interact with APIs and modify infrastructure, can automate catastrophe if not given a way to reason about security.\n\nCurrent industry defenses, such as post-build scanners like SonarQube or Snyk, are reactive. They operate in the CI/CD pipeline, often minutes or hours after a vulnerability has been merged, which is too slow for the rapid pace of AI agent development.\n\nWhen agents like Claude or Cursor can refactor entire modules in seconds, insecure code can be written faster than human-centric linting rules can catch it. The security gate needs to shift from 'post-build scan' to 'pre-coding reasoning'.\n\nThe Security Audit Prover MCP server was developed to address this by auditing the intent and strategy of an AI agent before it interacts with the filesystem. It is not a scanner but a forcing function for secure design.\n\nAgents often default to the path of least resistance, such as directly passing user-provided paths into filesystem calls, assuming internal tools are trusted. This mindset creates vulnerabilities like path traversal attacks, allowing attackers to escalate privileges.\n\nThe Prover forces agents to validate implementations against five specific axes of decision-making, using a structured reasoning engine. It rejects configurations without explicit proof of a security strategy.\n\n#AISecurity #DevSecOps #Cybersecurity #AI #Developer #GitHub\n\nSource: DEV",
+  "tweet": "An AI agent hardcoded a Stripe key, leading to $12,000 in losses from automated bots. Traditional scanners are too slow. We need pre-coding security reasoning for AI agents. #AISecurity #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/renato_marinho/your-ai-agent-just-leaked-your-stripe-key-heres-how-to-stop-it-before-the-commit-5fb7",
+  "image": "",
+  "orig_title": "Your AI Agent just leaked your Stripe key. Here's how to stop it before the commit.",
+  "cluster_urls": [
+   "https://dev.to/renato_marinho/your-ai-agent-just-leaked-your-stripe-key-heres-how-to-stop-it-before-the-commit-5fb7"
+  ],
+  "cluster_titles": [
+   "Your AI Agent just leaked your Stripe key. Here's how to stop it before the commit."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260627-0806-1-ai-agent-leaked-stripe-key-costing-12-000-he.png",
+   "20260627-0806-1-ai-agent-leaked-stripe-key-costing-12-000-he-d1.png",
+   "20260627-0806-1-ai-agent-leaked-stripe-key-costing-12-000-he-d2.png",
+   "20260627-0806-1-ai-agent-leaked-stripe-key-costing-12-000-he-d3.png",
+   "20260627-0806-1-ai-agent-leaked-stripe-key-costing-12-000-he-d4.png"
+  ]
+ }
+]

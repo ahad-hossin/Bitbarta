@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "topic": "ai_indirect_prompt_injection_in_wild",
+  "headline_marked": "[[Indirect Prompt Injection Attacks Confirmed]] in the Wild by Palo Alto Networks Unit 42",
+  "headline": "Indirect Prompt Injection Attacks Confirmed in the Wild by Palo Alto Networks Unit 42",
+  "summary": "Palo Alto Networks Unit 42 has confirmed real-world indirect prompt injection attacks against LLM-powered agents, leading to high-severity fraud. This active threat targets agents processing external web content.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Palo Alto Networks Unit 42 has confirmed real-world indirect prompt injection attacks against LLM-powered agents. These aren't research demos but actual adversaries embedding malicious instructions into web content that agents browse. This can cause agents to execute unintended actions, including fraud.",
+   "This threat model is now active for any agentic system that interacts with the web, such as research agents, browser-use workflows, or customer-facing assistants fetching external content. Attackers embed hidden instructions into web content, which agents ingest and then execute as legitimate commands. The core problem is the agent's inability to distinguish between retrieved content and instructions to follow.",
+   "The impact can be high-severity fraud-class actions because the agent views all text in its context window as instructions. This means attackers don't need system prompt access or application compromise; they just need the agent to read content they control. Agents lack a built-in mechanism to tag tool results as \"untrusted external content.\"",
+   "The risk escalates with agentic autonomy; more tools an agent has (file writes, API calls, email sends) increase the \"blast radius\" if its context is poisoned. The attack surface is the model's context, meaning defense must also occur at this level. A scrub layer on the inbound side of every tool result is crucial before it reaches the model.",
+   "Sentinel's transparent agentic proxy offers a solution by sitting inline between the application and the LLM. It scrubs tool results from web fetches before they reach the model's context window. This includes a Fast-Path Regex layer for high-confidence attack signatures and a Deep-Path Vector Similarity layer for rephrased or encoded injections.",
+   "The Deep-Path layer computes semantic embeddings and compares them against attack signature embeddings, flagging or neutralizing malicious content based on cosine similarity scores. For confirmed adversarial content, scores above 0.82 trigger a block, substituting the poisoned tool result with an inert placeholder. This allows the agent to continue without compromised content.",
+   "The integration is straightforward, often a one-line base URL change in the SDK initialization. The key takeaway is to treat every tool result as untrusted input and scrub it before it enters model context. This addresses the gap Unit 42's research confirmed adversaries are exploiting."
+  ],
+  "caption": "Real-world indirect prompt injection attacks against LLM-powered agents are confirmed active by Palo Alto Networks Unit 42. This critical vulnerability allows adversaries to embed malicious instructions in web content, leading to fraud.\n\nPalo Alto Networks Unit 42 has confirmed real-world indirect prompt injection attacks against LLM-powered agents. These aren't research demos but actual adversaries embedding malicious instructions into web content that agents browse. This can cause agents to execute unintended actions, including fraud.\n\nThis threat model is now active for any agentic system that interacts with the web, such as research agents, browser-use workflows, or customer-facing assistants fetching external content. Attackers embed hidden instructions into web content, which agents ingest and then execute as legitimate commands. The core problem is the agent's inability to distinguish between retrieved content and instructions to follow.\n\nThe impact can be high-severity fraud-class actions because the agent views all text in its context window as instructions. This means attackers don't need system prompt access or application compromise; they just need the agent to read content they control. Agents lack a built-in mechanism to tag tool results as \"untrusted external content.\"\n\nThe risk escalates with agentic autonomy; more tools an agent has (file writes, API calls, email sends) increase the \"blast radius\" if its context is poisoned. The attack surface is the model's context, meaning defense must also occur at this level. A scrub layer on the inbound side of every tool result is crucial before it reaches the model.\n\nSentinel's transparent agentic proxy offers a solution by sitting inline between the application and the LLM. It scrubs tool results from web fetches before they reach the model's context window. This includes a Fast-Path Regex layer for high-confidence attack signatures and a Deep-Path Vector Similarity layer for rephrased or encoded injections.\n\n#AISecurity #PromptInjection #LLMAgents #Cybersecurity #PaloAltoNetworks #TechNews\n\nSource: DEV",
+  "tweet": "Real-world indirect prompt injection attacks against LLM-powered agents are confirmed active by Palo Alto Networks Unit 42. Adversaries are embedding malicious instructions in web content, causing agents to execute fraud. A critical threat for agentic systems. #AISecurity #C",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "paloaltonetworks.com",
+  "source": "DEV",
+  "url": "https://dev.to/coridev/palo-alto-unit-42-caught-indirect-prompt-injection-in-the-wild-heres-what-your-agent-firewall-1igh",
+  "image": "",
+  "orig_title": "Palo Alto Unit 42 Caught Indirect Prompt Injection in the Wild — Here's What Your Agent Firewall Needs to Stop It",
+  "cluster_urls": [
+   "https://dev.to/coridev/palo-alto-unit-42-caught-indirect-prompt-injection-in-the-wild-heres-what-your-agent-firewall-1igh"
+  ],
+  "cluster_titles": [
+   "Palo Alto Unit 42 Caught Indirect Prompt Injection in the Wild — Here's What Your Agent Firewall Needs to Stop It"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260628-1606-0-indirect-prompt-injection-attacks-confirmed-.png",
+   "20260628-1606-0-indirect-prompt-injection-attacks-confirmed--d1.png",
+   "20260628-1606-0-indirect-prompt-injection-attacks-confirmed--d2.png",
+   "20260628-1606-0-indirect-prompt-injection-attacks-confirmed--d3.png",
+   "20260628-1606-0-indirect-prompt-injection-attacks-confirmed--d4.png"
+  ]
+ }
+]

@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "ollama_local_llm_setup",
+  "headline_marked": "[[Run LLMs Locally in 10 Minutes]] with Ollama: A Quick Start Guide",
+  "headline": "Run LLMs Locally in 10 Minutes with Ollama: A Quick Start Guide",
+  "summary": "Ollama offers the easiest way to run large language models on your own machine without API keys or cloud bills. This guide covers installation, model selection, and API integration for macOS, Linux, and Windows.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Ollama simplifies running large language models on your local machine, eliminating the need for API keys or cloud services. It packages model weights, a runtime (built on llama.cpp), and a CLI/REST API into one tool, working seamlessly across macOS, Linux, and Windows.",
+   "Installation is straightforward: download the app from ollama.com/download, use Homebrew on Linux/macOS, or run the Windows installer. Recent Windows versions include a full desktop app with a chat window, allowing use without the terminal.",
+   "To run a model, use 'ollama run <model>', which pulls the model (a few GB) and starts an interactive chat session. Always pull with an explicit tag like 'ollama pull qwen2.5-coder:7b' to ensure consistent versions.",
+   "Ollama's library features hundreds of models; a 7-8B model at Q4 quantization typically requires 5-6 GB of memory. Mixture-of-experts (MoE) models, while needing full memory for the model, often run faster at inference due to only using a fraction of their listed size.",
+   "Ollama exposes a REST API on 'localhost:11434', which powers IDE plugins and chat UIs. It also provides an OpenAI-compatible endpoint, allowing existing OpenAI SDK integrations to point to Ollama with a simple base URL change.",
+   "For customized models with fixed system prompts or default parameters, create a Modelfile. This allows you to bake in specific settings, making your custom model available via 'ollama list'."
+  ],
+  "caption": "Run LLMs locally in just 10 minutes, no cloud or API keys needed. Ollama makes it easy to get started across macOS, Linux, and Windows.\n\nOllama simplifies running large language models on your local machine, eliminating the need for API keys or cloud services. It packages model weights, a runtime (built on llama.cpp), and a CLI/REST API into one tool, working seamlessly across macOS, Linux, and Windows.\n\nInstallation is straightforward: download the app from ollama.com/download, use Homebrew on Linux/macOS, or run the Windows installer. Recent Windows versions include a full desktop app with a chat window, allowing use without the terminal.\n\nTo run a model, use 'ollama run <model>', which pulls the model (a few GB) and starts an interactive chat session. Always pull with an explicit tag like 'ollama pull qwen2.5-coder:7b' to ensure consistent versions.\n\nOllama's library features hundreds of models; a 7-8B model at Q4 quantization typically requires 5-6 GB of memory. Mixture-of-experts (MoE) models, while needing full memory for the model, often run faster at inference due to only using a fraction of their listed size.\n\nOllama exposes a REST API on 'localhost:11434', which powers IDE plugins and chat UIs. It also provides an OpenAI-compatible endpoint, allowing existing OpenAI SDK integrations to point to Ollama with a simple base URL change.\n\nFor customized models with fixed system prompts or default parameters, create a Modelfile. This allows you to bake in specific settings, making your custom model available via 'ollama list'.\n\n#Ollama #LLMs #AI #LocalAI #Developers #TechGuide\n\nSource: DEV",
+  "tweet": "Want to run LLMs locally in 10 minutes? Ollama makes it easy, no API keys or cloud bills. Get started with this guide for macOS, Linux, and Windows, covering installation, model selection, and API integration. #Ollama #LLMs #LocalAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "ollama.com",
+  "source": "DEV",
+  "url": "https://dev.to/mohitkumar4/getting-started-with-ollama-run-llms-locally-in-10-minutes-5g98",
+  "image": "",
+  "orig_title": "Getting Started with Ollama: Run LLMs Locally in 10 Minutes",
+  "cluster_urls": [
+   "https://dev.to/mohitkumar4/getting-started-with-ollama-run-llms-locally-in-10-minutes-5g98"
+  ],
+  "cluster_titles": [
+   "Getting Started with Ollama: Run LLMs Locally in 10 Minutes"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260628-0809-0-run-llms-locally-in-10-minutes-with-ollama-a.png",
+   "20260628-0809-0-run-llms-locally-in-10-minutes-with-ollama-a-d1.png",
+   "20260628-0809-0-run-llms-locally-in-10-minutes-with-ollama-a-d2.png"
+  ]
+ }
+]

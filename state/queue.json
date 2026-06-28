@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai_llm_model_swapping_deepseek_claude",
+  "headline_marked": "I Run DeepSeek on Claude Code — [[Swap Models by Changing Only One File]]",
+  "headline": "I Run DeepSeek on Claude Code — Swap Models by Changing Only One File",
+  "summary": "A new three-layer architecture simplifies swapping LLMs like DeepSeek V4 Pro, Claude Opus, or Sonnet in Claude Code, requiring changes to only one file instead of rewriting entire 500-line scripts.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many CLAUDE.md files are monolithic, often 500 lines long, requiring a complete rewrite every time you switch LLMs. This repetitive process becomes cumbersome when frequently moving between models like DeepSeek V4 Pro, Claude Opus, or Sonnet.",
+   "To address this, a developer built a three-layer architecture that makes model swaps trivial. This system allows for easy transitions between different LLMs, eliminating the need to rewrite extensive configuration files for each change.",
+   "The core problem identified was the mixing of identity, behavior tuning, and process rules into a single file. Each LLM requires different discipline and output handling, making a universal rule file ineffective and leading to constant rewrites.",
+   "The new architecture separates these concerns into distinct layers. One layer defines the LLM's role, goals, and expertise, remaining constant across models. Another layer handles model-specific calibration, adapting to each LLM's unique needs.",
+   "A third layer manages process rules like session startup checks, shutdown sequences, and review systems. These rules are model-agnostic, working consistently regardless of the underlying LLM engine, ensuring operational stability.",
+   "This separation prevents 'drift' where identity gets buried, and ensures process rules remain independent. The architecture is available as a Claude Code skill, with the full configuration system open-source for wider adoption and collaboration."
+  ],
+  "caption": "Tired of rewriting 500-line LLM config files for every model swap? A new open-source architecture lets you switch between DeepSeek, Claude Opus, and Sonnet by changing just one file.\n\nMany CLAUDE.md files are monolithic, often 500 lines long, requiring a complete rewrite every time you switch LLMs. This repetitive process becomes cumbersome when frequently moving between models like DeepSeek V4 Pro, Claude Opus, or Sonnet.\n\nTo address this, a developer built a three-layer architecture that makes model swaps trivial. This system allows for easy transitions between different LLMs, eliminating the need to rewrite extensive configuration files for each change.\n\nThe core problem identified was the mixing of identity, behavior tuning, and process rules into a single file. Each LLM requires different discipline and output handling, making a universal rule file ineffective and leading to constant rewrites.\n\nThe new architecture separates these concerns into distinct layers. One layer defines the LLM's role, goals, and expertise, remaining constant across models. Another layer handles model-specific calibration, adapting to each LLM's unique needs.\n\nA third layer manages process rules like session startup checks, shutdown sequences, and review systems. These rules are model-agnostic, working consistently regardless of the underlying LLM engine, ensuring operational stability.\n\nThis separation prevents 'drift' where identity gets buried, and ensures process rules remain independent. The architecture is available as a Claude Code skill, with the full configuration system open-source for wider adoption and collaboration.\n\n#LLMs #AI #SoftwareDevelopment #ClaudeCode #DeepSeek #DeveloperTools\n\nSource: DEV",
+  "tweet": "Stop rewriting massive LLM config files! A new open-source architecture for Claude Code allows you to swap between models like DeepSeek, Claude Opus, or Sonnet by modifying just ONE file. Simplify your AI development workflow. #LLMs #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/yuhaolin2005/i-run-deepseek-on-claude-code-how-i-swap-models-by-changing-only-one-file-3ee5",
+  "image": "",
+  "orig_title": "I Run DeepSeek on Claude Code — How I Swap Models by Changing Only One File",
+  "cluster_urls": [
+   "https://dev.to/yuhaolin2005/i-run-deepseek-on-claude-code-how-i-swap-models-by-changing-only-one-file-3ee5"
+  ],
+  "cluster_titles": [
+   "I Run DeepSeek on Claude Code — How I Swap Models by Changing Only One File"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260628-1207-0-i-run-deepseek-on-claude-code-swap-models-by.png",
+   "20260628-1207-0-i-run-deepseek-on-claude-code-swap-models-by-d1.png",
+   "20260628-1207-0-i-run-deepseek-on-claude-code-swap-models-by-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_tool_calling_json_schema_debug",
+  "headline_marked": "[[Your JSON schema is why AI agents call the wrong tool]]",
+  "headline": "Your JSON schema is why AI agents call the wrong tool",
+  "summary": "An AI agent with 95% per-step reliability only completes an 8-step task correctly 66% of the time. This reliability leak often stems from poorly defined JSON schemas and allowing the model to guess.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "An AI agent that calls the right tool with correct arguments 95% of the time still only completes an eight-step task correctly about 66% of the time. This reliability doesn't fail dramatically but leaks across multiple steps.",
+   "Most of this unreliability isn't due to the model itself but rather two controllable factors: the JSON schema provided to the model and whether it's allowed to guess when it shouldn't. Fixing these can significantly improve per-call rates, with compounding benefits.",
+   "When defining a tool, its description fields are the model's *only* instructions on when and how to use it, not just documentation for teammates. The model never sees the implementation, only the schema.",
+   "Common failure 1: Vague or missing descriptions. If two tools have thin descriptions like \"Sends an email\" or \"Gets data,\" the model struggles to differentiate them and picks incorrectly. Descriptions should clearly state when to call a tool, when not to, and what each argument means.",
+   "Common failure 2: Untyped or loosely typed parameters. Using a generic string where a specific format like an ISO date or one of a fixed set of statuses is expected leads the model to invent plausible but incorrect values. Encoding constraints with `enum`, `format`, and explicit types prevents violations.",
+   "Common failure 3: The \"silent killer\" of `required` naming a non-existent property. If the `required` array lists \"recipient\" but the property is called \"to\", the schema is valid JSON, but the model thinks a mandatory field has no slot to fill, causing malformed calls. Always verify that every name in `required` exists in `properties`.",
+   "Common failure 4: Free-text where a choice is meant. A `type: \"string\"` for \"priority\" invites varied inputs like \"high\", \"urgent\", or \"P0\". Using `enum: [\"low\", \"medium\", \"high\"]` removes ambiguity before the model can create it.",
+   "The most common production failure is the model confidently filling a blank it should have asked about. For fields affecting money, publishing, deletion, or customer communication, agents should be instructed to ask for clarification rather than guess. A clarifying question is cheaper than a wrong action.",
+   "This \"ask, don't guess\" principle can be encoded in the schema by not marking fields as required if the model can't reasonably infer them, and explicitly stating in the description to ask if a value is unspecified. Additionally, always validate model output on your side against real constraints before execution."
+  ],
+  "caption": "An AI agent with 95% per-step reliability only completes an 8-step task correctly 66% of the time. Your JSON schema is likely the culprit.\n\nAn AI agent that calls the right tool with correct arguments 95% of the time still only completes an eight-step task correctly about 66% of the time. This reliability doesn't fail dramatically but leaks across multiple steps.\n\nMost of this unreliability isn't due to the model itself but rather two controllable factors: the JSON schema provided to the model and whether it's allowed to guess when it shouldn't. Fixing these can significantly improve per-call rates, with compounding benefits.\n\nWhen defining a tool, its description fields are the model's *only* instructions on when and how to use it, not just documentation for teammates. The model never sees the implementation, only the schema.\n\nCommon failure 1: Vague or missing descriptions. If two tools have thin descriptions like \"Sends an email\" or \"Gets data,\" the model struggles to differentiate them and picks incorrectly. Descriptions should clearly state when to call a tool, when not to, and what each argument means.\n\nCommon failure 2: Untyped or loosely typed parameters. Using a generic string where a specific format like an ISO date or one of a fixed set of statuses is expected leads the model to invent plausible but incorrect values. Encoding constraints with `enum`, `format`, and explicit types prevents violations.\n\nCommon failure 3: The \"silent killer\" of `required` naming a non-existent property. If the `required` array lists \"recipient\" but the property is called \"to\", the schema is valid JSON, but the model thinks a mandatory field has no slot to fill, causing malformed calls. Always verify that every name in `required` exists in `properties`.\n\nCommon failure 4: Free-text where a choice is meant. A `type: \"string\"` for \"priority\" invites varied inputs like \"high\", \"urgent\", or \"P0\". Using `enum: [\"low\", \"medium\", \"high\"]` removes ambiguity before the model can create it.\n\n#AI #Developers #JSONSchema #AgenticAI #TechTips #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Your AI agent's reliability problem? It's probably your JSON schema. An agent with 95% per-step success only completes 66% of 8-step tasks. Learn how to fix vague descriptions, untyped params, and more to boost agent performance. #AI #Developers #JSONSchema",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/penloom_studio_829b7817d3/your-ai-agent-calls-the-wrong-tool-and-your-json-schema-is-usually-why-2886",
+  "image": "",
+  "orig_title": "Your AI agent calls the wrong tool — and your JSON schema is usually why",
+  "cluster_urls": [
+   "https://dev.to/penloom_studio_829b7817d3/your-ai-agent-calls-the-wrong-tool-and-your-json-schema-is-usually-why-2886"
+  ],
+  "cluster_titles": [
+   "Your AI agent calls the wrong tool — and your JSON schema is usually why"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260628-1207-1-your-json-schema-is-why-ai-agents-call-the-w.png",
+   "20260628-1207-1-your-json-schema-is-why-ai-agents-call-the-w-d1.png",
+   "20260628-1207-1-your-json-schema-is-why-ai-agents-call-the-w-d2.png",
+   "20260628-1207-1-your-json-schema-is-why-ai-agents-call-the-w-d3.png",
+   "20260628-1207-1-your-json-schema-is-why-ai-agents-call-the-w-d4.png"
+  ]
+ }
+]

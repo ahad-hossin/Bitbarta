@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "ai_code_hardcodes_secrets",
+  "headline_marked": "[[AI code assistants hardcode secrets]] in generated code, posing major security risks (CWE-798)",
+  "headline": "AI code assistants hardcode secrets in generated code, posing major security risks (CWE-798)",
+  "summary": "Popular AI coding tools like Cursor and Copilot frequently embed sensitive API keys and passwords directly into code snippets, making them vulnerable to public exposure if committed to repositories.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI code assistants are generating working code that often includes hardcoded secrets like API keys and passwords. This issue, classified as CWE-798, means sensitive information is directly embedded into the code rather than being loaded securely.",
+   "This isn't limited to one tool; Claude Code, Copilot, and Windsurf also exhibit this behavior. The problem stems from the training data, which often contains illustrative code snippets with hardcoded secrets not intended for production.",
+   "If these secrets are committed to a public GitHub repository, they can be scraped by bots within minutes. There are reports of newly committed AWS keys being exploited by attackers in under five minutes, even if the line is later deleted from history.",
+   "LLMs optimize for immediately runnable code. Reading from environment variables requires a developer to set up a .env file, so the model's path of least resistance is to inline values for quick functionality.",
+   "To mitigate this, developers should move all secrets to environment variables and load them at runtime. If a secret has already entered git history, immediate key rotation at the provider and history scrubbing with tools like git filter-repo or BFG are essential.",
+   "The most effective solution is a pre-commit hook to prevent secrets from ever reaching a commit. Tools like Gitleaks can be integrated into pre-commit hooks or used with services like SafeWeave to flag hardcoded secrets as soon as code is generated."
+  ],
+  "caption": "AI code assistants like Cursor and Copilot are generating code that hardcodes sensitive API keys and passwords. This critical vulnerability (CWE-798) puts your projects at severe risk.\n\nAI code assistants are generating working code that often includes hardcoded secrets like API keys and passwords. This issue, classified as CWE-798, means sensitive information is directly embedded into the code rather than being loaded securely.\n\nThis isn't limited to one tool; Claude Code, Copilot, and Windsurf also exhibit this behavior. The problem stems from the training data, which often contains illustrative code snippets with hardcoded secrets not intended for production.\n\nIf these secrets are committed to a public GitHub repository, they can be scraped by bots within minutes. There are reports of newly committed AWS keys being exploited by attackers in under five minutes, even if the line is later deleted from history.\n\nLLMs optimize for immediately runnable code. Reading from environment variables requires a developer to set up a .env file, so the model's path of least resistance is to inline values for quick functionality.\n\nTo mitigate this, developers should move all secrets to environment variables and load them at runtime. If a secret has already entered git history, immediate key rotation at the provider and history scrubbing with tools like git filter-repo or BFG are essential.\n\nThe most effective solution is a pre-commit hook to prevent secrets from ever reaching a commit. Tools like Gitleaks can be integrated into pre-commit hooks or used with services like SafeWeave to flag hardcoded secrets as soon as code is generated.\n\n#Security #AI #Developer #CodeSecurity #Cybersecurity #Vulnerability\n\nSource: DEV",
+  "tweet": "AI code assistants are hardcoding secrets (API keys, passwords) directly into generated code, creating major security risks. This widespread issue (CWE-798) means sensitive data can be exposed in minutes if committed to public repos. #Security #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/c_k_fb750e731394/why-cursor-keeps-hardcoding-secrets-in-ai-generated-code-cwe-798-1kjk",
+  "image": "",
+  "orig_title": "Why Cursor Keeps Hardcoding Secrets in AI-Generated Code (CWE-798)",
+  "cluster_urls": [
+   "https://dev.to/c_k_fb750e731394/why-cursor-keeps-hardcoding-secrets-in-ai-generated-code-cwe-798-1kjk"
+  ],
+  "cluster_titles": [
+   "Why Cursor Keeps Hardcoding Secrets in AI-Generated Code (CWE-798)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260628-1506-0-ai-code-assistants-hardcode-secrets-in-gener.png",
+   "20260628-1506-0-ai-code-assistants-hardcode-secrets-in-gener-d1.png",
+   "20260628-1506-0-ai-code-assistants-hardcode-secrets-in-gener-d2.png"
+  ]
+ }
+]

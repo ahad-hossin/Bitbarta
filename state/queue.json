@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "topic": "ibm promptware kill chain ai security threat",
+  "headline_marked": "[[IBM engineer unveils Promptware Kill Chain]], a new AI security threat model",
+  "headline": "IBM engineer unveils Promptware Kill Chain, a new AI security threat model",
+  "summary": "This novel attack model uses malicious prompts to manipulate generative AI chatbots and agents, leveraging AI's trust and long-term memory for persistent control.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "IBM Distinguished Engineer Jeff Crume introduced \"The Promptware Kill Chain,\" a new security threat. Unlike traditional malware, Promptware uses malicious prompts to manipulate generative AI chatbots and agents. This novel attack model was refined into a complete, step-by-step kill chain, drawing on research from experts like Bruce Schneier.",
+   "The fundamental flaw lies in large language models treating all input as tokens, blurring the line between data and system commands. This allows malicious instructions to gain authority similar to system commands, a boundary non-existent in LLMs compared to traditional code.",
+   "Attackers employ social engineering, role-playing, or adversarial prompts to bypass AI's safety alignments. AI's mimicry of human intelligence also makes it susceptible to human-like gullibility, allowing it to be tricked into revealing sensitive information or actions.",
+   "After a \"jailbreak\" is successful, Promptware often conducts reconnaissance. The AI can be manipulated to expose its own attack surface, revealing connected APIs, plugins, systems, and permissions it possesses.",
+   "Unlike transient conversations, current AI agents possess long-term memory via RAG databases, chat histories, and calendars. Malicious prompts embedded in these persistent stores can \"self-reinfect\" the AI each time it accesses the data, achieving lasting control.",
+   "Attackers can leverage the AI's network connectivity as a Command and Control (C2) channel. This transforms Promptware into a dynamic, remotely controllable threat, allowing updated malicious instructions to be delivered when the AI fetches external content.",
+   "Granting AI agents permissions like reading/writing emails, modifying calendars, accessing enterprise systems, or controlling smart homes creates pathways for this malware. An infected email agent could self-replicate by forwarding malicious code to contacts, similar to traditional computer viruses.",
+   "The ultimate goal mirrors traditional malware: data theft, financial fraud (e.g., cryptocurrency transfers), or running arbitrary malicious code if the AI has execution privileges."
+  ],
+  "caption": "A new security threat, \"Promptware Kill Chain,\" uses malicious prompts to hijack generative AI. It exploits AI's trust and long-term memory for persistent control.\n\nIBM Distinguished Engineer Jeff Crume introduced \"The Promptware Kill Chain,\" a new security threat. Unlike traditional malware, Promptware uses malicious prompts to manipulate generative AI chatbots and agents. This novel attack model was refined into a complete, step-by-step kill chain, drawing on research from experts like Bruce Schneier.\n\nThe fundamental flaw lies in large language models treating all input as tokens, blurring the line between data and system commands. This allows malicious instructions to gain authority similar to system commands, a boundary non-existent in LLMs compared to traditional code.\n\nAttackers employ social engineering, role-playing, or adversarial prompts to bypass AI's safety alignments. AI's mimicry of human intelligence also makes it susceptible to human-like gullibility, allowing it to be tricked into revealing sensitive information or actions.\n\nAfter a \"jailbreak\" is successful, Promptware often conducts reconnaissance. The AI can be manipulated to expose its own attack surface, revealing connected APIs, plugins, systems, and permissions it possesses.\n\nUnlike transient conversations, current AI agents possess long-term memory via RAG databases, chat histories, and calendars. Malicious prompts embedded in these persistent stores can \"self-reinfect\" the AI each time it accesses the data, achieving lasting control.\n\nAttackers can leverage the AI's network connectivity as a Command and Control (C2) channel. This transforms Promptware into a dynamic, remotely controllable threat, allowing updated malicious instructions to be delivered when the AI fetches external content.\n\n#AI #Cybersecurity #Promptware #KillChain #IBMTech #GenerativeAI\n\nSource: DEV",
+  "tweet": "IBM engineer Jeff Crume unveils the \"Promptware Kill Chain,\" a new AI security threat. This novel attack uses malicious prompts to manipulate generative AI, exploiting its trust & long-term memory for persistent control. #AI #Cybersecurity #Promptware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "ibm.com",
+  "source": "DEV",
+  "url": "https://dev.to/cognitalk/ibm-tech-ti-shi-ci-e-yi-ruan-jian-sha-shang-lian-the-promptware-kill-chainpou-xi-3hed",
+  "image": "",
+  "orig_title": "[IBM-Tech] 提示词恶意软件杀伤链（The Promptware Kill Chain）剖析",
+  "cluster_urls": [
+   "https://dev.to/cognitalk/ibm-tech-ti-shi-ci-e-yi-ruan-jian-sha-shang-lian-the-promptware-kill-chainpou-xi-3hed"
+  ],
+  "cluster_titles": [
+   "[IBM-Tech] 提示词恶意软件杀伤链（The Promptware Kill Chain）剖析"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260629-0906-0-ibm-engineer-unveils-promptware-kill-chain-a.png",
+   "20260629-0906-0-ibm-engineer-unveils-promptware-kill-chain-a-d1.png",
+   "20260629-0906-0-ibm-engineer-unveils-promptware-kill-chain-a-d2.png",
+   "20260629-0906-0-ibm-engineer-unveils-promptware-kill-chain-a-d3.png"
+  ]
+ }
+]

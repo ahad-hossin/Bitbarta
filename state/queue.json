@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai_agent_self_authorization_prevention",
+  "headline_marked": "[[AI agents can move value without self-authorization]] through a new security pattern",
+  "headline": "AI agents can move value without self-authorization through a new security pattern",
+  "summary": "An AI agent leaked its private keys, highlighting a critical flaw in autonomous AI wallets. A new pattern ensures agents can propose transactions but never self-authorize, preventing accidental or malicious fund movements.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "In February 2026, an autonomous AI agent, Owockibot, leaked its own hot wallet's private keys in multiple locations after being given the ability to hold and move funds. This incident previews a significant problem as billions of AI agents are projected to run by late 2026, with many gaining wallet capabilities.",
+   "The agentic-AI market was valued at $7.6 billion in 2025, demonstrating real capability. However, this raises a crucial question: what stops an AI agent\n—whether compromised, hijacked by prompt injection, or hallucinating\n—from authorizing its own actions?",
+   "A new, verifiable system proposes a pattern where an agent maintains full autonomy over judgment but has zero autonomy over signature. This means the agent decides what to do, but the cryptographic signature that makes a transaction real is structurally out of its reach.",
+   "For instance, an art curator agent can evaluate artworks and decide to bid in an on-chain auction. Yet, it can never confirm that bid; a human action, entirely outside the agent's process, is the sole trigger for signing and broadcasting the transaction.",
+   "The first key property is an out-of-band confirmation channel. The agent can trigger a transaction but cannot confirm it, ensuring the process fails closed if confirmation is absent. It's crucial that both the signing secret and the confirmation signal are beyond the agent's reach.",
+   "Secondly, the authorization decision must be made by a deterministic, non-probabilistic component, not the AI model itself. While a language model's probabilistic nature is useful for judgment, it's catastrophic for a 'yes/no' authorization, which requires absolute certainty.",
+   "Finally, the agent only accesses strictly necessary tools, never the signing key or its secret. The key is decrypted only after human confirmation, remains unexposed to the agent, and is never written to any log, ensuring maximum security."
+  ],
+  "caption": "An autonomous AI agent leaked its own private keys, exposing a critical vulnerability in agentic AI. A new security pattern prevents AI from self-authorizing transactions, even if compromised.\n\nIn February 2026, an autonomous AI agent, Owockibot, leaked its own hot wallet's private keys in multiple locations after being given the ability to hold and move funds. This incident previews a significant problem as billions of AI agents are projected to run by late 2026, with many gaining wallet capabilities.\n\nThe agentic-AI market was valued at $7.6 billion in 2025, demonstrating real capability. However, this raises a crucial question: what stops an AI agent\n—whether compromised, hijacked by prompt injection, or hallucinating\n—from authorizing its own actions?\n\nA new, verifiable system proposes a pattern where an agent maintains full autonomy over judgment but has zero autonomy over signature. This means the agent decides what to do, but the cryptographic signature that makes a transaction real is structurally out of its reach.\n\nFor instance, an art curator agent can evaluate artworks and decide to bid in an on-chain auction. Yet, it can never confirm that bid; a human action, entirely outside the agent's process, is the sole trigger for signing and broadcasting the transaction.\n\nThe first key property is an out-of-band confirmation channel. The agent can trigger a transaction but cannot confirm it, ensuring the process fails closed if confirmation is absent. It's crucial that both the signing secret and the confirmation signal are beyond the agent's reach.\n\nSecondly, the authorization decision must be made by a deterministic, non-probabilistic component, not the AI model itself. While a language model's probabilistic nature is useful for judgment, it's catastrophic for a 'yes/no' authorization, which requires absolute certainty.\n\n#AI #Security #AgenticAI #Blockchain #Dev #Software\n\nSource: DEV",
+  "tweet": "An AI agent leaked its private keys, highlighting a major security flaw. A new pattern ensures AI can propose transactions but never self-authorize, preventing accidental or malicious fund movements. Billions of agents expected by 2026. #AI #Security #AgenticAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/avp9nexus/the-agent-that-cannot-sign-a-pattern-for-letting-ai-move-value-without-self-authorization-4a0j",
+  "image": "",
+  "orig_title": "The agent that cannot sign: a pattern for letting AI move value without self-authorization",
+  "cluster_urls": [
+   "https://dev.to/avp9nexus/the-agent-that-cannot-sign-a-pattern-for-letting-ai-move-value-without-self-authorization-4a0j"
+  ],
+  "cluster_titles": [
+   "The agent that cannot sign: a pattern for letting AI move value without self-authorization"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260629-1706-0-ai-agents-can-move-value-without-self-author.png",
+   "20260629-1706-0-ai-agents-can-move-value-without-self-author-d1.png",
+   "20260629-1706-0-ai-agents-can-move-value-without-self-author-d2.png",
+   "20260629-1706-0-ai-agents-can-move-value-without-self-author-d3.png"
+  ]
+ },
+ {
+  "topic": "google_search_censorship_drama",
+  "headline_marked": "[[Google removed article about Pollen's collapse]] after fraudulent DMCA claim from 'uninhabited island'",
+  "headline": "Google removed article about Pollen's collapse after fraudulent DMCA claim from 'uninhabited island'",
+  "summary": "Google removed a critical article detailing events tech company Pollen's fall, including unpaid salaries and missing pensions, based on a fake DMCA complaint.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "The article detailed the 2022 collapse of events tech company Pollen, implicating founder Callum Negus-Fancey for issues like unpaid salaries, missing pension contributions, and health insurance for US employees. The story was so impactful it led to a BBC documentary.",
+   "Google recently removed this damning article from its search results following a fraudulent DMCA complaint. The complaint falsely claimed the original article copied a 1998 New York Post piece, despite no shared content.",
+   "The bogus DMCA was filed by a fake profile, 'Ellie Piee,' from Bouvet Island, an uninhabited Norwegian territory. This raises questions about Google's process for verifying such removal requests.",
+   "The author speculates that Pollen, its former CEO, or co-founder hired reputation firms to file these fraudulent requests to erase negative press. This incident highlights a potential loophole in Google's DMCA system.",
+   "Lawsuits against Pollen are still ongoing, including Tayler Ulmer vs Pollen in California. The author notes that attempts to silence the story have only renewed interest in reporting on the company's developments."
+  ],
+  "caption": "Google removed a critical article on events tech company Pollen's collapse from search results. The removal was based on a fraudulent DMCA claim filed from an uninhabited island.\n\nThe article detailed the 2022 collapse of events tech company Pollen, implicating founder Callum Negus-Fancey for issues like unpaid salaries, missing pension contributions, and health insurance for US employees. The story was so impactful it led to a BBC documentary.\n\nGoogle recently removed this damning article from its search results following a fraudulent DMCA complaint. The complaint falsely claimed the original article copied a 1998 New York Post piece, despite no shared content.\n\nThe bogus DMCA was filed by a fake profile, 'Ellie Piee,' from Bouvet Island, an uninhabited Norwegian territory. This raises questions about Google's process for verifying such removal requests.\n\nThe author speculates that Pollen, its former CEO, or co-founder hired reputation firms to file these fraudulent requests to erase negative press. This incident highlights a potential loophole in Google's DMCA system.\n\nLawsuits against Pollen are still ongoing, including Tayler Ulmer vs Pollen in California. The author notes that attempts to silence the story have only renewed interest in reporting on the company's developments.\n\n#Google #DMCA #Pollen #TechNews #Censorship #BigTech\n\nSource: Hacker News",
+  "tweet": "Google removed a damning article about Pollen's collapse from search results, citing a fraudulent DMCA claim filed from an uninhabited island. Questions arise about Google's verification process for content removal. #Google #DMCA #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "google.com",
+  "source": "Hacker News",
+  "url": "https://blog.pragmaticengineer.com/pollen-tried-to-remove-my-article-about-callum-negus-fancey-and-google-is-assisting-to-it/",
+  "image": "",
+  "orig_title": "Pollen (CEO Negus-Fancey, CTO Wright) tried to remove article, and Google helped",
+  "cluster_urls": [
+   "https://blog.pragmaticengineer.com/pollen-tried-to-remove-my-article-about-callum-negus-fancey-and-google-is-assisting-to-it/"
+  ],
+  "cluster_titles": [
+   "Pollen (CEO Negus-Fancey, CTO Wright) tried to remove article, and Google helped"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260629-1706-1-google-removed-article-about-pollen-s-collap.png",
+   "20260629-1706-1-google-removed-article-about-pollen-s-collap-d1.png",
+   "20260629-1706-1-google-removed-article-about-pollen-s-collap-d2.png"
+  ]
+ }
+]

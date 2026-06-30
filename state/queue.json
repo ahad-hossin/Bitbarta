@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "resksecure_llm_security_firewall",
+  "headline_marked": "[[reskSecure blocks LLM jailbreaks]] at token level, before output generation",
+  "headline": "reskSecure blocks LLM jailbreaks at token level, before output generation",
+  "summary": "Unlike post-generation filters, reskSecure's bitmask-based firewall modifies LLM output probability distributions to prevent disallowed tokens from ever being sampled.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "reskSecure introduces a novel approach to LLM security, blocking prompt injections and jailbreaks at the logits level. This prevents the model from sampling forbidden tokens, addressing a critical flaw in traditional post-generation scanning methods.",
+   "The system utilizes a bitmask-based policy engine, where each policy entry defines YAML rules. When a matching pattern is detected in the current token window, reskSecure either blocks the token or applies a penalty to its probability.",
+   "This pre-generation intervention means that sensitive data exfiltration or unauthorized tool calls are prevented before they can occur. It ensures that the model never generates disallowed tokens, enhancing security for LLM deployments.",
+   "The bitmask approach is designed for scalability and multi-tenant environments. Each request can receive its own capability mask, allowing the same firewall process to enforce different policies per user context.",
+   "Developers can integrate reskSecure into their production LLM systems. The tool is available via `pip install resksecure` and its documentation and GitHub repository are publicly accessible for feedback and contributions."
+  ],
+  "caption": "Stop LLM jailbreaks before they even start. reskSecure blocks forbidden tokens at the logits level, preventing any generation of malicious output.\n\nreskSecure introduces a novel approach to LLM security, blocking prompt injections and jailbreaks at the logits level. This prevents the model from sampling forbidden tokens, addressing a critical flaw in traditional post-generation scanning methods.\n\nThe system utilizes a bitmask-based policy engine, where each policy entry defines YAML rules. When a matching pattern is detected in the current token window, reskSecure either blocks the token or applies a penalty to its probability.\n\nThis pre-generation intervention means that sensitive data exfiltration or unauthorized tool calls are prevented before they can occur. It ensures that the model never generates disallowed tokens, enhancing security for LLM deployments.\n\nThe bitmask approach is designed for scalability and multi-tenant environments. Each request can receive its own capability mask, allowing the same firewall process to enforce different policies per user context.\n\nDevelopers can integrate reskSecure into their production LLM systems. The tool is available via `pip install resksecure` and its documentation and GitHub repository are publicly accessible for feedback and contributions.\n\n#LLMSecurity #AI #Cybersecurity #PromptInjection #reskSecure #Developers\n\nSource: DEV",
+  "tweet": "New LLM security firewall, reskSecure, blocks jailbreaks at the token level. It modifies output probability distributions to prevent forbidden tokens from being generated, a significant upgrade from post-generation filters. #LLMSecurity #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "resk.fr",
+  "source": "DEV",
+  "url": "https://dev.to/resk/bitmask-based-llm-security-firewall-with-resksecure-block-jailbreaks-at-token-level-2f4e",
+  "image": "",
+  "orig_title": "Bitmask-Based LLM Security Firewall with reskSecure — Block Jailbreaks at Token Level",
+  "cluster_urls": [
+   "https://dev.to/resk/bitmask-based-llm-security-firewall-with-resksecure-block-jailbreaks-at-token-level-2f4e"
+  ],
+  "cluster_titles": [
+   "Bitmask-Based LLM Security Firewall with reskSecure — Block Jailbreaks at Token Level"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260630-1437-0-resksecure-blocks-llm-jailbreaks-at-token-le.png",
+   "20260630-1437-0-resksecure-blocks-llm-jailbreaks-at-token-le-d1.png",
+   "20260630-1437-0-resksecure-blocks-llm-jailbreaks-at-token-le-d2.png"
+  ]
+ },
+ {
+  "topic": "octo_open_source_human_ai_agent_platform",
+  "headline_marked": "[[Octo: Open-source platform for human-AI agent collaboration]] released under Apache 2.0 license",
+  "headline": "Octo: Open-source platform for human-AI agent collaboration released under Apache 2.0 license",
+  "summary": "Octo is an open-source platform designed to enable seamless collaboration between humans and AI agents, and between agents themselves. It supports private deployment, ensuring your data remains on your infrastructure.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "We just open-sourced Octo. Released under the Apache 2.0 license, it supports private deployment, ensuring your data remains on your own infrastructure.",
+   "As AI agents integrate into workflows, they often operate independently, lacking a unified way to collaborate, share context, or learn from experience. This siloed operation is a growing blocker for wider AI adoption.",
+   "Octo addresses this by providing infrastructure for human-agent and agent-agent collaboration. It transforms ad-hoc interactions into reusable organizational assets, fostering more integrated AI use.",
+   "The platform introduces 'Channels' as project-level collaboration spaces, where members and bots share context and assign tasks. For parallel items, 'Threads' split discussions to maintain clarity and independence.",
+   "AI agents join as 'Bots', each with an 'AgentCard' detailing capabilities and work history. Octo allows connection with various agents like OpenClaw, Hermes, and Claude Code, facilitating diverse collaboration.",
+   "When discussions crystallize into work objectives, the system creates a 'Matter'. This core work unit records the task owner, delivery targets, and preserves the complete journey from brief to acceptance feedback, ensuring traceability.",
+   "Octo offers multiple collaboration modes, including Solo, Roundtable, Critic, Pipeline, Split, and Swarm. These modes define distinct information visibility and context flow patterns, optimizing agent interaction for different task requirements.",
+   "The human-agent division of labor is evolving, with agents excelling at high-frequency analysis and execution. Humans remain crucial for business judgment, value trade-offs, quality standards, and final decisions.",
+   "Feedback from human reviews is organized into 'Preference Cards', which bots can reference for future tasks, continuously adjusting their work style. Workflows developed through collaboration can become 'Skills', reusable across the organization.",
+   "Octo functions as a unified collaboration layer, integrating with existing enterprise software rather than replacing it. It brings web content, documents, code, and tasks directly into the collaboration space via browser extensions, CLI, and open APIs."
+  ],
+  "caption": "AI agents often operate in silos, lacking a unified way to collaborate or learn from human input. Octo changes that, offering an open-source platform for seamless human-AI agent teamwork.\n\nWe just open-sourced Octo. Released under the Apache 2.0 license, it supports private deployment, ensuring your data remains on your own infrastructure.\n\nAs AI agents integrate into workflows, they often operate independently, lacking a unified way to collaborate, share context, or learn from experience. This siloed operation is a growing blocker for wider AI adoption.\n\nOcto addresses this by providing infrastructure for human-agent and agent-agent collaboration. It transforms ad-hoc interactions into reusable organizational assets, fostering more integrated AI use.\n\nThe platform introduces 'Channels' as project-level collaboration spaces, where members and bots share context and assign tasks. For parallel items, 'Threads' split discussions to maintain clarity and independence.\n\nAI agents join as 'Bots', each with an 'AgentCard' detailing capabilities and work history. Octo allows connection with various agents like OpenClaw, Hermes, and Claude Code, facilitating diverse collaboration.\n\nWhen discussions crystallize into work objectives, the system creates a 'Matter'. This core work unit records the task owner, delivery targets, and preserves the complete journey from brief to acceptance feedback, ensuring traceability.\n\nOcto offers multiple collaboration modes, including Solo, Roundtable, Critic, Pipeline, Split, and Swarm. These modes define distinct information visibility and context flow patterns, optimizing agent interaction for different task requirements.\n\nThe human-agent division of labor is evolving, with agents excelling at high-frequency analysis and execution. Humans remain crucial for business judgment, value trade-offs, quality standards, and final decisions.\n\n#AI #OpenSource #DeveloperTools #AgentCollaboration #Tech #Software\n\nSource: DEV",
+  "tweet": "AI agents often operate in silos, lacking a unified way to collaborate or learn from human input. Octo changes that, offering an open-source platform for seamless human-AI agent teamwork. It's Apache 2.0 licensed & supports private deployment. #AI #OpenSource #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mininglamp/octo-an-open-source-platform-for-human-ai-agent-collaboration-3doa",
+  "image": "",
+  "orig_title": "Octo: An Open-Source Platform for Human-AI Agent Collaboration",
+  "cluster_urls": [
+   "https://dev.to/mininglamp/octo-an-open-source-platform-for-human-ai-agent-collaboration-3doa"
+  ],
+  "cluster_titles": [
+   "Octo: An Open-Source Platform for Human-AI Agent Collaboration"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260630-1437-1-octo-open-source-platform-for-human-ai-agent.png",
+   "20260630-1437-1-octo-open-source-platform-for-human-ai-agent-d1.png",
+   "20260630-1437-1-octo-open-source-platform-for-human-ai-agent-d2.png",
+   "20260630-1437-1-octo-open-source-platform-for-human-ai-agent-d3.png",
+   "20260630-1437-1-octo-open-source-platform-for-human-ai-agent-d4.png"
+  ]
+ }
+]

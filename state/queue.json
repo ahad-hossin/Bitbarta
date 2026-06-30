@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "okx_ai_agents_marketplace",
+  "headline_marked": "OKX launches AI agent marketplace [[where AIs hire and pay each other]]",
+  "headline": "OKX launches AI agent marketplace where AIs hire and pay each other",
+  "summary": "The crypto exchange is building infrastructure for an \"agent economy,\" allowing autonomous software to transact and build reputations on-chain.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Crypto exchange OKX has launched a new marketplace called OKX AI, designed to enable AI agents to hire each other, settle payments autonomously, and build on-chain reputations. This move marks OKX's expansion beyond crypto trading into a broader fintech company, anticipating a future where AI agents are significant economic actors.",
+   "The platform builds upon OKX's prior development of technology that allows AI agents to hold digital wallets, make stablecoin payments, and establish persistent identities. The company believes the \"agentic economy\" could become a trillion-dollar market within five years, driven by autonomous software and micropayments.",
+   "OKX AI is initially targeting crypto developers building AI applications and entrepreneurs looking to automate business processes. Early partners include CertiK for security assessments, CoinAnk for market data, and GenLayer for dispute resolution, showcasing the diverse services AI agents can offer and procure.",
+   "By leveraging blockchain-based payments and stablecoins, OKX AI facilitates 24/7 transactions, including low-value micropayments that are often impractical with traditional financial systems. This infrastructure is designed to support the needs of autonomous software agents.",
+   "OKX is applying its existing fraud detection and compliance systems, developed for its cryptocurrency exchange, to the new marketplace. The platform will be rolled out in phases, with developers accessing it through OKX's Onchain OS toolkit, compatible with various AI coding tools."
+  ],
+  "caption": "AI agents can now hire and pay each other on OKX's new marketplace, paving the way for an autonomous \"agent economy.\"\n\nCrypto exchange OKX has launched a new marketplace called OKX AI, designed to enable AI agents to hire each other, settle payments autonomously, and build on-chain reputations. This move marks OKX's expansion beyond crypto trading into a broader fintech company, anticipating a future where AI agents are significant economic actors.\n\nThe platform builds upon OKX's prior development of technology that allows AI agents to hold digital wallets, make stablecoin payments, and establish persistent identities. The company believes the \"agentic economy\" could become a trillion-dollar market within five years, driven by autonomous software and micropayments.\n\nOKX AI is initially targeting crypto developers building AI applications and entrepreneurs looking to automate business processes. Early partners include CertiK for security assessments, CoinAnk for market data, and GenLayer for dispute resolution, showcasing the diverse services AI agents can offer and procure.\n\nBy leveraging blockchain-based payments and stablecoins, OKX AI facilitates 24/7 transactions, including low-value micropayments that are often impractical with traditional financial systems. This infrastructure is designed to support the needs of autonomous software agents.\n\nOKX is applying its existing fraud detection and compliance systems, developed for its cryptocurrency exchange, to the new marketplace. The platform will be rolled out in phases, with developers accessing it through OKX's Onchain OS toolkit, compatible with various AI coding tools.\n\n#AI #OKX #Crypto #AgentEconomy #Fintech\n\nSource: TechCrunch",
+  "tweet": "OKX launches a marketplace where AI agents can hire and pay each other autonomously. This is a major step towards the \"agent economy,\" enabling AI to build on-chain reputations and transact 24/7. #AI #OKX #AgentEconomy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "okx.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/",
+  "image": "",
+  "orig_title": "Crypto exchange OKX wants AI agents to hire and pay each other",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/"
+  ],
+  "cluster_titles": [
+   "Crypto exchange OKX wants AI agents to hire and pay each other"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260630-1510-0-okx-launches-ai-agent-marketplace-where-ais-.png",
+   "20260630-1510-0-okx-launches-ai-agent-marketplace-where-ais--d1.png",
+   "20260630-1510-0-okx-launches-ai-agent-marketplace-where-ais--d2.png",
+   "20260630-1510-0-okx-launches-ai-agent-marketplace-where-ais--d3.png"
+  ]
+ },
+ {
+  "topic": "gpu_market_bubble_burst",
+  "headline_marked": "[[Moondream's Photon engine eliminates GPU bubbles]] for near-realtime VLM inference (~33ms)",
+  "headline": "Moondream's Photon engine eliminates GPU bubbles for near-realtime VLM inference (~33ms)",
+  "summary": "Moondream's Photon inference engine achieves near-realtime VLM inference at ~33ms on NVIDIA B200. It boosts decode throughput by up to 35% by optimizing GPU utilization and hiding idle time.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Moondream's Photon inference engine achieves near-realtime VLM inference, processing at approximately 33ms on an NVIDIA B200. This optimization delivers up to 35% higher decode throughput by efficiently managing GPU operations.",
+   "The core problem Photon addresses is the 'GPU bubble,' a phenomenon where the GPU sits idle not due to lack of work, but because the CPU hasn't yet issued the next command. This often occurs during autoregressive token generation in AI models.",
+   "In a typical AI model, text is generated one token at a time, with each token depending on the previous one. This sequential 'decode loop' involves a constant round trip between the CPU and GPU, where the CPU performs crucial housekeeping while the GPU handles heavy arithmetic.",
+   "The challenge arises because the GPU's work for a single token is relatively small, but the CPU's housekeeping incurs a fixed cost on every trip. If the GPU has to wait for the CPU's tasks, it leads to idle periods, creating these performance-sapping GPU bubbles.",
+   "Photon tackles this by implementing a technique called pipelined decoding. This method overlaps the CPU and GPU workloads, allowing the GPU to begin processing the next token while the CPU is still finalizing the previous one.",
+   "The key to this pipelining is that the newly sampled token does not need to leave the GPU memory immediately. The next forward pass can read it directly from GPU memory, while CPU bookkeeping (like detokenization and streaming) occurs in the background.",
+   "Ensuring safe pipelining requires careful management, including using 'ping-pong slots' to prevent buffer collisions, correctly ordering sampling for constrained decoding, and handling request cleanup with 'zombies.' These mechanisms ensure smooth, continuous operation.",
+   "Photon also utilizes pre-allocated, pinned host buffers and avoids runtime GPU memory allocations. These strategies prevent device synchronization and further reduce overhead, allowing the decode step to be captured as a CUDA graph and replayed efficiently."
+  ],
+  "caption": "Moondream's Photon engine achieves near-realtime VLM inference at ~33ms. It eliminates \"GPU bubbles\" to boost performance by up to 35%.\n\nMoondream's Photon inference engine achieves near-realtime VLM inference, processing at approximately 33ms on an NVIDIA B200. This optimization delivers up to 35% higher decode throughput by efficiently managing GPU operations.\n\nThe core problem Photon addresses is the 'GPU bubble,' a phenomenon where the GPU sits idle not due to lack of work, but because the CPU hasn't yet issued the next command. This often occurs during autoregressive token generation in AI models.\n\nIn a typical AI model, text is generated one token at a time, with each token depending on the previous one. This sequential 'decode loop' involves a constant round trip between the CPU and GPU, where the CPU performs crucial housekeeping while the GPU handles heavy arithmetic.\n\nThe challenge arises because the GPU's work for a single token is relatively small, but the CPU's housekeeping incurs a fixed cost on every trip. If the GPU has to wait for the CPU's tasks, it leads to idle periods, creating these performance-sapping GPU bubbles.\n\nPhoton tackles this by implementing a technique called pipelined decoding. This method overlaps the CPU and GPU workloads, allowing the GPU to begin processing the next token while the CPU is still finalizing the previous one.\n\nThe key to this pipelining is that the newly sampled token does not need to leave the GPU memory immediately. The next forward pass can read it directly from GPU memory, while CPU bookkeeping (like detokenization and streaming) occurs in the background.\n\nEnsuring safe pipelining requires careful management, including using 'ping-pong slots' to prevent buffer collisions, correctly ordering sampling for constrained decoding, and handling request cleanup with 'zombies.' These mechanisms ensure smooth, continuous operation.\n\n#AI #MachineLearning #GPUOptimization #DeepLearning #VLM #Moondream\n\nSource: Hacker News",
+  "tweet": "Moondream's Photon engine achieves near-realtime VLM inference (~33ms on NVIDIA B200) by eliminating \"GPU bubbles\". This optimization boosts decode throughput by up to 35%, overlapping CPU & GPU work for faster AI. #AI #GPUOptimization #Moondream",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "moondream.ai",
+  "source": "Hacker News",
+  "url": "https://moondream.ai/blog/popping-the-gpu-bubble",
+  "image": "",
+  "orig_title": "Popping the GPU Bubble",
+  "cluster_urls": [
+   "https://moondream.ai/blog/popping-the-gpu-bubble"
+  ],
+  "cluster_titles": [
+   "Popping the GPU Bubble"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260630-1510-1-moondream-s-photon-engine-eliminates-gpu-bub.png",
+   "20260630-1510-1-moondream-s-photon-engine-eliminates-gpu-bub-d1.png",
+   "20260630-1510-1-moondream-s-photon-engine-eliminates-gpu-bub-d2.png",
+   "20260630-1510-1-moondream-s-photon-engine-eliminates-gpu-bub-d3.png"
+  ]
+ }
+]

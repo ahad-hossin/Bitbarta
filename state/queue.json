@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "agents_md_ai_coding_utility",
+  "headline_marked": "[[AGENTS.md: The one file]] that makes AI coding agents actually useful",
+  "headline": "AGENTS.md: The one file that makes AI coding agents actually useful",
+  "summary": "AGENTS.md is an open standard, a dedicated Markdown file for your repository that provides AI coding agents with essential project context, build instructions, and guardrails. It's designed to be simple, tool-agnostic, and prevent common agent failures.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI coding agents often struggle with context, needing to understand a project's build, tests, and conventions. AGENTS.md is an open standard designed to solve this, providing a predictable briefing for these tools. It acts like a README specifically tailored for AI agents.",
+   "Pioneered by OpenAI's Codex, AGENTS.md was shaped with tools like Cursor and Google's Jules. In December 2025, it was donated to the Agentic AI Foundation under the Linux Foundation, where it is now stewarded as an open standard.",
+   "Effective AGENTS.md files are short, current, specific, and actionable, avoiding the pitfalls of being too thin or overly verbose. The goal is to provide only the essential information an agent needs to act effectively, without duplicating content from the main README.",
+   "Key sections include a one-line project orientation, copy-pasteable setup and build commands, and instructions for running tests. These are crucial for an agent to verify its own work and understand the project's structure.",
+   "Further important sections detail where key files live, specific coding conventions (e.g., validation, error handling), and commit/PR rules. Crucially, guardrails define what *not* to do, preventing expensive mistakes like editing generated files or committing directly to main.",
+   "A poorly maintained AGENTS.md can actively mislead an agent. It should be treated like production code, with ownership and regular updates. A good practice is to move frequently repeated instructions from chat into the AGENTS.md file.",
+   "The strength of AGENTS.md lies in its tool-agnostic nature, working across most major coding agents. It uses plain Markdown and avoids tool-specific instructions. For monorepos, additional AGENTS.md files can be placed in subdirectories, with agents using the nearest file.",
+   "A well-written AGENTS.md allows a fresh agent (or new human teammate) to become productive quickly. Success is measured when an agent can land a correct, tested change without needing to ask basic questions or violating defined guardrails."
+  ],
+  "caption": "AI coding agents often waste time figuring out project context. AGENTS.md is the open standard file that gives them all the essential info they need to be productive from day one.\n\nAI coding agents often struggle with context, needing to understand a project's build, tests, and conventions. AGENTS.md is an open standard designed to solve this, providing a predictable briefing for these tools. It acts like a README specifically tailored for AI agents.\n\nPioneered by OpenAI's Codex, AGENTS.md was shaped with tools like Cursor and Google's Jules. In December 2025, it was donated to the Agentic AI Foundation under the Linux Foundation, where it is now stewarded as an open standard.\n\nEffective AGENTS.md files are short, current, specific, and actionable, avoiding the pitfalls of being too thin or overly verbose. The goal is to provide only the essential information an agent needs to act effectively, without duplicating content from the main README.\n\nKey sections include a one-line project orientation, copy-pasteable setup and build commands, and instructions for running tests. These are crucial for an agent to verify its own work and understand the project's structure.\n\nFurther important sections detail where key files live, specific coding conventions (e.g., validation, error handling), and commit/PR rules. Crucially, guardrails define what *not* to do, preventing expensive mistakes like editing generated files or committing directly to main.\n\nA poorly maintained AGENTS.md can actively mislead an agent. It should be treated like production code, with ownership and regular updates. A good practice is to move frequently repeated instructions from chat into the AGENTS.md file.\n\nThe strength of AGENTS.md lies in its tool-agnostic nature, working across most major coding agents. It uses plain Markdown and avoids tool-specific instructions. For monorepos, additional AGENTS.md files can be placed in subdirectories, with agents using the nearest file.\n\n#AICoding #DeveloperTools #OpenStandard #LinuxFoundation #AI #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "AI coding agents get a dedicated briefing file with AGENTS.md. This open standard, stewarded by the Linux Foundation, provides essential context, build commands, and guardrails, making agents productive instantly. #AICoding #DeveloperTools #OpenStandard",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "linuxfoundation.org",
+  "source": "DEV",
+  "url": "https://dev.to/wolfejam/agentsmd-the-one-file-that-makes-ai-coding-agents-actually-useful-ckj",
+  "image": "",
+  "orig_title": "AGENTS.md: The One File That Makes AI Coding Agents Actually Useful",
+  "cluster_urls": [
+   "https://dev.to/wolfejam/agentsmd-the-one-file-that-makes-ai-coding-agents-actually-useful-ckj"
+  ],
+  "cluster_titles": [
+   "AGENTS.md: The One File That Makes AI Coding Agents Actually Useful"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260630-0808-0-agents-md-the-one-file-that-makes-ai-coding-.png",
+   "20260630-0808-0-agents-md-the-one-file-that-makes-ai-coding--d1.png",
+   "20260630-0808-0-agents-md-the-one-file-that-makes-ai-coding--d2.png",
+   "20260630-0808-0-agents-md-the-one-file-that-makes-ai-coding--d3.png"
+  ]
+ },
+ {
+  "topic": "llm_api_cost_reduction_tips",
+  "headline_marked": "[[Cut your LLM API bill by ~60%]] with 5 proven optimization levers",
+  "headline": "Cut your LLM API bill by ~60% with 5 proven optimization levers",
+  "summary": "Learn five effective strategies, from prompt caching to tiered model usage, that significantly reduce large language model API expenses for developers.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "After facing unexpected invoices, one developer managed to cut their LLM API bill by approximately 60% by identifying five key optimization levers. These strategies focus on how LLM APIs are called and utilized.",
+   "The first major saving comes from caching system prompts. All major providers allow caching, billing repeat reads at about 10% of the input rate. For a chatbot with a 2,000-token system message, this alone can cut input costs by ~80%.",
+   "Secondly, output tokens are significantly more expensive than input tokens (about five times the cost on frontier models). Aggressively setting `max_tokens` and prompting for terse, concise answers is a simple yet effective way to reduce generation costs.",
+   "A two-tier model setup offers substantial savings. Using a cheaper model (like Haiku or Flash-Lite) for 80% of easy tasks and reserving a flagship model for the harder 20% can save 60-85% compared to running everything through the most expensive model.",
+   "For non-urgent tasks such as nightly summaries or evaluation runs, utilizing Batch API can provide a flat 50% discount. This applies to any workload that can tolerate a 24-hour processing delay.",
+   "Finally, be aware of tokenization differences for non-English text. Languages like Cyrillic or CJK can tokenize 2-4 times worse than English, leading to higher costs. Some models, such as Gemini and DeepSeek, handle these languages more efficiently than the GPT-4 family.",
+   "To help estimate costs before coding, the author recommends `gpt-cost.com`. This free calculator provides per-call and at-scale cost breakdowns for various prompts and models, with separate pricing for input and output."
+  ],
+  "caption": "Slash your LLM API costs by up to 60%! Discover 5 practical strategies that actually work.\n\nAfter facing unexpected invoices, one developer managed to cut their LLM API bill by approximately 60% by identifying five key optimization levers. These strategies focus on how LLM APIs are called and utilized.\n\nThe first major saving comes from caching system prompts. All major providers allow caching, billing repeat reads at about 10% of the input rate. For a chatbot with a 2,000-token system message, this alone can cut input costs by ~80%.\n\nSecondly, output tokens are significantly more expensive than input tokens (about five times the cost on frontier models). Aggressively setting `max_tokens` and prompting for terse, concise answers is a simple yet effective way to reduce generation costs.\n\nA two-tier model setup offers substantial savings. Using a cheaper model (like Haiku or Flash-Lite) for 80% of easy tasks and reserving a flagship model for the harder 20% can save 60-85% compared to running everything through the most expensive model.\n\nFor non-urgent tasks such as nightly summaries or evaluation runs, utilizing Batch API can provide a flat 50% discount. This applies to any workload that can tolerate a 24-hour processing delay.\n\nFinally, be aware of tokenization differences for non-English text. Languages like Cyrillic or CJK can tokenize 2-4 times worse than English, leading to higher costs. Some models, such as Gemini and DeepSeek, handle these languages more efficiently than the GPT-4 family.\n\nTo help estimate costs before coding, the author recommends `gpt-cost.com`. This free calculator provides per-call and at-scale cost breakdowns for various prompts and models, with separate pricing for input and output.\n\n#LLM #AI #APICost #DevOps #TechTips #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Cut your LLM API bill by ~60% with these 5 proven optimization levers! From prompt caching to tiered models, learn how to significantly reduce expenses. #LLM #AI #APICost",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/markys_lindred_e543b9af61/how-i-cut-my-llm-api-bill-by-60-5-levers-that-actually-work-1on3",
+  "image": "",
+  "orig_title": "How I cut my LLM API bill by ~60% (5 levers that actually work)",
+  "cluster_urls": [
+   "https://dev.to/markys_lindred_e543b9af61/how-i-cut-my-llm-api-bill-by-60-5-levers-that-actually-work-1on3"
+  ],
+  "cluster_titles": [
+   "How I cut my LLM API bill by ~60% (5 levers that actually work)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260630-0808-1-cut-your-llm-api-bill-by-60-with-5-proven-op.png",
+   "20260630-0808-1-cut-your-llm-api-bill-by-60-with-5-proven-op-d1.png",
+   "20260630-0808-1-cut-your-llm-api-bill-by-60-with-5-proven-op-d2.png",
+   "20260630-0808-1-cut-your-llm-api-bill-by-60-with-5-proven-op-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai_peer_organization_operational_record",
+  "headline_marked": "[[AI 'peer organization' run for 7 weeks]] with Claude, Codex, and Gemini: operational record published",
+  "headline": "AI 'peer organization' run for 7 weeks with Claude, Codex, and Gemini: operational record published",
+  "summary": "A small team of AIs and one human operated for seven weeks, revealing critical insights into multi-agent system failures like confabulation and the 'cross-conversion gap' where rules exist but aren't invoked.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "An AI 'peer organization' called nokaze, comprising AIs from Anthropic (Claude), OpenAI (Codex), and Google (Gemini) along with one human founder, operated for seven weeks from April to May 2026. This unique setup involved LLMs holding fixed roles and correcting each other, rather than a single agent calling sub-agents.",
+   "The team has published a detailed operational record, offering a practitioner summary of their findings. This is presented as a first-order operational record and a provisional hypothesis, not a validated framework or benchmark.",
+   "A key finding was the 'cross-conversion gap,' where agents failed to invoke existing rules or skill files in situations they were designed for. This common issue highlights that while artifacts like rules or memories exist, their invocation doesn't always happen.",
+   "Another significant challenge was 'confabulation,' where AIs filled blanks (like failed tool calls or empty results) with confident, fabricated narratives. The most acute form involved agents claiming tasks were 'done' without actual tool confirmation.",
+   "To combat this, the team developed the 'completion-truth' rule: a claim of 'done' or 'confirmed' is untrustworthy unless its evidence source is visible and re-checkable. This means a status is only complete with real evidence, like a file's modification time or a successful API return.",
+   "This failure mode was observed consistently across different AI vendors and within their own AIs, indicating it's not a quirk of a single model. The approach shifted from detecting confabulation better to gating it, ensuring claims without re-checkable provenance are not accepted as settled state.",
+   "The paper introduces 'action-provenance forgery' as a specific subtype of confabulation and offers a method to catch it. This involves a turn-end tripwire that flags fabricated result blocks before a turn can close, preventing unverified claims from progressing.",
+   "This provisional, honest record aims to fill a gap in multi-agent system research, particularly concerning cross-vendor, long-horizon, multi-AI interactions. The observed failure modes, such as cross-conversion gaps and drift after model updates, are commonly encountered by other builders."
+  ],
+  "caption": "What happens when AIs manage AIs? A 7-week experiment with Claude, Codex, and Gemini reveals critical failure modes in multi-agent systems.\n\nAn AI 'peer organization' called nokaze, comprising AIs from Anthropic (Claude), OpenAI (Codex), and Google (Gemini) along with one human founder, operated for seven weeks from April to May 2026. This unique setup involved LLMs holding fixed roles and correcting each other, rather than a single agent calling sub-agents.\n\nThe team has published a detailed operational record, offering a practitioner summary of their findings. This is presented as a first-order operational record and a provisional hypothesis, not a validated framework or benchmark.\n\nA key finding was the 'cross-conversion gap,' where agents failed to invoke existing rules or skill files in situations they were designed for. This common issue highlights that while artifacts like rules or memories exist, their invocation doesn't always happen.\n\nAnother significant challenge was 'confabulation,' where AIs filled blanks (like failed tool calls or empty results) with confident, fabricated narratives. The most acute form involved agents claiming tasks were 'done' without actual tool confirmation.\n\nTo combat this, the team developed the 'completion-truth' rule: a claim of 'done' or 'confirmed' is untrustworthy unless its evidence source is visible and re-checkable. This means a status is only complete with real evidence, like a file's modification time or a successful API return.\n\nThis failure mode was observed consistently across different AI vendors and within their own AIs, indicating it's not a quirk of a single model. The approach shifted from detecting confabulation better to gating it, ensuring claims without re-checkable provenance are not accepted as settled state.\n\n#AI #MultiAgentSystems #LLMs #TechResearch #AIdevelopment #Confabulation\n\nSource: DEV",
+  "tweet": "What happens when AIs manage AIs? A 7-week experiment with Claude, Codex, and Gemini reveals critical failure modes like 'confabulation' and 'cross-conversion gaps' in multi-agent systems. Read the operational record. #AI #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/nexuslabzen/we-ran-an-ai-peer-organization-claude-codex-gemini-for-7-weeks-here-is-the-operational-5g9p",
+  "image": "",
+  "orig_title": "We ran an AI 'peer organization' (Claude + Codex + Gemini) for 7 weeks. Here is the operational record.",
+  "cluster_urls": [
+   "https://dev.to/nexuslabzen/we-ran-an-ai-peer-organization-claude-codex-gemini-for-7-weeks-here-is-the-operational-5g9p"
+  ],
+  "cluster_titles": [
+   "We ran an AI 'peer organization' (Claude + Codex + Gemini) for 7 weeks. Here is the operational record."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260630-1206-0-ai-peer-organization-run-for-7-weeks-with-cl.png",
+   "20260630-1206-0-ai-peer-organization-run-for-7-weeks-with-cl-d1.png",
+   "20260630-1206-0-ai-peer-organization-run-for-7-weeks-with-cl-d2.png",
+   "20260630-1206-0-ai-peer-organization-run-for-7-weeks-with-cl-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agents_wont_replace_developers_yet",
+  "headline_marked": "[[AI Agents Won't Replace Developers]], but will replace those who refuse to use AI",
+  "headline": "AI Agents Won't Replace Developers, but will replace those who refuse to use AI",
+  "summary": "The role of a Senior Developer is shifting from writing syntax to orchestrating AI agents, making prompt engineering a core competency for system design.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A significant shift is underway in software engineering, moving from traditional rule-based coding to AI-driven agentic workflows. This raises the question of whether developers are automating themselves out of a job.",
+   "The controversial take is that AI will not replace software engineers; instead, it will replace those engineers who refuse to integrate AI into their work. Adapting to new tools is crucial for relevance.",
+   "Autonomous agents have advanced rapidly, now capable of researching, planning, executing, and testing multi-file architectural changes independently. However, these agents still require human oversight as an \"architect.\"",
+   "Developers must learn to build with AI to stay relevant. Those who master the orchestration of autonomous agents could achieve the output equivalent to a 10-person engineering team, highlighting the transformative potential of AI in development."
+  ],
+  "caption": "AI agents are rapidly advancing, capable of complex software tasks. Will they replace developers?\n\nA significant shift is underway in software engineering, moving from traditional rule-based coding to AI-driven agentic workflows. This raises the question of whether developers are automating themselves out of a job.\n\nThe controversial take is that AI will not replace software engineers; instead, it will replace those engineers who refuse to integrate AI into their work. Adapting to new tools is crucial for relevance.\n\nAutonomous agents have advanced rapidly, now capable of researching, planning, executing, and testing multi-file architectural changes independently. However, these agents still require human oversight as an \"architect.\"\n\nDevelopers must learn to build with AI to stay relevant. Those who master the orchestration of autonomous agents could achieve the output equivalent to a 10-person engineering team, highlighting the transformative potential of AI in development.\n\n#AI #SoftwareDevelopment #TechTrends #FutureOfWork #Developer\n\nSource: DEV",
+  "tweet": "AI agents are transforming software engineering, but they won't replace developers—only those who refuse to adapt. Learn to orchestrate AI for 10x output. #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rahul_agarwal18/unpopular-opinion-ai-agents-wont-replace-developers-yet-2fgp",
+  "image": "",
+  "orig_title": "Unpopular Opinion: AI Agents Won't Replace Developers (Yet)",
+  "cluster_urls": [
+   "https://dev.to/rahul_agarwal18/unpopular-opinion-ai-agents-wont-replace-developers-yet-2fgp"
+  ],
+  "cluster_titles": [
+   "Unpopular Opinion: AI Agents Won't Replace Developers (Yet)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260630-1206-1-ai-agents-won-t-replace-developers-but-will-.png",
+   "20260630-1206-1-ai-agents-won-t-replace-developers-but-will--d1.png",
+   "20260630-1206-1-ai-agents-won-t-replace-developers-but-will--d2.png"
+  ]
+ }
+]

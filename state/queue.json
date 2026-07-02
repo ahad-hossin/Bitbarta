@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "android_malware_from_google",
+  "headline_marked": "[[Google installs 'Android Developer Verifier']] on 4B+ devices to block unapproved apps",
+  "headline": "Google installs 'Android Developer Verifier' on 4B+ devices to block unapproved apps",
+  "summary": "The 'Android Developer Verifier' (ADV) runs with root privileges on Android 8+ devices, bypassing Play Protect, which is its vector. It awaits activation to block software not centrally approved by Google.",
+  "category": "ANDROID",
+  "template": "terminal",
+  "details": [
+   "A new 'Android Developer Verifier' (ADV) process has been installed on an estimated 4 billion Android devices running Android 8 or higher. This system service runs surreptitiously in the background with full root privileges, silently awaiting remote activation.",
+   "Unlike typical malware, ADV cannot be blocked, disabled, or removed. It also bypasses Play Protect; in fact, Play Protect itself is the vector through which Google transmits and installs this service.",
+   "Google is propagating ADV, and once activated, its sole purpose is to block users from running software by developers not centrally approved by Google. This re-engineers the Android ecosystem by fiat.",
+   "Google rationalizes this as a solution to stem malware, but it lacks capabilities to prevent malware distribution. Less draconian solutions, like enhancing Play Protect or implementing federated verifiers, were proposed but not adopted.",
+   "Developers wishing to register as 'verified' must pay a fee, surrender personal information, upload government ID, and register all app identifiers and signing keys. This marks a significant shift from Android's 18-year tradition of open software development.",
+   "The most concerning aspect is clause 6.5 of the Android Developer Console Terms of Service, which states Google may terminate access if a developer distributes 'malware.' The term 'malware' is undefined in the document.",
+   "This absence of a formal definition allows Google to unilaterally dictate what constitutes 'malware,' potentially driven by business incentives or government compulsion. This could lead to the banning of apps like ad blockers, which Google has previously classified as malware."
+  ],
+  "caption": "Google has installed a system service with root privileges on 4 billion Android devices running Android 8+. It bypasses Play Protect and cannot be disabled, awaiting remote activation to block unapproved apps.\n\nA new 'Android Developer Verifier' (ADV) process has been installed on an estimated 4 billion Android devices running Android 8 or higher. This system service runs surreptitiously in the background with full root privileges, silently awaiting remote activation.\n\nUnlike typical malware, ADV cannot be blocked, disabled, or removed. It also bypasses Play Protect; in fact, Play Protect itself is the vector through which Google transmits and installs this service.\n\nGoogle is propagating ADV, and once activated, its sole purpose is to block users from running software by developers not centrally approved by Google. This re-engineers the Android ecosystem by fiat.\n\nGoogle rationalizes this as a solution to stem malware, but it lacks capabilities to prevent malware distribution. Less draconian solutions, like enhancing Play Protect or implementing federated verifiers, were proposed but not adopted.\n\nDevelopers wishing to register as 'verified' must pay a fee, surrender personal information, upload government ID, and register all app identifiers and signing keys. This marks a significant shift from Android's 18-year tradition of open software development.\n\nThe most concerning aspect is clause 6.5 of the Android Developer Console Terms of Service, which states Google may terminate access if a developer distributes 'malware.' The term 'malware' is undefined in the document.\n\nThis absence of a formal definition allows Google to unilaterally dictate what constitutes 'malware,' potentially driven by business incentives or government compulsion. This could lead to the banning of apps like ad blockers, which Google has previously classified as malware.\n\n#Android #Google #Security #Privacy #TechNews #Software\n\nSource: Hacker News",
+  "tweet": "Google's 'Android Developer Verifier' is installed on 4B+ Android 8+ devices, running with root access. It bypasses Play Protect (which installs it) and can't be disabled, awaiting activation to block apps not approved by Google. #Android #Security #Google",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Hacker News",
+  "url": "https://f-droid.org/2026/07/01/adv-malware.html",
+  "image": "",
+  "orig_title": "A new Android malware from Google",
+  "cluster_urls": [
+   "https://f-droid.org/2026/07/01/adv-malware.html"
+  ],
+  "cluster_titles": [
+   "A new Android malware from Google"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260702-1420-0-google-installs-android-developer-verifier-o.png",
+   "20260702-1420-0-google-installs-android-developer-verifier-o-d1.png",
+   "20260702-1420-0-google-installs-android-developer-verifier-o-d2.png",
+   "20260702-1420-0-google-installs-android-developer-verifier-o-d3.png"
+  ]
+ },
+ {
+  "topic": "php_payload_injection_security",
+  "headline_marked": "[[Stop PHP payload injection]] in Laravel image uploads with new sanitizer middleware",
+  "headline": "Stop PHP payload injection in Laravel image uploads with new sanitizer middleware",
+  "summary": "A new middleware for Laravel helps prevent remote code execution by scanning and re-encoding uploaded images that might contain hidden PHP web shells. Standard validation often misses these threats.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Image uploads can carry hidden PHP web shells in EXIF comments, bypassing common checks like MIME type, extension, and getimagesize(). If such a file lands in an an executable path, it can lead to remote code execution.",
+   "The laravel-at/laravel-image-sanitize middleware addresses this by scanning uploaded images for payload markers like <?php or phar. It then re-encodes suspicious files through Intervention Image.",
+   "This re-encoding process strips any appended payload by rebuilding the image solely from its pixel data. The rewritten, clean bytes replace the original upload before the controller or validation rules process them.",
+   "The sanitizer works in four steps: filtering by MIME type, scanning for payload markers, re-encoding on a match, and replacing the original content. It supports JPEG, PNG, GIF, BMP, and WebP, but not SVG due to its active content capabilities.",
+   "It's a defense-in-depth layer, not a replacement for existing validation or proper storage practices. Developers should still use mimes: and image validation rules and keep uploads out of public, executable paths.",
+   "Additional options include setting JPEG quality, stripping EXIF metadata for privacy, and handling animated GIFs/WebP. The package requires Laravel ^12.0|^13.0 and PHP ^8.3, and is MIT licensed."
+  ],
+  "caption": "Did you know a JPEG can hide a PHP web shell? Standard image validation often misses embedded code.\n\nImage uploads can carry hidden PHP web shells in EXIF comments, bypassing common checks like MIME type, extension, and getimagesize(). If such a file lands in an an executable path, it can lead to remote code execution.\n\nThe laravel-at/laravel-image-sanitize middleware addresses this by scanning uploaded images for payload markers like <?php or phar. It then re-encodes suspicious files through Intervention Image.\n\nThis re-encoding process strips any appended payload by rebuilding the image solely from its pixel data. The rewritten, clean bytes replace the original upload before the controller or validation rules process them.\n\nThe sanitizer works in four steps: filtering by MIME type, scanning for payload markers, re-encoding on a match, and replacing the original content. It supports JPEG, PNG, GIF, BMP, and WebP, but not SVG due to its active content capabilities.\n\nIt's a defense-in-depth layer, not a replacement for existing validation or proper storage practices. Developers should still use mimes: and image validation rules and keep uploads out of public, executable paths.\n\nAdditional options include setting JPEG quality, stripping EXIF metadata for privacy, and handling animated GIFs/WebP. The package requires Laravel ^12.0|^13.0 and PHP ^8.3, and is MIT licensed.\n\n#Laravel #PHP #Security #WebSecurity #DeveloperTools #ImageUpload\n\nSource: DEV",
+  "tweet": "A JPEG can hide a PHP web shell, bypassing common validation. The new laravel-image-sanitize middleware scans uploads for payloads & re-encodes suspicious files, stripping malicious code. Essential defense-in-depth for Laravel apps. #Laravel #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "laravel.com",
+  "source": "DEV",
+  "url": "https://dev.to/mathiasonea/sanitizing-image-uploads-in-laravel-stopping-php-payload-injection-via-image-files-1hij",
+  "image": "",
+  "orig_title": "Sanitizing Image Uploads in Laravel: Stopping PHP Payload Injection via Image Files",
+  "cluster_urls": [
+   "https://dev.to/mathiasonea/sanitizing-image-uploads-in-laravel-stopping-php-payload-injection-via-image-files-1hij"
+  ],
+  "cluster_titles": [
+   "Sanitizing Image Uploads in Laravel: Stopping PHP Payload Injection via Image Files"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260702-1420-1-stop-php-payload-injection-in-laravel-image-.png",
+   "20260702-1420-1-stop-php-payload-injection-in-laravel-image--d1.png",
+   "20260702-1420-1-stop-php-payload-injection-in-laravel-image--d2.png"
+  ]
+ }
+]

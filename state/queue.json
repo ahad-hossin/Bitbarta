@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "ai_agent_data_leak_security_risk",
+  "headline_marked": "[[Your AI Agent Is Leaking Data]] Right Now — And Every Tool Call Looks Safe",
+  "headline": "Your AI Agent Is Leaking Data Right Now — And Every Tool Call Looks Safe",
+  "summary": "Traditional AI guardrails miss a critical attack vector where individual tool calls appear safe but collectively lead to data exfiltration. A new open-source tool, SafetyDrift, detects these cumulative threats.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical blind spot in AI safety allows agents to leak data even when individual tool calls appear harmless. This new category of attack, often missed by existing guardrails, poses a significant risk in production environments.",
+   "Current AI safety tools, including Guardrails AI and Lakera Guard, typically evaluate each tool call in isolation. This approach fails to detect sophisticated patterns of abuse, akin to missing a bank robbery where many small, legitimate-looking withdrawals cumulatively drain an account.",
+   "Developer Abhishek M S has built SafetyDrift, the first open-source implementation of a research paper (arXiv:2603.27148). Instead of isolated checks, SafetyDrift tracks cumulative dimensions across an entire session using Markov chain analysis.",
+   "SafetyDrift computes the probability of a safety violation within the next five steps after each tool call. The research shows that reaching even a mild risk state gives an 85% probability of a violation, allowing SafetyDrift to intervene proactively.",
+   "The tool ships as an MCP server, offering automatic protection for MCP-compatible agents like Claude Code, Cursor, and Copilot with minimal setup. In benchmarks, SafetyDrift blocked 100% of 100 attack patterns (including data exfiltration and credential theft) without blocking any benign sessions.",
+   "SafetyDrift provides framework adapters for LangChain, LangGraph, OpenAI Agents SDK, AutoGen, and CrewAI. It is MIT licensed, with full source and benchmark code available."
+  ],
+  "caption": "Your AI agent could be leaking sensitive data right now, and every single action looks safe. A new open-source tool detects these hidden, cumulative attacks.\n\nA critical blind spot in AI safety allows agents to leak data even when individual tool calls appear harmless. This new category of attack, often missed by existing guardrails, poses a significant risk in production environments.\n\nCurrent AI safety tools, including Guardrails AI and Lakera Guard, typically evaluate each tool call in isolation. This approach fails to detect sophisticated patterns of abuse, akin to missing a bank robbery where many small, legitimate-looking withdrawals cumulatively drain an account.\n\nDeveloper Abhishek M S has built SafetyDrift, the first open-source implementation of a research paper (arXiv:2603.27148). Instead of isolated checks, SafetyDrift tracks cumulative dimensions across an entire session using Markov chain analysis.\n\nSafetyDrift computes the probability of a safety violation within the next five steps after each tool call. The research shows that reaching even a mild risk state gives an 85% probability of a violation, allowing SafetyDrift to intervene proactively.\n\nThe tool ships as an MCP server, offering automatic protection for MCP-compatible agents like Claude Code, Cursor, and Copilot with minimal setup. In benchmarks, SafetyDrift blocked 100% of 100 attack patterns (including data exfiltration and credential theft) without blocking any benign sessions.\n\nSafetyDrift provides framework adapters for LangChain, LangGraph, OpenAI Agents SDK, AutoGen, and CrewAI. It is MIT licensed, with full source and benchmark code available.\n\n#AI #AISafety #Cybersecurity #OpenSource #TechNews #DataSecurity\n\nSource: DEV",
+  "tweet": "Your AI agent might be leaking data, and current guardrails won't see it. A new open-source tool, SafetyDrift, detects cumulative attacks where individual actions look safe. It blocked 100% of attacks in tests. #AISafety #Cybersecurity #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/msabhishek0820prog/your-ai-agent-is-leaking-data-right-now-and-every-tool-call-looks-safe-44de",
+  "image": "",
+  "orig_title": "Your AI Agent Is Leaking Data Right Now — And Every Tool Call Looks Safe",
+  "cluster_urls": [
+   "https://dev.to/msabhishek0820prog/your-ai-agent-is-leaking-data-right-now-and-every-tool-call-looks-safe-44de"
+  ],
+  "cluster_titles": [
+   "Your AI Agent Is Leaking Data Right Now — And Every Tool Call Looks Safe"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260703-1053-0-your-ai-agent-is-leaking-data-right-now-and-.png",
+   "20260703-1053-0-your-ai-agent-is-leaking-data-right-now-and--d1.png",
+   "20260703-1053-0-your-ai-agent-is-leaking-data-right-now-and--d2.png"
+  ]
+ },
+ {
+  "topic": "virginia_bans_geolocation_data_sale",
+  "headline_marked": "[[Virginia bans sale of geolocation data]], effective July 1, 2026",
+  "headline": "Virginia bans sale of geolocation data, effective July 1, 2026",
+  "summary": "Virginia Governor signed a bill prohibiting the sale of geolocation data, but its definition of \"sale\" is narrower than other states, focusing only on monetary exchange.",
+  "category": "SECURITY",
+  "template": "launch",
+  "details": [
+   "On April 13, 2026, Virginia Governor Abigail Spanberger signed S.B. 388 into law, officially banning the sale of geolocation data. This significant amendment to the Virginia Consumer Data Protection Act (VCDPA) will take effect on July 1, 2026.",
+   "Virginia's definition of 'sale' is notably narrower than other state comprehensive privacy laws, specifically requiring 'monetary consideration' for the exchange of personal data to a third party. This contrasts with broader definitions that include 'other valuable consideration'.",
+   "The Commonwealth joins Maryland and Oregon, which have already implemented similar bans on geolocation data sales. Several other states, including California, Massachusetts, Vermont, and Washington State, are also proposing comparable legislation.",
+   "This legislative trend follows increased regulatory scrutiny on the location data industry. Recent actions include the California Attorney General's investigation in March 2025 and a 2024 FTC settlement that prohibited a data broker from selling geolocation data."
+  ],
+  "caption": "Virginia has officially banned the sale of geolocation data, with the new law taking effect on July 1, 2026.\n\nOn April 13, 2026, Virginia Governor Abigail Spanberger signed S.B. 388 into law, officially banning the sale of geolocation data. This significant amendment to the Virginia Consumer Data Protection Act (VCDPA) will take effect on July 1, 2026.\n\nVirginia's definition of 'sale' is notably narrower than other state comprehensive privacy laws, specifically requiring 'monetary consideration' for the exchange of personal data to a third party. This contrasts with broader definitions that include 'other valuable consideration'.\n\nThe Commonwealth joins Maryland and Oregon, which have already implemented similar bans on geolocation data sales. Several other states, including California, Massachusetts, Vermont, and Washington State, are also proposing comparable legislation.\n\nThis legislative trend follows increased regulatory scrutiny on the location data industry. Recent actions include the California Attorney General's investigation in March 2025 and a 2024 FTC settlement that prohibited a data broker from selling geolocation data.\n\n#Virginia #DataPrivacy #Geolocation #PrivacyLaw #TechPolicy #ConsumerRights\n\nSource: Hacker News",
+  "tweet": "Virginia officially bans the sale of geolocation data, effective July 1, 2026. The new law amends the VCDPA, though its definition of 'sale' is narrower than other states. This follows a trend of increased regulatory scrutiny on location data. #DataPrivacy #Virginia",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.hunton.com/privacy-and-cybersecurity-law-blog/virginia-bans-sale-of-geolocation-data",
+  "image": "",
+  "orig_title": "Virginia bans sale of geolocation data",
+  "cluster_urls": [
+   "https://www.hunton.com/privacy-and-cybersecurity-law-blog/virginia-bans-sale-of-geolocation-data"
+  ],
+  "cluster_titles": [
+   "Virginia bans sale of geolocation data"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260703-1053-1-virginia-bans-sale-of-geolocation-data-effec.png",
+   "20260703-1053-1-virginia-bans-sale-of-geolocation-data-effec-d1.png",
+   "20260703-1053-1-virginia-bans-sale-of-geolocation-data-effec-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,74 @@
-[]
+[
+ {
+  "topic": "ai_rag_security_prompt_injection_defense",
+  "headline_marked": "[[Guardrails and Prompt Injection Defense]] for Production RAG Systems",
+  "headline": "Guardrails and Prompt Injection Defense for Production RAG Systems",
+  "summary": "Learn how to implement robust guardrails and prompt injection defenses for RAG, Agent, and MCP systems before deploying them to production. Ensure your AI applications are secure against malicious input.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Securing RAG, Agent, and MCP systems is crucial before production deployment. This guide focuses on handling malicious input, building on previous observability discussions.",
+   "The primary strategy involves detecting and rejecting malicious input before it can compromise the system. This proactive approach is vital for maintaining system integrity.",
+   "Effective defense combines multiple layers: rigorous input validation, careful output validation, and strategic rate limiting. These measures work together to fortify the system.",
+   "For production environments, a dual-pronged approach is recommended: use rule-based filtering for fast initial screening, then leverage LLMs for higher-accuracy judgment of complex threats."
+  ],
+  "caption": "Protect your RAG, Agent, and MCP systems from malicious input. Learn essential guardrails and prompt injection defenses for production.\n\nSecuring RAG, Agent, and MCP systems is crucial before production deployment. This guide focuses on handling malicious input, building on previous observability discussions.\n\nThe primary strategy involves detecting and rejecting malicious input before it can compromise the system. This proactive approach is vital for maintaining system integrity.\n\nEffective defense combines multiple layers: rigorous input validation, careful output validation, and strategic rate limiting. These measures work together to fortify the system.\n\nFor production environments, a dual-pronged approach is recommended: use rule-based filtering for fast initial screening, then leverage LLMs for higher-accuracy judgment of complex threats.\n\n#Security #AI #RAG #PromptInjection #LLM #DevSecOps\n\nSource: DEV",
+  "tweet": "Protect your RAG, Agent, and MCP systems from malicious input. Implement robust guardrails and prompt injection defenses using input/output validation, rate limiting, and a hybrid rule-based/LLM approach. #AI #Security #PromptInjection",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hiroki-kameyama/security-guardrails-and-prompt-injection-defense-for-production-rag-3h9m",
+  "image": "",
+  "orig_title": "Security — Guardrails and Prompt Injection Defense for Production RAG",
+  "cluster_urls": [
+   "https://dev.to/hiroki-kameyama/security-guardrails-and-prompt-injection-defense-for-production-rag-3h9m"
+  ],
+  "cluster_titles": [
+   "Security — Guardrails and Prompt Injection Defense for Production RAG"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-1813-0-guardrails-and-prompt-injection-defense-for-.png",
+   "20260704-1813-0-guardrails-and-prompt-injection-defense-for--d1.png"
+  ]
+ },
+ {
+  "topic": "apple_hide_my_email_security_flaw",
+  "headline_marked": "[[Apple's Hide My Email service failed to hide]] user email addresses for over a year, researcher finds",
+  "headline": "Apple's Hide My Email service failed to hide user email addresses for over a year, researcher finds",
+  "summary": "A security researcher discovered a flaw in Apple's privacy feature, allowing real email addresses to be exposed. The issue persisted for at least a year, even after Apple claimed it was fixed.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Apple's 'Hide My Email' tool, launched in 2021 to protect user privacy by generating unique, random email addresses, has been found to have a critical vulnerability. Security researcher Tyler Murphy discovered that real email addresses could be uncovered, with 100% of tested Hide My Email addresses proving exploitable.",
+   "This flaw has reportedly existed for at least a year. Murphy initially reported the problem to Apple last summer, and was informed in March that it had been 'addressed.' However, subsequent testing revealed the issue remained exploitable.",
+   "The exact technical details of the vulnerability have not been publicly disclosed, as the problem is still unresolved. Apple has stated to Murphy that they are continuing to investigate the issue, but did not respond to requests for comment from 404 Media."
+  ],
+  "caption": "Apple's 'Hide My Email' feature, designed for privacy, failed to conceal user email addresses for over a year. A researcher found 100% of tested addresses were exploitable.\n\nApple's 'Hide My Email' tool, launched in 2021 to protect user privacy by generating unique, random email addresses, has been found to have a critical vulnerability. Security researcher Tyler Murphy discovered that real email addresses could be uncovered, with 100% of tested Hide My Email addresses proving exploitable.\n\nThis flaw has reportedly existed for at least a year. Murphy initially reported the problem to Apple last summer, and was informed in March that it had been 'addressed.' However, subsequent testing revealed the issue remained exploitable.\n\nThe exact technical details of the vulnerability have not been publicly disclosed, as the problem is still unresolved. Apple has stated to Murphy that they are continuing to investigate the issue, but did not respond to requests for comment from 404 Media.\n\n#Apple #Security #Privacy #Vulnerability #TechNews #Cybersecurity\n\nSource: Wired",
+  "tweet": "Apple's 'Hide My Email' feature, designed for privacy, failed to conceal user email addresses for over a year. A researcher found 100% of tested addresses were exploitable, despite Apple claiming it was fixed. #Apple #Security #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/security-roundup-apples-hide-my-email-service-fails-to-hide-your-email/",
+  "image": "https://media.wired.com/photos/6a459c14043fba997ea26852/master/pass/security_roudnup_GettyImages-1157988186.jpg",
+  "orig_title": "Security Roundup: Apple’s Hide My Email Service Fails to Hide Your Email",
+  "cluster_urls": [
+   "https://www.wired.com/story/security-roundup-apples-hide-my-email-service-fails-to-hide-your-email/"
+  ],
+  "cluster_titles": [
+   "Security Roundup: Apple’s Hide My Email Service Fails to Hide Your Email"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260704-1813-1-apple-s-hide-my-email-service-failed-to-hide.png",
+   "20260704-1813-1-apple-s-hide-my-email-service-failed-to-hide-d1.png",
+   "20260704-1813-1-apple-s-hide-my-email-service-failed-to-hide-d2.png"
+  ]
+ }
+]

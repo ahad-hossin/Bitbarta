@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "glm5_amd_mi355x_cost_performance",
+  "headline_marked": "[[GLM5.2 on AMD MI355X hits 2626 tok/s/node]] at over 2x lower cost than Blackwell",
+  "headline": "GLM5.2 on AMD MI355X hits 2626 tok/s/node at over 2x lower cost than Blackwell",
+  "summary": "Wafer achieved 2626 tokens/second/node for GLM5.2 on AMD MI355X, delivering over twice the cost efficiency compared to NVIDIA Blackwell GPUs. This breakthrough addresses the rising demand for inference.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Wafer has successfully served GLM5.2 on AMD MI355X at an aggregate throughput of 2626 tokens/second/node, achieving over 2x lower cost than NVIDIA's Blackwell GPUs. This performance was measured on a 20k in / 1k out workload with a 60% cache hit rate.",
+   "The demand for AI inference is rapidly increasing, with new frontier models emerging constantly. This surge is outpacing supply, leading to rising NVIDIA GPU prices and expensive tokens.",
+   "AMD's Instinct MI350 series offers comparable hardware specs to Blackwell but at a significantly lower cost, averaging 2.75x cheaper per GPU. However, NVIDIA's software advantage typically allows for faster inference with less friction.",
+   "Achieving state-of-the-art performance on AMD's MI355X / ROCm stack often requires extensive engineering and optimization due to a lack of day-0 software support. This means AMD often plays catch-up in supporting the newest models.",
+   "Wafer demonstrated that this gap can be closed through dedicated kernel and model optimization. Their solution delivered 80% of the performance measured on an NVIDIA B200, despite being over 2x cheaper.",
+   "For single-stream performance, Wafer achieved 213 tokens/second on GLM5.2 with 10k input and 1.5k output tokens on AMD MI355X, outperforming competitors on a performance-per-dollar basis.",
+   "The team quantized the base bf16 GLM-5.2 to MXFP4 using AMD Quark, finding it to be lossless compared to official FP8 quantization. They selected sglang as the inference framework for its native support and coherence with MXFP4.",
+   "Enabling speculative decode on sglang's ROCm image required two critical fixes. The first involved correcting a module prefix mismatch in Quark's quantization lookup for the MTP head, which delivered a nearly 3x gain in single-stream throughput.",
+   "The second fix addressed deep speculative decode, requiring an #ifdef USE_ROCM guard in a fused multi-step metadata kernel. These seemingly trivial changes were essential for fully leveraging speculative decode.",
+   "With speculative decode working properly and additional config optimizations like --kv-cache-dtype fp8_e4m3, Wafer reached its headline single-stream decode number. For aggregate throughput, prefill optimizations were also crucial."
+  ],
+  "caption": "AMD MI355X delivers GLM5.2 inference at 2626 tokens/second/node, slashing costs by over 2x compared to NVIDIA Blackwell. This breakthrough tackles the soaring demand for AI compute.\n\nWafer has successfully served GLM5.2 on AMD MI355X at an aggregate throughput of 2626 tokens/second/node, achieving over 2x lower cost than NVIDIA's Blackwell GPUs. This performance was measured on a 20k in / 1k out workload with a 60% cache hit rate.\n\nThe demand for AI inference is rapidly increasing, with new frontier models emerging constantly. This surge is outpacing supply, leading to rising NVIDIA GPU prices and expensive tokens.\n\nAMD's Instinct MI350 series offers comparable hardware specs to Blackwell but at a significantly lower cost, averaging 2.75x cheaper per GPU. However, NVIDIA's software advantage typically allows for faster inference with less friction.\n\nAchieving state-of-the-art performance on AMD's MI355X / ROCm stack often requires extensive engineering and optimization due to a lack of day-0 software support. This means AMD often plays catch-up in supporting the newest models.\n\nWafer demonstrated that this gap can be closed through dedicated kernel and model optimization. Their solution delivered 80% of the performance measured on an NVIDIA B200, despite being over 2x cheaper.\n\nFor single-stream performance, Wafer achieved 213 tokens/second on GLM5.2 with 10k input and 1.5k output tokens on AMD MI355X, outperforming competitors on a performance-per-dollar basis.\n\nThe team quantized the base bf16 GLM-5.2 to MXFP4 using AMD Quark, finding it to be lossless compared to official FP8 quantization. They selected sglang as the inference framework for its native support and coherence with MXFP4.\n\nEnabling speculative decode on sglang's ROCm image required two critical fixes. The first involved correcting a module prefix mismatch in Quark's quantization lookup for the MTP head, which delivered a nearly 3x gain in single-stream throughput.\n\n#AI #AMD #GPU #Inference #MachineLearning #Tech\n\nSource: Hacker News",
+  "tweet": "AMD MI355X powers GLM5.2 inference at 2626 tok/s/node, achieving over 2x lower cost than NVIDIA Blackwell. Wafer's optimizations prove AMD's potential to meet soaring AI demand. #AI #AMD #Inference",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "wafer.com",
+  "source": "Hacker News",
+  "url": "https://www.wafer.ai/blog/glm52-amd",
+  "image": "",
+  "orig_title": "GLM5.2 on AMD MI355X at 2626 tok/s/node at over 2x lower cost than Blackwell",
+  "cluster_urls": [
+   "https://www.wafer.ai/blog/glm52-amd"
+  ],
+  "cluster_titles": [
+   "GLM5.2 on AMD MI355X at 2626 tok/s/node at over 2x lower cost than Blackwell"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260704-0607-0-glm5-2-on-amd-mi355x-hits-2626-tok-s-node-at.png",
+   "20260704-0607-0-glm5-2-on-amd-mi355x-hits-2626-tok-s-node-at-d1.png",
+   "20260704-0607-0-glm5-2-on-amd-mi355x-hits-2626-tok-s-node-at-d2.png",
+   "20260704-0607-0-glm5-2-on-amd-mi355x-hits-2626-tok-s-node-at-d3.png",
+   "20260704-0607-0-glm5-2-on-amd-mi355x-hits-2626-tok-s-node-at-d4.png"
+  ]
+ },
+ {
+  "topic": "claude_mythos_vulnerabilities_spike",
+  "headline_marked": "[[Serious vulnerabilities spiked]] after Claude Mythos Preview release, 3.5x monthly record",
+  "headline": "Serious vulnerabilities spiked after Claude Mythos Preview release, 3.5x monthly record",
+  "summary": "In June 2026, high- and critical-severity CVEs surged to 1,500, over 3.5 times the previous monthly record. This spike followed Anthropic's Claude Mythos Preview, an AI designed to find software vulnerabilities.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Severe cybersecurity vulnerability disclosures (CVEs) saw an unprecedented spike in June 2026. Around 1,500 high- and critical-severity CVEs were published, marking over 3.5 times the monthly record prior to the event.",
+   "This surge followed Anthropic's April announcement of Claude Mythos Preview, an AI capable of autonomously discovering software vulnerabilities. The model was developed to proactively identify and fix bugs.",
+   "Anthropic's Project Glasswing partners, including tech giants like Microsoft, Google, Apple, and AWS, had been utilizing Mythos to find and patch bugs before its public release. Project Glasswing claims to have identified over 10,000 high- or critical-severity vulnerabilities to date.",
+   "Many of these vulnerabilities are yet to be individually disclosed. OpenAI has also undertaken similar initiatives with their Daybreak product, indicating a growing trend in AI-assisted vulnerability discovery."
+  ],
+  "caption": "Cybersecurity vulnerability disclosures (CVEs) spiked by over 3.5x in June 2026. This surge coincided with the release of an AI designed to find software bugs.\n\nSevere cybersecurity vulnerability disclosures (CVEs) saw an unprecedented spike in June 2026. Around 1,500 high- and critical-severity CVEs were published, marking over 3.5 times the monthly record prior to the event.\n\nThis surge followed Anthropic's April announcement of Claude Mythos Preview, an AI capable of autonomously discovering software vulnerabilities. The model was developed to proactively identify and fix bugs.\n\nAnthropic's Project Glasswing partners, including tech giants like Microsoft, Google, Apple, and AWS, had been utilizing Mythos to find and patch bugs before its public release. Project Glasswing claims to have identified over 10,000 high- or critical-severity vulnerabilities to date.\n\nMany of these vulnerabilities are yet to be individually disclosed. OpenAI has also undertaken similar initiatives with their Daybreak product, indicating a growing trend in AI-assisted vulnerability discovery.\n\n#Cybersecurity #Vulnerabilities #AI #Anthropic #ClaudeMythos #TechNews\n\nSource: Hacker News",
+  "tweet": "CVE disclosures surged over 3.5x in June 2026, with 1,500 high-severity bugs found. This spike follows Anthropic's Claude Mythos Preview, an AI designed to autonomously discover software vulnerabilities. AI is changing bug hunting. #Cybersecurity #AI #Vulnerabilities",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "Hacker News",
+  "url": "https://epoch.ai/data-insights/cve-severity-spike",
+  "image": "",
+  "orig_title": "New serious vulnerabilities spiked around release of Claude Mythos Preview",
+  "cluster_urls": [
+   "https://epoch.ai/data-insights/cve-severity-spike"
+  ],
+  "cluster_titles": [
+   "New serious vulnerabilities spiked around release of Claude Mythos Preview"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260704-0607-1-serious-vulnerabilities-spiked-after-claude-.png",
+   "20260704-0607-1-serious-vulnerabilities-spiked-after-claude--d1.png",
+   "20260704-0607-1-serious-vulnerabilities-spiked-after-claude--d2.png"
+  ]
+ }
+]

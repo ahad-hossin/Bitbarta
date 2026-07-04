@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "openai_gpt_realtime_2_voice_api_launch",
+  "headline_marked": "[[OpenAI's GPT-Realtime-2 brings GPT-5-class reasoning]] to voice API, enabling complex agents",
+  "headline": "OpenAI's GPT-Realtime-2 brings GPT-5-class reasoning to voice API, enabling complex agents",
+  "summary": "OpenAI has launched three new voice models for its API, led by GPT-Realtime-2, which integrates GPT-5-class reasoning. This upgrade enables complex multi-step voice workflows and reliable agentic tool calling for developers.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "On May 8, 2026, OpenAI shipped three new voice models into its API, with GPT-Realtime-2 being the most significant. It's the first voice model in the Realtime API family to carry GPT-5-class reasoning, unlocking previously impractical use cases. This includes complex multi-step voice workflows and reliable agentic tool calling during spoken interactions.",
+   "GPT-Realtime-2 offers GPT-5-class reasoning for live voice conversations, featuring configurable reasoning effort and a 128K context window. It also supports parallel multi-tool calling and natural interruption handling. These capabilities are crucial for handling real work in long sessions.",
+   "The other two models, GPT-Realtime-Translate and GPT-Realtime-Whisper, address other key developer frustrations. Translate offers live speech translation from 70+ input languages into 13 output languages, matching the speaker's pace. Whisper provides streaming speech-to-text, generating transcript text live as the speaker talks, rather than in batches.",
+   "The original Realtime API used a voice-optimized model that was fast but shallow in reasoning, struggling with multi-step logic and complex tool chains. GPT-Realtime-2 inverts this priority, with its underlying reasoning engine from the GPT-5.5 model family. This significantly improves performance on hard problems.",
+   "Developers gain four concrete improvements: reliable tool chaining allows five sequential calls while maintaining context, and parallel tool calls can execute multiple API requests simultaneously. Audible progress signals eliminate dead air during longer operations, generating spoken filler matching the agent's actions. Stronger instruction following ensures complex system prompts are reliably respected, unlike earlier Realtime models that drifted from complex rules after a few turns.",
+   "The previous Realtime API supported 32K tokens, which could be quickly exceeded in a 30-minute voice session with moderate tool use. The new 128K context window makes 45–60 minute sessions practical without external state management. This change makes the Realtime API production-viable for extended enterprise support, healthcare intake, or tutoring sessions.",
+   "GPT-Realtime-2 supports a `reasoning_effort` parameter with 'low', 'medium', and 'high' values, directly controlling latency and cost. 'Low' is for fastest response and simple queries, 'medium' (default) handles tool use, and 'high' prioritizes correctness for complex logic. Routing turns based on complexity can substantially cut costs without degrading quality."
+  ],
+  "caption": "OpenAI's new GPT-Realtime-2 brings GPT-5-class reasoning to live voice conversations. It unlocks complex multi-step workflows and reliable agentic tool calling for the first time.\n\nOn May 8, 2026, OpenAI shipped three new voice models into its API, with GPT-Realtime-2 being the most significant. It's the first voice model in the Realtime API family to carry GPT-5-class reasoning, unlocking previously impractical use cases. This includes complex multi-step voice workflows and reliable agentic tool calling during spoken interactions.\n\nGPT-Realtime-2 offers GPT-5-class reasoning for live voice conversations, featuring configurable reasoning effort and a 128K context window. It also supports parallel multi-tool calling and natural interruption handling. These capabilities are crucial for handling real work in long sessions.\n\nThe other two models, GPT-Realtime-Translate and GPT-Realtime-Whisper, address other key developer frustrations. Translate offers live speech translation from 70+ input languages into 13 output languages, matching the speaker's pace. Whisper provides streaming speech-to-text, generating transcript text live as the speaker talks, rather than in batches.\n\nThe original Realtime API used a voice-optimized model that was fast but shallow in reasoning, struggling with multi-step logic and complex tool chains. GPT-Realtime-2 inverts this priority, with its underlying reasoning engine from the GPT-5.5 model family. This significantly improves performance on hard problems.\n\nDevelopers gain four concrete improvements: reliable tool chaining allows five sequential calls while maintaining context, and parallel tool calls can execute multiple API requests simultaneously. Audible progress signals eliminate dead air during longer operations, generating spoken filler matching the agent's actions. Stronger instruction following ensures complex system prompts are reliably respected, unlike earlier Realtime models that drifted from complex rules after a few turns.\n\n#OpenAI #GPTRealtime2 #VoiceAI #APIDevelopment #AI #Tech\n\nSource: DEV",
+  "tweet": "OpenAI's new GPT-Realtime-2 model brings GPT-5-class reasoning to its Voice API. This enables complex multi-step voice agents, parallel tool calls, and 128K context windows for longer, more reliable interactions. A game-changer for voice app developers. #OpenAI #VoiceAI #API",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/akaranjkar08/openai-gpt-realtime-2-complete-voice-api-developer-guide-2026-aj6",
+  "image": "",
+  "orig_title": "OpenAI GPT-Realtime-2: Complete Voice API Developer Guide (2026)",
+  "cluster_urls": [
+   "https://dev.to/akaranjkar08/openai-gpt-realtime-2-complete-voice-api-developer-guide-2026-aj6"
+  ],
+  "cluster_titles": [
+   "OpenAI GPT-Realtime-2: Complete Voice API Developer Guide (2026)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-1046-0-openai-s-gpt-realtime-2-brings-gpt-5-class-r.png",
+   "20260704-1046-0-openai-s-gpt-realtime-2-brings-gpt-5-class-r-d1.png",
+   "20260704-1046-0-openai-s-gpt-realtime-2-brings-gpt-5-class-r-d2.png",
+   "20260704-1046-0-openai-s-gpt-realtime-2-brings-gpt-5-class-r-d3.png",
+   "20260704-1046-0-openai-s-gpt-realtime-2-brings-gpt-5-class-r-d4.png"
+  ]
+ },
+ {
+  "topic": "ai_agents_api_vs_mcp_paradigm",
+  "headline_marked": "[[Model Context Protocol (MCP) solves API failures]] for AI agents, backed by Linux Foundation",
+  "headline": "Model Context Protocol (MCP) solves API failures for AI agents, backed by Linux Foundation",
+  "summary": "Traditional APIs are proving slow, expensive, and brittle for autonomous AI agents due to over-fetching and stateless designs. MCP offers a universal, stateful adapter optimized for LLM context windows.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Traditional APIs, designed for human developers, are proving slow, expensive, and brittle for autonomous AI agents. This is a fundamental architectural mistake, as LLMs require a different approach than human frontends.",
+   "The Model Context Protocol (MCP), an open standard introduced by Anthropic and backed by the Linux Foundation, offers a solution. It acts as a universal adapter, replacing the custom glue code needed to connect LLMs with traditional services.",
+   "Traditional APIs lead to an N x M problem, requiring numerous custom connectors for various LLM frameworks and enterprise tools. MCP simplifies this to an N + M architecture, with one server per tool and one client per agent framework.",
+   "A key failing of REST/GraphQL APIs for LLMs is their design for hardcoded endpoints, contrasting with an agent's need to dynamically decide which tool to use at runtime. Over-fetching also causes \"context rot\" and wastes resources for LLMs.",
+   "MCP servers are built to return data optimized for LLM context windows, separating executable tools, readable resources, and prompt templates. This ensures LLMs receive only relevant information, improving efficiency and focus.",
+   "Unlike stateless REST APIs, MCP facilitates stateful JSON-RPC 2.0 sessions, allowing context to persist across agent interactions. This eliminates the need to re-send massive payloads, improving latency and reducing costs.",
+   "MCP doesn't replace existing databases or backend APIs; it replaces the custom integration logic. The industry is rapidly adopting MCP, making it the standard for building scalable architectures for the agentic future."
+  ],
+  "caption": "Traditional APIs are failing AI agents, making them slow, expensive, and brittle. The Model Context Protocol (MCP) is emerging as the universal adapter for LLMs.\n\nTraditional APIs, designed for human developers, are proving slow, expensive, and brittle for autonomous AI agents. This is a fundamental architectural mistake, as LLMs require a different approach than human frontends.\n\nThe Model Context Protocol (MCP), an open standard introduced by Anthropic and backed by the Linux Foundation, offers a solution. It acts as a universal adapter, replacing the custom glue code needed to connect LLMs with traditional services.\n\nTraditional APIs lead to an N x M problem, requiring numerous custom connectors for various LLM frameworks and enterprise tools. MCP simplifies this to an N + M architecture, with one server per tool and one client per agent framework.\n\nA key failing of REST/GraphQL APIs for LLMs is their design for hardcoded endpoints, contrasting with an agent's need to dynamically decide which tool to use at runtime. Over-fetching also causes \"context rot\" and wastes resources for LLMs.\n\nMCP servers are built to return data optimized for LLM context windows, separating executable tools, readable resources, and prompt templates. This ensures LLMs receive only relevant information, improving efficiency and focus.\n\nUnlike stateless REST APIs, MCP facilitates stateful JSON-RPC 2.0 sessions, allowing context to persist across agent interactions. This eliminates the need to re-send massive payloads, improving latency and reducing costs.\n\nMCP doesn't replace existing databases or backend APIs; it replaces the custom integration logic. The industry is rapidly adopting MCP, making it the standard for building scalable architectures for the agentic future.\n\n#AI #APIs #Developers #LLMs #Tech #OpenStandard\n\nSource: DEV",
+  "tweet": "Traditional APIs are hindering AI agents, making them slow & costly. Enter the Model Context Protocol (MCP), an open standard backed by the Linux Foundation. It's the universal adapter LLMs need for efficient, stateful interactions. #AI #APIs #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/chaudharidevam/mcp-vs-api-why-traditional-apis-are-failing-ai-agents-28m8",
+  "image": "",
+  "orig_title": "MCP vs API: Why Traditional APIs Are Failing AI Agents",
+  "cluster_urls": [
+   "https://dev.to/chaudharidevam/mcp-vs-api-why-traditional-apis-are-failing-ai-agents-28m8"
+  ],
+  "cluster_titles": [
+   "MCP vs API: Why Traditional APIs Are Failing AI Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260704-1046-1-model-context-protocol-mcp-solves-api-failur.png",
+   "20260704-1046-1-model-context-protocol-mcp-solves-api-failur-d1.png",
+   "20260704-1046-1-model-context-protocol-mcp-solves-api-failur-d2.png",
+   "20260704-1046-1-model-context-protocol-mcp-solves-api-failur-d3.png"
+  ]
+ }
+]

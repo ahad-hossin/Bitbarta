@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "msi_center_privilege_escalation_vulnerability",
+  "headline_marked": "[[MSI Center vulnerability]] allows SYSTEM privileges in seconds",
+  "headline": "MSI Center vulnerability allows SYSTEM privileges in seconds",
+  "summary": "A critical flaw in MSI Center's 'Notebook Foundation' service allows any authenticated user to gain SYSTEM-level privileges or even achieve remote code execution on a LAN. MSI has since patched the vulnerability.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A researcher discovered a severe vulnerability in MSI Center's 'Notebook Foundation' service, allowing authenticated users to gain SYSTEM privileges in seconds. The flaw could also enable remote code execution (RCE) on a local area network with valid login credentials.",
+   "The vulnerability stems from a named pipe created on boot that any authenticated user can interact with. Historically, MSI relied on \"security by obscurity\" and an outdated 3DES cipher for communication, making it exploitable.",
+   "The researcher created a Proof of Concept (PoC) to launch cmd.exe with escalated privileges. Malware could exploit this to disable Windows Defender or run arbitrary PowerShell commands.",
+   "Initial attempts to report the vulnerability to MSI were met with a full PSIRT mailbox, indicating a failure to receive reports. This concerning discovery prompted the researcher to seek external help to contact MSI.",
+   "With assistance from Gamers Nexus' Steve Burke, the researcher eventually connected with MSI, only to find the report had, in fact, reached them. MSI responded quickly, preparing a patch within two days of the successful report.",
+   "MSI released the patch bundled with an MSI Center update. However, MSI could not issue a CVE, so the researcher requested one via VulDB, which is currently under review."
+  ],
+  "caption": "Critical vulnerability in MSI Center allows SYSTEM privileges in seconds. Any authenticated user can exploit it, even without local admin rights.\n\nA researcher discovered a severe vulnerability in MSI Center's 'Notebook Foundation' service, allowing authenticated users to gain SYSTEM privileges in seconds. The flaw could also enable remote code execution (RCE) on a local area network with valid login credentials.\n\nThe vulnerability stems from a named pipe created on boot that any authenticated user can interact with. Historically, MSI relied on \"security by obscurity\" and an outdated 3DES cipher for communication, making it exploitable.\n\nThe researcher created a Proof of Concept (PoC) to launch cmd.exe with escalated privileges. Malware could exploit this to disable Windows Defender or run arbitrary PowerShell commands.\n\nInitial attempts to report the vulnerability to MSI were met with a full PSIRT mailbox, indicating a failure to receive reports. This concerning discovery prompted the researcher to seek external help to contact MSI.\n\nWith assistance from Gamers Nexus' Steve Burke, the researcher eventually connected with MSI, only to find the report had, in fact, reached them. MSI responded quickly, preparing a patch within two days of the successful report.\n\nMSI released the patch bundled with an MSI Center update. However, MSI could not issue a CVE, so the researcher requested one via VulDB, which is currently under review.\n\n#MSI #SecurityVulnerability #PrivilegeEscalation #TechNews #Cybersecurity #Exploit\n\nSource: Hacker News",
+  "tweet": "Critical vulnerability in MSI Center allows SYSTEM privileges in seconds. Any authenticated user can exploit it, even without local admin rights. MSI has patched the flaw. #MSI #Security #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "msi.com",
+  "source": "Hacker News",
+  "url": "https://mrbruh.com/msicenter/",
+  "image": "",
+  "orig_title": "MSI Center – How to gain SYSTEM privileges in seconds",
+  "cluster_urls": [
+   "https://mrbruh.com/msicenter/"
+  ],
+  "cluster_titles": [
+   "MSI Center – How to gain SYSTEM privileges in seconds"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-0806-0-msi-center-vulnerability-allows-system-privi.png",
+   "20260704-0806-0-msi-center-vulnerability-allows-system-privi-d1.png",
+   "20260704-0806-0-msi-center-vulnerability-allows-system-privi-d2.png"
+  ]
+ },
+ {
+  "topic": "privacy_first_ai_medical_data_federated_learning",
+  "headline_marked": "[[Build a Privacy-First Skin Cancer Classifier]] with Federated Learning & PySyft",
+  "headline": "Build a Privacy-First Skin Cancer Classifier with Federated Learning & PySyft",
+  "summary": "Learn how to train high-performing medical AI models on decentralized data without ever seeing raw patient images, using PySyft and PyTorch to ensure privacy.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Medical AI development often faces a \"Data Silo\" wall due to strict privacy regulations like GDPR and HIPAA. This guide explores Federated Learning (FL) and Privacy-Preserving AI to train models without direct access to sensitive patient data.",
+   "Federated Learning flips the traditional Machine Learning script: instead of bringing data to the model, the model is brought to the data. Raw images remain securely within hospitals, with only \"learnings\" (gradients/weights) sent to a central server.",
+   "The tutorial demonstrates this using PySyft and PyTorch, simulating two hospitals (Alice and Bob) with virtual workers. A simple CNN/Linear model is sent to these remote locations for training on their respective datasets.",
+   "To prevent potential reverse-engineering of gradients by clever attackers, Differential Privacy is incorporated. This technique injects controlled \"noise\" into the gradients, further safeguarding sensitive information during the learning process.",
+   "By leveraging FL, Differential Privacy, and Secure Multi-Party Computation (SMPC), developers can create robust models that learn from diverse medical sources without violating privacy regulations. This \"Privacy-First\" approach is becoming an industry standard."
+  ],
+  "caption": "Stop leaking medical data! Learn how to build a privacy-first skin cancer classifier using Federated Learning and PySyft without ever seeing raw patient images.\n\nMedical AI development often faces a \"Data Silo\" wall due to strict privacy regulations like GDPR and HIPAA. This guide explores Federated Learning (FL) and Privacy-Preserving AI to train models without direct access to sensitive patient data.\n\nFederated Learning flips the traditional Machine Learning script: instead of bringing data to the model, the model is brought to the data. Raw images remain securely within hospitals, with only \"learnings\" (gradients/weights) sent to a central server.\n\nThe tutorial demonstrates this using PySyft and PyTorch, simulating two hospitals (Alice and Bob) with virtual workers. A simple CNN/Linear model is sent to these remote locations for training on their respective datasets.\n\nTo prevent potential reverse-engineering of gradients by clever attackers, Differential Privacy is incorporated. This technique injects controlled \"noise\" into the gradients, further safeguarding sensitive information during the learning process.\n\nBy leveraging FL, Differential Privacy, and Secure Multi-Party Computation (SMPC), developers can create robust models that learn from diverse medical sources without violating privacy regulations. This \"Privacy-First\" approach is becoming an industry standard.\n\n#FederatedLearning #PrivacyAI #MedicalAI #PySyft #MachineLearning #Tech\n\nSource: DEV",
+  "tweet": "Stop leaking medical data! Learn to build a privacy-first skin cancer classifier using Federated Learning & PySyft. Train AI models on decentralized data without seeing raw patient images, ensuring compliance with GDPR/HIPAA. #PrivacyTech #AI #FederatedLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "pysyft.org",
+  "source": "DEV",
+  "url": "https://dev.to/wellallytech/stop-leaking-medical-data-build-a-privacy-first-skin-cancer-classifier-with-federated-learning--40o1",
+  "image": "",
+  "orig_title": "Stop Leaking Medical Data! Build a Privacy-First Skin Cancer Classifier with Federated Learning & PySyft 🩺🛡️",
+  "cluster_urls": [
+   "https://dev.to/wellallytech/stop-leaking-medical-data-build-a-privacy-first-skin-cancer-classifier-with-federated-learning--40o1"
+  ],
+  "cluster_titles": [
+   "Stop Leaking Medical Data! Build a Privacy-First Skin Cancer Classifier with Federated Learning & PySyft 🩺🛡️"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-0806-1-build-a-privacy-first-skin-cancer-classifier.png",
+   "20260704-0806-1-build-a-privacy-first-skin-cancer-classifier-d1.png",
+   "20260704-0806-1-build-a-privacy-first-skin-cancer-classifier-d2.png"
+  ]
+ }
+]

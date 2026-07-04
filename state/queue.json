@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "rag_retrieval_precision_breakthrough",
+  "headline_marked": "[[100% Retrieval Precision]] achieved in production RAG system with Hybrid Retrieval + RRF",
+  "headline": "100% Retrieval Precision achieved in production RAG system with Hybrid Retrieval + RRF",
+  "summary": "A developer shares how they boosted a production RAG system's retrieval precision to 100% by implementing hybrid retrieval with Reciprocal Rank Fusion, overcoming common semantic search limitations.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Naive RAG systems often struggle with exact keyword queries or short, specific questions, leading to hallucinations. In a production RAG system called ContextQuery, initial retrieval precision was capped at 72% despite tuning chunk size and overlap.",
+   "The solution involved hybrid retrieval using Reciprocal Rank Fusion (RRF). RRF merges ranked lists from multiple independent retrievers into a single, more robust ranking, leveraging consensus across methods.",
+   "The first retriever was a standard semantic search, utilizing NVIDIA NIM embeddings and Chroma Cloud. While excellent at capturing conceptual meaning and handling paraphrasing, it often missed exact keyword matches.",
+   "The second retriever was BM25, a classical sparse retrieval algorithm. It excels at exact keyword matching and short, specific queries but lacks semantic understanding. The combination of these two, with their complementary strengths and weaknesses, was key.",
+   "For implementation, top-10 chunks were fetched from each retriever before RRF merging, then cut to the top-5 after fusion. This ensures RRF has sufficient candidates for effective reranking, rather than simply combining limited results.",
+   "Evaluation on a 16-question test set confirmed 100% retrieval precision. The approach introduced a 600ms latency increase, deemed acceptable for the use case. Remaining faithfulness issues were attributed to chunk boundary problems, not retrieval."
+  ],
+  "caption": "Struggling with RAG precision? One developer hit 100% retrieval precision in a production system by combining semantic search with BM25 via Reciprocal Rank Fusion.\n\nNaive RAG systems often struggle with exact keyword queries or short, specific questions, leading to hallucinations. In a production RAG system called ContextQuery, initial retrieval precision was capped at 72% despite tuning chunk size and overlap.\n\nThe solution involved hybrid retrieval using Reciprocal Rank Fusion (RRF). RRF merges ranked lists from multiple independent retrievers into a single, more robust ranking, leveraging consensus across methods.\n\nThe first retriever was a standard semantic search, utilizing NVIDIA NIM embeddings and Chroma Cloud. While excellent at capturing conceptual meaning and handling paraphrasing, it often missed exact keyword matches.\n\nThe second retriever was BM25, a classical sparse retrieval algorithm. It excels at exact keyword matching and short, specific queries but lacks semantic understanding. The combination of these two, with their complementary strengths and weaknesses, was key.\n\nFor implementation, top-10 chunks were fetched from each retriever before RRF merging, then cut to the top-5 after fusion. This ensures RRF has sufficient candidates for effective reranking, rather than simply combining limited results.\n\nEvaluation on a 16-question test set confirmed 100% retrieval precision. The approach introduced a 600ms latency increase, deemed acceptable for the use case. Remaining faithfulness issues were attributed to chunk boundary problems, not retrieval.\n\n#RAG #AI #MachineLearning #Developer #Tech #HybridRetrieval\n\nSource: DEV",
+  "tweet": "Achieved 100% retrieval precision in a production RAG system! This deep dive explains how hybrid retrieval with Reciprocal Rank Fusion (RRF) solved common semantic search issues, combining NVIDIA NIM embeddings & BM25. #RAG #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vivek_patil_f9a71d5c65994/hybrid-retrieval-rrf-how-i-got-100-retrieval-precision-in-a-production-rag-system-1oga",
+  "image": "",
+  "orig_title": "Hybrid Retrieval + RRF: How I Got 100% Retrieval Precision in a Production RAG System",
+  "cluster_urls": [
+   "https://dev.to/vivek_patil_f9a71d5c65994/hybrid-retrieval-rrf-how-i-got-100-retrieval-precision-in-a-production-rag-system-1oga"
+  ],
+  "cluster_titles": [
+   "Hybrid Retrieval + RRF: How I Got 100% Retrieval Precision in a Production RAG System"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-1206-0-100-retrieval-precision-achieved-in-producti.png",
+   "20260704-1206-0-100-retrieval-precision-achieved-in-producti-d1.png",
+   "20260704-1206-0-100-retrieval-precision-achieved-in-producti-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_coding_agent_memory_optimization",
+  "headline_marked": "[[FTS5 beats vector search]] for coding agent memory, outperforming embeddings",
+  "headline": "FTS5 beats vector search for coding agent memory, outperforming embeddings",
+  "summary": "For coding agents handling structured data like logs and API responses, SQLite's FTS5 full-text search provides superior relevance and lower cost compared to vector search, which is often overused for such tasks.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many coding agent memory tutorials suggest vector search for document chunking and embedding. However, for indexing tool output, git logs, and fetched docs, SQLite's FTS5 full-text search proved to be a superior and more efficient alternative. It avoids the need for complex vector databases and embedding models.",
+   "Vector search excels at semantic similarity for prose, like matching 'reset password' to 'Account Recovery Steps'. But coding agent queries, such as 'HTTP 500 errors' or 'failing tests', require literal or near-exact term matching against keyword-dense, structured content like stack traces and JSON.",
+   "FTS5 is designed for tokenized, indexed, ranked full-text search over exact terms, offering BM25-style relevance scoring out of the box. It provides highlighted context snippets and accurate ranking based on term frequency and rarity. This results in more relevant results for technical queries.",
+   "Implementing FTS5 requires no embedding model, no vector database, and no network round-trip for embeddings. It leverages SQLite's standard library, making it significantly lighter and faster to integrate. This reduces infrastructure costs and complexity compared to a vector-based solution.",
+   "While vector search is ideal for genuine semantic matching needs, FTS5 is better for structured, keyword-dense content where literal term matching is key. Developers should evaluate query and content characteristics before defaulting to vector embeddings. This approach saves resources and improves relevance for agent tooling."
+  ],
+  "caption": "Vector search is the default for agent memory, but one developer found a better, cheaper solution. SQLite's FTS5 outperformed embeddings for coding agent's memory.\n\nMany coding agent memory tutorials suggest vector search for document chunking and embedding. However, for indexing tool output, git logs, and fetched docs, SQLite's FTS5 full-text search proved to be a superior and more efficient alternative. It avoids the need for complex vector databases and embedding models.\n\nVector search excels at semantic similarity for prose, like matching 'reset password' to 'Account Recovery Steps'. But coding agent queries, such as 'HTTP 500 errors' or 'failing tests', require literal or near-exact term matching against keyword-dense, structured content like stack traces and JSON.\n\nFTS5 is designed for tokenized, indexed, ranked full-text search over exact terms, offering BM25-style relevance scoring out of the box. It provides highlighted context snippets and accurate ranking based on term frequency and rarity. This results in more relevant results for technical queries.\n\nImplementing FTS5 requires no embedding model, no vector database, and no network round-trip for embeddings. It leverages SQLite's standard library, making it significantly lighter and faster to integrate. This reduces infrastructure costs and complexity compared to a vector-based solution.\n\nWhile vector search is ideal for genuine semantic matching needs, FTS5 is better for structured, keyword-dense content where literal term matching is key. Developers should evaluate query and content characteristics before defaulting to vector embeddings. This approach saves resources and improves relevance for agent tooling.\n\n#Tech #SoftwareDevelopment #AI #Coding #SQLite #VectorSearch\n\nSource: DEV",
+  "tweet": "Ditching vector search for coding agent memory? One dev found SQLite's FTS5 offers superior relevance & lower cost for structured data like logs and API responses. It's a powerful alternative to complex embedding models. #SoftwareDevelopment #AI #SQLite",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "sqlite.org",
+  "source": "DEV",
+  "url": "https://dev.to/enjoy_kumawat/i-ditched-vector-search-for-my-coding-agents-memory-fts5-won-22g2",
+  "image": "",
+  "orig_title": "I Ditched Vector Search for My Coding Agent's Memory. FTS5 Won.",
+  "cluster_urls": [
+   "https://dev.to/enjoy_kumawat/i-ditched-vector-search-for-my-coding-agents-memory-fts5-won-22g2"
+  ],
+  "cluster_titles": [
+   "I Ditched Vector Search for My Coding Agent's Memory. FTS5 Won."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-1206-1-fts5-beats-vector-search-for-coding-agent-me.png",
+   "20260704-1206-1-fts5-beats-vector-search-for-coding-agent-me-d1.png",
+   "20260704-1206-1-fts5-beats-vector-search-for-coding-agent-me-d2.png",
+   "20260704-1206-1-fts5-beats-vector-search-for-coding-agent-me-d3.png"
+  ]
+ }
+]

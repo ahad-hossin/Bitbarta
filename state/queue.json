@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "protocol_prying_airdrop_quick_share_vulnerability",
+  "headline_marked": "[[AirDrop and Quick Share]] Vulnerabilities Disclosed by Protocol Prying Research",
+  "headline": "AirDrop and Quick Share Vulnerabilities Disclosed by Protocol Prying Research",
+  "summary": "Researchers have uncovered potential security flaws within Apple's AirDrop and Google's Quick Share protocols, raising concerns about data privacy and device security.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A new research paper titled \"Protocol Prying\" details potential vulnerabilities found in Apple's AirDrop and Google's Quick Share file-sharing protocols. The study, presented on arXiv, suggests that these widely used systems might be susceptible to information disclosure under certain conditions.",
+   "The research highlights how the protocols, designed for seamless device-to-device communication, could potentially be exploited to reveal information about nearby devices or users. While the specifics of the exploits are not fully detailed in the public summary, the findings point to a need for enhanced security measures.",
+   "arXivLabs, the framework facilitating this research, emphasizes its commitment to openness and user data privacy. Collaborators within arXivLabs are expected to adhere to these values, with the platform only partnering with entities that share this dedication.",
+   "The implications of these findings could affect millions of users who rely on AirDrop and Quick Share for convenient file transfers. Further investigation and potential patches from Apple and Google are anticipated to address the disclosed security concerns."
+  ],
+  "caption": "Security researchers have identified potential vulnerabilities in Apple's AirDrop and Google's Quick Share protocols. The \"Protocol Prying\" research raises concerns about data privacy on millions of devices.\n\nA new research paper titled \"Protocol Prying\" details potential vulnerabilities found in Apple's AirDrop and Google's Quick Share file-sharing protocols. The study, presented on arXiv, suggests that these widely used systems might be susceptible to information disclosure under certain conditions.\n\nThe research highlights how the protocols, designed for seamless device-to-device communication, could potentially be exploited to reveal information about nearby devices or users. While the specifics of the exploits are not fully detailed in the public summary, the findings point to a need for enhanced security measures.\n\narXivLabs, the framework facilitating this research, emphasizes its commitment to openness and user data privacy. Collaborators within arXivLabs are expected to adhere to these values, with the platform only partnering with entities that share this dedication.\n\nThe implications of these findings could affect millions of users who rely on AirDrop and Quick Share for convenient file transfers. Further investigation and potential patches from Apple and Google are anticipated to address the disclosed security concerns.\n\n#AirDrop #QuickShare #CyberSecurity #Vulnerability #TechNews\n\nSource: Hacker News",
+  "tweet": "Researchers uncover potential security flaws in Apple's AirDrop and Google's Quick Share. The \"Protocol Prying\" study highlights concerns for user data privacy and device security. #AirDrop #QuickShare #CyberSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://arxiv.org/abs/2606.26967",
+  "image": "",
+  "orig_title": "Protocol Prying: Vulnerability Research in AirDrop and Quick Share",
+  "cluster_urls": [
+   "https://arxiv.org/abs/2606.26967"
+  ],
+  "cluster_titles": [
+   "Protocol Prying: Vulnerability Research in AirDrop and Quick Share"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260705-0505-0-airdrop-and-quick-share-vulnerabilities-disc.png",
+   "20260705-0505-0-airdrop-and-quick-share-vulnerabilities-disc-d1.png",
+   "20260705-0505-0-airdrop-and-quick-share-vulnerabilities-disc-d2.png"
+  ]
+ },
+ {
+  "topic": "microservices_circuit_breakers_codeowners",
+  "headline_marked": "[[3-minute outage]] cascaded to 45 minutes due to retry storms",
+  "headline": "3-minute outage cascaded to 45 minutes due to retry storms",
+  "summary": "A brief payment service failure led to a widespread system collapse as retries overwhelmed connections, highlighting the need for robust error handling.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A recent incident saw a payment service go down for just 3 minutes. However, this brief outage triggered a cascade of failures across 12 other services that were continuously retrying the payment service.",
+   "These 'retry storms' consumed all available connections, leading to a complete system outage that lasted 45 minutes. This demonstrates how even short failures can have significant ripple effects in interconnected systems.",
+   "The severity of an outage often depends on the criticality of the affected service. Critical services typically have lower tolerance thresholds and require faster recovery mechanisms.",
+   "To prevent such cascading failures, solutions like AI-powered circuit breakers and advanced error handling are crucial. Companies like Nova AI Ops are developing such technologies to improve system resilience."
+  ],
+  "caption": "A 3-minute payment service failure caused a 45-minute total system outage due to retry storms. Learn how to prevent cascading failures.\n\nA recent incident saw a payment service go down for just 3 minutes. However, this brief outage triggered a cascade of failures across 12 other services that were continuously retrying the payment service.\n\nThese 'retry storms' consumed all available connections, leading to a complete system outage that lasted 45 minutes. This demonstrates how even short failures can have significant ripple effects in interconnected systems.\n\nThe severity of an outage often depends on the criticality of the affected service. Critical services typically have lower tolerance thresholds and require faster recovery mechanisms.\n\nTo prevent such cascading failures, solutions like AI-powered circuit breakers and advanced error handling are crucial. Companies like Nova AI Ops are developing such technologies to improve system resilience.\n\n#SoftwareEngineering #SystemOutage #DevOps #CircuitBreaker #Resilience\n\nSource: DEV",
+  "tweet": "A 3-minute payment service failure cascaded into a 45-minute total outage due to retry storms. This highlights the critical need for robust error handling and circuit breakers in microservices. #DevOps #SoftwareEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "novaaiops.com",
+  "source": "DEV",
+  "url": "https://dev.to/samson_tanimawo/why-your-microservices-need-circuit-breakers-and-how-to-add-them-1ee8",
+  "image": "",
+  "orig_title": "Why Your Microservices Need Circuit Breakers (And How to Add Them)",
+  "cluster_urls": [
+   "https://dev.to/samson_tanimawo/why-your-microservices-need-circuit-breakers-and-how-to-add-them-1ee8",
+   "https://dev.to/smusali/meet-checkowners-confidence-scored-codeowners-from-your-git-history-4280"
+  ],
+  "cluster_titles": [
+   "Why Your Microservices Need Circuit Breakers (And How to Add Them)",
+   "Meet checkOwners: confidence-scored CODEOWNERS from your git history"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260705-0505-1-3-minute-outage-cascaded-to-45-minutes-due-t.png",
+   "20260705-0505-1-3-minute-outage-cascaded-to-45-minutes-due-t-d1.png",
+   "20260705-0505-1-3-minute-outage-cascaded-to-45-minutes-due-t-d2.png"
+  ]
+ }
+]

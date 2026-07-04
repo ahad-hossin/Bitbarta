@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "ai_self_building_autonomy",
+  "headline_marked": "[[Anthropic's Claude writes 80% of its production code]], boosting engineer output 8x",
+  "headline": "Anthropic's Claude writes 80% of its production code, boosting engineer output 8x",
+  "summary": "Anthropic's essay reveals their engineers are 8x more productive with Claude writing 80% of their code. This shifts the focus from execution to human judgment in software development.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Anthropic's essay \"When AI Builds Itself\" reports that their AI, Claude, now writes over 80% of their production code. This significant automation has led to engineers shipping approximately eight times more code than they were in 2024.",
+   "The essay distinguishes between \"execution\" (the act of writing code) and \"judgment\" (deciding what to build, evaluating results, and questioning answers). While execution is rapidly being automated, human judgment remains paramount.",
+   "The author notes that defining the problem, understanding existing constraints, and envisioning a correct solution are key areas where human judgment lives. This critical phase of problem definition is not being automated away.",
+   "Anthropic, a leading AI company, is already operating with an AI-first development culture. Their internal processes are remade around the default assumption that AI writes the code, and humans primarily review it.",
+   "In practice, \"judgment\" translates to building systems that work reliably in production, discerning which constraints truly matter, and implementing what was intended rather than just what was asked. It emphasizes genuine usefulness over performative helpfulness.",
+   "The essay suggests that the definition of software engineering is fundamentally shifting. Engineers who thrive in the future will be those who understand the difference between the parts of their work that can be automated and those that cannot."
+  ],
+  "caption": "Anthropic's AI, Claude, now writes over 80% of their production code. This has led to engineers shipping 8x more code than before.\n\nAnthropic's essay \"When AI Builds Itself\" reports that their AI, Claude, now writes over 80% of their production code. This significant automation has led to engineers shipping approximately eight times more code than they were in 2024.\n\nThe essay distinguishes between \"execution\" (the act of writing code) and \"judgment\" (deciding what to build, evaluating results, and questioning answers). While execution is rapidly being automated, human judgment remains paramount.\n\nThe author notes that defining the problem, understanding existing constraints, and envisioning a correct solution are key areas where human judgment lives. This critical phase of problem definition is not being automated away.\n\nAnthropic, a leading AI company, is already operating with an AI-first development culture. Their internal processes are remade around the default assumption that AI writes the code, and humans primarily review it.\n\nIn practice, \"judgment\" translates to building systems that work reliably in production, discerning which constraints truly matter, and implementing what was intended rather than just what was asked. It emphasizes genuine usefulness over performative helpfulness.\n\nThe essay suggests that the definition of software engineering is fundamentally shifting. Engineers who thrive in the future will be those who understand the difference between the parts of their work that can be automated and those that cannot.\n\n#AI #SoftwareEngineering #Anthropic #Claude #FutureOfWork #TechNews\n\nSource: DEV",
+  "tweet": "Anthropic's Claude AI now writes over 80% of its production code, boosting engineer output 8x. This shift highlights human judgment as the paramount skill in software development. #AI #SoftwareEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/amrree/when-ai-builds-itself-what-execution-gets-you-23ib",
+  "image": "",
+  "orig_title": "When AI Builds Itself: What Execution Gets You",
+  "cluster_urls": [
+   "https://dev.to/amrree/when-ai-builds-itself-what-execution-gets-you-23ib"
+  ],
+  "cluster_titles": [
+   "When AI Builds Itself: What Execution Gets You"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-1306-0-anthropic-s-claude-writes-80-of-its-producti.png",
+   "20260704-1306-0-anthropic-s-claude-writes-80-of-its-producti-d1.png",
+   "20260704-1306-0-anthropic-s-claude-writes-80-of-its-producti-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_function_calling_architecture",
+  "headline_marked": "[[Function calling is the architecture of useful AI agents]], enabling models to interact with external systems",
+  "headline": "Function calling is the architecture of useful AI agents, enabling models to interact with external systems",
+  "summary": "Function calling transforms AI models from text generators into proactive agents capable of sending emails, checking files, or pushing code. It's a structured protocol for external system interaction.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Every AI model can generate text, but the differentiating factor for a truly useful agent is its ability to act on that text. This includes tasks like sending emails, checking files, querying databases, or pushing code to GitHub.",
+   "Function calling is the fundamental mechanism that makes these actions possible. It's not merely a feature; it is the entire point that elevates an AI model from a conversational tool to a proactive agent.",
+   "At its core, function calling establishes a structured protocol between an LLM and an external system. The model does not execute code directly; instead, it outputs a structured object that specifies a function name and its arguments.",
+   "An interpreter then takes this structured object, executes the actual function, and returns the result to the model as context. This allows the LLM to understand the outcome of its requested action.",
+   "OpenAI formalized this concept in 2023, and its specification has since been widely adopted across the industry. Major players like Anthropic, Google, Meta, and most open-source models now support some version of it.",
+   "The underlying protocol is now stable enough to be treated as foundational infrastructure rather than an experimental feature. This widespread adoption underscores its importance in AI agent development.",
+   "A critical aspect often overlooked is that the model only understands what your function schema describes, not the function's internal workings. If the schema is inaccurate, the model will call the wrong function without realizing its error.",
+   "The effectiveness of your function calling system is almost entirely determined by the quality of your tool definitions. Each definition requires an unambiguous name, a clear description, and a precise parameter schema.",
+   "The description is particularly crucial as it informs the model *when* to call a tool, not just *what* it does. Parameter schemas should follow standard JSON Schema, explicitly defining types, required fields, and enum constraints for optimal model performance.",
+   "Modern LLMs are capable of calling multiple tools in parallel, which significantly impacts efficiency. For independent data sources, calling them simultaneously reduces latency and token consumption compared to sequential execution.",
+   "However, parallel calling is only effective when tool calls are genuinely independent. If one tool's input relies on another's output, you revert to sequential execution, requiring careful agent design.",
+   "Robust error handling is paramount, as most models handle tool failures poorly in extended sequences, often fabricating responses after multiple failures. Implementing retry mechanisms with exponential backoff for transient errors is essential.",
+   "Structured error reporting, returning clear success or error objects instead of raw exception messages, helps the model understand failures. Additionally, defining clear fallback paths ensures the agent can recover or report issues effectively when primary tools fail."
+  ],
+  "caption": "Function calling is the *entire point* of a useful AI agent. It's the mechanism that lets LLMs move beyond text generation to *action*.\n\nEvery AI model can generate text, but the differentiating factor for a truly useful agent is its ability to act on that text. This includes tasks like sending emails, checking files, querying databases, or pushing code to GitHub.\n\nFunction calling is the fundamental mechanism that makes these actions possible. It's not merely a feature; it is the entire point that elevates an AI model from a conversational tool to a proactive agent.\n\nAt its core, function calling establishes a structured protocol between an LLM and an external system. The model does not execute code directly; instead, it outputs a structured object that specifies a function name and its arguments.\n\nAn interpreter then takes this structured object, executes the actual function, and returns the result to the model as context. This allows the LLM to understand the outcome of its requested action.\n\nOpenAI formalized this concept in 2023, and its specification has since been widely adopted across the industry. Major players like Anthropic, Google, Meta, and most open-source models now support some version of it.\n\nThe underlying protocol is now stable enough to be treated as foundational infrastructure rather than an experimental feature. This widespread adoption underscores its importance in AI agent development.\n\nA critical aspect often overlooked is that the model only understands what your function schema describes, not the function's internal workings. If the schema is inaccurate, the model will call the wrong function without realizing its error.\n\nThe effectiveness of your function calling system is almost entirely determined by the quality of your tool definitions. Each definition requires an unambiguous name, a clear description, and a precise parameter schema.\n\n#AICode #LLMAgents #FunctionCalling #Developer #Tech #AI\n\nSource: DEV",
+  "tweet": "Function calling is key to useful AI agents, letting LLMs take action beyond text. This technical guide breaks down how it works, from structured protocols to robust error handling. #AI #Developer #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/amrree/function-calling-and-the-architecture-of-useful-agents-45ff",
+  "image": "",
+  "orig_title": "Function Calling and the Architecture of Useful Agents",
+  "cluster_urls": [
+   "https://dev.to/amrree/function-calling-and-the-architecture-of-useful-agents-45ff"
+  ],
+  "cluster_titles": [
+   "Function Calling and the Architecture of Useful Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260704-1306-1-function-calling-is-the-architecture-of-usef.png",
+   "20260704-1306-1-function-calling-is-the-architecture-of-usef-d1.png",
+   "20260704-1306-1-function-calling-is-the-architecture-of-usef-d2.png",
+   "20260704-1306-1-function-calling-is-the-architecture-of-usef-d3.png",
+   "20260704-1306-1-function-calling-is-the-architecture-of-usef-d4.png",
+   "20260704-1306-1-function-calling-is-the-architecture-of-usef-d5.png"
+  ]
+ }
+]

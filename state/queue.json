@@ -1,1 +1,73 @@
-[]
+[
+ {
+  "topic": "ai_document_qa_bot_embeddings",
+  "headline_marked": "[[Building a Document Q&A Bot]]: Embeddings Are Trickier Than They Look",
+  "headline": "Building a Document Q&A Bot: Embeddings Are Trickier Than They Look",
+  "summary": "Developer shares experience building a Q&A bot for internal docs, highlights challenges with embeddings.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The developer spent a weekend building a Q&A bot for their team's internal documents, aiming to provide instant answers to frequently asked questions.",
+   "They used OpenAI embeddings, stored them in Pinecone, and used GPT-4 to generate answers from retrieved chunks, but faced challenges with naive chunking, chunk size, and overlap.",
+   "The developer ultimately landed on a hybrid approach that balances precision and context length, and advises starting with a simpler baseline and adding embeddings if necessary."
+  ],
+  "caption": "Trickier than they look? Building a Q&A bot with embeddings just got a lot more complicated.\n\nThe developer spent a weekend building a Q&A bot for their team's internal documents, aiming to provide instant answers to frequently asked questions.\n\nThey used OpenAI embeddings, stored them in Pinecone, and used GPT-4 to generate answers from retrieved chunks, but faced challenges with naive chunking, chunk size, and overlap.\n\nThe developer ultimately landed on a hybrid approach that balances precision and context length, and advises starting with a simpler baseline and adding embeddings if necessary.\n\n#AI #OpenAI #GPT4 #DocumentQABot\n\nSource: DEV",
+  "tweet": "Building a Document Q&A Bot: Why Embeddings Are Trickier Than They Look #AI #OpenAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "dev.to",
+  "source": "DEV",
+  "url": "https://dev.to/__c1b9e06dc90a7e0a676b/building-a-document-qa-bot-why-embeddings-are-trickier-than-they-look-3jl8",
+  "image": "",
+  "orig_title": "Building a Document Q&A Bot: Why Embeddings Are Trickier Than They Look",
+  "cluster_urls": [
+   "https://dev.to/__c1b9e06dc90a7e0a676b/building-a-document-qa-bot-why-embeddings-are-trickier-than-they-look-3jl8"
+  ],
+  "cluster_titles": [
+   "Building a Document Q&A Bot: Why Embeddings Are Trickier Than They Look"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260705-1605-0-building-a-document-q-a-bot-embeddings-are-t.png",
+   "20260705-1605-0-building-a-document-q-a-bot-embeddings-are-t-d1.png"
+  ]
+ },
+ {
+  "topic": "how_hashing_works",
+  "headline_marked": "[[Hashing isn't encryption]]: DEV explains the crucial difference",
+  "headline": "Hashing isn't encryption: DEV explains the crucial difference",
+  "summary": "Hashing turns any input into a fixed-size fingerprint, but it's not encryption. Understanding the difference is key to password security.",
+  "category": "SECURITY",
+  "template": "neon",
+  "details": [
+   "Hashing and encryption are often confused, but they serve different purposes. Hashing is a one-way process that turns any input into a fixed-size fingerprint.",
+   "A hash function like SHA-256 produces a fixed-size output, regardless of the input size. This means that infinitely many possible inputs map to the same hash, making reversal impossible.",
+   "The real mistake happens when using general-purpose hashes like SHA-256 for password storage. These hashes are designed to be fast, which makes them vulnerable to guessing attacks.",
+   "Two defenses can close this gap: using purpose-built slow hashes like Argon2 or bcrypt with a per-user salt, and helping users pick strong, unique passwords."
+  ],
+  "caption": "Did you know hashing isn't encryption? Learn the crucial difference.\n\nHashing and encryption are often confused, but they serve different purposes. Hashing is a one-way process that turns any input into a fixed-size fingerprint.\n\nA hash function like SHA-256 produces a fixed-size output, regardless of the input size. This means that infinitely many possible inputs map to the same hash, making reversal impossible.\n\nThe real mistake happens when using general-purpose hashes like SHA-256 for password storage. These hashes are designed to be fast, which makes them vulnerable to guessing attacks.\n\nTwo defenses can close this gap: using purpose-built slow hashes like Argon2 or bcrypt with a per-user salt, and helping users pick strong, unique passwords.\n\n#Tech #Security #Hashing #Encryption #PasswordSecurity\n\nSource: DEV",
+  "tweet": "Hashing isn't encryption! Learn the difference and why it matters for password security #Security #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "dev.to",
+  "source": "DEV",
+  "url": "https://dev.to/anh_qunnguyn_57549060f/how-hashing-actually-works-and-why-you-cant-un-hash-a-password-16l6",
+  "image": "",
+  "orig_title": "How Hashing Actually Works (and Why You Can't Un-Hash a Password)",
+  "cluster_urls": [
+   "https://dev.to/anh_qunnguyn_57549060f/how-hashing-actually-works-and-why-you-cant-un-hash-a-password-16l6"
+  ],
+  "cluster_titles": [
+   "How Hashing Actually Works (and Why You Can't Un-Hash a Password)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260705-1605-1-hashing-isn-t-encryption-dev-explains-the-cr.png",
+   "20260705-1605-1-hashing-isn-t-encryption-dev-explains-the-cr-d1.png"
+  ]
+ }
+]

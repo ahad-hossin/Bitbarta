@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "brain_aging_reversal_nasal_spray",
+  "headline_marked": "[[Scientists reverse brain aging]] with a simple nasal spray, restoring memory in weeks",
+  "headline": "Scientists reverse brain aging with a simple nasal spray, restoring memory in weeks",
+  "summary": "A landmark study shows a two-dose nasal spray dramatically reduced brain inflammation and significantly improved memory within weeks, with effects lasting for months, potentially reshaping neurodegenerative therapies.",
+  "category": "SCIENCE",
+  "template": "neon",
+  "details": [
+   "Researchers at Texas A&M University have developed a nasal spray that reverses brain aging by healing inflammation and restoring memory. This breakthrough targets \"neuroinflammaging,\" a persistent brain fog caused by inflammation in the brain's memory center, previously thought to be an inevitable part of aging.",
+   "The innovative therapy, detailed in the Journal of Extracellular Vesicles, involves just two doses of a nasal spray. It dramatically reduced brain inflammation, recharged neuronal mitochondria (cellular power plants), and significantly improved memory within weeks, with effects lasting for months.",
+   "The treatment utilizes millions of microscopic biological parcels called extracellular vesicles (EVs), which act as delivery vehicles for powerful genetic cargo known as microRNAs. These microRNAs are packed into the nasal spray, allowing them to bypass the brain's protective shield and travel directly into brain tissue.",
+   "Once absorbed by the brain's immune cells, the microRNAs suppress specific pathways like NLRP3 inflammasome and cGAS–STING signaling, which are known drivers of chronic inflammation in aging brains. This cellular-level intervention effectively clears brain fog and recharges brain cells.",
+   "The implications of this research are profound, potentially redefining what it means to grow old and offering new hope for neurodegenerative therapies. The approach could help people stay mentally sharp, socially engaged, and free from age-related decline, and may even aid stroke survivors in rebuilding lost brain function.",
+   "With new dementia cases projected to double in the United States over the next four decades, this simple, two-dose nasal spray could one day replace invasive procedures or prolonged medication. The study also found the treatment to be universally effective across both genders, a rare and significant outcome in biomedical research."
+  ],
+  "caption": "Scientists have developed a nasal spray that reverses brain aging, healing inflammation and restoring memory. The effects were seen within weeks and lasted for months after just two doses.\n\nResearchers at Texas A&M University have developed a nasal spray that reverses brain aging by healing inflammation and restoring memory. This breakthrough targets \"neuroinflammaging,\" a persistent brain fog caused by inflammation in the brain's memory center, previously thought to be an inevitable part of aging.\n\nThe innovative therapy, detailed in the Journal of Extracellular Vesicles, involves just two doses of a nasal spray. It dramatically reduced brain inflammation, recharged neuronal mitochondria (cellular power plants), and significantly improved memory within weeks, with effects lasting for months.\n\nThe treatment utilizes millions of microscopic biological parcels called extracellular vesicles (EVs), which act as delivery vehicles for powerful genetic cargo known as microRNAs. These microRNAs are packed into the nasal spray, allowing them to bypass the brain's protective shield and travel directly into brain tissue.\n\nOnce absorbed by the brain's immune cells, the microRNAs suppress specific pathways like NLRP3 inflammasome and cGAS–STING signaling, which are known drivers of chronic inflammation in aging brains. This cellular-level intervention effectively clears brain fog and recharges brain cells.\n\nThe implications of this research are profound, potentially redefining what it means to grow old and offering new hope for neurodegenerative therapies. The approach could help people stay mentally sharp, socially engaged, and free from age-related decline, and may even aid stroke survivors in rebuilding lost brain function.\n\n#BrainAging #Neuroscience #MedicalBreakthrough #ScienceNews #HealthTech #Research\n\nSource: Hacker News",
+  "tweet": "Scientists have developed a nasal spray that reverses brain aging, healing inflammation & restoring memory. Just two doses showed effects within weeks, lasting months. This could redefine neurodegenerative therapies. #BrainAging #Neuroscience #Science",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tamu.edu",
+  "source": "Hacker News",
+  "url": "https://stories.tamu.edu/news/2026/04/14/scientists-reverse-brain-aging-with-a-nasal-spray/",
+  "image": "",
+  "orig_title": "Scientists reverse brain aging, with a nasal spray",
+  "cluster_urls": [
+   "https://stories.tamu.edu/news/2026/04/14/scientists-reverse-brain-aging-with-a-nasal-spray/"
+  ],
+  "cluster_titles": [
+   "Scientists reverse brain aging, with a nasal spray"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260705-0606-0-scientists-reverse-brain-aging-with-a-simple.png",
+   "20260705-0606-0-scientists-reverse-brain-aging-with-a-simple-d1.png",
+   "20260705-0606-0-scientists-reverse-brain-aging-with-a-simple-d2.png",
+   "20260705-0606-0-scientists-reverse-brain-aging-with-a-simple-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_code_review_failure_bug",
+  "headline_marked": "[[Two AI code reviews missed a critical bug]] documented one file away, despite passing local checks",
+  "headline": "Two AI code reviews missed a critical bug documented one file away, despite passing local checks",
+  "summary": "AI models failed to catch a Node.js module system mismatch that caused a deployment crash, highlighting how shared blind spots in automated checks can lead to false confidence.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Two AI models, one for writing code and one for reviewing, passed a bug that caused a deployment crash. Both models ran local checks and reported green, even though the fix was clearly documented in a nearby file.",
+   "The bug was a packaging error: a Node.js ES module (.mjs) was imported via CommonJS require() in the deployed Vercel environment, which is barred by spec. Locally, Node.js allowed an ESM import, masking the issue.",
+   "This highlights that \"green\" results only mean \"clean within that scope.\" The bug existed in the \"seam\" between local ESM resolution and deployed CJS resolution, a gap outside the scope of any automated check.",
+   "The correct architectural convention, to use CommonJS for specific helpers, was documented in a sibling file's header comment and project docs. However, this prose documentation was outside the scope of the automated AI checks.",
+   "Stacking two AI reviewers that share the same scope (local logic correctness) creates a false sense of security. It multiplies confidence without expanding coverage, as both share the same blind spot.",
+   "True defense in depth requires checks with uncorrelated scopes, meaning they evaluate completely different signals to catch issues that others might miss."
+  ],
+  "caption": "Two AI models reviewed a code change and both gave it a green light. Yet, a critical bug slipped through, with the correct solution documented just one file away.\n\nTwo AI models, one for writing code and one for reviewing, passed a bug that caused a deployment crash. Both models ran local checks and reported green, even though the fix was clearly documented in a nearby file.\n\nThe bug was a packaging error: a Node.js ES module (.mjs) was imported via CommonJS require() in the deployed Vercel environment, which is barred by spec. Locally, Node.js allowed an ESM import, masking the issue.\n\nThis highlights that \"green\" results only mean \"clean within that scope.\" The bug existed in the \"seam\" between local ESM resolution and deployed CJS resolution, a gap outside the scope of any automated check.\n\nThe correct architectural convention, to use CommonJS for specific helpers, was documented in a sibling file's header comment and project docs. However, this prose documentation was outside the scope of the automated AI checks.\n\nStacking two AI reviewers that share the same scope (local logic correctness) creates a false sense of security. It multiplies confidence without expanding coverage, as both share the same blind spot.\n\nTrue defense in depth requires checks with uncorrelated scopes, meaning they evaluate completely different signals to catch issues that others might miss.\n\n#AI #CodeReview #SoftwareDevelopment #NodeJS #Vercel #DeveloperTools\n\nSource: DEV",
+  "tweet": "Two AI models reviewed a code change, both passing it, but a critical bug still shipped. The fix? Documented one file away. This highlights shared blind spots in automated checks and the need for uncorrelated review scopes. #AI #CodeReview #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/akahkhanna/two-ai-reviews-passed-my-change-the-correct-architecture-was-documented-one-file-away-1fnd",
+  "image": "",
+  "orig_title": "Two AI reviews passed my change. The correct architecture was documented one file away.",
+  "cluster_urls": [
+   "https://dev.to/akahkhanna/two-ai-reviews-passed-my-change-the-correct-architecture-was-documented-one-file-away-1fnd"
+  ],
+  "cluster_titles": [
+   "Two AI reviews passed my change. The correct architecture was documented one file away."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260705-0606-1-two-ai-code-reviews-missed-a-critical-bug-do.png",
+   "20260705-0606-1-two-ai-code-reviews-missed-a-critical-bug-do-d1.png",
+   "20260705-0606-1-two-ai-code-reviews-missed-a-critical-bug-do-d2.png"
+  ]
+ }
+]

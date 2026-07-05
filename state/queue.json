@@ -1,1 +1,37 @@
-[]
+[
+ {
+  "topic": "anthropic_claude_code_security",
+  "headline_marked": "Anthropic replaces Claude Code secrets with [[OIDC gateway]]",
+  "headline": "Anthropic replaces Claude Code secrets with OIDC gateway",
+  "summary": "Anthropic introduces self-hosted Claude apps gateway for enterprises, replacing long-lived secrets with short-lived OIDC sessions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Anthropic has introduced a self-hosted Claude apps gateway for enterprises running Claude Code on Amazon Bedrock or Google Cloud. The gateway acts as an OpenID Connect relying party, federating sign-in through existing IdPs.",
+   "The gateway replaces long-lived per-developer secrets with short-lived OIDC sessions, centralizing identity, policy enforcement, usage tracking, and spend management for Claude Code.",
+   "This change allows for easier revocation of access and reduces the blast radius of a compromised Claude Code install on a developer laptop."
+  ],
+  "caption": "What if your coding agent's secrets were stolen? Anthropic's new OIDC gateway aims to fix that.\n\nAnthropic has introduced a self-hosted Claude apps gateway for enterprises running Claude Code on Amazon Bedrock or Google Cloud. The gateway acts as an OpenID Connect relying party, federating sign-in through existing IdPs.\n\nThe gateway replaces long-lived per-developer secrets with short-lived OIDC sessions, centralizing identity, policy enforcement, usage tracking, and spend management for Claude Code.\n\nThis change allows for easier revocation of access and reduces the blast radius of a compromised Claude Code install on a developer laptop.\n\n#AI #SECURITY #TECH #CLOUD #DEVOPS\n\nSource: DEV",
+  "tweet": "Anthropic ditches Claude Code secrets for OIDC gateway! #AI #SECURITY",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/leobaniak/anthropic-swaps-per-developer-claude-code-secrets-for-an-oidc-gateway-3go8",
+  "image": "",
+  "orig_title": "Anthropic swaps per-developer Claude Code secrets for an OIDC gateway",
+  "cluster_urls": [
+   "https://dev.to/leobaniak/anthropic-swaps-per-developer-claude-code-secrets-for-an-oidc-gateway-3go8"
+  ],
+  "cluster_titles": [
+   "Anthropic swaps per-developer Claude Code secrets for an OIDC gateway"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260705-1505-0-anthropic-replaces-claude-code-secrets-with-.png",
+   "20260705-1505-0-anthropic-replaces-claude-code-secrets-with--d1.png"
+  ]
+ }
+]

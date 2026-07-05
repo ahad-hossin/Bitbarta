@@ -1,1 +1,39 @@
-[]
+[
+ {
+  "topic": "ai_agent_bilateral_provenance",
+  "headline_marked": "AI agents get [[bilateral signatures]] for secure notarization",
+  "headline": "AI agents get bilateral signatures for secure notarization",
+  "summary": "New bilateral signature method adds AI agent's Ed25519 key to notarized records",
+  "category": "CRYPTO",
+  "template": "terminal",
+  "details": [
+   "The bilateral signature method, called v0x04, adds the AI agent's Ed25519 key to the notarized record, making it more secure. This update builds on the existing Provenance Data Records (PDR) system, which provides a 239-byte cryptographic record, signed by an independent notary, anchored on NEAR.",
+   "The new method requires two private keys to forge a record: the notary's Ed25519 seed and the agent's Ed25519 key. This makes it more difficult to compromise, providing non-repudiation for free.",
+   "The bilateral PDRs (v0x04) are supported on mainnet as of July 2024, at the same price and size as the previous version (v0x03). The parser handles both versions by checking the version byte, and all 9 existing mainnet PDRs (v0x03) remain valid.",
+   "The service provides two separate cryptographic proofs, each verifiable independently, each requiring a different public key. This allows for a chain of custody in multi-agent pipelines, where each stage can be notarized with a bilateral PDR signed by that stage's agent key."
+  ],
+  "caption": "Can AI agents prove they wrote their work? A new bilateral signature method says yes\n\nThe bilateral signature method, called v0x04, adds the AI agent's Ed25519 key to the notarized record, making it more secure. This update builds on the existing Provenance Data Records (PDR) system, which provides a 239-byte cryptographic record, signed by an independent notary, anchored on NEAR.\n\nThe new method requires two private keys to forge a record: the notary's Ed25519 seed and the agent's Ed25519 key. This makes it more difficult to compromise, providing non-repudiation for free.\n\nThe bilateral PDRs (v0x04) are supported on mainnet as of July 2024, at the same price and size as the previous version (v0x03). The parser handles both versions by checking the version byte, and all 9 existing mainnet PDRs (v0x03) remain valid.\n\nThe service provides two separate cryptographic proofs, each verifiable independently, each requiring a different public key. This allows for a chain of custody in multi-agent pipelines, where each stage can be notarized with a bilateral PDR signed by that stage's agent key.\n\n#AI #CRYPTO #BLOCKCHAIN #SECURITY #TECH\n\nSource: DEV",
+  "tweet": "AI agents can now prove authorship with bilateral signatures. No more questioning who wrote what. #AI #CRYPTO",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "dev.to",
+  "source": "DEV",
+  "url": "https://dev.to/gitsergecrypto/two-signatures-are-better-than-one-bilateral-provenance-for-ai-agents-3668",
+  "image": "",
+  "orig_title": "Two signatures are better than one — bilateral provenance for AI agents",
+  "cluster_urls": [
+   "https://dev.to/gitsergecrypto/two-signatures-are-better-than-one-bilateral-provenance-for-ai-agents-3668"
+  ],
+  "cluster_titles": [
+   "Two signatures are better than one — bilateral provenance for AI agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260705-1405-0-ai-agents-get-bilateral-signatures-for-secur.png",
+   "20260705-1405-0-ai-agents-get-bilateral-signatures-for-secur-d1.png",
+   "20260705-1405-0-ai-agents-get-bilateral-signatures-for-secur-d2.png"
+  ]
+ }
+]

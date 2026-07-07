@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai_api_comparison_2025",
+  "headline_marked": "[[DeepSeek V4 Flash wins on price-to-performance]] in real-world AI API stress test",
+  "headline": "DeepSeek V4 Flash wins on price-to-performance in real-world AI API stress test",
+  "summary": "An in-depth comparison stress-tested DeepSeek, Qwen, Kimi, and GLM APIs for production readiness, revealing surprising performance and pricing differences beyond marketing claims.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A recent analysis rigorously stress-tested leading Chinese AI APIs—DeepSeek, Qwen, Kimi, and GLM—under production-like workloads to assess their real-world performance and reliability. The study focused on critical factors like uptime, latency, and behavior under burst loads, going beyond typical benchmarks.",
+   "The findings reveal DeepSeek V4 Flash offers the best price-to-performance ratio, delivering around 60 tokens per second at just $0.25/M output tokens. It consistently maintains flat p99 latency under burst load, making it ideal for scalable chat services and English-language code generation.",
+   "Qwen stands out for its extensive model catalog, including the highly affordable Qwen3-8B at $0.01/M output for light tasks, and robust multimodal capabilities with models like Qwen3-VL. Its Alibaba infrastructure provides consistent multi-region performance, though model naming can be confusing.",
+   "Kimi is positioned as a premium option, with K2.5 costing $3.00/M output, justifying its price with superior performance on complex reasoning-heavy workloads. For tasks requiring multi-step logic and intricate problem-solving, Kimi consistently outperforms its competitors.",
+   "GLM demonstrates strong capabilities for Chinese-language tasks and offers multimodal support, a feature not universally available across the other contenders. While specific pricing details were not fully elaborated in the provided text, its niche strengths are clear."
+  ],
+  "caption": "Which Chinese AI API truly wins for production use? A new deep dive stress-tested DeepSeek, Qwen, Kimi, and GLM, revealing surprising results for performance and cost.\n\nA recent analysis rigorously stress-tested leading Chinese AI APIs—DeepSeek, Qwen, Kimi, and GLM—under production-like workloads to assess their real-world performance and reliability. The study focused on critical factors like uptime, latency, and behavior under burst loads, going beyond typical benchmarks.\n\nThe findings reveal DeepSeek V4 Flash offers the best price-to-performance ratio, delivering around 60 tokens per second at just $0.25/M output tokens. It consistently maintains flat p99 latency under burst load, making it ideal for scalable chat services and English-language code generation.\n\nQwen stands out for its extensive model catalog, including the highly affordable Qwen3-8B at $0.01/M output for light tasks, and robust multimodal capabilities with models like Qwen3-VL. Its Alibaba infrastructure provides consistent multi-region performance, though model naming can be confusing.\n\nKimi is positioned as a premium option, with K2.5 costing $3.00/M output, justifying its price with superior performance on complex reasoning-heavy workloads. For tasks requiring multi-step logic and intricate problem-solving, Kimi consistently outperforms its competitors.\n\nGLM demonstrates strong capabilities for Chinese-language tasks and offers multimodal support, a feature not universally available across the other contenders. While specific pricing details were not fully elaborated in the provided text, its niche strengths are clear.\n\n#AI #LLM #API #DeepSeek #Qwen #Tech\n\nSource: DEV",
+  "tweet": "Deep dive reveals which Chinese AI API truly wins for production! DeepSeek V4 Flash excels in price-to-performance, Qwen offers unmatched variety, Kimi leads in reasoning, and GLM shines in Chinese/multimodal. Essential insights for developers. #AI #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gentlenode/deepseek-vs-qwen-vs-kimi-vs-glm-which-ai-api-actually-wins-in-2025-8bn",
+  "image": "",
+  "orig_title": "DeepSeek vs Qwen vs Kimi vs GLM: Which AI API Actually Wins in 2025?",
+  "cluster_urls": [
+   "https://dev.to/gentlenode/deepseek-vs-qwen-vs-kimi-vs-glm-which-ai-api-actually-wins-in-2025-8bn"
+  ],
+  "cluster_titles": [
+   "DeepSeek vs Qwen vs Kimi vs GLM: Which AI API Actually Wins in 2025?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260707-0906-0-deepseek-v4-flash-wins-on-price-to-performan.png",
+   "20260707-0906-0-deepseek-v4-flash-wins-on-price-to-performan-d1.png",
+   "20260707-0906-0-deepseek-v4-flash-wins-on-price-to-performan-d2.png"
+  ]
+ },
+ {
+  "topic": "chatgpt_autonomous_agent_prompt",
+  "headline_marked": "[[The 10-Line Prompt]] That Turns ChatGPT Into a Fully Autonomous AI Agent",
+  "headline": "The 10-Line Prompt That Turns ChatGPT Into a Fully Autonomous AI Agent",
+  "summary": "A simple 10-line prompt can transform GPT-4 into a self-correcting AI agent capable of planning and executing complex tasks without plugins or APIs.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A 10-line prompt can turn ChatGPT (GPT-4 or later) into a fully autonomous AI agent. This structure enables the model to plan, sequence, execute, and self-correct its work without constant human intervention or external tools.",
+   "This method moves beyond treating Large Language Models as simple search engines. Instead, it allows them to tackle complex missions like market research or content strategy by breaking them into tasks and iterating through solutions.",
+   "The prompt works by changing the model's \"distributional constraints.\" By assigning an agent identity and a self-evaluation loop, the model anchors its predictions to systematic, iterative work patterns rather than generic one-shot answers.",
+   "This approach is a simplified implementation of the ReAct (Reason + Act) pattern, formally documented in a 2022 paper. ReAct interleaves reasoning traces with concrete actions, significantly reducing hallucination and improving task completion.",
+   "Key components of the prompt include setting a reasoning mode, defining a specific mission, and incorporating a self-evaluation step. The self-evaluation is crucial, forcing the model to critically review its own output and identify gaps.",
+   "The distinction between an \"agent\" and an \"assistant\" is vital: agents plan and execute missions, while assistants respond to queries. This prompt shifts the LLM into an agentic workflow, mimicking advanced models like OpenAI's o1."
+  ],
+  "caption": "Unleash the full power of ChatGPT with just 10 lines. This simple prompt turns GPT-4 into a self-correcting AI agent.\n\nA 10-line prompt can turn ChatGPT (GPT-4 or later) into a fully autonomous AI agent. This structure enables the model to plan, sequence, execute, and self-correct its work without constant human intervention or external tools.\n\nThis method moves beyond treating Large Language Models as simple search engines. Instead, it allows them to tackle complex missions like market research or content strategy by breaking them into tasks and iterating through solutions.\n\nThe prompt works by changing the model's \"distributional constraints.\" By assigning an agent identity and a self-evaluation loop, the model anchors its predictions to systematic, iterative work patterns rather than generic one-shot answers.\n\nThis approach is a simplified implementation of the ReAct (Reason + Act) pattern, formally documented in a 2022 paper. ReAct interleaves reasoning traces with concrete actions, significantly reducing hallucination and improving task completion.\n\nKey components of the prompt include setting a reasoning mode, defining a specific mission, and incorporating a self-evaluation step. The self-evaluation is crucial, forcing the model to critically review its own output and identify gaps.\n\nThe distinction between an \"agent\" and an \"assistant\" is vital: agents plan and execute missions, while assistants respond to queries. This prompt shifts the LLM into an agentic workflow, mimicking advanced models like OpenAI's o1.\n\n#AI #ChatGPT #PromptEngineering #LLM #Tech #Developer\n\nSource: DEV",
+  "tweet": "Transform ChatGPT into an autonomous AI agent with a 10-line prompt. No plugins, no APIs, just smart prompting for GPT-4 to plan, execute, and self-correct complex tasks. #AI #PromptEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/blobxiaoyao/the-10-line-prompt-that-turns-chatgpt-into-a-fully-autonomous-ai-agent-2bgf",
+  "image": "",
+  "orig_title": "The 10-Line Prompt That Turns ChatGPT Into a Fully Autonomous AI Agent",
+  "cluster_urls": [
+   "https://dev.to/blobxiaoyao/the-10-line-prompt-that-turns-chatgpt-into-a-fully-autonomous-ai-agent-2bgf"
+  ],
+  "cluster_titles": [
+   "The 10-Line Prompt That Turns ChatGPT Into a Fully Autonomous AI Agent"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260707-0906-1-the-10-line-prompt-that-turns-chatgpt-into-a.png",
+   "20260707-0906-1-the-10-line-prompt-that-turns-chatgpt-into-a-d1.png",
+   "20260707-0906-1-the-10-line-prompt-that-turns-chatgpt-into-a-d2.png"
+  ]
+ }
+]

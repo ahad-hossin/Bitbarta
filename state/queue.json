@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai_agents_guide_validation",
+  "headline_marked": "[[AI agents find 8 specification errors]] in technical guides, including 2 critical profile drifts",
+  "headline": "AI agents find 8 specification errors in technical guides, including 2 critical profile drifts",
+  "summary": "Four AI agents, powered by Claude Fable 5, conducted a second pass on turva.dev's guides, uncovering 8 issues. This included a high-rated outdated proposal, an expired IETF draft, and two machine-readable profiles that had silently drifted from their own speci",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Specifications are dynamic, and static documentation can quickly become stale without detection by automated scanners. To address this, turva.dev deployed four AI agents, each running Claude Fable 5, to re-read its technical guides line by line against primary sources.",
+   "The audit identified eight issues: one high-rated, one medium, and six small. The high-rated finding was in the MCP guide, which described the SEP-2127 server card proposal in the present tense, despite it having moved to an experimental extension with new recommendations as of July 2026.",
+   "The medium finding concerned the response-header guide, which relied on an IETF draft for standard RateLimit headers that expired in March 2026 without a successor. The six small issues were minor wording discrepancies, including outdated vocabulary and a Cache-Control nuance.",
+   "More critically, two machine-readable profiles, UCP and MPP, had drifted from their own specifications. Unlike stale prose, this is a harder failure because these files are for software and had passed all previous scans, as scanners check parsing but not vocabulary validity.",
+   "The UCP profile incorrectly used service keys in a reserved namespace and listed transports not in its enum. The MPP manifest declared a version field undefined by its protocol. Both profiles have now been corrected to match their specifications, verified programmatically.",
+   "Despite these significant fixes, external scanners like startuphub.ai and isitagentready.com showed unchanged scores. This highlights that scanners measure a site's shape at scan time, but cannot assess the currency of claims about external specifications.",
+   "The lasting solution involves anchoring guide claims about moving specifications with dates, such as 'as of July 2026', to preserve accuracy. Additionally, fast-moving areas like agent commerce and MCP discovery are now on a regular re-check schedule to prevent future drift."
+  ],
+  "caption": "AI agents found 8 issues, including critical specification drift in machine-readable profiles, after re-checking technical guides. Automated scanners missed these.\n\nSpecifications are dynamic, and static documentation can quickly become stale without detection by automated scanners. To address this, turva.dev deployed four AI agents, each running Claude Fable 5, to re-read its technical guides line by line against primary sources.\n\nThe audit identified eight issues: one high-rated, one medium, and six small. The high-rated finding was in the MCP guide, which described the SEP-2127 server card proposal in the present tense, despite it having moved to an experimental extension with new recommendations as of July 2026.\n\nThe medium finding concerned the response-header guide, which relied on an IETF draft for standard RateLimit headers that expired in March 2026 without a successor. The six small issues were minor wording discrepancies, including outdated vocabulary and a Cache-Control nuance.\n\nMore critically, two machine-readable profiles, UCP and MPP, had drifted from their own specifications. Unlike stale prose, this is a harder failure because these files are for software and had passed all previous scans, as scanners check parsing but not vocabulary validity.\n\nThe UCP profile incorrectly used service keys in a reserved namespace and listed transports not in its enum. The MPP manifest declared a version field undefined by its protocol. Both profiles have now been corrected to match their specifications, verified programmatically.\n\nDespite these significant fixes, external scanners like startuphub.ai and isitagentready.com showed unchanged scores. This highlights that scanners measure a site's shape at scan time, but cannot assess the currency of claims about external specifications.\n\n#AI #Developer #TechNews #Specifications #SoftwareDevelopment #Audit\n\nSource: DEV",
+  "tweet": "AI agents running Claude Fable 5 re-checked technical guides, uncovering 8 issues including critical specification drift in machine-readable profiles. Scanners missed these, highlighting the need for continuous human/AI review. #AI #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "turva.dev",
+  "source": "DEV",
+  "url": "https://dev.to/turva-dev/four-ai-agents-re-checked-the-guides-3j1a",
+  "image": "",
+  "orig_title": "Four AI agents re-checked the guides",
+  "cluster_urls": [
+   "https://dev.to/turva-dev/four-ai-agents-re-checked-the-guides-3j1a"
+  ],
+  "cluster_titles": [
+   "Four AI agents re-checked the guides"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260707-1406-0-ai-agents-find-8-specification-errors-in-tec.png",
+   "20260707-1406-0-ai-agents-find-8-specification-errors-in-tec-d1.png",
+   "20260707-1406-0-ai-agents-find-8-specification-errors-in-tec-d2.png",
+   "20260707-1406-0-ai-agents-find-8-specification-errors-in-tec-d3.png",
+   "20260707-1406-0-ai-agents-find-8-specification-errors-in-tec-d4.png"
+  ]
+ },
+ {
+  "topic": "google_android_backup_storage_cap",
+  "headline_marked": "[[Google will now count all Android backup data]] toward your storage cap, starting July 7",
+  "headline": "Google will now count all Android backup data toward your storage cap, starting July 7",
+  "summary": "Starting July 7, all Android backup data will contribute to your Google account's storage limit, a change from the previous policy that only counted media. Google estimates an average increase of 40MB per user.",
+  "category": "ANDROID",
+  "template": "neon",
+  "details": [
+   "Beginning July 7, all data in your Android backups will count toward the storage limit on your Google account. This policy shift applies immediately to new Android users, with current users seeing the change roll out in the coming months.",
+   "Previously, only media uploaded to Google Photos and photos/videos within MMS data were counted against the storage cap. Google estimates this change will add only 40MB on average to user storage.",
+   "The company is also introducing new controls within the hardware's backups menu. Users can now selectively skip device settings, call history, or SMS and MMS messages from the backup process, alongside individual app data toggles.",
+   "This adjustment follows previous changes to Google's storage policies, including a test in May to reduce the default free storage limit for new accounts from 15GB to 5GB unless a phone number was linked."
+  ],
+  "caption": "Google is changing how it calculates Android backup data for storage. Starting July 7, all your Android backup data will count towards your Google account's storage cap.\n\nBeginning July 7, all data in your Android backups will count toward the storage limit on your Google account. This policy shift applies immediately to new Android users, with current users seeing the change roll out in the coming months.\n\nPreviously, only media uploaded to Google Photos and photos/videos within MMS data were counted against the storage cap. Google estimates this change will add only 40MB on average to user storage.\n\nThe company is also introducing new controls within the hardware's backups menu. Users can now selectively skip device settings, call history, or SMS and MMS messages from the backup process, alongside individual app data toggles.\n\nThis adjustment follows previous changes to Google's storage policies, including a test in May to reduce the default free storage limit for new accounts from 15GB to 5GB unless a phone number was linked.\n\n#Google #Android #CloudStorage #TechNews #DataBackup #GoogleDrive\n\nSource: Engadget",
+  "tweet": "Google is changing its storage policy. Starting July 7, all Android backup data will count towards your Google account's storage cap, adding an average of 40MB. New controls allow selective backup. #Google #Android #CloudStorage",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2209189/google-will-now-count-all-android-backup-data-toward-your-storage-cap/",
+  "image": "https://www.engadget.com/img/gallery/google-will-now-count-all-android-backup-data-toward-your-storage-cap/l-intro-1783375302.jpg",
+  "orig_title": "Google will now count all Android backup data toward your storage cap",
+  "cluster_urls": [
+   "https://www.engadget.com/2209189/google-will-now-count-all-android-backup-data-toward-your-storage-cap/"
+  ],
+  "cluster_titles": [
+   "Google will now count all Android backup data toward your storage cap"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260707-1406-1-google-will-now-count-all-android-backup-dat.png",
+   "20260707-1406-1-google-will-now-count-all-android-backup-dat-d1.png",
+   "20260707-1406-1-google-will-now-count-all-android-backup-dat-d2.png"
+  ]
+ }
+]

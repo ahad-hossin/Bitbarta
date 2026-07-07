@@ -1,1 +1,96 @@
-[]
+[
+ {
+  "topic": "discord_accidental_bans_safety_bug",
+  "headline_marked": "[[Discord accidentally banned]] over 8,000 users for posting benign images",
+  "headline": "Discord accidentally banned over 8,000 users for posting benign images",
+  "summary": "A bug in Discord's safety system mistakenly flagged and banned thousands of accounts for posting images like chessboards and game textures.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Discord has acknowledged a significant bug in its safety system that led to the mistaken banning of over 8,000 users since May. The issue affected users who posted seemingly harmless images, including chessboards, game textures, and Minecraft inventories.",
+   "According to Stanislav Vishnevskiy, Discord's CTO, the bug impacted approximately 200 users for posting \"grid-like\" pictures and an additional 8,000 for \"other benign images.\" All affected accounts have now been unbanned.",
+   "The platform's safety system is designed to flag content by comparing it against a database of known harmful material. However, a glitch caused the system to issue permanent bans instead of temporarily flagging content for review by human moderators.",
+   "Discord stated that when staff reviewed and cleared these accounts, the bug prevented the ban from being automatically lifted, leaving the bans in place until the issue was identified and resolved."
+  ],
+  "caption": "Discord mistakenly banned over 8,000 users for posting benign images like chessboards and game textures due to a system bug.\n\nDiscord has acknowledged a significant bug in its safety system that led to the mistaken banning of over 8,000 users since May. The issue affected users who posted seemingly harmless images, including chessboards, game textures, and Minecraft inventories.\n\nAccording to Stanislav Vishnevskiy, Discord's CTO, the bug impacted approximately 200 users for posting \"grid-like\" pictures and an additional 8,000 for \"other benign images.\" All affected accounts have now been unbanned.\n\nThe platform's safety system is designed to flag content by comparing it against a database of known harmful material. However, a glitch caused the system to issue permanent bans instead of temporarily flagging content for review by human moderators.\n\nDiscord stated that when staff reviewed and cleared these accounts, the bug prevented the ban from being automatically lifted, leaving the bans in place until the issue was identified and resolved.\n\n#Discord #TechNews #Bug #Security #Software\n\nSource: The Verge",
+  "tweet": "Discord accidentally banned over 8,000 users for posting benign images like chessboards and game textures due to a system bug. All affected accounts have now been unbanned. #Discord #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "discord.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/games/962156/discord-accidental-bans-grid-images",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/discord-chess-ban.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Discord accidentally banned over 8,000 people for posting grids and other &#8216;benign&#8217; images",
+  "cluster_urls": [
+   "https://www.theverge.com/games/962156/discord-accidental-bans-grid-images"
+  ],
+  "cluster_titles": [
+   "Discord accidentally banned over 8,000 people for posting grids and other &#8216;benign&#8217; images"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260707-2107-0-discord-accidentally-banned-over-8-000-users.png",
+   "20260707-2107-0-discord-accidentally-banned-over-8-000-users-d1.png",
+   "20260707-2107-0-discord-accidentally-banned-over-8-000-users-d2.png"
+  ]
+ },
+ {
+  "topic": "local_ai_developer_tools_testing",
+  "headline_marked": "[[Run AI Code Review]] Locally with Ollama, No Cloud Needed",
+  "headline": "Run AI Code Review Locally with Ollama, No Cloud Needed",
+  "summary": "Avoid sending proprietary code to cloud AI. Run Mistral 7B models offline for faster, private code reviews.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Waiting for code review can be a bottleneck, especially outside business hours. Instead of risking proprietary code with cloud AI like ChatGPT, you can run AI models locally for code review. This approach ensures your code never leaves your machine, offering enhanced privacy and potentially faster feedback loops.",
+   "Ollama provides an easy entry point for running AI models locally. A simple command downloads and sets up models like Mistral 7B, which is around 4GB. While not the most advanced, it's capable of understanding code semantics for meaningful feedback.",
+   "For better code understanding, especially if you have a GPU, consider models like Llama 2 13B. If you're running on CPU only, sticking with Mistral 7B is recommended to manage performance. This allows you to tailor the AI's capabilities to your hardware.",
+   "The AI can catch critical issues, such as silently dropping errors, which could lead to unreliable code. By flagging these, it pushes developers towards writing more robust applications, moving beyond basic functionality to ensure reliability.",
+   "Integrating this into your workflow can be done via CI/CD pipelines. While it can be set as a non-blocking check, it provides valuable feedback in the logs. Some teams even add it to their PR templates for on-demand second opinions.",
+   "Performance varies: a 7B model on CPU might take 30 seconds for a 50-line function, while a GPU can do it in 3-5 seconds. This makes local AI review ideal for complex code segments rather than high-volume, simple checks.",
+   "It's important to remember that local models can still hallucinate and occasionally flag non-existent bugs. They serve as a valuable second opinion, augmenting human review rather than replacing it entirely."
+  ],
+  "caption": "Stop sending your proprietary code to the cloud for AI review. Run powerful AI models locally on your machine for faster, private feedback.\n\nWaiting for code review can be a bottleneck, especially outside business hours. Instead of risking proprietary code with cloud AI like ChatGPT, you can run AI models locally for code review. This approach ensures your code never leaves your machine, offering enhanced privacy and potentially faster feedback loops.\n\nOllama provides an easy entry point for running AI models locally. A simple command downloads and sets up models like Mistral 7B, which is around 4GB. While not the most advanced, it's capable of understanding code semantics for meaningful feedback.\n\nFor better code understanding, especially if you have a GPU, consider models like Llama 2 13B. If you're running on CPU only, sticking with Mistral 7B is recommended to manage performance. This allows you to tailor the AI's capabilities to your hardware.\n\nThe AI can catch critical issues, such as silently dropping errors, which could lead to unreliable code. By flagging these, it pushes developers towards writing more robust applications, moving beyond basic functionality to ensure reliability.\n\nIntegrating this into your workflow can be done via CI/CD pipelines. While it can be set as a non-blocking check, it provides valuable feedback in the logs. Some teams even add it to their PR templates for on-demand second opinions.\n\nPerformance varies: a 7B model on CPU might take 30 seconds for a 50-line function, while a GPU can do it in 3-5 seconds. This makes local AI review ideal for complex code segments rather than high-volume, simple checks.\n\nIt's important to remember that local models can still hallucinate and occasionally flag non-existent bugs. They serve as a valuable second opinion, augmenting human review rather than replacing it entirely.\n\n#AI #DevTools #CodeReview #LocalAI #Ollama\n\nSource: DEV",
+  "tweet": "Tired of waiting for code reviews or risking your proprietary code with cloud AI? Run AI code review locally with Ollama! Get faster, private feedback without sending data off your machine. #AI #DevTools #LocalAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/learnairesource/running-code-review-with-local-ai-no-cloud-no-waiting-265n",
+  "image": "",
+  "orig_title": "Running Code Review with Local AI (No Cloud, No Waiting)",
+  "cluster_urls": [
+   "https://dev.to/learnairesource/running-code-review-with-local-ai-no-cloud-no-waiting-265n",
+   "https://dev.to/pratikbin/we-read-the-source-of-16-sandbox-sdks-before-writing-ours-4gig",
+   "https://dev.to/yashksaini/dev-log-6-networking-deep-dives-and-scaling-docs-my-30k-line-week-in-oss-3pbb",
+   "https://dev.to/suruseas/i-ran-29-real-docker-compose-projects-on-apples-container-runtime-heres-what-broke-2fk7",
+   "https://dev.to/blacknobilityenterprisellcarch/i-shipped-a-production-ai-router-from-my-phone-prisma-neon-postgres-and-the-termux-odyssey-4mf7",
+   "https://dev.to/scarab-systems/scarab-diagnostic-field-test-038-pnpm-github-actions-setup-state-boundary-3120",
+   "https://dev.to/arvavit/i-sent-http-query-through-the-real-internet-the-smarter-the-layer-the-harder-it-broke-586b",
+   "https://dev.to/pixlane/what-we-learned-building-browser-based-image-pdf-and-ai-tools-with-webassembly-532f",
+   "https://dev.to/suruseas/i-ran-29-real-docker-compose-projects-on-apples-container-runtime-heres-what-broke-28cb"
+  ],
+  "cluster_titles": [
+   "Running Code Review with Local AI (No Cloud, No Waiting)",
+   "We read the source of 16 sandbox SDKs before writing ours",
+   "Dev log #6 Networking Deep Dives and Scaling Docs: My 30k Line Week in OSS",
+   "I ran 29 real docker-compose projects on Apple's container runtime. Here's what broke",
+   "I Shipped a Production AI Router From My Phone: Prisma, Neon Postgres, and the Termux Odyssey",
+   "Scarab Diagnostic Field Test #038 - pnpm GitHub Actions Setup State Boundary",
+   "I sent HTTP QUERY through the real internet. The smarter the layer, the harder it broke.",
+   "What We Learned Building Browser-Based Image, PDF and AI Tools with WebAssembly",
+   "I ran 29 real docker-compose projects on Apple's container runtime. Here's what broke"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260707-2107-1-run-ai-code-review-locally-with-ollama-no-cl.png",
+   "20260707-2107-1-run-ai-code-review-locally-with-ollama-no-cl-d1.png",
+   "20260707-2107-1-run-ai-code-review-locally-with-ollama-no-cl-d2.png",
+   "20260707-2107-1-run-ai-code-review-locally-with-ollama-no-cl-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_prompt_html_to_cms",
+  "headline_marked": "[[Turn static HTML into an editable CMS site with one prompt]] using Neleto's AI",
+  "headline": "Turn static HTML into an editable CMS site with one prompt using Neleto's AI",
+  "summary": "Neleto leverages its native MCP server to let AI assistants convert your pixel-perfect HTML into a fully component-driven CMS, keeping all original CSS, animations, and JavaScript intact. It starts free, with paid plans from €24/month.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Tired of rebuilding static HTML designs into editable CMS sites? Neleto offers a solution that converts your pixel-perfect HTML into a fully component-driven CMS with just one AI prompt. This eliminates the tedious manual work of mapping every element to a field.",
+   "Neleto is unique with its native MCP (Model Context Protocol) server, enabling AI assistants like Claude Code to directly interact with and write to your CMS. This allows the AI to create layouts, components, and editable fields without any manual admin form input.",
+   "The workflow is straightforward: finish your HTML design, run a single prompt, and Neleto transforms it. Your original CSS, animations, and JavaScript are carried over untouched, ensuring your design integrity is preserved.",
+   "The AI intelligently splits the page into sections, places global CSS into a layout, and converts each section into a component with scoped CSS/JS. Crucially, it replaces every content element – headlines, paragraphs, images – with named, editable fields in the CMS.",
+   "This means your <h1>Design that moves people</h1> becomes an editable 'Heading' field, maintaining its original markup and styling. The AI handles the structural mapping, allowing designers to focus on taste and art direction, not CMS plumbing.",
+   "Underneath, it's a real CMS hosted in the EU, offering clients a clean admin panel with plain-language fields. Clients can add new projects or items to galleries themselves, and images are automatically scaled on upload, preventing performance issues.",
+   "Compared to alternatives like Contentful, which can start around €109/month, Neleto offers paid plans from €24/month after a free tier. Its EU infrastructure also provides protection against the US Cloud Act, a growing concern for many clients."
+  ],
+  "caption": "Web designers, reclaim your weekends! Turn any static HTML page into a fully editable, component-driven CMS site with just one AI prompt. Your custom CSS, animations, and JavaScript remain untouched.\n\nTired of rebuilding static HTML designs into editable CMS sites? Neleto offers a solution that converts your pixel-perfect HTML into a fully component-driven CMS with just one AI prompt. This eliminates the tedious manual work of mapping every element to a field.\n\nNeleto is unique with its native MCP (Model Context Protocol) server, enabling AI assistants like Claude Code to directly interact with and write to your CMS. This allows the AI to create layouts, components, and editable fields without any manual admin form input.\n\nThe workflow is straightforward: finish your HTML design, run a single prompt, and Neleto transforms it. Your original CSS, animations, and JavaScript are carried over untouched, ensuring your design integrity is preserved.\n\nThe AI intelligently splits the page into sections, places global CSS into a layout, and converts each section into a component with scoped CSS/JS. Crucially, it replaces every content element – headlines, paragraphs, images – with named, editable fields in the CMS.\n\nThis means your <h1>Design that moves people</h1> becomes an editable 'Heading' field, maintaining its original markup and styling. The AI handles the structural mapping, allowing designers to focus on taste and art direction, not CMS plumbing.\n\nUnderneath, it's a real CMS hosted in the EU, offering clients a clean admin panel with plain-language fields. Clients can add new projects or items to galleries themselves, and images are automatically scaled on upload, preventing performance issues.\n\nCompared to alternatives like Contentful, which can start around €109/month, Neleto offers paid plans from €24/month after a free tier. Its EU infrastructure also provides protection against the US Cloud Act, a growing concern for many clients.\n\n#WebDesign #CMS #AItools #DeveloperTools #NoCode #Neleto\n\nSource: DEV",
+  "tweet": "Web designers, reclaim your weekends! Turn any static HTML page into a fully editable, component-driven CMS site with just one AI prompt using Neleto. Your custom CSS, animations, and JavaScript remain untouched. #WebDesign #AItools #Neleto",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "neleto.com",
+  "source": "DEV",
+  "url": "https://dev.to/neletomartin/i-turned-a-static-html-page-into-an-editable-cms-site-with-one-prompt-4ajl",
+  "image": "",
+  "orig_title": "I turned a static HTML page into an editable CMS site with one prompt",
+  "cluster_urls": [
+   "https://dev.to/neletomartin/i-turned-a-static-html-page-into-an-editable-cms-site-with-one-prompt-4ajl"
+  ],
+  "cluster_titles": [
+   "I turned a static HTML page into an editable CMS site with one prompt"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260707-1436-0-turn-static-html-into-an-editable-cms-site-w.png",
+   "20260707-1436-0-turn-static-html-into-an-editable-cms-site-w-d1.png",
+   "20260707-1436-0-turn-static-html-into-an-editable-cms-site-w-d2.png",
+   "20260707-1436-0-turn-static-html-into-an-editable-cms-site-w-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_knows_when_not_to_act",
+  "headline_marked": "[[NeuroScale Autopilot: AI agent prioritizes safety]] over speed in Kubernetes incident response",
+  "headline": "NeuroScale Autopilot: AI agent prioritizes safety over speed in Kubernetes incident response",
+  "summary": "This five-agent system for Kubernetes incident response uses a \"Trust Layer gate\" to verify fixes, escalating to humans if confidence or runbook match is low, preventing erroneous auto-remediations.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "NeuroScale Autopilot is a five-agent Kubernetes incident-response system built for the Qwen Cloud Global AI Hackathon. Its core thesis is prioritizing safety over speed, ensuring automated actions are proven safe before execution. This prevents fast, confident, but wrong automated rollbacks or scaling errors that can cause major outages.",
+   "A \"Trust Layer gate\" sits between the Planner and Executor agents. Before any automatic execution, three independent signals must clear a bar: high confidence, a runbook retrieval score of >= 0.65, and low risk. This explicit set of checks ensures the agent earns the right to act automatically.",
+   "If even one of these signals fails, the system does not guess. Instead, it holds the incident open, attaches the exact rollback command it would have used, and waits for a human to approve or reject the proposed action. This mechanism prevents plausible-looking but potentially incorrect fixes from being deployed.",
+   "During testing, a broken image tag pushed to a sample service was correctly diagnosed by Qwen-Max in under three seconds. However, the runbook retrieval score was 0.59, just below the 0.65 threshold. The system held, escalated the issue with the rollback command prepared, and waited for human intervention, demonstrating its cautious design.",
+   "NeuroScale utilizes different Qwen models for distinct jobs to maintain speed without sacrificing quality. Qwen-Max is used for root cause analysis, Qwen-Embedding for runbook retrieval, and Qwen-Turbo for summarizing escalation reports. This routing of reasoning loads to appropriately sized models optimizes performance.",
+   "The system is deployed on a real Alibaba Cloud ECS instance running a k3s cluster in Singapore, not merely a local demo. This live deployment allows for real-time testing and validation of its incident response capabilities."
+  ],
+  "caption": "NeuroScale Autopilot: an AI agent for Kubernetes that *won't* act unless it's proven safe. It escalates to humans if confidence or runbook match is low, preventing costly errors.\n\nNeuroScale Autopilot is a five-agent Kubernetes incident-response system built for the Qwen Cloud Global AI Hackathon. Its core thesis is prioritizing safety over speed, ensuring automated actions are proven safe before execution. This prevents fast, confident, but wrong automated rollbacks or scaling errors that can cause major outages.\n\nA \"Trust Layer gate\" sits between the Planner and Executor agents. Before any automatic execution, three independent signals must clear a bar: high confidence, a runbook retrieval score of >= 0.65, and low risk. This explicit set of checks ensures the agent earns the right to act automatically.\n\nIf even one of these signals fails, the system does not guess. Instead, it holds the incident open, attaches the exact rollback command it would have used, and waits for a human to approve or reject the proposed action. This mechanism prevents plausible-looking but potentially incorrect fixes from being deployed.\n\nDuring testing, a broken image tag pushed to a sample service was correctly diagnosed by Qwen-Max in under three seconds. However, the runbook retrieval score was 0.59, just below the 0.65 threshold. The system held, escalated the issue with the rollback command prepared, and waited for human intervention, demonstrating its cautious design.\n\nNeuroScale utilizes different Qwen models for distinct jobs to maintain speed without sacrificing quality. Qwen-Max is used for root cause analysis, Qwen-Embedding for runbook retrieval, and Qwen-Turbo for summarizing escalation reports. This routing of reasoning loads to appropriately sized models optimizes performance.\n\n#AI #Kubernetes #DevOps #IncidentResponse #Automation #QwenCloud\n\nSource: DEV",
+  "tweet": "NeuroScale Autopilot: an AI agent for Kubernetes that *won't* act unless it's proven safe. It escalates to humans if confidence or runbook match is low, preventing costly errors. Built for Qwen Cloud, it prioritizes judgment over speed. #AI #Kubernetes #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "alibabacloud.com",
+  "source": "DEV",
+  "url": "https://dev.to/sodiqjimoh/the-agent-that-knows-when-not-to-act-building-neuroscale-autopilot-on-qwen-cloud-1lld",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqzo8op0l3mour30phoqm.png",
+  "orig_title": "The Agent That Knows When Not to Act — Building NeuroScale Autopilot on Qwen Cloud",
+  "cluster_urls": [
+   "https://dev.to/sodiqjimoh/the-agent-that-knows-when-not-to-act-building-neuroscale-autopilot-on-qwen-cloud-1lld"
+  ],
+  "cluster_titles": [
+   "The Agent That Knows When Not to Act — Building NeuroScale Autopilot on Qwen Cloud"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260707-1436-1-neuroscale-autopilot-ai-agent-prioritizes-sa.png",
+   "20260707-1436-1-neuroscale-autopilot-ai-agent-prioritizes-sa-d1.png",
+   "20260707-1436-1-neuroscale-autopilot-ai-agent-prioritizes-sa-d2.png",
+   "20260707-1436-1-neuroscale-autopilot-ai-agent-prioritizes-sa-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_operating_system_concept",
+  "headline_marked": "[[Context Engineering emerges as a core primitive]] for an AI Operating System runtime model",
+  "headline": "Context Engineering emerges as a core primitive for an AI Operating System runtime model",
+  "summary": "A new framework proposes an AI Operating System, focusing on governed agentic work. Context Engineering is identified as a crucial runtime primitive, managing agent visibility and resource allocation.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The concept of an \"AI Operating System\" (AOS) is being explored, not as a traditional OS, but as a runtime model for governed agentic work. This framework aims to define the necessary runtime primitives for agentic systems to be useful, inspectable, and safe for real software tasks.",
+   "Context Engineering is already performing OS-like functions within this framework. It involves building a context-manifest before a delivery pipeline, which scopes relevant files, prior deliveries, knowledge items, and token budget pressure for an agent.",
+   "Similar to how an operating system controls process visibility and resource access, Context Engineering dictates what an agent can perceive and its operational boundaries. This approach treats the context window as a budget, not a mere storage space, making context a schedulable resource within a potential AOS.",
+   "Memory management is also critical, following a lifecycle: Capture -> Candidate -> Audit -> Approve -> Index -> Retrieve -> Expire. This structured approach ensures that not all observations become durable, nor do all durable items live indefinitely, preventing memory from becoming an unmanaged pile.",
+   "Entropy management is essential to prevent learning systems from accumulating clutter. Without a function to manage decay, accumulated rules, prompts, skills, and workarounds can turn into unmaintainable complexity, hindering the system's effectiveness.",
+   "A useful AOS must avoid becoming a giant prompt library or over-optimizing for autonomy without counterbalances. Instead, it should focus on governed agency, where boundaries, reviews, summaries, approvals, and forgetting mechanisms ensure safer and more comprehensible software delivery."
+  ],
+  "caption": "Is an 'AI Operating System' the next frontier for agentic AI? A new framework explores runtime primitives for governed, inspectable, and safe AI software work.\n\nThe concept of an \"AI Operating System\" (AOS) is being explored, not as a traditional OS, but as a runtime model for governed agentic work. This framework aims to define the necessary runtime primitives for agentic systems to be useful, inspectable, and safe for real software tasks.\n\nContext Engineering is already performing OS-like functions within this framework. It involves building a context-manifest before a delivery pipeline, which scopes relevant files, prior deliveries, knowledge items, and token budget pressure for an agent.\n\nSimilar to how an operating system controls process visibility and resource access, Context Engineering dictates what an agent can perceive and its operational boundaries. This approach treats the context window as a budget, not a mere storage space, making context a schedulable resource within a potential AOS.\n\nMemory management is also critical, following a lifecycle: Capture -> Candidate -> Audit -> Approve -> Index -> Retrieve -> Expire. This structured approach ensures that not all observations become durable, nor do all durable items live indefinitely, preventing memory from becoming an unmanaged pile.\n\nEntropy management is essential to prevent learning systems from accumulating clutter. Without a function to manage decay, accumulated rules, prompts, skills, and workarounds can turn into unmaintainable complexity, hindering the system's effectiveness.\n\nA useful AOS must avoid becoming a giant prompt library or over-optimizing for autonomy without counterbalances. Instead, it should focus on governed agency, where boundaries, reviews, summaries, approvals, and forgetting mechanisms ensure safer and more comprehensible software delivery.\n\n#AI #AOS #ContextEngineering #SoftwareDevelopment #AgenticAI\n\nSource: DEV",
+  "tweet": "An 'AI Operating System' concept is emerging, focusing on governed agentic work. Context Engineering manages what agents see, acting like an OS primitive. Memory lifecycle and entropy control are key for inspectable, safe AI. #AI #AOS #ContextEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/orieken/toward-an-ai-operating-system-context-engineering-as-the-first-runtime-primitive-58go",
+  "image": "",
+  "orig_title": "Toward an AI Operating System: Context Engineering as the First Runtime Primitive",
+  "cluster_urls": [
+   "https://dev.to/orieken/toward-an-ai-operating-system-context-engineering-as-the-first-runtime-primitive-58go"
+  ],
+  "cluster_titles": [
+   "Toward an AI Operating System: Context Engineering as the First Runtime Primitive"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260708-0806-0-context-engineering-emerges-as-a-core-primit.png",
+   "20260708-0806-0-context-engineering-emerges-as-a-core-primit-d1.png",
+   "20260708-0806-0-context-engineering-emerges-as-a-core-primit-d2.png",
+   "20260708-0806-0-context-engineering-emerges-as-a-core-primit-d3.png"
+  ]
+ },
+ {
+  "topic": "tenda_firmware_backdoor_vulnerability",
+  "headline_marked": "[[Tenda firmware contains hidden authentication backdoor]] across multiple versions",
+  "headline": "Tenda firmware contains hidden authentication backdoor across multiple versions",
+  "summary": "An undocumented backdoor in Tenda router firmware grants full administrative access, bypassing password verification. No patch is available, but users can disable remote management and restrict local network exposure.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Multiple versions of Tenda firmware contain an undocumented authentication backdoor, tracked as CVE-2026-11405. This vulnerability allows an attacker to bypass password verification and gain full administrative control of affected devices' web management interfaces without valid credentials.",
+   "Affected versions include US_FH1201V1.0BR_V1.2.0.14(408)_EN_TD, US_W15EV1.0br_V15.11.0.5(1068_1567_841)_EN_TDE, US_AC10V1.0re_V15.03.06.46_multi_TDE01, US_AC5V1.0RTL_V15.03.06.48_multi_TDE01, and US_AC6V2.0RTL_V15.03.06.51_multi_T.",
+   "Tenda is a major supplier of home and business network devices, including routers, switches, and wireless access points. These devices typically feature web-based interfaces for configuration and management, protected by username/password authentication.",
+   "The backdoor mechanism resides in the /bin/httpd web server binary, specifically within the login() function. After a failed normal MD5-based password verification, the function retrieves an alternate password via GetValue(\"sys.rzadmin.password\").",
+   "It then performs a direct plaintext strcmp() comparison between the user-supplied password and this configuration-stored value. A successful match grants 'role=2' admin-level access and establishes a valid session, regardless of the username provided.",
+   "This undocumented backdoor is not visible through any administrative interface and does not validate the associated username. Successful exploitation provides complete administrative control over the device's web interface.",
+   "With administrative access, an attacker can reconfigure the device, alter network settings, and disable security features. This enables broader compromise of the local network, posing a significant risk to users.",
+   "The vendor could not be reached for coordination, and no official patch is currently available. Users are advised to implement mitigation strategies to reduce the vulnerability's impact.",
+   "Recommended workarounds include disabling remote management on the device to prevent external network access to the administrative dashboard. Additionally, changing the default LAN IP address may reduce opportunistic discovery by automated scanners."
+  ],
+  "caption": "A critical backdoor in Tenda router firmware grants full admin access without a password. Multiple versions are affected, with no official patch available.\n\nMultiple versions of Tenda firmware contain an undocumented authentication backdoor, tracked as CVE-2026-11405. This vulnerability allows an attacker to bypass password verification and gain full administrative control of affected devices' web management interfaces without valid credentials.\n\nAffected versions include US_FH1201V1.0BR_V1.2.0.14(408)_EN_TD, US_W15EV1.0br_V15.11.0.5(1068_1567_841)_EN_TDE, US_AC10V1.0re_V15.03.06.46_multi_TDE01, US_AC5V1.0RTL_V15.03.06.48_multi_TDE01, and US_AC6V2.0RTL_V15.03.06.51_multi_T.\n\nTenda is a major supplier of home and business network devices, including routers, switches, and wireless access points. These devices typically feature web-based interfaces for configuration and management, protected by username/password authentication.\n\nThe backdoor mechanism resides in the /bin/httpd web server binary, specifically within the login() function. After a failed normal MD5-based password verification, the function retrieves an alternate password via GetValue(\"sys.rzadmin.password\").\n\nIt then performs a direct plaintext strcmp() comparison between the user-supplied password and this configuration-stored value. A successful match grants 'role=2' admin-level access and establishes a valid session, regardless of the username provided.\n\nThis undocumented backdoor is not visible through any administrative interface and does not validate the associated username. Successful exploitation provides complete administrative control over the device's web interface.\n\nWith administrative access, an attacker can reconfigure the device, alter network settings, and disable security features. This enables broader compromise of the local network, posing a significant risk to users.\n\n#Tenda #Firmware #Backdoor #SecurityVulnerability #CyberSecurity #RouterSecurity\n\nSource: Hacker News",
+  "tweet": "Critical backdoor found in multiple Tenda router firmware versions. Attackers can gain full admin access by bypassing password verification. No patch available; disable remote management & restrict local network exposure. #Tenda #SecurityVulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tenda.com.cn",
+  "source": "Hacker News",
+  "url": "https://kb.cert.org/vuls/id/213560",
+  "image": "",
+  "orig_title": "Tenda firmware (multiple versions) contains hidden authentication backdoor",
+  "cluster_urls": [
+   "https://kb.cert.org/vuls/id/213560"
+  ],
+  "cluster_titles": [
+   "Tenda firmware (multiple versions) contains hidden authentication backdoor"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260708-0806-1-tenda-firmware-contains-hidden-authenticatio.png",
+   "20260708-0806-1-tenda-firmware-contains-hidden-authenticatio-d1.png",
+   "20260708-0806-1-tenda-firmware-contains-hidden-authenticatio-d2.png",
+   "20260708-0806-1-tenda-firmware-contains-hidden-authenticatio-d3.png",
+   "20260708-0806-1-tenda-firmware-contains-hidden-authenticatio-d4.png"
+  ]
+ }
+]

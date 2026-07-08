@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "robotaxi_law_threatens_tesla",
+  "headline_marked": "[[New Jersey bill mandates lidar for robotaxis]], potentially banning Tesla's camera-only system",
+  "headline": "New Jersey bill mandates lidar for robotaxis, potentially banning Tesla's camera-only system",
+  "summary": "A proposed New Jersey law would require autonomous vehicles to use multiple sensing technologies, including lidar, effectively preventing Tesla's camera-only Robotaxi system from operating in the state.",
+  "category": "AUTOMOTIVE",
+  "template": "neon",
+  "details": [
+   "New Jersey's proposed bill mandates that fully autonomous vehicles must use multiple sensor technologies, including cameras plus two other sensing technologies like lidar and radar. This directly impacts Tesla, whose Robotaxi system relies solely on cameras and artificial intelligence.",
+   "If enacted, New Jersey would be the first state to codify such a hardware mandate into law, setting a precedent. A nearly identical proposal is also currently pending action in neighboring New York.",
+   "Democratic state Senator Andrew Zwicker, the bill's primary sponsor, emphasizes safety, stating he is not convinced a single sensor with software is sufficient to handle complex situations. He believes autonomous vehicles can transform transportation but should roll out cautiously.",
+   "The proposal would establish a three-year pilot program, requiring companies to report certain crashes and complete at least 50,000 miles of supervised testing in New Jersey without a major incident. State authorization would also be necessary before operating fully driverless commercial services.",
+   "Elon Musk has long argued that cameras paired with increasingly capable AI are the most cost-effective and best way to operate autonomous vehicles, akin to human vision. He also suggests that adding more sensors can reduce safety by creating conflicting information for the software to reconcile."
+  ],
+  "caption": "New Jersey lawmakers are moving to mandate lidar and radar for all robotaxis. This proposed law could effectively ban Tesla's camera-only autonomous vehicles from operating in the state.\n\nNew Jersey's proposed bill mandates that fully autonomous vehicles must use multiple sensor technologies, including cameras plus two other sensing technologies like lidar and radar. This directly impacts Tesla, whose Robotaxi system relies solely on cameras and artificial intelligence.\n\nIf enacted, New Jersey would be the first state to codify such a hardware mandate into law, setting a precedent. A nearly identical proposal is also currently pending action in neighboring New York.\n\nDemocratic state Senator Andrew Zwicker, the bill's primary sponsor, emphasizes safety, stating he is not convinced a single sensor with software is sufficient to handle complex situations. He believes autonomous vehicles can transform transportation but should roll out cautiously.\n\nThe proposal would establish a three-year pilot program, requiring companies to report certain crashes and complete at least 50,000 miles of supervised testing in New Jersey without a major incident. State authorization would also be necessary before operating fully driverless commercial services.\n\nElon Musk has long argued that cameras paired with increasingly capable AI are the most cost-effective and best way to operate autonomous vehicles, akin to human vision. He also suggests that adding more sensors can reduce safety by creating conflicting information for the software to reconcile.\n\n#Robotaxi #Tesla #AutonomousVehicles #Lidar #NewJersey #TechPolicy\n\nSource: The Verge",
+  "tweet": "New Jersey is proposing a new law that would mandate lidar for all robotaxis, potentially banning Tesla's camera-only autonomous vehicles from operating in the state. This sets a precedent for AV hardware requirements. #Robotaxi #Tesla #TechPolicy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tesla.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/transportation/962309/new-jersey-robotaxi-bill-lidar-tesla",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/268625_A_New_Jersey_bill_would_keep_Tesla_Robotaxis_out_of_the_state__and_decide_how_AVs_are_built_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "The robotaxi law that could ban Tesla",
+  "cluster_urls": [
+   "https://www.theverge.com/transportation/962309/new-jersey-robotaxi-bill-lidar-tesla"
+  ],
+  "cluster_titles": [
+   "The robotaxi law that could ban Tesla"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260708-1707-0-new-jersey-bill-mandates-lidar-for-robotaxis.png",
+   "20260708-1707-0-new-jersey-bill-mandates-lidar-for-robotaxis-d1.png",
+   "20260708-1707-0-new-jersey-bill-mandates-lidar-for-robotaxis-d2.png"
+  ]
+ },
+ {
+  "topic": "nvidia_vera_cpu_ai_advantage",
+  "headline_marked": "[[Nvidia frames Vera CPU as 'max single-threaded CPU at scale']] for AI, reveals Rigel cores",
+  "headline": "Nvidia frames Vera CPU as 'max single-threaded CPU at scale' for AI, reveals Rigel cores",
+  "summary": "Nvidia positions its 88-core Vera CPU as a 'max single-threaded CPU at scale' for AI inference and agentic workloads, claiming up to 6x latency drops. It also teased its next-gen Rigel Arm v9.2 core for even higher per-core performance.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "Nvidia is reasserting its Vera Arm-based CPU's advantage for AI work, describing it as a \"max single-threaded CPU at scale.\" This monolithic 88-core design, with SMT for 176 threads, aims to provide strong performance per core and predictable latency, rather than just maximizing core count.",
+   "The company argues that AI inference and agentic workloads are often bound by single-thread speed. Each step in a reasoning AI or agent workflow depends on the previous one, making high single-thread performance crucial over massive parallelism.",
+   "Vera's design supports this with 1.2 TB/s LPDDR5X RAM and 3.4 TB/s of core-to-core bandwidth, which Nvidia claims is 3x that of \"any other data center CPU.\" This ensures active cores are well-supplied with data and avoids bottlenecks.",
+   "Nvidia touts significant performance gains from Vera in various AI-related tasks. It claims 1.8x higher performance in \"agentic execution,\" 1.5x higher in coding workflows, and 3x faster in database analytics compared to x86 competitors.",
+   "Real-world scenarios from partners like Perplexity show a 1.5x performance increase in coding agent work and 1.9x speedup in concurrent sandboxes. Starburst reported a 3x uplift in large-scale SQL analytics, and Redpanda saw a 6x latency drop in real-time analytics.",
+   "Nvidia also revealed its next-generation Rigel Arm v9.2 CPU core, which will ship as part of its Rosa CPU. Rigel is designed to deliver even higher per-core performance than Vera's Olympus core within the same silicon footprint."
+  ],
+  "caption": "Nvidia's Vera CPU is designed as a 'max single-threaded CPU at scale' for AI, claiming up to 6x latency drops in real-world agentic and database workloads. It's not just about core count.\n\nNvidia is reasserting its Vera Arm-based CPU's advantage for AI work, describing it as a \"max single-threaded CPU at scale.\" This monolithic 88-core design, with SMT for 176 threads, aims to provide strong performance per core and predictable latency, rather than just maximizing core count.\n\nThe company argues that AI inference and agentic workloads are often bound by single-thread speed. Each step in a reasoning AI or agent workflow depends on the previous one, making high single-thread performance crucial over massive parallelism.\n\nVera's design supports this with 1.2 TB/s LPDDR5X RAM and 3.4 TB/s of core-to-core bandwidth, which Nvidia claims is 3x that of \"any other data center CPU.\" This ensures active cores are well-supplied with data and avoids bottlenecks.\n\nNvidia touts significant performance gains from Vera in various AI-related tasks. It claims 1.8x higher performance in \"agentic execution,\" 1.5x higher in coding workflows, and 3x faster in database analytics compared to x86 competitors.\n\nReal-world scenarios from partners like Perplexity show a 1.5x performance increase in coding agent work and 1.9x speedup in concurrent sandboxes. Starburst reported a 3x uplift in large-scale SQL analytics, and Redpanda saw a 6x latency drop in real-time analytics.\n\nNvidia also revealed its next-generation Rigel Arm v9.2 CPU core, which will ship as part of its Rosa CPU. Rigel is designed to deliver even higher per-core performance than Vera's Olympus core within the same silicon footprint.\n\n#Nvidia #VeraCPU #AI #Hardware #DataCenter #Rigel\n\nSource: Tom's Hardware",
+  "tweet": "Nvidia's Vera CPU is designed as a 'max single-threaded CPU at scale' for AI, claiming up to 6x latency drops in real-world agentic and database workloads. It's not just about core count. Next-gen Rigel cores also teased. #Nvidia #AI #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/cpus/nvidia-touts-vera-cpus-single-threaded-performance-as-its-agentic-ai-advantage-frames-chip-as-a-max-single-threaded-cpu-at-scale-not-a-parallel-monster",
+  "image": "https://cdn.mos.cms.futurecdn.net/JUMzzHeBHtq9q5mBczXBWb-1280-80.jpg",
+  "orig_title": "Nvidia touts Vera CPU's single-threaded performance as its agentic AI advantage, reveals next-gen 'Rigel' Arm CPU cores — frames chip as a 'max single-threaded CPU at scale,' not a parallel monster",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/cpus/nvidia-touts-vera-cpus-single-threaded-performance-as-its-agentic-ai-advantage-frames-chip-as-a-max-single-threaded-cpu-at-scale-not-a-parallel-monster"
+  ],
+  "cluster_titles": [
+   "Nvidia touts Vera CPU's single-threaded performance as its agentic AI advantage, reveals next-gen 'Rigel' Arm CPU cores — frames chip as a 'max single-threaded CPU at scale,' not a parallel monster"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260708-1707-1-nvidia-frames-vera-cpu-as-max-single-threade.png",
+   "20260708-1707-1-nvidia-frames-vera-cpu-as-max-single-threade-d1.png",
+   "20260708-1707-1-nvidia-frames-vera-cpu-as-max-single-threade-d2.png"
+  ]
+ }
+]

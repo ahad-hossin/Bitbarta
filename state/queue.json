@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_agentic_os_engineering_guide",
+  "headline_marked": "Building an Agentic OS: [[A Complete End-to-End Guide for Autonomous AI Engineering Workflows]]",
+  "headline": "Building an Agentic OS: A Complete End-to-End Guide for Autonomous AI Engineering Workflows",
+  "summary": "This guide details how to build an Agentic OS, a lightweight automation layer for AI models to act as engineering teammates. It covers rules, routing, verification, and budget enforcement for autonomous AI workflows.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Traditional AI use often involves manual prompting and correction. To enable AI to operate as a true engineering teammate, an \"operating system\" is needed around the model, incorporating rules, routing, verification, memory, budgets, and rollback paths.",
+   "This guide outlines how to build an Agentic OS: a lightweight automation layer that can inspect repositories, decide on relevant work, assign tasks to models, verify output, enforce budgets, and gradually earn autonomy. It is vendor-agnostic, adaptable to various models like Claude, GPT, Gemini, local models, or OpenRouter.",
+   "The system emphasizes a clear separation of concerns: AI can suggest, execute, and review, but deterministic commands ultimately decide whether work is done. A fresh auditor must independently review changes, rather than the executor approving its own output.",
+   "Effective prompts are crucial for precise, verifiable work. For example, specifying \"Change only login error messaging. Done when npm test -- tests/login and npm run lint both pass.\" ensures clear completion criteria. High-capability models should handle branching decisions, while cheaper models can manage repetitive, scoped implementation.",
+   "The guide warns against granting global autonomy, noting that a model reliable for documentation might be unsafe for migrations. Continuous checking is vital, as bugs fixed once can reappear. The \"constitution\" file should be enforceable and executable, not merely descriptive.",
+   "The core loop, `agent-os/cycle.sh`, ties all layers together. Each iteration, it gathers recent repo signals, runs an intake prompt to decide actionable work, and a router prompt to produce a work order.",
+   "It then creates an isolated git worktree, runs the executor prompt inside it, diffs the result, runs the auditor prompt against that diff, and executes a deterministic validation gate. A pass or fail is recorded in a trust ledger, with pull requests automatically shipped only once a skill has earned the auto tier.",
+   "The loop respects a maximum iteration count and a daily budget, failing closed if spending crosses the limit. Placeholder commands like `ai-router`, `ai-exec`, and `ai-audit` can be replaced with preferred CLIs or thin wrapper scripts, and `Makefile` targets are created for various operations."
+  ],
+  "caption": "Stop prompting and start building an AI engineering teammate. This guide shows you how to create an Agentic OS for autonomous AI workflows.\n\nTraditional AI use often involves manual prompting and correction. To enable AI to operate as a true engineering teammate, an \"operating system\" is needed around the model, incorporating rules, routing, verification, memory, budgets, and rollback paths.\n\nThis guide outlines how to build an Agentic OS: a lightweight automation layer that can inspect repositories, decide on relevant work, assign tasks to models, verify output, enforce budgets, and gradually earn autonomy. It is vendor-agnostic, adaptable to various models like Claude, GPT, Gemini, local models, or OpenRouter.\n\nThe system emphasizes a clear separation of concerns: AI can suggest, execute, and review, but deterministic commands ultimately decide whether work is done. A fresh auditor must independently review changes, rather than the executor approving its own output.\n\nEffective prompts are crucial for precise, verifiable work. For example, specifying \"Change only login error messaging. Done when npm test -- tests/login and npm run lint both pass.\" ensures clear completion criteria. High-capability models should handle branching decisions, while cheaper models can manage repetitive, scoped implementation.\n\nThe guide warns against granting global autonomy, noting that a model reliable for documentation might be unsafe for migrations. Continuous checking is vital, as bugs fixed once can reappear. The \"constitution\" file should be enforceable and executable, not merely descriptive.\n\nThe core loop, `agent-os/cycle.sh`, ties all layers together. Each iteration, it gathers recent repo signals, runs an intake prompt to decide actionable work, and a router prompt to produce a work order.\n\n#AI #SoftwareEngineering #Developer #AgenticAI #Automation #TechGuide\n\nSource: DEV",
+  "tweet": "Stop prompting, start building! This end-to-end guide shows how to create an Agentic OS for autonomous AI engineering workflows. Learn to integrate rules, verification, and budgets for AI that acts like a true teammate. #AI #Developer #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/saitarrun/building-an-agentic-os-a-complete-end-to-end-guide-for-autonomous-ai-engineering-workflows-25dk",
+  "image": "",
+  "orig_title": "Building an Agentic OS: A Complete End-to-End Guide for Autonomous AI Engineering Workflows",
+  "cluster_urls": [
+   "https://dev.to/saitarrun/building-an-agentic-os-a-complete-end-to-end-guide-for-autonomous-ai-engineering-workflows-25dk"
+  ],
+  "cluster_titles": [
+   "Building an Agentic OS: A Complete End-to-End Guide for Autonomous AI Engineering Workflows"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260708-1025-0-building-an-agentic-os-a-complete-end-to-end.png",
+   "20260708-1025-0-building-an-agentic-os-a-complete-end-to-end-d1.png",
+   "20260708-1025-0-building-an-agentic-os-a-complete-end-to-end-d2.png",
+   "20260708-1025-0-building-an-agentic-os-a-complete-end-to-end-d3.png",
+   "20260708-1025-0-building-an-agentic-os-a-complete-end-to-end-d4.png"
+  ]
+ },
+ {
+  "topic": "south_korea_ai_chip_plan_challenges",
+  "headline_marked": "South Korea's $880B chip/AI plan [[faces huge power/water challenges]], needing 25% of Seoul's power",
+  "headline": "South Korea's $880B chip/AI plan faces huge power/water challenges, needing 25% of Seoul's power",
+  "summary": "South Korea's ambitious $880 billion chip and AI plan faces critical infrastructure hurdles. The Yongin megacluster alone requires 15-16 GW, nearly a quarter of Seoul's total electricity demand, with significant portions still lacking finalized supply plans.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "South Korea announced a ₩1,350 trillion ($880 billion) 10-year public-private plan for semiconductors, AI data centers, and robotics. The Yongin Semiconductor National Industrial Complex, a megacluster by Samsung and SK hynix, is estimated to require 15 to 16 GW at full operation, nearly 25% of Seoul's total power demand.",
+   "Local power supply for Yongin is only about 1.9 GW, leaving a significant gap. As of January, about 6 GW of the complex's 15 GW power needs had no finalized supply plan, with fabs being accelerated faster than infrastructure.",
+   "Power is generated on the coasts, far from the inland fabs. State utility KEPCO plans a ₩37 trillion, 1,153-km transmission network by 2036, but faces a problematic track record with long delays on similar projects.",
+   "Local opposition has also delayed critical transmission lines, like the Donghaean-Dongseoul high-voltage direct current line. SK hynix has pulled its fourth Yongin fab completion forward by 12 years to 2033, further exacerbating the infrastructure gap.",
+   "Six LNG plants are planned within the Yongin complex to bridge the power gap, scaling towards 10 GW. However, both Samsung and SK hynix have RE100 commitments for 100% renewable electricity by 2050, and a carbon-neutrality committee has demanded the LNG plan's cancellation.",
+   "Water supply is another major challenge, with a large memory fab consuming over 100,000 tons per day. The Yongin complex is projected to need around 800,000 tons per day at full build-out.",
+   "Water supply plans involve drawing from Paldang Dam and treated wastewater, with new facilities by 2034. However, SK hynix's accelerated fab is due in 2033, a year before the integrated pipeline serving it. Local water disputes have already caused delays and cancelled groundbreakings."
+  ],
+  "caption": "South Korea's $880 billion chip and AI plan faces massive power and water supply challenges. The Yongin megacluster alone needs a quarter of Seoul's electricity.\n\nSouth Korea announced a ₩1,350 trillion ($880 billion) 10-year public-private plan for semiconductors, AI data centers, and robotics. The Yongin Semiconductor National Industrial Complex, a megacluster by Samsung and SK hynix, is estimated to require 15 to 16 GW at full operation, nearly 25% of Seoul's total power demand.\n\nLocal power supply for Yongin is only about 1.9 GW, leaving a significant gap. As of January, about 6 GW of the complex's 15 GW power needs had no finalized supply plan, with fabs being accelerated faster than infrastructure.\n\nPower is generated on the coasts, far from the inland fabs. State utility KEPCO plans a ₩37 trillion, 1,153-km transmission network by 2036, but faces a problematic track record with long delays on similar projects.\n\nLocal opposition has also delayed critical transmission lines, like the Donghaean-Dongseoul high-voltage direct current line. SK hynix has pulled its fourth Yongin fab completion forward by 12 years to 2033, further exacerbating the infrastructure gap.\n\nSix LNG plants are planned within the Yongin complex to bridge the power gap, scaling towards 10 GW. However, both Samsung and SK hynix have RE100 commitments for 100% renewable electricity by 2050, and a carbon-neutrality committee has demanded the LNG plan's cancellation.\n\nWater supply is another major challenge, with a large memory fab consuming over 100,000 tons per day. The Yongin complex is projected to need around 800,000 tons per day at full build-out.\n\nWater supply plans involve drawing from Paldang Dam and treated wastewater, with new facilities by 2034. However, SK hynix's accelerated fab is due in 2033, a year before the integrated pipeline serving it. Local water disputes have already caused delays and cancelled groundbreakings.\n\n#SouthKorea #Semiconductors #AI #TechNews #Infrastructure #BigTech\n\nSource: Tom's Hardware",
+  "tweet": "South Korea's $880B chip & AI plan faces massive power & water supply challenges. The Yongin megacluster needs 25% of Seoul's total electricity, with infrastructure years behind fab construction. #SouthKorea #Semiconductors #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/power-and-water-lag-the-fabs-in-south-koreas-880-billion-chip-and-ai-plan",
+  "image": "https://cdn.mos.cms.futurecdn.net/2XC9HXbpgeAoiRz7ULY39j-1280-80.jpg",
+  "orig_title": "South Korea's $880 billion chip and AI plan faces big power and water challenges — a single megacluster requires a quarter of Seoul's total power demand",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/power-and-water-lag-the-fabs-in-south-koreas-880-billion-chip-and-ai-plan"
+  ],
+  "cluster_titles": [
+   "South Korea's $880 billion chip and AI plan faces big power and water challenges — a single megacluster requires a quarter of Seoul's total power demand"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260708-1025-1-south-korea-s-880b-chip-ai-plan-faces-huge-p.png",
+   "20260708-1025-1-south-korea-s-880b-chip-ai-plan-faces-huge-p-d1.png",
+   "20260708-1025-1-south-korea-s-880b-chip-ai-plan-faces-huge-p-d2.png",
+   "20260708-1025-1-south-korea-s-880b-chip-ai-plan-faces-huge-p-d3.png"
+  ]
+ }
+]

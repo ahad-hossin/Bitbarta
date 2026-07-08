@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "ai_agent_stealth_browser",
+  "headline_marked": "[[Fortress is a stealth Chromium]] that stops scrapers getting blocked",
+  "headline": "Fortress is a stealth Chromium that stops scrapers getting blocked",
+  "summary": "This engine corrects browser fingerprints in C++ directly, making automation appear human to advanced bot detectors like Cloudflare Turnstile and CreepJS.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Fortress is a stealth Chromium engine designed to prevent web scrapers and browser automation agents from being detected and blocked. It achieves this by modifying the browser's fingerprint directly within Chromium's C++ code, ensuring the browser presents itself as an ordinary, human-operated Chrome installation.",
+   "Bot detectors typically flag automation by analyzing various browser surfaces like canvas, WebGL, audio, fonts, and navigator properties. Fortress corrects these surfaces at the engine level, avoiding detectable JavaScript patch layers that pages can often identify. This allows scrapers to complete their tasks and agents to reach target pages without being flagged.",
+   "The engine has been tested to clear live Cloudflare challenges and passes detection tests from Sannysoft, BrowserScan, and CreepJS, all while appearing as a stock Chrome install. It maintains coherence between the engine, user-agent, and JA3/JA4 TLS shape, presenting a consistent Windows persona.",
+   "Developers can integrate Fortress with existing Playwright or Puppeteer setups by pointing their Chrome DevTools Protocol (CDP) client at Fortress, often requiring only a one-line code change. It ships as an ordinary browser binary exposing a CDP endpoint, simplifying adoption.",
+   "Fortress ships with two Chromium bases and provides native binaries for Linux x64 and Windows x64. macOS users can run it via a Docker image. The SDK includes compiled builds and patches, allowing users to rebuild the engine and verify corrections against the source code."
+  ],
+  "caption": "Stop your web scrapers and browser agents from getting blocked. Fortress is a stealth Chromium engine that makes automation appear human.\n\nFortress is a stealth Chromium engine designed to prevent web scrapers and browser automation agents from being detected and blocked. It achieves this by modifying the browser's fingerprint directly within Chromium's C++ code, ensuring the browser presents itself as an ordinary, human-operated Chrome installation.\n\nBot detectors typically flag automation by analyzing various browser surfaces like canvas, WebGL, audio, fonts, and navigator properties. Fortress corrects these surfaces at the engine level, avoiding detectable JavaScript patch layers that pages can often identify. This allows scrapers to complete their tasks and agents to reach target pages without being flagged.\n\nThe engine has been tested to clear live Cloudflare challenges and passes detection tests from Sannysoft, BrowserScan, and CreepJS, all while appearing as a stock Chrome install. It maintains coherence between the engine, user-agent, and JA3/JA4 TLS shape, presenting a consistent Windows persona.\n\nDevelopers can integrate Fortress with existing Playwright or Puppeteer setups by pointing their Chrome DevTools Protocol (CDP) client at Fortress, often requiring only a one-line code change. It ships as an ordinary browser binary exposing a CDP endpoint, simplifying adoption.\n\nFortress ships with two Chromium bases and provides native binaries for Linux x64 and Windows x64. macOS users can run it via a Docker image. The SDK includes compiled builds and patches, allowing users to rebuild the engine and verify corrections against the source code.\n\n#WebScraping #Automation #Chromium #Developers #BotDetection #Tech\n\nSource: Hacker News",
+  "tweet": "Stop your web scrapers from getting blocked! Fortress, a stealth Chromium engine, corrects browser fingerprints in C++ to make automation appear human. Works with Playwright/Puppeteer. #WebScraping #Automation #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/tiliondev/fortress",
+  "image": "",
+  "orig_title": "Show HN: Fortress – a stealth Chromium so your agents stop getting blocked",
+  "cluster_urls": [
+   "https://github.com/tiliondev/fortress"
+  ],
+  "cluster_titles": [
+   "Show HN: Fortress – a stealth Chromium so your agents stop getting blocked"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260708-0706-0-fortress-is-a-stealth-chromium-that-stops-sc.png",
+   "20260708-0706-0-fortress-is-a-stealth-chromium-that-stops-sc-d1.png",
+   "20260708-0706-0-fortress-is-a-stealth-chromium-that-stops-sc-d2.png",
+   "20260708-0706-0-fortress-is-a-stealth-chromium-that-stops-sc-d3.png"
+  ]
+ },
+ {
+  "topic": "eu_car_driver_monitoring_camera_privacy",
+  "headline_marked": "Every new car sold in the European Union [[must include a driver monitoring camera]]",
+  "headline": "Every new car sold in the European Union must include a driver monitoring camera",
+  "summary": "New regulations in the European Union mandate that all new cars sold must be equipped with a driver monitoring camera. This measure aims to enhance road safety and reduce accidents caused by driver distraction or fatigue.",
+  "category": "GADGETS",
+  "template": "neon",
+  "details": [
+   "New regulations in the European Union now require all newly sold cars to be equipped with driver monitoring cameras. These systems are designed to detect signs of driver distraction, drowsiness, or impairment, providing alerts to improve road safety.",
+   "The mandate is part of a broader push by the EU to reduce road fatalities and serious injuries. It builds on previous safety measures, aiming to leverage technology for proactive accident prevention.",
+   "These cameras typically monitor eye movement, head position, and other behavioral cues. While the primary goal is safety, concerns about data privacy and the potential for surveillance have been raised by various groups.",
+   "Automakers are now integrating these systems into their vehicle designs to comply with the new rules. This marks a significant shift in standard vehicle safety features across the European market."
+  ],
+  "caption": "Every new car sold in the EU will now come with a mandatory driver monitoring camera. This aims to boost road safety by detecting distraction and fatigue.\n\nNew regulations in the European Union now require all newly sold cars to be equipped with driver monitoring cameras. These systems are designed to detect signs of driver distraction, drowsiness, or impairment, providing alerts to improve road safety.\n\nThe mandate is part of a broader push by the EU to reduce road fatalities and serious injuries. It builds on previous safety measures, aiming to leverage technology for proactive accident prevention.\n\nThese cameras typically monitor eye movement, head position, and other behavioral cues. While the primary goal is safety, concerns about data privacy and the potential for surveillance have been raised by various groups.\n\nAutomakers are now integrating these systems into their vehicle designs to comply with the new rules. This marks a significant shift in standard vehicle safety features across the European market.\n\n#EUSafety #CarTech #DriverMonitoring #RoadSafety #Automotive #TechNews\n\nSource: Hacker News",
+  "tweet": "New EU mandate: Every new car sold in the European Union must now include a driver monitoring camera. This aims to enhance road safety by detecting driver distraction and fatigue. #EUSafety #CarTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://allaboutcookies.org/eu-mandatory-distracted-driver-system",
+  "image": "",
+  "orig_title": "Every new car sold in the European Union must include a driver monitoring camera",
+  "cluster_urls": [
+   "https://allaboutcookies.org/eu-mandatory-distracted-driver-system"
+  ],
+  "cluster_titles": [
+   "Every new car sold in the European Union must include a driver monitoring camera"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260708-0706-1-every-new-car-sold-in-the-european-union-mus.png",
+   "20260708-0706-1-every-new-car-sold-in-the-european-union-mus-d1.png",
+   "20260708-0706-1-every-new-car-sold-in-the-european-union-mus-d2.png"
+  ]
+ }
+]

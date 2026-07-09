@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_model_race_crumbling_monolithic_era",
+  "headline_marked": "[[The smartest model lost]] — and it just redrew the 2026 AI race",
+  "headline": "The smartest model lost — and it just redrew the 2026 AI race",
+  "summary": "A new benchmark redefines AI model evaluation, prioritizing human taste and collaboration over raw intelligence, with OpenAI's GPT-5.6 Soul outperforming Anthropic's Claude Fable.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A new benchmark, designed by Claire Vo of ChatPRD, has shifted the focus of AI model evaluation from theoretical intelligence to practical usability and human collaboration. The test pitted OpenAI's GPT-5.6 lineup against Anthropic's Claude Fable, with surprising results.",
+   "While Claude Fable demonstrated superior theoretical intelligence, GPT-5.6 Soul emerged as the winner in Vo's benchmark, which combined LLM-as-judge scoring with her own hand-graded \"taste test.\" Vo weighted her personal judgment at 70%, emphasizing that human taste remains the ultimate arbiter.",
+   "Vo described Fable as \"an engineer who has never met a human,\" noting its precision often led to overly rigid outputs. In contrast, GPT-5.6 Soul was praised for its ability to adapt and fix problems, even when faced with complex tasks like debugging multi-step code.",
+   "The key insight is that a model's ability to be collaborated with is as crucial as its intelligence. Vo found Fable's output nearly unreadable to humans, while Soul's writing style was more natural and accessible, highlighting the merging of intelligence and usability.",
+   "Vo's benchmark also evaluated aesthetic design, penalizing \"slop\" and overly familiar \"editorial\" looks. She noted that as generation becomes cheaper, having a unique point of view and the ability to refuse generic output becomes a key differentiator.",
+   "OpenAI's GPT-5.6 is a suite of three models: Soul (frontier), Terra (balanced), and Luna (cheap, high-volume). Pricing for Soul is aggressive at $5/$30 per million tokens, significantly undercutting Fable's $10/$50.",
+   "The review suggests a broader shift in AI value, moving from simply providing tools to delivering end-to-end outcomes. GPT-5.6, when integrated with tools like Codex and Chrome, demonstrated this by performing complex tasks such as generating social clips and testing web apps autonomously."
+  ],
+  "caption": "The AI race has a new leader: OpenAI's GPT-5.6 Soul. It beat Anthropic's theoretically smarter Claude Fable by prioritizing human collaboration and taste over raw intelligence.\n\nA new benchmark, designed by Claire Vo of ChatPRD, has shifted the focus of AI model evaluation from theoretical intelligence to practical usability and human collaboration. The test pitted OpenAI's GPT-5.6 lineup against Anthropic's Claude Fable, with surprising results.\n\nWhile Claude Fable demonstrated superior theoretical intelligence, GPT-5.6 Soul emerged as the winner in Vo's benchmark, which combined LLM-as-judge scoring with her own hand-graded \"taste test.\" Vo weighted her personal judgment at 70%, emphasizing that human taste remains the ultimate arbiter.\n\nVo described Fable as \"an engineer who has never met a human,\" noting its precision often led to overly rigid outputs. In contrast, GPT-5.6 Soul was praised for its ability to adapt and fix problems, even when faced with complex tasks like debugging multi-step code.\n\nThe key insight is that a model's ability to be collaborated with is as crucial as its intelligence. Vo found Fable's output nearly unreadable to humans, while Soul's writing style was more natural and accessible, highlighting the merging of intelligence and usability.\n\nVo's benchmark also evaluated aesthetic design, penalizing \"slop\" and overly familiar \"editorial\" looks. She noted that as generation becomes cheaper, having a unique point of view and the ability to refuse generic output becomes a key differentiator.\n\nOpenAI's GPT-5.6 is a suite of three models: Soul (frontier), Terra (balanced), and Luna (cheap, high-volume). Pricing for Soul is aggressive at $5/$30 per million tokens, significantly undercutting Fable's $10/$50.\n\nThe review suggests a broader shift in AI value, moving from simply providing tools to delivering end-to-end outcomes. GPT-5.6, when integrated with tools like Codex and Chrome, demonstrated this by performing complex tasks such as generating social clips and testing web apps autonomously.\n\n#AI #GPT5 #OpenAI #Anthropic #LLM\n\nSource: DEV",
+  "tweet": "The smartest AI model lost — and it just redrew the 2026 AI race. OpenAI's GPT-5.6 Soul beat Anthropic's Claude Fable by focusing on human collaboration and taste. \n\n#AI #GPT5 #OpenAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/hunter_g_50e2ec233acd07b5/the-smartest-model-lost-and-it-just-redrew-the-2026-ai-race-3623",
+  "image": "",
+  "orig_title": "The smartest model lost — and it just redrew the 2026 AI race",
+  "cluster_urls": [
+   "https://dev.to/hunter_g_50e2ec233acd07b5/the-smartest-model-lost-and-it-just-redrew-the-2026-ai-race-3623",
+   "https://dev.to/alan_scottencinas/the-paintbrush-paradox-why-the-monolithic-era-of-ai-is-crumbling-16na"
+  ],
+  "cluster_titles": [
+   "The smartest model lost — and it just redrew the 2026 AI race",
+   "The Paintbrush Paradox: Why the Monolithic Era of AI Is Crumbling"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260710-0305-0-the-smartest-model-lost-and-it-just-redrew-t.png",
+   "20260710-0305-0-the-smartest-model-lost-and-it-just-redrew-t-d1.png",
+   "20260710-0305-0-the-smartest-model-lost-and-it-just-redrew-t-d2.png",
+   "20260710-0305-0-the-smartest-model-lost-and-it-just-redrew-t-d3.png"
+  ]
+ },
+ {
+  "topic": "windows_defender_0day_exploit_smart_glasses_ban",
+  "headline_marked": "Microsoft Defender patch [[causes disk space exhaustion]] on Windows",
+  "headline": "Microsoft Defender patch causes disk space exhaustion on Windows",
+  "summary": "A fix for a zero-day vulnerability in Windows Defender may cause machines to write files large enough to consume all available disk space.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A recent patch released by Microsoft to fix a zero-day vulnerability in Windows Defender (CVE-2026-50656) may inadvertently cause Windows machines to fill up their hard drives. The vulnerability, discovered by researcher NightmareEclipse, allows remote attackers to gain administrative control of Windows 10 and 11 machines.",
+   "The patch, intended to fix the \"RoguePlanet\" vulnerability, introduced new \"defense-in-depth\" measures. However, these new mitigations in the Microsoft Malware Protection Engine can cause it to leak data when trying to open a file, potentially leading to massive amounts of data being written to disk.",
+   "Normally, Defender places strict limits on file sizes during scanning and quarantining. The researcher found an exception where SpyNet functions within the engine attempt to cache a Zone.Identifier file locally, regardless of its size, leading to disk exhaustion.",
+   "Exploiting this requires a special setup involving a custom SMB server that serves a malicious file and a massive Zone.Identifier ADS file. By not responding to read requests, the server can cause Defender to hang, locking up disk space and potentially causing system instability and application crashes.",
+   "Microsoft has not immediately confirmed the existence of this behavior. This incident is the latest in an ongoing dispute between NightmareEclipse and Microsoft, with the researcher having previously disclosed several zero-days before Microsoft could patch them."
+  ],
+  "caption": "Microsoft's latest Windows Defender patch, meant to fix a zero-day, might be filling up hard drives on Windows machines.\n\nA recent patch released by Microsoft to fix a zero-day vulnerability in Windows Defender (CVE-2026-50656) may inadvertently cause Windows machines to fill up their hard drives. The vulnerability, discovered by researcher NightmareEclipse, allows remote attackers to gain administrative control of Windows 10 and 11 machines.\n\nThe patch, intended to fix the \"RoguePlanet\" vulnerability, introduced new \"defense-in-depth\" measures. However, these new mitigations in the Microsoft Malware Protection Engine can cause it to leak data when trying to open a file, potentially leading to massive amounts of data being written to disk.\n\nNormally, Defender places strict limits on file sizes during scanning and quarantining. The researcher found an exception where SpyNet functions within the engine attempt to cache a Zone.Identifier file locally, regardless of its size, leading to disk exhaustion.\n\nExploiting this requires a special setup involving a custom SMB server that serves a malicious file and a massive Zone.Identifier ADS file. By not responding to read requests, the server can cause Defender to hang, locking up disk space and potentially causing system instability and application crashes.\n\nMicrosoft has not immediately confirmed the existence of this behavior. This incident is the latest in an ongoing dispute between NightmareEclipse and Microsoft, with the researcher having previously disclosed several zero-days before Microsoft could patch them.\n\n#Windows #Microsoft #Defender #CyberSecurity #Vulnerability\n\nSource: Ars Technica, Engadget",
+  "tweet": "Microsoft's new Windows Defender patch, intended to fix a zero-day, may cause disk space exhaustion on Windows machines. A researcher claims the fix can lead to massive file writes, potentially filling up hard drives. #Windows #CyberSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Ars Technica, Engadget",
+  "url": "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/GettyImages-1237693734-1152x648.jpg",
+  "orig_title": "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/07/patch-for-windows-defender-0-day-could-allow-attackers-to-fill-hard-disk/",
+   "https://www.engadget.com/2211151/new-york-first-us-state-ban-smart-glasses-all-courthouses/"
+  ],
+  "cluster_titles": [
+   "Patch for Windows Defender 0-day could allow attackers to fill hard disk",
+   "New York is the first US state to ban smart glasses in all its courthouses"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260710-0305-1-microsoft-defender-patch-causes-disk-space-e.png",
+   "20260710-0305-1-microsoft-defender-patch-causes-disk-space-e-d1.png",
+   "20260710-0305-1-microsoft-defender-patch-causes-disk-space-e-d2.png",
+   "20260710-0305-1-microsoft-defender-patch-causes-disk-space-e-d3.png"
+  ]
+ }
+]

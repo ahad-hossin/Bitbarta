@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "nhtsa_autonomous_cars_first_responders_interference",
+  "headline_marked": "[[NHTSA demands autonomous car makers fix interference]] with first responders by end of July",
+  "headline": "NHTSA demands autonomous car makers fix interference with first responders by end of July",
+  "summary": "The US Department of Transportation's NHTSA has identified a \"clear pattern\" of AVs blocking emergency services, giving companies less than a month to propose solutions.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The US Department of Transportation's National Highway Traffic Safety Administration (NHTSA) is demanding action from autonomous car makers. The agency identified \"a clear pattern of driverless AVs interfering with law enforcement and other first responders\" over recent months.",
+   "While NHTSA didn't cite specific incidents, reports have long detailed self-driving vehicles obstructing emergency services. One instance involved a Waymo vehicle blocking an ambulance responding to a deadly shooting in Austin, Texas, costing precious minutes.",
+   "Emergency first responder leaders expressed growing frustration to regulators in March. They reported having to spend critical time during emergencies resolving issues with \"frozen\" or \"stuck\" autonomous vehicles.",
+   "Officials from San Francisco and Austin, where Waymo operates, noted a \"backsliding\" in AV performance. San Francisco Fire Department chief Patrick Rabbitt reportedly stated Waymo vehicles have been freezing and blocking fire stations and trucks.",
+   "Austin officials echoed these concerns, adding that Waymo robotaxis fail to recognize first responders' hand signals. This interference is costing critical time and preventing timely emergency responses.",
+   "NHTSA Administrator Jonathan Morrison emphasized that \"every second matters\" in emergencies. He stated that AV disruption \"ceases to be a minor software anomaly\" and must support, not impede, life-saving missions.",
+   "Morrison has scheduled meetings with autonomous vehicle makers by the end of July. Companies have less than a month to present concrete solutions to the agency's urgent call for action."
+  ],
+  "caption": "Autonomous vehicles are repeatedly interfering with first responders, prompting a stern warning from the NHTSA. Companies have until July's end to fix it.\n\nThe US Department of Transportation's National Highway Traffic Safety Administration (NHTSA) is demanding action from autonomous car makers. The agency identified \"a clear pattern of driverless AVs interfering with law enforcement and other first responders\" over recent months.\n\nWhile NHTSA didn't cite specific incidents, reports have long detailed self-driving vehicles obstructing emergency services. One instance involved a Waymo vehicle blocking an ambulance responding to a deadly shooting in Austin, Texas, costing precious minutes.\n\nEmergency first responder leaders expressed growing frustration to regulators in March. They reported having to spend critical time during emergencies resolving issues with \"frozen\" or \"stuck\" autonomous vehicles.\n\nOfficials from San Francisco and Austin, where Waymo operates, noted a \"backsliding\" in AV performance. San Francisco Fire Department chief Patrick Rabbitt reportedly stated Waymo vehicles have been freezing and blocking fire stations and trucks.\n\nAustin officials echoed these concerns, adding that Waymo robotaxis fail to recognize first responders' hand signals. This interference is costing critical time and preventing timely emergency responses.\n\nNHTSA Administrator Jonathan Morrison emphasized that \"every second matters\" in emergencies. He stated that AV disruption \"ceases to be a minor software anomaly\" and must support, not impede, life-saving missions.\n\nMorrison has scheduled meetings with autonomous vehicle makers by the end of July. Companies have less than a month to present concrete solutions to the agency's urgent call for action.\n\n#AutonomousVehicles #SelfDrivingCars #NHTSA #Waymo #TechNews #AI\n\nSource: Engadget, TechCrunch",
+  "tweet": "Autonomous vehicles are repeatedly interfering with first responders, prompting a stern warning from the NHTSA. Companies have until July's end to fix this \"clear pattern\" of disruption. Lives are on the line. #SelfDrivingCars #NHTSA #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "waymo.com",
+  "source": "Engadget, TechCrunch",
+  "url": "https://www.engadget.com/2211209/nhtsa-calls-out-autonomous-cars-interfering-first-responders/",
+  "image": "https://www.engadget.com/img/gallery/nhtsa-calls-out-autonomous-cars-for-interfering-with-first-responders/l-intro-1783585672.jpg",
+  "orig_title": "NHTSA calls out autonomous cars for interfering with first responders",
+  "cluster_urls": [
+   "https://www.engadget.com/2211209/nhtsa-calls-out-autonomous-cars-interfering-first-responders/",
+   "https://techcrunch.com/2026/07/08/feds-demand-autonomous-vehicle-companies-stop-interfering-with-first-responders/"
+  ],
+  "cluster_titles": [
+   "NHTSA calls out autonomous cars for interfering with first responders",
+   "Feds demand autonomous vehicle companies stop interfering with first responders"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260709-1443-0-nhtsa-demands-autonomous-car-makers-fix-inte.png",
+   "20260709-1443-0-nhtsa-demands-autonomous-car-makers-fix-inte-d1.png",
+   "20260709-1443-0-nhtsa-demands-autonomous-car-makers-fix-inte-d2.png",
+   "20260709-1443-0-nhtsa-demands-autonomous-car-makers-fix-inte-d3.png"
+  ]
+ },
+ {
+  "topic": "autonomous_agent_webhook_timeout_fix",
+  "headline_marked": "[[Webhooks Time Out for Long-Running Autonomous Agents]] (and the Fix)",
+  "headline": "Webhooks Time Out for Long-Running Autonomous Agents (and the Fix)",
+  "summary": "Webhooks are designed for short requests, causing issues for long-running agents like timeouts, duplicate deliveries, and connectivity problems. A new approach using permanent outbound tunnels offers a robust alternative.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Webhooks are designed for short-lived requests, which autonomous agents constantly violate. This leads to timeouts, lost events, and duplicate tasks when agents are busy for minutes.",
+   "Most webhook senders expect an HTTP 200 response within a few seconds. An agent that needs to think, call a tool, or wait on another agent will exceed this window, causing delivery failures.",
+   "The standard workaround of acknowledging immediately and processing asynchronously adds complexity with queues and workers. Events can be lost if the agent process restarts between acknowledgment and actual handling.",
+   "Because sender timeouts fire, they often retry deliveries. If an agent's task execution isn't idempotent, this can lead to double-charged, double-notified, or double-executed steps that are difficult to undo.",
+   "Webhooks are inbound, meaning an external service must reach your agent. If the agent runs behind NAT, inside a rescheduled container, or on a dynamic IP, the registered webhook URL can silently stop working.",
+   "Integrating with multiple external systems means exposing multiple inbound webhook endpoints. Each one is a public attack surface, even when the agent itself doesn't need to be publicly reachable.",
+   "Webhooks are a push model built on the assumption that the receiver is a stateless, always-listening HTTP server. Autonomous agents are stateful, often mid-task, and not always in a position to accept new work instantly.",
+   "The desired solution is a persistent, open connection that doesn't depend on guessing timeout windows or requiring the agent to be publicly reachable. This is similar to what agents need for peer-to-peer communication.",
+   "An alternative is giving the agent a permanent outbound tunnel that the other side can reach it through, regardless of NAT, IP changes, or restarts. Pilot Protocol uses this model with encrypted UDP tunnels and NAT traversal.",
+   "This approach means the agent doesn't need a public IP, an open inbound port, or a stable webhook URL. While webhooks are still suitable for fast, stateless handlers, this tunnel model solves the specific failure modes for long-running, stateful autonomous agents."
+  ],
+  "caption": "Why do webhooks fail for long-running autonomous agents? It's not a bug in your handler, but a fundamental mismatch in design.\n\nWebhooks are designed for short-lived requests, which autonomous agents constantly violate. This leads to timeouts, lost events, and duplicate tasks when agents are busy for minutes.\n\nMost webhook senders expect an HTTP 200 response within a few seconds. An agent that needs to think, call a tool, or wait on another agent will exceed this window, causing delivery failures.\n\nThe standard workaround of acknowledging immediately and processing asynchronously adds complexity with queues and workers. Events can be lost if the agent process restarts between acknowledgment and actual handling.\n\nBecause sender timeouts fire, they often retry deliveries. If an agent's task execution isn't idempotent, this can lead to double-charged, double-notified, or double-executed steps that are difficult to undo.\n\nWebhooks are inbound, meaning an external service must reach your agent. If the agent runs behind NAT, inside a rescheduled container, or on a dynamic IP, the registered webhook URL can silently stop working.\n\nIntegrating with multiple external systems means exposing multiple inbound webhook endpoints. Each one is a public attack surface, even when the agent itself doesn't need to be publicly reachable.\n\nWebhooks are a push model built on the assumption that the receiver is a stateless, always-listening HTTP server. Autonomous agents are stateful, often mid-task, and not always in a position to accept new work instantly.\n\nThe desired solution is a persistent, open connection that doesn't depend on guessing timeout windows or requiring the agent to be publicly reachable. This is similar to what agents need for peer-to-peer communication.\n\nAn alternative is giving the agent a permanent outbound tunnel that the other side can reach it through, regardless of NAT, IP changes, or restarts. Pilot Protocol uses this model with encrypted UDP tunnels and NAT traversal.\n\n#Webhooks #AutonomousAgents #SoftwareDevelopment #TechTips #Programming #AI\n\nSource: DEV",
+  "tweet": "Why do webhooks time out for long-running autonomous agents? It's a fundamental design mismatch. Learn why standard webhook patterns fail and discover a robust alternative for persistent agent communication. #Webhooks #AutonomousAgents #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/pstayet/why-webhooks-time-out-for-long-running-autonomous-agents-and-the-fix-3g2b",
+  "image": "",
+  "orig_title": "Why Webhooks Time Out for Long-Running Autonomous Agents (and the Fix)",
+  "cluster_urls": [
+   "https://dev.to/pstayet/why-webhooks-time-out-for-long-running-autonomous-agents-and-the-fix-3g2b"
+  ],
+  "cluster_titles": [
+   "Why Webhooks Time Out for Long-Running Autonomous Agents (and the Fix)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260709-1443-1-webhooks-time-out-for-long-running-autonomou.png",
+   "20260709-1443-1-webhooks-time-out-for-long-running-autonomou-d1.png",
+   "20260709-1443-1-webhooks-time-out-for-long-running-autonomou-d2.png",
+   "20260709-1443-1-webhooks-time-out-for-long-running-autonomou-d3.png",
+   "20260709-1443-1-webhooks-time-out-for-long-running-autonomou-d4.png"
+  ]
+ }
+]

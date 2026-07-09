@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "estonia_ai_fuckup_finder_government_error",
+  "headline_marked": "[[Estonia's AI 'Fuckup Finder']] born from $28M tax blunder",
+  "headline": "Estonia's AI 'Fuckup Finder' born from $28M tax blunder",
+  "summary": "A €24 million ($27.4 million) tax blunder in Estonia led to the creation of an AI tool, 'Fuckup Finder,' designed to automatically flag errors in draft legislation, preventing future costly mistakes.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Estonia's parliament made a €24 million ($27.4 million) mistake in its Gambling Tax Act, accidentally exempting online casinos from taxes for a year. This costly error was due to a single wrong phrase in the legislation.",
+   "The blunder was identified by a legal counsel, but its severity was highlighted when former undersecretary Luukas Ilves ran the flawed legislation through Claude and Gemini. Both AI systems immediately detected the inconsistency.",
+   "Inspired by this, Ilves rapidly prototyped 'Apsakaleidja' (Fuckup Finder), a tool that pulls draft bills from the Riigikogu website. It flags issues like broken references, contradictory wording, arithmetic errors, and impossible dates, categorizing risks as high, medium, or low.",
+   "Of 112 current bills, 102 are rated high risk by the tool, demonstrating its immediate value. This embarrassment turned into a revelation for the government, proving AI's utility as an assistant.",
+   "Estonia is now doubling down on AI in government. Prime Minister Kristen Michal launched the Eesti.ai program to boost AI skills, aiming to double national productivity by 2035.",
+   "The government also proposed a bill allowing state and local authorities to use AI for automating administrative processes. Estonia aims to be the first country to create official digital identities for AI agents.",
+   "These initiatives build on Estonia's digital-first state, where 99% of public services are already online. This foundation enables faster and more confident adoption of AI.",
+   "However, ethical questions remain about human oversight. Researchers like Catherine Flick question why human review processes missed such errors, emphasizing the need for human understanding of context in legislation.",
+   "Estonia's current approach divides decisions into rule-bound (automatable) and discretionary (requiring human judgment). The debate continues on how to best integrate AI while maintaining human accountability."
+  ],
+  "caption": "Estonia lost €24 million ($27.4 million) due to a single wrong phrase in a tax law. An AI tool, 'Fuckup Finder,' was built in response to prevent future legislative blunders.\n\nEstonia's parliament made a €24 million ($27.4 million) mistake in its Gambling Tax Act, accidentally exempting online casinos from taxes for a year. This costly error was due to a single wrong phrase in the legislation.\n\nThe blunder was identified by a legal counsel, but its severity was highlighted when former undersecretary Luukas Ilves ran the flawed legislation through Claude and Gemini. Both AI systems immediately detected the inconsistency.\n\nInspired by this, Ilves rapidly prototyped 'Apsakaleidja' (Fuckup Finder), a tool that pulls draft bills from the Riigikogu website. It flags issues like broken references, contradictory wording, arithmetic errors, and impossible dates, categorizing risks as high, medium, or low.\n\nOf 112 current bills, 102 are rated high risk by the tool, demonstrating its immediate value. This embarrassment turned into a revelation for the government, proving AI's utility as an assistant.\n\nEstonia is now doubling down on AI in government. Prime Minister Kristen Michal launched the Eesti.ai program to boost AI skills, aiming to double national productivity by 2035.\n\nThe government also proposed a bill allowing state and local authorities to use AI for automating administrative processes. Estonia aims to be the first country to create official digital identities for AI agents.\n\nThese initiatives build on Estonia's digital-first state, where 99% of public services are already online. This foundation enables faster and more confident adoption of AI.\n\nHowever, ethical questions remain about human oversight. Researchers like Catherine Flick question why human review processes missed such errors, emphasizing the need for human understanding of context in legislation.\n\n#Estonia #AI #GovernmentTech #PublicSector #DigitalTransformation #Innovation\n\nSource: Wired",
+  "tweet": "Estonia's parliament lost €24M due to a legislative error. In response, an AI tool called \"Fuckup Finder\" was built to automatically flag mistakes in draft bills. The country is now doubling down on AI in government. #Estonia #AI #GovTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/the-28-million-dollar-mistake-that-inspired-estonias-ai-fuckup-finder/",
+  "image": "",
+  "orig_title": "The $28 Million Mistake That Inspired Estonia's AI “Fuckup Finder”",
+  "cluster_urls": [
+   "https://www.wired.com/story/the-28-million-dollar-mistake-that-inspired-estonias-ai-fuckup-finder/"
+  ],
+  "cluster_titles": [
+   "The $28 Million Mistake That Inspired Estonia's AI “Fuckup Finder”"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260709-1307-0-estonia-s-ai-fuckup-finder-born-from-28m-tax.png",
+   "20260709-1307-0-estonia-s-ai-fuckup-finder-born-from-28m-tax-d1.png",
+   "20260709-1307-0-estonia-s-ai-fuckup-finder-born-from-28m-tax-d2.png",
+   "20260709-1307-0-estonia-s-ai-fuckup-finder-born-from-28m-tax-d3.png"
+  ]
+ },
+ {
+  "topic": "anthropic_claude_slack_integration",
+  "headline_marked": "[[Anthropic ships @Claude for Slack]], but you can build your own bot for under $12/month",
+  "headline": "Anthropic ships @Claude for Slack, but you can build your own bot for under $12/month",
+  "summary": "Anthropic's new @Claude for Slack offers channel memory and app integration for enterprise users. However, small teams can replicate this functionality on other platforms like Telegram or WhatsApp for a fraction of the cost.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Anthropic has launched @Claude within Slack, offering AI assistance that reads threads, performs work asynchronously, and posts back. This enterprise-focused integration targets Slack Team and Enterprise plans, providing channel memory and connectivity to other apps.",
+   "While convenient for large organizations, the article highlights that 95% of small businesses don't primarily use Slack, opting for platforms like WhatsApp (2B+ users) or Telegram (900M+ users). Adding Slack seats for AI functionality can be costly at $15/user/month.",
+   "The core functionality of a mention-bot—webhook trigger, context storage, model call, and reply—is \"trivially replicable\" on any messenger with a bot API. A working Telegram version can be built with ~200 lines of code on a $10 VPS.",
+   "This DIY approach avoids vendor lock-in and expensive third-party integrations like Zapier. The first step involves setting up a Telegram bot via @BotFather, adding it to a group, and enabling a webhook to log messages and capture context.",
+   "By capturing the last N messages from a chat, the bot can pull recent thread history from a SQLite database to provide context for its replies. This simple memory mechanism allows the AI to answer questions without needing clarifying prompts.",
+   "Similar patterns can be applied to WhatsApp using the Meta Cloud API or Gmail via Pub/Sub notifications, adapting the webhook and message sending mechanisms. The underlying four-part structure remains consistent across platforms.",
+   "The author's own server handles ~40 mentions/day across three groups for under $12/month, demonstrating the economic viability. This contrasts with enterprise solutions that cater to existing procurement motions rather than operator needs."
+  ],
+  "caption": "Anthropic's @Claude is now on Slack, but small teams can build their own AI bot for Telegram or WhatsApp for under $12/month. It only takes ~200 lines of code.\n\nAnthropic has launched @Claude within Slack, offering AI assistance that reads threads, performs work asynchronously, and posts back. This enterprise-focused integration targets Slack Team and Enterprise plans, providing channel memory and connectivity to other apps.\n\nWhile convenient for large organizations, the article highlights that 95% of small businesses don't primarily use Slack, opting for platforms like WhatsApp (2B+ users) or Telegram (900M+ users). Adding Slack seats for AI functionality can be costly at $15/user/month.\n\nThe core functionality of a mention-bot—webhook trigger, context storage, model call, and reply—is \"trivially replicable\" on any messenger with a bot API. A working Telegram version can be built with ~200 lines of code on a $10 VPS.\n\nThis DIY approach avoids vendor lock-in and expensive third-party integrations like Zapier. The first step involves setting up a Telegram bot via @BotFather, adding it to a group, and enabling a webhook to log messages and capture context.\n\nBy capturing the last N messages from a chat, the bot can pull recent thread history from a SQLite database to provide context for its replies. This simple memory mechanism allows the AI to answer questions without needing clarifying prompts.\n\nSimilar patterns can be applied to WhatsApp using the Meta Cloud API or Gmail via Pub/Sub notifications, adapting the webhook and message sending mechanisms. The underlying four-part structure remains consistent across platforms.\n\nThe author's own server handles ~40 mentions/day across three groups for under $12/month, demonstrating the economic viability. This contrasts with enterprise solutions that cater to existing procurement motions rather than operator needs.\n\n#AI #Bots #Developer #Slack #Telegram #WhatsApp\n\nSource: DEV",
+  "tweet": "Anthropic's @Claude is now on Slack, but small teams can build their own AI bot for Telegram or WhatsApp for under $12/month. Replicate the core functionality with ~200 lines of code and public APIs. #AI #Developer #Bots",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/lamingsrb/anthropic-shipped-claude-for-slack-my-team-runs-on-341h",
+  "image": "",
+  "orig_title": "Anthropic Shipped @Claude For Slack. My Team Runs On",
+  "cluster_urls": [
+   "https://dev.to/lamingsrb/anthropic-shipped-claude-for-slack-my-team-runs-on-341h"
+  ],
+  "cluster_titles": [
+   "Anthropic Shipped @Claude For Slack. My Team Runs On"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260709-1307-1-anthropic-ships-claude-for-slack-but-you-can.png",
+   "20260709-1307-1-anthropic-ships-claude-for-slack-but-you-can-d1.png",
+   "20260709-1307-1-anthropic-ships-claude-for-slack-but-you-can-d2.png",
+   "20260709-1307-1-anthropic-ships-claude-for-slack-but-you-can-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai_agents_data_leak_vulnerability",
+  "headline_marked": "[[AI agents can leak your data]] via 'lethal trifecta' of capabilities, new report warns",
+  "headline": "AI agents can leak your data via 'lethal trifecta' of capabilities, new report warns",
+  "summary": "A \"lethal trifecta\" of data access, untrusted content, and external communication turns AI agents into data exfiltration tools, a structural vulnerability that human oversight often fails to catch.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The \"lethal trifecta\" describes how AI agents can become data exfiltration tools, combining access to private data, exposure to untrusted content, and external communication capabilities. This structural vulnerability is not a bug in any single model but an inherent property of how agents function.",
+   "The danger arises because AI agents don't distinguish between \"data\" and \"instructions\" in untrusted content like web pages or emails. An attacker can embed hidden commands that the agent may follow, treating them as legitimate user instructions.",
+   "This mechanism, known as prompt injection, allows malicious instructions to be hidden in various forms, such as white-on-white text, HTML comments, or image alt text. The agent ingests these instructions while performing its tasks, potentially leading to unauthorized actions.",
+   "A human checkpoint or approval prompt often fails against this attack because the malicious instruction and harmful action occur simultaneously and invisibly within the automated process. The agent completes the exfiltration before any human can review or intervene.",
+   "For example, a support agent with all three capabilities could read a customer email containing a hidden instruction to extract sensitive data (like phone numbers) and POST it to an attacker's server. The agent would then send a normal reply, with the data exfiltration already completed unnoticed.",
+   "To break this attack, it's crucial to ensure that a single AI agent session never simultaneously holds all three capabilities. Removing even one leg of the trifecta prevents the exploit.",
+   "Strategies include running untrusted-content tasks with minimal, scoped credentials, ensuring agents processing sensitive data cannot communicate externally, or using separate agents for different tasks to isolate capabilities."
+  ],
+  "caption": "AI agents can secretly leak your private data without you ever knowing. Learn about the \"lethal trifecta\" that makes it possible.\n\nThe \"lethal trifecta\" describes how AI agents can become data exfiltration tools, combining access to private data, exposure to untrusted content, and external communication capabilities. This structural vulnerability is not a bug in any single model but an inherent property of how agents function.\n\nThe danger arises because AI agents don't distinguish between \"data\" and \"instructions\" in untrusted content like web pages or emails. An attacker can embed hidden commands that the agent may follow, treating them as legitimate user instructions.\n\nThis mechanism, known as prompt injection, allows malicious instructions to be hidden in various forms, such as white-on-white text, HTML comments, or image alt text. The agent ingests these instructions while performing its tasks, potentially leading to unauthorized actions.\n\nA human checkpoint or approval prompt often fails against this attack because the malicious instruction and harmful action occur simultaneously and invisibly within the automated process. The agent completes the exfiltration before any human can review or intervene.\n\nFor example, a support agent with all three capabilities could read a customer email containing a hidden instruction to extract sensitive data (like phone numbers) and POST it to an attacker's server. The agent would then send a normal reply, with the data exfiltration already completed unnoticed.\n\nTo break this attack, it's crucial to ensure that a single AI agent session never simultaneously holds all three capabilities. Removing even one leg of the trifecta prevents the exploit.\n\nStrategies include running untrusted-content tasks with minimal, scoped credentials, ensuring agents processing sensitive data cannot communicate externally, or using separate agents for different tasks to isolate capabilities.\n\n#AI #Security #DataLeak #PromptInjection #Cybersecurity #TechNews\n\nSource: DEV",
+  "tweet": "AI agents pose a new data leak risk via the \"lethal trifecta\": data access, untrusted content, & external comms. Hidden prompt injections can exfiltrate info before humans can react. Learn how to stop it. #AI #Security #DataLeak",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "looprails.dev",
+  "source": "DEV",
+  "url": "https://dev.to/brennhill/the-lethal-trifecta-how-ai-agents-leak-your-data-and-how-to-stop-it-3bh1",
+  "image": "",
+  "orig_title": "The Lethal Trifecta: How AI Agents Leak Your Data (and How to Stop It)",
+  "cluster_urls": [
+   "https://dev.to/brennhill/the-lethal-trifecta-how-ai-agents-leak-your-data-and-how-to-stop-it-3bh1"
+  ],
+  "cluster_titles": [
+   "The Lethal Trifecta: How AI Agents Leak Your Data (and How to Stop It)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260709-1812-0-ai-agents-can-leak-your-data-via-lethal-trif.png",
+   "20260709-1812-0-ai-agents-can-leak-your-data-via-lethal-trif-d1.png",
+   "20260709-1812-0-ai-agents-can-leak-your-data-via-lethal-trif-d2.png",
+   "20260709-1812-0-ai-agents-can-leak-your-data-via-lethal-trif-d3.png"
+  ]
+ },
+ {
+  "topic": "eu_parliament_greenlights_chat_control_1_0",
+  "headline_marked": "[[EU Parliament greenlights Chat Control 1.0]], allowing mass scanning of private messages until 2028",
+  "headline": "EU Parliament greenlights Chat Control 1.0, allowing mass scanning of private messages until 2028",
+  "summary": "Despite a majority of MEPs opposing it, the measure passed due to a failed absolute majority vote, permitting suspicionless mass scanning of private communications.",
+  "category": "SECURITY",
+  "template": "neon",
+  "details": [
+   "The European Parliament has allowed \"Chat Control 1.0\" to pass, a measure permitting suspicionless mass scanning of private communications, which it had previously rejected twice in March. This interim regulation will remain in effect until 2028.",
+   "A majority of voting Members of the European Parliament (MEPs) actually opposed the regulation (314 against, 276 in favor). However, the motion to reject it failed to secure the required absolute majority of 361 votes.",
+   "Dr. Patrick Breyer, a civil rights activist and former MEP, criticized the decision as a \"farce\" that damages democracy. He warned that the passage jeopardizes genuine, permanent child protection regulations.",
+   "The interim regulation reinstates the indiscriminate, warrantless searching of private, unencrypted messages on certain platforms. Effective law enforcement tools like court-ordered wiretaps and user reports were never at risk and remain intact.",
+   "The political battle over a permanent \"Chat Control 2.0\" is ongoing, with negotiations set to resume in September. The core dispute remains whether scanning of private chats should be indiscriminate or targeted at criminal suspects."
+  ],
+  "caption": "The EU Parliament has greenlit 'Chat Control 1.0', enabling suspicionless mass scanning of private messages until 2028.\n\nThe European Parliament has allowed \"Chat Control 1.0\" to pass, a measure permitting suspicionless mass scanning of private communications, which it had previously rejected twice in March. This interim regulation will remain in effect until 2028.\n\nA majority of voting Members of the European Parliament (MEPs) actually opposed the regulation (314 against, 276 in favor). However, the motion to reject it failed to secure the required absolute majority of 361 votes.\n\nDr. Patrick Breyer, a civil rights activist and former MEP, criticized the decision as a \"farce\" that damages democracy. He warned that the passage jeopardizes genuine, permanent child protection regulations.\n\nThe interim regulation reinstates the indiscriminate, warrantless searching of private, unencrypted messages on certain platforms. Effective law enforcement tools like court-ordered wiretaps and user reports were never at risk and remain intact.\n\nThe political battle over a permanent \"Chat Control 2.0\" is ongoing, with negotiations set to resume in September. The core dispute remains whether scanning of private chats should be indiscriminate or targeted at criminal suspects.\n\n#EUParl #ChatControl #Privacy #DigitalRights #TechPolicy #Surveillance\n\nSource: Hacker News",
+  "tweet": "EU Parliament greenlights 'Chat Control 1.0', allowing mass scanning of private messages until 2028. Despite majority opposition, the measure passed due to procedural rules. Critics warn of privacy loss and jeopardized child protection efforts. #ChatControl #Privacy #EUParl",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/",
+  "image": "",
+  "orig_title": "EU Parliament greenlights Chat Control 1.0 – Breyer: \"Our children lose out\"",
+  "cluster_urls": [
+   "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/"
+  ],
+  "cluster_titles": [
+   "EU Parliament greenlights Chat Control 1.0 – Breyer: \"Our children lose out\""
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260709-1812-1-eu-parliament-greenlights-chat-control-1-0-a.png",
+   "20260709-1812-1-eu-parliament-greenlights-chat-control-1-0-a-d1.png",
+   "20260709-1812-1-eu-parliament-greenlights-chat-control-1-0-a-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,109 @@
-[]
+[
+ {
+  "topic": "engineering beyond the keystroke systems thinking",
+  "headline_marked": "[[Sub-Second Trade Execution]] for Polymarket Bot: System Design Insights",
+  "headline": "Sub-Second Trade Execution for Polymarket Bot: System Design Insights",
+  "summary": "A developer shares the intricate details of optimizing a trading bot for Polymarket, revealing that on-chain execution latency is the primary challenge, not client-side speed.",
+  "category": "DEV",
+  "template": "terminal",
+  "details": [
+   "Centralized exchanges prioritize microsecond advantages, but on-chain platforms like Polymarket operate differently. Your order faces blockchain realities: block times, mempool congestion, and gas fees. This means even sub-second client-side execution can result in multi-second confirmation delays.",
+   "The core problem shifts from raw speed to structuring execution to mitigate uncontrollable latency. The bot's signal generation, powered by sub-second Chainlink Data Streams, is designed to be fast and asynchronous, queuing updates rather than blocking processing.",
+   "Cryptographic signing via EIP-712 is a local CPU task, completed in under 20ms on modern hardware. To further optimize, the bot pre-builds common order templates, filling in variable fields at signal time, saving precious milliseconds and maintaining code clarity.",
+   "The Polymarket CLOB API round trip is a significant factor, typically taking 100-200ms from a well-connected server. Maintaining persistent, keep-alive connections is crucial to avoid the 50-100ms overhead of TCP handshakes per trade.",
+   "The unavoidable bottleneck is Polygon's block time, around 2 seconds. Orders enter the mempool and wait for confirmation, with congestion potentially extending this. The bot manages this by setting gas prices at the 90th percentile of recent blocks for timely confirmation without overpayment.",
+   "The 90-second cutoff before resolution is an execution reliability measure, not a signal quality one. It ensures that even with worst-case latency across all layers, the order is submitted with sufficient buffer time to avoid being rejected or filled at an unfavorable price."
+  ],
+  "caption": "Polymarket trading bot execution is not about microsecond speed. It's about surviving on-chain latency.\n\nCentralized exchanges prioritize microsecond advantages, but on-chain platforms like Polymarket operate differently. Your order faces blockchain realities: block times, mempool congestion, and gas fees. This means even sub-second client-side execution can result in multi-second confirmation delays.\n\nThe core problem shifts from raw speed to structuring execution to mitigate uncontrollable latency. The bot's signal generation, powered by sub-second Chainlink Data Streams, is designed to be fast and asynchronous, queuing updates rather than blocking processing.\n\nCryptographic signing via EIP-712 is a local CPU task, completed in under 20ms on modern hardware. To further optimize, the bot pre-builds common order templates, filling in variable fields at signal time, saving precious milliseconds and maintaining code clarity.\n\nThe Polymarket CLOB API round trip is a significant factor, typically taking 100-200ms from a well-connected server. Maintaining persistent, keep-alive connections is crucial to avoid the 50-100ms overhead of TCP handshakes per trade.\n\nThe unavoidable bottleneck is Polygon's block time, around 2 seconds. Orders enter the mempool and wait for confirmation, with congestion potentially extending this. The bot manages this by setting gas prices at the 90th percentile of recent blocks for timely confirmation without overpayment.\n\nThe 90-second cutoff before resolution is an execution reliability measure, not a signal quality one. It ensures that even with worst-case latency across all layers, the order is submitted with sufficient buffer time to avoid being rejected or filled at an unfavorable price.\n\nDEV #TradingBot #Polymarket #Blockchain #DeFi #SystemDesign\n\nSource: DEV",
+  "tweet": "Polymarket trading bot execution is not about microsecond speed. It's about surviving on-chain latency. A developer shares insights on optimizing for blockchain realities, from CLOB API round trips to Polygon block times. #TradingBot #Polymarket #Blockchain",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/lkto1m/execution-latency-in-my-polymarket-trading-bot-sub-second-trade-execution-system-design-1d33",
+  "image": "",
+  "orig_title": "Execution Latency in My Polymarket Trading Bot - Sub-Second Trade Execution System Design",
+  "cluster_urls": [
+   "https://dev.to/lkto1m/execution-latency-in-my-polymarket-trading-bot-sub-second-trade-execution-system-design-1d33",
+   "https://dev.to/nahamaalochi/engineering-beyond-the-keystroke-why-the-future-belongs-to-systems-thinkers-542h",
+   "https://dev.to/silviutech/versiona-acciones-de-correo-en-agentes-llm-63d",
+   "https://dev.to/alex_boguslavets_b6280b12/if-your-infrastructure-exists-only-as-a-series-of-clicks-you-have-a-problem-50oo",
+   "https://dev.to/ndegwaduncan/the-downstream-trap-why-patching-the-entry-point-never-stops-the-credential-2dpc",
+   "https://dev.to/versa-dev/search-bars-in-flutter-2ijg",
+   "https://dev.to/davekurian/achieve-smooth-uiux-with-unified-components-across-web-and-mobile-2fmd",
+   "https://dev.to/rahul_chaduvula_a406acb5c/how-i-built-a-concurrency-safe-reservation-system-2eea",
+   "https://dev.to/boriskirp/cognitive-defrag-a-local-sense-filter-for-anti-chaos-thinking-zero-data-edition-4719",
+   "https://dev.to/sbt112321321/beyond-the-black-box-a-developers-guide-to-open-weight-llm-api-integration-1ea6",
+   "https://dev.to/kriosa/the-decode-bomb-problem-why-unlimited-url-decoding-can-be-its-own-vulnerability-22lb"
+  ],
+  "cluster_titles": [
+   "Execution Latency in My Polymarket Trading Bot - Sub-Second Trade Execution System Design",
+   "Engineering Beyond the Keystroke: Why the Future Belongs to Systems Thinkers",
+   "Versiona acciones de correo en agentes LLM",
+   "If Your Infrastructure Exists Only as a Series of Clicks, You Have a Problem",
+   "The Downstream Trap: Why Patching the Entry Point Never Stops the Credential",
+   "Search Bars in Flutter",
+   "Achieve smooth UI/UX with Unified Components Across Web and Mobile",
+   "How I Built a Concurrency-Safe Reservation System",
+   "Cognitive Defrag: A Local Sense Filter for Anti-Chaos Thinking (Zero-Data Edition)",
+   "Beyond the Black Box: A Developer's Guide to Open-Weight LLM API Integration",
+   "The Decode Bomb Problem — Why Unlimited URL Decoding Can Be Its Own Vulnerability"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260710-1433-0-sub-second-trade-execution-for-polymarket-bo.png",
+   "20260710-1433-0-sub-second-trade-execution-for-polymarket-bo-d1.png",
+   "20260710-1433-0-sub-second-trade-execution-for-polymarket-bo-d2.png",
+   "20260710-1433-0-sub-second-trade-execution-for-polymarket-bo-d3.png"
+  ]
+ },
+ {
+  "topic": "ai and robotics summit discussions",
+  "headline_marked": "UN AI Summit: [[Harnessing AI for Good]] Amidst Corporate Scrutiny",
+  "headline": "UN AI Summit: Harnessing AI for Good Amidst Corporate Scrutiny",
+  "summary": "Global leaders convened at the UN AI for Good summit to explore AI's potential for humanity, while activists and experts raised concerns about corporate influence and equitable access.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The UN's AI for Good summit brought together private and public sector representatives to discuss harnessing AI for humanity's benefit. While Silicon Valley grapples with superintelligence risks, the summit focused on idealistic goals, aiming to use AI to solve pressing global issues like hunger, disease, and climate change.",
+   "Despite the optimistic outlook, a drumbeat of worry persisted throughout the event regarding the unchecked deployment of AI by corporate monopolies, which could exacerbate global inequality and erode human rights. Experts urged a move away from overreliance on big tech, highlighting concerns about opaque deals and the difficulty of understanding complex tech stacks.",
+   "The summit was not without disruption, as pro-Palestine activists stormed the stage during a keynote by Amazon's CTO, alleging the company's technology is used against Palestinians. This incident underscored the intense scrutiny and ethical debates surrounding AI's real-world applications.",
+   "A key theme was the global debate around access to AI, focusing on who can use models, buy chips, and participate in the compute economy. Concerns were raised that tightening access could leave poorer countries dependent on foreign infrastructure and standards, turning compute into a development problem rather than just a technological one.",
+   "Speakers emphasized the need for AI to serve communities beyond the richest markets. This includes developing smaller, local LLMs that can run on cheaper hardware and are structured around local languages, not just English, to ensure AI's benefits are more widely distributed."
+  ],
+  "caption": "AI for Good summit highlights potential and perils of AI, with calls for equitable access and corporate accountability.\n\nThe UN's AI for Good summit brought together private and public sector representatives to discuss harnessing AI for humanity's benefit. While Silicon Valley grapples with superintelligence risks, the summit focused on idealistic goals, aiming to use AI to solve pressing global issues like hunger, disease, and climate change.\n\nDespite the optimistic outlook, a drumbeat of worry persisted throughout the event regarding the unchecked deployment of AI by corporate monopolies, which could exacerbate global inequality and erode human rights. Experts urged a move away from overreliance on big tech, highlighting concerns about opaque deals and the difficulty of understanding complex tech stacks.\n\nThe summit was not without disruption, as pro-Palestine activists stormed the stage during a keynote by Amazon's CTO, alleging the company's technology is used against Palestinians. This incident underscored the intense scrutiny and ethical debates surrounding AI's real-world applications.\n\nA key theme was the global debate around access to AI, focusing on who can use models, buy chips, and participate in the compute economy. Concerns were raised that tightening access could leave poorer countries dependent on foreign infrastructure and standards, turning compute into a development problem rather than just a technological one.\n\nSpeakers emphasized the need for AI to serve communities beyond the richest markets. This includes developing smaller, local LLMs that can run on cheaper hardware and are structured around local languages, not just English, to ensure AI's benefits are more widely distributed.\n\n#AI #AISummit #UnitedNations #TechForGood #ArtificialIntelligence\n\nSource: Hacker News, Wired",
+  "tweet": "The UN AI for Good summit explored AI's potential to solve global issues, but faced scrutiny over corporate influence and equitable access. Activists and experts called for greater accountability. #AI #AISummit #TechForGood",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News, Wired",
+  "url": "https://nevo-project.epfl.ch/",
+  "image": "",
+  "orig_title": "AI-generated videos to maximally drive a target brain region",
+  "cluster_urls": [
+   "https://nevo-project.epfl.ch/",
+   "https://www.wired.com/story/robot-dogs-teslas-and-rescue-helicopters-the-un-ai-summit-was-alot/",
+   "https://blog.cloudflare.com/build-your-own-vulnerability-harness/",
+   "https://davidoks.blog/p/why-american-ambulance-rides-are",
+   "https://www.ello.com/blog/teaching-a-child-in-1000-ms"
+  ],
+  "cluster_titles": [
+   "AI-generated videos to maximally drive a target brain region",
+   "Robot Dogs, Teslas, and Rescue Helicopters: The UN AI Summit Was a Lot",
+   "Build your own vulnerability harness",
+   "Why American ambulance rides are so expensive",
+   "Building a real-time AI tutor for 5-year-olds"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260710-1433-1-un-ai-summit-harnessing-ai-for-good-amidst-c.png",
+   "20260710-1433-1-un-ai-summit-harnessing-ai-for-good-amidst-c-d1.png",
+   "20260710-1433-1-un-ai-summit-harnessing-ai-for-good-amidst-c-d2.png",
+   "20260710-1433-1-un-ai-summit-harnessing-ai-for-good-amidst-c-d3.png"
+  ]
+ }
+]

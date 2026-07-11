@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "solana_fan_loyalty_app",
+  "headline_marked": "[[Loyalty Ledger puts fan streaks on Solana]] to prevent resets and ensure true ownership",
+  "headline": "Loyalty Ledger puts fan streaks on Solana to prevent resets and ensure true ownership",
+  "summary": "A new project called Loyalty Ledger lets fans track their loyalty streaks, badges, and history on the Solana blockchain, ensuring their progress can't be reset or deleted by apps.",
+  "category": "CRYPTO",
+  "template": "terminal",
+  "details": [
+   "Loyalty Ledger is a new fan loyalty tracker that stores check-in streaks, badges, and history on the Solana blockchain. This innovative approach aims to solve the problem of traditional sports apps deleting or resetting fan data when users switch apps or accounts become inactive.",
+   "Many sports apps encourage engagement through points, streaks, and badges, but this history is often lost because it resides in a company's database. This means companies can reset, inflate, or delete fan data without recourse, as it's never truly owned by the fan.",
+   "The project's core functionality allows users to connect a crypto wallet, select a sport and team (FIFA World Cup is fully live), and check in. Each check-in sends a real transaction that creates or updates a program-owned account on Solana, ensuring the streak count and badges are immutably recorded.",
+   "Beyond the core streak, Loyalty Ledger builds out a \"Fan Passport\" displaying a Fan Score, tier (Rookie to Legend), progress bars, an achievements grid, and a recent activity feed pulled directly from on-chain transaction history. A leaderboard ranks fans by real streaks.",
+   "Technically, each fan gets a Program Derived Address (PDA) on Solana, owned by the program, not the developer. The check_in instruction directly creates or updates this account, making the streak data verifiable by anyone, not just the app's frontend.",
+   "An initial challenge was enabling queries for all fans of a specific team. This was solved by adding sport and team as actual fields to the account data, allowing getProgramAccounts calls to filter and rank fans by streak using real chain state.",
+   "Solana was chosen because check-ins are frequent and individually low-value, requiring near-free and fast transactions to feel like a seamless UI action. This makes the blockchain an integral part of the product, not just a buzzword."
+  ],
+  "caption": "Your fan loyalty streak, badges, and history can now live on the Solana blockchain. No more losing your progress when apps reset or shut down.\n\nLoyalty Ledger is a new fan loyalty tracker that stores check-in streaks, badges, and history on the Solana blockchain. This innovative approach aims to solve the problem of traditional sports apps deleting or resetting fan data when users switch apps or accounts become inactive.\n\nMany sports apps encourage engagement through points, streaks, and badges, but this history is often lost because it resides in a company's database. This means companies can reset, inflate, or delete fan data without recourse, as it's never truly owned by the fan.\n\nThe project's core functionality allows users to connect a crypto wallet, select a sport and team (FIFA World Cup is fully live), and check in. Each check-in sends a real transaction that creates or updates a program-owned account on Solana, ensuring the streak count and badges are immutably recorded.\n\nBeyond the core streak, Loyalty Ledger builds out a \"Fan Passport\" displaying a Fan Score, tier (Rookie to Legend), progress bars, an achievements grid, and a recent activity feed pulled directly from on-chain transaction history. A leaderboard ranks fans by real streaks.\n\nTechnically, each fan gets a Program Derived Address (PDA) on Solana, owned by the program, not the developer. The check_in instruction directly creates or updates this account, making the streak data verifiable by anyone, not just the app's frontend.\n\nAn initial challenge was enabling queries for all fans of a specific team. This was solved by adding sport and team as actual fields to the account data, allowing getProgramAccounts calls to filter and rank fans by streak using real chain state.\n\nSolana was chosen because check-ins are frequent and individually low-value, requiring near-free and fast transactions to feel like a seamless UI action. This makes the blockchain an integral part of the product, not just a buzzword.\n\n#Solana #Blockchain #FanLoyalty #Web3 #Crypto #Tech\n\nSource: DEV",
+  "tweet": "Your fan loyalty streak, badges, and history can now live on the Solana blockchain with Loyalty Ledger. Never lose your progress when apps reset or shut down. #Solana #Web3 #Crypto",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "loyalty-ledger.vercel.app",
+  "source": "DEV",
+  "url": "https://dev.to/ishantgupta/i-put-my-fan-streak-on-solana-so-nobody-could-reset-it-5dg9",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7ugb6l1ytoe80rxw574f.png",
+  "orig_title": "I put my fan streak on Solana so nobody could reset it",
+  "cluster_urls": [
+   "https://dev.to/ishantgupta/i-put-my-fan-streak-on-solana-so-nobody-could-reset-it-5dg9"
+  ],
+  "cluster_titles": [
+   "I put my fan streak on Solana so nobody could reset it"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260711-1506-0-loyalty-ledger-puts-fan-streaks-on-solana-to.png",
+   "20260711-1506-0-loyalty-ledger-puts-fan-streaks-on-solana-to-d1.png",
+   "20260711-1506-0-loyalty-ledger-puts-fan-streaks-on-solana-to-d2.png",
+   "20260711-1506-0-loyalty-ledger-puts-fan-streaks-on-solana-to-d3.png"
+  ]
+ }
+]

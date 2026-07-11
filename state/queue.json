@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "local_ai_coding_agent_ollama_aider",
+  "headline_marked": "[[Set up a local AI coding agent]] with Ollama and Aider on Windows + WSL2",
+  "headline": "Set up a local AI coding agent with Ollama and Aider on Windows + WSL2",
+  "summary": "This setup allows developers to run code-focused LLMs entirely on a local machine, keeping all source code and data private, even on CPU-only systems.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "Developers can now set up a local AI coding agent using Ollama on Windows and Aider within Ubuntu on WSL2. This configuration allows a code-focused LLM to run entirely on a local machine, even without a dedicated NVIDIA GPU, operating in CPU-only mode.",
+   "The architectural choice keeps Ollama on Windows for compatibility with other Windows applications, avoiding duplicate model installations. Aider, on the other hand, runs inside WSL, where its installation and configuration are simpler within the Linux command-line environment.",
+   "Ollama remains exposed on local port 11434, and Aider connects to it from Ubuntu WSL2 via the OLLAMA_API_BASE environment variable. This setup prevents model duplication inside WSL while keeping development repositories in the Linux filesystem for natural Git and command-line tool usage.",
+   "Initially, Aider couldn't communicate with Ollama. The solution involved configuring WSL to use mirrored networking, which allowed successful connection to the Ollama server at 127.0.0.1:11434.",
+   "For version control, Git was configured, and repositories can be accessed directly from Windows Explorer using a simple command. This integration streamlines the development workflow between Windows and WSL environments.",
+   "The goal was to understand the underlying processes, including token processing, inference time, and expected throughput. This ensures a realistic and efficient local AI development experience, especially for non-AI workstations."
+  ],
+  "caption": "Run a powerful AI coding agent entirely on your local machine, keeping all code and data private. This setup uses Ollama on Windows and Aider in WSL2.\n\nDevelopers can now set up a local AI coding agent using Ollama on Windows and Aider within Ubuntu on WSL2. This configuration allows a code-focused LLM to run entirely on a local machine, even without a dedicated NVIDIA GPU, operating in CPU-only mode.\n\nThe architectural choice keeps Ollama on Windows for compatibility with other Windows applications, avoiding duplicate model installations. Aider, on the other hand, runs inside WSL, where its installation and configuration are simpler within the Linux command-line environment.\n\nOllama remains exposed on local port 11434, and Aider connects to it from Ubuntu WSL2 via the OLLAMA_API_BASE environment variable. This setup prevents model duplication inside WSL while keeping development repositories in the Linux filesystem for natural Git and command-line tool usage.\n\nInitially, Aider couldn't communicate with Ollama. The solution involved configuring WSL to use mirrored networking, which allowed successful connection to the Ollama server at 127.0.0.1:11434.\n\nFor version control, Git was configured, and repositories can be accessed directly from Windows Explorer using a simple command. This integration streamlines the development workflow between Windows and WSL environments.\n\nThe goal was to understand the underlying processes, including token processing, inference time, and expected throughput. This ensures a realistic and efficient local AI development experience, especially for non-AI workstations.\n\n#AI #Coding #Ollama #Aider #WSL2 #DeveloperTools\n\nSource: DEV",
+  "tweet": "Set up a local AI coding agent with Ollama and Aider on Windows + WSL2. Keep your code private and run LLMs entirely on your machine, even without a dedicated GPU. #AI #DeveloperTools #Ollama",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ollama.ai",
+  "source": "DEV",
+  "url": "https://dev.to/eleonorarocchi/setting-up-a-local-ai-coding-agent-with-ollama-and-aider-1jdi",
+  "image": "",
+  "orig_title": "Setting Up a Local AI Coding Agent with Ollama and Aider",
+  "cluster_urls": [
+   "https://dev.to/eleonorarocchi/setting-up-a-local-ai-coding-agent-with-ollama-and-aider-1jdi"
+  ],
+  "cluster_titles": [
+   "Setting Up a Local AI Coding Agent with Ollama and Aider"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260711-1948-0-set-up-a-local-ai-coding-agent-with-ollama-a.png",
+   "20260711-1948-0-set-up-a-local-ai-coding-agent-with-ollama-a-d1.png",
+   "20260711-1948-0-set-up-a-local-ai-coding-agent-with-ollama-a-d2.png"
+  ]
+ },
+ {
+  "topic": "samsung_gallery_onedrive_sync_ends",
+  "headline_marked": "[[Samsung Gallery to stop syncing with Microsoft OneDrive]] by end of September",
+  "headline": "Samsung Gallery to stop syncing with Microsoft OneDrive by end of September",
+  "summary": "The direct integration between Samsung's Gallery app and Microsoft OneDrive will be fully deprecated, requiring users to find alternative backup methods or use the OneDrive app directly.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Samsung and Microsoft are ending their direct cloud storage collaboration for Galaxy devices. By the end of September, the Samsung Gallery app will no longer sync photos and videos directly with Microsoft OneDrive.",
+   "This change means photos stored in OneDrive will cease to appear in the Gallery app, and sync-dependent features on Samsung TVs or smart appliances will no longer function. Users can still access their media directly from OneDrive.",
+   "Samsung has already begun phasing out the feature, with the OneDrive sync option disappearing from the Gallery app for new setups. Upcoming devices like the Galaxy Z Fold8 and Flip8 are expected to launch without this integration.",
+   "Users can still back up photos to OneDrive by downloading the dedicated Microsoft OneDrive app from the Play Store. Within the app, they can enable the Camera Backup option to continue syncing their media.",
+   "For those seeking alternatives, Google Photos remains an option, though users should be mindful of privacy policies. Other cloud storage services like Dropbox and Amazon also offer photo sync solutions.",
+   "More advanced users can consider self-hosting solutions like Immich for photo backups or Nextcloud for broader data control. These options require personal hardware like a NAS or home server."
+  ],
+  "caption": "Samsung Galaxy users, your photo backup routine is about to change. Direct sync between Samsung Gallery and Microsoft OneDrive ends September 30.\n\nSamsung and Microsoft are ending their direct cloud storage collaboration for Galaxy devices. By the end of September, the Samsung Gallery app will no longer sync photos and videos directly with Microsoft OneDrive.\n\nThis change means photos stored in OneDrive will cease to appear in the Gallery app, and sync-dependent features on Samsung TVs or smart appliances will no longer function. Users can still access their media directly from OneDrive.\n\nSamsung has already begun phasing out the feature, with the OneDrive sync option disappearing from the Gallery app for new setups. Upcoming devices like the Galaxy Z Fold8 and Flip8 are expected to launch without this integration.\n\nUsers can still back up photos to OneDrive by downloading the dedicated Microsoft OneDrive app from the Play Store. Within the app, they can enable the Camera Backup option to continue syncing their media.\n\nFor those seeking alternatives, Google Photos remains an option, though users should be mindful of privacy policies. Other cloud storage services like Dropbox and Amazon also offer photo sync solutions.\n\nMore advanced users can consider self-hosting solutions like Immich for photo backups or Nextcloud for broader data control. These options require personal hardware like a NAS or home server.\n\n#Samsung #OneDrive #CloudStorage #TechNews #Galaxy #PhotoBackup\n\nSource: Engadget",
+  "tweet": "Samsung Gallery will no longer sync directly with Microsoft OneDrive after September 30. Galaxy users, prepare to adjust your photo backup strategy or use the OneDrive app. #Samsung #OneDrive #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "samsung.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2211948/samsung-gallery-no-longer-syncing-microsoft-onedrive-september-2026/",
+  "image": "https://www.engadget.com/img/gallery/your-samsung-gallery-wont-be-able-to-sync-with-microsoft-onedrive-soon/l-intro-1783629483.jpg",
+  "orig_title": "Your Samsung Gallery won't be able to sync with Microsoft OneDrive soon",
+  "cluster_urls": [
+   "https://www.engadget.com/2211948/samsung-gallery-no-longer-syncing-microsoft-onedrive-september-2026/"
+  ],
+  "cluster_titles": [
+   "Your Samsung Gallery won't be able to sync with Microsoft OneDrive soon"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260711-1948-1-samsung-gallery-to-stop-syncing-with-microso.png",
+   "20260711-1948-1-samsung-gallery-to-stop-syncing-with-microso-d1.png",
+   "20260711-1948-1-samsung-gallery-to-stop-syncing-with-microso-d2.png"
+  ]
+ }
+]

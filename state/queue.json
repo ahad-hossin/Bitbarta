@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "open_source_scanner_catches_crypto_scammer",
+  "headline_marked": "[[Open-source scanner caught crypto scammer exposing keys]] during benchmark, neutralizing Tether phishing.",
+  "headline": "Open-source scanner caught crypto scammer exposing keys during benchmark, neutralizing Tether phishing.",
+  "summary": "A new open-source secret scanner, Sentinel, accidentally exposed a Tether phishing operation by finding the scammer's Firebase API keys hardcoded in a public GitHub repo, neutralizing the threat.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A newly developed open-source secret scanner named Sentinel, written in Go, accidentally uncovered and neutralized a Tether (USDT) phishing operation. This occurred during a routine benchmark scan of random, recently updated GitHub repositories, where Sentinel was designed to catch edge-case credentials.",
+   "Sentinel instantly flagged a critical severity finding: a fully exposed, hardcoded Firebase configuration object containing the API key, project ID, and messaging sender ID. This was found in a suspicious public repository, indicating a major security oversight by the scammer.",
+   "The linked Vercel deployment revealed a phishing site impersonating Tether, the world's largest stablecoin, complete with official logos and a login prompt. However, due to the scammer blindly copying a generic template, the authentication options were consumer-focused, not crypto-wallet related.",
+   "The author intervened by opening a public GitHub Issue on the scammer's repository, titled 'If you want to scam someone, you must first learn how to protect yourself.' By publicly highlighting the exposed keys, the Firebase project was flagged, effectively neutralizing the phishing attempt before it could claim victims.",
+   "This incident underscores the critical importance of robust secret scanning in modern software development. Sentinel, which installs as a pre-commit hook, offers a three-tier detection pipeline designed for speed and near-zero false positives to prevent accidental credential exposure."
+  ],
+  "caption": "A new open-source secret scanner accidentally neutralized a crypto phishing scam. The scammer exposed their own Firebase API keys in a public GitHub repository.\n\nA newly developed open-source secret scanner named Sentinel, written in Go, accidentally uncovered and neutralized a Tether (USDT) phishing operation. This occurred during a routine benchmark scan of random, recently updated GitHub repositories, where Sentinel was designed to catch edge-case credentials.\n\nSentinel instantly flagged a critical severity finding: a fully exposed, hardcoded Firebase configuration object containing the API key, project ID, and messaging sender ID. This was found in a suspicious public repository, indicating a major security oversight by the scammer.\n\nThe linked Vercel deployment revealed a phishing site impersonating Tether, the world's largest stablecoin, complete with official logos and a login prompt. However, due to the scammer blindly copying a generic template, the authentication options were consumer-focused, not crypto-wallet related.\n\nThe author intervened by opening a public GitHub Issue on the scammer's repository, titled 'If you want to scam someone, you must first learn how to protect yourself.' By publicly highlighting the exposed keys, the Firebase project was flagged, effectively neutralizing the phishing attempt before it could claim victims.\n\nThis incident underscores the critical importance of robust secret scanning in modern software development. Sentinel, which installs as a pre-commit hook, offers a three-tier detection pipeline designed for speed and near-zero false positives to prevent accidental credential exposure.\n\n#Tech #Security #Crypto #OpenSource #Phishing #GitHub\n\nSource: DEV",
+  "tweet": "An open-source secret scanner, Sentinel, accidentally neutralized a Tether phishing scam! The scammer exposed their own Firebase API keys in a public GitHub repo, leading to the project being flagged. A stark reminder for developers. #Security #OpenSource #Crypto",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/muslimkh09/how-my-open-source-scanner-caught-a-crypto-scammer-exposing-their-own-keys-2pkl",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fm95cyzha4p1anz5xqmun.jpg",
+  "orig_title": "How My Open-Source Scanner Caught a Crypto Scammer Exposing Their Own Keys",
+  "cluster_urls": [
+   "https://dev.to/muslimkh09/how-my-open-source-scanner-caught-a-crypto-scammer-exposing-their-own-keys-2pkl"
+  ],
+  "cluster_titles": [
+   "How My Open-Source Scanner Caught a Crypto Scammer Exposing Their Own Keys"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260711-1307-0-open-source-scanner-caught-crypto-scammer-ex.png",
+   "20260711-1307-0-open-source-scanner-caught-crypto-scammer-ex-d1.png",
+   "20260711-1307-0-open-source-scanner-caught-crypto-scammer-ex-d2.png",
+   "20260711-1307-0-open-source-scanner-caught-crypto-scammer-ex-d3.png"
+  ]
+ },
+ {
+  "topic": "ransomware_negotiator_betrayal",
+  "headline_marked": "[[Ransomware negotiator worked for attackers]], sentenced to 6 years in prison",
+  "headline": "Ransomware negotiator worked for attackers, sentenced to 6 years in prison",
+  "summary": "Angelo Martino colluded with BlackCat scammers, inflating ransoms for five victims who paid over $75 million, while he received millions in cryptocurrency.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Angelo Martino, a former ransomware negotiator, was sentenced to 70 months (nearly six years) in prison yesterday. He colluded with BlackCat scammers to extort the very victims he was hired to protect.",
+   "Martino's job at DigitalMint was to negotiate with cybercriminals to mitigate ransoms. Instead, he provided confidential negotiation information to BlackCat to maximize payments, receiving a portion of the inflated ransoms.",
+   "Five of Martino's clients paid over $75 million in ransoms, with millions likely inflated due to his actions. He also secured an affiliate account with ALPHV BlackCat and deployed ransomware against five other victims, extorting $1.2 million from one.",
+   "Martino pleaded guilty and cooperated, leading to the indictment and conviction of co-defendants Kevin Martin and Ryan Goldberg, who were each sentenced to four years. To compensate victims, Martino must forfeit property and pay 10% of his salary after release.",
+   "The FBI seized some cryptocurrency from Martino, though he had already used much of it to purchase two houses, a boat, and several vehicles. BlackCat, also known as ALPHV, is a notorious ransomware group that caused chaos, including taking down the Change Healthcare payment network."
+  ],
+  "caption": "A former ransomware negotiator was sentenced to 70 months in prison for colluding with BlackCat scammers. He inflated ransoms for clients, costing victims over $75 million.\n\nAngelo Martino, a former ransomware negotiator, was sentenced to 70 months (nearly six years) in prison yesterday. He colluded with BlackCat scammers to extort the very victims he was hired to protect.\n\nMartino's job at DigitalMint was to negotiate with cybercriminals to mitigate ransoms. Instead, he provided confidential negotiation information to BlackCat to maximize payments, receiving a portion of the inflated ransoms.\n\nFive of Martino's clients paid over $75 million in ransoms, with millions likely inflated due to his actions. He also secured an affiliate account with ALPHV BlackCat and deployed ransomware against five other victims, extorting $1.2 million from one.\n\nMartino pleaded guilty and cooperated, leading to the indictment and conviction of co-defendants Kevin Martin and Ryan Goldberg, who were each sentenced to four years. To compensate victims, Martino must forfeit property and pay 10% of his salary after release.\n\nThe FBI seized some cryptocurrency from Martino, though he had already used much of it to purchase two houses, a boat, and several vehicles. BlackCat, also known as ALPHV, is a notorious ransomware group that caused chaos, including taking down the Change Healthcare payment network.\n\n#CyberSecurity #Ransomware #BlackCat #Cybercrime #SecurityBreach #TechNews\n\nSource: Ars Technica",
+  "tweet": "Ransomware negotiator Angelo Martino sentenced to 70 months for colluding with BlackCat, inflating victim ransoms by millions. He helped extort over $75M from clients. A stark warning against insider threats. #CyberSecurity #Ransomware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Ars Technica",
+  "url": "https://arstechnica.com/tech-policy/2026/07/ransomware-negotiator-helped-attackers-extort-his-own-clients-gets-6-year-sentence/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/security-illustration-skull-1152x648-1783710141.jpg",
+  "orig_title": "Ransomware negotiator hired to represent victims was working for the attackers",
+  "cluster_urls": [
+   "https://arstechnica.com/tech-policy/2026/07/ransomware-negotiator-helped-attackers-extort-his-own-clients-gets-6-year-sentence/"
+  ],
+  "cluster_titles": [
+   "Ransomware negotiator hired to represent victims was working for the attackers"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260711-1307-1-ransomware-negotiator-worked-for-attackers-s.png",
+   "20260711-1307-1-ransomware-negotiator-worked-for-attackers-s-d1.png",
+   "20260711-1307-1-ransomware-negotiator-worked-for-attackers-s-d2.png"
+  ]
+ }
+]

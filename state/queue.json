@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_agent_runtime_checks",
+  "headline_marked": "[[AI Agents Need Runtime State Checks]], Not Just Better Prompts",
+  "headline": "AI Agents Need Runtime State Checks, Not Just Better Prompts",
+  "summary": "The article highlights that reliable AI agents require robust runtime state management, not just improved prompts. Production agent engineering focuses on fixing state-management issues like lost messages, stale statuses, and preventing fabricated in-transcrip",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Claude Code's recent changelog reveals that production AI agent engineering prioritizes state-management fixes over model benchmarks. Issues addressed include silently lost messages, incorrect status displays for background agents, and agents flipping states without clear reasons.",
+   "A critical safety addition prevents AI agents from acting on fabricated in-transcript approvals by explicitly stating when no human input occurred. These fixes highlight that agent reliability stems from correct runtime behavior, not solely prompt quality.",
+   "AI agents function as state machines, managing current steps, task statuses, previous messages, tool results, and user input. Errors in this internal state can lead to incorrect agent behavior, even if the underlying language model's response is good.",
+   "A common and dangerous failure mode for agents is unchecked continuation, where they keep operating without clear stop conditions. This can occur due to stale task statuses, unclear stop conditions, or max-turn limits that don't properly halt the runtime.",
+   "Such unchecked continuations can lead to unnecessary provider calls, increasing costs for sensitive agents. The runtime should proactively prevent these incorrect continuations before they happen, treating every provider call as an admission decision.",
+   "A safer pattern involves checking the agent's runtime state before every provider call, verifying conditions like user input, real approval, step limits, and budget. This ensures the agent only proceeds when all critical conditions are met.",
+   "The issue of approvals is particularly important; text that looks like permission in a transcript does not equate to human approval. Production systems require explicit runtime events for approval, not just generated strings.",
+   "Implementing structured approval events, checked by the runtime, prevents models from generating operational permissions. Similarly, turn limits should produce clear stop reasons, not vague failures, to ensure predictable agent behavior."
+  ],
+  "caption": "AI agents aren't just about prompts. Their reliability hinges on robust runtime state checks, preventing costly errors and ensuring safe operations.\n\nClaude Code's recent changelog reveals that production AI agent engineering prioritizes state-management fixes over model benchmarks. Issues addressed include silently lost messages, incorrect status displays for background agents, and agents flipping states without clear reasons.\n\nA critical safety addition prevents AI agents from acting on fabricated in-transcript approvals by explicitly stating when no human input occurred. These fixes highlight that agent reliability stems from correct runtime behavior, not solely prompt quality.\n\nAI agents function as state machines, managing current steps, task statuses, previous messages, tool results, and user input. Errors in this internal state can lead to incorrect agent behavior, even if the underlying language model's response is good.\n\nA common and dangerous failure mode for agents is unchecked continuation, where they keep operating without clear stop conditions. This can occur due to stale task statuses, unclear stop conditions, or max-turn limits that don't properly halt the runtime.\n\nSuch unchecked continuations can lead to unnecessary provider calls, increasing costs for sensitive agents. The runtime should proactively prevent these incorrect continuations before they happen, treating every provider call as an admission decision.\n\nA safer pattern involves checking the agent's runtime state before every provider call, verifying conditions like user input, real approval, step limits, and budget. This ensures the agent only proceeds when all critical conditions are met.\n\nThe issue of approvals is particularly important; text that looks like permission in a transcript does not equate to human approval. Production systems require explicit runtime events for approval, not just generated strings.\n\n#AIAgents #SoftwareEngineering #Runtime #AI #Developer #Tech\n\nSource: DEV",
+  "tweet": "AI agents need more than just better prompts. Recent updates show production engineering focuses on runtime state checks to prevent lost messages, stale statuses, and fake approvals. This is key for reliable, safe AI. #AIAgents #SoftwareEngineering #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/assili_salim_e3c07f9954de/ai-agents-need-runtime-state-checks-not-just-better-prompts-5cdp",
+  "image": "",
+  "orig_title": "AI Agents Need Runtime State Checks, Not Just Better Prompts",
+  "cluster_urls": [
+   "https://dev.to/assili_salim_e3c07f9954de/ai-agents-need-runtime-state-checks-not-just-better-prompts-5cdp"
+  ],
+  "cluster_titles": [
+   "AI Agents Need Runtime State Checks, Not Just Better Prompts"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260711-1107-0-ai-agents-need-runtime-state-checks-not-just.png",
+   "20260711-1107-0-ai-agents-need-runtime-state-checks-not-just-d1.png",
+   "20260711-1107-0-ai-agents-need-runtime-state-checks-not-just-d2.png",
+   "20260711-1107-0-ai-agents-need-runtime-state-checks-not-just-d3.png"
+  ]
+ },
+ {
+  "topic": "verifiable_ai_contribution_privacy",
+  "headline_marked": "[[Verifiable Contribution Without Global Deanonymization]]: WebAZ explores privacy-preserving attribution",
+  "headline": "Verifiable Contribution Without Global Deanonymization: WebAZ explores privacy-preserving attribution",
+  "summary": "As AI streamlines public work, ensuring verifiable contributions without creating a global identity trap is crucial. WebAZ, an open-source experiment, proposes a protocol for attestations that preserve pseudonymity.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI is changing the cost structure of public work, making tasks like coding, summaries, and translations easier to produce. This shifts the focus from who can create an artifact to who actually participated, what evidence exists, and what responsibility they accepted.",
+   "This shift presents a core design question for WebAZ: how can a protocol verify real participation for humans and future AI agents without turning contribution records into a global identity trap? A naive approach of binding every action to a single strong identity, while tempting for attribution, is dangerous.",
+   "Vitalik Buterin's work on ZK-wrapped identity highlights that even with zero-knowledge proofs, a one-person-one-identity system can reduce practical pseudonymity and create coercion risks. AI exacerbates this by making writing style, timing, and social graphs easier to correlate.",
+   "If the future of work is agent-assisted, many valuable actions will occur through mediated workflows. If every record becomes globally linkable by default, the contribution layer risks becoming surveillance. The alternative is to attest actions, not souls, asking \"Did this action happen, under what rules, with what evidence, and who accepted accountability for it?\"",
+   "A useful protocol for AI-era participation needs five properties: contextual attestations, selective disclosure, pluralistic identity, human-accountable delegation, and bounded economic state. These principles aim to ensure attribution and accountability while protecting user privacy and avoiding universal identity systems. WebAZ is an open-source experiment exploring these concepts."
+  ],
+  "caption": "AI makes public work easier, but verifying contributions without sacrificing privacy is a critical challenge. WebAZ proposes a new protocol to attest actions, not identities.\n\nAI is changing the cost structure of public work, making tasks like coding, summaries, and translations easier to produce. This shifts the focus from who can create an artifact to who actually participated, what evidence exists, and what responsibility they accepted.\n\nThis shift presents a core design question for WebAZ: how can a protocol verify real participation for humans and future AI agents without turning contribution records into a global identity trap? A naive approach of binding every action to a single strong identity, while tempting for attribution, is dangerous.\n\nVitalik Buterin's work on ZK-wrapped identity highlights that even with zero-knowledge proofs, a one-person-one-identity system can reduce practical pseudonymity and create coercion risks. AI exacerbates this by making writing style, timing, and social graphs easier to correlate.\n\nIf the future of work is agent-assisted, many valuable actions will occur through mediated workflows. If every record becomes globally linkable by default, the contribution layer risks becoming surveillance. The alternative is to attest actions, not souls, asking \"Did this action happen, under what rules, with what evidence, and who accepted accountability for it?\"\n\nA useful protocol for AI-era participation needs five properties: contextual attestations, selective disclosure, pluralistic identity, human-accountable delegation, and bounded economic state. These principles aim to ensure attribution and accountability while protecting user privacy and avoiding universal identity systems. WebAZ is an open-source experiment exploring these concepts.\n\n#AI #Privacy #Web3 #OpenSource #Decentralization #Tech\n\nSource: DEV",
+  "tweet": "AI is changing public work, making verifiable contributions crucial. But how do we do it without global deanonymization? WebAZ explores a protocol for attestations that protect privacy while ensuring accountability. #AI #Privacy #Web3",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/seasonkoh/verifiable-contribution-without-global-deanonymization-kkj",
+  "image": "",
+  "orig_title": "Verifiable Contribution Without Global Deanonymization",
+  "cluster_urls": [
+   "https://dev.to/seasonkoh/verifiable-contribution-without-global-deanonymization-kkj"
+  ],
+  "cluster_titles": [
+   "Verifiable Contribution Without Global Deanonymization"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260711-1107-1-verifiable-contribution-without-global-deano.png",
+   "20260711-1107-1-verifiable-contribution-without-global-deano-d1.png",
+   "20260711-1107-1-verifiable-contribution-without-global-deano-d2.png",
+   "20260711-1107-1-verifiable-contribution-without-global-deano-d3.png"
+  ]
+ }
+]

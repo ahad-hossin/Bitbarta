@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "topic": "holepunch_abandons_nodejs_for_bare",
+  "headline_marked": "[[Holepunch Threw Away Node.js]] to Build 'Bare' for True P2P Applications",
+  "headline": "Holepunch Threw Away Node.js to Build 'Bare' for True P2P Applications",
+  "summary": "Holepunch found Node.js unsuitable for decentralized peer-to-peer apps due to its server-centric architecture. They created Bare, a minimalist JavaScript runtime designed for true P2P, mobile, and IoT embedding.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "When developing Pear, a decentralized peer-to-peer application runtime, the Holepunch team initially chose Node.js. Despite Node's massive ecosystem and V8 engine speed, they encountered fundamental architectural roadblocks.",
+   "Node.js was built for data centers, carrying legacy APIs tightly coupled to centralized client-server web architecture. This built-in bloat became dead weight for a purely peer-to-peer, serverless network.",
+   "In response, Holepunch stripped Node.js down, discarding its bloated standard library to build Bare. Bare is a minimalist JavaScript runtime specifically designed for desktop, mobile, and IoT embedding.",
+   "Bare retains the best parts of Node's foundational architecture but aggressively decouples the JavaScript engine from system APIs. This is achieved via `libjs`, a C-API wrapper that allows developers to swap out engines.",
+   "While Bare defaults to V8 for desktop performance, `libjs` enables switching to lightweight engines like QuickJS or JerryScript for constrained devices. This flexibility is crucial for diverse P2P deployments.",
+   "Bare intentionally ships with almost nothing; there is no http, net, or crypto built-in. This is because standard HTTP is considered an anti-pattern in true peer-to-peer architecture, relying on centralized elements like DNS and Certificate Authorities.",
+   "Instead of a heavy standard library, Bare provides only a module system and a native addon system. All other features are imported a-la-carte, allowing for P2P network connections using cryptographic keys via modules like Holepunch's `hyperdht`.",
+   "Bare's reduced memory footprint makes it mobile-first, unlike Node.js, which is notoriously difficult to embed cleanly into mobile applications. It avoids massive binaries, battery drain, and messy IPC bridges.",
+   "Through Bare Kit, developers can run \"worklets\"—isolated Bare threads—directly inside native mobile frameworks like SwiftUI or Android Services. This offloads heavy P2P tasks to efficient background threads, preventing UI freezes.",
+   "Bare challenges the assumption that backend JavaScript inherently means server logic. By shedding Web2's data center legacy, Holepunch created a runtime for the edge, fostering resilient systems immune to government blocks or cloud provider crashes."
+  ],
+  "caption": "Holepunch ditched Node.js, the 'king of JavaScript outside the browser,' to build 'Bare'—a new runtime specifically for decentralized peer-to-peer applications.\n\nWhen developing Pear, a decentralized peer-to-peer application runtime, the Holepunch team initially chose Node.js. Despite Node's massive ecosystem and V8 engine speed, they encountered fundamental architectural roadblocks.\n\nNode.js was built for data centers, carrying legacy APIs tightly coupled to centralized client-server web architecture. This built-in bloat became dead weight for a purely peer-to-peer, serverless network.\n\nIn response, Holepunch stripped Node.js down, discarding its bloated standard library to build Bare. Bare is a minimalist JavaScript runtime specifically designed for desktop, mobile, and IoT embedding.\n\nBare retains the best parts of Node's foundational architecture but aggressively decouples the JavaScript engine from system APIs. This is achieved via `libjs`, a C-API wrapper that allows developers to swap out engines.\n\nWhile Bare defaults to V8 for desktop performance, `libjs` enables switching to lightweight engines like QuickJS or JerryScript for constrained devices. This flexibility is crucial for diverse P2P deployments.\n\nBare intentionally ships with almost nothing; there is no http, net, or crypto built-in. This is because standard HTTP is considered an anti-pattern in true peer-to-peer architecture, relying on centralized elements like DNS and Certificate Authorities.\n\nInstead of a heavy standard library, Bare provides only a module system and a native addon system. All other features are imported a-la-carte, allowing for P2P network connections using cryptographic keys via modules like Holepunch's `hyperdht`.\n\nBare's reduced memory footprint makes it mobile-first, unlike Node.js, which is notoriously difficult to embed cleanly into mobile applications. It avoids massive binaries, battery drain, and messy IPC bridges.\n\n#BareJS #P2P #Decentralized #JavaScript #NodeJS #DeveloperTools\n\nSource: DEV",
+  "tweet": "Holepunch abandoned Node.js for its P2P runtime, citing server-centric bloat. They built 'Bare,' a minimalist JavaScript runtime designed for true decentralized apps, mobile, and IoT. It strips Node to its core, enabling resilient, serverless networks. #BareJS #P2P #JavaScri",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "holepunch.com",
+  "source": "DEV",
+  "url": "https://dev.to/aniket_misra_e47d1564ab7b/kill-the-server-why-holepunch-threw-away-nodejs-and-built-bare-3gdi",
+  "image": "",
+  "orig_title": "Kill the Server: Why Holepunch Threw Away Node.js and Built 'Bare'",
+  "cluster_urls": [
+   "https://dev.to/aniket_misra_e47d1564ab7b/kill-the-server-why-holepunch-threw-away-nodejs-and-built-bare-3gdi"
+  ],
+  "cluster_titles": [
+   "Kill the Server: Why Holepunch Threw Away Node.js and Built 'Bare'"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260711-0935-0-holepunch-threw-away-node-js-to-build-bare-f.png",
+   "20260711-0935-0-holepunch-threw-away-node-js-to-build-bare-f-d1.png",
+   "20260711-0935-0-holepunch-threw-away-node-js-to-build-bare-f-d2.png",
+   "20260711-0935-0-holepunch-threw-away-node-js-to-build-bare-f-d3.png",
+   "20260711-0935-0-holepunch-threw-away-node-js-to-build-bare-f-d4.png"
+  ]
+ },
+ {
+  "topic": "open_source_browser_beats_cloudflare_bots",
+  "headline_marked": "[[Open-source stealth browser beats Cloudflare's bot detection]], bypassing 'Just a moment' screens",
+  "headline": "Open-source stealth browser beats Cloudflare's bot detection, bypassing 'Just a moment' screens",
+  "summary": "A new open-source browser, Fortress, successfully navigates bot-protected sites, preventing AI agents from mistakenly summarizing block pages as real content. It delivers actual data from major platforms.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Cloudflare blocks AI crawlers by default on new domains, turning away hundreds of billions of bot requests. However, AI agents often read these block pages, like Cloudflare's \"Just a moment\" screen, and confidently summarize them as real content, leading to incorrect data.",
+   "This issue is hard to detect because standard fetch requests (e.g., fetch(), httpx.get()) often return a 200 or 403 status with the block page's HTML body, which looks like a successful request to retry logic and language models.",
+   "To address this, developers created Fortress, an open-source stealth browser designed to bypass these bot detection systems and retrieve actual page content. It aims to provide accurate data for tasks like recruiting, sales research, and lead generation.",
+   "Tests show that a naive fetch (like curl with a desktop user-agent) failed to get real content from any of eight popular bot-protected targets, returning summarizable block pages without any signal of failure.",
+   "Fortress, the open-source build, successfully navigated five of these eight targets, including Cloudflare, CloudFront, and PerimeterX. It extracted clean, structured data from sites like Indeed, Zillow, and StockX.",
+   "For example, a naive fetch on Indeed.com returns 27KB of \"Just a moment,\" while Fortress retrieves actual job listings with full descriptions and salary ranges. Similarly, on Zillow.com, Fortress provides 878 live listings instead of a 403 \"Access denied\" page.",
+   "The browser uses multiple techniques, including patiently waiting through JavaScript challenges for Cloudflare and PerimeterX, rendering entire pages for SPA/JS-gated content, and monitoring private API traffic for sites like StockX to get real JSON data.",
+   "While effective against many systems, the open-source Fortress build currently does not clear DataDome and Amazon's click-walls, which represent a more advanced level of bot protection."
+  ],
+  "caption": "AI agents are confidently giving you wrong answers because they're summarizing bot block pages, not real content. An open-source stealth browser just beat Cloudflare's detection.\n\nCloudflare blocks AI crawlers by default on new domains, turning away hundreds of billions of bot requests. However, AI agents often read these block pages, like Cloudflare's \"Just a moment\" screen, and confidently summarize them as real content, leading to incorrect data.\n\nThis issue is hard to detect because standard fetch requests (e.g., fetch(), httpx.get()) often return a 200 or 403 status with the block page's HTML body, which looks like a successful request to retry logic and language models.\n\nTo address this, developers created Fortress, an open-source stealth browser designed to bypass these bot detection systems and retrieve actual page content. It aims to provide accurate data for tasks like recruiting, sales research, and lead generation.\n\nTests show that a naive fetch (like curl with a desktop user-agent) failed to get real content from any of eight popular bot-protected targets, returning summarizable block pages without any signal of failure.\n\nFortress, the open-source build, successfully navigated five of these eight targets, including Cloudflare, CloudFront, and PerimeterX. It extracted clean, structured data from sites like Indeed, Zillow, and StockX.\n\nFor example, a naive fetch on Indeed.com returns 27KB of \"Just a moment,\" while Fortress retrieves actual job listings with full descriptions and salary ranges. Similarly, on Zillow.com, Fortress provides 878 live listings instead of a 403 \"Access denied\" page.\n\nThe browser uses multiple techniques, including patiently waiting through JavaScript challenges for Cloudflare and PerimeterX, rendering entire pages for SPA/JS-gated content, and monitoring private API traffic for sites like StockX to get real JSON data.\n\n#WebScraping #BotDetection #OpenSource #Cloudflare #AI #Tech\n\nSource: Hacker News",
+  "tweet": "AI agents are giving wrong answers, summarizing bot block pages instead of real content. A new open-source stealth browser, Fortress, just beat Cloudflare's detection to get actual data. #WebScraping #OpenSource #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://tilion.dev/blog/cloudflare-blocks-agents",
+  "image": "",
+  "orig_title": "Show HN: We beat Cloudflare's bot detection (open-source stealth browser)",
+  "cluster_urls": [
+   "https://tilion.dev/blog/cloudflare-blocks-agents"
+  ],
+  "cluster_titles": [
+   "Show HN: We beat Cloudflare's bot detection (open-source stealth browser)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260711-0935-1-open-source-stealth-browser-beats-cloudflare.png",
+   "20260711-0935-1-open-source-stealth-browser-beats-cloudflare-d1.png",
+   "20260711-0935-1-open-source-stealth-browser-beats-cloudflare-d2.png",
+   "20260711-0935-1-open-source-stealth-browser-beats-cloudflare-d3.png"
+  ]
+ }
+]

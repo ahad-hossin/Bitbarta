@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "solo_dev_gaming_stackoverflow_launch",
+  "headline_marked": "[[Solo dev builds Stack Overflow for gamers]] using Next.js, Prisma, and Meilisearch for search",
+  "headline": "Solo dev builds Stack Overflow for gamers using Next.js, Prisma, and Meilisearch for search",
+  "summary": "LootQuery aims to solve the problem of unsearchable gaming help found in forums and videos, providing permanent, searchable Q&A for PC gaming issues.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A solo developer has launched LootQuery, a Q&A platform designed like Stack Overflow specifically for PC gaming problems. The goal is to provide permanent, searchable solutions to common issues, unlike fleeting Reddit threads or YouTube videos.",
+   "The core tech stack includes Next.js (App Router) for server-rendered pages and SEO, Prisma for database schema management, and PostgreSQL for relational data. This combination was chosen for its reliability and ease of maintenance.",
+   "For search functionality, Meilisearch was selected over PostgreSQL's full-text search due to its superior typo-tolerance and instant-as-you-type ranking. This was a critical decision for user experience on a Q&A site.",
+   "The entire platform is self-hosted using Docker Compose and Caddy, running on a single VPS. This setup provides predictable costs, avoiding per-request pricing surprises common with managed platforms.",
+   "Challenges included handling duplicate questions, where different phrasing describes the same bug, and the \"cold-start problem\" of a new Q&A site. The developer addressed this by seeding the site with genuinely useful, solved problems."
+  ],
+  "caption": "A solo developer built LootQuery, a Stack Overflow-like Q&A site for PC gamers. It tackles the problem of finding reliable, searchable solutions to common gaming issues.\n\nA solo developer has launched LootQuery, a Q&A platform designed like Stack Overflow specifically for PC gaming problems. The goal is to provide permanent, searchable solutions to common issues, unlike fleeting Reddit threads or YouTube videos.\n\nThe core tech stack includes Next.js (App Router) for server-rendered pages and SEO, Prisma for database schema management, and PostgreSQL for relational data. This combination was chosen for its reliability and ease of maintenance.\n\nFor search functionality, Meilisearch was selected over PostgreSQL's full-text search due to its superior typo-tolerance and instant-as-you-type ranking. This was a critical decision for user experience on a Q&A site.\n\nThe entire platform is self-hosted using Docker Compose and Caddy, running on a single VPS. This setup provides predictable costs, avoiding per-request pricing surprises common with managed platforms.\n\nChallenges included handling duplicate questions, where different phrasing describes the same bug, and the \"cold-start problem\" of a new Q&A site. The developer addressed this by seeding the site with genuinely useful, solved problems.\n\n#SoloDev #WebDev #GamingTech #StackOverflow #LootQuery #TechBuild\n\nSource: DEV",
+  "tweet": "Solo dev launches LootQuery, a Stack Overflow for gamers! Built with Next.js, Prisma, PostgreSQL, and Meilisearch to provide permanent, searchable solutions for PC gaming problems. #WebDev #GamingTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "lootquery.com",
+  "source": "DEV",
+  "url": "https://dev.to/likable03/i-built-a-stack-overflow-for-gamers-as-a-solo-dev-heres-the-stack-and-why-33dp",
+  "image": "",
+  "orig_title": "I built a Stack Overflow for gamers as a solo dev — here’s the stack and why",
+  "cluster_urls": [
+   "https://dev.to/likable03/i-built-a-stack-overflow-for-gamers-as-a-solo-dev-heres-the-stack-and-why-33dp"
+  ],
+  "cluster_titles": [
+   "I built a Stack Overflow for gamers as a solo dev — here’s the stack and why"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260712-1107-0-solo-dev-builds-stack-overflow-for-gamers-us.png",
+   "20260712-1107-0-solo-dev-builds-stack-overflow-for-gamers-us-d1.png",
+   "20260712-1107-0-solo-dev-builds-stack-overflow-for-gamers-us-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_generated_sql_validation_tool",
+  "headline_marked": "[[Sqlsure performs deterministic semantic checks]] for AI-generated SQL in 0.1ms",
+  "headline": "Sqlsure performs deterministic semantic checks for AI-generated SQL in 0.1ms",
+  "summary": "This new tool catches silently wrong SQL queries, like double-counting or exposed patient IDs, that databases and linters miss. It provides machine-actionable fixes for AI agents.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Sqlsure is a new semantic inspector for SQL designed to catch errors that traditional database systems, linters, and even LLMs reviewing their own SQL often miss. It targets issues like fan-out double-counting, additivity violations, wrong join keys, and policy breaches before a query executes.",
+   "The tool operates deterministically and rapidly, completing checks in just 0.1 milliseconds. Benchmarking against 2,568 expert-written queries from text-to-SQL models yielded 45 flags with zero false alarms, including identifying an 8x error in a BIRD dev gold answer.",
+   "Sqlsure integrates with existing team declarations like dbt unique tests and relationship tests, converting them into enforceable semantics without requiring a new language or manual model maintenance. Rules are dictionary lookups, ensuring consistent verdicts offline.",
+   "Every rejection from Sqlsure includes a machine-actionable fix, enabling AI agents to self-repair through a draft-check-fix-execute loop. In benchmarks, applying these fixes verbatim resulted in a passing query 10 out of 10 times.",
+   "The tool can be deployed as an MCP server for AI agent inspection, embedded as a library within text-to-SQL products, or used as a semantic evaluation metric. It honestly reports \"can't verify\" when uncertain, a key feature for reliability.",
+   "It supports various data sources today, including dbt manifest.json/schema.yml, plain PK/FK declarations, and can introspect live databases to build rulebooks from catalogs like SQLite PRAGMAs or information_schema. Loaders for OSI and WrenAI MDL are also in development."
+  ],
+  "caption": "AI-generated SQL can be silently wrong, leading to double-counted revenue or exposed patient data. Sqlsure catches these critical errors in 0.1ms.\n\nSqlsure is a new semantic inspector for SQL designed to catch errors that traditional database systems, linters, and even LLMs reviewing their own SQL often miss. It targets issues like fan-out double-counting, additivity violations, wrong join keys, and policy breaches before a query executes.\n\nThe tool operates deterministically and rapidly, completing checks in just 0.1 milliseconds. Benchmarking against 2,568 expert-written queries from text-to-SQL models yielded 45 flags with zero false alarms, including identifying an 8x error in a BIRD dev gold answer.\n\nSqlsure integrates with existing team declarations like dbt unique tests and relationship tests, converting them into enforceable semantics without requiring a new language or manual model maintenance. Rules are dictionary lookups, ensuring consistent verdicts offline.\n\nEvery rejection from Sqlsure includes a machine-actionable fix, enabling AI agents to self-repair through a draft-check-fix-execute loop. In benchmarks, applying these fixes verbatim resulted in a passing query 10 out of 10 times.\n\nThe tool can be deployed as an MCP server for AI agent inspection, embedded as a library within text-to-SQL products, or used as a semantic evaluation metric. It honestly reports \"can't verify\" when uncertain, a key feature for reliability.\n\nIt supports various data sources today, including dbt manifest.json/schema.yml, plain PK/FK declarations, and can introspect live databases to build rulebooks from catalogs like SQLite PRAGMAs or information_schema. Loaders for OSI and WrenAI MDL are also in development.\n\n#SQL #AI #DeveloperTools #DataQuality #Software #OpenSource\n\nSource: Hacker News",
+  "tweet": "AI-generated SQL can be silently wrong, causing critical data errors. Sqlsure performs deterministic semantic checks in 0.1ms, catching double-counting & data policy breaches before queries run. It even provides machine-actionable fixes for AI agents. #SQL #AI #DeveloperTool",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/sqlsure/sqlsure",
+  "image": "",
+  "orig_title": "Show HN: Sqlsure – deterministic semantic checks for AI-generated SQL",
+  "cluster_urls": [
+   "https://github.com/sqlsure/sqlsure"
+  ],
+  "cluster_titles": [
+   "Show HN: Sqlsure – deterministic semantic checks for AI-generated SQL"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260712-1107-1-sqlsure-performs-deterministic-semantic-chec.png",
+   "20260712-1107-1-sqlsure-performs-deterministic-semantic-chec-d1.png",
+   "20260712-1107-1-sqlsure-performs-deterministic-semantic-chec-d2.png",
+   "20260712-1107-1-sqlsure-performs-deterministic-semantic-chec-d3.png"
+  ]
+ }
+]

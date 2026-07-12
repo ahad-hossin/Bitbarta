@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "devs build weekend passion projects with ai",
+  "headline_marked": "[[Boppi turns moments]] into personalized songs using Google's Gemini",
+  "headline": "Boppi turns moments into personalized songs using Google's Gemini",
+  "summary": "This new app uses AI to analyze photos and captions, then composes short musical 'Bops' based on the mood.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Boppi is a new app that transforms everyday moments into short, personalized songs called 'Bops'. Users upload a photo and add a caption, and the app's AI analyzes the content and mood to create a unique musical piece.",
+   "The app leverages Google's Gemini AI to understand the feeling behind a moment, whether it's a good cup of coffee, coding in the rain, or a sunset. Gemini then generates a composition plan with melody, bass, and rhythm.",
+   "Strudel, a browser-based music engine, takes Gemini's plan and turns it into an audible song. This process allows for real-time song construction, with users able to see and hear the layers as they are added.",
+   "Boppi offers both solo and collaborative modes. In solo mode, one moment becomes a personal song. In group mode, up to four people can contribute moments to create a single, coherent composition, fostering a collaborative creative memory.",
+   "The app was built using Next.js, Bun, Convex, Gemini, Strudel, and Vercel. The developer aimed for a simple, immediate experience, focusing on capturing the essence of a moment rather than creating complex, professional tracks."
+  ],
+  "caption": "Turn your favorite moments into music! 🎵 Boppi uses Google's Gemini AI to compose personalized songs from your photos and captions.\n\nBoppi is a new app that transforms everyday moments into short, personalized songs called 'Bops'. Users upload a photo and add a caption, and the app's AI analyzes the content and mood to create a unique musical piece.\n\nThe app leverages Google's Gemini AI to understand the feeling behind a moment, whether it's a good cup of coffee, coding in the rain, or a sunset. Gemini then generates a composition plan with melody, bass, and rhythm.\n\nStrudel, a browser-based music engine, takes Gemini's plan and turns it into an audible song. This process allows for real-time song construction, with users able to see and hear the layers as they are added.\n\nBoppi offers both solo and collaborative modes. In solo mode, one moment becomes a personal song. In group mode, up to four people can contribute moments to create a single, coherent composition, fostering a collaborative creative memory.\n\nThe app was built using Next.js, Bun, Convex, Gemini, Strudel, and Vercel. The developer aimed for a simple, immediate experience, focusing on capturing the essence of a moment rather than creating complex, professional tracks.\n\n#AI #Gemini #MusicTech #Boppi #GoogleAI\n\nSource: DEV",
+  "tweet": "Turn your favorite moments into music! 🎵 Boppi uses Google's Gemini AI to compose personalized songs from your photos and captions. #AI #Gemini #Boppi",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/paulcontr_/what-if-your-little-moments-became-a-song-i-built-boppi-with-gemini-strudel-23d",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fy6ggq9ylcbguwmt0isqg.png",
+  "orig_title": "What if your little moments became a song? I built Boppi with Gemini + Strudel 🎵",
+  "cluster_urls": [
+   "https://dev.to/paulcontr_/what-if-your-little-moments-became-a-song-i-built-boppi-with-gemini-strudel-23d",
+   "https://dev.to/bee6ix/i-built-talkndo-over-the-weekend-55nn"
+  ],
+  "cluster_titles": [
+   "What if your little moments became a song? I built Boppi with Gemini + Strudel 🎵",
+   "I Built TalknDo over the Weekend"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260712-1706-0-boppi-turns-moments-into-personalized-songs-.png",
+   "20260712-1706-0-boppi-turns-moments-into-personalized-songs--d1.png",
+   "20260712-1706-0-boppi-turns-moments-into-personalized-songs--d2.png"
+  ]
+ },
+ {
+  "topic": "testing ai understanding of codebases",
+  "headline_marked": "[[Testing AI code understanding]] is harder than it looks",
+  "headline": "Testing AI code understanding is harder than it looks",
+  "summary": "AI can explain code, but does it truly grasp its structure and dependencies? A developer explores the challenges of measuring AI comprehension.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Testing an AI's ability to understand a codebase is a complex challenge, distinct from simply evaluating its code-writing capabilities. True understanding involves knowing interdependencies, potential impacts of changes, and the 'hidden' aspects of a system, akin to a senior engineer's grasp.",
+   "Current methods fall short: asking an AI to explain a file only tests local comprehension, while querying architecture trivia can be answered by rote memorization. Even testing code changes with passing tests doesn't reveal subtle, production-breaking issues.",
+   "A proposed test involves asking an AI to identify all dependencies of a core model before a change. This pure structure question requires understanding edges, indirect relationships, and configurations, going beyond simple text analysis.",
+   "Experiments across Ruby codebases showed that a structural map significantly improved AI performance on larger applications, suggesting the AI was indeed tracking structural relationships rather than just repo size or luck.",
+   "However, the test has limitations: it focuses on one type of understanding (dependency tracking), may miss dynamic aspects like event buses, relies on a manually created 'ground truth' prone to human error, and doesn't assess judgment or prioritization of risks.",
+   "The author seeks community input on better tasks to test AI codebase understanding, methods for creating reliable ground truths, and experiences with AI confidently providing incorrect architectural insights.",
+   "The article suggests a practical experiment: run a tool called 'sense' on a known codebase, first without a structural map, then with one, and compare the AI's dependency findings to identify current blind spots."
+  ],
+  "caption": "Can AI truly understand your codebase? Testing for deep comprehension, not just code generation, is a major challenge for developers.\n\nTesting an AI's ability to understand a codebase is a complex challenge, distinct from simply evaluating its code-writing capabilities. True understanding involves knowing interdependencies, potential impacts of changes, and the 'hidden' aspects of a system, akin to a senior engineer's grasp.\n\nCurrent methods fall short: asking an AI to explain a file only tests local comprehension, while querying architecture trivia can be answered by rote memorization. Even testing code changes with passing tests doesn't reveal subtle, production-breaking issues.\n\nA proposed test involves asking an AI to identify all dependencies of a core model before a change. This pure structure question requires understanding edges, indirect relationships, and configurations, going beyond simple text analysis.\n\nExperiments across Ruby codebases showed that a structural map significantly improved AI performance on larger applications, suggesting the AI was indeed tracking structural relationships rather than just repo size or luck.\n\nHowever, the test has limitations: it focuses on one type of understanding (dependency tracking), may miss dynamic aspects like event buses, relies on a manually created 'ground truth' prone to human error, and doesn't assess judgment or prioritization of risks.\n\nThe author seeks community input on better tasks to test AI codebase understanding, methods for creating reliable ground truths, and experiences with AI confidently providing incorrect architectural insights.\n\nThe article suggests a practical experiment: run a tool called 'sense' on a known codebase, first without a structural map, then with one, and compare the AI's dependency findings to identify current blind spots.\n\nAI #CodeUnderstanding #SoftwareDevelopment #AItesting #DevOps\n\nSource: DEV",
+  "tweet": "How do you test if an AI *truly* understands your codebase? It's more than just good code generation. Exploring the challenges of measuring AI's grasp of complex software architecture. #AI #CodeUnderstanding #SoftwareDevelopment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/luuuc/how-would-you-test-whether-an-ai-understands-your-codebase-1c9l",
+  "image": "",
+  "orig_title": "How would you test whether an AI understands your codebase?",
+  "cluster_urls": [
+   "https://dev.to/luuuc/how-would-you-test-whether-an-ai-understands-your-codebase-1c9l"
+  ],
+  "cluster_titles": [
+   "How would you test whether an AI understands your codebase?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260712-1706-1-testing-ai-code-understanding-is-harder-than.png",
+   "20260712-1706-1-testing-ai-code-understanding-is-harder-than-d1.png",
+   "20260712-1706-1-testing-ai-code-understanding-is-harder-than-d2.png",
+   "20260712-1706-1-testing-ai-code-understanding-is-harder-than-d3.png"
+  ]
+ }
+]

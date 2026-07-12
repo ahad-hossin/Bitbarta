@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "typescript_7_release_performance",
+  "headline_marked": "[[TypeScript 7.0 is 8x-12x faster]], rewritten in Go, with VS Code builds 16.7x quicker",
+  "headline": "TypeScript 7.0 is 8x-12x faster, rewritten in Go, with VS Code builds 16.7x quicker",
+  "summary": "TypeScript 7.0 is now stable, featuring a complete rewrite of its compiler in Go. This delivers significant performance boosts, with large projects seeing 8x to 12x faster builds and type checking.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "TypeScript 7.0 is officially stable, with its compiler completely rewritten in Go. This fundamental change leverages native code, multithreading, and better parallelization for dramatically faster builds and type checking.",
+   "Microsoft reports that TypeScript 7 is typically 8x to 12x faster on large projects. In some cases, with increased parallelization, performance gains can be even higher, reaching up to 16.7x faster for specific tasks.",
+   "For instance, a VS Code build that previously took over two minutes now completes in just over ten seconds. With `--checkers 8`, this drops to 7.51 seconds, a 16.7x improvement over TypeScript 6.",
+   "This speedup also comes with reduced memory usage, with projects showing a 6% to 26% decrease. The new language server, based on LSP, also makes editor features like autocomplete, real-time errors, and code navigation feel much faster.",
+   "Microsoft extensively tested TypeScript 7 for over a year on large codebases, both internally and with companies like Slack, Canva, Figma, Vercel, Notion, and Bloomberg. This ensures stability and real-world performance benefits.",
+   "The default configuration uses 4 workers for type checking, which can be adjusted with `--checkers`. While more workers can speed up builds, they may also increase memory usage, requiring project-specific testing.",
+   "A key point is that TypeScript 7.0 does not yet expose a stable programmatic API, which is expected in 7.1. This means tools and frameworks like Vue, Astro, Svelte, and some Angular workflows may need to run TypeScript 6 and 7 side-by-side for now.",
+   "This release focuses on solving the \"waiting problem\" for developers, significantly improving productivity on large projects by making local development faster and more responsive."
+  ],
+  "caption": "TypeScript 7.0 is here, and it's up to 16.7x faster! The compiler has been completely rewritten in Go for massive performance gains.\n\nTypeScript 7.0 is officially stable, with its compiler completely rewritten in Go. This fundamental change leverages native code, multithreading, and better parallelization for dramatically faster builds and type checking.\n\nMicrosoft reports that TypeScript 7 is typically 8x to 12x faster on large projects. In some cases, with increased parallelization, performance gains can be even higher, reaching up to 16.7x faster for specific tasks.\n\nFor instance, a VS Code build that previously took over two minutes now completes in just over ten seconds. With `--checkers 8`, this drops to 7.51 seconds, a 16.7x improvement over TypeScript 6.\n\nThis speedup also comes with reduced memory usage, with projects showing a 6% to 26% decrease. The new language server, based on LSP, also makes editor features like autocomplete, real-time errors, and code navigation feel much faster.\n\nMicrosoft extensively tested TypeScript 7 for over a year on large codebases, both internally and with companies like Slack, Canva, Figma, Vercel, Notion, and Bloomberg. This ensures stability and real-world performance benefits.\n\nThe default configuration uses 4 workers for type checking, which can be adjusted with `--checkers`. While more workers can speed up builds, they may also increase memory usage, requiring project-specific testing.\n\nA key point is that TypeScript 7.0 does not yet expose a stable programmatic API, which is expected in 7.1. This means tools and frameworks like Vue, Astro, Svelte, and some Angular workflows may need to run TypeScript 6 and 7 side-by-side for now.\n\nThis release focuses on solving the \"waiting problem\" for developers, significantly improving productivity on large projects by making local development faster and more responsive.\n\n#TypeScript #Programming #SoftwareDevelopment #Microsoft #GoLang #DeveloperTools\n\nSource: DEV",
+  "tweet": "TypeScript 7.0 is officially stable, with its compiler rewritten in Go! Expect up to 16.7x faster builds and type checking on large projects. VS Code builds now take just 10 seconds. A huge productivity boost for developers. #TypeScript #GoLang #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "DEV",
+  "url": "https://dev.to/jatniel/typescript-70-is-here-the-compiler-is-much-faster-30n",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fw2wpxdqz526sexbpksal.png",
+  "orig_title": "TypeScript 7.0 Is Here: The Compiler Is Much Faster",
+  "cluster_urls": [
+   "https://dev.to/jatniel/typescript-70-is-here-the-compiler-is-much-faster-30n"
+  ],
+  "cluster_titles": [
+   "TypeScript 7.0 Is Here: The Compiler Is Much Faster"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260712-1207-0-typescript-7-0-is-8x-12x-faster-rewritten-in.png",
+   "20260712-1207-0-typescript-7-0-is-8x-12x-faster-rewritten-in-d1.png",
+   "20260712-1207-0-typescript-7-0-is-8x-12x-faster-rewritten-in-d2.png",
+   "20260712-1207-0-typescript-7-0-is-8x-12x-faster-rewritten-in-d3.png"
+  ]
+ },
+ {
+  "topic": "micro_ai_consumer_hardware_engineering",
+  "headline_marked": "[[Engineering \"Micro-AI\" on Consumer Hardware]] for local, high-performance AI processing",
+  "headline": "Engineering \"Micro-AI\" on Consumer Hardware for local, high-performance AI processing",
+  "summary": "A new project, LATIVM MatrixEngine v2.0, aims to shift AI processing from cloud farms to local GPUs, promising enhanced control, privacy, and speed by leveraging highly optimized mathematical kernels.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Current AI often relies on massive cloud farms and \"black-box\" APIs, leading to bottlenecks in real-world performance. This approach sacrifices control, privacy, and speed, making latency a constant issue and users dependent on external infrastructure.",
+   "The LATIVM MatrixEngine v2.0 project counters this trend by focusing on \"Micro-AI\" services. These are small, highly optimized mathematical kernels designed to perform specific tasks, such as object detection or signal analysis, directly on a user's own GPU.",
+   "The architecture involves converting raw data into tensors, which are then pushed directly into the GPU's VRAM using DirectML, bypassing high-level frameworks. This bare-metal processing allows for instant retrieval of results, with round-trip latency measured in milliseconds.",
+   "This method treats the GPU as a specialized mathematical processor, transforming a local workstation into a high-performance AI node. It provides transparency and efficiency, giving developers precise control over every clock cycle of their GPU.",
+   "Such granular control is crucial for edge computing and industrial applications where efficiency and understanding the underlying processes are non-negotiable. The ongoing development focuses on optimizing kernel scheduling, particularly for AMD RX 480 architecture."
+  ],
+  "caption": "Tired of cloud AI's latency and lack of control? A new project is bringing high-performance \"Micro-AI\" directly to your consumer GPU.\n\nCurrent AI often relies on massive cloud farms and \"black-box\" APIs, leading to bottlenecks in real-world performance. This approach sacrifices control, privacy, and speed, making latency a constant issue and users dependent on external infrastructure.\n\nThe LATIVM MatrixEngine v2.0 project counters this trend by focusing on \"Micro-AI\" services. These are small, highly optimized mathematical kernels designed to perform specific tasks, such as object detection or signal analysis, directly on a user's own GPU.\n\nThe architecture involves converting raw data into tensors, which are then pushed directly into the GPU's VRAM using DirectML, bypassing high-level frameworks. This bare-metal processing allows for instant retrieval of results, with round-trip latency measured in milliseconds.\n\nThis method treats the GPU as a specialized mathematical processor, transforming a local workstation into a high-performance AI node. It provides transparency and efficiency, giving developers precise control over every clock cycle of their GPU.\n\nSuch granular control is crucial for edge computing and industrial applications where efficiency and understanding the underlying processes are non-negotiable. The ongoing development focuses on optimizing kernel scheduling, particularly for AMD RX 480 architecture.\n\n#MicroAI #LocalAI #EdgeComputing #GPU #DirectML #AI\n\nSource: DEV",
+  "tweet": "Tired of cloud AI's latency & lack of control? A new project, LATIVM MatrixEngine v2.0, is engineering \"Micro-AI\" to run directly on consumer GPUs, promising enhanced speed, privacy, & transparency. #MicroAI #LocalAI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/lativm_lativm_ce3a80903fb/beyond-the-cloud-engineering-micro-ai-on-consumer-hardware-1kb6",
+  "image": "",
+  "orig_title": "Beyond the Cloud: Engineering \"Micro-AI\" on Consumer Hardware",
+  "cluster_urls": [
+   "https://dev.to/lativm_lativm_ce3a80903fb/beyond-the-cloud-engineering-micro-ai-on-consumer-hardware-1kb6"
+  ],
+  "cluster_titles": [
+   "Beyond the Cloud: Engineering \"Micro-AI\" on Consumer Hardware"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260712-1207-1-engineering-micro-ai-on-consumer-hardware-fo.png",
+   "20260712-1207-1-engineering-micro-ai-on-consumer-hardware-fo-d1.png",
+   "20260712-1207-1-engineering-micro-ai-on-consumer-hardware-fo-d2.png"
+  ]
+ }
+]

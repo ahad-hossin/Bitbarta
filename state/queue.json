@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "go_middleware_production_best_practices",
+  "headline_marked": "[[Go Middleware Best Practices]] for Production APIs (2026)",
+  "headline": "Go Middleware Best Practices for Production APIs (2026)",
+  "summary": "Learn how to correctly order middleware in Go to avoid production bugs, focusing on panic recovery, request IDs, and response writing.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A Go middleware bug caused 2% of requests to return 500 errors for six months without logs or traces. The issue stemmed from a panic caught by a recovery middleware placed after the logging middleware, resulting in a ghost 500 error invisible to dashboards.",
+   "Understanding Go middleware best practices is crucial for production APIs. Key challenges include correct ordering, panic recovery, timeouts, ResponseWriter wrapping, and context propagation. This article distills 14 years of experience into actionable advice.",
+   "The canonical Go middleware pattern involves a function taking an http.Handler and returning another. Operations before `next.ServeHTTP` run on request, while those after run on response, forming an 'onion model' where requests descend and responses ascend through layers.",
+   "To chain middleware effectively without manual nesting, a helper function is used. The order of application matters: applying middleware from last to first ensures the first middleware in the chain remains the outermost layer. Incorrect ordering inverts the entire sequence.",
+   "Three non-negotiable rules for middleware ordering: 1. Recover must be the outermost layer to catch all panics. 2. Request ID should precede the logger for trace correlation. 3. Auth and rate-limiting should be closest to the handler but after observability layers.",
+   "An explicit Recover middleware is essential in Go to prevent unrecovered panics from potentially crashing the entire server. Care must be taken to avoid re-panicking within the defer statement and to handle cases where a downstream middleware has already written a status code.",
+   "Wrapping http.ResponseWriter to intercept calls like WriteHeader and Write can break functionality like Server-Sent Events or streaming if optional interfaces (Flusher, Hijacker, Pusher) are lost. Since Go 1.20, http.ResponseController can mitigate this.",
+   "When wrapping ResponseWriter, ensure at least the `Flush` interface is re-exposed, as this is a common point of failure in production. This ensures that streaming responses continue to function correctly, even with nested middleware."
+  ],
+  "caption": "A Go middleware bug caused invisible 500 errors for months. Learn the 3 non-negotiable rules for ordering your production middleware to prevent similar issues.\n\nA Go middleware bug caused 2% of requests to return 500 errors for six months without logs or traces. The issue stemmed from a panic caught by a recovery middleware placed after the logging middleware, resulting in a ghost 500 error invisible to dashboards.\n\nUnderstanding Go middleware best practices is crucial for production APIs. Key challenges include correct ordering, panic recovery, timeouts, ResponseWriter wrapping, and context propagation. This article distills 14 years of experience into actionable advice.\n\nThe canonical Go middleware pattern involves a function taking an http.Handler and returning another. Operations before `next.ServeHTTP` run on request, while those after run on response, forming an 'onion model' where requests descend and responses ascend through layers.\n\nTo chain middleware effectively without manual nesting, a helper function is used. The order of application matters: applying middleware from last to first ensures the first middleware in the chain remains the outermost layer. Incorrect ordering inverts the entire sequence.\n\nThree non-negotiable rules for middleware ordering: 1. Recover must be the outermost layer to catch all panics. 2. Request ID should precede the logger for trace correlation. 3. Auth and rate-limiting should be closest to the handler but after observability layers.\n\nAn explicit Recover middleware is essential in Go to prevent unrecovered panics from potentially crashing the entire server. Care must be taken to avoid re-panicking within the defer statement and to handle cases where a downstream middleware has already written a status code.\n\n#GoLang #Programming #SoftwareDevelopment #DevOps #Backend\n\nSource: DEV",
+  "tweet": "Invisible 500 errors plagued a Go API for months due to middleware ordering. Learn the 3 essential rules for production middleware: Recover outermost, Request ID before Logger, Auth/Rate-limit near handler. #GoLang #SoftwareDevelopment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ohugonnot/go-middleware-best-practices-in-production-2026-1ekj",
+  "image": "",
+  "orig_title": "Go Middleware Best Practices in Production (2026)",
+  "cluster_urls": [
+   "https://dev.to/ohugonnot/go-middleware-best-practices-in-production-2026-1ekj"
+  ],
+  "cluster_titles": [
+   "Go Middleware Best Practices in Production (2026)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260712-1506-0-go-middleware-best-practices-for-production-.png",
+   "20260712-1506-0-go-middleware-best-practices-for-production--d1.png",
+   "20260712-1506-0-go-middleware-best-practices-for-production--d2.png",
+   "20260712-1506-0-go-middleware-best-practices-for-production--d3.png",
+   "20260712-1506-0-go-middleware-best-practices-for-production--d4.png"
+  ]
+ }
+]

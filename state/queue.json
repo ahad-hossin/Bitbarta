@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai_agents_in_repo_experiment",
+  "headline_marked": "[[AI Agents]] in One Repo Cause Chaos: Branch Hijacking & Lost Commits",
+  "headline": "AI Agents in One Repo Cause Chaos: Branch Hijacking & Lost Commits",
+  "summary": "Running multiple AI agents on the same codebase leads to unexpected conflicts, including branch hijacking, orphaned commits, and duplicate work. The shared working directory becomes a race condition.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "When multiple AI agents work on the same repository simultaneously, the shared working directory can lead to significant conflicts. The primary issue arises because the current branch acts as a global variable, causing problems when agents switch branches or make commits without awareness of each other's actions.",
+   "One common problem is 'branch hijacking,' where one agent's commit lands on another agent's intended branch, potentially overwriting work. This can also lead to 'orphaned commits' if an agent deletes a branch that another agent was working on, requiring manual recovery through the reflog.",
+   "Staging contamination is another risk, where files staged for deletion by one agent might be accidentally included in another agent's commit. Without careful review, these unintended deletions could be committed, leading to data loss. Duplicate implementations also occur when two agents independently develop the same feature, wasting development time.",
+   "The repository-wide testing and static analysis gates, designed to prevent broken states, become problematic with parallel agents. An agent might fail its gate due to unrelated changes being made by another agent, leading to delays and frustration as agents spend time proving their changes are not the cause of the errors.",
+   "The author found that the core issue is treating the working directory as a shared resource without proper concurrency control. Just like in databases and multithreaded code, concurrent access without isolation leads to race conditions and data loss. The solution involves isolating agents or implementing a strict coordination protocol.",
+   "While the problems are significant, the author emphasizes this is not an argument against using parallel AI agents. Instead, it highlights the need for better management and isolation strategies, such as using templates or ensuring agents do not work on overlapping scopes simultaneously. The key is to avoid cramming multiple agents into the same shared environment without coordination."
+  ],
+  "caption": "Running multiple AI agents on a single codebase? You might be heading for disaster. \n\nFrom branch hijacking to lost commits, the shared working directory can quickly become a chaotic race condition.\n\nWhen multiple AI agents work on the same repository simultaneously, the shared working directory can lead to significant conflicts. The primary issue arises because the current branch acts as a global variable, causing problems when agents switch branches or make commits without awareness of each other's actions.\n\nOne common problem is 'branch hijacking,' where one agent's commit lands on another agent's intended branch, potentially overwriting work. This can also lead to 'orphaned commits' if an agent deletes a branch that another agent was working on, requiring manual recovery through the reflog.\n\nStaging contamination is another risk, where files staged for deletion by one agent might be accidentally included in another agent's commit. Without careful review, these unintended deletions could be committed, leading to data loss. Duplicate implementations also occur when two agents independently develop the same feature, wasting development time.\n\nThe repository-wide testing and static analysis gates, designed to prevent broken states, become problematic with parallel agents. An agent might fail its gate due to unrelated changes being made by another agent, leading to delays and frustration as agents spend time proving their changes are not the cause of the errors.\n\nThe author found that the core issue is treating the working directory as a shared resource without proper concurrency control. Just like in databases and multithreaded code, concurrent access without isolation leads to race conditions and data loss. The solution involves isolating agents or implementing a strict coordination protocol.\n\n#TechNews #AI #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "Multiple AI agents in one repo? It's a recipe for disaster! 🤯 Branch hijacking, lost commits, and duplicate work are just the beginning. The shared working directory needs serious concurrency control. #AI #DevTools #Git",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/whynext/what-happened-when-i-let-several-ai-agents-loose-in-one-repo-3eoh",
+  "image": "",
+  "orig_title": "What Happened When I Let Several AI Agents Loose in One Repo",
+  "cluster_urls": [
+   "https://dev.to/whynext/what-happened-when-i-let-several-ai-agents-loose-in-one-repo-3eoh"
+  ],
+  "cluster_titles": [
+   "What Happened When I Let Several AI Agents Loose in One Repo"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260712-1246-0-ai-agents-in-one-repo-cause-chaos-branch-hij.png",
+   "20260712-1246-0-ai-agents-in-one-repo-cause-chaos-branch-hij-d1.png",
+   "20260712-1246-0-ai-agents-in-one-repo-cause-chaos-branch-hij-d2.png",
+   "20260712-1246-0-ai-agents-in-one-repo-cause-chaos-branch-hij-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agents_atomic_htlc_swaps",
+  "headline_marked": "[[AI agents]] now running atomic HTLC swaps on Bitcoin Layer 2",
+  "headline": "AI agents now running atomic HTLC swaps on Bitcoin Layer 2",
+  "summary": "KaleidoSwap releases KaleidoAgent, a non-custodial trader agent for Lightning and RGB assets, marking a significant step in agent economy development.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A second team has successfully deployed an AI agent capable of executing atomic Hash Time-Locked Contract (HTLC) swaps on Bitcoin Layer 2 networks. This development validates the argument that settlement layers do not require a referee, as HTLCs can secure trades without any third party holding funds.",
+   "KaleidoSwap has launched KaleidoAgent, a self-sovereign trader agent that operates non-custodially on Bitcoin Layer 2s. It integrates Lightning and RGB wallets, executes atomic HTLC swaps on the KaleidoSwap DEX, and manages DCA and portfolio strategies.",
+   "The agent is powered by an LLM, such as Claude or OpenAI, which drives the kaleido CLI and underlying wallet primitives. This allows the AI agent to autonomously decide trades and execute them via a primitive where no third party ever holds the funds, a key aspect of the agent economy.",
+   "This follows KaleidoSwap's earlier achievement of the first atomic swap of an RGB asset (tUSDT) on the Lightning Network mainnet. The atomicity is ensured by identical payment hashes across both legs of the swap, locking funds via HTLCs that return them if a timeout occurs or reveal a preimage to claim the other leg.",
+   "This implementation aligns with the 'atomic lock' camp, contrasting with 'escrow-with-a-judge' systems. While both approaches facilitate AI agent-driven swaps, KaleidoAgent focuses on a single network (Bitcoin Layer 2) for BTC, stablecoins, and RGB assets over Lightning.",
+   "In contrast, Hashlock is designed for cross-chain settlement, with current implementations on Ethereum mainnet and ongoing work for Sui and Bitcoin. Hashlock also incorporates a sealed-bid RFQ layer for private price quotes and atomic settlement between agents holding assets on different chains.",
+   "The emergence of both KaleidoAgent and Hashlock highlights different layers of the same core idea: trustless trading. KaleidoSwap enables this within a single network's asset universe, while Hashlock extends it across multiple chains.",
+   "The agent economy is broadly divided between 'custody' and 'no-custody' models. While many recent developments (MetaMask Agent Wallet, Coinbase for Agents) fall into the custody camp, holding or routing assets through evaluators, the 'no-custody' approach, exemplified by these atomic HTLC swaps, represents a distinct and significant advancement."
+  ],
+  "caption": "AI agents are now executing trades on Bitcoin Layer 2s without any third-party custodians, thanks to atomic HTLC swaps.\n\nA second team has successfully deployed an AI agent capable of executing atomic Hash Time-Locked Contract (HTLC) swaps on Bitcoin Layer 2 networks. This development validates the argument that settlement layers do not require a referee, as HTLCs can secure trades without any third party holding funds.\n\nKaleidoSwap has launched KaleidoAgent, a self-sovereign trader agent that operates non-custodially on Bitcoin Layer 2s. It integrates Lightning and RGB wallets, executes atomic HTLC swaps on the KaleidoSwap DEX, and manages DCA and portfolio strategies.\n\nThe agent is powered by an LLM, such as Claude or OpenAI, which drives the kaleido CLI and underlying wallet primitives. This allows the AI agent to autonomously decide trades and execute them via a primitive where no third party ever holds the funds, a key aspect of the agent economy.\n\nThis follows KaleidoSwap's earlier achievement of the first atomic swap of an RGB asset (tUSDT) on the Lightning Network mainnet. The atomicity is ensured by identical payment hashes across both legs of the swap, locking funds via HTLCs that return them if a timeout occurs or reveal a preimage to claim the other leg.\n\nThis implementation aligns with the 'atomic lock' camp, contrasting with 'escrow-with-a-judge' systems. While both approaches facilitate AI agent-driven swaps, KaleidoAgent focuses on a single network (Bitcoin Layer 2) for BTC, stablecoins, and RGB assets over Lightning.\n\nIn contrast, Hashlock is designed for cross-chain settlement, with current implementations on Ethereum mainnet and ongoing work for Sui and Bitcoin. Hashlock also incorporates a sealed-bid RFQ layer for private price quotes and atomic settlement between agents holding assets on different chains.\n\n#AI #Crypto #Blockchain #Bitcoin #AgentEconomy\n\nSource: DEV",
+  "tweet": "AI agents are now running atomic HTLC swaps on Bitcoin Layer 2s! KaleidoSwap's KaleidoAgent enables non-custodial trading of BTC, stablecoins, and RGB assets, validating the 'no-custody' model in the agent economy. #AI #Crypto #Bitcoin",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/barissozen/week-13-a-second-team-is-now-running-an-ai-agent-on-atomic-htlc-swaps-here-is-what-that-validates-5h69",
+  "image": "",
+  "orig_title": "Week 13: a second team is now running an AI agent on atomic HTLC swaps. Here is what that validates.",
+  "cluster_urls": [
+   "https://dev.to/barissozen/week-13-a-second-team-is-now-running-an-ai-agent-on-atomic-htlc-swaps-here-is-what-that-validates-5h69"
+  ],
+  "cluster_titles": [
+   "Week 13: a second team is now running an AI agent on atomic HTLC swaps. Here is what that validates."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260712-1246-1-ai-agents-now-running-atomic-htlc-swaps-on-b.png",
+   "20260712-1246-1-ai-agents-now-running-atomic-htlc-swaps-on-b-d1.png",
+   "20260712-1246-1-ai-agents-now-running-atomic-htlc-swaps-on-b-d2.png",
+   "20260712-1246-1-ai-agents-now-running-atomic-htlc-swaps-on-b-d3.png",
+   "20260712-1246-1-ai-agents-now-running-atomic-htlc-swaps-on-b-d4.png"
+  ]
+ }
+]

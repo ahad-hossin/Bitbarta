@@ -1,1 +1,59 @@
-[]
+[
+ {
+  "topic": "developer_productivity_tools_and_techniques",
+  "headline_marked": "[[SigNoz Transforms MERN Stack Debugging]] with Distributed Tracing",
+  "headline": "SigNoz Transforms MERN Stack Debugging with Distributed Tracing",
+  "summary": "Developers can now visualize API request bottlenecks and pinpoint latency issues in real-time, moving from reactive debugging to proactive monitoring.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Developers often face the frustration of slow API routes with no clear indication of the cause. A recent challenge involved implementing a proper observability backend for a MERN stack application, moving beyond basic console logging.",
+   "Self-hosting SigNoz proved to be a frictionless experience, with the entire observability stack running locally via docker-compose. The next step was integrating it with a Node.js/Express backend using OpenTelemetry, which automatically pushed data to the SigNoz endpoint.",
+   "Once the application was running and routes were hit, data began flowing into the SigNoz dashboard. While metrics and general dashboards are valuable, the standout feature is Distributed Tracing.",
+   "In a MERN stack, a single action like booking a room triggers multiple events across frontend, auth middleware, controllers, and the database. Previously, identifying the source of a 800ms delay was guesswork.",
+   "SigNoz's Distributed Tracing provides a clear, visual flame graph for every request. This allows developers to see exactly how long database queries take, visualize time spent in middleware functions, and pinpoint the exact point of failure for errors.",
+   "By highlighting latency in MongoDB aggregations or Express middleware, developers can quickly identify performance bottlenecks. This proactive monitoring approach significantly reduces debugging time compared to sifting through terminal logs.",
+   "The author recommends SigNoz for any Node.js API developer tired of guessing where their application's performance issues lie, especially after a successful integration with a real-world project."
+  ],
+  "caption": "Tired of guessing where your Node.js API bottlenecks are? SigNoz offers real-time distributed tracing to visualize every request's journey.\n\nDevelopers often face the frustration of slow API routes with no clear indication of the cause. A recent challenge involved implementing a proper observability backend for a MERN stack application, moving beyond basic console logging.\n\nSelf-hosting SigNoz proved to be a frictionless experience, with the entire observability stack running locally via docker-compose. The next step was integrating it with a Node.js/Express backend using OpenTelemetry, which automatically pushed data to the SigNoz endpoint.\n\nOnce the application was running and routes were hit, data began flowing into the SigNoz dashboard. While metrics and general dashboards are valuable, the standout feature is Distributed Tracing.\n\nIn a MERN stack, a single action like booking a room triggers multiple events across frontend, auth middleware, controllers, and the database. Previously, identifying the source of a 800ms delay was guesswork.\n\nSigNoz's Distributed Tracing provides a clear, visual flame graph for every request. This allows developers to see exactly how long database queries take, visualize time spent in middleware functions, and pinpoint the exact point of failure for errors.\n\nBy highlighting latency in MongoDB aggregations or Express middleware, developers can quickly identify performance bottlenecks. This proactive monitoring approach significantly reduces debugging time compared to sifting through terminal logs.\n\nThe author recommends SigNoz for any Node.js API developer tired of guessing where their application's performance issues lie, especially after a successful integration with a real-world project.\n\n#MERN #Nodejs #Expressjs #Observability #SigNoz\n\nSource: DEV",
+  "tweet": "Stop guessing, start tracing! SigNoz's distributed tracing transforms MERN stack debugging by visualizing API request bottlenecks in real-time. Level up your backend insights. #SigNoz #MERN #Observability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "signoz.io",
+  "source": "DEV",
+  "url": "https://dev.to/sujal_arse/leveling-up-my-mern-stack-observability-with-signoz-19nb",
+  "image": "",
+  "orig_title": "Leveling Up My MERN Stack Observability with SigNoz",
+  "cluster_urls": [
+   "https://dev.to/sujal_arse/leveling-up-my-mern-stack-observability-with-signoz-19nb",
+   "https://dev.to/ameer_abdullah_68d48c8496/class-vs-instance-variables-the-mutation-trap-that-catches-experienced-developers-483f",
+   "https://dev.to/turva-dev/when-an-agent-can-prove-it-is-claude-4b3j",
+   "https://dev.to/xeito-ai/vibe-coding-and-the-new-developer-interview-what-to-expect-in-2026-4l09",
+   "https://dev.to/aasimghaffar/25-wordpress-pms-integrations-later-what-actually-works-and-what-doesnt-53oi",
+   "https://dev.to/naserrasouli/refresh-tokens-on-the-frontend-architecture-implementation-5db7",
+   "https://dev.to/leobaniak/aws-puts-gray-zone-failures-into-the-eks-control-loop-1d87",
+   "https://dev.to/yashwanth_kasi/day-130-react-pattern-explained-3nbf",
+   "https://dev.to/parsajiravand/your-dropdown-is-a-div-the-browser-has-a-native-popover-now-43d6"
+  ],
+  "cluster_titles": [
+   "Leveling Up My MERN Stack Observability with SigNoz",
+   "Class vs Instance Variables: The Mutation Trap That Catches Experienced Developers",
+   "When an agent can prove it is Claude",
+   "Vibe Coding and the New Developer Interview: What to Expect in 2026",
+   "25 WordPress PMS Integrations Later: What Actually Works (And What Doesn't)",
+   "Refresh Tokens on the Frontend: Architecture & Implementation",
+   "AWS puts gray zone failures into the EKS control loop",
+   "Day 1/30: ReAct Pattern Explained",
+   "Your dropdown is a div. The browser has a native popover now."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260712-1510-0-signoz-transforms-mern-stack-debugging-with-.png",
+   "20260712-1510-0-signoz-transforms-mern-stack-debugging-with--d1.png",
+   "20260712-1510-0-signoz-transforms-mern-stack-debugging-with--d2.png",
+   "20260712-1510-0-signoz-transforms-mern-stack-debugging-with--d3.png"
+  ]
+ }
+]

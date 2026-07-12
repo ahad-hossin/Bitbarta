@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "privacy_first_browser_llm_health_assistant",
+  "headline_marked": "[[Run Your Own Health Assistant LLM Entirely in the Browser]] (No Backend Required!)",
+  "headline": "Run Your Own Health Assistant LLM Entirely in the Browser (No Backend Required!)",
+  "summary": "Leveraging WebLLM and WebGPU, developers can now execute powerful Large Language Models directly within the browser, ensuring privacy with zero data leakage and no server costs.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Privacy-preserving AI is now possible directly in your browser. By utilizing WebLLM and WebGPU, high-performance Large Language Models (LLMs) can run client-side, eliminating the need for backend servers.",
+   "This approach ensures zero data leakage, no API keys, and no server costs, making personal health queries truly private. A private health consultation bot running 100% client-side is a prime example.",
+   "Traditional AI relies on heavy GPU clusters, but WebGPU taps into the user's local hardware for execution. The compilation stack uses Apache TVM, allowing models to run on various backends, with WebLLM as the browser interface.",
+   "Implementation involves initializing the MLCEngine within a Web Worker to maintain a smooth UI. Developers can wrap the logic into custom hooks for clean interaction within frameworks like React.",
+   "A key consideration is the model size, typically 4-5GB, requiring clear loading feedback. Users must also be aware of device constraints when running such large models directly in the browser.",
+   "By moving the \"brain\" of applications to the user's device, latency, server costs, and privacy risks are significantly reduced. The ability to run a \"Llama\" model in a browser tab showcases the evolving power of WebGPU and WebLLM."
+  ],
+  "caption": "Run a powerful Large Language Model (LLM) for health consultations directly in your browser, with no backend servers and complete privacy.\n\nPrivacy-preserving AI is now possible directly in your browser. By utilizing WebLLM and WebGPU, high-performance Large Language Models (LLMs) can run client-side, eliminating the need for backend servers.\n\nThis approach ensures zero data leakage, no API keys, and no server costs, making personal health queries truly private. A private health consultation bot running 100% client-side is a prime example.\n\nTraditional AI relies on heavy GPU clusters, but WebGPU taps into the user's local hardware for execution. The compilation stack uses Apache TVM, allowing models to run on various backends, with WebLLM as the browser interface.\n\nImplementation involves initializing the MLCEngine within a Web Worker to maintain a smooth UI. Developers can wrap the logic into custom hooks for clean interaction within frameworks like React.\n\nA key consideration is the model size, typically 4-5GB, requiring clear loading feedback. Users must also be aware of device constraints when running such large models directly in the browser.\n\nBy moving the \"brain\" of applications to the user's device, latency, server costs, and privacy risks are significantly reduced. The ability to run a \"Llama\" model in a browser tab showcases the evolving power of WebGPU and WebLLM.\n\n#WebLLM #WebGPU #Privacy #EdgeAI #AI #Developers\n\nSource: DEV",
+  "tweet": "Run a powerful LLM for health consultations directly in your browser, with no backend servers and complete privacy. This new approach leverages WebLLM & WebGPU, eliminating data leakage & server costs. #WebLLM #Privacy #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/beck_moulton/privacy-first-run-your-own-health-assistant-llm-entirely-in-the-browser-no-backend-required-4al8",
+  "image": "",
+  "orig_title": "Privacy First: Run Your Own Health Assistant LLM Entirely in the Browser (No Backend Required!)",
+  "cluster_urls": [
+   "https://dev.to/beck_moulton/privacy-first-run-your-own-health-assistant-llm-entirely-in-the-browser-no-backend-required-4al8"
+  ],
+  "cluster_titles": [
+   "Privacy First: Run Your Own Health Assistant LLM Entirely in the Browser (No Backend Required!)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260712-0706-0-run-your-own-health-assistant-llm-entirely-i.png",
+   "20260712-0706-0-run-your-own-health-assistant-llm-entirely-i-d1.png",
+   "20260712-0706-0-run-your-own-health-assistant-llm-entirely-i-d2.png"
+  ]
+ },
+ {
+  "topic": "migrating_off_openai",
+  "headline_marked": "[[Backend engineer cuts LLM costs by 40x]] migrating off OpenAI in 3 hours",
+  "headline": "Backend engineer cuts LLM costs by 40x migrating off OpenAI in 3 hours",
+  "summary": "An engineer slashed monthly OpenAI bills from $500 to $12.50 by switching to DeepSeek V4 Flash, achieving a 40x cost reduction with minimal code changes due to OpenAI-compatible APIs.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A backend engineer faced a monthly OpenAI bill exceeding $500 for chat completion and embedding lookups, prompting a search for more cost-effective alternatives. This significant expenditure highlighted the need for immediate optimization.",
+   "Benchmarking revealed DeepSeek V4 Flash priced at $0.25 per million output tokens, a stark contrast to GPT-4o's $10.00 per million. This represented a 40x price difference for comparable output quality, with users often unable to distinguish between them.",
+   "The potential savings were substantial: the $500 monthly bill could be reduced to approximately $12.50 with DeepSeek. This financial incentive aligned perfectly with engineering goals, making the migration a clear win-win.",
+   "Surprisingly, the migration itself took only about three hours. This efficiency was largely due to Global API offering an OpenAI-compatible endpoint, meaning existing libraries like the official OpenAI SDK, LangChain, and LlamaIndex worked with minimal configuration changes.",
+   "The API compatibility meant the same wire protocol, JSON shape, response object, and streaming functionality. Only two configuration values and a model name needed to be swapped, making the code changes incredibly minor and unit tests untouched.",
+   "Beyond cost, the Global API provided access to 184 models, enabling a multi-model architecture. This allowed routing traffic by task type, such as DeepSeek V4 Flash for chat summarization and Qwen3-32B for code review prompts, all through a single, unified interface."
+  ],
+  "caption": "A backend engineer cut LLM costs by 40x, reducing a $500/month OpenAI bill to just $12.50. The migration took only 3 hours.\n\nA backend engineer faced a monthly OpenAI bill exceeding $500 for chat completion and embedding lookups, prompting a search for more cost-effective alternatives. This significant expenditure highlighted the need for immediate optimization.\n\nBenchmarking revealed DeepSeek V4 Flash priced at $0.25 per million output tokens, a stark contrast to GPT-4o's $10.00 per million. This represented a 40x price difference for comparable output quality, with users often unable to distinguish between them.\n\nThe potential savings were substantial: the $500 monthly bill could be reduced to approximately $12.50 with DeepSeek. This financial incentive aligned perfectly with engineering goals, making the migration a clear win-win.\n\nSurprisingly, the migration itself took only about three hours. This efficiency was largely due to Global API offering an OpenAI-compatible endpoint, meaning existing libraries like the official OpenAI SDK, LangChain, and LlamaIndex worked with minimal configuration changes.\n\nThe API compatibility meant the same wire protocol, JSON shape, response object, and streaming functionality. Only two configuration values and a model name needed to be swapped, making the code changes incredibly minor and unit tests untouched.\n\nBeyond cost, the Global API provided access to 184 models, enabling a multi-model architecture. This allowed routing traffic by task type, such as DeepSeek V4 Flash for chat summarization and Qwen3-32B for code review prompts, all through a single, unified interface.\n\n#AI #LLMs #OpenAI #DeepSeek #BackendDev #CostSavings\n\nSource: DEV",
+  "tweet": "An engineer slashed their $500/month OpenAI bill to $12.50 by migrating to DeepSeek V4 Flash. The 40x cost reduction was achieved in just 3 hours thanks to OpenAI-compatible APIs. #AI #LLMs #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/gentleforge/migrating-off-openai-a-backend-engineers-notes-from-production-50d6",
+  "image": "",
+  "orig_title": "Migrating Off OpenAI: A Backend Engineer's Notes From Production",
+  "cluster_urls": [
+   "https://dev.to/gentleforge/migrating-off-openai-a-backend-engineers-notes-from-production-50d6"
+  ],
+  "cluster_titles": [
+   "Migrating Off OpenAI: A Backend Engineer's Notes From Production"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260712-0706-1-backend-engineer-cuts-llm-costs-by-40x-migra.png",
+   "20260712-0706-1-backend-engineer-cuts-llm-costs-by-40x-migra-d1.png",
+   "20260712-0706-1-backend-engineer-cuts-llm-costs-by-40x-migra-d2.png"
+  ]
+ }
+]

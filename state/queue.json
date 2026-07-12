@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "qwen3_5_mac_studio_llm_fixes",
+  "headline_marked": "[[Fixed three bugs that made Qwen3.5-122B a daily driver]] on Mac Studio",
+  "headline": "Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio",
+  "summary": "A developer spent weeks debugging a cache leak and other issues in their custom serving stack, reducing 3-5 minute AI response times to near-instant on an M3 Mac Studio Ultra.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Initially, a 50,000-token conversation with an LLM on an M3 Mac Studio Ultra suffered from 3-5 minute prefill latency before the first token appeared, making it unusable for real-time interaction. This was a significant bottleneck for agentic coding workflows.",
+   "The developer switched from DS4 Flash to Qwen 3.5 122B, which fit the M3 Ultra better. However, the new model was still unusable out of the box due to issues in the custom serving stack, qMLX.",
+   "The primary problem was a cache leak related to the hybrid attention architecture of Qwen 3.5 122B. This caused the in-memory prefix cache to miss every time, forcing the system to reprocess the entire conversation from scratch for each follow-up.",
+   "One bug involved the agent framework stamping a unique message ID into the system prompt on every turn. This slight change prevented byte-exact KV reuse, effectively making every turn a \"cold\" start and discarding the cached context.",
+   "The fix for this specific issue was to remove the decorative message ID from the cached prefix, ensuring the prompt remained byte-stable for efficient cache hits. The article implies further bugs were fixed to fully resolve the issue."
+  ],
+  "caption": "A developer slashed AI response times from minutes to seconds on Mac Studio by fixing critical bugs in their serving stack.\n\nInitially, a 50,000-token conversation with an LLM on an M3 Mac Studio Ultra suffered from 3-5 minute prefill latency before the first token appeared, making it unusable for real-time interaction. This was a significant bottleneck for agentic coding workflows.\n\nThe developer switched from DS4 Flash to Qwen 3.5 122B, which fit the M3 Ultra better. However, the new model was still unusable out of the box due to issues in the custom serving stack, qMLX.\n\nThe primary problem was a cache leak related to the hybrid attention architecture of Qwen 3.5 122B. This caused the in-memory prefix cache to miss every time, forcing the system to reprocess the entire conversation from scratch for each follow-up.\n\nOne bug involved the agent framework stamping a unique message ID into the system prompt on every turn. This slight change prevented byte-exact KV reuse, effectively making every turn a \"cold\" start and discarding the cached context.\n\nThe fix for this specific issue was to remove the decorative message ID from the cached prefix, ensuring the prompt remained byte-stable for efficient cache hits. The article implies further bugs were fixed to fully resolve the issue.\n\n#AI #MacStudio #LLM #SoftwareDev #Debugging #Tech\n\nSource: Hacker News",
+  "tweet": "A developer spent weeks fixing 3 critical bugs in their qMLX serving stack, transforming Qwen3.5-122B on Mac Studio from a 5-minute wait to a near-instant daily driver for long-context AI. #AI #MacStudio #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/",
+  "image": "",
+  "orig_title": "Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio",
+  "cluster_urls": [
+   "https://mrzk.io/posts/qmlx-maximising-ai-psychosis-minmaxing-mac-studio/"
+  ],
+  "cluster_titles": [
+   "Fixed three bugs that made Qwen3.5-122B a daily driver on Mac Studio"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260712-1007-0-fixed-three-bugs-that-made-qwen3-5-122b-a-da.png",
+   "20260712-1007-0-fixed-three-bugs-that-made-qwen3-5-122b-a-da-d1.png",
+   "20260712-1007-0-fixed-three-bugs-that-made-qwen3-5-122b-a-da-d2.png"
+  ]
+ },
+ {
+  "topic": "nvidia_gpu_boom_financing",
+  "headline_marked": "[[Nvidia, CoreWeave, Nebius use circular financing]] to fuel GPU boom, raising red flags",
+  "headline": "Nvidia, CoreWeave, Nebius use circular financing to fuel GPU boom, raising red flags",
+  "summary": "Neocloud providers CoreWeave and Nebius are securing massive hyperscaler contracts and GPU-backed debt, alongside Nvidia investments, to fund rapid data center expansion, raising questions about sustainability.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Neocloud providers CoreWeave and Nebius are experiencing explosive growth, driven by hyperscalers' insatiable demand for GPU compute. These companies are employing unique and circular financing structures, including significant investments from Nvidia, to fund their rapid expansion.",
+   "Microsoft has committed approximately $60 billion to neoclouds, including CoreWeave and Nebius. Meta's total commitments to CoreWeave and Nebius reach up to $62.2 billion, bringing total potential commitments from these two hyperscalers alone to over $122 billion.",
+   "These commitments are an order of magnitude higher than CoreWeave's estimated FY2026 revenue of $12.6B and Nebius' $3.4B. Hyperscalers are drawn to neoclouds for quick access to leading GPU generations, optimized compute utilization, and the benefit of not recognizing capex on their balance sheets.",
+   "Neoclouds can deploy high-density GPU infrastructure within months, a significant advantage over the multi-year builds required for hyperscale data centers. This rapid deployment minimizes the lag between data center expenses and revenue generation for Big Tech.",
+   "CoreWeave boasts being among the first to deliver NVIDIA H100, H200, GH200, and GB200 NVL72 instances, deploying new chips in as little as two weeks. Nebius also notes its consistent track record of deploying the latest generation of NVIDIA GPU chips early.",
+   "Nvidia has directly invested $2 billion in both CoreWeave and Nebius, solidifying their partnerships. This relationship is crucial for neoclouds to acquire the latest GPUs ahead of competitors."
+  ],
+  "caption": "Over $122 billion in hyperscaler commitments are fueling the GPU boom, but a 'circular financing' model involving Nvidia, CoreWeave, and Nebius raises questions.\n\nNeocloud providers CoreWeave and Nebius are experiencing explosive growth, driven by hyperscalers' insatiable demand for GPU compute. These companies are employing unique and circular financing structures, including significant investments from Nvidia, to fund their rapid expansion.\n\nMicrosoft has committed approximately $60 billion to neoclouds, including CoreWeave and Nebius. Meta's total commitments to CoreWeave and Nebius reach up to $62.2 billion, bringing total potential commitments from these two hyperscalers alone to over $122 billion.\n\nThese commitments are an order of magnitude higher than CoreWeave's estimated FY2026 revenue of $12.6B and Nebius' $3.4B. Hyperscalers are drawn to neoclouds for quick access to leading GPU generations, optimized compute utilization, and the benefit of not recognizing capex on their balance sheets.\n\nNeoclouds can deploy high-density GPU infrastructure within months, a significant advantage over the multi-year builds required for hyperscale data centers. This rapid deployment minimizes the lag between data center expenses and revenue generation for Big Tech.\n\nCoreWeave boasts being among the first to deliver NVIDIA H100, H200, GH200, and GB200 NVL72 instances, deploying new chips in as little as two weeks. Nebius also notes its consistent track record of deploying the latest generation of NVIDIA GPU chips early.\n\nNvidia has directly invested $2 billion in both CoreWeave and Nebius, solidifying their partnerships. This relationship is crucial for neoclouds to acquire the latest GPUs ahead of competitors.\n\n#GPU #AI #TechFinance #Nvidia #CoreWeave #Nebius\n\nSource: Hacker News",
+  "tweet": "Over $122B in hyperscaler commitments are fueling the GPU boom, but a 'circular financing' model involving Nvidia, CoreWeave, and Nebius raises questions about sustainability. Dive into the complex web of investments. #GPU #AIFinance #BigTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+  "image": "",
+  "orig_title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+  "cluster_urls": [
+   "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom"
+  ],
+  "cluster_titles": [
+   "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260712-1007-1-nvidia-coreweave-nebius-use-circular-financi.png",
+   "20260712-1007-1-nvidia-coreweave-nebius-use-circular-financi-d1.png",
+   "20260712-1007-1-nvidia-coreweave-nebius-use-circular-financi-d2.png"
+  ]
+ }
+]

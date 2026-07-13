@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai_reviews_its_own_code_finds_bugs",
+  "headline_marked": "[[AI found 3 bugs]] in its own code after being asked to review it like a skeptical engineer",
+  "headline": "AI found 3 bugs in its own code after being asked to review it like a skeptical engineer",
+  "summary": "A developer discovered that asking an AI to review its recently written code, pretending it didn't write it, revealed three critical bugs the AI initially missed. This technique significantly improved code quality.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer implemented a new workflow: after an AI (Claude Code) writes code, it's immediately asked to review its own work as a skeptical senior engineer. This process recently uncovered three bugs in code the AI had just produced.",
+   "The bugs were found in code for a Windows app that translates screenshot text, specifically struggling with white text on dark navy headers. The AI's initial OCR pipeline ignored these regions.",
+   "The AI was tasked with fixing this by detecting dark regions, inverting them, and then running OCR. While the initial fix seemed successful, the subsequent self-review revealed deeper issues.",
+   "One bug involved button-detection logic that was missing a width check, causing long, thin text strokes to be mistaken for button edges. This fragmented words like \"DASHBOARD,\" rendering them unreadable.",
+   "Another issue was an overly aggressive noise-removal rule. Intended to clean up small artifacts, it was deleting text that should have been preserved, silently removing valid content.",
+   "The third bug concerned brightness measurement. The AI's logic for inverting regions misidentified bold white letters as \"bright buttons,\" preventing necessary inversion and leading to text detection failures.",
+   "The core insight is that writing and reviewing code require different mental models, even for AI. The \"author\" focuses on intent, while the \"reviewer\" questions the intent itself and potential flaws.",
+   "It's crucial to triage the AI's findings; not all are real bugs. Some might be intentional design choices or false positives. Only confirmed, real bugs are fixed with minimal changes.",
+   "This \"role-switching\" technique has proven effective in catching more bugs before they reach users, highlighting a valuable method for improving AI-generated code quality."
+  ],
+  "caption": "An AI found 3 bugs in its own code just minutes after writing it. The trick? Asking it to review its work like a skeptical senior engineer.\n\nA developer implemented a new workflow: after an AI (Claude Code) writes code, it's immediately asked to review its own work as a skeptical senior engineer. This process recently uncovered three bugs in code the AI had just produced.\n\nThe bugs were found in code for a Windows app that translates screenshot text, specifically struggling with white text on dark navy headers. The AI's initial OCR pipeline ignored these regions.\n\nThe AI was tasked with fixing this by detecting dark regions, inverting them, and then running OCR. While the initial fix seemed successful, the subsequent self-review revealed deeper issues.\n\nOne bug involved button-detection logic that was missing a width check, causing long, thin text strokes to be mistaken for button edges. This fragmented words like \"DASHBOARD,\" rendering them unreadable.\n\nAnother issue was an overly aggressive noise-removal rule. Intended to clean up small artifacts, it was deleting text that should have been preserved, silently removing valid content.\n\nThe third bug concerned brightness measurement. The AI's logic for inverting regions misidentified bold white letters as \"bright buttons,\" preventing necessary inversion and leading to text detection failures.\n\nThe core insight is that writing and reviewing code require different mental models, even for AI. The \"author\" focuses on intent, while the \"reviewer\" questions the intent itself and potential flaws.\n\nIt's crucial to triage the AI's findings; not all are real bugs. Some might be intentional design choices or false positives. Only confirmed, real bugs are fixed with minimal changes.\n\nThis \"role-switching\" technique has proven effective in catching more bugs before they reach users, highlighting a valuable method for improving AI-generated code quality.\n\n#AI #Coding #SoftwareDevelopment #Debugging #DeveloperTools #ClaudeAI\n\nSource: DEV",
+  "tweet": "An AI found 3 bugs in its own code after being prompted to review it like a skeptical senior engineer. This simple role-switching technique significantly improves code quality by catching flaws the AI initially missed. #AI #Coding #Debugging",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/miitobow/i-had-my-ai-review-its-own-code-and-it-found-3-bugs-it-had-just-written-3430",
+  "image": "",
+  "orig_title": "I had my AI review its own code, and it found 3 bugs it had just written",
+  "cluster_urls": [
+   "https://dev.to/miitobow/i-had-my-ai-review-its-own-code-and-it-found-3-bugs-it-had-just-written-3430"
+  ],
+  "cluster_titles": [
+   "I had my AI review its own code, and it found 3 bugs it had just written"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260713-1406-0-ai-found-3-bugs-in-its-own-code-after-being-.png",
+   "20260713-1406-0-ai-found-3-bugs-in-its-own-code-after-being--d1.png",
+   "20260713-1406-0-ai-found-3-bugs-in-its-own-code-after-being--d2.png",
+   "20260713-1406-0-ai-found-3-bugs-in-its-own-code-after-being--d3.png"
+  ]
+ },
+ {
+  "topic": "code_performance_optimization_if_statement",
+  "headline_marked": "[[Quadrupling code performance]] with a \"useless\" if statement",
+  "headline": "Quadrupling code performance with a \"useless\" if statement",
+  "summary": "A seemingly redundant `if` statement, combined with a `volatile` cast, can trick modern CPUs into vastly improving loop execution speed by leveraging branch prediction.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "An optimization problem in a domain-specific compressor involved finding the shortest path on a grid, leading to a loop where each iteration depended on the previous one. This data dependency limited performance to memory access latency, even for a single `mov` instruction.",
+   "The solution involved adding an `if` statement that appears \"useless\" to the compiler: `if (j != next_j[i][j]) { j = next_j[i][j]; }`. This aims to leverage branch prediction, making the CPU assume `j` won't change, thus allowing parallel execution.",
+   "Compilers typically remove such \"useless\" branches. To prevent this, a `volatile` cast was used: `j = *(uint8_t volatile *)&next_j[i][j];`. This makes the compiler treat the condition and assignment as independent.",
+   "In a synthetic benchmark, this technique dramatically sped up the loop from 320 microseconds to 80 microseconds, achieving a 4x performance improvement on the test data."
+  ],
+  "caption": "A \"useless\" `if` statement can make your code 4x faster.\n\nAn optimization problem in a domain-specific compressor involved finding the shortest path on a grid, leading to a loop where each iteration depended on the previous one. This data dependency limited performance to memory access latency, even for a single `mov` instruction.\n\nThe solution involved adding an `if` statement that appears \"useless\" to the compiler: `if (j != next_j[i][j]) { j = next_j[i][j]; }`. This aims to leverage branch prediction, making the CPU assume `j` won't change, thus allowing parallel execution.\n\nCompilers typically remove such \"useless\" branches. To prevent this, a `volatile` cast was used: `j = *(uint8_t volatile *)&next_j[i][j];`. This makes the compiler treat the condition and assignment as independent.\n\nIn a synthetic benchmark, this technique dramatically sped up the loop from 320 microseconds to 80 microseconds, achieving a 4x performance improvement on the test data.\n\n#CodeOptimization #Programming #Performance #SoftwareDev #CPU #Tech\n\nSource: Hacker News",
+  "tweet": "A \"useless\" `if` statement, paired with a `volatile` cast, can quadruple code performance by tricking CPU branch prediction. Learn how to optimize latency-bound loops. #CodeOptimization #Performance",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://purplesyringa.moe/blog/quadrupling-code-performance-with-a-useless-if/",
+  "image": "",
+  "orig_title": "Quadrupling code performance with a \"useless\" if",
+  "cluster_urls": [
+   "https://purplesyringa.moe/blog/quadrupling-code-performance-with-a-useless-if/"
+  ],
+  "cluster_titles": [
+   "Quadrupling code performance with a \"useless\" if"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260713-1406-1-quadrupling-code-performance-with-a-useless-.png",
+   "20260713-1406-1-quadrupling-code-performance-with-a-useless--d1.png",
+   "20260713-1406-1-quadrupling-code-performance-with-a-useless--d2.png"
+  ]
+ }
+]

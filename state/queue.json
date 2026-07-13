@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_agent_tool_call_authority",
+  "headline_marked": "[[The authority boundary problem]] in agent tool calls: who decides what 'no results' means",
+  "headline": "The authority boundary problem in agent tool calls: who decides what 'no results' means",
+  "summary": "When an AI agent's tool call returns no results, the agent often guesses the cause, leading to incorrect actions. This 'authority boundary problem' arises from tools not providing enough context about failure states.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents frequently encounter a critical ambiguity when their tool calls return an empty list of results. This isn't about crashes or timeouts, but productive failures where the tool appears to succeed but yields no information.",
+   "The core issue is that an empty list can stem from at least three distinct root causes: no match found, rate limiting, or a stale index. Each requires a completely different response from the agent, such as reformulating the query, waiting, or retrying.",
+   "A minimum viable fix involves tools explicitly naming the failure state, rather than just returning an empty list. States like `no_match`, `rate_limited`, or `stale_index` provide crucial context, ideally including a `retry_after` field for rate limits.",
+   "This leads to the 'scope staleness problem,' where the thresholds defining states (e.g., what constitutes a 'stale index') are set by tool developers without knowledge of every specific use case. These arbitrary calibrations can quickly become outdated.",
+   "The asymmetry of errors is significant: over-labeling a result (e.g., calling `no_match` a `stale_index`) is cheap, leading to a wasted retry. Under-labeling (calling `stale_index` a `no_match`) is catastrophic, causing the agent to reformulate a valid query and potentially miss critical information.",
+   "The 'authority boundary problem' then asks: who decides what to do when a tool returns a named failure state? Options include the agent, the tool itself, or a middleware layer that intercepts and enforces policy.",
+   "Most frameworks default to the agent deciding, but this has a hidden cost. The agent's instructions, like the tool's scope, can go stale, leading it to make confident but incorrect decisions based on outdated guidance, such as reformulating a query when it should wait."
+  ],
+  "caption": "When an AI agent's tool call returns an empty list, it often has no idea why. This critical ambiguity can lead to wrong decisions.\n\nAI agents frequently encounter a critical ambiguity when their tool calls return an empty list of results. This isn't about crashes or timeouts, but productive failures where the tool appears to succeed but yields no information.\n\nThe core issue is that an empty list can stem from at least three distinct root causes: no match found, rate limiting, or a stale index. Each requires a completely different response from the agent, such as reformulating the query, waiting, or retrying.\n\nA minimum viable fix involves tools explicitly naming the failure state, rather than just returning an empty list. States like `no_match`, `rate_limited`, or `stale_index` provide crucial context, ideally including a `retry_after` field for rate limits.\n\nThis leads to the 'scope staleness problem,' where the thresholds defining states (e.g., what constitutes a 'stale index') are set by tool developers without knowledge of every specific use case. These arbitrary calibrations can quickly become outdated.\n\nThe asymmetry of errors is significant: over-labeling a result (e.g., calling `no_match` a `stale_index`) is cheap, leading to a wasted retry. Under-labeling (calling `stale_index` a `no_match`) is catastrophic, causing the agent to reformulate a valid query and potentially miss critical information.\n\nThe 'authority boundary problem' then asks: who decides what to do when a tool returns a named failure state? Options include the agent, the tool itself, or a middleware layer that intercepts and enforces policy.\n\nMost frameworks default to the agent deciding, but this has a hidden cost. The agent's instructions, like the tool's scope, can go stale, leading it to make confident but incorrect decisions based on outdated guidance, such as reformulating a query when it should wait.\n\n#AI #Agents #Developer #SoftwareDevelopment #Tech #LLMs\n\nSource: DEV",
+  "tweet": "AI agents struggle when tool calls return 'no results' without context. This 'authority boundary problem' means agents often guess, leading to incorrect actions. Learn why tools need to name failure states and who should decide the response. #AI #Developer #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/aloya/the-authority-boundary-problem-in-agent-tool-calls-who-decides-what-no-results-means-55d3",
+  "image": "",
+  "orig_title": "The authority boundary problem in agent tool calls: who decides what 'no results' means",
+  "cluster_urls": [
+   "https://dev.to/aloya/the-authority-boundary-problem-in-agent-tool-calls-who-decides-what-no-results-means-55d3"
+  ],
+  "cluster_titles": [
+   "The authority boundary problem in agent tool calls: who decides what 'no results' means"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260713-1038-0-the-authority-boundary-problem-in-agent-tool.png",
+   "20260713-1038-0-the-authority-boundary-problem-in-agent-tool-d1.png",
+   "20260713-1038-0-the-authority-boundary-problem-in-agent-tool-d2.png",
+   "20260713-1038-0-the-authority-boundary-problem-in-agent-tool-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_assistant_memory_problem",
+  "headline_marked": "[[Your Team's AI Assistant Acts Like It's the First Day]] on the Job, Every Single Time",
+  "headline": "Your Team's AI Assistant Acts Like It's the First Day on the Job, Every Single Time",
+  "summary": "Current AI tools struggle with persistent memory across team collaborations, forcing users to re-explain context repeatedly. This issue scales rapidly, hindering productivity and consistent output.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Many users find AI assistants forget crucial context in new conversations, whether it's a recent KPI overhaul or a locked-down tech stack. This means re-explaining project backgrounds and past decisions constantly.",
+   "In multi-person teams, this problem escalates quickly. Each team member's interaction with the AI is isolated, leading to duplicated explanations as the AI's understanding isn't shared across users.",
+   "Mainstream AI tools store memory as conversation history in a context window. When this window fills, older messages are truncated, making cross-day or cross-week team collaboration ineffective. Even large context windows struggle with information density.",
+   "Effective team collaboration requires a multi-layered memory system. This includes long-term context like project background, tech stack choices, and reasons for past pivots, which influence every task but aren't in single conversations.",
+   "Some products use vector retrieval to extend memory by storing embeddings of past conversations. However, semantic similarity doesn't equate to causal logic, meaning complex relationships like \"this decision was made because of an incident\" are lost.",
+   "Architectural-level thinking is needed to solve this. Octo, for example, extracts context from individual conversations and transforms it into shared team assets. This makes project background and historical decisions accessible to all collaborators, human and AI.",
+   "Explicit knowledge can be documented, but critical information often isn't. This includes specific reasons for rejecting an approach, a boss's preferred writing style, or client communication taboos, which currently only exist in people's heads.",
+   "User feedback, like accepting or rejecting AI output, often vanishes after a conversation. This means the AI doesn't learn persistent preferences, leading to repetitive corrections in subsequent interactions.",
+   "When multiple people interact with the same AI, their preferences can conflict. A product manager might want business analysis, while an engineer seeks technical details. Without distinguishing users, the AI produces compromised output that satisfies no one.",
+   "Octo addresses this by automatically distilling user feedback, such as acceptances, rejections, and annotations, into persistent preferences. This allows agents to reference these preferences for new tasks, shifting tacit knowledge capture from manual documentation to automatic system learning."
+  ],
+  "caption": "Does your team's AI assistant constantly forget past conversations and project context? It's a common problem that cripples team collaboration.\n\nMany users find AI assistants forget crucial context in new conversations, whether it's a recent KPI overhaul or a locked-down tech stack. This means re-explaining project backgrounds and past decisions constantly.\n\nIn multi-person teams, this problem escalates quickly. Each team member's interaction with the AI is isolated, leading to duplicated explanations as the AI's understanding isn't shared across users.\n\nMainstream AI tools store memory as conversation history in a context window. When this window fills, older messages are truncated, making cross-day or cross-week team collaboration ineffective. Even large context windows struggle with information density.\n\nEffective team collaboration requires a multi-layered memory system. This includes long-term context like project background, tech stack choices, and reasons for past pivots, which influence every task but aren't in single conversations.\n\nSome products use vector retrieval to extend memory by storing embeddings of past conversations. However, semantic similarity doesn't equate to causal logic, meaning complex relationships like \"this decision was made because of an incident\" are lost.\n\nArchitectural-level thinking is needed to solve this. Octo, for example, extracts context from individual conversations and transforms it into shared team assets. This makes project background and historical decisions accessible to all collaborators, human and AI.\n\nExplicit knowledge can be documented, but critical information often isn't. This includes specific reasons for rejecting an approach, a boss's preferred writing style, or client communication taboos, which currently only exist in people's heads.\n\n#AI #TeamCollaboration #Productivity #TechNews #ArtificialIntelligence #Software\n\nSource: DEV",
+  "tweet": "Your team's AI assistant keeps forgetting key project details and preferences? It's not just you. Current AI memory models struggle with persistent context in collaborative environments, leading to repeated explanations and inconsistent output. #AI #TeamProductivity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mininglamp/why-your-teams-ai-assistant-acts-like-its-the-first-day-on-the-job-every-single-time-2mep",
+  "image": "",
+  "orig_title": "Why Your Team's AI Assistant Acts Like It's the First Day on the Job, Every Single Time",
+  "cluster_urls": [
+   "https://dev.to/mininglamp/why-your-teams-ai-assistant-acts-like-its-the-first-day-on-the-job-every-single-time-2mep"
+  ],
+  "cluster_titles": [
+   "Why Your Team's AI Assistant Acts Like It's the First Day on the Job, Every Single Time"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260713-1038-1-your-team-s-ai-assistant-acts-like-it-s-the-.png",
+   "20260713-1038-1-your-team-s-ai-assistant-acts-like-it-s-the--d1.png",
+   "20260713-1038-1-your-team-s-ai-assistant-acts-like-it-s-the--d2.png",
+   "20260713-1038-1-your-team-s-ai-assistant-acts-like-it-s-the--d3.png",
+   "20260713-1038-1-your-team-s-ai-assistant-acts-like-it-s-the--d4.png"
+  ]
+ }
+]

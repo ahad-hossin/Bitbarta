@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "llm_agent_memory_layer_stale_facts",
+  "headline_marked": "[[New LLM memory layer]] knows which facts go stale, prevents outdated information",
+  "headline": "New LLM memory layer knows which facts go stale, prevents outdated information",
+  "summary": "VoltMem introduces domain-aware protection for LLM memory, preventing stale volatile facts from persisting while safeguarding stable preferences from being easily overwritten.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Most LLM memory systems treat every fact equally, whether it's a stable preference or a volatile piece of information like a current location. This leads to systematic errors: agents either hold volatile facts too long (stale knowledge) or overwrite stable facts on thin evidence (corrupted knowledge).",
+   "VoltMem addresses this by introducing a memory layer that understands fact volatility. It differentiates between facts that change often, like a user's current task or mood, and those that are stable, such as personality traits or long-term preferences.",
+   "The system uses domain-aware protection, applying different thresholds for updating information based on its volatility. High-volatility domains have a low threshold, making updates easy, while low-volatility domains have a high threshold, making them harder to overwrite.",
+   "Practically, this means a user stating they 'moved to Paris' will cleanly supersede 'user lives in Berlin' because location is a volatile domain. Conversely, a fleeting observation like 'user seemed extroverted today' won't overwrite a deeply confirmed 'user is introverted'.",
+   "VoltMem was tested against Mem0 on three scenarios: a location update, a stable preference blip, and a volatile mood shift. VoltMem successfully provided the current top answer in all three scripted scenarios.",
+   "While not a leaderboard claim, VoltMem achieved 0% stale@1 in retrieval freshness tests, compared to cosine-only retrieval returning stale facts 20% of the time. On LongMemEval-S, it tied cosine at 70% answer@5, focusing on update policy and retrieval freshness for mixed-volatility personal memory.",
+   "The core VoltMem library has zero required dependencies, with embeddings being optional via sentence-transformers. The current volatility priors are hand-tuned, presenting an area for future feedback and development.",
+   "The project originated from a philosophical discussion about how human minds handle stale beliefs and when to question old habits. This insight into how humans add a monitoring layer to impulses directly informed the design of VoltMem's domain-aware memory system for LLMs."
+  ],
+  "caption": "LLM agents often get stuck on outdated facts, like thinking you still live in Berlin months after you moved. A new memory layer, VoltMem, tackles this by understanding fact volatility.\n\nMost LLM memory systems treat every fact equally, whether it's a stable preference or a volatile piece of information like a current location. This leads to systematic errors: agents either hold volatile facts too long (stale knowledge) or overwrite stable facts on thin evidence (corrupted knowledge).\n\nVoltMem addresses this by introducing a memory layer that understands fact volatility. It differentiates between facts that change often, like a user's current task or mood, and those that are stable, such as personality traits or long-term preferences.\n\nThe system uses domain-aware protection, applying different thresholds for updating information based on its volatility. High-volatility domains have a low threshold, making updates easy, while low-volatility domains have a high threshold, making them harder to overwrite.\n\nPractically, this means a user stating they 'moved to Paris' will cleanly supersede 'user lives in Berlin' because location is a volatile domain. Conversely, a fleeting observation like 'user seemed extroverted today' won't overwrite a deeply confirmed 'user is introverted'.\n\nVoltMem was tested against Mem0 on three scenarios: a location update, a stable preference blip, and a volatile mood shift. VoltMem successfully provided the current top answer in all three scripted scenarios.\n\nWhile not a leaderboard claim, VoltMem achieved 0% stale@1 in retrieval freshness tests, compared to cosine-only retrieval returning stale facts 20% of the time. On LongMemEval-S, it tied cosine at 70% answer@5, focusing on update policy and retrieval freshness for mixed-volatility personal memory.\n\n#AI #LLM #MachineLearning #Tech #ArtificialIntelligence #VoltMem\n\nSource: DEV",
+  "tweet": "LLM agents often get stuck on outdated facts. VoltMem is a new memory layer that knows which facts go stale, preventing your AI from thinking you still live in Berlin when you've moved to Paris. #AI #LLM #VoltMem",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rouche01/i-built-a-memory-layer-for-llm-agents-that-knows-which-facts-go-stale-1mg5",
+  "image": "",
+  "orig_title": "I Built a Memory Layer for LLM Agents That Knows Which Facts Go Stale",
+  "cluster_urls": [
+   "https://dev.to/rouche01/i-built-a-memory-layer-for-llm-agents-that-knows-which-facts-go-stale-1mg5"
+  ],
+  "cluster_titles": [
+   "I Built a Memory Layer for LLM Agents That Knows Which Facts Go Stale"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260713-0806-0-new-llm-memory-layer-knows-which-facts-go-st.png",
+   "20260713-0806-0-new-llm-memory-layer-knows-which-facts-go-st-d1.png",
+   "20260713-0806-0-new-llm-memory-layer-knows-which-facts-go-st-d2.png",
+   "20260713-0806-0-new-llm-memory-layer-knows-which-facts-go-st-d3.png"
+  ]
+ },
+ {
+  "topic": "hn_ai_generated_article_flag",
+  "headline_marked": "[[Hacker News considers adding flag for AI-generated articles]] to its platform",
+  "headline": "Hacker News considers adding flag for AI-generated articles to its platform",
+  "summary": "The popular tech news aggregator is debating whether its traditional voting system is adequate for the influx of AI-generated content and if new moderation tools are needed.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Hacker News is currently hosting a discussion on whether to implement a flag for AI-generated articles. The debate centers on the effectiveness of the platform's existing voting system in distinguishing human-created content from AI-generated submissions.",
+   "Suggestions include a two-dimensional voting system (good/bad, AI/human) to reduce meta-discussions about content origin. Some users propose an outright ban on AI-generated submissions, arguing they disrupt the platform's established balance of effort.",
+   "Concerns were raised that current voting systems can be gamed, especially as Hacker News grows and attracts diverse audiences. There's also a noted conflict of interest, as Y Combinator, the parent company of Hacker News, is heavily invested in AI technologies."
+  ],
+  "caption": "Hacker News is debating a major policy change: should AI-generated articles be flagged or even banned? The platform's core voting system is under scrutiny.\n\nHacker News is currently hosting a discussion on whether to implement a flag for AI-generated articles. The debate centers on the effectiveness of the platform's existing voting system in distinguishing human-created content from AI-generated submissions.\n\nSuggestions include a two-dimensional voting system (good/bad, AI/human) to reduce meta-discussions about content origin. Some users propose an outright ban on AI-generated submissions, arguing they disrupt the platform's established balance of effort.\n\nConcerns were raised that current voting systems can be gamed, especially as Hacker News grows and attracts diverse audiences. There's also a noted conflict of interest, as Y Combinator, the parent company of Hacker News, is heavily invested in AI technologies.\n\n#HackerNews #AI #ContentModeration #TechPolicy #GenerativeAI\n\nSource: Hacker News",
+  "tweet": "Hacker News is debating whether to flag or ban AI-generated articles, questioning if its traditional voting system can handle the influx of new content. A major policy discussion is underway. #HackerNews #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ycombinator.com",
+  "source": "Hacker News",
+  "url": "https://news.ycombinator.com/item?id=48886741",
+  "image": "",
+  "orig_title": "Ask HN: Add flag for AI-generated articles",
+  "cluster_urls": [
+   "https://news.ycombinator.com/item?id=48886741"
+  ],
+  "cluster_titles": [
+   "Ask HN: Add flag for AI-generated articles"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260713-0806-1-hacker-news-considers-adding-flag-for-ai-gen.png",
+   "20260713-0806-1-hacker-news-considers-adding-flag-for-ai-gen-d1.png"
+  ]
+ }
+]

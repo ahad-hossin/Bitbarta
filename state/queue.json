@@ -1,1 +1,127 @@
-[]
+[
+ {
+  "topic": "ai_safety_and_ethics_responsible_ai_systems",
+  "headline_marked": "[[Fixing timezone bugs]] in reporting queries with a simple helper",
+  "headline": "Fixing timezone bugs in reporting queries with a simple helper",
+  "summary": "Timezone bugs can cause reports to show incorrect data. A simple helper function can fix this issue.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A common issue in reporting queries is handling timezones correctly. When a report runs, it needs to know what day it is for each store, but stores can be in different timezones.",
+   "The problem arises when the reporting query uses UTC midnight for everyone, which can lead to incorrect data for stores east of GMT. The fix is to convert the store's local day-bounds into a UTC range before filtering.",
+   "However, there's a landmine in the conversion: if the datetime is already offset-aware, the localize() function will refuse to touch it, causing a ValueError. This issue can be solved by guarding the input before it hits datetime.combine().",
+   "The solution involves adding a per-store timezone field and a helper function that safely turns a local calendar date into a UTC range for filtering. This approach ensures that the reporting query is timezone-correct by construction.",
+   "The helper function normalizes its input before doing anything else, and Postgres handles the UTC comparison natively. This solution works for any date, not just 'yesterday,' and can be used for daily EOD reports, weekly summaries, and arbitrary date-picker queries."
+  ],
+  "caption": "Can a simple helper function fix timezone bugs in reporting queries?\n\nA common issue in reporting queries is handling timezones correctly. When a report runs, it needs to know what day it is for each store, but stores can be in different timezones.\n\nThe problem arises when the reporting query uses UTC midnight for everyone, which can lead to incorrect data for stores east of GMT. The fix is to convert the store's local day-bounds into a UTC range before filtering.\n\nHowever, there's a landmine in the conversion: if the datetime is already offset-aware, the localize() function will refuse to touch it, causing a ValueError. This issue can be solved by guarding the input before it hits datetime.combine().\n\nThe solution involves adding a per-store timezone field and a helper function that safely turns a local calendar date into a UTC range for filtering. This approach ensures that the reporting query is timezone-correct by construction.\n\nThe helper function normalizes its input before doing anything else, and Postgres handles the UTC comparison natively. This solution works for any date, not just 'yesterday,' and can be used for daily EOD reports, weekly summaries, and arbitrary date-picker queries.\n\n#TechNews #Software #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "Fix timezone bugs in reporting queries with a simple helper function! #tech #software #development",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "dev.to",
+  "source": "DEV",
+  "url": "https://dev.to/acel/it-worked-on-every-environment-except-prod-getting-daily-reports-right-across-timezones-5coo",
+  "image": "",
+  "orig_title": "It Worked on Every Environment Except Prod: Getting Daily Reports Right Across Timezones",
+  "cluster_urls": [
+   "https://dev.to/acel/it-worked-on-every-environment-except-prod-getting-daily-reports-right-across-timezones-5coo",
+   "https://dev.to/mzunain/ai-safety-ethics-building-responsible-ai-systems-that-dont-backfire-1a4j",
+   "https://dev.to/adamthedeveloper/stop-saying-you-want-ownership-mindset-34nf",
+   "https://dev.to/imdj/securing-shared-api-connections-in-azure-logic-apps-standard-with-access-policies-2opi"
+  ],
+  "cluster_titles": [
+   "It Worked on Every Environment Except Prod: Getting Daily Reports Right Across Timezones",
+   "AI Safety & Ethics: Building Responsible AI Systems That Don't Backfire",
+   "Stop Saying You Want Ownership Mindset",
+   "Securing Shared API Connections in Azure Logic Apps Standard with Access Policies"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260714-1207-0-fixing-timezone-bugs-in-reporting-queries-wi.png",
+   "20260714-1207-0-fixing-timezone-bugs-in-reporting-queries-wi-d1.png",
+   "20260714-1207-0-fixing-timezone-bugs-in-reporting-queries-wi-d2.png"
+  ]
+ },
+ {
+  "topic": "developer_and_tech_news_hacker_news_highlights",
+  "headline_marked": "Australia offers [[free daytime electricity]] from July 1, 2026",
+  "headline": "Australia offers free daytime electricity from July 1, 2026",
+  "summary": "Households in NSW, South Australia, and South-East Queensland to get at least 3 hours of free electricity daily",
+  "category": "SCIENCE",
+  "template": "launch",
+  "details": [
+   "From 1 July 2026, energy retailers in NSW, South Australia, and South-East Queensland must give households at least three hours of free electricity every day. No solar panels required. No need to own your home. You just need a smart meter and to opt in through your retailer to have access to free daytime electricity.",
+   "The scheme is called the Solar Sharer Offer. It works by passing on the benefit of cheap midday solar power, which has always existed on the wholesale market but never made it to your bill, directly to households.",
+   "The free window will sit around midday, with the exact hours tailored to local conditions. As a rough guide, expect something like 11am to 2pm or noon to 3pm."
+  ],
+  "caption": "Get ready for free electricity! Australia introduces free daytime electricity from July 1, 2026\n\nFrom 1 July 2026, energy retailers in NSW, South Australia, and South-East Queensland must give households at least three hours of free electricity every day. No solar panels required. No need to own your home. You just need a smart meter and to opt in through your retailer to have access to free daytime electricity.\n\nThe scheme is called the Solar Sharer Offer. It works by passing on the benefit of cheap midday solar power, which has always existed on the wholesale market but never made it to your bill, directly to households.\n\nThe free window will sit around midday, with the exact hours tailored to local conditions. As a rough guide, expect something like 11am to 2pm or noon to 3pm.\n\n#TechNews #Science #Tech #BitBarta\n\nSource: Hacker News, DEV",
+  "tweet": "Australia to offer free daytime electricity from July 1, 2026! #Australia #RenewableEnergy #FreeElectricity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News, DEV",
+  "url": "https://lenergy.com.au/free-daytime-electricity-is-coming-heres-how-it-actually-works/",
+  "image": "",
+  "orig_title": "Australia is offering free daytime electricity",
+  "cluster_urls": [
+   "https://lenergy.com.au/free-daytime-electricity-is-coming-heres-how-it-actually-works/",
+   "https://github.com/JetBrains/youtrackdb",
+   "https://www.thedial.world/articles/news/amish-pennsylvania-dutch",
+   "https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/",
+   "https://web.stanford.edu/~dntse/wireless_book.html",
+   "https://satellitemap.space/",
+   "https://www.normaltech.ai/p/what-will-be-left-for-us-to-work",
+   "https://careersatdoordash.com/blog/building-food-metadata-with-llm-juries-context-optimization-multimodal-ai/",
+   "https://chipsandcheese.com/p/is-x86-ready-to-ace-it",
+   "https://elasticity.institute/rsi-paper.pdf",
+   "https://dev.to/hyeong/kodeubeiseureul-da-ihae-mos-haedo-gwaencanhda-bubunjeog-ihaereul-wihan-byeonho-3mk3",
+   "https://paradigms-of-intelligence.github.io/morpho/",
+   "https://dev.to/hyeong/2026nyeon-7weol-14il-aillm-isyu-daijeseuteu-eijeonteuga-samusilro-deuleooneunde-mundansogeun-nuga-hana-5do",
+   "https://arxiv.org/abs/2607.08550",
+   "https://lalitm.com/post/git-history/",
+   "https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html",
+   "https://www.bbc.com/news/articles/cm2drrv6q54o",
+   "https://arxiv.org/abs/2607.01418",
+   "https://github.com/marcelpanse/youtube-guitar-tab-parser",
+   "https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py",
+   "https://bruceediger.com/posts/tftp-honeypot-results/",
+   "https://www.sfgate.com/politics/article/meta-social-media-teenagers-22337724.php",
+   "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/",
+   "https://cakehonolulu.github.io/linux-on-32x/"
+  ],
+  "cluster_titles": [
+   "Australia is offering free daytime electricity",
+   "YouTrackDB is a general-use object-oriented graph database",
+   "Our Amish Language",
+   "Japan develops a method to recover up to 90% of lithium from used EV batteries",
+   "Fundamentals of Wireless Communication (2005)",
+   "Satellite Tracker – Live Map of Starlink and 30k Satellites",
+   "What will be left for us to work on?",
+   "Building Food Metadata with LLM Juries",
+   "Is x86 ready to ACE it?",
+   "The Economics of Recursive Self-Improvement [pdf]",
+   "코드베이스를 다 이해 못 해도 괜찮다 — 부분적 이해를 위한 변호",
+   "MorphoHDL: A minimalistic language for growing circuits",
+   "2026년 7월 14일 AI·LLM 이슈 다이제스트 — 에이전트가 사무실로 들어오는데, 문단속은 누가 하나",
+   "ESBMC-Arduino: Closing the Deployment Gap for Formal Verification",
+   "The Git history command deserves more attention",
+   "Show HN: Sx 2.0 – Share AI skills with your team through a Dropbox folder",
+   "An Englishwoman who sketched India before photography took hold",
+   "A Study of Microsoft's Early 2026 Rollout of Claude Code and GitHub Copilot CLI",
+   "Show HN: YouTube Guitar Tab Parser",
+   "Show HN: I implemented a neural network in SQL",
+   "TFTP Honey Pot Results",
+   "The infinite scroll may become endangered if controversial Calif. law passes",
+   "Building and shipping Mac and iOS apps without opening Xcode",
+   "Linux on the Sega 32X. Who needs hardware synchronization primitives anyway?"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260714-1207-1-australia-offers-free-daytime-electricity-fr.png",
+   "20260714-1207-1-australia-offers-free-daytime-electricity-fr-d1.png"
+  ]
+ }
+]

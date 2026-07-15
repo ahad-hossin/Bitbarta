@@ -1,1 +1,104 @@
-[]
+[
+ {
+  "topic": "grok_build_open_source",
+  "headline_marked": "SpaceXAI releases [[Grok Build]] as open-source AI coding agent",
+  "headline": "SpaceXAI releases Grok Build as open-source AI coding agent",
+  "summary": "The terminal-based AI coding agent can edit files, run shell commands, and search the web, now available for developers.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "SpaceXAI has open-sourced Grok Build, its terminal-based AI coding agent. This powerful tool functions as a full-screen TUI, capable of understanding codebases, editing files, executing shell commands, and performing web searches.",
+   "Grok Build offers flexible interaction modes, allowing users to engage with it interactively, run it headlessly for scripting and CI pipelines, or embed it directly into editors via the Agent Client Protocol (ACP).",
+   "The project's Rust source code is now available, synced periodically from the SpaceXAI monorepo. Prebuilt binaries are accessible for macOS, Linux, and Windows.",
+   "Comprehensive documentation is provided, covering everything from getting started and keyboard shortcuts to advanced features like MCP servers, skills, plugins, hooks, headless mode, and sandboxing."
+  ],
+  "caption": "SpaceXAI's AI coding agent, Grok Build, is now open source.\nIt understands your codebase, edits files, and runs shell commands.\n\nSpaceXAI has open-sourced Grok Build, its terminal-based AI coding agent. This powerful tool functions as a full-screen TUI, capable of understanding codebases, editing files, executing shell commands, and performing web searches.\n\nGrok Build offers flexible interaction modes, allowing users to engage with it interactively, run it headlessly for scripting and CI pipelines, or embed it directly into editors via the Agent Client Protocol (ACP).\n\nThe project's Rust source code is now available, synced periodically from the SpaceXAI monorepo. Prebuilt binaries are accessible for macOS, Linux, and Windows.\n\nComprehensive documentation is provided, covering everything from getting started and keyboard shortcuts to advanced features like MCP servers, skills, plugins, hooks, headless mode, and sandboxing.\n\n#AI #OpenSource #GrokBuild #SpaceXAI #Coding\n\nSource: Hacker News",
+  "tweet": "SpaceXAI's AI coding agent, Grok Build, is now open source! It understands codebases, edits files, runs shell commands, and searches the web. Available for developers. #AI #OpenSource #GrokBuild",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "x.ai",
+  "source": "Hacker News",
+  "url": "https://github.com/xai-org/grok-build",
+  "image": "",
+  "orig_title": "Grok Build is open source",
+  "cluster_urls": [
+   "https://github.com/xai-org/grok-build"
+  ],
+  "cluster_titles": [
+   "Grok Build is open source"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260716-0506-0-spacexai-releases-grok-build-as-open-source-.png",
+   "20260716-0506-0-spacexai-releases-grok-build-as-open-source--d1.png",
+   "20260716-0506-0-spacexai-releases-grok-build-as-open-source--d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_development_challenges",
+  "headline_marked": "[[AI Agents]] Are Not Free: Hidden Costs of Tokens, Tools, and Latency",
+  "headline": "AI Agents Are Not Free: Hidden Costs of Tokens, Tools, and Latency",
+  "summary": "The illusion of a single API call disappears when AI agents perform real work, leading to unexpected costs in tokens, latency, and system load.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents often appear to make a single API call, but in production, they operate in complex loops involving multiple model calls, memory retrieval, tool execution, and retries. This multi-step process significantly increases token usage and introduces latency.",
+   "Tool usage is frequently underestimated. Beyond the tool's own cost, each tool call adds network latency, potential failure scenarios, and often triggers additional model calls for processing the tool's output. The surrounding orchestration, not just the tool itself, drives up expenses.",
+   "Retries are a major cost multiplier. Whether due to tool failure, invalid model output, or validation errors, each retry repeats the entire step, leading to exponentially increased model calls, longer execution times, and higher overall costs.",
+   "Latency is a critical, often overlooked, factor. Each model call, tool execution, memory retrieval, and retry adds to the total execution time. An agent that seems instant in a demo can easily take several seconds in production, impacting user experience.",
+   "Memory retrieval, while powerful, is not free. It incurs query costs, adds tokens to prompts, and complicates prompt construction. If not filtered effectively, it can increase token usage, introduce irrelevant context, and reduce model accuracy.",
+   "Advanced agent patterns like reflection, which involve evaluating output and re-planning steps, improve quality but also add more model calls. This can double or triple token usage, highlighting the need for intentional use of such features.",
+   "The true cost of AI agents extends beyond API pricing to include latency, system load, increased failure surface, and debugging complexity. These factors make cost an architectural concern, not just a billing issue.",
+   "Each added capability in an AI agent multiplies its cost. More tools, more memory, more retries, and more reasoning all contribute to escalating usage. AI agents do not scale linearly; they scale multiplicatively.",
+   "To control costs, developers should implement guardrails: limit steps, set retry limits, keep prompts concise, use relevant context, employ tools intentionally, avoid infinite loops, and meticulously track usage, tokens, latency, and failures.",
+   "The goal is not to eliminate features but to use them intentionally. A simple, controlled agent that solves a specific problem is often more valuable and cost-effective in production than a complex agent attempting to do everything."
+  ],
+  "caption": "AI agents seem simple, but their production reality is a costly loop of tokens, tools, retries, and latency.\n\nAI agents often appear to make a single API call, but in production, they operate in complex loops involving multiple model calls, memory retrieval, tool execution, and retries. This multi-step process significantly increases token usage and introduces latency.\n\nTool usage is frequently underestimated. Beyond the tool's own cost, each tool call adds network latency, potential failure scenarios, and often triggers additional model calls for processing the tool's output. The surrounding orchestration, not just the tool itself, drives up expenses.\n\nRetries are a major cost multiplier. Whether due to tool failure, invalid model output, or validation errors, each retry repeats the entire step, leading to exponentially increased model calls, longer execution times, and higher overall costs.\n\nLatency is a critical, often overlooked, factor. Each model call, tool execution, memory retrieval, and retry adds to the total execution time. An agent that seems instant in a demo can easily take several seconds in production, impacting user experience.\n\nMemory retrieval, while powerful, is not free. It incurs query costs, adds tokens to prompts, and complicates prompt construction. If not filtered effectively, it can increase token usage, introduce irrelevant context, and reduce model accuracy.\n\nAdvanced agent patterns like reflection, which involve evaluating output and re-planning steps, improve quality but also add more model calls. This can double or triple token usage, highlighting the need for intentional use of such features.\n\nThe true cost of AI agents extends beyond API pricing to include latency, system load, increased failure surface, and debugging complexity. These factors make cost an architectural concern, not just a billing issue.\n\n#AI #AIAgents #LLM #Tech #Development\n\nSource: DEV",
+  "tweet": "AI agents aren't just one API call. In production, they involve complex loops multiplying costs via tokens, tool calls, retries, and latency. Developers need guardrails to manage this hidden expense. #AI #AIAgents #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/raju_dandigam/the-hidden-cost-of-ai-agents-tokens-tools-retries-and-latency-aj6",
+  "image": "",
+  "orig_title": "The Hidden Cost of AI Agents: Tokens, Tools, Retries, and Latency",
+  "cluster_urls": [
+   "https://dev.to/raju_dandigam/the-hidden-cost-of-ai-agents-tokens-tools-retries-and-latency-aj6",
+   "https://dev.to/coridev/your-ai-coding-assistant-isnt-reading-your-code-its-mailing-it-home-3blg",
+   "https://dev.to/coridev/your-ai-agents-memory-is-now-an-attack-surface-and-nobody-designed-for-that-34p4",
+   "https://dev.to/gurinderchauhan/laravel-1320-image-processing-a-production-guide-381n",
+   "https://dev.to/jocanola/stop-uninstalling-your-app-to-test-staging-and-production-a-proper-multi-environment-setup-for-50j0",
+   "https://dev.to/aws-builders/building-a-false-positive-resilient-challenge-architecture-with-aws-waf-dynamic-label-interpolation-e96",
+   "https://dev.to/ibne_sabidsaikat_1443282/whats-actually-cooking-in-azure-ai-right-now-notes-from-my-mvp-prep-rabbit-hole-9hf",
+   "https://dev.to/samson_tanimawo/incident-severity-levels-sev-1-to-sev-5-calibration-3o0o",
+   "https://dev.to/dan52242644dan/matrix-chess-club-bot-1m52",
+   "https://dev.to/sleepyfalcon247/the-hard-part-of-test-automation-isnt-writing-tests-anymore-h9",
+   "https://dev.to/larrymargerum01/dreams-dont-always-arrive-on-schedule-2dhd"
+  ],
+  "cluster_titles": [
+   "The Hidden Cost of AI Agents: Tokens, Tools, Retries, and Latency",
+   "Your AI Coding Assistant Isn't Reading Your Code, It's Mailing It Home",
+   "Your AI Agent's Memory Is Now an Attack Surface, and Nobody Designed for That",
+   "Laravel 13.20 Image Processing: A Production Guide",
+   "Stop Uninstalling Your App to Test Staging and Production: A Proper Multi-Environment Setup for Mobile Development",
+   "Building a False-Positive-Resilient Challenge Architecture with AWS WAF Dynamic Label Interpolation",
+   "What's Actually Cooking in Azure AI Right Now (Notes from My MVP Prep Rabbit Hole)",
+   "Incident Severity Levels: SEV-1 to SEV-5 Calibration",
+   "Matrix Chess Club Bot",
+   "The Hard Part of Test Automation Isn’t Writing Tests Anymore",
+   "Dreams Don't Always Arrive on Schedule."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260716-0506-1-ai-agents-are-not-free-hidden-costs-of-token.png",
+   "20260716-0506-1-ai-agents-are-not-free-hidden-costs-of-token-d1.png",
+   "20260716-0506-1-ai-agents-are-not-free-hidden-costs-of-token-d2.png",
+   "20260716-0506-1-ai-agents-are-not-free-hidden-costs-of-token-d3.png",
+   "20260716-0506-1-ai-agents-are-not-free-hidden-costs-of-token-d4.png"
+  ]
+ }
+]

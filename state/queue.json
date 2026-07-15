@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "starlink_v5_dish_launch",
+  "headline_marked": "[[Starlink launches new V5 dish]] 63% lighter, 50% more energy-efficient, available now",
+  "headline": "Starlink launches new V5 dish 63% lighter, 50% more energy-efficient, available now",
+  "summary": "Starlink's latest V5 residential dish is significantly smaller, lighter, and more power-efficient than its predecessor. It's now rolling out in select regions, though initially only for the cheapest internet plan.",
+  "category": "HARDWARE",
+  "template": "launch",
+  "details": [
+   "Starlink has quietly released its new V5 residential dish, which is significantly smaller, lighter, and more energy-efficient than the previous V4 model. This should simplify installation and reduce power consumption for users. It is now available in certain regions, initially bundled with the Router Mini.",
+   "The V5 dish weighs just 2.4 pounds, a substantial reduction from the V4's 6.5 pounds, making it 63% lighter. Its dimensions are 5.12 x 12.05 x 1.34 inches, a much more compact form factor compared to the V4's 23.4 x 15.1 x 1.5 inches.",
+   "Power efficiency is also improved, with the V5 consuming 35 to 50 watts, down from the V4's 75 to 100 watts. While it doesn't boost speeds, supporting 375+ Mbps compared to V4's 400+ Mbps, the focus is on form factor and efficiency.",
+   "The new dish comes with a \"pipe adapter\" for rooftop installation and is bundled with the Router Mini. Despite its light weight, similar to the Starlink Mini, it is not designed for in-motion use.",
+   "Currently, in regions like Drummond, Montana, the V5 dish is exclusively offered with the $55 per month 100Mbps Residential plan. Pricier Residential and Residential Max plans continue to use the V4 dish with the superior Router 3.",
+   "Elon Musk recently showcased the V5 dish, stating it would be produced in \"much higher volume.\" This release comes as Starlink also prepares for its next-gen Mobile network in mid-2027 and previously unveiled a $2,000 Performance dish for gigabit speeds."
+  ],
+  "caption": "Starlink's new V5 dish is 63% lighter and uses up to 50% less power than its predecessor. It's now rolling out in select areas.\n\nStarlink has quietly released its new V5 residential dish, which is significantly smaller, lighter, and more energy-efficient than the previous V4 model. This should simplify installation and reduce power consumption for users. It is now available in certain regions, initially bundled with the Router Mini.\n\nThe V5 dish weighs just 2.4 pounds, a substantial reduction from the V4's 6.5 pounds, making it 63% lighter. Its dimensions are 5.12 x 12.05 x 1.34 inches, a much more compact form factor compared to the V4's 23.4 x 15.1 x 1.5 inches.\n\nPower efficiency is also improved, with the V5 consuming 35 to 50 watts, down from the V4's 75 to 100 watts. While it doesn't boost speeds, supporting 375+ Mbps compared to V4's 400+ Mbps, the focus is on form factor and efficiency.\n\nThe new dish comes with a \"pipe adapter\" for rooftop installation and is bundled with the Router Mini. Despite its light weight, similar to the Starlink Mini, it is not designed for in-motion use.\n\nCurrently, in regions like Drummond, Montana, the V5 dish is exclusively offered with the $55 per month 100Mbps Residential plan. Pricier Residential and Residential Max plans continue to use the V4 dish with the superior Router 3.\n\nElon Musk recently showcased the V5 dish, stating it would be produced in \"much higher volume.\" This release comes as Starlink also prepares for its next-gen Mobile network in mid-2027 and previously unveiled a $2,000 Performance dish for gigabit speeds.\n\n#Starlink #SpaceX #SatelliteInternet #TechNews #Hardware #Internet\n\nSource: Engadget, The Verge",
+  "tweet": "Starlink's new V5 residential dish is here! It's 63% lighter (2.4 lbs) and up to 50% more energy-efficient (35-50W) than the V4. Now available in select regions, initially for the cheapest plan. #Starlink #SpaceX #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "starlink.com",
+  "source": "Engadget, The Verge",
+  "url": "https://www.engadget.com/2215419/starlink-v5-home-dish-smaller-and-more-energy-efficient/",
+  "image": "https://www.engadget.com/img/gallery/starlinks-new-v5-home-dish-is-smaller-and-more-energy-efficient/l-intro-1784104958.jpg",
+  "orig_title": "Starlink's new V5 home dish is smaller and more energy-efficient",
+  "cluster_urls": [
+   "https://www.engadget.com/2215419/starlink-v5-home-dish-smaller-and-more-energy-efficient/",
+   "https://www.theverge.com/science/965824/starlink-v5-vs-v4-dish-comparison"
+  ],
+  "cluster_titles": [
+   "Starlink's new V5 home dish is smaller and more energy-efficient",
+   "Starlink’s V5 dish is now available — here’s how it compares"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260715-1519-0-starlink-launches-new-v5-dish-63-lighter-50-.png",
+   "20260715-1519-0-starlink-launches-new-v5-dish-63-lighter-50--d1.png",
+   "20260715-1519-0-starlink-launches-new-v5-dish-63-lighter-50--d2.png"
+  ]
+ },
+ {
+  "topic": "production_rag_at_scale_lessons",
+  "headline_marked": "[[Lessons from running RAG at scale]], processing 10,000+ listings daily",
+  "headline": "Lessons from running RAG at scale, processing 10,000+ listings daily",
+  "summary": "An engineer shares critical insights from building a stable and affordable RAG pipeline processing over 10,000 job listings daily, covering chunking, embeddings, and vector store choices.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Debugging a RAG pipeline for a job board processing thousands of listings daily revealed key challenges in scaling LLM function calls. The goal was to achieve stability and affordability beyond basic vector store choices.",
+   "Chunking strategy proved paramount, directly impacting embedding quality, retrieval accuracy, and cost. Fixed-size chunks were ineffective for structured job descriptions, arbitrarily splitting semantic sections.",
+   "Semantic chunking by headers improved results but led to uneven chunk sizes, causing wasted embedding calls or missed context. Recursive character splitting with overlap, plus pre-processing for consistent input, was the most effective method.",
+   "For embeddings, OpenAI's text-embedding-3-small outperformed self-hosted Llama 3.1 via Ollama. While more costly, OpenAI's model provided superior accuracy for domain-specific language in job descriptions, reducing downstream LLM correction calls.",
+   "Cost and latency were optimized by batching OpenAI embedding requests, sending up to 100 chunks per API call. This significantly reduced pipeline latency, allowing daily volume processing within the scraping window.",
+   "Vector store evaluation led to a hybrid approach: Pinecone was quick for PoC but costly at scale. pgvector within PostgreSQL, despite more upfront work, offered dramatic cost savings and transactional consistency using existing infrastructure."
+  ],
+  "caption": "Running a RAG pipeline at scale for 10,000+ daily listings is tough. Learn how one engineer tackled chunking, embeddings, and vector stores to make it stable and affordable.\n\nDebugging a RAG pipeline for a job board processing thousands of listings daily revealed key challenges in scaling LLM function calls. The goal was to achieve stability and affordability beyond basic vector store choices.\n\nChunking strategy proved paramount, directly impacting embedding quality, retrieval accuracy, and cost. Fixed-size chunks were ineffective for structured job descriptions, arbitrarily splitting semantic sections.\n\nSemantic chunking by headers improved results but led to uneven chunk sizes, causing wasted embedding calls or missed context. Recursive character splitting with overlap, plus pre-processing for consistent input, was the most effective method.\n\nFor embeddings, OpenAI's text-embedding-3-small outperformed self-hosted Llama 3.1 via Ollama. While more costly, OpenAI's model provided superior accuracy for domain-specific language in job descriptions, reducing downstream LLM correction calls.\n\nCost and latency were optimized by batching OpenAI embedding requests, sending up to 100 chunks per API call. This significantly reduced pipeline latency, allowing daily volume processing within the scraping window.\n\nVector store evaluation led to a hybrid approach: Pinecone was quick for PoC but costly at scale. pgvector within PostgreSQL, despite more upfront work, offered dramatic cost savings and transactional consistency using existing infrastructure.\n\n#RAG #LLM #AI #SoftwareDevelopment #Tech #VectorDatabases\n\nSource: DEV",
+  "tweet": "Running a RAG pipeline for 10,000+ daily listings? This engineer shares crucial lessons on chunking, embeddings (OpenAI vs. self-hosted), and vector stores (Pinecone vs. pgvector) to achieve stability and affordability. #RAG #AI #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/abdul___rehman/production-rag-at-scale-lessons-from-processing-10000-listings-daily-22gm",
+  "image": "",
+  "orig_title": "Production RAG at Scale: Lessons from Processing 10,000+ Listings Daily",
+  "cluster_urls": [
+   "https://dev.to/abdul___rehman/production-rag-at-scale-lessons-from-processing-10000-listings-daily-22gm"
+  ],
+  "cluster_titles": [
+   "Production RAG at Scale: Lessons from Processing 10,000+ Listings Daily"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260715-1519-1-lessons-from-running-rag-at-scale-processing.png",
+   "20260715-1519-1-lessons-from-running-rag-at-scale-processing-d1.png",
+   "20260715-1519-1-lessons-from-running-rag-at-scale-processing-d2.png"
+  ]
+ }
+]

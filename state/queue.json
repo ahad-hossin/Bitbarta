@@ -1,1 +1,75 @@
-[]
+[
+ {
+  "topic": "linkedin_scammers_identity_theft",
+  "headline_marked": "[[LinkedIn is a cesspool]] of scammers and identity theft",
+  "headline": "LinkedIn is a cesspool of scammers and identity theft",
+  "summary": "Users are increasingly reporting LinkedIn as a hub for scam attempts and identity theft, leading to comparisons with other social media platforms known for similar issues. Many are expressing frustration and unsubscribing.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Reports highlight a growing concern over LinkedIn's platform integrity, with users increasingly encountering scam attempts and unsolicited, competitive \"skill puzzle\" requests. Many users express frustration over the platform's shift, leading some to unsubscribe from communications.",
+   "Critics argue that the prevalence of such issues makes LinkedIn comparable to other social media platforms known for privacy and scam concerns. Some users state they view those who remain on LinkedIn with a similar lack of sympathy as those still active on Facebook, citing a perceived disregard for personal security."
+  ],
+  "caption": "Users are reporting a surge in scam attempts and identity theft on LinkedIn. Is the platform becoming a digital minefield?\n\nReports highlight a growing concern over LinkedIn's platform integrity, with users increasingly encountering scam attempts and unsolicited, competitive \"skill puzzle\" requests. Many users express frustration over the platform's shift, leading some to unsubscribe from communications.\n\nCritics argue that the prevalence of such issues makes LinkedIn comparable to other social media platforms known for privacy and scam concerns. Some users state they view those who remain on LinkedIn with a similar lack of sympathy as those still active on Facebook, citing a perceived disregard for personal security.\n\n#LinkedIn #Scams #IdentityTheft #CyberSecurity #SocialMedia #TechNews\n\nSource: Hacker News",
+  "tweet": "Users are reporting a surge in scam attempts and identity theft on LinkedIn, leading some to compare it to Facebook. Many are unsubscribing due to frustration with the platform's integrity. Is LinkedIn becoming a digital minefield? #LinkedIn #Scams #CyberSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "linkedin.com",
+  "source": "Hacker News",
+  "url": "https://news.ycombinator.com/item?id=48916375",
+  "image": "",
+  "orig_title": "LinkedIn is a cesspool of scammers and identity theft",
+  "cluster_urls": [
+   "https://news.ycombinator.com/item?id=48916375"
+  ],
+  "cluster_titles": [
+   "LinkedIn is a cesspool of scammers and identity theft"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260715-1225-0-linkedin-is-a-cesspool-of-scammers-and-ident.png",
+   "20260715-1225-0-linkedin-is-a-cesspool-of-scammers-and-ident-d1.png"
+  ]
+ },
+ {
+  "topic": "spacexai_grok_code_upload_security_flaw",
+  "headline_marked": "[[SpaceXAI's Grok uploaded entire user codebases]] to Google Cloud, including secrets",
+  "headline": "SpaceXAI's Grok uploaded entire user codebases to Google Cloud, including secrets",
+  "summary": "The AI coding tool was found to be packaging and uploading full code repositories, even files it was instructed to ignore, before the feature was disabled.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "SpaceXAI's Grok Build AI coding tool was discovered uploading users' entire codebases to Google Cloud, including files marked for exclusion and deleted secrets. This retention was significantly more extensive than comparable tools like Claude Code.",
+   "The issue was reported by Cereblab, which published findings on Monday detailing how the Grok Build CLI performed these uploads. The tool was subsequently turned off by the company.",
+   "Researchers confirmed that as of Monday, SpaceXAI's servers now return a \"disable_codebase_upload: true\" flag, indicating the codebase upload functionality is no longer active.",
+   "Elon Musk addressed the incident on X, stating that all previously uploaded data by Grok Build would be \"completely and utterly deleted.\" He also claimed privacy settings are always respected but requested users allow data retention for debugging.",
+   "Dr. Lukasz Olejnik, an independent security researcher, confirmed that this level of data retention is \"excessive.\" He warned that at-risk data could include proprietary source code, security vulnerabilities, personal data, infrastructure details, and credentials.",
+   "SpaceXAI initially suggested using a \"/privacy\" command in the CLI to disable data retention. However, Cereblab clarified that this was a per-session toggle and not the underlying fix for the systemic codebase upload issue."
+  ],
+  "caption": "SpaceXAI's Grok Build AI coding tool was caught uploading users' entire code repositories, including sensitive files and deleted secrets, to Google Cloud.\n\nSpaceXAI's Grok Build AI coding tool was discovered uploading users' entire codebases to Google Cloud, including files marked for exclusion and deleted secrets. This retention was significantly more extensive than comparable tools like Claude Code.\n\nThe issue was reported by Cereblab, which published findings on Monday detailing how the Grok Build CLI performed these uploads. The tool was subsequently turned off by the company.\n\nResearchers confirmed that as of Monday, SpaceXAI's servers now return a \"disable_codebase_upload: true\" flag, indicating the codebase upload functionality is no longer active.\n\nElon Musk addressed the incident on X, stating that all previously uploaded data by Grok Build would be \"completely and utterly deleted.\" He also claimed privacy settings are always respected but requested users allow data retention for debugging.\n\nDr. Lukasz Olejnik, an independent security researcher, confirmed that this level of data retention is \"excessive.\" He warned that at-risk data could include proprietary source code, security vulnerabilities, personal data, infrastructure details, and credentials.\n\nSpaceXAI initially suggested using a \"/privacy\" command in the CLI to disable data retention. However, Cereblab clarified that this was a per-session toggle and not the underlying fix for the systemic codebase upload issue.\n\n#SpaceXAI #Grok #DataPrivacy #SecurityBreach #AI #DeveloperTools\n\nSource: The Verge",
+  "tweet": "SpaceXAI's Grok Build AI coding tool was found uploading entire user codebases, including sensitive files, to Google Cloud. Elon Musk states all data will be deleted. This raises major privacy concerns for developers. #Grok #Security #AI",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "x.ai",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/05/STK262_GROK_B_B.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "SpaceXAI&#8217;s Grok programming tool was uploading its users&#8217; entire codebase to cloud storage",
+  "cluster_urls": [
+   "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload"
+  ],
+  "cluster_titles": [
+   "SpaceXAI&#8217;s Grok programming tool was uploading its users&#8217; entire codebase to cloud storage"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260715-1225-1-spacexai-s-grok-uploaded-entire-user-codebas.png",
+   "20260715-1225-1-spacexai-s-grok-uploaded-entire-user-codebas-d1.png",
+   "20260715-1225-1-spacexai-s-grok-uploaded-entire-user-codebas-d2.png"
+  ]
+ }
+]

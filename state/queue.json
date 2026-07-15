@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "llm_forgetting_graph_anchor_pyramid",
+  "headline_marked": "[[Graph-Anchor Pyramid (GAP) cures AI's relational blindspots]], recovers 100% causal chains",
+  "headline": "Graph-Anchor Pyramid (GAP) cures AI's relational blindspots, recovers 100% causal chains",
+  "summary": "A new architecture, Graph-Anchor Pyramid (GAP), combines graph retrieval and semantic anchoring to achieve 100% causal chain recovery in multi-document synthesis, solving LLM 'forgetting' issues.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The new Graph-Anchor Pyramid (GAP) architecture is introduced as the next evolution in hierarchical context processing for Large Language Models. It aims to solve the problem of LLMs losing critical, fine-grained details during summarization.",
+   "GAP addresses a key limitation of its predecessor, the Pyramid Aggregator, which assumed perfect input. In real-world scenarios, flat vector searches often fail to retrieve root-cause documents if they are semantically unrelated to symptoms, leading to incomplete data for summarization.",
+   "Standard semantic search struggles when documents are connected by dependency or causality rather than similarity. For instance, a database connection failure might be caused by a voltage drop, but a flat search for 'database issues' would miss the 'voltage' logs.",
+   "Even if all relevant logs are retrieved, hierarchical merging can lead to 'lossy compression.' Intermediate summaries, especially under strict word limits, force LLMs to prune text, washing out crucial micro-facts like specific error codes or module names, resulting in generic summaries.",
+   "Previous benchmarks showed a Micro-Fact Recovery Rate of 0.0% when LLMs were forced into strict length constraints during hierarchical summarization. The AI provided high-level summaries but completely forgot specific entities.",
+   "The GAP architecture resolves these issues by integrating graph topology and static attention anchors into the hierarchical tree. It represents the document corpus as a directed dependency graph where vertices are document chunks and edges denote causal dependencies.",
+   "To prevent 'Causal Splitting,' where cause and effect are grouped separately, GAP treats leaf grouping as a graph partitioning problem. This method groups nodes to minimize edge cuts on the retrieved subgraph, ensuring causal relationships are preserved throughout the summarization process."
+  ],
+  "caption": "LLMs struggle with 'forgetting' critical details and causal links in complex summaries. A new architecture, Graph-Anchor Pyramid (GAP), claims 100% causal chain recovery.\n\nThe new Graph-Anchor Pyramid (GAP) architecture is introduced as the next evolution in hierarchical context processing for Large Language Models. It aims to solve the problem of LLMs losing critical, fine-grained details during summarization.\n\nGAP addresses a key limitation of its predecessor, the Pyramid Aggregator, which assumed perfect input. In real-world scenarios, flat vector searches often fail to retrieve root-cause documents if they are semantically unrelated to symptoms, leading to incomplete data for summarization.\n\nStandard semantic search struggles when documents are connected by dependency or causality rather than similarity. For instance, a database connection failure might be caused by a voltage drop, but a flat search for 'database issues' would miss the 'voltage' logs.\n\nEven if all relevant logs are retrieved, hierarchical merging can lead to 'lossy compression.' Intermediate summaries, especially under strict word limits, force LLMs to prune text, washing out crucial micro-facts like specific error codes or module names, resulting in generic summaries.\n\nPrevious benchmarks showed a Micro-Fact Recovery Rate of 0.0% when LLMs were forced into strict length constraints during hierarchical summarization. The AI provided high-level summaries but completely forgot specific entities.\n\nThe GAP architecture resolves these issues by integrating graph topology and static attention anchors into the hierarchical tree. It represents the document corpus as a directed dependency graph where vertices are document chunks and edges denote causal dependencies.\n\n#AI #LLM #RAG #GraphAI #TechNews #DeepLearning\n\nSource: DEV",
+  "tweet": "LLMs forgetting crucial details? New Graph-Anchor Pyramid (GAP) architecture recovers 100% of causal chains in multi-document synthesis. It combines Graph-RAG, topology-aware grouping, and semantic anchoring to prevent information loss. #AI #LLM #RAG",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gde/stop-your-llms-from-forgetting-part-2-how-a-graph-anchor-pyramid-cures-ais-relational-blindspots-4m33",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3ozvqtq8uxbwiwxonqhn.jpg",
+  "orig_title": "Stop Your LLMs from Forgetting (Part 2): How a Graph-Anchor Pyramid Cures AI’s Relational Blindspots",
+  "cluster_urls": [
+   "https://dev.to/gde/stop-your-llms-from-forgetting-part-2-how-a-graph-anchor-pyramid-cures-ais-relational-blindspots-4m33"
+  ],
+  "cluster_titles": [
+   "Stop Your LLMs from Forgetting (Part 2): How a Graph-Anchor Pyramid Cures AI’s Relational Blindspots"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260715-0925-0-graph-anchor-pyramid-gap-cures-ai-s-relation.png",
+   "20260715-0925-0-graph-anchor-pyramid-gap-cures-ai-s-relation-d1.png",
+   "20260715-0925-0-graph-anchor-pyramid-gap-cures-ai-s-relation-d2.png",
+   "20260715-0925-0-graph-anchor-pyramid-gap-cures-ai-s-relation-d3.png"
+  ]
+ }
+]

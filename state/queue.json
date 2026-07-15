@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_incident_commander_88_percent_pass_rate",
+  "headline_marked": "[[AI Incident Commander achieves 88% pass rate]] against 15 real outages for $0.02",
+  "headline": "AI Incident Commander achieves 88% pass rate against 15 real outages for $0.02",
+  "summary": "This CLI tool, running on local LLMs, automates incident documentation and research, significantly reducing human effort during critical outages at minimal cost.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Managing tech incidents often involves chaos, with engineers juggling multiple tasks like logging events, reading logs, and drafting updates. This leads to bottlenecks and diverts focus from critical decision-making. The new ai-incident-commander CLI tool aims to automate these mechanical parts, allowing humans to focus on resolution.",
+   "The tool runs locally using an LLM, requiring no API keys, cloud services, or Docker, ensuring privacy and control. It processes alerts, logs, and GitHub PRs from a specified directory, generating 10 markdown files including timelines, stakeholder updates, remediation suggestions, and a blameless postmortem draft.",
+   "Safety is paramount, with three human approval points for stakeholder updates, remediation, and postmortem content. The AI never executes actions, only predicts outcomes, and all AI-generated content is clearly labeled. Remediation suggestions include citations, and low-confidence suggestions are suppressed.",
+   "The developer tested the tool against 15 real incidents from public postmortems (Cloudflare, GitLab, GitHub, AWS) and structured datasets. Using a small, inexpensive LLM (DeepSeek V4 Flash), the total cost for these tests was approximately $0.02, with local MLX models offering a completely free option on Apple Silicon.",
+   "The ai-incident-commander achieved an 88% overall pass rate. It scored 100% on blameless framing, graceful degradation, no hallucination, cost tracking, timeline coherence, and action item quality. Citation integrity was 93% after a minor fix.",
+   "A key lesson from testing was to evaluate LLM output for coherence, quality, and safety rather than exact matches against human-written ground truth. The tool is designed to act as a 'junior engineer,' producing safe and useful content for human review and action, rather than a search engine.",
+   "Future development includes testing with larger models like Qwen3.6-35B for improved Root Cause Analysis quality. The infrastructure is ready for 124 fixtures from four public datasets, with broader validation planned to further enhance the tool's capabilities."
+  ],
+  "caption": "An AI tool achieved an 88% pass rate against 15 real-world outages for just $0.02. It automates incident documentation and research locally.\n\nManaging tech incidents often involves chaos, with engineers juggling multiple tasks like logging events, reading logs, and drafting updates. This leads to bottlenecks and diverts focus from critical decision-making. The new ai-incident-commander CLI tool aims to automate these mechanical parts, allowing humans to focus on resolution.\n\nThe tool runs locally using an LLM, requiring no API keys, cloud services, or Docker, ensuring privacy and control. It processes alerts, logs, and GitHub PRs from a specified directory, generating 10 markdown files including timelines, stakeholder updates, remediation suggestions, and a blameless postmortem draft.\n\nSafety is paramount, with three human approval points for stakeholder updates, remediation, and postmortem content. The AI never executes actions, only predicts outcomes, and all AI-generated content is clearly labeled. Remediation suggestions include citations, and low-confidence suggestions are suppressed.\n\nThe developer tested the tool against 15 real incidents from public postmortems (Cloudflare, GitLab, GitHub, AWS) and structured datasets. Using a small, inexpensive LLM (DeepSeek V4 Flash), the total cost for these tests was approximately $0.02, with local MLX models offering a completely free option on Apple Silicon.\n\nThe ai-incident-commander achieved an 88% overall pass rate. It scored 100% on blameless framing, graceful degradation, no hallucination, cost tracking, timeline coherence, and action item quality. Citation integrity was 93% after a minor fix.\n\nA key lesson from testing was to evaluate LLM output for coherence, quality, and safety rather than exact matches against human-written ground truth. The tool is designed to act as a 'junior engineer,' producing safe and useful content for human review and action, rather than a search engine.\n\n#AI #IncidentManagement #DevOps #OpenSource #CLI #TechTools\n\nSource: DEV",
+  "tweet": "An AI Incident Commander CLI tool achieved an 88% pass rate against 15 real outages for just $0.02. It runs locally with LLMs, automating documentation & research during incidents. Focus on decisions, not paperwork. #AI #DevOps #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/debashish_ghosal/i-tested-an-ai-incident-commander-against-15-real-outages-88-pass-rate-4i1c",
+  "image": "",
+  "orig_title": "i tested an ai incident commander against 15 real outages — 88% pass rate",
+  "cluster_urls": [
+   "https://dev.to/debashish_ghosal/i-tested-an-ai-incident-commander-against-15-real-outages-88-pass-rate-4i1c"
+  ],
+  "cluster_titles": [
+   "i tested an ai incident commander against 15 real outages — 88% pass rate"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260715-1007-0-ai-incident-commander-achieves-88-pass-rate-.png",
+   "20260715-1007-0-ai-incident-commander-achieves-88-pass-rate--d1.png",
+   "20260715-1007-0-ai-incident-commander-achieves-88-pass-rate--d2.png",
+   "20260715-1007-0-ai-incident-commander-achieves-88-pass-rate--d3.png",
+   "20260715-1007-0-ai-incident-commander-achieves-88-pass-rate--d4.png"
+  ]
+ },
+ {
+  "topic": "google_epic_android_app_stores_coming",
+  "headline_marked": "[[Third-party Android app stores are coming]] to Google Play next week, Google and Epic drop settlement",
+  "headline": "Third-party Android app stores are coming to Google Play next week, Google and Epic drop settlement",
+  "summary": "Google and Epic Games have withdrawn their settlement attempt, forcing Google to integrate rival app stores directly into Google Play in the US, starting July 22nd.",
+  "category": "ANDROID",
+  "template": "neon",
+  "details": [
+   "Google and Epic Games have withdrawn their settlement attempt in the US Android app store lawsuit. This decision forces Google to integrate rival app stores directly into Google Play, with implementation starting Wednesday, July 22nd.",
+   "The move follows Judge James Donato's October 2024 ruling, which found Google guilty of an illegal monopoly over Android applications. The judge originally mandated Google carry rival stores and share its app catalog to undo this monopoly.",
+   "Google had previously fought the ruling, even convincing Epic to join a global settlement with an $800 million deal. Judge Donato, however, was skeptical of Google's proposed 'Registered App Stores' that required sideloading, preferring direct integration.",
+   "Google stated its agreement with Epic to withdraw the motion, aiming to avoid prolonging uncertainty for the ecosystem. The company plans to focus on its recently announced global business model evolution for greater app store choice and lower prices.",
+   "This development means Android may have two distinct app store tracks: stores-within-a-store in the United States and sideloaded Registered App Stores in other regions globally. This dual approach addresses different regulatory landscapes.",
+   "Google is already notifying US app developers that their app and game listings will automatically be provided to third-party app stores from July 22nd, unless they opt out. A specific Play Catalog Access Program page has been launched for third-party stores to enroll.",
+   "For access to the Google Play catalog, third-party stores will face an annual $5,000 fee for security and policy reviews. Additional requirements include US-only distribution, openness to all eligible developers, clear trust policies, and a malware rate below 1%.",
+   "The full economic implications for Android app distribution and billing are still evolving. However, the actions by Epic and Google have already set a precedent for reduced fees and opened the Play Store to outside payment options."
+  ],
+  "caption": "Third-party app stores are officially coming to Google Play in the US next week. Google is now forced to integrate rivals directly into its own store.\n\nGoogle and Epic Games have withdrawn their settlement attempt in the US Android app store lawsuit. This decision forces Google to integrate rival app stores directly into Google Play, with implementation starting Wednesday, July 22nd.\n\nThe move follows Judge James Donato's October 2024 ruling, which found Google guilty of an illegal monopoly over Android applications. The judge originally mandated Google carry rival stores and share its app catalog to undo this monopoly.\n\nGoogle had previously fought the ruling, even convincing Epic to join a global settlement with an $800 million deal. Judge Donato, however, was skeptical of Google's proposed 'Registered App Stores' that required sideloading, preferring direct integration.\n\nGoogle stated its agreement with Epic to withdraw the motion, aiming to avoid prolonging uncertainty for the ecosystem. The company plans to focus on its recently announced global business model evolution for greater app store choice and lower prices.\n\nThis development means Android may have two distinct app store tracks: stores-within-a-store in the United States and sideloaded Registered App Stores in other regions globally. This dual approach addresses different regulatory landscapes.\n\nGoogle is already notifying US app developers that their app and game listings will automatically be provided to third-party app stores from July 22nd, unless they opt out. A specific Play Catalog Access Program page has been launched for third-party stores to enroll.\n\nFor access to the Google Play catalog, third-party stores will face an annual $5,000 fee for security and policy reviews. Additional requirements include US-only distribution, openness to all eligible developers, clear trust policies, and a malware rate below 1%.\n\n#Android #AppStores #GooglePlay #EpicGames #TechNews #Monopoly\n\nSource: The Verge",
+  "tweet": "Third-party app stores are officially coming to Google Play in the US next week. Google and Epic Games have withdrawn their settlement, forcing Google to integrate rival stores directly. This follows a court ruling on Google's Android monopoly. #Android #GooglePlay #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/policy/965792/google-epic-withdraw-injunction-third-party-app-stores-coming-google-play",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25047551/236883_Epic_Vs_Google_C_CVirginia.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Google and Epic give up fighting — third-party Android app stores are coming next week",
+  "cluster_urls": [
+   "https://www.theverge.com/policy/965792/google-epic-withdraw-injunction-third-party-app-stores-coming-google-play"
+  ],
+  "cluster_titles": [
+   "Google and Epic give up fighting — third-party Android app stores are coming next week"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260715-1007-1-third-party-android-app-stores-are-coming-to.png",
+   "20260715-1007-1-third-party-android-app-stores-are-coming-to-d1.png",
+   "20260715-1007-1-third-party-android-app-stores-are-coming-to-d2.png",
+   "20260715-1007-1-third-party-android-app-stores-are-coming-to-d3.png"
+  ]
+ }
+]

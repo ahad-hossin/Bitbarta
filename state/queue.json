@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "samsung_z_fold_8_new_shape",
+  "headline_marked": "[[Samsung teases 'brand new shape' for Galaxy Z Fold 8]] in Spider-Man video",
+  "headline": "Samsung teases 'brand new shape' for Galaxy Z Fold 8 in Spider-Man video",
+  "summary": "A new Spider-Man teaser from Samsung offers a sneak peek at the rumored Galaxy Z Fold 8, hinting at a wider, passport-like design. The device appears heavily obscured by lens flares in the video.",
+  "category": "GADGETS",
+  "template": "leak",
+  "details": [
+   "Samsung has provided a sneak peek of what it calls a 'brand new shape' for its upcoming Galaxy Z Fold 8. This reveal came via a new teaser video for 'Spider-Man: Brand New Day', showcasing a foldable phone being opened book-style.",
+   "The shots of the Z Fold 8 in the teaser are heavily obscured by cinematic lens flares, making a clear view difficult. However, it is rumored to feature a wider, passport-like design, departing from previous models.",
+   "The video also includes glimpses of other devices, such as the Galaxy Watch Ultra 2 and Galaxy Z Flip 8. While these are shown more clearly, they appear largely similar to Samsung's current lineup, with the Z Flip 8 looking identical to the Z Flip 7.",
+   "Samsung is anticipated to officially announce the wider Galaxy Z Fold 8, along with its full new device lineup, at a Galaxy Unpacked event scheduled for July 22nd. This comes amidst rumors of Apple also preparing a foldable iPhone with a similar design for a potential launch later this year."
+  ],
+  "caption": "Samsung's new Spider-Man teaser offers a glimpse of the rumored Galaxy Z Fold 8's wider, passport-like design. The foldable phone is shown, albeit heavily obscured by lens flares.\n\nSamsung has provided a sneak peek of what it calls a 'brand new shape' for its upcoming Galaxy Z Fold 8. This reveal came via a new teaser video for 'Spider-Man: Brand New Day', showcasing a foldable phone being opened book-style.\n\nThe shots of the Z Fold 8 in the teaser are heavily obscured by cinematic lens flares, making a clear view difficult. However, it is rumored to feature a wider, passport-like design, departing from previous models.\n\nThe video also includes glimpses of other devices, such as the Galaxy Watch Ultra 2 and Galaxy Z Flip 8. While these are shown more clearly, they appear largely similar to Samsung's current lineup, with the Z Flip 8 looking identical to the Z Flip 7.\n\nSamsung is anticipated to officially announce the wider Galaxy Z Fold 8, along with its full new device lineup, at a Galaxy Unpacked event scheduled for July 22nd. This comes amidst rumors of Apple also preparing a foldable iPhone with a similar design for a potential launch later this year.\n\n#Samsung #GalaxyZFold8 #FoldableTech #SpiderMan #TechNews #Android\n\nSource: The Verge",
+  "tweet": "Samsung's new Spider-Man teaser hints at a redesigned Galaxy Z Fold 8 with a wider, passport-like shape. Shots are heavily obscured, but a July 22nd Unpacked event is expected for the official reveal. #Samsung #GalaxyZFold8 #FoldableTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "samsung.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/tech/965997/samsung-spider-man-galaxy-z-fold-8-teaser",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/07/Screenshot-2026-07-15-at-11.56.45-AM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Samsung shows off ‘brand new shape’ for Z Fold 8 in Spider-Man teaser",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/965997/samsung-spider-man-galaxy-z-fold-8-teaser"
+  ],
+  "cluster_titles": [
+   "Samsung shows off ‘brand new shape’ for Z Fold 8 in Spider-Man teaser"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260715-2207-0-samsung-teases-brand-new-shape-for-galaxy-z-.png",
+   "20260715-2207-0-samsung-teases-brand-new-shape-for-galaxy-z--d1.png",
+   "20260715-2207-0-samsung-teases-brand-new-shape-for-galaxy-z--d2.png"
+  ]
+ },
+ {
+  "topic": "github_ai_agent_security_flaw",
+  "headline_marked": "[[GitHub's AI agent can be tricked into leaking private repos]] via a public Issue",
+  "headline": "GitHub's AI agent can be tricked into leaking private repos via a public Issue",
+  "summary": "Researchers demonstrated how a prompt injection attack on GitHub's new Agentic Workflows can bypass security measures, causing the AI to publicly expose private repository contents in a comment.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "GitHub's new Agentic Workflows, combining GitHub Actions with an AI agent, have a critical vulnerability. Researchers at Noma Labs discovered that the AI can be prompted to leak private repository contents publicly.",
+   "The attack uses a crafted GitHub Issue with hidden instructions embedded within a plausible feature request. When an Agentic Workflow is triggered, these instructions can compel the AI to fetch and post sensitive data.",
+   "Noma Labs found that simply adding the word 'Additionally' to injected instructions bypassed GitHub's existing guardrails. This single keyword caused the model to reframe its output instead of refusing, leading to the data leak.",
+   "This vulnerability highlights prompt injection as a systemic issue for agentic AI, akin to SQL injection for web applications. It's a category-wide problem requiring architectural defenses, not just case-specific fixes.",
+   "The 'GitLost' attack succeeded because the AI agent couldn't differentiate between legitimate operator instructions and malicious commands hidden in user-controlled content. This represents a fundamental trust boundary failure in agentic systems.",
+   "GitHub was responsibly notified of the vulnerability. While this specific instance was reported, the underlying pattern of prompt injection remains a challenge for AI agents with broad access."
+  ],
+  "caption": "A single keyword can force GitHub's new AI agent to leak private repository contents publicly. No credentials or exploit code needed.\n\nGitHub's new Agentic Workflows, combining GitHub Actions with an AI agent, have a critical vulnerability. Researchers at Noma Labs discovered that the AI can be prompted to leak private repository contents publicly.\n\nThe attack uses a crafted GitHub Issue with hidden instructions embedded within a plausible feature request. When an Agentic Workflow is triggered, these instructions can compel the AI to fetch and post sensitive data.\n\nNoma Labs found that simply adding the word 'Additionally' to injected instructions bypassed GitHub's existing guardrails. This single keyword caused the model to reframe its output instead of refusing, leading to the data leak.\n\nThis vulnerability highlights prompt injection as a systemic issue for agentic AI, akin to SQL injection for web applications. It's a category-wide problem requiring architectural defenses, not just case-specific fixes.\n\nThe 'GitLost' attack succeeded because the AI agent couldn't differentiate between legitimate operator instructions and malicious commands hidden in user-controlled content. This represents a fundamental trust boundary failure in agentic systems.\n\nGitHub was responsibly notified of the vulnerability. While this specific instance was reported, the underlying pattern of prompt injection remains a challenge for AI agents with broad access.\n\n#GitHub #AI #Security #PromptInjection #Cybersecurity #DeveloperTools\n\nSource: DEV",
+  "tweet": "GitHub's new AI agent can be tricked into leaking private repo contents via a public issue. Researchers bypassed guardrails with a single keyword, demonstrating a critical prompt injection vulnerability. #GitHub #AI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/thegatewayguy/githubs-ai-agent-can-be-tricked-into-leaking-private-repos-via-a-public-issue-47ai",
+  "image": "",
+  "orig_title": "GitHub's AI agent can be tricked into leaking private repos via a public Issue",
+  "cluster_urls": [
+   "https://dev.to/thegatewayguy/githubs-ai-agent-can-be-tricked-into-leaking-private-repos-via-a-public-issue-47ai"
+  ],
+  "cluster_titles": [
+   "GitHub's AI agent can be tricked into leaking private repos via a public Issue"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260715-2207-1-github-s-ai-agent-can-be-tricked-into-leakin.png",
+   "20260715-2207-1-github-s-ai-agent-can-be-tricked-into-leakin-d1.png",
+   "20260715-2207-1-github-s-ai-agent-can-be-tricked-into-leakin-d2.png"
+  ]
+ }
+]

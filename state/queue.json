@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "microsoft patches record number of security vulnerabilities citing AI",
+  "headline_marked": "Windows 0-day exploit [[HiveLegacy]] published same day as record patches",
+  "headline": "Windows 0-day exploit HiveLegacy published same day as record patches",
+  "summary": "A researcher has released exploit code for a zero-day vulnerability in Windows, allowing low-privilege users to compromise administrator accounts.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A new Windows zero-day exploit, dubbed HiveLegacy, has been published by an anonymous researcher shortly after Microsoft released a record number of security patches. The exploit targets a vulnerability in the Windows User Profile Service, enabling low-privilege accounts to make sensitive changes to administrator accounts.",
+   "The HiveLegacy exploit allows an attacker to modify the Windows registry associated with an administrator account. While the current proof-of-concept requires the attacker to know another user's credentials and the username of a third account on the machine, researchers state it's a 'powerful primitive' that can be chained with other exploits.",
+   "Researchers explain that the exploit abuses how Windows loads a user's class hive when they log on. Since the user isn't logged in before logging on, it's loaded in the context of NT AUTHORITY\\SYSTEM, allowing malicious modifications.",
+   "Microsoft has stated they are aware of the vulnerability report and are investigating, while also noting their preference for coordinated disclosure policies. For now, users can run a detection script published by independent researcher Kevin Beaumont to protect their systems. Other defenses include restricting local non-user account creation and monitoring ProfSvc for unexpected hive loads."
+  ],
+  "caption": "Windows zero-day exploit published the same day Microsoft released a record number of patches. The HiveLegacy exploit allows low-privilege users to compromise admin accounts.\n\nA new Windows zero-day exploit, dubbed HiveLegacy, has been published by an anonymous researcher shortly after Microsoft released a record number of security patches. The exploit targets a vulnerability in the Windows User Profile Service, enabling low-privilege accounts to make sensitive changes to administrator accounts.\n\nThe HiveLegacy exploit allows an attacker to modify the Windows registry associated with an administrator account. While the current proof-of-concept requires the attacker to know another user's credentials and the username of a third account on the machine, researchers state it's a 'powerful primitive' that can be chained with other exploits.\n\nResearchers explain that the exploit abuses how Windows loads a user's class hive when they log on. Since the user isn't logged in before logging on, it's loaded in the context of NT AUTHORITY\\SYSTEM, allowing malicious modifications.\n\nMicrosoft has stated they are aware of the vulnerability report and are investigating, while also noting their preference for coordinated disclosure policies. For now, users can run a detection script published by independent researcher Kevin Beaumont to protect their systems. Other defenses include restricting local non-user account creation and monitoring ProfSvc for unexpected hive loads.\n\n#Windows #CyberSecurity #ZeroDay #Microsoft #Vulnerability\n\nSource: Ars Technica, TechCrunch",
+  "tweet": "Windows zero-day exploit [[HiveLegacy]] published same day as record patches. Allows low-privilege users to compromise admin accounts. Microsoft is investigating. #Windows #CyberSecurity #ZeroDay",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Ars Technica, TechCrunch",
+  "url": "https://arstechnica.com/security/2026/07/windows-0-day-drops-the-same-day-microsoft-releases-record-number-of-patches/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2022/10/windows-malware-1024x648.jpg",
+  "orig_title": "Windows 0-day drops the same day Microsoft releases record number of patches",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/07/windows-0-day-drops-the-same-day-microsoft-releases-record-number-of-patches/",
+   "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/"
+  ],
+  "cluster_titles": [
+   "Windows 0-day drops the same day Microsoft releases record number of patches",
+   "Microsoft patches record number of security vulnerabilities, citing its use of AI"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260716-0311-0-windows-0-day-exploit-hivelegacy-published-s.png",
+   "20260716-0311-0-windows-0-day-exploit-hivelegacy-published-s-d1.png",
+   "20260716-0311-0-windows-0-day-exploit-hivelegacy-published-s-d2.png"
+  ]
+ },
+ {
+  "topic": "siri ai integration and samsung galaxy s26 ultra screen issues",
+  "headline_marked": "[[iOS 27 preview]] brings practical, but plain, AI-powered Siri",
+  "headline": "iOS 27 preview brings practical, but plain, AI-powered Siri",
+  "summary": "Apple's latest beta focuses on utility over flash, transforming Siri into a more capable assistant with a dedicated app and improved contextual awareness.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "Apple has released the public betas for iOS 27, introducing a significantly upgraded Siri experience. The new assistant is designed to be more intelligent and faster, aiming to catch up with competitors like Gemini and ChatGPT.",
+   "The primary focus of iOS 27's AI push is on day-to-day utility and shortcuts. While the overall OS design remains largely similar to iOS 26, subtle refinements to transparency and UI elements are present. The new Siri is integrated more deeply into the iPhone's functionality.",
+   "Interacting with Siri has been revamped, with options to say \"Hey Siri,\" hold the side button, or swipe down from the Dynamic Island. A dedicated Siri app now keeps a persistent history of requests, though it currently lacks thumbnail previews for uploaded images.",
+   "Siri AI in iOS 27 offers \"Expressive Voice\" in US English, allowing users to customize the assistant's pace and expressiveness. The AI performs best when leveraging on-device context, such as recalling recent app activity or pulling specific information from built-in apps like Mail.",
+   "While the new Siri can index and optimize search across the entire phone, this process can take several days and is aided by keeping the device plugged in. Third-party app compatibility, particularly with non-default email clients like Gmail, is still a work in progress.",
+   "iOS 27 also introduces new widget options, including an XL size for larger information displays, and improved interaction with core apps like timers and alarms, streamlining access without needing widgets or multiple app navigations."
+  ],
+  "caption": "Apple's iOS 27 beta is here, and the star is a more practical, AI-enhanced Siri. It's smarter, faster, and has its own app, but is it enough to compete?\n\nApple has released the public betas for iOS 27, introducing a significantly upgraded Siri experience. The new assistant is designed to be more intelligent and faster, aiming to catch up with competitors like Gemini and ChatGPT.\n\nThe primary focus of iOS 27's AI push is on day-to-day utility and shortcuts. While the overall OS design remains largely similar to iOS 26, subtle refinements to transparency and UI elements are present. The new Siri is integrated more deeply into the iPhone's functionality.\n\nInteracting with Siri has been revamped, with options to say \"Hey Siri,\" hold the side button, or swipe down from the Dynamic Island. A dedicated Siri app now keeps a persistent history of requests, though it currently lacks thumbnail previews for uploaded images.\n\nSiri AI in iOS 27 offers \"Expressive Voice\" in US English, allowing users to customize the assistant's pace and expressiveness. The AI performs best when leveraging on-device context, such as recalling recent app activity or pulling specific information from built-in apps like Mail.\n\nWhile the new Siri can index and optimize search across the entire phone, this process can take several days and is aided by keeping the device plugged in. Third-party app compatibility, particularly with non-default email clients like Gmail, is still a work in progress.\n\niOS 27 also introduces new widget options, including an XL size for larger information displays, and improved interaction with core apps like timers and alarms, streamlining access without needing widgets or multiple app navigations.\n\n#iOS27 #AppleIntelligence #Siri #iPhone #TechNews\n\nSource: Engadget",
+  "tweet": "Apple's iOS 27 beta is live! The new AI-powered Siri is more practical and contextual, but is it a game-changer? It's smarter, faster, and has its own app. #iOS27 #Siri #Apple",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2215572/apple-ios-27-preview/",
+  "image": "https://www.engadget.com/img/gallery/ios-27-preview-long-awaited-siri-ai-is-practical-but-a-little-plain/l-intro-1784117651.jpg",
+  "orig_title": "iOS 27 preview: Long-awaited Siri AI is practical but plain",
+  "cluster_urls": [
+   "https://www.engadget.com/2215572/apple-ios-27-preview/",
+   "https://www.engadget.com/2216077/samsung-galaxy-s26-ultra-screens-turning-red-not-sure-why/"
+  ],
+  "cluster_titles": [
+   "iOS 27 preview: Long-awaited Siri AI is practical but plain",
+   "Samsung isn't sure why some Galaxy S26 Ultra screens are turning red"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260716-0311-1-ios-27-preview-brings-practical-but-plain-ai.png",
+   "20260716-0311-1-ios-27-preview-brings-practical-but-plain-ai-d1.png",
+   "20260716-0311-1-ios-27-preview-brings-practical-but-plain-ai-d2.png"
+  ]
+ }
+]

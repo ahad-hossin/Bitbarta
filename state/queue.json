@@ -1,1 +1,100 @@
-[]
+[
+ {
+  "topic": "ai_agent_development_and_security",
+  "headline_marked": "[[AI-generated code]] often looks good but is subtly wrong",
+  "headline": "AI-generated code often looks good but is subtly wrong",
+  "summary": "AI code can be confidently wrong, making traditional code review instincts useless. A new checklist prioritizes defects by cost of error.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI-generated code can be a double-edged sword. While it often appears fluent, well-named, and perfectly typed, it can contain subtle errors that traditional code review methods miss. This is because AI models optimize for plausibility, not necessarily correctness, leading to 'confidently wrong' code.",
+   "Unlike human-written code where errors often correlate with awkward phrasing or hesitant usage, AI code's fluency can mask underlying issues. The standard reviewer's instinct to slow down at messy parts actively misfires, as AI code typically lacks such tells.",
+   "A new approach to reviewing AI code suggests a specialized checklist, prioritizing defects by the 'cost of error' rather than frequency. This ensures reviewers focus their limited attention where a mistake would be most impactful.",
+   "One of the most AI-specific defects is hallucination, where models invent non-existent APIs, config fields, or package versions. These invented elements appear consistent and deliberate, making them hard to spot through reading alone.",
+   "The most effective way to catch hallucinations is not by reading more carefully, but by running the code. Type checkers and compilers can instantly flag incorrect method calls or argument shapes. For untyped surfaces like config keys, actual execution is the only reliable check.",
+   "Another dangerous category of AI code defects is the absence of crucial domain-specific rules that weren't present in the training data. This includes missing tenant IDs, incorrect filtering of soft-deleted rows, or refunds exceeding captured amounts."
+  ],
+  "caption": "AI code reads well, but is it correct? A new checklist helps developers spot subtle, high-cost errors.\n\nAI-generated code can be a double-edged sword. While it often appears fluent, well-named, and perfectly typed, it can contain subtle errors that traditional code review methods miss. This is because AI models optimize for plausibility, not necessarily correctness, leading to 'confidently wrong' code.\n\nUnlike human-written code where errors often correlate with awkward phrasing or hesitant usage, AI code's fluency can mask underlying issues. The standard reviewer's instinct to slow down at messy parts actively misfires, as AI code typically lacks such tells.\n\nA new approach to reviewing AI code suggests a specialized checklist, prioritizing defects by the 'cost of error' rather than frequency. This ensures reviewers focus their limited attention where a mistake would be most impactful.\n\nOne of the most AI-specific defects is hallucination, where models invent non-existent APIs, config fields, or package versions. These invented elements appear consistent and deliberate, making them hard to spot through reading alone.\n\nThe most effective way to catch hallucinations is not by reading more carefully, but by running the code. Type checkers and compilers can instantly flag incorrect method calls or argument shapes. For untyped surfaces like config keys, actual execution is the only reliable check.\n\nAnother dangerous category of AI code defects is the absence of crucial domain-specific rules that weren't present in the training data. This includes missing tenant IDs, incorrect filtering of soft-deleted rows, or refunds exceeding captured amounts.\n\n#AICoding #CodeReview #SoftwareDevelopment #AI\n\nSource: DEV",
+  "tweet": "AI-generated code can be 'confidently wrong.' A new checklist prioritizes defects by cost of error, helping developers catch subtle bugs that traditional reviews miss. #AICoding #CodeReview",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/iurii_rogulia/my-checklist-for-reviewing-ai-generated-code-2iop",
+  "image": "",
+  "orig_title": "My Checklist for Reviewing AI-Generated Code",
+  "cluster_urls": [
+   "https://dev.to/iurii_rogulia/my-checklist-for-reviewing-ai-generated-code-2iop",
+   "https://dev.to/adrian_368e1d3e691afab697/roomcraft-ai-optimizar-la-distribucion-de-una-habitacion-con-simulated-annealing-bj7",
+   "https://dev.to/codewithshahan/11-open-source-tools-i-install-on-every-new-development-machine-1me5",
+   "https://dev.to/talo_oyweka_d7847a162c1ad/navigating-intellectual-property-as-a-software-developer-5e73",
+   "https://dev.to/mike_anderson_d01f52129fb/mcp-for-aws-security-engineers-build-a-read-only-security-hub-triage-agent-1iep",
+   "https://dev.to/techpotions/how-to-build-an-ai-agent-with-n8n-4ecd",
+   "https://dev.to/juliedechili/5-things-i-learned-building-a-chrome-extension-that-watches-chatgpt-claude-gemini-4a4i",
+   "https://dev.to/basavaraj_sh_1ea7d95f0f2e/prompt-injection-the-ai-security-hole-every-builder-should-know-11kh",
+   "https://dev.to/suckup_de/distill-coding-agent-learnings-31og"
+  ],
+  "cluster_titles": [
+   "My Checklist for Reviewing AI-Generated Code",
+   "RoomCraft AI: optimizar la distribución de una habitación con Simulated Annealing",
+   "11 Open-Source Tools I Install on Every New Development Machine",
+   "Navigating Intellectual Property as a software Developer.",
+   "MCP for AWS Security Engineers: Build a Read-Only Security Hub Triage Agent",
+   "How to Build an AI Agent with n8n",
+   "5 Things I Learned Building a Chrome Extension That Watches ChatGPT, Claude & Gemini",
+   "Prompt Injection: The AI Security Hole Every Builder Should Know",
+   "Distill Coding Agent Learnings"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260716-1606-0-ai-generated-code-often-looks-good-but-is-su.png",
+   "20260716-1606-0-ai-generated-code-often-looks-good-but-is-su-d1.png",
+   "20260716-1606-0-ai-generated-code-often-looks-good-but-is-su-d2.png"
+  ]
+ },
+ {
+  "topic": "android_17_features_and_bugs",
+  "headline_marked": "[[Android 17]] launches with AI promises, but users get floating bubbles",
+  "headline": "Android 17 launches with AI promises, but users get floating bubbles",
+  "summary": "The latest Android update aims to be an 'intelligence system' with AI features, but currently only offers a fun 'Bubbles' multitasking feature.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "Android 17 has officially launched, with Google promising a significant shift towards an \"intelligence system\" powered by AI. Users were eager to see how these advancements would integrate into their daily workflow, but the highly anticipated AI features are not yet available.",
+   "While the core of Android has been modified to support future agentic capabilities, the current user experience in Android 17 and its QPR1 beta updates feels largely unchanged. Many users are finding that without the promised Gemini Intelligence, their devices already feel outdated.",
+   "The most notable and immediately impactful feature currently available in Android 17 is 'Bubbles.' These floating app bubbles allow for quick multitasking, enabling users to switch between apps with a single tap, a significant improvement over traditional app switching gestures.",
+   "The 'Bubbles' feature has proven useful for tasks like copying information between apps or managing multiple applications without cluttering the screen. It offers a flexible way to multitask, keeping one app predominantly visible while another remains a tap away.",
+   "Despite the current lack of advanced AI features, the 'Bubbles' functionality is praised for its aesthetic appeal and practical utility. It doesn't aim to replace existing app launching methods but rather to enhance the multitasking experience.",
+   "Google has indicated that the full Gemini Intelligence features will roll out later this summer. Until then, Android 17 is perceived by many as a standard update focused on quality-of-life improvements and bug fixes, with the 'Bubbles' feature being the primary highlight.",
+   "The true value of the Android 17 update hinges on the successful implementation of Gemini Intelligence. Users are hopeful that Google will deliver on its promises, transforming the OS into the agentic system envisioned."
+  ],
+  "caption": "Android 17 is here, promising an AI-powered future, but for now, users are mostly enjoying floating bubbles and waiting for the real intelligence to arrive.\n\nAndroid 17 has officially launched, with Google promising a significant shift towards an \"intelligence system\" powered by AI. Users were eager to see how these advancements would integrate into their daily workflow, but the highly anticipated AI features are not yet available.\n\nWhile the core of Android has been modified to support future agentic capabilities, the current user experience in Android 17 and its QPR1 beta updates feels largely unchanged. Many users are finding that without the promised Gemini Intelligence, their devices already feel outdated.\n\nThe most notable and immediately impactful feature currently available in Android 17 is 'Bubbles.' These floating app bubbles allow for quick multitasking, enabling users to switch between apps with a single tap, a significant improvement over traditional app switching gestures.\n\nThe 'Bubbles' feature has proven useful for tasks like copying information between apps or managing multiple applications without cluttering the screen. It offers a flexible way to multitask, keeping one app predominantly visible while another remains a tap away.\n\nDespite the current lack of advanced AI features, the 'Bubbles' functionality is praised for its aesthetic appeal and practical utility. It doesn't aim to replace existing app launching methods but rather to enhance the multitasking experience.\n\nGoogle has indicated that the full Gemini Intelligence features will roll out later this summer. Until then, Android 17 is perceived by many as a standard update focused on quality-of-life improvements and bug fixes, with the 'Bubbles' feature being the primary highlight.\n\nThe true value of the Android 17 update hinges on the successful implementation of Gemini Intelligence. Users are hopeful that Google will deliver on its promises, transforming the OS into the agentic system envisioned.\n\n#Android17 #Google #AI #MobileTech #Bubbles\n\nSource: Android Police",
+  "tweet": "Android 17 has launched with big AI promises, but users are currently only seeing floating bubbles. The real intelligence features are expected later this summer. #Android17 #GoogleAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "android.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/downloaded-android-17-for-futuristic-ai-got-cute-floating-bubbles/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/07/a-hand-holding-a-pixel-phone-running-android-17-with-app-bubbles-open.png",
+  "orig_title": "I downloaded Android 17 for the futuristic AI; all I got were some cute floating bubbles",
+  "cluster_urls": [
+   "https://www.androidpolice.com/downloaded-android-17-for-futuristic-ai-got-cute-floating-bubbles/",
+   "https://www.androidpolice.com/android-17-qpr1-beta-7-release/"
+  ],
+  "cluster_titles": [
+   "I downloaded Android 17 for the futuristic AI; all I got were some cute floating bubbles",
+   "Android 17 QPR1 Beta 7 fixes annoying Quick Settings bugs on Pixel"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260716-1606-1-android-17-launches-with-ai-promises-but-use.png",
+   "20260716-1606-1-android-17-launches-with-ai-promises-but-use-d1.png",
+   "20260716-1606-1-android-17-launches-with-ai-promises-but-use-d2.png",
+   "20260716-1606-1-android-17-launches-with-ai-promises-but-use-d3.png"
+  ]
+ }
+]

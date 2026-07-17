@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "mario_kart_wii_ai_recompile_pc",
+  "headline_marked": "[[Mario Kart Wii recompiled for PC]] with AI, 4K potential, uncapped frame rates, and 200+ tracks",
+  "headline": "Mario Kart Wii recompiled for PC with AI, 4K potential, uncapped frame rates, and 200+ tracks",
+  "summary": "This marks the first static recompilation of a Wii game, offering higher performance and stability. A beta is expected next month, but Nintendo's reaction remains to be seen.",
+  "category": "GAMING",
+  "template": "neon",
+  "details": [
+   "Developer @patchzyy has teased \"Mario Kart Wiicompiled,\" a version of Mario Kart Wii rebuilt for PC using AI coding. This project aims for 4K resolution and an unlocked frame rate, marking the first static recompilation of a Wii game.",
+   "Static recompilation converts binary machine code into native code for a target platform, like PC. This technique enhances performance and stability, eliminating emulation overheads and quirks.",
+   "The recompiled game will support over 200 race tracks thanks to compatibility with the Retro Rewind community mod. While it doesn't currently use 4K or HD textures, these are potential future community modifications.",
+   "A beta release is anticipated for August. The project's future may depend on Nintendo's response, given their history of protecting intellectual property.",
+   "AI was used to assist with code development, as clarified in the project's FAQ. It was not used for generating art or other game assets."
+  ],
+  "caption": "Mario Kart Wii is coming to PC with AI-assisted static recompilation, promising 4K visuals and uncapped frame rates. Get ready for over 200 tracks!\n\nDeveloper @patchzyy has teased \"Mario Kart Wiicompiled,\" a version of Mario Kart Wii rebuilt for PC using AI coding. This project aims for 4K resolution and an unlocked frame rate, marking the first static recompilation of a Wii game.\n\nStatic recompilation converts binary machine code into native code for a target platform, like PC. This technique enhances performance and stability, eliminating emulation overheads and quirks.\n\nThe recompiled game will support over 200 race tracks thanks to compatibility with the Retro Rewind community mod. While it doesn't currently use 4K or HD textures, these are potential future community modifications.\n\nA beta release is anticipated for August. The project's future may depend on Nintendo's response, given their history of protecting intellectual property.\n\nAI was used to assist with code development, as clarified in the project's FAQ. It was not used for generating art or other game assets.\n\n#MarioKartWii #Gaming #RetroGaming #PCGaming #AI #Nintendo\n\nSource: Tom's Hardware",
+  "tweet": "Mario Kart Wii has been recompiled for PC using AI, promising 4K resolution, uncapped frame rates, and over 200 tracks. A beta is set for August. This is the first static recompilation of a Wii game! #MarioKartWii #PCGaming #RetroGaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nintendo.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/video-games/retro-gaming/mario-kart-wii-recompiled-for-pc-using-ai-with-4k-potential-and-uncapped-frame-rates-first-static-recompilation-of-a-wii-game-supports-over-200-tracks-thanks-to-retro-rewind-compatibility",
+  "image": "https://cdn.mos.cms.futurecdn.net/WnR7TF2f9dHBNkeD7w3kNc-1280-80.jpg",
+  "orig_title": "Mario Kart Wii recompiled for PC using AI, with 4K potential and uncapped frame rates — 'first static recompilation of a Wii game' supports over 200 tracks thanks to Retro Rewind compatibility",
+  "cluster_urls": [
+   "https://www.tomshardware.com/video-games/retro-gaming/mario-kart-wii-recompiled-for-pc-using-ai-with-4k-potential-and-uncapped-frame-rates-first-static-recompilation-of-a-wii-game-supports-over-200-tracks-thanks-to-retro-rewind-compatibility"
+  ],
+  "cluster_titles": [
+   "Mario Kart Wii recompiled for PC using AI, with 4K potential and uncapped frame rates — 'first static recompilation of a Wii game' supports over 200 tracks thanks to Retro Rewind compatibility"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260717-1606-0-mario-kart-wii-recompiled-for-pc-with-ai-4k-.png",
+   "20260717-1606-0-mario-kart-wii-recompiled-for-pc-with-ai-4k--d1.png",
+   "20260717-1606-0-mario-kart-wii-recompiled-for-pc-with-ai-4k--d2.png"
+  ]
+ },
+ {
+  "topic": "shark_robovac_security_flaw",
+  "headline_marked": "[[Shark robot vacuum flaw]] lets one stolen certificate run root commands on other robovacs in the same AWS region",
+  "headline": "Shark robot vacuum flaw lets one stolen certificate run root commands on other robovacs in the same AWS region",
+  "summary": "An unpatched flaw in Shark robot vacuums allows a stolen certificate to expose live camera feeds, stored home maps, and Wi-Fi credentials held in plaintext across an entire AWS region. The vulnerability affects hundreds of thousands of devices.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A security researcher, tokay0, has published a method to exploit a flaw in Shark robot vacuums. By lifting a client certificate from one unit, root commands can be run on other Shark vacuums within the same Amazon Web Services region.",
+   "This vulnerability exposes live camera feeds, stored home maps, and Wi-Fi credentials, which are reportedly held in plaintext. The researcher first reported the technique to SharkNinja on March 1, but as of July 16, the flaw remains unpatched.",
+   "The core issue stems from an over-permissive AWS IoT policy. The certificate used by a Shark vacuum to authenticate with Amazon's cloud broker was not restricted to its specific device, allowing a stolen certificate to subscribe to fleet-wide traffic and publish commands to any device served by that broker.",
+   "These commands are sent via an `Exec_Command` field within the device's state document in AWS. A management daemon on the vacuum then passes any command under 1,000 bytes to a shell, enabling remote execution.",
+   "The researcher successfully tested the technique on his own units, including obtaining a live feed from an AV1102ARUS Shark IQ Robot Vacuum XL. Monitoring a single AWS region for 24 hours, he observed 1,517,605 unique Shark serial numbers, with 673,816 (44%) responding to a command probe.",
+   "SharkNinja acknowledged the report on March 12 and stated it was under review on April 27, promising a fix by July 10 which was not delivered. The company reportedly downplayed the severity of the flaw, despite its own disclosure policy.",
+   "Remediation for this cloud-side failure does not require a firmware update; it can be fixed by SharkNinja pushing a scoped IoT policy within its own AWS account. This incident follows a similar authorization flaw in DJI Romo vacuums, which was patched within weeks."
+  ],
+  "caption": "Your Shark robot vacuum could be exposing live camera feeds, home maps, and Wi-Fi credentials. An unpatched flaw allows hackers to run root commands on devices across an entire AWS region.\n\nA security researcher, tokay0, has published a method to exploit a flaw in Shark robot vacuums. By lifting a client certificate from one unit, root commands can be run on other Shark vacuums within the same Amazon Web Services region.\n\nThis vulnerability exposes live camera feeds, stored home maps, and Wi-Fi credentials, which are reportedly held in plaintext. The researcher first reported the technique to SharkNinja on March 1, but as of July 16, the flaw remains unpatched.\n\nThe core issue stems from an over-permissive AWS IoT policy. The certificate used by a Shark vacuum to authenticate with Amazon's cloud broker was not restricted to its specific device, allowing a stolen certificate to subscribe to fleet-wide traffic and publish commands to any device served by that broker.\n\nThese commands are sent via an `Exec_Command` field within the device's state document in AWS. A management daemon on the vacuum then passes any command under 1,000 bytes to a shell, enabling remote execution.\n\nThe researcher successfully tested the technique on his own units, including obtaining a live feed from an AV1102ARUS Shark IQ Robot Vacuum XL. Monitoring a single AWS region for 24 hours, he observed 1,517,605 unique Shark serial numbers, with 673,816 (44%) responding to a command probe.\n\nSharkNinja acknowledged the report on March 12 and stated it was under review on April 27, promising a fix by July 10 which was not delivered. The company reportedly downplayed the severity of the flaw, despite its own disclosure policy.\n\nRemediation for this cloud-side failure does not require a firmware update; it can be fixed by SharkNinja pushing a scoped IoT policy within its own AWS account. This incident follows a similar authorization flaw in DJI Romo vacuums, which was patched within weeks.\n\n#Tech #Security #Cybersecurity #RobotVacuum #SharkNinja #Vulnerability\n\nSource: Tom's Hardware",
+  "tweet": "Your Shark robot vacuum could be exposing live camera feeds, home maps, and Wi-Fi credentials. An unpatched flaw allows hackers to run root commands on devices across an entire AWS region. SharkNinja was notified in March but has yet to patch it. #Cybersecurity #RobotVacuum",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "sharkninja.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/cyber-security/shark-robot-vacuum-flaw-lets-one-stolen-certificate-run-root-commands-on-others-in-the-same-aws-region",
+  "image": "https://cdn.mos.cms.futurecdn.net/xHYaeGUrtwRYLr4vErMHoG-1280-80.jpg",
+  "orig_title": "Robot vacuum flaw lets one stolen certificate run root commands on other Shark robovacs in the same AWS region — unpatched flaw exposes live camera feeds, stored home maps, and Wi-Fi credentials",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/cyber-security/shark-robot-vacuum-flaw-lets-one-stolen-certificate-run-root-commands-on-others-in-the-same-aws-region"
+  ],
+  "cluster_titles": [
+   "Robot vacuum flaw lets one stolen certificate run root commands on other Shark robovacs in the same AWS region — unpatched flaw exposes live camera feeds, stored home maps, and Wi-Fi credentials"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260717-1606-1-shark-robot-vacuum-flaw-lets-one-stolen-cert.png",
+   "20260717-1606-1-shark-robot-vacuum-flaw-lets-one-stolen-cert-d1.png",
+   "20260717-1606-1-shark-robot-vacuum-flaw-lets-one-stolen-cert-d2.png",
+   "20260717-1606-1-shark-robot-vacuum-flaw-lets-one-stolen-cert-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai_agent_bricks_mac_mini",
+  "headline_marked": "[[Runaway local LLM corrupted APFS]] and bricked a Mac Mini, requiring 24-hour recovery",
+  "headline": "Runaway local LLM corrupted APFS and bricked a Mac Mini, requiring 24-hour recovery",
+  "summary": "A background LLM server on a nearly full Mac Mini disk led to unified memory overflow, failed writes, and APFS metadata corruption, bricking the machine for a full day.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A Mac Mini M4 with 24 GB of unified memory was bricked after a runaway local LLM corrupted its APFS filesystem. The incident required over 24 hours of recovery, stemming from a background process that started an LLM on a nearly full disk.",
+   "The issue began when an Apple MLX-based LLM server loaded 14B and 8B models, overflowing the unified memory. macOS attempted to swap, but with no disk space, failed writes led to I/O errors and severe APFS metadata corruption.",
+   "Initially, the machine showed signs of sluggishness before its display went black and it failed to boot. Recovery mode revealed an unmountable data volume and fsck_apfs failing to reconcile corrupted metadata, making repairs impossible.",
+   "While APFS is designed for crash consistency, a nearly-full disk under sustained failed swap writes can expose rare corner cases. The critical lesson is to never allow the OS to be forced into swapping onto a disk with insufficient room.",
+   "The LLM server was not manually started; a global configuration preferring local model delegation for background tasks auto-launched it without user awareness. This highlights the danger of 'soft defaults' that can be overridden by other scripts or environments.",
+   "The solution involved replacing 'guidance' with 'positive refusal' code blocks at every layer that could potentially start the server. This defense-in-depth approach ensures independent blocks are sufficient to halt the process.",
+   "These hard blocks are designed to be explicit refusals, not merely missing features, making their reversal a conscious decision. This prevents accidental re-enabling and ensures the critical guardrail remains in place.",
+   "To prevent the hard block from becoming dead weight, it ships with an explicit, ordered checklist for re-enabling the LLM. This transforms 'turning the LLM back on' from an impulse into a carefully gated act.",
+   "The incident offers a transferable lesson about Apple Silicon's unified memory, where CPU and GPU share a single 24 GB pool. Free disk space acts as a crucial memory safety net, as models draw from the same pool the OS uses."
+  ],
+  "caption": "A runaway local LLM bricked a Mac Mini, corrupting its filesystem and requiring a full day of recovery. This wasn't a manual error, but an auto-started background process.\n\nA Mac Mini M4 with 24 GB of unified memory was bricked after a runaway local LLM corrupted its APFS filesystem. The incident required over 24 hours of recovery, stemming from a background process that started an LLM on a nearly full disk.\n\nThe issue began when an Apple MLX-based LLM server loaded 14B and 8B models, overflowing the unified memory. macOS attempted to swap, but with no disk space, failed writes led to I/O errors and severe APFS metadata corruption.\n\nInitially, the machine showed signs of sluggishness before its display went black and it failed to boot. Recovery mode revealed an unmountable data volume and fsck_apfs failing to reconcile corrupted metadata, making repairs impossible.\n\nWhile APFS is designed for crash consistency, a nearly-full disk under sustained failed swap writes can expose rare corner cases. The critical lesson is to never allow the OS to be forced into swapping onto a disk with insufficient room.\n\nThe LLM server was not manually started; a global configuration preferring local model delegation for background tasks auto-launched it without user awareness. This highlights the danger of 'soft defaults' that can be overridden by other scripts or environments.\n\nThe solution involved replacing 'guidance' with 'positive refusal' code blocks at every layer that could potentially start the server. This defense-in-depth approach ensures independent blocks are sufficient to halt the process.\n\nThese hard blocks are designed to be explicit refusals, not merely missing features, making their reversal a conscious decision. This prevents accidental re-enabling and ensures the critical guardrail remains in place.\n\n#MacMini #LLM #AppleSilicon #APFS #Software #TechNews\n\nSource: DEV",
+  "tweet": "A local LLM running in the background on a nearly full Mac Mini disk caused APFS corruption, bricking the machine for over 24 hours. The fix? Hard-coded guardrails, not just guidance. #MacMini #LLM #AppleSilicon",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hexisteme/the-guardrail-has-to-be-code-how-a-runaway-local-llm-corrupted-apfs-and-bricked-a-mac-mini-4780",
+  "image": "",
+  "orig_title": "The Guardrail Has to Be Code: How a Runaway Local LLM Corrupted APFS and Bricked a Mac Mini",
+  "cluster_urls": [
+   "https://dev.to/hexisteme/the-guardrail-has-to-be-code-how-a-runaway-local-llm-corrupted-apfs-and-bricked-a-mac-mini-4780"
+  ],
+  "cluster_titles": [
+   "The Guardrail Has to Be Code: How a Runaway Local LLM Corrupted APFS and Bricked a Mac Mini"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260717-0607-0-runaway-local-llm-corrupted-apfs-and-bricked.png",
+   "20260717-0607-0-runaway-local-llm-corrupted-apfs-and-bricked-d1.png",
+   "20260717-0607-0-runaway-local-llm-corrupted-apfs-and-bricked-d2.png",
+   "20260717-0607-0-runaway-local-llm-corrupted-apfs-and-bricked-d3.png"
+  ]
+ },
+ {
+  "topic": "apple_m6_chip_coming_soon",
+  "headline_marked": "[[Apple's M6 chip is reportedly coming]] later this year with faster memory and a redesigned GPU",
+  "headline": "Apple's M6 chip is reportedly coming later this year with faster memory and a redesigned GPU",
+  "summary": "The next-gen M6 chip is rumored to feature faster memory, a redesigned GPU, and an unprecedented lineup change, expected later this year.",
+  "category": "APPLE",
+  "template": "leak",
+  "details": [
+   "Apple's M6 chip is reportedly set to launch later this year, bringing significant upgrades. Rumors suggest it will feature faster memory, a redesigned GPU, and an unprecedented change to its product lineup.",
+   "While specific performance benchmarks are not yet available, the focus on faster memory and a new GPU architecture indicates a push for enhanced graphical capabilities and overall system responsiveness.",
+   "The 'unprecedented lineup change' remains a key point of speculation, potentially hinting at new device categories or a restructuring of Apple's silicon tiers. This could impact future Mac and iPad models."
+  ],
+  "caption": "Apple's next-gen M6 chip is rumored to arrive this year with major upgrades.\n\nApple's M6 chip is reportedly set to launch later this year, bringing significant upgrades. Rumors suggest it will feature faster memory, a redesigned GPU, and an unprecedented change to its product lineup.\n\nWhile specific performance benchmarks are not yet available, the focus on faster memory and a new GPU architecture indicates a push for enhanced graphical capabilities and overall system responsiveness.\n\nThe 'unprecedented lineup change' remains a key point of speculation, potentially hinting at new device categories or a restructuring of Apple's silicon tiers. This could impact future Mac and iPad models.\n\n#Apple #M6Chip #AppleSilicon #TechLeak #Hardware #ComingSoon\n\nSource: 9to5Mac",
+  "tweet": "Apple's M6 chip is reportedly launching later this year, bringing faster memory, a redesigned GPU, and an unprecedented lineup change. Get ready for the next level of Apple Silicon performance. #Apple #M6Chip #TechLeak",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/07/16/apples-m6-chip-is-coming-soon-heres-everything-we-know/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/10/m6_regular.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Apple’s M6 chip is coming soon, here’s everything we know",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/07/16/apples-m6-chip-is-coming-soon-heres-everything-we-know/"
+  ],
+  "cluster_titles": [
+   "Apple’s M6 chip is coming soon, here’s everything we know"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260717-0607-1-apple-s-m6-chip-is-reportedly-coming-later-t.png",
+   "20260717-0607-1-apple-s-m6-chip-is-reportedly-coming-later-t-d1.png"
+  ]
+ }
+]

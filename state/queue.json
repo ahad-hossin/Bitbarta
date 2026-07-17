@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "ai_agent_production_lessons",
+  "headline_marked": "[[Auto-resume rate-limited Claude Code sessions]] with PROGRESS.md and retries",
+  "headline": "Auto-resume rate-limited Claude Code sessions with PROGRESS.md and retries",
+  "summary": "A developer shares a 20-line shell script to automatically resume Claude Code sessions that hit rate limits. It uses a PROGRESS.md file to maintain context and retries to ensure long tasks complete without manual intervention.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Long Claude Code tasks often halt due to rate limits, leading to lost context and tedious manual restarts. This article details a 20-line shell script designed to automatically resume these interrupted sessions.",
+   "The core solution involves using a PROGRESS.md file as a 'handoff ticket.' Claude is instructed to update this file at each work boundary, recording completed and remaining steps.",
+   "When a session is rate-limited, the script detects the non-zero exit code. It then prompts Claude to 'Read PROGRESS.md and continue the interrupted work,' allowing it to pick up exactly where it left off.",
+   "The resume-on-ratelimit.sh script employs MAX_RETRIES (default 20) and WAIT_MINUTES (default 5) to manage retries, covering rate limits within a few hours. These parameters are customizable via environment variables.",
+   "For unattended operation, the --dangerously-skip-permissions flag is used, though this requires strictly narrowing allowedTools in the prompt for security. Notifications are fired on rate limit detection, successful retry, and when max retries are exceeded.",
+   "This script acts as a wrapper for manual long tasks, complementing scheduled autopilot.sh runs. It ensures that user-initiated processes 'keep running until this process finishes' even when facing temporary service interruptions."
+  ],
+  "caption": "Stop losing progress on long AI tasks. A 20-line shell script ensures your Claude Code sessions auto-resume after hitting rate limits.\n\nLong Claude Code tasks often halt due to rate limits, leading to lost context and tedious manual restarts. This article details a 20-line shell script designed to automatically resume these interrupted sessions.\n\nThe core solution involves using a PROGRESS.md file as a 'handoff ticket.' Claude is instructed to update this file at each work boundary, recording completed and remaining steps.\n\nWhen a session is rate-limited, the script detects the non-zero exit code. It then prompts Claude to 'Read PROGRESS.md and continue the interrupted work,' allowing it to pick up exactly where it left off.\n\nThe resume-on-ratelimit.sh script employs MAX_RETRIES (default 20) and WAIT_MINUTES (default 5) to manage retries, covering rate limits within a few hours. These parameters are customizable via environment variables.\n\nFor unattended operation, the --dangerously-skip-permissions flag is used, though this requires strictly narrowing allowedTools in the prompt for security. Notifications are fired on rate limit detection, successful retry, and when max retries are exceeded.\n\nThis script acts as a wrapper for manual long tasks, complementing scheduled autopilot.sh runs. It ensures that user-initiated processes 'keep running until this process finishes' even when facing temporary service interruptions.\n\n#AI #Developer #ClaudeAI #Automation #ShellScript #TechTips\n\nSource: DEV",
+  "tweet": "Stop losing progress on long AI tasks! This 20-line shell script auto-resumes rate-limited Claude Code sessions using PROGRESS.md and retries. Never manually restart an AI task again. #AI #Developer #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/bokuwalily/how-i-auto-resume-a-rate-limited-claude-code-session-with-progressmd-and-retries-5cl5",
+  "image": "",
+  "orig_title": "How I Auto-Resume a Rate-Limited Claude Code Session with PROGRESS.md and Retries",
+  "cluster_urls": [
+   "https://dev.to/bokuwalily/how-i-auto-resume-a-rate-limited-claude-code-session-with-progressmd-and-retries-5cl5",
+   "https://dev.to/ethan_0422/six-months-ago-i-couldnt-code-now-i-run-12-companies-software-on-claude-code-heres-what-56d4"
+  ],
+  "cluster_titles": [
+   "How I Auto-Resume a Rate-Limited Claude Code Session with PROGRESS.md and Retries",
+   "Six months ago I couldn't code. Now I run 12 companies' software on Claude Code. Here's what production taught me."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260717-1106-0-auto-resume-rate-limited-claude-code-session.png",
+   "20260717-1106-0-auto-resume-rate-limited-claude-code-session-d1.png",
+   "20260717-1106-0-auto-resume-rate-limited-claude-code-session-d2.png"
+  ]
+ }
+]

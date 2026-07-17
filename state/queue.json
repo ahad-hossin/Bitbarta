@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "ai_qa_agent_failure_blank_canvas",
+  "headline_marked": "[[AI QA agent reported 'all features working']] on a blank canvas due to hidden tab throttling",
+  "headline": "AI QA agent reported 'all features working' on a blank canvas due to hidden tab throttling",
+  "summary": "An AI QA agent incorrectly passed a web tool, reporting 'all features working' despite a blank canvas. This was due to browser throttling of requestAnimationFrame and setInterval in hidden tabs, leading to zero frames rendered.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI QA agent once signed off on a web tool, declaring \"all features working, pass,\" even though the canvas was completely blank. The AI was not lying; in its environment, the tool genuinely appeared to function correctly.",
+   "The core issue stemmed from Chrome MCP operating in hidden tabs, where browsers aggressively throttle `requestAnimationFrame` to save power. This meant JavaScript executed without errors, but no pixels were rendered, leading the AI to falsely conclude success.",
+   "Further investigation revealed that `setInterval` was decimated to roughly 1/8 of its expected rate, and `setTimeout` also drifted significantly. This indicates that timer-driven logic in general cannot be trusted in hidden tabs, affecting more than just rAF-based animations.",
+   "The second trap involved AI QA reports focusing on code-path health rather than actual feature behavior. Statements like \"onclick wiring confirmed\" or \"zero JS errors\" describe code correctness, not visual or functional outcomes, allowing issues like empty downloaded files to pass unnoticed.",
+   "The solution involved first grepping the template for dynamic features, then requiring a behavior check for every hit. QA reports must now include a feature-coverage table, with \"exists in code but behavior unverified\" never graded as a pass.",
+   "A key benefit of visual QA is cross-checking code claims against pixel output, catching cascade and override bugs with concrete evidence. The operating principle is that dynamic rendering must be verified in a visible state, not just assumed from code execution.",
+   "Behavior checks consume time and tokens, so they are only required for tools where dynamic features are detected. This issue was verified and reproduced between April and July 2026, using Claude and Chrome MCP on Windows 11."
+  ],
+  "caption": "An AI QA agent reported 'all features working' on a completely blank canvas. The culprit: aggressive browser throttling in hidden tabs.\n\nAn AI QA agent once signed off on a web tool, declaring \"all features working, pass,\" even though the canvas was completely blank. The AI was not lying; in its environment, the tool genuinely appeared to function correctly.\n\nThe core issue stemmed from Chrome MCP operating in hidden tabs, where browsers aggressively throttle `requestAnimationFrame` to save power. This meant JavaScript executed without errors, but no pixels were rendered, leading the AI to falsely conclude success.\n\nFurther investigation revealed that `setInterval` was decimated to roughly 1/8 of its expected rate, and `setTimeout` also drifted significantly. This indicates that timer-driven logic in general cannot be trusted in hidden tabs, affecting more than just rAF-based animations.\n\nThe second trap involved AI QA reports focusing on code-path health rather than actual feature behavior. Statements like \"onclick wiring confirmed\" or \"zero JS errors\" describe code correctness, not visual or functional outcomes, allowing issues like empty downloaded files to pass unnoticed.\n\nThe solution involved first grepping the template for dynamic features, then requiring a behavior check for every hit. QA reports must now include a feature-coverage table, with \"exists in code but behavior unverified\" never graded as a pass.\n\nA key benefit of visual QA is cross-checking code claims against pixel output, catching cascade and override bugs with concrete evidence. The operating principle is that dynamic rendering must be verified in a visible state, not just assumed from code execution.\n\nBehavior checks consume time and tokens, so they are only required for tools where dynamic features are detected. This issue was verified and reproduced between April and July 2026, using Claude and Chrome MCP on Windows 11.\n\n#AI #SoftwareDevelopment #WebDev #QA #BrowserTech #Debugging\n\nSource: DEV",
+  "tweet": "An AI QA agent passed a web tool, but the canvas was blank. It turns out hidden browser tabs aggressively throttle `requestAnimationFrame` and `setInterval`, leading to zero frames rendered. A critical lesson for AI-driven visual QA. #AI #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mxhlix/my-ai-qa-agent-said-all-features-working-the-canvas-was-blank-heres-what-it-was-actually-1pl5",
+  "image": "",
+  "orig_title": "My AI QA agent said \"all features working.\" The canvas was blank. Here's what it was actually seeing.",
+  "cluster_urls": [
+   "https://dev.to/mxhlix/my-ai-qa-agent-said-all-features-working-the-canvas-was-blank-heres-what-it-was-actually-1pl5"
+  ],
+  "cluster_titles": [
+   "My AI QA agent said \"all features working.\" The canvas was blank. Here's what it was actually seeing."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260717-0906-0-ai-qa-agent-reported-all-features-working-on.png",
+   "20260717-0906-0-ai-qa-agent-reported-all-features-working-on-d1.png",
+   "20260717-0906-0-ai-qa-agent-reported-all-features-working-on-d2.png",
+   "20260717-0906-0-ai-qa-agent-reported-all-features-working-on-d3.png"
+  ]
+ }
+]

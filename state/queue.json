@@ -1,1 +1,107 @@
-[]
+[
+ {
+  "topic": "developer_tool_evolution_and_practices",
+  "headline_marked": "Yandex Search API: [[Scrape Yandex SERPs]] as Structured JSON",
+  "headline": "Yandex Search API: Scrape Yandex SERPs as Structured JSON",
+  "summary": "Access Yandex search results, including organic ranks and ads, in structured JSON format via Apify's hosted API. Covers 19 languages and 123,000+ region IDs.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Yandex serves search results for over half a billion users across Russia and CIS countries. For SEO professionals and analysts tracking this market, manually checking rankings or ads on Yandex.ru is a time-consuming hassle. This post introduces a shortcut: the Yandex Search API on Apify, which transforms any query into structured JSON data.",
+   "While Yandex offers an official Search API, it requires registration and key management. The Apify solution acts as a hosted scraper, allowing users to send queries and receive SERPs as JSON without extensive setup. It provides organic ranks, paid ads, knowledge graph cards, and even inline images and videos, each tagged with an item_type.",
+   "The API supports dedicated verticals for Yandex Images and Yandex Videos. Image results include full-size URLs, hosting pages, and thumbnails, with filters for type, color, orientation, size, and recency. Video results provide title, duration, views, date, source, and channel information.",
+   "This tool is invaluable for SEO teams tracking rankings in Russian-speaking markets, ad-intelligence analysts monitoring commercial keyword placements, and developers building AI agents that need a search engine beyond Google. The ability to localize results using one of 123,000+ region IDs is a key feature.",
+   "DIY scraping of Yandex involves manually requesting pages, parsing HTML, and dealing with proxy rotation and CAPTCHAs, which quickly becomes unmanageable due to Yandex's complex localization. The Apify API simplifies this by handling the complexities of 6 domains, 19 interface languages, and numerous region IDs.",
+   "The Yandex Search API can be used for rank tracking by saving queries as tasks and scheduling regular runs to collect data over time. It also offers a way to track Yandex search ads by pulling paid placements and their metadata, providing a cost-effective ad-intelligence feed for CIS markets.",
+   "For developers integrating AI, the Apify Actor can be exposed over the Model Context Protocol (MCP). This allows AI models like Claude to run live Yandex searches mid-conversation and reason over the structured results, effectively giving the AI a powerful new information source.",
+   "The pricing is event-based, starting at approximately $0.08 per search plus $0.08 per page of results, making a typical one-page pull around 16 cents. New Apify accounts receive free platform credit, covering initial searches without requiring payment details.",
+   "It's important to note that the API returns only what the public SERP shows. It does not provide keyword search volume or historical data unless collected by the user. For volume numbers, it should be paired with a dedicated keyword tool."
+  ],
+  "caption": "Tired of manual Yandex SERP checks? Access Yandex search results, including organic ranks and ads, as structured JSON via Apify's API.\n\nYandex serves search results for over half a billion users across Russia and CIS countries. For SEO professionals and analysts tracking this market, manually checking rankings or ads on Yandex.ru is a time-consuming hassle. This post introduces a shortcut: the Yandex Search API on Apify, which transforms any query into structured JSON data.\n\nWhile Yandex offers an official Search API, it requires registration and key management. The Apify solution acts as a hosted scraper, allowing users to send queries and receive SERPs as JSON without extensive setup. It provides organic ranks, paid ads, knowledge graph cards, and even inline images and videos, each tagged with an item_type.\n\nThe API supports dedicated verticals for Yandex Images and Yandex Videos. Image results include full-size URLs, hosting pages, and thumbnails, with filters for type, color, orientation, size, and recency. Video results provide title, duration, views, date, source, and channel information.\n\nThis tool is invaluable for SEO teams tracking rankings in Russian-speaking markets, ad-intelligence analysts monitoring commercial keyword placements, and developers building AI agents that need a search engine beyond Google. The ability to localize results using one of 123,000+ region IDs is a key feature.\n\nDIY scraping of Yandex involves manually requesting pages, parsing HTML, and dealing with proxy rotation and CAPTCHAs, which quickly becomes unmanageable due to Yandex's complex localization. The Apify API simplifies this by handling the complexities of 6 domains, 19 interface languages, and numerous region IDs.\n\n#SEO #Yandex #API #WebScraping #DeveloperTools #MarTech\n\nSource: DEV",
+  "tweet": "Yandex Search API: Scrape Yandex SERPs as Structured JSON. Access organic ranks, ads, images, and videos for Russia & CIS markets. Covers 19 languages & 123k+ regions. #SEO #API #WebScraping",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/trufflepig/yandex-search-api-how-to-scrape-yandex-serps-as-structured-json-in-2026-2bej",
+  "image": "",
+  "orig_title": "Yandex Search API: How to Scrape Yandex SERPs as Structured JSON in 2026",
+  "cluster_urls": [
+   "https://dev.to/trufflepig/yandex-search-api-how-to-scrape-yandex-serps-as-structured-json-in-2026-2bej",
+   "https://dev.to/sanjaysah/why-i-stopped-copy-pasting-repositories-and-started-building-my-own-starter-cli-246j",
+   "https://dev.to/hdzilyes/the-evolution-of-how-we-use-css-3ojo",
+   "https://dev.to/hdzilyes/a-tiny-engine-for-generating-file-trees-4m",
+   "https://dev.to/pawlee/customizable-workout-app-184l",
+   "https://dev.to/mrajaeim/stop-rebasing-every-time-a-safer-way-to-keep-your-git-branch-updated-with-master-4ojh",
+   "https://dev.to/evgenii-slepinin/your-html-is-fine-the-cdn-still-blocks-the-bot-466d",
+   "https://dev.to/vishnu1438/i-built-a-crew-of-ai-agents-that-review-code-like-a-real-team-then-watched-them-argue-with-signoz-238d",
+   "https://dev.to/okeke_chukwudubem_5f3bf49/project-log-17-my-agent-misreads-bank-balances-heres-how-im-fixing-it-4egj",
+   "https://dev.to/nabbilkhan/make-the-fake-impossible-5g07",
+   "https://dev.to/deeplab/how-i-make-ffmpeg-hit-an-exact-file-size-the-bitrate-math-nobody-explains-3o7o"
+  ],
+  "cluster_titles": [
+   "Yandex Search API: How to Scrape Yandex SERPs as Structured JSON in 2026",
+   "Why I Stopped Copy-Pasting Repositories and Started Building My Own Starter CLI",
+   "The evolution of how we use CSS",
+   "A tiny engine for generating file trees",
+   "Customizable workout app",
+   "Stop Rebasing Every Time: A Safer Way to Keep Your Git Branch Updated with `master`",
+   "Your HTML is fine. The CDN still blocks the bot.",
+   "I Built a Crew of AI Agents That Review Code Like a Real Team — Then Watched Them Argue With SigNoz",
+   "Project Log #17: My Agent Misreads Bank Balances. Here's How I'm Fixing It.",
+   "Make the Fake Impossible",
+   "How I make ffmpeg hit an exact file size (the bitrate math nobody explains)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260719-0106-0-yandex-search-api-scrape-yandex-serps-as-str.png",
+   "20260719-0106-0-yandex-search-api-scrape-yandex-serps-as-str-d1.png",
+   "20260719-0106-0-yandex-search-api-scrape-yandex-serps-as-str-d2.png",
+   "20260719-0106-0-yandex-search-api-scrape-yandex-serps-as-str-d3.png",
+   "20260719-0106-0-yandex-search-api-scrape-yandex-serps-as-str-d4.png"
+  ]
+ },
+ {
+  "topic": "chinese_ai_model_kimi_k3_competition",
+  "headline_marked": "Moonshot AI's Kimi [[outperforms frontier models]] amid US AI policy debate",
+  "headline": "Moonshot AI's Kimi outperforms frontier models amid US AI policy debate",
+  "summary": "The Chinese company's new open-source Kimi 3 model shows 'frontier-level performance,' sparking debate about AI competition and regulation.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Moonshot AI has released Kimi 3, an open-source AI model that the company claims demonstrates \"frontier-level performance\" and outperforms other tested models. Independent analyses from Arena.ai and Vals AI also suggest Kimi is competitive with leading frontier models.",
+   "The release comes as China's president Xi Jinping spoke at the World AI Conference in Shanghai, and has reportedly spooked Wall Street, with chip stocks seeing a dip. This follows similar debates after DeepSeek released its R1 model earlier this year.",
+   "Some US tech figures, like David Sacks, have contrasted Kimi's progress with US regulations that they argue are hindering domestic AI development. Others, like former Uber CEO Travis Kalanick, have raised concerns about Chinese companies 'distilling off' American AI models.",
+   "OpenAI's Dean Ball acknowledged Kimi's strong performance, suggesting it's unlikely to be explained by distillation alone. He also speculated that the open-sourcing of such powerful models could lead to 'AI communism,' where AI becomes a state-provided public good.",
+   "Ball proposed that the US government could create regulatory risk around open-weight Chinese models by issuing advisories that sow fear, uncertainty, and doubt, rather than outright banning open source.",
+   "However, some argue that concerns are overblown. Shakeel Hashim of Transformer suggests Kimi likely lacks dangerous cyber capabilities, and that China would have similar incentives to restrict open models once they develop such capabilities."
+  ],
+  "caption": "China's Kimi 3 AI model is reportedly outperforming frontier models, sparking debate over AI competition and regulation.\n\nMoonshot AI has released Kimi 3, an open-source AI model that the company claims demonstrates \"frontier-level performance\" and outperforms other tested models. Independent analyses from Arena.ai and Vals AI also suggest Kimi is competitive with leading frontier models.\n\nThe release comes as China's president Xi Jinping spoke at the World AI Conference in Shanghai, and has reportedly spooked Wall Street, with chip stocks seeing a dip. This follows similar debates after DeepSeek released its R1 model earlier this year.\n\nSome US tech figures, like David Sacks, have contrasted Kimi's progress with US regulations that they argue are hindering domestic AI development. Others, like former Uber CEO Travis Kalanick, have raised concerns about Chinese companies 'distilling off' American AI models.\n\nOpenAI's Dean Ball acknowledged Kimi's strong performance, suggesting it's unlikely to be explained by distillation alone. He also speculated that the open-sourcing of such powerful models could lead to 'AI communism,' where AI becomes a state-provided public good.\n\nBall proposed that the US government could create regulatory risk around open-weight Chinese models by issuing advisories that sow fear, uncertainty, and doubt, rather than outright banning open source.\n\nHowever, some argue that concerns are overblown. Shakeel Hashim of Transformer suggests Kimi likely lacks dangerous cyber capabilities, and that China would have similar incentives to restrict open models once they develop such capabilities.\n\n#AI #Kimi3 #MoonshotAI #OpenSourceAI #TechPolicy\n\nSource: TechCrunch, Hacker News",
+  "tweet": "China's Kimi 3 AI model is reportedly outperforming frontier models, sparking debate over AI competition and regulation. \n\n#AI #Kimi3 #OpenSourceAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "moonshot.ai",
+  "source": "TechCrunch, Hacker News",
+  "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+  "image": "",
+  "orig_title": "Kimi: Threat or menace?",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+   "https://stephen.bochinski.dev/blog/2026/07/18/the-kimi-k3-moment/"
+  ],
+  "cluster_titles": [
+   "Kimi: Threat or menace?",
+   "The Kimi K3 Moment"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260719-0106-1-moonshot-ai-s-kimi-outperforms-frontier-mode.png",
+   "20260719-0106-1-moonshot-ai-s-kimi-outperforms-frontier-mode-d1.png",
+   "20260719-0106-1-moonshot-ai-s-kimi-outperforms-frontier-mode-d2.png"
+  ]
+ }
+]

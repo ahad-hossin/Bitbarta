@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_agent_suites_vs_saas",
+  "headline_marked": "[[Agent suites deliver ROI]] and quietly threaten per-seat SaaS, shifting to usage-based pricing",
+  "headline": "Agent suites deliver ROI and quietly threaten per-seat SaaS, shifting to usage-based pricing",
+  "summary": "Companies adopting packaged agent suites are seeing significant ROI, but this also converts traditional seat-based SaaS spend into usage/outcome fees, leading to a reduction in human seats.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Buying packaged agent suites offers a dual advantage: faster production and measurable ROI. However, this also quietly threatens traditional per-seat SaaS models by converting spend into usage or outcome-based fees, ultimately reducing human seat requirements.",
+   "While companies often frame 'build vs. buy' as an engineering trade-off, the business reality is sharper. MIT Project NANDA reported 95% of GenAI pilots yield no material return, contrasting with BCG's 5% club capturing most gains, pushing leaders to consider vendor agents over internal platforms.",
+   "Real-world examples demonstrate this shift: Salesforce's Agentforce reached $800M ARR and saw a ~10% seat reduction per service agent within 12 months. ServiceNow's Now Assist also more than doubled net-new ACV YoY in Q4 FY25, crediting agentic AI for production deployments.",
+   "River Group/Deloitte documented agentic deployments in banking achieving 200–2,000% productivity gains for KYC/AML tasks. Internal builds often fail at the pilot-to-production stage due to a lack of robust production systems like evaluation harnesses, observability, and governance, which vendors include.",
+   "CFOs can estimate seat-risk using a simple three-line model: identify candidate seat pools (repeatable tasks), apply an adoption ramp (e.g., 20-40% in year 1), and convert displaced seats to outcome ARR by modeling a replacement rate for usage fees.",
+   "For a 1,000-seat support org paying $6k/seat/year, if 30% of seats are automatable and agents capture 30% adoption in year 1, 90 seats are displaced. This represents $540k of seat ARR at risk, with an estimated $216k recaptured as outcome ARR, leading to a net loss of $324k in seat ARR.",
+   "Not all seats are at risk; complex or emotionally charged interactions still require human oversight, as Klarna's experience showed. However, buying packaged agents is often the fastest path to production and measurable ROI, driving a significant shift from per-seat licensing to usage/outcome pricing that financial models must now explicitly address."
+  ],
+  "caption": "Agent suites deliver significant ROI while simultaneously eroding traditional per-seat SaaS revenue. This shift impacts both buyers and vendors.\n\nBuying packaged agent suites offers a dual advantage: faster production and measurable ROI. However, this also quietly threatens traditional per-seat SaaS models by converting spend into usage or outcome-based fees, ultimately reducing human seat requirements.\n\nWhile companies often frame 'build vs. buy' as an engineering trade-off, the business reality is sharper. MIT Project NANDA reported 95% of GenAI pilots yield no material return, contrasting with BCG's 5% club capturing most gains, pushing leaders to consider vendor agents over internal platforms.\n\nReal-world examples demonstrate this shift: Salesforce's Agentforce reached $800M ARR and saw a ~10% seat reduction per service agent within 12 months. ServiceNow's Now Assist also more than doubled net-new ACV YoY in Q4 FY25, crediting agentic AI for production deployments.\n\nRiver Group/Deloitte documented agentic deployments in banking achieving 200–2,000% productivity gains for KYC/AML tasks. Internal builds often fail at the pilot-to-production stage due to a lack of robust production systems like evaluation harnesses, observability, and governance, which vendors include.\n\nCFOs can estimate seat-risk using a simple three-line model: identify candidate seat pools (repeatable tasks), apply an adoption ramp (e.g., 20-40% in year 1), and convert displaced seats to outcome ARR by modeling a replacement rate for usage fees.\n\nFor a 1,000-seat support org paying $6k/seat/year, if 30% of seats are automatable and agents capture 30% adoption in year 1, 90 seats are displaced. This represents $540k of seat ARR at risk, with an estimated $216k recaptured as outcome ARR, leading to a net loss of $324k in seat ARR.\n\n#AI #SaaS #Tech #BusinessStrategy #FutureOfWork #AgenticAI\n\nSource: DEV",
+  "tweet": "Agent suites are delivering major ROI for companies, but they're also quietly disrupting the per-seat SaaS model. This shift converts spend to usage/outcome fees, leading to seat reductions. CFOs need to model this change now. #AI #SaaS #Business",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/starkprince/why-buying-agent-suites-is-both-the-roi-winner-and-the-quiet-threat-to-per-seat-saas-95d",
+  "image": "",
+  "orig_title": "Why buying agent suites is both the ROI winner and the quiet threat to per‑seat SaaS",
+  "cluster_urls": [
+   "https://dev.to/starkprince/why-buying-agent-suites-is-both-the-roi-winner-and-the-quiet-threat-to-per-seat-saas-95d"
+  ],
+  "cluster_titles": [
+   "Why buying agent suites is both the ROI winner and the quiet threat to per‑seat SaaS"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260718-1456-0-agent-suites-deliver-roi-and-quietly-threate.png",
+   "20260718-1456-0-agent-suites-deliver-roi-and-quietly-threate-d1.png",
+   "20260718-1456-0-agent-suites-deliver-roi-and-quietly-threate-d2.png",
+   "20260718-1456-0-agent-suites-deliver-roi-and-quietly-threate-d3.png"
+  ]
+ },
+ {
+  "topic": "progressive_jpeg_explained",
+  "headline_marked": "[[A single JPEG file can hide up to 90 frames]] for a full video, exploiting progressive scan features",
+  "headline": "A single JPEG file can hide up to 90 frames for a full video, exploiting progressive scan features",
+  "summary": "Researchers discovered how to manipulate JPEG progressive scans to embed sequential images, effectively creating a multi-frame animation or video within one file.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Progressive JPEG files display a low-resolution version first, then refine the image as more data downloads. This works by breaking compressed data into multiple \"scans,\" each adding more detail.",
+   "An initial attempt involved concatenating multiple single-scan JPEGs. However, most decoders stop processing after a certain number of scans, typically limiting this method to around 9 frames.",
+   "A refined technique uses \"DC-only\" scans, which are standards-compliant and contain only the lowest frequency data. This avoids issues with AC scans refining old data, preventing \"ghosting\" effects.",
+   "This method allows packing up to 90 frames into a single JPEG file, with Chrome rendering around this many and Firefox showing even more. The process involves using `jpegtran` with custom scan definitions.",
+   "While lacking practical applications due to no timing information, it enables creative uses like unconventional rickrolls, partial rendering effects, or even interactive single-page applications."
+  ],
+  "caption": "Did you know a single JPEG image can hide an entire video? A clever manipulation of progressive JPEG scans allows embedding up to 90 sequential frames.\n\nProgressive JPEG files display a low-resolution version first, then refine the image as more data downloads. This works by breaking compressed data into multiple \"scans,\" each adding more detail.\n\nAn initial attempt involved concatenating multiple single-scan JPEGs. However, most decoders stop processing after a certain number of scans, typically limiting this method to around 9 frames.\n\nA refined technique uses \"DC-only\" scans, which are standards-compliant and contain only the lowest frequency data. This avoids issues with AC scans refining old data, preventing \"ghosting\" effects.\n\nThis method allows packing up to 90 frames into a single JPEG file, with Chrome rendering around this many and Firefox showing even more. The process involves using `jpegtran` with custom scan definitions.\n\nWhile lacking practical applications due to no timing information, it enables creative uses like unconventional rickrolls, partial rendering effects, or even interactive single-page applications.\n\n#JPEG #ImageFormat #Programming #Tech #Software #WebDev\n\nSource: Hacker News, DEV",
+  "tweet": "A single JPEG can hide an entire video! By manipulating progressive JPEG scans, developers can embed up to 90 sequential frames, turning a static image into a multi-frame animation. No practical use, but a fun technical trick. #JPEG #Programming #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News, DEV",
+  "url": "https://maurycyz.com/projects/bad_jpeg/",
+  "image": "",
+  "orig_title": "Regressive JPEGs",
+  "cluster_urls": [
+   "https://maurycyz.com/projects/bad_jpeg/",
+   "https://dev.to/lu1tr0n/jpeg-progresivo-como-esconder-90-fotogramas-en-un-solo-archivo-3fp5"
+  ],
+  "cluster_titles": [
+   "Regressive JPEGs",
+   "JPEG progresivo: cómo esconder 90 fotogramas en un solo archivo"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260718-1456-1-a-single-jpeg-file-can-hide-up-to-90-frames-.png",
+   "20260718-1456-1-a-single-jpeg-file-can-hide-up-to-90-frames--d1.png",
+   "20260718-1456-1-a-single-jpeg-file-can-hide-up-to-90-frames--d2.png"
+  ]
+ }
+]

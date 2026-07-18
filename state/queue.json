@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai_agents_practical_applications",
+  "headline_marked": "[[Nylas Agent Accounts enable two-way appointment reminders]] that can reschedule automatically",
+  "headline": "Nylas Agent Accounts enable two-way appointment reminders that can reschedule automatically",
+  "summary": "This new system allows applications to own their own mailboxes and calendars, automating replies and rescheduling without human intervention.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Traditional appointment reminder systems are often one-way, leading to missed reschedule requests when patients reply. The new Agent Account system by Nylas addresses this by enabling automated, two-way communication.",
+   "An Agent Account is a dedicated mailbox and calendar for an application, allowing it to send reminders, receive replies, and act on reschedule requests autonomously. It operates with its own email address, like reminders@clinic.yourapp.nylas.email.",
+   "The system uses Nylas API endpoints, allowing the agent to update its own calendar events and send updated invites directly to patients. This eliminates the need for human triage of routine rescheduling requests.",
+   "Developers can integrate this functionality using the Nylas CLI or direct API calls. The core mechanism involves the agent owning the calendar event, with replies processed via webhooks to drive rescheduling logic.",
+   "A key component is the grant_id received after creating an Agent Account, which provides immediate access to the agent's mailbox and calendar without OAuth or refresh tokens. This simplifies API interactions for developers.",
+   "While powerful, users are reminded that this is a demo walkthrough, not a compliance blueprint. Handling patient data (PHI) requires careful consideration of security, retention, and BAA questions with a dedicated security team."
+  ],
+  "caption": "Tired of one-way appointment reminders? Nylas Agent Accounts let your app handle replies and reschedule appointments automatically.\n\nTraditional appointment reminder systems are often one-way, leading to missed reschedule requests when patients reply. The new Agent Account system by Nylas addresses this by enabling automated, two-way communication.\n\nAn Agent Account is a dedicated mailbox and calendar for an application, allowing it to send reminders, receive replies, and act on reschedule requests autonomously. It operates with its own email address, like reminders@clinic.yourapp.nylas.email.\n\nThe system uses Nylas API endpoints, allowing the agent to update its own calendar events and send updated invites directly to patients. This eliminates the need for human triage of routine rescheduling requests.\n\nDevelopers can integrate this functionality using the Nylas CLI or direct API calls. The core mechanism involves the agent owning the calendar event, with replies processed via webhooks to drive rescheduling logic.\n\nA key component is the grant_id received after creating an Agent Account, which provides immediate access to the agent's mailbox and calendar without OAuth or refresh tokens. This simplifies API interactions for developers.\n\nWhile powerful, users are reminded that this is a demo walkthrough, not a compliance blueprint. Handling patient data (PHI) requires careful consideration of security, retention, and BAA questions with a dedicated security team.\n\n#Nylas #DeveloperTools #API #Automation #SoftwareDevelopment #Tech\n\nSource: DEV",
+  "tweet": "Nylas Agent Accounts introduce two-way appointment reminders that can automatically reschedule based on patient replies. Automate your communication flow and eliminate manual triage. #Nylas #API #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "nylas.com",
+  "source": "DEV",
+  "url": "https://dev.to/mqasimca/a-clinic-reminder-agent-that-can-actually-move-the-appointment-4ikm",
+  "image": "",
+  "orig_title": "A clinic reminder agent that can actually move the appointment",
+  "cluster_urls": [
+   "https://dev.to/mqasimca/a-clinic-reminder-agent-that-can-actually-move-the-appointment-4ikm",
+   "https://dev.to/mqasimca/run-an-event-waitlist-with-an-email-agent-that-promotes-the-first-yes-19ne",
+   "https://dev.to/mqasimca/chase-e-signature-completions-with-an-email-agent-48lk"
+  ],
+  "cluster_titles": [
+   "A clinic reminder agent that can actually move the appointment",
+   "Run an event waitlist with an email agent that promotes the first yes",
+   "Chase e-signature completions with an email agent"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260718-1803-0-nylas-agent-accounts-enable-two-way-appointm.png",
+   "20260718-1803-0-nylas-agent-accounts-enable-two-way-appointm-d1.png",
+   "20260718-1803-0-nylas-agent-accounts-enable-two-way-appointm-d2.png"
+  ]
+ },
+ {
+  "topic": "period_tracker_privacy_concerns",
+  "headline_marked": "[[Period tracker Stardust shared sensitive health data]] with third parties, audit reveals",
+  "headline": "Period tracker Stardust shared sensitive health data with third parties, audit reveals",
+  "summary": "An audit by Mozilla Foundation and Harvard found Stardust, an astrology-themed period tracker, sent users' reproductive health details to an unlisted data firm, scoring 2 out of 10 for privacy.",
+  "category": "SECURITY",
+  "template": "neon",
+  "details": [
+   "The astrology-themed period tracker Stardust was found to send users' reproductive health details, including birth control type, pregnancy status, moods, and specific symptoms, to a data firm not named in its privacy policy. This concerning revelation came from a Mozilla Foundation audit conducted in partnership with Harvard's Berkman Klein Center.",
+   "Stardust received a score of 2 out of 10 for privacy, making it the worst performer among the six popular trackers evaluated in the audit. Mozilla researcher Shoshana Wodinsky discovered that the app begins pinging third-party trackers from the moment it opens, even before a user enters any personal information.",
+   "Upon logging a symptom, details were immediately sent to the analytics firm RudderStack, accompanied by a persistent user ID, with no in-app option to disable this sharing. Furthermore, Stardust provides Facebook with an ad identifier, linking users' in-app behavior to their existing profiles on the platform.",
+   "In stark contrast, Euki, a nonprofit-run period tracker, achieved a perfect score of 10 out of 10 for privacy. It requires no account, ensures health data never leaves the user's phone, and offers robust features like PIN protection, automatic data deletion, and a decoy screen for enhanced security."
+  ],
+  "caption": "An audit reveals the astrology-themed period tracker Stardust shares sensitive reproductive health data with unlisted third parties. It scored 2/10 for privacy.\n\nThe astrology-themed period tracker Stardust was found to send users' reproductive health details, including birth control type, pregnancy status, moods, and specific symptoms, to a data firm not named in its privacy policy. This concerning revelation came from a Mozilla Foundation audit conducted in partnership with Harvard's Berkman Klein Center.\n\nStardust received a score of 2 out of 10 for privacy, making it the worst performer among the six popular trackers evaluated in the audit. Mozilla researcher Shoshana Wodinsky discovered that the app begins pinging third-party trackers from the moment it opens, even before a user enters any personal information.\n\nUpon logging a symptom, details were immediately sent to the analytics firm RudderStack, accompanied by a persistent user ID, with no in-app option to disable this sharing. Furthermore, Stardust provides Facebook with an ad identifier, linking users' in-app behavior to their existing profiles on the platform.\n\nIn stark contrast, Euki, a nonprofit-run period tracker, achieved a perfect score of 10 out of 10 for privacy. It requires no account, ensures health data never leaves the user's phone, and offers robust features like PIN protection, automatic data deletion, and a decoy screen for enhanced security.\n\n#Privacy #DataSecurity #PeriodTracker #AppPrivacy #TechNews #Mozilla\n\nSource: Wired",
+  "tweet": "Period tracker Stardust scored 2/10 in a privacy audit, sending sensitive health data like pregnancy status and symptoms to unlisted third parties. Your data might not be as private as you think. #Privacy #DataSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/security-news-this-week-your-period-tracker-is-probably-spying-on-you/",
+  "image": "https://media.wired.com/photos/6a5ac7c5087b4a8eadcc0752/master/pass/Security-News-Period-Tracker-Spying-on-You-Security.jpg",
+  "orig_title": "Your Period Tracker Is (Probably) Spying on You",
+  "cluster_urls": [
+   "https://www.wired.com/story/security-news-this-week-your-period-tracker-is-probably-spying-on-you/"
+  ],
+  "cluster_titles": [
+   "Your Period Tracker Is (Probably) Spying on You"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260718-1803-1-period-tracker-stardust-shared-sensitive-hea.png",
+   "20260718-1803-1-period-tracker-stardust-shared-sensitive-hea-d1.png",
+   "20260718-1803-1-period-tracker-stardust-shared-sensitive-hea-d2.png"
+  ]
+ }
+]

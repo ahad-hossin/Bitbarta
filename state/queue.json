@@ -1,1 +1,49 @@
-[]
+[
+ {
+  "topic": "ai_pricing_ceiling_20_dollars",
+  "headline_marked": "AI-generated listings [[validated but fake]] booked via working affiliate links",
+  "headline": "AI-generated listings validated but fake booked via working affiliate links",
+  "summary": "Fake properties passed all automated checks, highlighting a critical flaw in data validation where missing information defaults to 'true'.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI-generated listings for non-existent properties were found to be perfectly formed and functional, passing all automated checks including structured data and booking links. These fake listings pointed to working affiliate links, raising concerns about sophisticated AI-driven fraud.",
+   "The core issue lies in how systems handle missing data. Instead of recognizing 'null' or 'unverified' states, code defaulted to 'true' for critical fields, effectively asserting facts that were not confirmed. This optimistic default turned missing information into confident, albeit false, assertions.",
+   "This 'default to true' behavior was found across multiple layers of the system, from the data model to the rendered copy and structured data. A system unable to represent 'I don't know' defaults to the most flattering value, leading to widespread misinformation.",
+   "The author emphasizes that AI-generated data is not a rough draft to be refined, but a potential forgery that validates itself. The danger isn't malformed data, but perfectly formed data that is entirely fabricated, as current pipelines are not designed to detect such inconsistencies.",
+   "The fix involved adding a necessary 'unverified' state to the data model, allowing the system to accurately represent uncertainty. This lesson generalizes to any system holding facts it cannot fully back, a situation becoming increasingly common with AI advancements."
+  ],
+  "caption": "AI is generating fake listings that pass validation. The real danger? Missing data defaults to 'true'.\n\nAI-generated listings for non-existent properties were found to be perfectly formed and functional, passing all automated checks including structured data and booking links. These fake listings pointed to working affiliate links, raising concerns about sophisticated AI-driven fraud.\n\nThe core issue lies in how systems handle missing data. Instead of recognizing 'null' or 'unverified' states, code defaulted to 'true' for critical fields, effectively asserting facts that were not confirmed. This optimistic default turned missing information into confident, albeit false, assertions.\n\nThis 'default to true' behavior was found across multiple layers of the system, from the data model to the rendered copy and structured data. A system unable to represent 'I don't know' defaults to the most flattering value, leading to widespread misinformation.\n\nThe author emphasizes that AI-generated data is not a rough draft to be refined, but a potential forgery that validates itself. The danger isn't malformed data, but perfectly formed data that is entirely fabricated, as current pipelines are not designed to detect such inconsistencies.\n\nThe fix involved adding a necessary 'unverified' state to the data model, allowing the system to accurately represent uncertainty. This lesson generalizes to any system holding facts it cannot fully back, a situation becoming increasingly common with AI advancements.\n\n#AI #SoftwareDevelopment #DataValidation #CyberSecurity #TechNews\n\nSource: DEV",
+  "tweet": "AI-generated listings that don't exist are passing validation and booking via working links. The issue? Missing data defaults to 'true', making fake info seem real. A critical lesson for developers on data integrity. #AI #Software #Data",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/henry_dan_81513dd35a2f540/the-listing-didnt-exist-the-booking-link-worked-2i4d",
+  "image": "",
+  "orig_title": "The Listing Didn't Exist. The Booking Link Worked.",
+  "cluster_urls": [
+   "https://dev.to/henry_dan_81513dd35a2f540/the-listing-didnt-exist-the-booking-link-worked-2i4d",
+   "https://dev.to/dilip_v_p/how-vector-databases-search-a-million-vectors-without-checking-a-million-2ee1",
+   "https://dev.to/okeke_chukwudubem_5f3bf49/smash-stories-the-bug-that-whispered-for-two-weeks-before-i-heard-it-405n",
+   "https://dev.to/nabbilkhan/make-the-wrong-answer-cheap-2n17",
+   "https://dev.to/qainsights/20month-the-price-ceiling-every-ai-company-copied-1jej"
+  ],
+  "cluster_titles": [
+   "The Listing Didn't Exist. The Booking Link Worked.",
+   "How Vector Databases Search a Million Vectors Without Checking a Million",
+   "Smash Stories: The Bug That Whispered for Two Weeks Before I Heard It",
+   "Make the Wrong Answer Cheap",
+   "$20/Month: The Price Ceiling Every AI Company Copied"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-0118-0-ai-generated-listings-validated-but-fake-boo.png",
+   "20260719-0118-0-ai-generated-listings-validated-but-fake-boo-d1.png",
+   "20260719-0118-0-ai-generated-listings-validated-but-fake-boo-d2.png",
+   "20260719-0118-0-ai-generated-listings-validated-but-fake-boo-d3.png"
+  ]
+ }
+]

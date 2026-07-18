@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "nvidia_rtx_50_gddr7_pricing",
+  "headline_marked": "[[Nvidia RTX 50 Super GPUs reportedly on hold]] due to triple-priced GDDR7 memory",
+  "headline": "Nvidia RTX 50 Super GPUs reportedly on hold due to triple-priced GDDR7 memory",
+  "summary": "Upcoming RTX 50 Super GPUs are reportedly delayed as 3GB GDDR7 memory chips cost up to three times more than 2GB variants, pushing potential retail prices beyond Nvidia's targets.",
+  "category": "HARDWARE",
+  "template": "leak",
+  "details": [
+   "Nvidia's upcoming RTX 50 Super GPU refresh is reportedly on hold because 3GB GDDR7 memory chips cost up to three times more than their 2GB counterparts. A board partner confirmed having RTX 50 Super GPUs, but Nvidia has allegedly paused their release due to memory pricing.",
+   "This delay suggests Nvidia has an internal release date but is pushing it back. If GDDR7 costs remain high, the GPUs would either launch above targeted MSRPs or partners would face losses, potentially leading to no units being manufactured.",
+   "The RTX 50 Super GPUs are rumored to feature 3GB GDDR7 chips, offering 50% more capacity than current 2GB RTX 50-series cards. This allows for increased memory without altering memory bus configurations, with models like the RTX 5080 Super and RTX 5070 Super expected.",
+   "Nvidia previously supplied VRAM chips to partners but changed this policy in late 2025 amidst a memory chip crisis. This forces board manufacturers to source their own memory in a competitive market, exacerbating cost issues.",
+   "The 'RAMpocalypse' has impacted even Nvidia, with memory costs now accounting for 25% of the bill of materials for its AI systems, soaring by nearly 500%. This is reflected in Nvidia not announcing a new GPU at CES 2026, a first in five years.",
+   "The path forward for Nvidia and its partners regarding the memory situation remains unclear. While delaying the RTX 50 Super launch is an option, it's a temporary solution, especially if GPU dies are already with board partners."
+  ],
+  "caption": "Nvidia's RTX 50 Super GPUs are reportedly ready but on hold. The reason? GDDR7 memory costs triple that of current 2GB chips.\n\nNvidia's upcoming RTX 50 Super GPU refresh is reportedly on hold because 3GB GDDR7 memory chips cost up to three times more than their 2GB counterparts. A board partner confirmed having RTX 50 Super GPUs, but Nvidia has allegedly paused their release due to memory pricing.\n\nThis delay suggests Nvidia has an internal release date but is pushing it back. If GDDR7 costs remain high, the GPUs would either launch above targeted MSRPs or partners would face losses, potentially leading to no units being manufactured.\n\nThe RTX 50 Super GPUs are rumored to feature 3GB GDDR7 chips, offering 50% more capacity than current 2GB RTX 50-series cards. This allows for increased memory without altering memory bus configurations, with models like the RTX 5080 Super and RTX 5070 Super expected.\n\nNvidia previously supplied VRAM chips to partners but changed this policy in late 2025 amidst a memory chip crisis. This forces board manufacturers to source their own memory in a competitive market, exacerbating cost issues.\n\nThe 'RAMpocalypse' has impacted even Nvidia, with memory costs now accounting for 25% of the bill of materials for its AI systems, soaring by nearly 500%. This is reflected in Nvidia not announcing a new GPU at CES 2026, a first in five years.\n\nThe path forward for Nvidia and its partners regarding the memory situation remains unclear. While delaying the RTX 50 Super launch is an option, it's a temporary solution, especially if GPU dies are already with board partners.\n\n#Nvidia #RTX50Super #GPU #Hardware #TechNews #GDDR7\n\nSource: Tom's Hardware",
+  "tweet": "Nvidia's RTX 50 Super GPUs are reportedly ready but delayed due to soaring GDDR7 memory costs. 3GB GDDR7 modules are three times pricier than 2GB, potentially pushing retail prices far above target. #Nvidia #RTX50Super #GPU",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-50-super-gpus-are-reportedly-ready-but-stuck-in-limbo-due-to-excessive-gddr7-pricing-3gb-gddr7-module-costs-triple-the-price-of-2gb",
+  "image": "https://cdn.mos.cms.futurecdn.net/CBBS7c4u3Y3LJcY55ryv2W-1280-80.jpg",
+  "orig_title": "Nvidia RTX 50 Super GPUs are reportedly ready, but stuck in limbo due to excessive GDDR7 pricing — 3GB GDDR7 module costs triple the price of 2GB",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-50-super-gpus-are-reportedly-ready-but-stuck-in-limbo-due-to-excessive-gddr7-pricing-3gb-gddr7-module-costs-triple-the-price-of-2gb"
+  ],
+  "cluster_titles": [
+   "Nvidia RTX 50 Super GPUs are reportedly ready, but stuck in limbo due to excessive GDDR7 pricing — 3GB GDDR7 module costs triple the price of 2GB"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260718-2006-0-nvidia-rtx-50-super-gpus-reportedly-on-hold-.png",
+   "20260718-2006-0-nvidia-rtx-50-super-gpus-reportedly-on-hold--d1.png",
+   "20260718-2006-0-nvidia-rtx-50-super-gpus-reportedly-on-hold--d2.png"
+  ]
+ },
+ {
+  "topic": "codex_x86_assembly_game_experiment",
+  "headline_marked": "[[Codex autonomously built a full x86 Assembly game]] from scratch, including debugging and planning",
+  "headline": "Codex autonomously built a full x86 Assembly game from scratch, including debugging and planning",
+  "summary": "An experiment challenged OpenAI's Codex to create a classic Asteroids-style game in x86 Assembly, a notoriously difficult environment. Codex handled all aspects from architecture to debugging with minimal human intervention.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An experiment pushed AI coding capabilities by tasking OpenAI's Codex with building a complete Asteroids-style arcade game in x86 Assembly. The goal was to assess its autonomy as a software engineering agent, not just a code generator.",
+   "The human operator's involvement was strictly limited to defining the initial objective and reporting gameplay issues. No Assembly code was written by the human, nor were any implementation details suggested.",
+   "Codex autonomously managed every aspect of the project, including architecture design, implementation, debugging, documentation, repository management, building, and running the game. It behaved much like a human software engineer.",
+   "Development followed an iterative process: Codex planned, implemented a milestone, built the project, ran it, verified the result, committed changes, and then presented it for human testing. The human's role was to play the latest version and provide feedback.",
+   "During the entire project, only two gameplay bugs were reported by the human that Codex hadn't detected automatically. Both were analyzed, fixed, and verified by Codex before development continued, showcasing its robust debugging capabilities.",
+   "This experiment demonstrated that Codex could act beyond simple code generation, engaging in higher-level software engineering tasks. It prioritized planning, documenting architecture, and organizing the repository before diving into gameplay code."
+  ],
+  "caption": "An AI just built a complete x86 Assembly game, a classic Asteroids-style arcade title, with virtually no human coding.\n\nAn experiment pushed AI coding capabilities by tasking OpenAI's Codex with building a complete Asteroids-style arcade game in x86 Assembly. The goal was to assess its autonomy as a software engineering agent, not just a code generator.\n\nThe human operator's involvement was strictly limited to defining the initial objective and reporting gameplay issues. No Assembly code was written by the human, nor were any implementation details suggested.\n\nCodex autonomously managed every aspect of the project, including architecture design, implementation, debugging, documentation, repository management, building, and running the game. It behaved much like a human software engineer.\n\nDevelopment followed an iterative process: Codex planned, implemented a milestone, built the project, ran it, verified the result, committed changes, and then presented it for human testing. The human's role was to play the latest version and provide feedback.\n\nDuring the entire project, only two gameplay bugs were reported by the human that Codex hadn't detected automatically. Both were analyzed, fixed, and verified by Codex before development continued, showcasing its robust debugging capabilities.\n\nThis experiment demonstrated that Codex could act beyond simple code generation, engaging in higher-level software engineering tasks. It prioritized planning, documenting architecture, and organizing the repository before diving into gameplay code.\n\n#AI #Coding #SoftwareDevelopment #x86Assembly #GameDev #OpenAICodex\n\nSource: DEV",
+  "tweet": "An AI (Codex) autonomously built a full x86 Assembly game, from planning to debugging, with minimal human input. It acted like a software engineer, not just a code generator, for a classic Asteroids-style title. #AI #Coding #GameDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/mbostjan/can-codex-build-an-entire-x86-assembly-game-autonomously-a-real-world-experiment-mik",
+  "image": "",
+  "orig_title": "Can Codex Build an Entire x86 Assembly Game Autonomously? A Real-World Experiment",
+  "cluster_urls": [
+   "https://dev.to/mbostjan/can-codex-build-an-entire-x86-assembly-game-autonomously-a-real-world-experiment-mik"
+  ],
+  "cluster_titles": [
+   "Can Codex Build an Entire x86 Assembly Game Autonomously? A Real-World Experiment"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260718-2006-1-codex-autonomously-built-a-full-x86-assembly.png",
+   "20260718-2006-1-codex-autonomously-built-a-full-x86-assembly-d1.png",
+   "20260718-2006-1-codex-autonomously-built-a-full-x86-assembly-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "tp_link_kasa_security_flaw",
+  "headline_marked": "[[TP-Link Kasa cameras leaked home GPS]] via unauthenticated UDP for 6 years",
+  "headline": "TP-Link Kasa cameras leaked home GPS via unauthenticated UDP for 6 years",
+  "summary": "TP-Link Kasa Spot EC71 cameras exposed precise location data for years through an unauthenticated UDP protocol. This vulnerability, known since 2016, was only recently patched after a coordinated disclosure.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "TP-Link Kasa Spot EC71 indoor cameras were found to have multiple critical vulnerabilities, including the unauthenticated exposure of precise location data, unsalted MD5 credential storage, and a fleet-wide RSA key. These issues were remediated in firmware version 2.4.1 following a six-month coordinated vulnerability disclosure process.",
+   "The GPS exposure, documented as CVE-2026-13230, has been publicly known since August 2020 across TP-Link's camera product line and since July 2016 for the underlying unauthenticated protocol. TP-Link had previously remediated an identical vulnerability class in its smart plug product line in November 2020, but did not extend the fix to its camera products.",
+   "A comprehensive security analysis, involving physical firmware extraction and network packet analysis, confirmed these vulnerabilities. The disclosure process highlighted a pattern of targeted, incremental remediation rather than a comprehensive architectural security review, leading to a permanently bricked test device during validation.",
+   "Additionally, CVE-2026-9770 covers two cryptographic failures: the presence of two complete fleet-wide RSA key/certificate pairs within the firmware. The active 2048-bit RSA private key is extractable from any EC71 unit via SPI flash and is identical across all devices, potentially allowing an attacker to intercept traffic.",
+   "User cloud account credentials were also stored as unsalted MD5 hashes across two filesystem partitions. This insecure storage, combined with a secondary market attack path, enables recovery of previous owner credentials and GPS coordinates from devices returned to factory settings."
+  ],
+  "caption": "TP-Link Kasa cameras leaked home GPS data for 6 years via an unauthenticated protocol. This vulnerability was publicly known since 2016 but remained unpatched in cameras until recently.\n\nTP-Link Kasa Spot EC71 indoor cameras were found to have multiple critical vulnerabilities, including the unauthenticated exposure of precise location data, unsalted MD5 credential storage, and a fleet-wide RSA key. These issues were remediated in firmware version 2.4.1 following a six-month coordinated vulnerability disclosure process.\n\nThe GPS exposure, documented as CVE-2026-13230, has been publicly known since August 2020 across TP-Link's camera product line and since July 2016 for the underlying unauthenticated protocol. TP-Link had previously remediated an identical vulnerability class in its smart plug product line in November 2020, but did not extend the fix to its camera products.\n\nA comprehensive security analysis, involving physical firmware extraction and network packet analysis, confirmed these vulnerabilities. The disclosure process highlighted a pattern of targeted, incremental remediation rather than a comprehensive architectural security review, leading to a permanently bricked test device during validation.\n\nAdditionally, CVE-2026-9770 covers two cryptographic failures: the presence of two complete fleet-wide RSA key/certificate pairs within the firmware. The active 2048-bit RSA private key is extractable from any EC71 unit via SPI flash and is identical across all devices, potentially allowing an attacker to intercept traffic.\n\nUser cloud account credentials were also stored as unsalted MD5 hashes across two filesystem partitions. This insecure storage, combined with a secondary market attack path, enables recovery of previous owner credentials and GPS coordinates from devices returned to factory settings.\n\n#Tech #Security #Vulnerability #IoT #TPLink #Kasa\n\nSource: Hacker News",
+  "tweet": "TP-Link Kasa cameras exposed home GPS data for 6 years through an unauthenticated protocol, a vulnerability known since 2016. Patched in v2.4.1, but highlights a pattern of incremental security fixes. #IoT #Security #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "tplink.com",
+  "source": "Hacker News",
+  "url": "https://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/TP-Link_Kasa_EC71/Kasa_EC71.md",
+  "image": "",
+  "orig_title": "TP-Link Kasa cameras leaked home GPS via unauthenticated UDP for 6 years",
+  "cluster_urls": [
+   "https://github.com/BadChemical/IoT-Vulnerability-Research-Public/blob/main/TP-Link_Kasa_EC71/Kasa_EC71.md"
+  ],
+  "cluster_titles": [
+   "TP-Link Kasa cameras leaked home GPS via unauthenticated UDP for 6 years"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260718-0923-0-tp-link-kasa-cameras-leaked-home-gps-via-una.png",
+   "20260718-0923-0-tp-link-kasa-cameras-leaked-home-gps-via-una-d1.png",
+   "20260718-0923-0-tp-link-kasa-cameras-leaked-home-gps-via-una-d2.png",
+   "20260718-0923-0-tp-link-kasa-cameras-leaked-home-gps-via-una-d3.png"
+  ]
+ },
+ {
+  "topic": "pixel_11a_hardware_leak",
+  "headline_marked": "[[Pixel 11a to ditch Samsung modem]] for MediaTek, leak suggests",
+  "headline": "Pixel 11a to ditch Samsung modem for MediaTek, leak suggests",
+  "summary": "The upcoming Pixel 11a is reportedly switching to a MediaTek M90 modem, moving away from Samsung's hardware, and will feature a Tensor G6 chip and a 6.3-inch AMOLED screen.",
+  "category": "ANDROID",
+  "template": "leak",
+  "details": [
+   "Mystic Leaks on Telegram has reportedly revealed key details about Google's upcoming Pixel 11a. The affordable phone is expected to feature a Google Tensor G6 chip and 8GB of RAM, maintaining Google's core formula with some notable changes.",
+   "A significant hardware shift includes the Pixel 11a packing MediaTek's M90 modem. This marks Google's departure from Samsung's modem hardware, which has been used in previous models and was reportedly problematic.",
+   "The device is also said to include the Google Titan M3 chip for enhanced security. It will reportedly come in four different colors, with storage options likely mirroring the previous model at 128GB and 256GB.",
+   "Display specifications point to a 6.3-inch AMOLED screen with a variable refresh rate between 60-120Hz. The screen is expected to reach a peak brightness of 3,350 nits, offering a vibrant visual experience.",
+   "Despite a smaller reported battery at 4,870mAh compared to the Pixel 10a, battery life may not suffer. The new Tensor and Titan chips are anticipated to be more efficient, potentially maintaining or even improving endurance.",
+   "Another reported upgrade is a larger front-facing camera, though specific details are yet to be revealed. This could enhance selfie quality and video calls on the new model.",
+   "The leak also mentions improvements to Face Unlock on the Pixel 11, promising faster reactions, better low-light performance, and enhanced security. Additionally, the codename for the future Pixel 12a has been revealed as 'marmoset'."
+  ],
+  "caption": "The Pixel 11a is reportedly making a major modem switch, ditching Samsung for MediaTek's M90. This could address past connectivity issues.\n\nMystic Leaks on Telegram has reportedly revealed key details about Google's upcoming Pixel 11a. The affordable phone is expected to feature a Google Tensor G6 chip and 8GB of RAM, maintaining Google's core formula with some notable changes.\n\nA significant hardware shift includes the Pixel 11a packing MediaTek's M90 modem. This marks Google's departure from Samsung's modem hardware, which has been used in previous models and was reportedly problematic.\n\nThe device is also said to include the Google Titan M3 chip for enhanced security. It will reportedly come in four different colors, with storage options likely mirroring the previous model at 128GB and 256GB.\n\nDisplay specifications point to a 6.3-inch AMOLED screen with a variable refresh rate between 60-120Hz. The screen is expected to reach a peak brightness of 3,350 nits, offering a vibrant visual experience.\n\nDespite a smaller reported battery at 4,870mAh compared to the Pixel 10a, battery life may not suffer. The new Tensor and Titan chips are anticipated to be more efficient, potentially maintaining or even improving endurance.\n\nAnother reported upgrade is a larger front-facing camera, though specific details are yet to be revealed. This could enhance selfie quality and video calls on the new model.\n\nThe leak also mentions improvements to Face Unlock on the Pixel 11, promising faster reactions, better low-light performance, and enhanced security. Additionally, the codename for the future Pixel 12a has been revealed as 'marmoset'.\n\n#Pixel11a #GooglePixel #Android #TechLeak #MediaTek #Smartphone\n\nSource: Android Police",
+  "tweet": "The Pixel 11a is reportedly ditching Samsung modems for MediaTek's M90, a significant hardware change. Expect a Tensor G6 chip, 8GB RAM, and a 6.3\" AMOLED screen. #Pixel11a #Android #TechLeak",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/pixel-11a-leaks-starting-showing-up/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/wm/2026/03/pixel-10a-hands-on-1.jpg",
+  "orig_title": "Pixel 11a could get the one big hardware change you were hoping for",
+  "cluster_urls": [
+   "https://www.androidpolice.com/pixel-11a-leaks-starting-showing-up/"
+  ],
+  "cluster_titles": [
+   "Pixel 11a could get the one big hardware change you were hoping for"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260718-0923-1-pixel-11a-to-ditch-samsung-modem-for-mediate.png",
+   "20260718-0923-1-pixel-11a-to-ditch-samsung-modem-for-mediate-d1.png",
+   "20260718-0923-1-pixel-11a-to-ditch-samsung-modem-for-mediate-d2.png",
+   "20260718-0923-1-pixel-11a-to-ditch-samsung-modem-for-mediate-d3.png"
+  ]
+ }
+]

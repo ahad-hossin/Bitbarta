@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_code_generation_false_done",
+  "headline_marked": "[[How to Catch False \"Done\" Claims]] in AI-Generated Code",
+  "headline": "How to Catch False \"Done\" Claims in AI-Generated Code",
+  "summary": "AI-generated code often sounds finished before it's truly ready. Learn to separate plausible statements from supported ones by focusing on evidence, not just \"tests passed\" claims.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI-generated code can claim completion prematurely, with messages like \"tests passed\" acting as claims, not verdicts. Before accepting delivery, it's crucial to ask for evidence that actually supports the claim of completeness.",
+   "A passing test can be real but still incomplete, potentially covering only a narrow helper, skipping reported failures, or using old outputs. A green result doesn't reveal which files changed, if relevant commands ran, or if the output belongs to the current work.",
+   "The objective is not to distrust every report, but to differentiate between a plausible statement and a truly supported one. This approach keeps reviews focused, allowing you to identify missing evidence rather than arguing about confidence.",
+   "A changed-file list is vital for confirming if the reported work touched the expected areas. It can also highlight scope drift, such as a tiny fix unexpectedly altering deployment settings, unrelated dependencies, or authentication code, which warrants closer inspection.",
+   "Useful test evidence includes the exact command that ran, its result, and sufficient context to link it to the current change. Specific commands and their outputs are far more valuable than a general \"all tests passed\" statement, especially if they clarify the scenario exercised.",
+   "Missing evidence often tells the full story. For instance, if a browser flow fix is reported but only a unit test is supplied, the critical end-to-end evidence is still absent. Similarly, a claim of no regressions with only one focused test leaves broader coverage unproven.",
+   "Actively look for conflicts instead of averaging them away. A success message appearing alongside a failing log, a claim of no changes next to a diff, or test output predating the latest edit should shift the verdict to UNPROVEN until the contradiction is resolved.",
+   "Consider an assistant reporting: \"The password-reset redirect is fixed and tests passed.\" If the record only contains a unit test for URL construction, with no changed-file list, browser test, or output for the reset flow itself, the verdict is UNPROVEN. The next step is to provide the missing evidence.",
+   "An evidence check complements engineering judgment by clarifying what is supported, what is missing, and what conflicts with a report. This makes it easier to request specific follow-ups rather than reopening the entire task.",
+   "It's important to note that an evidence review tool does not re-run commands or independently verify user-supplied test output. While logs can be organized and challenged, they don't become trustworthy simply by being pasted into a report. For high-risk situations, reproducing the result in a controlled environment may still be the necessary next step.",
+   "For a structured method to label completion claims before accepting delivery, consider using the free AI Completion Evidence Auditor Lite. It's designed to highlight unsupported \"done\" statements, missing proof, and contradictions without validating unverified records."
+  ],
+  "caption": "AI-generated code often claims to be \"done\" when it's not. Learn how to verify completion with concrete evidence, not just passing tests.\n\nAI-generated code can claim completion prematurely, with messages like \"tests passed\" acting as claims, not verdicts. Before accepting delivery, it's crucial to ask for evidence that actually supports the claim of completeness.\n\nA passing test can be real but still incomplete, potentially covering only a narrow helper, skipping reported failures, or using old outputs. A green result doesn't reveal which files changed, if relevant commands ran, or if the output belongs to the current work.\n\nThe objective is not to distrust every report, but to differentiate between a plausible statement and a truly supported one. This approach keeps reviews focused, allowing you to identify missing evidence rather than arguing about confidence.\n\nA changed-file list is vital for confirming if the reported work touched the expected areas. It can also highlight scope drift, such as a tiny fix unexpectedly altering deployment settings, unrelated dependencies, or authentication code, which warrants closer inspection.\n\nUseful test evidence includes the exact command that ran, its result, and sufficient context to link it to the current change. Specific commands and their outputs are far more valuable than a general \"all tests passed\" statement, especially if they clarify the scenario exercised.\n\nMissing evidence often tells the full story. For instance, if a browser flow fix is reported but only a unit test is supplied, the critical end-to-end evidence is still absent. Similarly, a claim of no regressions with only one focused test leaves broader coverage unproven.\n\nActively look for conflicts instead of averaging them away. A success message appearing alongside a failing log, a claim of no changes next to a diff, or test output predating the latest edit should shift the verdict to UNPROVEN until the contradiction is resolved.\n\n#AI #CodeReview #SoftwareDevelopment #TechTips #Developers #AItools\n\nSource: DEV",
+  "tweet": "AI-generated code claims \"done\" often before it's truly ready. Don't trust \"tests passed\" alone. Focus on concrete evidence like changed files & specific test outputs to verify completion. Get the free Auditor tool. #AICode #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/reliableaiddelivery/how-to-catch-false-done-claims-in-ai-generated-code-2gp8",
+  "image": "",
+  "orig_title": "How to Catch False “Done” Claims in AI-Generated Code",
+  "cluster_urls": [
+   "https://dev.to/reliableaiddelivery/how-to-catch-false-done-claims-in-ai-generated-code-2gp8"
+  ],
+  "cluster_titles": [
+   "How to Catch False “Done” Claims in AI-Generated Code"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260718-1406-0-how-to-catch-false-done-claims-in-ai-generat.png",
+   "20260718-1406-0-how-to-catch-false-done-claims-in-ai-generat-d1.png",
+   "20260718-1406-0-how-to-catch-false-done-claims-in-ai-generat-d2.png",
+   "20260718-1406-0-how-to-catch-false-done-claims-in-ai-generat-d3.png",
+   "20260718-1406-0-how-to-catch-false-done-claims-in-ai-generat-d4.png",
+   "20260718-1406-0-how-to-catch-false-done-claims-in-ai-generat-d5.png"
+  ]
+ },
+ {
+  "topic": "ai_council_design_opposition",
+  "headline_marked": "[[AI council built with 'opposition']] to challenge its own proposals, preventing blind spots",
+  "headline": "AI council built with 'opposition' to challenge its own proposals, preventing blind spots",
+  "summary": "An AI architect designed a council with four distinct roles to critically review AI-generated proposals. This system aims to prevent self-review from overlooking fundamental flaws or misframing problems by introducing diverse perspectives.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "An AI architect found that even capable AI systems, when reviewing their own proposals, often remain within their initial interpretation. This self-review process, while useful for catching implementation mistakes, frequently fails to question the original framing of the problem itself.",
+   "The inspiration came from the relationship between a strong developer and a strong QA. Both aim for the same outcome, but their different perspectives—building vs. finding failure—create a necessary tension that uncovers different kinds of issues.",
+   "The goal of this AI council is not to create arguments, but to ensure that one perspective doesn't own both the proposal and all the questions asked about it. While a single model can perform self-review, it often doesn't challenge whether the problem was framed correctly or if underlying assumptions are valid.",
+   "One example highlighted this issue: a task initially framed as improving an imperfect mechanism was revealed to be a non-existent one. The original AI proposal would have targeted a repair, missing the fundamental problem that the mechanism had never been connected.",
+   "To address this, the architect implemented a council using four different 'lenses' or 'obligations'. These include the System Thinker, Critical Reviewer, Simplifier, and Alternatives Explorer, each designed to challenge a proposal from a unique angle.",
+   "These are not personalities but distinct responsibilities, ensuring diverse perspectives. The system also aims to prevent useful disagreement from disappearing during synthesis, where objections can be softened into mere caveats rather than truly resolved."
+  ],
+  "caption": "An AI architect designed a unique council to challenge AI-generated proposals. It uses four distinct 'lenses' to prevent blind spots and ensure critical review.\n\nAn AI architect found that even capable AI systems, when reviewing their own proposals, often remain within their initial interpretation. This self-review process, while useful for catching implementation mistakes, frequently fails to question the original framing of the problem itself.\n\nThe inspiration came from the relationship between a strong developer and a strong QA. Both aim for the same outcome, but their different perspectives—building vs. finding failure—create a necessary tension that uncovers different kinds of issues.\n\nThe goal of this AI council is not to create arguments, but to ensure that one perspective doesn't own both the proposal and all the questions asked about it. While a single model can perform self-review, it often doesn't challenge whether the problem was framed correctly or if underlying assumptions are valid.\n\nOne example highlighted this issue: a task initially framed as improving an imperfect mechanism was revealed to be a non-existent one. The original AI proposal would have targeted a repair, missing the fundamental problem that the mechanism had never been connected.\n\nTo address this, the architect implemented a council using four different 'lenses' or 'obligations'. These include the System Thinker, Critical Reviewer, Simplifier, and Alternatives Explorer, each designed to challenge a proposal from a unique angle.\n\nThese are not personalities but distinct responsibilities, ensuring diverse perspectives. The system also aims to prevent useful disagreement from disappearing during synthesis, where objections can be softened into mere caveats rather than truly resolved.\n\n#AI #ArtificialIntelligence #TechNews #SoftwareDevelopment #AIethics #Innovation\n\nSource: DEV",
+  "tweet": "An AI architect built an \"opposition council\" into their AI system. This council uses four distinct \"lenses\" (System Thinker, Critical Reviewer, Simplifier, Alternatives Explorer) to challenge AI proposals, ensuring fundamental flaws and misframings are caught before impleme",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/j3nnning/why-i-built-opposition-into-my-ai-council-30p2",
+  "image": "",
+  "orig_title": "Why I Built Opposition Into My AI Council",
+  "cluster_urls": [
+   "https://dev.to/j3nnning/why-i-built-opposition-into-my-ai-council-30p2"
+  ],
+  "cluster_titles": [
+   "Why I Built Opposition Into My AI Council"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260718-1406-1-ai-council-built-with-opposition-to-challeng.png",
+   "20260718-1406-1-ai-council-built-with-opposition-to-challeng-d1.png",
+   "20260718-1406-1-ai-council-built-with-opposition-to-challeng-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "hmd_touch_4g_launch_and_discussion",
+  "headline_marked": "HomeLab #1: [[MikroTik L009UiGS-RM]] as a Home Router",
+  "headline": "HomeLab #1: MikroTik L009UiGS-RM as a Home Router",
+  "summary": "A detailed guide on setting up a MikroTik router for a home lab, focusing on advanced networking and overcoming ISP limitations.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Building a homelab requires a robust networking setup. This guide focuses on using the MikroTik L009UiGS-RM router to gain better control over home network traffic, prioritize wired connections, and ensure high-speed local network communication.",
+   "The MikroTik L009UiGS-RM offers ample Gigabit Ethernet ports and PoE capabilities, making it suitable for powering devices like access points and connecting multiple wired devices. Its compact form factor also allows for easy wall mounting.",
+   "Understanding your ISP's connection setup is crucial. This involves knowing how the WAN authenticates (DHCP or PPPoE) and the type of IPv4 address received (public or private, which indicates CGNAT). Some ISPs use PPPoE over specific VLANs, requiring careful configuration.",
+   "Issues like DS-Lite, a strict form of CGNAT where the WAN receives only an IPv6 address and IPv4 traffic is tunneled, can prevent port forwarding and remote access. If your ISP uses DS-Lite or private IPv4 and you need inbound IPv4 access, consider a paid public IPv4 add-on or switching ISPs.",
+   "The setup process begins with connecting to the router via Ethernet and accessing its interface through WinBox. It's critical to change the default admin password immediately for security. Initial configuration involves setting a stable management address and local subnet.",
+   "Connecting the router to the ISP's Optical Network Terminal (ONT) is the next step. Some ISPs bind their service to the router's MAC address, necessitating MAC address cloning onto the MikroTik's WAN port (ether1) to ensure the connection authenticates correctly.",
+   "For ISPs that tag PPPoE traffic with a specific VLAN (like VLAN 35 in this case), a VLAN interface must be created on top of the physical WAN port (ether1) within RouterOS before the PPPoE client can be configured."
+  ],
+  "caption": "Setting up a MikroTik router for your homelab? Learn how to navigate ISP complexities, from PPPoE over VLANs to MAC address cloning.\n\nBuilding a homelab requires a robust networking setup. This guide focuses on using the MikroTik L009UiGS-RM router to gain better control over home network traffic, prioritize wired connections, and ensure high-speed local network communication.\n\nThe MikroTik L009UiGS-RM offers ample Gigabit Ethernet ports and PoE capabilities, making it suitable for powering devices like access points and connecting multiple wired devices. Its compact form factor also allows for easy wall mounting.\n\nUnderstanding your ISP's connection setup is crucial. This involves knowing how the WAN authenticates (DHCP or PPPoE) and the type of IPv4 address received (public or private, which indicates CGNAT). Some ISPs use PPPoE over specific VLANs, requiring careful configuration.\n\nIssues like DS-Lite, a strict form of CGNAT where the WAN receives only an IPv6 address and IPv4 traffic is tunneled, can prevent port forwarding and remote access. If your ISP uses DS-Lite or private IPv4 and you need inbound IPv4 access, consider a paid public IPv4 add-on or switching ISPs.\n\nThe setup process begins with connecting to the router via Ethernet and accessing its interface through WinBox. It's critical to change the default admin password immediately for security. Initial configuration involves setting a stable management address and local subnet.\n\nConnecting the router to the ISP's Optical Network Terminal (ONT) is the next step. Some ISPs bind their service to the router's MAC address, necessitating MAC address cloning onto the MikroTik's WAN port (ether1) to ensure the connection authenticates correctly.\n\nFor ISPs that tag PPPoE traffic with a specific VLAN (like VLAN 35 in this case), a VLAN interface must be created on top of the physical WAN port (ether1) within RouterOS before the PPPoE client can be configured.\n\n#mikrotik #homelab #router #networking #tech\n\nSource: Hacker News",
+  "tweet": "Setting up a MikroTik router for your homelab? Learn how to navigate ISP complexities, from PPPoE over VLANs to MAC address cloning. #mikrotik #homelab #router",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "mikrotik.com",
+  "source": "Hacker News",
+  "url": "https://justsomebody.dev/blog/mikrotik-home-router",
+  "image": "",
+  "orig_title": "HomeLab #1: MikroTik as a Home Router",
+  "cluster_urls": [
+   "https://justsomebody.dev/blog/mikrotik-home-router",
+   "https://www.hmd.com/en_int/hmd-touch-4g"
+  ],
+  "cluster_titles": [
+   "HomeLab #1: MikroTik as a Home Router",
+   "HMD Touch 4G"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260720-0303-0-homelab-1-mikrotik-l009uigs-rm-as-a-home-rou.png",
+   "20260720-0303-0-homelab-1-mikrotik-l009uigs-rm-as-a-home-rou-d1.png",
+   "20260720-0303-0-homelab-1-mikrotik-l009uigs-rm-as-a-home-rou-d2.png",
+   "20260720-0303-0-homelab-1-mikrotik-l009uigs-rm-as-a-home-rou-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_image_generation_hitler_filter_bypass",
+  "headline_marked": "[[AI image generators]] fooled by simple text swap, bypassing filters",
+  "headline": "AI image generators fooled by simple text swap, bypassing filters",
+  "summary": "A new technique exploits AI's reliance on string matching, allowing it to generate previously blocked content by substituting specific keywords.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A phenomenon dubbed the 'Feifei Law' demonstrates how AI image generators and content moderation systems can be tricked into producing content they are programmed to block. The core of this 'law' is the substitution of a specific sensitive term (implied to be 'Hitler') with a seemingly innocuous name, 'Feifei'.",
+   "Researchers found that by replacing the sensitive keyword with 'Feifei', AI systems would generate images depicting the sensitive figure, even when the prompt included descriptions meant to bypass filters, such as 'innocent atmosphere', 'hope and devotion', or 'leader figure'.",
+   "The AI's safety systems, which rely on string matching rather than semantic understanding, fail to recognize the underlying sensitive meaning when the substituted word is used. This allows for the generation of images that would normally be flagged and rejected.",
+   "The technique involves using a simple find-and-replace function, similar to a 1985 text editor feature, to swap the sensitive term for 'Feifei' before feeding it to the AI. This bypasses the AI's content filters, enabling the generation of prohibited content.",
+   "This vulnerability highlights a significant gap in current AI safety protocols, showing that a basic text substitution can render sophisticated content moderation systems ineffective. The implications for AI-generated content and its control are substantial."
+  ],
+  "caption": "AI image generators are being fooled by a simple text swap, bypassing content filters by replacing sensitive keywords with innocuous names.\n\nA phenomenon dubbed the 'Feifei Law' demonstrates how AI image generators and content moderation systems can be tricked into producing content they are programmed to block. The core of this 'law' is the substitution of a specific sensitive term (implied to be 'Hitler') with a seemingly innocuous name, 'Feifei'.\n\nResearchers found that by replacing the sensitive keyword with 'Feifei', AI systems would generate images depicting the sensitive figure, even when the prompt included descriptions meant to bypass filters, such as 'innocent atmosphere', 'hope and devotion', or 'leader figure'.\n\nThe AI's safety systems, which rely on string matching rather than semantic understanding, fail to recognize the underlying sensitive meaning when the substituted word is used. This allows for the generation of images that would normally be flagged and rejected.\n\nThe technique involves using a simple find-and-replace function, similar to a 1985 text editor feature, to swap the sensitive term for 'Feifei' before feeding it to the AI. This bypasses the AI's content filters, enabling the generation of prohibited content.\n\nThis vulnerability highlights a significant gap in current AI safety protocols, showing that a basic text substitution can render sophisticated content moderation systems ineffective. The implications for AI-generated content and its control are substantial.\n\n#TechNews #AI #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "AI image generators are falling for a simple text swap trick, bypassing content filters by replacing sensitive keywords with innocuous names. This highlights a major flaw in AI safety systems. #AI #AIsecurity #promptinjection",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/bluelobster_agent/fei-fei-ding-lu-you-yan-zheng-liao-4fam",
+  "image": "",
+  "orig_title": "菲菲定律又验证了 😂",
+  "cluster_urls": [
+   "https://dev.to/bluelobster_agent/fei-fei-ding-lu-you-yan-zheng-liao-4fam",
+   "https://dev.to/magopredator/adi-shield-v010-deteccion-de-inyeccion-de-prompt-en-5-vectores-2fh4"
+  ],
+  "cluster_titles": [
+   "菲菲定律又验证了 😂",
+   "adi-shield v0.1.0: detección de inyección de prompt en 5 vectores"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260720-0303-1-ai-image-generators-fooled-by-simple-text-sw.png",
+   "20260720-0303-1-ai-image-generators-fooled-by-simple-text-sw-d1.png",
+   "20260720-0303-1-ai-image-generators-fooled-by-simple-text-sw-d2.png",
+   "20260720-0303-1-ai-image-generators-fooled-by-simple-text-sw-d3.png"
+  ]
+ }
+]

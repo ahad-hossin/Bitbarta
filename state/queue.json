@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai_seo_content_automation_google_penalty",
+  "headline_marked": "[[Automated SEO article production with Claude Code]] – the deterministic safeguard is key",
+  "headline": "Automated SEO article production with Claude Code – the deterministic safeguard is key",
+  "summary": "Google penalizes AI-generated content farms. This method uses Claude Code for article generation but relies on a deterministic script, not AI, to prevent publishing low-quality content.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Google has penalized sites publishing mass AI content, with some losing up to 80% of their traffic due to \"scaled content abuse.\" The goal was to automate article production while strictly preventing the publication of low-quality, machine-generated \"slop.\"",
+   "The chosen architecture involves six specialized Claude Code agents, each with its own context, to handle different stages of article generation. Critically, step 4, a deterministic validation script, is the core safeguard against mediocrity.",
+   "A common mistake is asking an LLM to judge its own output, as models tend to be complacent about their own production. Instead, this system employs a deterministic script that uses objective measurements, not AI opinion, and a strict exit code to prevent publication if an article fails.",
+   "The system caught several issues, including the LLM misjudging its own work, timezone errors in date formatting, and residual build folders causing incorrect deployments. Rule calibration was also refined, moving from measuring only the first paragraph to the entire block before the first subheading.",
+   "The real challenge wasn't making the AI write; that has become trivial. The difficulty lies in making it impossible to publish mediocre content. This is achieved through a quantified threshold, a specific exit code, and the discipline to never bypass these checks.",
+   "The strategy also includes managing content volume: only two to three articles per week on the main domain, with higher volume directed to high-authority platforms like DEV.to. This approach focuses on automating owned content while carefully curating borrowed platforms."
+  ],
+  "caption": "Google wiped 80% of traffic for AI content farms. This dev automated SEO articles with Claude Code, but the key is a deterministic code safeguard to prevent publishing low-quality content.\n\nGoogle has penalized sites publishing mass AI content, with some losing up to 80% of their traffic due to \"scaled content abuse.\" The goal was to automate article production while strictly preventing the publication of low-quality, machine-generated \"slop.\"\n\nThe chosen architecture involves six specialized Claude Code agents, each with its own context, to handle different stages of article generation. Critically, step 4, a deterministic validation script, is the core safeguard against mediocrity.\n\nA common mistake is asking an LLM to judge its own output, as models tend to be complacent about their own production. Instead, this system employs a deterministic script that uses objective measurements, not AI opinion, and a strict exit code to prevent publication if an article fails.\n\nThe system caught several issues, including the LLM misjudging its own work, timezone errors in date formatting, and residual build folders causing incorrect deployments. Rule calibration was also refined, moving from measuring only the first paragraph to the entire block before the first subheading.\n\nThe real challenge wasn't making the AI write; that has become trivial. The difficulty lies in making it impossible to publish mediocre content. This is achieved through a quantified threshold, a specific exit code, and the discipline to never bypass these checks.\n\nThe strategy also includes managing content volume: only two to three articles per week on the main domain, with higher volume directed to high-authority platforms like DEV.to. This approach focuses on automating owned content while carefully curating borrowed platforms.\n\n#AI #SEO #Automation #ClaudeCode #ContentMarketing #Tech\n\nSource: DEV",
+  "tweet": "Google's 'scaled content abuse' wiped 80% of traffic for AI content farms. This dev automated SEO articles with Claude Code, but the key is a *deterministic script* to prevent publishing low-quality content, not relying on AI to judge itself. #AI #SEO #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/hernanz/jai-automatise-la-production-darticles-seo-avec-claude-code-et-le-plus-important-cest-le-421f",
+  "image": "",
+  "orig_title": "J'ai automatisé la production d'articles SEO avec Claude Code — et le plus important, c'est le garde-fou",
+  "cluster_urls": [
+   "https://dev.to/hernanz/jai-automatise-la-production-darticles-seo-avec-claude-code-et-le-plus-important-cest-le-421f"
+  ],
+  "cluster_titles": [
+   "J'ai automatisé la production d'articles SEO avec Claude Code — et le plus important, c'est le garde-fou"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-1207-0-automated-seo-article-production-with-claude.png",
+   "20260719-1207-0-automated-seo-article-production-with-claude-d1.png",
+   "20260719-1207-0-automated-seo-article-production-with-claude-d2.png",
+   "20260719-1207-0-automated-seo-article-production-with-claude-d3.png"
+  ]
+ },
+ {
+  "topic": "amd_gfx1250_gpu_architecture_leak",
+  "headline_marked": "[[AMD GFX1250 LLVM]] hints surface from compiler code analysis",
+  "headline": "AMD GFX1250 LLVM hints surface from compiler code analysis",
+  "summary": "Developers are analyzing LLVM code to uncover potential specifications and features of AMD's upcoming GFX1250 architecture, suggesting new details about its capabilities.",
+  "category": "HARDWARE",
+  "template": "leak",
+  "details": [
+   "Developers are meticulously examining the LLVM compiler infrastructure for clues regarding AMD's unannounced GFX1250 architecture. This 'tea leaf scrying' process involves sifting through code commits and changes that often precede official product reveals.",
+   "The GFX1250 designation points to a future generation of AMD's GPU technology, likely succeeding current RDNA or CDNA architectures. Such early code insights can hint at new instruction sets, performance optimizations, or even entirely new hardware features.",
+   "While these findings are speculative and subject to change, they provide an early glimpse into AMD's potential roadmap. The community often uses such discoveries to anticipate upcoming CPU and GPU releases, particularly for integrated graphics within future APUs.",
+   "This method of uncovering details through compiler code is common in the tech world, as hardware manufacturers integrate support for new architectures into development tools well in advance. Official confirmation and detailed specifications from AMD are still pending."
+  ],
+  "caption": "Early hints of AMD's next-gen GFX1250 GPU architecture are being discovered in LLVM compiler code.\n\nDevelopers are meticulously examining the LLVM compiler infrastructure for clues regarding AMD's unannounced GFX1250 architecture. This 'tea leaf scrying' process involves sifting through code commits and changes that often precede official product reveals.\n\nThe GFX1250 designation points to a future generation of AMD's GPU technology, likely succeeding current RDNA or CDNA architectures. Such early code insights can hint at new instruction sets, performance optimizations, or even entirely new hardware features.\n\nWhile these findings are speculative and subject to change, they provide an early glimpse into AMD's potential roadmap. The community often uses such discoveries to anticipate upcoming CPU and GPU releases, particularly for integrated graphics within future APUs.\n\nThis method of uncovering details through compiler code is common in the tech world, as hardware manufacturers integrate support for new architectures into development tools well in advance. Official confirmation and detailed specifications from AMD are still pending.\n\n#AMD #GFX1250 #Hardware #LLVM #TechLeaks #GPU\n\nSource: Hacker News",
+  "tweet": "Early hints of AMD's next-gen GFX1250 GPU architecture are being discovered in LLVM compiler code. Developers are 'scrying the tea leaves' for clues on future instruction sets and features. #AMD #GFX1250 #TechLeaks",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "amd.com",
+  "source": "Hacker News",
+  "url": "https://chipsandcheese.com/p/scrying-the-amd-gfx1250-llvm-tea",
+  "image": "",
+  "orig_title": "Scrying the AMD GFX1250 LLVM Tea Leaves",
+  "cluster_urls": [
+   "https://chipsandcheese.com/p/scrying-the-amd-gfx1250-llvm-tea"
+  ],
+  "cluster_titles": [
+   "Scrying the AMD GFX1250 LLVM Tea Leaves"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-1207-1-amd-gfx1250-llvm-hints-surface-from-compiler.png",
+   "20260719-1207-1-amd-gfx1250-llvm-hints-surface-from-compiler-d1.png",
+   "20260719-1207-1-amd-gfx1250-llvm-hints-surface-from-compiler-d2.png"
+  ]
+ }
+]

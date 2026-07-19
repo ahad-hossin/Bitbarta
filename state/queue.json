@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "ai_images_hidden_workflow_data",
+  "headline_marked": "[[Hidden layer found inside AI images]] storing full generation data",
+  "headline": "Hidden layer found inside AI images storing full generation data",
+  "summary": "AI-generated PNGs contain complete metadata of their creation, including prompts, models, and workflows. A new tool can extract this hidden information, revealing the entire generation record.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer discovered that AI-generated PNG images contain a hidden layer of metadata, archiving the complete generation record. This includes the model, LoRA, prompt, and seed used to create the image.",
+   "AI generation tools like ComfyUI and AUTOMATIC1111 embed their entire internal state into the PNG file. This data, stored in standard PNG text chunks, includes workflow JSON, prompt text, and model references.",
+   "While this data has always been present, it wasn't easily accessible. The developer created a Python tool, `ai-artifact-inspector`, to read this hidden layer and reconstruct the generation details.",
+   "The tool can extract parameters such as the model, prompt, seed, steps, CFG, and LoRA. It can also reconstruct and visualize the workflow graph from the embedded data, turning a single PNG into a map of its creation process.",
+   "This discovery suggests a shift in how AI-generated files are perceived. Unlike human-created images, AI images are \"artifacts\" that contain both the final output and the complete process behind their creation, moving beyond just what's visible in the frame."
+  ],
+  "caption": "AI-generated images hide a complete record of their creation within their metadata. A new tool can extract every detail, from prompts to models.\n\nA developer discovered that AI-generated PNG images contain a hidden layer of metadata, archiving the complete generation record. This includes the model, LoRA, prompt, and seed used to create the image.\n\nAI generation tools like ComfyUI and AUTOMATIC1111 embed their entire internal state into the PNG file. This data, stored in standard PNG text chunks, includes workflow JSON, prompt text, and model references.\n\nWhile this data has always been present, it wasn't easily accessible. The developer created a Python tool, `ai-artifact-inspector`, to read this hidden layer and reconstruct the generation details.\n\nThe tool can extract parameters such as the model, prompt, seed, steps, CFG, and LoRA. It can also reconstruct and visualize the workflow graph from the embedded data, turning a single PNG into a map of its creation process.\n\nThis discovery suggests a shift in how AI-generated files are perceived. Unlike human-created images, AI images are \"artifacts\" that contain both the final output and the complete process behind their creation, moving beyond just what's visible in the frame.\n\n#AI #Tech #Metadata #PNG #ComfyUI #AUTOMATIC1111\n\nSource: DEV",
+  "tweet": "AI images aren't just images: they contain a hidden layer with their full generation history. A new tool, `ai-artifact-inspector`, can extract prompts, models, and workflows from PNG metadata. #AI #Tech #Metadata",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/biuta666/i-found-a-hidden-layer-inside-ai-images-3go7",
+  "image": "",
+  "orig_title": "I Found a Hidden Layer Inside AI Images",
+  "cluster_urls": [
+   "https://dev.to/biuta666/i-found-a-hidden-layer-inside-ai-images-3go7"
+  ],
+  "cluster_titles": [
+   "I Found a Hidden Layer Inside AI Images"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-1718-0-hidden-layer-found-inside-ai-images-storing-.png",
+   "20260719-1718-0-hidden-layer-found-inside-ai-images-storing--d1.png",
+   "20260719-1718-0-hidden-layer-found-inside-ai-images-storing--d2.png"
+  ]
+ }
+]

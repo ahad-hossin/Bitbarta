@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "esp32_replaces_bowling_center_system",
+  "headline_marked": "[[DIY Score System]] Replaces $120k Bowling Tech for $1.6k",
+  "headline": "DIY Score System Replaces $120k Bowling Tech for $1.6k",
+  "summary": "A bowling alley owner built a custom scoring system using ESP32 microcontrollers, slashing costs from six figures to just $1,600 for 8 lanes.",
+  "category": "HARDWARE",
+  "template": "terminal",
+  "details": [
+   "A family purchased an abandoned bowling alley in the rural Midwest, aiming to revitalize it as a community hub. They discovered the existing scoring and control system, installed in 2008, was prohibitively expensive to maintain or replace, with quotes ranging from $80,000 to $120,000 for a like-for-like system.",
+   "The old system managed complex functions like ball speed, trajectory, camera-based pin detection, and interfaced with the pinsetter and ball return machines. Despite its advanced features for the time, the core mechanical bowling equipment was decades old, highlighting the disproportionate cost of the electronic controls.",
+   "Frustrated by vendor lock-in and high costs, the owner, leveraging the advancements in open hardware and software, decided to build a custom solution. The goal was to create an affordable, modern system that offered flexibility and ownership of data.",
+   "The new system, dubbed OpenLaneLink, utilizes ESP32 microcontrollers connected to relays, optocouplers, and IR sensors. These nodes form an ESPNow mesh network, reporting to a Raspberry Pi gateway. The total cost for the hardware across 8 lanes is approximately $1,600, a fraction of the original system's price.",
+   "The software stack involves event streaming into Redis, with a middleware layer allowing for custom UIs and animations using React. This open approach means the owner can implement any desired features or themes, such as a Tron-themed night, without vendor restrictions.",
+   "Repairs are drastically simplified, with individual lane nodes replaceable in minutes. The owner plans to open-source the hardware, firmware, and software stack to help other bowling alleys maintain affordability and avoid costly proprietary systems."
+  ],
+  "caption": "Tired of $120,000 scoring systems? This owner built his own for $1,600 using ESP32s.\n\nA family purchased an abandoned bowling alley in the rural Midwest, aiming to revitalize it as a community hub. They discovered the existing scoring and control system, installed in 2008, was prohibitively expensive to maintain or replace, with quotes ranging from $80,000 to $120,000 for a like-for-like system.\n\nThe old system managed complex functions like ball speed, trajectory, camera-based pin detection, and interfaced with the pinsetter and ball return machines. Despite its advanced features for the time, the core mechanical bowling equipment was decades old, highlighting the disproportionate cost of the electronic controls.\n\nFrustrated by vendor lock-in and high costs, the owner, leveraging the advancements in open hardware and software, decided to build a custom solution. The goal was to create an affordable, modern system that offered flexibility and ownership of data.\n\nThe new system, dubbed OpenLaneLink, utilizes ESP32 microcontrollers connected to relays, optocouplers, and IR sensors. These nodes form an ESPNow mesh network, reporting to a Raspberry Pi gateway. The total cost for the hardware across 8 lanes is approximately $1,600, a fraction of the original system's price.\n\nThe software stack involves event streaming into Redis, with a middleware layer allowing for custom UIs and animations using React. This open approach means the owner can implement any desired features or themes, such as a Tron-themed night, without vendor restrictions.\n\nRepairs are drastically simplified, with individual lane nodes replaceable in minutes. The owner plans to open-source the hardware, firmware, and software stack to help other bowling alleys maintain affordability and avoid costly proprietary systems.\n\n#DIY #OpenSource #ESP32 #Bowling #HardwareHacking\n\nSource: Hacker News",
+  "tweet": "A bowling alley owner replaced a $120k scoring system with a DIY solution using ESP32s for just $1.6k! OpenLaneLink aims to keep alleys affordable. #DIY #OpenSource #Bowling",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://news.ycombinator.com/item?id=48968606",
+  "image": "",
+  "orig_title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
+  "cluster_urls": [
+   "https://news.ycombinator.com/item?id=48968606"
+  ],
+  "cluster_titles": [
+   "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260720-0205-0-diy-score-system-replaces-120k-bowling-tech-.png",
+   "20260720-0205-0-diy-score-system-replaces-120k-bowling-tech--d1.png",
+   "20260720-0205-0-diy-score-system-replaces-120k-bowling-tech--d2.png",
+   "20260720-0205-0-diy-score-system-replaces-120k-bowling-tech--d3.png"
+  ]
+ },
+ {
+  "topic": "minecraft_java_edition_uses_sdl3",
+  "headline_marked": "[[Minecraft Java Edition]] Switches to SDL3 for Window Management",
+  "headline": "Minecraft Java Edition Switches to SDL3 for Window Management",
+  "summary": "The latest snapshot updates the game's core libraries, impacting window management and input, while also introducing new item components for furnace fuels.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Mojang has released a new Minecraft Java Edition snapshot, marking a significant shift in its underlying technology. The game has transitioned from using GLFW to SDL3 for its window management, input handling, and platform integration.",
+   "This update also brings new item components, specifically for custom furnace fuels. These components allow for more granular control over how villagers interact with and utilize items, and influence the visibility percentage provided by equippable items.",
+   "Technical changes have also been implemented for signs, world generation, and loot tables. The recipes for Smokers and Blast Furnaces now share the same cooking time data definition as their Furnace counterparts.",
+   "The cooking time speedup is now managed through the `minecraft:cooking/speed_default` Number Provider, used by the furnace fuel components. This update also includes several new mathematical functions for data providers, such as subtraction, division, and interpolation."
+  ],
+  "caption": "Minecraft Java Edition is moving to SDL3, ditching GLFW for window management and input.\n\nMojang has released a new Minecraft Java Edition snapshot, marking a significant shift in its underlying technology. The game has transitioned from using GLFW to SDL3 for its window management, input handling, and platform integration.\n\nThis update also brings new item components, specifically for custom furnace fuels. These components allow for more granular control over how villagers interact with and utilize items, and influence the visibility percentage provided by equippable items.\n\nTechnical changes have also been implemented for signs, world generation, and loot tables. The recipes for Smokers and Blast Furnaces now share the same cooking time data definition as their Furnace counterparts.\n\nThe cooking time speedup is now managed through the `minecraft:cooking/speed_default` Number Provider, used by the furnace fuel components. This update also includes several new mathematical functions for data providers, such as subtraction, division, and interpolation.\n\n#Minecraft #JavaEdition #SDL3 #Gaming #Mojang\n\nSource: Hacker News",
+  "tweet": "Minecraft Java Edition is switching its window management and input library from GLFW to SDL3 in the latest snapshot. New item components for furnace fuels and technical changes are also included. #Minecraft #JavaEdition #SDL3",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "minecraft.net",
+  "source": "Hacker News",
+  "url": "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4",
+  "image": "",
+  "orig_title": "Minecraft: Java Edition now uses SDL3",
+  "cluster_urls": [
+   "https://www.minecraft.net/en-us/article/minecraft-26-3-snapshot-4"
+  ],
+  "cluster_titles": [
+   "Minecraft: Java Edition now uses SDL3"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260720-0205-1-minecraft-java-edition-switches-to-sdl3-for-.png",
+   "20260720-0205-1-minecraft-java-edition-switches-to-sdl3-for--d1.png",
+   "20260720-0205-1-minecraft-java-edition-switches-to-sdl3-for--d2.png"
+  ]
+ }
+]

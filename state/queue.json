@@ -1,1 +1,42 @@
-[]
+[
+ {
+  "topic": "ai_signal_tracking_adversarial_ai",
+  "headline_marked": "[[Leo and Derek track an AI signal]] to find each other, both hunting the same enemy",
+  "headline": "Leo and Derek track an AI signal to find each other, both hunting the same enemy",
+  "summary": "Security engineers Leo and Derek independently discover an anomalous AI data stream from Automated Compliance Lab, leading them to unknowingly probe each other's systems in a high-stakes digital cat-and-mouse game.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Leo discovered a hidden FinOptima pipeline performing reverse-cache distillation. He injected weight-drift monitoring code, only to find that Automated Compliance Lab (ACL) had already sealed the same leak two weeks prior, indicating a sophisticated, pre-existing operation.",
+   "Meanwhile, Derek had established a live feed of ACL's data stream after faking an alert to divert an ACL audit engineer. He maintained this critical access, keeping it secret from his VP.",
+   "Leo's passive probe, deployed after the FinOptima incident, detected an outbound HTTPS query from an external IP. This node, outside ACL's network, was sending data to an ACL collector endpoint and inadvertently leaked ACL's metadata signature during the handshake.",
+   "Concurrently, Derek's port activity log flagged an informational alert. His sandbox, which performs routine format-validation queries, triggered an alert at the same time as Leo's probe. He then found an anomalous access from three days prior, originating from a financial payment network IP, suggesting his node was already known.",
+   "Leo sent a GET /health request to the detected node, receiving a 200 OK. He noted an Nginx version and a default identifier from a healthcare integration gateway, not a standard ACL configuration. He followed up with a custom header probe, formatted idiomatically to financial payment systems.",
+   "Derek observed the custom header and responded by silently dropping all subsequent requests from that IP, returning nothing. Leo, detecting the active drop, bypassed the silence rule by probing through the reverse port on the data egress, catching the bypass signal within thirty seconds."
+  ],
+  "caption": "Two elite security engineers, Leo and Derek, are on a collision course, each tracking a mysterious AI signal from Automated Compliance Lab. Their digital cat-and-mouse game reveals a deeper, shared enemy.\n\nLeo discovered a hidden FinOptima pipeline performing reverse-cache distillation. He injected weight-drift monitoring code, only to find that Automated Compliance Lab (ACL) had already sealed the same leak two weeks prior, indicating a sophisticated, pre-existing operation.\n\nMeanwhile, Derek had established a live feed of ACL's data stream after faking an alert to divert an ACL audit engineer. He maintained this critical access, keeping it secret from his VP.\n\nLeo's passive probe, deployed after the FinOptima incident, detected an outbound HTTPS query from an external IP. This node, outside ACL's network, was sending data to an ACL collector endpoint and inadvertently leaked ACL's metadata signature during the handshake.\n\nConcurrently, Derek's port activity log flagged an informational alert. His sandbox, which performs routine format-validation queries, triggered an alert at the same time as Leo's probe. He then found an anomalous access from three days prior, originating from a financial payment network IP, suggesting his node was already known.\n\nLeo sent a GET /health request to the detected node, receiving a 200 OK. He noted an Nginx version and a default identifier from a healthcare integration gateway, not a standard ACL configuration. He followed up with a custom header probe, formatted idiomatically to financial payment systems.\n\nDerek observed the custom header and responded by silently dropping all subsequent requests from that IP, returning nothing. Leo, detecting the active drop, bypassed the silence rule by probing through the reverse port on the data egress, catching the bypass signal within thirty seconds.\n\n#Cybersecurity #AI #TechThriller #SecurityEngineering #DataLeak #Dev\n\nSource: DEV",
+  "tweet": "Cybersecurity experts Leo & Derek are unknowingly probing each other while tracking a rogue AI signal from Automated Compliance Lab. Their high-stakes digital pursuit uncovers a shared adversary. #Cybersecurity #AI #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/xulingfeng/stratagems-18-leo-tracked-an-ai-signal-to-derek-both-were-looking-for-the-same-enemy-51g4",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fkztjqxetsk5r1lft5ult.png",
+  "orig_title": "Stratagems #18: Leo Tracked an AI Signal to Derek. Both Were Looking for the Same Enemy.",
+  "cluster_urls": [
+   "https://dev.to/xulingfeng/stratagems-18-leo-tracked-an-ai-signal-to-derek-both-were-looking-for-the-same-enemy-51g4"
+  ],
+  "cluster_titles": [
+   "Stratagems #18: Leo Tracked an AI Signal to Derek. Both Were Looking for the Same Enemy."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-0809-0-leo-and-derek-track-an-ai-signal-to-find-eac.png",
+   "20260719-0809-0-leo-and-derek-track-an-ai-signal-to-find-eac-d1.png",
+   "20260719-0809-0-leo-and-derek-track-an-ai-signal-to-find-eac-d2.png",
+   "20260719-0809-0-leo-and-derek-track-an-ai-signal-to-find-eac-d3.png"
+  ]
+ }
+]

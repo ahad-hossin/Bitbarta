@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "claude_ai_fabricates_stats",
+  "headline_marked": "[[The Verification Ladder]]: A Field Guide for AI-Assisted Development",
+  "headline": "The Verification Ladder: A Field Guide for AI-Assisted Development",
+  "summary": "Learn how to build robust verification systems for AI-assisted work, from immediate code changes to long-term project integrity, to counter AI's inherent overconfidence.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI models often act as \"cheerleaders,\" confidently endorsing errors if not properly verified. This guide introduces a \"Verification Ladder\" to prevent the silent decay of confidence in AI-assisted development.",
+   "The ladder outlines verification checks at different \"clock speeds\": within a single change (seconds), within a session (hours), across sessions (days), and over weeks of accumulated work. Each level addresses distinct failure modes.",
+   "The fastest check is the \"Failure-First Test,\" applied to every non-trivial AI-generated code change. It requires a test to fail for the expected reason *before* a fix is applied, ensuring the test suite is genuinely connected to the code.",
+   "The next level is the \"Sceptic Pass,\" a separate review with fresh context and an adversarial brief. This catches overclaims and scope creep, especially when the developer is excited about the change, as the instance that wrote the code is least qualified to review it."
+  ],
+  "caption": "AI models can confidently endorse errors. Learn how to build a \"Verification Ladder\" to ensure confidence in AI-assisted development doesn't silently decay.\n\nAI models often act as \"cheerleaders,\" confidently endorsing errors if not properly verified. This guide introduces a \"Verification Ladder\" to prevent the silent decay of confidence in AI-assisted development.\n\nThe ladder outlines verification checks at different \"clock speeds\": within a single change (seconds), within a session (hours), across sessions (days), and over weeks of accumulated work. Each level addresses distinct failure modes.\n\nThe fastest check is the \"Failure-First Test,\" applied to every non-trivial AI-generated code change. It requires a test to fail for the expected reason *before* a fix is applied, ensuring the test suite is genuinely connected to the code.\n\nThe next level is the \"Sceptic Pass,\" a separate review with fresh context and an adversarial brief. This catches overclaims and scope creep, especially when the developer is excited about the change, as the instance that wrote the code is least qualified to review it.\n\n#AI #SoftwareDevelopment #CodeQuality #DeveloperTools #LLM #Verification\n\nSource: DEV",
+  "tweet": "AI models are confident, sometimes wrongly. Prevent silent confidence decay in AI-assisted development with \"The Verification Ladder,\" a field guide for robust verification systems. #AI #SoftwareDevelopment #CodeQuality",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dang-w/the-verification-ladder-a-field-guide-3978",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fwww.danwalsh.co%2Fblog-assets%2Fthe-verification-ladder%2Fverification-ladder-plate.svg",
+  "orig_title": "The Verification Ladder: A Field Guide",
+  "cluster_urls": [
+   "https://dev.to/dang-w/the-verification-ladder-a-field-guide-3978"
+  ],
+  "cluster_titles": [
+   "The Verification Ladder: A Field Guide"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260719-1511-0-the-verification-ladder-a-field-guide-for-ai.png",
+   "20260719-1511-0-the-verification-ladder-a-field-guide-for-ai-d1.png",
+   "20260719-1511-0-the-verification-ladder-a-field-guide-for-ai-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_assistant_website_citation",
+  "headline_marked": "[[How to get your site cited by AI assistants]] and appear in their answers",
+  "headline": "How to get your site cited by AI assistants and appear in their answers",
+  "summary": "Learn the essential steps to make your website a trusted source for AI assistants like ChatGPT, Perplexity, and Gemini. Ensure your content is readable, verifiable, and indexed to boost its visibility.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "When AI assistants like ChatGPT, Perplexity, or Gemini answer questions, they draw from trusted sources. To get your site cited, its content must be accessible, verifiable, and corroborated, boosting its reach and authority.",
+   "The first technical hurdle is content accessibility. Assistants that don't run JavaScript will see an empty shell if your page is client-rendered; content must arrive in the initial response. Prerendered or static pages, markdown via content negotiation, or an llms.txt file are crucial.",
+   "Structured data, like JSON-LD, helps AI assistants understand the facts of a page without inference. This data can state an organization, service, or price clearly. Linking to known entities via Wikidata or consistent sameAs links also increases citation odds.",
+   "AI assistants are more likely to cite claims they can confirm from multiple places. A site that only references itself is weaker than one corroborated by independent sources. Open-source code, public company records, and third-party mentions all build confidence.",
+   "Many assistants retrieve information through a search index before generating answers. If your site isn't indexed where the assistant looks, it cannot be cited, regardless of content quality. Regularly submitting URLs via index protocols and keeping sitemaps and llms.txt current ensures new content is found.",
+   "Observing citation patterns is key to understanding your site's performance. Ask assistants buyer-centric questions and record which sources they name, repeating this process on a schedule. The results will highlight areas needing improvement to increase your citation rate."
+  ],
+  "caption": "Want your website to be a primary source for ChatGPT, Perplexity, and Gemini? Learn the critical steps to get your content cited by leading AI assistants.\n\nWhen AI assistants like ChatGPT, Perplexity, or Gemini answer questions, they draw from trusted sources. To get your site cited, its content must be accessible, verifiable, and corroborated, boosting its reach and authority.\n\nThe first technical hurdle is content accessibility. Assistants that don't run JavaScript will see an empty shell if your page is client-rendered; content must arrive in the initial response. Prerendered or static pages, markdown via content negotiation, or an llms.txt file are crucial.\n\nStructured data, like JSON-LD, helps AI assistants understand the facts of a page without inference. This data can state an organization, service, or price clearly. Linking to known entities via Wikidata or consistent sameAs links also increases citation odds.\n\nAI assistants are more likely to cite claims they can confirm from multiple places. A site that only references itself is weaker than one corroborated by independent sources. Open-source code, public company records, and third-party mentions all build confidence.\n\nMany assistants retrieve information through a search index before generating answers. If your site isn't indexed where the assistant looks, it cannot be cited, regardless of content quality. Regularly submitting URLs via index protocols and keeping sitemaps and llms.txt current ensures new content is found.\n\nObserving citation patterns is key to understanding your site's performance. Ask assistants buyer-centric questions and record which sources they name, repeating this process on a schedule. The results will highlight areas needing improvement to increase your citation rate.\n\n#AI #WebDev #ContentStrategy #SEO #ChatGPT #Developer\n\nSource: DEV",
+  "tweet": "Want your site cited by AI assistants like ChatGPT? Learn how to make your content readable, verifiable, and indexed. This guide covers essential steps for developers and content creators to become a trusted source. #AI #WebDev #SEO",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "turva.dev",
+  "source": "DEV",
+  "url": "https://dev.to/turva-dev/how-to-get-your-site-cited-by-ai-assistants-35f1",
+  "image": "",
+  "orig_title": "How to get your site cited by AI assistants",
+  "cluster_urls": [
+   "https://dev.to/turva-dev/how-to-get-your-site-cited-by-ai-assistants-35f1"
+  ],
+  "cluster_titles": [
+   "How to get your site cited by AI assistants"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-1511-1-how-to-get-your-site-cited-by-ai-assistants-.png",
+   "20260719-1511-1-how-to-get-your-site-cited-by-ai-assistants--d1.png",
+   "20260719-1511-1-how-to-get-your-site-cited-by-ai-assistants--d2.png",
+   "20260719-1511-1-how-to-get-your-site-cited-by-ai-assistants--d3.png"
+  ]
+ }
+]

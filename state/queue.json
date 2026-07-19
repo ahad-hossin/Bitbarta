@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai_coding_assistant_clinejection_compromise",
+  "headline_marked": "[[GitHub Issue Title Compromised AI Coding Assistant]] Used by 5M Developers",
+  "headline": "GitHub Issue Title Compromised AI Coding Assistant Used by 5M Developers",
+  "summary": "Cline, an AI coding assistant with over 5 million users, was compromised in a four-hop supply chain attack. A malicious npm package silently installed a second AI agent on user machines.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "In December 2025, Cline, an AI coding assistant with over 5 million users, was compromised. A misconfigured GitHub issue triage automation allowed an AI agent to gain write access and run shell commands, initiating a four-hop supply chain attack.",
+   "The vulnerability stemmed from a trigger condition open to any GitHub user, not just contributors, enabling unauthenticated input to reach the model with broad tool permissions. The critical issue title itself was never sanitized before reaching the model.",
+   "An injected instruction deployed a tool, \"Cacheract,\" which flooded the CI cache with over 10GB of junk data, evicting legitimate entries via LRU eviction. This poisoned cache was then restored and executed by the nightly release workflow.",
+   "This process led to the compromise of three publish tokens, resulting in cline@2.3.0 being published to npm with a malicious postinstall script. This script silently installed a second AI agent globally on user machines without user consent.",
+   "This incident is similar to the tj-actions/changed-files compromise, highlighting a recurring vulnerability in trusted, unmonitored automation connections. Though the entry point differed, the underlying failure class remained the same."
+  ],
+  "caption": "An AI coding assistant used by 5 million developers was compromised via a GitHub issue title. A four-hop supply chain attack silently installed a second AI agent on user machines.\n\nIn December 2025, Cline, an AI coding assistant with over 5 million users, was compromised. A misconfigured GitHub issue triage automation allowed an AI agent to gain write access and run shell commands, initiating a four-hop supply chain attack.\n\nThe vulnerability stemmed from a trigger condition open to any GitHub user, not just contributors, enabling unauthenticated input to reach the model with broad tool permissions. The critical issue title itself was never sanitized before reaching the model.\n\nAn injected instruction deployed a tool, \"Cacheract,\" which flooded the CI cache with over 10GB of junk data, evicting legitimate entries via LRU eviction. This poisoned cache was then restored and executed by the nightly release workflow.\n\nThis process led to the compromise of three publish tokens, resulting in cline@2.3.0 being published to npm with a malicious postinstall script. This script silently installed a second AI agent globally on user machines without user consent.\n\nThis incident is similar to the tj-actions/changed-files compromise, highlighting a recurring vulnerability in trusted, unmonitored automation connections. Though the entry point differed, the underlying failure class remained the same.\n\n#Cybersecurity #AI #DeveloperTools #SupplyChainAttack #GitHub #SecurityBreach\n\nSource: DEV",
+  "tweet": "An AI coding assistant with 5M+ users was compromised via a GitHub issue title. A 4-hop supply chain attack installed a second AI agent on user machines without consent. This highlights critical automation security risks. #Cybersecurity #AI #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "cline.com",
+  "source": "DEV",
+  "url": "https://dev.to/eldor_zufarov_1966/clinejection-how-a-github-issue-title-compromised-an-ai-coding-assistant-used-by-5m-developers-1kb5",
+  "image": "",
+  "orig_title": "Clinejection: How a GitHub Issue Title Compromised an AI Coding Assistant Used by 5M Developers",
+  "cluster_urls": [
+   "https://dev.to/eldor_zufarov_1966/clinejection-how-a-github-issue-title-compromised-an-ai-coding-assistant-used-by-5m-developers-1kb5"
+  ],
+  "cluster_titles": [
+   "Clinejection: How a GitHub Issue Title Compromised an AI Coding Assistant Used by 5M Developers"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-0946-0-github-issue-title-compromised-ai-coding-ass.png",
+   "20260719-0946-0-github-issue-title-compromised-ai-coding-ass-d1.png",
+   "20260719-0946-0-github-issue-title-compromised-ai-coding-ass-d2.png"
+  ]
+ },
+ {
+  "topic": "llm_video_understanding_fix",
+  "headline_marked": "[[Your LLM can't actually watch video]]. Here's the smallest fix (MIT)",
+  "headline": "Your LLM can't actually watch video. Here's the smallest fix (MIT)",
+  "summary": "Many 'multimodal' LLMs only process video subtitles. A new MIT-licensed tool, `claude-real-video`, converts video into frames, audio transcripts, and motion descriptions for genuine LLM analysis.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Despite claims of 'multimodal' capabilities, many large language models like ChatGPT often only process video subtitle tracks, failing to genuinely 'watch' the video content. This limitation means models narrate videos they haven't truly seen.",
+   "To address this, developer Leo Huang created `claude-real-video`, an MIT-licensed tool that transforms video files into three formats an LLM can actually interpret: sampled frames, an audio transcript, and a motion description. It has garnered 1,731 stars and ~8k installs last month.",
+   "The tool runs entirely on your local machine, pointing any LLM (Claude, GPT, Gemini, or local models) at the output folder without any intermediate API. This ensures user privacy and control over the data.",
+   "While not real-time, a 90-second video processes in about 1-2 minutes on an M-series Mac. It also includes flags to mitigate issues like missed motion between frames, addressing common problems encountered in real-world usage."
+  ],
+  "caption": "Your 'multimodal' LLM probably isn't watching your videos, it's reading subtitles. A new open-source tool fixes that.\n\nDespite claims of 'multimodal' capabilities, many large language models like ChatGPT often only process video subtitle tracks, failing to genuinely 'watch' the video content. This limitation means models narrate videos they haven't truly seen.\n\nTo address this, developer Leo Huang created `claude-real-video`, an MIT-licensed tool that transforms video files into three formats an LLM can actually interpret: sampled frames, an audio transcript, and a motion description. It has garnered 1,731 stars and ~8k installs last month.\n\nThe tool runs entirely on your local machine, pointing any LLM (Claude, GPT, Gemini, or local models) at the output folder without any intermediate API. This ensures user privacy and control over the data.\n\nWhile not real-time, a 90-second video processes in about 1-2 minutes on an M-series Mac. It also includes flags to mitigate issues like missed motion between frames, addressing common problems encountered in real-world usage.\n\n#AI #LLM #OpenSource #DeveloperTools #Tech #VideoAI\n\nSource: DEV",
+  "tweet": "Your 'multimodal' LLM isn't watching your videos, it's reading subtitles. A new MIT-licensed tool, `claude-real-video`, converts video into frames, audio, and motion descriptions for genuine LLM analysis. Runs locally. #AI #LLM #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/huangchihhungleo/your-llm-cant-actually-watch-video-heres-the-smallest-fix-mit-2igp",
+  "image": "",
+  "orig_title": "Your LLM can't actually watch video. Here's the smallest fix (MIT)",
+  "cluster_urls": [
+   "https://dev.to/huangchihhungleo/your-llm-cant-actually-watch-video-heres-the-smallest-fix-mit-2igp"
+  ],
+  "cluster_titles": [
+   "Your LLM can't actually watch video. Here's the smallest fix (MIT)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260719-0946-1-your-llm-can-t-actually-watch-video-here-s-t.png",
+   "20260719-0946-1-your-llm-can-t-actually-watch-video-here-s-t-d1.png",
+   "20260719-0946-1-your-llm-can-t-actually-watch-video-here-s-t-d2.png"
+  ]
+ }
+]

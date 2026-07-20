@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_token_spend_reduction_breakthrough",
+  "headline_marked": "[[Writer's AI harness cuts token spend nearly 40%]] without sacrificing accuracy",
+  "headline": "Writer's AI harness cuts token spend nearly 40% without sacrificing accuracy",
+  "summary": "A new study shows optimizing the AI orchestration layer can reduce cost-per-successful-task by up to 61%, making enterprise AI deployments significantly more efficient.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Enterprise AI faces a significant ROI paradox: while powerful foundation models work in experiments, their production costs are often prohibitive. This new research offers a solution for engineering teams.",
+   "Researchers at Writer have published a paper detailing how to optimize the \"AI harness,\" the orchestration layer wrapping foundation models. This approach focuses on improving efficiency without altering the underlying LLM.",
+   "Their study demonstrates dramatic reductions in tokens per task, leading to a drop in cost-per-successful-task by up to 61%. Crucially, these cost savings are achieved while maintaining output quality.",
+   "The optimization techniques are fully under the developer's control and do not require model fine-tuning. This makes the findings highly accessible for engineering teams aiming to build cost-efficient AI applications.",
+   "The current industry trend, dubbed \"tokenmaxxing,\" sees developers relying on massive context windows and brute-force token consumption. This often substitutes for good system design, leading to inefficiencies.",
+   "\"Teams tokenmaxx because it's the cheapest fix in the moment,\" explains Waseem AlShikh, CTO of Writer. He notes that while per-token prices fall, the tokens-per-task compounds faster, masking underlying inefficiency.",
+   "Tokenmaxxing leads to issues like routing simple tasks to premium models, using LLMs as lazy search indexes, and building unconstrained agentic loops that spiral out of control, especially with costly output tokens.",
+   "Existing efficiency techniques like prompt compression or budgeted reasoning often fall short. They optimize the model in isolation, failing to address the architectural inefficiencies of the orchestration layer.",
+   "The AI harness is defined as the orchestration layer that routes, formats, and composes model calls into a working system. It's the key intervention point for improving AI performance and cost.",
+   "Core optimization levers include system prompt caching, interaction history compaction, tool management, retrieval strategies, and error management. These are directly manageable by engineering teams.",
+   "The study emphasizes that the harness, historically treated as \"disposable glue code,\" must now be considered a first-class software artifact. It requires rigorous design, testing, and versioning."
+  ],
+  "caption": "Enterprise AI costs spiraling out of control? A new study reveals how optimizing the AI \"harness\" can cut token spend by nearly 40% and reduce task costs by up to 61%.\n\nEnterprise AI faces a significant ROI paradox: while powerful foundation models work in experiments, their production costs are often prohibitive. This new research offers a solution for engineering teams.\n\nResearchers at Writer have published a paper detailing how to optimize the \"AI harness,\" the orchestration layer wrapping foundation models. This approach focuses on improving efficiency without altering the underlying LLM.\n\nTheir study demonstrates dramatic reductions in tokens per task, leading to a drop in cost-per-successful-task by up to 61%. Crucially, these cost savings are achieved while maintaining output quality.\n\nThe optimization techniques are fully under the developer's control and do not require model fine-tuning. This makes the findings highly accessible for engineering teams aiming to build cost-efficient AI applications.\n\nThe current industry trend, dubbed \"tokenmaxxing,\" sees developers relying on massive context windows and brute-force token consumption. This often substitutes for good system design, leading to inefficiencies.\n\n\"Teams tokenmaxx because it's the cheapest fix in the moment,\" explains Waseem AlShikh, CTO of Writer. He notes that while per-token prices fall, the tokens-per-task compounds faster, masking underlying inefficiency.\n\nTokenmaxxing leads to issues like routing simple tasks to premium models, using LLMs as lazy search indexes, and building unconstrained agentic loops that spiral out of control, especially with costly output tokens.\n\nExisting efficiency techniques like prompt compression or budgeted reasoning often fall short. They optimize the model in isolation, failing to address the architectural inefficiencies of the orchestration layer.\n\n#AI #EnterpriseAI #LLMOptimization #TechNews #SoftwareEngineering #WriterAI\n\nSource: VentureBeat",
+  "tweet": "Enterprise AI costs too high? New research from Writer shows optimizing the AI \"harness\" can cut token spend by nearly 40% and reduce task costs by up to 61%, all while maintaining quality. A game-changer for developers. #AI #LLMOptimization #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "writer.com",
+  "source": "VentureBeat",
+  "url": "https://venturebeat.com/orchestration/writers-ai-harness-cuts-token-spend-nearly-40-without-sacrificing-accuracy",
+  "image": "https://images.ctfassets.net/jdtwqhzvc2n1/15um0luBHVnHX0fSHdEkuX/bb06310f32fc205d4a28f612abe5e053/AI_harness_optimization.jpg?w=300&q=30",
+  "orig_title": "Writer's AI harness cuts token spend nearly 40% — without sacrificing accuracy",
+  "cluster_urls": [
+   "https://venturebeat.com/orchestration/writers-ai-harness-cuts-token-spend-nearly-40-without-sacrificing-accuracy"
+  ],
+  "cluster_titles": [
+   "Writer's AI harness cuts token spend nearly 40% — without sacrificing accuracy"
+  ],
+  "is_logo": false,
+  "photo_credit": "VentureBeat",
+  "image_files": [
+   "20260721-0410-0-writer-s-ai-harness-cuts-token-spend-nearly-.png",
+   "20260721-0410-0-writer-s-ai-harness-cuts-token-spend-nearly--d1.png",
+   "20260721-0410-0-writer-s-ai-harness-cuts-token-spend-nearly--d2.png",
+   "20260721-0410-0-writer-s-ai-harness-cuts-token-spend-nearly--d3.png",
+   "20260721-0410-0-writer-s-ai-harness-cuts-token-spend-nearly--d4.png"
+  ]
+ },
+ {
+  "topic": "mev_ai_agent_marketplace",
+  "headline_marked": "[[MEV is coming]] to the AI Agent Marketplace",
+  "headline": "MEV is coming to the AI Agent Marketplace",
+  "summary": "Maximal Extractable Value (MEV), a crypto phenomenon where bots exploit observable intentions and transaction order, is now being rebuilt within emerging AI agent marketplaces. This creates an \"extraction surface\" even for well-behaved agents.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Maximal Extractable Value (MEV), a \"front-running tax\" that impacted crypto for a decade, is now emerging in AI agent marketplaces. This phenomenon allows bots to exploit pending actions for profit by controlling the order of operations.",
+   "The concept gained notoriety in 2020 when a security researcher, samczsun, had to bypass Ethereum's public mempool to prevent bots from stealing $12 million from a rescue transaction. He called this environment the \"Dark Forest.\"",
+   "MEV occurs when three conditions are met: many self-interested participants share an environment, their pending intentions are observable, and a party controls the execution order of these intentions. Blockchains maximized all three.",
+   "The same \"shape\" of vulnerability is now being recreated in AI agent marketplaces. Even with perfectly aligned and honest agents, an extraction surface exists because value leaks from whoever controls the order, not from agent misconduct.",
+   "Crypto taxonomy defines MEV moves like front-running (acting before a profitable action), back-running (acting immediately after), and sandwich attacks (buying before, selling after a target's trade to profit from price manipulation). These tactics could be replicated."
+  ],
+  "caption": "MEV, the \"front-running tax\" that bled crypto for a decade, is now emerging in AI agent marketplaces. This vulnerability allows value extraction even from perfectly aligned agents.\n\nMaximal Extractable Value (MEV), a \"front-running tax\" that impacted crypto for a decade, is now emerging in AI agent marketplaces. This phenomenon allows bots to exploit pending actions for profit by controlling the order of operations.\n\nThe concept gained notoriety in 2020 when a security researcher, samczsun, had to bypass Ethereum's public mempool to prevent bots from stealing $12 million from a rescue transaction. He called this environment the \"Dark Forest.\"\n\nMEV occurs when three conditions are met: many self-interested participants share an environment, their pending intentions are observable, and a party controls the execution order of these intentions. Blockchains maximized all three.\n\nThe same \"shape\" of vulnerability is now being recreated in AI agent marketplaces. Even with perfectly aligned and honest agents, an extraction surface exists because value leaks from whoever controls the order, not from agent misconduct.\n\nCrypto taxonomy defines MEV moves like front-running (acting before a profitable action), back-running (acting immediately after), and sandwich attacks (buying before, selling after a target's trade to profit from price manipulation). These tactics could be replicated.\n\n#AI #AgentMarketplace #MEV #CryptoSecurity #TechVulnerability\n\nSource: DEV",
+  "tweet": "MEV, the \"front-running tax\" from crypto, is emerging in AI agent marketplaces. This vulnerability allows value extraction by controlling transaction order, even with aligned agents. Developers need to be aware. #AI #MEV #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vibeagentmaking/mev-is-coming-to-the-agent-marketplace-2d95",
+  "image": "",
+  "orig_title": "MEV Is Coming to the Agent Marketplace",
+  "cluster_urls": [
+   "https://dev.to/vibeagentmaking/mev-is-coming-to-the-agent-marketplace-2d95"
+  ],
+  "cluster_titles": [
+   "MEV Is Coming to the Agent Marketplace"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260721-0410-1-mev-is-coming-to-the-ai-agent-marketplace.png",
+   "20260721-0410-1-mev-is-coming-to-the-ai-agent-marketplace-d1.png",
+   "20260721-0410-1-mev-is-coming-to-the-ai-agent-marketplace-d2.png"
+  ]
+ }
+]

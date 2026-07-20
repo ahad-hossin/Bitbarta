@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "google_ai_chip_gemini_efficiency",
+  "headline_marked": "[[Google designing new AI chip]] 'Frozen v2' for Gemini, up to 10x more efficient by 2028",
+  "headline": "Google designing new AI chip 'Frozen v2' for Gemini, up to 10x more efficient by 2028",
+  "summary": "The chip, internally dubbed 'Frozen v2', is reportedly 6 to 10 times more efficient than current Google AI chips and is slated for release in 2028.",
+  "category": "AI",
+  "template": "leak",
+  "details": [
+   "Alphabet, Google’s parent company, is reportedly designing a new server chip, internally called 'Frozen v2', to make its in-house Gemini models operate more efficiently. Sources suggest it could be 6 to 10 times more efficient than Google’s existing AI chips, measured by tokens generated per unit of power.",
+   "The Information reported, citing anonymous sources, that this new chip is slated for release sometime in 2028. Google did not directly confirm or deny the report, stating only that their teams are \"constantly researching and experimenting with new innovations.\"",
+   "AI companies are increasingly developing their own custom chips to improve the efficiency of their in-house models and to address global shortages in AI computing capacity. This strategy also helps them reduce their dependence on dominant chipmakers like Nvidia.",
+   "This trend is also seen with other major players; OpenAI announced its custom inference processor 'Jalapeño' in June, and Anthropic is reportedly discussing a chipmaking partnership with Samsung. Developing specialized hardware is becoming a key competitive advantage.",
+   "Investors have previously expressed concerns about Alphabet’s substantial planned expenditures for its AI strategy, with Google projecting $180 billion to $190 billion in spending. News of the more efficient Frozen v2 chip reportedly assuaged some investor worries, leading to a 3% climb in Google's stock."
+  ],
+  "caption": "Google is reportedly developing a new AI chip, 'Frozen v2', that could be 6-10 times more efficient than current models for its Gemini AI.\n\nAlphabet, Google’s parent company, is reportedly designing a new server chip, internally called 'Frozen v2', to make its in-house Gemini models operate more efficiently. Sources suggest it could be 6 to 10 times more efficient than Google’s existing AI chips, measured by tokens generated per unit of power.\n\nThe Information reported, citing anonymous sources, that this new chip is slated for release sometime in 2028. Google did not directly confirm or deny the report, stating only that their teams are \"constantly researching and experimenting with new innovations.\"\n\nAI companies are increasingly developing their own custom chips to improve the efficiency of their in-house models and to address global shortages in AI computing capacity. This strategy also helps them reduce their dependence on dominant chipmakers like Nvidia.\n\nThis trend is also seen with other major players; OpenAI announced its custom inference processor 'Jalapeño' in June, and Anthropic is reportedly discussing a chipmaking partnership with Samsung. Developing specialized hardware is becoming a key competitive advantage.\n\nInvestors have previously expressed concerns about Alphabet’s substantial planned expenditures for its AI strategy, with Google projecting $180 billion to $190 billion in spending. News of the more efficient Frozen v2 chip reportedly assuaged some investor worries, leading to a 3% climb in Google's stock.\n\n#GoogleAI #AIChips #GeminiAI #TechNews #Hardware #ArtificialIntelligence\n\nSource: TechCrunch",
+  "tweet": "Google is reportedly developing a new AI chip, 'Frozen v2', for its Gemini AI. Sources suggest it could be 6-10x more efficient than current chips, slated for 2028. This move aims to boost efficiency and reduce reliance on external chipmakers. #GoogleAI #AIChips",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
+  "image": "",
+  "orig_title": "Google is working on a new AI chip designed to make Gemini more efficient",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/"
+  ],
+  "cluster_titles": [
+   "Google is working on a new AI chip designed to make Gemini more efficient"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260721-0406-0-google-designing-new-ai-chip-frozen-v2-for-g.png",
+   "20260721-0406-0-google-designing-new-ai-chip-frozen-v2-for-g-d1.png",
+   "20260721-0406-0-google-designing-new-ai-chip-frozen-v2-for-g-d2.png"
+  ]
+ },
+ {
+  "topic": "hollowgraph_malware_microsoft365_c2",
+  "headline_marked": "[[HollowGraph Malware uses Microsoft 365 Calendar Events]] as a covert C2 channel",
+  "headline": "HollowGraph Malware uses Microsoft 365 Calendar Events as a covert C2 channel",
+  "summary": "This new espionage implant hides command-and-control traffic in future-dated calendar entries, making it nearly indistinguishable from legitimate M365 activity.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Cybersecurity firm Group-IB disclosed HollowGraph, a new espionage implant that hijacks compromised Microsoft 365 mailboxes. It establishes a command-and-control (C2) channel hidden inside calendar events, making detection extremely difficult.",
+   "The malware attaches encrypted files to calendar entries dated May 13, 2050, far enough in the future to avoid detection by mailbox owners. It retrieves operator instructions from these 'dead drop' events, with all traffic moving through the Microsoft Graph API.",
+   "HollowGraph is a lightweight .NET DLL supporting GET and SEND commands. It queries the mailbox calendar for specific event titles, downloads and decrypts attached files for tasking using RSA and AES-256-GCM.",
+   "For data exfiltration, the implant creates new calendar entries with specific titles and uploads stolen files, encrypted with the attacker's public RSA key. Commands are retrieved from a fixed one-hour window on the far-future date.",
+   "A secondary, unencrypted channel uses DNS tunneling to refresh Microsoft Entra ID (Azure AD) credentials. It queries IPv6 AAAA records from an attacker-controlled domain, assembling payload bytes to update a configuration file masquerading as a log.",
+   "Group-IB assesses with high confidence that HollowGraph is linked to the Cavern backdoor framework, previously associated with Iranian-nexus activity. At least 12 systems have been infected, with active communication observed in three.",
+   "The campaign targets organizations using Microsoft 365, with indicators pointing specifically to entities in Israel. The technique weaponizes trusted cloud infrastructure, allowing C2 traffic to blend seamlessly with normal corporate usage patterns.",
+   "The primary danger lies in its ability to bypass traditional network security controls. Since all data flows through legitimate Microsoft cloud endpoints, detection is significantly harder than with conventional C2 channels."
+  ],
+  "caption": "A new malware implant, HollowGraph, is hiding its command-and-control traffic inside Microsoft 365 calendar events dated decades in the future. This makes it almost impossible to detect.\n\nCybersecurity firm Group-IB disclosed HollowGraph, a new espionage implant that hijacks compromised Microsoft 365 mailboxes. It establishes a command-and-control (C2) channel hidden inside calendar events, making detection extremely difficult.\n\nThe malware attaches encrypted files to calendar entries dated May 13, 2050, far enough in the future to avoid detection by mailbox owners. It retrieves operator instructions from these 'dead drop' events, with all traffic moving through the Microsoft Graph API.\n\nHollowGraph is a lightweight .NET DLL supporting GET and SEND commands. It queries the mailbox calendar for specific event titles, downloads and decrypts attached files for tasking using RSA and AES-256-GCM.\n\nFor data exfiltration, the implant creates new calendar entries with specific titles and uploads stolen files, encrypted with the attacker's public RSA key. Commands are retrieved from a fixed one-hour window on the far-future date.\n\nA secondary, unencrypted channel uses DNS tunneling to refresh Microsoft Entra ID (Azure AD) credentials. It queries IPv6 AAAA records from an attacker-controlled domain, assembling payload bytes to update a configuration file masquerading as a log.\n\nGroup-IB assesses with high confidence that HollowGraph is linked to the Cavern backdoor framework, previously associated with Iranian-nexus activity. At least 12 systems have been infected, with active communication observed in three.\n\nThe campaign targets organizations using Microsoft 365, with indicators pointing specifically to entities in Israel. The technique weaponizes trusted cloud infrastructure, allowing C2 traffic to blend seamlessly with normal corporate usage patterns.\n\n#CyberSecurity #Malware #Microsoft365 #Espionage #InfoSec #ThreatDetection\n\nSource: DEV",
+  "tweet": "New HollowGraph malware hides C2 traffic in Microsoft 365 calendar events dated 2050, making it nearly undetectable. This advanced espionage implant uses legitimate M365 APIs to blend in. #CyberSecurity #Malware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/alejandxr/hollowgraph-malware-uses-microsoft-365-calendar-events-as-dead-drop-c2-channel-5h02",
+  "image": "",
+  "orig_title": "HollowGraph Malware Uses Microsoft 365 Calendar Events as Dead-Drop C2 Channel",
+  "cluster_urls": [
+   "https://dev.to/alejandxr/hollowgraph-malware-uses-microsoft-365-calendar-events-as-dead-drop-c2-channel-5h02"
+  ],
+  "cluster_titles": [
+   "HollowGraph Malware Uses Microsoft 365 Calendar Events as Dead-Drop C2 Channel"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260721-0406-1-hollowgraph-malware-uses-microsoft-365-calen.png",
+   "20260721-0406-1-hollowgraph-malware-uses-microsoft-365-calen-d1.png",
+   "20260721-0406-1-hollowgraph-malware-uses-microsoft-365-calen-d2.png",
+   "20260721-0406-1-hollowgraph-malware-uses-microsoft-365-calen-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "natural_ai_agent_payments_funding",
+  "headline_marked": "[[Natural raises $30M]] to reinvent payments for AI agents and challenge Stripe",
+  "headline": "Natural raises $30M to reinvent payments for AI agents and challenge Stripe",
+  "summary": "Natural, a new startup, secured $30 million in Series A funding to build autonomous payment infrastructure for AI agents, positioning itself to compete directly with payment giants like Stripe.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Natural, a new startup, has secured $30 million in Series A funding, bringing its total capital to $40 million. The company aims to build an agent orchestration layer that enables AI agents to move and store funds autonomously, directly challenging incumbents like Stripe.",
+   "The problem Natural addresses is that current financial infrastructure, built for human-initiated transactions, cannot support the autonomous payment needs of evolving AI agents. Traditional systems like credit cards and ACH require human authorization, slowing down agent operations.",
+   "Co-founded in 2025 by Kahlil Lalji, Eric Wang, and Walt Leung, Natural was born from Lalji's realization that AI agents were outpacing existing financial architecture. Lalji, with a background in banking, saw agentic payments as a critical, unavoidable problem.",
+   "Forerunner, led by Kirsten Green, spearheaded the $30 million Series A round. Green was drawn to Natural's ambitious vision to reinvent payment infrastructure, including how disputed transactions are handled, not just facilitating agent checkouts.",
+   "Despite operating in beta, Natural believes its architectural decisions give it a strong chance against rivals like Stripe, which is also developing AI payment rails. Natural hopes its rapid development speed and experienced staff from fintech giants will give it an edge.",
+   "While Natural plans to support traditional bank payments, it will also incorporate stablecoins into its architecture. Other startups, such as Skyfire Systems, are also working on reinventing the payments backbone for AI agents, often utilizing USD-backed stablecoins.",
+   "CEO Kahlil Lalji envisions a future where the volume of payments could increase by \"two or three or four orders of magnitude\" as transactions shift from human speed to computer speed. This potential market growth fuels the intense competition in the field."
+  ],
+  "caption": "AI agents need to pay for things autonomously, but current financial systems aren't built for them. Natural just raised $30M to fix that and take on Stripe.\n\nNatural, a new startup, has secured $30 million in Series A funding, bringing its total capital to $40 million. The company aims to build an agent orchestration layer that enables AI agents to move and store funds autonomously, directly challenging incumbents like Stripe.\n\nThe problem Natural addresses is that current financial infrastructure, built for human-initiated transactions, cannot support the autonomous payment needs of evolving AI agents. Traditional systems like credit cards and ACH require human authorization, slowing down agent operations.\n\nCo-founded in 2025 by Kahlil Lalji, Eric Wang, and Walt Leung, Natural was born from Lalji's realization that AI agents were outpacing existing financial architecture. Lalji, with a background in banking, saw agentic payments as a critical, unavoidable problem.\n\nForerunner, led by Kirsten Green, spearheaded the $30 million Series A round. Green was drawn to Natural's ambitious vision to reinvent payment infrastructure, including how disputed transactions are handled, not just facilitating agent checkouts.\n\nDespite operating in beta, Natural believes its architectural decisions give it a strong chance against rivals like Stripe, which is also developing AI payment rails. Natural hopes its rapid development speed and experienced staff from fintech giants will give it an edge.\n\nWhile Natural plans to support traditional bank payments, it will also incorporate stablecoins into its architecture. Other startups, such as Skyfire Systems, are also working on reinventing the payments backbone for AI agents, often utilizing USD-backed stablecoins.\n\n#AI #Fintech #Payments #Startups #TechNews #NaturalAI\n\nSource: TechCrunch",
+  "tweet": "AI agents need to pay for things autonomously, but current financial systems aren't built for them. Natural just raised $30M to fix that, building new payment rails to challenge Stripe. #AI #Fintech #Startups",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "natural.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/07/20/natural-raises-30m-to-reinvent-payments-for-ai-agents-and-take-on-stripe/",
+  "image": "",
+  "orig_title": "Natural raises $30M to reinvent payments for AI agents — and take on Stripe",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/07/20/natural-raises-30m-to-reinvent-payments-for-ai-agents-and-take-on-stripe/"
+  ],
+  "cluster_titles": [
+   "Natural raises $30M to reinvent payments for AI agents — and take on Stripe"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260721-0206-0-natural-raises-30m-to-reinvent-payments-for-.png",
+   "20260721-0206-0-natural-raises-30m-to-reinvent-payments-for--d1.png",
+   "20260721-0206-0-natural-raises-30m-to-reinvent-payments-for--d2.png",
+   "20260721-0206-0-natural-raises-30m-to-reinvent-payments-for--d3.png"
+  ]
+ },
+ {
+  "topic": "ai_coding_agents_old_api_problem",
+  "headline_marked": "[[AI coding agents write old SDK APIs]] — new type-checker measures the gap",
+  "headline": "AI coding agents write old SDK APIs — new type-checker measures the gap",
+  "summary": "A developer created SDKProof, a type-checker, to objectively measure how often AI coding assistants generate code for outdated SDK APIs, leading to build failures. Scores for Prisma 7, AI SDK 7, and Zod 4 are 80, 90, and 90 respectively.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "AI coding assistants often generate code that looks correct but fails to compile due to using outdated API versions. This common issue arises when libraries ship new major versions with breaking changes, while the AI models are still trained on older APIs.",
+   "The core problem is a gap between the API the model \"remembers\" and the API actually installed in a project. This discrepancy is most pronounced immediately after a library releases a breaking change.",
+   "To objectively quantify this gap, a developer built SDKProof. This tool uses a type-checker, specifically `tsc`, as the impartial referee, rather than relying on an LLM to grade another LLM's output.",
+   "SDKProof measures by prompting models to create functions, but intentionally omits specific option names. This method ensures that the tool assesses what the model naturally generates, not just its ability to echo back provided names.",
+   "A representative example of a common miss is the AI SDK, where models frequently suggest `parameters` instead of the current `inputSchema`. This seemingly minor change is enough to halt a build.",
+   "Scores vary based on how recently an SDK had a breaking change. For instance, Prisma 7, a more recent update, scores 80/100, while AI SDK 7 and Zod 4, with changes from 2025, score higher at 90/100 as models have largely absorbed them.",
+   "This indicates that a model's \"readiness\" for an SDK directly correlates with the recency of that SDK's changes. A library scoring 95 today could drop to 70 the week its next major version ships, then gradually climb back with new model generations.",
+   "SDKProof is designed as a monitoring tool, not a one-time audit. It continuously answers the useful question: \"Does the model reach for API surface that still exists?\" with compiler-backed certainty."
+  ],
+  "caption": "AI coding assistants frequently generate code for outdated SDK APIs, causing build failures. A new tool, SDKProof, objectively measures this gap using a type-checker.\n\nAI coding assistants often generate code that looks correct but fails to compile due to using outdated API versions. This common issue arises when libraries ship new major versions with breaking changes, while the AI models are still trained on older APIs.\n\nThe core problem is a gap between the API the model \"remembers\" and the API actually installed in a project. This discrepancy is most pronounced immediately after a library releases a breaking change.\n\nTo objectively quantify this gap, a developer built SDKProof. This tool uses a type-checker, specifically `tsc`, as the impartial referee, rather than relying on an LLM to grade another LLM's output.\n\nSDKProof measures by prompting models to create functions, but intentionally omits specific option names. This method ensures that the tool assesses what the model naturally generates, not just its ability to echo back provided names.\n\nA representative example of a common miss is the AI SDK, where models frequently suggest `parameters` instead of the current `inputSchema`. This seemingly minor change is enough to halt a build.\n\nScores vary based on how recently an SDK had a breaking change. For instance, Prisma 7, a more recent update, scores 80/100, while AI SDK 7 and Zod 4, with changes from 2025, score higher at 90/100 as models have largely absorbed them.\n\nThis indicates that a model's \"readiness\" for an SDK directly correlates with the recency of that SDK's changes. A library scoring 95 today could drop to 70 the week its next major version ships, then gradually climb back with new model generations.\n\nSDKProof is designed as a monitoring tool, not a one-time audit. It continuously answers the useful question: \"Does the model reach for API surface that still exists?\" with compiler-backed certainty.\n\n#AI #DeveloperTools #SDK #APIs #Coding #TypeScript\n\nSource: DEV",
+  "tweet": "AI coding assistants often generate code for outdated SDK APIs, leading to broken builds. SDKProof, a new type-checker, objectively measures this problem, revealing how models lag behind library updates. #AI #DeveloperTools #SDK",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "sdkproof.dev",
+  "source": "DEV",
+  "url": "https://dev.to/kalpitrathore/ai-coding-agents-still-write-your-sdks-old-api-so-i-built-a-type-checker-to-measure-it-alk",
+  "image": "",
+  "orig_title": "AI coding agents still write your SDK's old API — so I built a type-checker to measure it",
+  "cluster_urls": [
+   "https://dev.to/kalpitrathore/ai-coding-agents-still-write-your-sdks-old-api-so-i-built-a-type-checker-to-measure-it-alk"
+  ],
+  "cluster_titles": [
+   "AI coding agents still write your SDK's old API — so I built a type-checker to measure it"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260721-0206-1-ai-coding-agents-write-old-sdk-apis-new-type.png",
+   "20260721-0206-1-ai-coding-agents-write-old-sdk-apis-new-type-d1.png",
+   "20260721-0206-1-ai-coding-agents-write-old-sdk-apis-new-type-d2.png",
+   "20260721-0206-1-ai-coding-agents-write-old-sdk-apis-new-type-d3.png"
+  ]
+ }
+]

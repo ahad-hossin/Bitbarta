@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "nat_gateway_hidden_costs",
+  "headline_marked": "[[Your NAT gateway is a $30k landmine]] and nobody warns juniors",
+  "headline": "Your NAT gateway is a $30k landmine and nobody warns juniors",
+  "summary": "A startup almost faced a $30,000 AWS bill due to an overlooked NAT gateway, highlighting how hidden network costs can quickly accumulate in cloud environments.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many developers focus on optimizing code performance, only to be blindsided by massive cloud bills. A common culprit is the Network Address Translation (NAT) gateway, which can silently inflate costs, as one startup nearly discovered with a $30,000 AWS invoice.",
+   "The issue wasn't powerful machines or GPU farms, but a worker fetching millions of small JSON files from S3. While S3 itself wasn't the problem, the NAT gateway mediating traffic between a private subnet and the internet charged for every byte transferred.",
+   "Unlike computational costs, which are immediately apparent, network transfer fees for small files can accumulate slowly and unexpectedly. NAT gateway pricing is per-GB processed, on top of hourly charges, and bills often arrive weeks after the code deployment that caused them, making debugging difficult.",
+   "The solution for the startup was simple: implementing a VPC endpoint for S3. This allows traffic to S3 to route privately within the VPC, bypassing the NAT gateway and its associated data transfer costs, preventing a five-figure bill.",
+   "The lesson extends beyond S3: before scaling any worker that moves data, always question the physical path of the traffic. Determine if it crosses a NAT gateway, a region boundary, or the open internet, and understand the cost implications for each hop.",
+   "Traffic within the same region and availability zone, or endpoint-routed traffic, is generally inexpensive or free. Conversely, traffic crossing AZs, regions, or routed via NAT gateways can significantly drain a startup's budget over time.",
+   "Beyond latency and throughput, 'cost per operation' is a critical, often overlooked performance metric. An application accessing millions of small files can incur huge network costs if not carefully engineered, especially if connections need to be re-established for each file."
+  ],
+  "caption": "A startup nearly got hit with a $30,000 AWS bill, not from GPUs, but from a hidden network cost. Your NAT gateway could be a silent budget killer.\n\nMany developers focus on optimizing code performance, only to be blindsided by massive cloud bills. A common culprit is the Network Address Translation (NAT) gateway, which can silently inflate costs, as one startup nearly discovered with a $30,000 AWS invoice.\n\nThe issue wasn't powerful machines or GPU farms, but a worker fetching millions of small JSON files from S3. While S3 itself wasn't the problem, the NAT gateway mediating traffic between a private subnet and the internet charged for every byte transferred.\n\nUnlike computational costs, which are immediately apparent, network transfer fees for small files can accumulate slowly and unexpectedly. NAT gateway pricing is per-GB processed, on top of hourly charges, and bills often arrive weeks after the code deployment that caused them, making debugging difficult.\n\nThe solution for the startup was simple: implementing a VPC endpoint for S3. This allows traffic to S3 to route privately within the VPC, bypassing the NAT gateway and its associated data transfer costs, preventing a five-figure bill.\n\nThe lesson extends beyond S3: before scaling any worker that moves data, always question the physical path of the traffic. Determine if it crosses a NAT gateway, a region boundary, or the open internet, and understand the cost implications for each hop.\n\nTraffic within the same region and availability zone, or endpoint-routed traffic, is generally inexpensive or free. Conversely, traffic crossing AZs, regions, or routed via NAT gateways can significantly drain a startup's budget over time.\n\nBeyond latency and throughput, 'cost per operation' is a critical, often overlooked performance metric. An application accessing millions of small files can incur huge network costs if not carefully engineered, especially if connections need to be re-established for each file.\n\n#CloudComputing #AWS #NATGateway #DevOps #CloudCosts #Tech\n\nSource: DEV",
+  "tweet": "A startup nearly got hit with a $30,000 AWS bill due to an overlooked NAT gateway. Learn how to avoid hidden cloud network costs and prevent your architecture from becoming a budget bug. #CloudComputing #AWS #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/adioof/your-nat-gateway-is-a-30k-landmine-and-nobody-warns-juniors-2l4a",
+  "image": "",
+  "orig_title": "Your NAT gateway is a $30k landmine and nobody warns juniors",
+  "cluster_urls": [
+   "https://dev.to/adioof/your-nat-gateway-is-a-30k-landmine-and-nobody-warns-juniors-2l4a"
+  ],
+  "cluster_titles": [
+   "Your NAT gateway is a $30k landmine and nobody warns juniors"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260720-1322-0-your-nat-gateway-is-a-30k-landmine-and-nobod.png",
+   "20260720-1322-0-your-nat-gateway-is-a-30k-landmine-and-nobod-d1.png",
+   "20260720-1322-0-your-nat-gateway-is-a-30k-landmine-and-nobod-d2.png",
+   "20260720-1322-0-your-nat-gateway-is-a-30k-landmine-and-nobod-d3.png"
+  ]
+ },
+ {
+  "topic": "microsoft_proprietary_formats_lock_in",
+  "headline_marked": "[[Microsoft uses proprietary formats]] as main tool for lock-in, creating user dependency",
+  "headline": "Microsoft uses proprietary formats as main tool for lock-in, creating user dependency",
+  "summary": "Microsoft Office's proprietary formats, like DOCX and XLSX, create user dependency by making documents incompatible or distorted when opened in non-Microsoft software, despite their 'standardized' status.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Microsoft's proprietary document formats, such as DOCX, XLSX, and PPTX, are identified as a primary tool for vendor lock-in. These formats, used by hundreds of millions globally, store information in ways that create dependency on Microsoft Office software.",
+   "Unlike open formats, proprietary formats may contain undocumented features or private extensions that only the original software implements correctly. This often leads to formatting distortions, shifted elements, and altered appearances when documents are opened in other applications.",
+   "This mechanism creates 'lock-in' not through technical bans, but through a silent and persistent friction. It makes any work outside the Microsoft ecosystem seem slightly off or unprofessional, subtly pushing users back to Microsoft tools for expected results.",
+   "The standardization of OOXML (Office Open XML) was highly contested, with reports of procedural irregularities. The resulting specification is extraordinarily complex, describing existing Microsoft Office behavior rather than a format designed for true interoperability.",
+   "Consequently, no other software can fully implement the format, yet is compelled to try for user compatibility. Microsoft Office has consistently used the problematic OOXML Transitional as its default, further hindering genuine open standard adoption."
+  ],
+  "caption": "Ever wondered why your Word document looks different in another app? Microsoft's proprietary formats are designed to create 'lock-in', making your data inseparable from their software.\n\nMicrosoft's proprietary document formats, such as DOCX, XLSX, and PPTX, are identified as a primary tool for vendor lock-in. These formats, used by hundreds of millions globally, store information in ways that create dependency on Microsoft Office software.\n\nUnlike open formats, proprietary formats may contain undocumented features or private extensions that only the original software implements correctly. This often leads to formatting distortions, shifted elements, and altered appearances when documents are opened in other applications.\n\nThis mechanism creates 'lock-in' not through technical bans, but through a silent and persistent friction. It makes any work outside the Microsoft ecosystem seem slightly off or unprofessional, subtly pushing users back to Microsoft tools for expected results.\n\nThe standardization of OOXML (Office Open XML) was highly contested, with reports of procedural irregularities. The resulting specification is extraordinarily complex, describing existing Microsoft Office behavior rather than a format designed for true interoperability.\n\nConsequently, no other software can fully implement the format, yet is compelled to try for user compatibility. Microsoft Office has consistently used the problematic OOXML Transitional as its default, further hindering genuine open standard adoption.\n\n#Microsoft #ProprietaryFormats #VendorLockin #Software #TechPolicy #OpenStandards\n\nSource: Hacker News",
+  "tweet": "Microsoft's proprietary formats (DOCX, XLSX) are a key tool for vendor lock-in. Documents often distort in other apps, creating a 'silent friction' that keeps users tied to Office. It's not a bug, it's a feature. #Microsoft #VendorLockin #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Hacker News",
+  "url": "https://blog.documentfoundation.org/blog/2026/07/17/microsofts-main-tool-for-lock-in/",
+  "image": "",
+  "orig_title": "How proprietary formats have become Microsoft’s main tool for lock-in",
+  "cluster_urls": [
+   "https://blog.documentfoundation.org/blog/2026/07/17/microsofts-main-tool-for-lock-in/"
+  ],
+  "cluster_titles": [
+   "How proprietary formats have become Microsoft’s main tool for lock-in"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260720-1322-1-microsoft-uses-proprietary-formats-as-main-t.png",
+   "20260720-1322-1-microsoft-uses-proprietary-formats-as-main-t-d1.png",
+   "20260720-1322-1-microsoft-uses-proprietary-formats-as-main-t-d2.png"
+  ]
+ }
+]

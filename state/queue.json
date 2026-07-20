@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "enterprise_ai_local_llm_security_solution",
+  "headline_marked": "[[kinako-llama-cpp solves corporate security issues]] for local LLMs in strict IT environments",
+  "headline": "kinako-llama-cpp solves corporate security issues for local LLMs in strict IT environments",
+  "summary": "kinako-llama-cpp is a tiny DLL designed to enable secure local LLM deployment within strict Windows Active Directory environments, bypassing common compliance bottlenecks.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Corporate environments often struggle to deploy local LLMs due to strict security and compliance rules. This creates a structural mismatch with standalone desktop tools, preventing companies from leveraging valuable internal data with AI.",
+   "kinako-llama-cpp is a small DLL file engineered to overcome these compliance hurdles within strict Windows Active Directory environments. It allows IT departments to deploy LLMs locally without compromising corporate security.",
+   "The solution addresses the dilemma where CEOs want innovation, IT Directors need security, and Auditors must uphold compliance. It provides a technical path forward for traditional enterprises to adopt AI safely.",
+   "Many long-standing companies possess highly valuable, confidential data that cannot be uploaded to public clouds. kinako-llama-cpp enables these organizations to safely utilize this internal knowledge with AI, protecting proprietary information.",
+   "The author emphasizes the importance of preventing companies from losing their competitive edge or collapsing due to an inability to adapt to AI. This tool aims to protect livelihoods and ensure business continuity by unlocking internal data securely."
+  ],
+  "caption": "Corporate security rules often block local LLMs, paralyzing innovation. A tiny DLL called kinako-llama-cpp offers a solution for strict Windows AD environments.\n\nCorporate environments often struggle to deploy local LLMs due to strict security and compliance rules. This creates a structural mismatch with standalone desktop tools, preventing companies from leveraging valuable internal data with AI.\n\nkinako-llama-cpp is a small DLL file engineered to overcome these compliance hurdles within strict Windows Active Directory environments. It allows IT departments to deploy LLMs locally without compromising corporate security.\n\nThe solution addresses the dilemma where CEOs want innovation, IT Directors need security, and Auditors must uphold compliance. It provides a technical path forward for traditional enterprises to adopt AI safely.\n\nMany long-standing companies possess highly valuable, confidential data that cannot be uploaded to public clouds. kinako-llama-cpp enables these organizations to safely utilize this internal knowledge with AI, protecting proprietary information.\n\nThe author emphasizes the importance of preventing companies from losing their competitive edge or collapsing due to an inability to adapt to AI. This tool aims to protect livelihoods and ensure business continuity by unlocking internal data securely.\n\n#LLMs #CorporateIT #SoftwareDevelopment #AI #Security #WindowsAD\n\nSource: DEV",
+  "tweet": "Corporate security rules often block local LLMs, hindering innovation. kinako-llama-cpp, a tiny DLL, now helps IT departments deploy LLMs securely in strict Windows AD environments without compliance compromise. #LLMs #CorporateIT #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sakurai-kinako/why-corporate-security-rules-kill-local-llms-and-how-kinako-llama-cpp-saves-lonely-it-departments-3ac8",
+  "image": "",
+  "orig_title": "Why Corporate Security Rules Kill Local LLMs, and How \"kinako-llama-cpp\" Saves Lonely IT Departments",
+  "cluster_urls": [
+   "https://dev.to/sakurai-kinako/why-corporate-security-rules-kill-local-llms-and-how-kinako-llama-cpp-saves-lonely-it-departments-3ac8"
+  ],
+  "cluster_titles": [
+   "Why Corporate Security Rules Kill Local LLMs, and How \"kinako-llama-cpp\" Saves Lonely IT Departments"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260720-1406-0-kinako-llama-cpp-solves-corporate-security-i.png",
+   "20260720-1406-0-kinako-llama-cpp-solves-corporate-security-i-d1.png",
+   "20260720-1406-0-kinako-llama-cpp-solves-corporate-security-i-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_model_release_bug_neutral_responses",
+  "headline_marked": "[[AI model passed all tests]] but shipped broken, outputting 'neutral' to everything",
+  "headline": "AI model passed all tests but shipped broken, outputting 'neutral' to everything",
+  "summary": "A developer recounts how their AI model, designed for compliance validation, passed all internal checks but failed in deployment, consistently returning a 'neutral' response due to a subtle quantization issue.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer discovered their newly trained AI model, intended to replace an existing compliance judge, passed all internal release gates but was fundamentally broken in deployment. The shipped model consistently returned 'neutral' to every input.",
+   "The model, nli-popia-v2, is an 82M-param cross-encoder fine-tuned on South Africa's POPIA clauses. It runs as INT8 ONNX on CPU, ensuring determinism for regulatory validation.",
+   "An attempt to improve performance involved switching to a larger deberta-v3-base (184M params). This new model showed better F1 scores on holdout data and passed the initial release gate.",
+   "However, when the actual deployed ONNX artifact was tested against a canonical failing example, it gave a 'neutral' response, unlike the previous version. Further testing confirmed it was a \"dead model wearing a live model's config,\" emitting one class for everything.",
+   "The root cause was deberta-v3's disentangled attention being sensitive to per-tensor INT8 dynamic quantization. This caused activation ranges to collapse, saturating the model to a single class, a problem not encountered with the previous roberta base.",
+   "The solution involved changing from per-tensor to per-channel quantization. This fixed the constant prediction issue, allowing the model to predict real classes.",
+   "Despite the fix, the quantized deberta-v3 model scored 0.576, significantly worse than the existing v2 model's 0.7465. The new artifact gate, implemented after this discovery, successfully blocked the inferior upload.",
+   "The experience highlighted a critical flaw: the release gate sat *before* the ONNX export and INT8 quantization steps, meaning the validation was not performed on the actual file being shipped. This led to a validation that couldn't reproduce the issue."
+  ],
+  "caption": "An AI model passed all its release tests, yet shipped completely broken, answering 'neutral' to every single query. This deep dive reveals a critical flaw in the deployment pipeline.\n\nA developer discovered their newly trained AI model, intended to replace an existing compliance judge, passed all internal release gates but was fundamentally broken in deployment. The shipped model consistently returned 'neutral' to every input.\n\nThe model, nli-popia-v2, is an 82M-param cross-encoder fine-tuned on South Africa's POPIA clauses. It runs as INT8 ONNX on CPU, ensuring determinism for regulatory validation.\n\nAn attempt to improve performance involved switching to a larger deberta-v3-base (184M params). This new model showed better F1 scores on holdout data and passed the initial release gate.\n\nHowever, when the actual deployed ONNX artifact was tested against a canonical failing example, it gave a 'neutral' response, unlike the previous version. Further testing confirmed it was a \"dead model wearing a live model's config,\" emitting one class for everything.\n\nThe root cause was deberta-v3's disentangled attention being sensitive to per-tensor INT8 dynamic quantization. This caused activation ranges to collapse, saturating the model to a single class, a problem not encountered with the previous roberta base.\n\nThe solution involved changing from per-tensor to per-channel quantization. This fixed the constant prediction issue, allowing the model to predict real classes.\n\nDespite the fix, the quantized deberta-v3 model scored 0.576, significantly worse than the existing v2 model's 0.7465. The new artifact gate, implemented after this discovery, successfully blocked the inferior upload.\n\nThe experience highlighted a critical flaw: the release gate sat *before* the ONNX export and INT8 quantization steps, meaning the validation was not performed on the actual file being shipped. This led to a validation that couldn't reproduce the issue.\n\n#AI #MachineLearning #MLOps #SoftwareDevelopment #Quantization #Tech\n\nSource: DEV",
+  "tweet": "An AI model passed all tests but shipped broken, outputting 'neutral' to everything. A developer shares how a subtle quantization issue in DeBERTa-v3-base caused a critical deployment failure, highlighting the need for post-quantization validation. #AI #MLOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/akhona_eland_072dac9e0c2c/my-release-gate-passed-the-model-it-shipped-answered-neutral-to-everything-3pjn",
+  "image": "",
+  "orig_title": "My Release Gate Passed. The Model It Shipped Answered 'Neutral' To Everything.",
+  "cluster_urls": [
+   "https://dev.to/akhona_eland_072dac9e0c2c/my-release-gate-passed-the-model-it-shipped-answered-neutral-to-everything-3pjn"
+  ],
+  "cluster_titles": [
+   "My Release Gate Passed. The Model It Shipped Answered 'Neutral' To Everything."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260720-1406-1-ai-model-passed-all-tests-but-shipped-broken.png",
+   "20260720-1406-1-ai-model-passed-all-tests-but-shipped-broken-d1.png",
+   "20260720-1406-1-ai-model-passed-all-tests-but-shipped-broken-d2.png",
+   "20260720-1406-1-ai-model-passed-all-tests-but-shipped-broken-d3.png"
+  ]
+ }
+]

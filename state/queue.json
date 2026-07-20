@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "automl_quantum_machine_learning_architecture",
+  "headline_marked": "[[QuOptuna delivers AutoML for quantum machine learning]] with 21 classifiers and fairness audits",
+  "headline": "QuOptuna delivers AutoML for quantum machine learning with 21 classifiers and fairness audits",
+  "summary": "This new open-source tool boots a full web app with a single command, combining 17 quantum and 4 classical classifiers, and integrates fairness auditing directly into the optimization process.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "QuOptuna is an open-source AutoML web app for quantum machine learning, requiring no installation. It performs hyperparameter searches across 21 quantum and classical classifiers, prunes weak configurations early, and audits models for fairness. It also explains winning models with SHAP and can draft research reports.",
+   "Existing classical AutoML tools don't support quantum models, and plain Optuna requires extensive manual setup. QuOptuna addresses this by providing a unified platform to search both quantum and classical models, ensuring a governable and transparent result. It's also the author's PhD project at Western Michigan University.",
+   "The tool registers 17 quantum classifiers, including data-reuploading, circuit-centric, and quantum kernel methods, alongside 4 classical baselines like SVC and MLP. A key innovation is assigning each model its own conditional Optuna search space, allowing a single study to optimize diverse model types.",
+   "Quantum circuit evaluation is computationally intensive, so QuOptuna employs several strategies for efficiency. These include pruning weak configurations early, caching results, and using early stopping. This significantly speeds up the iterative optimization process.",
+   "Fairness is a core component of QuOptuna's optimization, not an afterthought. It integrates fairness metrics from fairlearn (demographic parity, equalized odds, equal opportunity) directly into the optimization process. This ensures that fairness is considered throughout model selection.",
+   "For the winning model, users receive comprehensive analysis plots such as SHAP plots (bar, beeswarm, violin, heatmap, waterfall), ROC/PR curves, and confusion matrices. An optional LLM pipeline can draft a research report, requiring an OpenAI/Anthropic/Gemini key, though all plots and metrics are available without it.",
+   "A unique aspect of QuOptuna's architecture is its packaging: the Next.js frontend is statically exported and bundled into the Python wheel. This allows users to install and run the full web app via `pip install quoptuna` and `uvx quoptuna` without needing to install Node.js.",
+   "The project is built on a robust stack including Python 3.11–3.12, PennyLane, Optuna, JAX/Flax/Optax, scikit-learn, SHAP, fairlearn, FastAPI, and Next.js. The underlying theoretical approach is detailed in three upcoming IEEE papers, including one in IEEE Systems, Man & Cybernetics Magazine (2026)."
+  ],
+  "caption": "Build quantum machine learning models without the pain. This new AutoML tool boots a full web app with a single command, no Node.js install required.\n\nQuOptuna is an open-source AutoML web app for quantum machine learning, requiring no installation. It performs hyperparameter searches across 21 quantum and classical classifiers, prunes weak configurations early, and audits models for fairness. It also explains winning models with SHAP and can draft research reports.\n\nExisting classical AutoML tools don't support quantum models, and plain Optuna requires extensive manual setup. QuOptuna addresses this by providing a unified platform to search both quantum and classical models, ensuring a governable and transparent result. It's also the author's PhD project at Western Michigan University.\n\nThe tool registers 17 quantum classifiers, including data-reuploading, circuit-centric, and quantum kernel methods, alongside 4 classical baselines like SVC and MLP. A key innovation is assigning each model its own conditional Optuna search space, allowing a single study to optimize diverse model types.\n\nQuantum circuit evaluation is computationally intensive, so QuOptuna employs several strategies for efficiency. These include pruning weak configurations early, caching results, and using early stopping. This significantly speeds up the iterative optimization process.\n\nFairness is a core component of QuOptuna's optimization, not an afterthought. It integrates fairness metrics from fairlearn (demographic parity, equalized odds, equal opportunity) directly into the optimization process. This ensures that fairness is considered throughout model selection.\n\nFor the winning model, users receive comprehensive analysis plots such as SHAP plots (bar, beeswarm, violin, heatmap, waterfall), ROC/PR curves, and confusion matrices. An optional LLM pipeline can draft a research report, requiring an OpenAI/Anthropic/Gemini key, though all plots and metrics are available without it.\n\n#QuantumML #AutoML #MachineLearning #Python #AI #DeveloperTools\n\nSource: DEV",
+  "tweet": "Build quantum machine learning models without the pain. QuOptuna is a new AutoML web app that runs 21 quantum & classical classifiers, audits for fairness, and needs no Node.js install. Check out the architecture! #QuantumML #AutoML #Python",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/edwinjosechittilappi/i-built-automl-for-quantum-machine-learning-heres-the-architecture-454b",
+  "image": "",
+  "orig_title": "I built AutoML for quantum machine learning — here's the architecture",
+  "cluster_urls": [
+   "https://dev.to/edwinjosechittilappi/i-built-automl-for-quantum-machine-learning-heres-the-architecture-454b"
+  ],
+  "cluster_titles": [
+   "I built AutoML for quantum machine learning — here's the architecture"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260720-1206-0-quoptuna-delivers-automl-for-quantum-machine.png",
+   "20260720-1206-0-quoptuna-delivers-automl-for-quantum-machine-d1.png",
+   "20260720-1206-0-quoptuna-delivers-automl-for-quantum-machine-d2.png",
+   "20260720-1206-0-quoptuna-delivers-automl-for-quantum-machine-d3.png",
+   "20260720-1206-0-quoptuna-delivers-automl-for-quantum-machine-d4.png"
+  ]
+ },
+ {
+  "topic": "lora_fine_tuning_speedrun_leaderboard",
+  "headline_marked": "[[LoRA Speedrun launches public leaderboard]] for fine-tuning Qwen2.5-1.5B on L40S, current record 6m 05s",
+  "headline": "LoRA Speedrun launches public leaderboard for fine-tuning Qwen2.5-1.5B on L40S, current record 6m 05s",
+  "summary": "A new public leaderboard challenges developers to fine-tune Qwen2.5-1.5B to 57% on GSM8K on a single L40S as fast as possible, with the current record at 6 minutes and 5 seconds.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The LoRA Speedrun introduces a public leaderboard to benchmark fine-tuning techniques for Qwen2.5-1.5B on GSM8K. Competitors aim to achieve at least 57% accuracy on a single L40S GPU. The current record is 6 minutes and 5 seconds, set by @Saivineeth147 using sequence packing and completion-only loss masking.",
+   "Each record is independently re-run three times with fresh seeds on identical hardware to ensure validity. Attempting and verifying submissions is free, as official timing runs on a Modal L40S sandbox, covered by Modal's free monthly compute credits.",
+   "Participants have full control over LoRA rank and placement, quantization, learning-rate schedules, sequence packing, and custom kernels. The task, hardware (Modal L40S), and target model/dataset are frozen to ensure fair, apples-to-apples comparisons.",
+   "This initiative addresses a critical gap in the AI research community, where various LoRA techniques (DoRA, rsLoRA, PiSSA, LoRA+, etc.) lack a standardized, adversarial arena for public benchmarking. Existing papers often report numbers on disparate models, data, and hardware, making comparisons difficult.",
+   "The speedrun focuses on wall-clock time because it reflects real-world costs and forces optimization across kernels, data loading, and algorithms. The Qwen2.5-1.5B model was chosen for its ungated Apache-2.0 license and single-card compatibility, while the L40S on Modal provides consistent datacenter hardware, free access, and sandboxed execution for submissions."
+  ],
+  "caption": "How fast can you fine-tune an LLM? A new public leaderboard challenges developers to optimize LoRA techniques, with the current record at 6 minutes and 5 seconds.\n\nThe LoRA Speedrun introduces a public leaderboard to benchmark fine-tuning techniques for Qwen2.5-1.5B on GSM8K. Competitors aim to achieve at least 57% accuracy on a single L40S GPU. The current record is 6 minutes and 5 seconds, set by @Saivineeth147 using sequence packing and completion-only loss masking.\n\nEach record is independently re-run three times with fresh seeds on identical hardware to ensure validity. Attempting and verifying submissions is free, as official timing runs on a Modal L40S sandbox, covered by Modal's free monthly compute credits.\n\nParticipants have full control over LoRA rank and placement, quantization, learning-rate schedules, sequence packing, and custom kernels. The task, hardware (Modal L40S), and target model/dataset are frozen to ensure fair, apples-to-apples comparisons.\n\nThis initiative addresses a critical gap in the AI research community, where various LoRA techniques (DoRA, rsLoRA, PiSSA, LoRA+, etc.) lack a standardized, adversarial arena for public benchmarking. Existing papers often report numbers on disparate models, data, and hardware, making comparisons difficult.\n\nThe speedrun focuses on wall-clock time because it reflects real-world costs and forces optimization across kernels, data loading, and algorithms. The Qwen2.5-1.5B model was chosen for its ungated Apache-2.0 license and single-card compatibility, while the L40S on Modal provides consistent datacenter hardware, free access, and sandboxed execution for submissions.\n\n#AI #MachineLearning #LoRA #FineTuning #DeepLearning #Developer\n\nSource: Hacker News",
+  "tweet": "How fast can you fine-tune an LLM? The LoRA Speedrun launches a public leaderboard challenging developers to optimize LoRA techniques for Qwen2.5-1.5B on a single L40S. Current record: 6m 05s. Free to compete! #AI #FineTuning #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/Saivineeth147/lora-speedrun",
+  "image": "",
+  "orig_title": "LoRA Speedrun – a public wall-clock leaderboard for fine-tuning techniques",
+  "cluster_urls": [
+   "https://github.com/Saivineeth147/lora-speedrun"
+  ],
+  "cluster_titles": [
+   "LoRA Speedrun – a public wall-clock leaderboard for fine-tuning techniques"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260720-1206-1-lora-speedrun-launches-public-leaderboard-fo.png",
+   "20260720-1206-1-lora-speedrun-launches-public-leaderboard-fo-d1.png",
+   "20260720-1206-1-lora-speedrun-launches-public-leaderboard-fo-d2.png"
+  ]
+ }
+]

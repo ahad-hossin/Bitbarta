@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "image_compression_difficulty_50kb",
+  "headline_marked": "[[Compressing images to exact file sizes]] is surprisingly difficult",
+  "headline": "Compressing images to exact file sizes is surprisingly difficult",
+  "summary": "The \"quality\" setting in JPEG compression doesn't directly control file size. It impacts quantization, and the resulting file size depends heavily on the image content.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Ever tried to make an image exactly 50KB and found it harder than expected? The \"quality\" setting in JPEG compression doesn't directly control file size. Instead, it dictates the quantization table used, which determines how much high-frequency detail is discarded.",
+   "This means that a \"quality 70\" setting could result in a 15KB file for one image and a 180KB file for another. A tool that simply applies a fixed quality value will miss the target size depending on the image's content.",
+   "The relationship between quality and file size isn't linear. File size drops rapidly at first as quality decreases, then flattens out. This is because the most compressible redundancy is removed early, and what remains resists compression much more strongly.",
+   "A naive approach of repeatedly lowering quality until the target size is met can fail because the file size barely changes near the bottom of the quality range. At this point, the only effective lever left is image dimensions, not quality.",
+   "While a binary search on the quality parameter can get close, it breaks down at the edges. A compressor that only tunes quality might fail outright or produce a visibly degraded image without warning.",
+   "A more robust method involves searching across multiple parameters simultaneously, not just quality. This ensures better results without silently destroying the image or endlessly failing to meet the target.",
+   "Ultimately, some images simply cannot meet a small target size without visible quality loss. A detailed, high-resolution photo compressed to 20KB will look bad regardless of settings, as there's an information-theoretic floor.",
+   "The honest approach is to report the achievable minimum file size and let the user decide, rather than pretending the target was hit. This is especially true for text-heavy screenshots where quality reduction can quickly lead to visible artifacts.",
+   "Before assuming a target is impossible, consider alternative formats like WebP, which might achieve the desired size where JPEG fails. The optimal compression strategy is format-dependent.",
+   "The core engineering challenge lies not just in the search algorithms, but in knowing when to switch from quality reduction to dimension reduction, and when to concede that the target is unachievable without unacceptable visual loss."
+  ],
+  "caption": "Why is compressing an image to an exact file size like 50KB so difficult? It's not just about lowering the quality setting.\n\nEver tried to make an image exactly 50KB and found it harder than expected? The \"quality\" setting in JPEG compression doesn't directly control file size. Instead, it dictates the quantization table used, which determines how much high-frequency detail is discarded.\n\nThis means that a \"quality 70\" setting could result in a 15KB file for one image and a 180KB file for another. A tool that simply applies a fixed quality value will miss the target size depending on the image's content.\n\nThe relationship between quality and file size isn't linear. File size drops rapidly at first as quality decreases, then flattens out. This is because the most compressible redundancy is removed early, and what remains resists compression much more strongly.\n\nA naive approach of repeatedly lowering quality until the target size is met can fail because the file size barely changes near the bottom of the quality range. At this point, the only effective lever left is image dimensions, not quality.\n\nWhile a binary search on the quality parameter can get close, it breaks down at the edges. A compressor that only tunes quality might fail outright or produce a visibly degraded image without warning.\n\nA more robust method involves searching across multiple parameters simultaneously, not just quality. This ensures better results without silently destroying the image or endlessly failing to meet the target.\n\nUltimately, some images simply cannot meet a small target size without visible quality loss. A detailed, high-resolution photo compressed to 20KB will look bad regardless of settings, as there's an information-theoretic floor.\n\nThe honest approach is to report the achievable minimum file size and let the user decide, rather than pretending the target was hit. This is especially true for text-heavy screenshots where quality reduction can quickly lead to visible artifacts.\n\n#JPEG #ImageCompression #WebDevelopment #Programming #Optimization\n\nSource: DEV",
+  "tweet": "Compressing images to an exact file size is harder than it sounds! The \"quality\" setting in JPEGs doesn't directly control size, and the results depend heavily on image content. Learn why: #JPEG #ImageCompression",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vijay_kanna_56/why-compressing-an-image-to-exactly-50kb-is-harder-than-it-sounds-1pbg",
+  "image": "",
+  "orig_title": "Why Compressing an Image to Exactly 50KB Is Harder Than It Sounds",
+  "cluster_urls": [
+   "https://dev.to/vijay_kanna_56/why-compressing-an-image-to-exactly-50kb-is-harder-than-it-sounds-1pbg"
+  ],
+  "cluster_titles": [
+   "Why Compressing an Image to Exactly 50KB Is Harder Than It Sounds"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260721-0905-0-compressing-images-to-exact-file-sizes-is-su.png",
+   "20260721-0905-0-compressing-images-to-exact-file-sizes-is-su-d1.png",
+   "20260721-0905-0-compressing-images-to-exact-file-sizes-is-su-d2.png",
+   "20260721-0905-0-compressing-images-to-exact-file-sizes-is-su-d3.png",
+   "20260721-0905-0-compressing-images-to-exact-file-sizes-is-su-d4.png"
+  ]
+ },
+ {
+  "topic": "ai_career_anxiety_code_agents",
+  "headline_marked": "[[AI coding agents]] could automate developer work in 2 years, one dev fears",
+  "headline": "AI coding agents could automate developer work in 2 years, one dev fears",
+  "summary": "A software engineer expresses anxiety about AI's rapid advancement, fearing their job could be fully automated within two years.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A software engineer is experiencing significant career anxiety due to the rapid progress of AI coding agents.",
+   "The developer notes that AI can now generate boilerplate code, API endpoints, and UI scaffolding in seconds, tasks that previously consumed considerable development time.",
+   "This rapid advancement leads to fears that their daily work could be fully automated by AI within the next two years.",
+   "The engineer is actively brainstorming ways to develop differentiated engineering value to ensure long-term job security amidst these changes."
+  ],
+  "caption": "Will AI coding agents automate your job? One developer fears it could happen within 2 years.\n\nA software engineer is experiencing significant career anxiety due to the rapid progress of AI coding agents.\n\nThe developer notes that AI can now generate boilerplate code, API endpoints, and UI scaffolding in seconds, tasks that previously consumed considerable development time.\n\nThis rapid advancement leads to fears that their daily work could be fully automated by AI within the next two years.\n\nThe engineer is actively brainstorming ways to develop differentiated engineering value to ensure long-term job security amidst these changes.\n\n#AI #SoftwareDevelopment #FutureOfWork #Coding #TechAnxiety\n\nSource: DEV",
+  "tweet": "Will AI coding agents automate your job? One developer fears it could happen within 2 years. Boilerplate code and UI scaffolding can now be generated in seconds. #AI #SoftwareDevelopment #FutureOfWork",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/crystalkerui123/cant-stop-spiraling-over-this-my-work-with-might-get-fully-taken-over-by-ai-in-just-2-yrs-t-t-5fmf",
+  "image": "",
+  "orig_title": "Can’t stop spiraling over this: my work with might get fully taken over by AI in just 2 yrs T-T",
+  "cluster_urls": [
+   "https://dev.to/crystalkerui123/cant-stop-spiraling-over-this-my-work-with-might-get-fully-taken-over-by-ai-in-just-2-yrs-t-t-5fmf"
+  ],
+  "cluster_titles": [
+   "Can’t stop spiraling over this: my work with might get fully taken over by AI in just 2 yrs T-T"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260721-0905-1-ai-coding-agents-could-automate-developer-wo.png",
+   "20260721-0905-1-ai-coding-agents-could-automate-developer-wo-d1.png"
+  ]
+ }
+]

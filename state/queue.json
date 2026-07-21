@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "docker secrets multi-stage builds live reload",
+  "headline_marked": "Docker Secrets: [[Never Bake Passwords Into Your Image]]",
+  "headline": "Docker Secrets: Never Bake Passwords Into Your Image",
+  "summary": "Learn why baking secrets into Docker images is a critical security flaw and discover the correct, layered approach to managing sensitive data.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Baking sensitive information like database passwords directly into Dockerfiles creates permanent image layers, making them visible to anyone who can pull the image. This is a significant security risk, as these secrets are not hidden or encrypted and can be easily accessed by running `docker history` or unpacking the image layers.",
+   "The first step to better secret management is to pass secrets to the container at runtime instead of baking them into the image. This ensures the secret only exists in the container's environment in memory for its lifespan. However, typing secrets directly into the terminal can still expose them via shell history.",
+   "Using a `.env` file is a better approach, allowing Docker to inject its contents as environment variables. Crucially, this `.env` file must be added to `.gitignore` immediately to prevent it from being committed to your repository, which would reintroduce the same exposure risk.",
+   "For production environments, dedicated secrets managers like AWS Secrets Manager, HashiCorp Vault, or Doppler are the professional standard. These tools store secrets encrypted, control access, log all usage, and allow for secret rotation without rebuilding or redeploying containers.",
+   "The core principle is that any information baked into an image is essentially public. Sensitive data must arrive at runtime from a secure source outside of version control, such as a secrets manager, to maintain security.",
+   "Large Docker images can often be attributed to including unnecessary build tools and dependencies that are not required for the application to run. These bloat the image size, slow down deployments, and increase the attack surface by introducing more potential vulnerabilities."
+  ],
+  "caption": "Your Docker secrets are not as safe as you think. Baking passwords into images is a critical flaw. Learn the right way to handle sensitive data.\n\nBaking sensitive information like database passwords directly into Dockerfiles creates permanent image layers, making them visible to anyone who can pull the image. This is a significant security risk, as these secrets are not hidden or encrypted and can be easily accessed by running `docker history` or unpacking the image layers.\n\nThe first step to better secret management is to pass secrets to the container at runtime instead of baking them into the image. This ensures the secret only exists in the container's environment in memory for its lifespan. However, typing secrets directly into the terminal can still expose them via shell history.\n\nUsing a `.env` file is a better approach, allowing Docker to inject its contents as environment variables. Crucially, this `.env` file must be added to `.gitignore` immediately to prevent it from being committed to your repository, which would reintroduce the same exposure risk.\n\nFor production environments, dedicated secrets managers like AWS Secrets Manager, HashiCorp Vault, or Doppler are the professional standard. These tools store secrets encrypted, control access, log all usage, and allow for secret rotation without rebuilding or redeploying containers.\n\nThe core principle is that any information baked into an image is essentially public. Sensitive data must arrive at runtime from a secure source outside of version control, such as a secrets manager, to maintain security.\n\nLarge Docker images can often be attributed to including unnecessary build tools and dependencies that are not required for the application to run. These bloat the image size, slow down deployments, and increase the attack surface by introducing more potential vulnerabilities.\n\n#Docker #DevOps #Security #Containerization #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Docker secrets exposed! Baking passwords into images is a major security risk. Learn how to properly manage sensitive data with runtime injection and secrets managers. #Docker #DevOps #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "docker.com",
+  "source": "DEV",
+  "url": "https://dev.to/surajrkhonde/docker-for-the-developer-who-actually-has-to-ship-secrets-multi-stage-builds-live-reload-and-57m7",
+  "image": "",
+  "orig_title": "Docker for the Developer Who Actually Has to Ship: Secrets, Multi-Stage Builds, Live Reload, and Why Your Container Just Died",
+  "cluster_urls": [
+   "https://dev.to/surajrkhonde/docker-for-the-developer-who-actually-has-to-ship-secrets-multi-stage-builds-live-reload-and-57m7"
+  ],
+  "cluster_titles": [
+   "Docker for the Developer Who Actually Has to Ship: Secrets, Multi-Stage Builds, Live Reload, and Why Your Container Just Died"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260721-1606-0-docker-secrets-never-bake-passwords-into-you.png",
+   "20260721-1606-0-docker-secrets-never-bake-passwords-into-you-d1.png",
+   "20260721-1606-0-docker-secrets-never-bake-passwords-into-you-d2.png",
+   "20260721-1606-0-docker-secrets-never-bake-passwords-into-you-d3.png"
+  ]
+ },
+ {
+  "topic": "army burning through ai tokens",
+  "headline_marked": "Army AI [[burns through tokens]] faster than expected, limits reimposed",
+  "headline": "Army AI burns through tokens faster than expected, limits reimposed",
+  "summary": "The Army's AI platform, Ask Sage, exhausted its annual token supply in just over a month, forcing the reimposition of usage limits.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The U.S. Army's AI platform, Ask Sage, which utilizes models like Gemini, Llama, and ChatGPT, has reportedly exhausted its annual supply of AI tokens in just over a month. This comes after the Army CIO announced unlimited token usage in May 2026, highlighting a significant overconsumption of resources.",
+   "Ask Sage is a multimodal generative AI platform accredited for Controlled Unclassified Information and used by the DOD's Chief Digital and AI Office for acquisitions. It has been employed for tasks such as reclassifying personnel descriptions and defining job duties.",
+   "Employees were initially allocated 200,000 tokens per month, with automatic increases for heavy users, and the Army had access to 100,000,000 tokens as part of an annual enterprise pack. A single token equates to approximately 3.7 characters of output.",
+   "This rapid depletion of tokens mirrors similar issues faced by other major tech companies. Meta reportedly saw engineers \"tokenmaxx\" their usage, while Uber's engineers consumed a year's worth of tokens in just four months, indicating a broader challenge in managing generative AI consumption.",
+   "Despite the token shortage, the Army and DOD continue to emphasize AI integration, even reallocating staff from a civilian protection center to develop an AI tool for assessing civilian casualties. However, some Army employees find the AI tools unreliable and not particularly useful for their work."
+  ],
+  "caption": "The U.S. Army's AI program is burning through its allocated tokens at an alarming rate, forcing the reimposition of usage limits just weeks after unlimited access was announced.\n\nThe U.S. Army's AI platform, Ask Sage, which utilizes models like Gemini, Llama, and ChatGPT, has reportedly exhausted its annual supply of AI tokens in just over a month. This comes after the Army CIO announced unlimited token usage in May 2026, highlighting a significant overconsumption of resources.\n\nAsk Sage is a multimodal generative AI platform accredited for Controlled Unclassified Information and used by the DOD's Chief Digital and AI Office for acquisitions. It has been employed for tasks such as reclassifying personnel descriptions and defining job duties.\n\nEmployees were initially allocated 200,000 tokens per month, with automatic increases for heavy users, and the Army had access to 100,000,000 tokens as part of an annual enterprise pack. A single token equates to approximately 3.7 characters of output.\n\nThis rapid depletion of tokens mirrors similar issues faced by other major tech companies. Meta reportedly saw engineers \"tokenmaxx\" their usage, while Uber's engineers consumed a year's worth of tokens in just four months, indicating a broader challenge in managing generative AI consumption.\n\nDespite the token shortage, the Army and DOD continue to emphasize AI integration, even reallocating staff from a civilian protection center to develop an AI tool for assessing civilian casualties. However, some Army employees find the AI tools unreliable and not particularly useful for their work.\n\n#AI #Army #Tech #GenerativeAI #Tokens\n\nSource: Wired",
+  "tweet": "The U.S. Army's AI platform Ask Sage has burned through its annual token supply in just over a month, forcing limits on usage. This rapid consumption highlights challenges in managing generative AI resources. #AI #Army #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/the-army-is-burning-through-its-ai-tokens/",
+  "image": "https://media.wired.com/photos/6a5a5366ad0fb31ed65fa3d3/master/pass/Politics_ArmyBurningThroughAITokens_v4.jpg",
+  "orig_title": "The Army Is Burning Through Its AI Tokens",
+  "cluster_urls": [
+   "https://www.wired.com/story/the-army-is-burning-through-its-ai-tokens/"
+  ],
+  "cluster_titles": [
+   "The Army Is Burning Through Its AI Tokens"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260721-1606-1-army-ai-burns-through-tokens-faster-than-exp.png",
+   "20260721-1606-1-army-ai-burns-through-tokens-faster-than-exp-d1.png",
+   "20260721-1606-1-army-ai-burns-through-tokens-faster-than-exp-d2.png",
+   "20260721-1606-1-army-ai-burns-through-tokens-faster-than-exp-d3.png"
+  ]
+ }
+]

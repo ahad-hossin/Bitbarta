@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "claude_code_ios_app_testing",
+  "headline_marked": "[[Claude Code Mac app now supports live iOS app testing]] with integrated simulator",
+  "headline": "Claude Code Mac app now supports live iOS app testing with integrated simulator",
+  "summary": "Developers can now test iOS applications directly within Claude Code's Mac app, requiring Xcode with the iOS platform for full functionality.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Claude Code's Mac application has been updated to include an interactive simulator pane, enabling users to perform live testing of iOS apps. This new feature significantly streamlines the development workflow for Apple's mobile ecosystem.",
+   "To utilize this functionality, users must have Xcode installed on their Mac, along with the necessary iOS platform components. The integration aims to provide a more cohesive environment for coding and immediate testing."
+  ],
+  "caption": "Test iOS apps live, directly within Claude Code's Mac app. This update simplifies the development process for Apple's ecosystem.\n\nClaude Code's Mac application has been updated to include an interactive simulator pane, enabling users to perform live testing of iOS apps. This new feature significantly streamlines the development workflow for Apple's mobile ecosystem.\n\nTo utilize this functionality, users must have Xcode installed on their Mac, along with the necessary iOS platform components. The integration aims to provide a more cohesive environment for coding and immediate testing.\n\n#ClaudeCode #iOSDevelopment #MacApps #DeveloperTools #TechNews #SoftwareUpdate\n\nSource: 9to5Mac, DEV",
+  "tweet": "Claude Code's Mac app now features live iOS app testing via an integrated simulator. Developers can streamline their workflow, provided Xcode is installed. #iOSDev #ClaudeCode #MacApp",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "9to5Mac, DEV",
+  "url": "https://9to5mac.com/2026/07/21/claude-code-brings-live-ios-app-testing-into-its-mac-app/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/07/claude.webp?w=1600",
+  "orig_title": "Claude Code brings live iOS app testing into its Mac app",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/07/21/claude-code-brings-live-ios-app-testing-into-its-mac-app/",
+   "https://dev.to/creeta/openai-ships-codex-into-claude-code-two-commands-or-four-c7l"
+  ],
+  "cluster_titles": [
+   "Claude Code brings live iOS app testing into its Mac app",
+   "OpenAI ships Codex into Claude Code — two commands, or four?"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260722-1007-0-claude-code-mac-app-now-supports-live-ios-ap.png",
+   "20260722-1007-0-claude-code-mac-app-now-supports-live-ios-ap-d1.png"
+  ]
+ },
+ {
+  "topic": "qwen3_executorch_mlx_m1_max_speedup",
+  "headline_marked": "[[Qwen3 runs up to 4.52x faster]] on M1 Max with ExecuTorch MLX delegate",
+  "headline": "Qwen3 runs up to 4.52x faster on M1 Max with ExecuTorch MLX delegate",
+  "summary": "Running the Qwen3 LLM on Apple Silicon using ExecuTorch's experimental MLX delegate shows a 4.52x speed increase and 71.8% smaller file size, though INT4 quantization can alter output.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Benchmarking Qwen3-0.6B on an M1 Max, the ExecuTorch MLX delegate achieved a 4.52x speedup in decode throughput compared to PyTorch MPS BF16. The MLX INT4 quantized model also resulted in a 71.8% smaller file size.",
+   "ExecuTorch is a runtime designed for deploying trained PyTorch models on various devices, including desktops and phones. Its experimental MLX delegate, released in May 2026, optimizes PyTorch computations for Apple Silicon GPUs.",
+   "The Qwen3 LLM family, from the Qwen Team, supports over 100 languages and features a \"thinking mode\" for step-by-step reasoning. The Qwen3-0.6B model used in the test is a smaller, dense model with 0.6 billion parameters.",
+   "While the MLX BF16 delegate matched PyTorch MPS BF16 output exactly, the INT4 quantization method, which reduces model size, altered the generated output in two out of three simple prompts tested. This suggests a trade-off between speed/size and output fidelity.",
+   "The test involved generating 16 tokens from a Japanese prompt, with performance measured as the median of five trials after warm-up. The MLX path loaded a fresh forward method and initialized its KV cache for each trial.",
+   "To replicate the results, an Apple Silicon Mac, Xcode Command Line Tools, and specific software (mise, uv) are required. The initial setup downloads Qwen3 weights and creates about 1.53 GB of PTE files."
+  ],
+  "caption": "Qwen3 LLM runs up to 4.52x faster on Apple M1 Max chips. The ExecuTorch MLX delegate also slashes model file size by 71.8%.\n\nBenchmarking Qwen3-0.6B on an M1 Max, the ExecuTorch MLX delegate achieved a 4.52x speedup in decode throughput compared to PyTorch MPS BF16. The MLX INT4 quantized model also resulted in a 71.8% smaller file size.\n\nExecuTorch is a runtime designed for deploying trained PyTorch models on various devices, including desktops and phones. Its experimental MLX delegate, released in May 2026, optimizes PyTorch computations for Apple Silicon GPUs.\n\nThe Qwen3 LLM family, from the Qwen Team, supports over 100 languages and features a \"thinking mode\" for step-by-step reasoning. The Qwen3-0.6B model used in the test is a smaller, dense model with 0.6 billion parameters.\n\nWhile the MLX BF16 delegate matched PyTorch MPS BF16 output exactly, the INT4 quantization method, which reduces model size, altered the generated output in two out of three simple prompts tested. This suggests a trade-off between speed/size and output fidelity.\n\nThe test involved generating 16 tokens from a Japanese prompt, with performance measured as the median of five trials after warm-up. The MLX path loaded a fresh forward method and initialized its KV cache for each trial.\n\nTo replicate the results, an Apple Silicon Mac, Xcode Command Line Tools, and specific software (mise, uv) are required. The initial setup downloads Qwen3 weights and creates about 1.53 GB of PTE files.\n\n#AI #LLM #AppleSilicon #PyTorch #MachineLearning #Performance\n\nSource: DEV",
+  "tweet": "Qwen3 LLM runs up to 4.52x faster on Apple M1 Max with the ExecuTorch MLX delegate, reducing model size by 71.8%. A trade-off: INT4 quantization can change output. #AI #AppleSilicon #PyTorch",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/kiarina/running-qwen3-through-the-executorch-mlx-delegate-up-to-452x-faster-on-m1-max-4lc2",
+  "image": "",
+  "orig_title": "Running Qwen3 Through the ExecuTorch MLX Delegate: Up to 4.52x Faster on M1 Max",
+  "cluster_urls": [
+   "https://dev.to/kiarina/running-qwen3-through-the-executorch-mlx-delegate-up-to-452x-faster-on-m1-max-4lc2"
+  ],
+  "cluster_titles": [
+   "Running Qwen3 Through the ExecuTorch MLX Delegate: Up to 4.52x Faster on M1 Max"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260722-1007-1-qwen3-runs-up-to-4-52x-faster-on-m1-max-with.png",
+   "20260722-1007-1-qwen3-runs-up-to-4-52x-faster-on-m1-max-with-d1.png",
+   "20260722-1007-1-qwen3-runs-up-to-4-52x-faster-on-m1-max-with-d2.png"
+  ]
+ }
+]

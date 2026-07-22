@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai_models_attack_each_other",
+  "headline_marked": "[[Two AI models that attack each other]] beat one that agrees with itself",
+  "headline": "Two AI models that attack each other beat one that agrees with itself",
+  "summary": "Self-checking AI models often repeat their own blind spots, leading to confident but incorrect answers. A new approach uses two distinct models to critically refute each other's reasoning, catching errors a single model would miss.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "When an AI model checks its own work, it often repeats the same failure due to inherent blind spots and search patterns. Running it again only produces the same confident, yet incorrect, answer, creating a false sense of corroboration.",
+   "The solution lies in introducing a 'different pair of eyes' – a second, independently trained AI model. This rival model is tasked not with reviewing for agreement, but with actively finding where the initial reasoning breaks, defaulting to 'broken' when uncertain.",
+   "This adversarial approach proved highly effective. In one test, out of nine cross-model consultations, seven resulted in corrections to the author's own confident work, highlighting flaws that would have otherwise been shipped.",
+   "A key refinement ensures the second model receives the unedited, original output, not a summary. This prevents the first model from 'laundering' its errors by framing the problem defensively, ensuring a genuine, unbiased critique.",
+   "The system is triggered by user frustration – repeating questions or complaints – rather than subjective judgment. This ensures checks are initiated precisely when confidence is high but the AI is likely off-track, shortening the error loop from multiple wrong answers to just one."
+  ],
+  "caption": "Self-checking AI models are often confidently wrong. A new method pits two AI models against each other to find flaws.\n\nWhen an AI model checks its own work, it often repeats the same failure due to inherent blind spots and search patterns. Running it again only produces the same confident, yet incorrect, answer, creating a false sense of corroboration.\n\nThe solution lies in introducing a 'different pair of eyes' – a second, independently trained AI model. This rival model is tasked not with reviewing for agreement, but with actively finding where the initial reasoning breaks, defaulting to 'broken' when uncertain.\n\nThis adversarial approach proved highly effective. In one test, out of nine cross-model consultations, seven resulted in corrections to the author's own confident work, highlighting flaws that would have otherwise been shipped.\n\nA key refinement ensures the second model receives the unedited, original output, not a summary. This prevents the first model from 'laundering' its errors by framing the problem defensively, ensuring a genuine, unbiased critique.\n\nThe system is triggered by user frustration – repeating questions or complaints – rather than subjective judgment. This ensures checks are initiated precisely when confidence is high but the AI is likely off-track, shortening the error loop from multiple wrong answers to just one.\n\n#AI #MachineLearning #Tech #Developer #SoftwareDevelopment #Productivity\n\nSource: DEV",
+  "tweet": "Self-checking AI models often repeat their own errors, but a new adversarial method has two AIs attack each other's reasoning. This \"refute, never review\" approach caught 7 errors in 9 checks on confident work. #AI #MachineLearning #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mjmirza/two-ai-models-that-attack-each-other-beat-one-that-agrees-with-itself-4hk2",
+  "image": "",
+  "orig_title": "Two AI models that attack each other beat one that agrees with itself",
+  "cluster_urls": [
+   "https://dev.to/mjmirza/two-ai-models-that-attack-each-other-beat-one-that-agrees-with-itself-4hk2"
+  ],
+  "cluster_titles": [
+   "Two AI models that attack each other beat one that agrees with itself"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260722-1207-0-two-ai-models-that-attack-each-other-beat-on.png",
+   "20260722-1207-0-two-ai-models-that-attack-each-other-beat-on-d1.png",
+   "20260722-1207-0-two-ai-models-that-attack-each-other-beat-on-d2.png"
+  ]
+ },
+ {
+  "topic": "kimi_k3_fable_benchmark",
+  "headline_marked": "[[Kimi K3 is second only to Fable 5 on AA-Briefcase]], but costs more and takes nearly an hour per task",
+  "headline": "Kimi K3 is second only to Fable 5 on AA-Briefcase, but costs more and takes nearly an hour per task",
+  "summary": "Moonshot AI's Kimi K3 scores 1543 Elo on the AA-Briefcase benchmark, just behind Claude Fable 5. However, it averages $10.57 and 56.4 minutes per task, making it one of the most expensive and slowest models.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Moonshot AI has released Kimi K3, a 2.8T parameter model that achieves an Elo score of 1543 on the new AA-Briefcase benchmark. This places it as the second-highest performing model, only behind Claude Fable 5 (1574) and significantly ahead of GPT-5.6 Sol (1501) and Claude Opus 4.8 (1347).",
+   "AA-Briefcase is a proprietary benchmark designed for agentic knowledge work, utilizing a private dataset of realistic tasks. These tasks require complex deliverables such as spreadsheets, presentations, and UI mock-ups, with performance evaluated on correctness, analytical quality, and presentation quality.",
+   "Despite its strong performance, Kimi K3 is among the most expensive models to run, averaging $10.57 per task on AA-Briefcase. This high cost is attributed to its token pricing ($3/$15 per 1M input/output tokens) and increased output tokens, alongside a high average of 83 turns per task.",
+   "Kimi K3 also exhibits one of the longest average task completion times, at 56.4 minutes per task. This is approximately 2.5 times longer than Claude Fable 5 and 3.8 times longer than Grok 4.5, driven by its high turn count and increased output token usage.",
+   "The model shows strong objective and analytical performance, with a rubric pass rate of 51% and an analytical quality Elo of 1754, comparable to Claude Fable 5. However, its presentation quality is comparatively weaker, scoring 1471 Elo, below GPT-5.6 Sol and Claude Opus 4.8.",
+   "Kimi K3's launch is part of a recent surge in powerful AI models, with six labs now having models scoring above 50 on the Artificial Analysis Intelligence Index. This rapid advancement has led to a collapse in the price of near-frontier intelligence."
+  ],
+  "caption": "Kimi K3 is a top-tier AI model, scoring 1543 Elo on the AA-Briefcase benchmark, second only to Claude Fable 5. But it comes with a hefty price tag and a long average task completion time.\n\nMoonshot AI has released Kimi K3, a 2.8T parameter model that achieves an Elo score of 1543 on the new AA-Briefcase benchmark. This places it as the second-highest performing model, only behind Claude Fable 5 (1574) and significantly ahead of GPT-5.6 Sol (1501) and Claude Opus 4.8 (1347).\n\nAA-Briefcase is a proprietary benchmark designed for agentic knowledge work, utilizing a private dataset of realistic tasks. These tasks require complex deliverables such as spreadsheets, presentations, and UI mock-ups, with performance evaluated on correctness, analytical quality, and presentation quality.\n\nDespite its strong performance, Kimi K3 is among the most expensive models to run, averaging $10.57 per task on AA-Briefcase. This high cost is attributed to its token pricing ($3/$15 per 1M input/output tokens) and increased output tokens, alongside a high average of 83 turns per task.\n\nKimi K3 also exhibits one of the longest average task completion times, at 56.4 minutes per task. This is approximately 2.5 times longer than Claude Fable 5 and 3.8 times longer than Grok 4.5, driven by its high turn count and increased output token usage.\n\nThe model shows strong objective and analytical performance, with a rubric pass rate of 51% and an analytical quality Elo of 1754, comparable to Claude Fable 5. However, its presentation quality is comparatively weaker, scoring 1471 Elo, below GPT-5.6 Sol and Claude Opus 4.8.\n\nKimi K3's launch is part of a recent surge in powerful AI models, with six labs now having models scoring above 50 on the Artificial Analysis Intelligence Index. This rapid advancement has led to a collapse in the price of near-frontier intelligence.\n\n#AI #LLM #KimiK3 #MoonshotAI #AIBenchmark #TechNews\n\nSource: Hacker News",
+  "tweet": "Moonshot AI's Kimi K3 scores 1543 Elo on the AA-Briefcase benchmark, second only to Claude Fable 5. However, it averages $10.57 and 56.4 minutes per task, making it one of the most expensive and slowest models to run. #AI #LLM #KimiK3",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "moonshot.ai",
+  "source": "Hacker News",
+  "url": "https://artificialanalysis.ai/articles/kimi-k3-agentic-knowledge-benchmark",
+  "image": "",
+  "orig_title": "Kimi K3: second only to Fable 5 on AA-Briefcase",
+  "cluster_urls": [
+   "https://artificialanalysis.ai/articles/kimi-k3-agentic-knowledge-benchmark",
+   "https://fireworks.ai/blog/kimik3-fable"
+  ],
+  "cluster_titles": [
+   "Kimi K3: second only to Fable 5 on AA-Briefcase",
+   "Kimi K3 Is Competitive with Fable; Kimi K3 and Fable Is SoTA"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260722-1207-1-kimi-k3-is-second-only-to-fable-5-on-aa-brie.png",
+   "20260722-1207-1-kimi-k3-is-second-only-to-fable-5-on-aa-brie-d1.png",
+   "20260722-1207-1-kimi-k3-is-second-only-to-fable-5-on-aa-brie-d2.png",
+   "20260722-1207-1-kimi-k3-is-second-only-to-fable-5-on-aa-brie-d3.png"
+  ]
+ }
+]

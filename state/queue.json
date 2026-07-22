@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai_workflows_human_copy_paste_cost",
+  "headline_marked": "[[Human copy-paste still common]] in 'almost automated' AI workflows",
+  "headline": "Human copy-paste still common in 'almost automated' AI workflows",
+  "summary": "Many AI workflows appear automated but often depend on significant human intervention for data transfer, verification, and exception handling, silently eroding the expected ROI.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI workflows often create hidden operational labor, despite appearing automated. This \"almost automated\" state means employees frequently perform manual tasks like copying, pasting, and reformatting data when AI systems hit boundaries or encounter confusion. This hidden labor significantly impacts the return on investment (ROI) for AI initiatives.",
+   "The core issue is that AI excels at generating text but struggles with safely writing structured records into downstream systems like CRMs or ERPs. These systems demand exact fields, IDs, formats, and strict validation rules that current AI models often cannot reliably provide. Consequently, employees become the de facto API, bridging the gap between AI output and system requirements.",
+   "Common human tasks include mapping company names to account IDs, converting dates to specific formats, verifying data accuracy, and seeking manager approvals. While AI may save minutes on a visible task, the overall business process remains manual, as real automation is measured from the initial event to the completed business outcome. A generated proposal isn't an outcome; a reviewed, approved, logged, sent, and trackable one is.",
+   "This reliance on manual intervention shifts bottlenecks from production to review, as seen in a July 2026 study where AI-assisted output increased developer throughput but reviewer load roughly doubled. Faster generation is useful, but faster queues are not, indicating that copy-paste is a symptom of a broken handoff, not the root problem itself.",
+   "Effective \"human-in-the-loop\" AI systems are crucial, routing only uncertain, high-impact, or policy-sensitive decisions to qualified personnel. For routine, low-risk cases, the process should continue automatically. The human reviewer should receive full context, AI output, confidence signals, policy guidance, and clear action choices, ensuring judgment is applied where it adds value, not for unpaid integration work.",
+   "Industry trends, such as Zapier's human-review features, reflect a move towards explicit approval checkpoints. However, these checkpoints must be integrated into the entire process, not just bolted onto one step. Companies achieving the most value from AI, according to McKinsey's 2025 survey, prioritize workflow redesign, focusing on end-to-end automation."
+  ],
+  "caption": "Is your AI workflow truly automated? Many \"AI-powered\" processes still rely heavily on human copy-paste and manual checks.\n\nAI workflows often create hidden operational labor, despite appearing automated. This \"almost automated\" state means employees frequently perform manual tasks like copying, pasting, and reformatting data when AI systems hit boundaries or encounter confusion. This hidden labor significantly impacts the return on investment (ROI) for AI initiatives.\n\nThe core issue is that AI excels at generating text but struggles with safely writing structured records into downstream systems like CRMs or ERPs. These systems demand exact fields, IDs, formats, and strict validation rules that current AI models often cannot reliably provide. Consequently, employees become the de facto API, bridging the gap between AI output and system requirements.\n\nCommon human tasks include mapping company names to account IDs, converting dates to specific formats, verifying data accuracy, and seeking manager approvals. While AI may save minutes on a visible task, the overall business process remains manual, as real automation is measured from the initial event to the completed business outcome. A generated proposal isn't an outcome; a reviewed, approved, logged, sent, and trackable one is.\n\nThis reliance on manual intervention shifts bottlenecks from production to review, as seen in a July 2026 study where AI-assisted output increased developer throughput but reviewer load roughly doubled. Faster generation is useful, but faster queues are not, indicating that copy-paste is a symptom of a broken handoff, not the root problem itself.\n\n#AI #Automation #Workflow #TechNews #Productivity #Business\n\nSource: DEV",
+  "tweet": "Many 'AI-powered' workflows are only 'almost automated,' relying heavily on human copy-paste and manual checks. This hidden labor erodes ROI and shifts bottlenecks. True automation requires end-to-end process redesign. #AI #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dhruvjoshi9/the-hidden-cost-of-almost-automated-why-human-copy-paste-survives-inside-ai-workflows-2079",
+  "image": "",
+  "orig_title": "The Hidden Cost of “Almost Automated”: Why Human Copy-Paste Survives Inside AI Workflows",
+  "cluster_urls": [
+   "https://dev.to/dhruvjoshi9/the-hidden-cost-of-almost-automated-why-human-copy-paste-survives-inside-ai-workflows-2079"
+  ],
+  "cluster_titles": [
+   "The Hidden Cost of “Almost Automated”: Why Human Copy-Paste Survives Inside AI Workflows"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260722-1807-0-human-copy-paste-still-common-in-almost-auto.png",
+   "20260722-1807-0-human-copy-paste-still-common-in-almost-auto-d1.png",
+   "20260722-1807-0-human-copy-paste-still-common-in-almost-auto-d2.png",
+   "20260722-1807-0-human-copy-paste-still-common-in-almost-auto-d3.png"
+  ]
+ },
+ {
+  "topic": "kali_linux_deepseek_local_ai_security_bot",
+  "headline_marked": "[[Built a self-defending security bot for MyZubster]] using Kali Linux and local DeepSeek AI",
+  "headline": "Built a self-defending security bot for MyZubster using Kali Linux and local DeepSeek AI",
+  "summary": "This autonomous bot leverages Kali Linux's penetration testing tools and DeepSeek's local AI for log analysis, ensuring zero data sharing and no ongoing API costs for the decentralized marketplace.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "MyZubster, a decentralized marketplace handling tokenized assets and Monero payments, requires robust security. Instead of relying on passive measures or expensive third-party APIs, a developer built an autonomous security bot.",
+   "This custom bot integrates Kali Linux, the standard for security auditing and penetration testing, utilizing its over 600 pre-installed tools for network scanning and web application testing. All these tools are orchestrated through a single Python script.",
+   "For log analysis, the bot incorporates DeepSeek's `deepseek-r1:1.5b` model, running entirely locally via Ollama. This setup ensures that no sensitive data leaves the server, addressing privacy concerns and eliminating external API costs.",
+   "The security bot automates the entire process: it logs into MyZubster, initiates security scans using tools like nmap, sends the output to DeepSeek for analysis, and then executes predefined actions such as blocking suspicious IPs or suspending users.",
+   "This self-defending system offers significant advantages in automation, privacy, and cost-effectiveness. It provides continuous, proactive security without manual intervention or reliance on third-party services, keeping all data on-premises."
+  ],
+  "caption": "A self-defending security bot built with Kali Linux and local AI? This custom solution for MyZubster ensures complete data privacy and zero API costs.\n\nMyZubster, a decentralized marketplace handling tokenized assets and Monero payments, requires robust security. Instead of relying on passive measures or expensive third-party APIs, a developer built an autonomous security bot.\n\nThis custom bot integrates Kali Linux, the standard for security auditing and penetration testing, utilizing its over 600 pre-installed tools for network scanning and web application testing. All these tools are orchestrated through a single Python script.\n\nFor log analysis, the bot incorporates DeepSeek's `deepseek-r1:1.5b` model, running entirely locally via Ollama. This setup ensures that no sensitive data leaves the server, addressing privacy concerns and eliminating external API costs.\n\nThe security bot automates the entire process: it logs into MyZubster, initiates security scans using tools like nmap, sends the output to DeepSeek for analysis, and then executes predefined actions such as blocking suspicious IPs or suspending users.\n\nThis self-defending system offers significant advantages in automation, privacy, and cost-effectiveness. It provides continuous, proactive security without manual intervention or reliance on third-party services, keeping all data on-premises.\n\n#Cybersecurity #KaliLinux #DeepSeek #LocalAI #SecurityBot #DevSecOps\n\nSource: DEV",
+  "tweet": "A dev built a self-defending security bot for MyZubster using Kali Linux tools and local DeepSeek AI. It automates scans, analyzes logs, and takes action, all while keeping data private and costs at zero. #Cybersecurity #LocalAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/danielioni/how-i-integrated-kali-linux-and-deepseek-local-ai-to-build-a-self-defending-security-bot-for-47lk",
+  "image": "",
+  "orig_title": "🤖 How I Integrated Kali Linux and DeepSeek (Local AI) to Build a Self-Defending Security Bot for MyZubster",
+  "cluster_urls": [
+   "https://dev.to/danielioni/how-i-integrated-kali-linux-and-deepseek-local-ai-to-build-a-self-defending-security-bot-for-47lk"
+  ],
+  "cluster_titles": [
+   "🤖 How I Integrated Kali Linux and DeepSeek (Local AI) to Build a Self-Defending Security Bot for MyZubster"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260722-1807-1-built-a-self-defending-security-bot-for-myzu.png",
+   "20260722-1807-1-built-a-self-defending-security-bot-for-myzu-d1.png",
+   "20260722-1807-1-built-a-self-defending-security-bot-for-myzu-d2.png"
+  ]
+ }
+]

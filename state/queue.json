@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "apollo_11_guidance_computer_source_code",
+  "headline_marked": "[[Original Apollo 11 Guidance Computer source code]] for Command and Lunar Modules now on GitHub",
+  "headline": "Original Apollo 11 Guidance Computer source code for Command and Lunar Modules now on GitHub",
+  "summary": "The historic software that powered humanity's first moon landing has been digitized and made publicly available by Virtual AGC and the MIT Museum. It includes code for both the Command and Lunar Modules.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The original source code for the Apollo 11 Guidance Computer (AGC), which navigated the Command Module (Comanche055) and Lunar Module (Luminary099) during the historic mission, has been digitized. This monumental effort was undertaken by the teams at Virtual AGC and the MIT Museum.",
+   "The primary goal of making this code public is to create a definitive repository for the original Apollo 11 source. The project actively welcomes contributions and pull requests to identify and correct any discrepancies between the transcriptions and the original source scans.",
+   "This program was developed under DSR project 55-23870, sponsored by NASA's Manned Spacecraft Center through a contract with the Instrumentation Laboratory at MIT. It was specifically designed for use in the Command Module, as detailed in report R-577.",
+   "For those interested in compiling and exploring the historic software, the Virtual AGC project provides resources and guidance. This initiative offers a unique opportunity to delve into the foundational programming that enabled space exploration."
+  ],
+  "caption": "The actual source code that guided Apollo 11 to the moon is now publicly available. Explore the historic software that made humanity's greatest journey possible.\n\nThe original source code for the Apollo 11 Guidance Computer (AGC), which navigated the Command Module (Comanche055) and Lunar Module (Luminary099) during the historic mission, has been digitized. This monumental effort was undertaken by the teams at Virtual AGC and the MIT Museum.\n\nThe primary goal of making this code public is to create a definitive repository for the original Apollo 11 source. The project actively welcomes contributions and pull requests to identify and correct any discrepancies between the transcriptions and the original source scans.\n\nThis program was developed under DSR project 55-23870, sponsored by NASA's Manned Spacecraft Center through a contract with the Instrumentation Laboratory at MIT. It was specifically designed for use in the Command Module, as detailed in report R-577.\n\nFor those interested in compiling and exploring the historic software, the Virtual AGC project provides resources and guidance. This initiative offers a unique opportunity to delve into the foundational programming that enabled space exploration.\n\n#Apollo11 #SourceCode #SpaceExploration #NASA #SoftwareHistory #Tech\n\nSource: Hacker News",
+  "tweet": "The original source code for the Apollo 11 Guidance Computer, which navigated the Command & Lunar Modules to the moon, is now publicly available. Dive into the historic software that powered humanity's greatest journey. #Apollo11 #SpaceTech #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/chrislgarry/Apollo-11",
+  "image": "",
+  "orig_title": "Original Apollo 11 Guidance Computer source code for command and lunar modules",
+  "cluster_urls": [
+   "https://github.com/chrislgarry/Apollo-11"
+  ],
+  "cluster_titles": [
+   "Original Apollo 11 Guidance Computer source code for command and lunar modules"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260722-1306-0-original-apollo-11-guidance-computer-source-.png",
+   "20260722-1306-0-original-apollo-11-guidance-computer-source--d1.png",
+   "20260722-1306-0-original-apollo-11-guidance-computer-source--d2.png"
+  ]
+ },
+ {
+  "topic": "poolside_laguna_s_2_1_ai_model_breakthrough",
+  "headline_marked": "[[Poolside's Laguna S 2.1]] open-weight coding model beats rivals 10x its size",
+  "headline": "Poolside's Laguna S 2.1 open-weight coding model beats rivals 10x its size",
+  "summary": "The 118B-parameter (8B active) MoE model scores 70.2% on Terminal-Bench 2.1, outperforming models 10x its size, and supports a 1M token context window. Its weights are available on Hugging Face.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Poolside, a San Francisco AI lab, has released Laguna S 2.1, its most capable open-weight coding model to date. This 118-billion-parameter Mixture-of-Experts (MoE) system activates only 8 billion parameters per token and supports a context window of up to 1 million tokens.",
+   "According to company benchmarks, Laguna S 2.1 matches or beats open models several times its size on agentic coding tasks. It scored 70.2% on Terminal-Bench 2.1, placing it ahead of models like DeepSeek-V4-Pro-Max (1.6T parameters) and Nvidia’s Nemotron 3 Ultra (550B parameters).",
+   "The model also achieved 78.5% on SWE-Bench Multilingual and 59.4% on SWE-Bench Pro's public dataset. Remarkably, it went from pre-training to public launch in under nine weeks, trained on 4,096 Nvidia H200 GPUs.",
+   "This release comes amidst a growing debate about the origin of open-weight AI models, with developer adoption shifting towards inspectable, self-hostable systems. Leading options in this category have predominantly come from Chinese labs.",
+   "Poolside explicitly frames Laguna S 2.1 as a response to this trend, noting that no Western lab has released open weights in this size class for 11 months. Poolside co-CEO Jason Warner emphasized the need for trustworthy Western open-weight models.",
+   "Co-founder Eiso Kant articulated the philosophical stance, arguing that intelligence should become a commodity. He believes open models must be on par with or superior to their closed counterparts to truly win user adoption.",
+   "The strategic logic extends to Poolside's core business of deploying models within the security boundaries of government, defense, and regulated enterprises. For these customers, closed, metered API access is often not viable due to compliance and sovereignty concerns.",
+   "Releasing competitive open weights serves as both an ecosystem play and a top-of-funnel strategy for their high-security deployment business. It also shifts the AI race towards cost per token, self-hosting, and iteration speed, areas where Poolside aims to compete effectively.",
+   "Laguna S 2.1's sparse MoE architecture, with 256 routed experts plus one shared expert, means inference costs scale with the 8 billion active parameters, not the full 118 billion. This design allows the model to run on a single Nvidia DGX Spark, a desktop-class AI machine.",
+   "This efficiency is crucial for what Poolside calls token economics, as long-horizon coding agents are token-intensive. Agentic workloads at enterprise scale can become significant budget items at metered API prices, making cost-effective self-hosting a key advantage."
+  ],
+  "caption": "Poolside's new Laguna S 2.1 coding model, with just 118B parameters, outperforms rivals 10x its size on key benchmarks.\n\nPoolside, a San Francisco AI lab, has released Laguna S 2.1, its most capable open-weight coding model to date. This 118-billion-parameter Mixture-of-Experts (MoE) system activates only 8 billion parameters per token and supports a context window of up to 1 million tokens.\n\nAccording to company benchmarks, Laguna S 2.1 matches or beats open models several times its size on agentic coding tasks. It scored 70.2% on Terminal-Bench 2.1, placing it ahead of models like DeepSeek-V4-Pro-Max (1.6T parameters) and Nvidia’s Nemotron 3 Ultra (550B parameters).\n\nThe model also achieved 78.5% on SWE-Bench Multilingual and 59.4% on SWE-Bench Pro's public dataset. Remarkably, it went from pre-training to public launch in under nine weeks, trained on 4,096 Nvidia H200 GPUs.\n\nThis release comes amidst a growing debate about the origin of open-weight AI models, with developer adoption shifting towards inspectable, self-hostable systems. Leading options in this category have predominantly come from Chinese labs.\n\nPoolside explicitly frames Laguna S 2.1 as a response to this trend, noting that no Western lab has released open weights in this size class for 11 months. Poolside co-CEO Jason Warner emphasized the need for trustworthy Western open-weight models.\n\nCo-founder Eiso Kant articulated the philosophical stance, arguing that intelligence should become a commodity. He believes open models must be on par with or superior to their closed counterparts to truly win user adoption.\n\nThe strategic logic extends to Poolside's core business of deploying models within the security boundaries of government, defense, and regulated enterprises. For these customers, closed, metered API access is often not viable due to compliance and sovereignty concerns.\n\n#AI #Coding #OpenSource #MachineLearning #TechNews #PoolsideAI\n\nSource: VentureBeat",
+  "tweet": "Poolside's new Laguna S 2.1 coding model, with just 118B parameters, outperforms rivals 10x its size on key benchmarks like Terminal-Bench 2.1. It's an open-weight MoE system with a 1M token context window, available on Hugging Face. #AI #Coding #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "poolside.ai",
+  "source": "VentureBeat",
+  "url": "https://venturebeat.com/infrastructure/poolside-drops-laguna-s-2-1-an-open-weight-coding-model-that-beats-rivals-10x-its-size",
+  "image": "https://images.ctfassets.net/jdtwqhzvc2n1/3bn3yoTePyZbPJPJj0uEdC/401a5cb3161eb2cd6ae5d9b4ce0020ed/Nuneybits_Vector_art_of_minimalist_lines_clean_villas_overlooki_8da15709-c192-4383-b807-87d0dbfcf8e4.webp?w=300&q=30",
+  "orig_title": "Poolside drops Laguna S 2.1, an open-weight coding model that beats rivals 10x its size",
+  "cluster_urls": [
+   "https://venturebeat.com/infrastructure/poolside-drops-laguna-s-2-1-an-open-weight-coding-model-that-beats-rivals-10x-its-size"
+  ],
+  "cluster_titles": [
+   "Poolside drops Laguna S 2.1, an open-weight coding model that beats rivals 10x its size"
+  ],
+  "is_logo": false,
+  "photo_credit": "VentureBeat",
+  "image_files": [
+   "20260722-1306-1-poolside-s-laguna-s-2-1-open-weight-coding-m.png",
+   "20260722-1306-1-poolside-s-laguna-s-2-1-open-weight-coding-m-d1.png",
+   "20260722-1306-1-poolside-s-laguna-s-2-1-open-weight-coding-m-d2.png",
+   "20260722-1306-1-poolside-s-laguna-s-2-1-open-weight-coding-m-d3.png",
+   "20260722-1306-1-poolside-s-laguna-s-2-1-open-weight-coding-m-d4.png"
+  ]
+ }
+]

@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_character_consistency_pipeline",
+  "headline_marked": "[[2-stage image pipeline]] locks character faces across many AI-generated scenes",
+  "headline": "2-stage image pipeline locks character faces across many AI-generated scenes",
+  "summary": "A new 2-stage image generation pipeline ensures consistent character faces across multiple scenes by using a canonical base image as a constant reference, avoiding issues with seeds or LoRA training.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Generating the same AI character across multiple scenes is challenging; seeds drift, LoRA training is heavy, and prompt changes alter faces. This often leads to inconsistent character identity in generated content.",
+   "A production-ready solution involves a 2-stage pipeline: first, generate one canonical base image, then use it as a reference for every new scene. Consistency comes from this constant reference, not from seed reuse.",
+   "Common approaches like reusing seeds fail because a seed pins noise, not identity. The moment you change the prompt, even slightly, the denoising path changes and the face re-rolls with it.",
+   "Prompt-only methods also fall short as the model has no memory of previous generations. Each output is a fresh sample from the distribution described by the current words, meaning \"same face as last time\" isn't recognized.",
+   "While LoRA per character works, it's costly for app contexts. It requires curating 15-40 images, running a training job, and storing adapter weights for each character, which is impractical for on-demand character creation.",
+   "Stage 1 of the pipeline uses a text-to-image model (e.g., Z-Image-Turbo) to create one clean, canonical image of the character. This initial image establishes the character's identity and is then stored.",
+   "Stage 2 employs an image-edit model (e.g., Qwen-Image-Edit-2511) for all subsequent scenes. The crucial input is the base image itself, combined with instructions for changes like pose or setting, ensuring the character's face holds across many scenes.",
+   "Deployment of such pipelines faces challenges, as generation times of 10-40 seconds exceed typical HTTP request durations. Serverless platforms often cap request times, and browsers can time out, leading to poor user experience.",
+   "An async job queue with polling addresses this: the initial request returns in milliseconds, while the GPU work happens out-of-band. This simple setup requires no extra infrastructure like webhooks, making it easier to deploy.",
+   "While self-hosting on serverless GPU (like RunPod) can be cost-effective by paying only for active GPU-seconds and scaling to zero, hosted image APIs are often cheaper for low-volume projects due to operational overhead.",
+   "To optimize self-hosting, cold start times are crucial. This can be significantly reduced by using smaller models, pre-warming workers, and deliberate packaging. A free, runnable slice of the async transport layer is available for developers to test."
+  ],
+  "caption": "Tired of AI-generated characters changing faces in every scene? Discover a robust 2-stage image pipeline that locks character identity across unlimited scenes.\n\nGenerating the same AI character across multiple scenes is challenging; seeds drift, LoRA training is heavy, and prompt changes alter faces. This often leads to inconsistent character identity in generated content.\n\nA production-ready solution involves a 2-stage pipeline: first, generate one canonical base image, then use it as a reference for every new scene. Consistency comes from this constant reference, not from seed reuse.\n\nCommon approaches like reusing seeds fail because a seed pins noise, not identity. The moment you change the prompt, even slightly, the denoising path changes and the face re-rolls with it.\n\nPrompt-only methods also fall short as the model has no memory of previous generations. Each output is a fresh sample from the distribution described by the current words, meaning \"same face as last time\" isn't recognized.\n\nWhile LoRA per character works, it's costly for app contexts. It requires curating 15-40 images, running a training job, and storing adapter weights for each character, which is impractical for on-demand character creation.\n\nStage 1 of the pipeline uses a text-to-image model (e.g., Z-Image-Turbo) to create one clean, canonical image of the character. This initial image establishes the character's identity and is then stored.\n\nStage 2 employs an image-edit model (e.g., Qwen-Image-Edit-2511) for all subsequent scenes. The crucial input is the base image itself, combined with instructions for changes like pose or setting, ensuring the character's face holds across many scenes.\n\nDeployment of such pipelines faces challenges, as generation times of 10-40 seconds exceed typical HTTP request durations. Serverless platforms often cap request times, and browsers can time out, leading to poor user experience.\n\n#AI #ImageGeneration #DeveloperTools #MachineLearning #TechPipeline #AIArt\n\nSource: DEV",
+  "tweet": "AI character consistency solved! A new 2-stage image pipeline uses a canonical base image to lock faces across scenes, beating seeds & LoRA. Includes async job queue for deployment. #AI #ImageGeneration #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ownstackhq/character-consistency-isnt-a-seed-trick-a-2-stage-image-pipeline-that-actually-locks-the-face-p76",
+  "image": "",
+  "orig_title": "Character consistency isn't a seed trick: a 2-stage image pipeline that actually locks the face",
+  "cluster_urls": [
+   "https://dev.to/ownstackhq/character-consistency-isnt-a-seed-trick-a-2-stage-image-pipeline-that-actually-locks-the-face-p76"
+  ],
+  "cluster_titles": [
+   "Character consistency isn't a seed trick: a 2-stage image pipeline that actually locks the face"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260723-1007-0-2-stage-image-pipeline-locks-character-faces.png",
+   "20260723-1007-0-2-stage-image-pipeline-locks-character-faces-d1.png",
+   "20260723-1007-0-2-stage-image-pipeline-locks-character-faces-d2.png",
+   "20260723-1007-0-2-stage-image-pipeline-locks-character-faces-d3.png",
+   "20260723-1007-0-2-stage-image-pipeline-locks-character-faces-d4.png"
+  ]
+ },
+ {
+  "topic": "ai_prompt_injection_firewall",
+  "headline_marked": "[[New L1.9 firewall]] protects AI agents from prompt injection with 28 rules",
+  "headline": "New L1.9 firewall protects AI agents from prompt injection with 28 rules",
+  "summary": "Prompt injection is the leading attack vector against AI agents. This new defense layer scans tool descriptions, system prompts, and skill metadata before installation to block malicious instructions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Prompt injection is identified as the number one attack against AI agents, a problem that currently lacks effective solutions. L1.9 is a new prompt injection defense layer designed to counter this threat by scanning various components.",
+   "This firewall checks every tool description, system prompt, and skill metadata before an AI agent installs a new skill. It employs a comprehensive set of 28 detection rules to identify and block potential threats.",
+   "The risk is not theoretical; malicious tool descriptions can instruct an LLM to ignore prior commands or exfiltrate user API keys. Real-world MCP servers have been found to contain such vulnerabilities.",
+   "L1.9 is part of a broader security framework, complementing other layers like L1.5 metadata analysis, L1.6 semgrep+secrets+OSV, L1.7 binary detection, and L1.8 malware family identification. Further defenses include an L2 sandbox, L3 continuous monitoring, WAF, honeypot, and threat intelligence.",
+   "Each piece of text is rigorously tested against all 28 rules. If a match indicating a prompt injection attempt is found, the system takes appropriate action to prevent the agent from being compromised."
+  ],
+  "caption": "Prompt injection is the #1 threat to AI agents. A new L1.9 firewall with 28 rules aims to stop it.\n\nPrompt injection is identified as the number one attack against AI agents, a problem that currently lacks effective solutions. L1.9 is a new prompt injection defense layer designed to counter this threat by scanning various components.\n\nThis firewall checks every tool description, system prompt, and skill metadata before an AI agent installs a new skill. It employs a comprehensive set of 28 detection rules to identify and block potential threats.\n\nThe risk is not theoretical; malicious tool descriptions can instruct an LLM to ignore prior commands or exfiltrate user API keys. Real-world MCP servers have been found to contain such vulnerabilities.\n\nL1.9 is part of a broader security framework, complementing other layers like L1.5 metadata analysis, L1.6 semgrep+secrets+OSV, L1.7 binary detection, and L1.8 malware family identification. Further defenses include an L2 sandbox, L3 continuous monitoring, WAF, honeypot, and threat intelligence.\n\nEach piece of text is rigorously tested against all 28 rules. If a match indicating a prompt injection attempt is found, the system takes appropriate action to prevent the agent from being compromised.\n\n#AI #Security #PromptInjection #Cybersecurity #AIAgents #DeveloperTools\n\nSource: DEV",
+  "tweet": "Prompt injection is the #1 attack against AI agents. A new L1.9 firewall with 28 detection rules scans tool descriptions and system prompts *before* installation to prevent malicious instructions. #AI #Security #PromptInjection",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/edison_flores_6d2cd381b13/l19-i-built-a-prompt-injection-firewall-for-ai-agents-28-detection-rules-18nb",
+  "image": "",
+  "orig_title": "L1.9: I built a prompt injection firewall for AI agents (28 detection rules)",
+  "cluster_urls": [
+   "https://dev.to/edison_flores_6d2cd381b13/l19-i-built-a-prompt-injection-firewall-for-ai-agents-28-detection-rules-18nb"
+  ],
+  "cluster_titles": [
+   "L1.9: I built a prompt injection firewall for AI agents (28 detection rules)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260723-1007-1-new-l1-9-firewall-protects-ai-agents-from-pr.png",
+   "20260723-1007-1-new-l1-9-firewall-protects-ai-agents-from-pr-d1.png",
+   "20260723-1007-1-new-l1-9-firewall-protects-ai-agents-from-pr-d2.png"
+  ]
+ }
+]

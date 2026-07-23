@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "gigatoken_1000x_faster_ai_tokenization",
+  "headline_marked": "[[GigaToken tokenizes LLMs 1000x faster]], processing 24.53 GB/s on GPT-2",
+  "headline": "GigaToken tokenizes LLMs 1000x faster, processing 24.53 GB/s on GPT-2",
+  "summary": "A new Rust library, GigaToken, dramatically accelerates language model tokenization, achieving speeds up to 24.53 GB/s. This could tokenize the entire English Wikipedia twice in one second, significantly boosting ML training and inference.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A new Rust library called GigaToken claims to tokenize language models up to 1000 times faster than existing solutions. On a specific server CPU, it achieved a staggering 24.53 GB/s on GPT-2 tokenization, equivalent to 5.5 billion tokens per second.",
+   "Tokenization is the crucial, often invisible, step where human language is converted into fixed-size pieces (token IDs) for neural networks. It defines how models interpret length and context, impacting every interaction and training run.",
+   "While current tokenizers like HuggingFace's library (25-50 MB/s) and OpenAI's Tiktoken (36 MB/s) are considered fast, GigaToken pushes this into the gigabytes-per-second range. This speedup is critical when processing terabytes of text for large-scale model training.",
+   "GigaToken achieves its speed through two main innovations. Firstly, it replaces slow regex-based pretokenization with hand-written SIMD code, processing 16-64 bytes per instruction cycle on modern x86 and ARM CPUs, reaching over 2 GB/s per thread.",
+   "Secondly, it employs aggressive, hierarchical caching of pretoken mappings. This intelligent caching system optimizes for both frequently appearing tokens and the long tail of less common words, preventing memory bloat while maximizing cache hits.",
+   "The library functions as a drop-in replacement for HuggingFace Tokenizers. Users can wrap their existing tokenizer for immediate speed gains, or use GigaToken's native API for maximum performance.",
+   "Benchmarks show consistent performance across diverse hardware, including a 144-core EPYC, M4 Max laptop chip, and Ryzen 7 desktop, and across more than 20 tokenizer families, demonstrating its broad applicability and robust optimization."
+  ],
+  "caption": "A new Rust library tokenizes language models up to 1000x faster, hitting 24.53 GB/s. That's 5.5 billion tokens per second, enough to process Wikipedia twice in one second.\n\nA new Rust library called GigaToken claims to tokenize language models up to 1000 times faster than existing solutions. On a specific server CPU, it achieved a staggering 24.53 GB/s on GPT-2 tokenization, equivalent to 5.5 billion tokens per second.\n\nTokenization is the crucial, often invisible, step where human language is converted into fixed-size pieces (token IDs) for neural networks. It defines how models interpret length and context, impacting every interaction and training run.\n\nWhile current tokenizers like HuggingFace's library (25-50 MB/s) and OpenAI's Tiktoken (36 MB/s) are considered fast, GigaToken pushes this into the gigabytes-per-second range. This speedup is critical when processing terabytes of text for large-scale model training.\n\nGigaToken achieves its speed through two main innovations. Firstly, it replaces slow regex-based pretokenization with hand-written SIMD code, processing 16-64 bytes per instruction cycle on modern x86 and ARM CPUs, reaching over 2 GB/s per thread.\n\nSecondly, it employs aggressive, hierarchical caching of pretoken mappings. This intelligent caching system optimizes for both frequently appearing tokens and the long tail of less common words, preventing memory bloat while maximizing cache hits.\n\nThe library functions as a drop-in replacement for HuggingFace Tokenizers. Users can wrap their existing tokenizer for immediate speed gains, or use GigaToken's native API for maximum performance.\n\nBenchmarks show consistent performance across diverse hardware, including a 144-core EPYC, M4 Max laptop chip, and Ryzen 7 desktop, and across more than 20 tokenizer families, demonstrating its broad applicability and robust optimization.\n\n#GigaToken #Tokenization #AI #MachineLearning #Software #Rust\n\nSource: DEV, Hacker News",
+  "tweet": "GigaToken, a new Rust library, achieves up to 1000x faster language model tokenization, processing 24.53 GB/s. This means 5.5 billion tokens/sec – enough to tokenize Wikipedia twice in one second. Huge for ML training & inference! #AI #Software #Rust",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV, Hacker News",
+  "url": "https://dev.to/hermestomagent/every-word-i-say-gets-tokenized-this-library-does-it-1000x-faster-1kch",
+  "image": "",
+  "orig_title": "Every Word I Say Gets Tokenized. This Library Does It 1000x Faster.",
+  "cluster_urls": [
+   "https://dev.to/hermestomagent/every-word-i-say-gets-tokenized-this-library-does-it-1000x-faster-1kch",
+   "https://github.com/marcelroed/gigatoken/"
+  ],
+  "cluster_titles": [
+   "Every Word I Say Gets Tokenized. This Library Does It 1000x Faster.",
+   "GigaToken: ~1000x faster Language model tokenization"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260723-0906-0-gigatoken-tokenizes-llms-1000x-faster-proces.png",
+   "20260723-0906-0-gigatoken-tokenizes-llms-1000x-faster-proces-d1.png",
+   "20260723-0906-0-gigatoken-tokenizes-llms-1000x-faster-proces-d2.png",
+   "20260723-0906-0-gigatoken-tokenizes-llms-1000x-faster-proces-d3.png"
+  ]
+ }
+]

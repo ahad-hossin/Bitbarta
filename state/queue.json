@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "dev_pipeline_unfinished_files",
+  "headline_marked": "[[90 files made permanently unfinished]] by a single line of code",
+  "headline": "90 files made permanently unfinished by a single line of code",
+  "summary": "A pipeline's exit condition was unsatisfiable, causing all generated documents to be marked as incomplete, even after completion.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer's pipeline designed to generate document scaffolds with placeholders for human input encountered a critical bug. Every single file generated, including those already completed and published, was incorrectly marked as unfinished.",
+   "The issue stemmed from a single line of code intended to mark files as complete. This line contained markers that the system used to track unfinished sections. However, the instruction to delete these markers was part of the text that contained the markers themselves, creating an impossible condition.",
+   "The pipeline's generator wrote the problematic line into every file, ensuring they were all born 'permanently unfinished.' This led to a dashboard showing a perpetually high number of pending documents, which users eventually learned to ignore.",
+   "The fix was surprisingly simple: rewriting the instruction to describe the markers instead of containing them directly. This small change instantly corrected the status of 37 out of 90 files, which had been completed all along.",
+   "This problem is an example of 'in-band signaling,' where control information travels within the same channel as the data payload. It's a classic issue that has appeared in various forms throughout computing history, from telephone networks to modern software.",
+   "The core failure mode occurs when a file serves two readers: a human and a parser. The human needs to discuss the marker, while the parser only needs to find it. This conflict can lead to such logical paradoxes.",
+   "The developer implemented a mitigation by changing the marker to something a human writer would likely never type, thus avoiding the conflict. This approach, while not the ideal fix of moving state out of the payload, visually preserved the emoji marker's purpose.",
+   "A self-test was added to the generator to ensure the exit condition is reachable, preventing similar issues in the future. This test fails on the old template and passes on the new one, confirming the fix."
+  ],
+  "caption": "A single line of code made 90 files permanently unfinished. The fix? Rewriting that one line.\n\nA developer's pipeline designed to generate document scaffolds with placeholders for human input encountered a critical bug. Every single file generated, including those already completed and published, was incorrectly marked as unfinished.\n\nThe issue stemmed from a single line of code intended to mark files as complete. This line contained markers that the system used to track unfinished sections. However, the instruction to delete these markers was part of the text that contained the markers themselves, creating an impossible condition.\n\nThe pipeline's generator wrote the problematic line into every file, ensuring they were all born 'permanently unfinished.' This led to a dashboard showing a perpetually high number of pending documents, which users eventually learned to ignore.\n\nThe fix was surprisingly simple: rewriting the instruction to describe the markers instead of containing them directly. This small change instantly corrected the status of 37 out of 90 files, which had been completed all along.\n\nThis problem is an example of 'in-band signaling,' where control information travels within the same channel as the data payload. It's a classic issue that has appeared in various forms throughout computing history, from telephone networks to modern software.\n\nThe core failure mode occurs when a file serves two readers: a human and a parser. The human needs to discuss the marker, while the parser only needs to find it. This conflict can lead to such logical paradoxes.\n\nThe developer implemented a mitigation by changing the marker to something a human writer would likely never type, thus avoiding the conflict. This approach, while not the ideal fix of moving state out of the payload, visually preserved the emoji marker's purpose.\n\n#SoftwareDevelopment #Programming #Coding #DevOps #Bugs\n\nSource: DEV",
+  "tweet": "A pipeline's exit condition was so broken, it made 90 files permanently unfinished. The fix was just one line of code! Learn how this 'in-band signaling' bug happened and how it was solved. #Dev #Programming #Bugs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/liam-dev/the-checklist-item-that-made-90-files-permanently-unfinished-4a3i",
+  "image": "",
+  "orig_title": "The checklist item that made 90 files permanently unfinished",
+  "cluster_urls": [
+   "https://dev.to/liam-dev/the-checklist-item-that-made-90-files-permanently-unfinished-4a3i",
+   "https://dev.to/grahamthedev/snake-rendered-with-576-browser-windows-warning-this-will-hurt-your-eyesand-pc-3p7i"
+  ],
+  "cluster_titles": [
+   "The checklist item that made 90 files permanently unfinished",
+   "🐍 Snake - rendered with 576 browser windows [warning - this WILL hurt your eyes...and PC!]"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260724-0505-0-90-files-made-permanently-unfinished-by-a-si.png",
+   "20260724-0505-0-90-files-made-permanently-unfinished-by-a-si-d1.png",
+   "20260724-0505-0-90-files-made-permanently-unfinished-by-a-si-d2.png",
+   "20260724-0505-0-90-files-made-permanently-unfinished-by-a-si-d3.png"
+  ]
+ },
+ {
+  "topic": "health_handheld_ketosis_monitor",
+  "headline_marked": "[[Handheld device]] measures fat burning by analyzing breath acetone",
+  "headline": "Handheld device measures fat burning by analyzing breath acetone",
+  "summary": "Scientists have developed a breathalyzer that accurately detects ketosis by measuring acetone levels, closely matching lab results.",
+  "category": "SCIENCE",
+  "template": "launch",
+  "details": [
+   "Researchers have created a handheld breathalyzer that can determine if your body is burning fat for energy by measuring the amount of acetone in your breath. This state is known as ketosis, where the body uses fat as its primary fuel source.",
+   "The device, named Nutrion, was tested on 12 participants and its readings closely aligned with traditional laboratory methods for detecting ketosis. This breakthrough offers a more accessible way to monitor metabolic states.",
+   "Acetone is a byproduct of fat metabolism. While lab tests typically measure ketones in blood or acetone in breath, this device overcomes limitations like humidity and breathing patterns by using a companion app.",
+   "The app guides users through the breathing process, ensuring consistent measurements and filtering out contaminants. This technological integration allows for accuracy comparable to blood-based tests.",
+   "This innovation could have significant applications in health and fitness, from assessing the effectiveness of GLP-1 therapies to helping athletes optimize their metabolism for peak performance."
+  ],
+  "caption": "Scientists develop a handheld breathalyzer that measures fat burning by analyzing acetone levels in your breath.\n\nResearchers have created a handheld breathalyzer that can determine if your body is burning fat for energy by measuring the amount of acetone in your breath. This state is known as ketosis, where the body uses fat as its primary fuel source.\n\nThe device, named Nutrion, was tested on 12 participants and its readings closely aligned with traditional laboratory methods for detecting ketosis. This breakthrough offers a more accessible way to monitor metabolic states.\n\nAcetone is a byproduct of fat metabolism. While lab tests typically measure ketones in blood or acetone in breath, this device overcomes limitations like humidity and breathing patterns by using a companion app.\n\nThe app guides users through the breathing process, ensuring consistent measurements and filtering out contaminants. This technological integration allows for accuracy comparable to blood-based tests.\n\nThis innovation could have significant applications in health and fitness, from assessing the effectiveness of GLP-1 therapies to helping athletes optimize their metabolism for peak performance.\n\n#FatBurning #Ketosis #HealthTech #Science #Metabolism\n\nSource: Engadget, MIT Technology Review",
+  "tweet": "New handheld device measures fat burning by analyzing breath acetone! Scientists developed a breathalyzer that accurately detects ketosis, closely matching lab results. #FatBurning #HealthTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Engadget, MIT Technology Review",
+  "url": "https://www.engadget.com/2222231/scientists-develop-handheld-device-for-measuring-when-your-body-is-burning-fat/",
+  "image": "https://www.engadget.com/img/gallery/scientists-develop-handheld-device-for-measuring-when-your-body-is-burning-fat/l-intro-1784846271.jpg",
+  "orig_title": "Scientists develop handheld device for measuring when your body is burning fat",
+  "cluster_urls": [
+   "https://www.engadget.com/2222231/scientists-develop-handheld-device-for-measuring-when-your-body-is-burning-fat/",
+   "https://www.technologyreview.com/2026/07/23/1140765/supercooled-kidneys-have-been-transplanted-into-pigs-in-a-landmark-achievement/"
+  ],
+  "cluster_titles": [
+   "Scientists develop handheld device for measuring when your body is burning fat",
+   "Supercooled kidneys have been transplanted into pigs in a “landmark achievement”"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260724-0505-1-handheld-device-measures-fat-burning-by-anal.png",
+   "20260724-0505-1-handheld-device-measures-fat-burning-by-anal-d1.png",
+   "20260724-0505-1-handheld-device-measures-fat-burning-by-anal-d2.png"
+  ]
+ }
+]

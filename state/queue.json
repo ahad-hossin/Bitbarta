@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "rust_topcoat_fullstack_web_framework",
+  "headline_marked": "[[New Rust full-stack web framework Topcoat]] aims to simplify reactive app development",
+  "headline": "New Rust full-stack web framework Topcoat aims to simplify reactive app development",
+  "summary": "Topcoat, created by Carl Lerche and Julien Scholz, is a new batteries-included framework designed to build full-stack, reactive web applications entirely in Rust, addressing the complexity of connecting multiple libraries.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Topcoat is a new batteries-included framework for building full-stack, reactive web applications entirely in Rust. Created by Carl Lerche and Julien Scholz, it aims to simplify development by integrating routing, components, HTML rendering, and reactive updates.",
+   "Rust is already strong for backend with frameworks like Axum, but full-stack development often requires manually connecting many libraries. Topcoat seeks to remove this boilerplate, offering an integrated experience similar to Rails or Next.js.",
+   "Unlike client-heavy frameworks, Topcoat renders applications on the server and adds client-side reactivity through small instructions. It can re-render and replace only changed UI sections, akin to HTMX or Hotwire.",
+   "Components can be asynchronous, access databases, load application state, and check user permissions directly on the server. While still early, this framework marks a significant step for Rust in full-stack web development."
+  ],
+  "caption": "Introducing Topcoat: a new batteries-included framework for full-stack, reactive web apps entirely in Rust. It aims to simplify development by removing boilerplate.\n\nTopcoat is a new batteries-included framework for building full-stack, reactive web applications entirely in Rust. Created by Carl Lerche and Julien Scholz, it aims to simplify development by integrating routing, components, HTML rendering, and reactive updates.\n\nRust is already strong for backend with frameworks like Axum, but full-stack development often requires manually connecting many libraries. Topcoat seeks to remove this boilerplate, offering an integrated experience similar to Rails or Next.js.\n\nUnlike client-heavy frameworks, Topcoat renders applications on the server and adds client-side reactivity through small instructions. It can re-render and replace only changed UI sections, akin to HTMX or Hotwire.\n\nComponents can be asynchronous, access databases, load application state, and check user permissions directly on the server. While still early, this framework marks a significant step for Rust in full-stack web development.\n\n#RustLang #WebDevelopment #FullStack #Topcoat #Programming #Software\n\nSource: DEV",
+  "tweet": "Introducing Topcoat: a new batteries-included framework for full-stack, reactive web apps entirely in Rust. Created by Carl Lerche & Julien Scholz, it simplifies development by integrating routing, components, and reactive updates. A big step for Rust web dev! #RustLang #Web",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tokio.rs",
+  "source": "DEV",
+  "url": "https://dev.to/francescoxx/better-than-nextjs-is-rust-finally-ready-for-full-stack-web-development-introducing-topcoat-2h09",
+  "image": "",
+  "orig_title": "Better than Next.js? Is Rust Finally Ready for Full-Stack Web Development? Introducing Topcoat",
+  "cluster_urls": [
+   "https://dev.to/francescoxx/better-than-nextjs-is-rust-finally-ready-for-full-stack-web-development-introducing-topcoat-2h09"
+  ],
+  "cluster_titles": [
+   "Better than Next.js? Is Rust Finally Ready for Full-Stack Web Development? Introducing Topcoat"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260723-1634-0-new-rust-full-stack-web-framework-topcoat-ai.png",
+   "20260723-1634-0-new-rust-full-stack-web-framework-topcoat-ai-d1.png",
+   "20260723-1634-0-new-rust-full-stack-web-framework-topcoat-ai-d2.png"
+  ]
+ },
+ {
+  "topic": "mcp_impact_on_server_security",
+  "headline_marked": "[[MCP Just Killed the Handshake]], making your server stateless by July 28",
+  "headline": "MCP Just Killed the Handshake, making your server stateless by July 28",
+  "summary": "The Model Context Protocol (MCP) is finalizing its spec, dropping `initialize` and `Mcp-Session-Id` to eliminate sticky routes and shared state, fundamentally changing how AI apps connect to external tools.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The Model Context Protocol (MCP), an open standard from Anthropic, is undergoing a significant update with its spec finalizing on July 28. This change eliminates the `initialize` handshake and the `Mcp-Session-Id` header, moving towards a stateless connection model for AI applications.",
+   "Previously, client and server connections were tied to specific instances, requiring sticky routes and shared state management. The new approach allows requests to route on an `Mcp-Method` header, landing on any instance behind a load balancer, making MCP function like a standard web service.",
+   "This shift removes the 'infrastructure tax' of managing protocol state, which was deemed unnecessary debt. Ironically, some statefulness is being pushed back to the AI model itself, which will now store the chain of calls, a superior approach as the model drives the operation.",
+   "Several features are being deprecated or replaced. The Tasks API is superseded by the Tasks extension, while Roots, Sampling, and Logging (now using stderr or OpenTelemetry) have a 12-month runway. OAuth 2.1 is also becoming mandatory for authentication.",
+   "SDKs are also being updated, with Python renaming FastMCP to MCPServer, TypeScript going ESM-only, and Go and C# previews appearing. Developers can use the newly released `mcp-spec-audit` tool to scan repositories for migration issues and generate a checklist.",
+   "The `mcp-spec-audit` tool can be run in the CLI or adopted as a Claude Code skill. Using the Claude Code skill offers the fastest route, as Claude can follow up on the output and offer to complete the necessary fixes, streamlining the migration process."
+  ],
+  "caption": "MCP is fundamentally changing how AI apps connect to external tools, dropping key session management features to become stateless.\n\nThe Model Context Protocol (MCP), an open standard from Anthropic, is undergoing a significant update with its spec finalizing on July 28. This change eliminates the `initialize` handshake and the `Mcp-Session-Id` header, moving towards a stateless connection model for AI applications.\n\nPreviously, client and server connections were tied to specific instances, requiring sticky routes and shared state management. The new approach allows requests to route on an `Mcp-Method` header, landing on any instance behind a load balancer, making MCP function like a standard web service.\n\nThis shift removes the 'infrastructure tax' of managing protocol state, which was deemed unnecessary debt. Ironically, some statefulness is being pushed back to the AI model itself, which will now store the chain of calls, a superior approach as the model drives the operation.\n\nSeveral features are being deprecated or replaced. The Tasks API is superseded by the Tasks extension, while Roots, Sampling, and Logging (now using stderr or OpenTelemetry) have a 12-month runway. OAuth 2.1 is also becoming mandatory for authentication.\n\nSDKs are also being updated, with Python renaming FastMCP to MCPServer, TypeScript going ESM-only, and Go and C# previews appearing. Developers can use the newly released `mcp-spec-audit` tool to scan repositories for migration issues and generate a checklist.\n\nThe `mcp-spec-audit` tool can be run in the CLI or adopted as a Claude Code skill. Using the Claude Code skill offers the fastest route, as Claude can follow up on the output and offer to complete the necessary fixes, streamlining the migration process.\n\n#MCP #AI #Developer #SoftwareDevelopment #Anthropic #TechNews\n\nSource: DEV",
+  "tweet": "MCP is changing how AI apps connect to tools, dropping key session management features to become stateless. The spec finalizes July 28, making servers more like ordinary web services. #MCP #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/temrel/mcp-just-killed-the-handshake-your-server-is-next-47gj",
+  "image": "",
+  "orig_title": "MCP Just Killed the Handshake (Your Server Is Next)",
+  "cluster_urls": [
+   "https://dev.to/temrel/mcp-just-killed-the-handshake-your-server-is-next-47gj"
+  ],
+  "cluster_titles": [
+   "MCP Just Killed the Handshake (Your Server Is Next)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260723-1634-1-mcp-just-killed-the-handshake-making-your-se.png",
+   "20260723-1634-1-mcp-just-killed-the-handshake-making-your-se-d1.png",
+   "20260723-1634-1-mcp-just-killed-the-handshake-making-your-se-d2.png",
+   "20260723-1634-1-mcp-just-killed-the-handshake-making-your-se-d3.png"
+  ]
+ }
+]

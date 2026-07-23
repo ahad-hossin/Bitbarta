@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "autogen_hidden_token_tax_cost_analysis",
+  "headline_marked": "[[AutoGen's hidden token tax]] makes 3-agent chats cost 15x more than expected",
+  "headline": "AutoGen's hidden token tax makes 3-agent chats cost 15x more than expected",
+  "summary": "Microsoft's AutoGen framework can incur 15x higher token costs than expected in multi-agent chats. Its default unbounded context model leads to quadratic token growth, making costs invisible until the bill arrives.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Microsoft's AutoGen, a multi-agent framework, has a default memory model that can surprise teams with its cost shape in production. A 3-agent chat can cost up to 15.5 times more than anticipated due to a hidden token tax.",
+   "By default, every AssistantAgent in AutoGen receives its own UnboundedChatCompletionContext. This context accumulates the full list of messages without any cap or truncation, despite misleading docstrings.",
+   "When an agent takes its turn, all prior messages are added to its already growing context. This leads to a total cost that scales quadratically (O(T²)) with the number of turns, regardless of how many agents are involved.",
+   "For example, a 20-turn conversation can cost 10.5 times more than expected, and a 30-turn conversation can cost 15.5 times more. This quadratic growth is per-agent, making it easy to miss in per-call logs from LLM providers.",
+   "Most observability dashboards show per-call costs, making the cumulative runaway cost invisible until the final bill arrives. The problem stems from the default `UnboundedChatCompletionContext`.",
+   "AutoGen provides two bounded alternatives: `BufferedChatCompletionContext` (limits message count) and `TokenLimitedChatCompletionContext` (limits tokens). These change the cost shape to linear (O(T × buffer_size)), significantly reducing costs.",
+   "The issue can be detected statically by checking for `AssistantAgent` instantiations without a `model_context` argument. Dynamic detection tools like `tokenscope` can track cumulative token costs and block builds if thresholds are exceeded.",
+   "While the default unbounded context is suitable for short tasks, it becomes a cost trap for longer multi-agent conversations. The fix is a simple constructor argument, but developers must be aware of its necessity."
+  ],
+  "caption": "Microsoft's AutoGen framework has a hidden token tax that can make multi-agent chats cost 15 times more than you expect.\n\nMicrosoft's AutoGen, a multi-agent framework, has a default memory model that can surprise teams with its cost shape in production. A 3-agent chat can cost up to 15.5 times more than anticipated due to a hidden token tax.\n\nBy default, every AssistantAgent in AutoGen receives its own UnboundedChatCompletionContext. This context accumulates the full list of messages without any cap or truncation, despite misleading docstrings.\n\nWhen an agent takes its turn, all prior messages are added to its already growing context. This leads to a total cost that scales quadratically (O(T²)) with the number of turns, regardless of how many agents are involved.\n\nFor example, a 20-turn conversation can cost 10.5 times more than expected, and a 30-turn conversation can cost 15.5 times more. This quadratic growth is per-agent, making it easy to miss in per-call logs from LLM providers.\n\nMost observability dashboards show per-call costs, making the cumulative runaway cost invisible until the final bill arrives. The problem stems from the default `UnboundedChatCompletionContext`.\n\nAutoGen provides two bounded alternatives: `BufferedChatCompletionContext` (limits message count) and `TokenLimitedChatCompletionContext` (limits tokens). These change the cost shape to linear (O(T × buffer_size)), significantly reducing costs.\n\nThe issue can be detected statically by checking for `AssistantAgent` instantiations without a `model_context` argument. Dynamic detection tools like `tokenscope` can track cumulative token costs and block builds if thresholds are exceeded.\n\nWhile the default unbounded context is suitable for short tasks, it becomes a cost trap for longer multi-agent conversations. The fix is a simple constructor argument, but developers must be aware of its necessity.\n\n#AutoGen #AI #LLM #TokenCosts #Developer #Tech\n\nSource: DEV",
+  "tweet": "Microsoft's AutoGen framework can secretly inflate your LLM token costs by up to 15x in multi-agent chats. Learn why its default memory model leads to quadratic cost growth and how to fix it before your bill explodes. #AutoGen #AI #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "microsoft.com",
+  "source": "DEV",
+  "url": "https://dev.to/wartzarbee/autogens-hidden-token-tax-why-a-3-agent-chat-costs-15x-what-you-expect-21o5",
+  "image": "",
+  "orig_title": "AutoGen's hidden token tax: why a 3-agent chat costs 15 what you expect",
+  "cluster_urls": [
+   "https://dev.to/wartzarbee/autogens-hidden-token-tax-why-a-3-agent-chat-costs-15x-what-you-expect-21o5"
+  ],
+  "cluster_titles": [
+   "AutoGen's hidden token tax: why a 3-agent chat costs 15 what you expect"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260723-0707-0-autogen-s-hidden-token-tax-makes-3-agent-cha.png",
+   "20260723-0707-0-autogen-s-hidden-token-tax-makes-3-agent-cha-d1.png",
+   "20260723-0707-0-autogen-s-hidden-token-tax-makes-3-agent-cha-d2.png",
+   "20260723-0707-0-autogen-s-hidden-token-tax-makes-3-agent-cha-d3.png"
+  ]
+ },
+ {
+  "topic": "tesla_q2_financials_profit_weakness",
+  "headline_marked": "[[Tesla's Q2 revenue up 26% to $28.2B]], but profit margin drops to 1.4% amid soaring expenses",
+  "headline": "Tesla's Q2 revenue up 26% to $28.2B, but profit margin drops to 1.4% amid soaring expenses",
+  "summary": "Despite a significant increase in total revenue, Tesla's operating expenses and capital expenditures surged, leading to a 5% drop in net profit and negative free cash flow.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Tesla reported its Q2 financial statement, showing a 25% year-over-year sales growth. However, the company's once-strong double-digit profit margin has fallen significantly to just 1.4 percent.",
+   "The electric vehicle business generated $20.5 billion, a 23% increase, with only $146 million from regulatory credits. The energy and storage sector grew 13% to $3.1 billion, while services doubled to $4.6 billion, partly due to the FSD subscription.",
+   "Overall, total revenues for the quarter climbed 26% to $28.2 billion. This growth was offset by a substantial increase in the cost of doing business.",
+   "Operating expenses rose 47% to $4.4 billion, causing operating income to fall 57% year-over-year to $398 million. The company remained profitable with $1.1 billion for the quarter, but this was 5% less than the previous year.",
+   "Capital expenditures surged by 142% to $5.8 billion, resulting in a negative free cash flow of $1.1 billion. This represents an 848% drop compared to the same period last year.",
+   "Despite significant car revenues, Tesla's heavy spending is primarily directed towards AI, humanoid robots, and robotaxi rollouts. This is rather than developing new car lines or the long-promised solar roof tiles.",
+   "Tesla anticipates starting production for its humanoid robots later this year. Robotaxi deployments are \"in line in seven major metros,\" though some require regulatory approval from states like California."
+  ],
+  "caption": "Tesla's Q2 revenue jumped 26% to $28.2 billion, but profits fell 5% and free cash flow turned negative $1.1 billion. The company's profit margin dropped to 1.4%.\n\nTesla reported its Q2 financial statement, showing a 25% year-over-year sales growth. However, the company's once-strong double-digit profit margin has fallen significantly to just 1.4 percent.\n\nThe electric vehicle business generated $20.5 billion, a 23% increase, with only $146 million from regulatory credits. The energy and storage sector grew 13% to $3.1 billion, while services doubled to $4.6 billion, partly due to the FSD subscription.\n\nOverall, total revenues for the quarter climbed 26% to $28.2 billion. This growth was offset by a substantial increase in the cost of doing business.\n\nOperating expenses rose 47% to $4.4 billion, causing operating income to fall 57% year-over-year to $398 million. The company remained profitable with $1.1 billion for the quarter, but this was 5% less than the previous year.\n\nCapital expenditures surged by 142% to $5.8 billion, resulting in a negative free cash flow of $1.1 billion. This represents an 848% drop compared to the same period last year.\n\nDespite significant car revenues, Tesla's heavy spending is primarily directed towards AI, humanoid robots, and robotaxi rollouts. This is rather than developing new car lines or the long-promised solar roof tiles.\n\nTesla anticipates starting production for its humanoid robots later this year. Robotaxi deployments are \"in line in seven major metros,\" though some require regulatory approval from states like California.\n\n#Tesla #Financials #Q2Earnings #TechNews #EV #BigTech\n\nSource: Ars Technica, TechCrunch, The Verge",
+  "tweet": "Tesla's Q2 revenue jumped 26% to $28.2 billion, but profits fell 5% and free cash flow turned negative $1.1 billion. The company's profit margin dropped to 1.4% amid heavy spending on AI and robotaxis. #Tesla #Q2Earnings #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tesla.com",
+  "source": "Ars Technica, TechCrunch, The Verge",
+  "url": "https://arstechnica.com/cars/2026/07/teslas-revenues-are-up-but-profits-squeezed-as-musk-spends-on-ai/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2018/08/tesla-pondering.jpg",
+  "orig_title": "Sales were up at Tesla but so were costs and spending",
+  "cluster_urls": [
+   "https://arstechnica.com/cars/2026/07/teslas-revenues-are-up-but-profits-squeezed-as-musk-spends-on-ai/",
+   "https://techcrunch.com/2026/07/22/tesla-spending-skyrockets-as-cybercab-semi-megapack-production-timeline-slips/",
+   "https://www.theverge.com/transportation/969311/tesla-q2-2026-earnings-revenue-profit-sales"
+  ],
+  "cluster_titles": [
+   "Sales were up at Tesla but so were costs and spending",
+   "Tesla spending skyrockets as Cybercab, Semi, Megapack production timeline slips",
+   "Tesla’s revenues are bouncing back, but profits are still weak"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260723-0707-1-tesla-s-q2-revenue-up-26-to-28-2b-but-profit.png",
+   "20260723-0707-1-tesla-s-q2-revenue-up-26-to-28-2b-but-profit-d1.png",
+   "20260723-0707-1-tesla-s-q2-revenue-up-26-to-28-2b-but-profit-d2.png"
+  ]
+ }
+]

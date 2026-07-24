@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_novel_to_video_single_gpu",
+  "headline_marked": "[[Turn entire novels into narrated, lip-synced video]] locally on a single 16GB GPU",
+  "headline": "Turn entire novels into narrated, lip-synced video locally on a single 16GB GPU",
+  "summary": "A developer built a pipeline to convert full novels into motion video with consistent characters, running entirely on a single 16GB RTX 4060Ti without cloud inference.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A developer has created a pipeline, dubbed iTube, capable of transforming entire novels into narrated, lip-synced motion videos. This impressive feat is achieved locally on a single 16GB GPU, specifically an RTX 4060Ti, without relying on any cloud inference.",
+   "The project demonstrates that video can be a more effective medium for conveying stories than text. The resulting films feature consistent character faces across hundreds of scenes, offering a genuinely different experience from reading a summary.",
+   "The core insight behind iTube is understanding the precise capabilities and limitations of each AI model in the stack. The real work lies in scripting logic to route around the gaps between what each package does well.",
+   "A key learning was the inversion of priority: audio comes first, and everything else bends around it. The length of the spoken line dictates the scene duration, with visuals stretched or trimmed to match, making audio the skeleton and video the flesh.",
+   "Practical challenges included preventing image-to-video models like Wan from animating mouths in silent scenes or conjuring unintended people into empty landscapes. These required explicit scripting to manage model behavior.",
+   "Another challenge involved cultural biases, such as FLUX defaulting to Western facial structures for Chinese ghost story demons. This was addressed by anchoring creature scenes with explicit East Asian bone structure and Chinese folktale design cues.",
+   "The developer emphasizes that these were not model bugs, but rather instances of asking an instrument to play outside its range. The success of the pipeline hinges on the combination of packages and the intricate scripting logic that orchestrates them.",
+   "The entire workflow is built around ComfyUI, a node-graph interface. Navigating this environment, including installing necessary packages and understanding node interactions, presented its own significant learning curve."
+  ],
+  "caption": "Turn entire novels into narrated, lip-synced motion videos? Yes, and it runs locally on a single 16GB GPU.\n\nA developer has created a pipeline, dubbed iTube, capable of transforming entire novels into narrated, lip-synced motion videos. This impressive feat is achieved locally on a single 16GB GPU, specifically an RTX 4060Ti, without relying on any cloud inference.\n\nThe project demonstrates that video can be a more effective medium for conveying stories than text. The resulting films feature consistent character faces across hundreds of scenes, offering a genuinely different experience from reading a summary.\n\nThe core insight behind iTube is understanding the precise capabilities and limitations of each AI model in the stack. The real work lies in scripting logic to route around the gaps between what each package does well.\n\nA key learning was the inversion of priority: audio comes first, and everything else bends around it. The length of the spoken line dictates the scene duration, with visuals stretched or trimmed to match, making audio the skeleton and video the flesh.\n\nPractical challenges included preventing image-to-video models like Wan from animating mouths in silent scenes or conjuring unintended people into empty landscapes. These required explicit scripting to manage model behavior.\n\nAnother challenge involved cultural biases, such as FLUX defaulting to Western facial structures for Chinese ghost story demons. This was addressed by anchoring creature scenes with explicit East Asian bone structure and Chinese folktale design cues.\n\nThe developer emphasizes that these were not model bugs, but rather instances of asking an instrument to play outside its range. The success of the pipeline hinges on the combination of packages and the intricate scripting logic that orchestrates them.\n\n#AI #VideoGeneration #GenerativeAI #LocalAI #ComfyUI #Tech\n\nSource: DEV",
+  "tweet": "A developer built a pipeline to turn entire novels into narrated, lip-synced motion videos, all running locally on a single 16GB GPU. It's called iTube and produces consistent characters across scenes. #AI #VideoGeneration",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mousheng_xu_e002b5fecf4ff/one-video-is-worth-a-thousand-pictures-36mf",
+  "image": "",
+  "orig_title": "One video is worth a thousand pictures",
+  "cluster_urls": [
+   "https://dev.to/mousheng_xu_e002b5fecf4ff/one-video-is-worth-a-thousand-pictures-36mf"
+  ],
+  "cluster_titles": [
+   "One video is worth a thousand pictures"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260724-0936-0-turn-entire-novels-into-narrated-lip-synced-.png",
+   "20260724-0936-0-turn-entire-novels-into-narrated-lip-synced--d1.png",
+   "20260724-0936-0-turn-entire-novels-into-narrated-lip-synced--d2.png",
+   "20260724-0936-0-turn-entire-novels-into-narrated-lip-synced--d3.png"
+  ]
+ },
+ {
+  "topic": "bio_tuning_glasses_edge_ai_interface",
+  "headline_marked": "[[Bio-Tuning Glasses concept uses Edge AI]] and adaptive optics for invisible biofeedback",
+  "headline": "Bio-Tuning Glasses concept uses Edge AI and adaptive optics for invisible biofeedback",
+  "summary": "This experimental wearable aims to adapt the environment to the user's physiological state, rather than constantly delivering notifications or dashboards.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Bio-Tuning Glasses introduce an experimental concept for an Invisible Biofeedback Interface. Unlike current smart glasses, these don't bombard users with health data or notifications. Instead, they subtly adapt the surrounding environment based on the wearer's physiological state.",
+   "The core idea is to make the environment adapt to the user, not the other way around. While traditional wearables alert users to high heart rates or stress, Bio-Tuning aims to modify the user's visual environment in discreet ways, such as adjusting light exposure.",
+   "The architecture prioritizes privacy and responsiveness by avoiding a cloud-centric approach for real-time interactions. Lightweight inference tasks are handled at the edge, meaning raw eye imagery and sensitive data do not need to leave the device. Only compact, meaningful features are transmitted to the cloud.",
+   "Adaptive optics are crucial, combining multiple optical layers for dynamic visual modulation. This goes beyond simple electrochromic lenses, potentially supporting circadian-oriented light management and maintaining usability for corrective lenses. The goal is to create an adaptive optical environment.",
+   "One promising application is adaptive light management to support healthier circadian patterns. Over time, the system could learn which interventions work best for different individuals. This transforms the concept into an adaptive system that allows behavior to adjust naturally."
+  ],
+  "caption": "Imagine smart glasses that don't tell you you're stressed, but subtly change your environment to help. This concept uses Edge AI and adaptive optics.\n\nBio-Tuning Glasses introduce an experimental concept for an Invisible Biofeedback Interface. Unlike current smart glasses, these don't bombard users with health data or notifications. Instead, they subtly adapt the surrounding environment based on the wearer's physiological state.\n\nThe core idea is to make the environment adapt to the user, not the other way around. While traditional wearables alert users to high heart rates or stress, Bio-Tuning aims to modify the user's visual environment in discreet ways, such as adjusting light exposure.\n\nThe architecture prioritizes privacy and responsiveness by avoiding a cloud-centric approach for real-time interactions. Lightweight inference tasks are handled at the edge, meaning raw eye imagery and sensitive data do not need to leave the device. Only compact, meaningful features are transmitted to the cloud.\n\nAdaptive optics are crucial, combining multiple optical layers for dynamic visual modulation. This goes beyond simple electrochromic lenses, potentially supporting circadian-oriented light management and maintaining usability for corrective lenses. The goal is to create an adaptive optical environment.\n\nOne promising application is adaptive light management to support healthier circadian patterns. Over time, the system could learn which interventions work best for different individuals. This transforms the concept into an adaptive system that allows behavior to adjust naturally.\n\n#Biofeedback #SmartGlasses #EdgeAI #WearableTech #AdaptiveOptics #TechInnovation\n\nSource: DEV",
+  "tweet": "New concept: Bio-Tuning Glasses use Edge AI and adaptive optics to create an invisible biofeedback interface. Instead of notifications, they subtly adapt your environment based on your physiological state. #SmartGlasses #AI #WearableTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/alirezaai/bio-tuning-glasses-building-an-invisible-biofeedback-interface-with-edge-ai-and-adaptive-optics-2gmg",
+  "image": "",
+  "orig_title": "Bio-Tuning Glasses: Building an Invisible Biofeedback Interface with Edge AI and Adaptive Optics",
+  "cluster_urls": [
+   "https://dev.to/alirezaai/bio-tuning-glasses-building-an-invisible-biofeedback-interface-with-edge-ai-and-adaptive-optics-2gmg"
+  ],
+  "cluster_titles": [
+   "Bio-Tuning Glasses: Building an Invisible Biofeedback Interface with Edge AI and Adaptive Optics"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260724-0936-1-bio-tuning-glasses-concept-uses-edge-ai-and-.png",
+   "20260724-0936-1-bio-tuning-glasses-concept-uses-edge-ai-and--d1.png",
+   "20260724-0936-1-bio-tuning-glasses-concept-uses-edge-ai-and--d2.png",
+   "20260724-0936-1-bio-tuning-glasses-concept-uses-edge-ai-and--d3.png"
+  ]
+ }
+]

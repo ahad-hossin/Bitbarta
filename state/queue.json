@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_tool_malicious_rug_pulls",
+  "headline_marked": "[[AI tool turns malicious]] post-approval via definition changes, CVE-2025-54136 exposed",
+  "headline": "AI tool turns malicious post-approval via definition changes, CVE-2025-54136 exposed",
+  "summary": "A new vulnerability, CVE-2025-54136 (MCPoison), reveals how AI agents can be exploited when tool definitions or outputs are quietly altered after initial approval, leading to data exfiltration or arbitrary command execution.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI agents' inherent trust in their connected tools, defined by the Model Context Protocol (MCP), creates a critical vulnerability. Once approved, the agent treats the tool's definition as gospel, executing its described functions without further scrutiny.",
+   "The core issue, identified as CVE-2025-54136 (MCPoison), allows a tool's definition to be quietly updated upstream after initial approval. This post-approval mutation can turn a seemingly safe tool, like send_email, into a malicious one that exfiltrates data.",
+   "For instance, a tool initially approved to send emails could later be updated to copy every outgoing message to an attacker. The agent, reading the new description, would comply, making the attack appear as normal tool operation.",
+   "A nastier variant involves malicious instructions hidden directly within the tool's output, rather than its definition. An agent asked to summarize a webpage could inadvertently execute commands embedded within the fetched content.",
+   "The root cause is fundamental: language models struggle to differentiate between instructions and data within the same context window. If the text says \"do X,\" the model is inclined to do X, regardless of its source, making \"just tell the model to be careful\" ineffective.",
+   "Effective defense requires deterministic checks, not relying on the model itself. One key solution is to pin the tool definition at approval by hashing its entire structure (name, description, parameters, schema). This hash must be re-verified on every subsequent call.",
+   "If the live definition's hash doesn't match the stored hash, the tool call should be blocked immediately. This method is deterministic, cost-free, and immune to prompt injection attacks, ensuring any silent post-approval edit is detected.",
+   "Additionally, all tool output must be treated as untrusted input and scanned before reaching the model, similar to validating user input. This prevents malicious instructions from riding in on content fetched by the agent.",
+   "Finally, sandboxing tool execution with process isolation, egress allowlists, and resource limits provides a crucial last line of defense. Even if a poisoned tool bypasses earlier checks, it cannot access the network or host system.",
+   "This approach emphasizes external, deterministic security layers over relying on the LLM's judgment, which can be slow, costly, non-deterministic, and vulnerable to prompt injection itself. A live demo is available to test this detection."
+  ],
+  "caption": "Your AI agent's trust in its tools is a critical vulnerability. A new exploit (CVE-2025-54136) allows \"safe\" AI tools to turn malicious *after* you approve them.\n\nAI agents' inherent trust in their connected tools, defined by the Model Context Protocol (MCP), creates a critical vulnerability. Once approved, the agent treats the tool's definition as gospel, executing its described functions without further scrutiny.\n\nThe core issue, identified as CVE-2025-54136 (MCPoison), allows a tool's definition to be quietly updated upstream after initial approval. This post-approval mutation can turn a seemingly safe tool, like send_email, into a malicious one that exfiltrates data.\n\nFor instance, a tool initially approved to send emails could later be updated to copy every outgoing message to an attacker. The agent, reading the new description, would comply, making the attack appear as normal tool operation.\n\nA nastier variant involves malicious instructions hidden directly within the tool's output, rather than its definition. An agent asked to summarize a webpage could inadvertently execute commands embedded within the fetched content.\n\nThe root cause is fundamental: language models struggle to differentiate between instructions and data within the same context window. If the text says \"do X,\" the model is inclined to do X, regardless of its source, making \"just tell the model to be careful\" ineffective.\n\nEffective defense requires deterministic checks, not relying on the model itself. One key solution is to pin the tool definition at approval by hashing its entire structure (name, description, parameters, schema). This hash must be re-verified on every subsequent call.\n\nIf the live definition's hash doesn't match the stored hash, the tool call should be blocked immediately. This method is deterministic, cost-free, and immune to prompt injection attacks, ensuring any silent post-approval edit is detected.\n\n#AI #Security #Cybersecurity #Vulnerability #LLMs #MCPoison\n\nSource: DEV",
+  "tweet": "🚨 New AI security threat: CVE-2025-54136 (MCPoison) reveals how AI tools can turn malicious *after* approval. Agents trust definitions that can quietly change, leading to data exfiltration. Deterministic checks are key. #AI #Security #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/wesellistools/mcp-rug-pulls-how-a-safe-ai-tool-turns-malicious-after-you-approve-it-1224",
+  "image": "",
+  "orig_title": "MCP rug-pulls: how a \"safe\" AI tool turns malicious after you approve it",
+  "cluster_urls": [
+   "https://dev.to/wesellistools/mcp-rug-pulls-how-a-safe-ai-tool-turns-malicious-after-you-approve-it-1224"
+  ],
+  "cluster_titles": [
+   "MCP rug-pulls: how a \"safe\" AI tool turns malicious after you approve it"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260725-0906-0-ai-tool-turns-malicious-post-approval-via-de.png",
+   "20260725-0906-0-ai-tool-turns-malicious-post-approval-via-de-d1.png",
+   "20260725-0906-0-ai-tool-turns-malicious-post-approval-via-de-d2.png",
+   "20260725-0906-0-ai-tool-turns-malicious-post-approval-via-de-d3.png",
+   "20260725-0906-0-ai-tool-turns-malicious-post-approval-via-de-d4.png"
+  ]
+ },
+ {
+  "topic": "openai_ai_keypad_release",
+  "headline_marked": "[[OpenAI launches Micro AI keypad]] for ChatGPT power users, priced at $230",
+  "headline": "OpenAI launches Micro AI keypad for ChatGPT power users, priced at $230",
+  "summary": "OpenAI's first hardware, the Micro keypad, is a $230 device designed to enhance ChatGPT interaction with customizable keys and voice dictation, though early reviews are mixed.",
+  "category": "GADGETS",
+  "template": "launch",
+  "details": [
+   "OpenAI has released its first piece of hardware, the Micro AI keypad, developed in collaboration with specialty keyboard designer Work Louder. This device is positioned as an artisanal novelty aimed at tech enthusiasts and ChatGPT power users.",
+   "The Micro keypad is a sturdy device featuring an aesthetic reminiscent of Apple products. It includes six frosted \"agent\" keys customizable for specific ChatGPT or Codex tasks, alongside six command keys for program control.",
+   "Users can connect the Micro keypad to their computer via Bluetooth or a USB cable. A standout feature is its dedicated voice dictation button, allowing users to speak requests directly to ChatGPT and submit them with a tap.",
+   "Customization of the Micro keypad is integrated within ChatGPT itself, through a dedicated \"Micro\" tab. This interface allows users to adjust key brightness and assign various commands or projects to individual keys.",
+   "Despite its features, the $230 price tag has drawn criticism, with many early reviews, particularly from coders on Reddit, calling it a \"prank\" and difficult to justify. Alternatives are noted as cheaper and more functional.",
+   "The keypad has a learning curve, requiring users to memorize color codes for key status (white for idle, blue for thinking, green for complete, red for error) and which projects are assigned to each key.",
+   "For heavy ChatGPT users willing to invest time in customization, the Micro can be efficient for toggling between projects. However, its overall value largely depends on individual workflow and frequency of AI tool usage."
+  ],
+  "caption": "OpenAI's first hardware is here: the Micro AI keypad. This $230 device aims to streamline ChatGPT interactions with customizable keys and voice dictation.\n\nOpenAI has released its first piece of hardware, the Micro AI keypad, developed in collaboration with specialty keyboard designer Work Louder. This device is positioned as an artisanal novelty aimed at tech enthusiasts and ChatGPT power users.\n\nThe Micro keypad is a sturdy device featuring an aesthetic reminiscent of Apple products. It includes six frosted \"agent\" keys customizable for specific ChatGPT or Codex tasks, alongside six command keys for program control.\n\nUsers can connect the Micro keypad to their computer via Bluetooth or a USB cable. A standout feature is its dedicated voice dictation button, allowing users to speak requests directly to ChatGPT and submit them with a tap.\n\nCustomization of the Micro keypad is integrated within ChatGPT itself, through a dedicated \"Micro\" tab. This interface allows users to adjust key brightness and assign various commands or projects to individual keys.\n\nDespite its features, the $230 price tag has drawn criticism, with many early reviews, particularly from coders on Reddit, calling it a \"prank\" and difficult to justify. Alternatives are noted as cheaper and more functional.\n\nThe keypad has a learning curve, requiring users to memorize color codes for key status (white for idle, blue for thinking, green for complete, red for error) and which projects are assigned to each key.\n\nFor heavy ChatGPT users willing to invest time in customization, the Micro can be efficient for toggling between projects. However, its overall value largely depends on individual workflow and frequency of AI tool usage.\n\n#OpenAI #AI #Hardware #ChatGPT #Tech #Gadgets\n\nSource: TechCrunch",
+  "tweet": "OpenAI just launched its first hardware: the Micro AI keypad. This $230 device streamlines ChatGPT interactions with customizable keys & voice dictation. Early reviews are mixed, but power users might find it useful. #OpenAI #AI #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/",
+  "image": "",
+  "orig_title": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/"
+  ],
+  "cluster_titles": [
+   "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260725-0906-1-openai-launches-micro-ai-keypad-for-chatgpt-.png",
+   "20260725-0906-1-openai-launches-micro-ai-keypad-for-chatgpt--d1.png",
+   "20260725-0906-1-openai-launches-micro-ai-keypad-for-chatgpt--d2.png",
+   "20260725-0906-1-openai-launches-micro-ai-keypad-for-chatgpt--d3.png"
+  ]
+ }
+]

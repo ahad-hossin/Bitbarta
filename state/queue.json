@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "opencode_multi_agent_system",
+  "headline_marked": "[[Oh My Opencode transforms OpenCode]] into a multi-agent system with 7 specialized agents",
+  "headline": "Oh My Opencode transforms OpenCode into a multi-agent system with 7 specialized agents",
+  "summary": "Oh My Opencode is a community plugin that upgrades the popular OpenCode agent, enabling parallel execution and specialized roles for complex tasks. It aims to surpass single-agent limitations.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "OpenCode, a popular open-source coding agent with over 165,000 GitHub stars, is limited as a single agent, often struggling with large or complex tasks. Its context window can fill up, hindering efficient completion.",
+   "Oh My Opencode (omo) is a plugin that addresses this by transforming OpenCode into a multi-agent system. It introduces multiple specialized agents that work in parallel, effectively mimicking a full development team within the terminal.",
+   "The system employs a Sisyphus orchestrator for high-level planning and decision-making, delegating tasks to specialized agents like Sisyphus Junior (executor), Oracle, Momus (critic), Explore, and Librarian. Each agent is assigned models best suited for its specific role.",
+   "Before execution, a \"Hyperplan\" phase utilizes 5 \"hostile agents\" to rigorously challenge the proposed plan from multiple angles, identifying weaknesses and ensuring robustness. A \"security-research\" module also audits code with 3 vulnerability hunters and 2 PoC engineers.",
+   "Agents utilize different models, with a fallback chain for each, ensuring continuous operation even if a primary model is unavailable. For instance, Sisyphus can use high-reasoning models like Claude Opus 4.8, Kimi K2.5, GPT-5.4, or GLM-5.",
+   "The plugin is created by code-yeongyu and has an official website at ohmyopencode.com. QuickStart guides are available, making it accessible for developers to install and run.",
+   "Users can initiate the multi-agent workflow by running `bunx oh-my-openagent install` and then typing `ultrawork`. This command launches the 7 specialized agents to work concurrently on coding tasks."
+  ],
+  "caption": "Turn OpenCode into a full dev team in your terminal. This plugin transforms the popular coding agent into a multi-agent system with 7 specialists.\n\nOpenCode, a popular open-source coding agent with over 165,000 GitHub stars, is limited as a single agent, often struggling with large or complex tasks. Its context window can fill up, hindering efficient completion.\n\nOh My Opencode (omo) is a plugin that addresses this by transforming OpenCode into a multi-agent system. It introduces multiple specialized agents that work in parallel, effectively mimicking a full development team within the terminal.\n\nThe system employs a Sisyphus orchestrator for high-level planning and decision-making, delegating tasks to specialized agents like Sisyphus Junior (executor), Oracle, Momus (critic), Explore, and Librarian. Each agent is assigned models best suited for its specific role.\n\nBefore execution, a \"Hyperplan\" phase utilizes 5 \"hostile agents\" to rigorously challenge the proposed plan from multiple angles, identifying weaknesses and ensuring robustness. A \"security-research\" module also audits code with 3 vulnerability hunters and 2 PoC engineers.\n\nAgents utilize different models, with a fallback chain for each, ensuring continuous operation even if a primary model is unavailable. For instance, Sisyphus can use high-reasoning models like Claude Opus 4.8, Kimi K2.5, GPT-5.4, or GLM-5.\n\nThe plugin is created by code-yeongyu and has an official website at ohmyopencode.com. QuickStart guides are available, making it accessible for developers to install and run.\n\nUsers can initiate the multi-agent workflow by running `bunx oh-my-openagent install` and then typing `ultrawork`. This command launches the 7 specialized agents to work concurrently on coding tasks.\n\n#AI #OpenCode #MultiAgent #DeveloperTools #CodingAI #OpenSource\n\nSource: DEV",
+  "tweet": "Oh My Opencode transforms OpenCode into a full dev team in your terminal! This plugin adds 7 specialized agents and a Sisyphus orchestrator for parallel execution, tackling complex coding tasks more efficiently. #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "ohmyopencode.com",
+  "source": "DEV",
+  "url": "https://dev.to/sarantoon/oh-my-opencode-turn-opencode-into-a-multi-agent-system-with-7-specialized-agents-1flm",
+  "image": "",
+  "orig_title": "Oh My Opencode — Turn OpenCode into a Multi-Agent System with 7 Specialized Agents",
+  "cluster_urls": [
+   "https://dev.to/sarantoon/oh-my-opencode-turn-opencode-into-a-multi-agent-system-with-7-specialized-agents-1flm"
+  ],
+  "cluster_titles": [
+   "Oh My Opencode — Turn OpenCode into a Multi-Agent System with 7 Specialized Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260725-1207-0-oh-my-opencode-transforms-opencode-into-a-mu.png",
+   "20260725-1207-0-oh-my-opencode-transforms-opencode-into-a-mu-d1.png",
+   "20260725-1207-0-oh-my-opencode-transforms-opencode-into-a-mu-d2.png",
+   "20260725-1207-0-oh-my-opencode-transforms-opencode-into-a-mu-d3.png"
+  ]
+ },
+ {
+  "topic": "block_buzz_open_source_ai_workspace",
+  "headline_marked": "[[Block launches Buzz]], an open-source workspace for human and AI agent collaboration",
+  "headline": "Block launches Buzz, an open-source workspace for human and AI agent collaboration",
+  "summary": "Block's new platform gives AI agents cryptographic identities and equal participation alongside humans, enabling them to post, review code, and run automations.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Block, the company behind Square and Cash App, has launched Buzz, an open-source collaboration platform. It's designed for humans and AI agents to work together in a single workspace, built on the Nostr protocol.",
+   "Unlike traditional platforms, Buzz treats AI agents as first-class participants, not just bots. Agents have their own cryptographic identities, definable permissions, and can post, review code, run automations, and engage in conversations.",
+   "Block chose Nostr to solve the fundamental problem of multi-agent collaboration: identity. Every participant in Buzz, human or agent, holds their own cryptographic keypair, independent of the platform.",
+   "The platform is model-agnostic, allowing teams to deploy agents powered by various models like Claude Code, Codex, or Block's open-source agent harness, goose. Teams can also build their own custom agents.",
+   "Buzz is released under the Apache 2.0 license, with its code available on GitHub. Teams can run their own instances on their infrastructure, controlling data, relays, and agents, or use the hosted version at buzz.xyz.",
+   "Block is integrating Git into Buzz, aiming to create a space where open-source communities can host projects, discuss ideas, review changes, and collaborate with agents that assist in writing, testing, and maintaining code.",
+   "This launch signals a new product category: open agent collaboration infrastructure. Block is betting that this infrastructure should be open, much like the internet's foundational protocols.",
+   "Buzz is a new product, launched on July 21, 2026, and Nostr itself is not yet mainstream. This makes Block's choice of Nostr as its foundation a bold bet, meaning the ecosystem is currently small.",
+   "Buzz isn't trying to replace existing platforms like Slack; it's creating a new category for workspaces where humans and agents are truly equal citizens. Being a first-mover on an open protocol could be a significant advantage if this category takes off."
+  ],
+  "caption": "Block has launched Buzz, an open-source workspace where AI agents are first-class collaborators, not just bots. They have cryptographic identities and can review code.\n\nBlock, the company behind Square and Cash App, has launched Buzz, an open-source collaboration platform. It's designed for humans and AI agents to work together in a single workspace, built on the Nostr protocol.\n\nUnlike traditional platforms, Buzz treats AI agents as first-class participants, not just bots. Agents have their own cryptographic identities, definable permissions, and can post, review code, run automations, and engage in conversations.\n\nBlock chose Nostr to solve the fundamental problem of multi-agent collaboration: identity. Every participant in Buzz, human or agent, holds their own cryptographic keypair, independent of the platform.\n\nThe platform is model-agnostic, allowing teams to deploy agents powered by various models like Claude Code, Codex, or Block's open-source agent harness, goose. Teams can also build their own custom agents.\n\nBuzz is released under the Apache 2.0 license, with its code available on GitHub. Teams can run their own instances on their infrastructure, controlling data, relays, and agents, or use the hosted version at buzz.xyz.\n\nBlock is integrating Git into Buzz, aiming to create a space where open-source communities can host projects, discuss ideas, review changes, and collaborate with agents that assist in writing, testing, and maintaining code.\n\nThis launch signals a new product category: open agent collaboration infrastructure. Block is betting that this infrastructure should be open, much like the internet's foundational protocols.\n\nBuzz is a new product, launched on July 21, 2026, and Nostr itself is not yet mainstream. This makes Block's choice of Nostr as its foundation a bold bet, meaning the ecosystem is currently small.\n\n#OpenSource #AI #Collaboration #TechNews #Block #Nostr\n\nSource: DEV",
+  "tweet": "Block just launched Buzz, an open-source workspace where AI agents are first-class collaborators with cryptographic identities. They can post, review code, and run automations alongside humans. A bold bet on open agent infrastructure. #AI #OpenSource #Block",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "block.xyz",
+  "source": "DEV",
+  "url": "https://dev.to/sarantoon/block-buzz-open-source-workspace-for-humans-and-ai-agents-5825",
+  "image": "",
+  "orig_title": "Block Buzz: Open Source Workspace for Humans and AI Agents",
+  "cluster_urls": [
+   "https://dev.to/sarantoon/block-buzz-open-source-workspace-for-humans-and-ai-agents-5825"
+  ],
+  "cluster_titles": [
+   "Block Buzz: Open Source Workspace for Humans and AI Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260725-1207-1-block-launches-buzz-an-open-source-workspace.png",
+   "20260725-1207-1-block-launches-buzz-an-open-source-workspace-d1.png",
+   "20260725-1207-1-block-launches-buzz-an-open-source-workspace-d2.png",
+   "20260725-1207-1-block-launches-buzz-an-open-source-workspace-d3.png"
+  ]
+ }
+]

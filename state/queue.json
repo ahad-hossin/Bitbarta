@@ -1,1 +1,93 @@
-[]
+[
+ {
+  "topic": "google_gemini_flash_models_release",
+  "headline_marked": "[[Google focuses on cheaper Gemini models]], not stronger ones, with up to 65% cost savings",
+  "headline": "Google focuses on cheaper Gemini models, not stronger ones, with up to 65% cost savings",
+  "summary": "Google unveils three new Gemini models prioritizing efficiency and lower costs over raw performance, with Gemini 3.5 Pro still absent.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Google has introduced three new Gemini models, emphasizing cost reduction. The Gemini 3.6 Flash model offers 17% fewer output tokens for the same tasks compared to its predecessor, leading to significantly lower costs per million tokens.",
+   "This cost-saving focus is evident across various benchmarks, with up to 65% savings on DeepSWE, a programming test. Gemini 3.6 Flash is priced at $1.50 per million input tokens and $7.50 per million output tokens, outperforming the older 3.1 Pro on benchmarks.",
+   "The company claims to reduce verbosity without sacrificing quality. On DeepSWE, accuracy improved from 37% to 49%, and on MLE Bench, it rose from 49.7% to 63.9%. The Computer Use function, allowing models to interact with browsers and desktops, is now integrated client-side in the Gemini API.",
+   "However, these gains are measured against previous Gemini versions, not against top competitors. Google acknowledges its models still lag behind the best from other labs, with the stated goal being efficiency, reliability, and cost, rather than reclaiming the top performance spot.",
+   "Gemini 3.5 Flash-Lite targets high-volume, repetitive tasks, offering 350 tokens per second at $0.30 per million input and $2.50 per million output tokens. It surpasses the older 3 Flash on several agentic benchmarks, with its Terminal-Bench 2.1 score jumping from 31% to 54%.",
+   "The third model, 3.5 Flash Cyber, is specialized for software security, powering Google DeepMind's CodeMender agent. Its cost-effectiveness allows CodeMender to make multiple calls for a single report, identifying 55 unique vulnerabilities in Chrome's V8 JavaScript engine, including ten missed by other models.",
+   "Notably, Gemini 3.5 Pro, the anticipated high-end model, remains \"in testing with partners\" and is not yet released. Google simultaneously announced its \"most ambitious pre-training run\" for Gemini 4, suggesting a focus on future developments while managing current expectations."
+  ],
+  "caption": "Google just launched three new Gemini models, but the focus isn't on raw power. They're all about efficiency and cost savings, with one model cutting token output by 17%.\n\nGoogle has introduced three new Gemini models, emphasizing cost reduction. The Gemini 3.6 Flash model offers 17% fewer output tokens for the same tasks compared to its predecessor, leading to significantly lower costs per million tokens.\n\nThis cost-saving focus is evident across various benchmarks, with up to 65% savings on DeepSWE, a programming test. Gemini 3.6 Flash is priced at $1.50 per million input tokens and $7.50 per million output tokens, outperforming the older 3.1 Pro on benchmarks.\n\nThe company claims to reduce verbosity without sacrificing quality. On DeepSWE, accuracy improved from 37% to 49%, and on MLE Bench, it rose from 49.7% to 63.9%. The Computer Use function, allowing models to interact with browsers and desktops, is now integrated client-side in the Gemini API.\n\nHowever, these gains are measured against previous Gemini versions, not against top competitors. Google acknowledges its models still lag behind the best from other labs, with the stated goal being efficiency, reliability, and cost, rather than reclaiming the top performance spot.\n\nGemini 3.5 Flash-Lite targets high-volume, repetitive tasks, offering 350 tokens per second at $0.30 per million input and $2.50 per million output tokens. It surpasses the older 3 Flash on several agentic benchmarks, with its Terminal-Bench 2.1 score jumping from 31% to 54%.\n\nThe third model, 3.5 Flash Cyber, is specialized for software security, powering Google DeepMind's CodeMender agent. Its cost-effectiveness allows CodeMender to make multiple calls for a single report, identifying 55 unique vulnerabilities in Chrome's V8 JavaScript engine, including ten missed by other models.\n\n#GoogleAI #Gemini #AIModels #TechNews #MachineLearning\n\nSource: DEV",
+  "tweet": "Google's new Gemini models prioritize cost-effectiveness over raw power, with up to 65% savings on some tasks. The highly anticipated Gemini 3.5 Pro is still missing. #GoogleAI #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "google.com",
+  "source": "DEV",
+  "url": "https://dev.to/thibault_monteiro/google-mise-sur-des-gemini-moins-chers-pas-plus-forts-3blg",
+  "image": "",
+  "orig_title": "Google mise sur des Gemini moins chers, pas plus forts",
+  "cluster_urls": [
+   "https://dev.to/thibault_monteiro/google-mise-sur-des-gemini-moins-chers-pas-plus-forts-3blg"
+  ],
+  "cluster_titles": [
+   "Google mise sur des Gemini moins chers, pas plus forts"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260725-1227-0-google-focuses-on-cheaper-gemini-models-not-.png",
+   "20260725-1227-0-google-focuses-on-cheaper-gemini-models-not--d1.png",
+   "20260725-1227-0-google-focuses-on-cheaper-gemini-models-not--d2.png",
+   "20260725-1227-0-google-focuses-on-cheaper-gemini-models-not--d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_testing_nist_bug",
+  "headline_marked": "[[A calculator passed 389 of 390 tests]], but NIST still caught a critical bug",
+  "headline": "A calculator passed 389 of 390 tests, but NIST still caught a critical bug",
+  "summary": "Even with extensive testing, a Rust calculator library failed a single comparison against NIST's certified Longley regression dataset, highlighting that deterministic doesn't always mean trustworthy.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI agent was given a calculator to introduce an inspectable point into a probabilistic workflow. While the model interpreted requests and explained results, the calculator handled computations, seemingly a clean division of labor.",
+   "The calculator still passed 389 of the 390 tests in its Rust library harness. The sole failure compared its answer with NIST's certified results for the Longley regression dataset.",
+   "This bothered the developer more than a completely broken build, as deterministic computation was assumed safer than an LLM improvising arithmetic. However, deterministic does not mean trustworthy; a program can return the same wrong answer forever.",
+   "The concept of 'source of truth' felt too comfortable, suggesting that before an AI agent delegates authority to a tool, that authority should be challenged and remain revocable by evidence.",
+   "The calculator is merely a specimen; the larger idea is to place inspectable, replayable instruments inside probabilistic systems. The interesting distinction isn't between model weights and a 'real CPU', as model inference also runs on processors.",
+   "The useful boundary lies between generating an answer and executing a defined operation under a tested contract. Language models can learn genuine arithmetic procedures, but the reliability comes from the execution of defined operations.",
+   "Research on Program-Aided Language Models (PAL) makes a related split: the language model decomposes a natural-language problem, while a runtime like a Python interpreter executes the generated program. The model provides flexible interpretation, and the runtime contributes executable semantics.",
+   "This approach doesn't make the entire agent deterministic or the model unnecessary. The agent can still choose the wrong tool, supply incorrect arguments, misunderstand units, or misread results.",
+   "The promise is smaller: one claim becomes inspectable, replayable, and independently testable. The opposite of probabilistic is not trustworthy, but repeatable.",
+   "Calibration cannot be entirely self-referential; the implementation should not be the sole author of its own expected answers. This is why NIST was chosen, not for government authority, but for its long institutional practice of building shared, independently evaluated references.",
+   "Congress established the National Bureau of Standards in 1901 to strengthen measurement infrastructure, later becoming NIST in 1988. In 1999, their lineage reached statistical software through the Statistical Reference Datasets (StRD) project.",
+   "StRD pairs datasets with certified expected values for specific statistical procedures, including generated and real-world cases of varying difficulty. For linear procedures, NIST carried 500 digits through calculations to avoid floating-point representation errors.",
+   "Longley is a small but numerically challenging linear-regression dataset within this collection. Its certified results provided an expected answer produced outside the code under test, which the implementation could not manufacture itself.",
+   "This qualification matters: StRD aids in evaluating software but does not certify correctness or establish software traceability to NIST. The reference data served as an independent witness for the calculations it covered, not an oracle for the entire program."
+  ],
+  "caption": "A Rust calculator library passed 389 out of 390 tests, yet a single comparison against NIST's certified data exposed a critical flaw.\n\nAn AI agent was given a calculator to introduce an inspectable point into a probabilistic workflow. While the model interpreted requests and explained results, the calculator handled computations, seemingly a clean division of labor.\n\nThe calculator still passed 389 of the 390 tests in its Rust library harness. The sole failure compared its answer with NIST's certified results for the Longley regression dataset.\n\nThis bothered the developer more than a completely broken build, as deterministic computation was assumed safer than an LLM improvising arithmetic. However, deterministic does not mean trustworthy; a program can return the same wrong answer forever.\n\nThe concept of 'source of truth' felt too comfortable, suggesting that before an AI agent delegates authority to a tool, that authority should be challenged and remain revocable by evidence.\n\nThe calculator is merely a specimen; the larger idea is to place inspectable, replayable instruments inside probabilistic systems. The interesting distinction isn't between model weights and a 'real CPU', as model inference also runs on processors.\n\nThe useful boundary lies between generating an answer and executing a defined operation under a tested contract. Language models can learn genuine arithmetic procedures, but the reliability comes from the execution of defined operations.\n\nResearch on Program-Aided Language Models (PAL) makes a related split: the language model decomposes a natural-language problem, while a runtime like a Python interpreter executes the generated program. The model provides flexible interpretation, and the runtime contributes executable semantics.\n\nThis approach doesn't make the entire agent deterministic or the model unnecessary. The agent can still choose the wrong tool, supply incorrect arguments, misunderstand units, or misread results.\n\n#SoftwareTesting #AI #NIST #Debugging #RustLang #TechNews\n\nSource: DEV",
+  "tweet": "A Rust calculator passed 389/390 tests, but NIST's certified data revealed a critical bug. This highlights that deterministic systems aren't always trustworthy, especially when integrating tools with AI agents. #SoftwareTesting #AI #NIST",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/copyleftdev/389-tests-passed-nist-still-caught-the-bug-37jh",
+  "image": "",
+  "orig_title": "389 Tests Passed. NIST Still Caught the Bug.",
+  "cluster_urls": [
+   "https://dev.to/copyleftdev/389-tests-passed-nist-still-caught-the-bug-37jh"
+  ],
+  "cluster_titles": [
+   "389 Tests Passed. NIST Still Caught the Bug."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260725-1227-1-a-calculator-passed-389-of-390-tests-but-nis.png",
+   "20260725-1227-1-a-calculator-passed-389-of-390-tests-but-nis-d1.png",
+   "20260725-1227-1-a-calculator-passed-389-of-390-tests-but-nis-d2.png",
+   "20260725-1227-1-a-calculator-passed-389-of-390-tests-but-nis-d3.png",
+   "20260725-1227-1-a-calculator-passed-389-of-390-tests-but-nis-d4.png",
+   "20260725-1227-1-a-calculator-passed-389-of-390-tests-but-nis-d5.png"
+  ]
+ }
+]

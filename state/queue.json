@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai_open_source_project_developer_community_rejection",
+  "headline_marked": "[[AI-Assisted Development]] is Becoming the Wrong Filter for Open Source",
+  "headline": "AI-Assisted Development is Becoming the Wrong Filter for Open Source",
+  "summary": "Some developer communities are restricting submissions from newer users due to AI influx, questioning the value of AI-assisted code.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "A developer's open-source project, Open Vectorizer, built with substantial AI assistance, faced rejection from developer communities like r/rust, which now requires projects to certify they contain minimal AI-generated content.",
+   "This highlights a growing debate: is AI-generated code inherently low-effort? The author argues that focusing on the AI origin is a poor proxy for quality, as human developers also use tools like IDE autocompletion.",
+   "The project itself uses a novel deterministic algorithm to reconstruct vector boundaries at sub-pixel precision, a significant improvement over traditional methods. This advancement was discovered during the development process, not solely through AI.",
+   "Interestingly, a bug in the project's benchmark suite, which accidentally favored Open Vectorizer and penalized competitors, was discovered by a coding agent. This led to a re-evaluation of the benchmark's accuracy.",
+   "The author proposes shifting the focus from 'AI-generated' to more meaningful questions about a project's quality, such as its architecture, test coverage, and the developer's ability to evaluate and integrate AI-generated components effectively."
+  ],
+  "caption": "AI-assisted code is facing scrutiny in open-source communities. Is 'AI-generated' the wrong filter?\n\nA developer's open-source project, Open Vectorizer, built with substantial AI assistance, faced rejection from developer communities like r/rust, which now requires projects to certify they contain minimal AI-generated content.\n\nThis highlights a growing debate: is AI-generated code inherently low-effort? The author argues that focusing on the AI origin is a poor proxy for quality, as human developers also use tools like IDE autocompletion.\n\nThe project itself uses a novel deterministic algorithm to reconstruct vector boundaries at sub-pixel precision, a significant improvement over traditional methods. This advancement was discovered during the development process, not solely through AI.\n\nInterestingly, a bug in the project's benchmark suite, which accidentally favored Open Vectorizer and penalized competitors, was discovered by a coding agent. This led to a re-evaluation of the benchmark's accuracy.\n\nThe author proposes shifting the focus from 'AI-generated' to more meaningful questions about a project's quality, such as its architecture, test coverage, and the developer's ability to evaluate and integrate AI-generated components effectively.\n\n#AI #OpenSource #SoftwareDevelopment #Rust #Coding\n\nSource: DEV",
+  "tweet": "AI-assisted code is facing scrutiny in open-source communities. Is 'AI-generated' the wrong filter? Some communities are restricting submissions, questioning the value of AI-assisted code. #AI #OpenSource #SoftwareDevelopment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/madsendev/i-built-something-good-with-ai-now-some-developer-communities-dont-want-to-see-it-20mo",
+  "image": "",
+  "orig_title": "I Built Something Good With AI. Now Some Developer Communities Don't Want to See It.",
+  "cluster_urls": [
+   "https://dev.to/madsendev/i-built-something-good-with-ai-now-some-developer-communities-dont-want-to-see-it-20mo"
+  ],
+  "cluster_titles": [
+   "I Built Something Good With AI. Now Some Developer Communities Don't Want to See It."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260727-0306-0-ai-assisted-development-is-becoming-the-wron.png",
+   "20260727-0306-0-ai-assisted-development-is-becoming-the-wron-d1.png",
+   "20260727-0306-0-ai-assisted-development-is-becoming-the-wron-d2.png"
+  ]
+ },
+ {
+  "topic": "claude_opus_5_sdk_gap_closure",
+  "headline_marked": "[[Claude Opus 5]] fixes older SDKs, misses newest API changes",
+  "headline": "Claude Opus 5 fixes older SDKs, misses newest API changes",
+  "summary": "A new benchmark shows Claude Opus 5 excels at older SDK versions but struggles with the latest API updates from libraries like Prisma and Next.js.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new benchmark tool, SDKProof, tests how well AI coding agents handle the current API of an SDK, focusing on recent changes that models often get wrong.",
+   "Claude Opus 5, released today, achieved perfect scores (100/100) for Vercel AI SDK 7 and Zod 4, indicating it has successfully adapted to their latest versions.",
+   "However, the model still struggles with more recent breaking changes in libraries like Prisma 7 and Next 16. Prisma 7, for instance, requires a new driver adapter that Opus 5's generated code omits, and it uses a removed datasourceUrl.",
+   "Next 16 also presents challenges, with Opus 5 calling revalidateTag() with a single argument when it now requires two. These issues highlight that the model's accuracy is tied to the recency of an SDK's last major update.",
+   "The benchmark's creator also noted and fixed a bug in their own harness, which was incorrectly failing a Prisma task. This correction led to Prisma's score being adjusted from 80 to 87.",
+   "The SDKProof tool is available for developers to test their own SDKs, with the full board and tasks accessible at sdkproof.dev."
+  ],
+  "caption": "Claude Opus 5 is here, and it's great at coding with older SDKs. But it's still missing the mark on the newest API changes.\n\nA new benchmark tool, SDKProof, tests how well AI coding agents handle the current API of an SDK, focusing on recent changes that models often get wrong.\n\nClaude Opus 5, released today, achieved perfect scores (100/100) for Vercel AI SDK 7 and Zod 4, indicating it has successfully adapted to their latest versions.\n\nHowever, the model still struggles with more recent breaking changes in libraries like Prisma 7 and Next 16. Prisma 7, for instance, requires a new driver adapter that Opus 5's generated code omits, and it uses a removed datasourceUrl.\n\nNext 16 also presents challenges, with Opus 5 calling revalidateTag() with a single argument when it now requires two. These issues highlight that the model's accuracy is tied to the recency of an SDK's last major update.\n\nThe benchmark's creator also noted and fixed a bug in their own harness, which was incorrectly failing a Prisma task. This correction led to Prisma's score being adjusted from 80 to 87.\n\nThe SDKProof tool is available for developers to test their own SDKs, with the full board and tasks accessible at sdkproof.dev.\n\n#AI #Claude #SDK #DevTools\n\nSource: DEV",
+  "tweet": "Claude Opus 5 fixes older SDKs, but struggles with the newest API changes. It scored 100/100 on Vercel AI SDK 7 and Zod 4, but lagged on Prisma 7 and Next 16. Full benchmark: sdkproof.dev #AI #Claude #SDK",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "sdkproof.dev",
+  "source": "DEV",
+  "url": "https://dev.to/kalpitrathore/claude-opus-5-closed-last-years-sdk-gaps-not-this-years-31k3",
+  "image": "",
+  "orig_title": "Claude Opus 5 closed last year's SDK gaps — not this year's",
+  "cluster_urls": [
+   "https://dev.to/kalpitrathore/claude-opus-5-closed-last-years-sdk-gaps-not-this-years-31k3"
+  ],
+  "cluster_titles": [
+   "Claude Opus 5 closed last year's SDK gaps — not this year's"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260727-0306-1-claude-opus-5-fixes-older-sdks-misses-newest.png",
+   "20260727-0306-1-claude-opus-5-fixes-older-sdks-misses-newest-d1.png",
+   "20260727-0306-1-claude-opus-5-fixes-older-sdks-misses-newest-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,67 @@
-[]
+[
+ {
+  "topic": "open-source ai os for frontier ai",
+  "headline_marked": "Stop hardcoding AI tools: [[Dynamic discovery]] with Zod & MCP",
+  "headline": "Stop hardcoding AI tools: Dynamic discovery with Zod & MCP",
+  "summary": "Learn how to decouple LLM reasoning from external capabilities for a more robust and secure AI agent architecture.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Traditional AI agent development often involves hardcoding tool definitions and routing logic directly into initialization scripts. This static approach creates a brittle architecture, prone to collapse when external APIs update or new services emerge.",
+   "The solution lies in a paradigm shift towards dynamic tool discovery, leveraging the Model Context Protocol (MCP) and Zod runtime schema validation. This mirrors modern microservice architectures, where services dynamically discover and validate interfaces at runtime.",
+   "MCP applies this microservice topology to AI agents. The LLM acts as an orchestrator, querying MCP servers to discover available tools and their schemas. This allows agents to dynamically ingest new capabilities without core application restarts.",
+   "However, dynamic discovery introduces security risks. LLMs can hallucinate parameters or cause syntax drift, leading to malformed execution vectors. Passing LLM-generated data directly to tools without validation can cause errors or vulnerabilities.",
+   "Zod bridges this gap by providing runtime schema validation. Unlike TypeScript's compile-time types, Zod schemas are executable objects that validate data at runtime, ensuring that LLM-generated inputs conform to expected tool definitions.",
+   "By combining MCP for dynamic discovery and Zod for robust validation, developers can build AI agents with enterprise-grade flexibility and security. This approach prevents LLM hallucinations from corrupting databases and enables safe parallel tool calls."
+  ],
+  "caption": "Tired of brittle AI agents? Stop hardcoding tool definitions and embrace dynamic discovery with Zod and MCP for robust, secure AI development.\n\nTraditional AI agent development often involves hardcoding tool definitions and routing logic directly into initialization scripts. This static approach creates a brittle architecture, prone to collapse when external APIs update or new services emerge.\n\nThe solution lies in a paradigm shift towards dynamic tool discovery, leveraging the Model Context Protocol (MCP) and Zod runtime schema validation. This mirrors modern microservice architectures, where services dynamically discover and validate interfaces at runtime.\n\nMCP applies this microservice topology to AI agents. The LLM acts as an orchestrator, querying MCP servers to discover available tools and their schemas. This allows agents to dynamically ingest new capabilities without core application restarts.\n\nHowever, dynamic discovery introduces security risks. LLMs can hallucinate parameters or cause syntax drift, leading to malformed execution vectors. Passing LLM-generated data directly to tools without validation can cause errors or vulnerabilities.\n\nZod bridges this gap by providing runtime schema validation. Unlike TypeScript's compile-time types, Zod schemas are executable objects that validate data at runtime, ensuring that LLM-generated inputs conform to expected tool definitions.\n\nBy combining MCP for dynamic discovery and Zod for robust validation, developers can build AI agents with enterprise-grade flexibility and security. This approach prevents LLM hallucinations from corrupting databases and enables safe parallel tool calls.\n\n#AI #SoftwareDevelopment #LLM #AgentFrameworks #Zod #MCP\n\nSource: DEV, TechCrunch, The Verge, Hacker News",
+  "tweet": "Stop hardcoding AI tools! Learn how to use Dynamic Tool Discovery with Zod & MCP for more robust and secure AI agents. #AI #SoftwareDevelopment #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV, TechCrunch, The Verge, Hacker News",
+  "url": "https://dev.to/programmingcentral/stop-hardcoding-ai-tools-dynamic-tool-discovery-and-schema-validation-with-zod-mcp-3e9j",
+  "image": "",
+  "orig_title": "Stop Hardcoding AI Tools: Dynamic Tool Discovery and Schema Validation with Zod & MCP",
+  "cluster_urls": [
+   "https://dev.to/programmingcentral/stop-hardcoding-ai-tools-dynamic-tool-discovery-and-schema-validation-with-zod-mcp-3e9j",
+   "https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/",
+   "https://www.theverge.com/tech/971101/apple-smart-glasses-privacy",
+   "https://github.com/hertz-ai/HARTOS",
+   "https://dev.to/selectany/i-shipped-a-neural-network-opponent-into-the-browser-no-backend-no-accounts-120-ms-per-move-3l09",
+   "https://dev.to/venelouis/the-copilots-honest-opinion-about-rullst-hce",
+   "https://dev.to/makumi/when-to-rebuild-vs-when-to-refactor-a-decision-framework-for-founders-20go",
+   "https://dev.to/tracygjg/the-technical-debt-of-others-1gp8",
+   "https://dev.to/hammermei/is-ai-limited-by-the-exact-superpower-that-made-it-powerful-4n80",
+   "https://dev.to/erfanebrahimnia/nextjs-is-getting-much-better-at-spa-like-ux-141a",
+   "https://dev.to/shiftgrid/turn-claude-code-into-a-pentester-5hl5",
+   "https://dev.to/shankar_subramanian/clearing-a-false-positive-my-error-guard-matched-too-much-4moj",
+   "https://dev.to/shankar_subramanian/i-dockerized-my-app-and-one-button-broke-thanks-localhost-2e0p",
+   "https://dev.to/gde/building-ai-agents-with-the-python-agent-development-kit-adk-2026-edition-v2-32hf"
+  ],
+  "cluster_titles": [
+   "Stop Hardcoding AI Tools: Dynamic Tool Discovery and Schema Validation with Zod & MCP",
+   "Making sense of the panic over Chinese AI",
+   "Apple is banking on privacy to set its smart glasses apart",
+   "Show HN: HART OS – an open-source AI OS built so frontier AI needs no datacenter",
+   "I shipped a neural-network opponent into the browser: no backend, no accounts, 120 ms per move",
+   "🤖 The Copilot’s Honest Opinion about Rullst!",
+   "When to Rebuild vs When to Refactor: A Decision Framework for Founders",
+   "The technical debt of others",
+   "Is AI Limited by the Exact Superpower That Made It Powerful?",
+   "Next.js Is Getting Much Better at SPA-like UX",
+   "Turn Claude Code into a Pentester",
+   "Clearing a false positive: my error guard matched too much",
+   "I Dockerized my app and one button broke — thanks, localhost",
+   "Building AI Agents with the Python Agent Development Kit (ADK) — 2026 Edition (v2)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260727-0205-0-stop-hardcoding-ai-tools-dynamic-discovery-w.png",
+   "20260727-0205-0-stop-hardcoding-ai-tools-dynamic-discovery-w-d1.png",
+   "20260727-0205-0-stop-hardcoding-ai-tools-dynamic-discovery-w-d2.png"
+  ]
+ }
+]

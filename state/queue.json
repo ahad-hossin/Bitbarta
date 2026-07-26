@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_guardrails_multilingual_jailbreak",
+  "headline_marked": "[[AI guardrails fail in non-English languages]], allowing jailbreaks via Google Translate",
+  "headline": "AI guardrails fail in non-English languages, allowing jailbreaks via Google Translate",
+  "summary": "Research reveals that AI safety guardrails, primarily trained on English data, are easily bypassed in other languages like French or Polish, creating significant security gaps for global LLM deployments.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Research shows AI safety guardrails are inconsistently applied across languages. Prompts blocked in English can bypass the same LLM when phrased in French, Polish, or Finnish. This creates a significant coverage gap for models deployed in multilingual regions.",
+   "Most commercial LLM safety training relies heavily on English-language red-teaming data. RLHF fine-tuning and refusal training are typically validated against English jailbreak libraries, where research efforts have historically concentrated. This leaves other languages less protected.",
+   "The underlying LLM understands other languages well; the gap lies in the safety layer's refusal boundary. This layer is calibrated on English attack patterns, meaning a translated semantic attack probes a less-tuned region. Attackers can exploit this with simple translation tools.",
+   "Guardrails baked into base models are opaque, making it hard to verify per-language coverage. Deployers often discover these gaps only in production or through research findings. Application-layer keyword filters also suffer, as English-only pattern lists don't match translated equivalents.",
+   "This leads to a false sense of security, where English-language red teams pass, but non-English users or attackers can bypass defenses. Solutions like semantic embedding, which captures meaning across languages, are crucial to address this vulnerability.",
+   "Semantic similarity layers are not dependent on English string matching to function. They compare input embeddings against attack signature embeddings, allowing detection of translated attacks even if no direct string match occurs. This architecture helps mitigate the structural weakness described in the research."
+  ],
+  "caption": "AI guardrails are failing in non-English languages. A prompt blocked in English can sail right through the same model when phrased in French, Polish, or Finnish.\n\nResearch shows AI safety guardrails are inconsistently applied across languages. Prompts blocked in English can bypass the same LLM when phrased in French, Polish, or Finnish. This creates a significant coverage gap for models deployed in multilingual regions.\n\nMost commercial LLM safety training relies heavily on English-language red-teaming data. RLHF fine-tuning and refusal training are typically validated against English jailbreak libraries, where research efforts have historically concentrated. This leaves other languages less protected.\n\nThe underlying LLM understands other languages well; the gap lies in the safety layer's refusal boundary. This layer is calibrated on English attack patterns, meaning a translated semantic attack probes a less-tuned region. Attackers can exploit this with simple translation tools.\n\nGuardrails baked into base models are opaque, making it hard to verify per-language coverage. Deployers often discover these gaps only in production or through research findings. Application-layer keyword filters also suffer, as English-only pattern lists don't match translated equivalents.\n\nThis leads to a false sense of security, where English-language red teams pass, but non-English users or attackers can bypass defenses. Solutions like semantic embedding, which captures meaning across languages, are crucial to address this vulnerability.\n\nSemantic similarity layers are not dependent on English string matching to function. They compare input embeddings against attack signature embeddings, allowing detection of translated attacks even if no direct string match occurs. This architecture helps mitigate the structural weakness described in the research.\n\n#AI #Security #LLM #Jailbreak #Multilingual #TechNews\n\nSource: DEV",
+  "tweet": "AI guardrails are failing in non-English languages. Research shows prompts blocked in English can bypass LLMs when translated, creating significant security gaps for global deployments. Attackers only need Google Translate. #AI #Security #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/coridev/your-ai-guardrails-speak-english-only-heres-the-multilingual-jailbreak-gap-4fa0",
+  "image": "",
+  "orig_title": "Your AI Guardrails Speak English Only — Here's the Multilingual Jailbreak Gap",
+  "cluster_urls": [
+   "https://dev.to/coridev/your-ai-guardrails-speak-english-only-heres-the-multilingual-jailbreak-gap-4fa0"
+  ],
+  "cluster_titles": [
+   "Your AI Guardrails Speak English Only — Here's the Multilingual Jailbreak Gap"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260726-1343-0-ai-guardrails-fail-in-non-english-languages-.png",
+   "20260726-1343-0-ai-guardrails-fail-in-non-english-languages--d1.png",
+   "20260726-1343-0-ai-guardrails-fail-in-non-english-languages--d2.png",
+   "20260726-1343-0-ai-guardrails-fail-in-non-english-languages--d3.png"
+  ]
+ },
+ {
+  "topic": "ai_coding_agent_flight_recorder",
+  "headline_marked": "[[We Built a Flight Recorder for AI Coding Agents]] to watch them think with SigNoz",
+  "headline": "We Built a Flight Recorder for AI Coding Agents to watch them think with SigNoz",
+  "summary": "The AXRAY tool, powered by SigNoz, reveals crucial insights into AI agent behavior, from LLM reasoning latency to hanging shell commands, optimizing performance and debugging.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Autonomous AI coding agents can have wildly inconsistent run times, making it hard to diagnose performance issues. Traditional application logs fail to provide the necessary granular insight into their complex, multi-step operations. This gap spurred the creation of AXRAY.",
+   "AXRAY functions as a \"flight recorder\" for AI agents, instrumenting every agent \"turn\" using OpenTelemetry and adhering to official GenAI Semantic Conventions. This approach avoids custom telemetry schemas, integrating naturally into existing observability ecosystems.",
+   "SigNoz serves as AXRAY's observability backbone, storing traces in ClickHouse. This allows for custom SQL queries to break down sub-turn latencies and identify which tools consume the most execution time across a session.",
+   "The system captures key metrics like LLM thinking time and token generation. Early observations revealed surprising insights, highlighting the need for detailed visibility into agent processes to optimize prompts or fix execution issues like hanging shell commands.",
+   "AXRAY also integrates live alert visibility by connecting directly to SigNoz's MCP server. This allows active alert rules to appear within AXRAY's UI without duplicating SigNoz's alerting logic, streamlining debugging.",
+   "Deployment challenges included issues with SigNoz's move to Foundry and the need for a script to import dashboards and alert rules. Unique UUIDs generated by fresh SigNoz installations caused silent failures in clean setups, emphasizing the need for robust deployment practices.",
+   "The project underscores that AI agents should be treated as production backends, requiring robust observability. Using SigNoz's OpenTelemetry-native architecture proved highly beneficial, validating the decision to avoid custom telemetry formats."
+  ],
+  "caption": "Ever wonder why your AI coding agent takes 8 seconds one run and 45 the next? We built AXRAY, a flight recorder for AI agents, to find out.\n\nAutonomous AI coding agents can have wildly inconsistent run times, making it hard to diagnose performance issues. Traditional application logs fail to provide the necessary granular insight into their complex, multi-step operations. This gap spurred the creation of AXRAY.\n\nAXRAY functions as a \"flight recorder\" for AI agents, instrumenting every agent \"turn\" using OpenTelemetry and adhering to official GenAI Semantic Conventions. This approach avoids custom telemetry schemas, integrating naturally into existing observability ecosystems.\n\nSigNoz serves as AXRAY's observability backbone, storing traces in ClickHouse. This allows for custom SQL queries to break down sub-turn latencies and identify which tools consume the most execution time across a session.\n\nThe system captures key metrics like LLM thinking time and token generation. Early observations revealed surprising insights, highlighting the need for detailed visibility into agent processes to optimize prompts or fix execution issues like hanging shell commands.\n\nAXRAY also integrates live alert visibility by connecting directly to SigNoz's MCP server. This allows active alert rules to appear within AXRAY's UI without duplicating SigNoz's alerting logic, streamlining debugging.\n\nDeployment challenges included issues with SigNoz's move to Foundry and the need for a script to import dashboards and alert rules. Unique UUIDs generated by fresh SigNoz installations caused silent failures in clean setups, emphasizing the need for robust deployment practices.\n\nThe project underscores that AI agents should be treated as production backends, requiring robust observability. Using SigNoz's OpenTelemetry-native architecture proved highly beneficial, validating the decision to avoid custom telemetry formats.\n\n#AI #Observability #DevTools #OpenTelemetry #SigNoz #GenAI\n\nSource: DEV",
+  "tweet": "Ever wonder why your AI coding agent takes 8s one run & 45s the next? We built AXRAY, a flight recorder for AI agents using SigNoz & OpenTelemetry, to uncover the hidden reasons behind performance gaps. Essential for debugging & optimizing #AI development. #DevTools #Observa",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "signoz.io",
+  "source": "DEV",
+  "url": "https://dev.to/hussain_jamal_/we-built-a-flight-recorder-for-ai-coding-agents-heres-what-signoz-taught-us-about-watching-them-28mc",
+  "image": "",
+  "orig_title": "We Built a Flight Recorder for AI Coding Agents: Here's What SigNoz Taught Us About Watching Them Think",
+  "cluster_urls": [
+   "https://dev.to/hussain_jamal_/we-built-a-flight-recorder-for-ai-coding-agents-heres-what-signoz-taught-us-about-watching-them-28mc"
+  ],
+  "cluster_titles": [
+   "We Built a Flight Recorder for AI Coding Agents: Here's What SigNoz Taught Us About Watching Them Think"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260726-1343-1-we-built-a-flight-recorder-for-ai-coding-age.png",
+   "20260726-1343-1-we-built-a-flight-recorder-for-ai-coding-age-d1.png",
+   "20260726-1343-1-we-built-a-flight-recorder-for-ai-coding-age-d2.png",
+   "20260726-1343-1-we-built-a-flight-recorder-for-ai-coding-age-d3.png"
+  ]
+ }
+]

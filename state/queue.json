@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "microsoft ai agents self-evolve skillopt",
+  "headline_marked": "[[Microsoft SkillOpt lets AI agents self-evolve]] without touching model weights",
+  "headline": "Microsoft SkillOpt lets AI agents self-evolve without touching model weights",
+  "summary": "Microsoft Research's SkillOpt allows AI agents to improve their skills by optimizing markdown instructions, achieving best-in-class performance across 52 tests without costly model fine-tuning.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Microsoft Research introduces SkillOpt, a new method for AI agents to self-evolve their skills. Instead of manually tweaking skill documents, SkillOpt treats skill improvement as a measurable, scientific process. It modifies markdown files that govern agent behavior, rather than adjusting the neural network's weights.",
+   "The results are impressive, with SkillOpt performing best or tied for best in 52 out of 52 tests. These tests covered 7 models, 6 benchmarks, and 3 harnesses, demonstrating broad applicability and effectiveness.",
+   "SkillOpt's core idea is to view skill documents as \"weights\" that can be trained, measured, and improved. An optimizer model analyzes the agent's performance trajectory, identifying what went wrong and why, such as forgetting to validate input or using the wrong tool.",
+   "The optimizer then proposes bounded edits to the skill document—adding, deleting, or modifying sentences—under a limited budget. This budget is crucial, as removing it can lead to over-rewriting and a loss of effective skill structure.",
+   "Proposed changes are tested on a held-out validation set; only improvements are accepted. A rejected-edit buffer prevents the optimizer from repeatedly suggesting ineffective changes. This mechanism ensures continuous, evidence-based refinement.",
+   "Significant performance gains have been observed, including a +23.5 point increase on GPT-5.5, transforming \"passable\" performance into \"highly skilled\" without altering the underlying model. This means inference costs and architecture remain stable.",
+   "Ablation studies confirmed the necessity of each component, showing that the results are not merely due to a large model. Crucially, skills trained on one model or benchmark can be transferred to others, like a skill trained on Codex improving Claude Code by +31.8 points.",
+   "The latest version, v0.2.0, includes SkillOpt-Sleep, a nightly offline self-evolution engine. It reviews past sessions, replays tasks, and consolidates validated skills automatically, requiring no user intervention.",
+   "SkillOpt arrives as the AI agent skill ecosystem is rapidly expanding, with thousands of skill files being developed through trial and error. It transforms skill writing from an art into a measurable science, guided by actual agent trajectories.",
+   "Furthermore, this approach avoids the need for expensive GPU-based fine-tuning. It only requires an optimizer model (potentially a smaller one) and API calls for rollout, making it a resource-efficient solution for AI agent developers."
+  ],
+  "caption": "Microsoft's SkillOpt lets AI agents self-evolve their skills by editing markdown instructions, not model weights! It achieved best-in-class performance in 52 out of 52 tests.\n\nMicrosoft Research introduces SkillOpt, a new method for AI agents to self-evolve their skills. Instead of manually tweaking skill documents, SkillOpt treats skill improvement as a measurable, scientific process. It modifies markdown files that govern agent behavior, rather than adjusting the neural network's weights.\n\nThe results are impressive, with SkillOpt performing best or tied for best in 52 out of 52 tests. These tests covered 7 models, 6 benchmarks, and 3 harnesses, demonstrating broad applicability and effectiveness.\n\nSkillOpt's core idea is to view skill documents as \"weights\" that can be trained, measured, and improved. An optimizer model analyzes the agent's performance trajectory, identifying what went wrong and why, such as forgetting to validate input or using the wrong tool.\n\nThe optimizer then proposes bounded edits to the skill document—adding, deleting, or modifying sentences—under a limited budget. This budget is crucial, as removing it can lead to over-rewriting and a loss of effective skill structure.\n\nProposed changes are tested on a held-out validation set; only improvements are accepted. A rejected-edit buffer prevents the optimizer from repeatedly suggesting ineffective changes. This mechanism ensures continuous, evidence-based refinement.\n\nSignificant performance gains have been observed, including a +23.5 point increase on GPT-5.5, transforming \"passable\" performance into \"highly skilled\" without altering the underlying model. This means inference costs and architecture remain stable.\n\nAblation studies confirmed the necessity of each component, showing that the results are not merely due to a large model. Crucially, skills trained on one model or benchmark can be transferred to others, like a skill trained on Codex improving Claude Code by +31.8 points.\n\n#AI #Microsoft #SkillOpt #MachineLearning #AgentAI #TechResearch\n\nSource: DEV",
+  "tweet": "Microsoft's new SkillOpt enables AI agents to self-evolve their skills by optimizing markdown instructions, without touching model weights. It achieved best-in-class performance in 52/52 tests. A game-changer for AI development! #AI #Microsoft #SkillOpt",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "microsoft.com",
+  "source": "DEV",
+  "url": "https://dev.to/sarantoon/skillopt-microsoft-teaches-ai-agents-to-self-evolve-without-touching-model-weights-3blg",
+  "image": "",
+  "orig_title": "SkillOpt: Microsoft Teaches AI Agents to Self-Evolve Without Touching Model Weights",
+  "cluster_urls": [
+   "https://dev.to/sarantoon/skillopt-microsoft-teaches-ai-agents-to-self-evolve-without-touching-model-weights-3blg"
+  ],
+  "cluster_titles": [
+   "SkillOpt: Microsoft Teaches AI Agents to Self-Evolve Without Touching Model Weights"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260726-2106-0-microsoft-skillopt-lets-ai-agents-self-evolv.png",
+   "20260726-2106-0-microsoft-skillopt-lets-ai-agents-self-evolv-d1.png",
+   "20260726-2106-0-microsoft-skillopt-lets-ai-agents-self-evolv-d2.png",
+   "20260726-2106-0-microsoft-skillopt-lets-ai-agents-self-evolv-d3.png",
+   "20260726-2106-0-microsoft-skillopt-lets-ai-agents-self-evolv-d4.png"
+  ]
+ },
+ {
+  "topic": "autonomous on-chain agent solana",
+  "headline_marked": "[[Autonomous on-chain AI agent built on Solana]] with a policy engine for secure fund transfers",
+  "headline": "Autonomous on-chain AI agent built on Solana with a policy engine for secure fund transfers",
+  "summary": "A developer successfully built an autonomous AI agent on Solana's Devnet, capable of making decisions and securely moving funds. The project highlights the critical role of a deny-by-default policy engine over the LLM for security.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer completed the #100DaysOfSolana challenge by building an autonomous AI agent on Solana's Devnet. This agent is designed to make decisions, interact with the Solana blockchain, and safely move funds.",
+   "A key realization during development was that AI agents behave differently from traditional backend services. Unlike predictable REST APIs, AI agents can achieve the same goal through varied reasoning paths, necessitating a focus on guaranteed outcomes rather than specific sequences.",
+   "The core of the system is a robust policy engine, not the language model itself. This engine is the most trusted component, enforcing a \"deny-by-default\" rule, meaning every fund transfer must explicitly pass its checks before being signed.",
+   "This design prioritizes defining what is explicitly allowed, rather than attempting to detect malicious behavior. This approach ensures the wallet's security, even if the AI model's reasoning changes unexpectedly.",
+   "The agent demonstrated self-verification, checking wallet balances before reporting, and provided confidence through failed transfer attempts that were correctly denied by the policy engine. This variability in reasoning was an important lesson.",
+   "The biggest takeaway is that the most challenging and crucial part was designing the entire system *around* the AI, not the AI itself. The resulting architecture includes guardrails, logs, and a reusable tool layer, offering a strong foundation for future projects."
+  ],
+  "caption": "An autonomous AI agent on Solana's Devnet can now securely move funds. The key isn't the AI, but a 'deny-by-default' policy engine protecting the wallet.\n\nA developer completed the #100DaysOfSolana challenge by building an autonomous AI agent on Solana's Devnet. This agent is designed to make decisions, interact with the Solana blockchain, and safely move funds.\n\nA key realization during development was that AI agents behave differently from traditional backend services. Unlike predictable REST APIs, AI agents can achieve the same goal through varied reasoning paths, necessitating a focus on guaranteed outcomes rather than specific sequences.\n\nThe core of the system is a robust policy engine, not the language model itself. This engine is the most trusted component, enforcing a \"deny-by-default\" rule, meaning every fund transfer must explicitly pass its checks before being signed.\n\nThis design prioritizes defining what is explicitly allowed, rather than attempting to detect malicious behavior. This approach ensures the wallet's security, even if the AI model's reasoning changes unexpectedly.\n\nThe agent demonstrated self-verification, checking wallet balances before reporting, and provided confidence through failed transfer attempts that were correctly denied by the policy engine. This variability in reasoning was an important lesson.\n\nThe biggest takeaway is that the most challenging and crucial part was designing the entire system *around* the AI, not the AI itself. The resulting architecture includes guardrails, logs, and a reusable tool layer, offering a strong foundation for future projects.\n\n#AI #Solana #Blockchain #Developer #AgenticAI #Tech\n\nSource: DEV",
+  "tweet": "An autonomous AI agent built on Solana Devnet can securely move funds, thanks to a robust 'deny-by-default' policy engine. This shifts security from the LLM to the system's architecture. #AI #Solana #Blockchain",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/lymah/i-built-an-autonomous-on-chain-agent-on-solana-heres-the-documentation-i-wish-i-had-earlier-2hge",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fx1jkrh661t6ep6srqr4z.png",
+  "orig_title": "I Built an Autonomous On-Chain Agent on Solana: Here's the Documentation I Wish I Had Earlier",
+  "cluster_urls": [
+   "https://dev.to/lymah/i-built-an-autonomous-on-chain-agent-on-solana-heres-the-documentation-i-wish-i-had-earlier-2hge"
+  ],
+  "cluster_titles": [
+   "I Built an Autonomous On-Chain Agent on Solana: Here's the Documentation I Wish I Had Earlier"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260726-2106-1-autonomous-on-chain-ai-agent-built-on-solana.png",
+   "20260726-2106-1-autonomous-on-chain-ai-agent-built-on-solana-d1.png",
+   "20260726-2106-1-autonomous-on-chain-ai-agent-built-on-solana-d2.png"
+  ]
+ }
+]

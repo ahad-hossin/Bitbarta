@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "claude opus 5 vs opus 4.8 benchmarks",
+  "headline_marked": "Claude Opus 5: [[Same Price, 3x Higher Bills]] Due to Hidden Thinking",
+  "headline": "Claude Opus 5: Same Price, 3x Higher Bills Due to Hidden Thinking",
+  "summary": "Anthropic's latest Claude Opus 5 model charges the same rate as its predecessor but can cost up to 3.1x more due to 'adaptive thinking' that runs in the background and is billed as output.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Anthropic's Claude Opus 5, released on July 24, 2026, is priced at $5 per million input tokens and $25 per million output tokens, identical to Claude Opus 4.8. However, default Opus 5 configurations can result in bills 3.1 times higher because the model engages in 'adaptive thinking' by default, which is billed as output and is not visible to the user.",
+   "This hidden thinking process accounts for 42-95% of Opus 5's default output spend. For instance, a simple calculation like 17*23 generated a 1-token visible answer but included 11 tokens of hidden thinking. Similarly, a 120-word writing task consumed approximately 806 of its 1,031 output tokens in deliberation.",
+   "The 'adaptive thinking' feature can be disabled by setting the thinking parameter to 'disabled' (`{\"type\": \"disabled\"}`). This setting brings Opus 5's output token usage and cost to exact parity with Opus 4.8, costing $0.01130 per task set compared to Opus 4.8's $0.01120.",
+   "When compared to Fable 5, a model with double the token rates ($10/$50), the default Opus 5 billed 35% less in absolute dollars. This is because Fable 5 used significantly fewer output tokens (383 vs. 1,305) to complete the same tasks, indicating more efficient deliberation on simpler problems.",
+   "The difference in token usage stems from how each model calibrates its thinking process. Fable 5 requires less deliberation for straightforward answers, while Opus 5's default setting includes 'insurance' against harder problems, leading to higher costs on routine tasks. Users paying for unused insurance can disable this feature.",
+   "Anthropic's documentation notes edge cases when thinking is disabled, such as tool calls occasionally appearing in visible text or leaked internal tags. However, these were not encountered in testing with 84 thinking-off calls. The guidance suggests keeping thinking enabled for tool-heavy workflows where the cost is minimal."
+  ],
+  "caption": "Claude Opus 5 costs up to 3.1x more than Opus 4.8 at the same price point. The culprit? Hidden 'thinking' tokens billed as output.\n\nAnthropic's Claude Opus 5, released on July 24, 2026, is priced at $5 per million input tokens and $25 per million output tokens, identical to Claude Opus 4.8. However, default Opus 5 configurations can result in bills 3.1 times higher because the model engages in 'adaptive thinking' by default, which is billed as output and is not visible to the user.\n\nThis hidden thinking process accounts for 42-95% of Opus 5's default output spend. For instance, a simple calculation like 17*23 generated a 1-token visible answer but included 11 tokens of hidden thinking. Similarly, a 120-word writing task consumed approximately 806 of its 1,031 output tokens in deliberation.\n\nThe 'adaptive thinking' feature can be disabled by setting the thinking parameter to 'disabled' (`{\"type\": \"disabled\"}`). This setting brings Opus 5's output token usage and cost to exact parity with Opus 4.8, costing $0.01130 per task set compared to Opus 4.8's $0.01120.\n\nWhen compared to Fable 5, a model with double the token rates ($10/$50), the default Opus 5 billed 35% less in absolute dollars. This is because Fable 5 used significantly fewer output tokens (383 vs. 1,305) to complete the same tasks, indicating more efficient deliberation on simpler problems.\n\nThe difference in token usage stems from how each model calibrates its thinking process. Fable 5 requires less deliberation for straightforward answers, while Opus 5's default setting includes 'insurance' against harder problems, leading to higher costs on routine tasks. Users paying for unused insurance can disable this feature.\n\nAnthropic's documentation notes edge cases when thinking is disabled, such as tool calls occasionally appearing in visible text or leaked internal tags. However, these were not encountered in testing with 84 thinking-off calls. The guidance suggests keeping thinking enabled for tool-heavy workflows where the cost is minimal.\n\n#AI #Claude #LLM #Anthropic #TechNews\n\nSource: DEV",
+  "tweet": "Claude Opus 5 bills 3.1x more than Opus 4.8 despite same rates. Hidden 'adaptive thinking' is billed as output. Disabling it matches Opus 4.8 costs. #AI #Claude",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/synthorai/claude-opus-5-vs-opus-48-measured-same-price-3x-apart-3354",
+  "image": "",
+  "orig_title": "Claude Opus 5 vs Opus 4.8, Measured: Same Price, 3x Apart",
+  "cluster_urls": [
+   "https://dev.to/synthorai/claude-opus-5-vs-opus-48-measured-same-price-3x-apart-3354"
+  ],
+  "cluster_titles": [
+   "Claude Opus 5 vs Opus 4.8, Measured: Same Price, 3x Apart"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260727-0009-0-claude-opus-5-same-price-3x-higher-bills-due.png",
+   "20260727-0009-0-claude-opus-5-same-price-3x-higher-bills-due-d1.png",
+   "20260727-0009-0-claude-opus-5-same-price-3x-higher-bills-due-d2.png",
+   "20260727-0009-0-claude-opus-5-same-price-3x-higher-bills-due-d3.png"
+  ]
+ },
+ {
+  "topic": "apple smart glasses delayed by privacy concerns",
+  "headline_marked": "Apple's smart glasses [[delayed until 2027]] over privacy concerns",
+  "headline": "Apple's smart glasses delayed until 2027 over privacy concerns",
+  "summary": "Apple is reportedly exploring new hardware and software privacy features for its upcoming smart glasses, potentially delaying their launch.",
+  "category": "BIGTECH",
+  "template": "leak",
+  "details": [
+   "Apple's highly anticipated smart glasses, initially slated for release this year, have reportedly been pushed back to 2027 due to significant privacy concerns.",
+   "Sources indicate that teams within Apple are prioritizing user privacy, exploring new hardware and software features to address potential issues.",
+   "One proposed solution includes offering models without cameras, while another option involves disabling camera functionality if recording indicators are tampered with.",
+   "The smart glasses are now expected to be unveiled at WWDC 2027, with a release following by the end of that year.",
+   "This delay comes as competitors like Meta face scrutiny over privacy with their own AI-powered glasses."
+  ],
+  "caption": "Apple's smart glasses launch reportedly pushed to 2027 amid major privacy concerns.\n\nApple's highly anticipated smart glasses, initially slated for release this year, have reportedly been pushed back to 2027 due to significant privacy concerns.\n\nSources indicate that teams within Apple are prioritizing user privacy, exploring new hardware and software features to address potential issues.\n\nOne proposed solution includes offering models without cameras, while another option involves disabling camera functionality if recording indicators are tampered with.\n\nThe smart glasses are now expected to be unveiled at WWDC 2027, with a release following by the end of that year.\n\nThis delay comes as competitors like Meta face scrutiny over privacy with their own AI-powered glasses.\n\n#Apple #SmartGlasses #Privacy #TechNews #WWDC27\n\nSource: Engadget",
+  "tweet": "Apple's smart glasses launch reportedly pushed to 2027 amid major privacy concerns. The company is exploring new privacy features for the device. #Apple #SmartGlasses #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2223527/apple-smart-glasses-delay-major-privacy-concerns/",
+  "image": "https://www.engadget.com/img/gallery/apples-smart-glasses-delay-reportedly-stems-in-part-from-major-privacy-concerns/l-intro-1785087373.jpg",
+  "orig_title": "Apple's smart glasses delay reportedly stems in part from major privacy concerns",
+  "cluster_urls": [
+   "https://www.engadget.com/2223527/apple-smart-glasses-delay-major-privacy-concerns/"
+  ],
+  "cluster_titles": [
+   "Apple's smart glasses delay reportedly stems in part from major privacy concerns"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260727-0009-1-apple-s-smart-glasses-delayed-until-2027-ove.png",
+   "20260727-0009-1-apple-s-smart-glasses-delayed-until-2027-ove-d1.png"
+  ]
+ }
+]

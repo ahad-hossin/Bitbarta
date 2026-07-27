@@ -1,1 +1,92 @@
-[]
+[
+ {
+  "topic": "sui exploits lead to millions in losses",
+  "headline_marked": "[[Sui Chain Exploits]] Cost $224M+ Despite Audits, Same Root Cause",
+  "headline": "Sui Chain Exploits Cost $224M+ Despite Audits, Same Root Cause",
+  "summary": "Three separate incidents on the Sui blockchain resulted in over $224 million in losses, all stemming from overlooked arithmetic vulnerabilities in math libraries.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Cetus lost $223 million to a shift overflow exploit, Aftermath lost $1.14 million to a negative fee vulnerability, and Bucket Protocol shipped a decimal scaling bug. All three protocols passed audits from reputable firms, yet the same underlying issue allowed attackers to drain funds.",
+   "The largest exploit, impacting Cetus, involved a flaw in the checked_shlw function within a shared math library. This function was intended to prevent 256-bit left shifts from overflowing but failed for inputs near 2^192. An attacker exploited this by depositing a small amount and receiving a liquidity credit worth $223 million.",
+   "Aftermath's perpetual futures exchange allowed third-party integrators to set fee rates. A validation check only enforced an upper bound, enabling an attacker to set a negative fee. This caused the system to incorrectly add funds, allowing the attacker to withdraw over $100,000 per transaction.",
+   "Bucket Protocol's vulnerability lies in its compute_collateral_value_to_buck function. While it safely promotes to u128 internally, it then multiplies by a raw u64 factor that can overflow if collateral decimals exceed buck decimals by more than 9. This bug, if triggered, blocks critical safety functions like liquidation and redemption.",
+   "The common thread across these exploits is a math function that returns an incorrect answer for developer-unforeseen inputs, protected by a check that appears complete but is flawed. Auditors, under time pressure, often miss these subtle arithmetic boundary bugs that require deep mathematical analysis.",
+   "These incidents highlight a potential structural mismatch between how code audits are typically performed and the nature of arithmetic boundary bugs. While business logic and state transitions are easier to verify, the precise boundary conditions of mathematical operations can be easily overlooked.",
+   "The fix for the Cetus exploit involves a simple assertion: assert!(n < (1u256 << 192), ERR_OVERFLOW). For Aftermath, the fix is assert!(integrator_taker_fee >= 0, E_INVALID). These demonstrate that the underlying issues were often simple to correct once identified."
+  ],
+  "caption": "Three Sui protocols lost over $224 million combined due to the same type of overlooked arithmetic bug, despite passing multiple audits.\n\nCetus lost $223 million to a shift overflow exploit, Aftermath lost $1.14 million to a negative fee vulnerability, and Bucket Protocol shipped a decimal scaling bug. All three protocols passed audits from reputable firms, yet the same underlying issue allowed attackers to drain funds.\n\nThe largest exploit, impacting Cetus, involved a flaw in the checked_shlw function within a shared math library. This function was intended to prevent 256-bit left shifts from overflowing but failed for inputs near 2^192. An attacker exploited this by depositing a small amount and receiving a liquidity credit worth $223 million.\n\nAftermath's perpetual futures exchange allowed third-party integrators to set fee rates. A validation check only enforced an upper bound, enabling an attacker to set a negative fee. This caused the system to incorrectly add funds, allowing the attacker to withdraw over $100,000 per transaction.\n\nBucket Protocol's vulnerability lies in its compute_collateral_value_to_buck function. While it safely promotes to u128 internally, it then multiplies by a raw u64 factor that can overflow if collateral decimals exceed buck decimals by more than 9. This bug, if triggered, blocks critical safety functions like liquidation and redemption.\n\nThe common thread across these exploits is a math function that returns an incorrect answer for developer-unforeseen inputs, protected by a check that appears complete but is flawed. Auditors, under time pressure, often miss these subtle arithmetic boundary bugs that require deep mathematical analysis.\n\nThese incidents highlight a potential structural mismatch between how code audits are typically performed and the nature of arithmetic boundary bugs. While business logic and state transitions are easier to verify, the precise boundary conditions of mathematical operations can be easily overlooked.\n\n#Sui #Blockchain #Security #DeFi #Exploit #Audit\n\nSource: DEV",
+  "tweet": "Over $224M lost across three Sui protocols due to the same arithmetic bug, bypassing multiple audits. The issue lies in flawed math library checks that appear complete but fail under specific conditions. #Sui #Blockchain #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "sui.io",
+  "source": "DEV",
+  "url": "https://dev.to/mehvetero/three-sui-exploits-one-disease-why-the-math-looked-fine-keeps-costing-hundreds-of-millions-17f3",
+  "image": "",
+  "orig_title": "Three Sui Exploits, One Disease — Why \"The Math Looked Fine\" Keeps Costing Hundreds of Millions",
+  "cluster_urls": [
+   "https://dev.to/mehvetero/three-sui-exploits-one-disease-why-the-math-looked-fine-keeps-costing-hundreds-of-millions-17f3",
+   "https://dev.to/devteam/top-7-featured-dev-posts-of-the-week-257h"
+  ],
+  "cluster_titles": [
+   "Three Sui Exploits, One Disease — Why \"The Math Looked Fine\" Keeps Costing Hundreds of Millions",
+   "Top 7 Featured DEV Posts of the Week"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260728-0147-0-sui-chain-exploits-cost-224m-despite-audits-.png",
+   "20260728-0147-0-sui-chain-exploits-cost-224m-despite-audits--d1.png",
+   "20260728-0147-0-sui-chain-exploits-cost-224m-despite-audits--d2.png",
+   "20260728-0147-0-sui-chain-exploits-cost-224m-despite-audits--d3.png",
+   "20260728-0147-0-sui-chain-exploits-cost-224m-despite-audits--d4.png"
+  ]
+ },
+ {
+  "topic": "microsoft launches ai cybersecurity model and agentic defense platform",
+  "headline_marked": "Microsoft launches [[cheaper, faster AI cybersecurity]] model",
+  "headline": "Microsoft launches cheaper, faster AI cybersecurity model",
+  "summary": "Microsoft's new MAI-Cyber-1-Flash model scores 96% on CyberGym benchmark, outperforming rivals and cutting costs by half.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Microsoft has unveiled its first custom-built cybersecurity AI model, MAI-Cyber-1-Flash, and an agentic defense platform called MDASH. The company argues that the future of enterprise AI lies not in the largest models, but in the most cost-effective ones that are intelligently routed.",
+   "The MAI-Cyber-1-Flash model, developed in-house by Microsoft AI, achieved a 96% score on the CyberGym benchmark for identifying software vulnerabilities. This performance surpasses frontier models like Mythos, Gemini, and GPT, while reportedly halving costs compared to Microsoft's current production setup.",
+   "Microsoft also introduced Project Perception, an agentic security system that orchestrates 'red team' agents for compromise hunting, 'blue team' agents for risk assessment, and 'green team' agents for defense hardening. This system will enter public preview on August 3.",
+   "Microsoft AI CEO Mustafa Suleyman stated that the company possesses a significant advantage in data, harness, and expertise, enabling them to train faster, better, and cheaper models. He hinted at future advancements, suggesting the current announcement is just the beginning.",
+   "The MDASH system, when paired with MAI-Cyber-1-Flash and OpenAI's GPT-5.4, achieved a 95.95% score on the CyberGym benchmark, more than 10 percentage points ahead of rival configurations.",
+   "Microsoft's strategy involves using MAI-Cyber-1-Flash for approximately 90% of security tasks, escalating the remaining 10% of complex issues to a larger model like GPT-5.4. This tiered approach optimizes efficiency and cost.",
+   "Suleyman explained that the harness acts as a router, matching incoming problems to the most suitable model. This system includes the harness, the efficient MAI-Cyber-1-Flash for bulk queries, and GPT-5.4 as a generalist coding model for complex escalations.",
+   "The reliance on GPT-5.4 for escalation is driven by cost-effectiveness. Suleyman noted that while GPT-5.4 is expensive, it offers superior performance relative to its cost compared to other large models, aligning with customer demand for reduced expenses.",
+   "Microsoft estimates that this new configuration provides approximately 50% cost savings compared to the current MDASH setup, which utilizes a mix of GPT-5.4, 5.4 mini, and 5.3 Codex. In the realm of cybersecurity, where continuous processing of vast signal volumes incurs relentless token costs, these savings are significant."
+  ],
+  "caption": "Microsoft unveils its first custom AI cybersecurity model, MAI-Cyber-1-Flash, scoring 96% on CyberGym and cutting costs by half.\n\nMicrosoft has unveiled its first custom-built cybersecurity AI model, MAI-Cyber-1-Flash, and an agentic defense platform called MDASH. The company argues that the future of enterprise AI lies not in the largest models, but in the most cost-effective ones that are intelligently routed.\n\nThe MAI-Cyber-1-Flash model, developed in-house by Microsoft AI, achieved a 96% score on the CyberGym benchmark for identifying software vulnerabilities. This performance surpasses frontier models like Mythos, Gemini, and GPT, while reportedly halving costs compared to Microsoft's current production setup.\n\nMicrosoft also introduced Project Perception, an agentic security system that orchestrates 'red team' agents for compromise hunting, 'blue team' agents for risk assessment, and 'green team' agents for defense hardening. This system will enter public preview on August 3.\n\nMicrosoft AI CEO Mustafa Suleyman stated that the company possesses a significant advantage in data, harness, and expertise, enabling them to train faster, better, and cheaper models. He hinted at future advancements, suggesting the current announcement is just the beginning.\n\nThe MDASH system, when paired with MAI-Cyber-1-Flash and OpenAI's GPT-5.4, achieved a 95.95% score on the CyberGym benchmark, more than 10 percentage points ahead of rival configurations.\n\nMicrosoft's strategy involves using MAI-Cyber-1-Flash for approximately 90% of security tasks, escalating the remaining 10% of complex issues to a larger model like GPT-5.4. This tiered approach optimizes efficiency and cost.\n\nSuleyman explained that the harness acts as a router, matching incoming problems to the most suitable model. This system includes the harness, the efficient MAI-Cyber-1-Flash for bulk queries, and GPT-5.4 as a generalist coding model for complex escalations.\n\n#AI #Cybersecurity #Microsoft #TechLaunch #AIModel\n\nSource: VentureBeat, TechCrunch",
+  "tweet": "Microsoft launches its first custom AI cybersecurity model, MAI-Cyber-1-Flash! It scores 96% on CyberGym, beating rivals and cutting costs by 50%. Project Perception also enters public preview Aug 3. #AI #Cybersecurity #Microsoft",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "VentureBeat, TechCrunch",
+  "url": "https://venturebeat.com/security/microsoft-launches-ai-cybersecurity-model-agentic-defense-platform-to-cut-enterprise-security-costs",
+  "image": "https://images.ctfassets.net/jdtwqhzvc2n1/5W5ohvAaNIaMlgX7zglb1k/89329e06a2ccce88da17ead8d1473bb2/Nuneybits_Vector_art_of_overlapping_shield_silhouettes_blush_an_3dc6962d-2f33-4c80-9433-e1bf0b7e4c7b.webp?w=300&q=30",
+  "orig_title": "Microsoft launches AI cybersecurity model, agentic defense platform to cut enterprise security costs",
+  "cluster_urls": [
+   "https://venturebeat.com/security/microsoft-launches-ai-cybersecurity-model-agentic-defense-platform-to-cut-enterprise-security-costs",
+   "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/"
+  ],
+  "cluster_titles": [
+   "Microsoft launches AI cybersecurity model, agentic defense platform to cut enterprise security costs",
+   "Microsoft launches its first cybersecurity model, plus a new agentic cybersecurity system"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260728-0147-1-microsoft-launches-cheaper-faster-ai-cyberse.png",
+   "20260728-0147-1-microsoft-launches-cheaper-faster-ai-cyberse-d1.png",
+   "20260728-0147-1-microsoft-launches-cheaper-faster-ai-cyberse-d2.png",
+   "20260728-0147-1-microsoft-launches-cheaper-faster-ai-cyberse-d3.png",
+   "20260728-0147-1-microsoft-launches-cheaper-faster-ai-cyberse-d4.png"
+  ]
+ }
+]

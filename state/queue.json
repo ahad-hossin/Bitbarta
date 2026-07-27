@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "brain_waves_physical_ai_unlock",
+  "headline_marked": "[[Brain waves unlock next-gen physical AI]] training for humanoid robots",
+  "headline": "Brain waves unlock next-gen physical AI training for humanoid robots",
+  "summary": "Startups Encord and Zander Labs are experimenting with brain wave data to train AI models for robotics, aiming to overcome the scarcity of real-world physical training data.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Encord, a company specializing in AI model data tooling, is trialing brain wave data collection for physical AI. Their \"pilots\" wear headsets with brain wave sensors while performing tasks like a Jenga game, capturing their mental states.",
+   "The core challenge for humanoid and warehouse robotics is the scarcity of real-world physical training data. Encord is building a business around manufacturing this crucial data that simply doesn't exist at the required scale.",
+   "The brain wave headset, developed by German neuroscience startup Zander Labs, measures brain activity to deduce mental states such as error, intent, and surprise. This aims to create a more useful and nuanced dataset for training AI models.",
+   "Encord's current work with Zander Labs is a trial run. The goal is to build an initial brain wave-tagged dataset, test its effectiveness with customer robotics models, and evaluate if it significantly improves performance before scaling up the initiative.",
+   "Solving the robotics data bottleneck requires datasets potentially five times the size of YouTube's video corpus. This immense scale explains why data generation itself has become a specialized business rather than just a research problem.",
+   "Beyond brain waves, companies are also collecting \"egocentric\" video from workers wearing cameras, often augmented with other metrics, and gathering data from remotely operated robots. Encord utilizes both methods.",
+   "Encord's San Leandro facility is used to experiment with new modalities like brain waves and to collect datasets for fine-tuning specific skills. Tasks include pouring coffee, stacking poker chips, and precisely plugging ethernet cables into servers."
+  ],
+  "caption": "Robots learning from human brain waves? A new trial is using neuroscience to train physical AI, collecting data on human intent and error.\n\nEncord, a company specializing in AI model data tooling, is trialing brain wave data collection for physical AI. Their \"pilots\" wear headsets with brain wave sensors while performing tasks like a Jenga game, capturing their mental states.\n\nThe core challenge for humanoid and warehouse robotics is the scarcity of real-world physical training data. Encord is building a business around manufacturing this crucial data that simply doesn't exist at the required scale.\n\nThe brain wave headset, developed by German neuroscience startup Zander Labs, measures brain activity to deduce mental states such as error, intent, and surprise. This aims to create a more useful and nuanced dataset for training AI models.\n\nEncord's current work with Zander Labs is a trial run. The goal is to build an initial brain wave-tagged dataset, test its effectiveness with customer robotics models, and evaluate if it significantly improves performance before scaling up the initiative.\n\nSolving the robotics data bottleneck requires datasets potentially five times the size of YouTube's video corpus. This immense scale explains why data generation itself has become a specialized business rather than just a research problem.\n\nBeyond brain waves, companies are also collecting \"egocentric\" video from workers wearing cameras, often augmented with other metrics, and gathering data from remotely operated robots. Encord utilizes both methods.\n\nEncord's San Leandro facility is used to experiment with new modalities like brain waves and to collect datasets for fine-tuning specific skills. Tasks include pouring coffee, stacking poker chips, and precisely plugging ethernet cables into servers.\n\n#AI #Robotics #BrainWaves #MachineLearning #TechNews #PhysicalAI\n\nSource: TechCrunch",
+  "tweet": "Robots are learning from human brain waves! Encord and Zander Labs are trialing neuroscience headsets to capture human intent and error, aiming to solve the physical AI data bottleneck. #AI #Robotics #BrainWaves",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "encord.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/",
+  "image": "",
+  "orig_title": "Are brain waves the next unlock for physical AI?",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/"
+  ],
+  "cluster_titles": [
+   "Are brain waves the next unlock for physical AI?"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260727-0806-0-brain-waves-unlock-next-gen-physical-ai-trai.png",
+   "20260727-0806-0-brain-waves-unlock-next-gen-physical-ai-trai-d1.png",
+   "20260727-0806-0-brain-waves-unlock-next-gen-physical-ai-trai-d2.png",
+   "20260727-0806-0-brain-waves-unlock-next-gen-physical-ai-trai-d3.png"
+  ]
+ },
+ {
+  "topic": "privacy_first_vision_ai_browser_wasm",
+  "headline_marked": "[[Run Quantized ViT Models in the Browser]] with WebAssembly for privacy-first Vision AI",
+  "headline": "Run Quantized ViT Models in the Browser with WebAssembly for privacy-first Vision AI",
+  "summary": "Achieve sub-second latency and bank-level privacy for real-time AI applications like skin lesion analysis, keeping sensitive data on-device using TensorFlow.js and WebAssembly.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Worried about uploading sensitive photos to cloud AI? A new approach enables high-performance, privacy-first Edge AI directly in the browser. This method allows real-time skin lesion analysis, ensuring user data never leaves their device.",
+   "Leveraging TensorFlow.js, WebAssembly (WASM), and Vision Transformers (ViT), this setup achieves sub-second latency and bank-level privacy. Traditionally, ViT models were considered too heavy for web browsers, but WASM and model quantization overcome this.",
+   "The key involves initializing a WASM backend for efficient matrix multiplications, crucial for Vision Transformers. Quantized ViT versions (Int8 or Float16) reduce model bundle sizes from over 300MB to a manageable 30-50MB, making browser deployment feasible.",
+   "This technique addresses major bottlenecks for complex Vision/Edge AI tasks on the web. For production-grade applications, advanced methods like model sharding, IndexedDB caching, and Web Worker isolation are recommended to maintain UI responsiveness during inference.",
+   "Building browser-based tools like a skin lesion screening application is a significant step towards democratizing healthcare technology. It combines the power of Vision Transformers with the portability and privacy benefits of WebAssembly, turning the browser into a powerful diagnostic engine."
+  ],
+  "caption": "Run powerful Vision AI models directly in your browser with bank-level privacy. Sensitive data never leaves your device, enabling real-time analysis like skin lesion screening.\n\nWorried about uploading sensitive photos to cloud AI? A new approach enables high-performance, privacy-first Edge AI directly in the browser. This method allows real-time skin lesion analysis, ensuring user data never leaves their device.\n\nLeveraging TensorFlow.js, WebAssembly (WASM), and Vision Transformers (ViT), this setup achieves sub-second latency and bank-level privacy. Traditionally, ViT models were considered too heavy for web browsers, but WASM and model quantization overcome this.\n\nThe key involves initializing a WASM backend for efficient matrix multiplications, crucial for Vision Transformers. Quantized ViT versions (Int8 or Float16) reduce model bundle sizes from over 300MB to a manageable 30-50MB, making browser deployment feasible.\n\nThis technique addresses major bottlenecks for complex Vision/Edge AI tasks on the web. For production-grade applications, advanced methods like model sharding, IndexedDB caching, and Web Worker isolation are recommended to maintain UI responsiveness during inference.\n\nBuilding browser-based tools like a skin lesion screening application is a significant step towards democratizing healthcare technology. It combines the power of Vision Transformers with the portability and privacy benefits of WebAssembly, turning the browser into a powerful diagnostic engine.\n\n#EdgeAI #WebAssembly #VisionAI #PrivacyTech #TensorFlowJS #Developers\n\nSource: DEV",
+  "tweet": "Run powerful Vision AI models directly in your browser with bank-level privacy. Sensitive data never leaves your device, enabling real-time analysis like skin lesion screening using WebAssembly & TensorFlow.js. #EdgeAI #PrivacyTech #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/wellallytech/privacy-first-vision-ai-running-quantized-vit-models-in-the-browser-with-webassembly-1j5i",
+  "image": "",
+  "orig_title": "Privacy-First Vision AI: Running Quantized ViT Models in the Browser with WebAssembly 🚀",
+  "cluster_urls": [
+   "https://dev.to/wellallytech/privacy-first-vision-ai-running-quantized-vit-models-in-the-browser-with-webassembly-1j5i"
+  ],
+  "cluster_titles": [
+   "Privacy-First Vision AI: Running Quantized ViT Models in the Browser with WebAssembly 🚀"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260727-0806-1-run-quantized-vit-models-in-the-browser-with.png",
+   "20260727-0806-1-run-quantized-vit-models-in-the-browser-with-d1.png",
+   "20260727-0806-1-run-quantized-vit-models-in-the-browser-with-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "claude shared chats exposed on google search",
+  "headline_marked": "[[Private Claude Chats]] Exposed in Google and Bing Search Results",
+  "headline": "Private Claude Chats Exposed in Google and Bing Search Results",
+  "summary": "Anthropic's AI chatbot Claude inadvertently exposed user conversations, including sensitive topics, due to a lack of proper indexing controls on shared chat pages.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Users of Anthropic's Claude AI chatbot were surprised to find that some of their shared conversations were appearing in Google and Bing search results. The exposed chats ranged from personal advice on political parties to discussions about legal ethics and even erotic role-play.",
+   "The issue stemmed from how Claude's \"shared chats\" feature interacted with search engine crawlers. While Anthropic uses a robots.txt file to instruct crawlers not to index shared chats, this method proved insufficient on its own.",
+   "According to Google's developer guidelines, pages can still be indexed if they are linked from elsewhere on the internet and lack a specific \"noindex\" HTML tag or an \"x-robots-tag\" in the response header. Investigations revealed that the exposed Claude chat pages were missing these crucial \"noindex\" directives.",
+   "While the shared chats have reportedly been removed from Google search results, they may still appear in Bing. The affected pages still lack the \"noindex\" tag, meaning they could potentially be re-indexed by search engines in the future. Users can manage their shared chat settings via Claude's privacy options.",
+   "This is not the first time Anthropic has faced scrutiny for chat privacy. The company previously stated it relies on robots.txt, but reports indicate this method is not foolproof for preventing search engine indexing. Both Google and Bing have technical documentation outlining the need for \"noindex\" tags for comprehensive privacy."
+  ],
+  "caption": "Your private Claude chats might be public. Shared conversations, including sensitive topics, were found indexed by Google and Bing due to missing \"noindex\" tags.\n\nUsers of Anthropic's Claude AI chatbot were surprised to find that some of their shared conversations were appearing in Google and Bing search results. The exposed chats ranged from personal advice on political parties to discussions about legal ethics and even erotic role-play.\n\nThe issue stemmed from how Claude's \"shared chats\" feature interacted with search engine crawlers. While Anthropic uses a robots.txt file to instruct crawlers not to index shared chats, this method proved insufficient on its own.\n\nAccording to Google's developer guidelines, pages can still be indexed if they are linked from elsewhere on the internet and lack a specific \"noindex\" HTML tag or an \"x-robots-tag\" in the response header. Investigations revealed that the exposed Claude chat pages were missing these crucial \"noindex\" directives.\n\nWhile the shared chats have reportedly been removed from Google search results, they may still appear in Bing. The affected pages still lack the \"noindex\" tag, meaning they could potentially be re-indexed by search engines in the future. Users can manage their shared chat settings via Claude's privacy options.\n\nThis is not the first time Anthropic has faced scrutiny for chat privacy. The company previously stated it relies on robots.txt, but reports indicate this method is not foolproof for preventing search engine indexing. Both Google and Bing have technical documentation outlining the need for \"noindex\" tags for comprehensive privacy.\n\n#AI #Privacy #CyberSecurity #Claude #Anthropic #DataLeak\n\nSource: Wired, TechCrunch",
+  "tweet": "Private Claude chats exposed in Google & Bing search results. Sensitive conversations were indexed due to missing \"noindex\" tags on shared chat pages. Manage your privacy settings. #AI #Privacy #Claude",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "Wired, TechCrunch",
+  "url": "https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/",
+  "image": "https://media.wired.com/photos/6a678683a61c4389773966d4/master/pass/Security_GoogleSearchScrew-UpExposedPrivateClaudeChat-.gif",
+  "orig_title": "Private Claude Chats Exposed in Google and Bing Search Results",
+  "cluster_urls": [
+   "https://www.wired.com/story/private-claude-chats-exposed-in-google-and-bing-search-results/",
+   "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/"
+  ],
+  "cluster_titles": [
+   "Private Claude Chats Exposed in Google and Bing Search Results",
+   "PSA: Your Claude shared chats and Artifacts may have ended up on Google"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260728-0406-0-private-claude-chats-exposed-in-google-and-b.png",
+   "20260728-0406-0-private-claude-chats-exposed-in-google-and-b-d1.png",
+   "20260728-0406-0-private-claude-chats-exposed-in-google-and-b-d2.png",
+   "20260728-0406-0-private-claude-chats-exposed-in-google-and-b-d3.png"
+  ]
+ }
+]

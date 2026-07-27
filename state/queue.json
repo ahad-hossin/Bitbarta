@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai_development_challenges_catching_bs",
+  "headline_marked": "[[The hard part of building with AI isn't the code]] — it's catching the BS",
+  "headline": "The hard part of building with AI isn't the code — it's catching the BS",
+  "summary": "A product manager built a full game wiki using an AI coding agent, but found the biggest challenge wasn't writing code, but rigorously verifying the AI's confidently incorrect information.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A product manager, not a coder, successfully built a comprehensive wiki for the game \"Pathogenic\" using an AI coding agent like Claude Code. This included the entire tech stack: Next.js, Cloudflare Workers, SSR, and the content pipeline.",
+   "The experience revealed a critical insight: while the AI agent was \"shockingly fast\" at generating code and content, the most difficult part was identifying and correcting the AI's confidently presented, yet factually incorrect, information.",
+   "For example, the AI fabricated an elaborate explanation of \"Burn damage\" mechanics by combining fragments from medical literature and lore from a different board game. This output appeared authoritative but was entirely wrong for Pathogenic.",
+   "To combat this, the author implemented a strict rule: every factual claim in the wiki must link to a verifiable source, such as official patch notes, developer replies, or community gameplay videos. The AI performs the research, but the human verifies it.",
+   "Another instance involved a player commenting about a shop in the game's \"Brain area,\" which contradicted the wiki's information. The author resisted immediately updating the guide based on a single comment, opting for independent verification first.",
+   "Unable to find external confirmation for either the presence or absence of the shop, the author changed the guide's wording to neutral, practical advice. This avoided publishing unverified information while still being helpful to players.",
+   "The core job, therefore, shifted from writing code or content to making critical judgment calls and catching moments where information sounds right but lacks confirmation. This requires a human touch to maintain accuracy and trust.",
+   "The AI agent capably handled all technical aspects, including builds, deployments, SEO headers, and structured data. It even proactively caught a regression error when a shared component change broke another guide page.",
+   "This experience suggests that for non-coders with a clear vision and high quality standards, AI tools are now powerful enough to ship real products. The primary bottleneck has moved from technical implementation to ensuring factual correctness."
+  ],
+  "caption": "Building a game wiki with an AI coding agent was \"shockingly fast.\" The real challenge? Sifting through the AI's confidently wrong, yet plausible, information.\n\nA product manager, not a coder, successfully built a comprehensive wiki for the game \"Pathogenic\" using an AI coding agent like Claude Code. This included the entire tech stack: Next.js, Cloudflare Workers, SSR, and the content pipeline.\n\nThe experience revealed a critical insight: while the AI agent was \"shockingly fast\" at generating code and content, the most difficult part was identifying and correcting the AI's confidently presented, yet factually incorrect, information.\n\nFor example, the AI fabricated an elaborate explanation of \"Burn damage\" mechanics by combining fragments from medical literature and lore from a different board game. This output appeared authoritative but was entirely wrong for Pathogenic.\n\nTo combat this, the author implemented a strict rule: every factual claim in the wiki must link to a verifiable source, such as official patch notes, developer replies, or community gameplay videos. The AI performs the research, but the human verifies it.\n\nAnother instance involved a player commenting about a shop in the game's \"Brain area,\" which contradicted the wiki's information. The author resisted immediately updating the guide based on a single comment, opting for independent verification first.\n\nUnable to find external confirmation for either the presence or absence of the shop, the author changed the guide's wording to neutral, practical advice. This avoided publishing unverified information while still being helpful to players.\n\nThe core job, therefore, shifted from writing code or content to making critical judgment calls and catching moments where information sounds right but lacks confirmation. This requires a human touch to maintain accuracy and trust.\n\n#AI #Development #Coding #TechNews #Productivity #AItools\n\nSource: DEV",
+  "tweet": "Building a game wiki with an AI coding agent was \"shockingly fast.\" The real challenge? Sifting through the AI's confidently wrong, yet plausible, information. The code was easy; catching the BS was hard. #AI #DevTools #Productivity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/geek_/the-hard-part-of-building-with-ai-isnt-the-code-its-catching-the-bs-58m6",
+  "image": "",
+  "orig_title": "The hard part of building with AI isn't the code — it's catching the BS",
+  "cluster_urls": [
+   "https://dev.to/geek_/the-hard-part-of-building-with-ai-isnt-the-code-its-catching-the-bs-58m6"
+  ],
+  "cluster_titles": [
+   "The hard part of building with AI isn't the code — it's catching the BS"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260727-1107-0-the-hard-part-of-building-with-ai-isn-t-the-.png",
+   "20260727-1107-0-the-hard-part-of-building-with-ai-isn-t-the--d1.png",
+   "20260727-1107-0-the-hard-part-of-building-with-ai-isn-t-the--d2.png",
+   "20260727-1107-0-the-hard-part-of-building-with-ai-isn-t-the--d3.png"
+  ]
+ },
+ {
+  "topic": "postgresql_internals_pgsimcity",
+  "headline_marked": "[[PGSimCity visualizes PostgreSQL]] internals as an interactive 3D city",
+  "headline": "PGSimCity visualizes PostgreSQL internals as an interactive 3D city",
+  "summary": "PGSimCity offers an explorable 3D environment that illustrates how PostgreSQL components like backends, shared memory, and WAL interact in real-time.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "PGSimCity is an innovative project that transforms the complex internal workings of PostgreSQL into an explorable 3D city. It visually represents key components such as backends, shared memory, Write-Ahead Log (WAL), and storage, allowing users to observe their interactions.",
+   "The visualization aims to demystify how the popular open-source relational database system processes data and manages operations. This interactive model provides a unique educational tool for developers and database administrators.",
+   "Currently, PGSimCity is an early prototype and may contain inaccuracies in its model and explanations. The developer encourages community contributions through GitHub to identify and correct any issues, fostering collaborative improvement.",
+   "The project is open-source, with its code and documentation available for review and enhancement. It serves as a valuable resource for anyone looking to deepen their understanding of PostgreSQL's architecture."
+  ],
+  "caption": "Explore PostgreSQL's inner workings like never before! PGSimCity turns the database into an interactive 3D city.\n\nPGSimCity is an innovative project that transforms the complex internal workings of PostgreSQL into an explorable 3D city. It visually represents key components such as backends, shared memory, Write-Ahead Log (WAL), and storage, allowing users to observe their interactions.\n\nThe visualization aims to demystify how the popular open-source relational database system processes data and manages operations. This interactive model provides a unique educational tool for developers and database administrators.\n\nCurrently, PGSimCity is an early prototype and may contain inaccuracies in its model and explanations. The developer encourages community contributions through GitHub to identify and correct any issues, fostering collaborative improvement.\n\nThe project is open-source, with its code and documentation available for review and enhancement. It serves as a valuable resource for anyone looking to deepen their understanding of PostgreSQL's architecture.\n\n#PostgreSQL #Database #DevTools #Software #Visualization #OpenSource\n\nSource: Hacker News",
+  "tweet": "Dive into PostgreSQL's architecture with PGSimCity! This interactive 3D visualization brings database internals to life, showing backends, shared memory, and WAL in action. An early prototype, community contributions are welcome. #PostgreSQL #DevTools #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://nikolays.github.io/PGSimCity/",
+  "image": "",
+  "orig_title": "PGSimCity - How PostgreSQL Works",
+  "cluster_urls": [
+   "https://nikolays.github.io/PGSimCity/"
+  ],
+  "cluster_titles": [
+   "PGSimCity - How PostgreSQL Works"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260727-1107-1-pgsimcity-visualizes-postgresql-internals-as.png",
+   "20260727-1107-1-pgsimcity-visualizes-postgresql-internals-as-d1.png",
+   "20260727-1107-1-pgsimcity-visualizes-postgresql-internals-as-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_coding_10x_faster_octo",
+  "headline_marked": "Octo tackles the collaboration gap as [[AI coding gets 10x faster]] for individual developers",
+  "headline": "Octo tackles the collaboration gap as AI coding gets 10x faster for individual developers",
+  "summary": "While AI tools boost individual coding speed by 3-5x, team collaboration suffers from longer review queues and context switching. Octo aims to streamline this process.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI coding tools like Cursor, Windsurf, and Tencent Cloud's CodeBuddy NPC are dramatically increasing individual developer speed, automating tasks from function completion to full pull requests and CI cycles. Developers report a 3-5x increase in personal coding output.",
+   "However, this acceleration creates bottlenecks at the team level. Review queues grow longer, test environments become more frequently locked, and wait times between handoffs extend. Actual coding time often accounts for only a fraction of the total delivery cycle, with coordination and context switching consuming the rest.",
+   "Single-agent AI loops, while effective for isolated tasks, struggle with complex features that involve multiple roles like PMs, tech leads, QA, and Ops. These agents lack the context to manage reviews, provision test environments, or understand why previous versions were rejected.",
+   "A less visible but more damaging issue is feedback loss. Critical QA findings, stack traces, and reproduction steps often get buried in chat channels, leading to agents re-discovering bugs and wasting CI cycles. Unlike human developers, agents lack the historical memory of past issues or reviewer preferences.",
+   "This problem compounds over time, resulting in recurring bugs, inconsistent code styles, and persistent test coverage gaps due to lost institutional knowledge. These frictions, tolerable when code moves slowly, are amplified rapidly as AI accelerates output.",
+   "Octo was developed to directly address this delivery loop, rather than being another coding assistant. Its core unit of work, called a \"Loop,\" emerges naturally from conversation, removing the need for extensive ticket fields.",
+   "Within Octo, when an agent pushes code, all relevant information—PR link, commit SHA, and test results—is directly attached to the Loop. Similarly, when QA rejects a build, the rejection reasons and reproduction steps are bound to that specific Loop, creating a permanent, accessible history for future agent learning."
+  ],
+  "caption": "AI coding tools are making individual developers 3-5x faster. But this speed creates a massive bottleneck at the team level.\n\nAI coding tools like Cursor, Windsurf, and Tencent Cloud's CodeBuddy NPC are dramatically increasing individual developer speed, automating tasks from function completion to full pull requests and CI cycles. Developers report a 3-5x increase in personal coding output.\n\nHowever, this acceleration creates bottlenecks at the team level. Review queues grow longer, test environments become more frequently locked, and wait times between handoffs extend. Actual coding time often accounts for only a fraction of the total delivery cycle, with coordination and context switching consuming the rest.\n\nSingle-agent AI loops, while effective for isolated tasks, struggle with complex features that involve multiple roles like PMs, tech leads, QA, and Ops. These agents lack the context to manage reviews, provision test environments, or understand why previous versions were rejected.\n\nA less visible but more damaging issue is feedback loss. Critical QA findings, stack traces, and reproduction steps often get buried in chat channels, leading to agents re-discovering bugs and wasting CI cycles. Unlike human developers, agents lack the historical memory of past issues or reviewer preferences.\n\nThis problem compounds over time, resulting in recurring bugs, inconsistent code styles, and persistent test coverage gaps due to lost institutional knowledge. These frictions, tolerable when code moves slowly, are amplified rapidly as AI accelerates output.\n\nOcto was developed to directly address this delivery loop, rather than being another coding assistant. Its core unit of work, called a \"Loop,\" emerges naturally from conversation, removing the need for extensive ticket fields.\n\n#AICoding #DeveloperTools #SoftwareDevelopment #TeamCollaboration #Tech #AI\n\nSource: DEV",
+  "tweet": "AI coding tools boost individual speed by 3-5x, but create team bottlenecks. Octo introduces 'Loops' to streamline collaboration, binding all feedback and history to tasks for smarter agent learning. #AICoding #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "mininglamp.com",
+  "source": "DEV",
+  "url": "https://dev.to/mininglamp/octo-when-ai-coding-gets-10x-faster-how-we-designed-for-the-collaboration-gap-3jio",
+  "image": "",
+  "orig_title": "Octo: When AI Coding Gets 10x Faster, How We Designed for the Collaboration Gap",
+  "cluster_urls": [
+   "https://dev.to/mininglamp/octo-when-ai-coding-gets-10x-faster-how-we-designed-for-the-collaboration-gap-3jio"
+  ],
+  "cluster_titles": [
+   "Octo: When AI Coding Gets 10x Faster, How We Designed for the Collaboration Gap"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260727-1506-0-octo-tackles-the-collaboration-gap-as-ai-cod.png",
+   "20260727-1506-0-octo-tackles-the-collaboration-gap-as-ai-cod-d1.png",
+   "20260727-1506-0-octo-tackles-the-collaboration-gap-as-ai-cod-d2.png",
+   "20260727-1506-0-octo-tackles-the-collaboration-gap-as-ai-cod-d3.png",
+   "20260727-1506-0-octo-tackles-the-collaboration-gap-as-ai-cod-d4.png"
+  ]
+ },
+ {
+  "topic": "browser_ai_video_watermark_removal",
+  "headline_marked": "[[Removing Video Watermarks Entirely in the Browser]] with MI-GAN, ONNX Runtime Web, and WebGPU",
+  "headline": "Removing Video Watermarks Entirely in the Browser with MI-GAN, ONNX Runtime Web, and WebGPU",
+  "summary": "This new method uses MI-GAN, ONNX Runtime Web, and WebGPU to perform video watermark removal directly in the browser, eliminating the need for server uploads and addressing privacy concerns.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Removing watermarks from videos typically involves uploading media to a GPU server, which introduces latency, infrastructure costs, and privacy concerns. A new approach enables MI-GAN to run locally using ONNX Runtime Web and WebGPU, keeping all media on the user's device.",
+   "This browser-local inference shifts the initial cost to downloading the model. Once the runtime and model artifacts are cached, repeated edits are significantly faster to start, and the original media remains local, enhancing user privacy.",
+   "Video repair is substantially more complex than image repair due to the time axis. Watermarks can exist for a specific time range, move across the frame, and multiple regions may require repair simultaneously.",
+   "The system supports fixed or moving watermarks and multiple selections by interpolating regions between recorded positions. A draggable comparison line allows users to inspect the synthesized pixels before applying changes, as inpainting synthesizes plausible pixels rather than recovering hidden ground truth.",
+   "For optimal performance, the model session runs within a Web Worker, efficiently transferring frame data. WebGPU is the preferred backend for acceleration, with an explicit fallback to WASM if unavailable, ensuring broad compatibility.",
+   "Users are reminded to only apply object-removal tools to media they own or are authorized to edit. Removing ownership or attribution marks from third-party content may violate licenses or platform rules."
+  ],
+  "caption": "Remove video watermarks directly in your browser! This new method keeps your media local, eliminating server uploads, costs, and privacy concerns.\n\nRemoving watermarks from videos typically involves uploading media to a GPU server, which introduces latency, infrastructure costs, and privacy concerns. A new approach enables MI-GAN to run locally using ONNX Runtime Web and WebGPU, keeping all media on the user's device.\n\nThis browser-local inference shifts the initial cost to downloading the model. Once the runtime and model artifacts are cached, repeated edits are significantly faster to start, and the original media remains local, enhancing user privacy.\n\nVideo repair is substantially more complex than image repair due to the time axis. Watermarks can exist for a specific time range, move across the frame, and multiple regions may require repair simultaneously.\n\nThe system supports fixed or moving watermarks and multiple selections by interpolating regions between recorded positions. A draggable comparison line allows users to inspect the synthesized pixels before applying changes, as inpainting synthesizes plausible pixels rather than recovering hidden ground truth.\n\nFor optimal performance, the model session runs within a Web Worker, efficiently transferring frame data. WebGPU is the preferred backend for acceleration, with an explicit fallback to WASM if unavailable, ensuring broad compatibility.\n\nUsers are reminded to only apply object-removal tools to media they own or are authorized to edit. Removing ownership or attribution marks from third-party content may violate licenses or platform rules.\n\n#Tech #WebGPU #AI #VideoEditing #Software #Privacy\n\nSource: DEV",
+  "tweet": "Remove video watermarks entirely in your browser! A new method leverages MI-GAN, ONNX Runtime Web, and WebGPU for local processing, ensuring privacy and cutting server costs. Edit videos without uploading them. #WebGPU #AI #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/martindelophy/removing-video-watermarks-entirely-in-the-browser-with-mi-gan-onnx-runtime-web-and-webgpu-1jdi",
+  "image": "",
+  "orig_title": "Removing Video Watermarks Entirely in the Browser with MI-GAN, ONNX Runtime Web, and WebGPU",
+  "cluster_urls": [
+   "https://dev.to/martindelophy/removing-video-watermarks-entirely-in-the-browser-with-mi-gan-onnx-runtime-web-and-webgpu-1jdi"
+  ],
+  "cluster_titles": [
+   "Removing Video Watermarks Entirely in the Browser with MI-GAN, ONNX Runtime Web, and WebGPU"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260727-1506-1-removing-video-watermarks-entirely-in-the-br.png",
+   "20260727-1506-1-removing-video-watermarks-entirely-in-the-br-d1.png",
+   "20260727-1506-1-removing-video-watermarks-entirely-in-the-br-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "nvidia_open_secure_ai_alliance",
+  "headline_marked": "[[NVIDIA launches 'Open Secure AI Alliance']] with Microsoft, Dell, and SpaceX to boost cyber defense",
+  "headline": "NVIDIA launches 'Open Secure AI Alliance' with Microsoft, Dell, and SpaceX to boost cyber defense",
+  "summary": "This new alliance, featuring 27 founding members, aims to improve cybersecurity by leveraging both open and closed frontier AI models, with a focus on remediating vulnerabilities using open technologies.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "NVIDIA has formed the Open Secure AI Alliance with 26 other major tech companies, including Microsoft, Dell, and SpaceX, to enhance cybersecurity. The initiative builds on the Linux Foundation's Akrites and OpenSSF community work.",
+   "The alliance emphasizes that security researchers need access to both open and closed frontier AI models to effectively defend against modern attacks. They cited a recent incident where Hugging Face successfully used an open-source model after commercial closed models failed to assist due to safety guardrails.",
+   "During the Hugging Face intrusion, closed AI tools blocked forensic analysis, but the open-weight GLM 5.2 model on their own infrastructure allowed them to analyze over 17,000 actions and contain the breach.",
+   "Founding members are contributing diverse elements: NVIDIA offers open models and data, HPE provides cryptographic verification standards, and Hugging Face contributes Safetensors for secure AI model weight storage. Microsoft, IBM, and Red Hat are also offering open-source AI technology.",
+   "The group is calling on governments to collaborate on shared open AI infrastructure investments and to recognize open models as \"defensive assets, not liabilities.\" They argue that blanket restrictions on open frontier AI systems weaken defensive capacity.",
+   "Notably, major commercial AI firms like OpenAI, Anthropic, Meta, and Google are absent from the new alliance. This comes amid reports that the Trump administration is considering a wide ban on Chinese open-source AI models."
+  ],
+  "caption": "NVIDIA, Microsoft, Dell, and SpaceX have united with 23 other tech giants to form the Open Secure AI Alliance. Their mission: revolutionize cyber defense using open and closed AI models.\n\nNVIDIA has formed the Open Secure AI Alliance with 26 other major tech companies, including Microsoft, Dell, and SpaceX, to enhance cybersecurity. The initiative builds on the Linux Foundation's Akrites and OpenSSF community work.\n\nThe alliance emphasizes that security researchers need access to both open and closed frontier AI models to effectively defend against modern attacks. They cited a recent incident where Hugging Face successfully used an open-source model after commercial closed models failed to assist due to safety guardrails.\n\nDuring the Hugging Face intrusion, closed AI tools blocked forensic analysis, but the open-weight GLM 5.2 model on their own infrastructure allowed them to analyze over 17,000 actions and contain the breach.\n\nFounding members are contributing diverse elements: NVIDIA offers open models and data, HPE provides cryptographic verification standards, and Hugging Face contributes Safetensors for secure AI model weight storage. Microsoft, IBM, and Red Hat are also offering open-source AI technology.\n\nThe group is calling on governments to collaborate on shared open AI infrastructure investments and to recognize open models as \"defensive assets, not liabilities.\" They argue that blanket restrictions on open frontier AI systems weaken defensive capacity.\n\nNotably, major commercial AI firms like OpenAI, Anthropic, Meta, and Google are absent from the new alliance. This comes amid reports that the Trump administration is considering a wide ban on Chinese open-source AI models.\n\n#Cybersecurity #AI #NVIDIA #OpenSource #TechNews #Security\n\nSource: Engadget",
+  "tweet": "NVIDIA, Microsoft, Dell, & SpaceX are among 27 founding members of the new Open Secure AI Alliance. The group aims to boost cyber defense by leveraging open and closed AI models, advocating for open-source as a defensive asset. #Cybersecurity #AI #NVIDIA",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2223796/nvidia-launches-open-securte-ai-alliance-initiative-to-improve-cyber-defense/",
+  "image": "https://www.engadget.com/img/gallery/nvidia-launches-open-securte-ai-alliance-initiative-to-improve-cyber-defense/l-intro-1785148929.jpg",
+  "orig_title": "NVIDIA launches 'Open Secure AI Alliance' initiative to improve cyber defense",
+  "cluster_urls": [
+   "https://www.engadget.com/2223796/nvidia-launches-open-securte-ai-alliance-initiative-to-improve-cyber-defense/"
+  ],
+  "cluster_titles": [
+   "NVIDIA launches 'Open Secure AI Alliance' initiative to improve cyber defense"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260727-1706-0-nvidia-launches-open-secure-ai-alliance-with.png",
+   "20260727-1706-0-nvidia-launches-open-secure-ai-alliance-with-d1.png",
+   "20260727-1706-0-nvidia-launches-open-secure-ai-alliance-with-d2.png"
+  ]
+ },
+ {
+  "topic": "llm_agent_browser_automation_playwright",
+  "headline_marked": "[[Connect an LLM agent to a real browser]] with Playwright MCP, enabling live web interaction",
+  "headline": "Connect an LLM agent to a real browser with Playwright MCP, enabling live web interaction",
+  "summary": "Playwright MCP provides a standardized interface, allowing AI agents to perform real browser actions like clicking and navigating, adapting to live DOM changes.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Browser-capable AI agents have transitioned from research demos to practical implementations. Playwright MCP offers a direct method for LLMs to interact with a live browser, moving beyond mere action simulation.",
+   "MCP (Model Context Protocol) is a standardized interface designed for LLM agents to invoke external tools, including a live browser. Playwright, a well-established browser automation library, is wrapped by the Playwright MCP server.",
+   "This setup translates natural-language instructions from an agent into actual browser operations, such as navigation, clicks, form filling, and text extraction. The agent controls a real Chromium or Firefox instance.",
+   "It reads rendered pages, effectively handles JavaScript-heavy websites, and can adapt mid-task to page changes by directly reading the live DOM. This ensures robust interaction with dynamic web content.",
+   "A minimal working scaffold utilizes the OpenAI Agents SDK and the Playwright MCP server. The MCPServerStdio call initiates the Playwright server as a subprocess, automatically equipping the agent with browser-control tools without manual definitions.",
+   "The --headless flag makes the setup serverless-friendly. This configuration supports diverse tasks, ranging from form filling and data extraction to complex multi-step navigation.",
+   "For practical deployment, ensure that npx and Node.js are accessible alongside your Python runtime. Using a Docker image is recommended for a clean and consistent environment."
+  ],
+  "caption": "Give your LLM agent real browser control! Playwright MCP lets AI click, read, and navigate live web pages.\n\nBrowser-capable AI agents have transitioned from research demos to practical implementations. Playwright MCP offers a direct method for LLMs to interact with a live browser, moving beyond mere action simulation.\n\nMCP (Model Context Protocol) is a standardized interface designed for LLM agents to invoke external tools, including a live browser. Playwright, a well-established browser automation library, is wrapped by the Playwright MCP server.\n\nThis setup translates natural-language instructions from an agent into actual browser operations, such as navigation, clicks, form filling, and text extraction. The agent controls a real Chromium or Firefox instance.\n\nIt reads rendered pages, effectively handles JavaScript-heavy websites, and can adapt mid-task to page changes by directly reading the live DOM. This ensures robust interaction with dynamic web content.\n\nA minimal working scaffold utilizes the OpenAI Agents SDK and the Playwright MCP server. The MCPServerStdio call initiates the Playwright server as a subprocess, automatically equipping the agent with browser-control tools without manual definitions.\n\nThe --headless flag makes the setup serverless-friendly. This configuration supports diverse tasks, ranging from form filling and data extraction to complex multi-step navigation.\n\nFor practical deployment, ensure that npx and Node.js are accessible alongside your Python runtime. Using a Docker image is recommended for a clean and consistent environment.\n\n#AI #LLMAgents #Playwright #BrowserAutomation #Developers #Tech\n\nSource: DEV",
+  "tweet": "Give your LLM agent real browser control! Playwright MCP enables AI to click, read, and navigate live web pages using a real browser instance. A practical path for browser-capable agents. #AI #LLMAgents #Playwright",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/basavaraj_sh_1ea7d95f0f2e/connecting-an-llm-agent-to-a-real-browser-with-playwright-mcp-4onj",
+  "image": "",
+  "orig_title": "Connecting an LLM Agent to a Real Browser With Playwright MCP",
+  "cluster_urls": [
+   "https://dev.to/basavaraj_sh_1ea7d95f0f2e/connecting-an-llm-agent-to-a-real-browser-with-playwright-mcp-4onj"
+  ],
+  "cluster_titles": [
+   "Connecting an LLM Agent to a Real Browser With Playwright MCP"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260727-1706-1-connect-an-llm-agent-to-a-real-browser-with-.png",
+   "20260727-1706-1-connect-an-llm-agent-to-a-real-browser-with--d1.png",
+   "20260727-1706-1-connect-an-llm-agent-to-a-real-browser-with--d2.png",
+   "20260727-1706-1-connect-an-llm-agent-to-a-real-browser-with--d3.png"
+  ]
+ }
+]

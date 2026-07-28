@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "arista_velocloud_critical_vulnerability_active_attack",
+  "headline_marked": "Arista VeloCloud Orchestrator CVE-2026-16812: [[CVSS 10.0 Command Injection Under Active Attack]]",
+  "headline": "Arista VeloCloud Orchestrator CVE-2026-16812: CVSS 10.0 Command Injection Under Active Attack",
+  "summary": "A critical CVSS 10.0 command injection vulnerability in on-premises Arista VeloCloud Orchestrator (VCO) is under active exploitation. This flaw allows attackers to gain full control over SD-WAN deployments.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Attackers are actively exploiting CVE-2026-16812, a CVSS 10.0 operating system command injection flaw in on-premises Arista VeloCloud Orchestrator (VCO). Arista confirmed external discovery and active exploitation when its advisory was published on July 27, 2026.",
+   "VCO serves as the management plane for VeloCloud SD-WAN deployments, controlling routing policy and holding device credentials. A compromised orchestrator can grant attackers access to all managed VeloCloud Edge devices.",
+   "The vulnerability stems from privileged internal functionality being remotely accessible without authentication, allowing attacker-supplied input into an OS command context. This classic pattern contributes to its maximum CVSS score.",
+   "The CVSS 10.0 rating signifies a network attack vector, low complexity, no privileges required, and no user interaction. It results in full impact to confidentiality, integrity, and availability of the orchestrator and its managed data.",
+   "Four VCO release branches are affected, specifically customer-operated on-premises deployments. Arista's hosted and dedicated VCO offerings were remediated in advance.",
+   "Operators must immediately block the identified attacker IPs (8.19.75.217, 206.72.242.124, 206.72.242.162) and check historical VCO web access logs for hits. A match indicates an incident, not just a scan.",
+   "Arista advises preserving all evidence, including web access, application, system, and database logs, before patching or rebuilding. Patching first can destroy crucial artifacts needed for forensic analysis.",
+   "If compromise is found, treat the entire SD-WAN fabric as the blast radius. Recommended actions include rotating credentials, reviewing administrator activity, validating device states, and restoring the orchestrator from trusted sources.",
+   "Separately, CVE-2025-68686 in Fortinet FortiOS SSL-VPN and CVE-2026-16723 in Alibaba's Fastjson library (CVSS 9.0, unpatched) are also under active attack, highlighting broader threats."
+  ],
+  "caption": "A CVSS 10.0 command injection flaw in Arista VeloCloud Orchestrator is under active attack, giving full network control. Check your logs now.\n\nAttackers are actively exploiting CVE-2026-16812, a CVSS 10.0 operating system command injection flaw in on-premises Arista VeloCloud Orchestrator (VCO). Arista confirmed external discovery and active exploitation when its advisory was published on July 27, 2026.\n\nVCO serves as the management plane for VeloCloud SD-WAN deployments, controlling routing policy and holding device credentials. A compromised orchestrator can grant attackers access to all managed VeloCloud Edge devices.\n\nThe vulnerability stems from privileged internal functionality being remotely accessible without authentication, allowing attacker-supplied input into an OS command context. This classic pattern contributes to its maximum CVSS score.\n\nThe CVSS 10.0 rating signifies a network attack vector, low complexity, no privileges required, and no user interaction. It results in full impact to confidentiality, integrity, and availability of the orchestrator and its managed data.\n\nFour VCO release branches are affected, specifically customer-operated on-premises deployments. Arista's hosted and dedicated VCO offerings were remediated in advance.\n\nOperators must immediately block the identified attacker IPs (8.19.75.217, 206.72.242.124, 206.72.242.162) and check historical VCO web access logs for hits. A match indicates an incident, not just a scan.\n\nArista advises preserving all evidence, including web access, application, system, and database logs, before patching or rebuilding. Patching first can destroy crucial artifacts needed for forensic analysis.\n\nIf compromise is found, treat the entire SD-WAN fabric as the blast radius. Recommended actions include rotating credentials, reviewing administrator activity, validating device states, and restoring the orchestrator from trusted sources.\n\n#CyberSecurity #Vulnerability #Arista #CVE #SDWAN #InfoSec\n\nSource: DEV",
+  "tweet": "Arista VeloCloud Orchestrator has a critical CVSS 10.0 command injection flaw (CVE-2026-16812) under active exploitation. Attackers can gain full control of SD-WAN deployments. Block known IPs and check logs immediately. #CyberSecurity #Vulnerability #Arista",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "arista.com",
+  "source": "DEV",
+  "url": "https://dev.to/etairos/arista-velocloud-orchestrator-cve-2026-16812-cvss-100-command-injection-under-active-attack-f75",
+  "image": "",
+  "orig_title": "Arista VeloCloud Orchestrator CVE-2026-16812: CVSS 10.0 Command Injection Under Active Attack",
+  "cluster_urls": [
+   "https://dev.to/etairos/arista-velocloud-orchestrator-cve-2026-16812-cvss-100-command-injection-under-active-attack-f75"
+  ],
+  "cluster_titles": [
+   "Arista VeloCloud Orchestrator CVE-2026-16812: CVSS 10.0 Command Injection Under Active Attack"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260728-2032-0-arista-velocloud-orchestrator-cve-2026-16812.png",
+   "20260728-2032-0-arista-velocloud-orchestrator-cve-2026-16812-d1.png",
+   "20260728-2032-0-arista-velocloud-orchestrator-cve-2026-16812-d2.png",
+   "20260728-2032-0-arista-velocloud-orchestrator-cve-2026-16812-d3.png"
+  ]
+ },
+ {
+  "topic": "ios27_siri_ai_breakthrough",
+  "headline_marked": "[[iOS 27's Siri gets one thing very right]] that other AI assistants get wrong",
+  "headline": "iOS 27's Siri gets one thing very right that other AI assistants get wrong",
+  "summary": "The upcoming Siri AI in iOS 27 is set to offer a significant upgrade, distinguishing itself from other AI assistants in a crucial, unspecified aspect.",
+  "category": "APPLE",
+  "template": "neon",
+  "details": [
+   "Apple's Siri AI, slated for release with iOS 27, is described as a major upgrade to the existing assistant. It is expected to introduce significant improvements to its functionality.",
+   "The new Siri is said to differentiate itself greatly from other AI assistants in one key area. However, the specific details of this unique feature have not yet been disclosed."
+  ],
+  "caption": "Apple's upcoming Siri AI in iOS 27 promises a major upgrade, with one key differentiator from other assistants.\n\nApple's Siri AI, slated for release with iOS 27, is described as a major upgrade to the existing assistant. It is expected to introduce significant improvements to its functionality.\n\nThe new Siri is said to differentiate itself greatly from other AI assistants in one key area. However, the specific details of this unique feature have not yet been disclosed.\n\n#Apple #Siri #iOS #AI #TechNews\n\nSource: 9to5Mac",
+  "tweet": "iOS 27's Siri AI is getting a major upgrade, reportedly doing one key thing better than other assistants. Details on this unique feature are anticipated. #Apple #Siri #iOS27",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/07/28/ios-27s-siri-gets-one-thing-very-right-that-other-ai-assistants-get-wrong/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/06/siri-ai.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "iOS 27’s Siri gets one thing very right that other AI assistants get wrong",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/07/28/ios-27s-siri-gets-one-thing-very-right-that-other-ai-assistants-get-wrong/"
+  ],
+  "cluster_titles": [
+   "iOS 27’s Siri gets one thing very right that other AI assistants get wrong"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260728-2032-1-ios-27-s-siri-gets-one-thing-very-right-that.png",
+   "20260728-2032-1-ios-27-s-siri-gets-one-thing-very-right-that-d1.png"
+  ]
+ }
+]

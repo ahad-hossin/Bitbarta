@@ -1,1 +1,48 @@
-[]
+[
+ {
+  "topic": "eu_ai_act_enforcement_august_2",
+  "headline_marked": "[[EU AI Act high-risk provisions]] now enforceable for AI agents, starting August 2",
+  "headline": "EU AI Act high-risk provisions now enforceable for AI agents, starting August 2",
+  "summary": "The EU AI Act's high-risk conformity requirements are now live, impacting organizations deploying AI agents. Despite the Act not explicitly defining agentic systems, companies must demonstrate continuous risk management and human oversight.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "As of August 2, 2026, the EU AI Act's high-risk conformity requirements are officially enforceable, specifically Articles 9 (Risk Management), 14 (Human Oversight), and 43 (Conformity Assessment). These provisions apply directly to organizations deploying AI agents that perform actions with consequences.",
+   "The Act does not explicitly define \"agentic systems\" or address tool-calling agents, nor does it specify how human oversight functions for decisions made in milliseconds across distributed agent fleets. This creates a growing gap between the rapid deployment of agents and existing governance capabilities.",
+   "Organizations are now required to demonstrate \"continuous iterative risk management throughout the entire lifecycle\" of their AI systems. This also includes supporting \"effective oversight by natural persons\" and undergoing a conformity assessment before placing a high-risk system on the market.",
+   "Significant governance gaps persist, as highlighted by the NSA's June 2026 MCP Security Guidance, which identified eight critical flaws in agent communication protocols, including lack of authentication and RBAC. The Cloud Security Alliance's April 2026 research found 92% of enterprise CISOs cannot see their agents, and 95% cannot contain a compromised one.",
+   "Current standards are lagging; NIST's first agent-specific standards are not expected before Q4 2026, and ISO/IEC 42001, designed before autonomous agents, does not address real-time agent policy enforcement. The regulatory framework is in place, but the necessary governance infrastructure is still developing.",
+   "A fundamental architectural choice in agent governance is between watching and preventing. Most current solutions only watch agent traffic by proxying and inspecting prompts, which is useful but does not alter the underlying security model if an agent is compromised.",
+   "A \"credential-brokered\" model offers a preventative approach where agents never hold credentials. All credentials reside in a gateway vault, and every action is mediated and structurally enforced through this gateway before execution, ensuring agents cannot operate outside defined bounds.",
+   "This model generates hash-chained evidence receipts for every agent action, transforming risk identification into pattern analysis of the evidence chain. Risk mitigation becomes policy enforcement at the gateway, which is signed, versioned, and auditable. Human approval is cryptographically bound to the exact action content.",
+   "The complete evidence chain, encompassing every action, policy evaluation, and human oversight event, is cryptographically linked, independently verifiable, and RFC 3161 timestamped. This robust evidence is suitable for regulatory submission, allowing conformity assessors to verify the chain without trusting the operator, agent, or gateway provider.",
+   "The market is already seeing consolidation, with companies like Palo Alto acquiring Protect AI, Cisco taking Robust Intelligence, and SentinelOne buying Prompt Security. The urgent infrastructure problem in enterprise AI is bridging the gap between agent deployment and effective governance, as regulators demand proof and structural controls."
+  ],
+  "caption": "The EU AI Act's high-risk provisions are now enforceable, directly impacting AI agents. Organizations must prove continuous risk management and human oversight for their agentic systems.\n\nAs of August 2, 2026, the EU AI Act's high-risk conformity requirements are officially enforceable, specifically Articles 9 (Risk Management), 14 (Human Oversight), and 43 (Conformity Assessment). These provisions apply directly to organizations deploying AI agents that perform actions with consequences.\n\nThe Act does not explicitly define \"agentic systems\" or address tool-calling agents, nor does it specify how human oversight functions for decisions made in milliseconds across distributed agent fleets. This creates a growing gap between the rapid deployment of agents and existing governance capabilities.\n\nOrganizations are now required to demonstrate \"continuous iterative risk management throughout the entire lifecycle\" of their AI systems. This also includes supporting \"effective oversight by natural persons\" and undergoing a conformity assessment before placing a high-risk system on the market.\n\nSignificant governance gaps persist, as highlighted by the NSA's June 2026 MCP Security Guidance, which identified eight critical flaws in agent communication protocols, including lack of authentication and RBAC. The Cloud Security Alliance's April 2026 research found 92% of enterprise CISOs cannot see their agents, and 95% cannot contain a compromised one.\n\nCurrent standards are lagging; NIST's first agent-specific standards are not expected before Q4 2026, and ISO/IEC 42001, designed before autonomous agents, does not address real-time agent policy enforcement. The regulatory framework is in place, but the necessary governance infrastructure is still developing.\n\n#EUAIAct #AIGovernance #AICompliance #TechRegulation #AIagents #EnterpriseAI\n\nSource: DEV",
+  "tweet": "The EU AI Act's high-risk provisions are now enforceable for AI agents, starting August 2. Organizations must prove continuous risk management and human oversight. A significant gap exists between agent deployment velocity and governance capability. #EUAIAct #AIGovernance",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/narko4u/eu-ai-act-enforcement-starts-august-2-whos-governing-your-agents-2ign",
+  "image": "",
+  "orig_title": "EU AI Act Enforcement Starts August 2. Who's Governing Your Agents?",
+  "cluster_urls": [
+   "https://dev.to/narko4u/eu-ai-act-enforcement-starts-august-2-whos-governing-your-agents-2ign"
+  ],
+  "cluster_titles": [
+   "EU AI Act Enforcement Starts August 2. Who's Governing Your Agents?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260728-2107-0-eu-ai-act-high-risk-provisions-now-enforceab.png",
+   "20260728-2107-0-eu-ai-act-high-risk-provisions-now-enforceab-d1.png",
+   "20260728-2107-0-eu-ai-act-high-risk-provisions-now-enforceab-d2.png",
+   "20260728-2107-0-eu-ai-act-high-risk-provisions-now-enforceab-d3.png",
+   "20260728-2107-0-eu-ai-act-high-risk-provisions-now-enforceab-d4.png",
+   "20260728-2107-0-eu-ai-act-high-risk-provisions-now-enforceab-d5.png"
+  ]
+ }
+]

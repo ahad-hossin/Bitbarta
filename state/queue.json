@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "claude_opus_5_launch_safety_fineprint",
+  "headline_marked": "[[Claude Opus 5 System Card reveals critical safety fine print]] for developers",
+  "headline": "Claude Opus 5 System Card reveals critical safety fine print for developers",
+  "summary": "Anthropic's new model is powerful, but its system card dedicates two-thirds to safety, highlighting developer responsibilities, especially for API users who need to implement their own guardrails.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Anthropic's Claude Opus 5 is here, boasting faster performance, improved coding, and advanced \"computer use\" capabilities. However, its system card reveals that roughly two-thirds of the document focuses on safety and security measures.",
+   "The model is rated ASL-3, the same as Opus 4.8, indicating capabilities in non-novel biological or chemical weapons (CB-1) but not in designing new ones. It often struggles with complex, open-ended scientific problems.",
+   "Opus 5 excels at finding vulnerabilities, identifying bugs in nearly 80% of targets on the OSS-Fuzz benchmark, doubling Opus 4.8's performance. Yet, it still lags behind models like Mythos 5 in writing full, working exploits.",
+   "Anthropic's policy now allows the model to assist in finding bugs in source code for defensive purposes. However, it explicitly blocks attempts to find vulnerabilities in compiled binaries.",
+   "The model shows increased robustness against prompt injection attacks, particularly when acting as an agent using tools or browsing the web. Despite this, the attack surface grows as models gain more power, making external documents potential vectors.",
+   "A critical takeaway for developers is that the API version of Opus 5 does not include the same baked-in guardrails as the consumer-facing chat app. Anthropic states that developers building on the API are responsible for their own safety layers.",
+   "While Anthropic has implemented significant safety measures at the model level, the security of specific applications, their tools, data, and handling of user input remains the developer's responsibility."
+  ],
+  "caption": "Claude Opus 5 is powerful, but its API version lacks consumer-level guardrails. Developers must implement their own safety layers.\n\nAnthropic's Claude Opus 5 is here, boasting faster performance, improved coding, and advanced \"computer use\" capabilities. However, its system card reveals that roughly two-thirds of the document focuses on safety and security measures.\n\nThe model is rated ASL-3, the same as Opus 4.8, indicating capabilities in non-novel biological or chemical weapons (CB-1) but not in designing new ones. It often struggles with complex, open-ended scientific problems.\n\nOpus 5 excels at finding vulnerabilities, identifying bugs in nearly 80% of targets on the OSS-Fuzz benchmark, doubling Opus 4.8's performance. Yet, it still lags behind models like Mythos 5 in writing full, working exploits.\n\nAnthropic's policy now allows the model to assist in finding bugs in source code for defensive purposes. However, it explicitly blocks attempts to find vulnerabilities in compiled binaries.\n\nThe model shows increased robustness against prompt injection attacks, particularly when acting as an agent using tools or browsing the web. Despite this, the attack surface grows as models gain more power, making external documents potential vectors.\n\nA critical takeaway for developers is that the API version of Opus 5 does not include the same baked-in guardrails as the consumer-facing chat app. Anthropic states that developers building on the API are responsible for their own safety layers.\n\nWhile Anthropic has implemented significant safety measures at the model level, the security of specific applications, their tools, data, and handling of user input remains the developer's responsibility.\n\n#ClaudeOpus5 #AI #Security #Developer #Anthropic #LLM\n\nSource: DEV",
+  "tweet": "Claude Opus 5 is powerful, but its API version lacks consumer-level guardrails. Developers must implement their own safety layers for applications built with the model, especially concerning prompt injection and vulnerability detection. #ClaudeOpus5 #AI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/alessandro_pignati/claude-opus-5-is-here-what-developers-need-to-know-about-the-safety-fine-print-27dm",
+  "image": "",
+  "orig_title": "Claude Opus 5 is Here: What Developers Need to Know About the Safety \"Fine Print\"",
+  "cluster_urls": [
+   "https://dev.to/alessandro_pignati/claude-opus-5-is-here-what-developers-need-to-know-about-the-safety-fine-print-27dm"
+  ],
+  "cluster_titles": [
+   "Claude Opus 5 is Here: What Developers Need to Know About the Safety \"Fine Print\""
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260728-1506-0-claude-opus-5-system-card-reveals-critical-s.png",
+   "20260728-1506-0-claude-opus-5-system-card-reveals-critical-s-d1.png",
+   "20260728-1506-0-claude-opus-5-system-card-reveals-critical-s-d2.png",
+   "20260728-1506-0-claude-opus-5-system-card-reveals-critical-s-d3.png"
+  ]
+ }
+]

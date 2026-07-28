@@ -1,1 +1,91 @@
-[]
+[
+ {
+  "topic": "critical_security_vulnerabilities_uncovered",
+  "headline_marked": "[[Dysphoria botnet infects 200,000 devices]], uses blockchain DNS & turns them into relays",
+  "headline": "Dysphoria botnet infects 200,000 devices, uses blockchain DNS & turns them into relays",
+  "summary": "The Dysphoria botnet leverages blockchain name resolution and weak credentials to infect Linux devices, turning them into DDoS bots or relay nodes and exposing up to 155 ports. Daily infections peaked at 239,000 devices.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Dysphoria is a large-scale Linux botnet that infiltrates devices via weak Telnet/SSH passwords and various IoT RCE vulnerabilities. It obtains multi-stage C2 servers from ENS/SNS records, utilizing blockchain name resolution for command and control.",
+   "Infected devices are repurposed as DDoS bots or anonymous relay nodes, potentially exposing up to 155 ports on the local gateway using UPnP. Between July 14 and 20, 2026, daily infections reached a peak of 239,000 globally, with operators claiming control of about 200,000 devices.",
+   "The botnet's operators advertised up to 4 Tbps of DDoS capacity, though this figure is self-reported. The full architecture, persistence mechanisms, DDoS attack types, and regional infection counts have been detailed by researchers.",
+   "Devices in branch offices, factories, retail stores, security cameras, and remote work setups are vulnerable. When devices act as relay nodes, the assumption that \"low traffic means safety\" is no longer valid, necessitating monitoring of UPnP and outbound internal IoT traffic."
+  ],
+  "caption": "A new botnet, Dysphoria, has infected 200,000 devices globally, leveraging blockchain name resolution for its command and control infrastructure. It turns compromised devices into DDoS bots or anonymous relays.\n\nDysphoria is a large-scale Linux botnet that infiltrates devices via weak Telnet/SSH passwords and various IoT RCE vulnerabilities. It obtains multi-stage C2 servers from ENS/SNS records, utilizing blockchain name resolution for command and control.\n\nInfected devices are repurposed as DDoS bots or anonymous relay nodes, potentially exposing up to 155 ports on the local gateway using UPnP. Between July 14 and 20, 2026, daily infections reached a peak of 239,000 globally, with operators claiming control of about 200,000 devices.\n\nThe botnet's operators advertised up to 4 Tbps of DDoS capacity, though this figure is self-reported. The full architecture, persistence mechanisms, DDoS attack types, and regional infection counts have been detailed by researchers.\n\nDevices in branch offices, factories, retail stores, security cameras, and remote work setups are vulnerable. When devices act as relay nodes, the assumption that \"low traffic means safety\" is no longer valid, necessitating monitoring of UPnP and outbound internal IoT traffic.\n\n#Cybersecurity #Botnet #Linux #IoT #Blockchain #Security\n\nSource: DEV",
+  "tweet": "The Dysphoria botnet has infected 200k devices, using blockchain DNS for C2 and turning them into DDoS bots or relays. Daily infections peaked at 239k. Organizations must monitor UPnP and IoT traffic. #Cybersecurity #Botnet #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/dysphoria-a-200k-device-botnet-using-blockchain-name-resolution-and-infected-device-relays-2188",
+  "image": "",
+  "orig_title": "Dysphoria: A 200k-Device Botnet Using Blockchain Name Resolution and Infected Device Relays",
+  "cluster_urls": [
+   "https://dev.to/anoymask/dysphoria-a-200k-device-botnet-using-blockchain-name-resolution-and-infected-device-relays-2188",
+   "https://dev.to/anoymask/public-wi-fi-dns-poisoning-hijacking-microsoft-365-sessions-of-business-travelers-1g5n",
+   "https://dev.to/anoymask/fortios-cve-2025-68686-bypass-of-symlink-persistence-mitigation-for-already-compromised-devices-3534",
+   "https://dev.to/anoymask/certighost-cve-2026-54121-low-privilege-users-impersonate-a-dc-via-ad-cs-35je",
+   "https://dev.to/anoymask/medusahvnc-remote-control-of-logged-in-browsers-on-hidden-windows-desktops-9ia",
+   "https://dev.to/anoymask/velocloud-orchestrator-cve-2026-16812-unauthenticated-os-command-injection-actively-exploited-ml0"
+  ],
+  "cluster_titles": [
+   "Dysphoria: A 200k-Device Botnet Using Blockchain Name Resolution and Infected Device Relays",
+   "Public Wi‑Fi DNS Poisoning: Hijacking Microsoft 365 Sessions of Business Travelers",
+   "FortiOS CVE-2025-68686: Bypass of Symlink Persistence Mitigation for Already Compromised Devices",
+   "Certighost CVE-2026-54121: Low-Privilege Users Impersonate a DC via AD CS",
+   "MedusaHVNC: Remote Control of Logged-in Browsers on Hidden Windows Desktops",
+   "VeloCloud Orchestrator CVE-2026-16812: Unauthenticated OS Command Injection Actively Exploited"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260728-0707-0-dysphoria-botnet-infects-200-000-devices-use.png",
+   "20260728-0707-0-dysphoria-botnet-infects-200-000-devices-use-d1.png",
+   "20260728-0707-0-dysphoria-botnet-infects-200-000-devices-use-d2.png"
+  ]
+ },
+ {
+  "topic": "claude_opus_5_benchmarking_results",
+  "headline_marked": "[[Opus 5 achieves 24% pass rate]] on SlopCodeBench, a new long-horizon coding benchmark",
+  "headline": "Opus 5 achieves 24% pass rate on SlopCodeBench, a new long-horizon coding benchmark",
+  "summary": "Anthropic's latest model, Opus 5, shows a modest improvement over previous models on the challenging multi-checkpoint benchmark, highlighting current LLM limitations in complex software engineering tasks.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A new long-horizon coding benchmark, SlopCodeBench, challenges LLMs by revealing problem requirements in multiple checkpoints, forcing models to evolve codebases over time. This contrasts with traditional benchmarks that disclose the entire problem upfront.",
+   "Previous top models, GPT-5.4 and Opus 4.6, achieved strict pass rates of 11% and 17% respectively on SlopCodeBench, indicating the benchmark is currently unsaturated.",
+   "Recent tests on a subset of SlopCodeBench involved Opus 5, Opus 4.8, and Sonnet 5. Opus 5 technically won with a 24% strict pass rate, a slight increase over Opus 4.6's original 17%.",
+   "Despite the win, none of the models performed exceptionally well. Opus 5, for instance, showed a significant increase in verbosity and code complexity, writing five times more functions than Opus 4.8 for the same challenges.",
+   "The strict pass criteria meant that defects accumulated in earlier checkpoints prevented models from passing subsequent ones. None of the tested models made it to the end of any challenge without defects, even on an \"easy\" problem.",
+   "This performance suggests that current LLMs, even the most advanced, cannot be fully relied upon for real-world software engineering work that involves building solutions iteratively without constant human steering.",
+   "Opus 5 secured four strict passes (24% pass rate), while Opus 4.8 and Sonnet 5 each managed only one strict pass (6% pass rate). The results indicate that while more advanced models may offer slightly better correctness, no model achieved sufficient reliability.",
+   "The testing methodology involved running models in parallel with a fresh context window per checkpoint, using identical prompts within the Claude code harness. Defects were detected via black-box tests against the produced entrypoints."
+  ],
+  "caption": "Opus 5 scored just 24% on a new coding benchmark. Is this the reality check LLMs needed for complex software tasks?\n\nA new long-horizon coding benchmark, SlopCodeBench, challenges LLMs by revealing problem requirements in multiple checkpoints, forcing models to evolve codebases over time. This contrasts with traditional benchmarks that disclose the entire problem upfront.\n\nPrevious top models, GPT-5.4 and Opus 4.6, achieved strict pass rates of 11% and 17% respectively on SlopCodeBench, indicating the benchmark is currently unsaturated.\n\nRecent tests on a subset of SlopCodeBench involved Opus 5, Opus 4.8, and Sonnet 5. Opus 5 technically won with a 24% strict pass rate, a slight increase over Opus 4.6's original 17%.\n\nDespite the win, none of the models performed exceptionally well. Opus 5, for instance, showed a significant increase in verbosity and code complexity, writing five times more functions than Opus 4.8 for the same challenges.\n\nThe strict pass criteria meant that defects accumulated in earlier checkpoints prevented models from passing subsequent ones. None of the tested models made it to the end of any challenge without defects, even on an \"easy\" problem.\n\nThis performance suggests that current LLMs, even the most advanced, cannot be fully relied upon for real-world software engineering work that involves building solutions iteratively without constant human steering.\n\nOpus 5 secured four strict passes (24% pass rate), while Opus 4.8 and Sonnet 5 each managed only one strict pass (6% pass rate). The results indicate that while more advanced models may offer slightly better correctness, no model achieved sufficient reliability.\n\nThe testing methodology involved running models in parallel with a fresh context window per checkpoint, using identical prompts within the Claude code harness. Defects were detected via black-box tests against the produced entrypoints.\n\n#AI #LLM #Coding #Benchmarks #SoftwareDevelopment #Anthropic\n\nSource: Hacker News",
+  "tweet": "Opus 5 scored just 24% on a new coding benchmark, SlopCodeBench. The multi-checkpoint test reveals current LLMs struggle with long-horizon coding tasks, highlighting the need for human oversight in complex software development. #AI #LLM #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "Hacker News",
+  "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md",
+  "image": "",
+  "orig_title": "Benchmarking Opus 5 on SlopCodeBench",
+  "cluster_urls": [
+   "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md"
+  ],
+  "cluster_titles": [
+   "Benchmarking Opus 5 on SlopCodeBench"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260728-0707-1-opus-5-achieves-24-pass-rate-on-slopcodebenc.png",
+   "20260728-0707-1-opus-5-achieves-24-pass-rate-on-slopcodebenc-d1.png",
+   "20260728-0707-1-opus-5-achieves-24-pass-rate-on-slopcodebenc-d2.png",
+   "20260728-0707-1-opus-5-achieves-24-pass-rate-on-slopcodebenc-d3.png"
+  ]
+ }
+]

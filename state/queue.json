@@ -1,1 +1,91 @@
-[]
+[
+ {
+  "topic": "ai_agent_context_window_memory_solutions",
+  "headline_marked": "[[Structured Memory Categories with Mem0]] cut LLM agent token use by 40%",
+  "headline": "Structured Memory Categories with Mem0 cut LLM agent token use by 40%",
+  "summary": "LLM agents often struggle with memory, treating all facts equally. A new approach using Mem0's metadata allows for typed memory, reducing context window bloat and improving recall.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Traditional LLM agent memory implementations often fail in long-running agents by treating all facts equally. This leads to agents rereading stale information or flooding their context window with irrelevant data.",
+   "The article proposes a typed memory schema built on Mem0's metadata capabilities to address these issues. This allows for different types of memories to be handled distinctly based on their nature.",
+   "Memories like user preferences, project state, and behavioral feedback behave differently. A flat `memory.add(text)` approach cannot distinguish these, leading to irrelevant information surfacing during semantic searches.",
+   "By utilizing Mem0's `add()` metadata and `search()` filters, a lightweight type system can be implemented. This transforms retrieval into a two-step process: first, pull relevant memories by type, then let the LLM decide their use.",
+   "This structured approach allows for composing system prompts from distinct sections, such as \"user identity,\" \"standing rules,\" and \"current tasks.\" Crucially, behavioral corrections can be injected unconditionally, ensuring consistent application.",
+   "Project-state memories are prone to causing bugs when stale. The proposed method integrates expiry into the read path, rather than relying on separate cron jobs, keeping the memory store self-cleaning and preventing unbounded growth of the \"project state\" prompt section.",
+   "This memory typing significantly improved a long-running coding agent, preventing stale \"in progress\" notes from being re-read and ensuring consistent application of behavioral corrections. It also cut average per-turn retrieved-memory tokens by approximately 40%.",
+   "The solution leverages existing Mem0 features like metadata and filters, proving that a robust type system can be built without modifying Mem0's core. Designing the memory schema deliberately is key for agents running beyond a single session."
+  ],
+  "caption": "LLM agents drowning in context? Learn how structured memory categories with Mem0 can cut retrieved-memory tokens by 40%.\n\nTraditional LLM agent memory implementations often fail in long-running agents by treating all facts equally. This leads to agents rereading stale information or flooding their context window with irrelevant data.\n\nThe article proposes a typed memory schema built on Mem0's metadata capabilities to address these issues. This allows for different types of memories to be handled distinctly based on their nature.\n\nMemories like user preferences, project state, and behavioral feedback behave differently. A flat `memory.add(text)` approach cannot distinguish these, leading to irrelevant information surfacing during semantic searches.\n\nBy utilizing Mem0's `add()` metadata and `search()` filters, a lightweight type system can be implemented. This transforms retrieval into a two-step process: first, pull relevant memories by type, then let the LLM decide their use.\n\nThis structured approach allows for composing system prompts from distinct sections, such as \"user identity,\" \"standing rules,\" and \"current tasks.\" Crucially, behavioral corrections can be injected unconditionally, ensuring consistent application.\n\nProject-state memories are prone to causing bugs when stale. The proposed method integrates expiry into the read path, rather than relying on separate cron jobs, keeping the memory store self-cleaning and preventing unbounded growth of the \"project state\" prompt section.\n\nThis memory typing significantly improved a long-running coding agent, preventing stale \"in progress\" notes from being re-read and ensuring consistent application of behavioral corrections. It also cut average per-turn retrieved-memory tokens by approximately 40%.\n\nThe solution leverages existing Mem0 features like metadata and filters, proving that a robust type system can be built without modifying Mem0's core. Designing the memory schema deliberately is key for agents running beyond a single session.\n\n#AI #LLMAgents #Mem0 #Developer #Tech #Software\n\nSource: DEV",
+  "tweet": "LLM agents struggle with memory bloat. Learn how structured memory categories with Mem0 can cut retrieved-memory tokens by ~40%, preventing stale data and improving agent performance in long-running tasks. #AI #LLMAgents #Mem0",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "mem0.ai",
+  "source": "DEV",
+  "url": "https://dev.to/mukesh_13/stop-stuffing-your-llm-agents-context-window-structured-memory-categories-with-mem0-4l8i",
+  "image": "",
+  "orig_title": "Stop Stuffing Your LLM Agent's Context Window: Structured Memory Categories with Mem0",
+  "cluster_urls": [
+   "https://dev.to/mukesh_13/stop-stuffing-your-llm-agents-context-window-structured-memory-categories-with-mem0-4l8i",
+   "https://dev.to/wartzarbee/smolagents-replays-its-whole-memory-every-step-the-on2-token-bill-nobody-mentions-5ea3",
+   "https://dev.to/pstayet/your-ai-agent-cant-connect-through-a-corporate-firewall-heres-the-debugging-checklist-5ejj",
+   "https://dev.to/max_quimby/claude-code-cut-80-of-its-prompt-yours-should-too-13ci",
+   "https://dev.to/dongjiang/why-i-built-e2bgateway-solving-ai-agent-sandbox-vendor-lock-in-51k6"
+  ],
+  "cluster_titles": [
+   "Stop Stuffing Your LLM Agent's Context Window: Structured Memory Categories with Mem0",
+   "smolagents replays its whole memory every step: the O(n ) token bill nobody mentions",
+   "Your AI Agent Can't Connect Through a Corporate Firewall? Here's the Debugging Checklist",
+   "Claude Code Cut 80% of Its Prompt. Yours Should Too.",
+   "Why I Built E2BGateway: Solving AI Agent Sandbox Vendor Lock-in"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260729-1107-0-structured-memory-categories-with-mem0-cut-l.png",
+   "20260729-1107-0-structured-memory-categories-with-mem0-cut-l-d1.png",
+   "20260729-1107-0-structured-memory-categories-with-mem0-cut-l-d2.png",
+   "20260729-1107-0-structured-memory-categories-with-mem0-cut-l-d3.png"
+  ]
+ },
+ {
+  "topic": "unified_transformer_model_robot_co_design",
+  "headline_marked": "[[Unified model designs robots for specific tasks]] by optimizing every component for motion",
+  "headline": "Unified model designs robots for specific tasks by optimizing every component for motion",
+  "summary": "A new unified model, Transformer Transformer, can generate complete robots optimized for specific motions, demonstrating a 73% reduction in tracking error in one task.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Researchers have introduced Transformer Transformer, a unified AI model capable of designing complete robots optimized for specific motions. This includes generating every link, joint, motor, and inertial property. In a cloth flinging task on an ALOHA 2 platform, one such design reduced tracking error by 73% and max joint speed by 30%.",
+   "The model is a diffusion transformer trained on RoboTokens, a novel unified tokenization for robot embodiments, states, and actions. This architecture spans various embodiment spaces like wheeled bimanual, quadrupeds, and humanoids, and supports multiple use cases including embodiment generation and cross-embodiment control.",
+   "RoboTokens provide a shared vocabulary, allowing a single sequence to describe both a robot's time-invariant embodiment and its time-varying dynamics. The team tokenized 11 robots from the MuJoCo Menagerie, ranging from 0.65 kg to 67.5 kg and 6 to 35 active joints, into small sequences for end-to-end diffusion.",
+   "The same network functions as a generator, critic, and cross-embodiment controller by changing which tokens are masked during inference, a process called Dynamics Self-Guidance. This allows for zero-shot optimization of unseen rewards and trajectories, outperforming evolutionary baselines.",
+   "Crucially, the controller adapts its strategy to the robot it's driving because it sees the full embodiment as input. This means the same policy can maintain tracking performance even if link inertias, joint ranges, or motor gains are altered, without requiring any retraining per robot."
+  ],
+  "caption": "Imagine a robot that designs itself for the perfect task. A new unified model can generate complete robots, optimizing every component for a specific motion, reducing tracking error by 73%.\n\nResearchers have introduced Transformer Transformer, a unified AI model capable of designing complete robots optimized for specific motions. This includes generating every link, joint, motor, and inertial property. In a cloth flinging task on an ALOHA 2 platform, one such design reduced tracking error by 73% and max joint speed by 30%.\n\nThe model is a diffusion transformer trained on RoboTokens, a novel unified tokenization for robot embodiments, states, and actions. This architecture spans various embodiment spaces like wheeled bimanual, quadrupeds, and humanoids, and supports multiple use cases including embodiment generation and cross-embodiment control.\n\nRoboTokens provide a shared vocabulary, allowing a single sequence to describe both a robot's time-invariant embodiment and its time-varying dynamics. The team tokenized 11 robots from the MuJoCo Menagerie, ranging from 0.65 kg to 67.5 kg and 6 to 35 active joints, into small sequences for end-to-end diffusion.\n\nThe same network functions as a generator, critic, and cross-embodiment controller by changing which tokens are masked during inference, a process called Dynamics Self-Guidance. This allows for zero-shot optimization of unseen rewards and trajectories, outperforming evolutionary baselines.\n\nCrucially, the controller adapts its strategy to the robot it's driving because it sees the full embodiment as input. This means the same policy can maintain tracking performance even if link inertias, joint ranges, or motor gains are altered, without requiring any retraining per robot.\n\n#Robotics #AI #MachineLearning #RobotDesign #Tech\n\nSource: Hacker News",
+  "tweet": "A new AI model, Transformer Transformer, can design entire robots optimized for specific motions, reducing tracking error by 73% in tests. It uses \"RoboTokens\" for a unified robot vocabulary. #Robotics #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://transformer-transformer.github.io/",
+  "image": "",
+  "orig_title": "Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-Design",
+  "cluster_urls": [
+   "https://transformer-transformer.github.io/"
+  ],
+  "cluster_titles": [
+   "Transformer Transformer: A Unified Model for Motion-Conditioned Robot Co-Design"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260729-1107-1-unified-model-designs-robots-for-specific-ta.png",
+   "20260729-1107-1-unified-model-designs-robots-for-specific-ta-d1.png",
+   "20260729-1107-1-unified-model-designs-robots-for-specific-ta-d2.png",
+   "20260729-1107-1-unified-model-designs-robots-for-specific-ta-d3.png"
+  ]
+ }
+]

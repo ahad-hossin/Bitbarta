@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "secure local ai agent infrastructure",
+  "headline_marked": "[[Building a Secure Local AI Agent]] with SGLang & Olares: Lessons from Real-World Audits",
+  "headline": "Building a Secure Local AI Agent with SGLang & Olares: Lessons from Real-World Audits",
+  "summary": "Running LLMs locally offers data sovereignty but doesn't guarantee security. Poorly configured stacks expose infrastructure to prompt injection and adversarial attacks, requiring robust architecture.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "While local AI promises data sovereignty by running Large Language Models (LLMs) on-premise, it doesn't automatically ensure security. A poorly configured local LLM stack can expose infrastructure to sophisticated attack vectors, including prompt injection, tool misuse, and adversarial inference attacks.",
+   "This analysis details building a secure local AI agent using SGLang, a high-performance LLM serving engine, and Olares, a framework for local AI orchestration and security. It dissects the security implications of these components and reviews lessons from real-world penetration testing.",
+   "The traditional threat model shifts with LLMs; the boundary of trust moves from the network perimeter to the prompt interface. Many organizations mistakenly assume local model execution equates to safety, overlooking unique LLM vulnerabilities.",
+   "SGLang, developed by Princeton University, is an open-source LLM serving engine designed for high-throughput and complex structured generation. Its architecture offers security advantages but also introduces specific risks that need careful management.",
+   "Olares is an emerging framework focused on local AI orchestration with a strong emphasis on security and privacy. It acts as middleware, intercepting and validating LLM tool calls against security policies before execution.",
+   "Real-world security audits revealed that storing sensitive PII in the context window is a common vulnerability, making data extractable via adversarial prompts. Mitigation involves using Retrieval-Augmented Generation (RAG) with strict access controls and avoiding raw PII in the context.",
+   "Another finding highlighted LLMs hallucinating tool inputs, which attackers can exploit to cause unintended tool calls. Strict schema validation for tool inputs, SGLang's structured output features, and human-in-the-loop approval for high-risk actions are crucial mitigations.",
+   "Inference attacks, even with local models, can extract training data if the model is overfitted or APIs are exposed without rate limiting. Implementing rate limiting, anomaly detection, and regularly auditing model outputs for data leakage are essential countermeasures.",
+   "Building a secure local AI agent demands a comprehensive architectural approach, not just selecting the right model. Leveraging SGLang for structured serving and Olares for security-conscious orchestration, combined with vigilance and regular audits, is key to maintaining production security."
+  ],
+  "caption": "Running local AI? Don't assume it's secure. Real-world audits reveal critical vulnerabilities in on-premise LLM deployments, from prompt injection to data leakage.\n\nWhile local AI promises data sovereignty by running Large Language Models (LLMs) on-premise, it doesn't automatically ensure security. A poorly configured local LLM stack can expose infrastructure to sophisticated attack vectors, including prompt injection, tool misuse, and adversarial inference attacks.\n\nThis analysis details building a secure local AI agent using SGLang, a high-performance LLM serving engine, and Olares, a framework for local AI orchestration and security. It dissects the security implications of these components and reviews lessons from real-world penetration testing.\n\nThe traditional threat model shifts with LLMs; the boundary of trust moves from the network perimeter to the prompt interface. Many organizations mistakenly assume local model execution equates to safety, overlooking unique LLM vulnerabilities.\n\nSGLang, developed by Princeton University, is an open-source LLM serving engine designed for high-throughput and complex structured generation. Its architecture offers security advantages but also introduces specific risks that need careful management.\n\nOlares is an emerging framework focused on local AI orchestration with a strong emphasis on security and privacy. It acts as middleware, intercepting and validating LLM tool calls against security policies before execution.\n\nReal-world security audits revealed that storing sensitive PII in the context window is a common vulnerability, making data extractable via adversarial prompts. Mitigation involves using Retrieval-Augmented Generation (RAG) with strict access controls and avoiding raw PII in the context.\n\n#LocalAI #AISecurity #LLMSecurity #OpenSource #Cybersecurity #DevOps\n\nSource: DEV",
+  "tweet": "Running local AI? Don't assume it's secure. New insights from real-world audits highlight critical vulnerabilities in on-premise LLM deployments, from prompt injection to data leakage. Learn how to build a production-hardened secure AI agent with SGLang & Olares. #AISecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/building-a-secure-local-ai-agent-on-open-source-infrastructure-lessons-from-sglang-olares-and-3f8",
+  "image": "",
+  "orig_title": "Building a Secure Local AI Agent on Open-Source Infrastructure: Lessons from SGLang, Olares, and Real-World Audits",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/building-a-secure-local-ai-agent-on-open-source-infrastructure-lessons-from-sglang-olares-and-3f8"
+  ],
+  "cluster_titles": [
+   "Building a Secure Local AI Agent on Open-Source Infrastructure: Lessons from SGLang, Olares, and Real-World Audits"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260729-1210-0-building-a-secure-local-ai-agent-with-sglang.png",
+   "20260729-1210-0-building-a-secure-local-ai-agent-with-sglang-d1.png",
+   "20260729-1210-0-building-a-secure-local-ai-agent-with-sglang-d2.png",
+   "20260729-1210-0-building-a-secure-local-ai-agent-with-sglang-d3.png",
+   "20260729-1210-0-building-a-secure-local-ai-agent-with-sglang-d4.png"
+  ]
+ },
+ {
+  "topic": "iyo lawsuit openai jony ive settlement talks",
+  "headline_marked": "iyO’s trademark lawsuit against OpenAI [[paused over settlement talks]]",
+  "headline": "iyO’s trademark lawsuit against OpenAI paused over settlement talks",
+  "summary": "The legal battle between iyO and OpenAI, involving trademark disputes, has been temporarily halted as both parties explore a potential resolution.",
+  "category": "BIGTECH",
+  "template": "terminal",
+  "details": [
+   "A trademark lawsuit filed by iyO against OpenAI and Jony Ive has been put on hold. Judge Trina L. Thompson granted the pause to allow the involved parties to finalize settlement negotiations.",
+   "The specifics of the trademark dispute remain undisclosed, but the pause indicates a potential agreement is in the works. This development could bring an end to the legal proceedings.",
+   "OpenAI, a leading AI research company, has been involved in various legal and ethical discussions surrounding its technology and intellectual property.",
+   "Jony Ive, a prominent designer known for his work with Apple, was also named in the lawsuit, though his specific role or connection to the dispute is not detailed in the provided text."
+  ],
+  "caption": "iyO's trademark lawsuit against OpenAI and Jony Ive is on hold as settlement talks progress.\n\nA trademark lawsuit filed by iyO against OpenAI and Jony Ive has been put on hold. Judge Trina L. Thompson granted the pause to allow the involved parties to finalize settlement negotiations.\n\nThe specifics of the trademark dispute remain undisclosed, but the pause indicates a potential agreement is in the works. This development could bring an end to the legal proceedings.\n\nOpenAI, a leading AI research company, has been involved in various legal and ethical discussions surrounding its technology and intellectual property.\n\nJony Ive, a prominent designer known for his work with Apple, was also named in the lawsuit, though his specific role or connection to the dispute is not detailed in the provided text.\n\n#OpenAI #JonyIve #Lawsuit #Trademark #TechNews\n\nSource: 9to5Mac",
+  "tweet": "iyO's trademark lawsuit against OpenAI and Jony Ive has been paused as settlement talks are underway. Judge Trina L. Thompson granted the halt to allow parties to finalize negotiations. #OpenAI #Lawsuit #Trademark",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/07/28/iyos-trademark-lawsuit-against-openai-and-jony-ive-paused-over-settlement-talks/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/11/ive-altman-powell-jobs.webp?w=1600",
+  "orig_title": "iyO’s trademark lawsuit against OpenAI and Jony Ive paused over settlement talks [U]",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/07/28/iyos-trademark-lawsuit-against-openai-and-jony-ive-paused-over-settlement-talks/"
+  ],
+  "cluster_titles": [
+   "iyO’s trademark lawsuit against OpenAI and Jony Ive paused over settlement talks [U]"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260729-1210-1-iyo-s-trademark-lawsuit-against-openai-pause.png",
+   "20260729-1210-1-iyo-s-trademark-lawsuit-against-openai-pause-d1.png"
+  ]
+ }
+]

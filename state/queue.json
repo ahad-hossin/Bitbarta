@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ftc_sues_hims_hers_data_sharing",
+  "headline_marked": "[[FTC sues Hims & Hers]] for allegedly sharing patient medical data with Meta and Snap",
+  "headline": "FTC sues Hims & Hers for allegedly sharing patient medical data with Meta and Snap",
+  "summary": "The lawsuit alleges the healthcare giant shared sensitive health information with advertisers like Meta and Snap, and misled consumers about its privacy practices. This is part of a broader crackdown on healthcare companies sharing patient data without consent",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The Federal Trade Commission (FTC) is suing healthcare giant Hims & Hers, alleging the company shared customers' medical and healthcare information with advertisers and tech giants, including Meta and Snap. The lawsuit also claims Hims & Hers misled consumers regarding its privacy practices.",
+   "Hims & Hers, a publicly traded company, provides prescription medication for sexual wellness, mental health, and weight loss, handling a large volume of sensitive patient data. Companies often install code on their websites to share user information with advertisers, who then use this data to track website visitors.",
+   "The FTC's complaint, filed in a California federal court, states that Hims & Hers placed pixel-sized trackers from Meta, Snap, Microsoft, Pinterest, Reddit, and X. These trackers allegedly \"captured and shared users' health information,\" contradicting Hims & Hers' own privacy policy. The company is also accused of deceptive billing and creating policies that made cancellations difficult.",
+   "In response, Hims & Hers did not explicitly deny the FTC's claims. The company stated its privacy policy \"makes clear\" that users \"may choose how their data is used\" and expressed confidence in its position, planning to defend against the allegations.",
+   "This action is part of the FTC's ongoing efforts against healthcare companies sharing sensitive data without customer knowledge. Previous targets include telehealth startup Cerebral, alcohol recovery provider Monument, data giant GoodRx, and therapy provider BetterHelp, all accused of similar data-sharing practices.",
+   "The use of pixel trackers has previously highlighted how sensitive data can be inadvertently shared due to misconfigurations. For instance, in 2024, the U.S. Postal Service was found to be sharing logged-in users' home addresses with Meta, LinkedIn, and Snap via their pixel tracking code, which was later removed."
+  ],
+  "caption": "The FTC is suing healthcare giant Hims & Hers for allegedly sharing patients' sensitive medical data with advertisers like Meta and Snap.\n\nThe Federal Trade Commission (FTC) is suing healthcare giant Hims & Hers, alleging the company shared customers' medical and healthcare information with advertisers and tech giants, including Meta and Snap. The lawsuit also claims Hims & Hers misled consumers regarding its privacy practices.\n\nHims & Hers, a publicly traded company, provides prescription medication for sexual wellness, mental health, and weight loss, handling a large volume of sensitive patient data. Companies often install code on their websites to share user information with advertisers, who then use this data to track website visitors.\n\nThe FTC's complaint, filed in a California federal court, states that Hims & Hers placed pixel-sized trackers from Meta, Snap, Microsoft, Pinterest, Reddit, and X. These trackers allegedly \"captured and shared users' health information,\" contradicting Hims & Hers' own privacy policy. The company is also accused of deceptive billing and creating policies that made cancellations difficult.\n\nIn response, Hims & Hers did not explicitly deny the FTC's claims. The company stated its privacy policy \"makes clear\" that users \"may choose how their data is used\" and expressed confidence in its position, planning to defend against the allegations.\n\nThis action is part of the FTC's ongoing efforts against healthcare companies sharing sensitive data without customer knowledge. Previous targets include telehealth startup Cerebral, alcohol recovery provider Monument, data giant GoodRx, and therapy provider BetterHelp, all accused of similar data-sharing practices.\n\n#FTC #DataPrivacy #HimsAndHers #HealthcareTech #Security #BigTech\n\nSource: TechCrunch",
+  "tweet": "The FTC is suing healthcare giant Hims & Hers for allegedly sharing patients' sensitive medical data with advertisers like Meta and Snap. The lawsuit claims the company misled consumers about its privacy practices. #DataPrivacy #FTC #HimsAndHers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "hims.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/07/30/ftc-sues-hims-hers-for-allegedly-sharing-patients-medical-data-with-advertisers-meta-and-snap/",
+  "image": "",
+  "orig_title": "FTC sues Hims & Hers for allegedly sharing patients’ medical data with advertisers Meta and Snap",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/07/30/ftc-sues-hims-hers-for-allegedly-sharing-patients-medical-data-with-advertisers-meta-and-snap/"
+  ],
+  "cluster_titles": [
+   "FTC sues Hims & Hers for allegedly sharing patients’ medical data with advertisers Meta and Snap"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260730-2006-0-ftc-sues-hims-hers-for-allegedly-sharing-pat.png",
+   "20260730-2006-0-ftc-sues-hims-hers-for-allegedly-sharing-pat-d1.png",
+   "20260730-2006-0-ftc-sues-hims-hers-for-allegedly-sharing-pat-d2.png",
+   "20260730-2006-0-ftc-sues-hims-hers-for-allegedly-sharing-pat-d3.png"
+  ]
+ },
+ {
+  "topic": "bonsai_27b_llm_runs_on_phone",
+  "headline_marked": "[[Bonsai 27B AI model fits on your phone]] at under 4GB, but performance varies",
+  "headline": "Bonsai 27B AI model fits on your phone at under 4GB, but performance varies",
+  "summary": "Prism ML compressed the 27B-parameter Qwen 3.6 model from 54GB to under 4GB for mobile. While it struggles with factual recall, it surprisingly excels at complex coding tasks.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Prism ML compressed the 27B-parameter Qwen 3.6 model from 54GB (FP16) to under 4GB, allowing it to run entirely on a phone. This aggressive compression usually leads to significant performance degradation, raising questions about its practical utility.",
+   "Testing revealed that specific factual knowledge, which appears less frequently in training data, is quickly lost with compression. General language patterns and reasoning, however, survive much better.",
+   "For general knowledge chatbots or summarizing unfamiliar topics, the highly compressed Bonsai 27B (ternary or 1-bit versions) is not recommended due to a clear drop in factual accuracy.",
+   "Surprisingly, the story changes completely for coding tasks. The model successfully resolved classic bugs, including a complex race condition, performing identically to the less compressed original.",
+   "In an open-ended task to create programmatic visual compositions, the 1-bit compressed model converged to a correct solution in just two attempts. This was faster than the ternary (ten attempts) and the original model (four attempts), which spent more time exploring.",
+   "The key difference wasn't reasoning about the bug itself, but how efficiently each model interacted with the editing tool. The faster, more compressed model delivered within a reasonable time budget, showing that more parameters don't always mean faster task completion.",
+   "A significant drawback is infrastructure dependency: Bonsai 27B doesn't run on standard tools like Ollama. The 1-bit version requires a custom fork by Prism ML, and even the ternary version on standard MLX had a determinism bug.",
+   "This means aggressive compression makes the model more reliant on non-standard infrastructure, which contradicts the idea of accessibility. Users need patience for custom binaries and server configurations."
+  ],
+  "caption": "The Bonsai 27B AI model shrinks a 54GB LLM to under 4GB, fitting on your phone. It struggles with facts but surprisingly excels at complex coding challenges.\n\nPrism ML compressed the 27B-parameter Qwen 3.6 model from 54GB (FP16) to under 4GB, allowing it to run entirely on a phone. This aggressive compression usually leads to significant performance degradation, raising questions about its practical utility.\n\nTesting revealed that specific factual knowledge, which appears less frequently in training data, is quickly lost with compression. General language patterns and reasoning, however, survive much better.\n\nFor general knowledge chatbots or summarizing unfamiliar topics, the highly compressed Bonsai 27B (ternary or 1-bit versions) is not recommended due to a clear drop in factual accuracy.\n\nSurprisingly, the story changes completely for coding tasks. The model successfully resolved classic bugs, including a complex race condition, performing identically to the less compressed original.\n\nIn an open-ended task to create programmatic visual compositions, the 1-bit compressed model converged to a correct solution in just two attempts. This was faster than the ternary (ten attempts) and the original model (four attempts), which spent more time exploring.\n\nThe key difference wasn't reasoning about the bug itself, but how efficiently each model interacted with the editing tool. The faster, more compressed model delivered within a reasonable time budget, showing that more parameters don't always mean faster task completion.\n\nA significant drawback is infrastructure dependency: Bonsai 27B doesn't run on standard tools like Ollama. The 1-bit version requires a custom fork by Prism ML, and even the ternary version on standard MLX had a determinism bug.\n\nThis means aggressive compression makes the model more reliant on non-standard infrastructure, which contradicts the idea of accessibility. Users need patience for custom binaries and server configurations.\n\n#AI #LLM #MobileAI #Tech #MachineLearning #Bonsai27B\n\nSource: DEV",
+  "tweet": "Bonsai 27B: A 27B-parameter AI model now fits on your phone at under 4GB! It sacrifices factual recall but surprisingly shines in complex coding tasks, outperforming larger models in efficiency. #AI #LLM #MobileTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "prismml.com",
+  "source": "DEV",
+  "url": "https://dev.to/lincoln_romais/testei-mentalmente-no-hd-e-na-paciencia-o-bonsai-27b-o-modelo-que-cabe-no-seu-telefone-vale-a-1b7e",
+  "image": "",
+  "orig_title": "Testei o Bonsai 27B, o modelo que cabe no seu telefone. Vale a pena?",
+  "cluster_urls": [
+   "https://dev.to/lincoln_romais/testei-mentalmente-no-hd-e-na-paciencia-o-bonsai-27b-o-modelo-que-cabe-no-seu-telefone-vale-a-1b7e"
+  ],
+  "cluster_titles": [
+   "Testei o Bonsai 27B, o modelo que cabe no seu telefone. Vale a pena?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260730-2006-1-bonsai-27b-ai-model-fits-on-your-phone-at-un.png",
+   "20260730-2006-1-bonsai-27b-ai-model-fits-on-your-phone-at-un-d1.png",
+   "20260730-2006-1-bonsai-27b-ai-model-fits-on-your-phone-at-un-d2.png",
+   "20260730-2006-1-bonsai-27b-ai-model-fits-on-your-phone-at-un-d3.png"
+  ]
+ }
+]

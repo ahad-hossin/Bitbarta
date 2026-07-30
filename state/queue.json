@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "microsoft_q4_earnings_ai_xbox_split",
+  "headline_marked": "[[Microsoft logs $3.2B gain from Anthropic investment]], while OpenAI sees $600M markdown",
+  "headline": "Microsoft logs $3.2B gain from Anthropic investment, while OpenAI sees $600M markdown",
+  "summary": "Microsoft's Q4 fiscal 2026 earnings reveal a significant return on its Anthropic investment, contrasting with a quarterly write-down for its stake in OpenAI.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Microsoft reported its fourth-quarter earnings for fiscal year 2026, which ended on June 30, highlighting the performance of its AI investments. The company recorded a substantial $3.2 billion gain from its investment in Anthropic for the quarter.",
+   "This gain boosted Microsoft's diluted earnings per share by 33 cents, contributing to a reported $4.81 diluted EPS for the quarter. Microsoft had invested $5 billion in Anthropic in November 2025, part of an agreement where Anthropic also committed to purchasing $30 billion in Azure services.",
+   "In contrast, Microsoft's investment in OpenAI did not fare as well during the same quarter. The company marked down its OpenAI investment by approximately $600 million, reducing diluted EPS by about 7 cents per share.",
+   "Microsoft holds about 27% of OpenAI and accounts for the value of this investment quarterly. Despite the quarterly decline, the $600 million write-down was a minor factor in Microsoft's overall highly profitable quarter.",
+   "The tech giant reported $90 billion in revenue and a net income of $35.8 billion for the quarter. For the full fiscal year, Microsoft's total revenue reached $331.8 billion with a net income of $133.7 billion.",
+   "On a full-year basis, Microsoft's OpenAI investment generated a $5 billion gain, adding $0.67 to its annual EPS, which stood at $17.95. It is noteworthy that the one-quarter gain from Anthropic nearly matched the full-year gain from OpenAI."
+  ],
+  "caption": "Microsoft's latest earnings report reveals a staggering $3.2 billion gain from its Anthropic investment in just one quarter.\n\nMicrosoft reported its fourth-quarter earnings for fiscal year 2026, which ended on June 30, highlighting the performance of its AI investments. The company recorded a substantial $3.2 billion gain from its investment in Anthropic for the quarter.\n\nThis gain boosted Microsoft's diluted earnings per share by 33 cents, contributing to a reported $4.81 diluted EPS for the quarter. Microsoft had invested $5 billion in Anthropic in November 2025, part of an agreement where Anthropic also committed to purchasing $30 billion in Azure services.\n\nIn contrast, Microsoft's investment in OpenAI did not fare as well during the same quarter. The company marked down its OpenAI investment by approximately $600 million, reducing diluted EPS by about 7 cents per share.\n\nMicrosoft holds about 27% of OpenAI and accounts for the value of this investment quarterly. Despite the quarterly decline, the $600 million write-down was a minor factor in Microsoft's overall highly profitable quarter.\n\nThe tech giant reported $90 billion in revenue and a net income of $35.8 billion for the quarter. For the full fiscal year, Microsoft's total revenue reached $331.8 billion with a net income of $133.7 billion.\n\nOn a full-year basis, Microsoft's OpenAI investment generated a $5 billion gain, adding $0.67 to its annual EPS, which stood at $17.95. It is noteworthy that the one-quarter gain from Anthropic nearly matched the full-year gain from OpenAI.\n\n#Microsoft #Anthropic #OpenAI #AIBusiness #TechEarnings #BigTech\n\nSource: TechCrunch, The Verge",
+  "tweet": "Microsoft's Q4 earnings show a massive $3.2B gain from its Anthropic investment, significantly boosting EPS. Meanwhile, its OpenAI stake saw a $600M markdown for the quarter. #Microsoft #AI #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "TechCrunch, The Verge",
+  "url": "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+  "image": "",
+  "orig_title": "Microsoft logs $3.2B from Anthropic investment, but OpenAI was a mixed bag",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/",
+   "https://www.theverge.com/tech/972738/xbox-revenue-microsoft-earnings-q4-2026"
+  ],
+  "cluster_titles": [
+   "Microsoft logs $3.2B from Anthropic investment, but OpenAI was a mixed bag",
+   "Xbox revenue drops 10 percent as Microsoft&#8217;s cloud and AI business surges"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260730-0806-0-microsoft-logs-3-2b-gain-from-anthropic-inve.png",
+   "20260730-0806-0-microsoft-logs-3-2b-gain-from-anthropic-inve-d1.png",
+   "20260730-0806-0-microsoft-logs-3-2b-gain-from-anthropic-inve-d2.png"
+  ]
+ },
+ {
+  "topic": "mythos_ai_breaks_pqc_algorithm",
+  "headline_marked": "[[Anthropic AI breaks quantum-resistant algorithm HAWK]], forcing its withdrawal from NIST consideration",
+  "headline": "Anthropic AI breaks quantum-resistant algorithm HAWK, forcing its withdrawal from NIST consideration",
+  "summary": "The HAWK digital signature scheme, a candidate for a US post-quantum cryptography standard, was withdrawn after Anthropic's Mythos AI found a critical flaw.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The HAWK digital signature scheme, a promising candidate for a US post-quantum cryptography standard, has been withdrawn from consideration. This follows the discovery of a critical flaw by Anthropic's Mythos AI security model.",
+   "HAWK was designed to resist attacks from future quantum computers and had successfully passed two rigorous testing rounds by NIST. The flaw was uncovered during a third round of testing specifically designed to identify such weaknesses.",
+   "Anthropic announced its findings, revealing that its Mythos AI model identified weaknesses in the mathematical problems underpinning HAWK. It also found similar issues in a weakened version of the widely used AES cipher.",
+   "While significant, these findings are incremental and do not currently break any cryptosystems in widespread use today. Instead, they demonstrate methods for moderately reducing the computational effort required to defeat these systems.",
+   "The cryptosystems tested were weakened versions, known as \"challenge instances,\" provided by the specification authors for adversarial peer review. In production settings, the real versions are considerably more robust.",
+   "Crucially, the underlying mathematical primitives that form the building blocks of cryptosystems remain secure for now. Furthermore, the attacks described would likely be infeasible to execute outside of controlled testing environments.",
+   "An Anthropic researcher, with no prior cryptography expertise, prompted Mythos for about 60 hours at a compute cost of approximately $100,000. This effort improved the best-known attack on HAWK, effectively halving its key strength.",
+   "Mythos discovered a previously unknown method for finding automorphism symmetries in the Lattice Isomorphism Problem, on which HAWK's security relies. This discovery fundamentally broke the algorithm, though the weakness could be mitigated by doubling the key size, making HAWK less efficient than other PQC options.",
+   "Matthew Green, a cryptography expert, highlighted that the impressive aspect was Mythos's ability to combine existing, well-known tools in a novel way, rather than inventing new mathematics. This approach is particularly well-suited for AI.",
+   "Mythos operated semi-autonomously, guided by human non-technical direction. It conducted an extensive literature review, performed mathematical reasoning, and ran computational experiments, even implementing an end-to-end verification pipeline for its findings."
+  ],
+  "caption": "An AI just broke a quantum-resistant encryption algorithm! Anthropic's Mythos AI found a critical flaw in HAWK, a candidate for a US post-quantum standard.\n\nThe HAWK digital signature scheme, a promising candidate for a US post-quantum cryptography standard, has been withdrawn from consideration. This follows the discovery of a critical flaw by Anthropic's Mythos AI security model.\n\nHAWK was designed to resist attacks from future quantum computers and had successfully passed two rigorous testing rounds by NIST. The flaw was uncovered during a third round of testing specifically designed to identify such weaknesses.\n\nAnthropic announced its findings, revealing that its Mythos AI model identified weaknesses in the mathematical problems underpinning HAWK. It also found similar issues in a weakened version of the widely used AES cipher.\n\nWhile significant, these findings are incremental and do not currently break any cryptosystems in widespread use today. Instead, they demonstrate methods for moderately reducing the computational effort required to defeat these systems.\n\nThe cryptosystems tested were weakened versions, known as \"challenge instances,\" provided by the specification authors for adversarial peer review. In production settings, the real versions are considerably more robust.\n\nCrucially, the underlying mathematical primitives that form the building blocks of cryptosystems remain secure for now. Furthermore, the attacks described would likely be infeasible to execute outside of controlled testing environments.\n\nAn Anthropic researcher, with no prior cryptography expertise, prompted Mythos for about 60 hours at a compute cost of approximately $100,000. This effort improved the best-known attack on HAWK, effectively halving its key strength.\n\n#Cybersecurity #AI #Cryptography #QuantumComputing #TechNews #Anthropic\n\nSource: Ars Technica",
+  "tweet": "Anthropic's Mythos AI just broke HAWK, a quantum-resistant encryption algorithm candidate for a US standard. The flaw forced HAWK's withdrawal from NIST consideration. This highlights AI's growing role in security research. #Cybersecurity #AI #Cryptography",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "Ars Technica",
+  "url": "https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/07/broken-encryption-lock-1152x648.jpg",
+  "orig_title": "Mythos attack on 3rd-round PQC algorithm candidate puts it out of commission",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/07/mythos-uncovers-crypto-weaknesses-that-went-unknown-for-years/"
+  ],
+  "cluster_titles": [
+   "Mythos attack on 3rd-round PQC algorithm candidate puts it out of commission"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260730-0806-1-anthropic-ai-breaks-quantum-resistant-algori.png",
+   "20260730-0806-1-anthropic-ai-breaks-quantum-resistant-algori-d1.png",
+   "20260730-0806-1-anthropic-ai-breaks-quantum-resistant-algori-d2.png",
+   "20260730-0806-1-anthropic-ai-breaks-quantum-resistant-algori-d3.png",
+   "20260730-0806-1-anthropic-ai-breaks-quantum-resistant-algori-d4.png"
+  ]
+ }
+]

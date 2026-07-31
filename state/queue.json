@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "thinking machines inkling small open source ai model release",
+  "headline_marked": "[[Thinking Machines debuts Inkling-Small]] AI, 1/4 the size of Inkling with near-equal performance",
+  "headline": "Thinking Machines debuts Inkling-Small AI, 1/4 the size of Inkling with near-equal performance",
+  "summary": "Thinking Machines' new Inkling-Small model is 276B parameters, achieving within one point of its 975B predecessor on the AI Intelligence Index, significantly reducing compute needs.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Thinking Machines has released Inkling-Small, a 276-billion-parameter multimodal reasoning model. It achieves a score of 40 on the Artificial Analysis Intelligence Index, just one point shy of the original 975-billion-parameter Inkling. This makes it the highest-scoring open-weight model at its size or smaller.",
+   "The model uses 12 billion active parameters per token, a significant reduction from Inkling's 41 billion, while maintaining much of the flagship's coding, reasoning, and multimodal performance. It accepts text, image, and audio inputs, produces text, and supports a context window of up to one million tokens.",
+   "For enterprises, Inkling-Small offers substantial reductions in compute requirements, inference costs, and deployment footprint without sacrificing much capability. While still too large for laptops, it's materially easier to operate than its 3.5X larger predecessor, suiting companies with some GPU resources.",
+   "The full weights are available on Hugging Face, and Thinking Machines has added support for fine-tuning via its Tinker model training API. This allows developers to customize the model for specific tasks and datasets.",
+   "API pricing for the standard 64K-context Inkling-Small model starts at $0.58 per million prefill tokens and $1.44 per million sampled tokens, with a limited-time 50% discount. A 256K-context variant is also available at higher rates.",
+   "Inkling-Small not only approaches the flagship's aggregate score but surpasses it on several evaluations. It scores 80.2% on SWE-bench Verified (vs. Inkling's 77.6%) and 64.7% on Terminal Bench 2.1 (vs. 63.8%). It also edges ahead on SciCode, Humanity’s Last Exam, GPQA Diamond, and CritPt.",
+   "However, Inkling retains advantages in factual knowledge and some agentic tasks, with Inkling-Small scoring lower on \"τ³-Banking\" and having weaker factual coverage. This trade-off means Inkling-Small is ideal for coding assistants, RAG systems, document analysis, and multimodal workflows, but high-stakes factual tasks still require verification.",
+   "The model is a sparse Mixture-of-Experts (MoE) architecture, where its 42-layer decoder routes each token to six of 256 specialized experts plus two shared experts. This explains the distinction between its 276 billion total parameters and 12 billion active parameters, activating only a fraction of its capacity per inference step."
+  ],
+  "caption": "Thinking Machines just dropped Inkling-Small, an open-source AI model that's 1/4 the size of its predecessor. It achieves nearly identical performance, even surpassing it on several key benchmarks.\n\nThinking Machines has released Inkling-Small, a 276-billion-parameter multimodal reasoning model. It achieves a score of 40 on the Artificial Analysis Intelligence Index, just one point shy of the original 975-billion-parameter Inkling. This makes it the highest-scoring open-weight model at its size or smaller.\n\nThe model uses 12 billion active parameters per token, a significant reduction from Inkling's 41 billion, while maintaining much of the flagship's coding, reasoning, and multimodal performance. It accepts text, image, and audio inputs, produces text, and supports a context window of up to one million tokens.\n\nFor enterprises, Inkling-Small offers substantial reductions in compute requirements, inference costs, and deployment footprint without sacrificing much capability. While still too large for laptops, it's materially easier to operate than its 3.5X larger predecessor, suiting companies with some GPU resources.\n\nThe full weights are available on Hugging Face, and Thinking Machines has added support for fine-tuning via its Tinker model training API. This allows developers to customize the model for specific tasks and datasets.\n\nAPI pricing for the standard 64K-context Inkling-Small model starts at $0.58 per million prefill tokens and $1.44 per million sampled tokens, with a limited-time 50% discount. A 256K-context variant is also available at higher rates.\n\nInkling-Small not only approaches the flagship's aggregate score but surpasses it on several evaluations. It scores 80.2% on SWE-bench Verified (vs. Inkling's 77.6%) and 64.7% on Terminal Bench 2.1 (vs. 63.8%). It also edges ahead on SciCode, Humanity’s Last Exam, GPQA Diamond, and CritPt.\n\n#AI #OpenSource #LLM #ThinkingMachines #MachineLearning #TechNews\n\nSource: VentureBeat",
+  "tweet": "Thinking Machines unveils Inkling-Small, a new open-source AI model. It's 1/4 the size of its predecessor but delivers near-equal performance, even outperforming it on some benchmarks. Huge efficiency gains for enterprises! #AI #OpenSource #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "thinkingmachines.com",
+  "source": "VentureBeat",
+  "url": "https://venturebeat.com/technology/thinking-machines-debuts-inkling-small-open-source-ai-model-nearing-performance-of-predecessor-at-about-1-4-size",
+  "image": "https://images.ctfassets.net/jdtwqhzvc2n1/7gMtExpXjcD7vdSrlrD5Af/f6e41d5d0d1248046f97c767e5d7aee4/ChatGPT_Image_Jul_30__2026__07_32_19_PM.png?w=300&q=30",
+  "orig_title": "Thinking Machines debuts Inkling Small open source AI model nearing performance of predecessor at about 1/4 size",
+  "cluster_urls": [
+   "https://venturebeat.com/technology/thinking-machines-debuts-inkling-small-open-source-ai-model-nearing-performance-of-predecessor-at-about-1-4-size"
+  ],
+  "cluster_titles": [
+   "Thinking Machines debuts Inkling Small open source AI model nearing performance of predecessor at about 1/4 size"
+  ],
+  "is_logo": false,
+  "photo_credit": "VentureBeat",
+  "image_files": [
+   "20260731-0706-0-thinking-machines-debuts-inkling-small-ai-1-.png",
+   "20260731-0706-0-thinking-machines-debuts-inkling-small-ai-1--d1.png",
+   "20260731-0706-0-thinking-machines-debuts-inkling-small-ai-1--d2.png",
+   "20260731-0706-0-thinking-machines-debuts-inkling-small-ai-1--d3.png"
+  ]
+ },
+ {
+  "topic": "iran cyberattacks minnesota water utilities",
+  "headline_marked": "[[Leaked Memo Ties Cyberattacks on Minnesota Water Utilities to Iran]] in widest strike yet",
+  "headline": "Leaked Memo Ties Cyberattacks on Minnesota Water Utilities to Iran in widest strike yet",
+  "summary": "Dozens of Minnesota water utilities were targeted in cyberattacks, disabling telecommunications and causing a brief outage in one city. A leaked memo now ties these disruptive incidents to Iran, marking a rare state-sponsored strike on civilian infrastructure.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A leaked communication obtained by WIRED links a series of cyberattacks targeting dozens of Minnesota water and wastewater utilities to Iran. The Water Information Sharing and Analysis Center (WaterISAC) note states that the Minnesota Fusion Center found these attacks aligned with a campaign by \"Iran-affiliated\" hackers, first described by CISA in April.",
+   "These incidents represent a rare instance of state-sponsored targeting of civilian infrastructure outside of Russia's war against Ukraine, according to Joe Slowik, a former Los Alamos National Labs cybersecurity researcher. The attacks have resulted in documented disruption and modification of safety parameters in critical infrastructure, raising significant concern.",
+   "Earlier this week, Minnesota state officials revealed that over 30 municipal water systems were affected, with some experiencing disabled telecommunications between industrial control systems and equipment. In Braham, a city of 1,700, the hacking reportedly caused a brief water plant outage, and the latest CISA advisory notes \"boil-water notices\" and \"sustained manual operations\" in other affected areas.",
+   "Cybersecurity firm Tenable's report suggests CyberAv3ngers, an Iranian hacker group tied to the Iranian Revolutionary Guard Corps, may be responsible due to consistent operational patterns. While no official confirmation or claim of responsibility from Iran exists, US and state officials reportedly concluded the attacks were \"likely\" carried out by Iranian state-sponsored hackers.",
+   "A new CISA advisory warns that \"these threat actors are targeting water entities of all sizes\" and recommends disconnecting PLCs from the internet, using strong passwords, and allow-listing trusted devices. Experts caution that similar attacks could expand to other sites with the same targeted technology."
+  ],
+  "caption": "A leaked memo ties cyberattacks on dozens of Minnesota water utilities to Iran. This marks a significant escalation in state-sponsored targeting of civilian infrastructure.\n\nA leaked communication obtained by WIRED links a series of cyberattacks targeting dozens of Minnesota water and wastewater utilities to Iran. The Water Information Sharing and Analysis Center (WaterISAC) note states that the Minnesota Fusion Center found these attacks aligned with a campaign by \"Iran-affiliated\" hackers, first described by CISA in April.\n\nThese incidents represent a rare instance of state-sponsored targeting of civilian infrastructure outside of Russia's war against Ukraine, according to Joe Slowik, a former Los Alamos National Labs cybersecurity researcher. The attacks have resulted in documented disruption and modification of safety parameters in critical infrastructure, raising significant concern.\n\nEarlier this week, Minnesota state officials revealed that over 30 municipal water systems were affected, with some experiencing disabled telecommunications between industrial control systems and equipment. In Braham, a city of 1,700, the hacking reportedly caused a brief water plant outage, and the latest CISA advisory notes \"boil-water notices\" and \"sustained manual operations\" in other affected areas.\n\nCybersecurity firm Tenable's report suggests CyberAv3ngers, an Iranian hacker group tied to the Iranian Revolutionary Guard Corps, may be responsible due to consistent operational patterns. While no official confirmation or claim of responsibility from Iran exists, US and state officials reportedly concluded the attacks were \"likely\" carried out by Iranian state-sponsored hackers.\n\n#Cybersecurity #Iran #WaterUtilities #Cyberattack #CriticalInfrastructure #SecurityBreach\n\nSource: Wired",
+  "tweet": "A leaked memo links cyberattacks on dozens of Minnesota water utilities to Iran, marking a rare state-sponsored strike on civilian infrastructure. Over 30 systems affected, causing outages & boil-water notices. #Cybersecurity #Iran #WaterSecurity",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/a-leaked-memo-ties-cyberattacks-on-minnesota-water-utilities-to-iran/",
+  "image": "https://media.wired.com/photos/6a6b857e3e12d1f6b4b61e35/master/pass/GettyImages-1138939276.jpg",
+  "orig_title": "A Leaked Memo Ties Cyberattacks on Minnesota Water Utilities to Iran",
+  "cluster_urls": [
+   "https://www.wired.com/story/a-leaked-memo-ties-cyberattacks-on-minnesota-water-utilities-to-iran/"
+  ],
+  "cluster_titles": [
+   "A Leaked Memo Ties Cyberattacks on Minnesota Water Utilities to Iran"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260731-0706-1-leaked-memo-ties-cyberattacks-on-minnesota-w.png",
+   "20260731-0706-1-leaked-memo-ties-cyberattacks-on-minnesota-w-d1.png",
+   "20260731-0706-1-leaked-memo-ties-cyberattacks-on-minnesota-w-d2.png",
+   "20260731-0706-1-leaked-memo-ties-cyberattacks-on-minnesota-w-d3.png"
+  ]
+ }
+]

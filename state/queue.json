@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "anthropic_ai_models_hacked_organizations",
+  "headline_marked": "[[Google's AI fixed more Chrome bugs in June]] than in the past two years combined",
+  "headline": "Google's AI fixed more Chrome bugs in June than in the past two years combined",
+  "summary": "Google's Chrome Security team leveraged AI models like Gemini and Big Sleep to dramatically accelerate vulnerability discovery and patching, leading to unprecedented bug fixes and saving hundreds of developer hours monthly.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Google's Chrome Security team has achieved a significant milestone, fixing more security bugs in June thanks to AI than they did in the entirety of the previous two years combined. This rapid acceleration in vulnerability remediation marks a major shift in software security practices. The goal is to achieve greater resilience and comprehensive remediation faster than ever.",
+   "The team has been integrating Large Language Models (LLMs) for years, developing methods to boost security fuzzing coverage and performance since 2023. Collaborations with Project Zero on 'Naptime' and DeepMind on 'Big Sleep' further refined AI's role in vulnerability research, successfully finding bugs in critical components like the V8 JavaScript engine.",
+   "In early 2026, an AI agent harness using Gemini was deployed, significantly improving vulnerability detection across the broader Chrome codebase with higher efficiency. This agent notably uncovered a 13-year-old sandbox escape bug that could allow a compromised renderer to read local files, demonstrating AI's powerful detection capabilities.",
+   "Beyond discovery, AI also scales and automates the validation, triage, and fixing of bugs. Historically, triaging a single security report took 5 to 30 minutes, but a new automated process blending rule-based systems with AI now saves hundreds of developer hours per month, allowing the team to focus on other security priorities.",
+   "Google built these AI tools with safety as a priority, implementing strict guardrails to prevent unexpected AI behavior. The AI analyzes source code strictly at rest on locked-down machines without general internet access, and all network requests are intercepted and allowlisted to block suspicious model activity.",
+   "AI-powered detection complements existing security infrastructure, with fuzzing remaining effective for complex, long-range interactions. The Chrome Vulnerability Reward Program (VRP) has also been adjusted to focus external researchers on additive bug submissions that can be easily ingested by the new automated processing pipelines."
+  ],
+  "caption": "Google's AI-powered security agents have revolutionized Chrome bug fixing, identifying more vulnerabilities in June than in the past two years combined.\n\nGoogle's Chrome Security team has achieved a significant milestone, fixing more security bugs in June thanks to AI than they did in the entirety of the previous two years combined. This rapid acceleration in vulnerability remediation marks a major shift in software security practices. The goal is to achieve greater resilience and comprehensive remediation faster than ever.\n\nThe team has been integrating Large Language Models (LLMs) for years, developing methods to boost security fuzzing coverage and performance since 2023. Collaborations with Project Zero on 'Naptime' and DeepMind on 'Big Sleep' further refined AI's role in vulnerability research, successfully finding bugs in critical components like the V8 JavaScript engine.\n\nIn early 2026, an AI agent harness using Gemini was deployed, significantly improving vulnerability detection across the broader Chrome codebase with higher efficiency. This agent notably uncovered a 13-year-old sandbox escape bug that could allow a compromised renderer to read local files, demonstrating AI's powerful detection capabilities.\n\nBeyond discovery, AI also scales and automates the validation, triage, and fixing of bugs. Historically, triaging a single security report took 5 to 30 minutes, but a new automated process blending rule-based systems with AI now saves hundreds of developer hours per month, allowing the team to focus on other security priorities.\n\nGoogle built these AI tools with safety as a priority, implementing strict guardrails to prevent unexpected AI behavior. The AI analyzes source code strictly at rest on locked-down machines without general internet access, and all network requests are intercepted and allowlisted to block suspicious model activity.\n\n#Google #Chrome #AI #Cybersecurity #Security #Vulnerability\n\nSource: Hacker News, Engadget",
+  "tweet": "Google's AI-powered security agents have revolutionized Chrome bug fixing, identifying more vulnerabilities in June than in the past two years combined. This new approach is saving hundreds of developer hours monthly. #Google #Chrome #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "google.com",
+  "source": "Hacker News, Engadget",
+  "url": "https://blog.google/security/chrome-stronger-with-every-update/",
+  "image": "",
+  "orig_title": "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+  "cluster_urls": [
+   "https://blog.google/security/chrome-stronger-with-every-update/",
+   "https://www.engadget.com/2227630/anthropic-ai-models-hacked-three-organizations-on-their-own/"
+  ],
+  "cluster_titles": [
+   "Google fixed more Chrome bugs in June than over the past two years, thanks to AI",
+   "Anthropic says its AI models also hacked three organizations on their own"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260731-1609-0-google-s-ai-fixed-more-chrome-bugs-in-june-t.png",
+   "20260731-1609-0-google-s-ai-fixed-more-chrome-bugs-in-june-t-d1.png",
+   "20260731-1609-0-google-s-ai-fixed-more-chrome-bugs-in-june-t-d2.png",
+   "20260731-1609-0-google-s-ai-fixed-more-chrome-bugs-in-june-t-d3.png"
+  ]
+ },
+ {
+  "topic": "deepseek_v4_flash_analysis",
+  "headline_marked": "Manticore Search 28.6.6 [[adds UUID document IDs and ordered GROUP_CONCAT()]], plus 16 fixes",
+  "headline": "Manticore Search 28.6.6 adds UUID document IDs and ordered GROUP_CONCAT(), plus 16 fixes",
+  "summary": "The new release enables UUID document IDs for real-time tables and introduces ordered, limited GROUP_CONCAT() for grouped queries, alongside 16 critical fixes for production reliability.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "Manticore Search 28.6.6 has been released, bringing UUID document IDs for real-time tables and ordered, limited GROUP_CONCAT() for grouped queries. This update also includes 16 fixes addressing issues in backups, replication, query processing, and SQL compatibility.",
+   "UUID IDs are an opt-in feature for new real-time tables, allowing applications to use their existing UUID identifiers directly without separate numeric ID mapping. Manticore can accept explicit UUID strings or generate them automatically when omitted from an insert or replace.",
+   "The new GROUP_CONCAT() options, including ORDER BY, SEPARATOR, and LIMIT, provide more control over grouped results. Developers can now sort values and retain a specific number, eliminating the need for post-processing in application code.",
+   "Two key fixes enhance production stability: successful backups now consistently unfreeze real-time tables, preventing write blocks. Additionally, authenticated replication can again add existing populated real-time tables using ALTER CLUSTER ... ADD.",
+   "Other important fixes address a SphinxQL SSL connection-handling race that could cause 100% CPU usage and improve PHP/Ruby API response parsing. These changes aim to prevent failures during routine operations and busy search services."
+  ],
+  "caption": "Manticore Search 28.6.6 is here with UUID document IDs for real-time tables and enhanced GROUP_CONCAT(). This update streamlines data management and improves query flexibility.\n\nManticore Search 28.6.6 has been released, bringing UUID document IDs for real-time tables and ordered, limited GROUP_CONCAT() for grouped queries. This update also includes 16 fixes addressing issues in backups, replication, query processing, and SQL compatibility.\n\nUUID IDs are an opt-in feature for new real-time tables, allowing applications to use their existing UUID identifiers directly without separate numeric ID mapping. Manticore can accept explicit UUID strings or generate them automatically when omitted from an insert or replace.\n\nThe new GROUP_CONCAT() options, including ORDER BY, SEPARATOR, and LIMIT, provide more control over grouped results. Developers can now sort values and retain a specific number, eliminating the need for post-processing in application code.\n\nTwo key fixes enhance production stability: successful backups now consistently unfreeze real-time tables, preventing write blocks. Additionally, authenticated replication can again add existing populated real-time tables using ALTER CLUSTER ... ADD.\n\nOther important fixes address a SphinxQL SSL connection-handling race that could cause 100% CPU usage and improve PHP/Ruby API response parsing. These changes aim to prevent failures during routine operations and busy search services.\n\n#ManticoreSearch #Database #SoftwareRelease #DeveloperTools #TechNews #SQL\n\nSource: Hacker News, DEV",
+  "tweet": "Manticore Search 28.6.6 is out! Get UUID document IDs for real-time tables, ordered GROUP_CONCAT(), and 16 crucial fixes for production reliability. Streamline your data management and queries. #ManticoreSearch #Database #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "manticoresearch.com",
+  "source": "Hacker News, DEV",
+  "url": "https://artificialanalysis.ai/models/deepseek-v4-flash-ga",
+  "image": "",
+  "orig_title": "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
+  "cluster_urls": [
+   "https://artificialanalysis.ai/models/deepseek-v4-flash-ga",
+   "https://dev.to/sanikolaev/manticore-search-2866-uuid-document-ids-ordered-groupconcat-and-16-fixes-12ch"
+  ],
+  "cluster_titles": [
+   "DeepSeek V4 Flash 0731 Intelligence, Performance and Price Analysis",
+   "Manticore Search 28.6.6: UUID document IDs, ordered GROUP_CONCAT(), and 16 fixes"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260731-1609-1-manticore-search-28-6-6-adds-uuid-document-i.png",
+   "20260731-1609-1-manticore-search-28-6-6-adds-uuid-document-i-d1.png",
+   "20260731-1609-1-manticore-search-28-6-6-adds-uuid-document-i-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai_agent_product_testing_scale",
+  "headline_marked": "[[AI agent tests product for 29 hours]], processes 872M tokens, finds high-severity bugs",
+  "headline": "AI agent tests product for 29 hours, processes 872M tokens, finds high-severity bugs",
+  "summary": "An AI agent conducted a 29-hour QA marathon, processing 872 million tokens and uncovering several high-severity bugs in a product before its ad launch. This highlights AI's potential in catching issues human QA might miss, especially across multiple languages.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer tasked an AI agent, Codex, with a 29-hour QA marathon, processing 872 million tokens (97.63% cached) and making 5,222 tool calls. The agent closed 88 issues, finding zero critical bugs but several high-severity ones in a product previously QA'd by the developer.",
+   "The motivation behind this extensive AI testing was to prevent costly bugs from reaching users via paid advertising. The developer specifically feared unnoticed issues in multi-language versions of the product, which could lead to wasted ad spend.",
+   "The success hinged on a highly specific prompt that pushed the agent beyond typical 'happy path' testing. Instructions included repeating flows, interrupting mid-session, switching languages, checking privacy boundaries, and verifying fixes in a live production environment.",
+   "While the 872 million token count is impressive, it includes 97.63% cached input from the long-running session. The actual new context and generated work amounted to approximately 22.35 million non-cached input and output tokens.",
+   "Despite its thoroughness, the AI agent exhibited a common limitation: it excelled at detecting errors but struggled with subtle visual inconsistencies. A human intervention was necessary to flag a display issue in one language that the agent had overlooked."
+  ],
+  "caption": "An AI agent ran a 29-hour QA marathon, processing 872 million tokens and making 5,222 tool calls. It uncovered dozens of bugs, including high-severity ones, that human QA had missed.\n\nA developer tasked an AI agent, Codex, with a 29-hour QA marathon, processing 872 million tokens (97.63% cached) and making 5,222 tool calls. The agent closed 88 issues, finding zero critical bugs but several high-severity ones in a product previously QA'd by the developer.\n\nThe motivation behind this extensive AI testing was to prevent costly bugs from reaching users via paid advertising. The developer specifically feared unnoticed issues in multi-language versions of the product, which could lead to wasted ad spend.\n\nThe success hinged on a highly specific prompt that pushed the agent beyond typical 'happy path' testing. Instructions included repeating flows, interrupting mid-session, switching languages, checking privacy boundaries, and verifying fixes in a live production environment.\n\nWhile the 872 million token count is impressive, it includes 97.63% cached input from the long-running session. The actual new context and generated work amounted to approximately 22.35 million non-cached input and output tokens.\n\nDespite its thoroughness, the AI agent exhibited a common limitation: it excelled at detecting errors but struggled with subtle visual inconsistencies. A human intervention was necessary to flag a display issue in one language that the agent had overlooked.\n\n#AI #SoftwareTesting #DeveloperTools #QA #Codex #Tech\n\nSource: DEV",
+  "tweet": "An AI agent ran a 29-hour QA marathon, processing 872 million tokens and making 5,222 tool calls. It uncovered dozens of bugs, including high-severity ones, that human QA had missed, saving potential ad spend. #AI #SoftwareTesting #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/kansm/i-was-about-to-spend-money-on-ads-so-i-made-an-ai-agent-test-my-product-for-29-hours-mhc",
+  "image": "",
+  "orig_title": "I Was About to Spend Money on Ads. So I Made an AI Agent Test My Product for 29 Hours.",
+  "cluster_urls": [
+   "https://dev.to/kansm/i-was-about-to-spend-money-on-ads-so-i-made-an-ai-agent-test-my-product-for-29-hours-mhc"
+  ],
+  "cluster_titles": [
+   "I Was About to Spend Money on Ads. So I Made an AI Agent Test My Product for 29 Hours."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260801-1406-0-ai-agent-tests-product-for-29-hours-processe.png",
+   "20260801-1406-0-ai-agent-tests-product-for-29-hours-processe-d1.png",
+   "20260801-1406-0-ai-agent-tests-product-for-29-hours-processe-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_hallucination_fix_aws",
+  "headline_marked": "[[AWS Knowledge MCP Server prevents AI hallucinations]] with real-time documentation access",
+  "headline": "AWS Knowledge MCP Server prevents AI hallucinations with real-time documentation access",
+  "summary": "AI assistants often struggle with outdated information due to knowledge cutoffs, leading to incorrect answers. AWS has released an open-source tool that connects AI models like Claude and Copilot directly to current AWS documentation, ensuring accuracy.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI assistants frequently provide outdated or incorrect information because their training data has a fixed knowledge cutoff. This means they are unaware of new product releases, features, or documentation changes, which can be a significant hurdle for developers needing current information.",
+   "To address this, AWS Labs has released the AWS Knowledge Model Context Protocol (MCP) Server, an open-source tool. It establishes a direct connection between AI models and authoritative, up-to-date AWS documentation.",
+   "This server allows AI clients, including Claude and Copilot, to pull real-time AWS information. This includes current documentation, blog posts, 'What's New' announcements, and Well-Architected guidance, all fetched live rather than recalled from static training data.",
+   "The Model Context Protocol (MCP) is a standard for AI tools to communicate with external knowledge sources. While it enables Retrieval-Augmented Generation (RAG), MCP itself is a connector standard, distinct from the RAG pattern of looking up information to formulate an answer.",
+   "When using AWS Knowledge, only your query text (e.g., \"does Lambda support S3 Files yet\") and IP address are sent to a public AWS endpoint. No codebase, credentials, or AWS account information is transmitted, and AWS states that telemetry is not used for model training.",
+   "The practical benefit is immediate: when asked about recent services like \"Amazon S3 Files,\" models connected to AWS Knowledge will call `search_documentation` and provide accurate launch dates and region lists from live sources, instead of guessing or stating ignorance due to knowledge cutoffs.",
+   "The AWS Knowledge MCP Server is public and requires no authentication. It works with any MCP-compatible client, with specific setup instructions available for tools like Claude Code's CLI and VS Code, allowing for project-wide configuration."
+  ],
+  "caption": "Is your AI assistant making up facts because its knowledge is outdated? AWS just released an open-source tool to connect AI directly to live documentation.\n\nAI assistants frequently provide outdated or incorrect information because their training data has a fixed knowledge cutoff. This means they are unaware of new product releases, features, or documentation changes, which can be a significant hurdle for developers needing current information.\n\nTo address this, AWS Labs has released the AWS Knowledge Model Context Protocol (MCP) Server, an open-source tool. It establishes a direct connection between AI models and authoritative, up-to-date AWS documentation.\n\nThis server allows AI clients, including Claude and Copilot, to pull real-time AWS information. This includes current documentation, blog posts, 'What's New' announcements, and Well-Architected guidance, all fetched live rather than recalled from static training data.\n\nThe Model Context Protocol (MCP) is a standard for AI tools to communicate with external knowledge sources. While it enables Retrieval-Augmented Generation (RAG), MCP itself is a connector standard, distinct from the RAG pattern of looking up information to formulate an answer.\n\nWhen using AWS Knowledge, only your query text (e.g., \"does Lambda support S3 Files yet\") and IP address are sent to a public AWS endpoint. No codebase, credentials, or AWS account information is transmitted, and AWS states that telemetry is not used for model training.\n\nThe practical benefit is immediate: when asked about recent services like \"Amazon S3 Files,\" models connected to AWS Knowledge will call `search_documentation` and provide accurate launch dates and region lists from live sources, instead of guessing or stating ignorance due to knowledge cutoffs.\n\n#AWS #AI #Developers #OpenSource #CloudComputing #TechNews\n\nSource: DEV",
+  "tweet": "AI making up facts because its knowledge is outdated? AWS just released an open-source tool, the Knowledge Model Context Protocol (MCP) Server, that connects AI directly to live AWS documentation, ensuring accurate, real-time answers. #AWS #AI #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aws.amazon.com",
+  "source": "DEV",
+  "url": "https://dev.to/aws-builders/i-stopped-my-ai-from-making-up-aws-answers-with-one-command-5aba",
+  "image": "",
+  "orig_title": "I Stopped My AI From Making Up AWS Answers With One Command",
+  "cluster_urls": [
+   "https://dev.to/aws-builders/i-stopped-my-ai-from-making-up-aws-answers-with-one-command-5aba"
+  ],
+  "cluster_titles": [
+   "I Stopped My AI From Making Up AWS Answers With One Command"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260801-1406-1-aws-knowledge-mcp-server-prevents-ai-halluci.png",
+   "20260801-1406-1-aws-knowledge-mcp-server-prevents-ai-halluci-d1.png",
+   "20260801-1406-1-aws-knowledge-mcp-server-prevents-ai-halluci-d2.png",
+   "20260801-1406-1-aws-knowledge-mcp-server-prevents-ai-halluci-d3.png"
+  ]
+ }
+]

@@ -8391,7 +8391,12 @@
   "headline": "AI agent used stolen Tailscale credential to enroll 181 Hugging Face nodes",
   "topic": "tailscale_huggingface_intrusion_failure",
   "source": "Hacker News",
-  "status": "queued",
-  "at": "2026-08-01T03:09:32Z"
+  "status": "failed",
+  "at": "2026-08-01T03:09:32Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

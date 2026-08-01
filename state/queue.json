@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "aftermath_finance_1_14m_exploit",
+  "headline_marked": "[[Missing Assert Drained $1.14M From Aftermath Finance]] via Signed Integer Exploit on Sui",
+  "headline": "Missing Assert Drained $1.14M From Aftermath Finance via Signed Integer Exploit on Sui",
+  "summary": "A technical breakdown reveals how a signed integer exploit allowed an attacker to drain $1.14M USDC from Aftermath Finance on April 29, 2026, in just 36 minutes.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Aftermath Finance suffered a significant exploit on April 29, 2026, resulting in a loss of $1.14 million USDC. The attacker managed to drain the funds in a rapid 36-minute window, highlighting a critical vulnerability in the platform's code.",
+   "The exploit leveraged a signed integer vulnerability where a negative fee value bypassed validation checks. This allowed the attacker to manipulate and inflate collateral values, ultimately facilitating the unauthorized withdrawal of funds.",
+   "Investigators determined that a single missing assert statement was the root cause of the vulnerability. Implementing this one line of code would have prevented the negative fee value from being processed, thereby averting the entire exploit and the substantial financial loss."
+  ],
+  "caption": "A single missing assert statement led to a $1.14 million exploit on Aftermath Finance. The attack drained funds in just 36 minutes.\n\nAftermath Finance suffered a significant exploit on April 29, 2026, resulting in a loss of $1.14 million USDC. The attacker managed to drain the funds in a rapid 36-minute window, highlighting a critical vulnerability in the platform's code.\n\nThe exploit leveraged a signed integer vulnerability where a negative fee value bypassed validation checks. This allowed the attacker to manipulate and inflate collateral values, ultimately facilitating the unauthorized withdrawal of funds.\n\nInvestigators determined that a single missing assert statement was the root cause of the vulnerability. Implementing this one line of code would have prevented the negative fee value from being processed, thereby averting the entire exploit and the substantial financial loss.\n\n#CryptoSecurity #Blockchain #Exploit #Sui #AftermathFinance #DeFi\n\nSource: DEV",
+  "tweet": "A missing assert statement allowed an attacker to drain $1.14M from Aftermath Finance on Sui in just 36 minutes. The signed integer exploit leveraged a negative fee value to inflate collateral. #CryptoSecurity #DeFi",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aftermath.finance",
+  "source": "DEV",
+  "url": "https://dev.to/mehvetero/how-one-missing-assert-drained-114m-from-aftermath-finance-a-signed-integer-exploit-on-sui-1db3",
+  "image": "",
+  "orig_title": "How One Missing Assert Drained $1.14M From Aftermath Finance — A Signed Integer Exploit on Sui",
+  "cluster_urls": [
+   "https://dev.to/mehvetero/how-one-missing-assert-drained-114m-from-aftermath-finance-a-signed-integer-exploit-on-sui-1db3"
+  ],
+  "cluster_titles": [
+   "How One Missing Assert Drained $1.14M From Aftermath Finance — A Signed Integer Exploit on Sui"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260801-2039-0-missing-assert-drained-1-14m-from-aftermath-.png",
+   "20260801-2039-0-missing-assert-drained-1-14m-from-aftermath--d1.png"
+  ]
+ },
+ {
+  "topic": "7_5b_ai_model_beats_24b_coding_benchmark",
+  "headline_marked": "[[7.5B model beats 24B]] on custom coding benchmark, challenging public leaderboards",
+  "headline": "7.5B model beats 24B on custom coding benchmark, challenging public leaderboards",
+  "summary": "A 7.5B parameter Gemma model scored higher than a 24B Devstral model on a new 56-task coding benchmark, suggesting size isn't always king.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A custom 56-task coding benchmark revealed that gemma-4-e4b, a 7.5B parameter model, scored 42/56, outperforming devstral-small-2-24b (24B), which scored 40/56. This challenges the common assumption that larger models are inherently better.",
+   "The benchmark was designed to grade with hidden tests, running 16 model configurations on the same hardware with consistent settings. A total of 36 full runs were conducted to accurately measure performance variability and noise.",
+   "Results indicate that public leaderboards can be misleading, with this benchmark inverting some rankings. Furthermore, the error bar for performance is a property of the model itself, with some models showing significant score swings between identical runs.",
+   "Tasks were executed through a real agent loop where models read, edit, and run tests until completion. Grading relied on deterministic ground truth using `cargo test`, `pytest`, and `node`, avoiding LLM judges to prevent inflation of scores.",
+   "The tasks are test-first gated, ensuring they are neither accidentally passing nor impossible. The discriminating factor was often unstated correctness traps, such as degenerate inputs or subtle boundary conditions, rather than algorithmic difficulty.",
+   "The benchmark corpus includes 56 tasks across Python, Rust, JavaScript, TypeScript, and Shell, covering various categories like implementation, bug fixing, and error handling. All tests were run on an RTX 5060 Ti 16 GB card with consistent context and KV cache settings.",
+   "The study also debunked the 'just run the biggest model that fits' claim. For the Gemma-4 family, scaling from 7.5B to 12B parameters yielded only a half-point improvement, despite the 12B variant using better quantization."
+  ],
+  "caption": "A 7.5B parameter AI model outperformed a 24B model on a rigorous, custom-built coding benchmark.\n\nA custom 56-task coding benchmark revealed that gemma-4-e4b, a 7.5B parameter model, scored 42/56, outperforming devstral-small-2-24b (24B), which scored 40/56. This challenges the common assumption that larger models are inherently better.\n\nThe benchmark was designed to grade with hidden tests, running 16 model configurations on the same hardware with consistent settings. A total of 36 full runs were conducted to accurately measure performance variability and noise.\n\nResults indicate that public leaderboards can be misleading, with this benchmark inverting some rankings. Furthermore, the error bar for performance is a property of the model itself, with some models showing significant score swings between identical runs.\n\nTasks were executed through a real agent loop where models read, edit, and run tests until completion. Grading relied on deterministic ground truth using `cargo test`, `pytest`, and `node`, avoiding LLM judges to prevent inflation of scores.\n\nThe tasks are test-first gated, ensuring they are neither accidentally passing nor impossible. The discriminating factor was often unstated correctness traps, such as degenerate inputs or subtle boundary conditions, rather than algorithmic difficulty.\n\nThe benchmark corpus includes 56 tasks across Python, Rust, JavaScript, TypeScript, and Shell, covering various categories like implementation, bug fixing, and error handling. All tests were run on an RTX 5060 Ti 16 GB card with consistent context and KV cache settings.\n\nThe study also debunked the 'just run the biggest model that fits' claim. For the Gemma-4 family, scaling from 7.5B to 12B parameters yielded only a half-point improvement, despite the 12B variant using better quantization.\n\n#AI #LLM #Coding #Benchmark #Developer #Tech\n\nSource: DEV",
+  "tweet": "A 7.5B AI model just beat a 24B model on a new coding benchmark! This custom test challenges public leaderboards and shows that bigger isn't always better for local coding LLMs. #AI #LLM #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mrdushidush/a-75b-model-beat-a-24b-on-my-coding-benchmark-30o4",
+  "image": "",
+  "orig_title": "A 7.5B model beat a 24B on my coding benchmark.",
+  "cluster_urls": [
+   "https://dev.to/mrdushidush/a-75b-model-beat-a-24b-on-my-coding-benchmark-30o4"
+  ],
+  "cluster_titles": [
+   "A 7.5B model beat a 24B on my coding benchmark."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260801-2039-1-7-5b-model-beats-24b-on-custom-coding-benchm.png",
+   "20260801-2039-1-7-5b-model-beats-24b-on-custom-coding-benchm-d1.png",
+   "20260801-2039-1-7-5b-model-beats-24b-on-custom-coding-benchm-d2.png",
+   "20260801-2039-1-7-5b-model-beats-24b-on-custom-coding-benchm-d3.png"
+  ]
+ }
+]

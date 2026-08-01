@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_agent_security_data_leak_prevention",
+  "headline_marked": "[[AI Agent Security: Stop Model Exfiltration and API Key Leaks]]",
+  "headline": "AI Agent Security: Stop Model Exfiltration and API Key Leaks",
+  "summary": "AI agents' expanded capabilities, from tool calls to code execution, introduce new vulnerabilities for proprietary model behavior and sensitive API credentials.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI agents now perform complex tasks like calling tools, querying databases, and executing code. Each external connection creates a potential path for model exfiltration or credential leakage.",
+   "Model exfiltration involves direct theft of model weights, systematic extraction of proprietary behavior, or reconstruction of sensitive training data through repeated queries. Attackers can also inject instructions to reveal system prompts, internal files, or access tokens.",
+   "API keys are particularly vulnerable as agents often require credentials at runtime. If these secrets appear in prompts, logs, traces, or tool outputs, malicious users may recover them.",
+   "Secrets should never be directly included in an agent's prompt or long-term memory. Instead, use a dedicated secrets manager and expose narrowly scoped tool interfaces, with a trusted execution layer handling credential retrieval.",
+   "Implement short-lived tokens, workload identities, and least-privilege permissions. Each tool needs an explicit policy defining allowed endpoints, operations, data types, and request limits to prevent excessive access.",
+   "Treat prompt inputs and retrieved documents as untrusted data. Apply content isolation, schema validation, and output filtering before data reaches external tools. Redact credentials from telemetry and logs.",
+   "The open-source TrustGraph project helps visualize and analyze these complex trust paths, identifying excessive permissions, unexpected data routes, and indirect access to protected resources.",
+   "Preventive controls must be paired with continuous detection. Monitor for unusual query volume, repeated attempts to reproduce model behavior, encoded outbound content, and abnormal access patterns.",
+   "Deploy egress allowlists, response-size limits, rate controls, and automated secret scanning at all external boundaries. High-risk actions should require deterministic policy checks or human approval.",
+   "Finally, test the complete agent workflow through adversarial simulations, including prompt injection, poisoned retrieval content, and attempts to leak credentials via URLs or generated files."
+  ],
+  "caption": "AI agents are powerful, but their expanded capabilities open new security risks. Learn how to prevent model exfiltration and API key leaks.\n\nAI agents now perform complex tasks like calling tools, querying databases, and executing code. Each external connection creates a potential path for model exfiltration or credential leakage.\n\nModel exfiltration involves direct theft of model weights, systematic extraction of proprietary behavior, or reconstruction of sensitive training data through repeated queries. Attackers can also inject instructions to reveal system prompts, internal files, or access tokens.\n\nAPI keys are particularly vulnerable as agents often require credentials at runtime. If these secrets appear in prompts, logs, traces, or tool outputs, malicious users may recover them.\n\nSecrets should never be directly included in an agent's prompt or long-term memory. Instead, use a dedicated secrets manager and expose narrowly scoped tool interfaces, with a trusted execution layer handling credential retrieval.\n\nImplement short-lived tokens, workload identities, and least-privilege permissions. Each tool needs an explicit policy defining allowed endpoints, operations, data types, and request limits to prevent excessive access.\n\nTreat prompt inputs and retrieved documents as untrusted data. Apply content isolation, schema validation, and output filtering before data reaches external tools. Redact credentials from telemetry and logs.\n\nThe open-source TrustGraph project helps visualize and analyze these complex trust paths, identifying excessive permissions, unexpected data routes, and indirect access to protected resources.\n\nPreventive controls must be paired with continuous detection. Monitor for unusual query volume, repeated attempts to reproduce model behavior, encoded outbound content, and abnormal access patterns.\n\n#AISecurity #Cybersecurity #AI #DevSecOps #DataProtection #APISecurity\n\nSource: DEV",
+  "tweet": "AI agents' dynamic nature introduces new security risks for sensitive data & API keys. Learn essential safeguards like secrets management, least-privilege permissions, and graph analysis to protect your systems. #AISecurity #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/deepbodyme/ai-agent-security-stop-model-exfiltration-and-api-key-leaks-en0",
+  "image": "",
+  "orig_title": "AI Agent Security: Stop Model Exfiltration and API Key Leaks",
+  "cluster_urls": [
+   "https://dev.to/deepbodyme/ai-agent-security-stop-model-exfiltration-and-api-key-leaks-en0"
+  ],
+  "cluster_titles": [
+   "AI Agent Security: Stop Model Exfiltration and API Key Leaks"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260801-2210-0-ai-agent-security-stop-model-exfiltration-an.png",
+   "20260801-2210-0-ai-agent-security-stop-model-exfiltration-an-d1.png",
+   "20260801-2210-0-ai-agent-security-stop-model-exfiltration-an-d2.png",
+   "20260801-2210-0-ai-agent-security-stop-model-exfiltration-an-d3.png",
+   "20260801-2210-0-ai-agent-security-stop-model-exfiltration-an-d4.png"
+  ]
+ },
+ {
+  "topic": "uber_autonomous_vehicle_empire_strategy",
+  "headline_marked": "[[Uber partners with over 30 AV companies]] globally to build autonomous vehicle empire",
+  "headline": "Uber partners with over 30 AV companies globally to build autonomous vehicle empire",
+  "summary": "After divesting its own AV unit, Uber has strategically invested in and partnered with dozens of global autonomous vehicle firms, signaling a renewed focus on self-driving technology.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Uber has partnered with — and in some cases made direct investments in — more than 30 autonomous vehicle companies over the past two years. This global approach marks a significant shift in its strategy for self-driving technology.",
+   "The company previously developed its own autonomous vehicle technology through Uber Advanced Technologies Group (ATG) starting in 2014. It also acquired self-driving truck company Otto in 2016 and began public street testing.",
+   "However, progress unraveled after a trade secrets lawsuit, a leadership change, and a fatal crash in 2018. Uber suspended testing and later sold its moonshot projects, including Uber ATG to Aurora, to focus on core businesses.",
+   "Crucially, Uber retained equity stakes in these divested companies, allowing it to re-engage with AV deals from 2022 onwards. The deal flow intensified in 2024, indicating a strategic return to the autonomous space.",
+   "Key partnerships include Aurora, where Uber holds a 19.7% Class A equity stake. They've expanded their Uber Freight collaboration for self-driving trucks and plan a robotaxi program in Munich, utilizing Autobrains' AI driving system.",
+   "Uber also has a 30% stake in Avomo, a European autonomous fleet operator. Avomo manages fleet services for Uber's partnerships with Waymo in Austin and WeRide in Madrid, handling maintenance and depot operations.",
+   "Another significant deal is with Avride, a Yandex spinout, to integrate sidewalk delivery robots and autonomous vehicles into Uber Eats and the ride-hailing app. Uber and Nebius made strategic investments totaling $375 million in Avride."
+  ],
+  "caption": "Uber has partnered with over 30 autonomous vehicle companies globally in the last two years, making direct investments in many.\n\nUber has partnered with — and in some cases made direct investments in — more than 30 autonomous vehicle companies over the past two years. This global approach marks a significant shift in its strategy for self-driving technology.\n\nThe company previously developed its own autonomous vehicle technology through Uber Advanced Technologies Group (ATG) starting in 2014. It also acquired self-driving truck company Otto in 2016 and began public street testing.\n\nHowever, progress unraveled after a trade secrets lawsuit, a leadership change, and a fatal crash in 2018. Uber suspended testing and later sold its moonshot projects, including Uber ATG to Aurora, to focus on core businesses.\n\nCrucially, Uber retained equity stakes in these divested companies, allowing it to re-engage with AV deals from 2022 onwards. The deal flow intensified in 2024, indicating a strategic return to the autonomous space.\n\nKey partnerships include Aurora, where Uber holds a 19.7% Class A equity stake. They've expanded their Uber Freight collaboration for self-driving trucks and plan a robotaxi program in Munich, utilizing Autobrains' AI driving system.\n\nUber also has a 30% stake in Avomo, a European autonomous fleet operator. Avomo manages fleet services for Uber's partnerships with Waymo in Austin and WeRide in Madrid, handling maintenance and depot operations.\n\nAnother significant deal is with Avride, a Yandex spinout, to integrate sidewalk delivery robots and autonomous vehicles into Uber Eats and the ride-hailing app. Uber and Nebius made strategic investments totaling $375 million in Avride.\n\n#Uber #AutonomousVehicles #SelfDriving #TechNews #AI #FutureOfMobility\n\nSource: TechCrunch",
+  "tweet": "Uber is aggressively building its autonomous vehicle empire, partnering with over 30 AV companies globally. After divesting its own unit, it's now strategically investing and collaborating for self-driving tech across ride-hailing and delivery. #Uber #AV #SelfDriving",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "uber.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/08/01/ubers-autonomous-vehicle-deal-tracker/",
+  "image": "",
+  "orig_title": "Uber is building an autonomous vehicle empire, and here’s every company it’s using to do it",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/08/01/ubers-autonomous-vehicle-deal-tracker/"
+  ],
+  "cluster_titles": [
+   "Uber is building an autonomous vehicle empire, and here’s every company it’s using to do it"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260801-2210-1-uber-partners-with-over-30-av-companies-glob.png",
+   "20260801-2210-1-uber-partners-with-over-30-av-companies-glob-d1.png",
+   "20260801-2210-1-uber-partners-with-over-30-av-companies-glob-d2.png",
+   "20260801-2210-1-uber-partners-with-over-30-av-companies-glob-d3.png"
+  ]
+ }
+]

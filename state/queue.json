@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "teen_engineer_builds_cycloidal_gearbox",
+  "headline_marked": "[[15-year-old engineer builds working cycloidal gearbox]] with custom Python script",
+  "headline": "15-year-old engineer builds working cycloidal gearbox with custom Python script",
+  "summary": "A young engineer successfully designed and 3D-printed a functional cycloidal gearbox, developing a Python script to generate the complex geometry. This project showcases impressive mechanical and programming skills.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "A 15-year-old aspiring engineer has successfully designed and built a functional cycloidal gearbox, alongside a Python script to generate its intricate geometry. The project aimed to test the validity of the custom Python generator for mechanical designs.",
+   "Initial iterations included a handcranked version with a 1:9 ratio, primarily for testing the script's output. A subsequent 'micro' design, intended to fit a NEMA 17 footprint, faced challenges due to the tight tolerances required and limitations of 3D printing precision.",
+   "The breakthrough came with Version 3, the first fully functional gearbox designed to run on a NEMA 17 motor. This version featured a larger footprint, which allowed for greater manufacturing tolerances and ensured operational success.",
+   "The Python script, central to the project, was developed using parametric equations based on a SolidWorks article. It calculates the complex profiles for the cycloidal drive, enabling a reduction ratio of 1:(N-1), where N is the number of lobes.",
+   "Future improvements for the gearbox include replacing housing pins with MR128 bearings for reduced friction and higher efficiency. Output pins can also be upgraded with M2 screws and metal coverings to boost rigidity, maximum torque, and overall efficiency."
+  ],
+  "caption": "A 15-year-old aspiring engineer built a functional cycloidal gearbox and a Python script to generate it. This impressive project demonstrates advanced mechanical design and programming skills.\n\nA 15-year-old aspiring engineer has successfully designed and built a functional cycloidal gearbox, alongside a Python script to generate its intricate geometry. The project aimed to test the validity of the custom Python generator for mechanical designs.\n\nInitial iterations included a handcranked version with a 1:9 ratio, primarily for testing the script's output. A subsequent 'micro' design, intended to fit a NEMA 17 footprint, faced challenges due to the tight tolerances required and limitations of 3D printing precision.\n\nThe breakthrough came with Version 3, the first fully functional gearbox designed to run on a NEMA 17 motor. This version featured a larger footprint, which allowed for greater manufacturing tolerances and ensured operational success.\n\nThe Python script, central to the project, was developed using parametric equations based on a SolidWorks article. It calculates the complex profiles for the cycloidal drive, enabling a reduction ratio of 1:(N-1), where N is the number of lobes.\n\nFuture improvements for the gearbox include replacing housing pins with MR128 bearings for reduced friction and higher efficiency. Output pins can also be upgraded with M2 screws and metal coverings to boost rigidity, maximum torque, and overall efficiency.\n\n#Engineering #Hardware #3DPrinting #Python #DIYTech #Gearbox\n\nSource: Hacker News",
+  "tweet": "A 15-year-old engineer built a working cycloidal gearbox and a Python script to generate its design! This impressive project showcases advanced mechanical and programming skills. #Engineering #DIYTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/tom-ilan/cycloidal_gearbox",
+  "image": "",
+  "orig_title": "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built",
+  "cluster_urls": [
+   "https://github.com/tom-ilan/cycloidal_gearbox"
+  ],
+  "cluster_titles": [
+   "Show HN: I'm a 15 Year Old Wannabe Engineer, This Is a Cycloidal Gearbox I Built"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260802-0945-0-15-year-old-engineer-builds-working-cycloida.png",
+   "20260802-0945-0-15-year-old-engineer-builds-working-cycloida-d1.png",
+   "20260802-0945-0-15-year-old-engineer-builds-working-cycloida-d2.png"
+  ]
+ },
+ {
+  "topic": "claude_ai_hallucination_signs",
+  "headline_marked": "[[Three signs Claude is guessing]] even when confident",
+  "headline": "Three signs Claude is guessing even when confident",
+  "summary": "AI models like Claude can confidently present incorrect information. Learn three key patterns to identify when an AI is guessing, helping developers avoid wasted time on non-existent functions or misattributed features.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI models often present answers with high confidence, even when parts are entirely fabricated. Developers frequently encounter issues like non-existent config flags or functions that seem plausible but are not real, leading to wasted time and debugging efforts.",
+   "This isn't a trust issue, but a calibration problem. The challenge lies in distinguishing between grounded information and made-up details, especially for less experienced users who lack the pattern recognition built from past failures.",
+   "Sign one: Precise details without attribution. If an AI provides a specific config flag or function signature without stating its source, it's a high-risk area. Always verify such details against official documentation for your specific version before implementation.",
+   "Sign two: Correct function, wrong engine. An AI might suggest a function that exists and works as described, but for a different system (e.g., a Snowflake function suggested for BigQuery). Double-check that the function is valid for your specific environment, not just generally real.",
+   "Sign three: Constraint insensitivity. Test the AI's understanding of constraints by asking the same question twice, once with a key constraint and once without. If the answer remains largely unchanged, the AI likely provided a generic response, ignoring your specific context.",
+   "These signs offer a minimum standard for identifying common AI inaccuracies. While not foolproof, they significantly reduce the risk of implementing confidently wrong information and help developers build better intuition when working with AI."
+  ],
+  "caption": "AI models can confidently generate plausible-looking but entirely false information. Learn three critical signs to spot when an AI is guessing.\n\nAI models often present answers with high confidence, even when parts are entirely fabricated. Developers frequently encounter issues like non-existent config flags or functions that seem plausible but are not real, leading to wasted time and debugging efforts.\n\nThis isn't a trust issue, but a calibration problem. The challenge lies in distinguishing between grounded information and made-up details, especially for less experienced users who lack the pattern recognition built from past failures.\n\nSign one: Precise details without attribution. If an AI provides a specific config flag or function signature without stating its source, it's a high-risk area. Always verify such details against official documentation for your specific version before implementation.\n\nSign two: Correct function, wrong engine. An AI might suggest a function that exists and works as described, but for a different system (e.g., a Snowflake function suggested for BigQuery). Double-check that the function is valid for your specific environment, not just generally real.\n\nSign three: Constraint insensitivity. Test the AI's understanding of constraints by asking the same question twice, once with a key constraint and once without. If the answer remains largely unchanged, the AI likely provided a generic response, ignoring your specific context.\n\nThese signs offer a minimum standard for identifying common AI inaccuracies. While not foolproof, they significantly reduce the risk of implementing confidently wrong information and help developers build better intuition when working with AI.\n\n#AI #Developer #LLM #TechTips #MachineLearning #ClaudeAI\n\nSource: DEV",
+  "tweet": "AI models can confidently generate plausible-looking but false info. Learn 3 critical signs to spot when an AI is guessing, saving you hours of debugging. #AI #LLM #DeveloperTips",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/raghavsharma_/confident-is-not-correct-three-signs-that-claude-is-guessing-4o4j",
+  "image": "",
+  "orig_title": "Confident Is Not Correct: Three Signs That Claude Is Guessing",
+  "cluster_urls": [
+   "https://dev.to/raghavsharma_/confident-is-not-correct-three-signs-that-claude-is-guessing-4o4j"
+  ],
+  "cluster_titles": [
+   "Confident Is Not Correct: Three Signs That Claude Is Guessing"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260802-0945-1-three-signs-claude-is-guessing-even-when-con.png",
+   "20260802-0945-1-three-signs-claude-is-guessing-even-when-con-d1.png",
+   "20260802-0945-1-three-signs-claude-is-guessing-even-when-con-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai_multi_agent_risk_management",
+  "headline_marked": "[[Walsh AI stock research system]] features a risk manager that can veto trades",
+  "headline": "Walsh AI stock research system features a risk manager that can veto trades",
+  "summary": "The Walsh system uses four specialized agents to analyze stocks, but its rule-based risk manager can override decisions, leading to a conservative backtest performance that underperformed buy-and-hold in a bull market.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Walsh is a multi-agent stock research system that routes each ticker through four specialized agents: Fundamental, Technical, Sentiment, and Macro. Their theses are aggregated by a confidence-weighted Portfolio Manager. The final call is then gated through a Rule-Based Risk Manager that can veto or downgrade trades before execution.",
+   "A backtest run from Jan 2023 to Dec 2023 with $100k initial capital on AAPL, MSFT, and NVDA showed Walsh returning +75.5% compared to +119.8% for an equal-weight passive buy-and-hold strategy, underperforming by approximately 44 percentage points.",
+   "This underperformance was partly due to the risk manager's conservative threshold. For example, in Oct 2023, the pipeline exited all positions when momentum signals broke down, holding cash and missing a subsequent NVDA recovery rally. This highlights the cost of caution in trending markets.",
+   "The system's agents evaluate various factors: Fundamental (valuation metrics), Technical (SMA crossovers, MACD), Sentiment (news, social, insider buying), and Macro (GDP, Fed Funds rate, inflation). The Portfolio Manager synthesizes these, applying a consensus penalty based on signal spread.",
+   "The Risk Manager is the sole decision-maker, with two hard veto rules: portfolio confidence below 45% or an agent signal spread of 4 or more. A soft rule downgrades strong signals when confidence is between 45-65%. These rules prioritize risk mitigation over aggressive trading.",
+   "The current backtest uses deterministic rule-based agents, not the planned LLM-powered agents. Further tuning of signal weighting and volatility caps is needed, as contrarian strategies like Walsh's can underperform during sustained trending market regimes."
+  ],
+  "caption": "A new multi-agent AI system, Walsh, analyzes stocks with a unique risk manager that can veto trades. Its backtest underperformed buy-and-hold in a bull market, prioritizing caution.\n\nWalsh is a multi-agent stock research system that routes each ticker through four specialized agents: Fundamental, Technical, Sentiment, and Macro. Their theses are aggregated by a confidence-weighted Portfolio Manager. The final call is then gated through a Rule-Based Risk Manager that can veto or downgrade trades before execution.\n\nA backtest run from Jan 2023 to Dec 2023 with $100k initial capital on AAPL, MSFT, and NVDA showed Walsh returning +75.5% compared to +119.8% for an equal-weight passive buy-and-hold strategy, underperforming by approximately 44 percentage points.\n\nThis underperformance was partly due to the risk manager's conservative threshold. For example, in Oct 2023, the pipeline exited all positions when momentum signals broke down, holding cash and missing a subsequent NVDA recovery rally. This highlights the cost of caution in trending markets.\n\nThe system's agents evaluate various factors: Fundamental (valuation metrics), Technical (SMA crossovers, MACD), Sentiment (news, social, insider buying), and Macro (GDP, Fed Funds rate, inflation). The Portfolio Manager synthesizes these, applying a consensus penalty based on signal spread.\n\nThe Risk Manager is the sole decision-maker, with two hard veto rules: portfolio confidence below 45% or an agent signal spread of 4 or more. A soft rule downgrades strong signals when confidence is between 45-65%. These rules prioritize risk mitigation over aggressive trading.\n\nThe current backtest uses deterministic rule-based agents, not the planned LLM-powered agents. Further tuning of signal weighting and volatility caps is needed, as contrarian strategies like Walsh's can underperform during sustained trending market regimes.\n\n#AI #FinTech #StockMarket #AlgorithmicTrading #MachineLearning #TechResearch\n\nSource: Hacker News",
+  "tweet": "Walsh, a new multi-agent AI stock research system, features a risk manager that can veto trades. A backtest showed it underperformed buy-and-hold in a bull market, highlighting its conservative approach. #AI #FinTech #AlgorithmicTrading",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/ats4321/walsh",
+  "image": "",
+  "orig_title": "Walsh: Multi-agent research pipeline with risk manager that can veto trades",
+  "cluster_urls": [
+   "https://github.com/ats4321/walsh"
+  ],
+  "cluster_titles": [
+   "Walsh: Multi-agent research pipeline with risk manager that can veto trades"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260802-0806-0-walsh-ai-stock-research-system-features-a-ri.png",
+   "20260802-0806-0-walsh-ai-stock-research-system-features-a-ri-d1.png",
+   "20260802-0806-0-walsh-ai-stock-research-system-features-a-ri-d2.png",
+   "20260802-0806-0-walsh-ai-stock-research-system-features-a-ri-d3.png"
+  ]
+ },
+ {
+  "topic": "llm_attention_int4_memory_cells",
+  "headline_marked": "[[LLM Attention with INT4 In-Memory Cells]] via Persistent State Machines",
+  "headline": "LLM Attention with INT4 In-Memory Cells via Persistent State Machines",
+  "summary": "Researchers introduce Persistent State Machines (PSMs) for LLM attention, utilizing stationary in-memory cells for efficient computation. The architecture demonstrates ultra-low dynamic power consumption and high scaling potential on FPGA.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A new formal discrete framework, Persistent State Machines (PSMs), is proposed for attention operators in Large Language Models. This architecture utilizes stationary in-memory cells for local deterministic state transitions, promising significant efficiency gains.",
+   "The research provides complete mathematical proofs, including quantization error bounds and a multi-phase discrete Softmax construction. It also establishes deterministic finite-automaton equivalence and membership in DSPACE(O(n)).",
+   "Implementation feasibility was validated on programmable logic fabric through two evaluation flows. A 1024-cell array on a Zynq-7000 demonstrated dynamic power below 1.0 mW for core logic, yielding 3.81 × 10^-5 pJ/op normalized dynamic energy.",
+   "For system-level compatibility, a 256-cell sub-array was integrated into an SoC on an UltraScale+ xcvu9p, closing timing at 62.5 MHz within the AWS Cloud FPGA environment. This integration occupied only 0.67% of logic slices, indicating high scaling potential.",
+   "Functional simulations with over a thousand random vectors confirmed bit-exact agreement with a fixed-point software reference. The energy figures are simulation-based tool estimates, strictly excluding external memory energy.",
+   "The technology is currently patent pending under Japanese Patent Application No. 2026-177318. This work showcases a novel approach to making LLM attention more hardware-efficient and scalable."
+  ],
+  "caption": "A new framework called Persistent State Machines (PSMs) could revolutionize LLM attention. It achieves ultra-low dynamic power, estimated below 1.0 mW, with high scaling potential on FPGAs.\n\nA new formal discrete framework, Persistent State Machines (PSMs), is proposed for attention operators in Large Language Models. This architecture utilizes stationary in-memory cells for local deterministic state transitions, promising significant efficiency gains.\n\nThe research provides complete mathematical proofs, including quantization error bounds and a multi-phase discrete Softmax construction. It also establishes deterministic finite-automaton equivalence and membership in DSPACE(O(n)).\n\nImplementation feasibility was validated on programmable logic fabric through two evaluation flows. A 1024-cell array on a Zynq-7000 demonstrated dynamic power below 1.0 mW for core logic, yielding 3.81 × 10^-5 pJ/op normalized dynamic energy.\n\nFor system-level compatibility, a 256-cell sub-array was integrated into an SoC on an UltraScale+ xcvu9p, closing timing at 62.5 MHz within the AWS Cloud FPGA environment. This integration occupied only 0.67% of logic slices, indicating high scaling potential.\n\nFunctional simulations with over a thousand random vectors confirmed bit-exact agreement with a fixed-point software reference. The energy figures are simulation-based tool estimates, strictly excluding external memory energy.\n\nThe technology is currently patent pending under Japanese Patent Application No. 2026-177318. This work showcases a novel approach to making LLM attention more hardware-efficient and scalable.\n\n#AI #LLM #Hardware #FPGA #DeepLearning #Tech\n\nSource: Hacker News",
+  "tweet": "Persistent State Machines (PSMs) introduce a novel approach to LLM attention, leveraging INT4 in-memory cells for ultra-low power computation. Early tests show dynamic power below 1.0 mW and high scaling potential on FPGAs. #AI #LLM #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://zenodo.org/records/21753002",
+  "image": "",
+  "orig_title": "Persistent State Machines: LLM Attention with INT4 In-Memory Cells",
+  "cluster_urls": [
+   "https://zenodo.org/records/21753002"
+  ],
+  "cluster_titles": [
+   "Persistent State Machines: LLM Attention with INT4 In-Memory Cells"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260802-0806-1-llm-attention-with-int4-in-memory-cells-via-.png",
+   "20260802-0806-1-llm-attention-with-int4-in-memory-cells-via--d1.png",
+   "20260802-0806-1-llm-attention-with-int4-in-memory-cells-via--d2.png"
+  ]
+ }
+]

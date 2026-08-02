@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "Node.js native typescript support",
+  "headline_marked": "[[Node.js executes TypeScript files directly]] with native type stripping, no build step needed",
+  "headline": "Node.js executes TypeScript files directly with native type stripping, no build step needed",
+  "summary": "Node.js 23.6 and 22.18 LTS now support native type stripping, allowing direct execution of TypeScript files without `ts-node` or a build step. This feature ensures exact line numbers in stack traces by replacing type annotations with whitespace.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Node.js 23.6 and 22.18 LTS now natively execute TypeScript files by stripping type annotations at load time. This eliminates the need for loaders like `ts-node` or a separate build step, simplifying development workflows for many projects.",
+   "The type stripping mechanism replaces annotations with whitespace, ensuring stack traces maintain exact line and column numbers without source maps. This active mode is reported via `process.features.typescript` as 'strip'.",
+   "This feature primarily covers \"erasable syntax\" such as type annotations, interfaces, type aliases, and generics. Non-erasable constructs like `enum` or constructor parameter properties require the `--experimental-transform-types` flag, which uses an SWC-based transform.",
+   "To ensure compatibility with strip mode, developers can use TypeScript 5.8's `erasableSyntaxOnly` compiler option. This flag turns any non-erasable construct into a compile error, guaranteeing code will run correctly under native stripping.",
+   "While native execution is highly beneficial for scripts and utilities, it doesn't replace full build steps for all applications. Frameworks like NestJS, which rely on `emitDecoratorMetadata`, still require traditional compilation as Node.js does not emit this metadata in strip or transform modes.",
+   "Crucially, Node.js itself does not validate types during execution; it merely discards them. Type checking remains vital and should be enforced via CI gates or pre-commit hooks using `tsc --noEmit` to prevent shipping code with type errors."
+  ],
+  "caption": "Node.js now runs TypeScript files directly, no build step needed! This native type stripping is enabled by default in recent LTS versions.\n\nNode.js 23.6 and 22.18 LTS now natively execute TypeScript files by stripping type annotations at load time. This eliminates the need for loaders like `ts-node` or a separate build step, simplifying development workflows for many projects.\n\nThe type stripping mechanism replaces annotations with whitespace, ensuring stack traces maintain exact line and column numbers without source maps. This active mode is reported via `process.features.typescript` as 'strip'.\n\nThis feature primarily covers \"erasable syntax\" such as type annotations, interfaces, type aliases, and generics. Non-erasable constructs like `enum` or constructor parameter properties require the `--experimental-transform-types` flag, which uses an SWC-based transform.\n\nTo ensure compatibility with strip mode, developers can use TypeScript 5.8's `erasableSyntaxOnly` compiler option. This flag turns any non-erasable construct into a compile error, guaranteeing code will run correctly under native stripping.\n\nWhile native execution is highly beneficial for scripts and utilities, it doesn't replace full build steps for all applications. Frameworks like NestJS, which rely on `emitDecoratorMetadata`, still require traditional compilation as Node.js does not emit this metadata in strip or transform modes.\n\nCrucially, Node.js itself does not validate types during execution; it merely discards them. Type checking remains vital and should be enforced via CI gates or pre-commit hooks using `tsc --noEmit` to prevent shipping code with type errors.\n\n#Nodejs #TypeScript #WebDev #Programming #SoftwareDevelopment #TechNews\n\nSource: DEV",
+  "tweet": "Node.js now executes TypeScript files directly! Native type stripping is enabled by default in Node.js 23.6 & 22.18 LTS, eliminating the need for `ts-node` or build steps for many projects. Streamline your dev workflow. #Nodejs #TypeScript #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ahmed_mahmoud360/nodejs-runs-typescript-now-field-notes-on-native-type-stripping-8b4",
+  "image": "",
+  "orig_title": "Node.js Runs TypeScript Now: Field Notes on Native Type Stripping",
+  "cluster_urls": [
+   "https://dev.to/ahmed_mahmoud360/nodejs-runs-typescript-now-field-notes-on-native-type-stripping-8b4"
+  ],
+  "cluster_titles": [
+   "Node.js Runs TypeScript Now: Field Notes on Native Type Stripping"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260802-1246-0-node-js-executes-typescript-files-directly-w.png",
+   "20260802-1246-0-node-js-executes-typescript-files-directly-w-d1.png",
+   "20260802-1246-0-node-js-executes-typescript-files-directly-w-d2.png"
+  ]
+ },
+ {
+  "topic": "secure local-first ai assistants with go and rust",
+  "headline_marked": "[[Building Local-First AI Assistants]] with Go and Rust for Security",
+  "headline": "Building Local-First AI Assistants with Go and Rust for Security",
+  "summary": "Explore how to create secure, on-premise AI assistants by leveraging Go for orchestration and Rust for high-performance, memory-safe inference.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Cloud-based AI models raise concerns about latency, privacy, and data residency. For critical applications in finance or healthcare, a \"Local-First\" architecture, where AI assistants run entirely on-premise or on-device, offers a more secure and reliable solution. This approach requires a robust infrastructure layer to manage state, memory, and concurrency.",
+   "This article delves into building such an infrastructure using Go for its concurrency and orchestration capabilities, and Rust for its memory safety and performance-critical inference execution. The architecture separates the agent's logic in Go from the hardened inference core in Rust, enabling rapid iteration and a secure execution environment.",
+   "Rust is chosen for the inference engine due to its guaranteed memory safety, preventing crashes from malformed inputs that plague C/C++ libraries. Its lack of garbage collection ensures deterministic behavior and consistent token generation latency, crucial for real-time chat interfaces.",
+   "The modern Rust ML ecosystem, including libraries like Burn, Candle (by Hugging Face), and tch-rs, provides access to state-of-the-art models optimized for consumer hardware. These libraries leverage SIMD instructions and multi-threaded matrix multiplication for maximum performance.",
+   "Go excels in managing the AI agent's overall system, handling user sessions with its efficient goroutine model, which supports thousands of concurrent users with a small memory footprint. Its standard library also provides excellent tools for building HTTP/2 servers and WebSocket streams for real-time token delivery.",
+   "To mitigate the cost of inter-process communication (IPC) or Foreign Function Interface (FFI) calls, zero-copy strategies are employed. This involves defining gRPC schemas that minimize payload size and using pointers to pre-allocated buffers when Go calls Rust, avoiding excessive serialization/deserialization overhead.",
+   "The article specifically highlights the use of Hugging Face's Candle for its simplicity and performance in local inference, working efficiently on both CPU and GPU. The setup involves defining a clear contract between Go and Rust for type safety, with Rust acting as a standalone service connected to Go clients via gRPC."
+  ],
+  "caption": "Tired of cloud AI's privacy risks and latency? Learn how to build secure, local-first AI assistants using Go and Rust.\n\nCloud-based AI models raise concerns about latency, privacy, and data residency. For critical applications in finance or healthcare, a \"Local-First\" architecture, where AI assistants run entirely on-premise or on-device, offers a more secure and reliable solution. This approach requires a robust infrastructure layer to manage state, memory, and concurrency.\n\nThis article delves into building such an infrastructure using Go for its concurrency and orchestration capabilities, and Rust for its memory safety and performance-critical inference execution. The architecture separates the agent's logic in Go from the hardened inference core in Rust, enabling rapid iteration and a secure execution environment.\n\nRust is chosen for the inference engine due to its guaranteed memory safety, preventing crashes from malformed inputs that plague C/C++ libraries. Its lack of garbage collection ensures deterministic behavior and consistent token generation latency, crucial for real-time chat interfaces.\n\nThe modern Rust ML ecosystem, including libraries like Burn, Candle (by Hugging Face), and tch-rs, provides access to state-of-the-art models optimized for consumer hardware. These libraries leverage SIMD instructions and multi-threaded matrix multiplication for maximum performance.\n\nGo excels in managing the AI agent's overall system, handling user sessions with its efficient goroutine model, which supports thousands of concurrent users with a small memory footprint. Its standard library also provides excellent tools for building HTTP/2 servers and WebSocket streams for real-time token delivery.\n\n#AI #LocalAI #GoLang #RustLang #MachineLearning #Cybersecurity\n\nSource: DEV",
+  "tweet": "Building secure, local-first AI assistants? This guide shows how to leverage Go for orchestration and Rust for memory-safe, high-performance inference. Say goodbye to cloud risks! #AI #GoLang #RustLang",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/from-agents-to-infrastructure-building-secure-local-first-ai-assistants-with-go-and-rust-1fke",
+  "image": "",
+  "orig_title": "From Agents to Infrastructure: Building Secure, Local-First AI Assistants with Go and Rust",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/from-agents-to-infrastructure-building-secure-local-first-ai-assistants-with-go-and-rust-1fke"
+  ],
+  "cluster_titles": [
+   "From Agents to Infrastructure: Building Secure, Local-First AI Assistants with Go and Rust"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260802-1246-1-building-local-first-ai-assistants-with-go-a.png",
+   "20260802-1246-1-building-local-first-ai-assistants-with-go-a-d1.png",
+   "20260802-1246-1-building-local-first-ai-assistants-with-go-a-d2.png",
+   "20260802-1246-1-building-local-first-ai-assistants-with-go-a-d3.png",
+   "20260802-1246-1-building-local-first-ai-assistants-with-go-a-d4.png"
+  ]
+ }
+]

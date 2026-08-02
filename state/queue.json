@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "ai_agents_real_tools_no_api_keys",
+  "headline_marked": "[[AI agents access 1,400+ tools]] via single Vaaya MCP, no API keys or subscriptions",
+  "headline": "AI agents access 1,400+ tools via single Vaaya MCP, no API keys or subscriptions",
+  "summary": "Vaaya introduces a Multi-tool Control Plane (MCP) server, eliminating the need to manage multiple vendor accounts and API keys for AI agent workflows. This pay-per-successful-call model simplifies experimentation and debugging.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Vaaya introduces a Multi-tool Control Plane (MCP) server, enabling AI agents to access over 1,400 tools through a single integration. This system eliminates the need for multiple API keys and subscriptions, offering a pay-per-successful-call model for developers.",
+   "The solution addresses a common developer pain point: spending excessive time connecting various tools rather than focusing on building agent workflows. It streamlines the setup process for complex AI agent experiments.",
+   "By centralizing tool access, Vaaya makes tool calls visible directly within the agent UI, significantly simplifying debugging and understanding agent behavior. This transparency enhances the development experience for agentic AI projects.",
+   "Developers who find themselves spending more time on API wiring than on testing their AI agent ideas are encouraged to explore this approach. It promises a more efficient and cost-effective way to build and iterate on AI agent capabilities."
+  ],
+  "caption": "Tired of managing dozens of API keys for your AI agents? Vaaya's single MCP server gives agents access to over 1,400 tools with pay-per-call ease.\n\nVaaya introduces a Multi-tool Control Plane (MCP) server, enabling AI agents to access over 1,400 tools through a single integration. This system eliminates the need for multiple API keys and subscriptions, offering a pay-per-successful-call model for developers.\n\nThe solution addresses a common developer pain point: spending excessive time connecting various tools rather than focusing on building agent workflows. It streamlines the setup process for complex AI agent experiments.\n\nBy centralizing tool access, Vaaya makes tool calls visible directly within the agent UI, significantly simplifying debugging and understanding agent behavior. This transparency enhances the development experience for agentic AI projects.\n\nDevelopers who find themselves spending more time on API wiring than on testing their AI agent ideas are encouraged to explore this approach. It promises a more efficient and cost-effective way to build and iterate on AI agent capabilities.\n\n#AI #AIAgents #DeveloperTools #LLM #Automation #Vaaya\n\nSource: DEV",
+  "tweet": "Stop drowning in API keys! Vaaya's single MCP server lets your AI agents tap into 1,400+ tools with pay-per-call. Simplify development, debug faster, and build agent workflows efficiently. #AI #AIAgents #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "vaaya.ai",
+  "source": "DEV",
+  "url": "https://dev.to/nehaaaa6/i-gave-my-cursor-agent-real-tools-without-five-api-keys-1ib6",
+  "image": "",
+  "orig_title": "I gave my Cursor agent real tools without five API keys",
+  "cluster_urls": [
+   "https://dev.to/nehaaaa6/i-gave-my-cursor-agent-real-tools-without-five-api-keys-1ib6"
+  ],
+  "cluster_titles": [
+   "I gave my Cursor agent real tools without five API keys"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260802-0906-0-ai-agents-access-1-400-tools-via-single-vaay.png",
+   "20260802-0906-0-ai-agents-access-1-400-tools-via-single-vaay-d1.png",
+   "20260802-0906-0-ai-agents-access-1-400-tools-via-single-vaay-d2.png"
+  ]
+ },
+ {
+  "topic": "kubernetes_upgrades_no_downtime",
+  "headline_marked": "[[Master Kubernetes upgrades without downtime]] using a boring, disciplined process",
+  "headline": "Master Kubernetes upgrades without downtime using a boring, disciplined process",
+  "summary": "Learn a disciplined approach to Kubernetes upgrades that minimizes risk and ensures continuous service. This method emphasizes thorough preparation, testing, and careful execution to avoid outages.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Kubernetes upgrades, often a source of anxiety, can be made 'boring' and reliable by following a disciplined process. Crucially, this involves thoroughly reading release notes for every minor version to identify removed APIs and breaking changes, which are common causes of outages.",
+   "Before any production upgrade, test the process in an identical non-production cluster with actual workloads for at least a week. Additionally, perform a deprecated API audit using tools like pluto or kubent to fix any problematic manifests beforehand.",
+   "Implement PodDisruptionBudgets (PDBs) for critical services to prevent all pods from being drained simultaneously during node upgrades. When upgrading, always start with the control plane, updating one component at a time to maintain stability.",
+   "Upgrade worker nodes in small batches, typically 10% at a time, and wait for health checks between each batch. Continuously monitor specific metrics like control plane latency, API server error rate, and pending pod counts to catch issues early.",
+   "Kubernetes rollbacks are complex; the best strategy is to confirm health before proceeding with the next batch. Schedule upgrades during business hours (Tuesday-Thursday, first week of the month) when more support is available, rather than off-hours, which are paradoxically riskier.",
+   "Smooth upgrades are a sign of strong reliability discipline, indicating proper test environments, PDBs, and runbooks. Addressing these foundational issues makes the upgrade process predictable and less stressful."
+  ],
+  "caption": "Terrified of Kubernetes upgrades? Learn the 'boring' process that eliminates downtime and ensures stability.\n\nKubernetes upgrades, often a source of anxiety, can be made 'boring' and reliable by following a disciplined process. Crucially, this involves thoroughly reading release notes for every minor version to identify removed APIs and breaking changes, which are common causes of outages.\n\nBefore any production upgrade, test the process in an identical non-production cluster with actual workloads for at least a week. Additionally, perform a deprecated API audit using tools like pluto or kubent to fix any problematic manifests beforehand.\n\nImplement PodDisruptionBudgets (PDBs) for critical services to prevent all pods from being drained simultaneously during node upgrades. When upgrading, always start with the control plane, updating one component at a time to maintain stability.\n\nUpgrade worker nodes in small batches, typically 10% at a time, and wait for health checks between each batch. Continuously monitor specific metrics like control plane latency, API server error rate, and pending pod counts to catch issues early.\n\nKubernetes rollbacks are complex; the best strategy is to confirm health before proceeding with the next batch. Schedule upgrades during business hours (Tuesday-Thursday, first week of the month) when more support is available, rather than off-hours, which are paradoxically riskier.\n\nSmooth upgrades are a sign of strong reliability discipline, indicating proper test environments, PDBs, and runbooks. Addressing these foundational issues makes the upgrade process predictable and less stressful.\n\n#Kubernetes #DevOps #CloudNative #SRE #Tech #Software\n\nSource: DEV",
+  "tweet": "Kubernetes upgrades don't have to be terrifying. A disciplined, step-by-step process can ensure zero downtime and smooth transitions. Learn how to master K8s upgrades by focusing on preparation, testing, and careful execution. #Kubernetes #DevOps #CloudNative",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/samson_tanimawo/kubernetes-upgrades-without-downtime-4kc3",
+  "image": "",
+  "orig_title": "Kubernetes Upgrades Without Downtime",
+  "cluster_urls": [
+   "https://dev.to/samson_tanimawo/kubernetes-upgrades-without-downtime-4kc3"
+  ],
+  "cluster_titles": [
+   "Kubernetes Upgrades Without Downtime"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260802-0906-1-master-kubernetes-upgrades-without-downtime-.png",
+   "20260802-0906-1-master-kubernetes-upgrades-without-downtime--d1.png",
+   "20260802-0906-1-master-kubernetes-upgrades-without-downtime--d2.png"
+  ]
+ }
+]

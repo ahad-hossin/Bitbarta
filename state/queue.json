@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "macos_binaries_on_linux_arm",
+  "headline_marked": "[[Kakehashi]] lets you run macOS binaries on Linux ARM",
+  "headline": "Kakehashi lets you run macOS binaries on Linux ARM",
+  "summary": "This experimental userspace translation layer maps Darwin Mach-O binaries to Linux aarch64, enabling CLI tools to run natively.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Kakehashi is an experimental userspace translation layer that allows macOS binaries to run on Linux ARM64 systems. It achieves this by mapping Darwin Mach-O binaries and translating BSD syscalls, enabling real guest programs like clang, 7-Zip, and curl to function.",
+   "The project focuses on running CLI-first applications and does not use a Just-In-Time (JIT) compiler. It has been verified on platforms like Docker, Colima, and UTM, and supports full curl features, Apple Security.framework, and git.",
+   "Kakehashi runs guest code natively on the CPU, with performance impacted by the syscall boundary rather than instruction emulation. While not as fast as native macOS for all tasks, it offers a cost-effective solution for CI/CD pipelines.",
+   "The primary goal for continuous integration (CI) is to enable Darwin CLI tools to run on affordable Linux ARM64 runners, reducing reliance on expensive macOS capacity. This can lead to significant cost savings, even if jobs run slower on Linux.",
+   "While Kakehashi excels at running CLI tools, native macOS runners are still preferred for GUI applications, codesigning/notarization, and Xcode UI tests. Performance optimization is an ongoing effort, with detailed progress tracked in the project's roadmap."
+  ],
+  "caption": "Run macOS binaries on Linux ARM with Kakehashi.\nThis experimental tool translates Darwin Mach-O binaries to Linux aarch64.\n\nKakehashi is an experimental userspace translation layer that allows macOS binaries to run on Linux ARM64 systems. It achieves this by mapping Darwin Mach-O binaries and translating BSD syscalls, enabling real guest programs like clang, 7-Zip, and curl to function.\n\nThe project focuses on running CLI-first applications and does not use a Just-In-Time (JIT) compiler. It has been verified on platforms like Docker, Colima, and UTM, and supports full curl features, Apple Security.framework, and git.\n\nKakehashi runs guest code natively on the CPU, with performance impacted by the syscall boundary rather than instruction emulation. While not as fast as native macOS for all tasks, it offers a cost-effective solution for CI/CD pipelines.\n\nThe primary goal for continuous integration (CI) is to enable Darwin CLI tools to run on affordable Linux ARM64 runners, reducing reliance on expensive macOS capacity. This can lead to significant cost savings, even if jobs run slower on Linux.\n\nWhile Kakehashi excels at running CLI tools, native macOS runners are still preferred for GUI applications, codesigning/notarization, and Xcode UI tests. Performance optimization is an ongoing effort, with detailed progress tracked in the project's roadmap.\n\n#Linux #macOS #ARM64 #OpenSource #Kakehashi\n\nSource: Hacker News",
+  "tweet": "Run macOS binaries on Linux ARM with Kakehashi! This experimental userspace translation layer maps Darwin Mach-O binaries to Linux aarch64, enabling CLI tools to run natively. #Linux #macOS #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/wie-project/kakehashi",
+  "image": "",
+  "orig_title": "Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM",
+  "cluster_urls": [
+   "https://github.com/wie-project/kakehashi"
+  ],
+  "cluster_titles": [
+   "Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260803-0306-0-kakehashi-lets-you-run-macos-binaries-on-lin.png",
+   "20260803-0306-0-kakehashi-lets-you-run-macos-binaries-on-lin-d1.png",
+   "20260803-0306-0-kakehashi-lets-you-run-macos-binaries-on-lin-d2.png"
+  ]
+ },
+ {
+  "topic": "ebay_harassment_campaign_payout",
+  "headline_marked": "[[eBay harassment campaign]] leads to $56M payout for former exec",
+  "headline": "eBay harassment campaign leads to $56M payout for former exec",
+  "summary": "A former eBay executive was awarded $56 million after a harassment campaign orchestrated by former company managers.",
+  "category": "BIGTECH",
+  "template": "terminal",
+  "details": [
+   "A jury has awarded $56 million to a former eBay executive who was subjected to a disturbing harassment campaign by former company managers.",
+   "The campaign involved sending the executive and their spouse a series of disturbing items to their home, including live spiders, a funeral wreath, and a bloody pig mask.",
+   "The former managers also allegedly created fake social media profiles to harass the executive and sent them sexually explicit materials.",
+   "The harassment was reportedly intended to intimidate the executive into changing their reporting, according to court documents.",
+   "The former managers involved have since been fired from eBay and faced criminal charges for their actions."
+  ],
+  "caption": "Former eBay executive awarded $56M after disturbing harassment campaign by ex-managers.\n\nA jury has awarded $56 million to a former eBay executive who was subjected to a disturbing harassment campaign by former company managers.\n\nThe campaign involved sending the executive and their spouse a series of disturbing items to their home, including live spiders, a funeral wreath, and a bloody pig mask.\n\nThe former managers also allegedly created fake social media profiles to harass the executive and sent them sexually explicit materials.\n\nThe harassment was reportedly intended to intimidate the executive into changing their reporting, according to court documents.\n\nThe former managers involved have since been fired from eBay and faced criminal charges for their actions.\n\n#eBay #TechNews #Harassment #Cybersecurity #Lawsuit\n\nSource: Hacker News",
+  "tweet": "Former eBay executive awarded $56M after a disturbing harassment campaign orchestrated by ex-managers, involving threats and disturbing items sent to their home. #eBay #TechNews #Harassment",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ebay.com",
+  "source": "Hacker News",
+  "url": "https://www.ft.com/content/06ec1b03-d4af-40cf-b12a-4ba5a410f6d2",
+  "image": "",
+  "orig_title": "'Crush this lady': how eBay harassment campaign led to $56M payout",
+  "cluster_urls": [
+   "https://www.ft.com/content/06ec1b03-d4af-40cf-b12a-4ba5a410f6d2"
+  ],
+  "cluster_titles": [
+   "'Crush this lady': how eBay harassment campaign led to $56M payout"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260803-0306-1-ebay-harassment-campaign-leads-to-56m-payout.png",
+   "20260803-0306-1-ebay-harassment-campaign-leads-to-56m-payout-d1.png"
+  ]
+ }
+]

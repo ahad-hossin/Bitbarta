@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "cleanslate_open_source_coding_agent_launch",
+  "headline_marked": "[[CleanSlate, an open-source coding agent]] for the IDE, CLI, and SDK",
+  "headline": "CleanSlate, an open-source coding agent for the IDE, CLI, and SDK",
+  "summary": "CleanSlate runs coding agents across local machines and the cloud, supporting multiple model providers. It currently works via IDE, CLI, and SDK, with plans for autonomous cloud agents.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "CleanSlate is an open-source platform designed for running coding agents across both local machines and cloud environments. It currently integrates with IDEs, CLIs, and SDKs, enabling agents to understand codebases, make modifications, execute commands, browse the web, and verify their own work.",
+   "The project is actively developing longer-running autonomous cloud agents. These future agents will be able to continue working without requiring the user's local machine to remain active. CleanSlate is built to be flexible, supporting multiple AI model providers and avoiding ties to a single ecosystem.",
+   "The developer behind CleanSlate is seeking honest feedback from other developers who utilize coding agents. This indicates the project is still in its early stages and aims to evolve based on community input."
+  ],
+  "caption": "CleanSlate is an open-source platform for running coding agents across your local machine and the cloud. It works through IDE, CLI, and SDK.\n\nCleanSlate is an open-source platform designed for running coding agents across both local machines and cloud environments. It currently integrates with IDEs, CLIs, and SDKs, enabling agents to understand codebases, make modifications, execute commands, browse the web, and verify their own work.\n\nThe project is actively developing longer-running autonomous cloud agents. These future agents will be able to continue working without requiring the user's local machine to remain active. CleanSlate is built to be flexible, supporting multiple AI model providers and avoiding ties to a single ecosystem.\n\nThe developer behind CleanSlate is seeking honest feedback from other developers who utilize coding agents. This indicates the project is still in its early stages and aims to evolve based on community input.\n\n#CleanSlate #CodingAgent #OpenSource #DeveloperTools #AI #Software\n\nSource: DEV",
+  "tweet": "CleanSlate is an open-source platform for running coding agents across your local machine and the cloud. It works through IDE, CLI, and SDK, enabling agents to understand code, make changes, and verify work. Future plans include autonomous cloud agents. #CleanSlate #OpenSour",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/maaaz7/i-built-cleanslate-an-open-source-coding-agent-for-the-ide-cli-and-sdk-5b0n",
+  "image": "",
+  "orig_title": "I built CleanSlate, an open-source coding agent for the IDE, CLI, and SDK",
+  "cluster_urls": [
+   "https://dev.to/maaaz7/i-built-cleanslate-an-open-source-coding-agent-for-the-ide-cli-and-sdk-5b0n"
+  ],
+  "cluster_titles": [
+   "I built CleanSlate, an open-source coding agent for the IDE, CLI, and SDK"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260802-1006-0-cleanslate-an-open-source-coding-agent-for-t.png",
+   "20260802-1006-0-cleanslate-an-open-source-coding-agent-for-t-d1.png"
+  ]
+ },
+ {
+  "topic": "ai_tests_ai_prompts_finds_bug",
+  "headline_marked": "[[AI demolishes prompt, finds test that passes even when empty]]",
+  "headline": "AI demolishes prompt, finds test that passes even when empty",
+  "summary": "An AI agent tasked with 'demolishing' a handoff prompt uncovered a critical flaw: a test designed to check completion passed even when the underlying process failed, leading to false positives.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The process involves a 'commander' AI writing instructions as a handoff prompt, which a 'worker' AI then implements. This handoff prompt acts as the specification, and any errors in it lead to incorrect implementation.",
+   "The author adopted a practice of running these instructions past a 'demolition agent' subagent. This agent's sole purpose is to aggressively seek out flaws and never approve the prompt as 'broadly reasonable'.",
+   "In one instance, the demolition agent didn't just read the prompt's prose but analyzed the actual code. It revealed that a 'definition of done' test, intended to ensure success, only checked if the process ran to completion, passing even when the underlying task failed or exceptions were swallowed.",
+   "Another critical finding was a configuration flag meant to swap in a real component. The agent traced the code and discovered that the function for this swap was never called from anywhere, meaning it was effectively disconnected.",
+   "The author had written both instructions with full confidence, genuinely believing the test passed and the flag worked. The demolition agent's review of the actual code exposed these discrepancies.",
+   "A handoff prompt functions as a specification, and errors often arise during the transfer of work between humans and AIs, or even between different AI agents. A prose-based review would miss these issues; only a rigorous code-level analysis can catch them.",
+   "Identifying these flaws early, during the instruction phase, is significantly more cost-effective than discovering them after hours of implementation. This highlights the value of adversarial review for prompts and specifications."
+  ],
+  "caption": "An AI agent designed to find flaws in prompts uncovered a test that passed even when the underlying system failed.\n\nThe process involves a 'commander' AI writing instructions as a handoff prompt, which a 'worker' AI then implements. This handoff prompt acts as the specification, and any errors in it lead to incorrect implementation.\n\nThe author adopted a practice of running these instructions past a 'demolition agent' subagent. This agent's sole purpose is to aggressively seek out flaws and never approve the prompt as 'broadly reasonable'.\n\nIn one instance, the demolition agent didn't just read the prompt's prose but analyzed the actual code. It revealed that a 'definition of done' test, intended to ensure success, only checked if the process ran to completion, passing even when the underlying task failed or exceptions were swallowed.\n\nAnother critical finding was a configuration flag meant to swap in a real component. The agent traced the code and discovered that the function for this swap was never called from anywhere, meaning it was effectively disconnected.\n\nThe author had written both instructions with full confidence, genuinely believing the test passed and the flag worked. The demolition agent's review of the actual code exposed these discrepancies.\n\nA handoff prompt functions as a specification, and errors often arise during the transfer of work between humans and AIs, or even between different AI agents. A prose-based review would miss these issues; only a rigorous code-level analysis can catch them.\n\nIdentifying these flaws early, during the instruction phase, is significantly more cost-effective than discovering them after hours of implementation. This highlights the value of adversarial review for prompts and specifications.\n\n#AI #SoftwareDevelopment #PromptEngineering #CodeReview #TechNews #Developer\n\nSource: DEV",
+  "tweet": "An AI 'demolition agent' found a critical flaw in a human-written prompt: a test that reported success even when the system failed. This highlights the need for rigorous AI-assisted code and prompt review. #AI #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jun_uen0/i-told-one-ai-to-demolish-the-handoff-prompt-i-wrote-for-another-ai-it-found-a-test-that-passes-3o70",
+  "image": "",
+  "orig_title": "I told one AI to demolish the handoff prompt I wrote for another AI. It found a test that passes even when it's empty",
+  "cluster_urls": [
+   "https://dev.to/jun_uen0/i-told-one-ai-to-demolish-the-handoff-prompt-i-wrote-for-another-ai-it-found-a-test-that-passes-3o70"
+  ],
+  "cluster_titles": [
+   "I told one AI to demolish the handoff prompt I wrote for another AI. It found a test that passes even when it's empty"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260802-1006-1-ai-demolishes-prompt-finds-test-that-passes-.png",
+   "20260802-1006-1-ai-demolishes-prompt-finds-test-that-passes--d1.png",
+   "20260802-1006-1-ai-demolishes-prompt-finds-test-that-passes--d2.png",
+   "20260802-1006-1-ai-demolishes-prompt-finds-test-that-passes--d3.png"
+  ]
+ }
+]

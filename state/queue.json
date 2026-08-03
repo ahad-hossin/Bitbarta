@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "openai_super_pac_funds_ai_news_site",
+  "headline_marked": "[[OpenAI's super PAC funds AI-generated news site]] attacking industry critics",
+  "headline": "OpenAI's super PAC funds AI-generated news site attacking industry critics",
+  "summary": "A newly discovered AI-generated news site, Acutus, linked to OpenAI's super PAC, has published 94 articles in under four months, with 97% flagged as AI-generated.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "An investigation revealed an AI-generated news site, \"The Wire by Acutus,\" which publishes articles attacking AI industry critics. The site was exposed after a bot, posing as a reporter named Michael Chen, sent an interview request. Links to Targeted Victory, a firm central to OpenAI's $125 million political operation, were found for the second time this month.",
+   "Acutus launched on December 29, 2025, and has published 94 full-length articles on various topics in less than four months. The site operates anonymously, with no masthead, bylines, or named editors, and offers no explanation of its origins or management.",
+   "Every article on Acutus was run through Pangram, an AI content detector with a near-zero false-positive rate. Of the 94 articles, 69% were flagged as fully AI-generated, and another 28% as partially AI-generated, meaning only three articles were classified as human-authored.",
+   "Further evidence was found in the website's source code, revealing elements of a behind-the-scenes editorial interface. This interface includes fields like \"AI Background Context\" and \"Question Prompts,\" used to guide AI in generating questions and writing stories.",
+   "The interface also features a \"Generate Story Draft\" button and a \"Regenerate\" option. Additional AI tools within the system extract quotes from research notes, perform grammar checks, and conduct multi-pass AI-led editorial reviews, scoring output against various benchmarks.",
+   "Acutus licenses all its content under Creative Commons, an unusual practice for a news outlet, as part of a wire-service syndication setup. Its \"About\" page states, \"Our stories are made available as a wire service for all publishers to use.\""
+  ],
+  "caption": "An AI-generated news site, Acutus, linked to OpenAI's super PAC, was exposed after a bot reporter sought an interview.\n\nAn investigation revealed an AI-generated news site, \"The Wire by Acutus,\" which publishes articles attacking AI industry critics. The site was exposed after a bot, posing as a reporter named Michael Chen, sent an interview request. Links to Targeted Victory, a firm central to OpenAI's $125 million political operation, were found for the second time this month.\n\nAcutus launched on December 29, 2025, and has published 94 full-length articles on various topics in less than four months. The site operates anonymously, with no masthead, bylines, or named editors, and offers no explanation of its origins or management.\n\nEvery article on Acutus was run through Pangram, an AI content detector with a near-zero false-positive rate. Of the 94 articles, 69% were flagged as fully AI-generated, and another 28% as partially AI-generated, meaning only three articles were classified as human-authored.\n\nFurther evidence was found in the website's source code, revealing elements of a behind-the-scenes editorial interface. This interface includes fields like \"AI Background Context\" and \"Question Prompts,\" used to guide AI in generating questions and writing stories.\n\nThe interface also features a \"Generate Story Draft\" button and a \"Regenerate\" option. Additional AI tools within the system extract quotes from research notes, perform grammar checks, and conduct multi-pass AI-led editorial reviews, scoring output against various benchmarks.\n\nAcutus licenses all its content under Creative Commons, an unusual practice for a news outlet, as part of a wire-service syndication setup. Its \"About\" page states, \"Our stories are made available as a wire service for all publishers to use.\"\n\n#AI #OpenAI #TechNews #Journalism #AIethics #PoliticalTech\n\nSource: Hacker News",
+  "tweet": "An AI-generated news site, Acutus, linked to OpenAI's super PAC, was exposed after a bot reporter sought an interview. 97% of its 94 articles were flagged as AI-generated, attacking industry critics. #AI #OpenAI #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Hacker News",
+  "url": "https://www.modelrepublic.org/articles/the-reporters-at-this-news-site-are-ai-bots.-openai%E2%80%99s-super-pac-appears-to-be-using-it-to-advance-its-political-agenda",
+  "image": "",
+  "orig_title": "OpenAI's super PAC is funding AI-generated news site attacking industry critics",
+  "cluster_urls": [
+   "https://www.modelrepublic.org/articles/the-reporters-at-this-news-site-are-ai-bots.-openai%E2%80%99s-super-pac-appears-to-be-using-it-to-advance-its-political-agenda"
+  ],
+  "cluster_titles": [
+   "OpenAI's super PAC is funding AI-generated news site attacking industry critics"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260803-1039-0-openai-s-super-pac-funds-ai-generated-news-s.png",
+   "20260803-1039-0-openai-s-super-pac-funds-ai-generated-news-s-d1.png",
+   "20260803-1039-0-openai-s-super-pac-funds-ai-generated-news-s-d2.png",
+   "20260803-1039-0-openai-s-super-pac-funds-ai-generated-news-s-d3.png"
+  ]
+ },
+ {
+  "topic": "database_breach_strong_password_hashing",
+  "headline_marked": "Database stolen, [[not a single password cracked]] thanks to OPRF and server-side secrets",
+  "headline": "Database stolen, not a single password cracked thanks to OPRF and server-side secrets",
+  "summary": "Even with a database breach, an Oblivious Pseudo-Random Function (OPRF) can prevent attackers from cracking passwords offline. This method ensures the server never sees the password, and the client never learns the server's secret key.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Imagine the worst Monday: your user database, including emails, names, and password hashes, has been stolen. While using strong hashing like Argon2id is crucial, it's often not enough to prevent offline cracking.",
+   "The fundamental problem is that an attacker with your database dump has everything needed to compute the full hash function offline. Argon2id makes each attempt costly in time and memory, but the attacker only pays this cost once per candidate password, making brute-force feasible for common passwords.",
+   "A robust solution involves making the hash calculation dependent on a secret not stored in the database. A simple \"pepper\" key in the application's configuration helps but has serious vulnerabilities if the application server is compromised.",
+   "An Oblivious Pseudo-Random Function (OPRF) solves this by having the secret reside in a separate service. The elegant part is that this service never sees the actual password, and the client never learns the server's secret key.",
+   "With OPRF, an attacker possessing the database dump has the hash, salt, and parameters, but lacks the crucial server-side secret key. This means they cannot test a single password candidate offline, forcing them to interact with the OPRF service for each attempt.",
+   "This transforms an unlimited offline attack into a measurable, rate-limited online attack, subject to quotas and logging. For added security, a Verifiable OPRF (VOPRF, RFC 9497) is recommended, where the server provides cryptographic proof that it used the correct key.",
+   "A critical implementation detail for VOPRF is that the public key must be fixed out-of-band by the client. Requesting this key from the same server being verified defeats the entire purpose of verification.",
+   "Implementing OPRF introduces three real costs: dependency on an external service (which must fail closed if unavailable), a non-rotatable secret key, and a small amount of added network latency to logins.",
+   "The author has implemented VOPRF primitives in Rust, verified against RFC 9497, and packaged them for Python, including a Django hasher. This allows for gradual migration, where existing users are hardened on their next login.",
+   "The client package is Apache-2.0 licensed, and the OPRF server is AGPL open-source, allowing self-hosting. A commercial service at oprf.xiliux.com offers managed availability and key persistence, crucial as losing the key invalidates all passwords."
+  ],
+  "caption": "Stolen database? Your users' passwords can still be uncrackable. Learn how Oblivious Pseudo-Random Functions (OPRF) protect against offline attacks.\n\nImagine the worst Monday: your user database, including emails, names, and password hashes, has been stolen. While using strong hashing like Argon2id is crucial, it's often not enough to prevent offline cracking.\n\nThe fundamental problem is that an attacker with your database dump has everything needed to compute the full hash function offline. Argon2id makes each attempt costly in time and memory, but the attacker only pays this cost once per candidate password, making brute-force feasible for common passwords.\n\nA robust solution involves making the hash calculation dependent on a secret not stored in the database. A simple \"pepper\" key in the application's configuration helps but has serious vulnerabilities if the application server is compromised.\n\nAn Oblivious Pseudo-Random Function (OPRF) solves this by having the secret reside in a separate service. The elegant part is that this service never sees the actual password, and the client never learns the server's secret key.\n\nWith OPRF, an attacker possessing the database dump has the hash, salt, and parameters, but lacks the crucial server-side secret key. This means they cannot test a single password candidate offline, forcing them to interact with the OPRF service for each attempt.\n\nThis transforms an unlimited offline attack into a measurable, rate-limited online attack, subject to quotas and logging. For added security, a Verifiable OPRF (VOPRF, RFC 9497) is recommended, where the server provides cryptographic proof that it used the correct key.\n\nA critical implementation detail for VOPRF is that the public key must be fixed out-of-band by the client. Requesting this key from the same server being verified defeats the entire purpose of verification.\n\n#Cybersecurity #PasswordSecurity #DevSecOps #OPRF #DataProtection #InfoSec\n\nSource: DEV",
+  "tweet": "Stolen database? Your users' passwords can still be uncrackable. Oblivious Pseudo-Random Functions (OPRF) prevent offline cracking by requiring a server-side secret, turning unlimited attacks into rate-limited online attempts. #Cybersecurity #OPRF #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "xiliux.com",
+  "source": "DEV",
+  "url": "https://dev.to/isazajuancarlos/te-roban-la-base-de-datos-y-no-pueden-crackear-ni-una-contrasena-2983",
+  "image": "",
+  "orig_title": "Te roban la base de datos y no pueden crackear ni una contraseña",
+  "cluster_urls": [
+   "https://dev.to/isazajuancarlos/te-roban-la-base-de-datos-y-no-pueden-crackear-ni-una-contrasena-2983"
+  ],
+  "cluster_titles": [
+   "Te roban la base de datos y no pueden crackear ni una contraseña"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260803-1039-1-database-stolen-not-a-single-password-cracke.png",
+   "20260803-1039-1-database-stolen-not-a-single-password-cracke-d1.png",
+   "20260803-1039-1-database-stolen-not-a-single-password-cracke-d2.png",
+   "20260803-1039-1-database-stolen-not-a-single-password-cracke-d3.png",
+   "20260803-1039-1-database-stolen-not-a-single-password-cracke-d4.png"
+  ]
+ }
+]

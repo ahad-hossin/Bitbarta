@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "ai_rag_accuracy_breakthrough",
+  "headline_marked": "[[RAG Retrieval Accuracy jumped from 38% to 87%]] without touching the model",
+  "headline": "RAG Retrieval Accuracy jumped from 38% to 87% without touching the model",
+  "summary": "An AI RAG system's retrieval accuracy dramatically improved from 38% to 87% by fixing data ingestion and retrieval methods, proving the underlying model was never the issue.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A RAG assistant designed for fraud analysts was consistently providing incorrect answers, leading to calls for a more powerful AI model. The system's initial retrieval accuracy was a low 38%.",
+   "The core issue wasn't the AI model's intelligence but rather the 'garbage context' it received due to flawed data ingestion. Standard Operating Procedure (SOP) documents were split mid-sentence, fragmenting critical information across multiple data chunks.",
+   "The first crucial fix involved changing the chunking strategy from character counts to structural elements like sections and paragraphs, ensuring sufficient overlap. This improvement alone boosted the system's accuracy by 23 percentage points.",
+   "Further analysis revealed two distinct types of user queries: general pattern questions and specific identifier questions (e.g., for decline codes). The original dense-only retrieval system treated rare identifiers as noise, failing to retrieve literal matches.",
+   "The second fix implemented a hybrid retrieval approach, combining BM25 for precise identifier matches with embeddings for pattern-based queries. Reciprocal rank fusion was then used to effectively merge the results from both methods, adding another 26 percentage points to accuracy.",
+   "Crucially, an evaluation framework was established using real analyst search logs before any pipeline modifications were made. This ensured that all subsequent fixes were data-driven and prevented biases that could arise from invented test queries.",
+   "Following these comprehensive data pipeline and retrieval enhancements, the system's overall accuracy soared to 87%. The underlying AI model, initially deemed inadequate, remained completely untouched throughout the entire optimization process.",
+   "This case study underscores a vital principle: RAG system quality is often a data pipeline challenge, not an inherent flaw in the generative model. Inaccurate retrieval in high-stakes fields like fraud analysis can lead directly to critical operational errors."
+  ],
+  "caption": "RAG retrieval accuracy shot from 38% to 87%. The AI model? It was never touched.\n\nA RAG assistant designed for fraud analysts was consistently providing incorrect answers, leading to calls for a more powerful AI model. The system's initial retrieval accuracy was a low 38%.\n\nThe core issue wasn't the AI model's intelligence but rather the 'garbage context' it received due to flawed data ingestion. Standard Operating Procedure (SOP) documents were split mid-sentence, fragmenting critical information across multiple data chunks.\n\nThe first crucial fix involved changing the chunking strategy from character counts to structural elements like sections and paragraphs, ensuring sufficient overlap. This improvement alone boosted the system's accuracy by 23 percentage points.\n\nFurther analysis revealed two distinct types of user queries: general pattern questions and specific identifier questions (e.g., for decline codes). The original dense-only retrieval system treated rare identifiers as noise, failing to retrieve literal matches.\n\nThe second fix implemented a hybrid retrieval approach, combining BM25 for precise identifier matches with embeddings for pattern-based queries. Reciprocal rank fusion was then used to effectively merge the results from both methods, adding another 26 percentage points to accuracy.\n\nCrucially, an evaluation framework was established using real analyst search logs before any pipeline modifications were made. This ensured that all subsequent fixes were data-driven and prevented biases that could arise from invented test queries.\n\nFollowing these comprehensive data pipeline and retrieval enhancements, the system's overall accuracy soared to 87%. The underlying AI model, initially deemed inadequate, remained completely untouched throughout the entire optimization process.\n\n#RAG #AI #DataScience #MachineLearning #Tech #SoftwareEngineering\n\nSource: DEV",
+  "tweet": "RAG retrieval accuracy jumped from 38% to 87% without touching the AI model! This case study shows how data ingestion and retrieval fixes are often the key to better AI performance. #RAG #AI #DataScience",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/fagundesv/rag-retrieval-accuracy-38-after-the-fix-87-the-model-was-never-touched-22ci",
+  "image": "",
+  "orig_title": "RAG Retrieval Accuracy: 38%. After the Fix: 87%. The Model Was Never Touched.",
+  "cluster_urls": [
+   "https://dev.to/fagundesv/rag-retrieval-accuracy-38-after-the-fix-87-the-model-was-never-touched-22ci"
+  ],
+  "cluster_titles": [
+   "RAG Retrieval Accuracy: 38%. After the Fix: 87%. The Model Was Never Touched."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260803-1006-0-rag-retrieval-accuracy-jumped-from-38-to-87-.png",
+   "20260803-1006-0-rag-retrieval-accuracy-jumped-from-38-to-87--d1.png",
+   "20260803-1006-0-rag-retrieval-accuracy-jumped-from-38-to-87--d2.png",
+   "20260803-1006-0-rag-retrieval-accuracy-jumped-from-38-to-87--d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_sudo_access_from_chat",
+  "headline_marked": "[[suddo enables sudo password prompts]] directly within your AI agent's chat",
+  "headline": "suddo enables sudo password prompts directly within your AI agent's chat",
+  "summary": "This new tool allows AI agents to handle elevated commands like installing packages or reading system files without requiring users to open a separate terminal.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The new tool, suddo, addresses a common challenge for AI agents that need to execute commands with sudo privileges, such as installing packages or accessing system files. Previously, most Multi-Client Protocol (MCP) clients lacked support for creating a PTY, forcing users to switch to a separate terminal for password prompts.",
+   "suddo integrates these sudo password prompts directly into the AI agent's chat interface. This eliminates workflow interruptions, allowing AI agents to seamlessly perform privileged operations without leaving the conversational environment."
+  ],
+  "caption": "AI agents can now handle sudo password prompts directly in chat. No more switching to a separate terminal for elevated commands.\n\nThe new tool, suddo, addresses a common challenge for AI agents that need to execute commands with sudo privileges, such as installing packages or accessing system files. Previously, most Multi-Client Protocol (MCP) clients lacked support for creating a PTY, forcing users to switch to a separate terminal for password prompts.\n\nsuddo integrates these sudo password prompts directly into the AI agent's chat interface. This eliminates workflow interruptions, allowing AI agents to seamlessly perform privileged operations without leaving the conversational environment.\n\n#AI #DeveloperTools #sudo #Linux #OpenSource #Tech\n\nSource: DEV",
+  "tweet": "AI agents can now get sudo password prompts directly in their chat! suddo eliminates the need for separate terminals, streamlining operations for installing packages or accessing system files. #AI #DeveloperTools #sudo",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sunu15712/suddo-sudo-password-prompts-without-leaving-your-ai-agents-chat-2dgg",
+  "image": "",
+  "orig_title": "suddo – sudo password prompts without leaving your AI agent's chat",
+  "cluster_urls": [
+   "https://dev.to/sunu15712/suddo-sudo-password-prompts-without-leaving-your-ai-agents-chat-2dgg"
+  ],
+  "cluster_titles": [
+   "suddo – sudo password prompts without leaving your AI agent's chat"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260803-1006-1-suddo-enables-sudo-password-prompts-directly.png",
+   "20260803-1006-1-suddo-enables-sudo-password-prompts-directly-d1.png"
+  ]
+ }
+]

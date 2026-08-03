@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "samsung_galaxy_z_fold_8_ultra_review",
+  "headline_marked": "[[Samsung Galaxy Z Fold 8 Ultra:]] Nice upgrades, but not quite 'Ultra'",
+  "headline": "Samsung Galaxy Z Fold 8 Ultra: Nice upgrades, but not quite 'Ultra'",
+  "summary": "Samsung's new flagship foldable gets a Snapdragon Elite Gen 5 chip, brighter 3,000-nit screens, and chassis tweaks. However, it largely retains its predecessor's design, making its 'Ultra' branding feel somewhat underserved.",
+  "category": "ANDROID",
+  "template": "neon",
+  "details": [
+   "The Samsung Galaxy Z Fold 8 Ultra features a Snapdragon Elite Gen 5 processor, up to 16GB RAM, and 1TB storage, ensuring class-leading performance. Its displays now reach a peak brightness of 3,000 nits, a significant bump from 2,600 nits on the previous model. The main camera boasts a 200-megapixel sensor, complemented by a 10MP telephoto and a new 50MP ultra-wide lens.",
+   "Despite the 'Ultra' branding, the device largely maintains its predecessor's build, with identical thickness (8.9mm closed) and weight (7.58 ounces). However, Samsung did shave off a tiny bit of material, making it 4.1mm thin when open, and introduced subtle tapered edges for easier opening.",
+   "A new titanium alloy layer beneath the flexible display adds rigidity and reduces the appearance of the crease, though a faint groove remains. Both the 6.5-inch cover screen and 8-inch main screen are vivid AMOLED panels with a 120Hz refresh rate. The main screen also received a resolution bump to 2,256 x 2,504 and an anti-reflective coating.",
+   "While the Ultra offers superior multitasking due to its vertical screen height, its less expensive sibling, the base Z Fold 8, shares the exact same Snapdragon Elite Gen 5 processor and core performance specs. This means no reduction in speed or responsiveness for the non-Ultra model.",
+   "The review concludes that while the Z Fold 8 Ultra is a refined version of an already great device, its updates are not substantial enough to fully justify the 'Ultra' tag. It feels more like an incremental improvement rather than a significant overhaul."
+  ],
+  "caption": "Samsung's Galaxy Z Fold 8 Ultra packs a Snapdragon Elite Gen 5 chip and 3,000-nit screens. But does it truly earn the 'Ultra' moniker?\n\nThe Samsung Galaxy Z Fold 8 Ultra features a Snapdragon Elite Gen 5 processor, up to 16GB RAM, and 1TB storage, ensuring class-leading performance. Its displays now reach a peak brightness of 3,000 nits, a significant bump from 2,600 nits on the previous model. The main camera boasts a 200-megapixel sensor, complemented by a 10MP telephoto and a new 50MP ultra-wide lens.\n\nDespite the 'Ultra' branding, the device largely maintains its predecessor's build, with identical thickness (8.9mm closed) and weight (7.58 ounces). However, Samsung did shave off a tiny bit of material, making it 4.1mm thin when open, and introduced subtle tapered edges for easier opening.\n\nA new titanium alloy layer beneath the flexible display adds rigidity and reduces the appearance of the crease, though a faint groove remains. Both the 6.5-inch cover screen and 8-inch main screen are vivid AMOLED panels with a 120Hz refresh rate. The main screen also received a resolution bump to 2,256 x 2,504 and an anti-reflective coating.\n\nWhile the Ultra offers superior multitasking due to its vertical screen height, its less expensive sibling, the base Z Fold 8, shares the exact same Snapdragon Elite Gen 5 processor and core performance specs. This means no reduction in speed or responsiveness for the non-Ultra model.\n\nThe review concludes that while the Z Fold 8 Ultra is a refined version of an already great device, its updates are not substantial enough to fully justify the 'Ultra' tag. It feels more like an incremental improvement rather than a significant overhaul.\n\n#Samsung #GalaxyZFold8Ultra #FoldablePhone #TechReview #Android #Gadgets\n\nSource: Engadget",
+  "tweet": "Samsung's Galaxy Z Fold 8 Ultra packs a Snapdragon Elite Gen 5 chip and 3,000-nit screens. But does it truly earn the 'Ultra' moniker? Our review dives into the upgrades and why it still feels more like a refinement than an overhaul. #GalaxyZFold8Ultra #FoldableTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "samsung.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2228942/samsung-galaxy-z-fold-8-ultra-review/",
+  "image": "https://www.engadget.com/img/gallery/samsung-galaxy-z-fold-8-ultra-review-nice-upgrades-but-not-quite-ultra/l-intro-1785764499.jpg",
+  "orig_title": "Samsung Galaxy Z Fold 8 Ultra review: Nice upgrades, but not quite ultra",
+  "cluster_urls": [
+   "https://www.engadget.com/2228942/samsung-galaxy-z-fold-8-ultra-review/"
+  ],
+  "cluster_titles": [
+   "Samsung Galaxy Z Fold 8 Ultra review: Nice upgrades, but not quite ultra"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260803-2007-0-samsung-galaxy-z-fold-8-ultra-nice-upgrades-.png",
+   "20260803-2007-0-samsung-galaxy-z-fold-8-ultra-nice-upgrades--d1.png",
+   "20260803-2007-0-samsung-galaxy-z-fold-8-ultra-nice-upgrades--d2.png"
+  ]
+ },
+ {
+  "topic": "airllm_70b_single_4gb_gpu_inference",
+  "headline_marked": "[[AirLLM runs 70B LLMs]] on a single 4GB GPU without quantization",
+  "headline": "AirLLM runs 70B LLMs on a single 4GB GPU without quantization",
+  "summary": "AirLLM dramatically reduces inference memory, enabling large language models up to 2.8T parameters to run on consumer-grade GPUs by streaming one layer or expert at a time.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AirLLM allows large language models (LLMs) up to 70B parameters to run on a single 4GB GPU card. This is achieved without requiring quantization, distillation, or pruning, preserving model accuracy.",
+   "The technology extends to even larger models: Llama 3.1 (405B) can run on 8GB VRAM, DeepSeek-V3 (671B) on approximately 12GB, and the massive Kimi K3 (2.8T) on under 4GB. This is particularly effective for sparse MoE models.",
+   "The core innovation lies in AirLLM's ability to stream only one model layer or one expert at a time to the GPU. This means VRAM usage depends on the layer size, not the total model size, making huge models accessible on limited hardware.",
+   "AirLLM offers broad compatibility, working with virtually all popular open LLMs through a single AutoModel interface. Supported families include Llama (2/3/3.1/4), Qwen, DeepSeek (V2/V3/R1), Mistral, Phi, Gemma, and more.",
+   "Recent updates include FP8 model support, CPU inference, and MacOS compatibility. The project also incorporates block-wise quantization for up to 3x inference speedup by optimizing disk loading, with minimal accuracy loss."
+  ],
+  "caption": "Run 70B LLMs on a single 4GB GPU? AirLLM makes it possible without quantization.\n\nAirLLM allows large language models (LLMs) up to 70B parameters to run on a single 4GB GPU card. This is achieved without requiring quantization, distillation, or pruning, preserving model accuracy.\n\nThe technology extends to even larger models: Llama 3.1 (405B) can run on 8GB VRAM, DeepSeek-V3 (671B) on approximately 12GB, and the massive Kimi K3 (2.8T) on under 4GB. This is particularly effective for sparse MoE models.\n\nThe core innovation lies in AirLLM's ability to stream only one model layer or one expert at a time to the GPU. This means VRAM usage depends on the layer size, not the total model size, making huge models accessible on limited hardware.\n\nAirLLM offers broad compatibility, working with virtually all popular open LLMs through a single AutoModel interface. Supported families include Llama (2/3/3.1/4), Qwen, DeepSeek (V2/V3/R1), Mistral, Phi, Gemma, and more.\n\nRecent updates include FP8 model support, CPU inference, and MacOS compatibility. The project also incorporates block-wise quantization for up to 3x inference speedup by optimizing disk loading, with minimal accuracy loss.\n\n#AirLLM #LLM #AI #GPU #OpenSource #Tech\n\nSource: Hacker News",
+  "tweet": "AirLLM lets you run 70B LLMs on a single 4GB GPU, no quantization needed! Even 2.8T models fit under 4GB. It streams one layer at a time, making huge models accessible on consumer hardware. #AirLLM #LLM #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/lyogavin/airllm",
+  "image": "",
+  "orig_title": "AirLLM 70B inference with single 4GB GPU",
+  "cluster_urls": [
+   "https://github.com/lyogavin/airllm"
+  ],
+  "cluster_titles": [
+   "AirLLM 70B inference with single 4GB GPU"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260803-2007-1-airllm-runs-70b-llms-on-a-single-4gb-gpu-wit.png",
+   "20260803-2007-1-airllm-runs-70b-llms-on-a-single-4gb-gpu-wit-d1.png",
+   "20260803-2007-1-airllm-runs-70b-llms-on-a-single-4gb-gpu-wit-d2.png"
+  ]
+ }
+]

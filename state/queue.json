@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "deepseek_ai_orchestrates_telegram_attacks",
+  "headline_marked": "[[Threat Actor Used DeepSeek to Orchestrate 460 Attacks]] via Telegram",
+  "headline": "Threat Actor Used DeepSeek to Orchestrate 460 Attacks via Telegram",
+  "summary": "A Zhuhai-based threat actor leveraged DeepSeek AI, an open-source agent framework, and Telegram to execute over 460 attacks on internet-facing systems. This campaign highlights the rapid weaponization of frontier AI models.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Palo Alto Networks' Unit 42 reported that a threat actor from Zhuhai integrated DeepSeek with the open-source Hermes agent framework, controlling the entire operation via Telegram. This setup was used to attack hundreds of internet-facing systems, with analysis published on August 2.",
+   "The attacker combined three off-the-shelf components: a frontier AI model, a publicly available agent framework, and a messaging platform. DeepSeek was tasked with enumerating targets, finding public exploits, and executing them, while Telegram provided real-time operator control without command-line interaction.",
+   "The campaign was not a lab experiment, but an active and effective operation, hitting over 460 systems across multiple victims. Unit 42 linked it to a known Zhuhai group targeting manufacturing and software companies in Asia-Pacific, prompting their detailed documentation and naming of the campaign.",
+   "The ease of deployment is notable; Hermes is open-source, DeepSeek is accessible, and Telegram is free. The transition from a capable AI model to a weaponized agent compressed from weeks to days, allowing a moderately skilled operator to replicate the setup and adapt it with different models or target scopes.",
+   "This incident underscores a shift where frontier AI models are becoming the execution engines for attack automation, rather than a bottleneck. The challenge has moved from writing exploits to selecting frameworks, integrating models, and identifying targets, with API calls replacing complex engineering.",
+   "The attacker's choice of DeepSeek over models like GPT-5.5 or Claude Opus is significant. DeepSeek is generally cheaper to run, potentially offers fewer official audit trails, and is easier to operate in regions where Western APIs face scrutiny. This suggests that cost and operational security are driving the use of more accessible, open-weight models in such attacks.",
+   "Unit 42 focused on the technical chain, tracing the attack, naming it, and detailing the payload and messaging protocol. This clarity is crucial as future iterations are expected to be faster, more automated, and harder to trace, emphasizing the need for constant vigilance in cybersecurity."
+  ],
+  "caption": "A threat actor used DeepSeek AI, an open-source agent framework, and Telegram to orchestrate over 460 cyberattacks.\n\nPalo Alto Networks' Unit 42 reported that a threat actor from Zhuhai integrated DeepSeek with the open-source Hermes agent framework, controlling the entire operation via Telegram. This setup was used to attack hundreds of internet-facing systems, with analysis published on August 2.\n\nThe attacker combined three off-the-shelf components: a frontier AI model, a publicly available agent framework, and a messaging platform. DeepSeek was tasked with enumerating targets, finding public exploits, and executing them, while Telegram provided real-time operator control without command-line interaction.\n\nThe campaign was not a lab experiment, but an active and effective operation, hitting over 460 systems across multiple victims. Unit 42 linked it to a known Zhuhai group targeting manufacturing and software companies in Asia-Pacific, prompting their detailed documentation and naming of the campaign.\n\nThe ease of deployment is notable; Hermes is open-source, DeepSeek is accessible, and Telegram is free. The transition from a capable AI model to a weaponized agent compressed from weeks to days, allowing a moderately skilled operator to replicate the setup and adapt it with different models or target scopes.\n\nThis incident underscores a shift where frontier AI models are becoming the execution engines for attack automation, rather than a bottleneck. The challenge has moved from writing exploits to selecting frameworks, integrating models, and identifying targets, with API calls replacing complex engineering.\n\nThe attacker's choice of DeepSeek over models like GPT-5.5 or Claude Opus is significant. DeepSeek is generally cheaper to run, potentially offers fewer official audit trails, and is easier to operate in regions where Western APIs face scrutiny. This suggests that cost and operational security are driving the use of more accessible, open-weight models in such attacks.\n\n#CyberSecurity #AI #DeepSeek #CyberAttack #InfoSec #ThreatActor\n\nSource: DEV",
+  "tweet": "A threat actor leveraged DeepSeek AI, an open-source agent framework, and Telegram to launch over 460 cyberattacks. This highlights the rapid weaponization of frontier AI models in real-world campaigns. #CyberSecurity #AI #DeepSeek",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "deepseek.com",
+  "source": "DEV",
+  "url": "https://dev.to/peremptory/a-threat-actor-used-deepseek-to-orchestrate-460-attacks-via-telegram-2jpi",
+  "image": "",
+  "orig_title": "A Threat Actor Used DeepSeek to Orchestrate 460 Attacks via Telegram",
+  "cluster_urls": [
+   "https://dev.to/peremptory/a-threat-actor-used-deepseek-to-orchestrate-460-attacks-via-telegram-2jpi"
+  ],
+  "cluster_titles": [
+   "A Threat Actor Used DeepSeek to Orchestrate 460 Attacks via Telegram"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260803-1438-0-threat-actor-used-deepseek-to-orchestrate-46.png",
+   "20260803-1438-0-threat-actor-used-deepseek-to-orchestrate-46-d1.png",
+   "20260803-1438-0-threat-actor-used-deepseek-to-orchestrate-46-d2.png",
+   "20260803-1438-0-threat-actor-used-deepseek-to-orchestrate-46-d3.png",
+   "20260803-1438-0-threat-actor-used-deepseek-to-orchestrate-46-d4.png"
+  ]
+ },
+ {
+  "topic": "llm_semantic_cache_cost_reduction",
+  "headline_marked": "[[Build a semantic cache for LLM apps]] in 40 lines of Python, cutting costs by half",
+  "headline": "Build a semantic cache for LLM apps in 40 lines of Python, cutting costs by half",
+  "summary": "Learn to implement a semantic cache in Python to prevent redundant LLM API calls, potentially reducing costs by 30-50% by matching query meaning instead of exact strings.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Calling LLM APIs for every user request often means paying for the same question multiple times, as standard caches only match exact strings. Human users phrase the same intent in many ways, leading to missed cache hits and unnecessary model calls.",
+   "A semantic cache solves this by matching meaning instead of exact strings. Queries are converted into vectors and compared to previously answered queries' vectors, allowing for hits on paraphrased requests.",
+   "A basic 40-line Python implementation can demonstrate this, immediately showing cache hits on queries a string-based cache would miss. This can lead to a 30-40% hit rate for apps with repetitive user intents like support or FAQs.",
+   "However, a simple semantic cache can fail if similar-sounding queries have opposite intents (e.g., \"cancel\" vs. \"reactivate\"). A lightweight rejection rule for known polarity pairs is crucial to prevent incorrect cached responses.",
+   "For production, an in-memory list should be replaced with a vector database like Qdrant or Milvus for scalability. The query pattern remains the same, but it allows for millions of cached entries with sub-millisecond lookup.",
+   "Common mistakes include using one global threshold for all query types, caching everything indefinitely (answers can go stale), and trusting similarity scores alone without guard rails. Measuring hit rate by category is also vital.",
+   "An open-source package called Remem (pip install remem-ai) offers a more complete reference implementation with built-in guard-rail and invalidation logic for those looking to explore harder edge cases."
+  ],
+  "caption": "Stop paying for the same LLM query repeatedly. A 40-line Python semantic cache can cut your API costs by 30-50% by understanding user intent.\n\nCalling LLM APIs for every user request often means paying for the same question multiple times, as standard caches only match exact strings. Human users phrase the same intent in many ways, leading to missed cache hits and unnecessary model calls.\n\nA semantic cache solves this by matching meaning instead of exact strings. Queries are converted into vectors and compared to previously answered queries' vectors, allowing for hits on paraphrased requests.\n\nA basic 40-line Python implementation can demonstrate this, immediately showing cache hits on queries a string-based cache would miss. This can lead to a 30-40% hit rate for apps with repetitive user intents like support or FAQs.\n\nHowever, a simple semantic cache can fail if similar-sounding queries have opposite intents (e.g., \"cancel\" vs. \"reactivate\"). A lightweight rejection rule for known polarity pairs is crucial to prevent incorrect cached responses.\n\nFor production, an in-memory list should be replaced with a vector database like Qdrant or Milvus for scalability. The query pattern remains the same, but it allows for millions of cached entries with sub-millisecond lookup.\n\nCommon mistakes include using one global threshold for all query types, caching everything indefinitely (answers can go stale), and trusting similarity scores alone without guard rails. Measuring hit rate by category is also vital.\n\nAn open-source package called Remem (pip install remem-ai) offers a more complete reference implementation with built-in guard-rail and invalidation logic for those looking to explore harder edge cases.\n\n#LLM #SemanticCache #Python #AI #Developer #Tech\n\nSource: DEV",
+  "tweet": "Cut your LLM API costs by up to 50% with a 40-line Python semantic cache. Match user intent, not just exact strings, and avoid redundant calls. #LLM #Python #AICode",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hrsvd/build-a-semantic-cache-for-your-llm-app-in-40-lines-of-python-and-cut-costs-by-half-2216",
+  "image": "",
+  "orig_title": "Build a Semantic Cache for Your LLM App in 40 Lines of Python (And Cut Costs by Half)",
+  "cluster_urls": [
+   "https://dev.to/hrsvd/build-a-semantic-cache-for-your-llm-app-in-40-lines-of-python-and-cut-costs-by-half-2216"
+  ],
+  "cluster_titles": [
+   "Build a Semantic Cache for Your LLM App in 40 Lines of Python (And Cut Costs by Half)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260803-1438-1-build-a-semantic-cache-for-llm-apps-in-40-li.png",
+   "20260803-1438-1-build-a-semantic-cache-for-llm-apps-in-40-li-d1.png",
+   "20260803-1438-1-build-a-semantic-cache-for-llm-apps-in-40-li-d2.png",
+   "20260803-1438-1-build-a-semantic-cache-for-llm-apps-in-40-li-d3.png"
+  ]
+ }
+]

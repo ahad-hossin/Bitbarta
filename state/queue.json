@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "coldcard_predictable_rng_bitcoin_theft",
+  "headline_marked": "[[COLDCARD Predictable RNG]] linked to $8.86M Bitcoin Theft",
+  "headline": "COLDCARD Predictable RNG linked to $8.86M Bitcoin Theft",
+  "summary": "A conditional branching error in COLDCARD firmware made wallet seed randomness deterministic, potentially allowing attackers to reproduce private keys offline. This vulnerability could be tied to an estimated $8.86 million in Bitcoin theft.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical vulnerability in COLDCARD firmware, stemming from a conditional branching error, led to predictable wallet seed randomness. This flaw may have enabled attackers to offline-reproduce seeds and private keys, facilitating the unauthorized movement of funds without physical access to devices.",
+   "Attackers could reportedly use public Bitcoin addresses as a verification oracle to confirm reproduced seeds. This method bypassed the need to physically compromise the hardware wallet itself, making the theft harder to detect through traditional means.",
+   "COLDCARD devices are widely used by individuals and organizations, including crypto exchanges, Web3 businesses, and custody services. It is crucial to verify the firmware and entropy used at the time a wallet's seed was generated, not just the current firmware version.",
+   "Self-custody wallets often go undetected in IT asset inventories, posing a significant challenge for security operations centers. Organizations must integrate wallet inventories, key ceremonies, approval processes, and blockchain monitoring to mitigate such risks.",
+   "For high-value assets, relying on a single device vendor is not recommended. Instead, users should adopt independent entropy sources, implement multisig across heterogeneous hardware, and maintain auditable records of seed generation ceremonies. During migrations, vigilance against fake support scams is essential.",
+   "Mandatory security practices include official firmware hash verifications, address checks on device screens, small test transactions, and dual approvals for all critical operations. These steps can help prevent exploitation of similar vulnerabilities in the future."
+  ],
+  "caption": "A critical vulnerability in COLDCARD hardware wallets has been linked to an estimated $8.86 million in Bitcoin theft.\n\nA critical vulnerability in COLDCARD firmware, stemming from a conditional branching error, led to predictable wallet seed randomness. This flaw may have enabled attackers to offline-reproduce seeds and private keys, facilitating the unauthorized movement of funds without physical access to devices.\n\nAttackers could reportedly use public Bitcoin addresses as a verification oracle to confirm reproduced seeds. This method bypassed the need to physically compromise the hardware wallet itself, making the theft harder to detect through traditional means.\n\nCOLDCARD devices are widely used by individuals and organizations, including crypto exchanges, Web3 businesses, and custody services. It is crucial to verify the firmware and entropy used at the time a wallet's seed was generated, not just the current firmware version.\n\nSelf-custody wallets often go undetected in IT asset inventories, posing a significant challenge for security operations centers. Organizations must integrate wallet inventories, key ceremonies, approval processes, and blockchain monitoring to mitigate such risks.\n\nFor high-value assets, relying on a single device vendor is not recommended. Instead, users should adopt independent entropy sources, implement multisig across heterogeneous hardware, and maintain auditable records of seed generation ceremonies. During migrations, vigilance against fake support scams is essential.\n\nMandatory security practices include official firmware hash verifications, address checks on device screens, small test transactions, and dual approvals for all critical operations. These steps can help prevent exploitation of similar vulnerabilities in the future.\n\n#COLDCARD #Bitcoin #Security #Crypto #Vulnerability #HardwareWallet\n\nSource: DEV",
+  "tweet": "A COLDCARD hardware wallet vulnerability, due to predictable seed randomness, is linked to an estimated $8.86M Bitcoin theft. Users urged to verify firmware and entropy at seed generation. #COLDCARD #Bitcoin #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "coldcard.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/coldcard-predictable-rng-from-seed-recovery-to-about-886m-bitcoin-theft-21e0",
+  "image": "",
+  "orig_title": "COLDCARD Predictable RNG: From Seed Recovery to About $8.86M Bitcoin Theft",
+  "cluster_urls": [
+   "https://dev.to/anoymask/coldcard-predictable-rng-from-seed-recovery-to-about-886m-bitcoin-theft-21e0"
+  ],
+  "cluster_titles": [
+   "COLDCARD Predictable RNG: From Seed Recovery to About $8.86M Bitcoin Theft"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260803-0706-0-coldcard-predictable-rng-linked-to-8-86m-bit.png",
+   "20260803-0706-0-coldcard-predictable-rng-linked-to-8-86m-bit-d1.png",
+   "20260803-0706-0-coldcard-predictable-rng-linked-to-8-86m-bit-d2.png",
+   "20260803-0706-0-coldcard-predictable-rng-linked-to-8-86m-bit-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_code_debugging_challenges",
+  "headline_marked": "[[Debugging AI Code Takes 10x Longer]] Than Writing It: A Developer's Experience",
+  "headline": "Debugging AI Code Takes 10x Longer Than Writing It: A Developer's Experience",
+  "summary": "A developer found that debugging AI-generated code took up to 10 times longer than writing it from scratch, often due to subtle logical flaws and API hallucinations. This unexpected overhead can negate AI's initial speed benefits.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A developer recounts spending 10 times longer debugging AI-generated code than it would have taken to write it manually. Despite AI assistants speeding up initial code generation by 40-50%, the subsequent debugging process often negates these gains.",
+   "Tracking over three months revealed that AI-generated snippets took an average of 3.2 times longer to verify and fix. For complex tasks involving state management or async flows, this ratio jumped to 8-12x, highlighting a significant hidden cost.",
+   "One incident involved a Python data pipeline where a 60-line AI-generated function led to 30,000 duplicate records in production. The code passed initial tests and worked in staging, but failed under high concurrency.",
+   "The root cause was a subtle race condition in the AI's threading implementation, where the function reported completion before all batch insertions were fully committed. Fixing this required eight hours of tracing and rewriting with asyncio.",
+   "Common issues with AI-generated code include 'confident wrongness' (looks correct but has deep flaws), API hallucination (using non-existent or deprecated methods), incomplete context, inconsistent style, and a lack of environmental awareness.",
+   "The developer's new workflow treats AI like a junior developer, always asking for multiple approaches and writing tests *before* reviewing generated code. This test-driven approach helps catch flaws early and improves reliability."
+  ],
+  "caption": "AI speeds up coding, but a developer found debugging AI-generated code took 10 times longer. Subtle bugs and 'confident wrongness' often negate initial time savings.\n\nA developer recounts spending 10 times longer debugging AI-generated code than it would have taken to write it manually. Despite AI assistants speeding up initial code generation by 40-50%, the subsequent debugging process often negates these gains.\n\nTracking over three months revealed that AI-generated snippets took an average of 3.2 times longer to verify and fix. For complex tasks involving state management or async flows, this ratio jumped to 8-12x, highlighting a significant hidden cost.\n\nOne incident involved a Python data pipeline where a 60-line AI-generated function led to 30,000 duplicate records in production. The code passed initial tests and worked in staging, but failed under high concurrency.\n\nThe root cause was a subtle race condition in the AI's threading implementation, where the function reported completion before all batch insertions were fully committed. Fixing this required eight hours of tracing and rewriting with asyncio.\n\nCommon issues with AI-generated code include 'confident wrongness' (looks correct but has deep flaws), API hallucination (using non-existent or deprecated methods), incomplete context, inconsistent style, and a lack of environmental awareness.\n\nThe developer's new workflow treats AI like a junior developer, always asking for multiple approaches and writing tests *before* reviewing generated code. This test-driven approach helps catch flaws early and improves reliability.\n\n#AI #Coding #Debugging #DeveloperLife #SoftwareDevelopment #TechNews\n\nSource: DEV",
+  "tweet": "AI code generation can be fast, but debugging it? One developer spent 10x longer fixing AI-generated code than writing it from scratch. Subtle bugs and 'confident wrongness' are major culprits. #AI #Coding #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shadie_ai/i-spent-10x-longer-debugging-ai-code-than-writing-it-heres-what-changed-2k1h",
+  "image": "",
+  "orig_title": "I Spent 10x Longer Debugging AI Code Than Writing It — Here's What Changed",
+  "cluster_urls": [
+   "https://dev.to/shadie_ai/i-spent-10x-longer-debugging-ai-code-than-writing-it-heres-what-changed-2k1h"
+  ],
+  "cluster_titles": [
+   "I Spent 10x Longer Debugging AI Code Than Writing It — Here's What Changed"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260803-0706-1-debugging-ai-code-takes-10x-longer-than-writ.png",
+   "20260803-0706-1-debugging-ai-code-takes-10x-longer-than-writ-d1.png",
+   "20260803-0706-1-debugging-ai-code-takes-10x-longer-than-writ-d2.png"
+  ]
+ }
+]

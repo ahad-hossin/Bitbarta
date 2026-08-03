@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "xml tagging for better ai model output",
+  "headline_marked": "[[XML Tagging]] Boosts Claude & GPT Output Reliability",
+  "headline": "XML Tagging Boosts Claude & GPT Output Reliability",
+  "summary": "A simple trick using XML tags can significantly improve the consistency and accuracy of responses from large language models like Claude and GPT.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Struggling with inconsistent or unpredictable outputs from LLMs like Claude and GPT? When prompts become complex, models can mix up instructions, ignore formatting, or misinterpret examples. The solution is surprisingly simple: wrap distinct sections of your prompt in XML tags.",
+   "LLMs are trained on vast amounts of code and markup, making them adept at recognizing XML and HTML structures. Unlike plain text, tags create unambiguous boundaries between different prompt components, such as instructions, context, examples, and desired output format.",
+   "Anthropic officially recommends this method for Claude, suggesting tags like <instructions>, <context>, and <output_format> to enhance response consistency. This approach transforms prompt engineering from a fuzzy art into a more structured, reliable process.",
+   "Think of it like filling out a form with labeled fields instead of reading a dense block of text. The model can clearly distinguish between different types of information, preventing it from, for example, summarizing an example instead of the actual content.",
+   "You don't need a formal XML schema; these are semantic containers that LLMs can easily parse. You can even nest tags, like <document index=\"1\"> and <document index=\"2\">, and use attributes for more complex inputs.",
+   "This technique also simplifies parsing the model's response. By asking the LLM to return its answer within tags, you can programmatically extract specific information, turning a potentially fragile formatting challenge into a straightforward string-extraction task.",
+   "XML tagging is most beneficial for complex prompts containing multiple distinct components that could be confused. For simple, single instructions, it's unnecessary overhead. It's not a hack, but rather an application of good API design principles to prompt engineering.",
+   "The next time your prompts aren't yielding the desired results, consider structure over phrasing. Often, the issue isn't what you're asking, but how you're organizing the information you provide to the model."
+  ],
+  "caption": "Tired of LLMs like Claude and GPT giving you messy, unpredictable outputs?\nTry this simple XML tagging trick for reliable results.\n\nStruggling with inconsistent or unpredictable outputs from LLMs like Claude and GPT? When prompts become complex, models can mix up instructions, ignore formatting, or misinterpret examples. The solution is surprisingly simple: wrap distinct sections of your prompt in XML tags.\n\nLLMs are trained on vast amounts of code and markup, making them adept at recognizing XML and HTML structures. Unlike plain text, tags create unambiguous boundaries between different prompt components, such as instructions, context, examples, and desired output format.\n\nAnthropic officially recommends this method for Claude, suggesting tags like <instructions>, <context>, and <output_format> to enhance response consistency. This approach transforms prompt engineering from a fuzzy art into a more structured, reliable process.\n\nThink of it like filling out a form with labeled fields instead of reading a dense block of text. The model can clearly distinguish between different types of information, preventing it from, for example, summarizing an example instead of the actual content.\n\nYou don't need a formal XML schema; these are semantic containers that LLMs can easily parse. You can even nest tags, like <document index=\"1\"> and <document index=\"2\">, and use attributes for more complex inputs.\n\nThis technique also simplifies parsing the model's response. By asking the LLM to return its answer within tags, you can programmatically extract specific information, turning a potentially fragile formatting challenge into a straightforward string-extraction task.\n\nXML tagging is most beneficial for complex prompts containing multiple distinct components that could be confused. For simple, single instructions, it's unnecessary overhead. It's not a hack, but rather an application of good API design principles to prompt engineering.\n\n#AI #LLM #GPT #Claude #PromptEngineering\n\nSource: DEV",
+  "tweet": "Struggling with messy LLM outputs? [[XML tagging]] is the secret to boosting reliability from Claude & GPT. Wrap prompt sections in tags for clearer instructions & better results. #AI #LLM #PromptEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/maryam_saba_792cdbcdb46fd/xml-tagging-in-prompts-the-secret-to-getting-better-output-from-claude-and-gpt-54e1",
+  "image": "",
+  "orig_title": "XML Tagging in Prompts: The Secret to Getting Better Output from Claude and GPT",
+  "cluster_urls": [
+   "https://dev.to/maryam_saba_792cdbcdb46fd/xml-tagging-in-prompts-the-secret-to-getting-better-output-from-claude-and-gpt-54e1"
+  ],
+  "cluster_titles": [
+   "XML Tagging in Prompts: The Secret to Getting Better Output from Claude and GPT"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260804-0316-0-xml-tagging-boosts-claude-gpt-output-reliabi.png",
+   "20260804-0316-0-xml-tagging-boosts-claude-gpt-output-reliabi-d1.png",
+   "20260804-0316-0-xml-tagging-boosts-claude-gpt-output-reliabi-d2.png",
+   "20260804-0316-0-xml-tagging-boosts-claude-gpt-output-reliabi-d3.png"
+  ]
+ },
+ {
+  "topic": "ai debt binge unsustainable as hidden borrowing reaches 1.65t",
+  "headline_marked": "AI's hidden debt [[reaches $1.65T]] as borrowing binge continues",
+  "headline": "AI's hidden debt reaches $1.65T as borrowing binge continues",
+  "summary": "Tech giants are taking on unprecedented debt to fuel AI development, with 'hidden' liabilities now exceeding on-balance-sheet debt. Investors are starting to show signs of fatigue.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The insatiable demand for AI infrastructure has led major tech companies to engage in a massive debt binge. While visible bond issuance from hyperscalers and related entities like Nvidia has reached $225 billion so far this year, analysts suggest the true cost is much higher.",
+   "A Nikkei study revealed that 'hidden' debt at U.S. tech giants has exploded eightfold in four years to $1.65 trillion. This off-balance-sheet borrowing, often through long-term purchase or lease agreements, exceeds the $1.35 trillion in debt that appears on their balance sheets.",
+   "While these practices are legitimate under accounting rules and often disclosed in financial statement annotations, they represent significant future obligations. Moody's flagged $1.2 trillion in such debt-equivalent liabilities, with over $820 billion tied to data centers still under construction.",
+   "Despite the escalating debt, hyperscalers still maintain robust balance sheets and investment-grade ratings. However, the shift from asset-light to asset-heavy models signifies a fundamental change in their operational and financial strategies, requiring unprecedented capital investment.",
+   "Market participants are growing wary of the rapidly increasing leverage, with hyperscalers now paying a higher premium compared to risk-free bonds. This signals potential fatigue after absorbing a flood of debt in a short period, raising concerns about the sustainability of the AI boom's financing."
+  ],
+  "caption": "AI's borrowing binge is reaching staggering levels, with 'hidden' debt at U.S. tech giants exploding to $1.65 trillion.\n\nThe insatiable demand for AI infrastructure has led major tech companies to engage in a massive debt binge. While visible bond issuance from hyperscalers and related entities like Nvidia has reached $225 billion so far this year, analysts suggest the true cost is much higher.\n\nA Nikkei study revealed that 'hidden' debt at U.S. tech giants has exploded eightfold in four years to $1.65 trillion. This off-balance-sheet borrowing, often through long-term purchase or lease agreements, exceeds the $1.35 trillion in debt that appears on their balance sheets.\n\nWhile these practices are legitimate under accounting rules and often disclosed in financial statement annotations, they represent significant future obligations. Moody's flagged $1.2 trillion in such debt-equivalent liabilities, with over $820 billion tied to data centers still under construction.\n\nDespite the escalating debt, hyperscalers still maintain robust balance sheets and investment-grade ratings. However, the shift from asset-light to asset-heavy models signifies a fundamental change in their operational and financial strategies, requiring unprecedented capital investment.\n\nMarket participants are growing wary of the rapidly increasing leverage, with hyperscalers now paying a higher premium compared to risk-free bonds. This signals potential fatigue after absorbing a flood of debt in a short period, raising concerns about the sustainability of the AI boom's financing.\n\n#AI #TechDebt #ArtificialIntelligence #BigTech #Finance\n\nSource: Hacker News",
+  "tweet": "AI's hidden debt reaches $1.65T as borrowing binge continues. Tech giants are taking on unprecedented liabilities to fuel AI development, raising concerns about market sustainability. #AI #TechDebt #BigTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://fortune.com/2026/07/31/ai-debt-hypescalers-capex-capital-spending-hidden-borrowing-bond-issuance/",
+  "image": "",
+  "orig_title": "AI's debt binge can't last, hidden borrowing reaches $1.65T",
+  "cluster_urls": [
+   "https://fortune.com/2026/07/31/ai-debt-hypescalers-capex-capital-spending-hidden-borrowing-bond-issuance/"
+  ],
+  "cluster_titles": [
+   "AI's debt binge can't last, hidden borrowing reaches $1.65T"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260804-0316-1-ai-s-hidden-debt-reaches-1-65t-as-borrowing-.png",
+   "20260804-0316-1-ai-s-hidden-debt-reaches-1-65t-as-borrowing--d1.png",
+   "20260804-0316-1-ai-s-hidden-debt-reaches-1-65t-as-borrowing--d2.png"
+  ]
+ }
+]

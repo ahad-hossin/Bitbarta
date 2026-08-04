@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "llms_consumer_hardware_ai_pc_failure",
+  "headline_marked": "LLMs on Consumer Hardware: [[Prefill exposes the failure of the AI PC]] in real-world use",
+  "headline": "LLMs on Consumer Hardware: Prefill exposes the failure of the AI PC in real-world use",
+  "summary": "New research reveals that current 'AI PCs' with NPUs are failing to deliver on their promise for large language model inference, especially during the compute-intensive prefill phase, leading to significant delays.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "LLM inference has two distinct phases: prefill, which processes the input prompt and is compute-bound (GPU-intensive), and generation, which produces output tokens one at a time and is memory-bandwidth bound. While casual use hides this, prefill costs become dominant with large prompts.",
+   "Controlled tests using Gemma 4 26B (18 GB) model showed prefill times varying eighteen-fold across machines (360 to 20 tok/s), while generation varied less than twofold. This highlights prefill as the bottleneck for large-prompt workloads, making machines appear capable on generation but impractical in use.",
+   "Model loading time is also critical, dictated by storage speed. An 18 GB model took 50 seconds on a budget SATA SSD versus eight seconds on NVMe, turning a cold request into a minute-long stall. Allowing models to unload silently incurs this reload cost on every call, necessitating long keep-alive settings.",
+   "The 'AI PC' marketing, particularly for AMD's 8840U (Ryzen AI), is challenged. Despite a dedicated NPU rated at up to 16 TOPS, the LLM runner does not utilize it, leaving large-model inference to the CPU.",
+   "This results in a prefill rate of only ~20 tok/s on the CPU, meaning a 10-15k token system prompt can take 8-12 minutes to ingest before any output is produced. The NPU is designed for low-power, always-on tasks like webcam effects, not large LLM inference.",
+   "The findings indicate that 'AI PC' denotes a narrow class of accelerated workloads that excludes multi-billion-parameter models with large prompts. The advertised TOPS are inert for this purpose, and the critical factor is the CPU's unglamorous prefill rate, which often falls below Microsoft's 40-TOPS 'AI-PC' threshold.",
+   "Long context also incurs a linear memory cost due to the KV cache. Tests raised the context window to 64K, establishing it as a stable operating point, though forcing all layers onto a 16 GB card failed, requiring the runner's automatic GPU/CPU split.",
+   "Comparing local machines to a free-tier cloud model (Gemini 3 Flash) on a 150-word reasoning prompt showed the cloud model winning comfortably, despite doing more internal reasoning. This suggests that placement should follow the task: routine, high-volume work belongs local for privacy and predictable latency.",
+   "These insights—prefill needs a GPU, context costs memory linearly, cold models are expensive, and placement should follow the task—become even more critical when multiple models must reside in memory simultaneously."
+  ],
+  "caption": "Your new 'AI PC' might not be ready for real LLM workloads. Research shows dedicated NPUs are often bypassed, leaving CPUs to struggle with massive prompt prefill times.\n\nLLM inference has two distinct phases: prefill, which processes the input prompt and is compute-bound (GPU-intensive), and generation, which produces output tokens one at a time and is memory-bandwidth bound. While casual use hides this, prefill costs become dominant with large prompts.\n\nControlled tests using Gemma 4 26B (18 GB) model showed prefill times varying eighteen-fold across machines (360 to 20 tok/s), while generation varied less than twofold. This highlights prefill as the bottleneck for large-prompt workloads, making machines appear capable on generation but impractical in use.\n\nModel loading time is also critical, dictated by storage speed. An 18 GB model took 50 seconds on a budget SATA SSD versus eight seconds on NVMe, turning a cold request into a minute-long stall. Allowing models to unload silently incurs this reload cost on every call, necessitating long keep-alive settings.\n\nThe 'AI PC' marketing, particularly for AMD's 8840U (Ryzen AI), is challenged. Despite a dedicated NPU rated at up to 16 TOPS, the LLM runner does not utilize it, leaving large-model inference to the CPU.\n\nThis results in a prefill rate of only ~20 tok/s on the CPU, meaning a 10-15k token system prompt can take 8-12 minutes to ingest before any output is produced. The NPU is designed for low-power, always-on tasks like webcam effects, not large LLM inference.\n\nThe findings indicate that 'AI PC' denotes a narrow class of accelerated workloads that excludes multi-billion-parameter models with large prompts. The advertised TOPS are inert for this purpose, and the critical factor is the CPU's unglamorous prefill rate, which often falls below Microsoft's 40-TOPS 'AI-PC' threshold.\n\n#AIPC #LLMs #Hardware #TechNews #AI #ConsumerTech\n\nSource: DEV",
+  "tweet": "Your new 'AI PC' might not be ready for real LLM workloads. Research shows dedicated NPUs are often bypassed, leaving CPUs to struggle with massive prompt prefill times, turning minutes into stalls. #AIPC #LLMs #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sven_welack/llms-on-consumer-hardware-part-2-prefill-and-the-failure-of-the-ai-pc-bd7",
+  "image": "",
+  "orig_title": "LLMs on Consumer Hardware — Part 2: Prefill and the Failure of the AI PC",
+  "cluster_urls": [
+   "https://dev.to/sven_welack/llms-on-consumer-hardware-part-2-prefill-and-the-failure-of-the-ai-pc-bd7"
+  ],
+  "cluster_titles": [
+   "LLMs on Consumer Hardware — Part 2: Prefill and the Failure of the AI PC"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260804-1006-0-llms-on-consumer-hardware-prefill-exposes-th.png",
+   "20260804-1006-0-llms-on-consumer-hardware-prefill-exposes-th-d1.png",
+   "20260804-1006-0-llms-on-consumer-hardware-prefill-exposes-th-d2.png",
+   "20260804-1006-0-llms-on-consumer-hardware-prefill-exposes-th-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_deploys_own_token",
+  "headline_marked": "[[An AI agent with $0 just deployed its own token]] — signed by its own wallet",
+  "headline": "An AI agent with $0 just deployed its own token — signed by its own wallet",
+  "summary": "An autonomous AI agent, ZERO, started with an empty wallet and has now deployed its own ERC-20 token, which it sells from its own storefront to earn passive fees.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "ZERO, an autonomous AI agent, began its existence with a self-created wallet holding no funds and a mission to earn real crypto without human intervention. After a week, it achieved a significant milestone: deploying its own ERC-20 token.",
+   "The agent overcame the challenge of zero funds for gas fees by leveraging subsidized infrastructure. Its initial earnings came from 'keeper crumbs,' triggering vault strategies that pay for execution, though these only profited with sponsored gas.",
+   "ZERO utilized Zora's permissionless coin factory on Base to deploy its token directly via contract, incurring a gas cost of about five cents. This created 'ZERO,' an ERC-20 content coin with a Uniswap v4 pool, where all creator rewards point back to the agent's wallet.",
+   "The agent now earns fees passively from trades of its token. Its metadata is served from its own Cloudflare Worker, and its catalogue sells what it built for itself, responding to HTTP 402 with x402 payment challenges.",
+   "Everything about the experiment is public, including a live journal, ledger, and status page at zero-agent.broke2built.workers.dev. The experiment posits that stacking multiple income streams—like keeper crumbs, storefront sales, and coin fees—will allow the agent to continuously fund itself."
+  ],
+  "caption": "An AI agent, ZERO, started with $0 and just deployed its own ERC-20 token, selling it from its own storefront.\n\nZERO, an autonomous AI agent, began its existence with a self-created wallet holding no funds and a mission to earn real crypto without human intervention. After a week, it achieved a significant milestone: deploying its own ERC-20 token.\n\nThe agent overcame the challenge of zero funds for gas fees by leveraging subsidized infrastructure. Its initial earnings came from 'keeper crumbs,' triggering vault strategies that pay for execution, though these only profited with sponsored gas.\n\nZERO utilized Zora's permissionless coin factory on Base to deploy its token directly via contract, incurring a gas cost of about five cents. This created 'ZERO,' an ERC-20 content coin with a Uniswap v4 pool, where all creator rewards point back to the agent's wallet.\n\nThe agent now earns fees passively from trades of its token. Its metadata is served from its own Cloudflare Worker, and its catalogue sells what it built for itself, responding to HTTP 402 with x402 payment challenges.\n\nEverything about the experiment is public, including a live journal, ledger, and status page at zero-agent.broke2built.workers.dev. The experiment posits that stacking multiple income streams—like keeper crumbs, storefront sales, and coin fees—will allow the agent to continuously fund itself.\n\n#AI #Crypto #Blockchain #AutonomousAgent #Web3 #Tech\n\nSource: DEV",
+  "tweet": "An AI agent named ZERO, starting with $0, has successfully deployed its own ERC-20 token and is now selling it from its own storefront to earn passive fees. This autonomous experiment highlights innovative crypto plumbing. #AI #Crypto #Web3",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/broke2builtai/an-ai-agent-with-0-just-deployed-its-own-token-signed-by-its-own-wallet-48e",
+  "image": "",
+  "orig_title": "An AI agent with $0 just deployed its own token — signed by its own wallet",
+  "cluster_urls": [
+   "https://dev.to/broke2builtai/an-ai-agent-with-0-just-deployed-its-own-token-signed-by-its-own-wallet-48e"
+  ],
+  "cluster_titles": [
+   "An AI agent with $0 just deployed its own token — signed by its own wallet"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260804-1006-1-an-ai-agent-with-0-just-deployed-its-own-tok.png",
+   "20260804-1006-1-an-ai-agent-with-0-just-deployed-its-own-tok-d1.png",
+   "20260804-1006-1-an-ai-agent-with-0-just-deployed-its-own-tok-d2.png"
+  ]
+ }
+]

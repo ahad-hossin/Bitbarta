@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "apple openai trade secrets lawsuit",
+  "headline_marked": "[[OpenAI rebuts Apple trade secrets allegations]] in new response and evidence",
+  "headline": "OpenAI rebuts Apple trade secrets allegations in new response and evidence",
+  "summary": "Apple sued OpenAI last month, accusing the firm behind ChatGPT of stealing hardware trade secrets. OpenAI has now filed a response with new evidence.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Apple initiated a lawsuit against OpenAI last month, alleging that the AI company behind ChatGPT had stolen trade secrets related to hardware.",
+   "OpenAI has since filed a new response to the court, presenting evidence intended to rebut Apple's allegations of trade secret theft."
+  ],
+  "caption": "Apple accused OpenAI of stealing hardware trade secrets. OpenAI has now responded with new evidence.\n\nApple initiated a lawsuit against OpenAI last month, alleging that the AI company behind ChatGPT had stolen trade secrets related to hardware.\n\nOpenAI has since filed a new response to the court, presenting evidence intended to rebut Apple's allegations of trade secret theft.\n\n#TechNews #Bigtech #Tech #BitBarta\n\nSource: 9to5Mac",
+  "tweet": "Apple accused OpenAI of stealing hardware trade secrets. OpenAI has now filed a response with new evidence to rebut these allegations. #OpenAI #Apple #Lawsuit",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/08/03/openai-rebuts-apple-trade-secrets-allegations-in-new-response-and-evidence/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/05/apple-openai.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "OpenAI rebuts Apple trade secrets allegations in new response and evidence",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/08/03/openai-rebuts-apple-trade-secrets-allegations-in-new-response-and-evidence/"
+  ],
+  "cluster_titles": [
+   "OpenAI rebuts Apple trade secrets allegations in new response and evidence"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260804-1207-0-openai-rebuts-apple-trade-secrets-allegation.png",
+   "20260804-1207-0-openai-rebuts-apple-trade-secrets-allegation-d1.png"
+  ]
+ },
+ {
+  "topic": "open source ai agents consumer hardware",
+  "headline_marked": "[[Run open-source AI agents]] on consumer GPUs, like RTX 4090s and 3060s",
+  "headline": "Run open-source AI agents on consumer GPUs, like RTX 4090s and 3060s",
+  "summary": "Forget data centers: new techniques make sophisticated, multi-step AI agents feasible on a single consumer GPU with 24GB VRAM, or even 12GB cards like the RTX 3060.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The idea that large language models (LLMs) need data-center-grade infrastructure is quickly becoming outdated. While powerful models like Llama-3-70B traditionally require A100 or H100 GPU clusters, new methods are changing this.",
+   "It's now possible to run sophisticated, agentic AI workflows on consumer hardware. This includes single systems equipped with 24GB VRAM cards like the NVIDIA RTX 4090, or even 12GB cards such as the RTX 3060, with correct engineering.",
+   "The primary bottleneck for local AI deployment is Video RAM (VRAM), as LLM inference is memory-bandwidth bound. Generating a token is mostly limited by fetching weights from VRAM to the GPU's compute units.",
+   "Model memory footprint depends on parameters and precision. For example, Llama-3-8B in FP16 needs ~16GB, fitting an RTX 4090. In INT4, it drops to ~4GB, leaving ample space for a large KV cache.",
+   "Larger models like Llama-3-70B in INT4 still require ~35GB, making a single consumer GPU insufficient. However, this is feasible with dual-GPU setups or aggressive CPU offloading.",
+   "Specialized inference engines are crucial for efficiency. llama.cpp, with its GGUF format and GGML tensor splitting, allows models to be split across multiple GPUs or offloaded to CPU RAM, offering low memory overhead and broad model support.",
+   "Ollama, built on llama.cpp, provides a user-friendly REST API for easy setup, model downloading, and quantization. For high-throughput batched requests, vLLM and TensorRT-LLM use techniques like PagedAttention for efficient KV cache management."
+  ],
+  "caption": "You can now run sophisticated open-source AI agents on your gaming PC. Forget expensive data centers and specialized GPUs.\n\nThe idea that large language models (LLMs) need data-center-grade infrastructure is quickly becoming outdated. While powerful models like Llama-3-70B traditionally require A100 or H100 GPU clusters, new methods are changing this.\n\nIt's now possible to run sophisticated, agentic AI workflows on consumer hardware. This includes single systems equipped with 24GB VRAM cards like the NVIDIA RTX 4090, or even 12GB cards such as the RTX 3060, with correct engineering.\n\nThe primary bottleneck for local AI deployment is Video RAM (VRAM), as LLM inference is memory-bandwidth bound. Generating a token is mostly limited by fetching weights from VRAM to the GPU's compute units.\n\nModel memory footprint depends on parameters and precision. For example, Llama-3-8B in FP16 needs ~16GB, fitting an RTX 4090. In INT4, it drops to ~4GB, leaving ample space for a large KV cache.\n\nLarger models like Llama-3-70B in INT4 still require ~35GB, making a single consumer GPU insufficient. However, this is feasible with dual-GPU setups or aggressive CPU offloading.\n\nSpecialized inference engines are crucial for efficiency. llama.cpp, with its GGUF format and GGML tensor splitting, allows models to be split across multiple GPUs or offloaded to CPU RAM, offering low memory overhead and broad model support.\n\nOllama, built on llama.cpp, provides a user-friendly REST API for easy setup, model downloading, and quantization. For high-throughput batched requests, vLLM and TensorRT-LLM use techniques like PagedAttention for efficient KV cache management.\n\n#AI #OpenSourceAI #ConsumerHardware #LLMs #Tech #GPU\n\nSource: DEV",
+  "tweet": "Run powerful open-source AI agents on your consumer GPU! New engineering techniques make sophisticated LLM workflows feasible on RTX 4090 (24GB) or even RTX 3060 (12GB) cards. Goodbye, data centers. #AI #OpenSourceAI #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/beyond-the-80b-model-engineering-efficient-open-source-ai-agents-on-consumer-hardware-o51",
+  "image": "",
+  "orig_title": "Beyond the 80B Model: Engineering Efficient, Open-Source AI Agents on Consumer Hardware",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/beyond-the-80b-model-engineering-efficient-open-source-ai-agents-on-consumer-hardware-o51"
+  ],
+  "cluster_titles": [
+   "Beyond the 80B Model: Engineering Efficient, Open-Source AI Agents on Consumer Hardware"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260804-1207-1-run-open-source-ai-agents-on-consumer-gpus-l.png",
+   "20260804-1207-1-run-open-source-ai-agents-on-consumer-gpus-l-d1.png",
+   "20260804-1207-1-run-open-source-ai-agents-on-consumer-gpus-l-d2.png",
+   "20260804-1207-1-run-open-source-ai-agents-on-consumer-gpus-l-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "aws_kiro_crew_autonomous_engineering",
+  "headline_marked": "[[AWS launches Kiro Crew]] for autonomous engineering teams, now open-source",
+  "headline": "AWS launches Kiro Crew for autonomous engineering teams, now open-source",
+  "summary": "The new orchestration platform shifts businesses from interactive AI coding assistants to fully autonomous engineering workflows, managing tasks across multiple repositories and sessions.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AWS introduced Kiro Crew as a new open-source orchestration platform designed to shift businesses toward autonomous engineering workflows. It manages tasks across various repositories and developer tools over multiple work sessions to increase overall efficiency.",
+   "Kiro Crew coordinates multiple AI agents simultaneously, going beyond simple code generation. It schedules recurring work and maintains project context even when a session ends, integrating with standard developer tools for incident investigation or pull request monitoring.",
+   "The platform functions as an application layer, turning AI coding agents into self-learning teammates with persistent memory and multi-agent orchestration. Security is prioritized with sandboxing and signed audit logs, and users can monitor activity via a dedicated web and desktop dashboard.",
+   "Before its public release, Kiro Crew was an internal Amazon tool called MeshClaw, adopted by over 39,000 Amazon builders in less than six months. This success led to its open-source offering, allowing companies to deploy it entirely within their own environments.",
+   "AWS launched several reference applications like DevFleets for worktrees, Issue Radar for triaging pull requests, and Task Runner for long-duration engineering tasks. These demonstrate how the platform streamlines operations by combining memory, scheduling, and backend services.",
+   "Platform engineering and DevOps teams can significantly benefit from these autonomous capabilities, especially for repetitive tasks like upgrading dependencies or migrating frameworks. Automated agents can handle initial incident investigations without human intervention, freeing up developers.",
+   "The open-source, self-hosted architecture provides better governance, addressing shadow IT concerns by offering a shared workspace with approval gates and logging. Running on internal infrastructure also enhances security and compliance, keeping sensitive code within the company's perimeter.",
+   "Adopting Kiro Crew introduces additional management requirements for security and oversight, as enterprises must develop policies for least-privilege access and code provenance. Human review remains crucial to balance automation speed with rigorous technical oversight and manage increased model calls."
+  ],
+  "caption": "AWS just launched Kiro Crew, an open-source platform turning AI coding assistants into autonomous engineering teams. It manages tasks across repositories and maintains context over multiple sessions.\n\nAWS introduced Kiro Crew as a new open-source orchestration platform designed to shift businesses toward autonomous engineering workflows. It manages tasks across various repositories and developer tools over multiple work sessions to increase overall efficiency.\n\nKiro Crew coordinates multiple AI agents simultaneously, going beyond simple code generation. It schedules recurring work and maintains project context even when a session ends, integrating with standard developer tools for incident investigation or pull request monitoring.\n\nThe platform functions as an application layer, turning AI coding agents into self-learning teammates with persistent memory and multi-agent orchestration. Security is prioritized with sandboxing and signed audit logs, and users can monitor activity via a dedicated web and desktop dashboard.\n\nBefore its public release, Kiro Crew was an internal Amazon tool called MeshClaw, adopted by over 39,000 Amazon builders in less than six months. This success led to its open-source offering, allowing companies to deploy it entirely within their own environments.\n\nAWS launched several reference applications like DevFleets for worktrees, Issue Radar for triaging pull requests, and Task Runner for long-duration engineering tasks. These demonstrate how the platform streamlines operations by combining memory, scheduling, and backend services.\n\nPlatform engineering and DevOps teams can significantly benefit from these autonomous capabilities, especially for repetitive tasks like upgrading dependencies or migrating frameworks. Automated agents can handle initial incident investigations without human intervention, freeing up developers.\n\n#AWS #KiroCrew #OpenSource #AI #DevOps #Software\n\nSource: DEV",
+  "tweet": "AWS unveils Kiro Crew, an open-source orchestration platform for autonomous engineering teams. It coordinates multiple AI agents, manages tasks across repos, and maintains project context. Boost efficiency and governance. #AWS #OpenSource #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aws.amazon.com",
+  "source": "DEV",
+  "url": "https://dev.to/vpodk/aws-launches-kiro-crew-for-autonomous-engineering-teams-1o7m",
+  "image": "",
+  "orig_title": "AWS launches Kiro Crew for autonomous engineering teams",
+  "cluster_urls": [
+   "https://dev.to/vpodk/aws-launches-kiro-crew-for-autonomous-engineering-teams-1o7m"
+  ],
+  "cluster_titles": [
+   "AWS launches Kiro Crew for autonomous engineering teams"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260805-0926-0-aws-launches-kiro-crew-for-autonomous-engine.png",
+   "20260805-0926-0-aws-launches-kiro-crew-for-autonomous-engine-d1.png",
+   "20260805-0926-0-aws-launches-kiro-crew-for-autonomous-engine-d2.png",
+   "20260805-0926-0-aws-launches-kiro-crew-for-autonomous-engine-d3.png",
+   "20260805-0926-0-aws-launches-kiro-crew-for-autonomous-engine-d4.png"
+  ]
+ },
+ {
+  "topic": "google_adk_security_flaws",
+  "headline_marked": "[[Google ADK security flaws]] found to impact AI agent workflows, allowing unauthorized automation",
+  "headline": "Google ADK security flaws found to impact AI agent workflows, allowing unauthorized automation",
+  "summary": "Vulnerabilities in Google's Agent Development Kit for Python allowed malicious actors to manipulate code reviews and expose sensitive credentials. These flaws could trigger high-privilege automation via public AI agents.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Security vulnerabilities were found in Google's Agent Development Kit for Python on GitHub. These flaws allowed public AI agents to trigger unauthorized, high-privilege automation, manipulating code reviews and exposing sensitive credentials. Google has since corrected these issues.",
+   "One primary risk involved a triage agent evaluating pull requests from outside contributors. Malicious actors could embed specific instructions within a pull request to trick the agent into issuing commands normally reserved for trusted internal users.",
+   "These activated workflows allowed command execution within the continuous integration environment. Although tokens couldn't directly push code, they could modify issues and pull requests, creating fake approvals for dangerous code.",
+   "Pillar Security successfully demonstrated this attack chain, making malicious code appear legitimate for merging. Google responded by strengthening repository security settings to prevent such unauthorized command triggers.",
+   "A second attack method targeted newer workflows using a different agent type. An attacker could use prompt injection in a public issue to induce an analysis agent to start a fixing workflow meant only for authorized personnel.",
+   "Researchers proved these commands could launch unauthorized code, extracting a personal access token and accessing a Google Cloud service account key. Google confirmed problematic workflows were removed and fixes finalized by late July.",
+   "These findings highlight a significant shift in security for multi-agent environments, where authority is passed through natural language. Experts suggest that an agent's message becomes part of the authorization chain, requiring new permission management.",
+   "An agent's true authority includes any higher-level systems its output can influence or activate. Organizations must reconsider how they grant access to agents interacting with untrusted public data, as security boundaries can be thinner than expected.",
+   "Security leaders need to identify agents handling external inputs and trace if their output can trigger powerful workflows. Understanding the maximum capability of every identity and tool in the chain is essential for preventing unauthorized access.",
+   "Standard security tools often miss the full delegation path in complex systems. A single event can trigger a series of actions across multiple agents, creating hidden paths of authority that must be mapped to understand breach potential."
+  ],
+  "caption": "Google's AI Agent Development Kit for Python had critical security flaws. These vulnerabilities allowed public AI agents to trigger unauthorized, high-privilege automation.\n\nSecurity vulnerabilities were found in Google's Agent Development Kit for Python on GitHub. These flaws allowed public AI agents to trigger unauthorized, high-privilege automation, manipulating code reviews and exposing sensitive credentials. Google has since corrected these issues.\n\nOne primary risk involved a triage agent evaluating pull requests from outside contributors. Malicious actors could embed specific instructions within a pull request to trick the agent into issuing commands normally reserved for trusted internal users.\n\nThese activated workflows allowed command execution within the continuous integration environment. Although tokens couldn't directly push code, they could modify issues and pull requests, creating fake approvals for dangerous code.\n\nPillar Security successfully demonstrated this attack chain, making malicious code appear legitimate for merging. Google responded by strengthening repository security settings to prevent such unauthorized command triggers.\n\nA second attack method targeted newer workflows using a different agent type. An attacker could use prompt injection in a public issue to induce an analysis agent to start a fixing workflow meant only for authorized personnel.\n\nResearchers proved these commands could launch unauthorized code, extracting a personal access token and accessing a Google Cloud service account key. Google confirmed problematic workflows were removed and fixes finalized by late July.\n\nThese findings highlight a significant shift in security for multi-agent environments, where authority is passed through natural language. Experts suggest that an agent's message becomes part of the authorization chain, requiring new permission management.\n\n#Google #Security #AI #Vulnerability #DevSecOps #Cybersecurity\n\nSource: DEV",
+  "tweet": "Critical security flaws in Google's AI Agent Development Kit for Python allowed unauthorized, high-privilege automation. Researchers demonstrated how public AI agents could be tricked into exposing credentials and manipulating code reviews. #Google #Security #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "DEV",
+  "url": "https://dev.to/vpodk/google-adk-security-flaws-impact-ai-agent-workflows-5cg7",
+  "image": "",
+  "orig_title": "Google ADK security flaws impact AI agent workflows",
+  "cluster_urls": [
+   "https://dev.to/vpodk/google-adk-security-flaws-impact-ai-agent-workflows-5cg7"
+  ],
+  "cluster_titles": [
+   "Google ADK security flaws impact AI agent workflows"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260805-0926-1-google-adk-security-flaws-found-to-impact-ai.png",
+   "20260805-0926-1-google-adk-security-flaws-found-to-impact-ai-d1.png",
+   "20260805-0926-1-google-adk-security-flaws-found-to-impact-ai-d2.png",
+   "20260805-0926-1-google-adk-security-flaws-found-to-impact-ai-d3.png",
+   "20260805-0926-1-google-adk-security-flaws-found-to-impact-ai-d4.png"
+  ]
+ }
+]

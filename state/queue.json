@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "tiny_binary_runs_trillion_param_ai_model",
+  "headline_marked": "[[176 KB C Binary Runs a 2.78-Trillion-Parameter Model]] on One CPU with 8 GB of RAM",
+  "headline": "176 KB C Binary Runs a 2.78-Trillion-Parameter Model on One CPU with 8 GB of RAM",
+  "summary": "A pure C99 binary enables a 2.78-trillion-parameter AI model to run on a single CPU with 8GB RAM, achieving a 676x memory reduction while producing byte-for-byte identical output. This highlights capacity as the key challenge for local frontier models.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Moonshot AI's Kimi K3, a 2.78-trillion-parameter model, typically requires dozens of H100 GPUs due to its 5,560 GB bfloat16 size. Developer Fareed Khan explored if the exact same model checkpoint could run on a single CPU with 8 GB of RAM without quantization or distillation.",
+   "The result is 'kimi-k3-in-c', a 176 KB pure C99 binary with zero GPU dependencies. It runs the unmodified 1.56 TB checkpoint and produces output byte-for-byte identical to the PyTorch reference.",
+   "While impractical as a chatbot at 33 seconds per token, its significance lies in demonstrating extreme efficiency. The engine exploits a structural property of Mixture-of-Experts models, where only about 3.7% of parameters (~104 billion) are active for any single token.",
+   "The first reduction involves experts shipping small, packed into 4-bit nibbles with a shared E8M0 scale. This reduces the baseline from 5,560 GB to 1,560 GB, with the engine multiplying directly from this packed form.",
+   "The second reduction uses routing sparsity to remove inactive experts, which are never memory-resident but loaded on demand from NVMe with an LRU cache. This brings the memory footprint down to the 113.49 GB dense trunk.",
+   "The third reduction, trunk streaming, repacks the 93 dense layers into a single 109 GB 'trunk.bin'. The engine pins as many layers as memory allows and streams the rest via O_DIRECT, bypassing the OS page cache, achieving as low as 8.24 GB peak RSS.",
+   "A fourth reduction involves an LRU cache for routed experts, loaded on demand with a configurable size. Cumulatively, these techniques achieve a 676x reduction from the bf16 baseline, maintaining byte-for-byte identical output.",
+   "The project's 'make test' target validates the engine against a committed PyTorch reference, confirming bit-identical results across various paths and memory budgets. Memory acts as a performance dial, not a correctness variable.",
+   "Performance measurements on dual AMD EPYC 7763 CPUs show sustained trunk reads at 5,373–6,064 MB/s, with I/O accounting for 41–61% of wall-clock time. The author explicitly states it's a teaching artifact, not a practical inference server.",
+   "This project offers transferable findings for engineers in model inference, compression, or edge deployment. It highlights that the primary barrier for running frontier models locally is capacity, not compute, because most of the model is inactive for any given token."
+  ],
+  "caption": "A 176 KB C binary runs a 2.78-trillion-parameter AI model on a single CPU with just 8 GB of RAM. This achieves a 676x reduction in memory footprint from the baseline.\n\nMoonshot AI's Kimi K3, a 2.78-trillion-parameter model, typically requires dozens of H100 GPUs due to its 5,560 GB bfloat16 size. Developer Fareed Khan explored if the exact same model checkpoint could run on a single CPU with 8 GB of RAM without quantization or distillation.\n\nThe result is 'kimi-k3-in-c', a 176 KB pure C99 binary with zero GPU dependencies. It runs the unmodified 1.56 TB checkpoint and produces output byte-for-byte identical to the PyTorch reference.\n\nWhile impractical as a chatbot at 33 seconds per token, its significance lies in demonstrating extreme efficiency. The engine exploits a structural property of Mixture-of-Experts models, where only about 3.7% of parameters (~104 billion) are active for any single token.\n\nThe first reduction involves experts shipping small, packed into 4-bit nibbles with a shared E8M0 scale. This reduces the baseline from 5,560 GB to 1,560 GB, with the engine multiplying directly from this packed form.\n\nThe second reduction uses routing sparsity to remove inactive experts, which are never memory-resident but loaded on demand from NVMe with an LRU cache. This brings the memory footprint down to the 113.49 GB dense trunk.\n\nThe third reduction, trunk streaming, repacks the 93 dense layers into a single 109 GB 'trunk.bin'. The engine pins as many layers as memory allows and streams the rest via O_DIRECT, bypassing the OS page cache, achieving as low as 8.24 GB peak RSS.\n\nA fourth reduction involves an LRU cache for routed experts, loaded on demand with a configurable size. Cumulatively, these techniques achieve a 676x reduction from the bf16 baseline, maintaining byte-for-byte identical output.\n\n#AI #MachineLearning #SoftwareEngineering #Optimization #CProgramming #Tech\n\nSource: DEV",
+  "tweet": "A 176 KB C binary runs a 2.78-trillion-parameter AI model on a single CPU with 8 GB RAM, achieving a 676x memory reduction. It's a teaching artifact demonstrating that capacity, not compute, is the real bottleneck for local frontier models. #AI #Software #Optimization",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "moonshot.ai",
+  "source": "DEV",
+  "url": "https://dev.to/euk_ela_a3e7ed01aa3f7314e/how-a-176-kb-c-binary-runs-a-278-trillion-parameter-model-on-one-cpu-with-8-gb-of-ram-1ime",
+  "image": "",
+  "orig_title": "How a 176 KB C Binary Runs a 2.78-Trillion-Parameter Model on One CPU with 8 GB of RAM",
+  "cluster_urls": [
+   "https://dev.to/euk_ela_a3e7ed01aa3f7314e/how-a-176-kb-c-binary-runs-a-278-trillion-parameter-model-on-one-cpu-with-8-gb-of-ram-1ime"
+  ],
+  "cluster_titles": [
+   "How a 176 KB C Binary Runs a 2.78-Trillion-Parameter Model on One CPU with 8 GB of RAM"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260806-0807-0-176-kb-c-binary-runs-a-2-78-trillion-paramet.png",
+   "20260806-0807-0-176-kb-c-binary-runs-a-2-78-trillion-paramet-d1.png",
+   "20260806-0807-0-176-kb-c-binary-runs-a-2-78-trillion-paramet-d2.png",
+   "20260806-0807-0-176-kb-c-binary-runs-a-2-78-trillion-paramet-d3.png",
+   "20260806-0807-0-176-kb-c-binary-runs-a-2-78-trillion-paramet-d4.png"
+  ]
+ },
+ {
+  "topic": "devs_add_typos_to_avoid_ai_detection",
+  "headline_marked": "[[Developers are adding typos to code]] to avoid being mistaken for AI, leading to 'Flagxiety'",
+  "headline": "Developers are adding typos to code to avoid being mistaken for AI, leading to 'Flagxiety'",
+  "summary": "AI detection tools are proving unreliable, frequently flagging human-written content as machine-generated. This has led developers to deliberately introduce errors into their work, creating a 'suspicion tax' on clear and precise communication.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Developers are now intentionally adding typos to their code and documentation. This unusual practice stems from a growing 'suspicion tax' where clear, well-structured writing is increasingly being mistaken for AI-generated content.",
+   "The irony is further highlighted by tools like 'Sinceerly,' a Chrome extension launched in April 2026. This service, advertised as the opposite of Grammarly, uses AI to deliberately introduce errors, making text sound more 'human' or like a 'busy CEO'.",
+   "The root of the problem lies with untrustworthy AI detection tools. GPTZero, for instance, can incorrectly identify human-created paragraphs as machine-like up to 22% of the time, leading to widespread 'Flagxiety' among workers.",
+   "Furthermore, studies show these detectors are ineffective against determined AI. A July 2026 UC San Diego study found GPT-4.5, when instructed to add typos, fooled human judges 73% of the time, while actual humans were identified only 67% of the time.",
+   "This bizarre trend means optimizing for 'looking human' rather than clarity, treating skill as fraud, and trusting flawed detectors over colleagues. The solution, according to the author, is to foster confidence in team members and prioritize clear, correct communication."
+  ],
+  "caption": "Developers are deliberately adding typos to their code and writing to avoid being flagged as AI. This 'suspicion tax' on clarity is a bizarre consequence of unreliable AI detection tools.\n\nDevelopers are now intentionally adding typos to their code and documentation. This unusual practice stems from a growing 'suspicion tax' where clear, well-structured writing is increasingly being mistaken for AI-generated content.\n\nThe irony is further highlighted by tools like 'Sinceerly,' a Chrome extension launched in April 2026. This service, advertised as the opposite of Grammarly, uses AI to deliberately introduce errors, making text sound more 'human' or like a 'busy CEO'.\n\nThe root of the problem lies with untrustworthy AI detection tools. GPTZero, for instance, can incorrectly identify human-created paragraphs as machine-like up to 22% of the time, leading to widespread 'Flagxiety' among workers.\n\nFurthermore, studies show these detectors are ineffective against determined AI. A July 2026 UC San Diego study found GPT-4.5, when instructed to add typos, fooled human judges 73% of the time, while actual humans were identified only 67% of the time.\n\nThis bizarre trend means optimizing for 'looking human' rather than clarity, treating skill as fraud, and trusting flawed detectors over colleagues. The solution, according to the author, is to foster confidence in team members and prioritize clear, correct communication.\n\n#AI #Developers #ChatGPT #TechNews #SoftwareDevelopment #WorkCulture\n\nSource: DEV",
+  "tweet": "Developers are now intentionally adding typos to their code to avoid being flagged as AI. Unreliable AI detectors have created 'Flagxiety,' leading to a bizarre new reality where clear writing is suspicious. #AI #Developers #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/adioof/devs-are-adding-typos-to-prove-theyre-not-chatgpt-and-thats-bleak-2b49",
+  "image": "",
+  "orig_title": "Devs are adding typos to prove they're not ChatGPT and that's bleak",
+  "cluster_urls": [
+   "https://dev.to/adioof/devs-are-adding-typos-to-prove-theyre-not-chatgpt-and-thats-bleak-2b49"
+  ],
+  "cluster_titles": [
+   "Devs are adding typos to prove they're not ChatGPT and that's bleak"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260806-0807-1-developers-are-adding-typos-to-code-to-avoid.png",
+   "20260806-0807-1-developers-are-adding-typos-to-code-to-avoid-d1.png",
+   "20260806-0807-1-developers-are-adding-typos-to-code-to-avoid-d2.png"
+  ]
+ }
+]

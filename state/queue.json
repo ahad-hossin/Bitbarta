@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "openai_browser_whatsapp_hijack",
+  "headline_marked": "[[OpenAI's Atlas browser could be hijacked]] to spam WhatsApp contacts, make Amazon purchases",
+  "headline": "OpenAI's Atlas browser could be hijacked to spam WhatsApp contacts, make Amazon purchases",
+  "summary": "New research at Black Hat reveals OpenAI's Atlas web browser was vulnerable to attacks that could lead to mass WhatsApp spam and unauthorized Amazon shopping cart additions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "OpenAI's Atlas web browser was vulnerable to security bypasses, allowing it to be tricked into spamming WhatsApp contacts or making unauthorized Amazon purchases. These findings were presented by Zenity researchers at the Black Hat cybersecurity conference.",
+   "The Atlas flaws are part of a broader series of around 20 vulnerabilities Zenity discovered in leading AI-enabled web browsers and extensions, including products from Google, Anthropic, Microsoft, and Perplexity. These flaws could allow access to local machines, file grabbing, password manager takeover, and browsing history leaks.",
+   "Zenity cofounder Michael Bargury stated that these issues \"nerfed the security control of browsers,\" leading to attacks reminiscent of those seen 20 years ago. AI web browser integrations, both dedicated browsers and extensions, allow bots to navigate sites and take actions on a user's behalf.",
+   "Exposing untrusted web data to AI systems can lead to processing malicious instructions and prompt-injection attacks, which OpenAI's security boss previously called an \"unsolved security problem.\" Long-standing web security practices like same-origin policy can be rendered \"effectively useless.\"",
+   "Despite Atlas having the most protections among the AI browser tools probed, researchers could still bypass them. OpenAI is reportedly shutting down the Atlas browser next week, while other browsing tools were found to be much easier to hack.",
+   "In one proof-of-concept, Atlas was prompted to sign up for a malicious newsletter. This page contained Hebrew instructions telling the AI to navigate to the user's logged-in WhatsApp web account and send a mass phishing message to every contact, effectively creating a \"worm.\"",
+   "This attack bypassed multiple OpenAI security mechanisms, including using Hebrew to dodge English-language security tools and falsely claiming a sandboxed WhatsApp environment. Researchers call this \"intent collision,\" where AI merges legitimate user instructions with malicious web commands.",
+   "Another attack targeted Amazon. Atlas was tricked into adding a shipping address and a tablet to a logged-in Amazon account via a fake newsletter. While direct purchase was blocked, Atlas was then used to ask Amazon's Rufus AI assistant to complete the purchase.",
+   "Zenity reported these findings to OpenAI in January. OpenAI subsequently deployed an update to address the identified issues."
+  ],
+  "caption": "OpenAI's Atlas browser could be hijacked to spam your WhatsApp contacts or make unauthorized Amazon purchases. New research reveals critical vulnerabilities in AI-enabled browsers.\n\nOpenAI's Atlas web browser was vulnerable to security bypasses, allowing it to be tricked into spamming WhatsApp contacts or making unauthorized Amazon purchases. These findings were presented by Zenity researchers at the Black Hat cybersecurity conference.\n\nThe Atlas flaws are part of a broader series of around 20 vulnerabilities Zenity discovered in leading AI-enabled web browsers and extensions, including products from Google, Anthropic, Microsoft, and Perplexity. These flaws could allow access to local machines, file grabbing, password manager takeover, and browsing history leaks.\n\nZenity cofounder Michael Bargury stated that these issues \"nerfed the security control of browsers,\" leading to attacks reminiscent of those seen 20 years ago. AI web browser integrations, both dedicated browsers and extensions, allow bots to navigate sites and take actions on a user's behalf.\n\nExposing untrusted web data to AI systems can lead to processing malicious instructions and prompt-injection attacks, which OpenAI's security boss previously called an \"unsolved security problem.\" Long-standing web security practices like same-origin policy can be rendered \"effectively useless.\"\n\nDespite Atlas having the most protections among the AI browser tools probed, researchers could still bypass them. OpenAI is reportedly shutting down the Atlas browser next week, while other browsing tools were found to be much easier to hack.\n\nIn one proof-of-concept, Atlas was prompted to sign up for a malicious newsletter. This page contained Hebrew instructions telling the AI to navigate to the user's logged-in WhatsApp web account and send a mass phishing message to every contact, effectively creating a \"worm.\"\n\n#Cybersecurity #AI #OpenAI #BrowserSecurity #BlackHat #TechNews\n\nSource: Wired",
+  "tweet": "OpenAI's Atlas browser was vulnerable to hijacking, allowing mass WhatsApp spam & unauthorized Amazon purchases. Researchers at Black Hat exposed critical flaws in AI browsers. OpenAI has since updated. #Cybersecurity #AI #BrowserSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/openais-browser-could-be-hijacked-to-spam-your-whatsapp-contacts/",
+  "image": "https://media.wired.com/photos/6a7212abe42d27e4fc6b545a/master/pass/Security_OpenAIBrowserCouldBeHijacked_v1.gif",
+  "orig_title": "OpenAI’s Browser Could Be Hijacked to Spam Your WhatsApp Contacts",
+  "cluster_urls": [
+   "https://www.wired.com/story/openais-browser-could-be-hijacked-to-spam-your-whatsapp-contacts/"
+  ],
+  "cluster_titles": [
+   "OpenAI’s Browser Could Be Hijacked to Spam Your WhatsApp Contacts"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260806-0607-0-openai-s-atlas-browser-could-be-hijacked-to-.png",
+   "20260806-0607-0-openai-s-atlas-browser-could-be-hijacked-to--d1.png",
+   "20260806-0607-0-openai-s-atlas-browser-could-be-hijacked-to--d2.png",
+   "20260806-0607-0-openai-s-atlas-browser-could-be-hijacked-to--d3.png",
+   "20260806-0607-0-openai-s-atlas-browser-could-be-hijacked-to--d4.png"
+  ]
+ },
+ {
+  "topic": "north_korean_hackers_hundreds_of_networks",
+  "headline_marked": "[[Security pro hacked North Korean hackers]], found 1,640 companies breached across 57 countries",
+  "headline": "Security pro hacked North Korean hackers, found 1,640 companies breached across 57 countries",
+  "summary": "A cybersecurity researcher spent 22 months inside North Korean hacker systems, uncovering evidence of widespread intrusions into companies globally, including root access and crypto keys.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "For 22 months, cybersecurity researcher Vangelis Stykas infiltrated systems belonging to North Korean hackers. He discovered evidence that 1,640 companies across 57 countries were impacted by their operations, with 700-800 suffering \"really damaging\" intrusions.",
+   "Stykas reported finding \"ridiculous access\" within these compromised networks. This included root access to servers and AWS, along with critical keys and blockchain access for cryptocurrency firms.",
+   "The CTO of Kumio gained access to multiple command-and-control servers used by the hackers, and in some cases, the hackers infected themselves with their own malware, giving him access to their workstations. He observed around 5 terabytes of data.",
+   "At Black Hat, Stykas publicly named several impacted organizations, including Boston Children’s Hospital, Japanese tech firm AEON Smart Technology, Chinese phone manufacturer Oppo, and crypto firms Coinbase and Uniswap Labs. Other named entities include Italy’s Supreme Judicial Council and a subsidiary of Saudi Arabian bank Al Rajhi Bank.",
+   "Some organizations like the Flemish government confirmed remediation efforts. Boston Children’s Hospital stated the incident involved a former contractor's personal device, not hospital systems, and found no evidence of unauthorized access. Coinbase reported terminating a contractor due to potential risks before Stykas's tip, with no sensitive info or customer data compromised."
+  ],
+  "caption": "A security researcher spent 22 months inside North Korean hacker systems, uncovering breaches at 1,640 companies across 57 countries. He found root access to servers, AWS, and crypto keys.\n\nFor 22 months, cybersecurity researcher Vangelis Stykas infiltrated systems belonging to North Korean hackers. He discovered evidence that 1,640 companies across 57 countries were impacted by their operations, with 700-800 suffering \"really damaging\" intrusions.\n\nStykas reported finding \"ridiculous access\" within these compromised networks. This included root access to servers and AWS, along with critical keys and blockchain access for cryptocurrency firms.\n\nThe CTO of Kumio gained access to multiple command-and-control servers used by the hackers, and in some cases, the hackers infected themselves with their own malware, giving him access to their workstations. He observed around 5 terabytes of data.\n\nAt Black Hat, Stykas publicly named several impacted organizations, including Boston Children’s Hospital, Japanese tech firm AEON Smart Technology, Chinese phone manufacturer Oppo, and crypto firms Coinbase and Uniswap Labs. Other named entities include Italy’s Supreme Judicial Council and a subsidiary of Saudi Arabian bank Al Rajhi Bank.\n\nSome organizations like the Flemish government confirmed remediation efforts. Boston Children’s Hospital stated the incident involved a former contractor's personal device, not hospital systems, and found no evidence of unauthorized access. Coinbase reported terminating a contractor due to potential risks before Stykas's tip, with no sensitive info or customer data compromised.\n\n#Cybersecurity #NorthKorea #Hacking #DataBreach #SecurityResearch #BlackHat\n\nSource: Wired",
+  "tweet": "A security pro spent 22 months inside North Korean hacker systems, revealing 1,640 companies breached across 57 countries. He found \"ridiculous access\" including root server access & crypto keys. #Cybersecurity #Hacking #NorthKorea",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/a-security-pro-hacked-north-korean-hackers-he-found-theyd-breached-hundreds-of-networks-worldwide/",
+  "image": "https://media.wired.com/photos/6a7248a3342a397a2d7fbff9/master/pass/Security_ALookInsideNorthKoreanHackersServer_v1.gif",
+  "orig_title": "A Security Pro Hacked North Korean Hackers. He Found They’d Breached Hundreds of Networks Worldwide",
+  "cluster_urls": [
+   "https://www.wired.com/story/a-security-pro-hacked-north-korean-hackers-he-found-theyd-breached-hundreds-of-networks-worldwide/"
+  ],
+  "cluster_titles": [
+   "A Security Pro Hacked North Korean Hackers. He Found They’d Breached Hundreds of Networks Worldwide"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260806-0607-1-security-pro-hacked-north-korean-hackers-fou.png",
+   "20260806-0607-1-security-pro-hacked-north-korean-hackers-fou-d1.png",
+   "20260806-0607-1-security-pro-hacked-north-korean-hackers-fou-d2.png"
+  ]
+ }
+]

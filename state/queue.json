@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "self_hosted_ai_workflows",
+  "headline_marked": "[[Self-Hosted AI: n8n + Ollama]] for local AI workflows on your Mac",
+  "headline": "Self-Hosted AI: n8n + Ollama for local AI workflows on your Mac",
+  "summary": "Learn to run AI agents and models directly on your Mac using n8n for workflows and Ollama for models, ensuring your data remains private and on your machine.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "This guide enables running AI agents and models locally on your Mac, ensuring data privacy. It leverages n8n for workflow orchestration and Ollama for serving AI models, building on previous parts covering PostgreSQL and LLM concepts.",
+   "The setup requires Docker Desktop for Mac and utilizes n8n's official Self-hosted AI Starter Kit. This Docker Compose template preconfigures n8n, Ollama, Qdrant (a vector store), and PostgreSQL to work together seamlessly.",
+   "For optimal performance on Apple Silicon Macs, Ollama should run natively on the host machine, with Docker containers connecting to it. The guide details how to configure the .env file for this setup and update security keys.",
+   "Access n8n at http://localhost:5678 to create an account and manage workflows. Ollama serves its API at http://localhost:11434, which n8n calls.",
+   "To integrate, create an \"Ollama\" credential in n8n, setting the base URL to http://host.docker.internal:11434 for Dockerized n8n to connect to native Ollama. No API key is needed for local Ollama.",
+   "Use the Ollama Chat Model node in n8n workflows, selecting your credential and a local model like gemma4. AI Agent nodes can be enhanced with tools like HTTP Request or Qdrant, provided the chosen model supports tool use (e.g., llama3.1).",
+   "This setup provides a complete private AI stack, with n8n orchestrating and Ollama serving models, keeping all data on your machine. Cloud models can be integrated by setting up an Ollama cloud key and base URL if more power is needed."
+  ],
+  "caption": "Run AI agents and models directly on your Mac with n8n and Ollama. Keep all your data private and on your machine.\n\nThis guide enables running AI agents and models locally on your Mac, ensuring data privacy. It leverages n8n for workflow orchestration and Ollama for serving AI models, building on previous parts covering PostgreSQL and LLM concepts.\n\nThe setup requires Docker Desktop for Mac and utilizes n8n's official Self-hosted AI Starter Kit. This Docker Compose template preconfigures n8n, Ollama, Qdrant (a vector store), and PostgreSQL to work together seamlessly.\n\nFor optimal performance on Apple Silicon Macs, Ollama should run natively on the host machine, with Docker containers connecting to it. The guide details how to configure the .env file for this setup and update security keys.\n\nAccess n8n at http://localhost:5678 to create an account and manage workflows. Ollama serves its API at http://localhost:11434, which n8n calls.\n\nTo integrate, create an \"Ollama\" credential in n8n, setting the base URL to http://host.docker.internal:11434 for Dockerized n8n to connect to native Ollama. No API key is needed for local Ollama.\n\nUse the Ollama Chat Model node in n8n workflows, selecting your credential and a local model like gemma4. AI Agent nodes can be enhanced with tools like HTTP Request or Qdrant, provided the chosen model supports tool use (e.g., llama3.1).\n\nThis setup provides a complete private AI stack, with n8n orchestrating and Ollama serving models, keeping all data on your machine. Cloud models can be integrated by setting up an Ollama cloud key and base URL if more power is needed.\n\n#SelfHostedAI #LocalAI #Ollama #n8n #MacDev #AIWorkflows\n\nSource: DEV",
+  "tweet": "Run AI agents & models on your Mac with n8n + Ollama, keeping all data local and private. This guide details the setup for a complete self-hosted AI stack. #LocalAI #SelfHostedAI #MacDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/lorena_dvila_5ab5ef35ec6/2self-hosted-ai-n8n-ollama-local-ai-workflows-on-your-mac-239k",
+  "image": "",
+  "orig_title": "2.Self-Hosted AI: n8n + Ollama, local AI workflows on your Mac",
+  "cluster_urls": [
+   "https://dev.to/lorena_dvila_5ab5ef35ec6/2self-hosted-ai-n8n-ollama-local-ai-workflows-on-your-mac-239k"
+  ],
+  "cluster_titles": [
+   "2.Self-Hosted AI: n8n + Ollama, local AI workflows on your Mac"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260808-1022-0-self-hosted-ai-n8n-ollama-for-local-ai-workf.png",
+   "20260808-1022-0-self-hosted-ai-n8n-ollama-for-local-ai-workf-d1.png",
+   "20260808-1022-0-self-hosted-ai-n8n-ollama-for-local-ai-workf-d2.png",
+   "20260808-1022-0-self-hosted-ai-n8n-ollama-for-local-ai-workf-d3.png"
+  ]
+ }
+]

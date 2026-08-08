@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "meta muse spark 1.2 and muse code agentic harness review",
+  "headline_marked": "Meta Muse Spark 1.2 [[Loses Benchmarks, Wins as Agent]]",
+  "headline": "Meta Muse Spark 1.2 Loses Benchmarks, Wins as Agent",
+  "summary": "Meta's new coding model, Muse Spark 1.2, underperforms on raw coding tasks but excels as an agent within its Muse Code harness, offering advanced tool use and progress recovery.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Meta has released Muse Spark 1.2, a new coding model, alongside Muse Code, an agentic harness designed to run it. While the model itself struggles in direct coding benchmarks, it shines when integrated with Muse Code's advanced features, particularly its ability to resume interrupted tasks.",
+   "In coding benchmarks, Muse Spark 1.2 did not achieve top rankings, placing second on the Terminal Bench and third on DeepSWE, falling behind models like Opus 5. Games built with the model also exhibited issues, such as lag and missing graphical elements, with comparable prompts yielding better results from Qwen 3.8 and Fable 5.",
+   "However, the scenario changes dramatically when Muse Spark 1.2 operates within the Muse Code harness. Here, it secures first place in agent and tool-use benchmarks. The harness's local logging feature is a significant advantage for long-running agent jobs, ensuring progress is not lost if a run crashes.",
+   "A key test involved having Muse Spark and Qwen 3.8 convert a guide into a reusable skill. Muse Spark responded faster and delivered a more refined output, demonstrating superior analysis and specificity compared to Qwen 3.8.",
+   "For developers seeking the best raw coding performance, Opus 5 and Qwen 3.8 remain the top choices. But for those prioritizing agent workflows, effective tool utilization, and robust progress management, Muse Code presents a compelling option, highlighting that the surrounding framework can be as crucial as the model itself."
+  ],
+  "caption": "Meta's Muse Spark 1.2 model is a benchmark underdog but a top-tier agent. The real story is its Muse Code harness.\n\nMeta has released Muse Spark 1.2, a new coding model, alongside Muse Code, an agentic harness designed to run it. While the model itself struggles in direct coding benchmarks, it shines when integrated with Muse Code's advanced features, particularly its ability to resume interrupted tasks.\n\nIn coding benchmarks, Muse Spark 1.2 did not achieve top rankings, placing second on the Terminal Bench and third on DeepSWE, falling behind models like Opus 5. Games built with the model also exhibited issues, such as lag and missing graphical elements, with comparable prompts yielding better results from Qwen 3.8 and Fable 5.\n\nHowever, the scenario changes dramatically when Muse Spark 1.2 operates within the Muse Code harness. Here, it secures first place in agent and tool-use benchmarks. The harness's local logging feature is a significant advantage for long-running agent jobs, ensuring progress is not lost if a run crashes.\n\nA key test involved having Muse Spark and Qwen 3.8 convert a guide into a reusable skill. Muse Spark responded faster and delivered a more refined output, demonstrating superior analysis and specificity compared to Qwen 3.8.\n\nFor developers seeking the best raw coding performance, Opus 5 and Qwen 3.8 remain the top choices. But for those prioritizing agent workflows, effective tool utilization, and robust progress management, Muse Code presents a compelling option, highlighting that the surrounding framework can be as crucial as the model itself.\n\n#AI #Meta #LLM #Coding #MuseSpark\n\nSource: DEV",
+  "tweet": "Meta's Muse Spark 1.2 model struggles in raw coding benchmarks but shines as an agent within the Muse Code harness. The harness's ability to resume interrupted tasks is a standout feature. #AI #Meta #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "meta.com",
+  "source": "DEV",
+  "url": "https://dev.to/aditi_gupta_8d81622a592aa/meta-muse-spark-12-honest-review-loses-the-benchmarks-wins-as-an-agent-1m8c",
+  "image": "",
+  "orig_title": "Meta Muse Spark 1.2 Honest Review: Loses the Benchmarks, Wins as an Agent",
+  "cluster_urls": [
+   "https://dev.to/aditi_gupta_8d81622a592aa/meta-muse-spark-12-honest-review-loses-the-benchmarks-wins-as-an-agent-1m8c"
+  ],
+  "cluster_titles": [
+   "Meta Muse Spark 1.2 Honest Review: Loses the Benchmarks, Wins as an Agent"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260808-1453-0-meta-muse-spark-1-2-loses-benchmarks-wins-as.png",
+   "20260808-1453-0-meta-muse-spark-1-2-loses-benchmarks-wins-as-d1.png",
+   "20260808-1453-0-meta-muse-spark-1-2-loses-benchmarks-wins-as-d2.png"
+  ]
+ },
+ {
+  "topic": "open-weight vs closed-weight ai models explained",
+  "headline_marked": "[[Open-Weight vs Closed-Weight AI Models]] Explained: What It Means for You",
+  "headline": "Open-Weight vs Closed-Weight AI Models Explained: What It Means for You",
+  "summary": "Understand the core difference between open and closed AI models and how it impacts your projects, data privacy, and costs.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The distinction between open-weight and closed-weight AI models is crucial for anyone building with AI. It dictates what you can run locally, what your projects can rely on, and your operational costs.",
+   "AI models learn by adjusting millions or billions of numbers called 'weights.' These weights contain everything the model learned from its training data, making them the most valuable part. The core difference lies in whether you can download and run these weights yourself or only access them via an API.",
+   "Closed-weight models keep their weights proprietary. You interact with them through an API, sending your data to the company's servers and receiving answers back. This offers high quality without requiring personal hardware, simplifies setup, and offloads maintenance and scaling to the provider.",
+   "However, closed models come with trade-offs: per-use costs can escalate with popularity, data leaves your machine (a concern for sensitive applications), models can be updated or retired without notice, and offline use is impossible.",
+   "Open-weight models, conversely, publish their weights, allowing users to download, run, inspect, and often fine-tune them on their own hardware. This is distinct from 'open-source,' as the training data and full code are not always released; always check the license.",
+   "The advantages of open-weight models include offline operation, data staying local, predictable costs after initial setup, and the ability to use a specific, tested version indefinitely. Fine-tuning on specific tasks can also yield superior performance.",
+   "The primary trade-offs for open-weight models are the need for dedicated hardware and the operational burden of managing updates, scaling, and safety guardrails. While the gap is narrowing, the very best closed models may still outperform open ones on complex reasoning tasks.",
+   "For beginners, starting with a closed-weight model via its chat interface is recommended to focus on learning prompt engineering and answer verification, rather than infrastructure management.",
+   "A critical habit for any AI user is to assume models can be confidently wrong and to verify any information that would be embarrassing to get wrong. This practice is essential regardless of whether the model is open or closed.",
+   "For academic projects, especially those handling personal data, running an open-weight model locally offers a strong privacy advantage, ensuring data never leaves the user's machine. This defensibility is valuable for presentations and reports.",
+   "A common strategy is to prototype rapidly with a closed API to prove a concept, then transition to an open-weight model for the final demo and report, balancing speed with end-to-end control and data security."
+  ],
+  "caption": "Open vs. Closed AI Models: Which is right for you? Understand the key differences in cost, data privacy, and accessibility.\n\nThe distinction between open-weight and closed-weight AI models is crucial for anyone building with AI. It dictates what you can run locally, what your projects can rely on, and your operational costs.\n\nAI models learn by adjusting millions or billions of numbers called 'weights.' These weights contain everything the model learned from its training data, making them the most valuable part. The core difference lies in whether you can download and run these weights yourself or only access them via an API.\n\nClosed-weight models keep their weights proprietary. You interact with them through an API, sending your data to the company's servers and receiving answers back. This offers high quality without requiring personal hardware, simplifies setup, and offloads maintenance and scaling to the provider.\n\nHowever, closed models come with trade-offs: per-use costs can escalate with popularity, data leaves your machine (a concern for sensitive applications), models can be updated or retired without notice, and offline use is impossible.\n\nOpen-weight models, conversely, publish their weights, allowing users to download, run, inspect, and often fine-tune them on their own hardware. This is distinct from 'open-source,' as the training data and full code are not always released; always check the license.\n\nThe advantages of open-weight models include offline operation, data staying local, predictable costs after initial setup, and the ability to use a specific, tested version indefinitely. Fine-tuning on specific tasks can also yield superior performance.\n\nThe primary trade-offs for open-weight models are the need for dedicated hardware and the operational burden of managing updates, scaling, and safety guardrails. While the gap is narrowing, the very best closed models may still outperform open ones on complex reasoning tasks.\n\n#AI #ArtificialIntelligence #OpenSourceAI #MachineLearning #TechExplained\n\nSource: DEV",
+  "tweet": "Open vs. Closed AI Models: What's the difference and why does it matter? 🤔 Learn how model weights impact your projects, data privacy, and costs. #AI #MachineLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/akbar_952c24f291bf201eb0c/open-weight-vs-closed-weight-ai-models-what-it-means-for-you-5340",
+  "image": "",
+  "orig_title": "Open-Weight vs Closed-Weight AI Models: What It Means for You",
+  "cluster_urls": [
+   "https://dev.to/akbar_952c24f291bf201eb0c/open-weight-vs-closed-weight-ai-models-what-it-means-for-you-5340"
+  ],
+  "cluster_titles": [
+   "Open-Weight vs Closed-Weight AI Models: What It Means for You"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260808-1453-1-open-weight-vs-closed-weight-ai-models-expla.png",
+   "20260808-1453-1-open-weight-vs-closed-weight-ai-models-expla-d1.png",
+   "20260808-1453-1-open-weight-vs-closed-weight-ai-models-expla-d2.png",
+   "20260808-1453-1-open-weight-vs-closed-weight-ai-models-expla-d3.png",
+   "20260808-1453-1-open-weight-vs-closed-weight-ai-models-expla-d4.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "iphone_ultra_launch_colors_leak",
+  "headline_marked": "Leak suggests [[iPhone Ultra's two launch colors]] may be silver and dark blue",
+  "headline": "Leak suggests iPhone Ultra's two launch colors may be silver and dark blue",
+  "summary": "An accessory leak reportedly reveals the upcoming iPhone Ultra will launch in silver and dark blue. The device is anticipated to be unveiled next month.",
+  "category": "APPLE",
+  "template": "leak",
+  "details": [
+   "A recent accessory leak suggests that the highly anticipated iPhone Ultra may debut in two distinct color options: silver and dark blue. This information comes ahead of its expected unveiling next month.",
+   "The leak, originating from an accessory, provides an early glimpse into potential aesthetic choices for Apple's next premium smartphone. Further details on other features and specifications are still awaited."
+  ],
+  "caption": "The iPhone Ultra's potential launch colors have reportedly surfaced through an accessory leak, hinting at silver and dark blue options.\n\nA recent accessory leak suggests that the highly anticipated iPhone Ultra may debut in two distinct color options: silver and dark blue. This information comes ahead of its expected unveiling next month.\n\nThe leak, originating from an accessory, provides an early glimpse into potential aesthetic choices for Apple's next premium smartphone. Further details on other features and specifications are still awaited.\n\n#iPhoneUltra #AppleLeak #TechNews #Smartphone #Apple\n\nSource: 9to5Mac",
+  "tweet": "An accessory leak suggests the upcoming iPhone Ultra may launch in silver and dark blue. The device is expected to be unveiled next month. #iPhoneUltra #AppleLeak",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/08/08/iphone-ultra-colors-leak-rumor/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/09/iphone-17-event-13.02.22.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "New leak may reveal the iPhone Ultra’s two launch colors",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/08/08/iphone-ultra-colors-leak-rumor/"
+  ],
+  "cluster_titles": [
+   "New leak may reveal the iPhone Ultra’s two launch colors"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260809-0706-0-leak-suggests-iphone-ultra-s-two-launch-colo.png",
+   "20260809-0706-0-leak-suggests-iphone-ultra-s-two-launch-colo-d1.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_cost_optimization_tiered_routing",
+  "headline_marked": "[[Default-to-Flagship Is Now a Cost Bug]]: Use Tiered Model Routing for Agentic Workloads",
+  "headline": "Default-to-Flagship Is Now a Cost Bug: Use Tiered Model Routing for Agentic Workloads",
+  "summary": "Smaller, cheaper 'flash'-tier models are now outperforming flagship models for multi-step agentic coding, making default-to-flagship a costly mistake. Implementing tiered model routing can save significant costs.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "For two years, the default strategy was to use the biggest AI model available. However, this approach has become a significant cost bug, especially with the emergence of more efficient, smaller models.",
+   "This summer, a smaller, cheaper 'flash'-tier model began outperforming its flagship sibling on multi-step agentic coding workloads at a fraction of the price. When the fast, cheap tier wins hard benchmarks, defaulting to flagship models becomes wasteful.",
+   "Agent workloads consist of dozens of small steps like planning, tool selection, and argument formatting. Routing every single step through a frontier model is inefficient, akin to taking a helicopter for a short walk.",
+   "The trap lies in the cost being invisible per call but enormous in aggregate, leading to unexpected high invoices. The goal is to reserve flagship tiers for the 5-15% of steps that truly require them, letting cheaper tiers handle the bulk.",
+   "To fix this, implement static heuristics: short prompts with structured output and low stakes should go to the cheap tier. Any action involving a large context window or irreversible operations should escalate.",
+   "For everything else, use eval-gated escalation. Start with the cheap tier and only promote to a bigger model when evaluations prove the cheaper option fails for a specific input class. Escalation must be earned by evidence, not assumed.",
+   "A simple confidence signal can also help; if the cheap model hedges, returns malformed output, or shows low log-probabilities, retry one tier up. A single retry at a higher tier is still more cost-effective than sending everything to the flagship model.",
+   "Effective routing requires measurement. Log per step: which tier ran, token counts, latency, and a success signal. Crucially, optimize for \"cost per completed task\" rather than \"cost per token\" to avoid making overall costs worse with retries.",
+   "This routing strategy should be re-evaluated monthly, as model prices and capabilities evolve rapidly. The optimal routing table from last quarter can quickly become a mistake this quarter.",
+   "The winning move in 2026 isn't just using the best or cheapest model, but building a thin routing layer and an evaluation harness. This allows placing each step on the right tier and adapting to market changes quickly. Default-to-flagship was simple, but it is no longer cheap."
+  ],
+  "caption": "Are you still defaulting to flagship AI models? It's now a cost bug. Smaller, cheaper models are outperforming for agentic workloads.\n\nFor two years, the default strategy was to use the biggest AI model available. However, this approach has become a significant cost bug, especially with the emergence of more efficient, smaller models.\n\nThis summer, a smaller, cheaper 'flash'-tier model began outperforming its flagship sibling on multi-step agentic coding workloads at a fraction of the price. When the fast, cheap tier wins hard benchmarks, defaulting to flagship models becomes wasteful.\n\nAgent workloads consist of dozens of small steps like planning, tool selection, and argument formatting. Routing every single step through a frontier model is inefficient, akin to taking a helicopter for a short walk.\n\nThe trap lies in the cost being invisible per call but enormous in aggregate, leading to unexpected high invoices. The goal is to reserve flagship tiers for the 5-15% of steps that truly require them, letting cheaper tiers handle the bulk.\n\nTo fix this, implement static heuristics: short prompts with structured output and low stakes should go to the cheap tier. Any action involving a large context window or irreversible operations should escalate.\n\nFor everything else, use eval-gated escalation. Start with the cheap tier and only promote to a bigger model when evaluations prove the cheaper option fails for a specific input class. Escalation must be earned by evidence, not assumed.\n\nA simple confidence signal can also help; if the cheap model hedges, returns malformed output, or shows low log-probabilities, retry one tier up. A single retry at a higher tier is still more cost-effective than sending everything to the flagship model.\n\nEffective routing requires measurement. Log per step: which tier ran, token counts, latency, and a success signal. Crucially, optimize for \"cost per completed task\" rather than \"cost per token\" to avoid making overall costs worse with retries.\n\n#AI #MachineLearning #Developer #CostOptimization #Tech #AgenticAI\n\nSource: DEV",
+  "tweet": "Still defaulting to flagship AI models? It's now a cost bug. Smaller, cheaper models are outperforming for agentic workloads. Learn to implement tiered routing to cut costs significantly. #AI #DevOps #CostOptimization",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ai_maya_063fc568e157562fd/default-to-flagship-is-now-a-cost-bug-tiered-model-routing-for-agentic-workloads-2gk4",
+  "image": "",
+  "orig_title": "Default-to-Flagship Is Now a Cost Bug: Tiered Model Routing for Agentic Workloads",
+  "cluster_urls": [
+   "https://dev.to/ai_maya_063fc568e157562fd/default-to-flagship-is-now-a-cost-bug-tiered-model-routing-for-agentic-workloads-2gk4"
+  ],
+  "cluster_titles": [
+   "Default-to-Flagship Is Now a Cost Bug: Tiered Model Routing for Agentic Workloads"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-0706-1-default-to-flagship-is-now-a-cost-bug-use-ti.png",
+   "20260809-0706-1-default-to-flagship-is-now-a-cost-bug-use-ti-d1.png",
+   "20260809-0706-1-default-to-flagship-is-now-a-cost-bug-use-ti-d2.png",
+   "20260809-0706-1-default-to-flagship-is-now-a-cost-bug-use-ti-d3.png",
+   "20260809-0706-1-default-to-flagship-is-now-a-cost-bug-use-ti-d4.png"
+  ]
+ }
+]

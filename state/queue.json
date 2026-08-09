@@ -1,1 +1,55 @@
-[]
+[
+ {
+  "topic": "phone_software_issues_backup_notifications",
+  "headline_marked": "[[Lost a week of photos]]? Android's battery optimization may be to blame",
+  "headline": "Lost a week of photos? Android's battery optimization may be to blame",
+  "summary": "Self-hosting photo backups can be tricky, as background app limitations on Android can silently halt uploads without warning.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The author lost a week of photos after their Immich backup stopped working silently, with no indication of failure.",
+   "The issue wasn't with Immich itself, but with Android's aggressive battery optimization that suspends background apps to save power.",
+   "This system behavior prevents background workers, like Immich's backup process, from running, leading to missed uploads.",
+   "Immich's documentation acknowledges this as a known issue, advising users to adjust device-specific battery optimization settings.",
+   "A critical prompt warning about battery optimization and notification access was present during setup but was skipped by the user.",
+   "Adjusting Immich's battery setting to 'Unrestricted' on the Android device resolved the backup issue, allowing missing photos to upload.",
+   "While notifications are also required for Immich's progress updates, granting permission for them also contributed to a stable backup process.",
+   "Unlike Google Photos, which typically has necessary permissions set by default, self-hosted solutions require manual configuration.",
+   "This battery optimization feature, while useful for general battery life, can inadvertently disrupt essential background tasks.",
+   "Some users on Xiaomi and Samsung devices reportedly still face issues, with uploads only resuming when the app is manually opened."
+  ],
+  "caption": "Did you know your Android phone might be deleting your photos? \n\nBackground app limitations can silently stop backups, leading to lost memories.\n\nThe author lost a week of photos after their Immich backup stopped working silently, with no indication of failure.\n\nThe issue wasn't with Immich itself, but with Android's aggressive battery optimization that suspends background apps to save power.\n\nThis system behavior prevents background workers, like Immich's backup process, from running, leading to missed uploads.\n\nImmich's documentation acknowledges this as a known issue, advising users to adjust device-specific battery optimization settings.\n\nA critical prompt warning about battery optimization and notification access was present during setup but was skipped by the user.\n\nAdjusting Immich's battery setting to 'Unrestricted' on the Android device resolved the backup issue, allowing missing photos to upload.\n\nWhile notifications are also required for Immich's progress updates, granting permission for them also contributed to a stable backup process.\n\nUnlike Google Photos, which typically has necessary permissions set by default, self-hosted solutions require manual configuration.\n\nThis battery optimization feature, while useful for general battery life, can inadvertently disrupt essential background tasks.\n\nSome users on Xiaomi and Samsung devices reportedly still face issues, with uploads only resuming when the app is manually opened.\n\n#Android #Tech #Software #Privacy #Backup\n\nSource: Android Police",
+  "tweet": "Did you know your Android phone might be deleting your photos? \n\nBackground app limitations can silently stop backups, leading to lost memories. #Android #Tech #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "immich.app",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/self-hosted-photo-backups-were-failing-until-changed-two-settings/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/08/immich-logo-surrounded-by-photos-with-a-backup-upload-warning-icon.png",
+  "orig_title": "I almost lost a week of photos before realizing my phone was sabotaging my backups",
+  "cluster_urls": [
+   "https://www.androidpolice.com/self-hosted-photo-backups-were-failing-until-changed-two-settings/",
+   "https://www.androidpolice.com/fitbit-air-made-huge-mistake-i-regret-my-purchase/",
+   "https://www.androidpolice.com/the-pixel-6-pro-is-losing-support-and-its-the-end-of-an-era-for-google/",
+   "https://www.androidpolice.com/i-tested-the-macbook-neo-now-i-know-why-the-googlebook-will-disappoint/",
+   "https://www.androidpolice.com/free-open-source-app-made-phones-physical-buttons-useful/",
+   "https://www.androidpolice.com/i-stopped-missing-android-notifications-by-changing-hidden-settings/"
+  ],
+  "cluster_titles": [
+   "I almost lost a week of photos before realizing my phone was sabotaging my backups",
+   "My Fitbit Air made this huge mistake; now I regret my purchase",
+   "The Pixel 6 Pro is losing software support; it's the end of an era for Google",
+   "I tested the MacBook Neo; now I know why the Googlebook will disappoint",
+   "This free open source app finally made my phone's physical buttons actually useful",
+   "I finally stopped missing Android notifications by changing one hidden setting"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260809-2140-0-lost-a-week-of-photos-android-s-battery-opti.png",
+   "20260809-2140-0-lost-a-week-of-photos-android-s-battery-opti-d1.png",
+   "20260809-2140-0-lost-a-week-of-photos-android-s-battery-opti-d2.png"
+  ]
+ }
+]

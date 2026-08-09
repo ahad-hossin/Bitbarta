@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai detectors create distrust",
+  "headline_marked": "[[AI detectors are creating a new era of distrust]]",
+  "headline": "AI detectors are creating a new era of distrust",
+  "summary": "AI detection tools, despite being dubious and prone to false positives, are being widely adopted by educators and publishers, leading to significant real-world consequences for individuals.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Tools claiming to detect AI-written content are gaining traction among educators and publishers, even as their reliability is questioned. A survey found 43% of US 6th-12th grade teachers regularly used AI detectors between 2024-2025. Some universities even had AI detection automatically enabled in existing plagiarism tools like Turnitin.",
+   "Unlike traditional plagiarism checkers that match text, AI detectors like GPTZero and Pangram use their own AI models to guess if content is human-written. This process analyzes wording, rhythm, structure, and patterns, making the evaluation more subjective and less verifiable.",
+   "This subjective analysis can lead to false positives, particularly for non-native English speakers. Despite claims from companies like Turnitin and Pangram of false positive rates under 1% or 1 in 10,000, real-world cases show significant issues.",
+   "The widespread use of these tools is fueling accusations and impacting livelihoods. A publisher dropped a $2 million book deal over AI concerns, and a French national sued Yale after a professor's AI accusation led to a failing grade and suspension."
+  ],
+  "caption": "AI detectors are widely used by educators and publishers, but their reliability is dubious. This is creating a new era of distrust with real-world consequences.\n\nTools claiming to detect AI-written content are gaining traction among educators and publishers, even as their reliability is questioned. A survey found 43% of US 6th-12th grade teachers regularly used AI detectors between 2024-2025. Some universities even had AI detection automatically enabled in existing plagiarism tools like Turnitin.\n\nUnlike traditional plagiarism checkers that match text, AI detectors like GPTZero and Pangram use their own AI models to guess if content is human-written. This process analyzes wording, rhythm, structure, and patterns, making the evaluation more subjective and less verifiable.\n\nThis subjective analysis can lead to false positives, particularly for non-native English speakers. Despite claims from companies like Turnitin and Pangram of false positive rates under 1% or 1 in 10,000, real-world cases show significant issues.\n\nThe widespread use of these tools is fueling accusations and impacting livelihoods. A publisher dropped a $2 million book deal over AI concerns, and a French national sued Yale after a professor's AI accusation led to a failing grade and suspension.\n\n#AI #AIDetection #TechNews #Education #Publishing #Distrust\n\nSource: The Verge",
+  "tweet": "AI detectors are creating a new era of distrust. Widely adopted by educators & publishers, these dubious tools lead to false accusations & real-world consequences, from lost book deals to student suspensions. #AI #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/column/976690/ai-writing-detectors-suspicion",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/268680_AI_detection_CVirginia-.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "AI detectors are creating a new era of distrust",
+  "cluster_urls": [
+   "https://www.theverge.com/column/976690/ai-writing-detectors-suspicion"
+  ],
+  "cluster_titles": [
+   "AI detectors are creating a new era of distrust"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260809-1806-0-ai-detectors-are-creating-a-new-era-of-distr.png",
+   "20260809-1806-0-ai-detectors-are-creating-a-new-era-of-distr-d1.png",
+   "20260809-1806-0-ai-detectors-are-creating-a-new-era-of-distr-d2.png"
+  ]
+ },
+ {
+  "topic": "open source stealth usb drive",
+  "headline_marked": "[[Phantom Drive hides encrypted data]] behind an 8GB decoy USB stick, unlocks with a text file",
+  "headline": "Phantom Drive hides encrypted data behind an 8GB decoy USB stick, unlocks with a text file",
+  "summary": "This open-source USB drive appears as a standard 8GB stick, but a specific text file unlocks a hidden, AES-256 encrypted partition, designed for sensitive data protection.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The Phantom Drive, created by Rootkit Labs, presents itself as a basic 8GB USB stick upon insertion. However, it conceals a secret partition that only mounts after a specific text file is created, securing data with AES-256 encryption.",
+   "Built around a CH569 microcontroller, the device uses a user-provided microSD card for both its decoy and hidden storage. This design choice avoids onboard NAND chips due to component shortages, making it an open-source and customizable solution.",
+   "The custom firmware intercepts raw USB data packets, scanning for a predefined \"password\" string within the unlock.txt file. Upon detection, it copies the password to SRAM and overwrites the file data with zeroes before it reaches the physical storage.",
+   "A unique hardware ID from the microcontroller acts as a salt, combined with your password, and hashed 100,000 to 600,000 times using PBKDF2-HMAC-SHA-256 to generate an encryption key. This process includes an intentional 2-3 second delay to deter brute-force attacks.",
+   "The hidden partition remains inaccessible even if the microSD card is removed and inserted into another device, or if accessed directly through a card slot, where it appears as a broken partition. Users can also recompile the firmware to spoof vendor IDs, making the drive appear as a common brand.",
+   "Data recovery tools are available for Linux in case of physical damage to the board. Transfer speeds are limited by its USB 2.0 foundation, offering 20 MB/s reads and 9 MB/s writes in AES-CTR mode, or 10 MB/s reads and 6 MB/s writes in AES-XTS.",
+   "The Phantom Drive is available for $50 from Rootkit Labs, or users can build their own using the provided open-source resources on GitHub, including PCB layouts, schematics, and firmware. Creator Ryan Walker designed it for both utilitarian and political purposes, aiming to help users bypass authoritarian surveillance."
+  ],
+  "caption": "This USB drive looks like a cheap 8GB stick, but it hides a secure, AES-256 encrypted partition that only you can access.\n\nThe Phantom Drive, created by Rootkit Labs, presents itself as a basic 8GB USB stick upon insertion. However, it conceals a secret partition that only mounts after a specific text file is created, securing data with AES-256 encryption.\n\nBuilt around a CH569 microcontroller, the device uses a user-provided microSD card for both its decoy and hidden storage. This design choice avoids onboard NAND chips due to component shortages, making it an open-source and customizable solution.\n\nThe custom firmware intercepts raw USB data packets, scanning for a predefined \"password\" string within the unlock.txt file. Upon detection, it copies the password to SRAM and overwrites the file data with zeroes before it reaches the physical storage.\n\nA unique hardware ID from the microcontroller acts as a salt, combined with your password, and hashed 100,000 to 600,000 times using PBKDF2-HMAC-SHA-256 to generate an encryption key. This process includes an intentional 2-3 second delay to deter brute-force attacks.\n\nThe hidden partition remains inaccessible even if the microSD card is removed and inserted into another device, or if accessed directly through a card slot, where it appears as a broken partition. Users can also recompile the firmware to spoof vendor IDs, making the drive appear as a common brand.\n\nData recovery tools are available for Linux in case of physical damage to the board. Transfer speeds are limited by its USB 2.0 foundation, offering 20 MB/s reads and 9 MB/s writes in AES-CTR mode, or 10 MB/s reads and 6 MB/s writes in AES-XTS.\n\nThe Phantom Drive is available for $50 from Rootkit Labs, or users can build their own using the provided open-source resources on GitHub, including PCB layouts, schematics, and firmware. Creator Ryan Walker designed it for both utilitarian and political purposes, aiming to help users bypass authoritarian surveillance.\n\n#SecurityTech #DataPrivacy #OpenSource #USB #Encryption #PhantomDrive\n\nSource: Tom's Hardware",
+  "tweet": "This USB drive looks like a cheap 8GB stick, but it hides a secure, AES-256 encrypted partition that only you can access. The open-source Phantom Drive unlocks with a simple text file, designed for ultimate data stealth. #SecurityTech #DataPrivacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "rootkitlabs.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/usb-flash-drives/open-source-stealth-usb-hides-an-encrypted-partition-behind-an-8gb-decoy-drive-phantom-drive-appears-as-a-regular-usb-stick-until-you-create-a-text-file-to-unlock-the-hidden-data",
+  "image": "https://cdn.mos.cms.futurecdn.net/mwt5veUBP4L72NPirnqPDA-1280-80.jpg",
+  "orig_title": "Open-source stealth USB hides an encrypted partition behind an 8GB decoy drive — 'Phantom Drive' appears as a regular USB stick until you create a text file to unlock the hidden data",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/usb-flash-drives/open-source-stealth-usb-hides-an-encrypted-partition-behind-an-8gb-decoy-drive-phantom-drive-appears-as-a-regular-usb-stick-until-you-create-a-text-file-to-unlock-the-hidden-data"
+  ],
+  "cluster_titles": [
+   "Open-source stealth USB hides an encrypted partition behind an 8GB decoy drive — 'Phantom Drive' appears as a regular USB stick until you create a text file to unlock the hidden data"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260809-1806-1-phantom-drive-hides-encrypted-data-behind-an.png",
+   "20260809-1806-1-phantom-drive-hides-encrypted-data-behind-an-d1.png",
+   "20260809-1806-1-phantom-drive-hides-encrypted-data-behind-an-d2.png",
+   "20260809-1806-1-phantom-drive-hides-encrypted-data-behind-an-d3.png"
+  ]
+ }
+]

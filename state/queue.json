@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "whatsapp_ai_agent_production_architecture",
+  "headline_marked": "[[Production WhatsApp AI Agent]] Architecture That Actually Works",
+  "headline": "Production WhatsApp AI Agent Architecture That Actually Works",
+  "summary": "Learn the architecture behind SARA, an open-source WhatsApp AI agent that achieved 99.7% uptime over six months with zero inference cost.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Building a production-ready WhatsApp AI agent presents unique challenges beyond typical chat channels. This article delves into the architecture of SARA, an open-source agent that has been serving businesses across 20 industries for 18 months.",
+   "A key lesson learned is the risk of relying on a single AI provider. SARA employs a four-provider chain with retries and exponential backoff, ensuring 99.7% uptime over six months and achieving $0 inference costs by leveraging free tiers.",
+   "To prevent unintended actions, SARA incorporates an autonomy gate within its dispatcher, which maps over 30 tools to handlers. This ensures critical operations, like booking large catering orders, require human approval.",
+   "Managing context in WhatsApp, which lacks native 'sessions,' is handled through a robust pipeline. This system addresses challenges like message ordering, date parsing across languages, and timezone awareness, which alone took weeks to perfect.",
+   "The architecture avoids the need for GPUs by offloading inference to cloud providers like Groq. Lessons learned the hard way include managing session contention, as running two instances with the same number leads to instant logouts for both.",
+   "SARA's core agent definitions are open-source under Apache-2.0, allowing for self-hosting and extension. Cloud-only features such as multi-tenancy, white-labeling, and analytics are available in the commercial version.",
+   "The article emphasizes that running AI in production is 90% engineering and 10% model quality, offering a deep dive into the practicalities and 'war stories' of deploying AI agents in real-world scenarios."
+  ],
+  "caption": "Building a production WhatsApp AI agent is 90% engineering, 10% model quality. Here's the architecture that actually works.\n\nBuilding a production-ready WhatsApp AI agent presents unique challenges beyond typical chat channels. This article delves into the architecture of SARA, an open-source agent that has been serving businesses across 20 industries for 18 months.\n\nA key lesson learned is the risk of relying on a single AI provider. SARA employs a four-provider chain with retries and exponential backoff, ensuring 99.7% uptime over six months and achieving $0 inference costs by leveraging free tiers.\n\nTo prevent unintended actions, SARA incorporates an autonomy gate within its dispatcher, which maps over 30 tools to handlers. This ensures critical operations, like booking large catering orders, require human approval.\n\nManaging context in WhatsApp, which lacks native 'sessions,' is handled through a robust pipeline. This system addresses challenges like message ordering, date parsing across languages, and timezone awareness, which alone took weeks to perfect.\n\nThe architecture avoids the need for GPUs by offloading inference to cloud providers like Groq. Lessons learned the hard way include managing session contention, as running two instances with the same number leads to instant logouts for both.\n\nSARA's core agent definitions are open-source under Apache-2.0, allowing for self-hosting and extension. Cloud-only features such as multi-tenancy, white-labeling, and analytics are available in the commercial version.\n\nThe article emphasizes that running AI in production is 90% engineering and 10% model quality, offering a deep dive into the practicalities and 'war stories' of deploying AI agents in real-world scenarios.\n\n#AI #WhatsApp #OpenSource #DevOps #Agent\n\nSource: DEV",
+  "tweet": "Building a production WhatsApp AI agent? Learn from SARA's architecture: 99.7% uptime, $0 inference cost, and an autonomy gate for safety. It's 90% engineering, 10% model quality. #AI #WhatsApp #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/alessandrobinda114/building-a-production-whatsapp-ai-agent-architecture-that-actually-works-2gfd",
+  "image": "",
+  "orig_title": "Building a Production WhatsApp AI Agent: Architecture That Actually Works",
+  "cluster_urls": [
+   "https://dev.to/alessandrobinda114/building-a-production-whatsapp-ai-agent-architecture-that-actually-works-2gfd"
+  ],
+  "cluster_titles": [
+   "Building a Production WhatsApp AI Agent: Architecture That Actually Works"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-0342-0-production-whatsapp-ai-agent-architecture-th.png",
+   "20260810-0342-0-production-whatsapp-ai-agent-architecture-th-d1.png",
+   "20260810-0342-0-production-whatsapp-ai-agent-architecture-th-d2.png",
+   "20260810-0342-0-production-whatsapp-ai-agent-architecture-th-d3.png"
+  ]
+ },
+ {
+  "topic": "windows_11_weather_app_ram_usage",
+  "headline_marked": "Windows 11 Weather app [[uses over 1 GB of RAM]]",
+  "headline": "Windows 11 Weather app uses over 1 GB of RAM",
+  "summary": "Microsoft's built-in Weather app consumes more than 1 GB of RAM, significantly impacting lower-end systems. This is due to its web app foundation using the WebView2 framework.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Microsoft's efforts to optimize Windows 11 for lower-end hardware are being undermined by its own Weather app, which has been found to consume over 1 GB of RAM. Tests show the app can reach up to 1.6 GB during basic interactions, potentially occupying nearly 20% of memory on an 8 GB RAM system.",
+   "The excessive memory usage stems from the Weather app being a web app built on Microsoft's WebView2 framework, similar to an MSN Weather web app. This results in multiple Chromium-based subprocesses running concurrently, contributing to its high RAM footprint.",
+   "In comparison, Apple's native Weather app on macOS uses less than 250 MB of RAM, making Microsoft's implementation approximately five times larger. This significant difference could lead to noticeable performance degradation on systems with 8 GB or 16 GB of RAM, forcing Windows to rely more on the page file.",
+   "Adding to the criticism, the Windows 11 Weather app also features embedded advertising within its interface. Sponsored content is integrated directly into the forecast feed, appearing alongside weather cards in a similar visual style, which has drawn negative attention.",
+   "These findings contradict Microsoft's stated goals of improving Windows 11's efficiency and performance on lower-end hardware. While the company aims to develop more native applications, it remains unclear if MSN-branded apps like Weather will be rebuilt using WinUI."
+  ],
+  "caption": "Windows 11's built-in Weather app is reportedly consuming over 1 GB of RAM, significantly impacting system performance on lower-end PCs.\n\nMicrosoft's efforts to optimize Windows 11 for lower-end hardware are being undermined by its own Weather app, which has been found to consume over 1 GB of RAM. Tests show the app can reach up to 1.6 GB during basic interactions, potentially occupying nearly 20% of memory on an 8 GB RAM system.\n\nThe excessive memory usage stems from the Weather app being a web app built on Microsoft's WebView2 framework, similar to an MSN Weather web app. This results in multiple Chromium-based subprocesses running concurrently, contributing to its high RAM footprint.\n\nIn comparison, Apple's native Weather app on macOS uses less than 250 MB of RAM, making Microsoft's implementation approximately five times larger. This significant difference could lead to noticeable performance degradation on systems with 8 GB or 16 GB of RAM, forcing Windows to rely more on the page file.\n\nAdding to the criticism, the Windows 11 Weather app also features embedded advertising within its interface. Sponsored content is integrated directly into the forecast feed, appearing alongside weather cards in a similar visual style, which has drawn negative attention.\n\nThese findings contradict Microsoft's stated goals of improving Windows 11's efficiency and performance on lower-end hardware. While the company aims to develop more native applications, it remains unclear if MSN-branded apps like Weather will be rebuilt using WinUI.\n\n#Windows11 #Microsoft #Software #TechNews #Performance\n\nSource: Hacker News",
+  "tweet": "Windows 11's Weather app is hogging over 1 GB of RAM, impacting performance on lower-end systems. Built on WebView2, it uses multiple Chromium processes. #Windows11 #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Hacker News",
+  "url": "https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html",
+  "image": "",
+  "orig_title": "Windows 11's built-in Weather app wastes more than 1 GB of RAM",
+  "cluster_urls": [
+   "https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html"
+  ],
+  "cluster_titles": [
+   "Windows 11's built-in Weather app wastes more than 1 GB of RAM"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260810-0342-1-windows-11-weather-app-uses-over-1-gb-of-ram.png",
+   "20260810-0342-1-windows-11-weather-app-uses-over-1-gb-of-ram-d1.png",
+   "20260810-0342-1-windows-11-weather-app-uses-over-1-gb-of-ram-d2.png",
+   "20260810-0342-1-windows-11-weather-app-uses-over-1-gb-of-ram-d3.png"
+  ]
+ }
+]

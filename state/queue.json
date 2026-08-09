@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "model_dna_llm_verification",
+  "headline_marked": "[[Model DNA verifies 'from-scratch' LLM claims]] using architecture, tokenizer, and CKA (PyTorch)",
+  "headline": "Model DNA verifies 'from-scratch' LLM claims using architecture, tokenizer, and CKA (PyTorch)",
+  "summary": "A public method called Model DNA allows verifying if an LLM was trained from scratch or derived from an open-weight base, using only public files like config.json, tokenizer.json, and embedding weights. This technical deep-dive reproduces the method in PyTorch",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Model DNA is a public method and tool that determines if an LLM was trained from scratch or derived from an open-weight base. It relies solely on public artifacts: config.json, tokenizer.json, and embedding weights. This approach provides a reproducible procedure for verifying LLM provenance, moving beyond anecdotal claims.",
+   "The premise is that no leaked internals are required; everything is read from a model's public files. The method compares structural fields chosen at design time, such as model_type, vocab_size, and num_hidden_layers. Independently designed models rarely align on five or more of these fields simultaneously, which acts as a fingerprint.",
+   "Another signal involves comparing vocabularies. Two truly independently trained models almost never converge on the same vocabulary, so shared tokens are normalized against the smaller vocabulary. While tokenizer reuse can be a licensing or convenience decision, significant overlap serves as supporting evidence.",
+   "The most robust signal compares representation geometry using Linear CKA (Centered Kernel Alignment). This method is invariant to rotation, orthogonal transforms, and isotropic scaling, preventing derived models from easily appearing 'different.' Crucially, CKA is defined even when models have different hidden sizes, allowing direct comparison.",
+   "The Model DNA tool collapses these three signals into four labels for clear interpretation. It avoids common pitfalls like naive cosine similarity, which is fooled by rotation invariance, and relying solely on shared tokenizers. Model DNA fuses the right signals under the right invariance, offering a solid starting point for provenance analysis."
+  ],
+  "caption": "Can you tell if an LLM was truly trained from scratch? A new method, Model DNA, cross-checks architecture config, tokenizer overlap, and embedding CKA against candidate bases.\n\nModel DNA is a public method and tool that determines if an LLM was trained from scratch or derived from an open-weight base. It relies solely on public artifacts: config.json, tokenizer.json, and embedding weights. This approach provides a reproducible procedure for verifying LLM provenance, moving beyond anecdotal claims.\n\nThe premise is that no leaked internals are required; everything is read from a model's public files. The method compares structural fields chosen at design time, such as model_type, vocab_size, and num_hidden_layers. Independently designed models rarely align on five or more of these fields simultaneously, which acts as a fingerprint.\n\nAnother signal involves comparing vocabularies. Two truly independently trained models almost never converge on the same vocabulary, so shared tokens are normalized against the smaller vocabulary. While tokenizer reuse can be a licensing or convenience decision, significant overlap serves as supporting evidence.\n\nThe most robust signal compares representation geometry using Linear CKA (Centered Kernel Alignment). This method is invariant to rotation, orthogonal transforms, and isotropic scaling, preventing derived models from easily appearing 'different.' Crucially, CKA is defined even when models have different hidden sizes, allowing direct comparison.\n\nThe Model DNA tool collapses these three signals into four labels for clear interpretation. It avoids common pitfalls like naive cosine similarity, which is fooled by rotation invariance, and relying solely on shared tokenizers. Model DNA fuses the right signals under the right invariance, offering a solid starting point for provenance analysis.\n\n#AI #LLM #MachineLearning #DeepLearning #PyTorch #ModelProvenance\n\nSource: DEV",
+  "tweet": "Ever wonder if an LLM is truly 'from-scratch'? Model DNA, a new method, analyzes public artifacts like config, tokenizer, and embedding weights to verify claims. It uses CKA for robust comparison. #AI #LLM #ModelProvenance",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ai_maya_063fc568e157562fd/model-dna-analyzed-verifying-from-scratch-llm-claims-with-architecture-tokenizer-and-cka-2k4h",
+  "image": "",
+  "orig_title": "Model DNA, Analyzed: Verifying 'From-Scratch' LLM Claims with Architecture, Tokenizer, and CKA (PyTorch)",
+  "cluster_urls": [
+   "https://dev.to/ai_maya_063fc568e157562fd/model-dna-analyzed-verifying-from-scratch-llm-claims-with-architecture-tokenizer-and-cka-2k4h"
+  ],
+  "cluster_titles": [
+   "Model DNA, Analyzed: Verifying 'From-Scratch' LLM Claims with Architecture, Tokenizer, and CKA (PyTorch)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-1506-0-model-dna-verifies-from-scratch-llm-claims-u.png",
+   "20260809-1506-0-model-dna-verifies-from-scratch-llm-claims-u-d1.png",
+   "20260809-1506-0-model-dna-verifies-from-scratch-llm-claims-u-d2.png",
+   "20260809-1506-0-model-dna-verifies-from-scratch-llm-claims-u-d3.png"
+  ]
+ },
+ {
+  "topic": "biometric_api_face_liveness_detection",
+  "headline_marked": "[[Add Face Liveness Detection to Any App]] in 10 Lines of Code (Free Tier Available)",
+  "headline": "Add Face Liveness Detection to Any App in 10 Lines of Code (Free Tier Available)",
+  "summary": "FaceID API offers a free-tier REST API for biometric verification, allowing developers to integrate advanced face liveness detection with minimal code.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "FaceID API provides a free-tier REST API for adding face liveness detection to any web or mobile application. It aims to overcome the high costs and proprietary lock-ins often associated with biometric verification tools.",
+   "The system employs a 4-direction head challenge (up, down, left, right) combined with a mouth-open check to verify liveness. This multi-step process ensures robust detection against spoofing attempts.",
+   "Under the hood, MediaPipe FaceMesh tracks 468 facial landmarks in real time directly in the browser. A 128-float descriptor, a mathematical representation of the face, is generated by face-api.js only after all liveness challenges are successfully passed, ensuring no photos reach the server.",
+   "The service is available at faceidentity.site and includes a free tier that supports up to 200 enrollments per month, requiring no credit card to get started."
+  ],
+  "caption": "Integrate secure face liveness detection into any app with just 10 lines of code. A free tier is available, supporting up to 200 enrollments per month.\n\nFaceID API provides a free-tier REST API for adding face liveness detection to any web or mobile application. It aims to overcome the high costs and proprietary lock-ins often associated with biometric verification tools.\n\nThe system employs a 4-direction head challenge (up, down, left, right) combined with a mouth-open check to verify liveness. This multi-step process ensures robust detection against spoofing attempts.\n\nUnder the hood, MediaPipe FaceMesh tracks 468 facial landmarks in real time directly in the browser. A 128-float descriptor, a mathematical representation of the face, is generated by face-api.js only after all liveness challenges are successfully passed, ensuring no photos reach the server.\n\nThe service is available at faceidentity.site and includes a free tier that supports up to 200 enrollments per month, requiring no credit card to get started.\n\n#FaceLiveness #Biometrics #API #Developers #Security #Tech\n\nSource: DEV",
+  "tweet": "Add robust face liveness detection to any app in just 10 lines of code with FaceID API. It's a free-tier REST API, securing up to 200 enrollments/month. #FaceLiveness #Developers #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "faceidentity.site",
+  "source": "DEV",
+  "url": "https://dev.to/indiesolovibe/add-face-liveness-detection-to-any-app-in-10-lines-of-code-free-tier-available-1h92",
+  "image": "",
+  "orig_title": "Add Face Liveness Detection to Any App in 10 Lines of Code (Free Tier Available)",
+  "cluster_urls": [
+   "https://dev.to/indiesolovibe/add-face-liveness-detection-to-any-app-in-10-lines-of-code-free-tier-available-1h92",
+   "https://dev.to/indiesolovibe/how-i-built-an-enterprise-biometric-api-from-a-0-budget-and-an-android-phone-4ppo"
+  ],
+  "cluster_titles": [
+   "Add Face Liveness Detection to Any App in 10 Lines of Code (Free Tier Available)",
+   "How I Built an Enterprise Biometric API From a $0 Budget and an Android Phone"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-1506-1-add-face-liveness-detection-to-any-app-in-10.png",
+   "20260809-1506-1-add-face-liveness-detection-to-any-app-in-10-d1.png",
+   "20260809-1506-1-add-face-liveness-detection-to-any-app-in-10-d2.png"
+  ]
+ }
+]

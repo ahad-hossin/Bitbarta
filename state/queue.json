@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "micron_ram_return_policy_reversal",
+  "headline_marked": "[[Micron initially offers 37% of market value]] for Crucial RAM warranty, later reverses course",
+  "headline": "Micron initially offers 37% of market value for Crucial RAM warranty, later reverses course",
+  "summary": "Micron faced scrutiny after reportedly offering a customer only 37% of current market value for a faulty Crucial RAM kit. The company later reversed its stance, providing a more favorable replacement.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "Micron, through its now-defunct consumer brand Crucial, had pledged to honor warranties on existing products despite exiting the consumer market. A recent Reddit case highlighted challenges with this process, where a customer was initially offered a significantly undervalued payout for an RMA.",
+   "Redditor Key_Tailor6948 shared their experience with a failing memory module from a 48GB DDR5 kit. Micron allegedly stated they no longer offer replacement products, proposing a refund of $241.86 based on the original purchase price.",
+   "This proposed refund was problematic as it represented only 37% of the current market value for a comparable 48GB DDR5 memory kit, which now starts around $649.99. The original purchase was made before recent memory shortages and price hikes.",
+   "Further frustrations included the requirement to return the entire 48GB kit, even though only one module was faulty, which is a common industry practice. The user also covered shipping costs, a policy that varies among brands.",
+   "Following additional communication, Micron offered a more favorable resolution. The company agreed to send three Crucial Pro DDR5-6400 C32 16GB memory modules, matching the original 48GB capacity and offering better performance.",
+   "Crucial SSD owners are reportedly experiencing similar RMA practices, with Micron allegedly offering gift cards or cash refunds equivalent to original purchase prices for failing SSDs. These offers sometimes include transaction fees for the user.",
+   "Micron wound down its consumer business in December 2025, likely shifting focus to more profitable markets like data centers and AI. This transition may explain the difficulties in maintaining inventory and production lines for direct consumer product replacements."
+  ],
+  "caption": "Micron initially offered a customer just 37% of current market value for a faulty Crucial RAM kit. This sparked a public outcry before the company reversed its decision.\n\nMicron, through its now-defunct consumer brand Crucial, had pledged to honor warranties on existing products despite exiting the consumer market. A recent Reddit case highlighted challenges with this process, where a customer was initially offered a significantly undervalued payout for an RMA.\n\nRedditor Key_Tailor6948 shared their experience with a failing memory module from a 48GB DDR5 kit. Micron allegedly stated they no longer offer replacement products, proposing a refund of $241.86 based on the original purchase price.\n\nThis proposed refund was problematic as it represented only 37% of the current market value for a comparable 48GB DDR5 memory kit, which now starts around $649.99. The original purchase was made before recent memory shortages and price hikes.\n\nFurther frustrations included the requirement to return the entire 48GB kit, even though only one module was faulty, which is a common industry practice. The user also covered shipping costs, a policy that varies among brands.\n\nFollowing additional communication, Micron offered a more favorable resolution. The company agreed to send three Crucial Pro DDR5-6400 C32 16GB memory modules, matching the original 48GB capacity and offering better performance.\n\nCrucial SSD owners are reportedly experiencing similar RMA practices, with Micron allegedly offering gift cards or cash refunds equivalent to original purchase prices for failing SSDs. These offers sometimes include transaction fees for the user.\n\nMicron wound down its consumer business in December 2025, likely shifting focus to more profitable markets like data centers and AI. This transition may explain the difficulties in maintaining inventory and production lines for direct consumer product replacements.\n\n#Micron #Crucial #RAM #Warranty #TechNews #ConsumerRights\n\nSource: Tom's Hardware",
+  "tweet": "Micron initially offered a customer a mere 37% of current market value for a faulty Crucial RAM kit, sparking a warranty dispute. The company later reversed course, providing a better replacement. #Micron #Crucial #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "micron.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/ram/micron-reportedly-offers-pennies-on-the-dollar-for-crucial-ram-return-only-offers-to-reimburse-original-msrp-despite-it-being-only-37-percent-of-market-value-chipmaker-later-reverses-course-with-a-better-solution",
+  "image": "https://cdn.mos.cms.futurecdn.net/Kmba422TadpNgFayHYQVLJ-1280-80.jpg",
+  "orig_title": "Micron reportedly offers pennies on the dollar for Crucial RAM return, only offers to reimburse original MSRP despite it being only 37% of market value — chipmaker later reverses course with a better solution",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/ram/micron-reportedly-offers-pennies-on-the-dollar-for-crucial-ram-return-only-offers-to-reimburse-original-msrp-despite-it-being-only-37-percent-of-market-value-chipmaker-later-reverses-course-with-a-better-solution"
+  ],
+  "cluster_titles": [
+   "Micron reportedly offers pennies on the dollar for Crucial RAM return, only offers to reimburse original MSRP despite it being only 37% of market value — chipmaker later reverses course with a better solution"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260809-1739-0-micron-initially-offers-37-of-market-value-f.png",
+   "20260809-1739-0-micron-initially-offers-37-of-market-value-f-d1.png",
+   "20260809-1739-0-micron-initially-offers-37-of-market-value-f-d2.png",
+   "20260809-1739-0-micron-initially-offers-37-of-market-value-f-d3.png"
+  ]
+ },
+ {
+  "topic": "llm_spend_cap_failure",
+  "headline_marked": "[[Local LLM spend cap failed by 4.2x]] under parallel load, developer finds",
+  "headline": "Local LLM spend cap failed by 4.2x under parallel load, developer finds",
+  "summary": "Provider-level spend caps often fail due to billing lag, leading to huge bills. A developer's attempt to build a robust local cap initially overspent by 4.2x under parallel LLM calls, revealing a common race condition.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Provider-level spending limits for LLM calls are often ineffective, acting more as alerts than true brakes. Documented cases show developers receiving bills over $10,000 despite setting caps, and AWS customers charged over $30,000 for single inference runs without alerts.",
+   "This failure stems from a structural issue: provider caps rely on billing pipelines that lag by minutes to hours. While acceptable for slow-moving resources like EC2 instances, this delay is critical for fast-paced AI agents making parallel tool calls, which can exceed limits before the system registers costs.",
+   "To address this, one developer built a local spend cap using a NODE_OPTIONS hook to patch globalThis.fetch, intercepting LLM API requests and recording costs. Initial sequential tests showed the cap working as expected, blocking calls after a $0.05 limit was reached.",
+   "However, under parallel load, the system failed significantly, allowing 20 calls to complete and spending $0.21 against a $0.05 cap – an overspend of 4.2x. This critical flaw occurred because all parallel requests read the spent=0 state before any had completed and updated the cost.",
+   "The solution involved implementing a \"Reserve, Check, Reconcile\" pattern. This approach immediately reserves a pessimistic worst-case cost for each outgoing request, preventing new calls if the cap is approached. Once the actual response arrives, the reservation is released, and the precise cost is added.",
+   "A crucial detail for the fix's reliability is ensuring the reserve step is synchronous. Using fs.readFileSync and fs.writeFileSync with an atomic swap (fs.renameSync) prevents race conditions by blocking the Node.js event loop during state modification, ensuring no other requests can interleave."
+  ],
+  "caption": "LLM spend caps often fail, leading to bills over $10,000. A developer built a local solution, but it overspent by 4.2x under parallel load.\n\nProvider-level spending limits for LLM calls are often ineffective, acting more as alerts than true brakes. Documented cases show developers receiving bills over $10,000 despite setting caps, and AWS customers charged over $30,000 for single inference runs without alerts.\n\nThis failure stems from a structural issue: provider caps rely on billing pipelines that lag by minutes to hours. While acceptable for slow-moving resources like EC2 instances, this delay is critical for fast-paced AI agents making parallel tool calls, which can exceed limits before the system registers costs.\n\nTo address this, one developer built a local spend cap using a NODE_OPTIONS hook to patch globalThis.fetch, intercepting LLM API requests and recording costs. Initial sequential tests showed the cap working as expected, blocking calls after a $0.05 limit was reached.\n\nHowever, under parallel load, the system failed significantly, allowing 20 calls to complete and spending $0.21 against a $0.05 cap – an overspend of 4.2x. This critical flaw occurred because all parallel requests read the spent=0 state before any had completed and updated the cost.\n\nThe solution involved implementing a \"Reserve, Check, Reconcile\" pattern. This approach immediately reserves a pessimistic worst-case cost for each outgoing request, preventing new calls if the cap is approached. Once the actual response arrives, the reservation is released, and the precise cost is added.\n\nA crucial detail for the fix's reliability is ensuring the reserve step is synchronous. Using fs.readFileSync and fs.writeFileSync with an atomic swap (fs.renameSync) prevents race conditions by blocking the Node.js event loop during state modification, ensuring no other requests can interleave.\n\n#AI #LLM #Developer #Programming #CostManagement #TechDebt\n\nSource: DEV",
+  "tweet": "LLM spend caps are failing, with some devs getting $10k+ bills. One dev built a local cap, but it overspent 4.2x under parallel load due to race conditions. Learn how they fixed it with a synchronous \"Reserve, Check, Reconcile\" pattern. #AI #Developer #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/burnix/i-built-a-spend-cap-for-llm-calls-it-failed-by-42x-under-parallel-load-2h0c",
+  "image": "",
+  "orig_title": "I built a spend cap for LLM calls. It failed by 4.2x under parallel load.",
+  "cluster_urls": [
+   "https://dev.to/burnix/i-built-a-spend-cap-for-llm-calls-it-failed-by-42x-under-parallel-load-2h0c"
+  ],
+  "cluster_titles": [
+   "I built a spend cap for LLM calls. It failed by 4.2x under parallel load."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-1739-1-local-llm-spend-cap-failed-by-4-2x-under-par.png",
+   "20260809-1739-1-local-llm-spend-cap-failed-by-4-2x-under-par-d1.png",
+   "20260809-1739-1-local-llm-spend-cap-failed-by-4-2x-under-par-d2.png",
+   "20260809-1739-1-local-llm-spend-cap-failed-by-4-2x-under-par-d3.png"
+  ]
+ }
+]

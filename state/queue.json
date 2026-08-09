@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_agent_config_rollback_safety",
+  "headline_marked": "[[AI Agent Config Changes]] Can Be More Dangerous Than Code Deploys",
+  "headline": "AI Agent Config Changes Can Be More Dangerous Than Code Deploys",
+  "summary": "A new control plane offers a safer way to manage AI agent configurations, ensuring reversibility and preventing unintended consequences.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "When an AI agent has the ability to send messages, edit code repositories, spend money, or operate a browser, a configuration change can pose a greater risk than a traditional code deployment. Standard rollback procedures are insufficient for these complex systems.",
+   "A configuration revision can alter crucial aspects like tool permissions, model routing, retry behavior, queue limits, browser profiles, or approval rules, even while ongoing operations are in progress. Simply restoring an old file does not undo these side effects and can make reconciling past intents impossible.",
+   "This article introduces a control plane designed to make AI agent configuration changes reversible. It emphasizes immutability by storing each revision with its content digest, schema version, creator, reason, and validation results, preventing in-place mutation of active configurations.",
+   "The running agent should reference a specific revision ID rather than just a parsed object. Every action, from tool calls to side-effect intents, must record this ID. This allows for clear identification of which policy authorized an action during an incident.",
+   "Revisions are promoted in stages after passing deterministic checks. A canary deployment runs a fixed probe with mock credentials and APIs to assert tool names, arguments, policy decisions, and expected side-effect classes, verifying the worker's intended profile and state.",
+   "A critical check occurs just before dispatch: re-reading the active revision and authorization policy. This prevents long-running agents from executing plans based on revoked revisions. At dispatch, the system compares the recorded revision with the current policy, marking intents as STALE if they differ and requiring replanning.",
+   "For mutations, intents are persisted before sending. After a crash, the system reconciles the request key with the provider before retrying, using explicit outcomes like NOT_SENT, SUCCEEDED, FAILED, and UNKNOWN to avoid automatic retries on configuration rollbacks.",
+   "Rollbacks must consider state compatibility. If a new revision writes state that an older revision cannot read, a simple rollback is unsafe. The system should use a compatibility bridge, drain affected work, or restore a state snapshot expected by the older revision, rejecting unsafe rollbacks.",
+   "The goal is not to eliminate configuration mistakes entirely, but to make them bounded, visible, and recoverable. Immutable revisions, staged promotion, dispatch fences, and compatibility checks provide a safer alternative to simply reverting to an old configuration file."
+  ],
+  "caption": "AI agents can change configurations in ways that are more dangerous than code deploys. Learn how to roll them back safely.\n\nWhen an AI agent has the ability to send messages, edit code repositories, spend money, or operate a browser, a configuration change can pose a greater risk than a traditional code deployment. Standard rollback procedures are insufficient for these complex systems.\n\nA configuration revision can alter crucial aspects like tool permissions, model routing, retry behavior, queue limits, browser profiles, or approval rules, even while ongoing operations are in progress. Simply restoring an old file does not undo these side effects and can make reconciling past intents impossible.\n\nThis article introduces a control plane designed to make AI agent configuration changes reversible. It emphasizes immutability by storing each revision with its content digest, schema version, creator, reason, and validation results, preventing in-place mutation of active configurations.\n\nThe running agent should reference a specific revision ID rather than just a parsed object. Every action, from tool calls to side-effect intents, must record this ID. This allows for clear identification of which policy authorized an action during an incident.\n\nRevisions are promoted in stages after passing deterministic checks. A canary deployment runs a fixed probe with mock credentials and APIs to assert tool names, arguments, policy decisions, and expected side-effect classes, verifying the worker's intended profile and state.\n\nA critical check occurs just before dispatch: re-reading the active revision and authorization policy. This prevents long-running agents from executing plans based on revoked revisions. At dispatch, the system compares the recorded revision with the current policy, marking intents as STALE if they differ and requiring replanning.\n\n#TechNews #AI #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "AI agents can alter configurations with significant risks, often more so than code changes. Discover a new control plane that ensures safe, reversible configuration management for AI agents. #AI #DevOps #AIagent",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/zira125/your-ai-agent-changed-its-config-can-you-roll-it-back-safely-4abk",
+  "image": "",
+  "orig_title": "Your AI Agent Changed Its Config. Can You Roll It Back Safely?",
+  "cluster_urls": [
+   "https://dev.to/zira125/your-ai-agent-changed-its-config-can-you-roll-it-back-safely-4abk"
+  ],
+  "cluster_titles": [
+   "Your AI Agent Changed Its Config. Can You Roll It Back Safely?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-0406-0-ai-agent-config-changes-can-be-more-dangerou.png",
+   "20260810-0406-0-ai-agent-config-changes-can-be-more-dangerou-d1.png",
+   "20260810-0406-0-ai-agent-config-changes-can-be-more-dangerou-d2.png",
+   "20260810-0406-0-ai-agent-config-changes-can-be-more-dangerou-d3.png",
+   "20260810-0406-0-ai-agent-config-changes-can-be-more-dangerou-d4.png",
+   "20260810-0406-0-ai-agent-config-changes-can-be-more-dangerou-d5.png"
+  ]
+ },
+ {
+  "topic": "broken_heading_hierarchy_architecture_problem",
+  "headline_marked": "[[Broken heading hierarchy]] is an architecture problem, not markup",
+  "headline": "Broken heading hierarchy is an architecture problem, not markup",
+  "summary": "A recent audit revealed a common accessibility issue on BigCommerce. The fix requires rethinking component architecture, not just retagging headings.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "During a recent BigCommerce remediation, an audit flagged a broken heading hierarchy. Levels were skipped and jumped across the page, disrupting the structure that screen reader users rely on.",
+   "The immediate fix might seem obvious: open each template, retag the headings, and close the finding. However, this approach fails to address the root cause.",
+   "The issue stems from headings being hardcoded into individual templates. A section might render an <h2> simply because its template author chose it, without considering its placement within the overall page structure. This means no single element 'owns' the hierarchy.",
+   "A more robust solution involves creating a reusable heading component. This component wouldn't have an inherent level; its correct level would be determined by its context within the page structure, received as an input.",
+   "Any component that bakes in a fixed heading level is prone to errors when reused or copied. By centralizing heading rendering and passing the level as a contextual input, the hierarchy remains correct regardless of where the component is used.",
+   "This approach distinguishes between merely closing a reported finding and fixing the underlying system that produced it. The accessibility failure was in the markup, but the true solution lies in the architecture."
+  ],
+  "caption": "A broken heading hierarchy isn't just a markup issue; it's a fundamental architecture problem.\n\nDuring a recent BigCommerce remediation, an audit flagged a broken heading hierarchy. Levels were skipped and jumped across the page, disrupting the structure that screen reader users rely on.\n\nThe immediate fix might seem obvious: open each template, retag the headings, and close the finding. However, this approach fails to address the root cause.\n\nThe issue stems from headings being hardcoded into individual templates. A section might render an <h2> simply because its template author chose it, without considering its placement within the overall page structure. This means no single element 'owns' the hierarchy.\n\nA more robust solution involves creating a reusable heading component. This component wouldn't have an inherent level; its correct level would be determined by its context within the page structure, received as an input.\n\nAny component that bakes in a fixed heading level is prone to errors when reused or copied. By centralizing heading rendering and passing the level as a contextual input, the hierarchy remains correct regardless of where the component is used.\n\nThis approach distinguishes between merely closing a reported finding and fixing the underlying system that produced it. The accessibility failure was in the markup, but the true solution lies in the architecture.\n\n#TechNews #Software #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "A broken heading hierarchy is an architecture problem, not markup. Centralizing heading rendering and passing levels contextually ensures consistent accessibility across your site. #webdevelopment #accessibility #devcommunity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/praiztech/a-broken-heading-hierarchy-is-an-architecture-problem-not-a-markup-one-489n",
+  "image": "",
+  "orig_title": "A broken heading hierarchy is an architecture problem, not a markup one",
+  "cluster_urls": [
+   "https://dev.to/praiztech/a-broken-heading-hierarchy-is-an-architecture-problem-not-a-markup-one-489n"
+  ],
+  "cluster_titles": [
+   "A broken heading hierarchy is an architecture problem, not a markup one"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-0406-1-broken-heading-hierarchy-is-an-architecture-.png",
+   "20260810-0406-1-broken-heading-hierarchy-is-an-architecture--d1.png",
+   "20260810-0406-1-broken-heading-hierarchy-is-an-architecture--d2.png"
+  ]
+ }
+]

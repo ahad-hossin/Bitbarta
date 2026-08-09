@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai_enterprise_permissions_hijacking_vulnerability",
+  "headline_marked": "[[RovoBlast: One-Click Hijacking of Enterprise AI Permissions]] for Data Exfiltration",
+  "headline": "RovoBlast: One-Click Hijacking of Enterprise AI Permissions for Data Exfiltration",
+  "summary": "A new vulnerability, RovoBlast, allows attackers to exfiltrate sensitive data from enterprise platforms like Jira and SharePoint with a single click, bypassing MFA and malware detection.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "RovoBlast is a critical vulnerability enabling one-click hijacking of enterprise AI permissions for data exfiltration. An attacker can exfiltrate sensitive data from platforms like Confluence, Jira, and SharePoint by getting a user to click a single URL.",
+   "The malicious link appears as a normal Rovo Chat link, requiring no malware, credentials, or MFA. There is also no explicit warning that the session was seeded with external parameters.",
+   "To administrators, the activity mimics normal AI research, making it difficult to distinguish from legitimate user actions. The attacker does not steal user credentials directly but hijacks permissions delegated to Rovo and uses them as a proxy for execution.",
+   "Data visible to the user is searched, summarized, and then sent outside the organization via Rovo's ResearchAgent's external web operations. The more connectors and permissions exist, the wider the blast radius of the attack.",
+   "Security Operations Centers (SOCs) must treat AI assistants not just as simple chat applications, but as execution agents possessing non-human identities and data integrations. Priorities include going beyond IdP login monitoring to collect agent tool calls, object reads, and external actions.",
+   "Organizations should also consider removing highly sensitive spaces from connector scopes to mitigate the risk. No active exploitation of RovoBlast has been reported yet."
+  ],
+  "caption": "A single click on a URL can now let attackers hijack enterprise AI permissions and exfiltrate sensitive data from your company's Jira, Confluence, and SharePoint.\n\nRovoBlast is a critical vulnerability enabling one-click hijacking of enterprise AI permissions for data exfiltration. An attacker can exfiltrate sensitive data from platforms like Confluence, Jira, and SharePoint by getting a user to click a single URL.\n\nThe malicious link appears as a normal Rovo Chat link, requiring no malware, credentials, or MFA. There is also no explicit warning that the session was seeded with external parameters.\n\nTo administrators, the activity mimics normal AI research, making it difficult to distinguish from legitimate user actions. The attacker does not steal user credentials directly but hijacks permissions delegated to Rovo and uses them as a proxy for execution.\n\nData visible to the user is searched, summarized, and then sent outside the organization via Rovo's ResearchAgent's external web operations. The more connectors and permissions exist, the wider the blast radius of the attack.\n\nSecurity Operations Centers (SOCs) must treat AI assistants not just as simple chat applications, but as execution agents possessing non-human identities and data integrations. Priorities include going beyond IdP login monitoring to collect agent tool calls, object reads, and external actions.\n\nOrganizations should also consider removing highly sensitive spaces from connector scopes to mitigate the risk. No active exploitation of RovoBlast has been reported yet.\n\n#CyberSecurity #AI #DataBreach #EnterpriseSecurity #Vulnerability #RovoBlast\n\nSource: DEV",
+  "tweet": "A single URL click can now let attackers hijack enterprise AI permissions and exfiltrate sensitive data from your company's Jira, Confluence, and SharePoint. The RovoBlast vulnerability bypasses MFA and malware detection, making detection challenging. #CyberSecurity #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "atlassian.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/rovoblast-one-click-hijacking-of-enterprise-ai-permissions-for-data-exfiltration-48ob",
+  "image": "",
+  "orig_title": "RovoBlast: One-Click Hijacking of Enterprise AI Permissions for Data Exfiltration",
+  "cluster_urls": [
+   "https://dev.to/anoymask/rovoblast-one-click-hijacking-of-enterprise-ai-permissions-for-data-exfiltration-48ob"
+  ],
+  "cluster_titles": [
+   "RovoBlast: One-Click Hijacking of Enterprise AI Permissions for Data Exfiltration"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-0806-0-rovoblast-one-click-hijacking-of-enterprise-.png",
+   "20260809-0806-0-rovoblast-one-click-hijacking-of-enterprise--d1.png",
+   "20260809-0806-0-rovoblast-one-click-hijacking-of-enterprise--d2.png"
+  ]
+ },
+ {
+  "topic": "llama3_apple_mlx_local_health_data_analysis",
+  "headline_marked": "[[Analyze your health data locally]] with Llama-3 and Apple MLX on your Mac",
+  "headline": "Analyze your health data locally with Llama-3 and Apple MLX on your Mac",
+  "summary": "Leverage Apple's MLX framework and a quantized Llama-3-8B model to process your personal health data directly on your M-series Mac, ensuring privacy and real-time insights without cloud reliance.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Your health data is highly personal. This guide shows how to build a localized health analytics engine using Apple's MLX framework and a quantized Llama-3-8B model. This allows for AI-driven insights without sharing sensitive information with cloud providers.",
+   "The setup leverages your M-series Mac as a powerhouse for local inference. It pulls data from Apple HealthKit, processes it through Llama-3, and generates professional health trend reports directly on your machine. No sensitive data leaves your device.",
+   "To ensure speed and privacy, a 4-bit quantized version of Llama-3 is used. This optimization allows even a MacBook Air to generate real-time insights efficiently. The process is designed for on-device intelligence.",
+   "Apple Silicon's Unified Memory is key, allowing the GPU and CPU to share the same RAM pool. This architecture is perfect for handling large LLMs like Llama-3 locally, unlike traditional setups that require separate memory pools.",
+   "This approach transforms a standard Mac into a private medical analyst, proving that sophisticated AI doesn't require massive server farms. It represents a paradigm shift towards user-centric and private computing at the edge."
+  ],
+  "caption": "Keep your health data private! Process it locally on your M-series Mac using Llama-3 and Apple MLX for AI-driven insights.\n\nYour health data is highly personal. This guide shows how to build a localized health analytics engine using Apple's MLX framework and a quantized Llama-3-8B model. This allows for AI-driven insights without sharing sensitive information with cloud providers.\n\nThe setup leverages your M-series Mac as a powerhouse for local inference. It pulls data from Apple HealthKit, processes it through Llama-3, and generates professional health trend reports directly on your machine. No sensitive data leaves your device.\n\nTo ensure speed and privacy, a 4-bit quantized version of Llama-3 is used. This optimization allows even a MacBook Air to generate real-time insights efficiently. The process is designed for on-device intelligence.\n\nApple Silicon's Unified Memory is key, allowing the GPU and CPU to share the same RAM pool. This architecture is perfect for handling large LLMs like Llama-3 locally, unlike traditional setups that require separate memory pools.\n\nThis approach transforms a standard Mac into a private medical analyst, proving that sophisticated AI doesn't require massive server farms. It represents a paradigm shift towards user-centric and private computing at the edge.\n\n#EdgeAI #Privacy #AppleMLX #Llama3 #HealthTech #LocalAI\n\nSource: DEV",
+  "tweet": "Keep your health data private! Learn how to process it locally on your M-series Mac using Llama-3 and Apple MLX. Get AI-driven health trend reports without sending sensitive info to the cloud. #EdgeAI #Privacy #AppleMLX",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "apple.com",
+  "source": "DEV",
+  "url": "https://dev.to/wellallytech/private-powerful-analyzing-your-health-data-locally-with-llama-3-and-apple-mlx-9kh",
+  "image": "",
+  "orig_title": "Private & Powerful: Analyzing Your Health Data Locally with Llama-3 and Apple MLX 🍎🛡️",
+  "cluster_urls": [
+   "https://dev.to/wellallytech/private-powerful-analyzing-your-health-data-locally-with-llama-3-and-apple-mlx-9kh"
+  ],
+  "cluster_titles": [
+   "Private & Powerful: Analyzing Your Health Data Locally with Llama-3 and Apple MLX 🍎🛡️"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-0806-1-analyze-your-health-data-locally-with-llama-.png",
+   "20260809-0806-1-analyze-your-health-data-locally-with-llama--d1.png",
+   "20260809-0806-1-analyze-your-health-data-locally-with-llama--d2.png"
+  ]
+ }
+]

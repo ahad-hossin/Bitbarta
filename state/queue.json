@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai_tragedy_of_the_commons",
+  "headline_marked": "[[AI's Tragedy of the Commons]] Threatens Open-Source Models",
+  "headline": "AI's Tragedy of the Commons Threatens Open-Source Models",
+  "summary": "The rapid proliferation of AI models, while beneficial, is straining shared resources and potentially hindering future innovation.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The concept of 'the tragedy of the commons' is increasingly relevant to the AI landscape, particularly concerning open-source models.",
+   "As more powerful AI models are released and utilized, they consume significant computational resources and training data, which are finite.",
+   "This widespread consumption, if unchecked, could lead to a depletion of these essential resources, making it harder for new models to be developed and trained.",
+   "The open-source community thrives on shared resources, but the current trajectory of AI development may challenge this model, potentially slowing down overall progress in the field."
+  ],
+  "caption": "AI's open-source future is at risk. The 'tragedy of the commons' is hitting AI models hard.\n\nThe concept of 'the tragedy of the commons' is increasingly relevant to the AI landscape, particularly concerning open-source models.\n\nAs more powerful AI models are released and utilized, they consume significant computational resources and training data, which are finite.\n\nThis widespread consumption, if unchecked, could lead to a depletion of these essential resources, making it harder for new models to be developed and trained.\n\nThe open-source community thrives on shared resources, but the current trajectory of AI development may challenge this model, potentially slowing down overall progress in the field.\n\n#AI #OpenSource #MachineLearning #TechEthics\n\nSource: Hacker News",
+  "tweet": "AI's open-source future is at risk. The 'tragedy of the commons' is hitting AI models hard, potentially straining shared resources and hindering innovation. #AI #OpenSource #TechEthics",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
+  "image": "",
+  "orig_title": "The tragedy of the commons, AI edition",
+  "cluster_urls": [
+   "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition"
+  ],
+  "cluster_titles": [
+   "The tragedy of the commons, AI edition"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-0306-0-ai-s-tragedy-of-the-commons-threatens-open-s.png",
+   "20260810-0306-0-ai-s-tragedy-of-the-commons-threatens-open-s-d1.png"
+  ]
+ },
+ {
+  "topic": "gdids_deleted_microsoft",
+  "headline_marked": "[[Microsoft GDID]] deletion tool released, blocks new ID minting",
+  "headline": "Microsoft GDID deletion tool released, blocks new ID minting",
+  "summary": "A new open-source tool aims to remove Microsoft's Global Device Identifier (GDID) from Windows systems and prevent the creation of new ones.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A newly released open-source tool, deGDID, offers a method to delete Microsoft's Global Device Identifier (GDID) from Windows installations and block the minting of new identifiers. The GDID is a server-assigned installation identifier that Windows can acquire even with a local account, and it has been linked to tracking user activity.",
+   "The deGDID script is designed for unmanaged personal Windows installations with a single user profile, specifically validated on Windows 11 25H2/build 26200. It works by removing existing GDID state from local stores and continuously blocking the DeviceAdd path, which is responsible for minting new identifiers.",
+   "While the tool aims for complete protection, it's important to note its limitations. It does not claim to block all telemetry or browser privacy channels, nor does it address potential historical records Microsoft may hold. The script's effectiveness is also dependent on system configuration and requires re-running after significant Windows updates or security product changes.",
+   "The project's documentation details the GDID lifecycle and the technical mutations involved. It clarifies that 'ProtectedNoRealGdid' means the supported environment was readable, no real PUID remained, and the DeviceAdd gate was verified. It does not imply that Microsoft has deleted historical data or that unrelated telemetry has ceased.",
+   "The tool is licensed under the MIT License and is provided as-is without warranty. Users are responsible for any changes made to their systems. The developers emphasize that the mutation path is designed for specific configurations and may refuse to run on managed systems or those with multiple user profiles."
+  ],
+  "caption": "A new open-source tool can delete Microsoft's GDID and block new ones from being created on Windows.\n\nA newly released open-source tool, deGDID, offers a method to delete Microsoft's Global Device Identifier (GDID) from Windows installations and block the minting of new identifiers. The GDID is a server-assigned installation identifier that Windows can acquire even with a local account, and it has been linked to tracking user activity.\n\nThe deGDID script is designed for unmanaged personal Windows installations with a single user profile, specifically validated on Windows 11 25H2/build 26200. It works by removing existing GDID state from local stores and continuously blocking the DeviceAdd path, which is responsible for minting new identifiers.\n\nWhile the tool aims for complete protection, it's important to note its limitations. It does not claim to block all telemetry or browser privacy channels, nor does it address potential historical records Microsoft may hold. The script's effectiveness is also dependent on system configuration and requires re-running after significant Windows updates or security product changes.\n\nThe project's documentation details the GDID lifecycle and the technical mutations involved. It clarifies that 'ProtectedNoRealGdid' means the supported environment was readable, no real PUID remained, and the DeviceAdd gate was verified. It does not imply that Microsoft has deleted historical data or that unrelated telemetry has ceased.\n\nThe tool is licensed under the MIT License and is provided as-is without warranty. Users are responsible for any changes made to their systems. The developers emphasize that the mutation path is designed for specific configurations and may refuse to run on managed systems or those with multiple user profiles.\n\n#Windows #GDID #Privacy #CyberSecurity #OpenSource\n\nSource: Hacker News",
+  "tweet": "A new open-source tool, deGDID, deletes Microsoft's GDID and prevents new ones from minting. It's designed for personal Windows installs and aims to enhance user privacy by removing this installation identifier. #Windows #GDID #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Hacker News",
+  "url": "https://github.com/yegors/deGDID",
+  "image": "",
+  "orig_title": "Deletes all instances of Microsoft's GDID and prevents minting of new ones",
+  "cluster_urls": [
+   "https://github.com/yegors/deGDID"
+  ],
+  "cluster_titles": [
+   "Deletes all instances of Microsoft's GDID and prevents minting of new ones"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260810-0306-1-microsoft-gdid-deletion-tool-released-blocks.png",
+   "20260810-0306-1-microsoft-gdid-deletion-tool-released-blocks-d1.png",
+   "20260810-0306-1-microsoft-gdid-deletion-tool-released-blocks-d2.png",
+   "20260810-0306-1-microsoft-gdid-deletion-tool-released-blocks-d3.png"
+  ]
+ }
+]

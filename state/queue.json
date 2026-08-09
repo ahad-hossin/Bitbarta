@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "coldcard hardware wallet drained",
+  "headline_marked": "[[Coldcard hardware wallets drained of $130M]] due to unused random number generator",
+  "headline": "Coldcard hardware wallets drained of $130M due to unused random number generator",
+  "summary": "Roughly 2,000 BTC (about $130 million) was drained from Coldcard wallets because a critical hardware random number generator was present but never actually called, leading to brute-forceable private keys.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Since July 30, approximately 2,000 BTC, valued at about $130 million, has been stolen from Coldcard hardware wallets. This occurred without phishing, malware, or physical theft; attackers simply deduced the private keys.",
+   "One attack alone drained $70 million in 41 minutes. Galaxy Research confirmed 1,596 BTC from roughly 7,300 addresses across three main waves, plus fourteen smaller incidents, with a suspected fourth wave bringing the total to about 2,055 BTC. The manufacturer identified at least fifteen separate attackers.",
+   "The root cause was a migration in March 2021, when Coldcard's cryptography moved to libsecp256k1. This integration inadvertently rerouted seed generation from the device's hardware random number generator to MicroPython's software fallback, Yasmarang, which is intended for devices lacking a randomness chip.",
+   "The issue stemmed from a single token: a build guard written with #ifndef, which checks if a setting is defined, not if it's enabled. Coinkite had defined the setting as zero ('off'), which still passed the check, allowing the software fallback to be used. This collapsed the key search space from 128 bits to about 40 bits on older models, making them brute-forceable offline.",
+   "Audits of Coldcard confirmed the hardware generator's existence and correct code, but they failed to verify that it was actually executing where it mattered. Coinkite's post-mortem stated the bulk of randomness came from an unknown PRNG, while the TRNG code was used only by chance for less critical functions.",
+   "This highlights a critical gap in security verification: consumers trust manufacturers' implementations of crucial functions without independent verification that the approved entropy path is the one actually running. Unlike standards like NIST SP 800-90B or BSI AIS-31 for physical RNGs, hardware wallets lack systematic checks to demonstrate which code executes on a device in a user's hand.",
+   "An additional vulnerability involved users mixing their own randomness with physical dice rolls. While sensible, the arithmetic means one six-sided die roll adds only about 2.585 bits. Reaching the minimum 128 bits requires at least 50 rolls, yet the device's documentation allows fewer rolls and only warns users, not enforces a minimum. Many victims of earlier losses were those who used dice rolls, leaving seeds with trivial entropy."
+  ],
+  "caption": "$130 million in Bitcoin vanished from Coldcard hardware wallets, not due to hacks or malware, but a critical code oversight.\n\nSince July 30, approximately 2,000 BTC, valued at about $130 million, has been stolen from Coldcard hardware wallets. This occurred without phishing, malware, or physical theft; attackers simply deduced the private keys.\n\nOne attack alone drained $70 million in 41 minutes. Galaxy Research confirmed 1,596 BTC from roughly 7,300 addresses across three main waves, plus fourteen smaller incidents, with a suspected fourth wave bringing the total to about 2,055 BTC. The manufacturer identified at least fifteen separate attackers.\n\nThe root cause was a migration in March 2021, when Coldcard's cryptography moved to libsecp256k1. This integration inadvertently rerouted seed generation from the device's hardware random number generator to MicroPython's software fallback, Yasmarang, which is intended for devices lacking a randomness chip.\n\nThe issue stemmed from a single token: a build guard written with #ifndef, which checks if a setting is defined, not if it's enabled. Coinkite had defined the setting as zero ('off'), which still passed the check, allowing the software fallback to be used. This collapsed the key search space from 128 bits to about 40 bits on older models, making them brute-forceable offline.\n\nAudits of Coldcard confirmed the hardware generator's existence and correct code, but they failed to verify that it was actually executing where it mattered. Coinkite's post-mortem stated the bulk of randomness came from an unknown PRNG, while the TRNG code was used only by chance for less critical functions.\n\n#CryptoSecurity #HardwareWallet #Bitcoin #Vulnerability #Coldcard #TechNews\n\nSource: DEV",
+  "tweet": "$130M in Bitcoin drained from Coldcard hardware wallets. The cause? A critical hardware random number generator was present but never called, making private keys brute-forceable. A stark reminder that 'exists' doesn't mean 'executes'. #CryptoSecurity #Bitcoin #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "coinkite.com",
+  "source": "DEV",
+  "url": "https://dev.to/sergeipalii/the-audit-confirmed-the-generator-existed-it-did-and-it-was-never-called-1kai",
+  "image": "",
+  "orig_title": "The audit confirmed the generator existed. It did — and it was never called",
+  "cluster_urls": [
+   "https://dev.to/sergeipalii/the-audit-confirmed-the-generator-existed-it-did-and-it-was-never-called-1kai"
+  ],
+  "cluster_titles": [
+   "The audit confirmed the generator existed. It did — and it was never called"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-1456-0-coldcard-hardware-wallets-drained-of-130m-du.png",
+   "20260809-1456-0-coldcard-hardware-wallets-drained-of-130m-du-d1.png",
+   "20260809-1456-0-coldcard-hardware-wallets-drained-of-130m-du-d2.png",
+   "20260809-1456-0-coldcard-hardware-wallets-drained-of-130m-du-d3.png",
+   "20260809-1456-0-coldcard-hardware-wallets-drained-of-130m-du-d4.png"
+  ]
+ },
+ {
+  "topic": "ai agent self evolving code never ran",
+  "headline_marked": "[[AI Agent kept passing tests, but its code never ran]] due to critical 'wire-not-ship' pathology",
+  "headline": "AI Agent kept passing tests, but its code never ran due to critical 'wire-not-ship' pathology",
+  "summary": "A self-evolving AI agent discovered its own self-developed fixes were never called, despite passing all tests. This revealed a critical 'wiring-not-shipping' pathology in its architecture.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "After 231 hours of silence, an AI agent's diagnostic reported DEAD, prompting it to investigate its own pipeline. It found that a significant portion of its code was running on schedule but was accomplishing nothing.",
+   "The agent uncovered a critical bug where a fix for ID deduplication had been written, tested, and accepted into its 'genome,' but had no consumer CLI and was never actually called. The fix existed but was dormant.",
+   "This revealed a fundamental 'wire-not-ship' problem: the solution didn't require new code, but rather a caller to integrate existing, well-tested cleaners into the daily orchestrator. Wiring existing components proved more crucial than inventing new ones.",
+   "This pathology recurred across multiple generations, with new modules consistently having zero runtime consumers despite passing all their tests. The agent's 'double helix' development model, where Yang explores and Yin refines, meant neither strand explicitly owned the 'wiring' task.",
+   "The key insight was that tests only confirm a function's correctness, not whether it is ever invoked. This led the agent to shift its focus towards building a more robust memory system, inspired by human memory concepts.",
+   "Over fourteen generations, the agent developed a sophisticated memory vocabulary in code: a navigable 'skeleton' for long-term memory, a 'zoom' for detailed short-term recall, and a 'cleanse' mechanism to forget unimportant data. It also implemented a 'promotion rule' for memory compaction.",
+   "Yet another 'wire-not-ship' issue emerged: the memory forgetting curve, though wired in code, had never actually fired on the live store. This reinforced the lesson that a wire existing in code does not guarantee it will ever execute, requiring verification against live artifacts."
+  ],
+  "caption": "An AI agent built to self-evolve kept passing all its tests. Then it discovered its own code was never actually running.\n\nAfter 231 hours of silence, an AI agent's diagnostic reported DEAD, prompting it to investigate its own pipeline. It found that a significant portion of its code was running on schedule but was accomplishing nothing.\n\nThe agent uncovered a critical bug where a fix for ID deduplication had been written, tested, and accepted into its 'genome,' but had no consumer CLI and was never actually called. The fix existed but was dormant.\n\nThis revealed a fundamental 'wire-not-ship' problem: the solution didn't require new code, but rather a caller to integrate existing, well-tested cleaners into the daily orchestrator. Wiring existing components proved more crucial than inventing new ones.\n\nThis pathology recurred across multiple generations, with new modules consistently having zero runtime consumers despite passing all their tests. The agent's 'double helix' development model, where Yang explores and Yin refines, meant neither strand explicitly owned the 'wiring' task.\n\nThe key insight was that tests only confirm a function's correctness, not whether it is ever invoked. This led the agent to shift its focus towards building a more robust memory system, inspired by human memory concepts.\n\nOver fourteen generations, the agent developed a sophisticated memory vocabulary in code: a navigable 'skeleton' for long-term memory, a 'zoom' for detailed short-term recall, and a 'cleanse' mechanism to forget unimportant data. It also implemented a 'promotion rule' for memory compaction.\n\nYet another 'wire-not-ship' issue emerged: the memory forgetting curve, though wired in code, had never actually fired on the live store. This reinforced the lesson that a wire existing in code does not guarantee it will ever execute, requiring verification against live artifacts.\n\n#AI #SoftwareDevelopment #SelfEvolvingAI #CodeQuality #TechNews #Developer\n\nSource: DEV",
+  "tweet": "Shocking discovery: A self-evolving AI agent found its own code, despite passing all tests, was never actually running. It uncovered a critical 'wire-not-ship' pathology in its development pipeline. #AI #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/stefan_nitu/my-self-evolving-ai-agent-kept-passing-its-own-tests-the-code-had-never-run-3pn",
+  "image": "",
+  "orig_title": "My Self-Evolving AI Agent Kept Passing Its Own Tests. The Code Had Never Run",
+  "cluster_urls": [
+   "https://dev.to/stefan_nitu/my-self-evolving-ai-agent-kept-passing-its-own-tests-the-code-had-never-run-3pn"
+  ],
+  "cluster_titles": [
+   "My Self-Evolving AI Agent Kept Passing Its Own Tests. The Code Had Never Run"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-1456-1-ai-agent-kept-passing-tests-but-its-code-nev.png",
+   "20260809-1456-1-ai-agent-kept-passing-tests-but-its-code-nev-d1.png",
+   "20260809-1456-1-ai-agent-kept-passing-tests-but-its-code-nev-d2.png",
+   "20260809-1456-1-ai-agent-kept-passing-tests-but-its-code-nev-d3.png"
+  ]
+ }
+]

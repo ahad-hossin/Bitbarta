@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "illinois_os_age_reporting_law",
+  "headline_marked": "Illinois [[requires OS to report kids' age]] for new safety settings by 2028",
+  "headline": "Illinois requires OS to report kids' age for new safety settings by 2028",
+  "summary": "Illinois's new Children's Online Social Media Safety Act mandates device makers and OS providers to implement an age verification interface by January 2028, categorizing users into four age brackets.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Illinois has enacted HB5511, the Children's Online Social Media Safety Act, which mandates age verification for all devices sold or used in the state. This new framework applies to device makers, operating system providers, and app stores.",
+   "By January 1, 2028, these \"covered manufacturers\" must integrate an interface at account setup to collect a child's birth date. This date will then be converted into one of four age brackets: under 13, 13-15, 16-17, or 18 and up.",
+   "Applications can access this age bracket via an API upon download or launch. If a user is flagged as a minor, apps are legally deemed to have \"actual knowledge\" and must activate specific safety settings.",
+   "These mandatory safety features include restricted feeds, hidden profiles from adult strangers, blocked messages from adults, masked precise location, and a notification blackout from 10 PM to 7 AM. Parents can override these defaults, as can minors over 16.",
+   "Apps have until July 1, 2028, to begin requesting these age signals. Violations of the act can result in fines of up to $50,000 per instance, enforced by the state Attorney General.",
+   "Unlike similar laws in Colorado and California, which added exemptions for open-source platforms, Illinois's HB5511 contains no such concessions. Its definitions for \"covered manufacturer\" and \"application store\" remain broadly inclusive."
+  ],
+  "caption": "Illinois just passed a law making operating systems report a user's age to apps. This new age verification framework impacts all devices and app stores in the state.\n\nIllinois has enacted HB5511, the Children's Online Social Media Safety Act, which mandates age verification for all devices sold or used in the state. This new framework applies to device makers, operating system providers, and app stores.\n\nBy January 1, 2028, these \"covered manufacturers\" must integrate an interface at account setup to collect a child's birth date. This date will then be converted into one of four age brackets: under 13, 13-15, 16-17, or 18 and up.\n\nApplications can access this age bracket via an API upon download or launch. If a user is flagged as a minor, apps are legally deemed to have \"actual knowledge\" and must activate specific safety settings.\n\nThese mandatory safety features include restricted feeds, hidden profiles from adult strangers, blocked messages from adults, masked precise location, and a notification blackout from 10 PM to 7 AM. Parents can override these defaults, as can minors over 16.\n\nApps have until July 1, 2028, to begin requesting these age signals. Violations of the act can result in fines of up to $50,000 per instance, enforced by the state Attorney General.\n\nUnlike similar laws in Colorado and California, which added exemptions for open-source platforms, Illinois's HB5511 contains no such concessions. Its definitions for \"covered manufacturer\" and \"application store\" remain broadly inclusive.\n\n#IllinoisTech #AgeVerification #OnlineSafety #TechPolicy #Software #Privacy\n\nSource: Hacker News",
+  "tweet": "Illinois's new law mandates OS to report user age to apps by 2028 for child safety. Device makers & app stores must implement age verification, triggering strict privacy settings for minors. #IllinoisTech #OnlineSafety #TechPolicy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://itsfoss.com/news/illinois-age-verification-bill/",
+  "image": "",
+  "orig_title": "Illinois Just Told Every Operating System to Start Reporting Your Kid's Age",
+  "cluster_urls": [
+   "https://itsfoss.com/news/illinois-age-verification-bill/"
+  ],
+  "cluster_titles": [
+   "Illinois Just Told Every Operating System to Start Reporting Your Kid's Age"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260809-1154-0-illinois-requires-os-to-report-kids-age-for-.png",
+   "20260809-1154-0-illinois-requires-os-to-report-kids-age-for--d1.png",
+   "20260809-1154-0-illinois-requires-os-to-report-kids-age-for--d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_ux_review_productivity",
+  "headline_marked": "[[AI agent slashes Flutter UX review cycles by 30%]] for developers, boosting app quality",
+  "headline": "AI agent slashes Flutter UX review cycles by 30% for developers, boosting app quality",
+  "summary": "The AI agent tackles repetitive visual checks that human reviewers miss, catching UX inconsistencies and forgotten details before they reach designers or PMs. This significantly improves Flutter app quality and efficiency.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Developers often face late UX feedback on visual inconsistencies like missing empty states or off-brand colors. A custom AI agent has been developed to catch these issues early, slashing initial review cycles by 30% on Flutter projects and significantly improving app quality.",
+   "Traditional static analysis tools focus on code, not what users actually see. Human reviewers, while essential, struggle with the scale and repetitive nature of visual consistency checks, leading to overlooked details that surface late in the development process.",
+   "This AI agent doesn't replace designers or PMs. Instead, it automates mundane visual checks, freeing human experts to focus on higher-level strategic UX decisions, interaction flows, and overall product vision, making their review process more impactful.",
+   "The approach involves a multi-step pipeline combining visual AI with custom rule sets. It targets specific elements like empty states, button border radii, text colors, and the presence of crucial product data, which are visually obvious to humans but invisible to linters.",
+   "A key finding was that feeding only screenshots to LLMs resulted in vague feedback. Providing both the image and contextual code snippets, such as a simplified widget tree or relevant build method, significantly boosted the AI's accuracy and specificity.",
+   "This combined approach allows the AI to cross-reference visual cues with code intent. For example, when checking for empty states, providing the ListView.builder code alongside the screenshot helps the AI confirm the absence or presence of specific widgets."
+  ],
+  "caption": "A custom AI agent is cutting Flutter UX review cycles by 30%.\n\nDevelopers often face late UX feedback on visual inconsistencies like missing empty states or off-brand colors. A custom AI agent has been developed to catch these issues early, slashing initial review cycles by 30% on Flutter projects and significantly improving app quality.\n\nTraditional static analysis tools focus on code, not what users actually see. Human reviewers, while essential, struggle with the scale and repetitive nature of visual consistency checks, leading to overlooked details that surface late in the development process.\n\nThis AI agent doesn't replace designers or PMs. Instead, it automates mundane visual checks, freeing human experts to focus on higher-level strategic UX decisions, interaction flows, and overall product vision, making their review process more impactful.\n\nThe approach involves a multi-step pipeline combining visual AI with custom rule sets. It targets specific elements like empty states, button border radii, text colors, and the presence of crucial product data, which are visually obvious to humans but invisible to linters.\n\nA key finding was that feeding only screenshots to LLMs resulted in vague feedback. Providing both the image and contextual code snippets, such as a simplified widget tree or relevant build method, significantly boosted the AI's accuracy and specificity.\n\nThis combined approach allows the AI to cross-reference visual cues with code intent. For example, when checking for empty states, providing the ListView.builder code alongside the screenshot helps the AI confirm the absence or presence of specific widgets.\n\n#AI #Flutter #UX #DeveloperTools #SoftwareDevelopment #Tech\n\nSource: DEV",
+  "tweet": "A custom AI agent is cutting Flutter UX review cycles by 30%, catching visual inconsistencies before human reviewers. This boosts app quality & frees up designers for strategic work. #AI #Flutter #UX",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/umair24171/how-i-cut-ux-review-cycles-30-with-an-ai-agent-ai-agent-ux-review-flutter-14pm",
+  "image": "",
+  "orig_title": "How I Cut UX Review Cycles 30% with an AI Agent: ai agent ux review flutter",
+  "cluster_urls": [
+   "https://dev.to/umair24171/how-i-cut-ux-review-cycles-30-with-an-ai-agent-ai-agent-ux-review-flutter-14pm"
+  ],
+  "cluster_titles": [
+   "How I Cut UX Review Cycles 30% with an AI Agent: ai agent ux review flutter"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-1154-1-ai-agent-slashes-flutter-ux-review-cycles-by.png",
+   "20260809-1154-1-ai-agent-slashes-flutter-ux-review-cycles-by-d1.png",
+   "20260809-1154-1-ai-agent-slashes-flutter-ux-review-cycles-by-d2.png",
+   "20260809-1154-1-ai-agent-slashes-flutter-ux-review-cycles-by-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "chatgpt_blocks_style_copying",
+  "headline_marked": "[[ChatGPT blocks direct requests to copy an author's style]]",
+  "headline": "ChatGPT blocks direct requests to copy an author's style",
+  "summary": "OpenAI's popular LLM now refuses to generate text that directly mimics famous authors, instead offering responses that draw on 'broad qualities' while remaining distinct. This change has legal implications and impacts users who relied on the feature.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "OpenAI's ChatGPT is now refusing requests to generate text that directly mimics the style of famous authors. Instead, the popular LLM offers a response that draws on the 'broad qualities' of those authors while remaining distinct in its own voice. For example, a request for a story in Stephen King's style resulted in a refusal to imitate his exact voice, offering an original opening with a similar feeling.",
+   "This new behavior applies to both living authors like J.K. Rowling and deceased ones like Charles Dickens, a finding that contradicts an earlier study. George Washington University Law School Professor Robert Brauneis notes the significant legal implications, as AI allows personal styles to be imitated well and inexpensively.",
+   "The ability of LLMs to mimic styles has led to public issues, such as author Lena McDonald's book containing an apparent AI-generated passage mimicking another writer. Numerous academic studies have analyzed LLMs' capabilities in style imitation, both with and without fine-tuning.",
+   "Not all major LLMs handle these requests uniformly. Google's Gemini consistently complies with style-copying requests, while Perplexity AI's models consistently refuse them, similar to ChatGPT. Anthropic's Claude and Microsoft's Copilot comply but include qualifications, suggesting an awareness of the imitation issue.",
+   "For some longtime OpenAI users, these changes are already causing frustration. Reddit users have expressed difficulty in achieving desired outputs and are seeking workarounds to bypass the new stylistic restrictions."
+  ],
+  "caption": "OpenAI's ChatGPT is now refusing requests to generate text in the exact style of famous authors. It will only offer 'broad qualities' while keeping its own voice.\n\nOpenAI's ChatGPT is now refusing requests to generate text that directly mimics the style of famous authors. Instead, the popular LLM offers a response that draws on the 'broad qualities' of those authors while remaining distinct in its own voice. For example, a request for a story in Stephen King's style resulted in a refusal to imitate his exact voice, offering an original opening with a similar feeling.\n\nThis new behavior applies to both living authors like J.K. Rowling and deceased ones like Charles Dickens, a finding that contradicts an earlier study. George Washington University Law School Professor Robert Brauneis notes the significant legal implications, as AI allows personal styles to be imitated well and inexpensively.\n\nThe ability of LLMs to mimic styles has led to public issues, such as author Lena McDonald's book containing an apparent AI-generated passage mimicking another writer. Numerous academic studies have analyzed LLMs' capabilities in style imitation, both with and without fine-tuning.\n\nNot all major LLMs handle these requests uniformly. Google's Gemini consistently complies with style-copying requests, while Perplexity AI's models consistently refuse them, similar to ChatGPT. Anthropic's Claude and Microsoft's Copilot comply but include qualifications, suggesting an awareness of the imitation issue.\n\nFor some longtime OpenAI users, these changes are already causing frustration. Reddit users have expressed difficulty in achieving desired outputs and are seeking workarounds to bypass the new stylistic restrictions.\n\n#AI #ChatGPT #OpenAI #LLM #TechNews #Copyright\n\nSource: Hacker News",
+  "tweet": "OpenAI's ChatGPT now blocks direct requests to mimic famous authors' writing styles. Instead, it offers text based on 'broad qualities' in its own voice. This change has significant legal implications for AI-generated content. #AI #ChatGPT #OpenAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Hacker News",
+  "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
+  "image": "",
+  "orig_title": "ChatGPT starts blocking direct requests to copy an author's style",
+  "cluster_urls": [
+   "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/"
+  ],
+  "cluster_titles": [
+   "ChatGPT starts blocking direct requests to copy an author's style"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260809-1006-0-chatgpt-blocks-direct-requests-to-copy-an-au.png",
+   "20260809-1006-0-chatgpt-blocks-direct-requests-to-copy-an-au-d1.png",
+   "20260809-1006-0-chatgpt-blocks-direct-requests-to-copy-an-au-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_automates_job_search_claude_code",
+  "headline_marked": "[[Automate your job search]] using custom Claude Code skills",
+  "headline": "Automate your job search using custom Claude Code skills",
+  "summary": "The article details two custom Claude Code skills: one to score job listings against your profile and another to refine your resume based on frequently cited strengths across applications. These tools streamline the job hunt by providing actionable insights an",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Facing common job search challenges like time-consuming listing evaluation and resume drift, one developer built two custom Claude Code skills. These skills, /score-job and /resume-sharpener, are designed to work in tandem to streamline the application process and provide actionable insights.",
+   "The /score-job skill takes a job description (JD) as input and evaluates it against multiple personal source files, including various resumes, a profile, skills inventory, and disqualifier filters. It re-reads these files for each run, ensuring up-to-date analysis without caching.",
+   "Its output is a structured scorecard, rating the JD on factors like seniority, domain fit, and technical depth out of 10. A crucial 'Ideal Candidate Bar' section forces the model to define the target candidate before scoring, maintaining objective evaluation.",
+   "Beyond scoring, the output includes actionable sections: matched/gap requirements, top strengths, honest gap assessments, 3-5 tailored resume bullets, a two-sentence cover letter hook, red flags, and a recommended next action. For pivot roles like FDE, it scores twice to show both current and aspirational fit.",
+   "The /resume-sharpener skill analyzes all previously scored job listings alongside the base resumes. It identifies frequently cited strengths and bullet patterns across unrelated roles, filtering against overfitting to single job descriptions.",
+   "This skill generates a structured draft document, organized per resume, indicating how many listings each bullet pattern came from. This draft is written to Google Drive for human review, allowing the user to mark items as KEEP, MODIFY, or SKIP.",
+   "Only after explicit human approval does the skill edit the actual resume files with the approved text. This two-step gate ensures no autonomous resume rewrites, maintaining user control over the final document."
+  ],
+  "caption": "Automate your job search with AI! Discover how custom Claude Code skills can score job listings and sharpen your resume, saving you hours.\n\nFacing common job search challenges like time-consuming listing evaluation and resume drift, one developer built two custom Claude Code skills. These skills, /score-job and /resume-sharpener, are designed to work in tandem to streamline the application process and provide actionable insights.\n\nThe /score-job skill takes a job description (JD) as input and evaluates it against multiple personal source files, including various resumes, a profile, skills inventory, and disqualifier filters. It re-reads these files for each run, ensuring up-to-date analysis without caching.\n\nIts output is a structured scorecard, rating the JD on factors like seniority, domain fit, and technical depth out of 10. A crucial 'Ideal Candidate Bar' section forces the model to define the target candidate before scoring, maintaining objective evaluation.\n\nBeyond scoring, the output includes actionable sections: matched/gap requirements, top strengths, honest gap assessments, 3-5 tailored resume bullets, a two-sentence cover letter hook, red flags, and a recommended next action. For pivot roles like FDE, it scores twice to show both current and aspirational fit.\n\nThe /resume-sharpener skill analyzes all previously scored job listings alongside the base resumes. It identifies frequently cited strengths and bullet patterns across unrelated roles, filtering against overfitting to single job descriptions.\n\nThis skill generates a structured draft document, organized per resume, indicating how many listings each bullet pattern came from. This draft is written to Google Drive for human review, allowing the user to mark items as KEEP, MODIFY, or SKIP.\n\nOnly after explicit human approval does the skill edit the actual resume files with the approved text. This two-step gate ensures no autonomous resume rewrites, maintaining user control over the final document.\n\n#JobSearch #AI #ClaudeCode #DeveloperTools #CareerTech #Automation\n\nSource: DEV",
+  "tweet": "Struggling with job applications? Learn how custom Claude Code skills can automate your job search. Get job listing scorecards, tailored resume bullets, and identify key strengths across roles. A game-changer for efficiency! #JobSearch #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/smabernat/two-skills-i-built-to-automate-my-job-search-with-claude-code-1pcn",
+  "image": "",
+  "orig_title": "Two Skills I Built to Automate My Job Search with Claude Code",
+  "cluster_urls": [
+   "https://dev.to/smabernat/two-skills-i-built-to-automate-my-job-search-with-claude-code-1pcn"
+  ],
+  "cluster_titles": [
+   "Two Skills I Built to Automate My Job Search with Claude Code"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260809-1006-1-automate-your-job-search-using-custom-claude.png",
+   "20260809-1006-1-automate-your-job-search-using-custom-claude-d1.png",
+   "20260809-1006-1-automate-your-job-search-using-custom-claude-d2.png",
+   "20260809-1006-1-automate-your-job-search-using-custom-claude-d3.png"
+  ]
+ }
+]

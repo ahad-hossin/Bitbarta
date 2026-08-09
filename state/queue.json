@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "claude_code_agent_directory_enforcement",
+  "headline_marked": "[[Pasting Figma Screenshots]] into Claude fails; use this instead",
+  "headline": "Pasting Figma Screenshots into Claude fails; use this instead",
+  "summary": "Screenshots flatten crucial design data, leading LLMs to guess layout and semantics. A structured export offers a better alternative for AI code generation.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many design-to-code teams export Figma frames as PNGs and paste them into LLMs like Claude or Cursor, expecting them to build the UI. While this method feels productive, it's fundamentally flawed because a screenshot is the worst possible representation of a Figma design for an AI to interpret.",
+   "The core issue is that screenshots flatten the structured data within a Figma file into a grid of pixels. An LLM sees shapes and colors, not the underlying layout intent like auto-layout groups, component instances, or text layers. This forces the AI to infer structure, which is a lossy process.",
+   "This inference leads to semantic errors. The LLM might reconstruct a layout that looks visually correct but is semantically wrong, such as using fixed-width divs instead of flex children or absolute positioning instead of auto-layout. These inconsistencies can change between generations, making reliable code output impossible.",
+   "Furthermore, crucial semantic information like component names, variant properties, and node kinds is lost. A 'Button/Primary/Large' component becomes just a rounded rectangle with a label. The LLM might guess 'button' correctly but struggle with specific variants or states, leading to mismatches with the design system.",
+   "Spacing and typography are also poorly handled. Without access to Figma's design tokens, an LLM can only guess at padding values or font sizes, often resulting in hardcoded literals that deviate from the intended design system and will drift over time.",
+   "The solution proposed is to use a structured export format, like figmascope's context bundle. This bundle includes typed intermediate representation (IR), design tokens, component inventory, and UI strings, allowing the AI to reason about the design accurately rather than guess from pixels.",
+   "This structured data preserves the relationships between design elements, such as component reusability and semantic meaning. It allows the LLM to understand that multiple visually similar elements are instances of the same component, leading to more maintainable and accurate code generation."
+  ],
+  "caption": "Why are LLMs failing to build UIs from your Figma screenshots? It's not the AI, it's the input.\n\nMany design-to-code teams export Figma frames as PNGs and paste them into LLMs like Claude or Cursor, expecting them to build the UI. While this method feels productive, it's fundamentally flawed because a screenshot is the worst possible representation of a Figma design for an AI to interpret.\n\nThe core issue is that screenshots flatten the structured data within a Figma file into a grid of pixels. An LLM sees shapes and colors, not the underlying layout intent like auto-layout groups, component instances, or text layers. This forces the AI to infer structure, which is a lossy process.\n\nThis inference leads to semantic errors. The LLM might reconstruct a layout that looks visually correct but is semantically wrong, such as using fixed-width divs instead of flex children or absolute positioning instead of auto-layout. These inconsistencies can change between generations, making reliable code output impossible.\n\nFurthermore, crucial semantic information like component names, variant properties, and node kinds is lost. A 'Button/Primary/Large' component becomes just a rounded rectangle with a label. The LLM might guess 'button' correctly but struggle with specific variants or states, leading to mismatches with the design system.\n\nSpacing and typography are also poorly handled. Without access to Figma's design tokens, an LLM can only guess at padding values or font sizes, often resulting in hardcoded literals that deviate from the intended design system and will drift over time.\n\nThe solution proposed is to use a structured export format, like figmascope's context bundle. This bundle includes typed intermediate representation (IR), design tokens, component inventory, and UI strings, allowing the AI to reason about the design accurately rather than guess from pixels.\n\n#AI #Figma #LLM #DevTools #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Pasting Figma screenshots into LLMs like Claude for code generation is failing. The issue isn't the AI, but the input format. Screenshots flatten crucial design data, forcing AI to guess. A structured export offers a better solution. #AI #Figma #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/romantsisyk/why-pasting-figma-screenshots-into-claude-fails-and-what-to-use-instead-46d0",
+  "image": "",
+  "orig_title": "Why Pasting Figma Screenshots into Claude Fails (And What to Use Instead)",
+  "cluster_urls": [
+   "https://dev.to/romantsisyk/why-pasting-figma-screenshots-into-claude-fails-and-what-to-use-instead-46d0",
+   "https://dev.to/fewparts/how-to-stop-a-claude-code-agent-writing-outside-a-directory-253p"
+  ],
+  "cluster_titles": [
+   "Why Pasting Figma Screenshots into Claude Fails (And What to Use Instead)",
+   "How to stop a Claude Code agent writing outside a directory"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-0442-0-pasting-figma-screenshots-into-claude-fails-.png",
+   "20260810-0442-0-pasting-figma-screenshots-into-claude-fails--d1.png",
+   "20260810-0442-0-pasting-figma-screenshots-into-claude-fails--d2.png",
+   "20260810-0442-0-pasting-figma-screenshots-into-claude-fails--d3.png",
+   "20260810-0442-0-pasting-figma-screenshots-into-claude-fails--d4.png"
+  ]
+ },
+ {
+  "topic": "google_photos_vs_immich_android_limitations",
+  "headline_marked": "[[Leaving Google Photos]] made accessing my library harder on Android",
+  "headline": "Leaving Google Photos made accessing my library harder on Android",
+  "summary": "Deep integration with Android's Photo Picker, Google Messages, and Gemini means switching away from Google Photos creates significant usability issues.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "After years of using Google Photos, one user decided to switch to Immich, a self-hosted alternative, seeking greater control over their extensive photo library. The initial transition seemed successful, with Immich offering a viable app interface for managing media.",
+   "However, the user soon discovered that leaving Google Photos deeply impacted their Android experience. The Android Photo Picker, which unifies local and cloud storage for easy app access, relies heavily on Google Photos integration.",
+   "Without Google Photos as the primary provider, Immich's library doesn't surface in the Photo Picker. This means photos not stored locally on the device are inaccessible when trying to upload them to other apps, forcing a cumbersome workaround.",
+   "The issue extends beyond the Photo Picker. Inserting images in Google Messages also utilizes a similar inline picker that defaults to Google Photos. Furthermore, AI tools like Gemini leverage Google Photos integration to quickly retrieve specific images from a user's library.",
+   "While Immich offers its own search and organization features, these are confined within the app. The seamless integration of Google Photos across various Android functionalities, from app uploads to AI assistance, makes leaving the service a significant usability downgrade."
+  ],
+  "caption": "I tried leaving Google Photos for a self-hosted alternative, but Android made me come back. Here's why.\n\nAfter years of using Google Photos, one user decided to switch to Immich, a self-hosted alternative, seeking greater control over their extensive photo library. The initial transition seemed successful, with Immich offering a viable app interface for managing media.\n\nHowever, the user soon discovered that leaving Google Photos deeply impacted their Android experience. The Android Photo Picker, which unifies local and cloud storage for easy app access, relies heavily on Google Photos integration.\n\nWithout Google Photos as the primary provider, Immich's library doesn't surface in the Photo Picker. This means photos not stored locally on the device are inaccessible when trying to upload them to other apps, forcing a cumbersome workaround.\n\nThe issue extends beyond the Photo Picker. Inserting images in Google Messages also utilizes a similar inline picker that defaults to Google Photos. Furthermore, AI tools like Gemini leverage Google Photos integration to quickly retrieve specific images from a user's library.\n\nWhile Immich offers its own search and organization features, these are confined within the app. The seamless integration of Google Photos across various Android functionalities, from app uploads to AI assistance, makes leaving the service a significant usability downgrade.\n\n#Android #GooglePhotos #Tech #Software #Mobile\n\nSource: Android Police",
+  "tweet": "I tried leaving Google Photos for a self-hosted alternative, but Android made me come back. Deep integration with the Photo Picker, Google Messages, and Gemini makes switching away a usability nightmare. #Android #GooglePhotos",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/i-left-google-photos-immich-but-android-made-me-come-back/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/08/android-immich.png",
+  "orig_title": "I left Google Photos for Immich, but Android made me come back",
+  "cluster_urls": [
+   "https://www.androidpolice.com/i-left-google-photos-immich-but-android-made-me-come-back/",
+   "https://www.androidpolice.com/i-thought-i-knew-my-commute-until-google-maps-proved-me-wrong/"
+  ],
+  "cluster_titles": [
+   "I left Google Photos for Immich, but Android made me come back",
+   "My morning commute is less stressful thanks to these underrated Google Maps features"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260810-0442-1-leaving-google-photos-made-accessing-my-libr.png",
+   "20260810-0442-1-leaving-google-photos-made-accessing-my-libr-d1.png",
+   "20260810-0442-1-leaving-google-photos-made-accessing-my-libr-d2.png"
+  ]
+ }
+]

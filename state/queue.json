@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai agent skill security and design",
+  "headline_marked": "[[Structured Context]] is Key for AI Coding Agents, Not Pixel Data",
+  "headline": "Structured Context is Key for AI Coding Agents, Not Pixel Data",
+  "summary": "AI coding agents are hitting a bottleneck not in capability, but in the quality of context they receive. Learn why structured data beats pixel context for reliable code generation.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI-assisted development is increasingly limited by the quality of context provided to models, rather than the models' inherent capabilities. While vision-capable LLMs can process pixel data like screenshots impressively well, recognizing UI patterns and generating plausible code, this approach suffers from irreversible information loss.",
+   "Pixel context, such as PNG exports from Figma, discards crucial semantic information. This includes the layer tree structure, token bindings (like color references), component identity, and layout intent. The AI agent must reconstruct this information visually, leading to approximate and often incorrect outputs.",
+   "Structured context, conversely, provides a typed, machine-readable representation that preserves the design's semantics. This includes explicit design trees with node kinds, names, bounding boxes, and resolved token references, ensuring the agent understands 'what a design means' rather than just 'what it looks like'.",
+   "The core failure of pixel context is that it leads to generated code that doesn't compose well. Hardcoded values, incorrect component structures, and ambiguous layouts result from the AI's visual inference. This necessitates extensive manual editing and prevents outputs from composing across different screens.",
+   "Using structured context, such as exported IR (Intermediate Representation) from tools like figmascope, allows AI agents to generate code that uses correct token names, component structures, and layout conventions. This leads to more predictable and composable outputs, streamlining the development workflow.",
+   "The primary gain from structured context is composability, enabling generated code to integrate seamlessly across different screens and components. This contrasts sharply with the probabilistic outputs derived from pixel context, which often require significant rework and do not integrate well."
+  ],
+  "caption": "AI coding agents are struggling with context. Pixel data alone isn't enough; structured context is the key to reliable code generation.\n\nAI-assisted development is increasingly limited by the quality of context provided to models, rather than the models' inherent capabilities. While vision-capable LLMs can process pixel data like screenshots impressively well, recognizing UI patterns and generating plausible code, this approach suffers from irreversible information loss.\n\nPixel context, such as PNG exports from Figma, discards crucial semantic information. This includes the layer tree structure, token bindings (like color references), component identity, and layout intent. The AI agent must reconstruct this information visually, leading to approximate and often incorrect outputs.\n\nStructured context, conversely, provides a typed, machine-readable representation that preserves the design's semantics. This includes explicit design trees with node kinds, names, bounding boxes, and resolved token references, ensuring the agent understands 'what a design means' rather than just 'what it looks like'.\n\nThe core failure of pixel context is that it leads to generated code that doesn't compose well. Hardcoded values, incorrect component structures, and ambiguous layouts result from the AI's visual inference. This necessitates extensive manual editing and prevents outputs from composing across different screens.\n\nUsing structured context, such as exported IR (Intermediate Representation) from tools like figmascope, allows AI agents to generate code that uses correct token names, component structures, and layout conventions. This leads to more predictable and composable outputs, streamlining the development workflow.\n\nThe primary gain from structured context is composability, enabling generated code to integrate seamlessly across different screens and components. This contrasts sharply with the probabilistic outputs derived from pixel context, which often require significant rework and do not integrate well.\n\n#AI #Coding #LLM #DeveloperTools #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "AI coding agents hit a context bottleneck. Pixel data alone leads to irreversible info loss. Structured context is crucial for reliable, composable code. Learn why: [[Structured Context]] is Key for AI Coding Agents, Not Pixel Data #AI #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/romantsisyk/structured-context-vs-pixel-context-what-coding-agents-actually-need-4fl8",
+  "image": "",
+  "orig_title": "Structured Context vs Pixel Context: What Coding Agents Actually Need",
+  "cluster_urls": [
+   "https://dev.to/romantsisyk/structured-context-vs-pixel-context-what-coding-agents-actually-need-4fl8",
+   "https://dev.to/gde/from-threat-model-to-framework-closing-the-real-gaps-in-agent-skill-security-7m8",
+   "https://dev.to/loopandretry/designing-tools-an-llm-wont-misuse-49c3",
+   "https://dev.to/loopandretry/debugging-a-failed-agent-run-costs-more-than-the-run-itself-4ll4"
+  ],
+  "cluster_titles": [
+   "Structured Context vs Pixel Context: What Coding Agents Actually Need",
+   "From Threat Model to Framework: Closing the Real Gaps in Agent Skill Security",
+   "Designing tools an LLM won't misuse",
+   "Debugging a failed agent run costs more than the run itself"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-0506-0-structured-context-is-key-for-ai-coding-agen.png",
+   "20260810-0506-0-structured-context-is-key-for-ai-coding-agen-d1.png",
+   "20260810-0506-0-structured-context-is-key-for-ai-coding-agen-d2.png",
+   "20260810-0506-0-structured-context-is-key-for-ai-coding-agen-d3.png"
+  ]
+ },
+ {
+  "topic": "the hacker's renaissance and ideological shifts",
+  "headline_marked": "[[The Hacker's Renaissance]] emerges as a new era for cyber-ideology",
+  "headline": "The Hacker's Renaissance emerges as a new era for cyber-ideology",
+  "summary": "A new perspective suggests a shift in hacker motivations and community dynamics, moving beyond traditional motivations.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The concept of a \"Hacker's Renaissance\" is being discussed, proposing a significant evolution in the motivations and ideologies driving the hacker community.",
+   "This perspective suggests a move away from purely technical or financially driven activities towards more complex, perhaps even philosophical, drivers.",
+   "The discussion touches upon how these shifts might redefine the landscape of cybersecurity and online culture in the coming years.",
+   "It implies a potential broadening of what it means to be a hacker, encompassing new forms of digital exploration and influence."
+  ],
+  "caption": "Is the hacker community entering a new ideological era? The \"Hacker's Renaissance\" suggests a profound shift in motivations.\n\nThe concept of a \"Hacker's Renaissance\" is being discussed, proposing a significant evolution in the motivations and ideologies driving the hacker community.\n\nThis perspective suggests a move away from purely technical or financially driven activities towards more complex, perhaps even philosophical, drivers.\n\nThe discussion touches upon how these shifts might redefine the landscape of cybersecurity and online culture in the coming years.\n\nIt implies a potential broadening of what it means to be a hacker, encompassing new forms of digital exploration and influence.\n\n#Hacker #Cybersecurity #Renaissance #TechCulture #Ideology\n\nSource: Hacker News",
+  "tweet": "Is the hacker community entering a new ideological era? The \"Hacker's Renaissance\" suggests a profound shift in motivations, moving beyond traditional drivers. #Hacker #Cybersecurity #TechCulture",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://phrack.org/issues/72/19#article",
+  "image": "",
+  "orig_title": "The Hacker's Renaissance",
+  "cluster_urls": [
+   "https://phrack.org/issues/72/19#article",
+   "https://blog.andymasley.com/p/the-main-way-ive-seen-people-turn"
+  ],
+  "cluster_titles": [
+   "The Hacker's Renaissance",
+   "The main way I've seen people turn ideologically crazy (2025)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-0506-1-the-hacker-s-renaissance-emerges-as-a-new-er.png",
+   "20260810-0506-1-the-hacker-s-renaissance-emerges-as-a-new-er-d1.png"
+  ]
+ }
+]

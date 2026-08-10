@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "google_gemini_notebook_research_feature",
+  "headline_marked": "[[Gemini Notebook to generate apps]] from research with new 'App' tile",
+  "headline": "Gemini Notebook to generate apps from research with new 'App' tile",
+  "summary": "Google's Gemini Notebook is reportedly testing a new 'App' tile in its Studio panel, allowing users to generate simple applications like games or dashboards from their source materials using prompts. This feature, along with new note-taking and watermarking co",
+  "category": "AI",
+  "template": "leak",
+  "details": [
+   "Google's Gemini Notebook is reportedly testing a significant new feature: an \"App\" tile within its Studio panel. This innovative tool would allow users to generate simple applications, such as fun games or visual dashboards, directly from their source materials by typing prompts.",
+   "Originally known as NotebookLM, the AI product was rebranded to Gemini Notebook to align with Google's broader Gemini AI ecosystem. While the core experience remained consistent after the name change, Google Labs continues to explore new enhancements.",
+   "Beyond app generation, the platform is also developing features for enhanced note-taking. These include a button for users to manually add notes and an AI-powered option to automatically generate notes from sources, offering both control and efficiency.",
+   "Another upcoming feature is a watermarking toggle, which appears designed to give users control over AI-generated branding on exported content like videos, slide decks, and infographics. While details are scarce, this suggests more customization options.",
+   "Although these features are still in testing and unconfirmed, the leak suggests they are in the final stages of development. It's speculated that the \"App\" tile might be exclusive to Gemini's Premium tier, but no official release date or pricing information has been provided yet."
+  ],
+  "caption": "Google's Gemini Notebook is reportedly testing a groundbreaking 'App' tile, enabling users to generate simple applications directly from their research materials.\n\nGoogle's Gemini Notebook is reportedly testing a significant new feature: an \"App\" tile within its Studio panel. This innovative tool would allow users to generate simple applications, such as fun games or visual dashboards, directly from their source materials by typing prompts.\n\nOriginally known as NotebookLM, the AI product was rebranded to Gemini Notebook to align with Google's broader Gemini AI ecosystem. While the core experience remained consistent after the name change, Google Labs continues to explore new enhancements.\n\nBeyond app generation, the platform is also developing features for enhanced note-taking. These include a button for users to manually add notes and an AI-powered option to automatically generate notes from sources, offering both control and efficiency.\n\nAnother upcoming feature is a watermarking toggle, which appears designed to give users control over AI-generated branding on exported content like videos, slide decks, and infographics. While details are scarce, this suggests more customization options.\n\nAlthough these features are still in testing and unconfirmed, the leak suggests they are in the final stages of development. It's speculated that the \"App\" tile might be exclusive to Gemini's Premium tier, but no official release date or pricing information has been provided yet.\n\n#GeminiNotebook #GoogleAI #AItools #AppGeneration #TechNews #AI\n\nSource: Android Police",
+  "tweet": "Google's Gemini Notebook is reportedly testing a groundbreaking 'App' tile, allowing users to generate simple apps like games or dashboards directly from their research materials. This could be a major step for AI-powered creation. #GeminiNotebook #GoogleAI #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/gemini-notebook-tests-a-wild-new-way-to-bring-your-research-to-life/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/wm/2026/05/notebooklm-voice-notes-2.jpg",
+  "orig_title": "Gemini Notebook tests a wild new way to bring your research to life",
+  "cluster_urls": [
+   "https://www.androidpolice.com/gemini-notebook-tests-a-wild-new-way-to-bring-your-research-to-life/"
+  ],
+  "cluster_titles": [
+   "Gemini Notebook tests a wild new way to bring your research to life"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260810-1207-0-gemini-notebook-to-generate-apps-from-resear.png",
+   "20260810-1207-0-gemini-notebook-to-generate-apps-from-resear-d1.png",
+   "20260810-1207-0-gemini-notebook-to-generate-apps-from-resear-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_business_idea_validation_reddit",
+  "headline_marked": "[[Built an AI agent for business idea validation]] from Reddit: real costs revealed",
+  "headline": "Built an AI agent for business idea validation from Reddit: real costs revealed",
+  "summary": "An AI agent was built to validate business ideas by scraping Reddit comments, revealing surprising costs and anti-bot bypass techniques. Processing 10,000 comments with Claude Opus cost $150, but required advanced scraping methods.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "An AI agent was developed to validate business ideas by analyzing Reddit comments. The goal was to identify common frustrations within specific subreddits and generate scored reports on potential startup concepts, moving beyond theoretical market research.",
+   "Reddit serves as a rich source of raw, unfiltered user feedback, where people openly discuss pain points and solutions. Extracting this data at scale, however, presents significant challenges due to robust anti-bot measures.",
+   "The entire data pipeline was constructed using Node.js, with the Claude API (specifically claude-3-opus-20240229) handling the intensive semantic analysis. This setup allowed for nuanced understanding and structured output.",
+   "Modern Reddit scraping is complex; simple HTTP requests are quickly rate-limited or blocked. Platforms use IP reputation, HTTP/2 fingerprinting, and behavioral analysis to detect bots, making stealth and persistence crucial.",
+   "The breakthrough in bypassing anti-bot measures involved a specific combination of puppeteer-extra with puppeteer-extra-plugin-stealth (version 2.11.2) and a custom http.Agent configuration for axios. This was critical for handling JSON API endpoints after initial navigation.",
+   "A key insight was realizing that for certain Reddit endpoints, the default Node.js http.Agent was insufficient. Explicitly disabling keepAlive in specific scenarios helped avoid connection states that Reddit's servers could flag, especially when cycling proxies.",
+   "For pain point detection, Claude Opus proved superior to OpenAI models, offering a better balance of nuanced understanding and structured output. Its large context window was essential for processing entire comment threads effectively.",
+   "The prompt structure guided Claude to act as a product manager, synthesizing frustrations into quantifiable scores and actionable problem statements. Claude Opus typically took 15-20 seconds per comment for this level of detailed analysis.",
+   "Benchmarking revealed that processing 10,000 Reddit comments with Claude-3-Opus cost approximately $150. This included $75 for input tokens ($15/Mtok) and $75 for output tokens ($75/Mtok), based on average comment and prompt lengths.",
+   "The average processing speed for Claude Opus was about 12.4 tokens/second, translating to roughly 3-4 seconds per comment. While not excessively expensive for quality insights, costs can accumulate rapidly for larger datasets."
+  ],
+  "caption": "Building an AI agent for market research on Reddit? The real fight is bypassing anti-bot measures and managing LLM costs. One developer processed 10,000 comments with Claude Opus for $150, revealing crucial insights.\n\nAn AI agent was developed to validate business ideas by analyzing Reddit comments. The goal was to identify common frustrations within specific subreddits and generate scored reports on potential startup concepts, moving beyond theoretical market research.\n\nReddit serves as a rich source of raw, unfiltered user feedback, where people openly discuss pain points and solutions. Extracting this data at scale, however, presents significant challenges due to robust anti-bot measures.\n\nThe entire data pipeline was constructed using Node.js, with the Claude API (specifically claude-3-opus-20240229) handling the intensive semantic analysis. This setup allowed for nuanced understanding and structured output.\n\nModern Reddit scraping is complex; simple HTTP requests are quickly rate-limited or blocked. Platforms use IP reputation, HTTP/2 fingerprinting, and behavioral analysis to detect bots, making stealth and persistence crucial.\n\nThe breakthrough in bypassing anti-bot measures involved a specific combination of puppeteer-extra with puppeteer-extra-plugin-stealth (version 2.11.2) and a custom http.Agent configuration for axios. This was critical for handling JSON API endpoints after initial navigation.\n\nA key insight was realizing that for certain Reddit endpoints, the default Node.js http.Agent was insufficient. Explicitly disabling keepAlive in specific scenarios helped avoid connection states that Reddit's servers could flag, especially when cycling proxies.\n\nFor pain point detection, Claude Opus proved superior to OpenAI models, offering a better balance of nuanced understanding and structured output. Its large context window was essential for processing entire comment threads effectively.\n\n#AI #MarketResearch #RedditScraping #LLMs #WebDev #Startup\n\nSource: DEV",
+  "tweet": "Built an AI agent to validate business ideas from Reddit comments. The real challenge? Bypassing anti-bot measures & managing LLM costs. Processed 10,000 comments with Claude Opus for $150. Full breakdown of the tech & costs. #AI #WebScraping #Startup",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/umair24171/how-i-built-an-ai-agent-business-idea-validation-reddit-cost-49bc",
+  "image": "",
+  "orig_title": "How I Built an AI agent business idea validation: Reddit Cost",
+  "cluster_urls": [
+   "https://dev.to/umair24171/how-i-built-an-ai-agent-business-idea-validation-reddit-cost-49bc"
+  ],
+  "cluster_titles": [
+   "How I Built an AI agent business idea validation: Reddit Cost"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-1207-1-built-an-ai-agent-for-business-idea-validati.png",
+   "20260810-1207-1-built-an-ai-agent-for-business-idea-validati-d1.png",
+   "20260810-1207-1-built-an-ai-agent-for-business-idea-validati-d2.png",
+   "20260810-1207-1-built-an-ai-agent-for-business-idea-validati-d3.png",
+   "20260810-1207-1-built-an-ai-agent-for-business-idea-validati-d4.png"
+  ]
+ }
+]

@@ -1,1 +1,76 @@
-[]
+[
+ {
+  "topic": "android_vr_on_apple_vision_pro",
+  "headline_marked": "[[Run Android ARM64 VR APKs]] on Apple Vision Pro, no JIT required",
+  "headline": "Run Android ARM64 VR APKs on Apple Vision Pro, no JIT required",
+  "summary": "Klepton, a new compatibility layer, translates Android .so libraries for visionOS and macOS, enabling Quest/Android XR apps to run without Just-In-Time compilation.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "Klepton is a JIT-less relinker and compatibility layer that allows Android ARM64 VR APKs to run on Apple Vision Pro and macOS. It achieves this by translating Android .so libraries into loadable Apple .dylib and .framework libraries.",
+   "The project currently focuses on Java-thin applications, meaning it does not include the Android Runtime (ART) or a full Java Virtual Machine (JVM). Graphics are handled by translating GLES 3.2 to a vendored ANGLE GLES 3.0 with its Metal backend, and Vulkan to MoltenVK.",
+   "A key challenge addressed is the use of the x18 register by older Android applications, which conflicts with macOS's reservation and zeroing of x18. Klepton-ld patches all x18 usage, redirecting it to per-library TLS slots.",
+   "While Klepton can load and patch .so files at runtime with mmap on macOS where JIT is allowed, visionOS restricts JIT. Some applications might still require JIT if they utilize scripting runtimes like LuaJIT or V8.",
+   "Current progress includes Beat Saber working on both macOS and visionOS, albeit with minor graphical issues. Work is ongoing to integrate Steam VR Link and improve the generalizability and build tooling for the project."
+  ],
+  "caption": "Run Android VR apps like Beat Saber on your Apple Vision Pro. A new compatibility layer, Klepton, makes it possible without JIT.\n\nKlepton is a JIT-less relinker and compatibility layer that allows Android ARM64 VR APKs to run on Apple Vision Pro and macOS. It achieves this by translating Android .so libraries into loadable Apple .dylib and .framework libraries.\n\nThe project currently focuses on Java-thin applications, meaning it does not include the Android Runtime (ART) or a full Java Virtual Machine (JVM). Graphics are handled by translating GLES 3.2 to a vendored ANGLE GLES 3.0 with its Metal backend, and Vulkan to MoltenVK.\n\nA key challenge addressed is the use of the x18 register by older Android applications, which conflicts with macOS's reservation and zeroing of x18. Klepton-ld patches all x18 usage, redirecting it to per-library TLS slots.\n\nWhile Klepton can load and patch .so files at runtime with mmap on macOS where JIT is allowed, visionOS restricts JIT. Some applications might still require JIT if they utilize scripting runtimes like LuaJIT or V8.\n\nCurrent progress includes Beat Saber working on both macOS and visionOS, albeit with minor graphical issues. Work is ongoing to integrate Steam VR Link and improve the generalizability and build tooling for the project.\n\n#AppleVisionPro #AndroidVR #CrossPlatform #DeveloperTools #XR #Klepton\n\nSource: Hacker News",
+  "tweet": "Run Android VR apps like Beat Saber on Apple Vision Pro! Klepton, a JIT-less compatibility layer, translates Android APKs to visionOS/macOS. Graphics via ANGLE/MoltenVK. Still WIP, but promising! #AppleVisionPro #AndroidVR #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/shinyquagsire23/Klepton",
+  "image": "",
+  "orig_title": "Run Android ARM64 VR APKs on Apple Vision Pro",
+  "cluster_urls": [
+   "https://github.com/shinyquagsire23/Klepton"
+  ],
+  "cluster_titles": [
+   "Run Android ARM64 VR APKs on Apple Vision Pro"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260810-1048-0-run-android-arm64-vr-apks-on-apple-vision-pr.png",
+   "20260810-1048-0-run-android-arm64-vr-apks-on-apple-vision-pr-d1.png",
+   "20260810-1048-0-run-android-arm64-vr-apks-on-apple-vision-pr-d2.png"
+  ]
+ },
+ {
+  "topic": "claude_code_hallucination_fix",
+  "headline_marked": "[[Stop Letting Claude Code Hallucinate]] Your Modernization: Write OpenRewrite LST Recipes Instead",
+  "headline": "Stop Letting Claude Code Hallucinate Your Modernization: Write OpenRewrite LST Recipes Instead",
+  "summary": "Autonomous AI agents directly rewriting Java monoliths can introduce silent runtime bugs. Instead, use Claude Code CLI to author deterministic OpenRewrite LST recipes for safe, large-scale JDK 26 upgrades.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Letting autonomous AI agents directly rewrite large Java monoliths poses a significant risk of introducing silent runtime bugs. The recommended approach for large-scale JDK 26 upgrades involves using Claude Code CLI to author deterministic OpenRewrite LST recipes, rather than allowing blind source file edits.",
+   "Developers can leverage Claude Code CLI to generate, unit-test, and refine type-safe OpenRewrite Java recipes. These recipes are then executed deterministically via the rewrite-maven-plugin, ensuring controlled and predictable code modernization.",
+   "The process emphasizes prompting Claude Code CLI to generate a specific, imperatively-safe recipe structure. This method aims to prevent the 'hallucinations' often associated with direct AI code generation, ensuring reliability for critical updates like JDK 26."
+  ],
+  "caption": "Stop risking silent runtime bugs in your Java monoliths. Learn how to safely modernize your code with deterministic AI-assisted recipes.\n\nLetting autonomous AI agents directly rewrite large Java monoliths poses a significant risk of introducing silent runtime bugs. The recommended approach for large-scale JDK 26 upgrades involves using Claude Code CLI to author deterministic OpenRewrite LST recipes, rather than allowing blind source file edits.\n\nDevelopers can leverage Claude Code CLI to generate, unit-test, and refine type-safe OpenRewrite Java recipes. These recipes are then executed deterministically via the rewrite-maven-plugin, ensuring controlled and predictable code modernization.\n\nThe process emphasizes prompting Claude Code CLI to generate a specific, imperatively-safe recipe structure. This method aims to prevent the 'hallucinations' often associated with direct AI code generation, ensuring reliability for critical updates like JDK 26.\n\n#Java #CodeModernization #AI #OpenRewrite #DeveloperTools #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Stop risking silent runtime bugs in Java monoliths! Learn how to safely modernize your code with deterministic AI-assisted OpenRewrite LST recipes using Claude Code CLI. Avoid AI hallucinations in critical upgrades. #Java #AI #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/machinecodingmaster/stop-letting-claude-code-hallucinate-your-modernization-write-openrewrite-lst-recipes-instead-il6",
+  "image": "",
+  "orig_title": "Stop Letting Claude Code Hallucinate Your Modernization: Write OpenRewrite LST Recipes Instead",
+  "cluster_urls": [
+   "https://dev.to/machinecodingmaster/stop-letting-claude-code-hallucinate-your-modernization-write-openrewrite-lst-recipes-instead-il6"
+  ],
+  "cluster_titles": [
+   "Stop Letting Claude Code Hallucinate Your Modernization: Write OpenRewrite LST Recipes Instead"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260810-1048-1-stop-letting-claude-code-hallucinate-your-mo.png",
+   "20260810-1048-1-stop-letting-claude-code-hallucinate-your-mo-d1.png",
+   "20260810-1048-1-stop-letting-claude-code-hallucinate-your-mo-d2.png"
+  ]
+ }
+]

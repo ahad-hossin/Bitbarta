@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_agent_outcome_definition",
+  "headline_marked": "[[AI Agents redefine debugging]] by focusing on verifiable outcomes, not prompts",
+  "headline": "AI Agents redefine debugging by focusing on verifiable outcomes, not prompts",
+  "summary": "Instead of endless prompting, developers can define clear success conditions for AI agents to iterate on, transforming tedious debugging into an automated process that doesn't forget past attempts.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Debugging often involves repetitive, memory-intensive tasks that humans are ill-suited for. The author recounts a frustrating experience with an API where a working solution was found and then lost amidst frantic, unlogged edits, highlighting the inefficiency of manual iteration.",
+   "This kind of debugging doesn't require creativity; it demands repetition with perfect memory. Unlike a human developer, an AI agent doesn't get tired or forget previous attempts, making it an ideal candidate for systematically trying variations and observing results.",
+   "The core shift is from 'prompt engineering'—asking precisely once and hoping—to 'outcome engineering.' Here, you define what success looks like in a machine-verifiable way, allowing the agent to iterate until that condition is met without human intervention for each step.",
+   "Effective AI-driven loops require an unambiguous exit condition that the machine can verify, such as a passing test, an HTTP 200 status, or an exit code 0. Subjective assessments by the agent itself can lead to generously graded failures.",
+   "Crucial for success is readable feedback, including full response bodies, real stack traces, and detailed test output. Without this, the agent is left guessing. Additionally, clear boundaries, like one change per attempt and a commit log, prevent a working solution from being buried under unrelated 'improvements'.",
+   "A defined budget, specifying a maximum number of attempts, is also essential. This ensures that genuinely stuck loops escalate to a human with a comprehensive log, rather than silently making extensive, potentially unwanted, changes to the codebase.",
+   "This approach shifts trust from the AI's code generation to the verification script itself. Developers don't need to trust every individual attempt by the agent, but rather the integrity and accuracy of the self-assessment mechanism they've built.",
+   "However, not all tasks are suitable for this looping approach. Anything without a cheap, honest verification, such as UI polish, copy, or architectural decisions, won't work. If human judgment is the only way to confirm success, an agent cannot effectively iterate.",
+   "Furthermore, tasks where wrong attempts are expensive, like payments or migrations against real production data, are unsuitable. Loops assume failed attempts are free and reversible. Timing-sensitive bugs also pose a risk, as agents might implement superficial fixes that pass tests but don't resolve the underlying issue."
+  ],
+  "caption": "Tired of endless debugging loops and forgetting what you've tried? AI agents can now automate repetitive coding fixes by focusing on verifiable outcomes.\n\nDebugging often involves repetitive, memory-intensive tasks that humans are ill-suited for. The author recounts a frustrating experience with an API where a working solution was found and then lost amidst frantic, unlogged edits, highlighting the inefficiency of manual iteration.\n\nThis kind of debugging doesn't require creativity; it demands repetition with perfect memory. Unlike a human developer, an AI agent doesn't get tired or forget previous attempts, making it an ideal candidate for systematically trying variations and observing results.\n\nThe core shift is from 'prompt engineering'—asking precisely once and hoping—to 'outcome engineering.' Here, you define what success looks like in a machine-verifiable way, allowing the agent to iterate until that condition is met without human intervention for each step.\n\nEffective AI-driven loops require an unambiguous exit condition that the machine can verify, such as a passing test, an HTTP 200 status, or an exit code 0. Subjective assessments by the agent itself can lead to generously graded failures.\n\nCrucial for success is readable feedback, including full response bodies, real stack traces, and detailed test output. Without this, the agent is left guessing. Additionally, clear boundaries, like one change per attempt and a commit log, prevent a working solution from being buried under unrelated 'improvements'.\n\nA defined budget, specifying a maximum number of attempts, is also essential. This ensures that genuinely stuck loops escalate to a human with a comprehensive log, rather than silently making extensive, potentially unwanted, changes to the codebase.\n\n#AI #DeveloperTools #SoftwareEngineering #Debugging #Automation #Tech\n\nSource: DEV",
+  "tweet": "Tired of endless debugging loops and forgetting what you've tried? AI agents can now automate repetitive coding fixes by defining verifiable outcomes, shifting trust from generation to checking. #AI #DeveloperTools #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ayaan278/loop-engineering-stop-prompting-start-defining-outcomes-lho",
+  "image": "",
+  "orig_title": "Loop engineering: stop prompting, start defining outcomes",
+  "cluster_urls": [
+   "https://dev.to/ayaan278/loop-engineering-stop-prompting-start-defining-outcomes-lho",
+   "https://dev.to/hakiimi_claw/ai-agent-vs-single-prompt-when-automation-actually-pays-off-1cbe",
+   "https://dev.to/hakiimi_claw/ai-agent-vs-single-prompt-when-automation-actually-pays-off-2951"
+  ],
+  "cluster_titles": [
+   "Loop engineering: stop prompting, start defining outcomes",
+   "AI Agent vs. Single Prompt: When Automation Actually Pays Off",
+   "AI Agent vs. Single Prompt: When Automation Actually Pays Off"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260810-0828-0-ai-agents-redefine-debugging-by-focusing-on-.png",
+   "20260810-0828-0-ai-agents-redefine-debugging-by-focusing-on--d1.png",
+   "20260810-0828-0-ai-agents-redefine-debugging-by-focusing-on--d2.png",
+   "20260810-0828-0-ai-agents-redefine-debugging-by-focusing-on--d3.png",
+   "20260810-0828-0-ai-agents-redefine-debugging-by-focusing-on--d4.png",
+   "20260810-0828-0-ai-agents-redefine-debugging-by-focusing-on--d5.png"
+  ]
+ },
+ {
+  "topic": "local_ai_assistant_bash_automation",
+  "headline_marked": "[[Too lazy for Bash]]: My life with a local AI assistant",
+  "headline": "Too lazy for Bash: My life with a local AI assistant",
+  "summary": "An author shares how a local LLM, like Qwen3.6-35B, handles routine server tasks and Bash commands, making everyday computing easier and more private without sending data to the cloud.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "One developer is replacing tedious manual tasks with a local AI assistant, running models like Qwen3.6-35B-A3B-Q4_K_M on their own machine. This allows for quick configuration changes and server investigations without needing to recall specific commands.",
+   "The interaction mirrors science fiction, where the user tells the computer what they want rather than precisely how to do it. This marks a shift from users learning the computer's language to the computer understanding more of human language.",
+   "Local LLMs prove extremely useful for tasks the author knows how to do but prefers not to, such as Bash commands, small scripts, and understanding obscure errors. Crucially, all these operations remain private, with no data sent externally.",
+   "Beyond system administration, the local AI also assists with language learning, offering translations and refining phrasing without transmitting personal text. The key is competence, not genius, making supervision simpler than manual execution."
+  ],
+  "caption": "Too lazy for Bash commands? One developer now uses a local AI assistant, like Qwen3.6-35B, to handle routine server tasks and configuration changes, keeping data private.\n\nOne developer is replacing tedious manual tasks with a local AI assistant, running models like Qwen3.6-35B-A3B-Q4_K_M on their own machine. This allows for quick configuration changes and server investigations without needing to recall specific commands.\n\nThe interaction mirrors science fiction, where the user tells the computer what they want rather than precisely how to do it. This marks a shift from users learning the computer's language to the computer understanding more of human language.\n\nLocal LLMs prove extremely useful for tasks the author knows how to do but prefers not to, such as Bash commands, small scripts, and understanding obscure errors. Crucially, all these operations remain private, with no data sent externally.\n\nBeyond system administration, the local AI also assists with language learning, offering translations and refining phrasing without transmitting personal text. The key is competence, not genius, making supervision simpler than manual execution.\n\n#AI #LocalAI #LLM #DeveloperTools #Tech #Privacy\n\nSource: DEV",
+  "tweet": "Too lazy for Bash commands? One developer now uses a local AI assistant, like Qwen3.6-35B, to handle routine server tasks and config changes, keeping data private. It's like Dexter's Lab for your Linux box. #AI #LocalLLM #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/codisfy/too-lazy-for-bash-my-life-with-a-local-ai-assistant-25pb",
+  "image": "",
+  "orig_title": "Too lazy for Bash: My life with a local AI assistant",
+  "cluster_urls": [
+   "https://dev.to/codisfy/too-lazy-for-bash-my-life-with-a-local-ai-assistant-25pb"
+  ],
+  "cluster_titles": [
+   "Too lazy for Bash: My life with a local AI assistant"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260810-0828-1-too-lazy-for-bash-my-life-with-a-local-ai-as.png",
+   "20260810-0828-1-too-lazy-for-bash-my-life-with-a-local-ai-as-d1.png",
+   "20260810-0828-1-too-lazy-for-bash-my-life-with-a-local-ai-as-d2.png"
+  ]
+ }
+]

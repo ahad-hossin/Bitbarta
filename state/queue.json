@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "accidental_react_bracket_ddos",
+  "headline_marked": "[[React bracket triggers 100,000 API requests]], melts database in accidental DDoS",
+  "headline": "React bracket triggers 100,000 API requests, melts database in accidental DDoS",
+  "summary": "A seemingly innocent React deployment caused a catastrophic self-DDOS, pushing database CPU to 99.8% and API response times over 8000ms due to a JavaScript reference equality trap.",
+  "category": "DEVELOPMENT",
+  "template": "terminal",
+  "details": [
+   "It was a quiet Tuesday when a simple \"User Preferences\" dashboard card deployment unexpectedly triggered a critical system meltdown. Within minutes, a single frontend page aggressively hit the /api/user-preferences endpoint thousands of times per second for every connected user, causing the database CPU to spike to 99.8%.",
+   "The incident wasn't a malicious attack but a self-inflicted Distributed Denial of Service (DDOS) caused by an innocent piece of code. The browser was locked in an endless, violent render loop, leading to API gateway response times exceeding 8000ms.",
+   "Investigation using Sentry's telemetry and Session Replays quickly pinpointed the exact transaction and revealed the root cause. The issue stemmed from a classic JavaScript trap: reference vs. value equality.",
+   "Objects, arrays, and functions in JavaScript are compared by their memory reference, not their content. A useEffect hook with an object literal in its dependency array created a new object reference on every render, causing the effect to re-run infinitely.",
+   "The resolution involved ensuring the object reference remained stable across renders, achieved by rewriting the component to use a primitive value dependency array. After the fix, the database CPU returned to a peaceful 3%, and the dashboard loaded in milliseconds.",
+   "This incident highlighted key lessons: dependency arrays are not magic and rely on standard JavaScript equality checks, making object/array literals without memoization a ticking time bomb. It also underscored the non-negotiable value of observability tools like Sentry for rapid debugging."
+  ],
+  "caption": "A single React bracket accidentally triggered 100,000 API requests per second, melting a company's database and causing a critical system outage. This wasn't a hack, it was a self-DDOS.\n\nIt was a quiet Tuesday when a simple \"User Preferences\" dashboard card deployment unexpectedly triggered a critical system meltdown. Within minutes, a single frontend page aggressively hit the /api/user-preferences endpoint thousands of times per second for every connected user, causing the database CPU to spike to 99.8%.\n\nThe incident wasn't a malicious attack but a self-inflicted Distributed Denial of Service (DDOS) caused by an innocent piece of code. The browser was locked in an endless, violent render loop, leading to API gateway response times exceeding 8000ms.\n\nInvestigation using Sentry's telemetry and Session Replays quickly pinpointed the exact transaction and revealed the root cause. The issue stemmed from a classic JavaScript trap: reference vs. value equality.\n\nObjects, arrays, and functions in JavaScript are compared by their memory reference, not their content. A useEffect hook with an object literal in its dependency array created a new object reference on every render, causing the effect to re-run infinitely.\n\nThe resolution involved ensuring the object reference remained stable across renders, achieved by rewriting the component to use a primitive value dependency array. After the fix, the database CPU returned to a peaceful 3%, and the dashboard loaded in milliseconds.\n\nThis incident highlighted key lessons: dependency arrays are not magic and rely on standard JavaScript equality checks, making object/array literals without memoization a ticking time bomb. It also underscored the non-negotiable value of observability tools like Sentry for rapid debugging.\n\n#ReactJS #JavaScript #WebDev #BugSmash #Sentry #Programming\n\nSource: DEV",
+  "tweet": "A single React bracket caused an accidental DDoS, triggering 100,000 API requests/sec and melting a database. Learn how a JavaScript reference equality trap led to a critical system outage and how it was debugged. #ReactJS #WebDev #Bug",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/pooja_bhavani/the-accidental-ddos-how-a-single-react-bracket-triggered-100000-api-requests-and-melted-our-36li",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3yhiy3fyvl3ckkwzbco0.png",
+  "orig_title": "The Accidental DDOS: How a Single React Bracket Triggered 100,000 API Requests and Melted Our Database",
+  "cluster_urls": [
+   "https://dev.to/pooja_bhavani/the-accidental-ddos-how-a-single-react-bracket-triggered-100000-api-requests-and-melted-our-36li"
+  ],
+  "cluster_titles": [
+   "The Accidental DDOS: How a Single React Bracket Triggered 100,000 API Requests and Melted Our Database"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260811-2108-0-react-bracket-triggers-100-000-api-requests-.png",
+   "20260811-2108-0-react-bracket-triggers-100-000-api-requests--d1.png",
+   "20260811-2108-0-react-bracket-triggers-100-000-api-requests--d2.png",
+   "20260811-2108-0-react-bracket-triggers-100-000-api-requests--d3.png"
+  ]
+ },
+ {
+  "topic": "ai_increases_fossil_fuel_emissions",
+  "headline_marked": "[[AI could boost fossil fuel emissions]] by up to 4.8%, research warns",
+  "headline": "AI could boost fossil fuel emissions by up to 4.8%, research warns",
+  "summary": "New study suggests AI's productivity gains in oil and gas could lead to emissions equivalent to Russia's, significantly outweighing clean tech benefits.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "New research from former Microsoft sustainability workers indicates that artificial intelligence could significantly increase global energy emissions by enabling the fossil fuel industry to produce more oil and gas.",
+   "The study, published in npj Climate Action, estimates that AI's boost to the fossil fuel sector could result in additional yearly greenhouse gas emissions ranging from 1.2% to 4.8%, potentially matching Russia's current emissions at the high end.",
+   "This increase in emissions from enhanced fossil fuel production is projected to outweigh the benefits AI brings to developing clean technologies like solar and wind power.",
+   "Authors Will and Holly Alpine, former Microsoft employees, highlight a \"self-reinforcing effect between supply and demand\" where AI and fossil fuels are intrinsically linked, arguing that tech companies often overlook these \"enabled emissions\" in their sustainability reports.",
+   "The research utilized complex economic modeling, factoring in reported gains from AI tools in extraction, refining, and electricity generation within the oil and gas industry to project the impact on global emissions.",
+   "This finding contrasts sharply with projections for emissions from data center energy use, suggesting a more profound environmental impact from AI's role in fossil fuel expansion.",
+   "The story also touches on the growing partnership between tech giants and fossil fuel companies, citing a recent deal where Chevron will build a gas plant to power Microsoft data centers, with Chevron also planning to use some of that compute for its own AI operations."
+  ],
+  "caption": "AI is often hailed as a climate solution, but new research reveals it could dramatically increase fossil fuel emissions, potentially matching Russia's output.\n\nNew research from former Microsoft sustainability workers indicates that artificial intelligence could significantly increase global energy emissions by enabling the fossil fuel industry to produce more oil and gas.\n\nThe study, published in npj Climate Action, estimates that AI's boost to the fossil fuel sector could result in additional yearly greenhouse gas emissions ranging from 1.2% to 4.8%, potentially matching Russia's current emissions at the high end.\n\nThis increase in emissions from enhanced fossil fuel production is projected to outweigh the benefits AI brings to developing clean technologies like solar and wind power.\n\nAuthors Will and Holly Alpine, former Microsoft employees, highlight a \"self-reinforcing effect between supply and demand\" where AI and fossil fuels are intrinsically linked, arguing that tech companies often overlook these \"enabled emissions\" in their sustainability reports.\n\nThe research utilized complex economic modeling, factoring in reported gains from AI tools in extraction, refining, and electricity generation within the oil and gas industry to project the impact on global emissions.\n\nThis finding contrasts sharply with projections for emissions from data center energy use, suggesting a more profound environmental impact from AI's role in fossil fuel expansion.\n\nThe story also touches on the growing partnership between tech giants and fossil fuel companies, citing a recent deal where Chevron will build a gas plant to power Microsoft data centers, with Chevron also planning to use some of that compute for its own AI operations.\n\n#AI #ClimateChange #Sustainability #FossilFuels #Tech\n\nSource: Wired",
+  "tweet": "AI could be fueling a climate crisis, not solving it. New research warns AI's productivity boost for the fossil fuel industry could increase global emissions by up to 4.8%, potentially matching Russia's output. #AI #ClimateChange #Sustainability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/ai-could-help-fossil-fuel-companies-create-more-emissions/",
+  "image": "https://media.wired.com/photos/6a7a2036c58ed7121c9fbad3/master/pass/AIEmission.jpg",
+  "orig_title": "AI Could Help Fossil Fuel Companies Create More Emissions",
+  "cluster_urls": [
+   "https://www.wired.com/story/ai-could-help-fossil-fuel-companies-create-more-emissions/"
+  ],
+  "cluster_titles": [
+   "AI Could Help Fossil Fuel Companies Create More Emissions"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260811-2108-1-ai-could-boost-fossil-fuel-emissions-by-up-t.png",
+   "20260811-2108-1-ai-could-boost-fossil-fuel-emissions-by-up-t-d1.png",
+   "20260811-2108-1-ai-could-boost-fossil-fuel-emissions-by-up-t-d2.png",
+   "20260811-2108-1-ai-could-boost-fossil-fuel-emissions-by-up-t-d3.png"
+  ]
+ }
+]

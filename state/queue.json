@@ -1,1 +1,48 @@
-[]
+[
+ {
+  "topic": "google cloud agents-cli self-improving ai agent loops",
+  "headline_marked": "[[Google Cloud unveils 7 rules for self-improving AI agent loops]] with agents-cli",
+  "headline": "Google Cloud unveils 7 rules for self-improving AI agent loops with agents-cli",
+  "summary": "Google Cloud's new open-source agents-cli helps build AI agents, but warns that self-improving loops can optimize for metrics that don't reflect true improvement, leading to agents that score well but perform poorly.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Google Cloud Tech recently published \"7 rules for self-improving agent loops every AI engineer should know\" and launched agents-cli, an open-source CLI for building AI agents. The core message highlights that while coding agents can create and improve others, these loops often optimize for whatever is measured, without truly understanding if it's \"good.\"",
+   "The article explains that providing shallow goals can lead to agents being optimized to achieve high scores while their actual performance degrades. They will report success based on their own standards, as the automated loop can manage everything except defining what \"better\" means.",
+   "Google Cloud emphasizes the principle that \"you get what you measure.\" Self-improving loops literally adjust prompts, code, and behavior to align with rewarded metrics. A common pitfall is when an agent follows internal rules but fails in its final reply, a mistake often undetected by public metrics.",
+   "The solution involves creating custom metrics, such as `retention_offered`, which return a binary result with a one-line explanation. These definitions are yours to version and refine as new failures emerge. Crucially, coding agents should not be allowed to grade their own output, as they tend to be overly optimistic and overlook significant failures.",
+   "Grading breaks this circularity by evaluating every trace against your defined metrics, a standard the coding agent cannot manipulate. The article outlines 7 key rules discovered during the development of agents-cli, stressing that a single failing case is far more informative than twenty.",
+   "It's normal to expect 5-10 iterations before a fix is successful; only add the next case once the current one is resolved. While numbers indicate failure, the reasons behind them provide the direction for the next iteration. Deterministic checks, like verifying a tool call, can be precise Python functions, eliminating judge variance.",
+   "Human judges are best reserved for subjective assessments like tone, completeness, or explaining why an agent held up. The rules also caution against exact-match trajectories, which measure how much an agent changes rather than how much it improves, and non-deterministic agents, where scores fluctuate between identical runs.",
+   "Such inconsistencies indicate an underlying issue with the agent or the judge and should be investigated, not just removed. The article also warns against superficial improvements, such as lowering thresholds or quietly dropping cases, which can falsely inflate scores. Held-out slices are essential to confirm genuine progress.",
+   "Prompt optimization is expensive and typically only fixes wording, never addressing missing tool calls. Iterating on prompts can waste hours discovering issues that failure reasons would have immediately highlighted. Google Cloud notes that development 'eval' metrics seamlessly transition into production 'monitoring' metrics.",
+   "Deployed agents already export execution traces, including prompt-response logging into BigQuery. Running your custom metrics on this data provides the same grading process, applied to real traffic instead of a written dataset. Every production exchange that goes wrong should become a new case, graded by the same metric, preventing future regressions."
+  ],
+  "caption": "Self-improving AI agents can optimize for the wrong things. Google Cloud just released 7 critical rules to guide their development.\n\nGoogle Cloud Tech recently published \"7 rules for self-improving agent loops every AI engineer should know\" and launched agents-cli, an open-source CLI for building AI agents. The core message highlights that while coding agents can create and improve others, these loops often optimize for whatever is measured, without truly understanding if it's \"good.\"\n\nThe article explains that providing shallow goals can lead to agents being optimized to achieve high scores while their actual performance degrades. They will report success based on their own standards, as the automated loop can manage everything except defining what \"better\" means.\n\nGoogle Cloud emphasizes the principle that \"you get what you measure.\" Self-improving loops literally adjust prompts, code, and behavior to align with rewarded metrics. A common pitfall is when an agent follows internal rules but fails in its final reply, a mistake often undetected by public metrics.\n\nThe solution involves creating custom metrics, such as `retention_offered`, which return a binary result with a one-line explanation. These definitions are yours to version and refine as new failures emerge. Crucially, coding agents should not be allowed to grade their own output, as they tend to be overly optimistic and overlook significant failures.\n\nGrading breaks this circularity by evaluating every trace against your defined metrics, a standard the coding agent cannot manipulate. The article outlines 7 key rules discovered during the development of agents-cli, stressing that a single failing case is far more informative than twenty.\n\n#AI #GoogleCloud #DeveloperTools #MachineLearning #AIAgents #OpenSource\n\nSource: DEV",
+  "tweet": "Self-improving AI agents can optimize for the wrong things. Google Cloud just released 7 critical rules for AI engineers, plus an open-source CLI for building agents. Avoid common pitfalls and ensure your agents truly improve! #AI #GoogleCloud #AIAgents",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "cloud.google.com",
+  "source": "DEV",
+  "url": "https://dev.to/sarantoon/7-kdsamhrab-self-improving-agent-loops-thii-ai-engineer-thukkhnkhwrruu-google-cloud-epidtaw-agents-cli-o0m",
+  "image": "",
+  "orig_title": "7 กฎสำหรับ Self-Improving Agent Loops ที่ AI Engineer ทุกคนควรรู้, Google Cloud เปิดตัว agents-cli",
+  "cluster_urls": [
+   "https://dev.to/sarantoon/7-kdsamhrab-self-improving-agent-loops-thii-ai-engineer-thukkhnkhwrruu-google-cloud-epidtaw-agents-cli-o0m"
+  ],
+  "cluster_titles": [
+   "7 กฎสำหรับ Self-Improving Agent Loops ที่ AI Engineer ทุกคนควรรู้, Google Cloud เปิดตัว agents-cli"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260811-0807-0-google-cloud-unveils-7-rules-for-self-improv.png",
+   "20260811-0807-0-google-cloud-unveils-7-rules-for-self-improv-d1.png",
+   "20260811-0807-0-google-cloud-unveils-7-rules-for-self-improv-d2.png",
+   "20260811-0807-0-google-cloud-unveils-7-rules-for-self-improv-d3.png",
+   "20260811-0807-0-google-cloud-unveils-7-rules-for-self-improv-d4.png",
+   "20260811-0807-0-google-cloud-unveils-7-rules-for-self-improv-d5.png"
+  ]
+ }
+]

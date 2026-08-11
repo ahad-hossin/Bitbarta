@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "openai assistants api deprecation",
+  "headline_marked": "[[OpenAI's Assistants API dies]] in 15 days, no extension past August 26, 2026",
+  "headline": "OpenAI's Assistants API dies in 15 days, no extension past August 26, 2026",
+  "summary": "OpenAI is deprecating its Assistants API on August 26, 2026, with no extensions planned for most users. Azure OpenAI customers have until February 2027, but all others must migrate or their apps will stop working.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "OpenAI is officially removing its Assistants API on August 26, 2026. This deprecation comes after a full year of notice, with no extensions planned for most users. Azure OpenAI customers, however, have a separate deadline until February 2027.",
+   "A significant change is that prompts will now be built in the dashboard, not in code. This poses a challenge for apps that dynamically create assistants at runtime, a point of loud complaint in OpenAI's announcement thread without a clear solution.",
+   "Migration also means there's no bulk export for existing threads. Developers will need to move live conversations gradually as they occur. On the positive side, the polling loop is eliminated, simplifying the interaction model.",
+   "Developers must now decide where state lives. Responses are client-stateful by default, requiring a previous_response_id for continuity. After 30 days, developers will need to rebuild conversations from their own databases, necessitating a robust backend.",
+   "For small teams, this migration represents about a week of unplanned work. Industry data suggests that even with a year's notice, many teams delay SDK upgrades, as they don't directly ship features or win customers, often slipping quarter after quarter.",
+   "If you're still using the Assistants API with only two weeks left, prioritize checking the dashboard-only Prompts limitation. This specific change can be a hard blocker, potentially preventing your application from functioning entirely, beyond just costing time."
+  ],
+  "caption": "Your app breaks in 15 days if you're still on OpenAI's Assistants API. No extension past August 26, 2026.\n\nOpenAI is officially removing its Assistants API on August 26, 2026. This deprecation comes after a full year of notice, with no extensions planned for most users. Azure OpenAI customers, however, have a separate deadline until February 2027.\n\nA significant change is that prompts will now be built in the dashboard, not in code. This poses a challenge for apps that dynamically create assistants at runtime, a point of loud complaint in OpenAI's announcement thread without a clear solution.\n\nMigration also means there's no bulk export for existing threads. Developers will need to move live conversations gradually as they occur. On the positive side, the polling loop is eliminated, simplifying the interaction model.\n\nDevelopers must now decide where state lives. Responses are client-stateful by default, requiring a previous_response_id for continuity. After 30 days, developers will need to rebuild conversations from their own databases, necessitating a robust backend.\n\nFor small teams, this migration represents about a week of unplanned work. Industry data suggests that even with a year's notice, many teams delay SDK upgrades, as they don't directly ship features or win customers, often slipping quarter after quarter.\n\nIf you're still using the Assistants API with only two weeks left, prioritize checking the dashboard-only Prompts limitation. This specific change can be a hard blocker, potentially preventing your application from functioning entirely, beyond just costing time.\n\n#OpenAI #APIDeprecation #Developer #SoftwareDev #TechNews #AI\n\nSource: DEV",
+  "tweet": "Your app breaks in 15 days if you're still on OpenAI's Assistants API. No extension past August 26, 2026. This developer-focused change requires migration, impacting dynamic prompt creation and thread management. #OpenAI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/ursutihar/the-assistants-api-dies-in-15-days-here-is-what-changes-and-why-most-teams-will-miss-it-1am4",
+  "image": "",
+  "orig_title": "The Assistants API dies in 15 days. Here is what changes, and why most teams will miss it.",
+  "cluster_urls": [
+   "https://dev.to/ursutihar/the-assistants-api-dies-in-15-days-here-is-what-changes-and-why-most-teams-will-miss-it-1am4"
+  ],
+  "cluster_titles": [
+   "The Assistants API dies in 15 days. Here is what changes, and why most teams will miss it."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260811-0906-0-openai-s-assistants-api-dies-in-15-days-no-e.png",
+   "20260811-0906-0-openai-s-assistants-api-dies-in-15-days-no-e-d1.png",
+   "20260811-0906-0-openai-s-assistants-api-dies-in-15-days-no-e-d2.png"
+  ]
+ },
+ {
+  "topic": "apple iphone cancellation rumor stock downgrade",
+  "headline_marked": "[[Jefferies downgrades Apple stock]] amid all-glass iPhone cancellation rumor",
+  "headline": "Jefferies downgrades Apple stock amid all-glass iPhone cancellation rumor",
+  "summary": "Investment firm Jefferies has downgraded Apple's stock, citing unconfirmed reports that the highly anticipated all-glass iPhone design for its 20th anniversary may have been cancelled.",
+  "category": "APPLE",
+  "template": "leak",
+  "details": [
+   "Investment bank Jefferies has lowered its rating for Apple's stock, moving it from \"Buy\" to \"Hold.\" This downgrade comes in response to circulating rumors regarding a potential change in Apple's product roadmap.",
+   "Specifically, the firm's decision is tied to unconfirmed reports suggesting the cancellation of an all-glass iPhone design. This particular design was widely rumored to be a key feature for an upcoming 20th-anniversary iPhone model.",
+   "The all-glass design has been a long-standing point of speculation, with many anticipating a significant aesthetic overhaul. If these rumors prove true, it could impact investor confidence in Apple's innovation pipeline.",
+   "The market's reaction to such rumors can influence stock performance, as investors weigh the potential impact of product strategy shifts on future revenue and growth. Apple has not officially commented on these specific design rumors."
+  ],
+  "caption": "Apple's stock rating just dropped from \"Buy\" to \"Hold\" by Jefferies. The reason? Rumors of a major iPhone design cancellation.\n\nInvestment bank Jefferies has lowered its rating for Apple's stock, moving it from \"Buy\" to \"Hold.\" This downgrade comes in response to circulating rumors regarding a potential change in Apple's product roadmap.\n\nSpecifically, the firm's decision is tied to unconfirmed reports suggesting the cancellation of an all-glass iPhone design. This particular design was widely rumored to be a key feature for an upcoming 20th-anniversary iPhone model.\n\nThe all-glass design has been a long-standing point of speculation, with many anticipating a significant aesthetic overhaul. If these rumors prove true, it could impact investor confidence in Apple's innovation pipeline.\n\nThe market's reaction to such rumors can influence stock performance, as investors weigh the potential impact of product strategy shifts on future revenue and growth. Apple has not officially commented on these specific design rumors.\n\n#Apple #iPhone #StockMarket #TechNews #Rumors #AAPL\n\nSource: 9to5Mac",
+  "tweet": "Apple's stock downgraded by Jefferies from \"Buy\" to \"Hold\" due to unconfirmed rumors about the cancellation of the much-anticipated all-glass iPhone design. #Apple #iPhone #StockMarket",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/08/10/jefferies-downgrades-apple-stock-cites-all-glass-iphone-cancellation-rumor/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/06/AAPL-stock-slides-but-is-it-a-reaction-to-AI-announcements.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Jefferies downgrades Apple stock, cites all-glass iPhone cancellation rumor",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/08/10/jefferies-downgrades-apple-stock-cites-all-glass-iphone-cancellation-rumor/"
+  ],
+  "cluster_titles": [
+   "Jefferies downgrades Apple stock, cites all-glass iPhone cancellation rumor"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260811-0906-1-jefferies-downgrades-apple-stock-amid-all-gl.png",
+   "20260811-0906-1-jefferies-downgrades-apple-stock-amid-all-gl-d1.png",
+   "20260811-0906-1-jefferies-downgrades-apple-stock-amid-all-gl-d2.png"
+  ]
+ }
+]

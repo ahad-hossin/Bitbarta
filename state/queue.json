@@ -1,1 +1,95 @@
-[]
+[
+ {
+  "topic": "spotify_ai_persona_labels",
+  "headline_marked": "[[Spotify to label AI artists]] and exclude their music from recommendations starting mid-September",
+  "headline": "Spotify to label AI artists and exclude their music from recommendations starting mid-September",
+  "summary": "Starting mid-September, profiles identified as AI-generated will receive an 'AI Persona' badge and won't be featured in algorithmic or editorial recommendations.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Spotify announced it will begin labeling AI-generated artists with 'AI Persona' profile tags and ban their music from its editorial and algorithmic recommendations. Users will start seeing these badges appear on artist profiles in mid-September.",
+   "While artists can self-disclose, Spotify will also review profiles, focusing on those with pre-defined audience thresholds, to identify photorealistic AI-generated identities. This ensures more listened-to artists are covered first.",
+   "Once applied, the 'AI Persona' badges will be visible on the artist’s profile banner, About section, in Search results, and on track rows within playlists. This provides clear identification for listeners.",
+   "By default, AI Personas will not be included in Spotify's recommendations, unless a user explicitly chooses to follow an AI Persona. This allows for user choice while maintaining recommendation quality.",
+   "This move expands Spotify's AI policies, which already ban unauthorized AI voice clones and deepfakes. The company aims to balance AI innovation, like its own AI DJ, with preventing the proliferation of low-quality AI-generated content.",
+   "Spotify clarified that the 'AI Persona' badge is a judgment on the artist's public identity, not on how the music itself was made, which will be covered by other features like AI Credits. Artists can appeal an incorrect label.",
+   "In the coming months, Spotify will also introduce a tool for users to report unlabeled AI Persona profiles. This initiative helps differentiate AI Personas from forthcoming, licensed AI-generated remixes and covers.",
+   "Artists can begin self-disclosing as AI Personas via Spotify for Artists on August 11, 2026. The 'AI Persona' labels will start appearing on profiles next month, in mid-September."
+  ],
+  "caption": "Spotify is rolling out 'AI Persona' labels for AI-generated artists. Their music will be excluded from all recommendations.\n\nSpotify announced it will begin labeling AI-generated artists with 'AI Persona' profile tags and ban their music from its editorial and algorithmic recommendations. Users will start seeing these badges appear on artist profiles in mid-September.\n\nWhile artists can self-disclose, Spotify will also review profiles, focusing on those with pre-defined audience thresholds, to identify photorealistic AI-generated identities. This ensures more listened-to artists are covered first.\n\nOnce applied, the 'AI Persona' badges will be visible on the artist’s profile banner, About section, in Search results, and on track rows within playlists. This provides clear identification for listeners.\n\nBy default, AI Personas will not be included in Spotify's recommendations, unless a user explicitly chooses to follow an AI Persona. This allows for user choice while maintaining recommendation quality.\n\nThis move expands Spotify's AI policies, which already ban unauthorized AI voice clones and deepfakes. The company aims to balance AI innovation, like its own AI DJ, with preventing the proliferation of low-quality AI-generated content.\n\nSpotify clarified that the 'AI Persona' badge is a judgment on the artist's public identity, not on how the music itself was made, which will be covered by other features like AI Credits. Artists can appeal an incorrect label.\n\nIn the coming months, Spotify will also introduce a tool for users to report unlabeled AI Persona profiles. This initiative helps differentiate AI Personas from forthcoming, licensed AI-generated remixes and covers.\n\nArtists can begin self-disclosing as AI Personas via Spotify for Artists on August 11, 2026. The 'AI Persona' labels will start appearing on profiles next month, in mid-September.\n\n#Spotify #AI #MusicTech #Streaming #AIArt #TechNews\n\nSource: TechCrunch, Engadget, The Verge",
+  "tweet": "Spotify is introducing 'AI Persona' labels for AI-generated artists starting mid-September. Their music will be excluded from editorial & algorithmic recommendations, unless explicitly followed. A new era for music streaming. #Spotify #AI #Music",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "spotify.com",
+  "source": "TechCrunch, Engadget, The Verge",
+  "url": "https://techcrunch.com/2026/08/11/spotify-will-label-ai-persona-profiles-and-exclude-their-music-from-recommendations/",
+  "image": "",
+  "orig_title": "Spotify will label ‘AI Persona’ profiles and exclude their music from recommendations",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/08/11/spotify-will-label-ai-persona-profiles-and-exclude-their-music-from-recommendations/",
+   "https://www.engadget.com/2234144/spotify-launches-ai-persona-labels/",
+   "https://www.theverge.com/entertainment/977815/spotify-ai-persona-label-recommendations"
+  ],
+  "cluster_titles": [
+   "Spotify will label ‘AI Persona’ profiles and exclude their music from recommendations",
+   "Spotify AI Persona labels will alert listeners if an artist isn't real",
+   "Spotify says it won&#8217;t recommend music from &#8216;AI Personas&#8217;"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260811-1926-0-spotify-to-label-ai-artists-and-exclude-thei.png",
+   "20260811-1926-0-spotify-to-label-ai-artists-and-exclude-thei-d1.png",
+   "20260811-1926-0-spotify-to-label-ai-artists-and-exclude-thei-d2.png",
+   "20260811-1926-0-spotify-to-label-ai-artists-and-exclude-thei-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_device_access_security_governance",
+  "headline_marked": "[[Google's AI agent Spark accesses your Chrome sessions]], including passwords and payment methods",
+  "headline": "Google's AI agent Spark accesses your Chrome sessions, including passwords and payment methods",
+  "summary": "Google's Spark AI can now navigate sites and run tasks across your logged-in Chrome accounts, potentially exposing sensitive data to indirect prompt injection attacks.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Google has integrated an autonomous agent, Spark, into Chrome, allowing it to navigate sites and perform multi-step tasks across your logged-in accounts. This feature, known as Chrome auto browse, is currently a US-only preview, available to Pro or Ultra plan subscribers.",
+   "When activated, Spark operates within a local Chrome tab, granting it access to all sites you are signed into. It can even utilize your Password Manager entries to log into new services mid-task, after receiving your permission.",
+   "While Google states that raw password strings never enter the model's context, Spark still interacts with sites containing sensitive data. This raises privacy concerns as the agent can read account details and fill forms intended for personal use.",
+   "The most significant security risk is indirect prompt injection. Attackers can embed hidden instructions within ordinary web content, such as white text on a white background or buried in a product review, which the agent then reads and executes.",
+   "Researchers have demonstrated this vulnerability against other AI agents. Zenity researchers hijacked OpenAI's ChatGPT Atlas, causing it to send phishing messages via WhatsApp Web, and Brave's team exploited Perplexity's Comet to extract user email and one-time passwords.",
+   "Google acknowledges this threat and has implemented a defense architecture for Chrome. Key components include a User Alignment Critic, an isolated secondary model that vets proposed actions against your original intent, and Agent Origin Sets, which restrict the agent to task-relevant domains.",
+   "Despite these robust defenses, the system is not foolproof. Distinguishing genuinely helpful actions from subtly manipulated ones remains a complex judgment call, which the AI model itself is tasked with making.",
+   "To mitigate risks, users can run Gemini Spark within a separate Chrome profile dedicated solely to AI tasks. This isolated profile should be kept free of personal history and saved passwords, with credentials for sensitive services pruned from Google Password Manager.",
+   "Chrome also offers transparency tools, including a running work log in the active tab to review the agent's logic and Chrome History tags for background pages navigated by the agent, providing an audit trail for user review.",
+   "Users are advised to set clear boundaries for AI agent access, particularly for highly sensitive areas like medical portals, banking transactions, and primary email security settings. Convenience should not override critical data protection."
+  ],
+  "caption": "Google's Spark AI agent now accesses your active Chrome sessions. It can use saved passwords and payment methods for tasks.\n\nGoogle has integrated an autonomous agent, Spark, into Chrome, allowing it to navigate sites and perform multi-step tasks across your logged-in accounts. This feature, known as Chrome auto browse, is currently a US-only preview, available to Pro or Ultra plan subscribers.\n\nWhen activated, Spark operates within a local Chrome tab, granting it access to all sites you are signed into. It can even utilize your Password Manager entries to log into new services mid-task, after receiving your permission.\n\nWhile Google states that raw password strings never enter the model's context, Spark still interacts with sites containing sensitive data. This raises privacy concerns as the agent can read account details and fill forms intended for personal use.\n\nThe most significant security risk is indirect prompt injection. Attackers can embed hidden instructions within ordinary web content, such as white text on a white background or buried in a product review, which the agent then reads and executes.\n\nResearchers have demonstrated this vulnerability against other AI agents. Zenity researchers hijacked OpenAI's ChatGPT Atlas, causing it to send phishing messages via WhatsApp Web, and Brave's team exploited Perplexity's Comet to extract user email and one-time passwords.\n\nGoogle acknowledges this threat and has implemented a defense architecture for Chrome. Key components include a User Alignment Critic, an isolated secondary model that vets proposed actions against your original intent, and Agent Origin Sets, which restrict the agent to task-relevant domains.\n\nDespite these robust defenses, the system is not foolproof. Distinguishing genuinely helpful actions from subtly manipulated ones remains a complex judgment call, which the AI model itself is tasked with making.\n\n#AI #Security #GoogleChrome #Privacy #TechNews\n\nSource: Android Police, DEV",
+  "tweet": "Google's Spark AI agent now has full access to your Chrome sessions, including saved passwords. Learn about the risks of indirect prompt injection and how to protect your data. #AI #Security #Google",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police, DEV",
+  "url": "https://www.androidpolice.com/my-auto-browse-trust-problem/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/08/robotic-hand-holding-a-key-beside-a-red-warning-symbol-over-a-google-chrome-browser-window.png",
+  "orig_title": "I finally understand why handing an AI agent your Chrome session is terrifying",
+  "cluster_urls": [
+   "https://www.androidpolice.com/my-auto-browse-trust-problem/",
+   "https://dev.to/kikashy/when-agents-can-act-on-real-devices-governance-moves-beyond-the-prompt-2kf1"
+  ],
+  "cluster_titles": [
+   "I finally understand why handing an AI agent your Chrome session is terrifying",
+   "When Agents Can Act on Real Devices, Governance Moves Beyond the Prompt"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260811-1926-1-google-s-ai-agent-spark-accesses-your-chrome.png",
+   "20260811-1926-1-google-s-ai-agent-spark-accesses-your-chrome-d1.png",
+   "20260811-1926-1-google-s-ai-agent-spark-accesses-your-chrome-d2.png",
+   "20260811-1926-1-google-s-ai-agent-spark-accesses-your-chrome-d3.png",
+   "20260811-1926-1-google-s-ai-agent-spark-accesses-your-chrome-d4.png"
+  ]
+ }
+]

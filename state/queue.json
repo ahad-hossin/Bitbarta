@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "claude_ai_content_marking",
+  "headline_marked": "[[Claude models embed invisible watermarks]] and provenance metadata in AI-generated content worldwide",
+  "headline": "Claude models embed invisible watermarks and provenance metadata in AI-generated content worldwide",
+  "summary": "Anthropic's Claude models now embed imperceptible watermarks in text and cryptographically signed metadata in files, complying with the EU AI Act's transparency code globally. This applies to all supported output from August 2, 2026.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Anthropic's Claude models, launched after August 2, 2026, now embed machine-readable marks in generated output globally. This commitment aligns with the EU AI Act’s Article 50(2) Code of Practice on Transparency of AI-Generated Content.",
+   "For text, an imperceptible watermark is woven into the content, surviving copy and paste across applications like email or Slack. This mark does not alter meaning or readability.",
+   "Supported generated files (.svg, .png, .jpg) receive cryptographically signed provenance metadata using the C2PA open standard. However, this metadata can be removed if the file container is rewritten, for example, by image-delivery pipelines.",
+   "This marking applies to all supported output from the Claude Platform API, Claude chat app, Claude Code, Claude Cowork, and Claude Tag, regardless of geographical location. There is no option to disable this feature via API parameters or enterprise plans.",
+   "Text watermarking is statistical and requires sufficient generated text to encode and detect a reliable signal; very short responses may not be marked. Detection support is promised but not yet fully shipped, and older models are being retrofitted.",
+   "It's crucial to understand that a detected mark only indicates content may have been processed by Claude, not that Claude is the definitive author or that it's plagiarism. Conversely, the absence of a mark does not prove human authorship."
+  ],
+  "caption": "Anthropic's Claude models now embed invisible watermarks in AI-generated text and cryptographically signed metadata in images. This applies globally to all supported output from models launched after August 2, 2026.\n\nAnthropic's Claude models, launched after August 2, 2026, now embed machine-readable marks in generated output globally. This commitment aligns with the EU AI Act’s Article 50(2) Code of Practice on Transparency of AI-Generated Content.\n\nFor text, an imperceptible watermark is woven into the content, surviving copy and paste across applications like email or Slack. This mark does not alter meaning or readability.\n\nSupported generated files (.svg, .png, .jpg) receive cryptographically signed provenance metadata using the C2PA open standard. However, this metadata can be removed if the file container is rewritten, for example, by image-delivery pipelines.\n\nThis marking applies to all supported output from the Claude Platform API, Claude chat app, Claude Code, Claude Cowork, and Claude Tag, regardless of geographical location. There is no option to disable this feature via API parameters or enterprise plans.\n\nText watermarking is statistical and requires sufficient generated text to encode and detect a reliable signal; very short responses may not be marked. Detection support is promised but not yet fully shipped, and older models are being retrofitted.\n\nIt's crucial to understand that a detected mark only indicates content may have been processed by Claude, not that Claude is the definitive author or that it's plagiarism. Conversely, the absence of a mark does not prove human authorship.\n\n#AI #Anthropic #Claude #Watermarking #AITransparency #EUAIACT\n\nSource: DEV, Hacker News",
+  "tweet": "Claude models now embed invisible watermarks in AI-generated text and signed metadata in images globally, per EU AI Act transparency commitments. This applies to all supported output from August 2, 2026. #AI #Anthropic #AITransparency",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "DEV, Hacker News",
+  "url": "https://dev.to/hassann/how-claude-marks-ai-generated-content-245a",
+  "image": "",
+  "orig_title": "How Claude Marks AI-Generated Content?",
+  "cluster_urls": [
+   "https://dev.to/hassann/how-claude-marks-ai-generated-content-245a",
+   "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content"
+  ],
+  "cluster_titles": [
+   "How Claude Marks AI-Generated Content?",
+   "How Claude marks AI-generated content"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260811-1511-0-claude-models-embed-invisible-watermarks-and.png",
+   "20260811-1511-0-claude-models-embed-invisible-watermarks-and-d1.png",
+   "20260811-1511-0-claude-models-embed-invisible-watermarks-and-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_code_review_bias",
+  "headline_marked": "[[You Review AI Code Less Carefully Than Human Code]]. That Is Backwards.",
+  "headline": "You Review AI Code Less Carefully Than Human Code. That Is Backwards.",
+  "summary": "Studies show that while initial AI code reviews are rigorous, repeated exposure leads to 'habituation,' causing reviewers to spend less time inspecting and more time in queue, letting subtle errors pass.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Initial benchmarks show that AI-generated pull requests are accepted at a much lower rate (32.7%) compared to human-written ones (84.4%). Senior engineers also spend significantly more time reviewing AI suggestions, about 4.3 minutes versus 1.2 minutes for human code.",
+   "However, a study tracking 400 reviewers over seven months revealed a shift. Approval rates for AI agent pull requests rose from 30.1% to 36.8%, while the same reviewers became more critical of human-written code during the same period.",
+   "Crucially, review latency for AI pull requests went up by three and a half times, but inline comments decreased by 22%. This indicates that the increased time was spent in the queue, not on deeper code inspection.",
+   "This phenomenon is known as habituation, where repeated exposure to something that usually turns out fine gradually lowers attention. Reviewers don't consciously decide to care less; their attention quietly reallocates.",
+   "A second factor is the lack of a downstream catch for senior reviewers. When a senior's attention drifts, there's often no one else to catch the oversight, and their behavior sets the standard for the rest of the team.",
+   "The failures that slip through are often subtle, such as code that is correct today but unmaintainable in six months, or aggregation logic that runs clean but returns quietly wrong numbers, discovered weeks later by business users.",
+   "To counteract this, authors should be required to state what they specifically verified, rather than just 'AI wrote this.' This shifts the burden back to the submitter and guides reviewers on where to focus their attention.",
+   "Additionally, reviews should prioritize maintainability, not just correctness. AI-generated code tends to favor generic patterns and default error handling, which can increase static analysis warnings by 30% and complexity by over 40% across projects.",
+   "Instead of tracking review duration, teams should monitor inline comments per pull request over months. A falling comment count on AI-assisted pull requests, even as volume rises, signals habituation before it's consciously felt."
+  ],
+  "caption": "Developers are reviewing AI-generated code less carefully over time, despite initial caution. This 'habituation' leads to critical errors slipping through.\n\nInitial benchmarks show that AI-generated pull requests are accepted at a much lower rate (32.7%) compared to human-written ones (84.4%). Senior engineers also spend significantly more time reviewing AI suggestions, about 4.3 minutes versus 1.2 minutes for human code.\n\nHowever, a study tracking 400 reviewers over seven months revealed a shift. Approval rates for AI agent pull requests rose from 30.1% to 36.8%, while the same reviewers became more critical of human-written code during the same period.\n\nCrucially, review latency for AI pull requests went up by three and a half times, but inline comments decreased by 22%. This indicates that the increased time was spent in the queue, not on deeper code inspection.\n\nThis phenomenon is known as habituation, where repeated exposure to something that usually turns out fine gradually lowers attention. Reviewers don't consciously decide to care less; their attention quietly reallocates.\n\nA second factor is the lack of a downstream catch for senior reviewers. When a senior's attention drifts, there's often no one else to catch the oversight, and their behavior sets the standard for the rest of the team.\n\nThe failures that slip through are often subtle, such as code that is correct today but unmaintainable in six months, or aggregation logic that runs clean but returns quietly wrong numbers, discovered weeks later by business users.\n\nTo counteract this, authors should be required to state what they specifically verified, rather than just 'AI wrote this.' This shifts the burden back to the submitter and guides reviewers on where to focus their attention.\n\n#AICode #CodeReview #SoftwareDevelopment #DeveloperTools #TechNews #Programming\n\nSource: DEV",
+  "tweet": "Developers are reviewing AI-generated code less carefully over time, leading to critical errors. Studies show 'habituation' causes attention to drop while review time in queue rises. It's time to rethink code review strategies for AI-assisted development. #AICode #CodeReview",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/raghavsharma_/you-review-ai-code-less-carefully-than-human-code-that-is-backwards-akg",
+  "image": "",
+  "orig_title": "You Review AI Code Less Carefully Than Human Code. That Is Backwards.",
+  "cluster_urls": [
+   "https://dev.to/raghavsharma_/you-review-ai-code-less-carefully-than-human-code-that-is-backwards-akg"
+  ],
+  "cluster_titles": [
+   "You Review AI Code Less Carefully Than Human Code. That Is Backwards."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260811-1511-1-you-review-ai-code-less-carefully-than-human.png",
+   "20260811-1511-1-you-review-ai-code-less-carefully-than-human-d1.png",
+   "20260811-1511-1-you-review-ai-code-less-carefully-than-human-d2.png",
+   "20260811-1511-1-you-review-ai-code-less-carefully-than-human-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "docker_waf_security_implementation",
+  "headline_marked": "[[Free WAF blocks 99% of SQL Injection attacks]] before they reach your database",
+  "headline": "Free WAF blocks 99% of SQL Injection attacks before they reach your database",
+  "summary": "SQL injection remains the most dangerous and common web vulnerability. SafeLine's semantic WAF offers defense-in-depth, blocking 99% of these attacks with a 0.07% false positive rate.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "SQL injection remains the most dangerous and common web vulnerability, accounting for 23% of all reported web vulnerabilities in 2025. A Web Application Firewall (WAF) can block 99% of these attacks at the proxy level, preventing them from reaching your database.",
+   "SafeLine's semantic engine detects SQL injection by parsing the SQL structure of incoming payloads, rather than relying on regex rules or specific payload strings. This approach allows it to identify attempts to modify query behavior without needing custom rules.",
+   "The semantic engine boasts a 0.07% false positive rate for SQL injection detection. It also extends its capabilities to detect NoSQL injection patterns, such as MongoDB operators like $gt, $ne, and $where, using the same single-pass parsing method for JSON-encoded NoSQL queries.",
+   "While prepared statements are considered the gold standard for preventing SQL injection, a WAF provides crucial defense-in-depth. It acts as an additional layer of security, catching vulnerabilities that might slip past application code. Both methods should be employed for robust protection.",
+   "SafeLine's engine effectively detects both blind and in-band SQL injection techniques. Blind SQL injection, which uses timing-based extraction (e.g., AND SLEEP(5)), is identified with the same semantic parsing approach as more visible in-band attacks."
+  ],
+  "caption": "SQL injection remains the most dangerous web vulnerability, making up 23% of reported flaws in 2025. A WAF can block 99% of these attacks.\n\nSQL injection remains the most dangerous and common web vulnerability, accounting for 23% of all reported web vulnerabilities in 2025. A Web Application Firewall (WAF) can block 99% of these attacks at the proxy level, preventing them from reaching your database.\n\nSafeLine's semantic engine detects SQL injection by parsing the SQL structure of incoming payloads, rather than relying on regex rules or specific payload strings. This approach allows it to identify attempts to modify query behavior without needing custom rules.\n\nThe semantic engine boasts a 0.07% false positive rate for SQL injection detection. It also extends its capabilities to detect NoSQL injection patterns, such as MongoDB operators like $gt, $ne, and $where, using the same single-pass parsing method for JSON-encoded NoSQL queries.\n\nWhile prepared statements are considered the gold standard for preventing SQL injection, a WAF provides crucial defense-in-depth. It acts as an additional layer of security, catching vulnerabilities that might slip past application code. Both methods should be employed for robust protection.\n\nSafeLine's engine effectively detects both blind and in-band SQL injection techniques. Blind SQL injection, which uses timing-based extraction (e.g., AND SLEEP(5)), is identified with the same semantic parsing approach as more visible in-band attacks.\n\n#SQLInjection #WebSecurity #WAF #Cybersecurity #Developers #SafeLine\n\nSource: DEV",
+  "tweet": "SQL injection is still the top web vulnerability, accounting for 23% of flaws in 2025. Learn how a free WAF like SafeLine can block 99% of these attacks at the proxy level, even detecting blind and NoSQL injections. #WebSecurity #SQLInjection #WAF",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "safeline.com",
+  "source": "DEV",
+  "url": "https://dev.to/lialiago/how-to-block-sql-injection-attacks-with-a-free-waf-2dda",
+  "image": "",
+  "orig_title": "How to Block SQL Injection Attacks with a Free WAF",
+  "cluster_urls": [
+   "https://dev.to/lialiago/how-to-block-sql-injection-attacks-with-a-free-waf-2dda",
+   "https://dev.to/lialiago/docker-compose-waf-add-safeline-to-any-existing-stack-in-3-steps-np5"
+  ],
+  "cluster_titles": [
+   "How to Block SQL Injection Attacks with a Free WAF",
+   "Docker Compose WAF: Add SafeLine to Any Existing Stack in 3 Steps"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260811-1307-0-free-waf-blocks-99-of-sql-injection-attacks-.png",
+   "20260811-1307-0-free-waf-blocks-99-of-sql-injection-attacks--d1.png",
+   "20260811-1307-0-free-waf-blocks-99-of-sql-injection-attacks--d2.png",
+   "20260811-1307-0-free-waf-blocks-99-of-sql-injection-attacks--d3.png"
+  ]
+ },
+ {
+  "topic": "google_pixel_11_ai_feature_exclusion",
+  "headline_marked": "Pixel 11 base model [[reportedly skips HiLight/Pixel Glow]], but gets 12GB RAM standard",
+  "headline": "Pixel 11 base model reportedly skips HiLight/Pixel Glow, but gets 12GB RAM standard",
+  "summary": "New leaks suggest Google's flashy Pixel Glow LED system, potentially named HiLight, will be exclusive to the Pro models. However, the base Pixel 11 is now expected to ship with 12GB RAM, a bump from earlier 8GB rumors.",
+  "category": "ANDROID",
+  "template": "leak",
+  "details": [
+   "The Pixel 11 lineup is expected to feature a new LED lighting system called Pixel Glow, or HiLight, integrated into the camera flash. However, this feature will reportedly be exclusive to the Pro models, leaving the entry-level Pixel 11 without it. This system is described as a modern take on older Android notification LEDs.",
+   "Contrary to previous rumors of 8GB RAM, leaker @evowizz claims the base Pixel 11 will ship with 12GB RAM as standard. This increase in memory is significant, especially given rising DRAM prices.",
+   "Maintaining 12GB RAM across the lineup would ensure even the base model can handle increasingly demanding AI tasks. This aligns with Google's recent focus on integrating advanced AI capabilities into its Pixel devices.",
+   "The telephoto camera on the device is not expected to see any upgrades, reportedly sticking with the same 10.8MP shooter.",
+   "Despite numerous leaks, @evowizz teases that \"various features have not leaked yet,\" hinting at a \"special set of features\" that will be the \"focus\" of the Pixel 11 lineup. The Made by Google event is imminent, with expectations for AI-centric announcements."
+  ],
+  "caption": "The base Pixel 11 reportedly misses out on the new HiLight LED feature, but gains a surprising 12GB RAM as standard. What else is Google holding back?\n\nThe Pixel 11 lineup is expected to feature a new LED lighting system called Pixel Glow, or HiLight, integrated into the camera flash. However, this feature will reportedly be exclusive to the Pro models, leaving the entry-level Pixel 11 without it. This system is described as a modern take on older Android notification LEDs.\n\nContrary to previous rumors of 8GB RAM, leaker @evowizz claims the base Pixel 11 will ship with 12GB RAM as standard. This increase in memory is significant, especially given rising DRAM prices.\n\nMaintaining 12GB RAM across the lineup would ensure even the base model can handle increasingly demanding AI tasks. This aligns with Google's recent focus on integrating advanced AI capabilities into its Pixel devices.\n\nThe telephoto camera on the device is not expected to see any upgrades, reportedly sticking with the same 10.8MP shooter.\n\nDespite numerous leaks, @evowizz teases that \"various features have not leaked yet,\" hinting at a \"special set of features\" that will be the \"focus\" of the Pixel 11 lineup. The Made by Google event is imminent, with expectations for AI-centric announcements.\n\n#Pixel11 #GooglePixel #Android #Smartphone #TechLeaks #MadeByGoogle\n\nSource: Android Police",
+  "tweet": "Pixel 11 base model reportedly skips the new HiLight LED feature, but gets 12GB RAM standard. This contradicts earlier leaks of 8GB. More surprises expected at the Made by Google event soon! #Pixel11 #GooglePixel #Android",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/pixel-11-wont-get-googles-flashy-new-trick-but-more-come/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/04/pixel-11-with-a-glowing-camera-bar-and-pixel-glow-text-1.png",
+  "orig_title": "Pixel 11 won't get Google's flashy new trick, but there's more to come",
+  "cluster_urls": [
+   "https://www.androidpolice.com/pixel-11-wont-get-googles-flashy-new-trick-but-more-come/"
+  ],
+  "cluster_titles": [
+   "Pixel 11 won't get Google's flashy new trick, but there's more to come"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260811-1307-1-pixel-11-base-model-reportedly-skips-hilight.png",
+   "20260811-1307-1-pixel-11-base-model-reportedly-skips-hilight-d1.png",
+   "20260811-1307-1-pixel-11-base-model-reportedly-skips-hilight-d2.png"
+  ]
+ }
+]

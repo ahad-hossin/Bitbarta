@@ -1,1 +1,110 @@
-[]
+[
+ {
+  "topic": "censorship industrial complex and AI impact on internet",
+  "headline_marked": "[[Flock Camera Glitch]] Leads to Woman Pulled Over at Gunpoint Twice",
+  "headline": "Flock Camera Glitch Leads to Woman Pulled Over at Gunpoint Twice",
+  "summary": "A glitch in Flock's automated license plate reader cameras resulted in a woman being wrongfully stopped by police on two separate occasions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A woman was subjected to two separate police stops after a Flock Safety camera system malfunctioned, misidentifying her vehicle.",
+   "The incident highlights concerns about the accuracy and potential misuse of automated surveillance technology, particularly license plate readers.",
+   "Flock Safety cameras are widely used by law enforcement agencies across the US to track vehicles, raising questions about the reliability of such systems and the impact of errors on innocent citizens.",
+   "The \"censorship-industrial complex\" narrative, fueled by conservative media and non-profits, has also been linked to the State Department's monitoring of foreign disinformation, suggesting a broader trend of weaponizing ideas about online speech suppression."
+  ],
+  "caption": "Automated license plate readers are meant to enhance safety, but a glitch in Flock's system led to a woman being pulled over at gunpoint twice.\n\nA woman was subjected to two separate police stops after a Flock Safety camera system malfunctioned, misidentifying her vehicle.\n\nThe incident highlights concerns about the accuracy and potential misuse of automated surveillance technology, particularly license plate readers.\n\nFlock Safety cameras are widely used by law enforcement agencies across the US to track vehicles, raising questions about the reliability of such systems and the impact of errors on innocent citizens.\n\nThe \"censorship-industrial complex\" narrative, fueled by conservative media and non-profits, has also been linked to the State Department's monitoring of foreign disinformation, suggesting a broader trend of weaponizing ideas about online speech suppression.\n\n#security #surveillance #privacy #tech #AI\n\nSource: MIT Technology Review, Hacker News, Ars Technica, Wired",
+  "tweet": "A Flock camera glitch led to a woman being pulled over at gunpoint twice. This incident raises serious questions about the reliability of automated surveillance tech used by law enforcement. #security #privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "MIT Technology Review, Hacker News, Ars Technica, Wired",
+  "url": "https://www.technologyreview.com/2026/08/11/1141635/how-the-censorship-industrial-complex-is-changing-the-internet-and-us-policy/",
+  "image": "",
+  "orig_title": "How the “censorship-industrial complex” is changing the Internet and US policy",
+  "cluster_urls": [
+   "https://www.technologyreview.com/2026/08/11/1141635/how-the-censorship-industrial-complex-is-changing-the-internet-and-us-policy/",
+   "https://guessingheadlights.com/yall-failed-me-woman-pulled-over-at-gunpoint-twice-after-flock-camera-glitch/",
+   "https://arstechnica.com/security/2026/08/new-surveillance-tech-links-your-phone-to-your-license-plate/",
+   "https://arstechnica.com/security/2026/08/heres-why-the-new-pass-ta-key-attack-is-mostly-a-nothingburger/",
+   "https://www.propublica.org/article/foia-requests-responses",
+   "https://www.wired.com/story/book-excerpt-rise-and-fall-of-the-artificial-state-jill-lepore-silicon-valley-sci-fi/",
+   "https://www.wired.com/story/organoids-lab-grown-brains-neural-networks/",
+   "https://stolen-thoughts.com/",
+   "https://www.bbc.com/news/articles/c75gk620r22o"
+  ],
+  "cluster_titles": [
+   "How the “censorship-industrial complex” is changing the Internet and US policy",
+   "Woman Pulled over at Gunpoint Twice After Flock Camera Glitch",
+   "New surveillance tech links your phone to your license plate",
+   "New Pass-ta-key attack reveals all the things we didn't know about passkeys",
+   "Federal vendor with $50M in contracts leaves portal broken for a month",
+   "Elon Musk, Sam Altman, and the Misreading of Science Fiction",
+   "AI Is Dead. Organoids Are Alive",
+   "Stealing Reasoning Traces from Proprietary LLM APIs",
+   "England set to be one of the first countries to eliminate hepatitis C"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260812-0006-0-flock-camera-glitch-leads-to-woman-pulled-ov.png",
+   "20260812-0006-0-flock-camera-glitch-leads-to-woman-pulled-ov-d1.png"
+  ]
+ },
+ {
+  "topic": "developer tools and programming languages",
+  "headline_marked": "[[Roku TVs]] ship with a documented local HTTP API for control",
+  "headline": "Roku TVs ship with a documented local HTTP API for control",
+  "summary": "Every Roku device, including TVs from TCL, Hisense, and Sharp, exposes a local HTTP API on port 8060. This ECP interface is enabled by default and allows for direct control without cloud dependency or API keys.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Every Roku device, from smart TVs to streaming sticks, comes equipped with a documented local HTTP API known as the External Control Protocol (ECP). This interface operates on port 8060 and is enabled by default on all retail units, offering a direct line of control without the need for cloud services or authentication.",
+   "The ECP allows developers to interact with Roku devices using simple HTTP requests. Commands like key presses (Up, Down, Select, VolumeUp, etc.) can be sent to control playback, navigate menus, and manage device settings. The complete list of commands is available in Roku's official ECP documentation.",
+   "While the API is officially documented and used by Roku's own mobile app, it remains largely underutilized outside the developer community. Its simplicity and direct access make it a powerful tool for creating custom control interfaces or automating tasks on Roku-enabled devices.",
+   "Implementing a custom remote or control interface is straightforward. For simple commands, a web page can be created with buttons that trigger fetch requests to the ECP endpoints. However, for responses that require parsing (like device information or app lists), a local proxy or native application might be necessary due to CORS restrictions and mixed-content blocking.",
+   "The ECP has been a stable part of the Roku OS for years, with Roku having a strong incentive to maintain its compatibility across firmware updates, as it's the backbone of their official mobile applications. This stability ensures that custom integrations built on ECP are likely to remain functional over time."
+  ],
+  "caption": "Every Roku TV ships with a documented local HTTP API that allows for direct device control without cloud dependency or API keys.\n\nEvery Roku device, from smart TVs to streaming sticks, comes equipped with a documented local HTTP API known as the External Control Protocol (ECP). This interface operates on port 8060 and is enabled by default on all retail units, offering a direct line of control without the need for cloud services or authentication.\n\nThe ECP allows developers to interact with Roku devices using simple HTTP requests. Commands like key presses (Up, Down, Select, VolumeUp, etc.) can be sent to control playback, navigate menus, and manage device settings. The complete list of commands is available in Roku's official ECP documentation.\n\nWhile the API is officially documented and used by Roku's own mobile app, it remains largely underutilized outside the developer community. Its simplicity and direct access make it a powerful tool for creating custom control interfaces or automating tasks on Roku-enabled devices.\n\nImplementing a custom remote or control interface is straightforward. For simple commands, a web page can be created with buttons that trigger fetch requests to the ECP endpoints. However, for responses that require parsing (like device information or app lists), a local proxy or native application might be necessary due to CORS restrictions and mixed-content blocking.\n\nThe ECP has been a stable part of the Roku OS for years, with Roku having a strong incentive to maintain its compatibility across firmware updates, as it's the backbone of their official mobile applications. This stability ensures that custom integrations built on ECP are likely to remain functional over time.\n\n#Roku #SmartTV #API #Developer #Tech\n\nSource: DEV",
+  "tweet": "Every Roku TV ships with a documented local HTTP API (ECP) on port 8060, enabling direct control without cloud services or API keys. #Roku #SmartTV #API",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hisuperdev/every-roku-tv-ships-with-a-documented-rest-api-heres-how-to-use-it-from-curl-or-js-1jb1",
+  "image": "",
+  "orig_title": "Every Roku TV ships with a documented REST API — here's how to use it from curl or JS",
+  "cluster_urls": [
+   "https://dev.to/hisuperdev/every-roku-tv-ships-with-a-documented-rest-api-heres-how-to-use-it-from-curl-or-js-1jb1",
+   "https://dev.to/nitoba/typed-errors-werent-enough-so-i-built-better-effect-cki",
+   "https://dev.to/erikch/nuxt-45-ssr-streaming-is-kind-of-a-big-deal-2i37",
+   "https://dev.to/jacksonxly/refreshing-a-token-i-did-not-own-logged-our-account-out-3nah",
+   "https://dev.to/cospatial3d/how-i-coded-an-sse-streaming-ai-copilot-3d-canvas-entirely-from-my-smartphone-during-factory-line-5c9a",
+   "https://dev.to/tanu_priya/system-design-for-beginners-how-to-design-scalable-systems-1n21",
+   "https://dev.to/nigrosimone/which-is-the-fastest-http-server-in-2026-eg5",
+   "https://dev.to/storvus/what-does-the-del-statement-actually-do-36nf",
+   "https://dev.to/deepak_gahlyan_f3f9e6b657/how-i-built-a-fast-instagram-video-and-reels-downloader-with-nextjs-3bpp",
+   "https://dev.to/thedandev/whats-the-best-game-engine-59gk"
+  ],
+  "cluster_titles": [
+   "Every Roku TV ships with a documented REST API — here's how to use it from curl or JS",
+   "Typed Errors Weren't Enough, So I Built better-effect",
+   "Nuxt 4.5 SSR Streaming Is Kind Of A Big Deal",
+   "Refreshing a token I did not own logged our account out",
+   "How I coded an SSE streaming AI Copilot & 3D canvas entirely from my smartphone during factory line shifts",
+   "System Design for Beginners: How to Design Scalable Systems",
+   "Which is the fastest HTTP server in 2026?",
+   "What Does the `del` Statement Actually Do?",
+   "How I Built a Fast Instagram Video and Reels Downloader with Next.js",
+   "What’s the “best” game engine?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260812-0006-1-roku-tvs-ship-with-a-documented-local-http-a.png",
+   "20260812-0006-1-roku-tvs-ship-with-a-documented-local-http-a-d1.png",
+   "20260812-0006-1-roku-tvs-ship-with-a-documented-local-http-a-d2.png"
+  ]
+ }
+]

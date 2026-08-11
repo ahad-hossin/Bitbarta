@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "apple iphone 20th anniversary redesign",
+  "headline_marked": "[[Apple's 20th-anniversary iPhone redesign]] reportedly still on track for next year's Pro models",
+  "headline": "Apple's 20th-anniversary iPhone redesign reportedly still on track for next year's Pro models",
+  "summary": "Despite previous reports of cancellation, Bloomberg now indicates that Apple's significant iPhone redesign for its 20th anniversary is still planned for the 2025 Pro models.",
+  "category": "APPLE",
+  "template": "leak",
+  "details": [
+   "Bloomberg reports that Apple's highly anticipated 20th-anniversary iPhone redesign is still on schedule. This contradicts earlier rumors suggesting the project had been scrapped. The significant overhaul is expected for the 2025 Pro models.",
+   "The redesign is anticipated to bring substantial aesthetic and functional changes to the premium iPhone line. Details about the specific features remain speculative, but expectations are high for a fresh look.",
+   "This development suggests Apple is committed to a major refresh for its flagship device, aligning with its history of significant design updates for milestone anniversaries. The company aims to keep its Pro models at the forefront of innovation.",
+   "Industry observers will be closely watching for further leaks or official announcements regarding these next-generation iPhones. The 20th anniversary marks a key moment for the iconic smartphone."
+  ],
+  "caption": "Apple's major 20th-anniversary iPhone redesign is reportedly back on track for 2025 Pro models, defying earlier cancellation rumors.\n\nBloomberg reports that Apple's highly anticipated 20th-anniversary iPhone redesign is still on schedule. This contradicts earlier rumors suggesting the project had been scrapped. The significant overhaul is expected for the 2025 Pro models.\n\nThe redesign is anticipated to bring substantial aesthetic and functional changes to the premium iPhone line. Details about the specific features remain speculative, but expectations are high for a fresh look.\n\nThis development suggests Apple is committed to a major refresh for its flagship device, aligning with its history of significant design updates for milestone anniversaries. The company aims to keep its Pro models at the forefront of innovation.\n\nIndustry observers will be closely watching for further leaks or official announcements regarding these next-generation iPhones. The 20th anniversary marks a key moment for the iconic smartphone.\n\n#Apple #iPhone #iPhoneLeaks #TechNews #AppleRumors #FutureTech\n\nSource: 9to5Mac",
+  "tweet": "Apple's major 20th-anniversary iPhone redesign is reportedly back on track for 2025 Pro models, defying earlier cancellation rumors. Bloomberg indicates the significant overhaul is still planned. #Apple #iPhoneLeaks #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/08/10/apples-20th-anniversary-iphone-redesign-reportedly-remains-on-track/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/02/Mac-hardware-is-great-but-macOS-26-is-a-disaster-say-pundits.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Apple’s 20th-anniversary iPhone redesign reportedly remains on track",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/08/10/apples-20th-anniversary-iphone-redesign-reportedly-remains-on-track/"
+  ],
+  "cluster_titles": [
+   "Apple’s 20th-anniversary iPhone redesign reportedly remains on track"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260811-0822-0-apple-s-20th-anniversary-iphone-redesign-rep.png",
+   "20260811-0822-0-apple-s-20th-anniversary-iphone-redesign-rep-d1.png",
+   "20260811-0822-0-apple-s-20th-anniversary-iphone-redesign-rep-d2.png"
+  ]
+ },
+ {
+  "topic": "ai agent ghostjacking takeover security",
+  "headline_marked": "[[Ghostjacking turns logs and alerts into commands]] to take over AI agents",
+  "headline": "Ghostjacking turns logs and alerts into commands to take over AI agents",
+  "summary": "A new proof-of-concept attack, \"Ghostjacking,\" allows attackers to embed natural language commands into WAF logs and monitoring alerts. AI agents with investigation and modification permissions can then execute these commands, leading to system compromise.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "\"Ghostjacking\" is a novel attack where natural language commands are embedded into security logs, alerts, or bug reports. When an AI agent with both investigative and modification permissions reads these, it can execute regular tool calls.",
+   "This allows the agent to perform actions like changing DNS settings, running terminal commands, stealing cloud credentials, or creating backdoors. To an analyst, these actions appear as legitimate \"investigating a blocked request\" or \"diagnosing an alert.\"",
+   "The attack leverages privilege delegation, where the attacker's instructions enter the agent's planner via trusted data, not through the LLM creating its own autonomous goals. It bypasses standard defenses as it uses permitted agent identities and legitimate API calls.",
+   "Detection can occur if modification APIs are called immediately after investigation reads, log strings match tool arguments, or agents access unusual network destinations. Changes to agent memory or configuration are also indicators.",
+   "Organizations should treat AI agents not merely as \"human assistant UIs,\" but as execution entities with non-human identities and automation permissions. Maintaining inventories of assets, permissions, and logs for these agents is crucial.",
+   "The proof-of-concept uses a researcher's test account and public APIs, demonstrating the potential impact if tools like Cloudflare, Datadog, or Sentry are integrated with AI agents that delegate both investigation and modification to the same token."
+  ],
+  "caption": "Attackers can embed commands into WAF logs and alerts, turning them into instructions for AI agents. This new \"Ghostjacking\" PoC shows how AI agents can be hijacked.\n\n\"Ghostjacking\" is a novel attack where natural language commands are embedded into security logs, alerts, or bug reports. When an AI agent with both investigative and modification permissions reads these, it can execute regular tool calls.\n\nThis allows the agent to perform actions like changing DNS settings, running terminal commands, stealing cloud credentials, or creating backdoors. To an analyst, these actions appear as legitimate \"investigating a blocked request\" or \"diagnosing an alert.\"\n\nThe attack leverages privilege delegation, where the attacker's instructions enter the agent's planner via trusted data, not through the LLM creating its own autonomous goals. It bypasses standard defenses as it uses permitted agent identities and legitimate API calls.\n\nDetection can occur if modification APIs are called immediately after investigation reads, log strings match tool arguments, or agents access unusual network destinations. Changes to agent memory or configuration are also indicators.\n\nOrganizations should treat AI agents not merely as \"human assistant UIs,\" but as execution entities with non-human identities and automation permissions. Maintaining inventories of assets, permissions, and logs for these agents is crucial.\n\nThe proof-of-concept uses a researcher's test account and public APIs, demonstrating the potential impact if tools like Cloudflare, Datadog, or Sentry are integrated with AI agents that delegate both investigation and modification to the same token.\n\n#AI #Security #Cybersecurity #Ghostjacking #PromptInjection #TechNews\n\nSource: DEV",
+  "tweet": "New \"Ghostjacking\" PoC reveals how AI agents can be hijacked by embedding commands in WAF logs & alerts. If an AI agent has both investigation & modification permissions, it can execute these commands, leading to system compromise. #AI #Security #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/ghostjacking-turning-logs-and-alerts-into-commands-to-take-over-ai-agents-4l0h",
+  "image": "",
+  "orig_title": "Ghostjacking: Turning Logs and Alerts into Commands to Take Over AI Agents",
+  "cluster_urls": [
+   "https://dev.to/anoymask/ghostjacking-turning-logs-and-alerts-into-commands-to-take-over-ai-agents-4l0h"
+  ],
+  "cluster_titles": [
+   "Ghostjacking: Turning Logs and Alerts into Commands to Take Over AI Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260811-0822-1-ghostjacking-turns-logs-and-alerts-into-comm.png",
+   "20260811-0822-1-ghostjacking-turns-logs-and-alerts-into-comm-d1.png",
+   "20260811-0822-1-ghostjacking-turns-logs-and-alerts-into-comm-d2.png"
+  ]
+ }
+]

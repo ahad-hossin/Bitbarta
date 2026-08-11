@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "supermassive_games_layoffs",
+  "headline_marked": "Supermassive Games [[lays off up to 75 workers]] amid sustainability concerns",
+  "headline": "Supermassive Games lays off up to 75 workers amid sustainability concerns",
+  "summary": "The UK-based developer behind \"Until Dawn\" is undergoing its third round of job cuts in two and a half years, impacting a significant portion of its workforce.",
+  "category": "GAMING",
+  "template": "neon",
+  "details": [
+   "Supermassive Games, known for titles like \"Until Dawn\" and \"The Dark Pictures Anthology,\" has announced a difficult decision to initiate a redundancy consultation process. This process is expected to result in the loss of up to 75 employees.",
+   "The company stated that these layoffs are a necessary step to ensure its long-term sustainability. \"We know this will be an incredibly difficult time for everyone, and our priority throughout the process will be to provide support to all those impacted,\" Supermassive Games said in a statement.",
+   "This marks the third round of layoffs for Supermassive Games in the past two and a half years. The studio previously laid off approximately 90 workers in February 2024 and around 35 employees in July 2025. As of the end of 2025, the company had 172 employees.",
+   "The news comes after the release of Supermassive's most recent game, \"Directive 8020.\" While a sequel to \"Until Dawn\" was unveiled in June, Supermassive Games is not involved in its development; Sony's studio Firesprite is handling \"Until Dawn 2,\" and Supermassive also did not work on the 2024 remake of \"Until Dawn.\""
+  ],
+  "caption": "Another wave of job cuts hits the video game industry as Supermassive Games announces up to 75 layoffs.\n\nSupermassive Games, known for titles like \"Until Dawn\" and \"The Dark Pictures Anthology,\" has announced a difficult decision to initiate a redundancy consultation process. This process is expected to result in the loss of up to 75 employees.\n\nThe company stated that these layoffs are a necessary step to ensure its long-term sustainability. \"We know this will be an incredibly difficult time for everyone, and our priority throughout the process will be to provide support to all those impacted,\" Supermassive Games said in a statement.\n\nThis marks the third round of layoffs for Supermassive Games in the past two and a half years. The studio previously laid off approximately 90 workers in February 2024 and around 35 employees in July 2025. As of the end of 2025, the company had 172 employees.\n\nThe news comes after the release of Supermassive's most recent game, \"Directive 8020.\" While a sequel to \"Until Dawn\" was unveiled in June, Supermassive Games is not involved in its development; Sony's studio Firesprite is handling \"Until Dawn 2,\" and Supermassive also did not work on the 2024 remake of \"Until Dawn.\"\n\n#SupermassiveGames #GamingIndustry #Layoffs #UntilDawn #GameDev\n\nSource: Engadget",
+  "tweet": "Supermassive Games is laying off up to 75 employees, citing sustainability concerns. This is the studio's third round of job cuts in 2.5 years. #Gaming #Layoffs #SupermassiveGames",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "supermassivegames.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2234632/supermassive-games-will-lay-off-up-to-75-employees/",
+  "image": "https://www.engadget.com/img/gallery/supermassive-games-will-lay-off-up-to-75-workers/l-intro-1786464069.jpg",
+  "orig_title": "Supermassive Games will lay off up to 75 workers",
+  "cluster_urls": [
+   "https://www.engadget.com/2234632/supermassive-games-will-lay-off-up-to-75-employees/"
+  ],
+  "cluster_titles": [
+   "Supermassive Games will lay off up to 75 workers"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260811-2208-0-supermassive-games-lays-off-up-to-75-workers.png",
+   "20260811-2208-0-supermassive-games-lays-off-up-to-75-workers-d1.png",
+   "20260811-2208-0-supermassive-games-lays-off-up-to-75-workers-d2.png"
+  ]
+ },
+ {
+  "topic": "apple_silicon_llm_inference_speed",
+  "headline_marked": "[[Faster LLM Inference]] on Apple Silicon VMs: Up to 16× Speed Boost",
+  "headline": "Faster LLM Inference on Apple Silicon VMs: Up to 16× Speed Boost",
+  "summary": "New compatibility layer unlocks Metal fast paths in macOS guests, significantly improving LLM performance on M1 Ultra.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new research release from Cua aims to boost LLM performance within macOS virtual machines on Apple Silicon. By implementing a compatibility layer, it unlocks newer Metal fast paths, addressing limitations in graphics and LLM inference speed previously encountered with Apple's Virtualization.framework.",
+   "On an M1 Ultra, TinyLlama 1.1B processed prompts 11.08× faster and generated tokens 16.36× faster when running through llama.cpp with this new layer. Prompt processing speed reached 98% of bare-metal performance.",
+   "The same layer also significantly improved performance for Google's Gemma 4 12B model, boosting prompt processing by 7.20× and token generation by 14.54×. The VM achieved 99.59% of bare-metal prompt speed and 94.82% of bare-metal generation speed.",
+   "The compatibility layer works by intercepting Metal capability queries within a guest process and altering the reported values. This allows applications like llama.cpp to select more efficient GPU kernels, effectively closing the performance gap with native execution.",
+   "This approach differs from traditional GPU passthrough methods. Instead, it leverages Apple's paravirtualization architecture, where the host manages the physical GPU and the guest uses a specialized virtual device. The shim modifies the guest's perception of this device's capabilities.",
+   "The source code, build scripts, and benchmark logs are publicly available under a permissive license, allowing for reproduction and further research into optimizing LLM performance on Apple Silicon VMs."
+  ],
+  "caption": "Apple Silicon VMs just got a massive LLM speed boost! New tech makes Llama.cpp run up to 16x faster.\n\nA new research release from Cua aims to boost LLM performance within macOS virtual machines on Apple Silicon. By implementing a compatibility layer, it unlocks newer Metal fast paths, addressing limitations in graphics and LLM inference speed previously encountered with Apple's Virtualization.framework.\n\nOn an M1 Ultra, TinyLlama 1.1B processed prompts 11.08× faster and generated tokens 16.36× faster when running through llama.cpp with this new layer. Prompt processing speed reached 98% of bare-metal performance.\n\nThe same layer also significantly improved performance for Google's Gemma 4 12B model, boosting prompt processing by 7.20× and token generation by 14.54×. The VM achieved 99.59% of bare-metal prompt speed and 94.82% of bare-metal generation speed.\n\nThe compatibility layer works by intercepting Metal capability queries within a guest process and altering the reported values. This allows applications like llama.cpp to select more efficient GPU kernels, effectively closing the performance gap with native execution.\n\nThis approach differs from traditional GPU passthrough methods. Instead, it leverages Apple's paravirtualization architecture, where the host manages the physical GPU and the guest uses a specialized virtual device. The shim modifies the guest's perception of this device's capabilities.\n\nThe source code, build scripts, and benchmark logs are publicly available under a permissive license, allowing for reproduction and further research into optimizing LLM performance on Apple Silicon VMs.\n\n#AI #AppleSilicon #LLM #Virtualization #llama.cpp\n\nSource: Hacker News",
+  "tweet": "Apple Silicon VMs see up to 16x faster LLM inference! A new compatibility layer unlocks Metal fast paths, boosting performance for models like Llama and Gemma. Check out the research release from Cua. #AI #AppleSilicon #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "Hacker News",
+  "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
+  "image": "",
+  "orig_title": "Apple Silicon and macOS VMs: 11–16× Faster LLM Inference with Llama.cpp",
+  "cluster_urls": [
+   "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
+   "https://www.trykeet.com/"
+  ],
+  "cluster_titles": [
+   "Apple Silicon and macOS VMs: 11–16× Faster LLM Inference with Llama.cpp",
+   "Launch HN: Keet (YC S24) – An app to create video courses on anything"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260811-2208-1-faster-llm-inference-on-apple-silicon-vms-up.png",
+   "20260811-2208-1-faster-llm-inference-on-apple-silicon-vms-up-d1.png",
+   "20260811-2208-1-faster-llm-inference-on-apple-silicon-vms-up-d2.png"
+  ]
+ }
+]

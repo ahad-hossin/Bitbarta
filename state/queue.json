@@ -1,1 +1,91 @@
-[]
+[
+ {
+  "topic": "browser based ai image upscaler",
+  "headline_marked": "[[Run AI image upscaler & sharpener 100% in browser]] with TensorFlow.js",
+  "headline": "Run AI image upscaler & sharpener 100% in browser with TensorFlow.js",
+  "summary": "Developers can now run AI image upscaling and sharpening models entirely within a web browser using TensorFlow.js, ensuring images never leave the user's device. This enables privacy-focused, client-side image processing.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new approach allows AI image upscaling and sharpening to run entirely within a web browser, eliminating the need to upload images to external servers. This method leverages TensorFlow.js to keep all processing client-side, enhancing user privacy.",
+   "The core implementation involves initializing an Upscaler model and processing images in patches using `patchSize`. This tiling strategy is crucial for managing memory, preventing browser tabs from crashing when handling large images.",
+   "Model selection significantly impacts results. Benchmarking ESRGAN variants showed 'slim' is fast but softer, 'medium' had artifacts, and 'thick' offered the sharpest output but was three times slower. A default 'slim' mode with an optional 'max detail' ('thick') mode was implemented.",
+   "For sharpening without upscaling, the model processes the image and then downscales the result back to the original dimensions. This retains the AI-enhanced detail, producing a clearer image at its native size, distinct from simple enlargement.",
+   "The trade-offs include a one-time model download and slower performance on less powerful mobile devices. These limitations are managed through size caps and user-selectable quality modes (fast/max detail)."
+  ],
+  "caption": "Run AI image upscaling and sharpening directly in your browser. No uploads, no servers — your images never leave your device.\n\nA new approach allows AI image upscaling and sharpening to run entirely within a web browser, eliminating the need to upload images to external servers. This method leverages TensorFlow.js to keep all processing client-side, enhancing user privacy.\n\nThe core implementation involves initializing an Upscaler model and processing images in patches using `patchSize`. This tiling strategy is crucial for managing memory, preventing browser tabs from crashing when handling large images.\n\nModel selection significantly impacts results. Benchmarking ESRGAN variants showed 'slim' is fast but softer, 'medium' had artifacts, and 'thick' offered the sharpest output but was three times slower. A default 'slim' mode with an optional 'max detail' ('thick') mode was implemented.\n\nFor sharpening without upscaling, the model processes the image and then downscales the result back to the original dimensions. This retains the AI-enhanced detail, producing a clearer image at its native size, distinct from simple enlargement.\n\nThe trade-offs include a one-time model download and slower performance on less powerful mobile devices. These limitations are managed through size caps and user-selectable quality modes (fast/max detail).\n\n#AI #TensorFlowJS #WebDev #MachineLearning #BrowserTech #Privacy\n\nSource: DEV",
+  "tweet": "Run AI image upscaling & sharpening 100% in your browser with TensorFlow.js! Keep your images private; nothing leaves your device. Learn how. #AI #WebDev #TensorFlowJS",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/zephyrtran/running-an-ai-image-upscaler-sharpener-100-in-the-browser-tensorflowjs-47b8",
+  "image": "",
+  "orig_title": "Running an AI image upscaler & sharpener 100% in the browser (TensorFlow.js)",
+  "cluster_urls": [
+   "https://dev.to/zephyrtran/running-an-ai-image-upscaler-sharpener-100-in-the-browser-tensorflowjs-47b8"
+  ],
+  "cluster_titles": [
+   "Running an AI image upscaler & sharpener 100% in the browser (TensorFlow.js)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260811-1036-0-run-ai-image-upscaler-sharpener-100-in-brows.png",
+   "20260811-1036-0-run-ai-image-upscaler-sharpener-100-in-brows-d1.png",
+   "20260811-1036-0-run-ai-image-upscaler-sharpener-100-in-brows-d2.png"
+  ]
+ },
+ {
+  "topic": "ios 27 siri ai upgrade and photo authentication",
+  "headline_marked": "[[iOS 27 beta hints at iPhone photo authentication]] using Private Cloud Compute",
+  "headline": "iOS 27 beta hints at iPhone photo authentication using Private Cloud Compute",
+  "summary": "Apple's 'Reference Image' tool, spotted in iOS 27 beta, could verify if a photo was taken with an iPhone camera. This aims to combat AI-generated imagery by confirming content provenance.",
+  "category": "APPLE",
+  "template": "leak",
+  "details": [
+   "Apple's latest iOS 27 beta contains signals suggesting a new photo authentication feature called 'Reference Image'. This tool aims to verify if a photo was genuinely captured using an iPhone camera, addressing concerns around AI-generated content.",
+   "The system would work by sending select sensor information and metadata from an image to Apple's Private Cloud Compute for verification. Users would need to enable a new 'Reference mode' on their iPhone's camera for this authentication option to be available.",
+   "This development comes as tools for checking image provenance become increasingly critical amidst the rise of generative AI. While many efforts focus on watermarking AI creations, Apple's approach would confirm the origin of real photos.",
+   "It's important to note that this feature is currently only found in an ongoing beta test. There's a possibility that 'Reference Image' might not be included in the final public release of iOS 27 this fall."
+  ],
+  "caption": "Apple's iOS 27 beta reveals a potential new feature: 'Reference Image' for authenticating photos. It could verify if an image truly originated from an iPhone camera.\n\nApple's latest iOS 27 beta contains signals suggesting a new photo authentication feature called 'Reference Image'. This tool aims to verify if a photo was genuinely captured using an iPhone camera, addressing concerns around AI-generated content.\n\nThe system would work by sending select sensor information and metadata from an image to Apple's Private Cloud Compute for verification. Users would need to enable a new 'Reference mode' on their iPhone's camera for this authentication option to be available.\n\nThis development comes as tools for checking image provenance become increasingly critical amidst the rise of generative AI. While many efforts focus on watermarking AI creations, Apple's approach would confirm the origin of real photos.\n\nIt's important to note that this feature is currently only found in an ongoing beta test. There's a possibility that 'Reference Image' might not be included in the final public release of iOS 27 this fall.\n\n#Apple #iOS27 #PhotoAuthentication #AI #TechNews #Deepfakes\n\nSource: Engadget, 9to5Mac",
+  "tweet": "iOS 27 beta hints at a new 'Reference Image' tool to authenticate iPhone photos. This could be Apple's answer to AI-generated fakes, verifying image provenance via Private Cloud Compute. #Apple #iOS27 #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "Engadget, 9to5Mac",
+  "url": "https://www.engadget.com/2234108/apple-may-introduce-a-photo-authentication-tool-in-ios-27/",
+  "image": "https://www.engadget.com/img/gallery/apple-may-introduce-a-photo-authentication-tool-in-ios-27/l-intro-1786398315.jpg",
+  "orig_title": "Apple may introduce a photo authentication tool in iOS 27",
+  "cluster_urls": [
+   "https://www.engadget.com/2234108/apple-may-introduce-a-photo-authentication-tool-in-ios-27/",
+   "https://9to5mac.com/2026/08/10/apple-is-working-on-a-way-to-authenticate-that-a-photo-came-from-an-iphone-camera/",
+   "https://9to5mac.com/2026/08/10/heres-whats-new-with-ios-27-beta-5/",
+   "https://9to5mac.com/2026/08/10/the-new-ios-27-beta-further-expands-siri-voice-customization-options/",
+   "https://9to5mac.com/2026/08/10/ios-27-beta-5-adds-new-app-icons-for-siri-safari-and-more/",
+   "https://9to5mac.com/2026/08/10/apple-releases-beta-5-for-ipados-27-watchos-27-and-more/",
+   "https://9to5mac.com/2026/08/10/macos-27-golden-gate-beta-5-now-available-to-developers/",
+   "https://9to5mac.com/2026/08/10/ios-27-beta-5/"
+  ],
+  "cluster_titles": [
+   "Apple may introduce a photo authentication tool in iOS 27",
+   "Apple is working on a way to authenticate that a photo came from an iPhone camera",
+   "Here’s what’s new with iOS 27 beta 5",
+   "The new iOS 27 beta further expands Siri voice customization options",
+   "iOS 27 beta 5 adds new app icons for Siri, Safari, and more",
+   "Apple releases beta 5 for iPadOS 27, watchOS 27, and more",
+   "macOS 27 Golden Gate beta 5 now available to developers",
+   "iOS 27 beta 5 now available as Apple tests major Siri AI upgrade"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260811-1036-1-ios-27-beta-hints-at-iphone-photo-authentica.png",
+   "20260811-1036-1-ios-27-beta-hints-at-iphone-photo-authentica-d1.png",
+   "20260811-1036-1-ios-27-beta-hints-at-iphone-photo-authentica-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "gamer_air_traffic_control_recruitment",
+  "headline_marked": "[[Gamer recruitment for Air Traffic Control hits 94% goal]] in record time, 2,000+ hired",
+  "headline": "Gamer recruitment for Air Traffic Control hits 94% goal in record time, 2,000+ hired",
+  "summary": "The campaign by USDOT and FAA leveraged gamers' skills, hiring over 2,000 new controllers. Successful applicants can earn an average salary of $155,000 after three years.",
+  "category": "GAMING",
+  "template": "launch",
+  "details": [
+   "A groundbreaking campaign by the U.S. Department of Transportation (USDOT) and FAA to recruit video gamers as Air Traffic Controllers (ATC) has achieved a 94% hiring goal in record time. Over 2,000 new ATC operators have been hired, with another 2,000+ in the pipeline.",
+   "The initiative targeted individuals with transferable gaming skills such as spatial awareness, multitasking, strategic thinking, and rapid problem-solving. USDOT Secretary Sean P. Duffy hailed the results as 'historic' and the fastest ever to hit its target.",
+   "This recruitment drive aims to build 'the strongest, sharpest workforce in aviation history,' according to Duffy. Successful applicants can expect an average salary of $155,000 after just three years, while keeping millions safe daily.",
+   "The campaign's video messaging, which stated 'You’ve been training for this,' successfully shifted public perception. It highlighted how gaming experience directly translates to the demanding requirements of air traffic control."
+  ],
+  "caption": "Gamers are being recruited as Air Traffic Controllers, and the campaign is a massive success. Over 2,000 new controllers have been hired, with an average salary of $155,000 after three years.\n\nA groundbreaking campaign by the U.S. Department of Transportation (USDOT) and FAA to recruit video gamers as Air Traffic Controllers (ATC) has achieved a 94% hiring goal in record time. Over 2,000 new ATC operators have been hired, with another 2,000+ in the pipeline.\n\nThe initiative targeted individuals with transferable gaming skills such as spatial awareness, multitasking, strategic thinking, and rapid problem-solving. USDOT Secretary Sean P. Duffy hailed the results as 'historic' and the fastest ever to hit its target.\n\nThis recruitment drive aims to build 'the strongest, sharpest workforce in aviation history,' according to Duffy. Successful applicants can expect an average salary of $155,000 after just three years, while keeping millions safe daily.\n\nThe campaign's video messaging, which stated 'You’ve been training for this,' successfully shifted public perception. It highlighted how gaming experience directly translates to the demanding requirements of air traffic control.\n\n#Tech #Gaming #AirTrafficControl #Recruitment #FAA #USDOT\n\nSource: Tom's Hardware",
+  "tweet": "Gamers are now Air Traffic Controllers! A USDOT/FAA campaign leveraging gaming skills has hired 2,000+ new ATCs, hitting 94% of its goal in record time. Average salary $155K after 3 years. #Gaming #AirTrafficControl #Recruitment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/video-games/gamer-recruitment-drive-results-in-supercharged-hiring-campaign-for-new-air-traffic-controllers-usdot-secretary-reckons-theyve-got-the-strongest-sharpest-workforce-in-aviation-history",
+  "image": "https://cdn.mos.cms.futurecdn.net/HSr2m8bubPgpf4JHCCGRPK-1280-80.jpg",
+  "orig_title": "Gamer recruitment drive results in ‘supercharged’ hiring campaign for new Air Traffic Controllers — 94% hiring goal hit in record time with $155,000 salary potential; ‘the strongest, sharpest workforce in aviation history’",
+  "cluster_urls": [
+   "https://www.tomshardware.com/video-games/gamer-recruitment-drive-results-in-supercharged-hiring-campaign-for-new-air-traffic-controllers-usdot-secretary-reckons-theyve-got-the-strongest-sharpest-workforce-in-aviation-history"
+  ],
+  "cluster_titles": [
+   "Gamer recruitment drive results in ‘supercharged’ hiring campaign for new Air Traffic Controllers — 94% hiring goal hit in record time with $155,000 salary potential; ‘the strongest, sharpest workforce in aviation history’"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260811-1607-0-gamer-recruitment-for-air-traffic-control-hi.png",
+   "20260811-1607-0-gamer-recruitment-for-air-traffic-control-hi-d1.png",
+   "20260811-1607-0-gamer-recruitment-for-air-traffic-control-hi-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_failure_cascade",
+  "headline_marked": "[[LLM agent failures cascade]]: one mistake can become many, scaling super-linearly",
+  "headline": "LLM agent failures cascade: one mistake can become many, scaling super-linearly",
+  "summary": "A 10% per-step error rate in LLM agents can lead to more than double the expected faults in a run, as errors are coupled and amplify through the agent's context. This structural issue worsens with longer trajectories.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "LLM agents often experience \"cascading failures,\" where a single initial mistake doesn't just stop but amplifies through subsequent steps. Unlike independent errors, these faults become part of the agent's context, poisoning future reasoning.",
+   "This \"vertical spread\" within a single run differs from \"blast radius\" failures, which affect many workers simultaneously. The agent's ability to carry intent forward also serves as the channel for mistakes to propagate.",
+   "Quantitatively, a baseline 10% step-error rate can result in twice as many faults per run when errors are coupled. More than half of runs can become \"contaminated,\" leading to a significantly higher overall failure rate.",
+   "The problem scales super-linearly with run length. Longer agent runs provide more opportunities for early faults to poison downstream steps, making structural problems like this more pronounced in complex tasks.",
+   "The key is not solely preventing the first mistake, but implementing interruption points to stop a single fault from becoming multiple. These \"cascade controls\" are distinct from \"blast-radius controls\" used for distributed systems.",
+   "For multi-agent systems, a cascade in one agent can become poisoned input for another, leading to broader coordination breakdowns. Understanding these structural issues is crucial for building robust LLM agents."
+  ],
+  "caption": "A single mistake in an LLM agent doesn't just stop; it can amplify and poison an entire run. This \"cascade\" scales super-linearly with run length.\n\nLLM agents often experience \"cascading failures,\" where a single initial mistake doesn't just stop but amplifies through subsequent steps. Unlike independent errors, these faults become part of the agent's context, poisoning future reasoning.\n\nThis \"vertical spread\" within a single run differs from \"blast radius\" failures, which affect many workers simultaneously. The agent's ability to carry intent forward also serves as the channel for mistakes to propagate.\n\nQuantitatively, a baseline 10% step-error rate can result in twice as many faults per run when errors are coupled. More than half of runs can become \"contaminated,\" leading to a significantly higher overall failure rate.\n\nThe problem scales super-linearly with run length. Longer agent runs provide more opportunities for early faults to poison downstream steps, making structural problems like this more pronounced in complex tasks.\n\nThe key is not solely preventing the first mistake, but implementing interruption points to stop a single fault from becoming multiple. These \"cascade controls\" are distinct from \"blast-radius controls\" used for distributed systems.\n\nFor multi-agent systems, a cascade in one agent can become poisoned input for another, leading to broader coordination breakdowns. Understanding these structural issues is crucial for building robust LLM agents.\n\n#AI #LLMAgents #MachineLearning #SoftwareDevelopment #Tech #AgenticAI\n\nSource: DEV",
+  "tweet": "A single mistake in an LLM agent isn't isolated. It can cascade, amplifying errors and poisoning an entire run, scaling super-linearly with length. Understanding this \"vertical spread\" is key to building robust agents. #AI #LLMAgents",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/loopandretry/one-bad-step-n-bad-steps-how-agent-failures-cascade-538g",
+  "image": "",
+  "orig_title": "One bad step, N bad steps: how agent failures cascade",
+  "cluster_urls": [
+   "https://dev.to/loopandretry/one-bad-step-n-bad-steps-how-agent-failures-cascade-538g"
+  ],
+  "cluster_titles": [
+   "One bad step, N bad steps: how agent failures cascade"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260811-1607-1-llm-agent-failures-cascade-one-mistake-can-b.png",
+   "20260811-1607-1-llm-agent-failures-cascade-one-mistake-can-b-d1.png",
+   "20260811-1607-1-llm-agent-failures-cascade-one-mistake-can-b-d2.png"
+  ]
+ }
+]

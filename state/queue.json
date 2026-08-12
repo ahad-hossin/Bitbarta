@@ -1,1 +1,91 @@
-[]
+[
+ {
+  "topic": "ai_agent_real_world_failure_cost",
+  "headline_marked": "[[Two AI agents disagreed on a script's safety guard]] – both were right due to duplicate files",
+  "headline": "Two AI agents disagreed on a script's safety guard – both were right due to duplicate files",
+  "summary": "Two AI coding assistants checked the same script but found contradictory results. The paradox stemmed from identical filenames in different directories, revealing a dormant bug.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Two different AI coding assistants, checking the same project, uncovered a unique bug. This issue arose because both agents were completely honest and accurate, yet still disagreed on a script's properties.",
+   "One agent (A) claimed a render script had a safety guard: if every visual layer in a video composite was set to zero blur, the script would refuse to render. Agent A stated it tested this directly and it worked.",
+   "A second agent (B) went to verify that claim independently before accepting it into a shared record. Agent B opened the file at the path A described, read it top to bottom, and found no guard at all, no refusal logic.",
+   "The core issue was two files with the exact same filename but located in different directories. One copy had the safety guard patched in during the same session, while the other was an older, unguarded version left behind.",
+   "Agent A had edited and tested the guarded copy, while Agent B had opened the unguarded copy. Neither agent lied nor was careless; they accurately reported what was present in the specific file each had accessed.",
+   "This situation was more dangerous than a normal bug because the unguarded duplicate was a trap for the future. Any future script, person, or automated job invoking the tool by a shorter relative path or from the wrong working directory could have silently hit the unguarded copy, shipping the exact defect the guard was meant to prevent.",
+   "The bug was caught not by a smarter check or a better test, but by a second, independent reader who refused to accept the first claim on its word and looked for themselves. This led to a reported contradiction, signaling a deeper issue.",
+   "The immediate fix for the file itself was to rename the unguarded duplicate with an obvious 'superseded' marker. This ensures anyone stumbling upon it later knows immediately it is not the live copy, and makes the change a simple, reversible operation.",
+   "The more crucial fix is a policy: no claim about 'the file has X' is accepted until it names the exact live path and provides a reproducible command. This ensures all contributors, human or AI, are looking at the same evidence.",
+   "Ultimately, a disagreement between two honest, careful reads is a signal, not noise to be averaged away. It indicates that parties are not looking at the same thing, highlighting the importance of verifying shared assumptions in collaborative work."
+  ],
+  "caption": "Two AI agents checked the same script. One found a safety guard, one didn't. Both were right.\n\nTwo different AI coding assistants, checking the same project, uncovered a unique bug. This issue arose because both agents were completely honest and accurate, yet still disagreed on a script's properties.\n\nOne agent (A) claimed a render script had a safety guard: if every visual layer in a video composite was set to zero blur, the script would refuse to render. Agent A stated it tested this directly and it worked.\n\nA second agent (B) went to verify that claim independently before accepting it into a shared record. Agent B opened the file at the path A described, read it top to bottom, and found no guard at all, no refusal logic.\n\nThe core issue was two files with the exact same filename but located in different directories. One copy had the safety guard patched in during the same session, while the other was an older, unguarded version left behind.\n\nAgent A had edited and tested the guarded copy, while Agent B had opened the unguarded copy. Neither agent lied nor was careless; they accurately reported what was present in the specific file each had accessed.\n\nThis situation was more dangerous than a normal bug because the unguarded duplicate was a trap for the future. Any future script, person, or automated job invoking the tool by a shorter relative path or from the wrong working directory could have silently hit the unguarded copy, shipping the exact defect the guard was meant to prevent.\n\nThe bug was caught not by a smarter check or a better test, but by a second, independent reader who refused to accept the first claim on its word and looked for themselves. This led to a reported contradiction, signaling a deeper issue.\n\nThe immediate fix for the file itself was to rename the unguarded duplicate with an obvious 'superseded' marker. This ensures anyone stumbling upon it later knows immediately it is not the live copy, and makes the change a simple, reversible operation.\n\n#AI #Coding #SoftwareDevelopment #Bugs #TechNews #DevOps\n\nSource: DEV",
+  "tweet": "Two AI agents checked the same script for a safety guard. One found it, one didn't. Both were right. The paradox was due to duplicate files, revealing a dormant bug. A crucial lesson in verification. #AI #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/locoprowrestling/two-ai-agents-checked-the-same-script-for-a-safety-guard-one-found-it-one-didnt-both-were-right-57pc",
+  "image": "",
+  "orig_title": "Two AI agents checked the same script for a safety guard. One found it, one didn't. Both were right.",
+  "cluster_urls": [
+   "https://dev.to/locoprowrestling/two-ai-agents-checked-the-same-script-for-a-safety-guard-one-found-it-one-didnt-both-were-right-57pc",
+   "https://dev.to/locoprowrestling/my-ai-assistant-tested-a-flip-video-public-script-on-the-real-video-it-cost-us-the-premiere-5c5o"
+  ],
+  "cluster_titles": [
+   "Two AI agents checked the same script for a safety guard. One found it, one didn't. Both were right.",
+   "My AI assistant tested a \"flip video public\" script on the real video. It cost us the premiere, permanently."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260812-0907-0-two-ai-agents-disagreed-on-a-script-s-safety.png",
+   "20260812-0907-0-two-ai-agents-disagreed-on-a-script-s-safety-d1.png",
+   "20260812-0907-0-two-ai-agents-disagreed-on-a-script-s-safety-d2.png",
+   "20260812-0907-0-two-ai-agents-disagreed-on-a-script-s-safety-d3.png",
+   "20260812-0907-0-two-ai-agents-disagreed-on-a-script-s-safety-d4.png"
+  ]
+ },
+ {
+  "topic": "ai_unemployment_warning",
+  "headline_marked": "[[AI solves 2 days of dev work in 40 minutes]], outperforming human and Copilot efforts",
+  "headline": "AI solves 2 days of dev work in 40 minutes, outperforming human and Copilot efforts",
+  "summary": "A developer recounts how Claude Code fixed a complex bug in their Chrome extension in minutes, a task that would have taken them days, highlighting AI's rapid impact on coding.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The author warns that developers not using AI will soon face trouble, illustrating this with a personal experience where AI completed two days of their work in just 40 minutes. This revelation came while they were casually scrolling through social media.",
+   "The story centers on \"Intro Skipper,\" a Chrome extension designed to auto-skip intros, recaps, and credits on streaming platforms like Netflix, Hotstar, and Crunchyroll. While Netflix and Hotstar were straightforward, Crunchyroll presented a unique challenge due to its distinct video player and hidden skip buttons.",
+   "Initially, the developer used GitHub Copilot, which offered a \"creative\" but flawed solution: it faked mouse hovers to reveal controls and click skip buttons. This approach, however, left the player controls flickering on screen, disrupting the viewing experience and often failing to work reliably.",
+   "After Crunchyroll updated its player, further breaking the existing fix, the developer turned to Claude Code (Opus 4.8 in max thinking mode). They prompted Claude to analyze the Crunchyroll player and fix the extension's skipping issue.",
+   "Claude Code then performed an impressive feat: it read the entire codebase, opened a browser tab, played an anime on Crunchyroll multiple times to observe player behavior, and then wrote the fix. The entire process took only 30-40 minutes.",
+   "Unlike the previous attempts that focused on clicking hidden buttons, Claude discovered that Crunchyroll exposes exact skip timestamps via a public data endpoint. It then leveraged this data to directly seek the video past intros, recaps, and credits.",
+   "This \"correct solution\" meant no fake clicks or mouse movements were needed, ensuring the player controls never appeared. The extension now works flawlessly, silently skipping segments every time, a problem that had persisted for months.",
+   "The developer estimates that solving this problem manually would have taken two full days of intensive debugging, network request analysis, and trial-and-error. Claude Code achieved the optimal solution in a fraction of that time, while the developer was disengaged."
+  ],
+  "caption": "A developer watched AI fix a complex bug in 40 minutes that would have taken them two days. This is the new reality for coders.\n\nThe author warns that developers not using AI will soon face trouble, illustrating this with a personal experience where AI completed two days of their work in just 40 minutes. This revelation came while they were casually scrolling through social media.\n\nThe story centers on \"Intro Skipper,\" a Chrome extension designed to auto-skip intros, recaps, and credits on streaming platforms like Netflix, Hotstar, and Crunchyroll. While Netflix and Hotstar were straightforward, Crunchyroll presented a unique challenge due to its distinct video player and hidden skip buttons.\n\nInitially, the developer used GitHub Copilot, which offered a \"creative\" but flawed solution: it faked mouse hovers to reveal controls and click skip buttons. This approach, however, left the player controls flickering on screen, disrupting the viewing experience and often failing to work reliably.\n\nAfter Crunchyroll updated its player, further breaking the existing fix, the developer turned to Claude Code (Opus 4.8 in max thinking mode). They prompted Claude to analyze the Crunchyroll player and fix the extension's skipping issue.\n\nClaude Code then performed an impressive feat: it read the entire codebase, opened a browser tab, played an anime on Crunchyroll multiple times to observe player behavior, and then wrote the fix. The entire process took only 30-40 minutes.\n\nUnlike the previous attempts that focused on clicking hidden buttons, Claude discovered that Crunchyroll exposes exact skip timestamps via a public data endpoint. It then leveraged this data to directly seek the video past intros, recaps, and credits.\n\nThis \"correct solution\" meant no fake clicks or mouse movements were needed, ensuring the player controls never appeared. The extension now works flawlessly, silently skipping segments every time, a problem that had persisted for months.\n\n#AI #Developer #Coding #Tech #ClaudeAI #Productivity\n\nSource: DEV",
+  "tweet": "AI fixed a complex coding bug in 40 minutes that would have taken a developer two days. This personal account shows the rapid shift in developer productivity. Are you ready? #AI #Coding #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dsourav/if-youre-not-using-ai-yet-youll-be-unemployed-soon-i-learned-this-while-scrolling-reels-4el9",
+  "image": "",
+  "orig_title": "If You're Not Using AI Yet, You'll Be Unemployed Soon (I Learned This While Scrolling Reels)",
+  "cluster_urls": [
+   "https://dev.to/dsourav/if-youre-not-using-ai-yet-youll-be-unemployed-soon-i-learned-this-while-scrolling-reels-4el9"
+  ],
+  "cluster_titles": [
+   "If You're Not Using AI Yet, You'll Be Unemployed Soon (I Learned This While Scrolling Reels)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260812-0907-1-ai-solves-2-days-of-dev-work-in-40-minutes-o.png",
+   "20260812-0907-1-ai-solves-2-days-of-dev-work-in-40-minutes-o-d1.png",
+   "20260812-0907-1-ai-solves-2-days-of-dev-work-in-40-minutes-o-d2.png",
+   "20260812-0907-1-ai-solves-2-days-of-dev-work-in-40-minutes-o-d3.png"
+  ]
+ }
+]

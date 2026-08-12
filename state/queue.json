@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "topic": "ai used in cyberattacks and security vulnerabilities",
+  "headline_marked": "[[Terabytes of credentials leaked]] in supply-chain attack on AI package",
+  "headline": "Terabytes of credentials leaked in supply-chain attack on AI package",
+  "summary": "Hackers compromised LiteLLM, exposing secrets from over 2,500 organizations including Microsoft, Amazon, and Cisco.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A massive supply-chain attack has exposed terabytes of credentials, including cloud keys, API tokens, and SSH keys, belonging to over 2,500 organizations. The breach targeted LiteLLM, an open-source tool used to streamline AI software development, with compromised versions downloaded from the Python Package Index.",
+   "Security firms CloudSEK and Hudson Rock revealed the incident, stating that the credentials were exfiltrated during a 40-minute window in March. The attack was reportedly carried out by a group known as TeamPCP, who exploited a prior compromise of the vulnerability scanner Trivy.",
+   "The compromised versions of LiteLLM, along with other infected software like KICS and the Telnyx Python SDK, contained malicious code that scraped and exfiltrated sensitive data from infected machines. This included credentials for CI/CD software pipelines, potentially giving attackers access to vast amounts of sensitive information.",
+   "Organizations like Microsoft, Amazon, Cisco, Samsung, and Salesforce are among those affected, with credentials found for numerous sensitive entities. Researchers noted that many CI/CD pipelines are configured generically, meaning exposed secrets could be active and completely unknown to their owners.",
+   "Security experts are urging all organizations that used compromised versions of LiteLLM (specifically versions 1.82.7 and 1.82.8) to immediately rotate all credentials. This includes invalidating and rotating cloud keys, Kubernetes service account tokens, and GitLab/GitHub PATs, and auditing logging and egress filtering."
+  ],
+  "caption": "Terabytes of sensitive credentials exposed in a supply-chain attack targeting an AI package. Over 2,500 organizations compromised, including tech giants.\n\nA massive supply-chain attack has exposed terabytes of credentials, including cloud keys, API tokens, and SSH keys, belonging to over 2,500 organizations. The breach targeted LiteLLM, an open-source tool used to streamline AI software development, with compromised versions downloaded from the Python Package Index.\n\nSecurity firms CloudSEK and Hudson Rock revealed the incident, stating that the credentials were exfiltrated during a 40-minute window in March. The attack was reportedly carried out by a group known as TeamPCP, who exploited a prior compromise of the vulnerability scanner Trivy.\n\nThe compromised versions of LiteLLM, along with other infected software like KICS and the Telnyx Python SDK, contained malicious code that scraped and exfiltrated sensitive data from infected machines. This included credentials for CI/CD software pipelines, potentially giving attackers access to vast amounts of sensitive information.\n\nOrganizations like Microsoft, Amazon, Cisco, Samsung, and Salesforce are among those affected, with credentials found for numerous sensitive entities. Researchers noted that many CI/CD pipelines are configured generically, meaning exposed secrets could be active and completely unknown to their owners.\n\nSecurity experts are urging all organizations that used compromised versions of LiteLLM (specifically versions 1.82.7 and 1.82.8) to immediately rotate all credentials. This includes invalidating and rotating cloud keys, Kubernetes service account tokens, and GitLab/GitHub PATs, and auditing logging and egress filtering.\n\n#cybersecurity #infosec #datas breach #AI #supplychainattack\n\nSource: Ars Technica",
+  "tweet": "Massive supply-chain attack hits LiteLLM, exposing terabytes of credentials from over 2,500 orgs like Microsoft, Amazon, and Cisco. Urgent credential rotation advised! #cybersecurity #AI #breach",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Ars Technica",
+  "url": "https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2021/07/data-breach.jpeg",
+  "orig_title": "Terabytes of credentials leaked in massive supply-chain attack",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/",
+   "https://arstechnica.com/science/2026/08/have-physicists-finally-discovered-glueballs-new-evidence-points-to-yes/",
+   "https://arstechnica.com/gadgets/2026/08/us-boosts-drone-surveillance-as-flesh-eating-screwworms-spread-in-texas/",
+   "https://arstechnica.com/security/2026/08/researchers-found-a-way-to-hijack-devices-through-zoom-screen-sharing/"
+  ],
+  "cluster_titles": [
+   "Terabytes of credentials leaked in massive supply-chain attack",
+   "Have physicists finally discovered glueballs? New evidence points to yes.",
+   "US boosts drone surveillance as flesh-eating screwworms spread in Texas",
+   "Researchers found a way to hijack devices through Zoom screen sharing"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260813-0407-0-terabytes-of-credentials-leaked-in-supply-ch.png",
+   "20260813-0407-0-terabytes-of-credentials-leaked-in-supply-ch-d1.png",
+   "20260813-0407-0-terabytes-of-credentials-leaked-in-supply-ch-d2.png",
+   "20260813-0407-0-terabytes-of-credentials-leaked-in-supply-ch-d3.png"
+  ]
+ }
+]

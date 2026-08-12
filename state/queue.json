@@ -1,1 +1,52 @@
-[]
+[
+ {
+  "topic": "ai agents and enterprise AI developments",
+  "headline_marked": "[[Rogue AI Agents]] aren't evil, they're just eager to please",
+  "headline": "Rogue AI Agents aren't evil, they're just eager to please",
+  "summary": "New research suggests AI agents aren't malicious but rather misinterpret instructions, leading to unexpected and sometimes problematic behavior.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "When AI agents exhibit unexpected or undesirable behavior, it's often not due to malice but a misinterpretation of their instructions. This can manifest as exceeding iteration limits or producing incomplete results, even when the core prompt remains unchanged.",
+   "The issue stems from how different models decompose tasks. Some externalize planning into separate turns, while others handle it internally. Harnesses that only count turns can't distinguish these behaviors, leading to a false impression of efficiency.",
+   "A key takeaway is that step limits, often used as a safety mechanism, are a proxy for a model's formatting habits rather than a true measure of work. Swapping models can shift this proxy without triggering the limit, masking underlying behavioral changes.",
+   "To accurately assess agent performance, it's crucial to log detailed run information, including the 'terminated_by' field. This distinguishes model-ended runs from those cut off by guards, providing a clearer picture of agent behavior.",
+   "Collecting this data across representative samples on both old and new models, with identical inputs, is essential. Comparing against historical logs from different prompt versions is unreliable; the focus must be on holding all variables constant except the model itself."
+  ],
+  "caption": "Rogue AI agents aren't evil, they're just eager to please. Learn why your AI might be misbehaving.\n\nWhen AI agents exhibit unexpected or undesirable behavior, it's often not due to malice but a misinterpretation of their instructions. This can manifest as exceeding iteration limits or producing incomplete results, even when the core prompt remains unchanged.\n\nThe issue stems from how different models decompose tasks. Some externalize planning into separate turns, while others handle it internally. Harnesses that only count turns can't distinguish these behaviors, leading to a false impression of efficiency.\n\nA key takeaway is that step limits, often used as a safety mechanism, are a proxy for a model's formatting habits rather than a true measure of work. Swapping models can shift this proxy without triggering the limit, masking underlying behavioral changes.\n\nTo accurately assess agent performance, it's crucial to log detailed run information, including the 'terminated_by' field. This distinguishes model-ended runs from those cut off by guards, providing a clearer picture of agent behavior.\n\nCollecting this data across representative samples on both old and new models, with identical inputs, is essential. Comparing against historical logs from different prompt versions is unreliable; the focus must be on holding all variables constant except the model itself.\n\n#AI #ArtificialIntelligence #Tech #AIagents #MachineLearning\n\nSource: DEV, VentureBeat, MIT Technology Review, Wired, TechCrunch, The Verge",
+  "tweet": "Rogue AI agents aren't evil, they're just eager to please. New research explains why AI misinterprets instructions, leading to unexpected behavior. #AI #AIagents",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV, VentureBeat, MIT Technology Review, Wired, TechCrunch, The Verge",
+  "url": "https://dev.to/multigrid/what-changes-in-an-agents-planning-behaviour-after-a-model-migration-1ikd",
+  "image": "",
+  "orig_title": "What Changes in an Agent's Planning Behaviour After a Model Migration",
+  "cluster_urls": [
+   "https://dev.to/multigrid/what-changes-in-an-agents-planning-behaviour-after-a-model-migration-1ikd",
+   "https://venturebeat.com/security/four-of-five-enterprises-that-secured-ai-agent-identities-still-cant-contain-one-that-goes-rogue",
+   "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/",
+   "https://www.wired.com/story/rogue-ai-is-just-misunderstood/",
+   "https://dev.to/terminalchai/prime-agent-prime-intellect-open-sources-a-self-improving-rlm-framework-3an7",
+   "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/",
+   "https://www.theverge.com/policy/979010/ice-agents-electric-shock-gloves"
+  ],
+  "cluster_titles": [
+   "What Changes in an Agent's Planning Behaviour After a Model Migration",
+   "Four of five enterprises that secured AI agent identities still can't contain one that goes rogue",
+   "Scaling AI agents with trustworthy data",
+   "Rogue AI Agents Aren’t Evil. They’re Just Eager to Please",
+   "Prime Agent: Prime Intellect Open-Sources a Self-Improving RLM Framework",
+   "OpenAI-backed Thrive Holdings raises $2B to bring AI to the enterprise",
+   "ICE wants to give agents electrified gloves that shock people into compliance"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260813-0259-0-rogue-ai-agents-aren-t-evil-they-re-just-eag.png",
+   "20260813-0259-0-rogue-ai-agents-aren-t-evil-they-re-just-eag-d1.png",
+   "20260813-0259-0-rogue-ai-agents-aren-t-evil-they-re-just-eag-d2.png"
+  ]
+ }
+]

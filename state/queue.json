@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "ai impact on code review",
+  "headline_marked": "[[Build Wide, Ship Narrow]]: How AI Changed the Economics of Code Review",
+  "headline": "Build Wide, Ship Narrow: How AI Changed the Economics of Code Review",
+  "summary": "AI assistants are reshaping software development workflows, making it feasible to build entire features first and then use AI to decompose them into small, reviewable pull requests. This 'Build Wide, Ship Narrow' approach optimizes for learning and validation ",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Traditionally, engineers planned features meticulously, splitting them into small, sequential issues before writing any code. This approach aimed to keep code reviews manageable but forced critical structural decisions at the point of least knowledge, often leading to wasted effort.",
+   "The core problem was that untangling a week of work manually was harder than planning ahead, making upfront boundary decisions essential for reviewability. AI has now collapsed this cost, fundamentally altering the economics of code review.",
+   "AI assistants can turn clear problems into working code in hours, reshape plans at conversational speed, and, crucially, decompose a finished, tangled branch into a sequence of small pull requests with a simple prompt.",
+   "While AI excels at mechanical review tasks like consistency and obvious bugs, human judgment remains vital for subtle correctness, architectural decisions, and long-term impact. Narrow PRs still make human understanding and ownership of the code possible.",
+   "The new workflow suggests planning the feature's design and functionality thoroughly, but without pre-deciding the boundaries for PRs. Instead, developers build the entire feature on a single branch until it works end-to-end.",
+   "During this 'build wide' phase, commits serve as save points, not milestones for external review. Once the feature is complete and validated, the build branch is discarded, and the final, clean PRs are cut fresh.",
+   "Product validation now happens much earlier: the working feature can be demoed before anyone reads a line of code. If the direction is wrong, no review time is wasted on a doomed path.",
+   "If the demo lands successfully, the AI's role becomes paramount. The agent is then used to split the finished, working branch into a sequence of small, independently reviewable PRs, leveraging the code itself to identify natural boundaries like new modules or changed interfaces."
+  ],
+  "caption": "AI is fundamentally changing how developers approach code review, shifting from upfront planning of small PRs to building wide and decomposing later.\n\nTraditionally, engineers planned features meticulously, splitting them into small, sequential issues before writing any code. This approach aimed to keep code reviews manageable but forced critical structural decisions at the point of least knowledge, often leading to wasted effort.\n\nThe core problem was that untangling a week of work manually was harder than planning ahead, making upfront boundary decisions essential for reviewability. AI has now collapsed this cost, fundamentally altering the economics of code review.\n\nAI assistants can turn clear problems into working code in hours, reshape plans at conversational speed, and, crucially, decompose a finished, tangled branch into a sequence of small pull requests with a simple prompt.\n\nWhile AI excels at mechanical review tasks like consistency and obvious bugs, human judgment remains vital for subtle correctness, architectural decisions, and long-term impact. Narrow PRs still make human understanding and ownership of the code possible.\n\nThe new workflow suggests planning the feature's design and functionality thoroughly, but without pre-deciding the boundaries for PRs. Instead, developers build the entire feature on a single branch until it works end-to-end.\n\nDuring this 'build wide' phase, commits serve as save points, not milestones for external review. Once the feature is complete and validated, the build branch is discarded, and the final, clean PRs are cut fresh.\n\nProduct validation now happens much earlier: the working feature can be demoed before anyone reads a line of code. If the direction is wrong, no review time is wasted on a doomed path.\n\n#CodeReview #AI #SoftwareDevelopment #DevTools #Programming #Tech\n\nSource: DEV",
+  "tweet": "AI is revolutionizing code review workflows. Developers can now build entire features first, then use AI to decompose them into small, manageable PRs. This 'Build Wide, Ship Narrow' approach optimizes for rapid validation and efficient review. #CodeReview #AI #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/trismegistus/build-wide-ship-narrow-how-ai-changed-the-economics-of-code-review-11p2",
+  "image": "",
+  "orig_title": "Build Wide, Ship Narrow: How AI Changed the Economics of Code Review",
+  "cluster_urls": [
+   "https://dev.to/trismegistus/build-wide-ship-narrow-how-ai-changed-the-economics-of-code-review-11p2"
+  ],
+  "cluster_titles": [
+   "Build Wide, Ship Narrow: How AI Changed the Economics of Code Review"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260813-1224-0-build-wide-ship-narrow-how-ai-changed-the-ec.png",
+   "20260813-1224-0-build-wide-ship-narrow-how-ai-changed-the-ec-d1.png",
+   "20260813-1224-0-build-wide-ship-narrow-how-ai-changed-the-ec-d2.png",
+   "20260813-1224-0-build-wide-ship-narrow-how-ai-changed-the-ec-d3.png"
+  ]
+ },
+ {
+  "topic": "production ready ai agents 2026",
+  "headline_marked": "By 2026, [[60% of enterprises will deploy production AI agents]], IDC forecasts",
+  "headline": "By 2026, 60% of enterprises will deploy production AI agents, IDC forecasts",
+  "summary": "IDC forecasts 60% of enterprises will deploy production AI agents by 2026, yet Gartner data shows 70% of pilot projects fail. This deep-dive provides a playbook to overcome common pitfalls.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "IDC forecasts 60% of enterprises will deploy at least one production AI agent by 2026, automating revenue, customer support, DevOps, and R&D workflows. However, 70% of agent projects fail to move past pilot due to poor evaluation and flaky behavior, according to Gartner 2025 data.",
+   "By 2026, production AI agents will be multi-modal, tool-using, and stateful systems, operating autonomously for hours or days to complete complex workflows. For high-risk use cases in finance or healthcare, \"production-ready\" agents must comply with regulations like the EU AI Act.",
+   "The shift from pilot to production also marks a move from single-agent systems to coordinated multi-agent workflows. Specialized agents, such as research, drafting, and review agents, work together to complete tasks that would take human teams significantly longer.",
+   "Production agent systems are built on five non-negotiable architectural primitives, designed for scalability, safety, and observability. Most teams only test \"happy paths\" for agents, which often leads to flaky production behavior.",
+   "A robust production evaluation suite must cover five dimensions: functional correctness, safety, latency/cost, robustness, and business KPI alignment. A runnable minimal evaluation framework using Python and pytest is provided, designed for expansion to production use cases.",
+   "The agent harness is the runtime environment that manages agent execution, scaling, observability, and fault tolerance. A production-grade harness architecture includes five core components, with a minimal example using FastAPI and OpenTelemetry deployable as a scalable containerized service.",
+   "Competitive advantage from AI agents does not come from building a single chatbot, but from domain-specific, integrated, and continuously learning agent systems that are hard for competitors to replicate. Four proven patterns for 2026 are highlighted.",
+   "A mid-sized retail company case study shows a multi-agent system reduced churn by 22%, stockouts by 25%, and increased conversion by 18%, driving a 12% increase in annual revenue. This durable advantage is due to agents fine-tuned on the company's proprietary data, making them nearly impossible to replicate."
+  ],
+  "caption": "By 2026, 60% of enterprises will deploy production AI agents, but 70% of pilot projects fail. Learn how to build, evaluate, and harness production-ready AI agents effectively.\n\nIDC forecasts 60% of enterprises will deploy at least one production AI agent by 2026, automating revenue, customer support, DevOps, and R&D workflows. However, 70% of agent projects fail to move past pilot due to poor evaluation and flaky behavior, according to Gartner 2025 data.\n\nBy 2026, production AI agents will be multi-modal, tool-using, and stateful systems, operating autonomously for hours or days to complete complex workflows. For high-risk use cases in finance or healthcare, \"production-ready\" agents must comply with regulations like the EU AI Act.\n\nThe shift from pilot to production also marks a move from single-agent systems to coordinated multi-agent workflows. Specialized agents, such as research, drafting, and review agents, work together to complete tasks that would take human teams significantly longer.\n\nProduction agent systems are built on five non-negotiable architectural primitives, designed for scalability, safety, and observability. Most teams only test \"happy paths\" for agents, which often leads to flaky production behavior.\n\nA robust production evaluation suite must cover five dimensions: functional correctness, safety, latency/cost, robustness, and business KPI alignment. A runnable minimal evaluation framework using Python and pytest is provided, designed for expansion to production use cases.\n\nThe agent harness is the runtime environment that manages agent execution, scaling, observability, and fault tolerance. A production-grade harness architecture includes five core components, with a minimal example using FastAPI and OpenTelemetry deployable as a scalable containerized service.\n\n#AI #AIAgents #EnterpriseAI #TechTrends #FutureofWork #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "By 2026, 60% of enterprises will deploy production AI agents, but 70% of pilot projects fail. A new deep-dive offers an end-to-end playbook for building, evaluating, and harnessing production-ready AI agents for competitive advantage. #AI #EnterpriseAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/production-ready-ai-agents-2026-end-to-end-evaluation-production-harnessing-and-competitive-nhl",
+  "image": "",
+  "orig_title": "Production-Ready AI Agents 2026: End-to-End Evaluation, Production Harnessing, and Competitive Advantage",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/production-ready-ai-agents-2026-end-to-end-evaluation-production-harnessing-and-competitive-nhl"
+  ],
+  "cluster_titles": [
+   "Production-Ready AI Agents 2026: End-to-End Evaluation, Production Harnessing, and Competitive Advantage"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260813-1224-1-by-2026-60-of-enterprises-will-deploy-produc.png",
+   "20260813-1224-1-by-2026-60-of-enterprises-will-deploy-produc-d1.png",
+   "20260813-1224-1-by-2026-60-of-enterprises-will-deploy-produc-d2.png",
+   "20260813-1224-1-by-2026-60-of-enterprises-will-deploy-produc-d3.png",
+   "20260813-1224-1-by-2026-60-of-enterprises-will-deploy-produc-d4.png"
+  ]
+ }
+]

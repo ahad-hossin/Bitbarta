@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "zoomsday_zoom_flaw_ai_discovery",
+  "headline_marked": "[[Critical 'Zoomsday' flaw enables total device takeover]] during Zoom calls with just 20 AI prompts",
+  "headline": "Critical 'Zoomsday' flaw enables total device takeover during Zoom calls with just 20 AI prompts",
+  "summary": "Researchers developed a full remote code execution exploit for Zoom, affecting hundreds of millions of users, using only 20 prompts to an AI agent.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A new critical vulnerability, dubbed 'Zoomsday' by A.Security researchers, allowed any participant in a Zoom meeting to gain full control over another user's device. This exploit was created with remarkable ease, using just 20 prompts to an AI agent.",
+   "The vulnerability impacted Zoom Workplace versions before 7.0.6, and 7.1.5 for 'fast track' users. It was found in a library handling annotation functionality, meaning the exploit could be triggered without users even interacting with the whiteboard feature.",
+   "Attackers could achieve full remote code execution, effectively controlling the victim's computer and accessing their data invisibly. While Zoom doesn't run with admin privileges, the level of access gained was still significant.",
+   "This discovery highlights the growing ease of developing nation-state-class vulnerabilities with minimal resources, thanks to AI assistance. The researchers noted that the traditional barriers to creating such exploits are rapidly collapsing.",
+   "The vulnerability itself was a buffer overrun, where the program failed to check input size, allowing an attacker to send oversized data containing malicious code. This code would then be executed on the victim's machine.",
+   "A.Security's team initially used an AI agent to rank potential attack surfaces after decompiling the Android package. They then focused on the communications protocol, finding the critical flaw in how the annotation library handled serialized data objects without proper boundary checks.",
+   "Zoom quickly patched the bugs after the initial reports. Users who have updated Zoom Workplace to the current version should be safe from this particular exploit."
+  ],
+  "caption": "A critical 'Zoomsday' flaw allowed full device takeover during Zoom calls. This exploit was developed with just 20 AI prompts.\n\nA new critical vulnerability, dubbed 'Zoomsday' by A.Security researchers, allowed any participant in a Zoom meeting to gain full control over another user's device. This exploit was created with remarkable ease, using just 20 prompts to an AI agent.\n\nThe vulnerability impacted Zoom Workplace versions before 7.0.6, and 7.1.5 for 'fast track' users. It was found in a library handling annotation functionality, meaning the exploit could be triggered without users even interacting with the whiteboard feature.\n\nAttackers could achieve full remote code execution, effectively controlling the victim's computer and accessing their data invisibly. While Zoom doesn't run with admin privileges, the level of access gained was still significant.\n\nThis discovery highlights the growing ease of developing nation-state-class vulnerabilities with minimal resources, thanks to AI assistance. The researchers noted that the traditional barriers to creating such exploits are rapidly collapsing.\n\nThe vulnerability itself was a buffer overrun, where the program failed to check input size, allowing an attacker to send oversized data containing malicious code. This code would then be executed on the victim's machine.\n\nA.Security's team initially used an AI agent to rank potential attack surfaces after decompiling the Android package. They then focused on the communications protocol, finding the critical flaw in how the annotation library handled serialized data objects without proper boundary checks.\n\nZoom quickly patched the bugs after the initial reports. Users who have updated Zoom Workplace to the current version should be safe from this particular exploit.\n\n#Zoom #Security #Vulnerability #AI #Cybersecurity #Exploit\n\nSource: Tom's Hardware",
+  "tweet": "A critical 'Zoomsday' flaw allowed full device takeover during Zoom calls. Researchers developed this RCE exploit with just 20 AI prompts, highlighting AI's impact on cybersecurity. Update Zoom Workplace immediately! #Zoom #Security #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "zoom.us",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/cyber-security/zoomsday-vulnerability-let-anyone-in-a-zoom-meeting-take-over-anybody-else-ai-assisted-research-only-used-20-prompts-to-find-an-exploit-to-hack-hundred-of-millions-of-people",
+  "image": "https://cdn.mos.cms.futurecdn.net/rJRWfCPEoFB3pMFCRcnnL8-1280-80.jpg",
+  "orig_title": "Critical 'Zoomsday' flaw enables total device takeover during Zoom calls — AI-assisted research only used 20 prompts to find an exploit to hack hundreds of millions of people.",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/cyber-security/zoomsday-vulnerability-let-anyone-in-a-zoom-meeting-take-over-anybody-else-ai-assisted-research-only-used-20-prompts-to-find-an-exploit-to-hack-hundred-of-millions-of-people"
+  ],
+  "cluster_titles": [
+   "Critical 'Zoomsday' flaw enables total device takeover during Zoom calls — AI-assisted research only used 20 prompts to find an exploit to hack hundreds of millions of people."
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260813-1806-0-critical-zoomsday-flaw-enables-total-device-.png",
+   "20260813-1806-0-critical-zoomsday-flaw-enables-total-device--d1.png",
+   "20260813-1806-0-critical-zoomsday-flaw-enables-total-device--d2.png",
+   "20260813-1806-0-critical-zoomsday-flaw-enables-total-device--d3.png"
+  ]
+ },
+ {
+  "topic": "claude_model_retirement_notice_inconsistency",
+  "headline_marked": "[[Same Claude Model Gives You 60 Days' Notice]] on One Platform and 184 on Another",
+  "headline": "Same Claude Model Gives You 60 Days' Notice on One Platform and 184 on Another",
+  "summary": "Anthropic's own documentation promises 60 days' notice for model retirement, but the same Claude models hosted on AWS Bedrock offer users 184 days' notice.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Anthropic's public documentation states a minimum of 60 days' notice before retiring a model. A recent analysis of 19 retirements showed a median notice of 63 days, with the five most recent all falling between 60-62 days.",
+   "However, the same Anthropic Claude models, when accessed via AWS Bedrock, provide users with a significantly longer notice period. AWS guarantees models remain in a 'Legacy' state for at least six months (184 days) before their End-of-Life (EOL) date.",
+   "This discrepancy means developers using the same underlying AI model receive vastly different timelines for deprecation, depending on whether they interact directly with Anthropic's API or through AWS Bedrock. This highlights a lack of consistent lifecycle management communication across platforms.",
+   "The analysis also revealed issues with other major AI vendors. OpenAI and Google do not publish announcement dates for model retirements, making it impossible to calculate their notice periods from their public documentation.",
+   "Google's documentation for Gemini models even showed a previously announced October 16, 2026, shutdown date for some models that was later removed without any official change log or announcement, only detectable via an updated timestamp and Internet Archive captures.",
+   "These findings underscore the challenges developers face in planning for AI model deprecations due to inconsistent policies and opaque communication from leading AI providers."
+  ],
+  "caption": "The same Claude AI model offers developers 60 days' notice for retirement directly from Anthropic, but 184 days when accessed via AWS Bedrock.\n\nAnthropic's public documentation states a minimum of 60 days' notice before retiring a model. A recent analysis of 19 retirements showed a median notice of 63 days, with the five most recent all falling between 60-62 days.\n\nHowever, the same Anthropic Claude models, when accessed via AWS Bedrock, provide users with a significantly longer notice period. AWS guarantees models remain in a 'Legacy' state for at least six months (184 days) before their End-of-Life (EOL) date.\n\nThis discrepancy means developers using the same underlying AI model receive vastly different timelines for deprecation, depending on whether they interact directly with Anthropic's API or through AWS Bedrock. This highlights a lack of consistent lifecycle management communication across platforms.\n\nThe analysis also revealed issues with other major AI vendors. OpenAI and Google do not publish announcement dates for model retirements, making it impossible to calculate their notice periods from their public documentation.\n\nGoogle's documentation for Gemini models even showed a previously announced October 16, 2026, shutdown date for some models that was later removed without any official change log or announcement, only detectable via an updated timestamp and Internet Archive captures.\n\nThese findings underscore the challenges developers face in planning for AI model deprecations due to inconsistent policies and opaque communication from leading AI providers.\n\n#AI #DeveloperTools #CloudComputing #Anthropic #AWS #ModelDeprecation\n\nSource: DEV",
+  "tweet": "Same Claude AI model, wildly different deprecation notices: 60 days direct from Anthropic, but 184 days on AWS Bedrock. Inconsistent policies cause headaches for developers. #AI #DeveloperTools #CloudComputing",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/ai_changewatch/the-same-claude-model-gives-you-60-days-notice-on-one-platform-and-184-on-another-347p",
+  "image": "",
+  "orig_title": "The Same Claude Model Gives You 60 Days' Notice on One Platform and 184 on Another",
+  "cluster_urls": [
+   "https://dev.to/ai_changewatch/the-same-claude-model-gives-you-60-days-notice-on-one-platform-and-184-on-another-347p"
+  ],
+  "cluster_titles": [
+   "The Same Claude Model Gives You 60 Days' Notice on One Platform and 184 on Another"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260813-1806-1-same-claude-model-gives-you-60-days-notice-o.png",
+   "20260813-1806-1-same-claude-model-gives-you-60-days-notice-o-d1.png",
+   "20260813-1806-1-same-claude-model-gives-you-60-days-notice-o-d2.png"
+  ]
+ }
+]

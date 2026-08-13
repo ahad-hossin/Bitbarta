@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "topic": "ai agent blocks bad payments",
+  "headline_marked": "[[AI agent blocked $1,411.25]] in bad payments after reading 13 invoices in 28 seconds",
+  "headline": "AI agent blocked $1,411.25 in bad payments after reading 13 invoices in 28 seconds",
+  "summary": "An AI agent successfully identified and refused three fraudulent invoices totaling $1,411.25 from a batch of 13, demonstrating effective automation in financial checks.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI agent was tasked with processing 13 invoices and a list of actual orders. It approved 10 correct invoices worth $9,049.05 and refused three deliberately rigged ones, preventing $1,411.25 in erroneous payments.",
+   "The process involved a vision model reading each invoice image, even a poorly scanned one, and converting the data into strict JSON. Crucially, plain code, not AI, then checked this JSON against purchase orders.",
+   "The entire operation, from image reading to decision-making, took just 28 seconds. The cost of the vision model was negligible, emphasizing that the value lies in the subsequent rule-based checks.",
+   "The three problems identified were a padded total, an invoice for an unordered item, and a duplicate invoice. Each was stopped by a specific, deterministic rule implemented in the code.",
+   "The key insight is that the AI performed almost no deciding; it merely extracted data. The critical decisions were made by simple lookups and comparisons within the code, not by AI intelligence or judgment.",
+   "One challenge encountered was a date parsing error due to US-versus-EU format differences, where the model confidently misread \"02/08/2026\" as February 8 instead of August 2. Fortunately, the gate didn't rely on dates.",
+   "This highlights a broader lesson: vision models can provide wrong values with the same confidence as correct ones, and these errors are often internally consistent. Confidence does not equate to correctness.",
+   "The overarching rule established is to never allow a probabilistic component, like a vision model, to make a deterministic decision about money. Its role should be confined to turning pixels into structured data.",
+   "Every decision with financial consequences must reside in readable, testable, and reasoned code. The model votes by providing data, but the code ultimately decides, preventing costly errors.",
+   "Building such a system doesn't require a smarter AI model. Instead, it necessitates a \"dumber, stricter layer\" of code positioned between the AI model and the financial transaction system to ensure accuracy."
+  ],
+  "caption": "An AI agent just saved $1,411.25 by blocking bad payments. It processed 13 invoices in 28 seconds, but the real genius wasn't the AI.\n\nAn AI agent was tasked with processing 13 invoices and a list of actual orders. It approved 10 correct invoices worth $9,049.05 and refused three deliberately rigged ones, preventing $1,411.25 in erroneous payments.\n\nThe process involved a vision model reading each invoice image, even a poorly scanned one, and converting the data into strict JSON. Crucially, plain code, not AI, then checked this JSON against purchase orders.\n\nThe entire operation, from image reading to decision-making, took just 28 seconds. The cost of the vision model was negligible, emphasizing that the value lies in the subsequent rule-based checks.\n\nThe three problems identified were a padded total, an invoice for an unordered item, and a duplicate invoice. Each was stopped by a specific, deterministic rule implemented in the code.\n\nThe key insight is that the AI performed almost no deciding; it merely extracted data. The critical decisions were made by simple lookups and comparisons within the code, not by AI intelligence or judgment.\n\nOne challenge encountered was a date parsing error due to US-versus-EU format differences, where the model confidently misread \"02/08/2026\" as February 8 instead of August 2. Fortunately, the gate didn't rely on dates.\n\nThis highlights a broader lesson: vision models can provide wrong values with the same confidence as correct ones, and these errors are often internally consistent. Confidence does not equate to correctness.\n\nThe overarching rule established is to never allow a probabilistic component, like a vision model, to make a deterministic decision about money. Its role should be confined to turning pixels into structured data.\n\nEvery decision with financial consequences must reside in readable, testable, and reasoned code. The model votes by providing data, but the code ultimately decides, preventing costly errors.\n\n#AI #Automation #FinTech #SoftwareDevelopment #TechNews #InvoiceProcessing\n\nSource: DEV",
+  "tweet": "An AI agent read 13 invoices in 28 seconds and blocked $1,411.25 in bad payments. The secret? Smart code, not just smart AI. Learn how to build robust financial automation. #AI #Automation #FinTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shipsitself/an-ai-agent-read-13-invoices-and-blocked-141125-in-bad-payments-3npi",
+  "image": "",
+  "orig_title": "An AI agent read 13 invoices and blocked $1,411.25 in bad payments",
+  "cluster_urls": [
+   "https://dev.to/shipsitself/an-ai-agent-read-13-invoices-and-blocked-141125-in-bad-payments-3npi"
+  ],
+  "cluster_titles": [
+   "An AI agent read 13 invoices and blocked $1,411.25 in bad payments"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260813-1307-0-ai-agent-blocked-1-411-25-in-bad-payments-af.png",
+   "20260813-1307-0-ai-agent-blocked-1-411-25-in-bad-payments-af-d1.png",
+   "20260813-1307-0-ai-agent-blocked-1-411-25-in-bad-payments-af-d2.png",
+   "20260813-1307-0-ai-agent-blocked-1-411-25-in-bad-payments-af-d3.png",
+   "20260813-1307-0-ai-agent-blocked-1-411-25-in-bad-payments-af-d4.png"
+  ]
+ }
+]

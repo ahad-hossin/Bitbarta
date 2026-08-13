@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "topic": "ai_agents_safari_automation_bugs",
+  "headline_marked": "[[Stranger running 15 instances found three critical bugs]] in a developer's tool",
+  "headline": "Stranger running 15 instances found three critical bugs in a developer's tool",
+  "summary": "A developer's tool, designed for multi-instance use, revealed three subtle bugs when a user deployed it across 15 concurrent instances. These 'fail-safe' errors were invisible in standard testing.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer maintaining \"safari-mcp,\" an MCP server for AI agents to drive Safari, was proud of its per-session tab isolation feature. This allowed multiple agents to share one browser without interference.",
+   "However, a user deployed the tool in an unprecedented setup: three macOS profiles, running up to fifteen concurrent server instances. This user promptly filed three bug reports within seven seconds.",
+   "The first bug involved a redundant memory guard designed to sweep idle tabs. It was inadvertently gated to only one instance, rendering it inert in multi-instance deployments and leading to memory accumulation. The fix was a simple deletion of the superfluous code.",
+   "The second bug concerned a shared JSON file used to record tab ownership. The save mechanism was a classic read-at-startup, modify-in-memory, overwrite-on-save pattern. With fifteen instances, this led to silent loss of ownership entries as saves overwrote each other.",
+   "The fix for the ownership bug involved a merge-on-write strategy, unioning disk state with local state and prioritizing the newest timestamp. This approach also included explicit removal deltas to prevent stale entries from reappearing.",
+   "The third bug was a poll that never backed off: when a Safari window closed, the server polled for its reappearance every three seconds, spawning an `osascript` subprocess each time, indefinitely. This resulted in approximately 1,200 log lines and subprocess spawns per hour, per idle instance.",
+   "The solution for the polling issue was a standard self-scheduling backoff mechanism, doubling from 3 seconds to a 60-second cap and resetting on success. During this fix, a bonus bug was discovered: a trace log quietly growing inside `node_modules`.",
+   "The developer realized their test topology, involving small numbers of instances on a single profile, failed to simulate the user's real-world scale. All three bugs existed precisely in the gap between the tested and actual deployment environments, remaining invisible during green test runs.",
+   "All three bugs were 'fail-safe,' meaning the system continued to function without crashing or loud errors. Memory worsened slowly, entries vanished silently, and subprocesses spawned invisibly, allowing these issues to persist unnoticed until a user pushed the system to its limits.",
+   "The experience highlighted that bugs that fail loudly are fixed quickly, while quiet failures can persist for years. The developer concluded that failures should be designed to be loud, or one must accept that quiet ones will be found by users at scales not initially tested."
+  ],
+  "caption": "A developer's tool was put to the ultimate test: 15 concurrent instances across three macOS profiles. The result? Three critical bugs reported in just seven seconds.\n\nA developer maintaining \"safari-mcp,\" an MCP server for AI agents to drive Safari, was proud of its per-session tab isolation feature. This allowed multiple agents to share one browser without interference.\n\nHowever, a user deployed the tool in an unprecedented setup: three macOS profiles, running up to fifteen concurrent server instances. This user promptly filed three bug reports within seven seconds.\n\nThe first bug involved a redundant memory guard designed to sweep idle tabs. It was inadvertently gated to only one instance, rendering it inert in multi-instance deployments and leading to memory accumulation. The fix was a simple deletion of the superfluous code.\n\nThe second bug concerned a shared JSON file used to record tab ownership. The save mechanism was a classic read-at-startup, modify-in-memory, overwrite-on-save pattern. With fifteen instances, this led to silent loss of ownership entries as saves overwrote each other.\n\nThe fix for the ownership bug involved a merge-on-write strategy, unioning disk state with local state and prioritizing the newest timestamp. This approach also included explicit removal deltas to prevent stale entries from reappearing.\n\nThe third bug was a poll that never backed off: when a Safari window closed, the server polled for its reappearance every three seconds, spawning an `osascript` subprocess each time, indefinitely. This resulted in approximately 1,200 log lines and subprocess spawns per hour, per idle instance.\n\nThe solution for the polling issue was a standard self-scheduling backoff mechanism, doubling from 3 seconds to a 60-second cap and resetting on success. During this fix, a bonus bug was discovered: a trace log quietly growing inside `node_modules`.\n\n#SoftwareDevelopment #Debugging #Tech #OpenSource #Developer #Code\n\nSource: DEV",
+  "tweet": "A developer's tool was pushed to its limits with 15 concurrent instances, leading to 3 critical bugs reported in 7 seconds. This story highlights the importance of diverse test topologies & designing for loud failures. #SoftwareDev #Debugging",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/achiya-automation/i-said-my-tool-supported-multiple-instances-a-stranger-running-15-of-them-filed-three-bugs-all-3egi",
+  "image": "",
+  "orig_title": "I said my tool supported multiple instances. A stranger running 15 of them filed three bugs. All three were right.",
+  "cluster_urls": [
+   "https://dev.to/achiya-automation/i-said-my-tool-supported-multiple-instances-a-stranger-running-15-of-them-filed-three-bugs-all-3egi"
+  ],
+  "cluster_titles": [
+   "I said my tool supported multiple instances. A stranger running 15 of them filed three bugs. All three were right."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260813-1440-0-stranger-running-15-instances-found-three-cr.png",
+   "20260813-1440-0-stranger-running-15-instances-found-three-cr-d1.png",
+   "20260813-1440-0-stranger-running-15-instances-found-three-cr-d2.png",
+   "20260813-1440-0-stranger-running-15-instances-found-three-cr-d3.png",
+   "20260813-1440-0-stranger-running-15-instances-found-three-cr-d4.png"
+  ]
+ }
+]

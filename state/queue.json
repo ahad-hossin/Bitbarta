@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "topic": "microsoft patch tuesday august 2026 security updates",
+  "headline_marked": "Database Inserts Aren't Slow, [[Your Code Asks Permission]] 100 Million Times",
+  "headline": "Database Inserts Aren't Slow, Your Code Asks Permission 100 Million Times",
+  "summary": "A common database bottleneck isn't the insert speed, but the frequent, sequential requests for foreign key IDs. Learn how to optimize this process.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many developers face slow bulk inserts into databases, often blaming the insert operation itself. However, the real culprit can be the sequential fetching of foreign key IDs for each row, creating a dependency that halts progress.",
+   "When inserting songs that reference bands, the `song.band_id` foreign key often requires a lookup for the band's ID. If this lookup happens one by one for millions of rows, it creates a bottleneck, even if the actual insert is fast.",
+   "This sequential dependency prevents parallel processing. You can't start inserting songs until all band IDs are retrieved, and you can't optimize the tables independently. The process becomes a series of one-by-one \"permission\" requests.",
+   "SQLAlchemy offers `insertmanyvalues` which batches inserts and returns IDs more efficiently, improving speed by up to 15x. However, this still involves a dependency on receiving IDs back.",
+   "A more effective approach is to mint IDs yourself before insertion, for example, by using UUIDs like `uuid7` as primary keys. This way, SQLAlchemy can batch inserts without needing to query for IDs.",
+   "Alternatively, you can pre-allocate blocks of IDs from the database sequence. This ensures that you have the necessary IDs ready for your bulk insert operations, avoiding the per-row lookup.",
+   "By either minting IDs upfront or reserving blocks, you eliminate the sequential dependency, allowing for significantly faster data loading and more efficient database operations."
+  ],
+  "caption": "Your bulk database inserts might not be slow. The real issue could be your code asking for permission 100 million times.\n\nMany developers face slow bulk inserts into databases, often blaming the insert operation itself. However, the real culprit can be the sequential fetching of foreign key IDs for each row, creating a dependency that halts progress.\n\nWhen inserting songs that reference bands, the `song.band_id` foreign key often requires a lookup for the band's ID. If this lookup happens one by one for millions of rows, it creates a bottleneck, even if the actual insert is fast.\n\nThis sequential dependency prevents parallel processing. You can't start inserting songs until all band IDs are retrieved, and you can't optimize the tables independently. The process becomes a series of one-by-one \"permission\" requests.\n\nSQLAlchemy offers `insertmanyvalues` which batches inserts and returns IDs more efficiently, improving speed by up to 15x. However, this still involves a dependency on receiving IDs back.\n\nA more effective approach is to mint IDs yourself before insertion, for example, by using UUIDs like `uuid7` as primary keys. This way, SQLAlchemy can batch inserts without needing to query for IDs.\n\nAlternatively, you can pre-allocate blocks of IDs from the database sequence. This ensures that you have the necessary IDs ready for your bulk insert operations, avoiding the per-row lookup.\n\nBy either minting IDs upfront or reserving blocks, you eliminate the sequential dependency, allowing for significantly faster data loading and more efficient database operations.\n\n#Database #SQL #Programming #SoftwareDevelopment #DevOps\n\nSource: DEV",
+  "tweet": "Your bulk database inserts might not be slow. The real issue could be your code asking for permission 100 million times. Learn how to optimize: [Link] #Database #SQL",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/nicolas_vbgh/your-bulk-insert-isnt-slow-waiting-for-the-database-is-3927",
+  "image": "",
+  "orig_title": "Your Bulk Insert Isn't Slow. Waiting for the Database Is.",
+  "cluster_urls": [
+   "https://dev.to/nicolas_vbgh/your-bulk-insert-isnt-slow-waiting-for-the-database-is-3927",
+   "https://dev.to/ian_bishop_98bf15c6a498d4/patch-tuesday-august-2026-1-zero-day-109-critical-fixes-among-790-cves-3hdc"
+  ],
+  "cluster_titles": [
+   "Your Bulk Insert Isn't Slow. Waiting for the Database Is.",
+   "Patch Tuesday August 2026: 1 Zero-Day, 109 Critical Fixes Among 790 CVEs"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260814-0117-0-database-inserts-aren-t-slow-your-code-asks-.png",
+   "20260814-0117-0-database-inserts-aren-t-slow-your-code-asks--d1.png",
+   "20260814-0117-0-database-inserts-aren-t-slow-your-code-asks--d2.png"
+  ]
+ }
+]

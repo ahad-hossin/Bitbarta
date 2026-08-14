@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "deepseek ai token limit bug",
+  "headline_marked": "[[DeepSeek's AI ignored token limits]], leading to unexpected costs and latency for developers",
+  "headline": "DeepSeek's AI ignored token limits, leading to unexpected costs and latency for developers",
+  "summary": "An independent developer found DeepSeek-v4-pro's API silently disregards `max_tokens` and `max_completion_tokens` parameters, causing models to generate excessive tokens, incur full costs for empty responses, and significantly increase latency.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "DeepSeek-v4-pro's API was found to ignore `max_tokens` and `max_completion_tokens` parameters during testing, leading to models consuming up to 15,774 tokens for a task that normally required 3,200-5,800. This resulted in full billing for empty responses and severe performance issues.",
+   "The author, developing a Liar's Dice game, experienced three consecutive failed calls with a 3,072-token budget, paying for all generated tokens despite receiving no visible output. This also caused application errors, misinterpreting the budget failure as model misbehavior.",
+   "Testing revealed that the model consistently consumed its entire budget if it was too tight, only stopping naturally with a significantly larger limit (32,768 tokens). Reasoning usage was highly unpredictable, ranging from 3,137 to 5,691 tokens for the same task, making per-call budgeting unreliable.",
+   "Longer reasoning did not improve answer quality or length; visible answers were similar with or without extensive reasoning. Crucially, a single reasoning-enabled decision took 49-222 seconds, far exceeding the game's 30-60 second pacing budget and breaking the user experience.",
+   "The core problem lies in DeepSeek's API silently accepting unknown or unsupported parameters like `max_completion_tokens`, returning an HTTP 200 OK. This makes developers assume the limits are applied, only to discover the issue through billing or performance logs.",
+   "While the OpenAI-compatible protocol's `max_tokens` field can also lead to issues by budgeting reasoning and output together, DeepSeek's silent parameter acceptance exacerbates the problem. Unsupported parameters could be rejected, but ignoring them makes debugging and budgeting impossible."
+  ],
+  "caption": "DeepSeek's AI model was found to ignore developer-set token limits, leading to unexpected costs and severe latency issues.\n\nDeepSeek-v4-pro's API was found to ignore `max_tokens` and `max_completion_tokens` parameters during testing, leading to models consuming up to 15,774 tokens for a task that normally required 3,200-5,800. This resulted in full billing for empty responses and severe performance issues.\n\nThe author, developing a Liar's Dice game, experienced three consecutive failed calls with a 3,072-token budget, paying for all generated tokens despite receiving no visible output. This also caused application errors, misinterpreting the budget failure as model misbehavior.\n\nTesting revealed that the model consistently consumed its entire budget if it was too tight, only stopping naturally with a significantly larger limit (32,768 tokens). Reasoning usage was highly unpredictable, ranging from 3,137 to 5,691 tokens for the same task, making per-call budgeting unreliable.\n\nLonger reasoning did not improve answer quality or length; visible answers were similar with or without extensive reasoning. Crucially, a single reasoning-enabled decision took 49-222 seconds, far exceeding the game's 30-60 second pacing budget and breaking the user experience.\n\nThe core problem lies in DeepSeek's API silently accepting unknown or unsupported parameters like `max_completion_tokens`, returning an HTTP 200 OK. This makes developers assume the limits are applied, only to discover the issue through billing or performance logs.\n\nWhile the OpenAI-compatible protocol's `max_tokens` field can also lead to issues by budgeting reasoning and output together, DeepSeek's silent parameter acceptance exacerbates the problem. Unsupported parameters could be rejected, but ignoring them makes debugging and budgeting impossible.\n\n#DeepSeek #AI #LLM #Developer #APIBugs #TechNews\n\nSource: DEV",
+  "tweet": "DeepSeek's AI model ignored token limits in API calls, causing developers to pay for empty responses & face huge latency. The API silently accepts unsupported parameters, making budgeting impossible. #DeepSeek #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "deepseek.com",
+  "source": "DEV",
+  "url": "https://dev.to/haoxiang_li_a709204042e6b/i-gave-deepseek-a-token-limit-it-ignored-me-1ijd",
+  "image": "",
+  "orig_title": "I Gave DeepSeek a Token Limit. It Ignored Me.",
+  "cluster_urls": [
+   "https://dev.to/haoxiang_li_a709204042e6b/i-gave-deepseek-a-token-limit-it-ignored-me-1ijd"
+  ],
+  "cluster_titles": [
+   "I Gave DeepSeek a Token Limit. It Ignored Me."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260814-1008-0-deepseek-s-ai-ignored-token-limits-leading-t.png",
+   "20260814-1008-0-deepseek-s-ai-ignored-token-limits-leading-t-d1.png",
+   "20260814-1008-0-deepseek-s-ai-ignored-token-limits-leading-t-d2.png",
+   "20260814-1008-0-deepseek-s-ai-ignored-token-limits-leading-t-d3.png"
+  ]
+ },
+ {
+  "topic": "us drone tariffs",
+  "headline_marked": "Trump [[declares 100 percent tariffs on many drones and all aircraft parts]]",
+  "headline": "Trump declares 100 percent tariffs on many drones and all aircraft parts",
+  "summary": "The new tariffs include a 100% duty on heavy drones and thermal camera drones, with a 25% tariff on all other drone imports, significantly increasing their cost.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "President Donald Trump has declared new tariffs targeting existing drone imports and parts, aiming to significantly increase their cost. This action follows previous bans on future foreign drones, routers, robots, and Roombas from entering the United States.",
+   "A substantial 100% tariff will be imposed on imports of drones equipped with thermal cameras, drones weighing over 25kg (57 pounds), and any parts for unmanned aircraft exceeding 25kg. For all other drones, including smaller consumer models under 250 grams, a 25% tariff has been declared.",
+   "The new tariffs include a significant loophole: companies can avoid these duties if they commit to manufacturing some of their drones or aircraft parts within the United States. This mirrors Trump's previous threats of 100% tariffs on computer chips last year, which also included similar deal-making options.",
+   "Additionally, specific countries will receive lower tariff rates. The EU, Japan, Liechtenstein, South Korea, Switzerland, and Taiwan will face a 15% rate, while the UK will have a 10% rate. These reduced tariffs are contingent on substantially all hardware, software, and technology originating from within these countries and the United States.",
+   "Beyond the tariffs, the proclamation authorizes the Secretary of Commerce to establish a new program. This initiative aims to incentivize fresh investment in US production facilities for Unmanned Aircraft Systems (UAS) and their components, though past government drone incentives have often focused on military applications.",
+   "This move comes despite earlier rulings by the Supreme Court and the US Court of International Trade, which previously deemed Trump's global tariffs illegal. Despite these legal challenges, the former president continues to announce new tariff measures.",
+   "Historically, such tariffs have often led to corporations raising prices to cover the tariff costs, then receiving large refunds when the tariffs are later declared illegal. Companies typically do not pass these refunds or price reductions along to consumers, ultimately profiting at the public's expense.",
+   "These tariffs are not the only recent US government effort to target larger foreign drones. The FCC recently threatened to retroactively ban \"military-grade\" drones, using definitions that could also encompass drones vital for farmers, first responders, and light shows."
+  ],
+  "caption": "The US is imposing a 100% tariff on certain drone imports and parts, with a 25% tariff on all other drones. This aims to drastically increase costs for foreign-made unmanned aircraft.\n\nPresident Donald Trump has declared new tariffs targeting existing drone imports and parts, aiming to significantly increase their cost. This action follows previous bans on future foreign drones, routers, robots, and Roombas from entering the United States.\n\nA substantial 100% tariff will be imposed on imports of drones equipped with thermal cameras, drones weighing over 25kg (57 pounds), and any parts for unmanned aircraft exceeding 25kg. For all other drones, including smaller consumer models under 250 grams, a 25% tariff has been declared.\n\nThe new tariffs include a significant loophole: companies can avoid these duties if they commit to manufacturing some of their drones or aircraft parts within the United States. This mirrors Trump's previous threats of 100% tariffs on computer chips last year, which also included similar deal-making options.\n\nAdditionally, specific countries will receive lower tariff rates. The EU, Japan, Liechtenstein, South Korea, Switzerland, and Taiwan will face a 15% rate, while the UK will have a 10% rate. These reduced tariffs are contingent on substantially all hardware, software, and technology originating from within these countries and the United States.\n\nBeyond the tariffs, the proclamation authorizes the Secretary of Commerce to establish a new program. This initiative aims to incentivize fresh investment in US production facilities for Unmanned Aircraft Systems (UAS) and their components, though past government drone incentives have often focused on military applications.\n\nThis move comes despite earlier rulings by the Supreme Court and the US Court of International Trade, which previously deemed Trump's global tariffs illegal. Despite these legal challenges, the former president continues to announce new tariff measures.\n\n#Tech #Drones #Tariffs #USPolicy #Trade #Hardware\n\nSource: The Verge",
+  "tweet": "US President Trump declares 100% tariffs on heavy drones & thermal camera drones, plus 25% on all other drone imports. This aims to boost domestic production but will significantly raise costs for consumers and businesses. #Drones #Tariffs #USPolicy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/policy/979977/trump-declares-100-percent-tariffs-on-many-drones-and-all-aircraft-parts",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/04/dji-speaker-accessory.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Trump declares 100 percent tariffs on many drones and all aircraft parts",
+  "cluster_urls": [
+   "https://www.theverge.com/policy/979977/trump-declares-100-percent-tariffs-on-many-drones-and-all-aircraft-parts"
+  ],
+  "cluster_titles": [
+   "Trump declares 100 percent tariffs on many drones and all aircraft parts"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260814-1008-1-trump-declares-100-percent-tariffs-on-many-d.png",
+   "20260814-1008-1-trump-declares-100-percent-tariffs-on-many-d-d1.png",
+   "20260814-1008-1-trump-declares-100-percent-tariffs-on-many-d-d2.png",
+   "20260814-1008-1-trump-declares-100-percent-tariffs-on-many-d-d3.png"
+  ]
+ }
+]

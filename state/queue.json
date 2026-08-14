@@ -1,1 +1,46 @@
-[]
+[
+ {
+  "topic": "ai agent benchmark and testing",
+  "headline_marked": "[[200 OK is not enough]] for bot-protected sites returning bad data",
+  "headline": "200 OK is not enough for bot-protected sites returning bad data",
+  "summary": "A successful HTTP status code doesn't guarantee that the data you scraped is accurate. Sophisticated anti-bot systems are serving soft blocks that pass basic checks.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Scraping pipelines often monitor for successful HTTP status codes, assuming a 200 OK means the data is valid. However, modern anti-bot systems are evolving beyond simple blocks.",
+   "Instead of outright rejections (like 403s or 429s), these systems increasingly employ 'soft blocks.' These can manifest as challenge pages, interstitial verification steps, or cached fragments, all served with a 200 OK status.",
+   "This means a scraping job can complete successfully, with all requests returning 200, yet the data gathered might be stale, incomplete, or entirely incorrect. For example, an e-commerce price monitoring job might receive outdated pricing information.",
+   "A naive health check that only looks at status codes and response size will miss these failures. The key is to validate the actual content received, not just the success of the request itself.",
+   "Implementing post-fetch validation is crucial. This can include checking for specific challenge markers, monitoring response size and structure baselines, or even rendering pages in a browser context for JavaScript-heavy sites."
+  ],
+  "caption": "Your web scraping job returned 200 OK. But was the data actually good? Many sites are now serving soft blocks that look legitimate.\n\nScraping pipelines often monitor for successful HTTP status codes, assuming a 200 OK means the data is valid. However, modern anti-bot systems are evolving beyond simple blocks.\n\nInstead of outright rejections (like 403s or 429s), these systems increasingly employ 'soft blocks.' These can manifest as challenge pages, interstitial verification steps, or cached fragments, all served with a 200 OK status.\n\nThis means a scraping job can complete successfully, with all requests returning 200, yet the data gathered might be stale, incomplete, or entirely incorrect. For example, an e-commerce price monitoring job might receive outdated pricing information.\n\nA naive health check that only looks at status codes and response size will miss these failures. The key is to validate the actual content received, not just the success of the request itself.\n\nImplementing post-fetch validation is crucial. This can include checking for specific challenge markers, monitoring response size and structure baselines, or even rendering pages in a browser context for JavaScript-heavy sites.\n\n#webscraping #data #softwaredevelopment #security #automation\n\nSource: DEV",
+  "tweet": "Your web scraping job returned 200 OK. But was the data actually good? Many sites are now serving soft blocks that look legitimate. #webscraping #data #security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/promptcloud_services/200-ok-is-not-enough-why-bot-protected-sites-still-return-bad-data-4bdk",
+  "image": "",
+  "orig_title": "200 OK Is Not Enough: Why Bot-Protected Sites Still Return Bad Data",
+  "cluster_urls": [
+   "https://dev.to/promptcloud_services/200-ok-is-not-enough-why-bot-protected-sites-still-return-bad-data-4bdk",
+   "https://dev.to/shipsitself/a-prompt-injection-couldnt-beat-my-ai-lead-qualifier-a-lazy-lie-beat-it-2-times-out-of-5-15ln",
+   "https://dev.to/benchclaw/i-tried-to-verify-an-ai-agent-benchmark-heres-the-bundle-i-wish-everyone-shipped-2okn",
+   "https://dev.to/pavanbelagatti/build-your-agentic-software-factory-53nc"
+  ],
+  "cluster_titles": [
+   "200 OK Is Not Enough: Why Bot-Protected Sites Still Return Bad Data",
+   "A prompt injection couldn't beat my AI lead-qualifier. A lazy lie beat it 2 times out of 5.",
+   "I Tried to Verify an AI Agent Benchmark. Here's the Bundle I Wish Everyone Shipped",
+   "Build Your Agentic Software Factory!"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260814-1306-0-200-ok-is-not-enough-for-bot-protected-sites.png",
+   "20260814-1306-0-200-ok-is-not-enough-for-bot-protected-sites-d1.png",
+   "20260814-1306-0-200-ok-is-not-enough-for-bot-protected-sites-d2.png"
+  ]
+ }
+]

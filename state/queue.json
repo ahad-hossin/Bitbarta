@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "kisan vaani ai assistant for farmers",
+  "headline_marked": "[[Kisan Vaani: AI voice assistant]] helps Indian farmers with market prices, weather, and doctor advice",
+  "headline": "Kisan Vaani: AI voice assistant helps Indian farmers with market prices, weather, and doctor advice",
+  "summary": "The AI-powered voice assistant provides instant market prices, weather updates, and agricultural doctor advice through natural Hindi voice calls, overcoming barriers of text-heavy apps.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Kisan Vaani (किसान वाणी) is an AI-powered voice assistant designed to help Indian farmers. It provides instant market prices, weather updates, and agricultural doctor advice through natural Hindi voice calls.",
+   "The project was developed during Murf AI's \"10 Days of AI Voice Agents\" challenge to solve a real-world problem in India. Many rural farmers face barriers navigating text-heavy websites or mobile apps for crucial agricultural information.",
+   "Kisan Vaani offers natural Hindi voice interaction with ultra-low latency, achieving a time-to-first-byte under 100 ms using Murf Falcon 2 (Anisha voice). This makes conversations feel like talking to a real helper on the phone.",
+   "The system includes Caller Profile Memory using SQLite, allowing the agent to remember farmers across calls. It tailors responses based on saved profiles, including location and crop information.",
+   "Real-time tools are integrated to fetch live mandi prices per quintal for various crops via e-NAM price data, and district weather forecasts and rain probabilities through the Open-Meteo API.",
+   "For emergencies or financial disputes, Kisan Vaani creates an escalation ticket for a Krishi Vigyan Kendra (KVK) officer callback. A Next.js dashboard provides call analytics, duration metrics, and success rates.",
+   "A multi-agent specialist handoff feature allows the main agent to transfer calls to a CropDoctorSpecialistAgent for specific issues like crop diseases. The TTS voice dynamically switches to a specialist voice, like Murf Falcon Samar, for tailored advice.",
+   "Key engineering challenges included preventing the LLM from speaking raw tool tags, which was fixed by removing literal function names from prompt text and adding strict rules for silent tool execution.",
+   "Overcoming Groq 429 rate limits during agent transfers was achieved by clearing the old chat context when handing off to a specialist. This reduced the request payload size significantly.",
+   "Another challenge involved a LiveKit read-only property error when attempting to change the TTS instance during handoff. The solution was to pass the TTS instance directly into the agent class constructor."
+  ],
+  "caption": "Indian farmers can now get instant market prices and doctor advice via natural Hindi voice calls through Kisan Vaani, an AI-powered assistant.\n\nKisan Vaani (किसान वाणी) is an AI-powered voice assistant designed to help Indian farmers. It provides instant market prices, weather updates, and agricultural doctor advice through natural Hindi voice calls.\n\nThe project was developed during Murf AI's \"10 Days of AI Voice Agents\" challenge to solve a real-world problem in India. Many rural farmers face barriers navigating text-heavy websites or mobile apps for crucial agricultural information.\n\nKisan Vaani offers natural Hindi voice interaction with ultra-low latency, achieving a time-to-first-byte under 100 ms using Murf Falcon 2 (Anisha voice). This makes conversations feel like talking to a real helper on the phone.\n\nThe system includes Caller Profile Memory using SQLite, allowing the agent to remember farmers across calls. It tailors responses based on saved profiles, including location and crop information.\n\nReal-time tools are integrated to fetch live mandi prices per quintal for various crops via e-NAM price data, and district weather forecasts and rain probabilities through the Open-Meteo API.\n\nFor emergencies or financial disputes, Kisan Vaani creates an escalation ticket for a Krishi Vigyan Kendra (KVK) officer callback. A Next.js dashboard provides call analytics, duration metrics, and success rates.\n\nA multi-agent specialist handoff feature allows the main agent to transfer calls to a CropDoctorSpecialistAgent for specific issues like crop diseases. The TTS voice dynamically switches to a specialist voice, like Murf Falcon Samar, for tailored advice.\n\nKey engineering challenges included preventing the LLM from speaking raw tool tags, which was fixed by removing literal function names from prompt text and adding strict rules for silent tool execution.\n\n#AI #VoiceAI #Agriculture #India #TechForGood #Developer\n\nSource: DEV",
+  "tweet": "Kisan Vaani, an AI voice assistant, empowers Indian farmers with instant market prices, weather updates, and doctor advice via natural Hindi calls. A real-world solution for rural India. #AI #Agriculture #India",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/_adi_17/how-i-built-kisan-vaani-a-multi-agent-voice-ai-assistant-for-indian-farmers-550c",
+  "image": "",
+  "orig_title": "How I Built Kisan Vaani: A Multi-Agent Voice AI Assistant for Indian Farmers",
+  "cluster_urls": [
+   "https://dev.to/_adi_17/how-i-built-kisan-vaani-a-multi-agent-voice-ai-assistant-for-indian-farmers-550c"
+  ],
+  "cluster_titles": [
+   "How I Built Kisan Vaani: A Multi-Agent Voice AI Assistant for Indian Farmers"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260815-1111-0-kisan-vaani-ai-voice-assistant-helps-indian-.png",
+   "20260815-1111-0-kisan-vaani-ai-voice-assistant-helps-indian--d1.png",
+   "20260815-1111-0-kisan-vaani-ai-voice-assistant-helps-indian--d2.png",
+   "20260815-1111-0-kisan-vaani-ai-voice-assistant-helps-indian--d3.png",
+   "20260815-1111-0-kisan-vaani-ai-voice-assistant-helps-indian--d4.png"
+  ]
+ },
+ {
+  "topic": "google ai watermark removal",
+  "headline_marked": "[[Google Gemini now lets users remove visible watermarks]] from AI-generated content",
+  "headline": "Google Gemini now lets users remove visible watermarks from AI-generated content",
+  "summary": "This feature is rolling out now for images, videos, and lyrics, but invisible SynthID watermarks and C2PA metadata will remain embedded. It's not available in regions with legal requirements for watermarks.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "The latest version of Gemini, including Gemini Spark and 3.7 Flash, now allows users to remove visible watermarks from AI-generated content. This applies to images created with Nano Banana, videos made with Omni, and song lyrics generated with Lyria.",
+   "However, this functionality is not available in countries where watermarks are legally mandated, such as China, South Korea, and EU nations. Importantly, removing the visible watermark does not affect the embedded Invisible SynthID watermarks and C2PA metadata, which remain in the background.",
+   "The ability to toggle off watermarks is currently rolling out and is expected to be available to all users within days. Watermarking is enabled by default, and users can disable it via Settings > Show watermark."
+  ],
+  "caption": "Tired of visible watermarks on your AI art? Google Gemini is rolling out a new feature allowing you to remove them.\n\nThe latest version of Gemini, including Gemini Spark and 3.7 Flash, now allows users to remove visible watermarks from AI-generated content. This applies to images created with Nano Banana, videos made with Omni, and song lyrics generated with Lyria.\n\nHowever, this functionality is not available in countries where watermarks are legally mandated, such as China, South Korea, and EU nations. Importantly, removing the visible watermark does not affect the embedded Invisible SynthID watermarks and C2PA metadata, which remain in the background.\n\nThe ability to toggle off watermarks is currently rolling out and is expected to be available to all users within days. Watermarking is enabled by default, and users can disable it via Settings > Show watermark.\n\n#GoogleGemini #AI #GenerativeAI #TechNews #GoogleAI\n\nSource: Android Police, Engadget",
+  "tweet": "Tired of visible watermarks on your AI art? Google Gemini is rolling out a new feature allowing you to remove them from images, videos, and lyrics. Invisible SynthID watermarks remain. #GoogleGemini #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police, Engadget",
+  "url": "https://www.androidpolice.com/google-lets-you-say-goodbye-to-gemini-watermarks/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/03/two-robotic-hands-pointing-at-a-3d-colorful-gemini-app-icon-1.png",
+  "orig_title": "Google lets you say goodbye to Gemini watermarks",
+  "cluster_urls": [
+   "https://www.androidpolice.com/google-lets-you-say-goodbye-to-gemini-watermarks/",
+   "https://www.engadget.com/2237340/google-will-now-allow-users-to-remove-visible-watermarks-from-ai-content/"
+  ],
+  "cluster_titles": [
+   "Google lets you say goodbye to Gemini watermarks",
+   "Google will now allow users to remove visible watermarks from AI content"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260815-1111-1-google-gemini-now-lets-users-remove-visible-.png",
+   "20260815-1111-1-google-gemini-now-lets-users-remove-visible--d1.png"
+  ]
+ }
+]

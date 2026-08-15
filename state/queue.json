@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "mcp_native_app_platform_csp_blocks_everything",
+  "headline_marked": "[[MCP Just Got a Native App Platform]] — Its Default CSP Blocks Everything",
+  "headline": "MCP Just Got a Native App Platform — Its Default CSP Blocks Everything",
+  "summary": "The Model Context Protocol (MCP) now supports interactive HTML UIs, but its default Content Security Policy (CSP) is an allow-list that blocks all external resources by default, requiring explicit configuration.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "MCP Apps introduces the first official extension to the Model Context Protocol, enabling tools to declare interactive HTML UIs (ui:// resources). These UIs are rendered in sandboxed iframes, allowing for features like dashboards, forms, and live charts directly within conversations.",
+   "A key detail for developers is the specific mimeType required: \"text/html;profile=mcp-app\". Failing to include the \";profile=mcp-app\" suffix will cause the resource to be treated as a regular document, preventing interactive rendering and the postMessage bridge without any error notification.",
+   "The default Content Security Policy (CSP) for these UIs is an allow-list, meaning all external resources are blocked by default. Developers must explicitly list domains in `connectDomains`, `resourceDomains`, `frameDomains`, or `baseUriDomains` for any external API calls or CDN scripts to function.",
+   "The host↔iframe handshake relies on hand-rolled JSON-RPC over postMessage, as there is currently no client library to abstract this process. Malformed `params` objects in messages like `ui/initialize` or `ui/message` are silently dropped, making debugging challenging.",
+   "To help developers navigate these common pitfalls, a free, browser-based validator is available at bracketly.pages.dev/tools/mcp-apps-validator. It checks `_meta.ui` blocks, `resources/read` responses, and `ui/*` postMessage envelopes against the published spec, tracing checks back to their source."
+  ],
+  "caption": "MCP just got a native app platform for interactive UIs, but its default Content Security Policy (CSP) blocks all external resources.\n\nMCP Apps introduces the first official extension to the Model Context Protocol, enabling tools to declare interactive HTML UIs (ui:// resources). These UIs are rendered in sandboxed iframes, allowing for features like dashboards, forms, and live charts directly within conversations.\n\nA key detail for developers is the specific mimeType required: \"text/html;profile=mcp-app\". Failing to include the \";profile=mcp-app\" suffix will cause the resource to be treated as a regular document, preventing interactive rendering and the postMessage bridge without any error notification.\n\nThe default Content Security Policy (CSP) for these UIs is an allow-list, meaning all external resources are blocked by default. Developers must explicitly list domains in `connectDomains`, `resourceDomains`, `frameDomains`, or `baseUriDomains` for any external API calls or CDN scripts to function.\n\nThe host↔iframe handshake relies on hand-rolled JSON-RPC over postMessage, as there is currently no client library to abstract this process. Malformed `params` objects in messages like `ui/initialize` or `ui/message` are silently dropped, making debugging challenging.\n\nTo help developers navigate these common pitfalls, a free, browser-based validator is available at bracketly.pages.dev/tools/mcp-apps-validator. It checks `_meta.ui` blocks, `resources/read` responses, and `ui/*` postMessage envelopes against the published spec, tracing checks back to their source.\n\n#MCP #Developer #WebDev #CSP #Security #TechNews\n\nSource: DEV",
+  "tweet": "MCP now supports native app UIs, but beware: its default CSP blocks everything! Developers need to explicitly allow domains for any external resources. A new validator helps debug common issues. #MCP #WebDev #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ethan_5b3022150e2c07a4030/mcp-just-got-a-native-app-platform-its-default-csp-blocks-everything-1f3f",
+  "image": "",
+  "orig_title": "MCP Just Got a Native App Platform — Its Default CSP Blocks Everything",
+  "cluster_urls": [
+   "https://dev.to/ethan_5b3022150e2c07a4030/mcp-just-got-a-native-app-platform-its-default-csp-blocks-everything-1f3f"
+  ],
+  "cluster_titles": [
+   "MCP Just Got a Native App Platform — Its Default CSP Blocks Everything"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260815-1338-0-mcp-just-got-a-native-app-platform-its-defau.png",
+   "20260815-1338-0-mcp-just-got-a-native-app-platform-its-defau-d1.png",
+   "20260815-1338-0-mcp-just-got-a-native-app-platform-its-defau-d2.png",
+   "20260815-1338-0-mcp-just-got-a-native-app-platform-its-defau-d3.png"
+  ]
+ },
+ {
+  "topic": "scam_infrastructure_beyond_websites",
+  "headline_marked": "[[Scam infrastructure is more than just websites]], requiring a new defense model",
+  "headline": "Scam infrastructure is more than just websites, requiring a new defense model",
+  "summary": "Modern scam operations are complex, distributed service chains, not just malicious URLs. Effective defense requires moving beyond simple website blocking to a comprehensive understanding of the entire campaign.",
+  "category": "SECURITY",
+  "template": "neon",
+  "details": [
+   "The security industry often frames scam infrastructure as just malicious websites, which is operationally incomplete. A modern scam operation is a distributed service chain involving acquisition channels, impersonation assets, communication mechanisms, payment pathways, and replacement infrastructure.",
+   "This distinction is crucial because defensive architecture follows the object defenders choose to model. If the object is a malicious URL, the response focuses on URL detection and domain takedown. If it's a scam operation, the response must cover victim evidence, multi-channel infrastructure, payment context, and recurrence.",
+   "Services like Scams.Report, NothingPhishy, and MuleHunt provide a reference architecture for thinking about scams as connected systems. They combine multilingual verification, external threat disruption, and financial-harm intelligence.",
+   "The broader lesson is that scam prevention is more effective when evidence, infrastructure action, and financial-risk intelligence remain connected throughout an incident's lifecycle. This integrated approach addresses the full scope of an attack.",
+   "Website-centric thinking developed for good reasons, as phishing sites and fake storefronts were high-value intervention points. Domains are observable and linked to identifiable providers, making them easy to target.",
+   "However, the problem arises when website detection becomes the sole mental model for the entire scam. Social accounts, advertisements, landing pages, messaging, phone numbers, and applications all play roles in acquiring victims, building trust, and directing behavior.",
+   "Scam infrastructure is defined as the set of technical, social, identity, and financial components that enable a scam operation to acquire victims, sustain deception, direct behavior, receive value, and recover after intervention. This extends beyond conventional internet infrastructure.",
+   "This wider model changes both detection and response, shifting the defensive goal from artefact detection to campaign reconstruction. A website becomes just one node in a larger operational graph of interconnected components.",
+   "Relationships between scam components are often more durable than individual nodes, which are easily disposable. A domain's significance increases greatly when linked to other elements like phone numbers, social accounts, and payment destinations.",
+   "Defenders often face the \"infrastructure substitution problem,\" where removing one component leads to the attacker substituting another without changing the underlying workflow. Success should be measured by whether the intervention reduced the attacker's ability to complete the victim journey."
+  ],
+  "caption": "Scam operations are far more complex than just malicious websites. Understanding their full distributed service chain is key to effective defense.\n\nThe security industry often frames scam infrastructure as just malicious websites, which is operationally incomplete. A modern scam operation is a distributed service chain involving acquisition channels, impersonation assets, communication mechanisms, payment pathways, and replacement infrastructure.\n\nThis distinction is crucial because defensive architecture follows the object defenders choose to model. If the object is a malicious URL, the response focuses on URL detection and domain takedown. If it's a scam operation, the response must cover victim evidence, multi-channel infrastructure, payment context, and recurrence.\n\nServices like Scams.Report, NothingPhishy, and MuleHunt provide a reference architecture for thinking about scams as connected systems. They combine multilingual verification, external threat disruption, and financial-harm intelligence.\n\nThe broader lesson is that scam prevention is more effective when evidence, infrastructure action, and financial-risk intelligence remain connected throughout an incident's lifecycle. This integrated approach addresses the full scope of an attack.\n\nWebsite-centric thinking developed for good reasons, as phishing sites and fake storefronts were high-value intervention points. Domains are observable and linked to identifiable providers, making them easy to target.\n\nHowever, the problem arises when website detection becomes the sole mental model for the entire scam. Social accounts, advertisements, landing pages, messaging, phone numbers, and applications all play roles in acquiring victims, building trust, and directing behavior.\n\n#Cybersecurity #Scams #Security #Cybercrime #Tech #Infra\n\nSource: DEV",
+  "tweet": "Scam operations are complex distributed service chains, not just malicious websites. Effective defense requires shifting from URL blocking to understanding the entire campaign graph. #Cybersecurity #Scams #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/bruce1267/why-scam-infrastructure-is-more-than-a-website-19gb",
+  "image": "",
+  "orig_title": "Why Scam Infrastructure Is More Than a Website",
+  "cluster_urls": [
+   "https://dev.to/bruce1267/why-scam-infrastructure-is-more-than-a-website-19gb"
+  ],
+  "cluster_titles": [
+   "Why Scam Infrastructure Is More Than a Website"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260815-1338-1-scam-infrastructure-is-more-than-just-websit.png",
+   "20260815-1338-1-scam-infrastructure-is-more-than-just-websit-d1.png",
+   "20260815-1338-1-scam-infrastructure-is-more-than-just-websit-d2.png",
+   "20260815-1338-1-scam-infrastructure-is-more-than-just-websit-d3.png",
+   "20260815-1338-1-scam-infrastructure-is-more-than-just-websit-d4.png"
+  ]
+ }
+]

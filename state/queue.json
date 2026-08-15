@@ -1,1 +1,74 @@
-[]
+[
+ {
+  "topic": "vlc_windows_defender_bug_mp3_delay",
+  "headline_marked": "[[VLC media player bug]] causes 33-second MP3 delay on Windows, devs blame Microsoft Defender",
+  "headline": "VLC media player bug causes 33-second MP3 delay on Windows, devs blame Microsoft Defender",
+  "summary": "VLC users on Windows 11 are experiencing up to a 33-second delay when playing MP3s, with developers pointing to a Microsoft Defender bug as the culprit. Reinstalling VLC or adding an exception can fix it.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Popular open-source media player VLC has encountered an issue on Windows 11, causing delays of up to 33 seconds when playing MP3 files. Game developer Jonathan Blow highlighted the problem, leading VLC developers to respond.",
+   "The VLC team claims the bug stems from a Microsoft Defender update in Windows 11, which mysteriously quarantines VLC's plugin cache. This interference prevents the media player from loading components efficiently.",
+   "VLC relies on a plugin cache for codecs, demuxers, and I/O modules, loading them as needed to avoid scanning the entire directory every time. When Microsoft Defender blocks or quarantines the 'plugins.dat' cache file, VLC struggles to process its plugin system.",
+   "Users can fix this by reinstalling VLC or regenerating the plugin cache using 'vlc-cache-gen.exe' from the installation folder or Start menu shortcut. This process, however, resets customized preferences like audio settings and shortcuts.",
+   "A more stable solution involves adding an exception for the VLC installation folder within Microsoft Defender. This prevents future interference with cache files, though the need for such workarounds for basic media playback is not ideal."
+  ],
+  "caption": "VLC media player is reportedly taking up to 33 seconds to play MP3s on Windows 11 for some users, a bug developers attribute to Microsoft Defender.\n\nPopular open-source media player VLC has encountered an issue on Windows 11, causing delays of up to 33 seconds when playing MP3 files. Game developer Jonathan Blow highlighted the problem, leading VLC developers to respond.\n\nThe VLC team claims the bug stems from a Microsoft Defender update in Windows 11, which mysteriously quarantines VLC's plugin cache. This interference prevents the media player from loading components efficiently.\n\nVLC relies on a plugin cache for codecs, demuxers, and I/O modules, loading them as needed to avoid scanning the entire directory every time. When Microsoft Defender blocks or quarantines the 'plugins.dat' cache file, VLC struggles to process its plugin system.\n\nUsers can fix this by reinstalling VLC or regenerating the plugin cache using 'vlc-cache-gen.exe' from the installation folder or Start menu shortcut. This process, however, resets customized preferences like audio settings and shortcuts.\n\nA more stable solution involves adding an exception for the VLC installation folder within Microsoft Defender. This prevents future interference with cache files, though the need for such workarounds for basic media playback is not ideal.\n\n#VLC #Windows11 #MicrosoftDefender #TechNews #SoftwareBug #MediaPlayer\n\nSource: Tom's Hardware",
+  "tweet": "VLC users on Windows 11 are facing up to a 33-second delay playing MP3s. Developers say Microsoft Defender is quarantining VLC's plugin cache. Fixes include reinstalling or adding a Defender exception. #VLC #Windows11 #TechBug",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "videolan.org",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/software/windows/vlc-media-player-bug-reportedly-causes-33-second-delay-when-playing-mp3-files-on-windows-developers-say-microsoft-defender-is-to-blame",
+  "image": "https://cdn.mos.cms.futurecdn.net/eEtLR2fZ2Wuz7PEoxUuNKk-1280-80.png",
+  "orig_title": "Devs blame Windows for VLC media player bug that causes 33-second delay when playing MP3 files — creators allege Microsoft Defender blocking plugin cache is to blame",
+  "cluster_urls": [
+   "https://www.tomshardware.com/software/windows/vlc-media-player-bug-reportedly-causes-33-second-delay-when-playing-mp3-files-on-windows-developers-say-microsoft-defender-is-to-blame"
+  ],
+  "cluster_titles": [
+   "Devs blame Windows for VLC media player bug that causes 33-second delay when playing MP3 files — creators allege Microsoft Defender blocking plugin cache is to blame"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260815-1938-0-vlc-media-player-bug-causes-33-second-mp3-de.png",
+   "20260815-1938-0-vlc-media-player-bug-causes-33-second-mp3-de-d1.png",
+   "20260815-1938-0-vlc-media-player-bug-causes-33-second-mp3-de-d2.png"
+  ]
+ },
+ {
+  "topic": "x_brazilian_election_filter_algorithm",
+  "headline_marked": "[[Brazilian election filter]] found in X's For You timeline algorithm",
+  "headline": "Brazilian election filter found in X's For You timeline algorithm",
+  "summary": "Users have observed a specific filter related to Brazilian elections within the algorithm that powers the personalized \"For You\" feed on X, highlighting platform-specific content moderation.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "A filter specifically targeting Brazilian election content has been identified within the \"For You\" feed algorithm on X. This filter influences the content users see, potentially shaping their exposure to political discussions on the platform.",
+   "The algorithm powering X's \"For You\" feed is open-source, with its development repository available on GitHub. This transparency allows developers and researchers to examine its components, including specific content filters."
+  ],
+  "caption": "A Brazilian election filter has been observed within the \"For You\" feed algorithm on X. This highlights how algorithms can influence content visibility.\n\nA filter specifically targeting Brazilian election content has been identified within the \"For You\" feed algorithm on X. This filter influences the content users see, potentially shaping their exposure to political discussions on the platform.\n\nThe algorithm powering X's \"For You\" feed is open-source, with its development repository available on GitHub. This transparency allows developers and researchers to examine its components, including specific content filters.\n\n#X #Algorithm #SocialMedia #BrazilElections #TechNews #Software\n\nSource: Hacker News",
+  "tweet": "A Brazilian election filter has been observed within X's \"For You\" feed algorithm. The open-source nature of the algorithm allows for examination of such content moderation mechanisms. #X #Algorithm #BrazilElections",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "x.com",
+  "source": "Hacker News",
+  "url": "https://github.com/xai-org/x-algorithm/blob/main/home-mixer/filters/brazil_2026_election_filter.rs",
+  "image": "",
+  "orig_title": "Brazilian election filter in X For You timeline",
+  "cluster_urls": [
+   "https://github.com/xai-org/x-algorithm/blob/main/home-mixer/filters/brazil_2026_election_filter.rs"
+  ],
+  "cluster_titles": [
+   "Brazilian election filter in X For You timeline"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260815-1938-1-brazilian-election-filter-found-in-x-s-for-y.png",
+   "20260815-1938-1-brazilian-election-filter-found-in-x-s-for-y-d1.png"
+  ]
+ }
+]

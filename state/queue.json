@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "digital_identity_ghost_sean_byrne",
+  "headline_marked": "[[Digital identity ghost]]: Man denied Apple access due to non-existent person on US sanctions list",
+  "headline": "Digital identity ghost: Man denied Apple access due to non-existent person on US sanctions list",
+  "summary": "A developer was repeatedly flagged by tech companies like Apple and Nasdaq because his name matched an alias on a US government restricted-party list, despite the alias not being a real person.",
+  "category": "SECURITY",
+  "template": "neon",
+  "details": [
+   "Apple denied a developer access to App Store Connect, stating he matched a U.S. government restricted-party list. This wasn't the first time he encountered this issue, having been flagged previously by Nasdaq.",
+   "The matching entry on the U.S. Consolidated Screening List, maintained by the Commerce Department, lists \"Sean Byrne\" from Mac Aviation. This list is an export-control instrument, not a sanctions list for employment or share sales.",
+   "Mac Aviation, an Irish aircraft-parts business, was prosecuted in 2009 for illegally exporting U.S. aircraft equipment to Iran. The company was actually a father and son operation from a small cottage.",
+   "To appear larger, Mac Aviation's owners used false names, including \"Sean Byrne,\" on company paperwork. This led U.S. authorities to believe \"Byrne\" was a real person and attempt to indict him.",
+   "A superseding indictment in 2010 removed Sean Byrne as a defendant, repeatedly describing the name as an alias used by co-conspirators. However, the entry on the Entity List persisted for 16 years.",
+   "The list entry for \"Sean Byrne\" lacks a date of birth, passport number, or middle name, and is associated with Thomas McGuinn's home address in Sligo, not a real person. The author has no connection to this address or company."
+  ],
+  "caption": "Imagine being blocked from online services because a government list says you're an alias for a non-existent person. That's what happened to Sean Byrne.\n\nApple denied a developer access to App Store Connect, stating he matched a U.S. government restricted-party list. This wasn't the first time he encountered this issue, having been flagged previously by Nasdaq.\n\nThe matching entry on the U.S. Consolidated Screening List, maintained by the Commerce Department, lists \"Sean Byrne\" from Mac Aviation. This list is an export-control instrument, not a sanctions list for employment or share sales.\n\nMac Aviation, an Irish aircraft-parts business, was prosecuted in 2009 for illegally exporting U.S. aircraft equipment to Iran. The company was actually a father and son operation from a small cottage.\n\nTo appear larger, Mac Aviation's owners used false names, including \"Sean Byrne,\" on company paperwork. This led U.S. authorities to believe \"Byrne\" was a real person and attempt to indict him.\n\nA superseding indictment in 2010 removed Sean Byrne as a defendant, repeatedly describing the name as an alias used by co-conspirators. However, the entry on the Entity List persisted for 16 years.\n\nThe list entry for \"Sean Byrne\" lacks a date of birth, passport number, or middle name, and is associated with Thomas McGuinn's home address in Sligo, not a real person. The author has no connection to this address or company.\n\n#DigitalIdentity #TechNews #Compliance #Government #FalsePositive #Bureaucracy\n\nSource: Hacker News, DEV",
+  "tweet": "Blocked from Apple App Store Connect & Nasdaq? Sean Byrne was, because his name matched an alias on a US restricted list—an alias that isn't even a real person. A digital identity ghost story. #DigitalIdentity #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News, DEV",
+  "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
+  "image": "",
+  "orig_title": "The other Sean Byrne doesn't exist",
+  "cluster_urls": [
+   "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
+   "https://dev.to/kaixintelligence/the-other-sean-byrne-doesnt-exist-a-case-study-in-digital-identity-ghosts-mfk"
+  ],
+  "cluster_titles": [
+   "The other Sean Byrne doesn't exist",
+   "The Other Sean Byrne Doesn't Exist: A Case Study in Digital Identity Ghosts"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260815-1440-0-digital-identity-ghost-man-denied-apple-acce.png",
+   "20260815-1440-0-digital-identity-ghost-man-denied-apple-acce-d1.png",
+   "20260815-1440-0-digital-identity-ghost-man-denied-apple-acce-d2.png"
+  ]
+ },
+ {
+  "topic": "flock_safety_data_retention_cut",
+  "headline_marked": "[[Flock cuts camera-data retention to 7 days]] after its own data showed 23 days were unused",
+  "headline": "Flock cuts camera-data retention to 7 days after its own data showed 23 days were unused",
+  "summary": "Flock Safety has reduced its default license-plate-reader data retention from 30 to 7 days. This change follows an internal analysis revealing that over 90% of searches were completed within a week, rendering the longer retention largely unnecessary.",
+  "category": "SECURITY",
+  "template": "neon",
+  "details": [
+   "Flock Safety announced a significant policy change, cutting default license-plate-reader data retention from 30 days to just seven. This move also mandates misuse detection for all law enforcement customers and requires a case code for every search by year-end. The changes follow a Washington Post investigation documenting nearly 50 instances of officers accused of unauthorized searches.",
+   "A key driver for this decision was Flock's internal analysis, which revealed that over 90% of searches without a full plate are completed within a week. This means that for nine years, the company's network of over 120,000 cameras retained 23 days of vehicle movement data that served less than 10% of queries.",
+   "This finding highlights that data retention issues are often capacity problems that also carry privacy implications. The company had set the 30-day default nine years ago, and it was never revisited against actual usage, leading to unnecessary data storage.",
+   "Every day data is retained, it faces risks such as subpoena, breach, exfiltration by compromised accounts, or misuse by insiders. While access controls offer probabilistic protection, deletion is deterministic, fundamentally reducing the 'blast radius' of potential data misuse.",
+   "The response from privacy advocates has been mixed, with groups like the ACLU and Institute for Justice calling the measures inadequate 'window dressing.' They argue that while shorter retention is a step, the fundamental problem of police discretion in searches without judicial oversight remains.",
+   "Critics emphasize that the retention period remains a vendor-controlled setting, unlike the UK's National ANPR Service, which operates under published national standards and legislation. This distinction means Flock's policy can be changed again without public or legislative oversight."
+  ],
+  "caption": "Flock Safety cut its default camera-data retention from 30 days to 7. Its own analysis showed 90% of searches were done within a week, making 23 days of data storage largely unused.\n\nFlock Safety announced a significant policy change, cutting default license-plate-reader data retention from 30 days to just seven. This move also mandates misuse detection for all law enforcement customers and requires a case code for every search by year-end. The changes follow a Washington Post investigation documenting nearly 50 instances of officers accused of unauthorized searches.\n\nA key driver for this decision was Flock's internal analysis, which revealed that over 90% of searches without a full plate are completed within a week. This means that for nine years, the company's network of over 120,000 cameras retained 23 days of vehicle movement data that served less than 10% of queries.\n\nThis finding highlights that data retention issues are often capacity problems that also carry privacy implications. The company had set the 30-day default nine years ago, and it was never revisited against actual usage, leading to unnecessary data storage.\n\nEvery day data is retained, it faces risks such as subpoena, breach, exfiltration by compromised accounts, or misuse by insiders. While access controls offer probabilistic protection, deletion is deterministic, fundamentally reducing the 'blast radius' of potential data misuse.\n\nThe response from privacy advocates has been mixed, with groups like the ACLU and Institute for Justice calling the measures inadequate 'window dressing.' They argue that while shorter retention is a step, the fundamental problem of police discretion in searches without judicial oversight remains.\n\n#DataPrivacy #FlockSafety #TechPolicy #SurveillanceTech #Security #BigTech\n\nSource: DEV",
+  "tweet": "Flock Safety slashes camera-data retention from 30 days to 7. Their own data revealed 90% of searches completed in a week, meaning 23 days of stored data were effectively useless. A win for privacy, driven by efficiency. #DataPrivacy #FlockSafety #TechPolicy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "flocksafety.com",
+  "source": "DEV",
+  "url": "https://dev.to/superfunicular/flock-cut-default-camera-data-retention-from-30-days-to-7-and-its-own-numbers-say-the-other-23-4efm",
+  "image": "",
+  "orig_title": "Flock cut default camera-data retention from 30 days to 7 — and its own numbers say the other 23 days were never doing any work",
+  "cluster_urls": [
+   "https://dev.to/superfunicular/flock-cut-default-camera-data-retention-from-30-days-to-7-and-its-own-numbers-say-the-other-23-4efm"
+  ],
+  "cluster_titles": [
+   "Flock cut default camera-data retention from 30 days to 7 — and its own numbers say the other 23 days were never doing any work"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260815-1440-1-flock-cuts-camera-data-retention-to-7-days-a.png",
+   "20260815-1440-1-flock-cuts-camera-data-retention-to-7-days-a-d1.png",
+   "20260815-1440-1-flock-cuts-camera-data-retention-to-7-days-a-d2.png",
+   "20260815-1440-1-flock-cuts-camera-data-retention-to-7-days-a-d3.png"
+  ]
+ }
+]

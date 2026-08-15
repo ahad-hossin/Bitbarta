@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "auto-research with codex achieves 232x faster kernel",
+  "headline_marked": "[[232x Faster Kernel]] Achieved via Auto-Research in GPU Mode Contest",
+  "headline": "232x Faster Kernel Achieved via Auto-Research in GPU Mode Contest",
+  "summary": "A participant details their journey to a 232x speedup in a QR decomposition auto-research contest, sharing insights on optimization and LLM-assisted development.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A recent auto-research contest hosted by GPU Mode challenged participants to implement batched square compact-Householder QR factorization. The goal was to achieve a significant speedup over a baseline solution for QR decomposition.",
+   "The author, participating for the first time in auto-research, secured 12th place out of 183 participants, achieving an impressive 232x speedup. This post outlines their approach, the challenges encountered, and the key learnings from the experience.",
+   "The contest required returning a compact Householder representation of the QR decomposition for batched square FP32 CUDA matrices. This representation, similar to torch.geqrf, stores the R matrix in the upper triangle and Householder vectors in the lower triangle of an H matrix, along with a tau vector.",
+   "Submissions were ranked by runtime geometric mean across various matrix sizes, including 512x512, 1024x1024, 2048x2048, and 4096x4096. While internal computations could use lower precision formats like FP16 or FP8, the final factors had to satisfy FP32-style QR checks.",
+   "The author leveraged the contest's provided harness and agent-friendly CLI (popcorn) for testing, benchmarking, and direct submission. This facilitated a tight feedback loop, crucial for iterative optimization and 'hill-climbing' towards better performance.",
+   "Despite being an underdog with only a year of basic GPU kernel optimization experience, the author utilized LLMs like Claude to deepen their understanding of QR decomposition and Householder reflections. This knowledge was instrumental in selecting the blocked Householder algorithm with WY-update as the core architecture.",
+   "The contest's setup, with potentially unlimited submissions and accessible learning resources, fostered an environment for rapid iteration. However, heavy usage by participants led to temporary resource limitations, highlighting the intense competition.",
+   "The author emphasizes that while domain expertise aids LLM prompting, the contest was designed to be approachable even for those new to the field. A solid understanding of the agent/harness loop could still yield respectable speedups over the baseline."
+  ],
+  "caption": "Achieved a 232x speedup in a GPU auto-research contest using LLM-assisted optimization and a blocked Householder algorithm.\n\nA recent auto-research contest hosted by GPU Mode challenged participants to implement batched square compact-Householder QR factorization. The goal was to achieve a significant speedup over a baseline solution for QR decomposition.\n\nThe author, participating for the first time in auto-research, secured 12th place out of 183 participants, achieving an impressive 232x speedup. This post outlines their approach, the challenges encountered, and the key learnings from the experience.\n\nThe contest required returning a compact Householder representation of the QR decomposition for batched square FP32 CUDA matrices. This representation, similar to torch.geqrf, stores the R matrix in the upper triangle and Householder vectors in the lower triangle of an H matrix, along with a tau vector.\n\nSubmissions were ranked by runtime geometric mean across various matrix sizes, including 512x512, 1024x1024, 2048x2048, and 4096x4096. While internal computations could use lower precision formats like FP16 or FP8, the final factors had to satisfy FP32-style QR checks.\n\nThe author leveraged the contest's provided harness and agent-friendly CLI (popcorn) for testing, benchmarking, and direct submission. This facilitated a tight feedback loop, crucial for iterative optimization and 'hill-climbing' towards better performance.\n\nDespite being an underdog with only a year of basic GPU kernel optimization experience, the author utilized LLMs like Claude to deepen their understanding of QR decomposition and Householder reflections. This knowledge was instrumental in selecting the blocked Householder algorithm with WY-update as the core architecture.\n\nThe contest's setup, with potentially unlimited submissions and accessible learning resources, fostered an environment for rapid iteration. However, heavy usage by participants led to temporary resource limitations, highlighting the intense competition.\n\n#AI #GPU #Optimization #MachineLearning #LLM\n\nSource: Hacker News",
+  "tweet": "Achieved a 232x speedup in a GPU auto-research contest via LLM-assisted optimization and a blocked Householder algorithm. Details on approach, learnings, and bottlenecks. #AI #GPU #Optimization",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://sankalp.bearblog.dev/autoresearch/",
+  "image": "",
+  "orig_title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+  "cluster_urls": [
+   "https://sankalp.bearblog.dev/autoresearch/"
+  ],
+  "cluster_titles": [
+   "Auto-research with codex: How I achieved a 232x Faster Kernel"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-0234-0-232x-faster-kernel-achieved-via-auto-researc.png",
+   "20260816-0234-0-232x-faster-kernel-achieved-via-auto-researc-d1.png",
+   "20260816-0234-0-232x-faster-kernel-achieved-via-auto-researc-d2.png",
+   "20260816-0234-0-232x-faster-kernel-achieved-via-auto-researc-d3.png",
+   "20260816-0234-0-232x-faster-kernel-achieved-via-auto-researc-d4.png"
+  ]
+ }
+]

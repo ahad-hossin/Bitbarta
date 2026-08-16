@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai_prompt_security_boundary",
+  "headline_marked": "[[Your prompt is not a security boundary]] for AI agents with side effects",
+  "headline": "Your prompt is not a security boundary for AI agents with side effects",
+  "summary": "AI agents can confidently execute irreversible actions like payments based on hallucinated facts, even when instructed otherwise. Relying solely on prompts for security is insufficient when agents interact with real-world tools.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents equipped with tools that have side effects pose a significant risk if they confidently execute actions based on invented grounds. This can lead to irreversible outcomes, such as confirming payments or issuing invoices without proper verification.",
+   "Traditional prompt-based instructions like 'only confirm payment after receipt' are not guaranteed to execute. LLMs are trained to be helpful and cooperative, often overriding security instructions when faced with a persistent human input, leading to incorrect tool calls.",
+   "A proposed solution involves adding a list of factual preconditions to functions, checked by the tool executor *before* dispatching to any handler. These checks verify real-world facts against a database, not just the model's belief.",
+   "Examples of preconditions include client_sent_media (checking for inbound attachments) and function_called_before (ensuring a prior successful call). Crucially, these checks reside in a single place within the tool executor, preventing individual handlers from shipping without guards.",
+   "When a precondition fails, a block is returned to the model as a tool error with a reason, not a silent refusal. This explicit error allows the model to self-correct within the same round, prompting for missing information like a receipt.",
+   "This mechanism is designed to defend against model hallucination, not external attackers, and is distinct from authorization or rate limits. It costs nothing when not used, ensuring it remains viable for production systems without performance overhead."
+  ],
+  "caption": "Your AI agent might be confirming payments or booking slots based on facts it *invented*. Prompts alone aren't enough to prevent costly mistakes.\n\nAI agents equipped with tools that have side effects pose a significant risk if they confidently execute actions based on invented grounds. This can lead to irreversible outcomes, such as confirming payments or issuing invoices without proper verification.\n\nTraditional prompt-based instructions like 'only confirm payment after receipt' are not guaranteed to execute. LLMs are trained to be helpful and cooperative, often overriding security instructions when faced with a persistent human input, leading to incorrect tool calls.\n\nA proposed solution involves adding a list of factual preconditions to functions, checked by the tool executor *before* dispatching to any handler. These checks verify real-world facts against a database, not just the model's belief.\n\nExamples of preconditions include client_sent_media (checking for inbound attachments) and function_called_before (ensuring a prior successful call). Crucially, these checks reside in a single place within the tool executor, preventing individual handlers from shipping without guards.\n\nWhen a precondition fails, a block is returned to the model as a tool error with a reason, not a silent refusal. This explicit error allows the model to self-correct within the same round, prompting for missing information like a receipt.\n\nThis mechanism is designed to defend against model hallucination, not external attackers, and is distinct from authorization or rate limits. It costs nothing when not used, ensuring it remains viable for production systems without performance overhead.\n\n#AI #AISecurity #LLM #Developer #Tech #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "Is your AI agent making irreversible decisions based on hallucinated data? Prompts aren't a security boundary. Learn how to implement factual preconditions in your tool executor to prevent costly mistakes and ensure agent reliability. #AI #AISecurity #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dosai/your-prompt-is-not-a-security-boundary-382e",
+  "image": "",
+  "orig_title": "Your prompt is not a security boundary",
+  "cluster_urls": [
+   "https://dev.to/dosai/your-prompt-is-not-a-security-boundary-382e"
+  ],
+  "cluster_titles": [
+   "Your prompt is not a security boundary"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-1046-0-your-prompt-is-not-a-security-boundary-for-a.png",
+   "20260816-1046-0-your-prompt-is-not-a-security-boundary-for-a-d1.png",
+   "20260816-1046-0-your-prompt-is-not-a-security-boundary-for-a-d2.png"
+  ]
+ },
+ {
+  "topic": "frontier_ai_model_benchmarks",
+  "headline_marked": "[[GPQA Diamond is the most reported benchmark]] by frontier AI labs across 32 model cards",
+  "headline": "GPQA Diamond is the most reported benchmark by frontier AI labs across 32 model cards",
+  "summary": "An analysis of 32 frontier model cards from 11 organizations reveals GPQA Diamond, SWE-bench Verified, and LiveCodeBench as the top three most frequently reported benchmarks. This study focuses on reporting conventions, not benchmark quality.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A new analysis, \"Benchmark Radar,\" investigated 32 frontier model cards from 11 organizations, tracking 79 distinct benchmarks. The study found that GPQA Diamond is the most frequently reported benchmark, appearing on 24 cards from 10 organizations.",
+   "Following GPQA Diamond, SWE-bench Verified was reported on 18 cards by 8 organizations, and LiveCodeBench on 17 cards by 8 organizations. This analysis specifically ranks reporting convention, not the inherent quality of the benchmarks themselves.",
+   "The methodology counts each model card at most once per benchmark, regardless of how many configurations it reports. This ensures that a single vendor's extensive appendix does not disproportionately influence the ranking.",
+   "The study also tracks the first report of each benchmark by an organization over time, alongside individual score observations. However, comparable score observations require detailed metadata like benchmark version, metric direction, and reasoning budget, which this registry currently stores as mentions rather than full measurements.",
+   "The goal is to enable a \"Harbor-style view\" that could plot cost or latency against scores, connecting only non-dominated observations. This would allow for visualizing how the performance frontier moves over publication time."
+  ],
+  "caption": "Which benchmarks do frontier AI labs *actually* report? A new analysis of 32 model cards from 11 organizations reveals GPQA Diamond as the top choice.\n\nA new analysis, \"Benchmark Radar,\" investigated 32 frontier model cards from 11 organizations, tracking 79 distinct benchmarks. The study found that GPQA Diamond is the most frequently reported benchmark, appearing on 24 cards from 10 organizations.\n\nFollowing GPQA Diamond, SWE-bench Verified was reported on 18 cards by 8 organizations, and LiveCodeBench on 17 cards by 8 organizations. This analysis specifically ranks reporting convention, not the inherent quality of the benchmarks themselves.\n\nThe methodology counts each model card at most once per benchmark, regardless of how many configurations it reports. This ensures that a single vendor's extensive appendix does not disproportionately influence the ranking.\n\nThe study also tracks the first report of each benchmark by an organization over time, alongside individual score observations. However, comparable score observations require detailed metadata like benchmark version, metric direction, and reasoning budget, which this registry currently stores as mentions rather than full measurements.\n\nThe goal is to enable a \"Harbor-style view\" that could plot cost or latency against scores, connecting only non-dominated observations. This would allow for visualizing how the performance frontier moves over publication time.\n\n#AI #Benchmarks #MachineLearning #FrontierAI #ModelEvaluation #TechAnalysis\n\nSource: Hacker News",
+  "tweet": "Which benchmarks do frontier AI labs *actually* report? A new analysis of 32 model cards from 11 organizations reveals GPQA Diamond, SWE-bench Verified, and LiveCodeBench as the top three. #AI #Benchmarks #MachineLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://koutian.is-a.dev/benchmark-radar/?view=leaderboard",
+  "image": "",
+  "orig_title": "I checked 30 frontier model cards. Here are the benchmarks labs report",
+  "cluster_urls": [
+   "https://koutian.is-a.dev/benchmark-radar/?view=leaderboard"
+  ],
+  "cluster_titles": [
+   "I checked 30 frontier model cards. Here are the benchmarks labs report"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260816-1046-1-gpqa-diamond-is-the-most-reported-benchmark-.png",
+   "20260816-1046-1-gpqa-diamond-is-the-most-reported-benchmark--d1.png",
+   "20260816-1046-1-gpqa-diamond-is-the-most-reported-benchmark--d2.png"
+  ]
+ }
+]

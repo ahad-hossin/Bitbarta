@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "software_engineering_fundamentals_importance",
+  "headline_marked": "Software Engineering Fundamentals [[Matter More Than AI Hype]]",
+  "headline": "Software Engineering Fundamentals Matter More Than AI Hype",
+  "summary": "While AI agents are advancing rapidly, core engineering principles like debuggability and maintainability remain crucial for robust software development.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The rapid advancement of AI agents and 'agentic engineering' has generated significant online noise, overshadowing the fundamental importance of software engineering principles.",
+   "Despite the hype, practical application of AI tools, particularly agent harnesses combined with open-weight models, is proving powerful for developers. These models are becoming increasingly capable on personal computers, shrinking the gap with larger, more resource-intensive systems.",
+   "However, the ability to 'make it work' is only the beginning. True software engineering still requires focus on how code is put together, its 'API', and its integration with other systems. These aspects are as much art as science, relying on experience and foresight.",
+   "Key engineering challenges like making software debuggable, maintainable, layered, and composable still demand extensive, thoughtful reasoning – an area where current LLMs, even frontier models, fall short.",
+   "LLMs excel at prediction and echoing human knowledge but do not truly 'reason'. Their capabilities are limited by the data they are trained on, and research highlights their significant shortcomings in genuine reasoning processes.",
+   "While LLMs can predict code and follow instructions effectively, making them more useful involves providing concise data, deterministic validation tooling, and natural language feedback for self-correction. Their effectiveness in tool calling and instruction following is a key strength.",
+   "A significant limitation is the 'lethal trifecta' where LLMs struggle to distinguish good advice from bad, making them vulnerable to prompt injection attacks. Alignment work, safety harnesses, and sandboxes are essential to mitigate these risks."
+  ],
+  "caption": "AI agents are advancing, but [[software engineering fundamentals]] are more critical than ever for building robust, maintainable systems.\n\nThe rapid advancement of AI agents and 'agentic engineering' has generated significant online noise, overshadowing the fundamental importance of software engineering principles.\n\nDespite the hype, practical application of AI tools, particularly agent harnesses combined with open-weight models, is proving powerful for developers. These models are becoming increasingly capable on personal computers, shrinking the gap with larger, more resource-intensive systems.\n\nHowever, the ability to 'make it work' is only the beginning. True software engineering still requires focus on how code is put together, its 'API', and its integration with other systems. These aspects are as much art as science, relying on experience and foresight.\n\nKey engineering challenges like making software debuggable, maintainable, layered, and composable still demand extensive, thoughtful reasoning – an area where current LLMs, even frontier models, fall short.\n\nLLMs excel at prediction and echoing human knowledge but do not truly 'reason'. Their capabilities are limited by the data they are trained on, and research highlights their significant shortcomings in genuine reasoning processes.\n\nWhile LLMs can predict code and follow instructions effectively, making them more useful involves providing concise data, deterministic validation tooling, and natural language feedback for self-correction. Their effectiveness in tool calling and instruction following is a key strength.\n\nA significant limitation is the 'lethal trifecta' where LLMs struggle to distinguish good advice from bad, making them vulnerable to prompt injection attacks. Alignment work, safety harnesses, and sandboxes are essential to mitigate these risks.\n\n#AI #SoftwareEngineering #LLM #Tech\n\nSource: Hacker News",
+  "tweet": "AI agents are advancing, but [[software engineering fundamentals]] are more critical than ever for building robust, maintainable systems. #AI #SoftwareEngineering #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
+  "image": "",
+  "orig_title": "Software Engineering fundamentals matter more",
+  "cluster_urls": [
+   "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/"
+  ],
+  "cluster_titles": [
+   "Software Engineering fundamentals matter more"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260816-1340-0-software-engineering-fundamentals-matter-mor.png",
+   "20260816-1340-0-software-engineering-fundamentals-matter-mor-d1.png",
+   "20260816-1340-0-software-engineering-fundamentals-matter-mor-d2.png",
+   "20260816-1340-0-software-engineering-fundamentals-matter-mor-d3.png"
+  ]
+ },
+ {
+  "topic": "zsh_history_data_loss_bug_tracking",
+  "headline_marked": "[[Zsh history data loss bug]] tracked down using crash dumps",
+  "headline": "Zsh history data loss bug tracked down using crash dumps",
+  "summary": "A long-standing issue causing lost commands in Z shell history has been identified and fixed in Zsh 5.9.2.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "For years, users have occasionally noticed that commands they were certain they had executed were missing from their Z shell history file (~/.zsh_history). This article details the investigation into this elusive bug, which was ultimately resolved by patching Zsh to create detailed crash dumps.",
+   "The problem manifested as commands disappearing over time, with newer entries vanishing while older ones remained. The .zsh_history file itself showed no visible corruption, such as non-printable characters or incomplete lines, and the file size varied, making the cause unclear.",
+   "Initial investigations explored file system change monitoring tools like inotify and fatrace. These tools revealed that Zsh rewrites the history file by reading old contents into a new file, then renaming the new file to replace the old one. However, simply monitoring the file system did not pinpoint the exact process or the extent of data corruption.",
+   "Advanced debugging with bpftrace provided crucial insights. By tracing system calls like 'open' and 'write' on the .zsh_history file, the investigation revealed that Zsh was not reading the entire history file before rewriting it. This incomplete read operation was the root cause of the data loss.",
+   "The successful strategy involved patching Zsh to produce loud crash dumps when the issue occurred. Analyzing these core dumps allowed the developer to pinpoint the exact sequence of operations leading to the data loss, providing the necessary information to develop a fix.",
+   "The fix for this long-standing Zsh history data loss bug is included in Zsh version 5.9.2, released on July 12th, 2026. Users experiencing this issue can update to the latest version to ensure their command history is preserved accurately."
+  ],
+  "caption": "Ever lost a command you swore you ran? A deep dive into Zsh's history file reveals a bug that silently deleted user commands.\n\nFor years, users have occasionally noticed that commands they were certain they had executed were missing from their Z shell history file (~/.zsh_history). This article details the investigation into this elusive bug, which was ultimately resolved by patching Zsh to create detailed crash dumps.\n\nThe problem manifested as commands disappearing over time, with newer entries vanishing while older ones remained. The .zsh_history file itself showed no visible corruption, such as non-printable characters or incomplete lines, and the file size varied, making the cause unclear.\n\nInitial investigations explored file system change monitoring tools like inotify and fatrace. These tools revealed that Zsh rewrites the history file by reading old contents into a new file, then renaming the new file to replace the old one. However, simply monitoring the file system did not pinpoint the exact process or the extent of data corruption.\n\nAdvanced debugging with bpftrace provided crucial insights. By tracing system calls like 'open' and 'write' on the .zsh_history file, the investigation revealed that Zsh was not reading the entire history file before rewriting it. This incomplete read operation was the root cause of the data loss.\n\nThe successful strategy involved patching Zsh to produce loud crash dumps when the issue occurred. Analyzing these core dumps allowed the developer to pinpoint the exact sequence of operations leading to the data loss, providing the necessary information to develop a fix.\n\nThe fix for this long-standing Zsh history data loss bug is included in Zsh version 5.9.2, released on July 12th, 2026. Users experiencing this issue can update to the latest version to ensure their command history is preserved accurately.\n\n#Zsh #Shell #Linux #BugFix #CommandLine\n\nSource: Hacker News",
+  "tweet": "Ever lost a command you swore you ran? A deep dive into Zsh's history file reveals a bug that silently deleted user commands. The issue is now fixed in Zsh 5.9.2. #Zsh #Linux #BugFix",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
+  "image": "",
+  "orig_title": "Tracking down a Zsh history data loss bug",
+  "cluster_urls": [
+   "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/"
+  ],
+  "cluster_titles": [
+   "Tracking down a Zsh history data loss bug"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-1340-1-zsh-history-data-loss-bug-tracked-down-using.png",
+   "20260816-1340-1-zsh-history-data-loss-bug-tracked-down-using-d1.png",
+   "20260816-1340-1-zsh-history-data-loss-bug-tracked-down-using-d2.png",
+   "20260816-1340-1-zsh-history-data-loss-bug-tracked-down-using-d3.png"
+  ]
+ }
+]

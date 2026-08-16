@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_agent_security_supply_chain",
+  "headline_marked": "LLMs Can Be [[Brilliant Interns With No Fear]] — Design Tools Wisely",
+  "headline": "LLMs Can Be Brilliant Interns With No Fear — Design Tools Wisely",
+  "summary": "Giving language models API access is powerful, but requires careful design to prevent costly errors. Learn how to build safer, more reliable AI agents.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Giving language models API access transforms them into active agents, but the \"happy path\" demos often hide production pitfalls. This article explores how to build robust systems by treating LLMs as brilliant, fearless interns who need strict guidance and validation.",
+   "The core principle is understanding that LLM function calls are essentially text emissions that your SDK parses. This output has the same reliability as user input from a public form. Therefore, rigorous validation at runtime is crucial.",
+   "Implement schema-first design where business rules, like maximum refund amounts, are enforced within the schema itself. This prevents models from making structurally impossible or undesirable requests, unlike prompt-based suggestions.",
+   "Scope capabilities by providing only the minimum set of tools necessary for a given context. This reduces the chances of the model making incorrect tool selections and improves overall accuracy and safety.",
+   "Avoid naive retry logic for non-idempotent operations. Instead, let the LLM handle errors by returning structured failure objects. The model can then explain the situation to the user and suggest next steps, while your infrastructure avoids replaying charges.",
+   "Implement idempotency keys for all write operations to prevent duplicate transactions. This is a standard practice in payment APIs and ensures that duplicate calls are harmless no-ops, not costly errors.",
+   "Manage agent loop performance by being mindful of tool execution times. Avoid excessive calls to slow APIs, as this can lead to poor user experience and escalating costs. Apply the same bulkheading principles used for untrusted CLI tools."
+  ],
+  "caption": "LLMs are brilliant but fearless interns. Are you designing their tools safely?\n\nGiving language models API access transforms them into active agents, but the \"happy path\" demos often hide production pitfalls. This article explores how to build robust systems by treating LLMs as brilliant, fearless interns who need strict guidance and validation.\n\nThe core principle is understanding that LLM function calls are essentially text emissions that your SDK parses. This output has the same reliability as user input from a public form. Therefore, rigorous validation at runtime is crucial.\n\nImplement schema-first design where business rules, like maximum refund amounts, are enforced within the schema itself. This prevents models from making structurally impossible or undesirable requests, unlike prompt-based suggestions.\n\nScope capabilities by providing only the minimum set of tools necessary for a given context. This reduces the chances of the model making incorrect tool selections and improves overall accuracy and safety.\n\nAvoid naive retry logic for non-idempotent operations. Instead, let the LLM handle errors by returning structured failure objects. The model can then explain the situation to the user and suggest next steps, while your infrastructure avoids replaying charges.\n\nImplement idempotency keys for all write operations to prevent duplicate transactions. This is a standard practice in payment APIs and ensures that duplicate calls are harmless no-ops, not costly errors.\n\nManage agent loop performance by being mindful of tool execution times. Avoid excessive calls to slow APIs, as this can lead to poor user experience and escalating costs. Apply the same bulkheading principles used for untrusted CLI tools.\n\n#AI #LLM #Developer #APIDesign #Tech\n\nSource: DEV",
+  "tweet": "LLMs are like brilliant interns with no fear. Learn how to design their tools wisely to avoid costly errors and build safer AI agents. #AI #LLM #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ranaharoon3222/letting-an-llm-call-your-apis-without-losing-sleep-3fa4",
+  "image": "",
+  "orig_title": "Letting an LLM call your APIs without losing sleep",
+  "cluster_urls": [
+   "https://dev.to/ranaharoon3222/letting-an-llm-call-your-apis-without-losing-sleep-3fa4",
+   "https://dev.to/nodevguy/you-are-the-shadow-ai-your-security-team-is-worried-about-7fa",
+   "https://dev.to/nodevguy/your-coding-agents-supply-chain-is-a-mess-heres-how-to-harden-it-40fa"
+  ],
+  "cluster_titles": [
+   "Letting an LLM call your APIs without losing sleep",
+   "You Are the Shadow AI Your Security Team Is Worried About",
+   "Your Coding Agent's Supply Chain Is a Mess. Here's How to Harden It."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260816-1407-0-llms-can-be-brilliant-interns-with-no-fear-d.png",
+   "20260816-1407-0-llms-can-be-brilliant-interns-with-no-fear-d-d1.png",
+   "20260816-1407-0-llms-can-be-brilliant-interns-with-no-fear-d-d2.png",
+   "20260816-1407-0-llms-can-be-brilliant-interns-with-no-fear-d-d3.png"
+  ]
+ },
+ {
+  "topic": "laptop_secrets_plaintext",
+  "headline_marked": "[[jit]] moves plaintext secrets behind Touch ID on Macs",
+  "headline": "jit moves plaintext secrets behind Touch ID on Macs",
+  "summary": "This new tool finds secrets like API keys and tokens stored in plaintext files on your Mac and secures them with biometric authentication, injecting them only when needed.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Secrets like API keys, tokens, and credentials are often stored in plaintext files such as .env, ~/.aws/credentials, or ~/.zshrc exports. This leaves them vulnerable to any process running on your machine, including potentially malicious scripts or AI agents with broad permissions.",
+   "The new tool, jit, addresses this by moving these secrets into a local encrypted vault protected by Touch ID. It then rewrites the original files to contain decoys, ensuring that the real credentials only appear in memory for the specific process that requests them, after a biometric prompt.",
+   "jit is currently macOS-only and supports Apple Silicon Macs. For Intel Macs, it can be built from source. The tool offers features like scanning for secrets, migrating them to the vault, and wrapping CLI tools to automatically prompt for credentials when accessed.",
+   "The security model involves two Touch ID prompts: one to unlock the vault and a second to authorize a specific process's access to a credential. This prevents even authorized access from being a free-for-all, with options to disable the second prompt if desired.",
+   "Installation can be done via Homebrew or by downloading a tarball. The project emphasizes security with signed releases and notarization by Apple, ensuring a smooth installation process without Gatekeeper warnings. Users can verify the installation and signature using `jit doctor`."
+  ],
+  "caption": "Your Mac's secrets are likely in plaintext. This new tool moves them behind Touch ID, injecting them only when needed.\n\nSecrets like API keys, tokens, and credentials are often stored in plaintext files such as .env, ~/.aws/credentials, or ~/.zshrc exports. This leaves them vulnerable to any process running on your machine, including potentially malicious scripts or AI agents with broad permissions.\n\nThe new tool, jit, addresses this by moving these secrets into a local encrypted vault protected by Touch ID. It then rewrites the original files to contain decoys, ensuring that the real credentials only appear in memory for the specific process that requests them, after a biometric prompt.\n\njit is currently macOS-only and supports Apple Silicon Macs. For Intel Macs, it can be built from source. The tool offers features like scanning for secrets, migrating them to the vault, and wrapping CLI tools to automatically prompt for credentials when accessed.\n\nThe security model involves two Touch ID prompts: one to unlock the vault and a second to authorize a specific process's access to a credential. This prevents even authorized access from being a free-for-all, with options to disable the second prompt if desired.\n\nInstallation can be done via Homebrew or by downloading a tarball. The project emphasizes security with signed releases and notarization by Apple, ensuring a smooth installation process without Gatekeeper warnings. Users can verify the installation and signature using `jit doctor`.\n\n#security #opensource #macos #developers #privacy\n\nSource: Hacker News",
+  "tweet": "Your Mac's secrets are likely in plaintext. This new tool moves them behind Touch ID, injecting them only when needed. #security #macos #developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/jitpass/jit",
+  "image": "",
+  "orig_title": "Show HN: Laptop is the last place your secrets are still in plaintext",
+  "cluster_urls": [
+   "https://github.com/jitpass/jit"
+  ],
+  "cluster_titles": [
+   "Show HN: Laptop is the last place your secrets are still in plaintext"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260816-1407-1-jit-moves-plaintext-secrets-behind-touch-id-.png",
+   "20260816-1407-1-jit-moves-plaintext-secrets-behind-touch-id--d1.png",
+   "20260816-1407-1-jit-moves-plaintext-secrets-behind-touch-id--d2.png",
+   "20260816-1407-1-jit-moves-plaintext-secrets-behind-touch-id--d3.png"
+  ]
+ }
+]

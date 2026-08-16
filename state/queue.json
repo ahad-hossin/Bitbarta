@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai_auto_bug_fix_ci",
+  "headline_marked": "When a build breaks, [[the bug fixes itself]]",
+  "headline": "When a build breaks, the bug fixes itself",
+  "summary": "CI failures no longer halt development; an AI agent automatically files a bug, writes a patch, and opens a pull request, drastically reducing human intervention.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Previously, CI failures often went unnoticed for hours, requiring engineers to manually dig through logs, reproduce errors, and shepherd fixes. This process incurred significant human hours and delays.",
+   "Now, the moment a build fails, it automatically files a prioritized bug ticket in Shipeasy, complete with the failing step, branch, and logs. This eliminates the need for human monitoring and triage.",
+   "An AI agent then takes over, investigating the failure, writing the necessary patch, and opening a pull request. The entire fix loop, from failure to resolution, is automated, requiring only human review.",
+   "The implementation is designed to be lightweight and cost-effective, leveraging existing cloud infrastructure like Pub/Sub and services already in use. Only minimal \"glue\" code was needed to connect Cloud Build to Shipeasy.",
+   "For example, an agent successfully recognized a \"JavaScript heap out of memory\" error caused by a bundle exceeding its memory limit. It then opened a pull request with the complete fix.",
+   "This automation means engineers, even those unfamiliar with specific backend issues, can merge fixes with a simple review. The system handles the complex diagnostic and patching steps autonomously.",
+   "The ops platform, Shipeasy, handles the ticketing, agent delegation, and rollout. It offers a free tier, with a Team plan available at $49/seat/month for expanded features."
+  ],
+  "caption": "CI failures used to waste hours. Now, when a build breaks, an AI agent automatically files a bug, writes the fix, and opens a PR.\n\nPreviously, CI failures often went unnoticed for hours, requiring engineers to manually dig through logs, reproduce errors, and shepherd fixes. This process incurred significant human hours and delays.\n\nNow, the moment a build fails, it automatically files a prioritized bug ticket in Shipeasy, complete with the failing step, branch, and logs. This eliminates the need for human monitoring and triage.\n\nAn AI agent then takes over, investigating the failure, writing the necessary patch, and opening a pull request. The entire fix loop, from failure to resolution, is automated, requiring only human review.\n\nThe implementation is designed to be lightweight and cost-effective, leveraging existing cloud infrastructure like Pub/Sub and services already in use. Only minimal \"glue\" code was needed to connect Cloud Build to Shipeasy.\n\nFor example, an agent successfully recognized a \"JavaScript heap out of memory\" error caused by a bundle exceeding its memory limit. It then opened a pull request with the complete fix.\n\nThis automation means engineers, even those unfamiliar with specific backend issues, can merge fixes with a simple review. The system handles the complex diagnostic and patching steps autonomously.\n\nThe ops platform, Shipeasy, handles the ticketing, agent delegation, and rollout. It offers a free tier, with a Team plan available at $49/seat/month for expanded features.\n\n#AI #DevOps #Automation #SoftwareDevelopment #CI_CD #Shipeasy\n\nSource: DEV",
+  "tweet": "CI failures no longer block development! An AI agent now automatically files bugs, writes patches, and opens PRs for broken builds. Engineers just review the fix. #AI #DevOps #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "shipeasy.ai",
+  "source": "DEV",
+  "url": "https://dev.to/shipeasy/when-a-build-breaks-the-bug-fixes-itself-3nmm",
+  "image": "",
+  "orig_title": "When a build breaks, the bug fixes itself",
+  "cluster_urls": [
+   "https://dev.to/shipeasy/when-a-build-breaks-the-bug-fixes-itself-3nmm"
+  ],
+  "cluster_titles": [
+   "When a build breaks, the bug fixes itself"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-0606-0-when-a-build-breaks-the-bug-fixes-itself.png",
+   "20260816-0606-0-when-a-build-breaks-the-bug-fixes-itself-d1.png",
+   "20260816-0606-0-when-a-build-breaks-the-bug-fixes-itself-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_inbox_privacy_warning",
+  "headline_marked": "[[Don't hand your inbox to an AI agent]] without strict access controls, warns Reddit thread",
+  "headline": "Don't hand your inbox to an AI agent without strict access controls, warns Reddit thread",
+  "summary": "A Reddit discussion highlights the critical risks of granting AI agents unrestricted access to your email, emphasizing unintended data exposure over malicious theft. It urges users to implement strict security practices.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A Reddit thread on connecting Claude Code to a Yahoo Mail account evolved into a solid guide on limiting AI agent access. The core warning: never give an agent your email password or unrestricted mailbox access, as this creates significant exposure risks.",
+   "The danger isn't just a password leak, but that an agent with full access can read private messages, attachments, and recovery details for unrelated tasks. This broad access scales exposure with granted trust, not with malicious intent.",
+   "Key recommendations include using OAuth for connection, which allows precise permission control and revocation. Users should also aim for least privilege access, ideally read-only, and avoid granting permissions for sending, deleting, or modifying account settings.",
+   "It's safer to keep raw credentials out of the agent's direct reach, using a credential vault for authenticated actions. The rule of thumb: if you wouldn't paste a secret into a public chat, don't paste it into an agent's prompt.",
+   "For primary email accounts, the safest choice is often no agent access at all. If automation is necessary, use a separate, low-value account with narrowly scoped OAuth permissions and a sandboxed environment."
+  ],
+  "caption": "Giving an AI agent full access to your email inbox is a major security risk. Learn why broad access creates unintended exposure and how to protect your data.\n\nA Reddit thread on connecting Claude Code to a Yahoo Mail account evolved into a solid guide on limiting AI agent access. The core warning: never give an agent your email password or unrestricted mailbox access, as this creates significant exposure risks.\n\nThe danger isn't just a password leak, but that an agent with full access can read private messages, attachments, and recovery details for unrelated tasks. This broad access scales exposure with granted trust, not with malicious intent.\n\nKey recommendations include using OAuth for connection, which allows precise permission control and revocation. Users should also aim for least privilege access, ideally read-only, and avoid granting permissions for sending, deleting, or modifying account settings.\n\nIt's safer to keep raw credentials out of the agent's direct reach, using a credential vault for authenticated actions. The rule of thumb: if you wouldn't paste a secret into a public chat, don't paste it into an agent's prompt.\n\nFor primary email accounts, the safest choice is often no agent access at all. If automation is necessary, use a separate, low-value account with narrowly scoped OAuth permissions and a sandboxed environment.\n\n#AI #Security #Privacy #DataProtection #AIAgents #TechTips\n\nSource: DEV",
+  "tweet": "Don't hand your inbox to an AI agent without strict controls. Unrestricted access risks unintended exposure of private data, not just password leaks. Use OAuth, least privilege, and never paste secrets into prompts. #AI #Security #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/net_tab_ddf9dfbe0c308827e/dont-hand-your-inbox-to-an-agent-5dl8",
+  "image": "",
+  "orig_title": "Don't Hand Your Inbox to an Agent",
+  "cluster_urls": [
+   "https://dev.to/net_tab_ddf9dfbe0c308827e/dont-hand-your-inbox-to-an-agent-5dl8"
+  ],
+  "cluster_titles": [
+   "Don't Hand Your Inbox to an Agent"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-0606-1-don-t-hand-your-inbox-to-an-ai-agent-without.png",
+   "20260816-0606-1-don-t-hand-your-inbox-to-an-ai-agent-without-d1.png",
+   "20260816-0606-1-don-t-hand-your-inbox-to-an-ai-agent-without-d2.png"
+  ]
+ }
+]

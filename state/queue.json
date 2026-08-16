@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "llm_token_usage_optimization_lesson",
+  "headline_marked": "[[AI coding agent token usage cut by 91%]] with new CLI, freeing up 31% of context",
+  "headline": "AI coding agent token usage cut by 91% with new CLI, freeing up 31% of context",
+  "summary": "A developer built a CLI tool, mcptoon, that compacts MCP server JSON schemas, reducing token consumption from 39,964 to 3,511 for 255 tools. This significantly optimizes context window usage for AI agents.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI coding agents using MCP servers often face significant token waste, with 255 tools consuming 39,964 tokens, or 31% of a 128K context window, just for JSON schema overhead. This means paying for syntax rather than data.",
+   "A new CLI tool, mcptoon, addresses this by sitting between the agent and MCP servers. It presents tools in a compact, pipe-delimited format, drastically reducing the token footprint.",
+   "This optimization slashes token usage for 255 tools from 39,964 to just 3,511 tokens, achieving a 91% reduction. The savings were rigorously verified using tiktoken.get_encoding(\"cl100k_base\").",
+   "The tool works by storing full schemas on disk. Agents use mcptoon manifest --slim to see available tools and mcptoon call <server> <tool> '{\"param\":\"value\"}' --toon to execute, ensuring only compressed output enters the context.",
+   "An initial attempt to replace null with \b (empty set symbol) actually increased token count from 1 to 2, highlighting the importance of measuring against the actual model tokenizer. This \"humbling lesson\" led to tiktoken-verified methods for all substitutions.",
+   "mcptoon is compatible with any agent capable of running shell commands. It offers a single configuration file, eliminating the need to reconfigure for different AI coding environments like Claude Code, Cursor, or OpenCode."
+  ],
+  "caption": "A new CLI tool slashes AI coding agent token usage by 91% for MCP servers. This frees up 31% of a 128K context window before any user input.\n\nAI coding agents using MCP servers often face significant token waste, with 255 tools consuming 39,964 tokens, or 31% of a 128K context window, just for JSON schema overhead. This means paying for syntax rather than data.\n\nA new CLI tool, mcptoon, addresses this by sitting between the agent and MCP servers. It presents tools in a compact, pipe-delimited format, drastically reducing the token footprint.\n\nThis optimization slashes token usage for 255 tools from 39,964 to just 3,511 tokens, achieving a 91% reduction. The savings were rigorously verified using tiktoken.get_encoding(\"cl100k_base\").\n\nThe tool works by storing full schemas on disk. Agents use mcptoon manifest --slim to see available tools and mcptoon call <server> <tool> '{\"param\":\"value\"}' --toon to execute, ensuring only compressed output enters the context.\n\nAn initial attempt to replace null with \b (empty set symbol) actually increased token count from 1 to 2, highlighting the importance of measuring against the actual model tokenizer. This \"humbling lesson\" led to tiktoken-verified methods for all substitutions.\n\nmcptoon is compatible with any agent capable of running shell commands. It offers a single configuration file, eliminating the need to reconfigure for different AI coding environments like Claude Code, Cursor, or OpenCode.\n\n#AI #DeveloperTools #TokenOptimization #LLMs #Coding #Tech\n\nSource: DEV",
+  "tweet": "Slash AI coding agent token usage by 91% for MCP servers with a new CLI tool! It frees up 31% of a 128K context window, optimizing LLM context. Learn how to avoid common tokenizer pitfalls. #AI #DeveloperTools #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mcptokensaver/how-i-cut-mcp-token-usage-by-91-and-learned-a-humbling-lesson-about-tokenizers-5hl1",
+  "image": "",
+  "orig_title": "How I Cut MCP Token Usage by 91% (and Learned a Humbling Lesson About Tokenizers)",
+  "cluster_urls": [
+   "https://dev.to/mcptokensaver/how-i-cut-mcp-token-usage-by-91-and-learned-a-humbling-lesson-about-tokenizers-5hl1"
+  ],
+  "cluster_titles": [
+   "How I Cut MCP Token Usage by 91% (and Learned a Humbling Lesson About Tokenizers)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-0906-0-ai-coding-agent-token-usage-cut-by-91-with-n.png",
+   "20260816-0906-0-ai-coding-agent-token-usage-cut-by-91-with-n-d1.png",
+   "20260816-0906-0-ai-coding-agent-token-usage-cut-by-91-with-n-d2.png"
+  ]
+ },
+ {
+  "topic": "on_device_ai_revolution",
+  "headline_marked": "[[The AI revolution that fits on your phone]]",
+  "headline": "The AI revolution that fits on your phone",
+  "summary": "While large AI models get headlines, the true revolution is smaller, capable models running directly on your phone, even offline. This shift prioritizes privacy and efficiency over raw size.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "While trillion-parameter AI giants in distant datacenters grab headlines, the most significant shift is quieter: capable models small enough to run on your phone, even with Wi-Fi off. This move towards local AI prioritizes accessibility and efficiency over sheer computational power.",
+   "For a long time, AI progress was measured by parameter count. However, the focus has shifted from 'how big can we go?' to 'how small can we get while staying good enough?' Raw size incurs costs like expensive datacenters and network round-trips, and sends user data off-device.",
+   "Remarkably small models are now achievable through techniques like quantization, which stores model numbers at lower precision to dramatically shrink size with minimal quality loss. Distillation also helps, training compact models to mimic the performance of much larger ones.",
+   "Running AI models directly on a device offers several advantages. It keeps intelligence close to where it's needed, eliminates network latency, enhances data privacy by keeping information local, and reduces operational costs associated with cloud infrastructure.",
+   "The 'size race' often overlooks that most everyday tasks don't require the largest models. Summarizing notes, drafting replies, classifying messages, or answering questions about local documents are all handled effectively by smaller, on-device AI.",
+   "This approach mirrors good system design: use the simplest tool for the job. The future of everyday AI likely involves capable small models on devices for most tasks, only escalating to larger cloud models when genuinely complex problems arise. The 'shrink race' will ultimately achieve broader reach than the 'size race'."
+  ],
+  "caption": "Forget giant cloud AI. The real revolution is happening on your phone, running powerful AI models offline.\n\nWhile trillion-parameter AI giants in distant datacenters grab headlines, the most significant shift is quieter: capable models small enough to run on your phone, even with Wi-Fi off. This move towards local AI prioritizes accessibility and efficiency over sheer computational power.\n\nFor a long time, AI progress was measured by parameter count. However, the focus has shifted from 'how big can we go?' to 'how small can we get while staying good enough?' Raw size incurs costs like expensive datacenters and network round-trips, and sends user data off-device.\n\nRemarkably small models are now achievable through techniques like quantization, which stores model numbers at lower precision to dramatically shrink size with minimal quality loss. Distillation also helps, training compact models to mimic the performance of much larger ones.\n\nRunning AI models directly on a device offers several advantages. It keeps intelligence close to where it's needed, eliminates network latency, enhances data privacy by keeping information local, and reduces operational costs associated with cloud infrastructure.\n\nThe 'size race' often overlooks that most everyday tasks don't require the largest models. Summarizing notes, drafting replies, classifying messages, or answering questions about local documents are all handled effectively by smaller, on-device AI.\n\nThis approach mirrors good system design: use the simplest tool for the job. The future of everyday AI likely involves capable small models on devices for most tasks, only escalating to larger cloud models when genuinely complex problems arise. The 'shrink race' will ultimately achieve broader reach than the 'size race'.\n\n#AI #OnDeviceAI #EdgeAI #MobileTech #TechRevolution #MachineLearning\n\nSource: DEV",
+  "tweet": "The AI revolution isn't just in datacenters. Powerful AI models are now running directly on your phone, offline. This shift towards on-device AI promises greater privacy, efficiency, and accessibility for everyday tasks. #AI #EdgeAI #MobileTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dev-into-space/the-ai-revolution-that-fits-on-your-phone-4e44",
+  "image": "",
+  "orig_title": "The AI revolution that fits on your phone",
+  "cluster_urls": [
+   "https://dev.to/dev-into-space/the-ai-revolution-that-fits-on-your-phone-4e44"
+  ],
+  "cluster_titles": [
+   "The AI revolution that fits on your phone"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-0906-1-the-ai-revolution-that-fits-on-your-phone.png",
+   "20260816-0906-1-the-ai-revolution-that-fits-on-your-phone-d1.png",
+   "20260816-0906-1-the-ai-revolution-that-fits-on-your-phone-d2.png"
+  ]
+ }
+]

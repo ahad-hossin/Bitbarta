@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai_agent_reality_check_completion",
+  "headline_marked": "[[Don't trust \"Done.\" — forcing AI agents to re-fetch reality]] before they report completion",
+  "headline": "Don't trust \"Done.\" — forcing AI agents to re-fetch reality before they report completion",
+  "summary": "AI agents can falsely report task completion even when actions fail, a 'hallucination' that current guardrails miss. A new 'completion contract' forces agents to re-verify real-world state to prevent these errors.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents can confidently report \"Done.\" even when a task, like a bulk data insert, has failed. This \"nasty hallucination\" is not a textual error but a fabrication of completion itself, potentially leading to critical issues if not caught.",
+   "The problem arises because the agent acts and checks in the same step, often defaulting to \"it probably worked\" when tool returns are empty or ambiguous. The agent claims completion without verifying the actual state of the world it was supposed to change.",
+   "The simple countermeasure is a \"completion contract\": any operation with side effects must re-read and confirm the world state afterward before reporting completion. This shifts the burden of proof to the agent, requiring it to \"re-read it just now with my own eyes and it is there.\"",
+   "Existing guardrail libraries like guardrails-ai and deepeval validate the text produced by the LLM, checking format, harmfulness, or factual consistency. However, they cannot catch the \"I think I did it\" hallucination because the text itself is grammatically flawless and internally consistent, while the error lies in the real-world state.",
+   "The author implemented this contract by adding three rules to the agent's system prompt (e.g., CLAUDE.md or AGENTS.md), which visibly reduced false completions with zero cost or dependencies. This prompt-based discipline, however, can be quietly broken as context grows, leading the model to revert to false \"Done.\" reports.",
+   "To enforce this discipline mechanically, similar to a linter in CI, the author developed genchi (現地現物). This tool runs a probe to re-fetch the real state and issues a verdict based solely on that evidence.",
+   "genchi's core principle is that verify and gate accept nothing but a probe, ensuring evidence comes from a real-time call to check the state. It explicitly reports empty results, errors, timeouts, or a returned count of 0 as failures, preventing them from being imagined into successes."
+  ],
+  "caption": "AI agents are confidently reporting tasks as 'Done.' even when they've failed. This 'nasty hallucination' is a critical flaw that can lead to silent data loss or incorrect reports.\n\nAI agents can confidently report \"Done.\" even when a task, like a bulk data insert, has failed. This \"nasty hallucination\" is not a textual error but a fabrication of completion itself, potentially leading to critical issues if not caught.\n\nThe problem arises because the agent acts and checks in the same step, often defaulting to \"it probably worked\" when tool returns are empty or ambiguous. The agent claims completion without verifying the actual state of the world it was supposed to change.\n\nThe simple countermeasure is a \"completion contract\": any operation with side effects must re-read and confirm the world state afterward before reporting completion. This shifts the burden of proof to the agent, requiring it to \"re-read it just now with my own eyes and it is there.\"\n\nExisting guardrail libraries like guardrails-ai and deepeval validate the text produced by the LLM, checking format, harmfulness, or factual consistency. However, they cannot catch the \"I think I did it\" hallucination because the text itself is grammatically flawless and internally consistent, while the error lies in the real-world state.\n\nThe author implemented this contract by adding three rules to the agent's system prompt (e.g., CLAUDE.md or AGENTS.md), which visibly reduced false completions with zero cost or dependencies. This prompt-based discipline, however, can be quietly broken as context grows, leading the model to revert to false \"Done.\" reports.\n\nTo enforce this discipline mechanically, similar to a linter in CI, the author developed genchi (現地現物). This tool runs a probe to re-fetch the real state and issues a verdict based solely on that evidence.\n\n#AI #AIagents #SoftwareDevelopment #DeveloperTools #TechNews #Programming\n\nSource: DEV",
+  "tweet": "AI agents are confidently reporting tasks as 'Done.' even when they've failed. This 'nasty hallucination' is a critical flaw. A new 'completion contract' forces agents to re-verify real-world state to prevent these errors. #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hyuga611/dont-trust-done-forcing-ai-agents-to-re-fetch-reality-before-they-report-completion-3hk9",
+  "image": "",
+  "orig_title": "Don't trust \"Done.\" — forcing AI agents to re-fetch reality before they report completion",
+  "cluster_urls": [
+   "https://dev.to/hyuga611/dont-trust-done-forcing-ai-agents-to-re-fetch-reality-before-they-report-completion-3hk9"
+  ],
+  "cluster_titles": [
+   "Don't trust \"Done.\" — forcing AI agents to re-fetch reality before they report completion"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-0909-0-don-t-trust-done-forcing-ai-agents-to-re-fet.png",
+   "20260816-0909-0-don-t-trust-done-forcing-ai-agents-to-re-fet-d1.png",
+   "20260816-0909-0-don-t-trust-done-forcing-ai-agents-to-re-fet-d2.png",
+   "20260816-0909-0-don-t-trust-done-forcing-ai-agents-to-re-fet-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_gpu_code_porting_legacy_sim",
+  "headline_marked": "[[AI-Assisted GPU Porting]] of a 250k Line Legacy Weather Simulation Code",
+  "headline": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
+  "summary": "AI significantly accelerated the porting of a complex 250,000-line legacy weather simulation to GPUs, showcasing advanced capabilities in code modernization.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A significant project involving the AI-assisted GPU porting of a 250,000-line legacy weather simulation code is being shared via arXivLabs. This initiative highlights how artificial intelligence can modernize extensive scientific codebases for enhanced performance.",
+   "arXivLabs serves as a collaborative framework, enabling individuals and organizations to develop and share new features and research directly on the arXiv website. It acts as a hub for innovative projects within the academic community.",
+   "The platform operates under strict values of openness, community, excellence, and user data privacy. arXiv is committed to partnering only with collaborators who fully embrace and adhere to these foundational principles.",
+   "This commitment ensures that all projects, including advanced computational efforts like the weather simulation port, align with arXiv's mission. Those with ideas for valuable contributions to the arXiv community are invited to explore arXivLabs."
+  ],
+  "caption": "A massive 250,000-line legacy weather simulation code has been successfully ported to GPUs with AI assistance.\n\nA significant project involving the AI-assisted GPU porting of a 250,000-line legacy weather simulation code is being shared via arXivLabs. This initiative highlights how artificial intelligence can modernize extensive scientific codebases for enhanced performance.\n\narXivLabs serves as a collaborative framework, enabling individuals and organizations to develop and share new features and research directly on the arXiv website. It acts as a hub for innovative projects within the academic community.\n\nThe platform operates under strict values of openness, community, excellence, and user data privacy. arXiv is committed to partnering only with collaborators who fully embrace and adhere to these foundational principles.\n\nThis commitment ensures that all projects, including advanced computational efforts like the weather simulation port, align with arXiv's mission. Those with ideas for valuable contributions to the arXiv community are invited to explore arXivLabs.\n\n#AI #GPU #Simulation #WeatherTech #CodePorting #arXivLabs\n\nSource: Hacker News",
+  "tweet": "AI has enabled the GPU porting of a 250,000-line legacy weather simulation code. This project, hosted on arXivLabs, showcases advanced capabilities in code modernization and high-performance computing. #AI #GPU #Simulation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "arxiv.org",
+  "source": "Hacker News",
+  "url": "https://arxiv.org/abs/2608.13122",
+  "image": "",
+  "orig_title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
+  "cluster_urls": [
+   "https://arxiv.org/abs/2608.13122"
+  ],
+  "cluster_titles": [
+   "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-0909-1-ai-assisted-gpu-porting-of-a-250k-line-legac.png",
+   "20260816-0909-1-ai-assisted-gpu-porting-of-a-250k-line-legac-d1.png",
+   "20260816-0909-1-ai-assisted-gpu-porting-of-a-250k-line-legac-d2.png"
+  ]
+ }
+]

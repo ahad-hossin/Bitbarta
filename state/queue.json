@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "topic": "soft_boil_css_art_game_wallet_retries_concurrency",
+  "headline_marked": "[[CSS Art]] Simulates Soft-Boiled Eggs in Six Minutes",
+  "headline": "CSS Art Simulates Soft-Boiled Eggs in Six Minutes",
+  "summary": "A developer uses only divs, gradients, and shadows to create a realistic animation of boiling eggs, showcasing precise timing and visual effects.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "This entry for the Frontend Challenge - Comfort Food Edition uses pure CSS to depict the simple act of boiling eggs. The creator focused on the opposite of complex cooking: the dish you make when you have no skill, energy, or plan, emphasizing that soft-boiled eggs are foolproof.",
+   "The visual composition features a glass bowl to allow visibility of the boiling process and an induction hob for its distinct light source. The scene is constructed entirely from HTML divs, CSS gradients, and shadows, with no external assets like SVGs or images.",
+   "A key element is the animation of the induction hob's heating ring and the subsequent boiling of the water. The animation simulates the gradual build-up of heat, the emergence of bubbles, and the movement of the eggs, with a specific focus on the timing and visual progression.",
+   "The animation is driven by CSS custom properties, specifically `--heat` and `--amp`, which control the hob's temperature and the water's agitation. These properties are registered as numbers, allowing for smooth transitions that affect the ring's glow, bubble formation, water churn, and egg movement.",
+   "A notable detail is the simulated lag: the water agitation (`--amp`) doesn't begin for 2.6 seconds after the heat (`--heat`) starts, mimicking a real hob's behavior. This creates a realistic stretch where the ring glows but the eggs remain still.",
+   "The bubbles are staggered and appear at intervals, creating a natural look rather than a uniform fill. The surface churn only initiates when the heat level surpasses a certain threshold, indicating a genuine rolling boil.",
+   "Cooling is also animated with distinct timings, reflecting how a hob actually behaves: the boil subsides before the element cools down, and the cooling process is slower than heating.",
+   "The creator encountered a CSS animation quirk where opacity declarations in a rule are ignored if the element has another running animation affecting opacity, requiring careful management of visual states."
+  ],
+  "caption": "This CSS art piece perfectly simulates boiling eggs in six minutes, using only divs, gradients, and shadows.\n\nThis entry for the Frontend Challenge - Comfort Food Edition uses pure CSS to depict the simple act of boiling eggs. The creator focused on the opposite of complex cooking: the dish you make when you have no skill, energy, or plan, emphasizing that soft-boiled eggs are foolproof.\n\nThe visual composition features a glass bowl to allow visibility of the boiling process and an induction hob for its distinct light source. The scene is constructed entirely from HTML divs, CSS gradients, and shadows, with no external assets like SVGs or images.\n\nA key element is the animation of the induction hob's heating ring and the subsequent boiling of the water. The animation simulates the gradual build-up of heat, the emergence of bubbles, and the movement of the eggs, with a specific focus on the timing and visual progression.\n\nThe animation is driven by CSS custom properties, specifically `--heat` and `--amp`, which control the hob's temperature and the water's agitation. These properties are registered as numbers, allowing for smooth transitions that affect the ring's glow, bubble formation, water churn, and egg movement.\n\nA notable detail is the simulated lag: the water agitation (`--amp`) doesn't begin for 2.6 seconds after the heat (`--heat`) starts, mimicking a real hob's behavior. This creates a realistic stretch where the ring glows but the eggs remain still.\n\nThe bubbles are staggered and appear at intervals, creating a natural look rather than a uniform fill. The surface churn only initiates when the heat level surpasses a certain threshold, indicating a genuine rolling boil.\n\nCooling is also animated with distinct timings, reflecting how a hob actually behaves: the boil subsides before the element cools down, and the cooling process is slower than heating.\n\nCSS #CSSArt #FrontendDev #WebDevelopment #Coding\n\nSource: DEV",
+  "tweet": "This CSS art piece perfectly simulates boiling eggs in six minutes, using only divs, gradients, and shadows. A masterclass in animation timing! #CSS #CSSArt #FrontendDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/maneesh_thakur_d16c2852fa/soft-boil-six-minutes-and-you-cannot-get-it-wrong-5dj6",
+  "image": "",
+  "orig_title": "Soft Boil — six minutes, and you cannot get it wrong",
+  "cluster_urls": [
+   "https://dev.to/maneesh_thakur_d16c2852fa/soft-boil-six-minutes-and-you-cannot-get-it-wrong-5dj6",
+   "https://dev.to/zzzu2221/a-game-wallet-is-more-than-a-number-handling-retries-and-concurrency-2al3"
+  ],
+  "cluster_titles": [
+   "Soft Boil — six minutes, and you cannot get it wrong",
+   "A Game Wallet Is More Than a Number: Handling Retries and Concurrency"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260816-1306-0-css-art-simulates-soft-boiled-eggs-in-six-mi.png",
+   "20260816-1306-0-css-art-simulates-soft-boiled-eggs-in-six-mi-d1.png",
+   "20260816-1306-0-css-art-simulates-soft-boiled-eggs-in-six-mi-d2.png",
+   "20260816-1306-0-css-art-simulates-soft-boiled-eggs-in-six-mi-d3.png"
+  ]
+ },
+ {
+  "topic": "android_developer_verification_lockdown",
+  "headline_marked": "Google's [[Developer Verification]] Plan Could End Android's Openness",
+  "headline": "Google's Developer Verification Plan Could End Android's Openness",
+  "summary": "Starting September 2026, all Android developers must register with Google, impacting apps installed from any source, not just the Play Store.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Google announced Android Developer Verification, a policy change set to take effect in September 2026. This requires every developer whose app is installed on certified Android devices to register with Google. This mandate extends beyond the Google Play Store, encompassing apps sideloaded from websites, distributed via APK files, or even internal company tools.",
+   "The stated reason for this policy is to enhance security and accountability by preventing repeat malware developers. However, critics argue that it centralizes control with Google, turning the once-open Android ecosystem into a permission-based system where Google acts as the gatekeeper for all software.",
+   "Developers must register and undergo verification to have their apps installable on certified devices. Failure to comply will result in apps being silently blocked by Google Play Protect worldwide. This process transforms the simple 'build and share APK' workflow into a controlled environment.",
+   "While Google mentions an 'Advanced Flow' for power users and sideloading enthusiasts, this process relies on Google Play Services and can be modified or removed by Google at any time via server-side updates, without user consent or a full OS update.",
+   "This policy affects a broad range of developers, including those distributing apps outside the Play Store, such as hobbyists, internal enterprise developers, and those using alternative app stores. It adds a technical control layer on top of economic controls, potentially blocking apps even if they avoid Google's billing or Play Store.",
+   "The move has drawn significant backlash, with the Keep Android Open campaign launching an open letter signed by over 60 organizations. Critics, including Ars Technica, view this as Google dismantling Android's open legacy, akin to \"iOS with extra steps.\"",
+   "Android's success was largely attributed to its openness and flexibility compared to iOS. Mandatory Developer Verification fundamentally alters this by requiring developers to identify themselves to Google, a move seen by many as a security pretext for increased control rather than a genuine safety measure.",
+   "Critics argue that Google's actions contradict its promises of greater choice and openness following legal challenges like the Epic Games case. The new verification system grants Google unprecedented power to block or limit any app on billions of devices, raising concerns about user ownership and platform freedom."
+  ],
+  "caption": "Google's new Android Developer Verification policy, starting Sept 2026, will require ALL developers to register with Google, impacting apps from any source.\n\nGoogle announced Android Developer Verification, a policy change set to take effect in September 2026. This requires every developer whose app is installed on certified Android devices to register with Google. This mandate extends beyond the Google Play Store, encompassing apps sideloaded from websites, distributed via APK files, or even internal company tools.\n\nThe stated reason for this policy is to enhance security and accountability by preventing repeat malware developers. However, critics argue that it centralizes control with Google, turning the once-open Android ecosystem into a permission-based system where Google acts as the gatekeeper for all software.\n\nDevelopers must register and undergo verification to have their apps installable on certified devices. Failure to comply will result in apps being silently blocked by Google Play Protect worldwide. This process transforms the simple 'build and share APK' workflow into a controlled environment.\n\nWhile Google mentions an 'Advanced Flow' for power users and sideloading enthusiasts, this process relies on Google Play Services and can be modified or removed by Google at any time via server-side updates, without user consent or a full OS update.\n\nThis policy affects a broad range of developers, including those distributing apps outside the Play Store, such as hobbyists, internal enterprise developers, and those using alternative app stores. It adds a technical control layer on top of economic controls, potentially blocking apps even if they avoid Google's billing or Play Store.\n\nThe move has drawn significant backlash, with the Keep Android Open campaign launching an open letter signed by over 60 organizations. Critics, including Ars Technica, view this as Google dismantling Android's open legacy, akin to \"iOS with extra steps.\"\n\n#Android #Google #DeveloperVerification #TechPolicy #OpenSource\n\nSource: DEV",
+  "tweet": "Google's new Android Developer Verification policy, starting Sept 2026, will require ALL developers to register with Google, impacting apps from any source. This could end Android's open legacy. #Android #Google #DeveloperVerification",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "android.com",
+  "source": "DEV",
+  "url": "https://dev.to/ezhil_sivarajsr/androids-walled-garden-googles-developer-verification-lockdown-that-changes-everything-27po",
+  "image": "",
+  "orig_title": "Android’s Walled Garden: Google’s Developer Verification Lockdown That Changes Everything",
+  "cluster_urls": [
+   "https://dev.to/ezhil_sivarajsr/androids-walled-garden-googles-developer-verification-lockdown-that-changes-everything-27po"
+  ],
+  "cluster_titles": [
+   "Android’s Walled Garden: Google’s Developer Verification Lockdown That Changes Everything"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260816-1306-1-google-s-developer-verification-plan-could-e.png",
+   "20260816-1306-1-google-s-developer-verification-plan-could-e-d1.png",
+   "20260816-1306-1-google-s-developer-verification-plan-could-e-d2.png",
+   "20260816-1306-1-google-s-developer-verification-plan-could-e-d3.png",
+   "20260816-1306-1-google-s-developer-verification-plan-could-e-d4.png"
+  ]
+ }
+]

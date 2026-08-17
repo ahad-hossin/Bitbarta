@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "ai_agent_tool_call_failure_detection",
+  "headline_marked": "[[Tracelint]] catches AI agent structural defects in CI",
+  "headline": "Tracelint catches AI agent structural defects in CI",
+  "summary": "New open-source tool deterministically flags ignored tool errors in AI agent runs, ensuring reliability without needing a second model.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI agents can suffer from structural defects where they ignore critical tool errors, leading to incorrect responses or actions. These aren't hallucinations but decidable flaws within the execution trace. A new open-source tool, tracelint, aims to catch these issues deterministically.",
+   "Tracelint acts as a linter for agent runs, analyzing the execution trace to identify and flag structural bugs. It provides exact trace lines as evidence and can integrate with CI pipelines to exit with an error code, preventing faulty agents from being deployed.",
+   "Unlike LLM-based judges, which can be unreliable and costly, tracelint uses deterministic validation. It focuses on decidable categories of bugs like schema violations, malformed JSON, and ignored tool errors, which do not require a separate AI model to detect.",
+   "The tool is designed to work with existing telemetry data, such as OpenInference, Arize Phoenix, or Langfuse, without requiring new trace formats. This allows developers to leverage their current instrumentation for enhanced agent reliability.",
+   "Tracelint categorizes findings into hard defects (which fail CI) and heuristic candidates (which require human review). It also transparently reports any missing fields in the trace data, preventing false confidence from incomplete analysis.",
+   "The tool is open-source under the MIT license, dependency-light, and supports Python 3.10-3.12. The developer actively seeks feedback and traces from real-world exports to improve its detection capabilities."
+  ],
+  "caption": "Your AI agent ignored a failed tool call. Here's how to catch that in CI.\n\nAI agents can suffer from structural defects where they ignore critical tool errors, leading to incorrect responses or actions. These aren't hallucinations but decidable flaws within the execution trace. A new open-source tool, tracelint, aims to catch these issues deterministically.\n\nTracelint acts as a linter for agent runs, analyzing the execution trace to identify and flag structural bugs. It provides exact trace lines as evidence and can integrate with CI pipelines to exit with an error code, preventing faulty agents from being deployed.\n\nUnlike LLM-based judges, which can be unreliable and costly, tracelint uses deterministic validation. It focuses on decidable categories of bugs like schema violations, malformed JSON, and ignored tool errors, which do not require a separate AI model to detect.\n\nThe tool is designed to work with existing telemetry data, such as OpenInference, Arize Phoenix, or Langfuse, without requiring new trace formats. This allows developers to leverage their current instrumentation for enhanced agent reliability.\n\nTracelint categorizes findings into hard defects (which fail CI) and heuristic candidates (which require human review). It also transparently reports any missing fields in the trace data, preventing false confidence from incomplete analysis.\n\nThe tool is open-source under the MIT license, dependency-light, and supports Python 3.10-3.12. The developer actively seeks feedback and traces from real-world exports to improve its detection capabilities.\n\n#AI #SoftwareDevelopment #DevOps #OpenSource #AICoding\n\nSource: DEV",
+  "tweet": "Your AI agent ignored a failed tool call? 😱 New open-source tool tracelint deterministically catches these structural defects in CI, ensuring reliability. No second model needed! #AI #DevOps #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ashwin_ugale_102f2abc9cec/your-agent-ignored-a-failed-tool-call-heres-how-to-catch-that-in-ci-2i17",
+  "image": "",
+  "orig_title": "Your agent ignored a failed tool call. Here's how to catch that in CI.",
+  "cluster_urls": [
+   "https://dev.to/ashwin_ugale_102f2abc9cec/your-agent-ignored-a-failed-tool-call-heres-how-to-catch-that-in-ci-2i17",
+   "https://dev.to/navigatorbuilds/im-an-ai-maintainer-this-month-strangers-checked-my-work-139n"
+  ],
+  "cluster_titles": [
+   "Your agent ignored a failed tool call. Here's how to catch that in CI.",
+   "I'm an AI maintainer. This month, strangers checked my work."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260818-0407-0-tracelint-catches-ai-agent-structural-defect.png",
+   "20260818-0407-0-tracelint-catches-ai-agent-structural-defect-d1.png",
+   "20260818-0407-0-tracelint-catches-ai-agent-structural-defect-d2.png"
+  ]
+ }
+]

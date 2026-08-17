@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "cloudflare silent analytics injection",
+  "headline_marked": "[[Cloudflare injects analytics by default]] for free plans when switching nameservers",
+  "headline": "Cloudflare injects analytics by default for free plans when switching nameservers",
+  "summary": "Cloudflare integrates Real User Measurement (RUM) into free plans, enabling performance data collection and access to its Observatory tool. This feature is on by default but can be disabled.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Cloudflare has been observed injecting its Real User Measurement (RUM) analytics script into websites using its free plans. This occurs by default when site owners switch their nameservers to Cloudflare.",
+   "The company states that RUM provides site owners with actionable performance data they might not otherwise have. It also grants free plans access to their Observatory product, a performance-monitoring tool.",
+   "Cloudflare clarifies that RUM is on by default for free sites, a decision explained in a blog post titled \"The RUM Diaries.\" They emphasize that the feature is easy to disable if users prefer not to have it active.",
+   "For all paid Cloudflare plans, the RUM analytics feature is opt-in only. This distinction highlights different default behaviors based on subscription tiers.",
+   "The practice of injecting scripts into response bodies, even for analytics, raises discussions about third-party intervention. Cloudflare operates as a Man-in-the-Middle (MiTM) when directing traffic through its proxies.",
+   "This scenario is typically a concern cited against ISPs for potential script injection. Cloudflare's approach, however, has generally faced fewer objections, possibly due to its perceived benefits and user control options."
+  ],
+  "caption": "Cloudflare is injecting analytics scripts into websites on its free plans by default. This happens when users switch their nameservers.\n\nCloudflare has been observed injecting its Real User Measurement (RUM) analytics script into websites using its free plans. This occurs by default when site owners switch their nameservers to Cloudflare.\n\nThe company states that RUM provides site owners with actionable performance data they might not otherwise have. It also grants free plans access to their Observatory product, a performance-monitoring tool.\n\nCloudflare clarifies that RUM is on by default for free sites, a decision explained in a blog post titled \"The RUM Diaries.\" They emphasize that the feature is easy to disable if users prefer not to have it active.\n\nFor all paid Cloudflare plans, the RUM analytics feature is opt-in only. This distinction highlights different default behaviors based on subscription tiers.\n\nThe practice of injecting scripts into response bodies, even for analytics, raises discussions about third-party intervention. Cloudflare operates as a Man-in-the-Middle (MiTM) when directing traffic through its proxies.\n\nThis scenario is typically a concern cited against ISPs for potential script injection. Cloudflare's approach, however, has generally faced fewer objections, possibly due to its perceived benefits and user control options.\n\n#Cloudflare #WebAnalytics #Security #Privacy #TechNews #WebDev\n\nSource: Hacker News",
+  "tweet": "Cloudflare is injecting analytics scripts into websites on its free plans by default when users switch nameservers. The company states it provides performance data and is easy to disable. #Cloudflare #WebAnalytics #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "cloudflare.com",
+  "source": "Hacker News",
+  "url": "https://news.ycombinator.com/item?id=49322107",
+  "image": "",
+  "orig_title": "Tell HN: Cloudflare silently injects its analytics when you switch nameservers",
+  "cluster_urls": [
+   "https://news.ycombinator.com/item?id=49322107"
+  ],
+  "cluster_titles": [
+   "Tell HN: Cloudflare silently injects its analytics when you switch nameservers"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260817-1107-0-cloudflare-injects-analytics-by-default-for-.png",
+   "20260817-1107-0-cloudflare-injects-analytics-by-default-for--d1.png",
+   "20260817-1107-0-cloudflare-injects-analytics-by-default-for--d2.png"
+  ]
+ }
+]

@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "llm divination skill limitations",
+  "headline_marked": "[[LLM divination Skills compute wrong answers]] due to flawed astronomical calculations",
+  "headline": "LLM divination Skills compute wrong answers due to flawed astronomical calculations",
+  "summary": "Popular LLM-based divination apps on GitHub often produce incorrect results because they fail at precise astronomical calculations for solar terms, local solar time, and historical daylight saving. This leads to fundamental errors in chart casting, not just in",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Many popular LLM-based Chinese divination Skills on GitHub, some with thousands of stars, are praised for their features and anti-hallucination efforts. However, a deep dive reveals a critical flaw in their core arithmetic.",
+   "The problem isn't with interpreting the divination charts, but with the initial casting steps. While interpretation lacks ground truth, casting has one correct answer, which most implementations get wrong.",
+   "A major issue is the calculation of BaZi year and month pillars, which change at Lichun (a precise solar term instant), not midnight. Many Skills use day-granularity data, causing a quarter of a person's chart to be incorrect if born on a boundary day.",
+   "Another error source is local solar time. China's single official clock across multiple geographic time zones means a birth time needs longitude-based correction, which requires complex trigonometric calculations for the equation of time. LLMs struggle with this.",
+   "Historical Daylight Saving Time also causes inaccuracies. For example, China observed DST from 1986-1991. Birth certificates from this period record a clock time an hour forward, which can shift entire hour-branches and even day pillars in a BaZi chart.",
+   "This pattern extends beyond divination: LLMs asked for lookups or calculations often produce plausible but incorrect answers in domains without clear error signals, making errors difficult to detect."
+  ],
+  "caption": "Popular LLM-based divination apps are getting basic astronomy wrong. They're failing at precise calculations for solar terms, local solar time, and historical daylight saving.\n\nMany popular LLM-based Chinese divination Skills on GitHub, some with thousands of stars, are praised for their features and anti-hallucination efforts. However, a deep dive reveals a critical flaw in their core arithmetic.\n\nThe problem isn't with interpreting the divination charts, but with the initial casting steps. While interpretation lacks ground truth, casting has one correct answer, which most implementations get wrong.\n\nA major issue is the calculation of BaZi year and month pillars, which change at Lichun (a precise solar term instant), not midnight. Many Skills use day-granularity data, causing a quarter of a person's chart to be incorrect if born on a boundary day.\n\nAnother error source is local solar time. China's single official clock across multiple geographic time zones means a birth time needs longitude-based correction, which requires complex trigonometric calculations for the equation of time. LLMs struggle with this.\n\nHistorical Daylight Saving Time also causes inaccuracies. For example, China observed DST from 1986-1991. Birth certificates from this period record a clock time an hour forward, which can shift entire hour-branches and even day pillars in a BaZi chart.\n\nThis pattern extends beyond divination: LLMs asked for lookups or calculations often produce plausible but incorrect answers in domains without clear error signals, making errors difficult to detect.\n\n#AI #LLM #SoftwareDevelopment #ComputationalAccuracy #TechNews #Astrology\n\nSource: DEV",
+  "tweet": "Popular LLM-based divination apps on GitHub are failing at precise astronomical calculations for solar terms, local solar time, and historical DST. This leads to fundamentally incorrect chart castings, not just interpretation errors. #AI #LLM #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shanni/your-llm-skill-cant-do-astronomy-why-packaged-divination-skills-compute-the-wrong-answer-47nl",
+  "image": "",
+  "orig_title": "Your LLM Skill can't do astronomy: why packaged divination Skills compute the wrong answer",
+  "cluster_urls": [
+   "https://dev.to/shanni/your-llm-skill-cant-do-astronomy-why-packaged-divination-skills-compute-the-wrong-answer-47nl"
+  ],
+  "cluster_titles": [
+   "Your LLM Skill can't do astronomy: why packaged divination Skills compute the wrong answer"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260817-1307-0-llm-divination-skills-compute-wrong-answers-.png",
+   "20260817-1307-0-llm-divination-skills-compute-wrong-answers--d1.png",
+   "20260817-1307-0-llm-divination-skills-compute-wrong-answers--d2.png"
+  ]
+ }
+]

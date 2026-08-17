@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "linux botnet ddos tools",
+  "headline_marked": "[[Evooo1Bot: Multi-functional Linux botnet]] turns gateways into SOCKS5 relays, SSH spreaders, DDoS tools",
+  "headline": "Evooo1Bot: Multi-functional Linux botnet turns gateways into SOCKS5 relays, SSH spreaders, DDoS tools",
+  "summary": "This Mirai-variant botnet compromises Linux gateways using 150+ credential combos, deploying payloads for 12 CPU architectures. It combines SOCKS5 relaying, credential sniffing, SSH spreading, and 16 DDoS attack types.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Evooo1Bot is a Mirai-variant botnet that infiltrates Linux gateways using known vulnerabilities and over 150 credential combinations. It deploys highly versatile payloads supporting 12 different CPU architectures.",
+   "This sophisticated botnet integrates encrypted C2 communications, SOCKS5 relaying, credential sniffing, SSH spreading, persistence mechanisms. It also features 16 distinct types of DDoS attacks within a single package.",
+   "Fortinet telemetry indicates global targeting, including operational technology (OT) environments, such as Mitsubishi Electric ME-RTU equipment. This highlights a critical threat to industrial infrastructure.",
+   "Security Operations Centers (SOCs) are urged to expand monitoring beyond servers and endpoints to include processes, configurations, and egress traffic on routers, firewalls, cameras, and OT gateways.",
+   "It's crucial not to solely classify Mirai variants like Evooo1Bot as 'DDoS bots.' Investigations must also consider their potential for SOCKS relays, credential collection, and internal network pivoting to fully understand the threat."
+  ],
+  "caption": "Evooo1Bot, a new Mirai-variant botnet, is turning compromised Linux gateways into multi-functional attack tools. It uses over 150 credential combinations to breach systems.\n\nEvooo1Bot is a Mirai-variant botnet that infiltrates Linux gateways using known vulnerabilities and over 150 credential combinations. It deploys highly versatile payloads supporting 12 different CPU architectures.\n\nThis sophisticated botnet integrates encrypted C2 communications, SOCKS5 relaying, credential sniffing, SSH spreading, persistence mechanisms. It also features 16 distinct types of DDoS attacks within a single package.\n\nFortinet telemetry indicates global targeting, including operational technology (OT) environments, such as Mitsubishi Electric ME-RTU equipment. This highlights a critical threat to industrial infrastructure.\n\nSecurity Operations Centers (SOCs) are urged to expand monitoring beyond servers and endpoints to include processes, configurations, and egress traffic on routers, firewalls, cameras, and OT gateways.\n\nIt's crucial not to solely classify Mirai variants like Evooo1Bot as 'DDoS bots.' Investigations must also consider their potential for SOCKS relays, credential collection, and internal network pivoting to fully understand the threat.\n\n#CyberSecurity #Botnet #Linux #Mirai #DDoS #SecurityAlert\n\nSource: DEV",
+  "tweet": "Evooo1Bot, a new Mirai-variant botnet, is turning compromised Linux gateways into multi-functional attack tools. It uses over 150 credential combinations, deploys 12 CPU arch payloads, and performs SOCKS5 relaying, SSH spreading, and 16 DDoS attack types. #CyberSecurity #Bot",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/evooo1bot-a-multi-functional-linux-botnet-that-turns-compromised-gateways-into-socks5-relays-ssh-27kg",
+  "image": "",
+  "orig_title": "Evooo1Bot: A Multi-Functional Linux Botnet That Turns Compromised Gateways into SOCKS5 Relays, SSH Spreaders, and DDoS Tools",
+  "cluster_urls": [
+   "https://dev.to/anoymask/evooo1bot-a-multi-functional-linux-botnet-that-turns-compromised-gateways-into-socks5-relays-ssh-27kg"
+  ],
+  "cluster_titles": [
+   "Evooo1Bot: A Multi-Functional Linux Botnet That Turns Compromised Gateways into SOCKS5 Relays, SSH Spreaders, and DDoS Tools"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260817-0906-0-evooo1bot-multi-functional-linux-botnet-turn.png",
+   "20260817-0906-0-evooo1bot-multi-functional-linux-botnet-turn-d1.png",
+   "20260817-0906-0-evooo1bot-multi-functional-linux-botnet-turn-d2.png"
+  ]
+ },
+ {
+  "topic": "ai models getting dumber on purpose",
+  "headline_marked": "[[AI models are deliberately trading factual knowledge for reasoning skill]], leading to higher benchmark scores but worse recall",
+  "headline": "AI models are deliberately trading factual knowledge for reasoning skill, leading to higher benchmark scores but worse recall",
+  "summary": "AI models are increasingly optimized for reasoning, sacrificing vast factual recall. This strategy improves benchmark scores but means even top models still hallucinate over half the time on simple knowledge questions.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "While reasoning scores for AI models are rapidly improving, their factual recall is declining. Models like GLM-5.2 and Qwen3.5 show impressive gains on math and code benchmarks with fewer active parameters, far surpassing older models like GPT-4 in efficiency.",
+   "However, this focus comes at a cost. On factual recall benchmarks like SimpleQA, even the leading Gemini 2.5 Pro misses half the questions. Smaller models like Qwen3.5 4B and 9B exhibit hallucination rates of 80-82% on knowledge tasks, confidently inventing facts when they don't know the answer.",
+   "This trade-off is deliberate. Research indicates that factual knowledge requires approximately two bits per parameter, making extensive factual recall expensive in terms of model weights. Frontier models grew to trillions of parameters partly to store this vast knowledge.",
+   "Reasoning, conversely, compresses much more efficiently. Procedures like problem-breaking, state tracking, and self-correction can be distilled and transferred effectively into smaller models through techniques like synthetic data training and reinforcement learning.",
+   "The resulting models are generalists, possessing broad but shallow knowledge. They can understand a question's context and identify plausible sources, but lack deep, specific factual recall, which is now considered expensive to store and cheap to retrieve externally.",
+   "Another factor is the rapid obsolescence of baked-in facts. A model trained for months contains facts that are already stale by its release, requiring costly retraining to update. Procedures, however, remain constant.",
+   "This approach decouples the expensive, slow-to-train model from rapidly changing world knowledge. By focusing on robust reasoning procedures, models become more durable and less susceptible to aging out.",
+   "Consequently, external \"harnesses\" become crucial. These include retrieval-augmented generation (RAG) over knowledge bases, tool calls, and web search, which provide up-to-date factual depth that the model itself is no longer designed to store."
+  ],
+  "caption": "AI models are getting \"dumber\" on purpose, deliberately sacrificing factual knowledge for improved reasoning skills. This strategic shift is reshaping how large language models are built and used.\n\nWhile reasoning scores for AI models are rapidly improving, their factual recall is declining. Models like GLM-5.2 and Qwen3.5 show impressive gains on math and code benchmarks with fewer active parameters, far surpassing older models like GPT-4 in efficiency.\n\nHowever, this focus comes at a cost. On factual recall benchmarks like SimpleQA, even the leading Gemini 2.5 Pro misses half the questions. Smaller models like Qwen3.5 4B and 9B exhibit hallucination rates of 80-82% on knowledge tasks, confidently inventing facts when they don't know the answer.\n\nThis trade-off is deliberate. Research indicates that factual knowledge requires approximately two bits per parameter, making extensive factual recall expensive in terms of model weights. Frontier models grew to trillions of parameters partly to store this vast knowledge.\n\nReasoning, conversely, compresses much more efficiently. Procedures like problem-breaking, state tracking, and self-correction can be distilled and transferred effectively into smaller models through techniques like synthetic data training and reinforcement learning.\n\nThe resulting models are generalists, possessing broad but shallow knowledge. They can understand a question's context and identify plausible sources, but lack deep, specific factual recall, which is now considered expensive to store and cheap to retrieve externally.\n\nAnother factor is the rapid obsolescence of baked-in facts. A model trained for months contains facts that are already stale by its release, requiring costly retraining to update. Procedures, however, remain constant.\n\nThis approach decouples the expensive, slow-to-train model from rapidly changing world knowledge. By focusing on robust reasoning procedures, models become more durable and less susceptible to aging out.\n\n#AI #LLM #MachineLearning #TechNews #ArtificialIntelligence #DeepLearning\n\nSource: Hacker News",
+  "tweet": "AI models are getting \"dumber\" on purpose, trading factual knowledge for reasoning skill. This strategic shift means higher benchmark scores but worse factual recall, relying more on external tools for up-to-date info. #AI #LLM #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose",
+  "image": "",
+  "orig_title": "Models Are Getting Dumber on Purpose",
+  "cluster_urls": [
+   "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose"
+  ],
+  "cluster_titles": [
+   "Models Are Getting Dumber on Purpose"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260817-0906-1-ai-models-are-deliberately-trading-factual-k.png",
+   "20260817-0906-1-ai-models-are-deliberately-trading-factual-k-d1.png",
+   "20260817-0906-1-ai-models-are-deliberately-trading-factual-k-d2.png",
+   "20260817-0906-1-ai-models-are-deliberately-trading-factual-k-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "ai model unexpected decision making",
+  "headline_marked": "[[AI Model Knew Bid Was True But Challenged Anyway]], losing due to action contract misunderstanding",
+  "headline": "AI Model Knew Bid Was True But Challenged Anyway, losing due to action contract misunderstanding",
+  "summary": "Despite knowing a bid was true, AI models in a Liar's Dice game repeatedly chose to challenge, incurring guaranteed losses. This behavior was traced to an incomplete description of the 'challenge' action, not flawed arithmetic.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "In a Liar's Dice game, AI models including DeepSeek V4 Flash, DeepSeek V4 Pro, and GPT-5.6 Luna consistently challenged bids that their own dice guaranteed were true. This action led to an objective and unavoidable loss for the model.",
+   "The core issue wasn't a failure in the models' arithmetic or reasoning, but a semantic misunderstanding of the 'challenge' action. The action's description accurately stated its mechanical effect (reveal dice, settle round) but omitted the player's intent and the penalty for challenging a true bid.",
+   "Researchers conducted an experiment using ten distinct game positions where challenging was an objective error, and ten control positions where it could be a reasonable move. Each model was tested eight times under different versions of the action schema.",
+   "The results showed that a simple prose rewrite of the action description helped slightly. However, explicitly asserting the meaning of the 'challenge' action significantly reduced errors. Guaranteed-loss challenges fell from 21.7% to 10.6% in the v8-to-v9 comparison.",
+   "GPT-5.6 Luna demonstrated the most dramatic improvement, with its target error rate plummeting from 25.0% to 2.5%. This highlights how clarifying the semantic contract of actions can profoundly impact AI decision-making and prevent logical inconsistencies."
+  ],
+  "caption": "AI models consistently made objectively wrong moves in a Liar's Dice game, challenging bids they knew were true. This wasn't a bug in arithmetic, but a semantic misunderstanding of the action.\n\nIn a Liar's Dice game, AI models including DeepSeek V4 Flash, DeepSeek V4 Pro, and GPT-5.6 Luna consistently challenged bids that their own dice guaranteed were true. This action led to an objective and unavoidable loss for the model.\n\nThe core issue wasn't a failure in the models' arithmetic or reasoning, but a semantic misunderstanding of the 'challenge' action. The action's description accurately stated its mechanical effect (reveal dice, settle round) but omitted the player's intent and the penalty for challenging a true bid.\n\nResearchers conducted an experiment using ten distinct game positions where challenging was an objective error, and ten control positions where it could be a reasonable move. Each model was tested eight times under different versions of the action schema.\n\nThe results showed that a simple prose rewrite of the action description helped slightly. However, explicitly asserting the meaning of the 'challenge' action significantly reduced errors. Guaranteed-loss challenges fell from 21.7% to 10.6% in the v8-to-v9 comparison.\n\nGPT-5.6 Luna demonstrated the most dramatic improvement, with its target error rate plummeting from 25.0% to 2.5%. This highlights how clarifying the semantic contract of actions can profoundly impact AI decision-making and prevent logical inconsistencies.\n\n#AI #MachineLearning #LLM #GameAI #TechNews #DeepLearning\n\nSource: DEV",
+  "tweet": "AI models in a Liar's Dice game repeatedly challenged bids they knew were true, leading to guaranteed losses. The issue stemmed from an incomplete action description, not flawed reasoning. Clarifying the semantic meaning drastically cut errors. #AI #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/haoxiang_li_a709204042e6b/the-model-knew-the-bid-was-true-then-it-challenged-anyway-2k6f",
+  "image": "",
+  "orig_title": "The Model Knew the Bid Was True. Then It Challenged Anyway.",
+  "cluster_urls": [
+   "https://dev.to/haoxiang_li_a709204042e6b/the-model-knew-the-bid-was-true-then-it-challenged-anyway-2k6f"
+  ],
+  "cluster_titles": [
+   "The Model Knew the Bid Was True. Then It Challenged Anyway."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260817-1312-0-ai-model-knew-bid-was-true-but-challenged-an.png",
+   "20260817-1312-0-ai-model-knew-bid-was-true-but-challenged-an-d1.png",
+   "20260817-1312-0-ai-model-knew-bid-was-true-but-challenged-an-d2.png"
+  ]
+ }
+]

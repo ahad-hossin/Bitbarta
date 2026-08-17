@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "gpu vram upgrade for budget ai",
+  "headline_marked": "[[RTX 2080 Ti modded to 22GB VRAM]] for just $282 ($25/GB) in Japan",
+  "headline": "RTX 2080 Ti modded to 22GB VRAM for just $282 ($25/GB) in Japan",
+  "summary": "A Japanese repair shop is offering VRAM upgrades for NVIDIA's RTX 2080 Ti, doubling its memory to 22GB at a cost-effective price, transforming it into a budget AI powerhouse.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "A Japanese vendor, known as \"AI to GPU Expert,\" is offering VRAM upgrades for the NVIDIA GeForce RTX 2080 Ti. For 45,000 Yen (approximately $282), they add 11GB of GDDR6 memory, bringing the total to 22GB.",
+   "This service effectively costs about $25 per gigabyte of added VRAM. The shop operates out of Saitama Prefecture and lists modded GPUs on Mercari, often at reasonable prices.",
+   "The vendor recently received a shipment of 200 Samsung 2GB GDDR6 modules, enough to upgrade 36 RTX 2080 Ti cards. They quickly demonstrated the successful upgrade of a card to 22GB.",
+   "While a stock RTX 2080 Ti can be found for under $250 on the secondhand market, the total cost for a 22GB card through this service would be just over $500. Pre-modded units are also available from various sellers for similar prices.",
+   "The increased VRAM is not primarily beneficial for gaming, as the GPU's core silicon would still be a bottleneck. However, it significantly boosts performance for AI models during both training and inference stages, making it a viable alternative to more expensive professional cards like the RTX A4000."
+  ],
+  "caption": "Double your RTX 2080 Ti's VRAM to 22GB for just $282! A Japanese shop offers this upgrade at $25 per gigabyte.\n\nA Japanese vendor, known as \"AI to GPU Expert,\" is offering VRAM upgrades for the NVIDIA GeForce RTX 2080 Ti. For 45,000 Yen (approximately $282), they add 11GB of GDDR6 memory, bringing the total to 22GB.\n\nThis service effectively costs about $25 per gigabyte of added VRAM. The shop operates out of Saitama Prefecture and lists modded GPUs on Mercari, often at reasonable prices.\n\nThe vendor recently received a shipment of 200 Samsung 2GB GDDR6 modules, enough to upgrade 36 RTX 2080 Ti cards. They quickly demonstrated the successful upgrade of a card to 22GB.\n\nWhile a stock RTX 2080 Ti can be found for under $250 on the secondhand market, the total cost for a 22GB card through this service would be just over $500. Pre-modded units are also available from various sellers for similar prices.\n\nThe increased VRAM is not primarily beneficial for gaming, as the GPU's core silicon would still be a bottleneck. However, it significantly boosts performance for AI models during both training and inference stages, making it a viable alternative to more expensive professional cards like the RTX A4000.\n\n#Tech #Hardware #GPU #VRAM #RTX2080Ti #AI\n\nSource: Tom's Hardware",
+  "tweet": "Upgrade your RTX 2080 Ti to 22GB VRAM for just $282 ($25/GB) in Japan! A local shop is turning gaming GPUs into budget AI powerhouses. #Tech #Hardware #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/gpus/japanese-repair-shop-sells-gddr6-vram-upgrades-for-usd25-per-gb-during-memory-crisis-rtx-2080-ti-modded-to-22gb-for-just-usd282-double-the-vram-creates-a-budget-ai-powerhouse",
+  "image": "https://cdn.mos.cms.futurecdn.net/MmqRv6C4cxpsk7GWCfvm88-1280-80.jpg",
+  "orig_title": "Japanese repair shop sells GDDR6 VRAM upgrades for $25 per GB during memory crisis — RTX 2080 Ti modded to 22GB for just $282, double the VRAM creates a budget AI powerhouse",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/gpus/japanese-repair-shop-sells-gddr6-vram-upgrades-for-usd25-per-gb-during-memory-crisis-rtx-2080-ti-modded-to-22gb-for-just-usd282-double-the-vram-creates-a-budget-ai-powerhouse"
+  ],
+  "cluster_titles": [
+   "Japanese repair shop sells GDDR6 VRAM upgrades for $25 per GB during memory crisis — RTX 2080 Ti modded to 22GB for just $282, double the VRAM creates a budget AI powerhouse"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260817-1643-0-rtx-2080-ti-modded-to-22gb-vram-for-just-282.png",
+   "20260817-1643-0-rtx-2080-ti-modded-to-22gb-vram-for-just-282-d1.png",
+   "20260817-1643-0-rtx-2080-ti-modded-to-22gb-vram-for-just-282-d2.png"
+  ]
+ },
+ {
+  "topic": "ai agent code execution security",
+  "headline_marked": "Developer builds [[VaultRun for self-hosted AI agent execution]] to boost security",
+  "headline": "Developer builds VaultRun for self-hosted AI agent execution to boost security",
+  "summary": "AI agents can access sensitive data and production systems. A new self-hosted runtime, VaultRun, offers isolated Docker containers and audited actions to enhance control and mitigate risks.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI agents are gaining access to increasingly powerful tools, capable of executing code, querying databases, calling APIs, and interacting with production infrastructure.",
+   "While useful, this capability raises significant security questions, especially when agents handle credentials, customer data, or internal APIs in a hosted sandbox environment.",
+   "The author advocates for an execution environment on controlled infrastructure, with each agent session isolated in its own Docker container. This shifts the security model from restricting dangerous parts to explicitly granting necessary permissions.",
+   "These concerns led to the development of VaultRun, a self-hosted runtime designed specifically for AI agents. It ensures agent workloads run on your own infrastructure.",
+   "VaultRun isolates each session within a Docker container, disables network access by default, and records all actions in a signed audit trail. It can be managed through APIs and MCP.",
+   "While self-hosting doesn't eliminate all security challenges, such as managing credentials or preventing container escapes, it provides a crucial, inspectable security boundary.",
+   "VaultRun is an early-stage project, and the author is seeking community input on establishing the optimal security boundaries for AI agents, acknowledging that different workloads require varying levels of isolation."
+  ],
+  "caption": "AI agents can access your production systems and sensitive data. But should they run in someone else's cloud?\n\nAI agents are gaining access to increasingly powerful tools, capable of executing code, querying databases, calling APIs, and interacting with production infrastructure.\n\nWhile useful, this capability raises significant security questions, especially when agents handle credentials, customer data, or internal APIs in a hosted sandbox environment.\n\nThe author advocates for an execution environment on controlled infrastructure, with each agent session isolated in its own Docker container. This shifts the security model from restricting dangerous parts to explicitly granting necessary permissions.\n\nThese concerns led to the development of VaultRun, a self-hosted runtime designed specifically for AI agents. It ensures agent workloads run on your own infrastructure.\n\nVaultRun isolates each session within a Docker container, disables network access by default, and records all actions in a signed audit trail. It can be managed through APIs and MCP.\n\nWhile self-hosting doesn't eliminate all security challenges, such as managing credentials or preventing container escapes, it provides a crucial, inspectable security boundary.\n\nVaultRun is an early-stage project, and the author is seeking community input on establishing the optimal security boundaries for AI agents, acknowledging that different workloads require varying levels of isolation.\n\n#AI #Security #Developers #CloudSecurity #VaultRun #Tech\n\nSource: DEV",
+  "tweet": "AI agents are powerful, but executing code in third-party clouds raises major security questions. A new self-hosted runtime, VaultRun, offers isolated containers and audit trails for better control. #AI #Security #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "vaultrun.dev",
+  "source": "DEV",
+  "url": "https://dev.to/030dev/why-i-dont-want-ai-agents-executing-code-in-someone-elses-cloud-flf",
+  "image": "",
+  "orig_title": "Why I don’t want AI agents executing code in someone else’s cloud",
+  "cluster_urls": [
+   "https://dev.to/030dev/why-i-dont-want-ai-agents-executing-code-in-someone-elses-cloud-flf"
+  ],
+  "cluster_titles": [
+   "Why I don’t want AI agents executing code in someone else’s cloud"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260817-1643-1-developer-builds-vaultrun-for-self-hosted-ai.png",
+   "20260817-1643-1-developer-builds-vaultrun-for-self-hosted-ai-d1.png",
+   "20260817-1643-1-developer-builds-vaultrun-for-self-hosted-ai-d2.png"
+  ]
+ }
+]

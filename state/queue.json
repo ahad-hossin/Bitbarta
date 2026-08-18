@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "prompt_injection_internal_tools",
+  "headline_marked": "[[Prompt injection threatens internal AI tools]], not just public chatbots",
+  "headline": "Prompt injection threatens internal AI tools, not just public chatbots",
+  "summary": "Prompt injection, often seen as a PR risk for public chatbots, poses a significant security threat to internal AI tools that process sensitive data or take actions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Prompt injection isn't just a chatbot problem; it's a serious security risk for internal AI tools. These tools summarize support tickets, process emails, or read documents, where consequences are far more severe than an awkward public screenshot.",
+   "Unlike traditional software with clear code-data separation, LLMs process system prompts, user requests, and external content through the same text channel. This makes it hard for the model to distinguish between data and malicious instructions.",
+   "Examples include email-triage assistants manipulated by malicious emails, document summarizers revealing sensitive info from planted PDFs, or customer support agents tricked into exposing other accounts. These don't require sophisticated attackers.",
+   "Simple defenses like 'ignore instructions' are insufficient, as adversarial content can bypass them. Relying solely on prompt-level defenses is akin to client-side input validation in web apps – it's not a complete solution.",
+   "A defense-in-depth approach, treating untrusted LLM input as seriously as SQL queries, is crucial. This structural property of LLMs demands a security-first mindset for internal AI development."
+  ],
+  "caption": "Prompt injection isn't just a chatbot problem. It's a critical security risk for internal AI tools that handle sensitive data.\n\nPrompt injection isn't just a chatbot problem; it's a serious security risk for internal AI tools. These tools summarize support tickets, process emails, or read documents, where consequences are far more severe than an awkward public screenshot.\n\nUnlike traditional software with clear code-data separation, LLMs process system prompts, user requests, and external content through the same text channel. This makes it hard for the model to distinguish between data and malicious instructions.\n\nExamples include email-triage assistants manipulated by malicious emails, document summarizers revealing sensitive info from planted PDFs, or customer support agents tricked into exposing other accounts. These don't require sophisticated attackers.\n\nSimple defenses like 'ignore instructions' are insufficient, as adversarial content can bypass them. Relying solely on prompt-level defenses is akin to client-side input validation in web apps – it's not a complete solution.\n\nA defense-in-depth approach, treating untrusted LLM input as seriously as SQL queries, is crucial. This structural property of LLMs demands a security-first mindset for internal AI development.\n\n#AI #Security #PromptInjection #LLMs #Cybersecurity #DevTools\n\nSource: DEV",
+  "tweet": "Prompt injection isn't just a chatbot problem. It's a critical security risk for internal AI tools that handle sensitive data, potentially leading to data exfiltration or unauthorized actions. Developers need a defense-in-depth approach. #AI #Security #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ayushi_kumari_22cee92b18f/prompt-injection-isnt-just-a-chatbot-problem-its-coming-for-your-internal-tools-too-4mp2",
+  "image": "",
+  "orig_title": "Prompt Injection Isn't Just a Chatbot Problem — It's Coming for Your Internal Tools Too",
+  "cluster_urls": [
+   "https://dev.to/ayushi_kumari_22cee92b18f/prompt-injection-isnt-just-a-chatbot-problem-its-coming-for-your-internal-tools-too-4mp2"
+  ],
+  "cluster_titles": [
+   "Prompt Injection Isn't Just a Chatbot Problem — It's Coming for Your Internal Tools Too"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260818-1308-0-prompt-injection-threatens-internal-ai-tools.png",
+   "20260818-1308-0-prompt-injection-threatens-internal-ai-tools-d1.png",
+   "20260818-1308-0-prompt-injection-threatens-internal-ai-tools-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_code_judgment_developer_role",
+  "headline_marked": "[[Judgment Is the Job Now]] for developers in the AI era",
+  "headline": "Judgment Is the Job Now for developers in the AI era",
+  "summary": "With AI generating code, the core value for engineers shifts from production to critical judgment: knowing what to build, what's \"good enough,\" and when to ship.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "As AI models become proficient at generating code, even multiple versions, the fundamental value in software development is shifting. Producing code is becoming cheaper and more automated, moving the focus to higher-level decision-making.",
+   "This new emphasis is on 'judgment' – the ability to discern what is worth building, define 'good enough' for specific contexts, and make strategic calls on shipping or delaying projects. This crucial skill is not derived from AI models but from an engineer's accumulated experience, context, and taste.",
+   "The engineer of the future will not be defined by typing speed or raw coding output. Instead, their primary role will involve evaluating numerous options and confidently selecting the optimal path, backed by sound reasoning and understanding.",
+   "While building remains essential, the imperative is now to sharpen the decision-making faculties. AI tools are handing back the responsibility of judgment, making it the paramount skill for developers in the coming decade."
+  ],
+  "caption": "AI can write code, but it can't decide what's worth building. The new core skill for engineers? Judgment.\n\nAs AI models become proficient at generating code, even multiple versions, the fundamental value in software development is shifting. Producing code is becoming cheaper and more automated, moving the focus to higher-level decision-making.\n\nThis new emphasis is on 'judgment' – the ability to discern what is worth building, define 'good enough' for specific contexts, and make strategic calls on shipping or delaying projects. This crucial skill is not derived from AI models but from an engineer's accumulated experience, context, and taste.\n\nThe engineer of the future will not be defined by typing speed or raw coding output. Instead, their primary role will involve evaluating numerous options and confidently selecting the optimal path, backed by sound reasoning and understanding.\n\nWhile building remains essential, the imperative is now to sharpen the decision-making faculties. AI tools are handing back the responsibility of judgment, making it the paramount skill for developers in the coming decade.\n\n#AI #SoftwareDevelopment #DeveloperLife #FutureOfTech #Coding #TechTrends\n\nSource: DEV",
+  "tweet": "AI writes code, but human judgment decides what to build. The future of engineering isn't about typing speed, but critical decision-making. #AI #Developers #FutureOfWork",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "dev.to",
+  "source": "DEV",
+  "url": "https://dev.to/sergueyasaelshinder/judgment-is-the-job-now-4kmm",
+  "image": "",
+  "orig_title": "Judgment Is the Job Now",
+  "cluster_urls": [
+   "https://dev.to/sergueyasaelshinder/judgment-is-the-job-now-4kmm"
+  ],
+  "cluster_titles": [
+   "Judgment Is the Job Now"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260818-1308-1-judgment-is-the-job-now-for-developers-in-th.png",
+   "20260818-1308-1-judgment-is-the-job-now-for-developers-in-th-d1.png",
+   "20260818-1308-1-judgment-is-the-job-now-for-developers-in-th-d2.png"
+  ]
+ }
+]

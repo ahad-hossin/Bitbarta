@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "enterprises overpaying for simple AI queries",
+  "headline_marked": "Snowflake Cortex AI Gateway [[cuts AI query costs by up to 3x]]",
+  "headline": "Snowflake Cortex AI Gateway cuts AI query costs by up to 3x",
+  "summary": "The new dynamic model routing feature automatically selects the most cost-effective AI model for each task, potentially slashing enterprise AI expenses.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Enterprises are overpaying for AI queries, with simple questions often routed to expensive, highly capable models. Snowflake's Cortex AI Gateway now offers dynamic model routing, allowing businesses to select 'auto' and have tasks intelligently assigned to the best-suited model for cost and quality.",
+   "Snowflake claims this capability can reduce token costs by as much as 3x on certain workloads, based on internal testing. This addresses the issue of simple queries being unnecessarily processed by top-tier models, leading to higher expenses and slower response times.",
+   "This feature arrives as automated model routing gains traction across the industry, with competitors like Databricks, AWS, Google Cloud, and Nvidia also developing similar technologies. Snowflake emphasizes that routing involves more than just price and performance, highlighting the importance of governance and context.",
+   "The dynamic routing operates via an 'advisor pattern,' where a smaller model attempts a task first, escalating to a larger model if necessary. A separate classifier also routes straightforward queries to simpler models based on historical data.",
+   "Customers retain control, with the option to manually pin specific models or sets of models for routing. Snowflake charges solely based on token usage, meaning cost savings from routing directly translate to a lower bill with no additional fees for the routing service itself.",
+   "Governance is a key aspect, with Snowflake integrating routing into its existing data access controls. This ensures role-based access extends from data to models and agents, maintaining security and compliance boundaries.",
+   "Inference for both open and proprietary models remains within Snowflake's security perimeter, addressing data residency concerns, especially for non-U.S. models. The recent acquisition of Natoma further enhances governance with over 100 connectors for scoped access to tools.",
+   "Snowflake's Horizon Context and Cortex Sense tools also contribute by pre-packaging context, reducing the need for models to perform expensive exploratory work. Agent memory is integrated into this context, allowing systems to recall and build upon previous interactions."
+  ],
+  "caption": "Are you overpaying for AI queries? Snowflake's new Cortex AI Gateway can cut your costs by up to 3x by intelligently routing tasks to the right model.\n\nEnterprises are overpaying for AI queries, with simple questions often routed to expensive, highly capable models. Snowflake's Cortex AI Gateway now offers dynamic model routing, allowing businesses to select 'auto' and have tasks intelligently assigned to the best-suited model for cost and quality.\n\nSnowflake claims this capability can reduce token costs by as much as 3x on certain workloads, based on internal testing. This addresses the issue of simple queries being unnecessarily processed by top-tier models, leading to higher expenses and slower response times.\n\nThis feature arrives as automated model routing gains traction across the industry, with competitors like Databricks, AWS, Google Cloud, and Nvidia also developing similar technologies. Snowflake emphasizes that routing involves more than just price and performance, highlighting the importance of governance and context.\n\nThe dynamic routing operates via an 'advisor pattern,' where a smaller model attempts a task first, escalating to a larger model if necessary. A separate classifier also routes straightforward queries to simpler models based on historical data.\n\nCustomers retain control, with the option to manually pin specific models or sets of models for routing. Snowflake charges solely based on token usage, meaning cost savings from routing directly translate to a lower bill with no additional fees for the routing service itself.\n\nGovernance is a key aspect, with Snowflake integrating routing into its existing data access controls. This ensures role-based access extends from data to models and agents, maintaining security and compliance boundaries.\n\n#AI #Snowflake #LLM #CostOptimization #EnterpriseAI\n\nSource: VentureBeat",
+  "tweet": "Snowflake's Cortex AI Gateway now offers dynamic model routing to cut enterprise AI query costs by up to 3x. It intelligently assigns tasks to the most cost-effective model. #AI #Snowflake #CostOptimization",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "snowflake.com",
+  "source": "VentureBeat",
+  "url": "https://venturebeat.com/orchestration/enterprises-are-overpaying-for-simple-ai-queries-snowflakes-gateway-now-auto-routes-to-cut-costs-up-to-3x",
+  "image": "https://images.ctfassets.net/jdtwqhzvc2n1/X0FfjRQnN6fOsSZXizwV3/f3fde76c3c9dd36925fe9c23392c3cf9/model-routing-context-smk1.jpg?w=300&q=30",
+  "orig_title": "Enterprises are overpaying for simple AI queries — Snowflake's gateway now auto-routes to cut costs up to 3x",
+  "cluster_urls": [
+   "https://venturebeat.com/orchestration/enterprises-are-overpaying-for-simple-ai-queries-snowflakes-gateway-now-auto-routes-to-cut-costs-up-to-3x"
+  ],
+  "cluster_titles": [
+   "Enterprises are overpaying for simple AI queries — Snowflake's gateway now auto-routes to cut costs up to 3x"
+  ],
+  "is_logo": false,
+  "photo_credit": "VentureBeat",
+  "image_files": [
+   "20260818-1903-0-snowflake-cortex-ai-gateway-cuts-ai-query-co.png",
+   "20260818-1903-0-snowflake-cortex-ai-gateway-cuts-ai-query-co-d1.png",
+   "20260818-1903-0-snowflake-cortex-ai-gateway-cuts-ai-query-co-d2.png",
+   "20260818-1903-0-snowflake-cortex-ai-gateway-cuts-ai-query-co-d3.png"
+  ]
+ },
+ {
+  "topic": "chatgpt stricter teen mode rolling out",
+  "headline_marked": "OpenAI rolls out [[stricter teen mode]] for ChatGPT",
+  "headline": "OpenAI rolls out stricter teen mode for ChatGPT",
+  "summary": "New experience automatically identifies users under 18, offering learning tools and enhanced safety features.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "OpenAI has begun rolling out a new user experience for ChatGPT aimed at users under 18, dubbed 'ChatGPT for Teens.' This mode will automatically be applied to users identified as minors, requiring no new account setup or changes from them.",
+   "The new experience focuses on two key areas: learning and safety. It integrates features like 'Study Mode,' which employs a Socratic method to guide users to answers rather than providing them directly. 'Study Hours' can also be set to automatically activate Study Mode during specific times.",
+   "To further support learning, ChatGPT can now generate visuals for over 300 topics, up from 70 at launch, aiding in the explanation of complex concepts. The AI will also attempt to redirect young users from skipping homework to utilizing Study Mode.",
+   "On the safety front, stricter restrictions are in place to prevent anthropomorphism. ChatGPT will avoid calling itself a friend, expressing personal feelings, or suggesting sentience. Break reminders will be more frequent and emphasize ChatGPT's AI nature.",
+   "OpenAI is also expanding parental notifications. In addition to policy violations like violent threats, parents will now be notified of conversations indicating 'serious self-harm concerns,' including those related to eating disorders. These notifications are sent via text, in-app, and email after review by OpenAI employees."
+  ],
+  "caption": "ChatGPT gets a new 'teen mode' with enhanced safety and learning features.\n\nOpenAI has begun rolling out a new user experience for ChatGPT aimed at users under 18, dubbed 'ChatGPT for Teens.' This mode will automatically be applied to users identified as minors, requiring no new account setup or changes from them.\n\nThe new experience focuses on two key areas: learning and safety. It integrates features like 'Study Mode,' which employs a Socratic method to guide users to answers rather than providing them directly. 'Study Hours' can also be set to automatically activate Study Mode during specific times.\n\nTo further support learning, ChatGPT can now generate visuals for over 300 topics, up from 70 at launch, aiding in the explanation of complex concepts. The AI will also attempt to redirect young users from skipping homework to utilizing Study Mode.\n\nOn the safety front, stricter restrictions are in place to prevent anthropomorphism. ChatGPT will avoid calling itself a friend, expressing personal feelings, or suggesting sentience. Break reminders will be more frequent and emphasize ChatGPT's AI nature.\n\nOpenAI is also expanding parental notifications. In addition to policy violations like violent threats, parents will now be notified of conversations indicating 'serious self-harm concerns,' including those related to eating disorders. These notifications are sent via text, in-app, and email after review by OpenAI employees.\n\n#ChatGPT #OpenAI #AI #TechNews #ArtificialIntelligence\n\nSource: Engadget",
+  "tweet": "OpenAI is rolling out a new 'ChatGPT for Teens' experience with stricter safety measures and learning-focused tools like Study Mode. Parents will also receive more notifications about their child's usage. #ChatGPT #OpenAI #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2238773/chatgpt-stricter-teen-mode-starts-rolling-out-today/",
+  "image": "https://www.engadget.com/img/gallery/chatgpts-stricter-teen-mode-starts-rolling-out-today/l-intro-1787007551.jpg",
+  "orig_title": "ChatGPT's stricter teen mode starts rolling out today",
+  "cluster_urls": [
+   "https://www.engadget.com/2238773/chatgpt-stricter-teen-mode-starts-rolling-out-today/"
+  ],
+  "cluster_titles": [
+   "ChatGPT's stricter teen mode starts rolling out today"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260818-1903-1-openai-rolls-out-stricter-teen-mode-for-chat.png",
+   "20260818-1903-1-openai-rolls-out-stricter-teen-mode-for-chat-d1.png",
+   "20260818-1903-1-openai-rolls-out-stricter-teen-mode-for-chat-d2.png"
+  ]
+ }
+]

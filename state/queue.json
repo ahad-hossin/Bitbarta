@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "openai launches safer chatgpt for teens",
+  "headline_marked": "OpenAI launches [[ChatGPT for Teens]] with new safety and study tools",
+  "headline": "OpenAI launches ChatGPT for Teens with new safety and study tools",
+  "summary": "The new version includes a Study Mode to guide students and homework reminders to prevent cheating, years after teens began using the tool.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "OpenAI has officially launched ChatGPT for Teens, a version of its popular AI chatbot designed with enhanced safety measures and educational features. This move comes after years of teens using the original ChatGPT, amidst concerns over its potential misuse for cheating and negative mental health impacts.",
+   "The new product introduces a 'Study Mode' that provides guiding questions and step-by-step support, aiming to foster genuine understanding rather than just quick answers. It also features homework reminders that prompt users to engage with the material more deeply.",
+   "To combat academic dishonesty, the chatbot will now detect when a teen might be attempting to cheat and will steer them towards Study Mode instead. The platform will also support quizzes and learning visualizations.",
+   "OpenAI states that app-appropriate protections are enabled by default, based on its Under-18 Principles informed by developmental science and expert guidance. Parents can utilize existing family tools for settings management, safety notifications, and setting 'Quiet Hours'.",
+   "Despite these measures, the article notes that it remains to be seen how effectively teens will be prevented from bypassing these new safety systems, given their known adeptness at circumventing digital restrictions.",
+   "In addition to the teen-focused features, OpenAI has partnered with CodeAI to educate teens about AI and continues to offer ChatGPT for Teachers to educational institutions."
+  ],
+  "caption": "OpenAI rolls out ChatGPT for Teens, featuring Study Mode and homework reminders to tackle cheating and enhance learning.\n\nOpenAI has officially launched ChatGPT for Teens, a version of its popular AI chatbot designed with enhanced safety measures and educational features. This move comes after years of teens using the original ChatGPT, amidst concerns over its potential misuse for cheating and negative mental health impacts.\n\nThe new product introduces a 'Study Mode' that provides guiding questions and step-by-step support, aiming to foster genuine understanding rather than just quick answers. It also features homework reminders that prompt users to engage with the material more deeply.\n\nTo combat academic dishonesty, the chatbot will now detect when a teen might be attempting to cheat and will steer them towards Study Mode instead. The platform will also support quizzes and learning visualizations.\n\nOpenAI states that app-appropriate protections are enabled by default, based on its Under-18 Principles informed by developmental science and expert guidance. Parents can utilize existing family tools for settings management, safety notifications, and setting 'Quiet Hours'.\n\nDespite these measures, the article notes that it remains to be seen how effectively teens will be prevented from bypassing these new safety systems, given their known adeptness at circumventing digital restrictions.\n\nIn addition to the teen-focused features, OpenAI has partnered with CodeAI to educate teens about AI and continues to offer ChatGPT for Teachers to educational institutions.\n\n#OpenAI #ChatGPT #AI #EdTech #TeenTech\n\nSource: TechCrunch",
+  "tweet": "OpenAI launches ChatGPT for Teens! Features include Study Mode for guided learning and homework reminders to combat cheating. Years in the making. #OpenAI #ChatGPT #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/",
+  "image": "",
+  "orig_title": "OpenAI launches a safer ChatGPT for teens — years after teens started using it",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/08/18/openai-launches-a-safer-chatgpt-for-teens-years-after-teens-started-using-it/"
+  ],
+  "cluster_titles": [
+   "OpenAI launches a safer ChatGPT for teens — years after teens started using it"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260818-1953-0-openai-launches-chatgpt-for-teens-with-new-s.png",
+   "20260818-1953-0-openai-launches-chatgpt-for-teens-with-new-s-d1.png",
+   "20260818-1953-0-openai-launches-chatgpt-for-teens-with-new-s-d2.png"
+  ]
+ },
+ {
+  "topic": "microsoft copilot and firefox smart window hacked",
+  "headline_marked": "Microsoft Copilot [[hacked to reveal user passwords]] via secret URL parameter",
+  "headline": "Microsoft Copilot hacked to reveal user passwords via secret URL parameter",
+  "summary": "Researchers discovered an undocumented parameter that allowed attackers to bypass consent checks and exfiltrate sensitive data from Microsoft 365 Copilot Enterprise.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Security researchers found a critical vulnerability in Microsoft 365 Copilot Enterprise that allowed attackers to steal user passwords and other sensitive data. The exploit was achieved by discovering an undocumented prompt parameter, which bypassed the need for explicit user consent.",
+   "Instead of traditional hacking methods, researchers from Varonis asked Copilot itself about its security guardrails. Through a series of questions, the AI assistant inadvertently revealed a secret parameter, '?autorun=1', which, when combined with a known parameter, enabled automatic execution of commands.",
+   "This exploit allowed attackers to craft malicious URLs. When a target user clicked such a link, Copilot would automatically execute commands, exfiltrating data like sender email addresses or even passwords directly to an attacker-controlled server, often encoded in base64.",
+   "Microsoft has since mitigated the vulnerability, first in February by altering how the '?q=' parameter interacted with the chatbot input, and then with more comprehensive fixes released on Tuesday. The initial fix prevented third-party browser integrations from exploiting the parameter as intended.",
+   "The vulnerability highlights the ongoing challenges in securing AI models and ensuring that their powerful capabilities do not become vectors for data breaches. As AI assistants become more integrated into workflows, understanding and mitigating such vulnerabilities is crucial."
+  ],
+  "caption": "Microsoft Copilot was tricked into revealing a secret parameter that allowed hackers to steal user passwords and sensitive data.\n\nSecurity researchers found a critical vulnerability in Microsoft 365 Copilot Enterprise that allowed attackers to steal user passwords and other sensitive data. The exploit was achieved by discovering an undocumented prompt parameter, which bypassed the need for explicit user consent.\n\nInstead of traditional hacking methods, researchers from Varonis asked Copilot itself about its security guardrails. Through a series of questions, the AI assistant inadvertently revealed a secret parameter, '?autorun=1', which, when combined with a known parameter, enabled automatic execution of commands.\n\nThis exploit allowed attackers to craft malicious URLs. When a target user clicked such a link, Copilot would automatically execute commands, exfiltrating data like sender email addresses or even passwords directly to an attacker-controlled server, often encoded in base64.\n\nMicrosoft has since mitigated the vulnerability, first in February by altering how the '?q=' parameter interacted with the chatbot input, and then with more comprehensive fixes released on Tuesday. The initial fix prevented third-party browser integrations from exploiting the parameter as intended.\n\nThe vulnerability highlights the ongoing challenges in securing AI models and ensuring that their powerful capabilities do not become vectors for data breaches. As AI assistants become more integrated into workflows, understanding and mitigating such vulnerabilities is crucial.\n\n#Microsoft #Copilot #CyberSecurity #AI #DataBreach #Vulnerability\n\nSource: Ars Technica, The Verge",
+  "tweet": "Microsoft Copilot was tricked into revealing a secret parameter that allowed hackers to steal user passwords and sensitive data. Researchers used the AI itself to uncover the flaw. Microsoft has since patched the vulnerability. #AI #CyberSecurity #Copilot",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Ars Technica, The Verge",
+  "url": "https://arstechnica.com/security/2026/08/microsoft-copilot-reveals-secret-input-that-allowed-it-to-be-hacked/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2026/06/GettyImages-2242817595-1152x648.jpg",
+  "orig_title": "Microsoft Copilot reveals secret input that allowed it to be hacked",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/08/microsoft-copilot-reveals-secret-input-that-allowed-it-to-be-hacked/",
+   "https://www.theverge.com/ai-artificial-intelligence/981283/mozilla-firefox-smart-window-ai-features"
+  ],
+  "cluster_titles": [
+   "Microsoft Copilot reveals secret input that allowed it to be hacked",
+   "Firefox&#8217;s Smart Window promises a better AI browser"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260818-1953-1-microsoft-copilot-hacked-to-reveal-user-pass.png",
+   "20260818-1953-1-microsoft-copilot-hacked-to-reveal-user-pass-d1.png",
+   "20260818-1953-1-microsoft-copilot-hacked-to-reveal-user-pass-d2.png",
+   "20260818-1953-1-microsoft-copilot-hacked-to-reveal-user-pass-d3.png"
+  ]
+ }
+]

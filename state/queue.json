@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "rust_multi_agent_orchestration_llm_gateway",
+  "headline_marked": "[[Swarm unifies AI agent orchestration and LLM gateway]] in a single Rust framework",
+  "headline": "Swarm unifies AI agent orchestration and LLM gateway in a single Rust framework",
+  "summary": "Swarm is an open-source framework written in Rust that combines multi-agent system orchestration and an LLM gateway, typically separate components, into a high-performance unified runtime.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Swarm is a new open-source AI orchestration framework and model gateway built in Rust. It unifies the infrastructure for multi-agent systems and LLM request routing, which are often handled by separate tools.",
+   "The framework addresses the common challenge of managing distinct orchestration and gateway layers. Swarm integrates both functionalities into a single high-performance Tokio runtime, sharing abstractions and state management.",
+   "In its first mode, Swarm acts as a full agent orchestration stack. It facilitates inter-agent communication using type-safe agent-to-agent (A2A) message contracts, designed to catch integration errors early.",
+   "The second mode allows Swarm to function as a standalone LLM gateway. It exposes an OpenAI-compatible API, making it suitable for client applications, developer tools, and automated pipelines.",
+   "Released under the Apache-2.0 license, Swarm leverages Rust's performance and safety features. The developers are actively seeking feedback from those running agent systems or LLM gateways in production."
+  ],
+  "caption": "Swarm is a new open-source Rust framework that unifies AI agent orchestration and LLM gateway functionalities. It combines two typically separate infrastructure pieces into a single high-performance runtime.\n\nSwarm is a new open-source AI orchestration framework and model gateway built in Rust. It unifies the infrastructure for multi-agent systems and LLM request routing, which are often handled by separate tools.\n\nThe framework addresses the common challenge of managing distinct orchestration and gateway layers. Swarm integrates both functionalities into a single high-performance Tokio runtime, sharing abstractions and state management.\n\nIn its first mode, Swarm acts as a full agent orchestration stack. It facilitates inter-agent communication using type-safe agent-to-agent (A2A) message contracts, designed to catch integration errors early.\n\nThe second mode allows Swarm to function as a standalone LLM gateway. It exposes an OpenAI-compatible API, making it suitable for client applications, developer tools, and automated pipelines.\n\nReleased under the Apache-2.0 license, Swarm leverages Rust's performance and safety features. The developers are actively seeking feedback from those running agent systems or LLM gateways in production.\n\n#Rust #AI #OpenSource #Developers #LLM #Tech\n\nSource: DEV",
+  "tweet": "Swarm, a new open-source Rust framework, unifies AI agent orchestration & LLM gateway functionalities into a single high-performance runtime. It's designed to simplify multi-agent systems and model routing. #Rust #AI #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/fcn06/introducing-swarm-multi-agent-orchestration-and-an-llm-gateway-in-pure-rust-54ha",
+  "image": "",
+  "orig_title": "Introducing Swarm: Multi-Agent Orchestration and an LLM Gateway in Pure Rust 🦀",
+  "cluster_urls": [
+   "https://dev.to/fcn06/introducing-swarm-multi-agent-orchestration-and-an-llm-gateway-in-pure-rust-54ha"
+  ],
+  "cluster_titles": [
+   "Introducing Swarm: Multi-Agent Orchestration and an LLM Gateway in Pure Rust 🦀"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260818-1208-0-swarm-unifies-ai-agent-orchestration-and-llm.png",
+   "20260818-1208-0-swarm-unifies-ai-agent-orchestration-and-llm-d1.png",
+   "20260818-1208-0-swarm-unifies-ai-agent-orchestration-and-llm-d2.png"
+  ]
+ },
+ {
+  "topic": "claude_prompt_size_optimization",
+  "headline_marked": "[[Cut CLAUDE.md from 548KB to 34KB]]: how we optimized context load & kept it small",
+  "headline": "Cut CLAUDE.md from 548KB to 34KB: how we optimized context load & kept it small",
+  "summary": "Learn how a team slashed their CLAUDE.md file size by over 93%, drastically reducing session startup costs and subagent overhead without losing any functionality.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A team successfully reduced their CLAUDE.md file from 548KB to just 34KB. This massive optimization cut the fixed overhead for every Claude session and subagent, which previously loaded the entire file before any work began.",
+   "The key was understanding Claude's context loading mechanisms: CLAUDE.md loads fully, @path imports don't reduce context, and HTML comments are stripped. Crucially, path-scoped rules and skills load on demand, not at session start.",
+   "By moving TypeScript conventions, test-wording rules, and commit-gate documentation to path-scoped rules, and operational runbooks to skills, the team offloaded large portions of text from the always-loaded context.",
+   "The migration process revealed that even HTML comments in CLAUDE.md are stripped, offering a free way to add maintainer notes. This discovery alone helped further streamline the file.",
+   "To prevent regrowing files, a commit gate was implemented to catch dangling references. This proactive measure ensures the file size remains optimized, preventing future bloat.",
+   "A critical lesson learned involved a production issue where a paused job's sibling mechanism remained active due to narrow implementation. This highlighted that structural checks don't validate records against intent, emphasizing the need for thorough process review."
+  ],
+  "caption": "A team slashed their CLAUDE.md file from 548KB to 34KB, cutting AI session startup costs and subagent overhead by over 93%.\n\nA team successfully reduced their CLAUDE.md file from 548KB to just 34KB. This massive optimization cut the fixed overhead for every Claude session and subagent, which previously loaded the entire file before any work began.\n\nThe key was understanding Claude's context loading mechanisms: CLAUDE.md loads fully, @path imports don't reduce context, and HTML comments are stripped. Crucially, path-scoped rules and skills load on demand, not at session start.\n\nBy moving TypeScript conventions, test-wording rules, and commit-gate documentation to path-scoped rules, and operational runbooks to skills, the team offloaded large portions of text from the always-loaded context.\n\nThe migration process revealed that even HTML comments in CLAUDE.md are stripped, offering a free way to add maintainer notes. This discovery alone helped further streamline the file.\n\nTo prevent regrowing files, a commit gate was implemented to catch dangling references. This proactive measure ensures the file size remains optimized, preventing future bloat.\n\nA critical lesson learned involved a production issue where a paused job's sibling mechanism remained active due to narrow implementation. This highlighted that structural checks don't validate records against intent, emphasizing the need for thorough process review.\n\n#ClaudeAI #AI #Developer #Optimization #Tech #Software\n\nSource: DEV",
+  "tweet": "Massive Claude.md optimization: A team cut their config file from 548KB to 34KB, reducing AI session startup costs and subagent overhead by over 93%. Learn the techniques for efficient context management. #ClaudeAI #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "claude.ai",
+  "source": "DEV",
+  "url": "https://dev.to/rulestack/we-cut-our-claudemd-from-548kb-to-34kb-what-loads-when-measured-and-the-commit-gate-that-keeps-1kpk",
+  "image": "",
+  "orig_title": "We cut our CLAUDE.md from 548KB to 34KB: what loads when, measured — and the commit gate that keeps it small",
+  "cluster_urls": [
+   "https://dev.to/rulestack/we-cut-our-claudemd-from-548kb-to-34kb-what-loads-when-measured-and-the-commit-gate-that-keeps-1kpk"
+  ],
+  "cluster_titles": [
+   "We cut our CLAUDE.md from 548KB to 34KB: what loads when, measured — and the commit gate that keeps it small"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260818-1208-1-cut-claude-md-from-548kb-to-34kb-how-we-opti.png",
+   "20260818-1208-1-cut-claude-md-from-548kb-to-34kb-how-we-opti-d1.png",
+   "20260818-1208-1-cut-claude-md-from-548kb-to-34kb-how-we-opti-d2.png"
+  ]
+ }
+]

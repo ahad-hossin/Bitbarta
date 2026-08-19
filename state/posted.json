@@ -8377,8 +8377,13 @@
   "headline": "ClarityCheck exposed 9M+ photos of people's faces, emails, and phone numbers",
   "topic": "reverse_lookup_service_exposed_millions_of_faces",
   "source": "Wired",
-  "status": "queued",
-  "at": "2026-08-19T10:07:28Z"
+  "status": "failed",
+  "at": "2026-08-19T10:07:28Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "9974521001363c3f",
@@ -8386,7 +8391,12 @@
   "headline": "Playable Doom ported to DSLR camera with 3-inch TFT LCD, even plays sound",
   "topic": "doom_on_dslr_camera",
   "source": "Tom's Hardware",
-  "status": "queued",
-  "at": "2026-08-19T10:07:28Z"
+  "status": "failed",
+  "at": "2026-08-19T10:07:28Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

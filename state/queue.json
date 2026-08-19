@@ -1,1 +1,93 @@
-[]
+[
+ {
+  "topic": "ai api cost optimization and llm caching",
+  "headline_marked": "[[Data Scientist cuts AI API costs 95%]] with smart model matching & caching",
+  "headline": "Data Scientist cuts AI API costs 95% with smart model matching & caching",
+  "summary": "A data scientist shares a detailed playbook for dramatically reducing AI API spending, achieving a 95% cost cut with no significant quality loss by optimizing model selection, caching, and prompt compression.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A data scientist drastically cut their team's AI API bill by 95% after three months of optimization. This was achieved while maintaining output quality within 0.05 of original benchmarks, offering a significant financial saving.",
+   "Initial analysis revealed that 78% of the budget was consumed by GPT-4o, used as the default for 62% of requests. This expensive model was often used for tasks that didn't require its full capabilities.",
+   "The core strategy involved matching the AI model to task complexity, leading to a mean savings of 96.8% across various request types like chat, code, and classification. This ensures cheaper models handle simpler tasks.",
+   "For the small percentage of requests (5-10%) where cheaper models might fail, a fallback ladder ensures quality isn't silently degraded. This system allows 96% of requests to be handled cost-effectively, with only 4% requiring more powerful, expensive models.",
+   "Real-world validation in a customer support chatbot saw monthly costs plummet from $420 to $28, a 93.3% reduction over 31 days and 4,200 conversations. Customer satisfaction remained statistically indistinguishable from the baseline.",
+   "Implementing a caching layer for identical requests alone cut effective token spend by nearly half, with a mean weighted cache hit rate of 47%. This significantly reduces redundant API calls.",
+   "Semantic caching further boosts hit rates to 61% by embedding queries and serving similar requests from a FAISS vector store. This leverages a 384-dim sentence-transformers model with a cosine similarity threshold of >0.92.",
+   "Long prompts were identified as a major cost driver, with 23% of requests having prompts over 4,000 tokens, accounting for 61% of input-token spend. Prompt compression, rigorously tested, offers six-figure savings at scale.",
+   "Batching related API calls, instead of making separate requests, can lead to a 50x reduction in input tokens. This minimizes overhead and maximizes efficiency for interconnected tasks.",
+   "The savings achieved are multiplicative, though individual results may vary based on specific use cases and data distributions. The author strongly recommends running A/B tests with at least 1,000 requests per arm before full deployment.",
+   "The biggest insight was that cost strongly correlates with the chosen model, not just usage volume. Simply switching the default model accounted for 90% of the overall savings."
+  ],
+  "caption": "A data scientist slashed AI API costs by 95% while maintaining output quality. Learn how they cut monthly spending from $420 to $28 for a customer support chatbot.\n\nA data scientist drastically cut their team's AI API bill by 95% after three months of optimization. This was achieved while maintaining output quality within 0.05 of original benchmarks, offering a significant financial saving.\n\nInitial analysis revealed that 78% of the budget was consumed by GPT-4o, used as the default for 62% of requests. This expensive model was often used for tasks that didn't require its full capabilities.\n\nThe core strategy involved matching the AI model to task complexity, leading to a mean savings of 96.8% across various request types like chat, code, and classification. This ensures cheaper models handle simpler tasks.\n\nFor the small percentage of requests (5-10%) where cheaper models might fail, a fallback ladder ensures quality isn't silently degraded. This system allows 96% of requests to be handled cost-effectively, with only 4% requiring more powerful, expensive models.\n\nReal-world validation in a customer support chatbot saw monthly costs plummet from $420 to $28, a 93.3% reduction over 31 days and 4,200 conversations. Customer satisfaction remained statistically indistinguishable from the baseline.\n\nImplementing a caching layer for identical requests alone cut effective token spend by nearly half, with a mean weighted cache hit rate of 47%. This significantly reduces redundant API calls.\n\nSemantic caching further boosts hit rates to 61% by embedding queries and serving similar requests from a FAISS vector store. This leverages a 384-dim sentence-transformers model with a cosine similarity threshold of >0.92.\n\nLong prompts were identified as a major cost driver, with 23% of requests having prompts over 4,000 tokens, accounting for 61% of input-token spend. Prompt compression, rigorously tested, offers six-figure savings at scale.\n\n#AI #CostOptimization #DataScience #LLM #APICosts #Tech\n\nSource: DEV",
+  "tweet": "A data scientist achieved a 95% reduction in AI API costs by optimizing model selection, caching, and prompt compression. Their playbook cut monthly spend from $420 to $28 for one chatbot. #AI #CostOptimization #DataScience",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gentleforge/how-i-cut-ai-api-costs-95-a-data-scientists-field-guide-3k9g",
+  "image": "",
+  "orig_title": "How I Cut AI API Costs 95% — A Data Scientist's Field Guide",
+  "cluster_urls": [
+   "https://dev.to/gentleforge/how-i-cut-ai-api-costs-95-a-data-scientists-field-guide-3k9g",
+   "https://dev.to/xuanyi/the-cheapest-llm-call-is-the-one-you-dont-make-a-caching-layer-that-actually-pays-off-59e"
+  ],
+  "cluster_titles": [
+   "How I Cut AI API Costs 95% — A Data Scientist's Field Guide",
+   "The cheapest LLM call is the one you don't make: a caching layer that actually pays off"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260819-0908-0-data-scientist-cuts-ai-api-costs-95-with-sma.png",
+   "20260819-0908-0-data-scientist-cuts-ai-api-costs-95-with-sma-d1.png",
+   "20260819-0908-0-data-scientist-cuts-ai-api-costs-95-with-sma-d2.png",
+   "20260819-0908-0-data-scientist-cuts-ai-api-costs-95-with-sma-d3.png",
+   "20260819-0908-0-data-scientist-cuts-ai-api-costs-95-with-sma-d4.png"
+  ]
+ },
+ {
+  "topic": "ai agent stack frameworks memory orchestration",
+  "headline_marked": "[[The AI Agent Stack in 2026]]: Frameworks matter less than memory and orchestration",
+  "headline": "The AI Agent Stack in 2026: Frameworks matter less than memory and orchestration",
+  "summary": "In 2026, the core AI agent framework is less critical than the surrounding layers like memory, orchestration, and observability. Real engineering effort should focus on these layers for production-grade agents.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Many founders are panicking over which AI agent framework to bet their company on, but this perspective misses the mark. The framework itself is often the least important layer of the stack, compiling down to the same core loop.",
+   "What truly separates production-grade AI agents from mere demos in 2026 is the surrounding stack. This includes the memory layer, orchestration, observability, and the discipline applied to their implementation.",
+   "As of mid-2026, several frameworks are prevalent in production environments, each with distinct strengths. These include LangGraph, CrewAI, AutoGen/AG2, n8n, OpenAI Agents SDK, and Semantic Kernel.",
+   "LangGraph, from the LangChain ecosystem, excels with its graph-based approach, defining state machines with durable state and human-in-the-loop checkpoints. It's ideal for tasks that are heavily process-oriented and require context preservation.",
+   "CrewAI offers a role-based multi-agent system, effective for prototyping polished drafts but incurring significant cost due to frequent model calls. AutoGen/AG2 provides conversational multi-agents, powerful for experiments and interleaved human-machine workflows, though with higher coordination overhead.",
+   "n8n functions as a visual workflow engine, allowing non-engineers to integrate LLM steps into existing business processes quickly. The OpenAI Agents SDK and Semantic Kernel serve as thin, vendor-blessed layers, suitable for those already deep in a specific vendor's ecosystem.",
+   "For core product tasks, custom frameworks become inevitable, tailored to exact failure modes. The general pattern shows that frameworks offering more structure (like graphs) are more production-friendly, while freeform agenting introduces more cost and unreliability.",
+   "The memory layer is a critical component that is often underestimated, requiring a quarter of the development time compared to a weekend for frameworks. Production agents need both ephemeral working memory (for current context, often in Redis) and durable task memory (for task accomplishment across restarts, typically in Postgres)."
+  ],
+  "caption": "Picking an AI agent framework is a weekend's work, but building the memory layer is a quarter's.\n\nMany founders are panicking over which AI agent framework to bet their company on, but this perspective misses the mark. The framework itself is often the least important layer of the stack, compiling down to the same core loop.\n\nWhat truly separates production-grade AI agents from mere demos in 2026 is the surrounding stack. This includes the memory layer, orchestration, observability, and the discipline applied to their implementation.\n\nAs of mid-2026, several frameworks are prevalent in production environments, each with distinct strengths. These include LangGraph, CrewAI, AutoGen/AG2, n8n, OpenAI Agents SDK, and Semantic Kernel.\n\nLangGraph, from the LangChain ecosystem, excels with its graph-based approach, defining state machines with durable state and human-in-the-loop checkpoints. It's ideal for tasks that are heavily process-oriented and require context preservation.\n\nCrewAI offers a role-based multi-agent system, effective for prototyping polished drafts but incurring significant cost due to frequent model calls. AutoGen/AG2 provides conversational multi-agents, powerful for experiments and interleaved human-machine workflows, though with higher coordination overhead.\n\nn8n functions as a visual workflow engine, allowing non-engineers to integrate LLM steps into existing business processes quickly. The OpenAI Agents SDK and Semantic Kernel serve as thin, vendor-blessed layers, suitable for those already deep in a specific vendor's ecosystem.\n\nFor core product tasks, custom frameworks become inevitable, tailored to exact failure modes. The general pattern shows that frameworks offering more structure (like graphs) are more production-friendly, while freeform agenting introduces more cost and unreliability.\n\n#AI #AgentFrameworks #LLM #SoftwareDevelopment #TechStack #MachineLearning\n\nSource: DEV",
+  "tweet": "Don't get stuck on AI agent frameworks. In 2026, the real engineering challenge is in the memory, orchestration, and observability layers. Frameworks are a weekend; memory is a quarter. #AI #AgentTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mryadavgulshan/the-ai-agent-stack-in-2026-frameworks-memory-orchestration-3n02",
+  "image": "",
+  "orig_title": "The AI Agent Stack in 2026: Frameworks, Memory, Orchestration",
+  "cluster_urls": [
+   "https://dev.to/mryadavgulshan/the-ai-agent-stack-in-2026-frameworks-memory-orchestration-3n02"
+  ],
+  "cluster_titles": [
+   "The AI Agent Stack in 2026: Frameworks, Memory, Orchestration"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260819-0908-1-the-ai-agent-stack-in-2026-frameworks-matter.png",
+   "20260819-0908-1-the-ai-agent-stack-in-2026-frameworks-matter-d1.png",
+   "20260819-0908-1-the-ai-agent-stack-in-2026-frameworks-matter-d2.png",
+   "20260819-0908-1-the-ai-agent-stack-in-2026-frameworks-matter-d3.png",
+   "20260819-0908-1-the-ai-agent-stack-in-2026-frameworks-matter-d4.png"
+  ]
+ }
+]

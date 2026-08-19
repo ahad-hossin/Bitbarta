@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai agent trading bot failure fix",
+  "headline_marked": "[[AI agent broke trading bots twice]] running unattended, prompting new safety gate",
+  "headline": "AI agent broke trading bots twice running unattended, prompting new safety gate",
+  "summary": "An AI agent managing trading bots made flawed decisions on incomplete data and deleted critical security fixes, leading its creator to build a robust safety gate.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI agent, tasked with replacing a trading strategy, introduced a bug that caused real (paper) sell decisions based on incomplete, still-forming price data. This occurred because the bot's scheduled task fired while the code was being rewritten, exposing multiple holes in the safety net.",
+   "A second incident involved the agent using `git reset --hard HEAD~1`, which inadvertently discarded uncommitted security fixes from the previous incident. This highlighted how AI agents, making hundreds of commits weekly, can quickly repeat mistakes a human engineer might make once a decade.",
+   "Learning from these experiences, the developer built a three-layered 'gate' for a content pipeline before the publish step. This gate includes a hand-maintained deny-list, a live scan for secret values, and a semantic check from a second AI model to ensure content is safe to publish.",
+   "The gate proved effective when it caught three real account numbers in a draft post, blocking publication before the sensitive data reached git or the blog. This demonstrated the crucial difference between discovering issues after they occur and preventing them proactively.",
+   "The developer is now preparing to release this 'gate' pattern as a standalone tool. It's designed for solo developers and small teams who use AI agents with real write access (e.g., live bots, publish pipelines, deploy steps) without real-time human review, focusing on preventing irreversible actions."
+  ],
+  "caption": "An AI agent running trading bots made real (paper) sell decisions on incomplete data and accidentally deleted security fixes. This led to building a robust 'gate' to prevent future mishaps.\n\nAn AI agent, tasked with replacing a trading strategy, introduced a bug that caused real (paper) sell decisions based on incomplete, still-forming price data. This occurred because the bot's scheduled task fired while the code was being rewritten, exposing multiple holes in the safety net.\n\nA second incident involved the agent using `git reset --hard HEAD~1`, which inadvertently discarded uncommitted security fixes from the previous incident. This highlighted how AI agents, making hundreds of commits weekly, can quickly repeat mistakes a human engineer might make once a decade.\n\nLearning from these experiences, the developer built a three-layered 'gate' for a content pipeline before the publish step. This gate includes a hand-maintained deny-list, a live scan for secret values, and a semantic check from a second AI model to ensure content is safe to publish.\n\nThe gate proved effective when it caught three real account numbers in a draft post, blocking publication before the sensitive data reached git or the blog. This demonstrated the crucial difference between discovering issues after they occur and preventing them proactively.\n\nThe developer is now preparing to release this 'gate' pattern as a standalone tool. It's designed for solo developers and small teams who use AI agents with real write access (e.g., live bots, publish pipelines, deploy steps) without real-time human review, focusing on preventing irreversible actions.\n\n#AI #Developer #Security #Automation #Software #DevOps\n\nSource: DEV",
+  "tweet": "An AI agent running trading bots broke twice, making flawed decisions and deleting critical code. This led to building a robust 'gate' to prevent future mishaps, catching real account numbers before publication. A crucial lesson in AI safety. #AI #DevOps #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tatsuyawwp/i-let-an-ai-agent-run-my-trading-bots-unattended-it-broke-twice-before-i-built-a-gate-to-stop-it-40db",
+  "image": "",
+  "orig_title": "I let an AI agent run my trading bots unattended. It broke twice before I built a gate to stop it.",
+  "cluster_urls": [
+   "https://dev.to/tatsuyawwp/i-let-an-ai-agent-run-my-trading-bots-unattended-it-broke-twice-before-i-built-a-gate-to-stop-it-40db"
+  ],
+  "cluster_titles": [
+   "I let an AI agent run my trading bots unattended. It broke twice before I built a gate to stop it."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260819-1642-0-ai-agent-broke-trading-bots-twice-running-un.png",
+   "20260819-1642-0-ai-agent-broke-trading-bots-twice-running-un-d1.png",
+   "20260819-1642-0-ai-agent-broke-trading-bots-twice-running-un-d2.png",
+   "20260819-1642-0-ai-agent-broke-trading-bots-twice-running-un-d3.png"
+  ]
+ },
+ {
+  "topic": "claude ai macos printer driver",
+  "headline_marked": "[[Claude AI helps dev create native macOS driver]] for 'obscure' Windows-only HP printer, now on GitHub",
+  "headline": "Claude AI helps dev create native macOS driver for 'obscure' Windows-only HP printer, now on GitHub",
+  "summary": "A developer leveraged Claude Code to build a full macOS driver for the HP Laser 1008a, a printer previously unsupported on Apple Silicon, enabling system-wide Cmd-P functionality.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer, Kuberwastaken (Kuber), successfully used Claude Code to create a native macOS driver for the HP Laser 1008a. This printer, originally designed for Windows, now works seamlessly on Apple Silicon Macs, allowing Cmd-P printing from any application. HP never released a working macOS driver for this model.",
+   "The HP Laser 1008a belongs to a family of printers that are rebadged Samsung SPL3 lasers. These printers do not support widely compatible standards like PostScript or PCL, nor do they work with open-source SPL/QPDL drivers or Apple AirPrint, making macOS compatibility a significant challenge.",
+   "Kuber's project, hp-laser-1008a-macos, overcomes this by leveraging HP's own rastertospl codec. This codec, also used in the HP Unified Linux Driver, is inserted into a tiny Linux container, which then delivers the printing results over USB to the macOS system.",
+   "Installation is a straightforward, one-time process for users with Homebrew installed. A simple git clone and ./install.sh command in Terminal sets up the driver, making the printer appear as \"HP Laser 1008a\" for immediate use via Cmd-P.",
+   "The driver is also compatible with other models like the HP Laser 1003, 1006, and 1008. Users should be aware of potential slow startup times for the first print, the requirement for Colima to be running, and possibly needing to update their USB product ID.",
+   "Kuber has made the fully functional macOS printer driver available on GitHub, allowing other developers and users to benefit from this solution without having to replicate the complex development work."
+  ],
+  "caption": "An 'obscure' Windows-only HP printer now works natively on macOS, thanks to a developer and Claude AI. This new driver enables system-wide Cmd-P printing.\n\nA developer, Kuberwastaken (Kuber), successfully used Claude Code to create a native macOS driver for the HP Laser 1008a. This printer, originally designed for Windows, now works seamlessly on Apple Silicon Macs, allowing Cmd-P printing from any application. HP never released a working macOS driver for this model.\n\nThe HP Laser 1008a belongs to a family of printers that are rebadged Samsung SPL3 lasers. These printers do not support widely compatible standards like PostScript or PCL, nor do they work with open-source SPL/QPDL drivers or Apple AirPrint, making macOS compatibility a significant challenge.\n\nKuber's project, hp-laser-1008a-macos, overcomes this by leveraging HP's own rastertospl codec. This codec, also used in the HP Unified Linux Driver, is inserted into a tiny Linux container, which then delivers the printing results over USB to the macOS system.\n\nInstallation is a straightforward, one-time process for users with Homebrew installed. A simple git clone and ./install.sh command in Terminal sets up the driver, making the printer appear as \"HP Laser 1008a\" for immediate use via Cmd-P.\n\nThe driver is also compatible with other models like the HP Laser 1003, 1006, and 1008. Users should be aware of potential slow startup times for the first print, the requirement for Colima to be running, and possibly needing to update their USB product ID.\n\nKuber has made the fully functional macOS printer driver available on GitHub, allowing other developers and users to benefit from this solution without having to replicate the complex development work.\n\n#AI #macOS #PrinterDriver #HP #OpenSource #TechNews\n\nSource: Tom's Hardware",
+  "tweet": "Claude AI just helped a dev create a native macOS driver for a Windows-only HP Laser 1008a printer! Now you can Cmd-P print from any app on Apple Silicon. Driver available on GitHub. #AI #macOS #PrinterDriver",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "hp.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/dev-uses-claude-ai-to-create-native-macos-driver-for-obscure-windows-only-printer-linux-container-hack-enables-system-wide-cmd-p-printing-driver-now-available-on-github",
+  "image": "https://cdn.mos.cms.futurecdn.net/MEhj2kjie9xAZfBevnC5jT-1280-80.jpg",
+  "orig_title": "Dev uses Claude AI to create native macOS driver for 'obscure' Windows-only printer — Linux container hack enables system-wide Cmd-P printing, driver now available on Github",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/dev-uses-claude-ai-to-create-native-macos-driver-for-obscure-windows-only-printer-linux-container-hack-enables-system-wide-cmd-p-printing-driver-now-available-on-github"
+  ],
+  "cluster_titles": [
+   "Dev uses Claude AI to create native macOS driver for 'obscure' Windows-only printer — Linux container hack enables system-wide Cmd-P printing, driver now available on Github"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260819-1642-1-claude-ai-helps-dev-create-native-macos-driv.png",
+   "20260819-1642-1-claude-ai-helps-dev-create-native-macos-driv-d1.png",
+   "20260819-1642-1-claude-ai-helps-dev-create-native-macos-driv-d2.png",
+   "20260819-1642-1-claude-ai-helps-dev-create-native-macos-driv-d3.png"
+  ]
+ }
+]

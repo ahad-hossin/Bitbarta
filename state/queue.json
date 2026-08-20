@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "topic": "ai_prompt_injection_test_failed_attack_worked",
+  "headline_marked": "[[LLM prompt injection test passed]] but the attack still worked, exposing a testing blind spot.",
+  "headline": "LLM prompt injection test passed but the attack still worked, exposing a testing blind spot.",
+  "summary": "A developer's test for prompt injection showed 100% coverage and passed, yet the vulnerability remained active, highlighting a critical flaw in how security properties are asserted.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A developer maintaining the `llm-council` CLI discovered a prompt injection vulnerability in its own prompts. This was particularly alarming because a test specifically designed to catch this flaw had been passing with 100% code coverage.",
+   "The vulnerability, identified as OWASP LLM01, stemmed from chaining models where the output of one untrusted model becomes the input for the next. The standard mitigation involves 'fencing' untrusted content with delimiters.",
+   "However, a hostile input could forge these delimiters, causing downstream models to interpret subsequent text as instructions rather than quoted data. The original test merely verified string concatenation, failing to check if the LLM could actually be deceived.",
+   "The test's name claimed a security property, but its assertions only checked arithmetic, not the functional security. This created a false sense of security, as the test ran, exercised real code, and would catch refactoring mistakes, but completely missed the security flaw it was meant to cover.",
+   "The fix involved replacing static delimiters with per-run random nonces, ensuring that only emitted markers carried the real nonce and forged ones remained inert text. The test was then rewritten to assert this property of nonce uniqueness.",
+   "Further review uncovered another gap where stage 3 rankings were unfenced, allowing raw input into another model. Mutation testing was used to verify the fixes, confirming that reverting to static nonces or unfencing rankings would correctly cause tests to fail.",
+   "A SonarCloud quality gate initially blocked the pull request due to a weak test for randomness, which could pass with predictable inputs like a counter. This led to a stronger test to prevent nonce collisions, which could enable reusable forgeries.",
+   "The incident underscores that a test's name is a claim, and its assertion is the evidence. Mutation testing is highlighted as a crucial tool to detect when the claimed property and the actual assertion diverge, even with 100% code coverage."
+  ],
+  "caption": "A prompt injection test passed with 100% coverage, yet the attack still worked. This reveals a critical blind spot in LLM security testing.\n\nA developer maintaining the `llm-council` CLI discovered a prompt injection vulnerability in its own prompts. This was particularly alarming because a test specifically designed to catch this flaw had been passing with 100% code coverage.\n\nThe vulnerability, identified as OWASP LLM01, stemmed from chaining models where the output of one untrusted model becomes the input for the next. The standard mitigation involves 'fencing' untrusted content with delimiters.\n\nHowever, a hostile input could forge these delimiters, causing downstream models to interpret subsequent text as instructions rather than quoted data. The original test merely verified string concatenation, failing to check if the LLM could actually be deceived.\n\nThe test's name claimed a security property, but its assertions only checked arithmetic, not the functional security. This created a false sense of security, as the test ran, exercised real code, and would catch refactoring mistakes, but completely missed the security flaw it was meant to cover.\n\nThe fix involved replacing static delimiters with per-run random nonces, ensuring that only emitted markers carried the real nonce and forged ones remained inert text. The test was then rewritten to assert this property of nonce uniqueness.\n\nFurther review uncovered another gap where stage 3 rankings were unfenced, allowing raw input into another model. Mutation testing was used to verify the fixes, confirming that reverting to static nonces or unfencing rankings would correctly cause tests to fail.\n\nA SonarCloud quality gate initially blocked the pull request due to a weak test for randomness, which could pass with predictable inputs like a counter. This led to a stronger test to prevent nonce collisions, which could enable reusable forgeries.\n\n#LLMSecurity #PromptInjection #SoftwareTesting #Cybersecurity #DevTools #AI\n\nSource: DEV",
+  "tweet": "A prompt injection test passed with 100% coverage, yet the attack still worked! This developer's story exposes a critical flaw in LLM security testing and the dangers of misaligned assertions. A must-read for devs. #LLMSecurity #SoftwareTesting",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mk023/i-wrote-a-test-for-prompt-injection-it-passed-while-the-attack-worked-kc9",
+  "image": "",
+  "orig_title": "I wrote a test for prompt injection. It passed while the attack worked.",
+  "cluster_urls": [
+   "https://dev.to/mk023/i-wrote-a-test-for-prompt-injection-it-passed-while-the-attack-worked-kc9"
+  ],
+  "cluster_titles": [
+   "I wrote a test for prompt injection. It passed while the attack worked."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260820-0908-0-llm-prompt-injection-test-passed-but-the-att.png",
+   "20260820-0908-0-llm-prompt-injection-test-passed-but-the-att-d1.png",
+   "20260820-0908-0-llm-prompt-injection-test-passed-but-the-att-d2.png",
+   "20260820-0908-0-llm-prompt-injection-test-passed-but-the-att-d3.png"
+  ]
+ }
+]

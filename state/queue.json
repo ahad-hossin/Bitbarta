@@ -1,1 +1,76 @@
-[]
+[
+ {
+  "topic": "aws_bedrock_codex_10x_charges_bug",
+  "headline_marked": "[[Codex on AWS Bedrock bug]] causes 10x charges for GPT-5.6 Sol users",
+  "headline": "Codex on AWS Bedrock bug causes 10x charges for GPT-5.6 Sol users",
+  "summary": "Native Codex CLI requests to Amazon Bedrock Mantle's GPT-5.6 Sol cannot opt into explicit prompt caching, leading to significantly higher costs due to excessive cache-write tokens. Users are unable to configure the documented explicit-cache mechanism for stabl",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A bug in native Codex CLI requests to Amazon Bedrock Mantle's GPT-5.6 Sol prevents the use of explicit prompt caching, resulting in materially higher costs. This issue is particularly evident in agentic coding workloads, which generate a large volume of cache-write tokens.",
+   "Estimates from August 5-8, 2026, show that 76 Sol requests generated 6.709 million cache-write input tokens, with an average of about 88,000 cache-write tokens per request. This lack of caching has led to an estimated 10x increase in charges for affected users.",
+   "The problem stems from the request types for both HTTP and WebSocket Responses, which do not include the necessary `prompt_cache_key_mode` or `prompt_cache_key_id` fields. The built-in Amazon Bedrock provider configuration lacks the structured request-body transformation needed to enable these settings.",
+   "AWS documentation explicitly details a cache mode for GPT-5.6 on Bedrock, designed for agentic workflows with long, stable instructions followed by changing content. However, native Bedrock Codex currently offers no way to leverage this documented explicit-cache mechanism for such stable-prefix scenarios."
+  ],
+  "caption": "A critical bug in native Codex CLI for Amazon Bedrock's GPT-5.6 Sol is hitting users with 10x higher costs due to disabled explicit prompt caching.\n\nA bug in native Codex CLI requests to Amazon Bedrock Mantle's GPT-5.6 Sol prevents the use of explicit prompt caching, resulting in materially higher costs. This issue is particularly evident in agentic coding workloads, which generate a large volume of cache-write tokens.\n\nEstimates from August 5-8, 2026, show that 76 Sol requests generated 6.709 million cache-write input tokens, with an average of about 88,000 cache-write tokens per request. This lack of caching has led to an estimated 10x increase in charges for affected users.\n\nThe problem stems from the request types for both HTTP and WebSocket Responses, which do not include the necessary `prompt_cache_key_mode` or `prompt_cache_key_id` fields. The built-in Amazon Bedrock provider configuration lacks the structured request-body transformation needed to enable these settings.\n\nAWS documentation explicitly details a cache mode for GPT-5.6 on Bedrock, designed for agentic workflows with long, stable instructions followed by changing content. However, native Bedrock Codex currently offers no way to leverage this documented explicit-cache mechanism for such stable-prefix scenarios.\n\n#AWS #AmazonBedrock #GPT5 #AI #CloudComputing #SoftwareBug\n\nSource: Hacker News",
+  "tweet": "A critical bug in native Codex CLI for Amazon Bedrock's GPT-5.6 Sol is hitting users with 10x higher costs. Explicit prompt caching is disabled, leading to massive cache-write tokens. Developers using agentic workflows are impacted. #AWS #AI #SoftwareBug",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "aws.amazon.com",
+  "source": "Hacker News",
+  "url": "https://github.com/openai/codex/issues/37674",
+  "image": "",
+  "orig_title": "Codex on AWS bedrock bug causing 10x charges",
+  "cluster_urls": [
+   "https://github.com/openai/codex/issues/37674"
+  ],
+  "cluster_titles": [
+   "Codex on AWS bedrock bug causing 10x charges"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260821-1051-0-codex-on-aws-bedrock-bug-causes-10x-charges-.png",
+   "20260821-1051-0-codex-on-aws-bedrock-bug-causes-10x-charges--d1.png",
+   "20260821-1051-0-codex-on-aws-bedrock-bug-causes-10x-charges--d2.png"
+  ]
+ },
+ {
+  "topic": "ai_companies_destroy_physical_books_scanning_urgency",
+  "headline_marked": "[[AI companies destroy physical books]] – urgent call to scan rare books before it's too late",
+  "headline": "AI companies destroy physical books – urgent call to scan rare books before it's too late",
+  "summary": "Reports indicate AI companies are destroying physical books for data. Experts are urging immediate action to digitize rare and valuable collections to prevent irreversible loss.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Concerns are rising over reports that some AI companies are systematically destroying physical books to extract data for training their large language models. This practice involves disassembling books to scan them at high speed, often rendering them unusable afterward.",
+   "This method, while efficient for data acquisition, poses a significant threat to libraries and archives. Rare and unique editions, particularly those not yet digitized, are at risk of permanent loss, impacting future research and cultural preservation.",
+   "Experts and preservationists are now issuing urgent calls for a global effort to scan and digitize rare books before they fall victim to these destructive processes. Initiatives are being proposed to fund and coordinate large-scale scanning projects.",
+   "The debate highlights a critical tension between rapid AI development and the long-term safeguarding of human knowledge and heritage. Protecting these physical artifacts is crucial for maintaining the integrity of historical records and cultural memory."
+  ],
+  "caption": "AI companies are reportedly destroying physical books for data. This alarming trend threatens irreplaceable cultural heritage.\n\nConcerns are rising over reports that some AI companies are systematically destroying physical books to extract data for training their large language models. This practice involves disassembling books to scan them at high speed, often rendering them unusable afterward.\n\nThis method, while efficient for data acquisition, poses a significant threat to libraries and archives. Rare and unique editions, particularly those not yet digitized, are at risk of permanent loss, impacting future research and cultural preservation.\n\nExperts and preservationists are now issuing urgent calls for a global effort to scan and digitize rare books before they fall victim to these destructive processes. Initiatives are being proposed to fund and coordinate large-scale scanning projects.\n\nThe debate highlights a critical tension between rapid AI development and the long-term safeguarding of human knowledge and heritage. Protecting these physical artifacts is crucial for maintaining the integrity of historical records and cultural memory.\n\n#AI #Books #DigitalPreservation #CulturalHeritage #TechNews #Libraries\n\nSource: Hacker News",
+  "tweet": "AI companies are reportedly destroying physical books for data, sparking an urgent call to digitize rare collections. This trend threatens irreplaceable cultural heritage. #AI #Books #DigitalPreservation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://annas-archive.gl/blog/physical-destruction.html",
+  "image": "",
+  "orig_title": "AI companies destroy physical books – let's scan rare books before it's too late",
+  "cluster_urls": [
+   "https://annas-archive.gl/blog/physical-destruction.html"
+  ],
+  "cluster_titles": [
+   "AI companies destroy physical books – let's scan rare books before it's too late"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260821-1051-1-ai-companies-destroy-physical-books-urgent-c.png",
+   "20260821-1051-1-ai-companies-destroy-physical-books-urgent-c-d1.png",
+   "20260821-1051-1-ai-companies-destroy-physical-books-urgent-c-d2.png"
+  ]
+ }
+]

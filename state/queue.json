@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai_coding_agent_self_attack_testing",
+  "headline_marked": "[[Make your AI coding agent attack its own work]] to find subtle bugs and security flaws",
+  "headline": "Make your AI coding agent attack its own work to find subtle bugs and security flaws",
+  "summary": "Adversarial review, where an AI agent critically evaluates its own code for flaws, significantly improves the quality and security of AI-generated software. This method uncovers hidden bugs, edge cases, and architectural issues.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI coding agents are proficient at generating working implementations, but they often become satisfied with their initial output. A highly effective strategy to improve their work is to prompt them for an adversarial review of their own code. This involves challenging the agent to find flaws in its own creation.",
+   "In this review, the agent acts as a skeptical critic, assuming the implementation contains subtle bugs, incorrect assumptions, security issues, or missing edge cases. Its objective is to break the code, not to defend it. This shift in perspective is crucial for uncovering deeper problems.",
+   "Separating the diagnosis of issues from their remediation allows for inspectable reasoning, preventing silent patches. Role framing, such as telling the model 'You did not write this code,' can remove 'psychological ownership' and lead to a more skeptical and thorough analysis. This fictitious detachment helps the AI identify flaws it might otherwise overlook.",
+   "To make AI review more useful, demand concrete failure cases and reproducible scenarios. Ask for specific inputs, system states, or event sequences that could cause incorrect behavior. For instance, identify how concurrent updates might lead to an incorrect balance in a transaction system.",
+   "Beyond finding implementation bugs, adversarial review often reveals product or security decisions disguised as mere implementation details. Questions like 'What should happen if two users update simultaneously?' or 'Should this endpoint reveal if an email exists?' push the agent into higher-level design considerations. This process helps clarify requirements and potential vulnerabilities.",
+   "Producing reproduction cases and tests is vital, as it validates suspected bugs and provides permanent test coverage. Bugs frequently reside at the boundaries of newly written functions or in neighboring code, not just within the function itself. The ultimate goal is to make the model critically disagree with its previous self, leading to more robust software."
+  ],
+  "caption": "Your AI coding agent just finished a task. Now, ask it to actively attack its own work to find hidden flaws and security vulnerabilities.\n\nAI coding agents are proficient at generating working implementations, but they often become satisfied with their initial output. A highly effective strategy to improve their work is to prompt them for an adversarial review of their own code. This involves challenging the agent to find flaws in its own creation.\n\nIn this review, the agent acts as a skeptical critic, assuming the implementation contains subtle bugs, incorrect assumptions, security issues, or missing edge cases. Its objective is to break the code, not to defend it. This shift in perspective is crucial for uncovering deeper problems.\n\nSeparating the diagnosis of issues from their remediation allows for inspectable reasoning, preventing silent patches. Role framing, such as telling the model 'You did not write this code,' can remove 'psychological ownership' and lead to a more skeptical and thorough analysis. This fictitious detachment helps the AI identify flaws it might otherwise overlook.\n\nTo make AI review more useful, demand concrete failure cases and reproducible scenarios. Ask for specific inputs, system states, or event sequences that could cause incorrect behavior. For instance, identify how concurrent updates might lead to an incorrect balance in a transaction system.\n\nBeyond finding implementation bugs, adversarial review often reveals product or security decisions disguised as mere implementation details. Questions like 'What should happen if two users update simultaneously?' or 'Should this endpoint reveal if an email exists?' push the agent into higher-level design considerations. This process helps clarify requirements and potential vulnerabilities.\n\n#AI #Coding #SoftwareDevelopment #DevTools #Security #AIethics\n\nSource: DEV",
+  "tweet": "Boost your AI-generated code quality: Make your AI coding agent perform an adversarial review of its own work. This method uncovers subtle bugs, security issues, and edge cases by forcing the AI to try and break its own implementation. #AI #Coding #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jlmartel/your-ai-coding-agent-just-finished-now-ask-it-to-attack-its-own-work-54g3",
+  "image": "",
+  "orig_title": "Your AI Coding Agent Just Finished. Now Ask It to Attack Its Own Work.",
+  "cluster_urls": [
+   "https://dev.to/jlmartel/your-ai-coding-agent-just-finished-now-ask-it-to-attack-its-own-work-54g3"
+  ],
+  "cluster_titles": [
+   "Your AI Coding Agent Just Finished. Now Ask It to Attack Its Own Work."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260821-0752-0-make-your-ai-coding-agent-attack-its-own-wor.png",
+   "20260821-0752-0-make-your-ai-coding-agent-attack-its-own-wor-d1.png",
+   "20260821-0752-0-make-your-ai-coding-agent-attack-its-own-wor-d2.png",
+   "20260821-0752-0-make-your-ai-coding-agent-attack-its-own-wor-d3.png"
+  ]
+ },
+ {
+  "topic": "eu_ai_generated_content_no_copyright",
+  "headline_marked": "[[Copyright does not protect AI-generated content]] in the EU, legal experts confirm",
+  "headline": "Copyright does not protect AI-generated content in the EU, legal experts confirm",
+  "summary": "Content fully generated by AI lacks copyright protection under EU law due to its strictly human-centric foundation. This has significant implications for businesses and content creators.",
+  "category": "LAW",
+  "template": "neon",
+  "details": [
+   "Content fully generated by artificial intelligence is not protected under EU copyright law. This is due to the law's strictly human-centric foundation, a point reiterated by legal experts. The Munich Local Court has already ruled that AI-generated logos lack copyright protection, stating that mere prompting or selection isn't sufficient human creative contribution.",
+   "According to legal scholar Daniel J. Gervais, attributing AI-written content to oneself implies responsibility for it, but does not confer copyright. This distinction highlights that while individuals can be liable for AI output, they don't gain exclusive rights over it.",
+   "For businesses, this creates an ambivalent situation. Content generated purely by AI can hardly be protected on an exclusive basis, which has significant implications for brand building and content strategies in the EU market."
+  ],
+  "caption": "Is your AI-generated content truly yours? In the EU, content created entirely by artificial intelligence is not protected by copyright.\n\nContent fully generated by artificial intelligence is not protected under EU copyright law. This is due to the law's strictly human-centric foundation, a point reiterated by legal experts. The Munich Local Court has already ruled that AI-generated logos lack copyright protection, stating that mere prompting or selection isn't sufficient human creative contribution.\n\nAccording to legal scholar Daniel J. Gervais, attributing AI-written content to oneself implies responsibility for it, but does not confer copyright. This distinction highlights that while individuals can be liable for AI output, they don't gain exclusive rights over it.\n\nFor businesses, this creates an ambivalent situation. Content generated purely by AI can hardly be protected on an exclusive basis, which has significant implications for brand building and content strategies in the EU market.\n\n#AICopyright #EULaw #IntellectualProperty #TechLaw #AIContent #Copyright\n\nSource: Hacker News",
+  "tweet": "Heads up, creators! In the EU, content fully generated by AI is NOT protected by copyright, according to legal experts. EU law has a strictly human-centric foundation, impacting brand building & content strategies. #AICopyright #EULaw",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
+  "image": "",
+  "orig_title": "Copyright does not protect AI-generated content in EU",
+  "cluster_urls": [
+   "https://mathstodon.xyz/@maxpool/117128107757895678"
+  ],
+  "cluster_titles": [
+   "Copyright does not protect AI-generated content in EU"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260821-0752-1-copyright-does-not-protect-ai-generated-cont.png",
+   "20260821-0752-1-copyright-does-not-protect-ai-generated-cont-d1.png"
+  ]
+ }
+]

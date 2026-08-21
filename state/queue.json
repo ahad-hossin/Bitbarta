@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "topic": "ai content labels and web trust",
+  "headline_marked": "[[AI Content Labels]] are now product infrastructure: build trust signals before users stop believing",
+  "headline": "AI Content Labels are now product infrastructure: build trust signals before users stop believing",
+  "summary": "With over a third of post-ChatGPT web pages showing signs of AI authorship, clear content labeling is becoming crucial for establishing user trust online.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The web is facing a trust crisis as users struggle to distinguish human-written content from AI-generated material. A Pew Research Center analysis found that 10% of sampled English webpages showed significant AI authorship, rising to over one-third for pages published after ChatGPT's launch.",
+   "For developers building AI products, content labeling is no longer a minor policy detail but essential product infrastructure. The goal is to create useful, honest, and developer-friendly labels that go beyond a simple \"made with AI\" badge.",
+   "Effective labels must answer deeper trust questions and differentiate content based on its risk zone. A playful image caption, for instance, should not be treated the same as an AI-edited medical explanation or a generated billing policy.",
+   "A robust system separates the content itself, the generation event, its review status, and the user-facing label. This approach allows for detailed internal provenance while presenting only the necessary information to the reader.",
+   "Proportionality is key: users should notice labels when trust or action is affected, not be overwhelmed by constant warnings. Developers should implement a policy function to automate label generation, ensuring consistency and adaptability.",
+   "Maintaining content provenance is vital. If content is labeled as reviewed, its hash should be recomputed upon any user edits. If the hash changes, the review status must be marked as stale to prevent false confidence.",
+   "Standards like C2PA are becoming relevant for media provenance (images, audio, video), using signed manifests to describe origin and edit history. Developers should design their internal provenance systems to be compatible with such standards for future integration.",
+   "Good labels are visible enough to help without interrupting the user's workflow. Examples include \"This answer was drafted with AI, checked against three help-center sources, and reviewed by the support team\" or \"This AI-generated draft has not been reviewed.\""
+  ],
+  "caption": "Over one-third of web pages published after ChatGPT launched show significant signs of AI authorship.\n\nThe web is facing a trust crisis as users struggle to distinguish human-written content from AI-generated material. A Pew Research Center analysis found that 10% of sampled English webpages showed significant AI authorship, rising to over one-third for pages published after ChatGPT's launch.\n\nFor developers building AI products, content labeling is no longer a minor policy detail but essential product infrastructure. The goal is to create useful, honest, and developer-friendly labels that go beyond a simple \"made with AI\" badge.\n\nEffective labels must answer deeper trust questions and differentiate content based on its risk zone. A playful image caption, for instance, should not be treated the same as an AI-edited medical explanation or a generated billing policy.\n\nA robust system separates the content itself, the generation event, its review status, and the user-facing label. This approach allows for detailed internal provenance while presenting only the necessary information to the reader.\n\nProportionality is key: users should notice labels when trust or action is affected, not be overwhelmed by constant warnings. Developers should implement a policy function to automate label generation, ensuring consistency and adaptability.\n\nMaintaining content provenance is vital. If content is labeled as reviewed, its hash should be recomputed upon any user edits. If the hash changes, the review status must be marked as stale to prevent false confidence.\n\nStandards like C2PA are becoming relevant for media provenance (images, audio, video), using signed manifests to describe origin and edit history. Developers should design their internal provenance systems to be compatible with such standards for future integration.\n\n#AI #ContentCreation #TrustAndSafety #WebDevelopment #Developers #TechNews\n\nSource: DEV",
+  "tweet": "Over one-third of web pages published after ChatGPT launched show significant signs of AI authorship. As AI content proliferates, building clear trust signals with content labels is becoming essential product infrastructure for developers. #AI #WebDev #Trust",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jackm-singularity/ai-content-labels-build-trust-signals-before-users-stop-believing-the-page-44c4",
+  "image": "",
+  "orig_title": "AI Content Labels: Build Trust Signals Before Users Stop Believing the Page",
+  "cluster_urls": [
+   "https://dev.to/jackm-singularity/ai-content-labels-build-trust-signals-before-users-stop-believing-the-page-44c4"
+  ],
+  "cluster_titles": [
+   "AI Content Labels: Build Trust Signals Before Users Stop Believing the Page"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260821-1008-0-ai-content-labels-are-now-product-infrastruc.png",
+   "20260821-1008-0-ai-content-labels-are-now-product-infrastruc-d1.png",
+   "20260821-1008-0-ai-content-labels-are-now-product-infrastruc-d2.png",
+   "20260821-1008-0-ai-content-labels-are-now-product-infrastruc-d3.png"
+  ]
+ }
+]

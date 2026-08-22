@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai_model_training_on_live_skin",
+  "headline_marked": "[[Michael Polansky is training an AI model]] on skin that’s still alive",
+  "headline": "Michael Polansky is training an AI model on skin that’s still alive",
+  "summary": "Lady Gaga's partner, Michael Polansky, founded Outer Biosciences, a startup that keeps human tissue alive for over a month to train AI models for biological research.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Michael Polansky, founder of Outer Biosciences, is developing an AI model trained on living human tissue. His startup has achieved keeping human skin alive outside the body for over a month, a critical breakthrough for advanced biological research.",
+   "Polansky, a Harvard alum in applied mathematics and computer science, previously worked at Bridgewater Associates and Founders Fund. He also managed Sean Parker's family office, gaining extensive experience in business and philanthropy.",
+   "His life took a \"different direction\" during COVID, leading to his relationship with Stefani Germanotta (Lady Gaga). Their mothers initially tried to set them up, and their partnership has since grown both personally and professionally.",
+   "The couple's collaboration extends to business, with Germanotta on the board of Outer Biosciences and their companies running joint projects. Polansky also highlights Germanotta's role in Haus Labs, her thriving cosmetics brand.",
+   "Polansky \"accidentally\" entered life sciences through over a decade in cancer immunotherapy alongside Sean Parker. This background informed the foundation of Outer Biosciences, focusing on innovative biological solutions."
+  ],
+  "caption": "Lady Gaga's partner, Michael Polansky, is training an AI model on living human skin.\n\nMichael Polansky, founder of Outer Biosciences, is developing an AI model trained on living human tissue. His startup has achieved keeping human skin alive outside the body for over a month, a critical breakthrough for advanced biological research.\n\nPolansky, a Harvard alum in applied mathematics and computer science, previously worked at Bridgewater Associates and Founders Fund. He also managed Sean Parker's family office, gaining extensive experience in business and philanthropy.\n\nHis life took a \"different direction\" during COVID, leading to his relationship with Stefani Germanotta (Lady Gaga). Their mothers initially tried to set them up, and their partnership has since grown both personally and professionally.\n\nThe couple's collaboration extends to business, with Germanotta on the board of Outer Biosciences and their companies running joint projects. Polansky also highlights Germanotta's role in Haus Labs, her thriving cosmetics brand.\n\nPolansky \"accidentally\" entered life sciences through over a decade in cancer immunotherapy alongside Sean Parker. This background informed the foundation of Outer Biosciences, focusing on innovative biological solutions.\n\n#AI #BioTech #Science #Startups #MichaelPolansky #OuterBiosciences\n\nSource: TechCrunch",
+  "tweet": "Lady Gaga's partner, Michael Polansky, is training an AI model on living human skin. His startup, Outer Biosciences, keeps human tissue alive for over a month, enabling new biological research. #AI #BioTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "outerbiosciences.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/",
+  "image": "",
+  "orig_title": "Michael Polansky is training an AI model on skin that’s still alive",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/08/21/michael-polansky-is-training-an-ai-model-on-skin-thats-still-alive/"
+  ],
+  "cluster_titles": [
+   "Michael Polansky is training an AI model on skin that’s still alive"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260822-0806-0-michael-polansky-is-training-an-ai-model-on-.png",
+   "20260822-0806-0-michael-polansky-is-training-an-ai-model-on--d1.png",
+   "20260822-0806-0-michael-polansky-is-training-an-ai-model-on--d2.png"
+  ]
+ },
+ {
+  "topic": "javascript_sandbox_escape_vulnerability",
+  "headline_marked": "[[JavaScript Sandbox Escape]] via Type Confusion in isolated-vm",
+  "headline": "JavaScript Sandbox Escape via Type Confusion in isolated-vm",
+  "summary": "A critical vulnerability in `isolated-vm` allows JavaScript sandbox escapes, potentially corrupting Node.js process memory. Organizations running automation or AI code execution environments should update immediately and review worker privileges.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A newly discovered vulnerability in the `isolated-vm` JavaScript environment allows for a sandbox escape. This flaw, stemming from a type confusion via a double-read value difference, can corrupt host Node.js process memory and hijack control flow.",
+   "Organizations utilizing `isolated-vm` in automation infrastructure or AI code execution environments, such as n8n, are particularly at risk. It is crucial to not dismiss Node.js crashes following untrusted code execution as mere availability issues.",
+   "Affected administrators must update `isolated-vm` to version 7.0.1 or 6.2.0. Beyond just updating npm packages, it is also recommended to run code execution workers with lower privileges and check their credentials and network isolation.",
+   "General users do not need to take action as this vulnerability primarily affects server-side environments where untrusted JavaScript code is executed. The responsibility for updates and isolation lies with system administrators of such features."
+  ],
+  "caption": "A critical type confusion vulnerability in `isolated-vm` allows JavaScript sandbox escapes. It can corrupt host Node.js process memory and hijack control flow.\n\nA newly discovered vulnerability in the `isolated-vm` JavaScript environment allows for a sandbox escape. This flaw, stemming from a type confusion via a double-read value difference, can corrupt host Node.js process memory and hijack control flow.\n\nOrganizations utilizing `isolated-vm` in automation infrastructure or AI code execution environments, such as n8n, are particularly at risk. It is crucial to not dismiss Node.js crashes following untrusted code execution as mere availability issues.\n\nAffected administrators must update `isolated-vm` to version 7.0.1 or 6.2.0. Beyond just updating npm packages, it is also recommended to run code execution workers with lower privileges and check their credentials and network isolation.\n\nGeneral users do not need to take action as this vulnerability primarily affects server-side environments where untrusted JavaScript code is executed. The responsibility for updates and isolation lies with system administrators of such features.\n\n#JavaScript #Security #NodeJS #Vulnerability #Cybersecurity #isolatedvm\n\nSource: DEV",
+  "tweet": "Critical JavaScript sandbox escape found in `isolated-vm` via type confusion. This vulnerability can corrupt Node.js process memory. Organizations running automation or AI code execution environments must update to 7.0.1 or 6.2.0 immediately. #JavaScript #Security #NodeJS",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/javascript-sandbox-escape-via-type-confusion-in-isolated-vm-4op9",
+  "image": "",
+  "orig_title": "JavaScript Sandbox Escape via Type Confusion in isolated-vm",
+  "cluster_urls": [
+   "https://dev.to/anoymask/javascript-sandbox-escape-via-type-confusion-in-isolated-vm-4op9"
+  ],
+  "cluster_titles": [
+   "JavaScript Sandbox Escape via Type Confusion in isolated-vm"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260822-0806-1-javascript-sandbox-escape-via-type-confusion.png",
+   "20260822-0806-1-javascript-sandbox-escape-via-type-confusion-d1.png",
+   "20260822-0806-1-javascript-sandbox-escape-via-type-confusion-d2.png"
+  ]
+ }
+]

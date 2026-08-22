@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "ai_hub_security_pentest_and_injection_audits",
+  "headline_marked": "[[Pentesting own AI hub]] reveals critical data leaks and silent failures in new code",
+  "headline": "Pentesting own AI hub reveals critical data leaks and silent failures in new code",
+  "summary": "The author's read-only audit uncovered multiple vulnerabilities, primarily in recently written controls, highlighting the need for continuous verification.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A developer conducted a penetration test on their personal AI-assisted coding observability hub, comprising six services. The audit was a read-only review of code and configuration, plus dynamic testing on a local Docker stack, avoiding live system attacks.",
+   "Surprisingly, most serious defects were found in controls written days or hours earlier, often with comments indicating their purpose. Older code, having faced real traffic, had fewer issues, suggesting that reasoning about defenses is not a substitute for observing them in action.",
+   "One significant finding involved user identity attributes, including email addresses, leaking as index labels in Loki despite an allow-list. The telemetry system's attribute set was not a fixed contract, allowing new attributes to bypass existing filters.",
+   "Another vulnerability showed scope attributes bypassing both Collector and Loki filters, making planted secrets queryable. The design note incorrectly stated the two barriers were independent, leading to a double hole that allowed data to pass through.",
+   "A line intended to zero the trace ID on every record before storage failed silently because the `ParseTraceID` function expected 32 hex characters and received an empty string. This resulted in two warnings per record and the trace ID reaching Loki untouched.",
+   "A conditional failure occurred where a `set` operation, meant to collapse log bodies to event names, did nothing if the value resolved to nil. This allowed full prompts and addresses to arrive verbatim in Loki when no `event.name` was present.",
+   "The audit also exposed silent failures within the testing instrument itself, which was designed to prevent such issues. Additionally, image pinning for the Collector was found to be outdated, with a dependency update moving production to a newer version than specified."
+  ],
+  "caption": "A developer pentested their own AI hub and found critical data leaks and silent failures in newly written code.\n\nA developer conducted a penetration test on their personal AI-assisted coding observability hub, comprising six services. The audit was a read-only review of code and configuration, plus dynamic testing on a local Docker stack, avoiding live system attacks.\n\nSurprisingly, most serious defects were found in controls written days or hours earlier, often with comments indicating their purpose. Older code, having faced real traffic, had fewer issues, suggesting that reasoning about defenses is not a substitute for observing them in action.\n\nOne significant finding involved user identity attributes, including email addresses, leaking as index labels in Loki despite an allow-list. The telemetry system's attribute set was not a fixed contract, allowing new attributes to bypass existing filters.\n\nAnother vulnerability showed scope attributes bypassing both Collector and Loki filters, making planted secrets queryable. The design note incorrectly stated the two barriers were independent, leading to a double hole that allowed data to pass through.\n\nA line intended to zero the trace ID on every record before storage failed silently because the `ParseTraceID` function expected 32 hex characters and received an empty string. This resulted in two warnings per record and the trace ID reaching Loki untouched.\n\nA conditional failure occurred where a `set` operation, meant to collapse log bodies to event names, did nothing if the value resolved to nil. This allowed full prompts and addresses to arrive verbatim in Loki when no `event.name` was present.\n\nThe audit also exposed silent failures within the testing instrument itself, which was designed to prevent such issues. Additionally, image pinning for the Collector was found to be outdated, with a dependency update moving production to a newer version than specified.\n\n#Pentesting #Security #DevOps #AI #Cybersecurity #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "A developer pentested their own AI hub and found critical data leaks and silent failures in newly written code. The audit revealed that new controls were more vulnerable than old code, emphasizing the need for continuous verification. #Security #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mk023/i-pentested-my-own-ai-hub-and-shipped-the-method-not-the-map-4k3n",
+  "image": "",
+  "orig_title": "I pentested my own AI hub and shipped the method, not the map",
+  "cluster_urls": [
+   "https://dev.to/mk023/i-pentested-my-own-ai-hub-and-shipped-the-method-not-the-map-4k3n",
+   "https://dev.to/magopredator/topowatch-audita-el-attack-success-rate-de-tu-workspace-contra-inyeccion-indirecta-2klh"
+  ],
+  "cluster_titles": [
+   "I pentested my own AI hub and shipped the method, not the map",
+   "topowatch: audita el Attack Success Rate de tu workspace contra inyección indirecta"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260822-1001-0-pentesting-own-ai-hub-reveals-critical-data-.png",
+   "20260822-1001-0-pentesting-own-ai-hub-reveals-critical-data--d1.png",
+   "20260822-1001-0-pentesting-own-ai-hub-reveals-critical-data--d2.png",
+   "20260822-1001-0-pentesting-own-ai-hub-reveals-critical-data--d3.png"
+  ]
+ }
+]

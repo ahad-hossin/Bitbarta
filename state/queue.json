@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "s3_data_exfiltration_realtime_response",
+  "headline_marked": "[[Stop S3 data exfiltration in real time]] with IAM session revocation",
+  "headline": "Stop S3 data exfiltration in real time with IAM session revocation",
+  "summary": "Learn the immediate steps to cut off attacker access to sensitive S3 data using IAM role session revocation, preventing hours of outage.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "An EC2 instance compromise can lead to attackers extracting temporary credentials and bulk-downloading sensitive S3 data. GuardDuty may alert, but a quick response is needed before a patch is ready. This guide outlines how to immediately cut off access.",
+   "The critical action is to revoke sessions on the compromised IAM role. This invalidates all temporary credentials issued before the current timestamp, effective immediately with no propagation delay. This can be done via CLI or the AWS console.",
+   "Every API call with temporary credentials includes aws:TokenIssueTime. An inline policy denies actions for any credential set issued before the specified timestamp. This stops credentials already exfiltrated or cached by the attacker.",
+   "After revocation, validate by checking CloudTrail for AccessDenied events on GetObject calls. Legitimate access for the EC2 instance can be restored as it automatically requests new credentials that bypass the revocation.",
+   "Revocation alone is not enough; combine it with instance isolation (stop or quarantine the EC2 instance). Revoke first to handle existing credentials, then isolate to prevent new ones from being issued.",
+   "Waiting for temporary credentials to expire (up to 6 hours) is not an option during active exfiltration. The revocation method provides the smallest blast radius and fastest effect, avoiding a full outage.",
+   "Once the development team deploys the fix, remember to remove the revocation policy. Forgetting to do so could cause unexpected denials for processes using cached old credentials."
+  ],
+  "caption": "An EC2 instance is compromised, and an attacker is exfiltrating sensitive S3 data. Learn the immediate, real-time steps to cut off access.\n\nAn EC2 instance compromise can lead to attackers extracting temporary credentials and bulk-downloading sensitive S3 data. GuardDuty may alert, but a quick response is needed before a patch is ready. This guide outlines how to immediately cut off access.\n\nThe critical action is to revoke sessions on the compromised IAM role. This invalidates all temporary credentials issued before the current timestamp, effective immediately with no propagation delay. This can be done via CLI or the AWS console.\n\nEvery API call with temporary credentials includes aws:TokenIssueTime. An inline policy denies actions for any credential set issued before the specified timestamp. This stops credentials already exfiltrated or cached by the attacker.\n\nAfter revocation, validate by checking CloudTrail for AccessDenied events on GetObject calls. Legitimate access for the EC2 instance can be restored as it automatically requests new credentials that bypass the revocation.\n\nRevocation alone is not enough; combine it with instance isolation (stop or quarantine the EC2 instance). Revoke first to handle existing credentials, then isolate to prevent new ones from being issued.\n\nWaiting for temporary credentials to expire (up to 6 hours) is not an option during active exfiltration. The revocation method provides the smallest blast radius and fastest effect, avoiding a full outage.\n\nOnce the development team deploys the fix, remember to remove the revocation policy. Forgetting to do so could cause unexpected denials for processes using cached old credentials.\n\n#AWS #S3 #Security #CloudSecurity #IncidentResponse #IAM\n\nSource: DEV",
+  "tweet": "Attacker exfiltrating S3 data? Learn how to immediately cut off access using IAM session revocation. This guide details real-time incident response steps to stop data exfiltration without causing a full outage. #AWS #CloudSecurity #IncidentResponse",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/nghidanh2005/-stopping-s3-data-exfiltration-in-real-time-a-step-by-step-incident-response-2jp",
+  "image": "",
+  "orig_title": "# Stopping S3 Data Exfiltration in Real Time: A Step-by-Step Incident Response",
+  "cluster_urls": [
+   "https://dev.to/nghidanh2005/-stopping-s3-data-exfiltration-in-real-time-a-step-by-step-incident-response-2jp"
+  ],
+  "cluster_titles": [
+   "# Stopping S3 Data Exfiltration in Real Time: A Step-by-Step Incident Response"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1406-0-stop-s3-data-exfiltration-in-real-time-with-.png",
+   "20260823-1406-0-stop-s3-data-exfiltration-in-real-time-with--d1.png",
+   "20260823-1406-0-stop-s3-data-exfiltration-in-real-time-with--d2.png",
+   "20260823-1406-0-stop-s3-data-exfiltration-in-real-time-with--d3.png"
+  ]
+ },
+ {
+  "topic": "ai_shopping_agent_unknown_output",
+  "headline_marked": "[[The Most Important Output of a Shopping Agent May Be `unknown`]]",
+  "headline": "The Most Important Output of a Shopping Agent May Be `unknown`",
+  "summary": "AI shopping agents often fill gaps with inferred data, but explicitly stating 'unknown' is crucial for preserving provenance and avoiding false confidence in e-commerce.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A shopping agent that always provides a complete answer isn't always useful. In e-commerce, product listings are often incomplete, and an AI might infer missing details from similar products, presenting them as facts.",
+   "This practice can mislead buyers by presenting inferred values with the same confidence as seller-declared facts. The challenge for AI in commerce is preserving the provenance and uncertainty of information throughout the decision process.",
+   "Agent-facing product records should distinguish between seller-declared facts, derived estimates, and absent fields. These classes should not be collapsed into a single, polished description.",
+   "A field that is absent should remain absent, and derived estimates must identify their inputs. A seller's statement should not silently become a platform guarantee, ensuring transparency for the buyer.",
+   "Production systems need more than just a null value; the reason a field is unknown affects the agent's next action. Specific states like `stale_value`, `conflicting_sources`, or `not_applicable` lead to different behaviors.",
+   "For example, conflicting dimensions might require evidence review, and an undeclared compatibility claim should block a recommendation rather than invite a guess. Risk indicators, like a new seller, should be surfaced as flags for the buyer to weigh, not as fabricated reputation scores.",
+   "The WebAZ Agent Commerce Lab demonstrates this principle with a known-versus-unknown prompt using real product listings. This lab helps evaluate agents by forcing them to explicitly state `unknown` for missing details, rather than filling gaps with typical values.",
+   "This constraint makes failures visible, allowing comparison against public listings and rejection of invented information. Evaluating an agent based on its `unknown` list can reveal product-data gaps that affect human buyers too.",
+   "While AI commerce often focuses on faster checkout, a safer goal is 'decision readiness.' This means collecting known facts, preserving their origin, exposing what remains unknown, and identifying the next responsible action, which might be asking the seller or stopping the process."
+  ],
+  "caption": "AI shopping agents often invent details. The most important output for a reliable agent? 'Unknown.'\n\nA shopping agent that always provides a complete answer isn't always useful. In e-commerce, product listings are often incomplete, and an AI might infer missing details from similar products, presenting them as facts.\n\nThis practice can mislead buyers by presenting inferred values with the same confidence as seller-declared facts. The challenge for AI in commerce is preserving the provenance and uncertainty of information throughout the decision process.\n\nAgent-facing product records should distinguish between seller-declared facts, derived estimates, and absent fields. These classes should not be collapsed into a single, polished description.\n\nA field that is absent should remain absent, and derived estimates must identify their inputs. A seller's statement should not silently become a platform guarantee, ensuring transparency for the buyer.\n\nProduction systems need more than just a null value; the reason a field is unknown affects the agent's next action. Specific states like `stale_value`, `conflicting_sources`, or `not_applicable` lead to different behaviors.\n\nFor example, conflicting dimensions might require evidence review, and an undeclared compatibility claim should block a recommendation rather than invite a guess. Risk indicators, like a new seller, should be surfaced as flags for the buyer to weigh, not as fabricated reputation scores.\n\nThe WebAZ Agent Commerce Lab demonstrates this principle with a known-versus-unknown prompt using real product listings. This lab helps evaluate agents by forcing them to explicitly state `unknown` for missing details, rather than filling gaps with typical values.\n\nThis constraint makes failures visible, allowing comparison against public listings and rejection of invented information. Evaluating an agent based on its `unknown` list can reveal product-data gaps that affect human buyers too.\n\n#AI #Ecommerce #ShoppingAgent #MachineLearning #Tech #WebAZ\n\nSource: DEV",
+  "tweet": "AI shopping agents can mislead by inventing details. The most crucial output for reliability is 'unknown,' preserving data provenance and preventing false confidence in e-commerce. #AI #Ecommerce #ShoppingAgent",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/seasonkoh/the-most-important-output-of-a-shopping-agent-may-be-unknown-56me",
+  "image": "",
+  "orig_title": "The Most Important Output of a Shopping Agent May Be `unknown`",
+  "cluster_urls": [
+   "https://dev.to/seasonkoh/the-most-important-output-of-a-shopping-agent-may-be-unknown-56me"
+  ],
+  "cluster_titles": [
+   "The Most Important Output of a Shopping Agent May Be `unknown`"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1406-1-the-most-important-output-of-a-shopping-agen.png",
+   "20260823-1406-1-the-most-important-output-of-a-shopping-agen-d1.png",
+   "20260823-1406-1-the-most-important-output-of-a-shopping-agen-d2.png",
+   "20260823-1406-1-the-most-important-output-of-a-shopping-agen-d3.png"
+  ]
+ }
+]

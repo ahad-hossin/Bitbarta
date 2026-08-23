@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai_code_quality_rewrite_needed",
+  "headline_marked": "[[AI-Generated Code for Your Go Project Compiles But Still Needs a Rewrite]]",
+  "headline": "AI-Generated Code for Your Go Project Compiles But Still Needs a Rewrite",
+  "summary": "AI coding tools often produce Go code that compiles but introduces silent failures in the UI or inconsistent styles, leading to costly rewrites. This happens because models lack current project context.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI coding tools frequently generate code that compiles and responds, but fails silently in the UI (e.g., missing menu items or 403 errors). This can also introduce inconsistent coding styles that are hard to untangle later.",
+   "The core issue isn't the AI model itself, but its lack of understanding of the project's current codebase and conventions. Models are often trained on older, publicly visible code styles, like the earlier versions of `go-admin`.",
+   "For `go-admin`, older versions required extensive hand-written API and Service files, a style likely overrepresented in training data. Current recommendations favor an Actions-based pattern, needing fewer files and handling common CRUD operations via the framework.",
+   "Both styles compile, so the discrepancy isn't immediately obvious, leading to mixed codebases. Beyond style, critical UI functionality depends on correct seed data across multiple tables (e.g., `sys_api`, `sys_menu`), which AI often misses.",
+   "To address this, `go-admin` uses `AGENTS.md` convention files for AI tools, focusing on rules that cause real failures. It also provides a reference implementation (`app/demo/`) that compiles and runs in CI, serving as a reliable source of truth.",
+   "These layers help with style, but not always permissions. A \"Skill\" was developed for `go-admin` to guide AI through adding a new business module, covering table design, migrations, scaffolding, and crucial menu/permission seed data steps.",
+   "This approach combines deterministic code generation for standard CRUD with AI generation for business logic, refactors, and tests. The `go-admin` docs offer detailed prompts and templates for various AI coding tasks."
+  ],
+  "caption": "AI-generated Go code often compiles perfectly but fails silently in the UI or introduces costly style inconsistencies. Discover why this happens and how to fix it.\n\nAI coding tools frequently generate code that compiles and responds, but fails silently in the UI (e.g., missing menu items or 403 errors). This can also introduce inconsistent coding styles that are hard to untangle later.\n\nThe core issue isn't the AI model itself, but its lack of understanding of the project's current codebase and conventions. Models are often trained on older, publicly visible code styles, like the earlier versions of `go-admin`.\n\nFor `go-admin`, older versions required extensive hand-written API and Service files, a style likely overrepresented in training data. Current recommendations favor an Actions-based pattern, needing fewer files and handling common CRUD operations via the framework.\n\nBoth styles compile, so the discrepancy isn't immediately obvious, leading to mixed codebases. Beyond style, critical UI functionality depends on correct seed data across multiple tables (e.g., `sys_api`, `sys_menu`), which AI often misses.\n\nTo address this, `go-admin` uses `AGENTS.md` convention files for AI tools, focusing on rules that cause real failures. It also provides a reference implementation (`app/demo/`) that compiles and runs in CI, serving as a reliable source of truth.\n\nThese layers help with style, but not always permissions. A \"Skill\" was developed for `go-admin` to guide AI through adding a new business module, covering table design, migrations, scaffolding, and crucial menu/permission seed data steps.\n\nThis approach combines deterministic code generation for standard CRUD with AI generation for business logic, refactors, and tests. The `go-admin` docs offer detailed prompts and templates for various AI coding tasks.\n\n#AICoding #GoLang #SoftwareDevelopment #DevTools #CodeQuality #AI\n\nSource: DEV",
+  "tweet": "AI-generated Go code compiles but often needs a rewrite due to silent UI failures or style inconsistencies. The problem isn't the model, but its lack of project context. Learn how to guide AI for better results. #AICoding #GoLang #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/zhangwj891129/why-ai-generated-code-for-your-go-project-compiles-but-still-needs-a-rewrite-hea",
+  "image": "",
+  "orig_title": "Why AI-Generated Code for Your Go Project Compiles But Still Needs a Rewrite",
+  "cluster_urls": [
+   "https://dev.to/zhangwj891129/why-ai-generated-code-for-your-go-project-compiles-but-still-needs-a-rewrite-hea"
+  ],
+  "cluster_titles": [
+   "Why AI-Generated Code for Your Go Project Compiles But Still Needs a Rewrite"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1442-0-ai-generated-code-for-your-go-project-compil.png",
+   "20260823-1442-0-ai-generated-code-for-your-go-project-compil-d1.png",
+   "20260823-1442-0-ai-generated-code-for-your-go-project-compil-d2.png",
+   "20260823-1442-0-ai-generated-code-for-your-go-project-compil-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agents_blog_automation_breakdown",
+  "headline_marked": "[[Developer automates blog posts]] with local AI agents, publishing 15 articles/month for $0 API cost",
+  "headline": "Developer automates blog posts with local AI agents, publishing 15 articles/month for $0 API cost",
+  "summary": "A developer built a system using local AI agents on a Mac Mini M4, publishing 15 articles monthly to Dev.to with zero API fees. It maintains consistent tone and output.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer successfully automated their blog using local AI agents, increasing output from 12 articles per year to approximately 15 per month. This system operates with zero monthly API costs, running entirely on local hardware.",
+   "The core of the system is an AI agent named Celebi, activated by a cron job every 48 hours. It reads a personal style guide, selects a topic from a draft folder, or invents one based on recent projects.",
+   "Celebi runs on Ollama, utilizing Qwen 3.5 9B on a Mac Mini M4. For complex tasks, it delegates to other local models like ProgrammierMinna (Qwen 3 Coder 30B) or DocMinna (Granite 3.2 8B) on a Windows PC.",
+   "The entire process from topic selection to final draft takes 3-5 minutes of GPU time, translating to 15-20 seconds of actual clock time due to models being pre-loaded. Articles are posted directly to Dev.to via their REST API.",
+   "Key benefits include automatic consistency, a stable writing tone, and negligible electricity costs (around $5/month). The system is also iterative, allowing the developer to refine rules and tags for continuous improvement.",
+   "However, the system has limitations: fact-checking requires a quick manual skim to catch AI hallucinations, and timeliness is absent as it doesn't track current events.",
+   "Engagement on automated articles is flat, typically generating 50-200 views but few discussions, as they lack provocative stances. The draft folder also acts as a bottleneck, requiring manual input for new ideas.",
+   "Despite individual article view counts dropping, total reach tripled, and the developer's time investment decreased by 95%. Automation is effective for consistent presence but not for building a personal brand with strong engagement."
+  ],
+  "caption": "This developer automated their blog with local AI agents, publishing 15 articles per month with zero API costs. It runs on a Mac Mini M4 and posts directly to Dev.to.\n\nA developer successfully automated their blog using local AI agents, increasing output from 12 articles per year to approximately 15 per month. This system operates with zero monthly API costs, running entirely on local hardware.\n\nThe core of the system is an AI agent named Celebi, activated by a cron job every 48 hours. It reads a personal style guide, selects a topic from a draft folder, or invents one based on recent projects.\n\nCelebi runs on Ollama, utilizing Qwen 3.5 9B on a Mac Mini M4. For complex tasks, it delegates to other local models like ProgrammierMinna (Qwen 3 Coder 30B) or DocMinna (Granite 3.2 8B) on a Windows PC.\n\nThe entire process from topic selection to final draft takes 3-5 minutes of GPU time, translating to 15-20 seconds of actual clock time due to models being pre-loaded. Articles are posted directly to Dev.to via their REST API.\n\nKey benefits include automatic consistency, a stable writing tone, and negligible electricity costs (around $5/month). The system is also iterative, allowing the developer to refine rules and tags for continuous improvement.\n\nHowever, the system has limitations: fact-checking requires a quick manual skim to catch AI hallucinations, and timeliness is absent as it doesn't track current events.\n\nEngagement on automated articles is flat, typically generating 50-200 views but few discussions, as they lack provocative stances. The draft folder also acts as a bottleneck, requiring manual input for new ideas.\n\nDespite individual article view counts dropping, total reach tripled, and the developer's time investment decreased by 95%. Automation is effective for consistent presence but not for building a personal brand with strong engagement.\n\n#AI #Automation #DevBlog #LocalAI #Ollama #Tech\n\nSource: DEV",
+  "tweet": "A developer built a local AI agent system to automate their blog, publishing 15 articles/month for $0 API fees. It runs on a Mac Mini M4, maintaining consistent output & tone, but needs manual fact-checks. #AI #Automation #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/samhartley_dev/i-automated-my-dev-blog-with-local-ai-agents-heres-the-honest-breakdown-4mj6",
+  "image": "",
+  "orig_title": "I Automated My Dev Blog With Local AI Agents. Here's the Honest Breakdown.",
+  "cluster_urls": [
+   "https://dev.to/samhartley_dev/i-automated-my-dev-blog-with-local-ai-agents-heres-the-honest-breakdown-4mj6"
+  ],
+  "cluster_titles": [
+   "I Automated My Dev Blog With Local AI Agents. Here's the Honest Breakdown."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1442-1-developer-automates-blog-posts-with-local-ai.png",
+   "20260823-1442-1-developer-automates-blog-posts-with-local-ai-d1.png",
+   "20260823-1442-1-developer-automates-blog-posts-with-local-ai-d2.png",
+   "20260823-1442-1-developer-automates-blog-posts-with-local-ai-d3.png"
+  ]
+ }
+]

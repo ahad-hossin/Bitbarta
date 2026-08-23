@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "run_ai_models_locally_docker_spring_ai",
+  "headline_marked": "[[Run AI Models Locally]] with Docker Model Runner and Spring AI",
+  "headline": "Run AI Models Locally with Docker Model Runner and Spring AI",
+  "summary": "Java developers can now run AI models locally using Docker Model Runner and Spring AI, enabling cost-effective, privacy-friendly experimentation and development without relying on cloud APIs.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "Generative AI development doesn't always require cloud-hosted models. Docker Model Runner allows Java applications built with Spring AI to run AI models locally, connecting them to Spring Boot without external model APIs.",
+   "This approach means prompts and application data can remain on your machine, eliminating API charges during development and experimentation. It's particularly useful for sensitive or proprietary data, and allows offline inference.",
+   "Your Java application interacts with the local model through an API, with Docker handling the model execution. This provides a convenient way to experiment with LLM applications without immediately provisioning cloud infrastructure.",
+   "A key advantage is that applications continue to use Spring AI abstractions, decoupling business logic from specific model providers. If a local model exposes an OpenAI-compatible API, Spring AI can communicate with it using the appropriate configuration.",
+   "To get started, Docker Desktop must be installed and running. Docker Model Runner's functionality depends on your Docker Desktop version. The local runtime exposes an API endpoint for your Spring AI application to connect to, often using an OpenAI-compatible configuration.",
+   "While local models offer significant benefits for experimentation and cost savings, running large frontier models may require substantial memory and compute. Docker Model Runner is ideal for developers already integrated into the Docker ecosystem, bringing model execution closer to their local development environment for easier reproducibility."
+  ],
+  "caption": "Develop AI applications without cloud API costs or data privacy concerns. Run LLMs directly on your machine with Docker Model Runner and Spring AI.\n\nGenerative AI development doesn't always require cloud-hosted models. Docker Model Runner allows Java applications built with Spring AI to run AI models locally, connecting them to Spring Boot without external model APIs.\n\nThis approach means prompts and application data can remain on your machine, eliminating API charges during development and experimentation. It's particularly useful for sensitive or proprietary data, and allows offline inference.\n\nYour Java application interacts with the local model through an API, with Docker handling the model execution. This provides a convenient way to experiment with LLM applications without immediately provisioning cloud infrastructure.\n\nA key advantage is that applications continue to use Spring AI abstractions, decoupling business logic from specific model providers. If a local model exposes an OpenAI-compatible API, Spring AI can communicate with it using the appropriate configuration.\n\nTo get started, Docker Desktop must be installed and running. Docker Model Runner's functionality depends on your Docker Desktop version. The local runtime exposes an API endpoint for your Spring AI application to connect to, often using an OpenAI-compatible configuration.\n\nWhile local models offer significant benefits for experimentation and cost savings, running large frontier models may require substantial memory and compute. Docker Model Runner is ideal for developers already integrated into the Docker ecosystem, bringing model execution closer to their local development environment for easier reproducibility.\n\n#AI #Docker #SpringAI #Java #LocalAI #Developer\n\nSource: DEV",
+  "tweet": "Develop AI apps without cloud API costs or data privacy concerns! Run LLMs locally on your machine with Docker Model Runner and Spring AI. Perfect for Java developers. #AI #Docker #SpringAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "docker.com",
+  "source": "DEV",
+  "url": "https://dev.to/ayshriv/run-ai-models-locally-with-docker-model-runner-and-spring-ai-2god",
+  "image": "",
+  "orig_title": "Run AI Models Locally with Docker Model Runner and Spring AI",
+  "cluster_urls": [
+   "https://dev.to/ayshriv/run-ai-models-locally-with-docker-model-runner-and-spring-ai-2god"
+  ],
+  "cluster_titles": [
+   "Run AI Models Locally with Docker Model Runner and Spring AI"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1506-0-run-ai-models-locally-with-docker-model-runn.png",
+   "20260823-1506-0-run-ai-models-locally-with-docker-model-runn-d1.png",
+   "20260823-1506-0-run-ai-models-locally-with-docker-model-runn-d2.png",
+   "20260823-1506-0-run-ai-models-locally-with-docker-model-runn-d3.png"
+  ]
+ },
+ {
+  "topic": "nextjs_server_actions_csrf_protection",
+  "headline_marked": "[[Next.js Server Actions Have Built-In CSRF Protection]]. Your API Routes Probably Don't.",
+  "headline": "Next.js Server Actions Have Built-In CSRF Protection. Your API Routes Probably Don't.",
+  "summary": "Next.js Server Actions automatically include Cross-Site Request Forgery (CSRF) protection by verifying the Origin header. However, standard API route handlers lack this built-in safeguard, requiring manual implementation for secure authenticated state mutation",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Next.js Server Actions automatically include Cross-Site Request Forgery (CSRF) protection, a feature often missing from standard API route handlers. CSRF allows a malicious site to trick a victim's browser into sending unauthorized requests to your app, leveraging their authenticated session.",
+   "Server Actions achieve this protection by automatically checking the Origin header of every incoming request. If the Origin header does not match your deployed domain, the request is rejected before your action's code even executes.",
+   "This built-in safeguard is possible because Server Actions are designed to be called from your own app's forms and components. Next.js has the necessary context, including its build output and deployed domain, to perform this verification automatically.",
+   "In contrast, API route handlers (e.g., in `app/api/`) are general-purpose HTTP endpoints. Next.js doesn't make assumptions about who is allowed to call them, accommodating mobile apps, webhooks, or external services. Due to this flexibility, Next.js cannot automatically enforce an origin check.",
+   "If an API route handler mutates state on behalf of an authenticated user, it is vulnerable to CSRF if it doesn't explicitly verify the request's origin. A malicious site can easily auto-submit a POST request, and the browser will attach the user's session cookie.",
+   "It's crucial to understand that CSRF protection (origin checking) is distinct from authorization. While Server Actions protect against cross-origin forgery, they do not automatically ensure that the authenticated user is permitted to perform the requested action. Authorization checks must always be implemented manually.",
+   "Developers with API route handlers in production that modify data based on a session cookie should immediately review them for explicit origin verification. This ensures that only legitimate requests from your own application are processed, preventing potential security exploits."
+  ],
+  "caption": "Next.js Server Actions automatically protect against CSRF attacks. But if you're using API routes, you might be vulnerable.\n\nNext.js Server Actions automatically include Cross-Site Request Forgery (CSRF) protection, a feature often missing from standard API route handlers. CSRF allows a malicious site to trick a victim's browser into sending unauthorized requests to your app, leveraging their authenticated session.\n\nServer Actions achieve this protection by automatically checking the Origin header of every incoming request. If the Origin header does not match your deployed domain, the request is rejected before your action's code even executes.\n\nThis built-in safeguard is possible because Server Actions are designed to be called from your own app's forms and components. Next.js has the necessary context, including its build output and deployed domain, to perform this verification automatically.\n\nIn contrast, API route handlers (e.g., in `app/api/`) are general-purpose HTTP endpoints. Next.js doesn't make assumptions about who is allowed to call them, accommodating mobile apps, webhooks, or external services. Due to this flexibility, Next.js cannot automatically enforce an origin check.\n\nIf an API route handler mutates state on behalf of an authenticated user, it is vulnerable to CSRF if it doesn't explicitly verify the request's origin. A malicious site can easily auto-submit a POST request, and the browser will attach the user's session cookie.\n\nIt's crucial to understand that CSRF protection (origin checking) is distinct from authorization. While Server Actions protect against cross-origin forgery, they do not automatically ensure that the authenticated user is permitted to perform the requested action. Authorization checks must always be implemented manually.\n\n#Nextjs #WebDev #Security #CSRF #Developer #API\n\nSource: DEV",
+  "tweet": "Next.js Server Actions include built-in CSRF protection, but your API routes likely don't. Learn why this crucial safeguard is automatic for Server Actions and requires manual implementation for API handlers that mutate state. #Nextjs #WebSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "nextjs.org",
+  "source": "DEV",
+  "url": "https://dev.to/anas_sheikh_2/nextjs-server-actions-have-built-in-csrf-protection-your-api-routes-probably-dont-41b5",
+  "image": "",
+  "orig_title": "Next.js Server Actions Have Built-In CSRF Protection. Your API Routes Probably Don't.",
+  "cluster_urls": [
+   "https://dev.to/anas_sheikh_2/nextjs-server-actions-have-built-in-csrf-protection-your-api-routes-probably-dont-41b5"
+  ],
+  "cluster_titles": [
+   "Next.js Server Actions Have Built-In CSRF Protection. Your API Routes Probably Don't."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1506-1-next-js-server-actions-have-built-in-csrf-pr.png",
+   "20260823-1506-1-next-js-server-actions-have-built-in-csrf-pr-d1.png",
+   "20260823-1506-1-next-js-server-actions-have-built-in-csrf-pr-d2.png",
+   "20260823-1506-1-next-js-server-actions-have-built-in-csrf-pr-d3.png"
+  ]
+ }
+]

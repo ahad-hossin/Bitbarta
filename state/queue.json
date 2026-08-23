@@ -1,1 +1,60 @@
-[]
+[
+ {
+  "topic": "ai_agents_development_and_challenges",
+  "headline_marked": "Android Storage in 2026: [[Scoped Storage, SAF, and Why Filesystem Abstractions Still Matter]]",
+  "headline": "Android Storage in 2026: Scoped Storage, SAF, and Why Filesystem Abstractions Still Matter",
+  "summary": "Android's storage landscape is evolving beyond traditional file paths, requiring new abstractions for developers to navigate.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Android developers once navigated storage with familiar concepts like file paths and streams. Today, applications must contend with application-private storage, MediaStore for shared media, the Storage Access Framework (SAF) for user-selected documents, and cloud-backed providers, all while abstracting these differences.",
+   "Scoped Storage introduced a significant shift, limiting app access to private directories and using platform APIs. For media files, MediaStore offers an abstraction, while private data can be handled by application-private storage.",
+   "However, applications needing user-selected directories and file access within them require a different approach. SAF allows apps to work with document trees, which can represent local storage or cloud-backed services through various document providers.",
+   "The challenge lies in abstracting these diverse storage mechanisms. A robust abstraction doesn't hide every difference but rather hides the mechanics of access while exposing sensible operations. This means understanding that a URI might look path-like but shouldn't be treated as a normal filesystem path.",
+   "Instead of pretending SAF and the JVM filesystem are identical, the abstraction must represent storage operations. This involves traversing document trees, creating directories, and providing a filesystem-like experience without misrepresenting the underlying storage.",
+   "Performance and API boundaries are crucial. A good abstraction may use a combination of approaches, leveraging DocumentFile for traversal and DocumentsContract for lower-level access, choosing the appropriate mechanism for each operation."
+  ],
+  "caption": "Android storage is getting complex in 2026. Scoped Storage, SAF, and cloud providers mean developers need smart abstractions.\n\nAndroid developers once navigated storage with familiar concepts like file paths and streams. Today, applications must contend with application-private storage, MediaStore for shared media, the Storage Access Framework (SAF) for user-selected documents, and cloud-backed providers, all while abstracting these differences.\n\nScoped Storage introduced a significant shift, limiting app access to private directories and using platform APIs. For media files, MediaStore offers an abstraction, while private data can be handled by application-private storage.\n\nHowever, applications needing user-selected directories and file access within them require a different approach. SAF allows apps to work with document trees, which can represent local storage or cloud-backed services through various document providers.\n\nThe challenge lies in abstracting these diverse storage mechanisms. A robust abstraction doesn't hide every difference but rather hides the mechanics of access while exposing sensible operations. This means understanding that a URI might look path-like but shouldn't be treated as a normal filesystem path.\n\nInstead of pretending SAF and the JVM filesystem are identical, the abstraction must represent storage operations. This involves traversing document trees, creating directories, and providing a filesystem-like experience without misrepresenting the underlying storage.\n\nPerformance and API boundaries are crucial. A good abstraction may use a combination of approaches, leveraging DocumentFile for traversal and DocumentsContract for lower-level access, choosing the appropriate mechanism for each operation.\n\n#AndroidDev #SoftwareEngineering #Storage #SAF #ScopedStorage\n\nSource: DEV",
+  "tweet": "Android storage in 2026: Scoped Storage, SAF, and why filesystem abstractions matter. Developers face a complex landscape beyond traditional paths, needing smart ways to handle diverse storage options. #AndroidDev #SoftwareEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/slambyte/android-storage-in-2026-scoped-storage-saf-and-why-filesystem-abstractions-still-matter-30e",
+  "image": "",
+  "orig_title": "Android Storage in 2026: Scoped Storage, SAF, and Why Filesystem Abstractions Still Matter",
+  "cluster_urls": [
+   "https://dev.to/slambyte/android-storage-in-2026-scoped-storage-saf-and-why-filesystem-abstractions-still-matter-30e",
+   "https://dev.to/praiztech/accessibility-remediation-is-software-engineering-not-a-checklist-3d64",
+   "https://dev.to/virtual_texttools_2036eb/you-probably-dont-need-a-server-for-that-4ffi",
+   "https://dev.to/alkisyuv/my-agents-kept-overwriting-each-other-so-i-gave-them-claims-2h8k",
+   "https://dev.to/alkisyuv/i-built-an-ai-that-writes-like-me-and-im-measuring-how-much-it-fails-4o0",
+   "https://dev.to/alkisyuv/what-my-agents-are-allowed-to-remember-46fd",
+   "https://dev.to/alkisyuv/every-hole-in-the-gate-is-signed-3a43",
+   "https://dev.to/ventrova/catch-mcp-tool-poisoning-and-prompt-injection-regressions-on-every-pr-github-actions-pre-commit-24fb",
+   "https://dev.to/jigjoy/were-running-an-online-hackathon-for-building-concurrent-ai-agents-sep-5-6-3n20",
+   "https://dev.to/theaidownside/atlassian-now-trains-its-ai-on-your-work-by-default-and-full-opt-out-is-an-enterprise-feature-5661"
+  ],
+  "cluster_titles": [
+   "Android Storage in 2026: Scoped Storage, SAF, and Why Filesystem Abstractions Still Matter",
+   "Accessibility remediation is software engineering, not a checklist",
+   "You Probably Don't Need a Server For That",
+   "My agents kept overwriting each other, so I gave them claims",
+   "I built an AI that writes like me, and I'm measuring how much it fails",
+   "What my agents are allowed to remember",
+   "Every hole in the gate is signed",
+   "Catch MCP Tool-Poisoning and Prompt-Injection Regressions on Every PR (GitHub Actions + pre-commit)",
+   "We’re running an online hackathon for building concurrent AI agents — Sep 5–6",
+   "Atlassian Now Trains Its AI on Your Work by Default — and Full Opt-Out Is an Enterprise Feature"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260824-0434-0-android-storage-in-2026-scoped-storage-saf-a.png",
+   "20260824-0434-0-android-storage-in-2026-scoped-storage-saf-a-d1.png",
+   "20260824-0434-0-android-storage-in-2026-scoped-storage-saf-a-d2.png",
+   "20260824-0434-0-android-storage-in-2026-scoped-storage-saf-a-d3.png"
+  ]
+ }
+]

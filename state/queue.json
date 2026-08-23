@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "local_llm_performance_perception",
+  "headline_marked": "[[Your local LLM feels dumber]] due to inference implementation differences",
+  "headline": "Your local LLM feels dumber due to inference implementation differences",
+  "summary": "The perceived intelligence of your local Large Language Model often falls short of expectations. This is largely due to significant variations in hardware, software, and inference settings compared to reference implementations.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Many users find their local LLMs underperform compared to online hype. This discrepancy isn't always the model itself, but rather the specific inference setup.",
+   "Reference implementations, used for official benchmarks, run on different hardware and software stacks than typical home labs. These differences significantly impact output.",
+   "Even with identical model weights, varying GPU generations and instruction sets can cause tokens to be calculated differently, leading to divergent results.",
+   "Measuring performance requires running standard benchmarks representative of your actual workload, not just a few zero-shot prompts. Correct sampler settings, often specified in model cards, are also crucial.",
+   "\"Logits\" are the model's scores for possible next tokens. Small changes in these probabilities can alter the generated text, leading to a \"something feels off\" sensation.",
+   "KL Divergence (KLD) measures how far a probability distribution has moved from a baseline. A lower KLD indicates closer adherence to the reference output, but doesn't automatically mean \"smarter.\"",
+   "Be wary of KLD claims on quantized model cards without full disclosure of the reference checkpoints, runtime environment, evaluation text, and methodology. Proper interpretation requires complete context.",
+   "The complex software stack involved in LLM inference, from tokenization to sampling, has many configurable components that can introduce divergence based on hardware, software, model, and quantization."
+  ],
+  "caption": "Ever wonder why your local LLM doesn't perform as well as advertised? It's often not the model itself, but the intricate details of your inference setup.\n\nMany users find their local LLMs underperform compared to online hype. This discrepancy isn't always the model itself, but rather the specific inference setup.\n\nReference implementations, used for official benchmarks, run on different hardware and software stacks than typical home labs. These differences significantly impact output.\n\nEven with identical model weights, varying GPU generations and instruction sets can cause tokens to be calculated differently, leading to divergent results.\n\nMeasuring performance requires running standard benchmarks representative of your actual workload, not just a few zero-shot prompts. Correct sampler settings, often specified in model cards, are also crucial.\n\n\"Logits\" are the model's scores for possible next tokens. Small changes in these probabilities can alter the generated text, leading to a \"something feels off\" sensation.\n\nKL Divergence (KLD) measures how far a probability distribution has moved from a baseline. A lower KLD indicates closer adherence to the reference output, but doesn't automatically mean \"smarter.\"\n\nBe wary of KLD claims on quantized model cards without full disclosure of the reference checkpoints, runtime environment, evaluation text, and methodology. Proper interpretation requires complete context.\n\nThe complex software stack involved in LLM inference, from tokenization to sampling, has many configurable components that can introduce divergence based on hardware, software, model, and quantization.\n\n#LLM #AI #MachineLearning #Tech #Inference #DeepLearning\n\nSource: Hacker News",
+  "tweet": "Your local LLM feeling dumber than expected? It's likely due to subtle but significant differences in hardware, software, and inference settings compared to reference implementations. Dive into the technical reasons why. #LLM #AI #Inference",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+  "image": "",
+  "orig_title": "Why your local LLM feels dumber than it is",
+  "cluster_urls": [
+   "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917"
+  ],
+  "cluster_titles": [
+   "Why your local LLM feels dumber than it is"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260823-1106-0-your-local-llm-feels-dumber-due-to-inference.png",
+   "20260823-1106-0-your-local-llm-feels-dumber-due-to-inference-d1.png",
+   "20260823-1106-0-your-local-llm-feels-dumber-due-to-inference-d2.png",
+   "20260823-1106-0-your-local-llm-feels-dumber-due-to-inference-d3.png"
+  ]
+ },
+ {
+  "topic": "walmart_flipkart_india_quick_commerce",
+  "headline_marked": "[[Flipkart Minutes nears 1.2M daily orders]], closing gap with India's quick-commerce leaders",
+  "headline": "Flipkart Minutes nears 1.2M daily orders, closing gap with India's quick-commerce leaders",
+  "summary": "Flipkart's quick-commerce service, Minutes, now handles 1.1-1.2 million daily orders, a significant jump from 400,000 in November, rapidly catching up to competitors like Swiggy's Instamart.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Flipkart Minutes, launched in August 2024, now processes 1.1-1.2 million orders daily, a sharp increase from 390,000-400,000 in November. This growth positions it close to Swiggy's Instamart, which sees about 1.4 million daily orders.",
+   "Despite being a latecomer to India's quick-commerce market, Flipkart is rapidly narrowing the gap with established leaders like Instamart, Blinkit, and Zepto. Blinkit leads with 3.4-3.6 million daily orders, followed by Zepto at 2.4-2.6 million.",
+   "The service has aggressively expanded its infrastructure, now operating 1,020-1,050 micro-fulfillment centers, up from 600 in January. Flipkart aims to reach 1,500 such facilities by the end of 2026, adding about 100 monthly.",
+   "Flipkart leverages its vast existing e-commerce customer base, acquired over years, providing Minutes with a ready audience. This strategic advantage helps drive customer acquisition and repeat purchases.",
+   "Customer engagement is strong, with 65-70% monthly repeat buyers and a 50-60% increase in transactions per customer year-over-year. The average order value is ₹400-₹500 ($4.20-$5.20), with categories like fruits, vegetables, and dairy growing fast.",
+   "Minutes has also improved efficiency, with its average delivery time dropping to approximately 11 minutes, down from 13 minutes a year ago. This efficiency supports the growing demand for quick commerce in India.",
+   "The quick-commerce sector in India continues to grow, even as broader consumer demand shows some weakness. Amazon is also expanding its quick-commerce service, Amazon Now, aiming to reach over 300 cities and 1,000 micro-fulfillment centers."
+  ],
+  "caption": "Flipkart Minutes is now delivering over 1.1 million orders daily, a massive surge from 400,000 in November. It's rapidly closing in on India's quick-commerce leaders.\n\nFlipkart Minutes, launched in August 2024, now processes 1.1-1.2 million orders daily, a sharp increase from 390,000-400,000 in November. This growth positions it close to Swiggy's Instamart, which sees about 1.4 million daily orders.\n\nDespite being a latecomer to India's quick-commerce market, Flipkart is rapidly narrowing the gap with established leaders like Instamart, Blinkit, and Zepto. Blinkit leads with 3.4-3.6 million daily orders, followed by Zepto at 2.4-2.6 million.\n\nThe service has aggressively expanded its infrastructure, now operating 1,020-1,050 micro-fulfillment centers, up from 600 in January. Flipkart aims to reach 1,500 such facilities by the end of 2026, adding about 100 monthly.\n\nFlipkart leverages its vast existing e-commerce customer base, acquired over years, providing Minutes with a ready audience. This strategic advantage helps drive customer acquisition and repeat purchases.\n\nCustomer engagement is strong, with 65-70% monthly repeat buyers and a 50-60% increase in transactions per customer year-over-year. The average order value is ₹400-₹500 ($4.20-$5.20), with categories like fruits, vegetables, and dairy growing fast.\n\nMinutes has also improved efficiency, with its average delivery time dropping to approximately 11 minutes, down from 13 minutes a year ago. This efficiency supports the growing demand for quick commerce in India.\n\nThe quick-commerce sector in India continues to grow, even as broader consumer demand shows some weakness. Amazon is also expanding its quick-commerce service, Amazon Now, aiming to reach over 300 cities and 1,000 micro-fulfillment centers.\n\n#Flipkart #QuickCommerce #IndiaTech #Ecommerce #TechNews #Walmart\n\nSource: TechCrunch",
+  "tweet": "Flipkart Minutes is surging in India's quick-commerce market, now handling over 1.1M daily orders. This massive growth, up from 400K in November, puts it close to top rivals. Average delivery time is down to 11 minutes. #Flipkart #IndiaTech #Ecommerce",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "flipkart.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/08/22/two-years-after-launch-walmarts-flipkart-is-closing-in-on-indias-quick-commerce-leaders/",
+  "image": "",
+  "orig_title": "Two years after launch, Walmart’s Flipkart is closing in on India’s quick-commerce leaders",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/08/22/two-years-after-launch-walmarts-flipkart-is-closing-in-on-indias-quick-commerce-leaders/"
+  ],
+  "cluster_titles": [
+   "Two years after launch, Walmart’s Flipkart is closing in on India’s quick-commerce leaders"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260823-1106-1-flipkart-minutes-nears-1-2m-daily-orders-clo.png",
+   "20260823-1106-1-flipkart-minutes-nears-1-2m-daily-orders-clo-d1.png",
+   "20260823-1106-1-flipkart-minutes-nears-1-2m-daily-orders-clo-d2.png",
+   "20260823-1106-1-flipkart-minutes-nears-1-2m-daily-orders-clo-d3.png"
+  ]
+ }
+]

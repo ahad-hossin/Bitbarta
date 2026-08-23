@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "ai_agents_optimize_java_code",
+  "headline_marked": "[[AI Agents Can Now Optimize Your Slow Java Code]] in Spring Boot, no specialist needed",
+  "headline": "AI Agents Can Now Optimize Your Slow Java Code in Spring Boot, no specialist needed",
+  "summary": "Performance work that once needed a rare specialist now takes minutes, not days. AI agents can optimize Java code, reducing human-time cost by up to a million times.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A viral tweet sparked debate on LLM-generated bloat, leading engineer Dan Luu to publish 'There's no reason for software to be slow anymore.' His essay argues that AI agents can perform performance work that previously required rare specialists, quantifying a human-time cost reduction of up to a million times.",
+   "Luu demonstrated this by having an agent optimize his ripgrep usage in 2 minutes. Performance engineer Jamie Brandon also saw Claude achieve significantly better results on Anthropic's take-home exercise, with some optimizations Brandon described as 'crazy shit' he wouldn't have tried.",
+   "For enterprise Java services, this means measuring and trying optimizations now costs minutes instead of days. A practical workflow is presented for applying AI agents to slow Spring Boot hot paths, ensuring quality results.",
+   "The conventional wisdom for Java teams was to let the JVM's JIT handle performance, as optimization investigations were costly. With AI, this calculus changes, making many previously 'unprofitable' optimizations, even speculative ones, worth pursuing.",
+   "A crucial lesson from Luu's work is the risk of overfitting. Agents, like humans, can tune for synthetic loads. The proposed workflow emphasizes optimizing against real workload samples and scoring against a holdout set to ensure true performance improvement, not just benchmark gaming.",
+   "The full setup involves a fixed harness, real workload data, an optimization loop, and a holdout gate. This structured approach helps prevent agents from shipping garbage while still leveraging their rapid optimization capabilities."
+  ],
+  "caption": "AI agents are slashing the human-time cost of code optimization by up to a million times. This changes how Java teams approach performance.\n\nA viral tweet sparked debate on LLM-generated bloat, leading engineer Dan Luu to publish 'There's no reason for software to be slow anymore.' His essay argues that AI agents can perform performance work that previously required rare specialists, quantifying a human-time cost reduction of up to a million times.\n\nLuu demonstrated this by having an agent optimize his ripgrep usage in 2 minutes. Performance engineer Jamie Brandon also saw Claude achieve significantly better results on Anthropic's take-home exercise, with some optimizations Brandon described as 'crazy shit' he wouldn't have tried.\n\nFor enterprise Java services, this means measuring and trying optimizations now costs minutes instead of days. A practical workflow is presented for applying AI agents to slow Spring Boot hot paths, ensuring quality results.\n\nThe conventional wisdom for Java teams was to let the JVM's JIT handle performance, as optimization investigations were costly. With AI, this calculus changes, making many previously 'unprofitable' optimizations, even speculative ones, worth pursuing.\n\nA crucial lesson from Luu's work is the risk of overfitting. Agents, like humans, can tune for synthetic loads. The proposed workflow emphasizes optimizing against real workload samples and scoring against a holdout set to ensure true performance improvement, not just benchmark gaming.\n\nThe full setup involves a fixed harness, real workload data, an optimization loop, and a holdout gate. This structured approach helps prevent agents from shipping garbage while still leveraging their rapid optimization capabilities.\n\n#AI #Java #SpringBoot #CodeOptimization #DeveloperTools #Performance\n\nSource: DEV",
+  "tweet": "AI agents are slashing the human-time cost of code optimization by up to 1,000,000x. A new workflow shows how to apply this to slow Spring Boot services, making previously 'unprofitable' optimizations viable in minutes. #AI #Java #CodeOptimization",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jamilxt/ai-agents-can-now-optimize-your-slow-java-code-a-spring-boot-workflow-that-used-to-need-a-1ipn",
+  "image": "",
+  "orig_title": "AI Agents Can Now Optimize Your Slow Java Code: A Spring Boot Workflow That Used to Need a Specialist",
+  "cluster_urls": [
+   "https://dev.to/jamilxt/ai-agents-can-now-optimize-your-slow-java-code-a-spring-boot-workflow-that-used-to-need-a-1ipn"
+  ],
+  "cluster_titles": [
+   "AI Agents Can Now Optimize Your Slow Java Code: A Spring Boot Workflow That Used to Need a Specialist"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1006-0-ai-agents-can-now-optimize-your-slow-java-co.png",
+   "20260823-1006-0-ai-agents-can-now-optimize-your-slow-java-co-d1.png",
+   "20260823-1006-0-ai-agents-can-now-optimize-your-slow-java-co-d2.png",
+   "20260823-1006-0-ai-agents-can-now-optimize-your-slow-java-co-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_rag_framework_lessons",
+  "headline_marked": "[[Vestibule RAG framework wasn't installable]] despite 483 tests passing; lessons from AI agents",
+  "headline": "Vestibule RAG framework wasn't installable despite 483 tests passing; lessons from AI agents",
+  "summary": "A Python RAG framework built with AI agents passed 483 tests, yet a simple pip install failed due to packaging conflicts and real-world SDK issues. This exposed a critical gap between internal testing and user experience.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Developer spent two months building Vestibule, an open-source Python framework for RAG ingestion's 'boring layer'—stable document IDs, state ledgers, error classification. Despite 483 tests passing, the framework was found to be uninstallable via pip install.",
+   "The majority of the code was written by four AI agents: one for design, one for design review, one for implementation, and one for code review. This process involved real GitHub pull requests, with the developer signing off at each stage, resulting in twelve components and 878 tests.",
+   "A critical race condition in the vector index provisioning component was identified by an AI reviewer agent during the design phase, before any code was written. This bug would have caused duplicate index creation in production under default settings.",
+   "The major installability issues were discovered only after writing a quickstart script and attempting a clean installation, mimicking a new user. Problems included a packaging conflict, a default model name that never worked with the real SDK, and an import error from a missing optional dependency.",
+   "The core problem wasn't the tests themselves, but what they measured. They confirmed internal code consistency and mocked seams, failing to validate the framework in a real user environment with a clean machine, actual installation, and live SDK interactions.",
+   "The lasting solution involved implementing a new CI job that builds a clean virtual environment, performs a real pip install, and executes the quickstart script on every pull request. All three critical bugs were openly documented in the release notes.",
+   "Vestibule aims to address common production RAG failures that tutorials often miss: issues like retries duplicating chunks, documents silently vanishing, cross-team config corruption, and the inability to track document ingestion status.",
+   "The framework provides four core contracts: an arrival envelope for validated document entry with ACLs, deterministic identity for doc_id and chunk_id, a state ledger for document tracking, and a failure taxonomy to classify errors as permanent or transient.",
+   "Additional features include per-vertical configuration for different chunk sizes and ACL policies, dynamic index provisioning, and pluggable adapters for various parsers, chunkers, embedders, and vector stores, including local options.",
+   "Key lessons from the development process emphasize knowing the real need, prioritizing gates over speed (AI-found design flaws saved incidents), and critically, using your own product 'cold' on a clean machine to uncover real-world usability issues."
+  ],
+  "caption": "A Python RAG framework passed 483 tests, yet couldn't be installed. This critical flaw was only found by running a quickstart script like a real user.\n\nDeveloper spent two months building Vestibule, an open-source Python framework for RAG ingestion's 'boring layer'—stable document IDs, state ledgers, error classification. Despite 483 tests passing, the framework was found to be uninstallable via pip install.\n\nThe majority of the code was written by four AI agents: one for design, one for design review, one for implementation, and one for code review. This process involved real GitHub pull requests, with the developer signing off at each stage, resulting in twelve components and 878 tests.\n\nA critical race condition in the vector index provisioning component was identified by an AI reviewer agent during the design phase, before any code was written. This bug would have caused duplicate index creation in production under default settings.\n\nThe major installability issues were discovered only after writing a quickstart script and attempting a clean installation, mimicking a new user. Problems included a packaging conflict, a default model name that never worked with the real SDK, and an import error from a missing optional dependency.\n\nThe core problem wasn't the tests themselves, but what they measured. They confirmed internal code consistency and mocked seams, failing to validate the framework in a real user environment with a clean machine, actual installation, and live SDK interactions.\n\nThe lasting solution involved implementing a new CI job that builds a clean virtual environment, performs a real pip install, and executes the quickstart script on every pull request. All three critical bugs were openly documented in the release notes.\n\nVestibule aims to address common production RAG failures that tutorials often miss: issues like retries duplicating chunks, documents silently vanishing, cross-team config corruption, and the inability to track document ingestion status.\n\n#SoftwareDevelopment #AI #RAG #Testing #Python #Developer\n\nSource: DEV",
+  "tweet": "A Python RAG framework passed 483 tests, yet couldn't be installed. This critical flaw was only found by running a quickstart script like a real user. Lessons from building with AI agents reveal the gap between internal tests and real-world usability. #SoftwareDev #AI #Testi",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vk032503/483-tests-passed-but-vestibule-rag-framework-wasnt-installable-lessons-from-building-with-ai-b81",
+  "image": "",
+  "orig_title": "483 tests passed, but Vestibule RAG framework wasn't installable — lessons from building with AI agents",
+  "cluster_urls": [
+   "https://dev.to/vk032503/483-tests-passed-but-vestibule-rag-framework-wasnt-installable-lessons-from-building-with-ai-b81"
+  ],
+  "cluster_titles": [
+   "483 tests passed, but Vestibule RAG framework wasn't installable — lessons from building with AI agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-1006-1-vestibule-rag-framework-wasn-t-installable-d.png",
+   "20260823-1006-1-vestibule-rag-framework-wasn-t-installable-d-d1.png",
+   "20260823-1006-1-vestibule-rag-framework-wasn-t-installable-d-d2.png",
+   "20260823-1006-1-vestibule-rag-framework-wasn-t-installable-d-d3.png",
+   "20260823-1006-1-vestibule-rag-framework-wasn-t-installable-d-d4.png"
+  ]
+ }
+]

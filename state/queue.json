@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "google sheets features for productivity",
+  "headline_marked": "[[Google Sheets]] now generates QR codes, aggregates RSS feeds",
+  "headline": "Google Sheets now generates QR codes, aggregates RSS feeds",
+  "summary": "Discover how Google Sheets' built-in formulas can replace dedicated apps for QR code generation, RSS aggregation, and even currency conversion.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "Google Sheets has evolved beyond basic data management, offering powerful features that can replace other utility apps. Users can now generate QR codes for links, contact details, or plain text using a simple formula and a free public API server, eliminating the need for third-party apps and their associated ads.",
+   "The QR code generation is seamless: input your data into a cell, then use the formula `=IMAGE(\"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=\" & ENCODEURL(A2))` in another cell. The generated QR code image automatically fits the cell, with options to adjust resolution and aspect ratio.",
+   "For news enthusiasts, Google Sheets acts as a lightweight RSS feed aggregator. The `IMPORTFEED` function allows users to track breaking news and new product releases by pulling data directly from RSS feed URLs, presenting it as raw, editable text.",
+   "This feature is particularly useful for managing feeds without paywalls or device limits, unlike many standalone aggregators. The formula `=IMPORTFEED(\"URL\", \"items\", TRUE, 10)` can fetch the 10 latest articles, complete with headers for title, author, and publication date.",
+   "Google Sheets also boasts a robust built-in translation feature, capable of converting entire rows or columns of text at once. This eliminates the tedious manual process of copying and pasting entries into separate translation tabs.",
+   "Users can leverage Gemini for Workspace to translate specific cells or entire tables, or manually use the `=ARRAYFORMULA(IF(A2:A=\"\", \"\", GOOGLETRANSLATE(A2:A, \"auto\", \"en\")))` formula for instant translations. Customizing target languages is as simple as changing the language code.",
+   "Furthermore, Sheets provides a convenient way to handle currency conversions, especially useful for travelers. By pulling live exchange rates from the web, conversions update dynamically, offering a faster alternative to switching between browser tabs or calculator apps.",
+   "With Gemini for Workspace, users can even prompt it to generate dynamic conversion tables for multiple currencies in a matter of minutes, streamlining financial tracking on the go."
+  ],
+  "caption": "Did you know Google Sheets can generate QR codes and aggregate RSS feeds? \n\nIt's true! Google's powerful spreadsheet tool has hidden features that can replace dedicated apps.\n\nGoogle Sheets has evolved beyond basic data management, offering powerful features that can replace other utility apps. Users can now generate QR codes for links, contact details, or plain text using a simple formula and a free public API server, eliminating the need for third-party apps and their associated ads.\n\nThe QR code generation is seamless: input your data into a cell, then use the formula `=IMAGE(\"https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=\" & ENCODEURL(A2))` in another cell. The generated QR code image automatically fits the cell, with options to adjust resolution and aspect ratio.\n\nFor news enthusiasts, Google Sheets acts as a lightweight RSS feed aggregator. The `IMPORTFEED` function allows users to track breaking news and new product releases by pulling data directly from RSS feed URLs, presenting it as raw, editable text.\n\nThis feature is particularly useful for managing feeds without paywalls or device limits, unlike many standalone aggregators. The formula `=IMPORTFEED(\"URL\", \"items\", TRUE, 10)` can fetch the 10 latest articles, complete with headers for title, author, and publication date.\n\nGoogle Sheets also boasts a robust built-in translation feature, capable of converting entire rows or columns of text at once. This eliminates the tedious manual process of copying and pasting entries into separate translation tabs.\n\nUsers can leverage Gemini for Workspace to translate specific cells or entire tables, or manually use the `=ARRAYFORMULA(IF(A2:A=\"\", \"\", GOOGLETRANSLATE(A2:A, \"auto\", \"en\")))` formula for instant translations. Customizing target languages is as simple as changing the language code.\n\n#GoogleSheets #Productivity #TechTips #Android #Spreadsheet\n\nSource: Android Police",
+  "tweet": "[[Google Sheets]] now generates QR codes, aggregates RSS feeds, and more! \n\nDiscover how to use built-in formulas to replace dedicated apps for tasks like QR code generation and RSS aggregation. #GoogleSheets #Productivity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/6-google-sheets-features-are-so-good-i-deleted-paid-apps/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/08/google-sheets-logo-surrounded-by-qr-code-rss-translation-and-spreadsheet-formula-icons.jpg",
+  "orig_title": "These 6 Google Sheets features are so good I deleted paid apps for them",
+  "cluster_urls": [
+   "https://www.androidpolice.com/6-google-sheets-features-are-so-good-i-deleted-paid-apps/"
+  ],
+  "cluster_titles": [
+   "These 6 Google Sheets features are so good I deleted paid apps for them"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260823-2132-0-google-sheets-now-generates-qr-codes-aggrega.png",
+   "20260823-2132-0-google-sheets-now-generates-qr-codes-aggrega-d1.png",
+   "20260823-2132-0-google-sheets-now-generates-qr-codes-aggrega-d2.png",
+   "20260823-2132-0-google-sheets-now-generates-qr-codes-aggrega-d3.png"
+  ]
+ },
+ {
+  "topic": "flock ceo calls for compromise amid surveillance backlash",
+  "headline_marked": "Flock CEO: [[We need a compromise]] between privacy and safety",
+  "headline": "Flock CEO: We need a compromise between privacy and safety",
+  "summary": "Surveillance tech company Flock Safety faces backlash over misuse of its cameras, drones, and license plate readers.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Flock Safety CEO Garrett Langley is calling for a \"compromise\" between privacy and safety as his company faces increasing public scrutiny. The company's surveillance technology, including cameras, drones, and license plate readers, has raised concerns about potential misuse.",
+   "Recent reports indicate that police officers have been accused of using Flock technology for unauthorized purposes, such as stalking. The Washington Post identified 46 such cases, prompting an apology from Langley to one alleged victim, though he maintains Flock is the first company to \"shine a light\" on such abuses.",
+   "Politicians from both sides of the aisle have targeted Flock. Democrats like Abdul El-Sayed have criticized the \"mass proliferation\" of cameras, while Senator Bernie Sanders has called to \"STOP AI MASS SURVEILLANCE.\" Republicans have introduced legislation to prohibit federal government purchase of automated surveillance systems, including Flock Safety cameras.",
+   "In response to criticism, Flock has reduced default data retention from 30 to seven days and requires case codes for data access. However, these changes can be overridden by police using an \"Evidence Mode,\" which the ACLU notes could be a \"PR move\" rather than a genuine change.",
+   "Langley advocates for state regulators to criminalize the illegal use of Flock data and emphasizes the company's efforts to improve accountability. He argues that current regulations and accountability for technologies like Flock are insufficient, a stance he will discuss further at TechCrunch's Disrupt conference."
+  ],
+  "caption": "Flock Safety CEO calls for \"compromise\" on privacy vs. safety amid misuse allegations and bipartisan political backlash.\n\nFlock Safety CEO Garrett Langley is calling for a \"compromise\" between privacy and safety as his company faces increasing public scrutiny. The company's surveillance technology, including cameras, drones, and license plate readers, has raised concerns about potential misuse.\n\nRecent reports indicate that police officers have been accused of using Flock technology for unauthorized purposes, such as stalking. The Washington Post identified 46 such cases, prompting an apology from Langley to one alleged victim, though he maintains Flock is the first company to \"shine a light\" on such abuses.\n\nPoliticians from both sides of the aisle have targeted Flock. Democrats like Abdul El-Sayed have criticized the \"mass proliferation\" of cameras, while Senator Bernie Sanders has called to \"STOP AI MASS SURVEILLANCE.\" Republicans have introduced legislation to prohibit federal government purchase of automated surveillance systems, including Flock Safety cameras.\n\nIn response to criticism, Flock has reduced default data retention from 30 to seven days and requires case codes for data access. However, these changes can be overridden by police using an \"Evidence Mode,\" which the ACLU notes could be a \"PR move\" rather than a genuine change.\n\nLangley advocates for state regulators to criminalize the illegal use of Flock data and emphasizes the company's efforts to improve accountability. He argues that current regulations and accountability for technologies like Flock are insufficient, a stance he will discuss further at TechCrunch's Disrupt conference.\n\n#FlockSafety #Surveillance #Privacy #TechNews #AI\n\nSource: TechCrunch",
+  "tweet": "Flock Safety CEO calls for \"compromise\" on privacy vs. safety amid misuse allegations and bipartisan political backlash. The company has reduced data retention but critics remain wary. #FlockSafety #Surveillance #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "flocksafety.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/",
+  "image": "",
+  "orig_title": "Flock CEO calls for ‘compromise’ as surveillance company faces growing backlash",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/"
+  ],
+  "cluster_titles": [
+   "Flock CEO calls for ‘compromise’ as surveillance company faces growing backlash"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260823-2132-1-flock-ceo-we-need-a-compromise-between-priva.png",
+   "20260823-2132-1-flock-ceo-we-need-a-compromise-between-priva-d1.png",
+   "20260823-2132-1-flock-ceo-we-need-a-compromise-between-priva-d2.png",
+   "20260823-2132-1-flock-ceo-we-need-a-compromise-between-priva-d3.png"
+  ]
+ }
+]

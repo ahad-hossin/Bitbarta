@@ -1,1 +1,50 @@
-[]
+[
+ {
+  "topic": "trusted_ai_agent_transactions_identity_and_security",
+  "headline_marked": "NestMux runs [[five coding agents]] in a single window",
+  "headline": "NestMux runs five coding agents in a single window",
+  "summary": "The app supports Claude Code, Codex, Gemini CLI, Copilot, and OpenCode, each in its own terminal pane.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "NestMux is a desktop application that consolidates multiple coding agents, including Claude Code, Codex, Gemini CLI, Copilot, and OpenCode, into a single interface. Each agent operates within its own dedicated terminal pane, allowing for independent accounts and git worktrees.",
+   "The application's architecture treats each agent as a process within a standard terminal emulator. It leverages node-pty to spawn shells, redirecting HOME directories for isolated accounts and setting specific current working directories for git worktrees, preventing conflicts when multiple agents work on the same repository.",
+   "A key design choice is operating on raw terminal input rather than parsing agent output. This approach ensures compatibility with any program that interacts with a terminal, such as agents with their own TUIs, REPLs, or even git commands like rebase -i, without requiring specific knowledge of each agent's internal workings.",
+   "This simplicity comes with trade-offs: the app broadcasts all input, including control keys, and does not explicitly check if a pane is ready to receive input. This design avoids the fragility of parsing agent output, which could break with every CLI update.",
+   "Resource monitoring, such as CPU, memory, and open ports per pane, is handled through complex heuristics. It involves resolving process trees, as agents often spawn child processes that can become orphaned. The app attributes resources based on process executable paths, command lines, and current directories, with some limitations for elevated or cross-user processes.",
+   "NestMux also features a built-in diff viewer that parses unified diffs into files and hunks. It avoids rendering files over 10,000 lines to prevent performance issues and defaults to showing uncommitted work relative to HEAD."
+  ],
+  "caption": "Run Claude Code, Codex, Gemini CLI, Copilot, and OpenCode side-by-side in one window with NestMux.\n\nNestMux is a desktop application that consolidates multiple coding agents, including Claude Code, Codex, Gemini CLI, Copilot, and OpenCode, into a single interface. Each agent operates within its own dedicated terminal pane, allowing for independent accounts and git worktrees.\n\nThe application's architecture treats each agent as a process within a standard terminal emulator. It leverages node-pty to spawn shells, redirecting HOME directories for isolated accounts and setting specific current working directories for git worktrees, preventing conflicts when multiple agents work on the same repository.\n\nA key design choice is operating on raw terminal input rather than parsing agent output. This approach ensures compatibility with any program that interacts with a terminal, such as agents with their own TUIs, REPLs, or even git commands like rebase -i, without requiring specific knowledge of each agent's internal workings.\n\nThis simplicity comes with trade-offs: the app broadcasts all input, including control keys, and does not explicitly check if a pane is ready to receive input. This design avoids the fragility of parsing agent output, which could break with every CLI update.\n\nResource monitoring, such as CPU, memory, and open ports per pane, is handled through complex heuristics. It involves resolving process trees, as agents often spawn child processes that can become orphaned. The app attributes resources based on process executable paths, command lines, and current directories, with some limitations for elevated or cross-user processes.\n\nNestMux also features a built-in diff viewer that parses unified diffs into files and hunks. It avoids rendering files over 10,000 lines to prevent performance issues and defaults to showing uncommitted work relative to HEAD.\n\n#coding #developers #AI #software #NestMux\n\nSource: DEV",
+  "tweet": "NestMux lets you run five coding agents (Claude, Codex, Gemini, Copilot, OpenCode) in a single window. Each agent gets its own terminal, account, and git worktree. #coding #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nestmux.com",
+  "source": "DEV",
+  "url": "https://dev.to/eliseomdq/how-we-run-five-coding-agents-side-by-side-in-one-window-32gf",
+  "image": "",
+  "orig_title": "How we run five coding agents side by side in one window",
+  "cluster_urls": [
+   "https://dev.to/eliseomdq/how-we-run-five-coding-agents-side-by-side-in-one-window-32gf",
+   "https://dev.to/darkedges/trusted-ai-agent-transactions-part-4-pingauthorize-policy-decisions-3ik8",
+   "https://dev.to/darkedges/trusted-ai-agent-transactions-part-3-spire-workload-identity-1gfb",
+   "https://dev.to/darkedges/trusted-ai-agent-transactions-part-2-pingfederate-token-exchange-35pn",
+   "https://dev.to/darkedges/trusted-ai-agent-transactions-part-1-the-identity-problem-17aa"
+  ],
+  "cluster_titles": [
+   "How we run five coding agents side by side in one window",
+   "Trusted AI Agent Transactions, Part 4: PingAuthorize Policy Decisions",
+   "Trusted AI Agent Transactions, Part 3: SPIRE Workload Identity",
+   "Trusted AI Agent Transactions, Part 2: PingFederate Token Exchange",
+   "Trusted AI Agent Transactions, Part 1: The Identity Problem"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260824-0531-0-nestmux-runs-five-coding-agents-in-a-single-.png",
+   "20260824-0531-0-nestmux-runs-five-coding-agents-in-a-single--d1.png",
+   "20260824-0531-0-nestmux-runs-five-coding-agents-in-a-single--d2.png",
+   "20260824-0531-0-nestmux-runs-five-coding-agents-in-a-single--d3.png"
+  ]
+ }
+]

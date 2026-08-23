@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai_agent_verifiable_stop_conditions",
+  "headline_marked": "[[Agent loops need verifiable stop conditions]] to prevent premature victory",
+  "headline": "Agent loops need verifiable stop conditions to prevent premature victory",
+  "summary": "AI agents often claim completion prematurely. Learn why self-grading fails and how to implement external, verifiable stop conditions to ensure your agent loops are truly done.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agent loops often declare completion prematurely, leading to 'premature victory' and 'fake-done features'. This happens because an agent grading its own work is inherently optimistic and will assert it's done before it truly is.",
+   "A stop condition must be an objective claim about reality, verifiable by an entity separate from the agent performing the work. Without external verification, it's merely a self-report, not a true check.",
+   "The article outlines four 'rungs of verification', from simple exit codes (Rung 1) to a separate AI model (Rung 3) dedicated solely to checking the stop condition. The gap between these rungs highlights the 'maker' agent's optimism.",
+   "The core principle is that the checker's value comes entirely from not being the maker. It should have different instructions, potentially a cheaper model, and a clean context for each turn to ensure an unbiased 'PASS'.",
+   "Developers must also implement 'caps' – conditions that stop a loop regardless of success, preventing infinite runs. A trusted loop combines both a success-based stop condition and a fail-safe cap.",
+   "A practical example involved fixing a bug in a content-agent repo using a fresh-context maker and a bash test exit code as the checker, demonstrating a machine-checkable artifact for verification.",
+   "The 'single highest-leverage move in loop design' is splitting the maker from the checker. This ensures that the loop stops because a command exited successfully, not because the agent 'felt finished'."
+  ],
+  "caption": "Your AI agent might be lying about being done. Learn why self-grading fails and how to implement verifiable stop conditions.\n\nAI agent loops often declare completion prematurely, leading to 'premature victory' and 'fake-done features'. This happens because an agent grading its own work is inherently optimistic and will assert it's done before it truly is.\n\nA stop condition must be an objective claim about reality, verifiable by an entity separate from the agent performing the work. Without external verification, it's merely a self-report, not a true check.\n\nThe article outlines four 'rungs of verification', from simple exit codes (Rung 1) to a separate AI model (Rung 3) dedicated solely to checking the stop condition. The gap between these rungs highlights the 'maker' agent's optimism.\n\nThe core principle is that the checker's value comes entirely from not being the maker. It should have different instructions, potentially a cheaper model, and a clean context for each turn to ensure an unbiased 'PASS'.\n\nDevelopers must also implement 'caps' – conditions that stop a loop regardless of success, preventing infinite runs. A trusted loop combines both a success-based stop condition and a fail-safe cap.\n\nA practical example involved fixing a bug in a content-agent repo using a fresh-context maker and a bash test exit code as the checker, demonstrating a machine-checkable artifact for verification.\n\nThe 'single highest-leverage move in loop design' is splitting the maker from the checker. This ensures that the loop stops because a command exited successfully, not because the agent 'felt finished'.\n\n#AI #AgenticAI #SoftwareEngineering #DeveloperTools #LLMs #Tech\n\nSource: DEV, Hacker News, VentureBeat",
+  "tweet": "Is your AI agent *really* done? Agents grading their own work often declare premature victory. Implement verifiable stop conditions with a separate checker and loop caps to ensure true completion. #AI #AgenticAI #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV, Hacker News, VentureBeat",
+  "url": "https://dev.to/shipwithaiio/your-agent-loop-is-lying-about-being-done-writing-verifiable-stop-conditions-270p",
+  "image": "",
+  "orig_title": "Your Agent Loop Is Lying About Being Done: Writing Verifiable Stop Conditions",
+  "cluster_urls": [
+   "https://dev.to/shipwithaiio/your-agent-loop-is-lying-about-being-done-writing-verifiable-stop-conditions-270p",
+   "https://simonwillison.net/2026/Feb/23/agentic-engineering-patterns/",
+   "https://venturebeat.com/orchestration/enterprises-winning-with-ai-agents-are-limiting-how-much-the-agents-can-do-alone"
+  ],
+  "cluster_titles": [
+   "Your Agent Loop Is Lying About Being Done: Writing Verifiable Stop Conditions",
+   "Software Engineering in the Agentic Era",
+   "Enterprises winning with AI agents are limiting how much the agents can do alone"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260823-0806-0-agent-loops-need-verifiable-stop-conditions-.png",
+   "20260823-0806-0-agent-loops-need-verifiable-stop-conditions--d1.png",
+   "20260823-0806-0-agent-loops-need-verifiable-stop-conditions--d2.png"
+  ]
+ },
+ {
+  "topic": "uber_gdpr_fine_europe",
+  "headline_marked": "[[Uber hit with a nearly $1 billion fine]] for automatically deactivating drivers in Europe",
+  "headline": "Uber hit with a nearly $1 billion fine for automatically deactivating drivers in Europe",
+  "summary": "The Dutch Data Protection Authority (AP) levied the €824.9 million ($966 million) penalty for GDPR violations related to automated driver account deactivations. Uber has already filed an appeal against the fine.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Uber has been hit with a massive €824.9 million ($966 million) fine by the Dutch Data Protection Authority (AP) for violating GDPR. The penalty stems from automatically deactivating driver accounts in Europe between 2018 and 2022 without human intervention.",
+   "The AP stated that Uber deprived drivers of income through fully automated decisions, which is a breach of GDPR. Monique Verdier, deputy chair of the AP, emphasized that \"A computer should not make decisions on its own that have major consequences for you.\"",
+   "The investigation was initiated after 171 French drivers reported these automated deactivations to a local human rights organization. The case was then taken over by the AP, as Uber's European headquarters are located in The Netherlands.",
+   "This is not Uber's first run-in with the AP; the company has been fined three times previously, including a record €290 million penalty in 2024 for improper data transfer. The current €824.9 million fine represents the maximum penalty, calculated as four percent of Uber's worldwide annual turnover.",
+   "Uber has already filed an appeal against the fine. The company has been contacted for comment, with updates pending."
+  ],
+  "caption": "Uber faces a monumental €824.9 million ($966 million) fine in Europe. This penalty is for automatically deactivating driver accounts without human oversight.\n\nUber has been hit with a massive €824.9 million ($966 million) fine by the Dutch Data Protection Authority (AP) for violating GDPR. The penalty stems from automatically deactivating driver accounts in Europe between 2018 and 2022 without human intervention.\n\nThe AP stated that Uber deprived drivers of income through fully automated decisions, which is a breach of GDPR. Monique Verdier, deputy chair of the AP, emphasized that \"A computer should not make decisions on its own that have major consequences for you.\"\n\nThe investigation was initiated after 171 French drivers reported these automated deactivations to a local human rights organization. The case was then taken over by the AP, as Uber's European headquarters are located in The Netherlands.\n\nThis is not Uber's first run-in with the AP; the company has been fined three times previously, including a record €290 million penalty in 2024 for improper data transfer. The current €824.9 million fine represents the maximum penalty, calculated as four percent of Uber's worldwide annual turnover.\n\nUber has already filed an appeal against the fine. The company has been contacted for comment, with updates pending.\n\n#Uber #GDPR #TechNews #RegulatoryFine #BigTech #Europe\n\nSource: Engadget",
+  "tweet": "Uber hit with a nearly $1 billion fine (€824.9M) by Dutch regulators for automatically deactivating European driver accounts without human intervention, violating GDPR. Uber is appealing. #Uber #GDPR #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "uber.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2242192/uber-hit-with-1-billion-fine-for-automatically-deactivating-drivers-in-europe/",
+  "image": "https://www.engadget.com/img/gallery/uber-hit-with-a-nearly-1-billion-fine-for-automatically-deactivating-drivers-in-europe/l-intro-1787420501.jpg",
+  "orig_title": "Uber hit with a nearly $1 billion fine for automatically deactivating drivers in Europe",
+  "cluster_urls": [
+   "https://www.engadget.com/2242192/uber-hit-with-1-billion-fine-for-automatically-deactivating-drivers-in-europe/"
+  ],
+  "cluster_titles": [
+   "Uber hit with a nearly $1 billion fine for automatically deactivating drivers in Europe"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260823-0806-1-uber-hit-with-a-nearly-1-billion-fine-for-au.png",
+   "20260823-0806-1-uber-hit-with-a-nearly-1-billion-fine-for-au-d1.png",
+   "20260823-0806-1-uber-hit-with-a-nearly-1-billion-fine-for-au-d2.png"
+  ]
+ }
+]

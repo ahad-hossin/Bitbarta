@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai_worst_failure_mode_not_hallucination",
+  "headline_marked": "AI's [[Worst Failure Modes]] Aren't Hallucinations, They're Worse",
+  "headline": "AI's Worst Failure Modes Aren't Hallucinations, They're Worse",
+  "summary": "Beyond fabricated facts, AI can declare problems unsolvable or silently omit critical data, impacting real-world applications from code debugging to healthcare.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "While AI hallucinations are well-known, two other failure modes cause more significant real-world damage, with few defenses being developed. These issues are not about inventing false information but about AI's inability to persevere or its silent omission of crucial details.",
+   "Linus Torvalds recently shared an experience debugging a Linux kernel bug with Google's Gemini. The AI repeatedly stated the problem was 'impossible and unsolvable,' discouraging Torvalds. Despite the AI's verdict, Torvalds persisted, eventually finding a single-character fix, highlighting how AI can lack human-level stubbornness.",
+   "The fix, a change from round_up() to round_down(), was merged into Linux 7.3. Torvalds even let the AI write the commit message, sparking discussion about AI-generated documentation in critical systems. This 'AI says impossible' failure is at least noisy, alerting users to its limitations.",
+   "A more insidious failure mode was identified by physician Sebastian Fox in 847 AI-generated clinical notes. These systems passed all evaluations but silently omitted critical findings, transformed discussions into decisions, and altered treatment schedules.",
+   "For example, an AI note missed a patient's jaw pain, a red flag for a condition that can cause blindness if untreated. The note appeared technically correct, and standard hallucination detectors flagged nothing, demonstrating the danger of silent omissions in high-stakes fields like medicine.",
+   "Fox's analysis found that roughly 1 in 20 AI-generated clinical notes contained errors serious enough to cause significant patient harm, and nearly 1 in 5 had important omissions. These were systems supposedly vetted by sophisticated evaluation frameworks that signed off on most notes.",
+   "Both the 'AI says impossible' and 'silent omission' failures stem from Reinforcement Learning from Human Feedback (RLHF). This process optimizes for AI responses that appear helpful and confident, rather than complete or persistent, penalizing uncertainty and complexity."
+  ],
+  "caption": "AI can fail in two ways worse than hallucination: declaring problems 'impossible' or silently omitting critical data.\n\nWhile AI hallucinations are well-known, two other failure modes cause more significant real-world damage, with few defenses being developed. These issues are not about inventing false information but about AI's inability to persevere or its silent omission of crucial details.\n\nLinus Torvalds recently shared an experience debugging a Linux kernel bug with Google's Gemini. The AI repeatedly stated the problem was 'impossible and unsolvable,' discouraging Torvalds. Despite the AI's verdict, Torvalds persisted, eventually finding a single-character fix, highlighting how AI can lack human-level stubbornness.\n\nThe fix, a change from round_up() to round_down(), was merged into Linux 7.3. Torvalds even let the AI write the commit message, sparking discussion about AI-generated documentation in critical systems. This 'AI says impossible' failure is at least noisy, alerting users to its limitations.\n\nA more insidious failure mode was identified by physician Sebastian Fox in 847 AI-generated clinical notes. These systems passed all evaluations but silently omitted critical findings, transformed discussions into decisions, and altered treatment schedules.\n\nFor example, an AI note missed a patient's jaw pain, a red flag for a condition that can cause blindness if untreated. The note appeared technically correct, and standard hallucination detectors flagged nothing, demonstrating the danger of silent omissions in high-stakes fields like medicine.\n\nFox's analysis found that roughly 1 in 20 AI-generated clinical notes contained errors serious enough to cause significant patient harm, and nearly 1 in 5 had important omissions. These were systems supposedly vetted by sophisticated evaluation frameworks that signed off on most notes.\n\n#AI #ArtificialIntelligence #Tech #LLM #MachineLearning\n\nSource: DEV",
+  "tweet": "AI's biggest failures aren't hallucinations. It can also declare problems unsolvable or silently omit crucial data, impacting everything from code to healthcare. #AI #Tech #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/max_quimby/ais-worst-failure-mode-isnt-hallucination-3oo7",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpl7qfhv94bi7sgr1xgtd.png",
+  "orig_title": "AI's Worst Failure Mode Isn't Hallucination",
+  "cluster_urls": [
+   "https://dev.to/max_quimby/ais-worst-failure-mode-isnt-hallucination-3oo7"
+  ],
+  "cluster_titles": [
+   "AI's Worst Failure Mode Isn't Hallucination"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260824-1058-0-ai-s-worst-failure-modes-aren-t-hallucinatio.png",
+   "20260824-1058-0-ai-s-worst-failure-modes-aren-t-hallucinatio-d1.png",
+   "20260824-1058-0-ai-s-worst-failure-modes-aren-t-hallucinatio-d2.png",
+   "20260824-1058-0-ai-s-worst-failure-modes-aren-t-hallucinatio-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_cost_context_problem",
+  "headline_marked": "[[Agent bills]] are a context problem, not a budget problem",
+  "headline": "Agent bills are a context problem, not a budget problem",
+  "summary": "The core issue with AI agent costs isn't spending limits, but how context is managed. Learn how to optimize token usage for efficiency and accuracy.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The rising cost of AI agents is often framed as a budgeting issue, but the real problem lies in how context is handled. Uber's CTO reportedly noted the company exhausted its AI budget early in 2026, largely due to coding agent usage, highlighting a common challenge.",
+   "While setting limits and building dashboards are necessary, they don't address the root cause. The majority of AI agent costs stem from input tokens, meaning you're paying for the information you feed the agent, not necessarily what it generates.",
+   "Optimizing context management can significantly reduce costs. For instance, Anthropic bills cache reads at a lower rate than new input, making stable prefixes cheaper to resend. This can save around 9% on costs.",
+   "Further cost reductions are possible by leveraging batch APIs, which can discount input and output by 50% if latency is tolerable. This is a configuration change that can halve the bill for that traffic.",
+   "The most impactful strategy, however, is 'contextmaxxing'—spending on relevance rather than sheer volume. An agent that remembers context efficiently uses fewer tokens and can even improve accuracy.",
+   "Research shows that agents using a task-scoped memory layer used 41.2% fewer tokens and cost 72.6% less, while accuracy increased from 83.37% to 88.31%. This approach focuses on smarter context handling over brute-force token usage.",
+   "The concept of 'tokenmaxxing' (maximizing usage) is a rational first response to useful AI, but it's ultimately less effective than 'contextmaxxing'. The key is to spend tokens wisely on relevant information, not just on sheer volume."
+  ],
+  "caption": "Your AI agent bill is skyrocketing? It's likely a context problem, not a budget one. Discover how to cut costs by optimizing context management.\n\nThe rising cost of AI agents is often framed as a budgeting issue, but the real problem lies in how context is handled. Uber's CTO reportedly noted the company exhausted its AI budget early in 2026, largely due to coding agent usage, highlighting a common challenge.\n\nWhile setting limits and building dashboards are necessary, they don't address the root cause. The majority of AI agent costs stem from input tokens, meaning you're paying for the information you feed the agent, not necessarily what it generates.\n\nOptimizing context management can significantly reduce costs. For instance, Anthropic bills cache reads at a lower rate than new input, making stable prefixes cheaper to resend. This can save around 9% on costs.\n\nFurther cost reductions are possible by leveraging batch APIs, which can discount input and output by 50% if latency is tolerable. This is a configuration change that can halve the bill for that traffic.\n\nThe most impactful strategy, however, is 'contextmaxxing'—spending on relevance rather than sheer volume. An agent that remembers context efficiently uses fewer tokens and can even improve accuracy.\n\nResearch shows that agents using a task-scoped memory layer used 41.2% fewer tokens and cost 72.6% less, while accuracy increased from 83.37% to 88.31%. This approach focuses on smarter context handling over brute-force token usage.\n\nThe concept of 'tokenmaxxing' (maximizing usage) is a rational first response to useful AI, but it's ultimately less effective than 'contextmaxxing'. The key is to spend tokens wisely on relevant information, not just on sheer volume.\n\n#AI #Agent #Context #CostOptimization #Tech\n\nSource: DEV",
+  "tweet": "Your AI agent bill is a context problem, not a budget problem. Learn how to cut costs by optimizing context management and focusing on relevance over volume. #AI #Agent #Context",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sentraai/your-agent-bill-is-a-context-problem-not-a-budget-problem-4mmo",
+  "image": "",
+  "orig_title": "Your agent bill is a context problem, not a budget problem",
+  "cluster_urls": [
+   "https://dev.to/sentraai/your-agent-bill-is-a-context-problem-not-a-budget-problem-4mmo"
+  ],
+  "cluster_titles": [
+   "Your agent bill is a context problem, not a budget problem"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260824-1058-1-agent-bills-are-a-context-problem-not-a-budg.png",
+   "20260824-1058-1-agent-bills-are-a-context-problem-not-a-budg-d1.png",
+   "20260824-1058-1-agent-bills-are-a-context-problem-not-a-budg-d2.png",
+   "20260824-1058-1-agent-bills-are-a-context-problem-not-a-budg-d3.png"
+  ]
+ }
+]

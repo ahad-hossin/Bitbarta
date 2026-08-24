@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "toxicpanda_2_0_malware_chains_vpn_accessibility",
+  "headline_marked": "[[ToxicPanda 2.0]] Android Malware Uses VPN and Accessibility for Financial Theft",
+  "headline": "ToxicPanda 2.0 Android Malware Uses VPN and Accessibility for Financial Theft",
+  "summary": "New Android banking malware, ToxicPanda 2.0, exploits VPN and Accessibility permissions to steal financial information without device rooting.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "ToxicPanda 2.0 is a sophisticated Android banking malware that employs deceptive installation screens to trick users into granting critical VPN and Accessibility permissions. Once these permissions are obtained, the malware leverages them to manipulate device settings and establish a connection to the local ADB daemon.",
+   "Without requiring root access, ToxicPanda 2.0 utilizes shell privileges to alter system settings and ensure its persistence on the device. This allows it to operate stealthily while preparing to exfiltrate sensitive financial data.",
+   "The malware's final stage involves stealing financial information through a combination of the granted Accessibility permissions and fake login screens or overlays designed to mimic legitimate banking applications.",
+   "Security researchers advise monitoring for unusual time-series events such as unexpected VPN or Accessibility grants on unknown APKs, enabled Developer Options, local ADB pairing, and suspicious C2 WebSocket connections. It's crucial to differentiate ADB shell access from true root privileges when analyzing such threats.",
+   "To mitigate the risk, organizations should restrict the installation of non-Google Play apps, unauthorized VPNs, and the use of Accessibility and Device Administrator privileges. Disabling Developer Options and Wireless Debugging is also recommended. Android telemetry should be fed to the Security Operations Center (SOC) for continuous monitoring."
+  ],
+  "caption": "Beware of ToxicPanda 2.0: A new Android malware that steals financial data by chaining VPN, Accessibility, and ADB permissions without needing root access.\n\nToxicPanda 2.0 is a sophisticated Android banking malware that employs deceptive installation screens to trick users into granting critical VPN and Accessibility permissions. Once these permissions are obtained, the malware leverages them to manipulate device settings and establish a connection to the local ADB daemon.\n\nWithout requiring root access, ToxicPanda 2.0 utilizes shell privileges to alter system settings and ensure its persistence on the device. This allows it to operate stealthily while preparing to exfiltrate sensitive financial data.\n\nThe malware's final stage involves stealing financial information through a combination of the granted Accessibility permissions and fake login screens or overlays designed to mimic legitimate banking applications.\n\nSecurity researchers advise monitoring for unusual time-series events such as unexpected VPN or Accessibility grants on unknown APKs, enabled Developer Options, local ADB pairing, and suspicious C2 WebSocket connections. It's crucial to differentiate ADB shell access from true root privileges when analyzing such threats.\n\nTo mitigate the risk, organizations should restrict the installation of non-Google Play apps, unauthorized VPNs, and the use of Accessibility and Device Administrator privileges. Disabling Developer Options and Wireless Debugging is also recommended. Android telemetry should be fed to the Security Operations Center (SOC) for continuous monitoring.\n\n#AndroidMalware #CyberSecurity #BankingTrojan #ToxicPanda #InfoSec\n\nSource: DEV",
+  "tweet": "ToxicPanda 2.0 is a new Android malware that uses VPN and Accessibility permissions to steal financial data, even without root access. Stay vigilant! #AndroidMalware #CyberSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/toxicpanda-20-chains-vpn-accessibility-and-adb-34l9",
+  "image": "",
+  "orig_title": "ToxicPanda 2.0 Chains VPN, Accessibility, and ADB",
+  "cluster_urls": [
+   "https://dev.to/anoymask/toxicpanda-20-chains-vpn-accessibility-and-adb-34l9"
+  ],
+  "cluster_titles": [
+   "ToxicPanda 2.0 Chains VPN, Accessibility, and ADB"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260824-1007-0-toxicpanda-2-0-android-malware-uses-vpn-and-.png",
+   "20260824-1007-0-toxicpanda-2-0-android-malware-uses-vpn-and--d1.png",
+   "20260824-1007-0-toxicpanda-2-0-android-malware-uses-vpn-and--d2.png"
+  ]
+ }
+]

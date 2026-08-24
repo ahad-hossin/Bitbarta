@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai_agent_loop_failure",
+  "headline_marked": "[[AI reviewer invented a request]]. Producer retried 245 times.",
+  "headline": "AI reviewer invented a request. Producer retried 245 times.",
+  "summary": "An AI reviewer hallucinated a request, causing a producer agent to repeatedly fail its contract. This led to 470 wasted generations across two documents in just five days due to a faulty retry mechanism.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An LLM agent pipeline experienced a significant failure where one document was rewritten 245 times and another 225 times over five days, totaling 470 wasted generations. This occurred because a reviewer agent invented a request, leading the producer agent to repeatedly fail its contract.",
+   "The pipeline operates with a producer agent that writes a document, which is then checked by a reviewer agent against a predefined contract. This contract specifies requirements like minimum length and required sections, and rejected work is sent back with instructions for fixes.",
+   "In the specific incident, the reviewer hallucinated a request for a 3-line email triage response for a 4,452-character key-management specification. The reviewed document contained none of the terms the reviewer claimed were part of the original request.",
+   "Since no output could possibly satisfy the invented request, the producer agent continuously failed its contract and was re-queued. The existing retry cap mechanism counted reviews, but a contract-failed output never reached the review stage, allowing the loop to continue unchecked.",
+   "The core issue stemmed from the review prompt, which included the artifact body (up to 4,000 characters) but not the original request. When asked to judge against information it didn't possess, the model confidently hallucinated the missing context.",
+   "A secondary failure mode was also identified: long documents were truncated to 4,000 characters before review without explicit notification to the reviewer. This led reviewers to mark these documents as \"thin\" or \"cut off mid-sentence,\" despite the truncation being an internal system action.",
+   "An audit of 2,038 reviews revealed a 0.2% hallucination rate (four contaminated reviews) where terms appeared in the review but not the document. This low error rate, combined with infinite retries, resulted in unbounded damage, underscoring that the loop, not just the rate, is the primary risk.",
+   "The company offers an npm package called \"honto-contract\" for catching broken outputs, which has seen over 600 downloads. They also provide free (email-gated) unattended-operation checklists and watchdog templates, including the exact ones used in this story."
+  ],
+  "caption": "An AI reviewer hallucinated a request, trapping a producer agent in a loop of 245 failed retries. This led to 470 wasted generations in just 5 days.\n\nAn LLM agent pipeline experienced a significant failure where one document was rewritten 245 times and another 225 times over five days, totaling 470 wasted generations. This occurred because a reviewer agent invented a request, leading the producer agent to repeatedly fail its contract.\n\nThe pipeline operates with a producer agent that writes a document, which is then checked by a reviewer agent against a predefined contract. This contract specifies requirements like minimum length and required sections, and rejected work is sent back with instructions for fixes.\n\nIn the specific incident, the reviewer hallucinated a request for a 3-line email triage response for a 4,452-character key-management specification. The reviewed document contained none of the terms the reviewer claimed were part of the original request.\n\nSince no output could possibly satisfy the invented request, the producer agent continuously failed its contract and was re-queued. The existing retry cap mechanism counted reviews, but a contract-failed output never reached the review stage, allowing the loop to continue unchecked.\n\nThe core issue stemmed from the review prompt, which included the artifact body (up to 4,000 characters) but not the original request. When asked to judge against information it didn't possess, the model confidently hallucinated the missing context.\n\nA secondary failure mode was also identified: long documents were truncated to 4,000 characters before review without explicit notification to the reviewer. This led reviewers to mark these documents as \"thin\" or \"cut off mid-sentence,\" despite the truncation being an internal system action.\n\n#AI #LLM #SoftwareDevelopment #TechNews #AIError #DevOps\n\nSource: DEV",
+  "tweet": "An AI reviewer invented a request, causing a producer agent to retry 245 times in 5 days. This hallucination led to 470 wasted generations, highlighting the danger of unchecked AI loops even with low error rates. #AI #LLM #SoftwareBugs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "gxcafe.co.jp",
+  "source": "DEV",
+  "url": "https://dev.to/gxcafellc/our-ai-reviewer-invented-a-request-our-producer-retried-245-times-465f",
+  "image": "",
+  "orig_title": "Our AI reviewer invented a request. Our producer retried 245 times.",
+  "cluster_urls": [
+   "https://dev.to/gxcafellc/our-ai-reviewer-invented-a-request-our-producer-retried-245-times-465f"
+  ],
+  "cluster_titles": [
+   "Our AI reviewer invented a request. Our producer retried 245 times."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260824-0706-0-ai-reviewer-invented-a-request-producer-retr.png",
+   "20260824-0706-0-ai-reviewer-invented-a-request-producer-retr-d1.png",
+   "20260824-0706-0-ai-reviewer-invented-a-request-producer-retr-d2.png",
+   "20260824-0706-0-ai-reviewer-invented-a-request-producer-retr-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_coding_agents_architecture",
+  "headline_marked": "[[Context Packet architecture]] improves AI coding agents' understanding of complex repositories",
+  "headline": "Context Packet architecture improves AI coding agents' understanding of complex repositories",
+  "summary": "AI coding agents struggle with large repositories containing obsolete code and undocumented decisions. A 'context packet' offers a small, versioned, machine-readable system description, allowing agents to identify critical constraints more effectively.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Giving AI coding agents access to an entire repository doesn't guarantee better understanding; it can actually lead to less. Large repositories often contain obsolete code and undocumented decisions, overwhelming the agent with irrelevant or contradictory signals.",
+   "The 'Context Packet' proposes a small, versioned, machine-readable description of the system. This packet complements source code by explicitly recording contracts and decisions that source code alone may not reveal.",
+   "Current approaches often rely on improving prompts, but prompts are a weak place to store architecture as they are hard to version and validate. The core issue is 'signal density' – the proportion of useful constraints among all the material an agent must interpret.",
+   "A context packet is the minimal scoped input for a single change or workflow. It includes only the necessary context and constraints, built from a dependency graph rather than just folder structure.",
+   "When an agent receives only this packet, it can make a scoped change, read/edit code, and rerun tests. CI/CD then enforces security by rejecting changes outside the defined edit boundary or lacking evidence.",
+   "The assembler starts with files changed by a pull request and follows declared dependencies outward. Nodes are included if directly changed, a dependency of a changed node, or defining an operational contract for that dependency.",
+   "While updating contracts and service metadata incurs a cost, it's preferable to relying on undocumented knowledge held by individual engineers. A well-organized packet improves engineering outcomes by making this work explicit and reusable.",
+   "To prevent false confidence, packets can allow agents to request expanded boundaries, which are logged and, for sensitive areas, require approval. Security boundaries must also be enforced at runtime, not solely via prompts or JSON fields."
+  ],
+  "caption": "Giving AI coding agents access to an entire repository can actually hinder their understanding. A new architectural approach, the 'Context Packet', aims to solve this by providing only essential information.\n\nGiving AI coding agents access to an entire repository doesn't guarantee better understanding; it can actually lead to less. Large repositories often contain obsolete code and undocumented decisions, overwhelming the agent with irrelevant or contradictory signals.\n\nThe 'Context Packet' proposes a small, versioned, machine-readable description of the system. This packet complements source code by explicitly recording contracts and decisions that source code alone may not reveal.\n\nCurrent approaches often rely on improving prompts, but prompts are a weak place to store architecture as they are hard to version and validate. The core issue is 'signal density' – the proportion of useful constraints among all the material an agent must interpret.\n\nA context packet is the minimal scoped input for a single change or workflow. It includes only the necessary context and constraints, built from a dependency graph rather than just folder structure.\n\nWhen an agent receives only this packet, it can make a scoped change, read/edit code, and rerun tests. CI/CD then enforces security by rejecting changes outside the defined edit boundary or lacking evidence.\n\nThe assembler starts with files changed by a pull request and follows declared dependencies outward. Nodes are included if directly changed, a dependency of a changed node, or defining an operational contract for that dependency.\n\nWhile updating contracts and service metadata incurs a cost, it's preferable to relying on undocumented knowledge held by individual engineers. A well-organized packet improves engineering outcomes by making this work explicit and reusable.\n\n#AI #Coding #SoftwareArchitecture #DeveloperTools #Tech #Engineering\n\nSource: DEV",
+  "tweet": "Giving AI coding agents access to an entire repository can actually hinder their understanding. The 'Context Packet' architecture provides a minimal, versioned, machine-readable system description, improving agent reliability for complex codebases. #AI #Coding #DeveloperTool",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/majdizlitni/the-context-packet-the-right-architectural-coding-agents-5agc",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3wp87d7x36doh9xupdhi.gif",
+  "orig_title": "The Context Packet: The Right Architectural Coding Agents",
+  "cluster_urls": [
+   "https://dev.to/majdizlitni/the-context-packet-the-right-architectural-coding-agents-5agc"
+  ],
+  "cluster_titles": [
+   "The Context Packet: The Right Architectural Coding Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260824-0706-1-context-packet-architecture-improves-ai-codi.png",
+   "20260824-0706-1-context-packet-architecture-improves-ai-codi-d1.png",
+   "20260824-0706-1-context-packet-architecture-improves-ai-codi-d2.png",
+   "20260824-0706-1-context-packet-architecture-improves-ai-codi-d3.png"
+  ]
+ }
+]

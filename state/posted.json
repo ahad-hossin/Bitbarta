@@ -8377,8 +8377,13 @@
   "headline": "LLM passed all 29 tests, but can't ship because real-world cases are unknown.",
   "topic": "ai_llm_passed_tests_cant_ship",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-08-24T02:06:39Z"
+  "status": "failed",
+  "at": "2026-08-24T02:06:39Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "e00e497749d85ae3",
@@ -8386,7 +8391,12 @@
   "headline": "Xiaomi's First NAS Launches at 2,699 RMB with dual 2.5G Ethernet and Docker support",
   "topic": "xiaomi_first_nas_launch",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-08-24T02:06:39Z"
+  "status": "failed",
+  "at": "2026-08-24T02:06:39Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

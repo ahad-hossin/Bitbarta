@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "claude_ai_daily_learning_reset",
+  "headline_marked": "Claude Forgets Everything Overnight — [[3:30 AM Batch Harvests Learned Skills]]",
+  "headline": "Claude Forgets Everything Overnight — 3:30 AM Batch Harvests Learned Skills",
+  "summary": "An automated script runs daily at 3:30 AM to harvest useful procedures from Claude Code conversations, creating a persistent knowledge base.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Most AI models, including Claude Code, have a per-session context window, meaning they forget learned information once a session ends. This can lead to users repeatedly solving the same problems, as the AI doesn't retain non-obvious procedures discovered during previous interactions.",
+   "To combat this, a developer created a script called \"skill-harvest.sh\" that runs automatically every morning at 3:30 AM. This script parses past conversation logs to extract useful procedures and saves them as skill files in a dedicated directory.",
+   "This automated process effectively creates a persistent \"environment\" for the AI, allowing next week's version of the user to start with a richer knowledge base than this week's. This moves beyond simply working faster to handling more complex tasks by accumulating a library of learned procedures.",
+   "The script is configured to run via macOS's launchd service, specifically set with low priority to avoid impacting system performance during sleep. This ensures the AI's knowledge base is updated overnight without user intervention, with a weekly review of proposed skills recommended.",
+   "By saving discovered procedures into structured files on the filesystem, the system compensates for Claude's lack of long-term memory. This allows subsequent Claude Code sessions to automatically reference this knowledge, streamlining workflows and preventing the re-discovery of solutions."
+  ],
+  "caption": "Claude forgets everything overnight. A 3:30 AM batch script is now harvesting its learned skills to build a persistent knowledge base.\n\nMost AI models, including Claude Code, have a per-session context window, meaning they forget learned information once a session ends. This can lead to users repeatedly solving the same problems, as the AI doesn't retain non-obvious procedures discovered during previous interactions.\n\nTo combat this, a developer created a script called \"skill-harvest.sh\" that runs automatically every morning at 3:30 AM. This script parses past conversation logs to extract useful procedures and saves them as skill files in a dedicated directory.\n\nThis automated process effectively creates a persistent \"environment\" for the AI, allowing next week's version of the user to start with a richer knowledge base than this week's. This moves beyond simply working faster to handling more complex tasks by accumulating a library of learned procedures.\n\nThe script is configured to run via macOS's launchd service, specifically set with low priority to avoid impacting system performance during sleep. This ensures the AI's knowledge base is updated overnight without user intervention, with a weekly review of proposed skills recommended.\n\nBy saving discovered procedures into structured files on the filesystem, the system compensates for Claude's lack of long-term memory. This allows subsequent Claude Code sessions to automatically reference this knowledge, streamlining workflows and preventing the re-discovery of solutions.\n\n#TechNews #AI #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "Claude forgets everything overnight. A 3:30 AM batch script harvests its learned skills to build a persistent knowledge base. #AI #Claude #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/bokuwalily/claude-forgets-everything-overnight-the-330-am-batch-that-harvests-what-it-learned-13bo",
+  "image": "",
+  "orig_title": "Claude Forgets Everything Overnight — The 3:30 AM Batch That Harvests What It Learned",
+  "cluster_urls": [
+   "https://dev.to/bokuwalily/claude-forgets-everything-overnight-the-330-am-batch-that-harvests-what-it-learned-13bo"
+  ],
+  "cluster_titles": [
+   "Claude Forgets Everything Overnight — The 3:30 AM Batch That Harvests What It Learned"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260824-1108-0-claude-forgets-everything-overnight-3-30-am-.png",
+   "20260824-1108-0-claude-forgets-everything-overnight-3-30-am--d1.png",
+   "20260824-1108-0-claude-forgets-everything-overnight-3-30-am--d2.png"
+  ]
+ }
+]

@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "ai_agent_free_server_security_warning",
+  "headline_marked": "Developers: [[Treat agent's free server as compromised]] to prevent data leaks",
+  "headline": "Developers: Treat agent's free server as compromised to prevent data leaks",
+  "summary": "Free remote servers for coding agents pose significant security risks, as a recent incident revealed a developer's personal data and a staging database password were exposed. Adopting a 'compromised machine' mindset is crucial to prevent such leaks.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Last week, a developer using a coding agent on a free remote server accidentally exposed their personal name, email, and a staging database password. Although nothing was exploited, the incident highlighted a critical security vulnerability. The core issue is assuming a free server behaves like a local machine.",
+   "When using free servers for agent work, the primary risk isn't the model or token quota, but the boundary between your local machine and the remote host. Most agent workflows currently fail to acknowledge this crucial distinction, leading to potential data exposure.",
+   "MonkeyCode's open-source agent project, offering free model access and a free server option, makes this risk concrete. While the 10 million token allowance grabs attention, the free server component demands a completely different security posture from developers.",
+   "The default assumption for any free server should be that you do not control it. You have no knowledge of other users on the host, what data is logged, or how long those logs persist. This means your workflow must be robust enough to survive a shared, monitored, and eventually recycled host.",
+   "One common broken assumption is that your environment variables will be present on the remote server. They won't, and explicitly passing them can lead to production keys ending up in run logs, creating a significant security hole.",
+   "Another critical mistake is reusing your personal Git identity. Agent commits under your name create a difficult-to-clean trail, making all future commits harder to trust and potentially compromising your professional identity.",
+   "Developers often assume agent output is just code, but it also includes logs, temporary files, and copied configurations. Every run directory is a potential leak and should be treated as such until thoroughly scanned for sensitive information.",
+   "To mitigate these risks, a wrapper that builds a deliberately small environment for each remote run is essential. Using the `env -i` flag starts the agent with only explicitly allowed variables, preventing stray shell variables from leaking into the remote process.",
+   "A companion file containing a scoped, disposable credential set should be used, treated like a temporary badge rather than a permanent key. Additionally, a scanner should be run over the agent's output before you review the diff, commit, or push any run directory.",
+   "The consistent pattern for secure agent use is clear: anything public or disposable can go to the remote server, while anything identifying you or granting long-lived access must remain local. This minimizes the attack surface.",
+   "Organizations with strict compliance rules requiring code to stay on controlled machines should avoid free servers for agents. Similarly, if you cannot issue short-lived credentials, the residual risk of a leaked long-lived token likely outweighs the benefit of free compute.",
+   "This security pattern is ideal for solo developers and small teams seeking the economic benefits of free agent runs without compromising their identity on shared hosts. Treating the disposable server as such—with minimal credentials, a separate identity, and output scanning—ensures security while leveraging its utility."
+  ],
+  "caption": "Using a free server for your coding agent? A developer accidentally exposed a staging database password and personal Git identity. Learn how to prevent critical data leaks.\n\nLast week, a developer using a coding agent on a free remote server accidentally exposed their personal name, email, and a staging database password. Although nothing was exploited, the incident highlighted a critical security vulnerability. The core issue is assuming a free server behaves like a local machine.\n\nWhen using free servers for agent work, the primary risk isn't the model or token quota, but the boundary between your local machine and the remote host. Most agent workflows currently fail to acknowledge this crucial distinction, leading to potential data exposure.\n\nMonkeyCode's open-source agent project, offering free model access and a free server option, makes this risk concrete. While the 10 million token allowance grabs attention, the free server component demands a completely different security posture from developers.\n\nThe default assumption for any free server should be that you do not control it. You have no knowledge of other users on the host, what data is logged, or how long those logs persist. This means your workflow must be robust enough to survive a shared, monitored, and eventually recycled host.\n\nOne common broken assumption is that your environment variables will be present on the remote server. They won't, and explicitly passing them can lead to production keys ending up in run logs, creating a significant security hole.\n\nAnother critical mistake is reusing your personal Git identity. Agent commits under your name create a difficult-to-clean trail, making all future commits harder to trust and potentially compromising your professional identity.\n\n#DevSecOps #CodingAgents #Cybersecurity #DeveloperTips #DataSecurity #FreeServers\n\nSource: DEV",
+  "tweet": "Using a free server for your coding agent? A developer accidentally exposed a staging database password. Learn why you must treat free agent servers as compromised machines to prevent critical data leaks. #DevSecOps #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/webx_2736/treat-your-agents-free-server-like-a-compromised-machine-34j0",
+  "image": "",
+  "orig_title": "Treat Your Agent's Free Server Like a Compromised Machine",
+  "cluster_urls": [
+   "https://dev.to/webx_2736/treat-your-agents-free-server-like-a-compromised-machine-34j0"
+  ],
+  "cluster_titles": [
+   "Treat Your Agent's Free Server Like a Compromised Machine"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260825-1106-0-developers-treat-agent-s-free-server-as-comp.png",
+   "20260825-1106-0-developers-treat-agent-s-free-server-as-comp-d1.png",
+   "20260825-1106-0-developers-treat-agent-s-free-server-as-comp-d2.png",
+   "20260825-1106-0-developers-treat-agent-s-free-server-as-comp-d3.png",
+   "20260825-1106-0-developers-treat-agent-s-free-server-as-comp-d4.png",
+   "20260825-1106-0-developers-treat-agent-s-free-server-as-comp-d5.png"
+  ]
+ },
+ {
+  "topic": "calix_router_upnp_vulnerability",
+  "headline_marked": "[[Calix Router WAN-side UPnP Exposes Internal Devices]] via CVE-2026-75501",
+  "headline": "Calix Router WAN-side UPnP Exposes Internal Devices via CVE-2026-75501",
+  "summary": "An unpatched vulnerability in Calix GS5239XG / EXOS 6.6.47 routers allows attackers to bypass NAT and firewalls by exposing UPnP control on WAN-side TCP port 5000, enabling them to add port forwarding rules and expose internal devices.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "An unpatched vulnerability, CVE-2026-75501, in Calix GS5239XG / EXOS 6.6.47 routers allows attackers on the internet to bypass NAT and firewalls. It exposes UPnP control, normally internal, without authentication on WAN-side TCP port 5000.",
+   "This critical flaw enables attackers to add port forwarding rules, potentially exposing internal cameras, NAS devices, and management interfaces to the external network. Users should track suspicious activity like UPnP forwarding table changes.",
+   "To mitigate, disable UPnP and block TCP port 5000 on affected Calix routers. It's crucial to review all port forwarding rules and delete any suspicious entries, rather than simply rebooting the device.",
+   "If you rent an affected router from your ISP, disable UPnP in its management settings or contact your provider for assistance. Additionally, ensure all connected internal devices like cameras and NAS have strong passwords and updated firmware."
+  ],
+  "caption": "A critical vulnerability (CVE-2026-75501) in Calix routers exposes internal network devices to the internet, bypassing NAT and firewalls.\n\nAn unpatched vulnerability, CVE-2026-75501, in Calix GS5239XG / EXOS 6.6.47 routers allows attackers on the internet to bypass NAT and firewalls. It exposes UPnP control, normally internal, without authentication on WAN-side TCP port 5000.\n\nThis critical flaw enables attackers to add port forwarding rules, potentially exposing internal cameras, NAS devices, and management interfaces to the external network. Users should track suspicious activity like UPnP forwarding table changes.\n\nTo mitigate, disable UPnP and block TCP port 5000 on affected Calix routers. It's crucial to review all port forwarding rules and delete any suspicious entries, rather than simply rebooting the device.\n\nIf you rent an affected router from your ISP, disable UPnP in its management settings or contact your provider for assistance. Additionally, ensure all connected internal devices like cameras and NAS have strong passwords and updated firmware.\n\n#CyberSecurity #Vulnerability #RouterSecurity #Calix #CVE #NetworkSecurity\n\nSource: DEV",
+  "tweet": "Critical CVE-2026-75501 in Calix routers allows WAN-side UPnP exposure, letting attackers bypass NAT and expose internal devices like cameras and NAS. Disable UPnP and block TCP port 5000. #CyberSecurity #Vulnerability #Calix",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "calix.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/cve-2026-75501-calix-router-wan-side-upnp-exposes-internal-devices-5bo3",
+  "image": "",
+  "orig_title": "CVE-2026-75501: Calix Router WAN-side UPnP Exposes Internal Devices",
+  "cluster_urls": [
+   "https://dev.to/anoymask/cve-2026-75501-calix-router-wan-side-upnp-exposes-internal-devices-5bo3"
+  ],
+  "cluster_titles": [
+   "CVE-2026-75501: Calix Router WAN-side UPnP Exposes Internal Devices"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260825-1106-1-calix-router-wan-side-upnp-exposes-internal-.png",
+   "20260825-1106-1-calix-router-wan-side-upnp-exposes-internal--d1.png",
+   "20260825-1106-1-calix-router-wan-side-upnp-exposes-internal--d2.png"
+  ]
+ }
+]

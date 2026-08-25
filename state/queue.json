@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_impact_on_software_development",
+  "headline_marked": "[[AI makes software development faster]], but human judgment is now more critical for strategic decisions",
+  "headline": "AI makes software development faster, but human judgment is now more critical for strategic decisions",
+  "summary": "AI tools boost productivity by automating coding, testing, and prototyping. However, this increased speed shifts the bottleneck from execution to strategic decision-making, emphasizing human judgment.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI has drastically sped up software development, from code generation to prototyping, reducing development time from weeks to days or hours. This increased efficiency, however, creates a new challenge: making the right strategic decisions becomes paramount.",
+   "AI coding tools assist developers in generating code, building databases, writing tests, fixing bugs, and clarifying new technologies. This massive productivity boost means teams can create many more prototypes, but without proper validation, they risk building unnecessary things faster.",
+   "AI excels at exploration, helping to brainstorm products, compare alternatives, find risks, and analyze competitors. While it generates numerous possibilities, it doesn't inherently lead to better decisions, as human judgment is required to narrow down options.",
+   "The crucial step of \"convergence\" involves deciding which ideas to actually build, requiring judgment based on customer needs, market, business constraints, and timing. These factors often aren't found in data sets, highlighting the irreplaceable role of human insight.",
+   "AI can be an outstanding thinker, uncovering hidden assumptions, assessing risks, and highlighting flaws in human thinking. However, there's a critical difference between AI assisting in decision-making and AI making the decision itself, a distinction that grows more important as AI advances.",
+   "With cheaper software development, experimentation becomes easier, allowing teams to prototype and validate assumptions quickly. This speed must be paired with ruthless elimination and user testing to ensure valuable products are developed."
+  ],
+  "caption": "AI is making software development faster than ever before. But this speed introduces a new bottleneck: strategic decision-making.\n\nAI has drastically sped up software development, from code generation to prototyping, reducing development time from weeks to days or hours. This increased efficiency, however, creates a new challenge: making the right strategic decisions becomes paramount.\n\nAI coding tools assist developers in generating code, building databases, writing tests, fixing bugs, and clarifying new technologies. This massive productivity boost means teams can create many more prototypes, but without proper validation, they risk building unnecessary things faster.\n\nAI excels at exploration, helping to brainstorm products, compare alternatives, find risks, and analyze competitors. While it generates numerous possibilities, it doesn't inherently lead to better decisions, as human judgment is required to narrow down options.\n\nThe crucial step of \"convergence\" involves deciding which ideas to actually build, requiring judgment based on customer needs, market, business constraints, and timing. These factors often aren't found in data sets, highlighting the irreplaceable role of human insight.\n\nAI can be an outstanding thinker, uncovering hidden assumptions, assessing risks, and highlighting flaws in human thinking. However, there's a critical difference between AI assisting in decision-making and AI making the decision itself, a distinction that grows more important as AI advances.\n\nWith cheaper software development, experimentation becomes easier, allowing teams to prototype and validate assumptions quickly. This speed must be paired with ruthless elimination and user testing to ensure valuable products are developed.\n\n#AI #SoftwareDevelopment #TechNews #Productivity #Innovation #BusinessStrategy\n\nSource: DEV",
+  "tweet": "AI is accelerating software development, enabling rapid prototyping and code generation. But this speed shifts the focus to strategic decision-making. Human judgment is now more critical than ever to ensure the right products are built. #AI #SoftwareDev #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/fathimath_fida_ffbda72c61/ai-is-making-software-faster-but-is-it-making-decisions-better-3k56",
+  "image": "",
+  "orig_title": "AI Is Making Software Faster. But Is It Making Decisions Better?",
+  "cluster_urls": [
+   "https://dev.to/fathimath_fida_ffbda72c61/ai-is-making-software-faster-but-is-it-making-decisions-better-3k56"
+  ],
+  "cluster_titles": [
+   "AI Is Making Software Faster. But Is It Making Decisions Better?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260825-1207-0-ai-makes-software-development-faster-but-hum.png",
+   "20260825-1207-0-ai-makes-software-development-faster-but-hum-d1.png",
+   "20260825-1207-0-ai-makes-software-development-faster-but-hum-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_pr_reviewer_github_workflow",
+  "headline_marked": "[[Build a free-tier AI PR reviewer]] with GitHub Actions and MonkeyCode",
+  "headline": "Build a free-tier AI PR reviewer with GitHub Actions and MonkeyCode",
+  "summary": "Leverage MonkeyCode's free model allowance (10 million tokens) and server option to create an automated code review workflow that catches real issues without spamming.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Automated code review using AI can pay for itself on the first pull request. A GitHub Actions workflow, built around MonkeyCode's free model, offers a practical solution. It catches real issues without spamming the conversation.",
+   "The open-source MonkeyCode project provides a free allowance of ten million tokens and a free server option. This setup is deliberately simple, focusing on the workflow's value rather than complex model integration. It triggers on pull_request events, capturing diffs for structured feedback.",
+   "The first step involves a workflow file that captures the diff between the base and head branches. Using `fetch-depth: 0` ensures git can compute exact changes, saving the diff to a temporary file. API keys and GitHub tokens are passed via environment variables, keeping secrets out of the repository.",
+   "The `pull_request` event fires on both `opened` and `synchronize`, meaning every new push triggers a fresh review. The Python script truncates large diffs to fit free-tier input limits and prompts the model for a JSON array of comments with path, line, and body.",
+   "The script then posts each comment through the GitHub API, but only if the comment does not already exist. This deduplication step prevents repeated feedback on every push. It also limits the total number of comments to five, ensuring low noise and forcing the model to prioritize key findings.",
+   "The workflow has limitations: the free model may produce false positives, so comments are suggestions, not blockers. Malformed JSON output can occur, causing the script to skip that review cycle. Large pull requests are only partially reviewed due to diff truncation, and the model lacks codebase awareness beyond the diff itself.",
+   "This system is not a replacement for a human reviewer but rather a triage layer that surfaces obvious problems. The entire workflow is under a hundred lines, with deduplication and output parsing being the most challenging parts. MonkeyCode's free allowance is generous enough for a small team's pull request volume."
+  ],
+  "caption": "Build an AI code reviewer for free using GitHub Actions. It catches real issues and saves human review time.\n\nAutomated code review using AI can pay for itself on the first pull request. A GitHub Actions workflow, built around MonkeyCode's free model, offers a practical solution. It catches real issues without spamming the conversation.\n\nThe open-source MonkeyCode project provides a free allowance of ten million tokens and a free server option. This setup is deliberately simple, focusing on the workflow's value rather than complex model integration. It triggers on pull_request events, capturing diffs for structured feedback.\n\nThe first step involves a workflow file that captures the diff between the base and head branches. Using `fetch-depth: 0` ensures git can compute exact changes, saving the diff to a temporary file. API keys and GitHub tokens are passed via environment variables, keeping secrets out of the repository.\n\nThe `pull_request` event fires on both `opened` and `synchronize`, meaning every new push triggers a fresh review. The Python script truncates large diffs to fit free-tier input limits and prompts the model for a JSON array of comments with path, line, and body.\n\nThe script then posts each comment through the GitHub API, but only if the comment does not already exist. This deduplication step prevents repeated feedback on every push. It also limits the total number of comments to five, ensuring low noise and forcing the model to prioritize key findings.\n\nThe workflow has limitations: the free model may produce false positives, so comments are suggestions, not blockers. Malformed JSON output can occur, causing the script to skip that review cycle. Large pull requests are only partially reviewed due to diff truncation, and the model lacks codebase awareness beyond the diff itself.\n\n#AI #GitHubActions #CodeReview #OpenSource #DeveloperTools #MonkeyCode\n\nSource: DEV",
+  "tweet": "Build a free-tier AI PR reviewer with GitHub Actions! This workflow leverages MonkeyCode's free model to catch real issues without spamming. It's a practical triage layer for your code. #AI #GitHubActions #CodeReview",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "monkeycode.com",
+  "source": "DEV",
+  "url": "https://dev.to/byteio_3726/a-free-tier-ai-pr-reviewer-a-github-actions-workflow-that-actually-works-hgk",
+  "image": "",
+  "orig_title": "A Free-Tier AI PR Reviewer: A GitHub Actions Workflow That Actually Works",
+  "cluster_urls": [
+   "https://dev.to/byteio_3726/a-free-tier-ai-pr-reviewer-a-github-actions-workflow-that-actually-works-hgk"
+  ],
+  "cluster_titles": [
+   "A Free-Tier AI PR Reviewer: A GitHub Actions Workflow That Actually Works"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260825-1207-1-build-a-free-tier-ai-pr-reviewer-with-github.png",
+   "20260825-1207-1-build-a-free-tier-ai-pr-reviewer-with-github-d1.png",
+   "20260825-1207-1-build-a-free-tier-ai-pr-reviewer-with-github-d2.png",
+   "20260825-1207-1-build-a-free-tier-ai-pr-reviewer-with-github-d3.png",
+   "20260825-1207-1-build-a-free-tier-ai-pr-reviewer-with-github-d4.png"
+  ]
+ }
+]

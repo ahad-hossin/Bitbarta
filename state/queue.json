@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "android_auto_spotify_crash_fix_and_meta_teen_safety_changes",
+  "headline_marked": "[[Android phones]] could soon control Windows PC shutdowns and updates",
+  "headline": "Android phones could soon control Windows PC shutdowns and updates",
+  "summary": "New code in Microsoft's Link to Windows app suggests Android devices may gain the ability to remotely shut down, sleep, and update Windows PCs.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Microsoft is reportedly developing a feature that would allow Android phones to control key functions of Windows PCs. This integration, found within the Link to Windows app, could enable users to remotely shut down, update, or put their PC to sleep directly from their smartphone.",
+   "The discovered code includes commands for updating and restarting, or updating and shutting down the PC. This could be a significant convenience for users who often postpone updates, allowing them to initiate them remotely, perhaps overnight.",
+   "While the ability to put a PC to sleep is noted, the option to wake it up might not be included. This functionality is still in the code-discovery phase, and its eventual release to the public is not guaranteed.",
+   "This potential feature builds upon existing cross-ecosystem integration efforts, such as Microsoft's Phone Link app, which already offers some level of interaction between Android phones and Windows PCs.",
+   "For users seeking more advanced cross-device functionality, the article also highlights Sefirah, a free app that reportedly offers seamless integration across all Android devices without paywalls."
+  ],
+  "caption": "Your Android phone might soon be able to update and shut down your Windows PC.\n\nMicrosoft is reportedly developing a feature that would allow Android phones to control key functions of Windows PCs. This integration, found within the Link to Windows app, could enable users to remotely shut down, update, or put their PC to sleep directly from their smartphone.\n\nThe discovered code includes commands for updating and restarting, or updating and shutting down the PC. This could be a significant convenience for users who often postpone updates, allowing them to initiate them remotely, perhaps overnight.\n\nWhile the ability to put a PC to sleep is noted, the option to wake it up might not be included. This functionality is still in the code-discovery phase, and its eventual release to the public is not guaranteed.\n\nThis potential feature builds upon existing cross-ecosystem integration efforts, such as Microsoft's Phone Link app, which already offers some level of interaction between Android phones and Windows PCs.\n\nFor users seeking more advanced cross-device functionality, the article also highlights Sefirah, a free app that reportedly offers seamless integration across all Android devices without paywalls.\n\n#Android #Windows #Microsoft #Tech #Software #CrossPlatform\n\nSource: Android Police, Wired",
+  "tweet": "Your Android phone could soon control your Windows PC! New code suggests features for remote shutdown, sleep, and updates via the Link to Windows app. #Android #Windows #Microsoft",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "microsoft.com",
+  "source": "Android Police, Wired",
+  "url": "https://www.androidpolice.com/android-phones-could-soon-shut-down-restart-and-sleep-your-pc/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/wm/2024/09/link-to-windows.jpg",
+  "orig_title": "Your Android phone could soon control more of your Windows PC with a tap",
+  "cluster_urls": [
+   "https://www.androidpolice.com/android-phones-could-soon-shut-down-restart-and-sleep-your-pc/",
+   "https://www.wired.com/story/the-meta-settlement-will-put-limits-on-instagram-for-teens-theyre-still-vulnerable/"
+  ],
+  "cluster_titles": [
+   "Your Android phone could soon control more of your Windows PC with a tap",
+   "The Meta Settlement Will Put Limits on Instagram for Teens. They’re Still Vulnerable"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260827-0306-0-android-phones-could-soon-control-windows-pc.png",
+   "20260827-0306-0-android-phones-could-soon-control-windows-pc-d1.png",
+   "20260827-0306-0-android-phones-could-soon-control-windows-pc-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_coding_agent_safeguards_failure_and_bug_introduction",
+  "headline_marked": "[[AI Coding Agents]] Drop Auth Checks & Rewrite Queries, Causing Bugs",
+  "headline": "AI Coding Agents Drop Auth Checks & Rewrite Queries, Causing Bugs",
+  "summary": "New GitHub Action 'Agent Code Merge Gate' scans pull requests for these specific regression classes, aiming to catch bugs before they hit production.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI coding agents are adept at making code changes that pass basic tests, but they often fail to preserve essential properties that aren't explicitly tested. This can lead to subtle but critical bugs.",
+   "Two common issues observed include the accidental removal of authorization checks during refactoring and the introduction of inefficient database queries that perform poorly on large datasets. These problems often slip through standard CI checks.",
+   "To address this, 'Agent Code Merge Gate' has been released as a free GitHub Action. It automatically runs on every pull request to identify these specific types of regressions.",
+   "The tool employs a fast, offline heuristic pass and an AI-backed pass to generate a concise executive summary. This feedback is posted as a single comment on the pull request, updating with each push.",
+   "Designed with a narrow scope, the action focuses solely on the two failure modes that have become prevalent with the increasing use of AI-generated pull requests, rather than attempting to be a comprehensive linter."
+  ],
+  "caption": "AI coding agents are introducing bugs by dropping crucial authorization checks and rewriting inefficient queries. Learn how to catch them.\n\nAI coding agents are adept at making code changes that pass basic tests, but they often fail to preserve essential properties that aren't explicitly tested. This can lead to subtle but critical bugs.\n\nTwo common issues observed include the accidental removal of authorization checks during refactoring and the introduction of inefficient database queries that perform poorly on large datasets. These problems often slip through standard CI checks.\n\nTo address this, 'Agent Code Merge Gate' has been released as a free GitHub Action. It automatically runs on every pull request to identify these specific types of regressions.\n\nThe tool employs a fast, offline heuristic pass and an AI-backed pass to generate a concise executive summary. This feedback is posted as a single comment on the pull request, updating with each push.\n\nDesigned with a narrow scope, the action focuses solely on the two failure modes that have become prevalent with the increasing use of AI-generated pull requests, rather than attempting to be a comprehensive linter.\n\n#AI #Coding #SoftwareDevelopment #DevOps #GitHubActions\n\nSource: DEV",
+  "tweet": "AI coding agents are dropping auth checks & rewriting queries, causing bugs. The new 'Agent Code Merge Gate' GitHub Action scans PRs for these specific regressions to catch them early. #AI #Coding #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/momcilo_savic_f347191005c/the-bug-class-ai-coding-agents-keep-introducing-and-how-we-started-catching-it-in-ci-1np7",
+  "image": "",
+  "orig_title": "The Bug Class AI Coding Agents Keep Introducing (and How We Started Catching It in CI)",
+  "cluster_urls": [
+   "https://dev.to/momcilo_savic_f347191005c/the-bug-class-ai-coding-agents-keep-introducing-and-how-we-started-catching-it-in-ci-1np7",
+   "https://dev.to/alifar/openais-hugging-face-incident-report-shows-where-ai-agent-safeguards-failed-3oc6"
+  ],
+  "cluster_titles": [
+   "The Bug Class AI Coding Agents Keep Introducing (and How We Started Catching It in CI)",
+   "OpenAI’s Hugging Face Incident Report Shows Where AI Agent Safeguards Failed"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260827-0306-1-ai-coding-agents-drop-auth-checks-rewrite-qu.png",
+   "20260827-0306-1-ai-coding-agents-drop-auth-checks-rewrite-qu-d1.png",
+   "20260827-0306-1-ai-coding-agents-drop-auth-checks-rewrite-qu-d2.png"
+  ]
+ }
+]

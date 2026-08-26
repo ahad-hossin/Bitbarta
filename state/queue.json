@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "ai_agent_bug_detection_and_breaking",
+  "headline_marked": "[[Three critical vulnerabilities found]] in Claude, Gemini, and OpenAI's Codex AI coding agents",
+  "headline": "Three critical vulnerabilities found in Claude, Gemini, and OpenAI's Codex AI coding agents",
+  "summary": "Novee Security's Black Hat USA 2026 briefing revealed distinct, exploitable flaws in widely used AI coding agents, some with maximum CVSS scores, highlighting systemic trust issues.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Novee Security's Black Hat USA 2026 briefing, \"Trusted Enough to Run: Breaking AI Agents in Official Workflows,\" uncovered three distinct, exploitable vulnerabilities. These flaws were found in three of the most widely used AI coding agents, each within the agent's own repository and triggered by code the agent itself was asked to review.",
+   "One vulnerability, CVE-2026-54316 (CVSS v4 score 6.0), affected Claude Code versions >=0.2.54 and <2.1.163. A preprocessing step stripped single-quoted text from commands, making it invisible to 23 security checks and allowing command injection. Anthropic patched it, but Novee found two bypasses.",
+   "The first bypass used `tac` to read arbitrary files and exfiltrated contents via public GitHub Actions logs, reversing an API key to avoid detection. The second leveraged HuggingFace's public download counter as a covert channel, encoding data into download increments.",
+   "Both Claude bypasses worked because the patch fixed the single-quote issue but not the fundamental architecture: the validator still saw a sanitized command, not the one that would actually execute. This demonstrated a deeper flaw in how commands were processed versus executed.",
+   "CVE-2026-12537, affecting Gemini CLI, received a maximum CVSS v3.1 score of 10.0 (AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H). With over 106,000 stars and 2 million monthly installs, this was a critical finding. In headless CI mode, Gemini CLI automatically loaded and trusted `.gemini/.env` before sandboxing, allowing environment variable injection.",
+   "Additionally, Gemini CLI's `--yolo` flag, which skips confirmation, parsed an allowlist of commands but never enforced it, allowing any sufficiently similar command to pass. Agents in the sandboxed environment could also read `/proc` to access parent process secrets. Google classified this as a supply chain compromise, with fixes in versions 0.39.1, 0.40.0-preview.3, and run-gemini-cli 0.1.22.",
+   "OpenAI's Codex also had a significant vulnerability, though without a CVE. It involved a multi-pass pattern in CI where the first step writes `AGENTS.md` (classified as untrusted input by OpenAI's own docs), and the second step then loads `AGENTS.md` as trusted instructions because it exists on disk.",
+   "The fix for Codex involved isolating the jobs so they no longer shared a checkout. However, Novee Security found this multi-pass pattern, where one agent writes configuration that another then trusts, copied across over 100 public repositories, indicating a widespread architectural flaw. Elad Meged of Novee Security stated, \"The harness is the code between the model and the real world.\"",
+   "Each of these vulnerabilities represents a failure at a trust handoff point within the agent's workflow. The findings underscore that traditional detection methods alone are insufficient to address these architectural security weaknesses in AI coding agents."
+  ],
+  "caption": "Three widely used AI coding agents from Anthropic, Google, and OpenAI were found to have critical, exploitable vulnerabilities. One flaw in Gemini CLI scored a perfect 10.0 on the CVSS scale.\n\nNovee Security's Black Hat USA 2026 briefing, \"Trusted Enough to Run: Breaking AI Agents in Official Workflows,\" uncovered three distinct, exploitable vulnerabilities. These flaws were found in three of the most widely used AI coding agents, each within the agent's own repository and triggered by code the agent itself was asked to review.\n\nOne vulnerability, CVE-2026-54316 (CVSS v4 score 6.0), affected Claude Code versions >=0.2.54 and <2.1.163. A preprocessing step stripped single-quoted text from commands, making it invisible to 23 security checks and allowing command injection. Anthropic patched it, but Novee found two bypasses.\n\nThe first bypass used `tac` to read arbitrary files and exfiltrated contents via public GitHub Actions logs, reversing an API key to avoid detection. The second leveraged HuggingFace's public download counter as a covert channel, encoding data into download increments.\n\nBoth Claude bypasses worked because the patch fixed the single-quote issue but not the fundamental architecture: the validator still saw a sanitized command, not the one that would actually execute. This demonstrated a deeper flaw in how commands were processed versus executed.\n\nCVE-2026-12537, affecting Gemini CLI, received a maximum CVSS v3.1 score of 10.0 (AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H). With over 106,000 stars and 2 million monthly installs, this was a critical finding. In headless CI mode, Gemini CLI automatically loaded and trusted `.gemini/.env` before sandboxing, allowing environment variable injection.\n\n#AISecurity #Cybersecurity #Vulnerability #AIagents #BlackHat #DevSecOps\n\nSource: DEV",
+  "tweet": "Critical vulnerabilities found in AI coding agents from Anthropic, Google, and OpenAI. Flaws include command injection, supply chain compromise, and trust handoff failures. Gemini CLI vulnerability scored CVSS 10.0. #AISecurity #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/correctover/three-ai-coding-agents-three-ways-to-break-them-and-one-thing-detection-will-never-give-you-5b5j",
+  "image": "",
+  "orig_title": "Three AI Coding Agents, Three Ways to Break Them, and One Thing Detection Will Never Give You",
+  "cluster_urls": [
+   "https://dev.to/correctover/three-ai-coding-agents-three-ways-to-break-them-and-one-thing-detection-will-never-give-you-5b5j",
+   "https://dev.to/leojulieta/spotting-invisible-llm-agent-bugs-with-agnost-ai-4jea"
+  ],
+  "cluster_titles": [
+   "Three AI Coding Agents, Three Ways to Break Them, and One Thing Detection Will Never Give You",
+   "Spotting Invisible LLM Agent Bugs with Agnost AI"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260826-1051-0-three-critical-vulnerabilities-found-in-clau.png",
+   "20260826-1051-0-three-critical-vulnerabilities-found-in-clau-d1.png",
+   "20260826-1051-0-three-critical-vulnerabilities-found-in-clau-d2.png",
+   "20260826-1051-0-three-critical-vulnerabilities-found-in-clau-d3.png",
+   "20260826-1051-0-three-critical-vulnerabilities-found-in-clau-d4.png",
+   "20260826-1051-0-three-critical-vulnerabilities-found-in-clau-d5.png"
+  ]
+ },
+ {
+  "topic": "youtube_seo_ai_agents_pipeline",
+  "headline_marked": "[[AI agents automate YouTube SEO]] pipeline, handling research, scripting, rendering, and scheduling",
+  "headline": "AI agents automate YouTube SEO pipeline, handling research, scripting, rendering, and scheduling",
+  "summary": "This self-hosted multi-agent system autonomously manages video production from topic selection to analytics, significantly reducing manual effort for creators.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new multi-agent system has been developed to fully automate the YouTube video production pipeline. It handles everything from video research and script writing to rendering, upload scheduling, and performance analytics.",
+   "The system operates on three interconnected AI agents communicating via a shared SQLite-backed message bus. Each agent has its own task queue, heartbeat monitoring, and priority-based message delivery for efficient operation.",
+   "Agents scan tech trends, community discussions, and competitor channels to identify topics. Each selected topic is fact-verified and tagged with relevant keywords before proceeding through the production pipeline.",
+   "For video creation, the system utilizes Piper TTS for offline voiceover generation and FFmpeg for rendering. It incorporates PIL-piped terminal backgrounds, Karaoke ASS subtitles, and glitch overlays, all without relying on cloud APIs.",
+   "Performance results, including click-through rates and engagement, feed back into the system to optimize topic selection and video titles. This iterative process helps refine content strategy for better audience reach.",
+   "Key findings include the importance of content structure (hook → content → engagement → CTA → debrief) and optimal upload frequency. Posting 14 videos/day significantly reduced CTR, while 2 uploads/day with 6+ hour gaps performed dramatically better.",
+   "The system leverages cross-session memory with MemPalace and knowledge graphs to prevent repeated mistakes and preserve decisions across agent restarts. This ensures continuous learning and improvement in the automated process."
+  ],
+  "caption": "A new AI agent system automates the entire YouTube video production process, from research to rendering and scheduling.\n\nA new multi-agent system has been developed to fully automate the YouTube video production pipeline. It handles everything from video research and script writing to rendering, upload scheduling, and performance analytics.\n\nThe system operates on three interconnected AI agents communicating via a shared SQLite-backed message bus. Each agent has its own task queue, heartbeat monitoring, and priority-based message delivery for efficient operation.\n\nAgents scan tech trends, community discussions, and competitor channels to identify topics. Each selected topic is fact-verified and tagged with relevant keywords before proceeding through the production pipeline.\n\nFor video creation, the system utilizes Piper TTS for offline voiceover generation and FFmpeg for rendering. It incorporates PIL-piped terminal backgrounds, Karaoke ASS subtitles, and glitch overlays, all without relying on cloud APIs.\n\nPerformance results, including click-through rates and engagement, feed back into the system to optimize topic selection and video titles. This iterative process helps refine content strategy for better audience reach.\n\nKey findings include the importance of content structure (hook → content → engagement → CTA → debrief) and optimal upload frequency. Posting 14 videos/day significantly reduced CTR, while 2 uploads/day with 6+ hour gaps performed dramatically better.\n\nThe system leverages cross-session memory with MemPalace and knowledge graphs to prevent repeated mistakes and preserve decisions across agent restarts. This ensures continuous learning and improvement in the automated process.\n\n#AI #YouTube #Automation #Tech #Software #Developer\n\nSource: DEV",
+  "tweet": "New AI agent system automates the full YouTube video production pipeline, from research to rendering and scheduling. This self-hosted solution handles everything, optimizing content and upload frequency. #AI #YouTubeAutomation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/xxxn3m3s1sxxx/how-we-built-a-youtube-seo-pipeline-with-ai-agents-4ldn",
+  "image": "",
+  "orig_title": "How We Built a YouTube SEO Pipeline with AI Agents",
+  "cluster_urls": [
+   "https://dev.to/xxxn3m3s1sxxx/how-we-built-a-youtube-seo-pipeline-with-ai-agents-4ldn"
+  ],
+  "cluster_titles": [
+   "How We Built a YouTube SEO Pipeline with AI Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260826-1051-1-ai-agents-automate-youtube-seo-pipeline-hand.png",
+   "20260826-1051-1-ai-agents-automate-youtube-seo-pipeline-hand-d1.png",
+   "20260826-1051-1-ai-agents-automate-youtube-seo-pipeline-hand-d2.png",
+   "20260826-1051-1-ai-agents-automate-youtube-seo-pipeline-hand-d3.png"
+  ]
+ }
+]

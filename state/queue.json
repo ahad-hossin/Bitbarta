@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "arm_agi_server_cpu_details",
+  "headline_marked": "[[Arm's AGI server CPU features two 70-core N3P chiplets]] with 2 TB/s UCIe fabric and 12-channel memory",
+  "headline": "Arm's AGI server CPU features two 70-core N3P chiplets with 2 TB/s UCIe fabric and 12-channel memory",
+  "summary": "Designed for AI servers, Arm's AGI CPU packs up to 136 Neoverse V3 cores and supports 6 TB of DDR5-8800 memory per socket, leveraging a 2 TB/s UCIe fabric link for high bandwidth.",
+  "category": "HARDWARE",
+  "template": "launch",
+  "details": [
+   "Arm's AGI data center CPU, set to ship starting in late 2026, received extensive new details at Hot Chips 2026. This reveal clarified many architectural and design decisions for the processor.",
+   "The AGI is a dual-chiplet data center processor, featuring 64, 128, or 136 Neoverse V3 cores running between 2.80 GHz and 3.70 GHz. Each core includes two 128-bit vector engines and 2MB of L2 cache, with up to 272 MB of system-level cache across the CPU.",
+   "Each CSS V3 chiplet is built on TSMC's N3P technology, containing 70 V3 cores and a six-channel memory subsystem. This supports up to 3 TB of DDR5-8800 memory per chiplet, totaling 6 TB per socket.",
+   "The two chiplets connect via 16x16 UCIe macros at 32 GT/s, providing an aggregated bandwidth of 2 TB/s. This high-speed fabric is crucial for data transfer between the processing units.",
+   "A key design choice places both compute and I/O on the same die within each chiplet, differing from heterogeneous multi-chiplet designs used by competitors like AMD, Intel, and Nvidia. This approach aims to reduce latency for memory-sensitive workloads.",
+   "Arm's AGI features 96 PCIe 6.0 lanes utilizing the CXL 3.0 protocol for memory expansion, alongside four PCIe 4.0 lanes and other interfaces. The CPU operates with a thermal design power (TDP) of 300W.",
+   "The AGI CPU is primarily positioned for AI servers and agentic AI systems, where memory performance plays a significant role. Its coherent NUMA memory subsystem is specifically optimized for these demanding workloads.",
+   "An 8x9 CMN-S3 mesh interconnects CPU cores, memory, I/O, and accelerators within each chiplet, extending coherency beyond the die and socket. This design prioritizes memory locality, bandwidth, and latency."
+  ],
+  "caption": "Arm's AGI server CPU, set for late 2026, promises a massive 2 TB/s UCIe fabric link. It's designed specifically for next-gen AI and agentic AI systems.\n\nArm's AGI data center CPU, set to ship starting in late 2026, received extensive new details at Hot Chips 2026. This reveal clarified many architectural and design decisions for the processor.\n\nThe AGI is a dual-chiplet data center processor, featuring 64, 128, or 136 Neoverse V3 cores running between 2.80 GHz and 3.70 GHz. Each core includes two 128-bit vector engines and 2MB of L2 cache, with up to 272 MB of system-level cache across the CPU.\n\nEach CSS V3 chiplet is built on TSMC's N3P technology, containing 70 V3 cores and a six-channel memory subsystem. This supports up to 3 TB of DDR5-8800 memory per chiplet, totaling 6 TB per socket.\n\nThe two chiplets connect via 16x16 UCIe macros at 32 GT/s, providing an aggregated bandwidth of 2 TB/s. This high-speed fabric is crucial for data transfer between the processing units.\n\nA key design choice places both compute and I/O on the same die within each chiplet, differing from heterogeneous multi-chiplet designs used by competitors like AMD, Intel, and Nvidia. This approach aims to reduce latency for memory-sensitive workloads.\n\nArm's AGI features 96 PCIe 6.0 lanes utilizing the CXL 3.0 protocol for memory expansion, alongside four PCIe 4.0 lanes and other interfaces. The CPU operates with a thermal design power (TDP) of 300W.\n\nThe AGI CPU is primarily positioned for AI servers and agentic AI systems, where memory performance plays a significant role. Its coherent NUMA memory subsystem is specifically optimized for these demanding workloads.\n\nAn 8x9 CMN-S3 mesh interconnects CPU cores, memory, I/O, and accelerators within each chiplet, extending coherency beyond the die and socket. This design prioritizes memory locality, bandwidth, and latency.\n\n#Arm #AGICPU #HotChips #AIHardware #ServerTech #DDR5\n\nSource: Tom's Hardware",
+  "tweet": "Arm's AGI server CPU, shipping late 2026, was detailed at Hot Chips 2026. It features two 70-core N3P chiplets, a 2 TB/s UCIe fabric link, and 12-channel DDR5-8800 memory controller, targeting AI servers. #Arm #AIHardware #HotChips",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "arm.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-arm-details-agi-server-cpu-with-two-70-core-n3p-chiplets-touts-2-tb-s-ucie-fabric-link-and-12-channel-memory-controller",
+  "image": "https://cdn.mos.cms.futurecdn.net/eNtVhb5GoBQCE9XK3irTnB-1280-80.jpg",
+  "orig_title": "Hot Chips 2026: Arm details AGI server CPU with two 70-core N3P chiplets — touts 2 TB/s UCIe fabric link and 12-channel memory controller",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/cpus/hot-chips-2026-arm-details-agi-server-cpu-with-two-70-core-n3p-chiplets-touts-2-tb-s-ucie-fabric-link-and-12-channel-memory-controller"
+  ],
+  "cluster_titles": [
+   "Hot Chips 2026: Arm details AGI server CPU with two 70-core N3P chiplets — touts 2 TB/s UCIe fabric link and 12-channel memory controller"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260826-1706-0-arm-s-agi-server-cpu-features-two-70-core-n3.png",
+   "20260826-1706-0-arm-s-agi-server-cpu-features-two-70-core-n3-d1.png",
+   "20260826-1706-0-arm-s-agi-server-cpu-features-two-70-core-n3-d2.png",
+   "20260826-1706-0-arm-s-agi-server-cpu-features-two-70-core-n3-d3.png"
+  ]
+ },
+ {
+  "topic": "google_gemini_cash_flow_crisis",
+  "headline_marked": "[[Google reports $5.8B operating loss]] despite Gemini reaching 1 billion users",
+  "headline": "Google reports $5.8B operating loss despite Gemini reaching 1 billion users",
+  "summary": "Google's AI R&D expenses led to its first negative cash flow since 2004, raising questions about Gemini's profitability despite its massive user base.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Google's AI chatbot, Gemini, has reached one billion monthly active users, becoming the 14th Google product to hit this milestone. However, Google's Q2 2026 earnings report revealed a $5.8 billion operating loss. This loss was explicitly attributed to \"shared AI R&D expenses.\"",
+   "This marks Google's first negative cash flow since its 2004 IPO, despite a $26 billion revenue jump from the previous year. While the company remains profitable, these gains are in unrealized assets, not hard cash.",
+   "Gemini is now central to Google's hardware strategy. New devices like the Pixel 11 series and upcoming Googlebook are designed with RAM configurations and features explicitly chosen to support Gemini Intelligence.",
+   "This deep integration means that buying new Google hardware is increasingly about using its AI capabilities. Google cannot easily pull back its AI deployment, as it would undermine the strategy built around machine-learning Tensor chips since the Pixel 6.",
+   "For Google, Gemini must become profitable to reverse the negative cash flow trend. The next few quarterly earnings reports will be critical in determining the future viability of both Gemini and Google's overall strategy."
+  ],
+  "caption": "Google's AI ambitions are costing it dearly. Despite Gemini hitting 1 billion users, the company just reported its first negative cash flow since 2004.\n\nGoogle's AI chatbot, Gemini, has reached one billion monthly active users, becoming the 14th Google product to hit this milestone. However, Google's Q2 2026 earnings report revealed a $5.8 billion operating loss. This loss was explicitly attributed to \"shared AI R&D expenses.\"\n\nThis marks Google's first negative cash flow since its 2004 IPO, despite a $26 billion revenue jump from the previous year. While the company remains profitable, these gains are in unrealized assets, not hard cash.\n\nGemini is now central to Google's hardware strategy. New devices like the Pixel 11 series and upcoming Googlebook are designed with RAM configurations and features explicitly chosen to support Gemini Intelligence.\n\nThis deep integration means that buying new Google hardware is increasingly about using its AI capabilities. Google cannot easily pull back its AI deployment, as it would undermine the strategy built around machine-learning Tensor chips since the Pixel 6.\n\nFor Google, Gemini must become profitable to reverse the negative cash flow trend. The next few quarterly earnings reports will be critical in determining the future viability of both Gemini and Google's overall strategy.\n\n#Google #Gemini #AI #BigTech #Financials #TechNews\n\nSource: Android Police",
+  "tweet": "Google's Gemini hit 1 billion users, but its AI R&D costs led to a $5.8B operating loss in Q2 2026 – Google's first negative cash flow since 2004. Can Gemini turn a profit? #Google #AI #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/geminis-one-billion-users-cant-hide-googles-cash-flow-crisis/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/08/gemini-logo-above-earth-with-rising-arrows-and-floating-coins.jpg",
+  "orig_title": "Gemini's one billion users can't hide Google's cash flow crisis",
+  "cluster_urls": [
+   "https://www.androidpolice.com/geminis-one-billion-users-cant-hide-googles-cash-flow-crisis/"
+  ],
+  "cluster_titles": [
+   "Gemini's one billion users can't hide Google's cash flow crisis"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260826-1706-1-google-reports-5-8b-operating-loss-despite-g.png",
+   "20260826-1706-1-google-reports-5-8b-operating-loss-despite-g-d1.png",
+   "20260826-1706-1-google-reports-5-8b-operating-loss-despite-g-d2.png"
+  ]
+ }
+]

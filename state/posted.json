@@ -8377,8 +8377,13 @@
   "headline": "Your agent's 'secure' network policy was off unless you did four steps — so it was off",
   "topic": "ai_agent_network_policy_vulnerability",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-08-26T00:07:23Z"
+  "status": "failed",
+  "at": "2026-08-26T00:07:23Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "f3b12203d7cad063",
@@ -8386,7 +8391,12 @@
   "headline": "Instagram head Adam Mosseri says it was 'news to me' that staff limited his exposure to teen safety data",
   "topic": "instagram_mosseri_teen_safety_data",
   "source": "Engadget",
-  "status": "queued",
-  "at": "2026-08-26T00:07:23Z"
+  "status": "failed",
+  "at": "2026-08-26T00:07:23Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

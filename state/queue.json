@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_propaganda_israel_us_thinktank",
+  "headline_marked": "[[Fake US thinktank funded by Israel]] sought to game AI for propaganda, publishing 560k words in 9 days",
+  "headline": "Fake US thinktank funded by Israel sought to game AI for propaganda, publishing 560k words in 9 days",
+  "summary": "A non-existent \"thinktank\" published over half a million words in nine days, designed to optimize content for AI chatbots to cite pro-Israel arguments.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A non-existent US thinktank, the Hanover Institute for Public Policy, published over 560,000 words across 124 reports in just nine days. This content was built on a commercial platform designed to optimize for AI chatbot citations, aiming to prime chatbots with pro-Israel arguments.",
+   "The site presents Israel's position on sensitive topics like Palestinian prisoner torture, war crimes, and alleged starvation in Gaza. It frames these as neutral research, despite being filed under the Foreign Agents Registration Act (FARA) by Piro Inc as material for the Israeli government.",
+   "The Hanover Institute lacks legal entity status, a physical address, named staff, or bylines. Its funding page initially claimed no external funding but was later updated, stating the previous claim was true \"when it was written.\"",
+   "This website is part of a broader, multi-million dollar effort financed by the Israeli government, routed through third parties like Havas Media. The campaign aims to influence chatbots to present Israel's arguments, with contracts explicitly mentioning \"GPT framing results on GPT conversations.\"",
+   "Guardian analysis revealed that between August 6 and 14, the institute published an average of 4,500 words per report. Most headlines are questions resembling chatbot queries, such as \"Is Anti-Zionism Antisemitism?\" or \"Is Israel Carrying Out a Genocide in Gaza?\".",
+   "Reports are presented in a quasi-academic style with citations from sources like the World Bank and UN agencies. However, analysis shows the information is consistently framed to blunt criticism of Israel, often noting that no court has entered a verdict on claims of genocide or apartheid.",
+   "Casualty and aid figures are frequently attributed to \"a party to the events,\" a caveat used in 55 reports for both Israeli and Palestinian counts. This leaves the reader with the impression that little about Gaza can be definitively established."
+  ],
+  "caption": "A fake US thinktank, funded by Israel, published over half a million words in nine days. Its goal: to game AI chatbots for propaganda.\n\nA non-existent US thinktank, the Hanover Institute for Public Policy, published over 560,000 words across 124 reports in just nine days. This content was built on a commercial platform designed to optimize for AI chatbot citations, aiming to prime chatbots with pro-Israel arguments.\n\nThe site presents Israel's position on sensitive topics like Palestinian prisoner torture, war crimes, and alleged starvation in Gaza. It frames these as neutral research, despite being filed under the Foreign Agents Registration Act (FARA) by Piro Inc as material for the Israeli government.\n\nThe Hanover Institute lacks legal entity status, a physical address, named staff, or bylines. Its funding page initially claimed no external funding but was later updated, stating the previous claim was true \"when it was written.\"\n\nThis website is part of a broader, multi-million dollar effort financed by the Israeli government, routed through third parties like Havas Media. The campaign aims to influence chatbots to present Israel's arguments, with contracts explicitly mentioning \"GPT framing results on GPT conversations.\"\n\nGuardian analysis revealed that between August 6 and 14, the institute published an average of 4,500 words per report. Most headlines are questions resembling chatbot queries, such as \"Is Anti-Zionism Antisemitism?\" or \"Is Israel Carrying Out a Genocide in Gaza?\".\n\nReports are presented in a quasi-academic style with citations from sources like the World Bank and UN agencies. However, analysis shows the information is consistently framed to blunt criticism of Israel, often noting that no court has entered a verdict on claims of genocide or apartheid.\n\n#AI #Propaganda #Disinformation #Israel #TechNews #Chatbots\n\nSource: Hacker News",
+  "tweet": "A fake US thinktank, funded by Israel, published 560,000 words in 9 days to game AI chatbots for propaganda. The site, designed for AI optimization, presents pro-Israel arguments as neutral research. #AI #Propaganda #Disinformation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
+  "image": "",
+  "orig_title": "Fake US thinktank set up and funded by Israel sought to game AI for propaganda",
+  "cluster_urls": [
+   "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda"
+  ],
+  "cluster_titles": [
+   "Fake US thinktank set up and funded by Israel sought to game AI for propaganda"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260826-1911-0-fake-us-thinktank-funded-by-israel-sought-to.png",
+   "20260826-1911-0-fake-us-thinktank-funded-by-israel-sought-to-d1.png",
+   "20260826-1911-0-fake-us-thinktank-funded-by-israel-sought-to-d2.png",
+   "20260826-1911-0-fake-us-thinktank-funded-by-israel-sought-to-d3.png"
+  ]
+ },
+ {
+  "topic": "ring_encryption_police_access",
+  "headline_marked": "[[Ring's new encryption limits data it can give police]] with 'Throw Away The Key' method, rolling out now",
+  "headline": "Ring's new encryption limits data it can give police with 'Throw Away The Key' method, rolling out now",
+  "summary": "Ring's new \"Throw Away The Key Encryption\" (TAKE) becomes the default for all cameras, protecting videos without traditional end-to-end encryption. It restricts Amazon's cloud access and changes what Ring can provide to law enforcement.",
+  "category": "SECURITY",
+  "template": "launch",
+  "details": [
+   "Ring has developed \"Throw Away The Key Encryption\" (TAKE), a new method to protect user videos. It will become the default for all Ring cameras, rolling out gradually starting in September, regardless of subscription status.",
+   "TAKE limits when and why Amazon's cloud can access videos, while still enabling smart features like AI-powered alerts and video search. Ring states it will only be able to provide non-video information and encrypted video files to law enforcement.",
+   "Unlike full end-to-end encryption (E2EE), TAKE allows Ring to process videos for cloud-based features. It uses unique, rotating encryption keys for every five minutes of footage, stored in a secure enclave.",
+   "Ring stores copies of these keys temporarily but deletes them within 24 hours, giving users full control over older videos. This 24-hour window allows for processing current cloud features.",
+   "The system was developed using Messaging Layer Security, an open standard, and is inspired by E2EE principles. Users can switch between TAKE and E2EE on newer, on-device encrypting cameras, while older cameras only support TAKE.",
+   "Key management occurs within an AWS Nitro Enclave, with restricted access and no persistent storage for Ring employees. Keys are unlocked only by cryptographic attestation and are permanently deleted after 24 hours with no backups.",
+   "To view older footage, an authorized device must send the keys back to Ring for that session, with key delivery being push-only. Ring offers multiple recovery methods if device access is lost, all customer-accessible."
+  ],
+  "caption": "Ring's new \"Throw Away The Key Encryption\" (TAKE) is rolling out, changing what video data the company can provide to law enforcement. This new default encryption method aims to enhance user privacy.\n\nRing has developed \"Throw Away The Key Encryption\" (TAKE), a new method to protect user videos. It will become the default for all Ring cameras, rolling out gradually starting in September, regardless of subscription status.\n\nTAKE limits when and why Amazon's cloud can access videos, while still enabling smart features like AI-powered alerts and video search. Ring states it will only be able to provide non-video information and encrypted video files to law enforcement.\n\nUnlike full end-to-end encryption (E2EE), TAKE allows Ring to process videos for cloud-based features. It uses unique, rotating encryption keys for every five minutes of footage, stored in a secure enclave.\n\nRing stores copies of these keys temporarily but deletes them within 24 hours, giving users full control over older videos. This 24-hour window allows for processing current cloud features.\n\nThe system was developed using Messaging Layer Security, an open standard, and is inspired by E2EE principles. Users can switch between TAKE and E2EE on newer, on-device encrypting cameras, while older cameras only support TAKE.\n\nKey management occurs within an AWS Nitro Enclave, with restricted access and no persistent storage for Ring employees. Keys are unlocked only by cryptographic attestation and are permanently deleted after 24 hours with no backups.\n\nTo view older footage, an authorized device must send the keys back to Ring for that session, with key delivery being push-only. Ring offers multiple recovery methods if device access is lost, all customer-accessible.\n\n#Ring #Privacy #Encryption #Security #SmartHome #TechNews\n\nSource: The Verge",
+  "tweet": "Ring's new \"Throw Away The Key Encryption\" (TAKE) is rolling out as the default for all cameras. It limits what video data Ring can provide to law enforcement, enhancing user privacy while maintaining smart features. #Ring #Privacy #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ring.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/tech/984838/ring-take-encryption-throw-away-the-key-law-enforcement",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/09/236648_Ring_Battery_Doorbell_Plus_JTuohy_0012.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Ring says its new encryption limits what it can give police",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/984838/ring-take-encryption-throw-away-the-key-law-enforcement"
+  ],
+  "cluster_titles": [
+   "Ring says its new encryption limits what it can give police"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260826-1911-1-ring-s-new-encryption-limits-data-it-can-giv.png",
+   "20260826-1911-1-ring-s-new-encryption-limits-data-it-can-giv-d1.png",
+   "20260826-1911-1-ring-s-new-encryption-limits-data-it-can-giv-d2.png"
+  ]
+ }
+]

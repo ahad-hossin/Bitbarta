@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "command_injection_live_exploit",
+  "headline_marked": "[[Command Injection (CWE-78) from Auto-Detected Finding to Live Exploit to Fixed]] — Fully Offline",
+  "headline": "Command Injection (CWE-78) from Auto-Detected Finding to Live Exploit to Fixed — Fully Offline",
+  "summary": "This walkthrough details a real-world CWE-78 vulnerability, showing its detection, live exploitation, and fix, all within a fully offline process without cloud AI.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "This story details a real-world OS Command Injection (CWE-78) vulnerability, from its initial flagging by a rule engine to a disclosure-ready report. The entire process runs locally, with no cloud AI involved in the pipeline.",
+   "The target is a deliberately vulnerable local training application: a small \"network diagnostics\" tool designed to ping a host. It lacks validation and escaping, allowing user input to flow directly into a shell.",
+   "The JSON response echoes the exact command string built by the server, making the vulnerable string visible in every response. This provides clear, externally observable proof of the bug without needing server access.",
+   "A taint-tracking static analysis rule automatically raises a Critical CWE-78 finding, eliminating manual creation or guesswork. The rule engine discovers the vulnerability; an LLM only explains the already-verified finding afterward.",
+   "Submitting `127.0.0.1; id` into the form field demonstrates the exploit. The `cmd` output proves the server built the expected unescaped string, and `stdout` shows the `id` command's output after the ping.",
+   "A key point for manual testing is that the request's `Content-Type` is `application/x-www-form-urlencoded`. Metacharacters like `&` in payloads must be percent-encoded to survive the form parser.",
+   "The article demonstrates four independent shell metacharacters (`;`, `&&`, `|`, `` ` ``) that successfully lead to exploitation. This proves the vulnerability reaches a real shell, confirming it's not a lucky payload.",
+   "With both static and live evidence attached to the finding, a local LLM generates a plain-language narrative, such as \"Untrusted input reaches `child_process.exec` via string concatenation — full remote code execution.\" No network calls are made.",
+   "The fix involves using `execFile` with an argument array, which prevents a shell from interpreting the input. Adding strict input validation, like an IP/hostname allow-list, provides defense in depth.",
+   "While the platform's engine has active-exploitation probes for this bug class, they are not yet wired to a GUI or CLI. This walkthrough therefore proves the exploit manually, acknowledging current tooling gaps. The target app and playbook are available for reproduction."
+  ],
+  "caption": "A real-world Command Injection (CWE-78) vulnerability, from auto-detection to live exploit, fixed entirely offline. See how it's done.\n\nThis story details a real-world OS Command Injection (CWE-78) vulnerability, from its initial flagging by a rule engine to a disclosure-ready report. The entire process runs locally, with no cloud AI involved in the pipeline.\n\nThe target is a deliberately vulnerable local training application: a small \"network diagnostics\" tool designed to ping a host. It lacks validation and escaping, allowing user input to flow directly into a shell.\n\nThe JSON response echoes the exact command string built by the server, making the vulnerable string visible in every response. This provides clear, externally observable proof of the bug without needing server access.\n\nA taint-tracking static analysis rule automatically raises a Critical CWE-78 finding, eliminating manual creation or guesswork. The rule engine discovers the vulnerability; an LLM only explains the already-verified finding afterward.\n\nSubmitting `127.0.0.1; id` into the form field demonstrates the exploit. The `cmd` output proves the server built the expected unescaped string, and `stdout` shows the `id` command's output after the ping.\n\nA key point for manual testing is that the request's `Content-Type` is `application/x-www-form-urlencoded`. Metacharacters like `&` in payloads must be percent-encoded to survive the form parser.\n\nThe article demonstrates four independent shell metacharacters (`;`, `&&`, `|`, `` ` ``) that successfully lead to exploitation. This proves the vulnerability reaches a real shell, confirming it's not a lucky payload.\n\nWith both static and live evidence attached to the finding, a local LLM generates a plain-language narrative, such as \"Untrusted input reaches `child_process.exec` via string concatenation — full remote code execution.\" No network calls are made.\n\n#Cybersecurity #CommandInjection #CWE78 #InfoSec #DevSecOps #Vulnerability\n\nSource: DEV",
+  "tweet": "A full walkthrough of a real-world Command Injection (CWE-78) vulnerability: from auto-detection to live exploit, fixed entirely offline. Learn how to identify and mitigate this critical flaw. #Cybersecurity #CWE78 #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jomynn/command-injection-cwe-78-from-auto-detected-finding-to-live-exploit-to-fixed-fully-offline-573c",
+  "image": "",
+  "orig_title": "Command Injection (CWE-78): From Auto-Detected Finding to Live Exploit to Fixed — Fully Offline",
+  "cluster_urls": [
+   "https://dev.to/jomynn/command-injection-cwe-78-from-auto-detected-finding-to-live-exploit-to-fixed-fully-offline-573c"
+  ],
+  "cluster_titles": [
+   "Command Injection (CWE-78): From Auto-Detected Finding to Live Exploit to Fixed — Fully Offline"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260827-1606-0-command-injection-cwe-78-from-auto-detected-.png",
+   "20260827-1606-0-command-injection-cwe-78-from-auto-detected--d1.png",
+   "20260827-1606-0-command-injection-cwe-78-from-auto-detected--d2.png",
+   "20260827-1606-0-command-injection-cwe-78-from-auto-detected--d3.png",
+   "20260827-1606-0-command-injection-cwe-78-from-auto-detected--d4.png"
+  ]
+ },
+ {
+  "topic": "atari_activision_collection_999_price",
+  "headline_marked": "[[Atari revives 39 Activision games on cartridges]] for Atari 2600/7800, Ultimate Deluxe costs $999.96",
+  "headline": "Atari revives 39 Activision games on cartridges for Atari 2600/7800, Ultimate Deluxe costs $999.96",
+  "summary": "The Ultimate Deluxe Set, featuring all 39 titles, is priced at $999.96. Individual cartridges start at $34.98, with pre-orders shipping from November 2026.",
+  "category": "GAMING",
+  "template": "launch",
+  "details": [
+   "Atari has officially unveiled the Atari x Activision Collection, a compilation featuring 39 classic Activision games on physical cartridges. The Ultimate Deluxe Set, including all titles, is priced at $999.96, while individual cartridges start at $34.98.",
+   "This collection is fully compatible with original Atari 2600 and 7800 consoles, as well as the newer Atari 2600+ and 7800+. This move by Atari supports physical media in an era where many manufacturers are moving away from it.",
+   "Standard Editions of select games like Pitfall! and River Raid are available for $34.99 each. These editions feature a sleek black cartridge and a newly designed, full-color manual.",
+   "Deluxe Editions come in four different collections: Treasure, Speed, Secrets, and Victory. Each collection includes 9-10 games and retails for $249.99, featuring vibrant, colorful cartridges, 10 woven patches, 10 enamel pins, and a collector slipcase.",
+   "The Ultimate Deluxe Set combines the content of all four Deluxe Sets, offering all 39 classic Activision titles. It also adds 12 exclusive metal trading cards and a yet-to-be-announced collectible item. Buying Deluxe Editions offers savings, reducing the per-game cost to $24.99 if purchasing more than seven titles.",
+   "Pre-orders for the Standard Edition cartridges, the Treasure Collection, and the Ultimate Deluxe Set are officially open on Atari's website, with shipping expected in November 2026. The Speed, Secrets, and Victory Collections will be available later, through Fall 2027."
+  ],
+  "caption": "Atari is bringing back 39 classic Activision games on new physical cartridges, fully compatible with consoles spanning five decades. The Ultimate Deluxe Set costs $999.96.\n\nAtari has officially unveiled the Atari x Activision Collection, a compilation featuring 39 classic Activision games on physical cartridges. The Ultimate Deluxe Set, including all titles, is priced at $999.96, while individual cartridges start at $34.98.\n\nThis collection is fully compatible with original Atari 2600 and 7800 consoles, as well as the newer Atari 2600+ and 7800+. This move by Atari supports physical media in an era where many manufacturers are moving away from it.\n\nStandard Editions of select games like Pitfall! and River Raid are available for $34.99 each. These editions feature a sleek black cartridge and a newly designed, full-color manual.\n\nDeluxe Editions come in four different collections: Treasure, Speed, Secrets, and Victory. Each collection includes 9-10 games and retails for $249.99, featuring vibrant, colorful cartridges, 10 woven patches, 10 enamel pins, and a collector slipcase.\n\nThe Ultimate Deluxe Set combines the content of all four Deluxe Sets, offering all 39 classic Activision titles. It also adds 12 exclusive metal trading cards and a yet-to-be-announced collectible item. Buying Deluxe Editions offers savings, reducing the per-game cost to $24.99 if purchasing more than seven titles.\n\nPre-orders for the Standard Edition cartridges, the Treasure Collection, and the Ultimate Deluxe Set are officially open on Atari's website, with shipping expected in November 2026. The Speed, Secrets, and Victory Collections will be available later, through Fall 2027.\n\n#Atari #Activision #RetroGaming #GamingNews #PhysicalMedia #ClassicGames\n\nSource: Tom's Hardware",
+  "tweet": "Atari revives 39 classic Activision games on new physical cartridges, compatible with original Atari 2600/7800 and modern 2600+/7800+ consoles. The Ultimate Deluxe Set with all titles is $999.96. Pre-orders ship Nov 2026. #Atari #RetroGaming #Gaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "atari.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/video-games/retro-gaming/atari-drops-39-activision-games-on-cartridges-the-run-seamlessly-across-five-decades-of-hardware-ultimate-deluxe-collection-that-includes-every-title-clocks-in-at-usd999-96",
+  "image": "https://cdn.mos.cms.futurecdn.net/nHq2Q4GskapRxzxmaPNHAc-1280-80.jpg",
+  "orig_title": "Atari revives 39 Activision games on cartridges that run seamlessly across five decades of hardware — Ultimate Deluxe collection that includes every title costs a wild $999.96",
+  "cluster_urls": [
+   "https://www.tomshardware.com/video-games/retro-gaming/atari-drops-39-activision-games-on-cartridges-the-run-seamlessly-across-five-decades-of-hardware-ultimate-deluxe-collection-that-includes-every-title-clocks-in-at-usd999-96"
+  ],
+  "cluster_titles": [
+   "Atari revives 39 Activision games on cartridges that run seamlessly across five decades of hardware — Ultimate Deluxe collection that includes every title costs a wild $999.96"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260827-1606-1-atari-revives-39-activision-games-on-cartrid.png",
+   "20260827-1606-1-atari-revives-39-activision-games-on-cartrid-d1.png",
+   "20260827-1606-1-atari-revives-39-activision-games-on-cartrid-d2.png",
+   "20260827-1606-1-atari-revives-39-activision-games-on-cartrid-d3.png"
+  ]
+ }
+]

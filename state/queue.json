@@ -1,1 +1,59 @@
-[]
+[
+ {
+  "topic": "cloud_ai_coding_agent_testing_and_development",
+  "headline_marked": "[[AI agent's worst bug]] was its own progress report, not a stall",
+  "headline": "AI agent's worst bug was its own progress report, not a stall",
+  "summary": "A startup analyzed every message from its first six users, finding that the AI agent's perceived failures were often due to inaccurate reporting of its own actions.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A startup building a cloud AI coding agent analyzed the interactions of its first six users over 21 days. They discovered that the AI agent's perceived failures, such as stalling or producing no output, were often due to internal reporting bugs rather than actual system failures.",
+   "One critical bug involved the agent's progress report, which failed to count file reads and searches. This led to instances where the agent performed significant work but reported 'nothing happened,' causing users to abandon the session.",
+   "The team found that their evaluation harness was also flawed, scoring high on trajectory quality while failing acceptance checks. This led them to incorrectly believe the agent was underperforming when the measurement tool itself was the issue.",
+   "The article emphasizes the importance of accurate instrumentation, stating, 'Check what your instrument counts before you conclude the model is bad at its job.' They learned to distinguish between the agent genuinely doing nothing and the agent investigating and stopping.",
+   "A positive finding was that one user, after receiving a well-handled token budget exhaustion message, returned the next day because the work the agent had started was worth continuing. This user also experienced the agent unprompted fixing a Next.js breakage.",
+   "The startup has since fixed the reporting bugs and improved the agent's ability to differentiate between genuine inaction and investigated stops. When the fault lies with the product, it now explicitly states it, avoiding user confusion."
+  ],
+  "caption": "We read every message our first six users sent. The worst bug was our own progress report.\n\nA startup building a cloud AI coding agent analyzed the interactions of its first six users over 21 days. They discovered that the AI agent's perceived failures, such as stalling or producing no output, were often due to internal reporting bugs rather than actual system failures.\n\nOne critical bug involved the agent's progress report, which failed to count file reads and searches. This led to instances where the agent performed significant work but reported 'nothing happened,' causing users to abandon the session.\n\nThe team found that their evaluation harness was also flawed, scoring high on trajectory quality while failing acceptance checks. This led them to incorrectly believe the agent was underperforming when the measurement tool itself was the issue.\n\nThe article emphasizes the importance of accurate instrumentation, stating, 'Check what your instrument counts before you conclude the model is bad at its job.' They learned to distinguish between the agent genuinely doing nothing and the agent investigating and stopping.\n\nA positive finding was that one user, after receiving a well-handled token budget exhaustion message, returned the next day because the work the agent had started was worth continuing. This user also experienced the agent unprompted fixing a Next.js breakage.\n\nThe startup has since fixed the reporting bugs and improved the agent's ability to differentiate between genuine inaction and investigated stops. When the fault lies with the product, it now explicitly states it, avoiding user confusion.\n\n#AI #DevTools #Coding #AIagent\n\nSource: DEV",
+  "tweet": "We read every message our first six users sent. The worst bug was our own progress report. The AI agent's perceived failures were often due to inaccurate reporting of its own actions, not actual system failures. #AI #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/trynocoder/we-read-every-message-our-first-six-users-sent-the-worst-bug-was-our-own-progress-report-20lh",
+  "image": "",
+  "orig_title": "We read every message our first six users sent. The worst bug was our own progress report.",
+  "cluster_urls": [
+   "https://dev.to/trynocoder/we-read-every-message-our-first-six-users-sent-the-worst-bug-was-our-own-progress-report-20lh",
+   "https://dev.to/theodore_p_9749548f7dd03/building-a-verification-first-repair-harness-2d11",
+   "https://dev.to/gde/cross-cloud-a2a-agent-card-field-comparison-2hod",
+   "https://dev.to/spranab/i-made-an-mcp-server-stop-calling-any-ai-api-and-it-got-more-useful-26jg",
+   "https://dev.to/abernathycross6857/startup-sms-alerts-explained-4-us-eu-provider-tests-for-signatures-and-compliance-3c4n",
+   "https://dev.to/benjamin_cup/building-a-dynamic-twap-momentum-strategy-for-polymarket-3cmm",
+   "https://dev.to/jon_handler_9bb3e6b4a2fd0/your-ai-agent-just-read-the-man-pages-opensearch-agent-skills-turn-your-ide-into-a-search-engineer-4ld8",
+   "https://dev.to/latryee/how-i-anonymized-relational-sql-dumps-without-breaking-foreign-key-relationships-24jm",
+   "https://dev.to/rulestack/how-do-you-keep-an-agent-maintained-claudemd-from-growing-forever-20em",
+   "https://dev.to/anoymask/sharepoint-authentication-bypass-and-rce-chain-attack-observed-cve-2026-55040-cve-2026-63520-3274"
+  ],
+  "cluster_titles": [
+   "We read every message our first six users sent. The worst bug was our own progress report.",
+   "Building a Verification-First Repair Harness",
+   "Cross Cloud A2A Agent Card Field Comparison",
+   "I Made an MCP Server Stop Calling Any AI API, and It Got More Useful",
+   "Startup SMS Alerts Explained: 4 US-EU Provider Tests for Signatures and Compliance",
+   "Building a Dynamic TWAP Momentum Strategy for Polymarket",
+   "Your AI Agent Just Read the man Pages. OpenSearch Agent Skills Turn Your IDE Into a Search Engineer.",
+   "How I Anonymized Relational SQL Dumps Without Breaking Foreign-Key Relationships",
+   "How do you keep an agent-maintained CLAUDE.md from growing forever?",
+   "SharePoint Authentication Bypass and RCE Chain Attack Observed: CVE-2026-55040 / CVE-2026-63520"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260827-2107-0-ai-agent-s-worst-bug-was-its-own-progress-re.png",
+   "20260827-2107-0-ai-agent-s-worst-bug-was-its-own-progress-re-d1.png",
+   "20260827-2107-0-ai-agent-s-worst-bug-was-its-own-progress-re-d2.png"
+  ]
+ }
+]

@@ -8377,8 +8377,13 @@
   "headline": "Command Injection (CWE-78) from Auto-Detected Finding to Live Exploit to Fixed — Fully Offline",
   "topic": "command_injection_live_exploit",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-08-27T10:06:32Z"
+  "status": "failed",
+  "at": "2026-08-27T10:06:32Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "5d0e86fd0a587bde",
@@ -8386,7 +8391,12 @@
   "headline": "Atari revives 39 Activision games on cartridges for Atari 2600/7800, Ultimate Deluxe costs $999.96",
   "topic": "atari_activision_collection_999_price",
   "source": "Tom's Hardware",
-  "status": "queued",
-  "at": "2026-08-27T10:06:32Z"
+  "status": "failed",
+  "at": "2026-08-27T10:06:32Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

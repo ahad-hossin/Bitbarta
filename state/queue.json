@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "gemini_omni_1_1_flash_video_cost",
+  "headline_marked": "[[Google's Gemini Omni 1.1 Flash 720p video costs $0.10 per second]]",
+  "headline": "Google's Gemini Omni 1.1 Flash 720p video costs $0.10 per second",
+  "summary": "There is no free tier for Gemini Omni 1.1 Flash; even the first clip generated during documentation review will be charged. Costs are token-based, not duration-based.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A second of 720p video from Gemini Omni 1.1 Flash costs approximately $0.10, according to Google's pricing page. This is the baseline for cost planning, as there is no free tier; even the first clip generated will incur charges.",
+   "Google charges by tokens, not duration, which reveals key cost levers. Generating drafts in 360p can reduce iteration costs by two-thirds compared to 720p.",
+   "These rates apply to the gemini-omni-1.1-flash model, which reached General Availability (GA) on August 27, 2026. One second of 720p video output is equivalent to 5,792 tokens.",
+   "Input costs, such as reference images and attached videos, are significantly cheaper at $1.50 per million tokens. Therefore, optimizing generated video duration and resolution is more impactful than optimizing prompt size.",
+   "Google generates 360p previews at one-third the cost of 720p and up to 60% faster. A 10-second draft costs about $0.34, versus $1.01 for 720p.",
+   "Video prompt iteration often requires multiple attempts, with a realistic session involving twelve tries before approval. By drafting in 360p and rendering the final version in 720p, costs can be reduced by 62%.",
+   "1080p and 4K layers are upscales of generated frames, not native renders, and cost more than 720p. Always check Google's pricing page for current per-second rates before budgeting for 4K pipelines.",
+   "A 40-second scene is not a single request but involves one generation and three extension calls, each charging for its 10 seconds of output plus previous context. A full 40-second scene in 720p costs about $4.06 in output.",
+   "The standard Veo 3.1 model costs about four times more than one second of Omni in 720p, while Veo 3.1 Lite is cheaper than Omni. Both models use the same Gemini API key, which can obscure price differences.",
+   "Avoid regenerating content that could be cached and be cautious with retries after timeouts, as video generation is slow and a client timeout doesn't always mean failure. Always verify completion status before retrying.",
+   "For a team delivering 5 minutes of finished 720p video monthly, with a 10:1 draft-to-final ratio in 360p, the draft costs will dominate the bill despite being cheaper per second. Focus on improving prompts to reduce iterations rather than solely cutting final render costs."
+  ],
+  "caption": "Generating a single second of 720p video with Google's Gemini Omni 1.1 Flash costs $0.10. There's no free tier, meaning every clip you generate will be charged.\n\nA second of 720p video from Gemini Omni 1.1 Flash costs approximately $0.10, according to Google's pricing page. This is the baseline for cost planning, as there is no free tier; even the first clip generated will incur charges.\n\nGoogle charges by tokens, not duration, which reveals key cost levers. Generating drafts in 360p can reduce iteration costs by two-thirds compared to 720p.\n\nThese rates apply to the gemini-omni-1.1-flash model, which reached General Availability (GA) on August 27, 2026. One second of 720p video output is equivalent to 5,792 tokens.\n\nInput costs, such as reference images and attached videos, are significantly cheaper at $1.50 per million tokens. Therefore, optimizing generated video duration and resolution is more impactful than optimizing prompt size.\n\nGoogle generates 360p previews at one-third the cost of 720p and up to 60% faster. A 10-second draft costs about $0.34, versus $1.01 for 720p.\n\nVideo prompt iteration often requires multiple attempts, with a realistic session involving twelve tries before approval. By drafting in 360p and rendering the final version in 720p, costs can be reduced by 62%.\n\n1080p and 4K layers are upscales of generated frames, not native renders, and cost more than 720p. Always check Google's pricing page for current per-second rates before budgeting for 4K pipelines.\n\nA 40-second scene is not a single request but involves one generation and three extension calls, each charging for its 10 seconds of output plus previous context. A full 40-second scene in 720p costs about $4.06 in output.\n\nThe standard Veo 3.1 model costs about four times more than one second of Omni in 720p, while Veo 3.1 Lite is cheaper than Omni. Both models use the same Gemini API key, which can obscure price differences.\n\n#AI #GoogleAI #Gemini #GenerativeAI #VideoGeneration #TechCosts\n\nSource: DEV",
+  "tweet": "Google's Gemini Omni 1.1 Flash 720p video costs $0.10 per second, with no free tier. Costs are token-based, so optimize drafts in 360p to cut iteration expenses by two-thirds. #GoogleAI #Gemini #VideoGen",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "DEV",
+  "url": "https://dev.to/lucas_ferreira/gemini-omni-11-flash-o-que-um-segundo-de-video-realmente-custa-fln",
+  "image": "",
+  "orig_title": "Gemini Omni 1.1 Flash: O que um segundo de vídeo realmente custa",
+  "cluster_urls": [
+   "https://dev.to/lucas_ferreira/gemini-omni-11-flash-o-que-um-segundo-de-video-realmente-custa-fln"
+  ],
+  "cluster_titles": [
+   "Gemini Omni 1.1 Flash: O que um segundo de vídeo realmente custa"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260828-1410-0-google-s-gemini-omni-1-1-flash-720p-video-co.png",
+   "20260828-1410-0-google-s-gemini-omni-1-1-flash-720p-video-co-d1.png",
+   "20260828-1410-0-google-s-gemini-omni-1-1-flash-720p-video-co-d2.png",
+   "20260828-1410-0-google-s-gemini-omni-1-1-flash-720p-video-co-d3.png"
+  ]
+ },
+ {
+  "topic": "p2p_file_transfer_webrtc_browser",
+  "headline_marked": "[[Zero-Install P2P File Transfer]] Engine Built in Browser with WebRTC",
+  "headline": "Zero-Install P2P File Transfer Engine Built in Browser with WebRTC",
+  "summary": "This new tool, FluX, uses WebRTC and the File System Access API to send multi-gigabyte files directly between browsers without any desktop client installation.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Sending large files like 15GB 4K videos or raw datasets used to be a hassle, often crashing browsers due to memory limits. A new open-source project called FluX aims to solve this by enabling peer-to-peer (P2P) file sharing entirely within the browser.",
+   "FluX bypasses traditional download methods that load entire files into memory. Instead, it leverages the File System Access API's `showSaveFilePicker` to write incoming data chunks directly to disk, preventing Out of Memory errors.",
+   "To manage WebRTC data channel buffering, FluX monitors `dataChannel.bufferedAmount`. It pauses sending data when the buffer exceeds a set threshold (e.g., 8MB) and resumes when it drops, ensuring stable transfers even at local network speeds.",
+   "Complex operations like calculating SHA-256 checksums and slicing large files are offloaded to Web Workers. This keeps the main thread free, ensuring smooth UI animations and a responsive user experience, even during intensive file transfers.",
+   "The project is built with React 18, Zustand, Framer Motion, and Tailwind CSS on the frontend, utilizing WebRTC for data transfer and WebSockets for signaling. The backend uses Node.js, Express, and Socket.io."
+  ],
+  "caption": "Tired of browser crashes when sending large files? This developer built a zero-install, multi-gigabyte P2P file transfer engine entirely in the browser using WebRTC and the File System Access API.\n\nSending large files like 15GB 4K videos or raw datasets used to be a hassle, often crashing browsers due to memory limits. A new open-source project called FluX aims to solve this by enabling peer-to-peer (P2P) file sharing entirely within the browser.\n\nFluX bypasses traditional download methods that load entire files into memory. Instead, it leverages the File System Access API's `showSaveFilePicker` to write incoming data chunks directly to disk, preventing Out of Memory errors.\n\nTo manage WebRTC data channel buffering, FluX monitors `dataChannel.bufferedAmount`. It pauses sending data when the buffer exceeds a set threshold (e.g., 8MB) and resumes when it drops, ensuring stable transfers even at local network speeds.\n\nComplex operations like calculating SHA-256 checksums and slicing large files are offloaded to Web Workers. This keeps the main thread free, ensuring smooth UI animations and a responsive user experience, even during intensive file transfers.\n\nThe project is built with React 18, Zustand, Framer Motion, and Tailwind CSS on the frontend, utilizing WebRTC for data transfer and WebSockets for signaling. The backend uses Node.js, Express, and Socket.io.\n\n#WebRTC #P2P #FileTransfer #JavaScript #WebDevelopment\n\nSource: DEV",
+  "tweet": "Built a zero-install, multi-gigabyte P2P file transfer engine in the browser using WebRTC & File System Access API! Send large files directly without desktop clients. Check out FluX: fluxbykingupe.vercel.app #WebRTC #P2P #JavaScript",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/kingupe/how-i-built-a-zero-install-multi-gigabyte-p2p-file-transfer-engine-in-the-browser-with-webrtc--1doe",
+  "image": "",
+  "orig_title": "How I Built a Zero-Install, Multi-Gigabyte P2P File Transfer Engine in the Browser with WebRTC & File System Access API",
+  "cluster_urls": [
+   "https://dev.to/kingupe/how-i-built-a-zero-install-multi-gigabyte-p2p-file-transfer-engine-in-the-browser-with-webrtc--1doe"
+  ],
+  "cluster_titles": [
+   "How I Built a Zero-Install, Multi-Gigabyte P2P File Transfer Engine in the Browser with WebRTC & File System Access API"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260828-1410-1-zero-install-p2p-file-transfer-engine-built-.png",
+   "20260828-1410-1-zero-install-p2p-file-transfer-engine-built--d1.png",
+   "20260828-1410-1-zero-install-p2p-file-transfer-engine-built--d2.png"
+  ]
+ }
+]

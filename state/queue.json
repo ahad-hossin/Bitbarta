@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "llm_benchmarking_niche_app_cost_performance",
+  "headline_marked": "[[Flagship LLM costing 5.8x more lost]] in niche production app benchmark",
+  "headline": "Flagship LLM costing 5.8x more lost in niche production app benchmark",
+  "summary": "A developer's custom benchmark for a BaZi chart app found that the most expensive LLM was outperformed by a model costing significantly less, highlighting the need for domain-specific evaluation.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer building an app for personalized BaZi (Chinese Four Pillars) birth chart readings benchmarked 8 LLMs on their specific workload. The goal was to find cost-effective and accurate models for a niche domain full of trap terminology.",
+   "The results revealed that the most expensive flagship model performed worse than a model costing 5.8 times less. This finding underscores that generic LLM benchmarks are often insufficient for specialized production applications.",
+   "The evaluation led to a two-tier model strategy: a cheap and accurate small model for the free tier, and a mid-tier model for paid users. A surprising discovery was that the mid-tier's previous generation offered equal accuracy at a lower cost, serving as an ideal fallback.",
+   "The app implements a robust routing layer with ordered fallback chains. Each route specifies a provider, endpoint, model, and list price. This ensures that if the primary workhorse model fails, a backup can serve the request.",
+   "Crucially, the system differentiates between transient rate-limit throttling and permanent quota exhaustion for 429 errors. Retrying the same model for quota issues is a waste of time; the system must skip to the next route, a distinction learned by analyzing provider-specific error taxonomies.",
+   "To prevent persistent issues, the app never caches fallback stubs. If a reading fails, it returns placeholder text with an `ok: false` flag, preventing the placeholder from being saved to the database and ensuring the system retries on the next request.",
+   "Each business action (a reading, involving up to 7 parallel calls) emits a usage event, with costs computed against the model that actually served it. This provides precise cost tracking, showing approximately $0.0021 per paid-tier call and $0.0005 per free-tier call.",
+   "The app, auspiceoracle.com, is a bilingual BaZi calculator where a deterministic engine computes the chart, and the LLM is strictly constrained to phrasing the results, a design choice that will be detailed in a future article."
+  ],
+  "caption": "The most expensive LLM lost to a model costing 5.8x less in a real-world production app benchmark. Generic benchmarks are useless for niche domains.\n\nA developer building an app for personalized BaZi (Chinese Four Pillars) birth chart readings benchmarked 8 LLMs on their specific workload. The goal was to find cost-effective and accurate models for a niche domain full of trap terminology.\n\nThe results revealed that the most expensive flagship model performed worse than a model costing 5.8 times less. This finding underscores that generic LLM benchmarks are often insufficient for specialized production applications.\n\nThe evaluation led to a two-tier model strategy: a cheap and accurate small model for the free tier, and a mid-tier model for paid users. A surprising discovery was that the mid-tier's previous generation offered equal accuracy at a lower cost, serving as an ideal fallback.\n\nThe app implements a robust routing layer with ordered fallback chains. Each route specifies a provider, endpoint, model, and list price. This ensures that if the primary workhorse model fails, a backup can serve the request.\n\nCrucially, the system differentiates between transient rate-limit throttling and permanent quota exhaustion for 429 errors. Retrying the same model for quota issues is a waste of time; the system must skip to the next route, a distinction learned by analyzing provider-specific error taxonomies.\n\nTo prevent persistent issues, the app never caches fallback stubs. If a reading fails, it returns placeholder text with an `ok: false` flag, preventing the placeholder from being saved to the database and ensuring the system retries on the next request.\n\nEach business action (a reading, involving up to 7 parallel calls) emits a usage event, with costs computed against the model that actually served it. This provides precise cost tracking, showing approximately $0.0021 per paid-tier call and $0.0005 per free-tier call.\n\n#LLM #AI #Benchmarking #Developer #Tech #Software\n\nSource: DEV",
+  "tweet": "A developer benchmarked 8 LLMs for a niche app. The flagship model, 5.8x more expensive, lost to a cheaper alternative. Custom evaluation is key for specialized domains. #LLM #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "auspiceoracle.com",
+  "source": "DEV",
+  "url": "https://dev.to/shanni/i-benchmarked-8-llms-for-a-niche-production-app-the-flagship-was-16x-the-cost-for-nothing-246e",
+  "image": "",
+  "orig_title": "I benchmarked 8 LLMs for a niche production app. The flagship cost 5.8x more - and lost.",
+  "cluster_urls": [
+   "https://dev.to/shanni/i-benchmarked-8-llms-for-a-niche-production-app-the-flagship-was-16x-the-cost-for-nothing-246e"
+  ],
+  "cluster_titles": [
+   "I benchmarked 8 LLMs for a niche production app. The flagship cost 5.8x more - and lost."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260829-0807-0-flagship-llm-costing-5-8x-more-lost-in-niche.png",
+   "20260829-0807-0-flagship-llm-costing-5-8x-more-lost-in-niche-d1.png",
+   "20260829-0807-0-flagship-llm-costing-5-8x-more-lost-in-niche-d2.png",
+   "20260829-0807-0-flagship-llm-costing-5-8x-more-lost-in-niche-d3.png"
+  ]
+ },
+ {
+  "topic": "attest_adk_agent_model_audits",
+  "headline_marked": "[[Attest: ADK agent audits models on SEC advisers]] for compliance and accuracy",
+  "headline": "Attest: ADK agent audits models on SEC advisers for compliance and accuracy",
+  "summary": "Attest is an ADK agent designed to audit what other AI models say about SEC-registered advisers, scoring their responses against official Form ADV filings to ensure accuracy and provide an immutable record.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Attest is an ADK agent built to address the challenge of unrecorded AI descriptions of businesses, particularly for SEC-registered investment advisers. The SEC's 2026 examination priorities highlight AI, focusing on firms' claims about their own AI, but not what other models say about them.",
+   "The agent runs a fixed battery of factual questions about SEC-registered advisers on a schedule. It scores each AI-generated answer against the firm's official Form ADV Part 1A filing and appends the result to a hash-chained archive.",
+   "The system is orchestrated by Cloud Scheduler, which triggers monthly jobs via Pub/Sub to an agent running on Cloud Run. This agent utilizes six distinct tools: two for reading ground truth, one for scoring, one for appending evidence, and two for managing per-firm memory.",
+   "The archive is designed to be append-only, ensuring immutability with hash-chained entries, sequence numbers, timestamps, and model IDs. This chain tail advances within a Firestore transaction, with payloads stored in Cloud Storage, preventing replays from overwriting existing entries.",
+   "Attest is built on the Google Agent Development Kit (ADK) and leverages three different Gemini models. Gemini-3.5-flash-lite handles orchestration and subject model tasks, while Gemini-3.1-flash-lite is used for scoring to maintain comparability with pre-build experiments.",
+   "A notable development challenge involved integrating Google's Model Armor, which initially failed due to a 403 PERMISSION_DENIED error. This was traced to using a global API host instead of the required per-region host, highlighting a critical detail for API interactions."
+  ],
+  "caption": "Is AI describing your business without your knowledge? Attest, an ADK agent, audits what other models say about SEC-registered advisers.\n\nAttest is an ADK agent built to address the challenge of unrecorded AI descriptions of businesses, particularly for SEC-registered investment advisers. The SEC's 2026 examination priorities highlight AI, focusing on firms' claims about their own AI, but not what other models say about them.\n\nThe agent runs a fixed battery of factual questions about SEC-registered advisers on a schedule. It scores each AI-generated answer against the firm's official Form ADV Part 1A filing and appends the result to a hash-chained archive.\n\nThe system is orchestrated by Cloud Scheduler, which triggers monthly jobs via Pub/Sub to an agent running on Cloud Run. This agent utilizes six distinct tools: two for reading ground truth, one for scoring, one for appending evidence, and two for managing per-firm memory.\n\nThe archive is designed to be append-only, ensuring immutability with hash-chained entries, sequence numbers, timestamps, and model IDs. This chain tail advances within a Firestore transaction, with payloads stored in Cloud Storage, preventing replays from overwriting existing entries.\n\nAttest is built on the Google Agent Development Kit (ADK) and leverages three different Gemini models. Gemini-3.5-flash-lite handles orchestration and subject model tasks, while Gemini-3.1-flash-lite is used for scoring to maintain comparability with pre-build experiments.\n\nA notable development challenge involved integrating Google's Model Armor, which initially failed due to a 403 PERMISSION_DENIED error. This was traced to using a global API host instead of the required per-region host, highlighting a critical detail for API interactions.\n\n#AI #Compliance #FinTech #RegTech #DeveloperTools #GoogleADK\n\nSource: DEV",
+  "tweet": "Is AI describing your business without your knowledge? Attest, an ADK agent, audits what other models say about SEC-registered advisers, scoring answers against official filings. Essential for compliance in the age of AI. #AI #Compliance #FinTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jpka/attest-an-adk-agent-that-audits-what-other-models-say-about-sec-registered-advisers-2mml",
+  "image": "",
+  "orig_title": "Attest: an ADK agent that audits what other models say about SEC-registered advisers",
+  "cluster_urls": [
+   "https://dev.to/jpka/attest-an-adk-agent-that-audits-what-other-models-say-about-sec-registered-advisers-2mml"
+  ],
+  "cluster_titles": [
+   "Attest: an ADK agent that audits what other models say about SEC-registered advisers"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260829-0807-1-attest-adk-agent-audits-models-on-sec-advise.png",
+   "20260829-0807-1-attest-adk-agent-audits-models-on-sec-advise-d1.png",
+   "20260829-0807-1-attest-adk-agent-audits-models-on-sec-advise-d2.png",
+   "20260829-0807-1-attest-adk-agent-audits-models-on-sec-advise-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "duckdb_and_pandas_data_analysis_tutorials",
+  "headline_marked": "[[DuckDB runs SQL on CSVs]] with zero import step",
+  "headline": "DuckDB runs SQL on CSVs with zero import step",
+  "summary": "This new tool allows you to query CSV files directly using SQL, automatically inferring data types and eliminating the need for manual table creation or data import.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "DuckDB offers a revolutionary approach to data analysis by enabling users to run SQL queries directly on CSV files without any import process. This means no CREATE TABLE statements or manual schema definitions are required; DuckDB handles data type inference automatically.",
+   "Installation is as simple as running `python -m pip install duckdb`. Once installed, you can query your CSV file by simply referencing its filename in place of a table name in your SQL query. This library runs within your program, similar to SQLite, eliminating the need for a separate server or background service.",
+   "The tool intelligently infers column types, displaying them by default, which helps avoid common frustrations like dates being treated as text. For critical analyses, the `DESCRIBE` command can be used to verify the inferred types, ensuring data accuracy.",
+   "A standout feature is DuckDB's ability to query multiple files at once using a wildcard in the filename. This is particularly useful for tasks involving monthly reports or datasets spread across numerous files, simplifying data aggregation significantly."
+  ],
+  "caption": "Tired of importing CSVs? DuckDB lets you run SQL directly on your files with zero import steps.\n\nDuckDB offers a revolutionary approach to data analysis by enabling users to run SQL queries directly on CSV files without any import process. This means no CREATE TABLE statements or manual schema definitions are required; DuckDB handles data type inference automatically.\n\nInstallation is as simple as running `python -m pip install duckdb`. Once installed, you can query your CSV file by simply referencing its filename in place of a table name in your SQL query. This library runs within your program, similar to SQLite, eliminating the need for a separate server or background service.\n\nThe tool intelligently infers column types, displaying them by default, which helps avoid common frustrations like dates being treated as text. For critical analyses, the `DESCRIBE` command can be used to verify the inferred types, ensuring data accuracy.\n\nA standout feature is DuckDB's ability to query multiple files at once using a wildcard in the filename. This is particularly useful for tasks involving monthly reports or datasets spread across numerous files, simplifying data aggregation significantly.\n\n#DuckDB #SQL #DataAnalysis #CSV #Programming\n\nSource: DEV",
+  "tweet": "Run SQL directly on CSV files without any import step! DuckDB automatically infers data types and simplifies data analysis. Installation is a breeze: `python -m pip install duckdb`. #DuckDB #SQL #DataAnalysis",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/michaelnocito/how-to-set-up-duckdb-run-sql-on-a-csv-with-no-import-step-16nk",
+  "image": "",
+  "orig_title": "How to Set Up DuckDB (Run SQL on a CSV With No Import Step)",
+  "cluster_urls": [
+   "https://dev.to/michaelnocito/how-to-set-up-duckdb-run-sql-on-a-csv-with-no-import-step-16nk",
+   "https://dev.to/michaelnocito/pandas-readcsv-your-first-dataframe-and-what-it-guessed-icm",
+   "https://dev.to/michaelnocito/pandas-merge-left-join-inner-join-and-the-one-that-doubled-the-revenue-21lf"
+  ],
+  "cluster_titles": [
+   "How to Set Up DuckDB (Run SQL on a CSV With No Import Step)",
+   "pandas read_csv: Your First DataFrame, and What It Guessed",
+   "pandas merge: Left Join, Inner Join, and the One That Doubled the Revenue"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260829-1909-0-duckdb-runs-sql-on-csvs-with-zero-import-ste.png",
+   "20260829-1909-0-duckdb-runs-sql-on-csvs-with-zero-import-ste-d1.png",
+   "20260829-1909-0-duckdb-runs-sql-on-csvs-with-zero-import-ste-d2.png"
+  ]
+ },
+ {
+  "topic": "nvidia_ai_advantage_beyond_gpu",
+  "headline_marked": "Nvidia's AI Advantage [[Expands Beyond GPUs]] with New Systems",
+  "headline": "Nvidia's AI Advantage Expands Beyond GPUs with New Systems",
+  "summary": "The tech giant is building state-of-the-art hardware for AI orchestration, moving beyond just its dominant GPU market.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Nvidia's AI dominance is evolving. While its GPUs have been the backbone of the AI boom, increased competition has pushed the company to expand its advantage into the complex systems that surround compute.",
+   "The company is rolling out its Vera Rubin architecture, which includes the Vera CPU alongside the Rubin GPU. This new hardware is designed to optimize data orchestration and efficiency in massive data centers.",
+   "Nvidia's VP of storage technology, Jason Hardy, highlighted that the Vera CPU can accelerate operations by up to 3x, ensuring flash storage can perform at its full potential without bottlenecks.",
+   "This focus on data orchestration mirrors efforts by other AI leaders. OpenAI, for instance, designed its Jalapeño chip to minimize data movement and keep workloads within a single integrated system for maximum efficiency.",
+   "While Nvidia faces competition in GPUs, its new strategy shifts the battleground to the entire system's efficiency. This move into surrounding infrastructure could secure its commanding lead in the AI hardware space.",
+   "The challenge of operating megascale data centers at peak efficiency is growing as AI deployments become larger and faster, creating a new layer of infrastructure for companies to compete over."
+  ],
+  "caption": "Nvidia's AI advantage is no longer just about GPUs. The company is now dominating the complex systems that orchestrate AI compute at scale.\n\nNvidia's AI dominance is evolving. While its GPUs have been the backbone of the AI boom, increased competition has pushed the company to expand its advantage into the complex systems that surround compute.\n\nThe company is rolling out its Vera Rubin architecture, which includes the Vera CPU alongside the Rubin GPU. This new hardware is designed to optimize data orchestration and efficiency in massive data centers.\n\nNvidia's VP of storage technology, Jason Hardy, highlighted that the Vera CPU can accelerate operations by up to 3x, ensuring flash storage can perform at its full potential without bottlenecks.\n\nThis focus on data orchestration mirrors efforts by other AI leaders. OpenAI, for instance, designed its Jalapeño chip to minimize data movement and keep workloads within a single integrated system for maximum efficiency.\n\nWhile Nvidia faces competition in GPUs, its new strategy shifts the battleground to the entire system's efficiency. This move into surrounding infrastructure could secure its commanding lead in the AI hardware space.\n\nThe challenge of operating megascale data centers at peak efficiency is growing as AI deployments become larger and faster, creating a new layer of infrastructure for companies to compete over.\n\n#Nvidia #AI #Tech #Hardware #DataCenter\n\nSource: TechCrunch",
+  "tweet": "Nvidia's AI advantage is expanding beyond GPUs. The company is now building state-of-the-art hardware for AI orchestration, moving beyond its dominant GPU market. #Nvidia #AI #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+  "image": "",
+  "orig_title": "Nvidia’s AI advantage is moving beyond the GPU",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/"
+  ],
+  "cluster_titles": [
+   "Nvidia’s AI advantage is moving beyond the GPU"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260829-1909-1-nvidia-s-ai-advantage-expands-beyond-gpus-wi.png",
+   "20260829-1909-1-nvidia-s-ai-advantage-expands-beyond-gpus-wi-d1.png",
+   "20260829-1909-1-nvidia-s-ai-advantage-expands-beyond-gpus-wi-d2.png"
+  ]
+ }
+]

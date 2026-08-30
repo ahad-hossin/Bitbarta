@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "apple_ipad_mini_next_gen_rumors",
+  "headline_marked": "[[Apple's next iPad mini]] expected by late Oct with OLED, faster chip, and better water resistance",
+  "headline": "Apple's next iPad mini expected by late Oct with OLED, faster chip, and better water resistance",
+  "summary": "The upcoming iPad mini is rumored to feature a new OLED display, a more powerful chip, and improved water resistance, with an expected release by late October.",
+  "category": "APPLE",
+  "template": "leak",
+  "details": [
+   "The next iPad mini is anticipated to launch by late October, bringing significant upgrades. Key enhancements include an OLED display, a faster processor, and improved water resistance.",
+   "The switch to an OLED panel is expected to deliver deeper blacks, higher contrast, and more vibrant colors. This display technology will offer a premium viewing experience for users.",
+   "A faster chip will power the new mini, ensuring smoother performance across apps and games. This upgrade will make the compact tablet even more capable for demanding tasks.",
+   "Enhanced water resistance is also on the cards, adding durability and peace of mind for users. This feature would align the iPad mini more closely with other modern Apple devices."
+  ],
+  "caption": "Apple's next iPad mini is rumored to arrive by late October.\n\nThe next iPad mini is anticipated to launch by late October, bringing significant upgrades. Key enhancements include an OLED display, a faster processor, and improved water resistance.\n\nThe switch to an OLED panel is expected to deliver deeper blacks, higher contrast, and more vibrant colors. This display technology will offer a premium viewing experience for users.\n\nA faster chip will power the new mini, ensuring smoother performance across apps and games. This upgrade will make the compact tablet even more capable for demanding tasks.\n\nEnhanced water resistance is also on the cards, adding durability and peace of mind for users. This feature would align the iPad mini more closely with other modern Apple devices.\n\n#Apple #iPadMini #TechNews #Leak #OLED #Gadgets\n\nSource: 9to5Mac",
+  "tweet": "Apple's next iPad mini is rumored to arrive by late October, featuring an OLED display, a faster chip, and better water resistance. Get ready for a significant upgrade! #Apple #iPadMini #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/08/30/apples-next-ipad-mini-is-almost-here-heres-what-to-expect/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/07/ipad-mini-6-jb.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Apple’s next iPad mini is almost ready, here’s what to expect",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/08/30/apples-next-ipad-mini-is-almost-here-heres-what-to-expect/"
+  ],
+  "cluster_titles": [
+   "Apple’s next iPad mini is almost ready, here’s what to expect"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260831-0007-0-apple-s-next-ipad-mini-expected-by-late-oct-.png",
+   "20260831-0007-0-apple-s-next-ipad-mini-expected-by-late-oct--d1.png"
+  ]
+ },
+ {
+  "topic": "omarchy_root_escalation_vulnerability",
+  "headline_marked": "Omarchy [[Root Escalation Vulnerability]] Allows Any Process to Gain Root Privileges",
+  "headline": "Omarchy Root Escalation Vulnerability Allows Any Process to Gain Root Privileges",
+  "summary": "A critical flaw in Omarchy's default Docker configuration allowed any user process to escalate to root privileges without authentication, impacting versions prior to 4.0.1.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A significant security vulnerability has been discovered in Omarchy's default Docker configuration, enabling any user process to escalate to root privileges without requiring a password, sudo, or any form of prompt. This issue affects all versions of Omarchy prior to 4.0.1.",
+   "The vulnerability stems from Omarchy configuring its default user as a member of the Linux 'docker' group. Membership in this group grants a user the ability to communicate with the Docker daemon, which itself carries warnings about providing root-level privileges.",
+   "Processes with access to the Docker socket can instruct the root-owned Docker daemon to launch containers, mount host filesystems, and execute code as root. In affected Omarchy systems, this means the default user and all processes within that session effectively have root access, allowing for immediate full machine compromise from a standard user application.",
+   "This security tradeoff was opt-out rather than opt-in, and the implications were not clearly explained to users. While Omarchy's documentation mentioned changes for running Docker as a normal user, it did not convey that this configuration granted root-level privileges by default.",
+   "The issue was reported through responsible disclosure and has since been patched in version 4.0.1. Users are strongly advised to update their Omarchy systems immediately to mitigate this risk.",
+   "The discovery highlights the increasing severity of CVEs produced by AI and emphasizes the need for security to be a top priority for developers, particularly those creating distributions targeted at developers. Developer machines are high-value targets due to their extensive access and often relaxed security measures."
+  ],
+  "caption": "Omarchy's default Docker setup allowed ANY user process to gain root access without a password. Update to 4.0.1 immediately.\n\nA significant security vulnerability has been discovered in Omarchy's default Docker configuration, enabling any user process to escalate to root privileges without requiring a password, sudo, or any form of prompt. This issue affects all versions of Omarchy prior to 4.0.1.\n\nThe vulnerability stems from Omarchy configuring its default user as a member of the Linux 'docker' group. Membership in this group grants a user the ability to communicate with the Docker daemon, which itself carries warnings about providing root-level privileges.\n\nProcesses with access to the Docker socket can instruct the root-owned Docker daemon to launch containers, mount host filesystems, and execute code as root. In affected Omarchy systems, this means the default user and all processes within that session effectively have root access, allowing for immediate full machine compromise from a standard user application.\n\nThis security tradeoff was opt-out rather than opt-in, and the implications were not clearly explained to users. While Omarchy's documentation mentioned changes for running Docker as a normal user, it did not convey that this configuration granted root-level privileges by default.\n\nThe issue was reported through responsible disclosure and has since been patched in version 4.0.1. Users are strongly advised to update their Omarchy systems immediately to mitigate this risk.\n\nThe discovery highlights the increasing severity of CVEs produced by AI and emphasizes the need for security to be a top priority for developers, particularly those creating distributions targeted at developers. Developer machines are high-value targets due to their extensive access and often relaxed security measures.\n\n#Omarchy #Docker #Security #Vulnerability #RootAccess\n\nSource: Hacker News",
+  "tweet": "Omarchy's default Docker config had a critical flaw: any user process could escalate to root privileges. Update to 4.0.1 now to patch this. #Omarchy #Docker #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "omarchy.com",
+  "source": "Hacker News",
+  "url": "https://0xcc.io/posts/omarchy-root-creds/",
+  "image": "",
+  "orig_title": "Omarchy: Any User Process Can Escalate to Root",
+  "cluster_urls": [
+   "https://0xcc.io/posts/omarchy-root-creds/"
+  ],
+  "cluster_titles": [
+   "Omarchy: Any User Process Can Escalate to Root"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260831-0007-1-omarchy-root-escalation-vulnerability-allows.png",
+   "20260831-0007-1-omarchy-root-escalation-vulnerability-allows-d1.png",
+   "20260831-0007-1-omarchy-root-escalation-vulnerability-allows-d2.png",
+   "20260831-0007-1-omarchy-root-escalation-vulnerability-allows-d3.png"
+  ]
+ }
+]

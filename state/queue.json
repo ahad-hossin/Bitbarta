@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "instagram_automation_script_mishap",
+  "headline_marked": "[[My own script killed Instagram sessions]] nightly for days due to pkill and a shared Chrome profile",
+  "headline": "My own script killed Instagram sessions nightly for days due to pkill and a shared Chrome profile",
+  "summary": "A solo developer's automation script repeatedly terminated Instagram login sessions, disrupting revenue for days before the root cause — a shared Chrome profile and pkill command — was identified.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A solo developer's fleet of 171 automation jobs, generating ¥1.2M/month, was silently sabotaged by one of its own scripts. An Instagram account crucial for revenue kept losing its login session every night, going unnoticed for days.",
+   "The issue stemmed from a `pkill` command in `ensure_chrome.sh` that forcefully terminated Chrome processes. This script, intended to ensure Chrome was running, would kill any Chrome instance not responding on CDP port 9223.",
+   "Another automation job, `th-scent`, was using the same Chrome profile but launched Chrome via Playwright, which does not open CDP port 9223. This made `th-scent`'s Chrome instance appear \"dead\" to `ensure_chrome.sh`.",
+   "The collision was deterministic, scheduled nightly. At 23:00, `daily-post` would call `ensure_chrome.sh`, detect the \"dead\" Chrome from `th-scent`, and `pkill` it, causing Chrome to lose its cookies and the Instagram session.",
+   "Monitoring was in place, but alerts only reported \"posting failed\" or \"need login,\" not the actual cause. The problem was compounded because the breaking script and the reporting script were in different repositories.",
+   "This created a loop: the session would be destroyed, the user would re-login, and the script would kill it again the next night. The shared Chrome profile and the `pkill` logic were the core of the undetected issue."
+  ],
+  "caption": "My automation script, generating ¥1.2M/month, was silently killing its own Instagram sessions every night. It took days to find the hidden `pkill` bug.\n\nA solo developer's fleet of 171 automation jobs, generating ¥1.2M/month, was silently sabotaged by one of its own scripts. An Instagram account crucial for revenue kept losing its login session every night, going unnoticed for days.\n\nThe issue stemmed from a `pkill` command in `ensure_chrome.sh` that forcefully terminated Chrome processes. This script, intended to ensure Chrome was running, would kill any Chrome instance not responding on CDP port 9223.\n\nAnother automation job, `th-scent`, was using the same Chrome profile but launched Chrome via Playwright, which does not open CDP port 9223. This made `th-scent`'s Chrome instance appear \"dead\" to `ensure_chrome.sh`.\n\nThe collision was deterministic, scheduled nightly. At 23:00, `daily-post` would call `ensure_chrome.sh`, detect the \"dead\" Chrome from `th-scent`, and `pkill` it, causing Chrome to lose its cookies and the Instagram session.\n\nMonitoring was in place, but alerts only reported \"posting failed\" or \"need login,\" not the actual cause. The problem was compounded because the breaking script and the reporting script were in different repositories.\n\nThis created a loop: the session would be destroyed, the user would re-login, and the script would kill it again the next night. The shared Chrome profile and the `pkill` logic were the core of the undetected issue.\n\n#Developer #Automation #Debugging #Tech #SoftwareDevelopment #Chrome\n\nSource: DEV",
+  "tweet": "My ¥1.2M/month automation system had a hidden bug: one script was killing Instagram sessions nightly. A shared Chrome profile & `pkill` command caused a silent revenue drain for days. Debugging distributed systems is tough! #DevOps #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/bokuwalily/how-my-own-script-killed-instagram-sessions-every-night-pkill-and-a-shared-chrome-profile-3df5",
+  "image": "",
+  "orig_title": "How My Own Script Killed Instagram Sessions Every Night: pkill and a Shared Chrome Profile",
+  "cluster_urls": [
+   "https://dev.to/bokuwalily/how-my-own-script-killed-instagram-sessions-every-night-pkill-and-a-shared-chrome-profile-3df5"
+  ],
+  "cluster_titles": [
+   "How My Own Script Killed Instagram Sessions Every Night: pkill and a Shared Chrome Profile"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260830-1109-0-my-own-script-killed-instagram-sessions-nigh.png",
+   "20260830-1109-0-my-own-script-killed-instagram-sessions-nigh-d1.png",
+   "20260830-1109-0-my-own-script-killed-instagram-sessions-nigh-d2.png"
+  ]
+ },
+ {
+  "topic": "bybit_oracle_manipulation_risk",
+  "headline_marked": "[[Bybit faces high oracle manipulation risk]], report warns for $16B+ DeFi platform",
+  "headline": "Bybit faces high oracle manipulation risk, report warns for $16B+ DeFi platform",
+  "summary": "A new report assigns Bybit a 'High' 7/10 risk score for oracle manipulation, potentially impacting its $16B+ Total Value Locked (TVL) across Ethereum and L2 roll-ups.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Bybit, a rapidly expanding DeFi hub with over $16.06 billion in Total Value Locked (TVL), relies heavily on external price feeds (oracles) for critical operations like trade settlement and liquidations. A new security report assigns the platform a 'High' risk score of 7/10 for oracle manipulation.",
+   "The report identifies four primary oracle-related attack vectors that could be exploited by adversaries, from opportunistic traders to well-funded actors. Despite existing mitigations like multi-source aggregation and Chainlink fallback, significant residual exposure remains.",
+   "This residual exposure creates a high likelihood that a sophisticated adversary could profitably manipulate prices. Such an attack could lead to forced liquidations for users and a substantial loss of confidence in the platform's integrity.",
+   "Concrete technical recommendations are outlined to harden Bybit's oracle pipeline, including source diversification, longer aggregation windows, and deviation guards. Implementing high-priority measures could reduce the overall risk by an estimated 45-60% within a month.",
+   "The report stresses that oracle security should be a continuous, layered defense, combining on-chain safeguards with off-chain monitoring and robust governance. Regular audits, public bug-bounty programs, and transparent reporting are crucial to reinforce user trust and protect economic value."
+  ],
+  "caption": "A new report gives DeFi giant Bybit a 'High' 7/10 risk score for oracle manipulation. This could impact its $16B+ Total Value Locked.\n\nBybit, a rapidly expanding DeFi hub with over $16.06 billion in Total Value Locked (TVL), relies heavily on external price feeds (oracles) for critical operations like trade settlement and liquidations. A new security report assigns the platform a 'High' risk score of 7/10 for oracle manipulation.\n\nThe report identifies four primary oracle-related attack vectors that could be exploited by adversaries, from opportunistic traders to well-funded actors. Despite existing mitigations like multi-source aggregation and Chainlink fallback, significant residual exposure remains.\n\nThis residual exposure creates a high likelihood that a sophisticated adversary could profitably manipulate prices. Such an attack could lead to forced liquidations for users and a substantial loss of confidence in the platform's integrity.\n\nConcrete technical recommendations are outlined to harden Bybit's oracle pipeline, including source diversification, longer aggregation windows, and deviation guards. Implementing high-priority measures could reduce the overall risk by an estimated 45-60% within a month.\n\nThe report stresses that oracle security should be a continuous, layered defense, combining on-chain safeguards with off-chain monitoring and robust governance. Regular audits, public bug-bounty programs, and transparent reporting are crucial to reinforce user trust and protect economic value.\n\n#DeFi #Crypto #Security #Blockchain #Bybit #Oracle\n\nSource: DEV",
+  "tweet": "DeFi platform Bybit faces a 'High' 7/10 oracle manipulation risk, a new report warns. With $16B+ TVL, even small price deviations could lead to significant losses. Recommendations aim to cut risk by 45-60%. #DeFi #CryptoSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "bybit.com",
+  "source": "DEV",
+  "url": "https://dev.to/dannydoes_2abdf9c/oracle-manipulation-risk-report-bybit-4j8e",
+  "image": "",
+  "orig_title": "Oracle Manipulation Risk Report: Bybit",
+  "cluster_urls": [
+   "https://dev.to/dannydoes_2abdf9c/oracle-manipulation-risk-report-bybit-4j8e"
+  ],
+  "cluster_titles": [
+   "Oracle Manipulation Risk Report: Bybit"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260830-1109-1-bybit-faces-high-oracle-manipulation-risk-re.png",
+   "20260830-1109-1-bybit-faces-high-oracle-manipulation-risk-re-d1.png",
+   "20260830-1109-1-bybit-faces-high-oracle-manipulation-risk-re-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "gpt5_6_luna_pricing_foundry",
+  "headline_marked": "[[GPT-5.6 Luna on Microsoft Foundry: PTU Sizing, PayGo vs. PTU + Spillover Pricing]]",
+  "headline": "GPT-5.6 Luna on Microsoft Foundry: PTU Sizing, PayGo vs. PTU + Spillover Pricing",
+  "summary": "The article details how to size and cost GPT-5.6 Luna deployments on Microsoft Foundry, comparing Provisioned Throughput (PTU), Pay-as-you-go (PayGo), and a hybrid PTU with spillover model for optimal performance and cost.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Provisioned Throughput (PTU) offers dedicated processing capacity and a model-specific latency SLA, unlike Standard/PayGo which provides shared capacity. Model-specific sizing constants, like Input TPM per PTU, vary significantly; for example, GPT-5.6 Luna has 30,000, while GPT-5.6 Terra has 3,000.",
+   "Consider an application with a peak rate of 1,000 RPM, using GPT-5.6 Luna with an average prompt size of 1,200 tokens and an average response size of 200 tokens on a Global Provisioned deployment. This scenario helps illustrate the practical application of PTU sizing.",
+   "For Standard/PayGo deployments, costs are based on actual usage. Prompt caching significantly impacts input token charges; for instance, 50% cache reads and 10% cache writes reduce the billable regular input. Rates for GPT-5.6 Luna Global Standard were listed as of August 27, 2026.",
+   "The PTU + Spillover model combines a provisioned baseline with PayGo for bursts. For example, a 250 RPM baseline can be covered by PTU, with any traffic above that automatically routed to an associated Standard deployment via spillover, which must be configured.",
+   "Cost estimates for this hybrid model show significant figures: a 30-day estimate using a monthly reservation could reach $19,549.20 (PTU reservation $3,900.00 + PayGo spillover $15,649.20). A 365-day estimate with a yearly reservation totals $230,178.60.",
+   "It's important to note that hourly, non-reserved PTU is best suited for temporary workloads like testing or migration. Actual throughput and costs can vary based on factors such as request concurrency, token-length distribution, caching behavior, model version, regional pricing, and throttling characteristics."
+  ],
+  "caption": "Optimizing GPT-5.6 Luna deployment costs on Microsoft Foundry is complex. Learn how Provisioned Throughput (PTU), Pay-as-you-go (PayGo), and hybrid spillover models impact your budget and performance.\n\nProvisioned Throughput (PTU) offers dedicated processing capacity and a model-specific latency SLA, unlike Standard/PayGo which provides shared capacity. Model-specific sizing constants, like Input TPM per PTU, vary significantly; for example, GPT-5.6 Luna has 30,000, while GPT-5.6 Terra has 3,000.\n\nConsider an application with a peak rate of 1,000 RPM, using GPT-5.6 Luna with an average prompt size of 1,200 tokens and an average response size of 200 tokens on a Global Provisioned deployment. This scenario helps illustrate the practical application of PTU sizing.\n\nFor Standard/PayGo deployments, costs are based on actual usage. Prompt caching significantly impacts input token charges; for instance, 50% cache reads and 10% cache writes reduce the billable regular input. Rates for GPT-5.6 Luna Global Standard were listed as of August 27, 2026.\n\nThe PTU + Spillover model combines a provisioned baseline with PayGo for bursts. For example, a 250 RPM baseline can be covered by PTU, with any traffic above that automatically routed to an associated Standard deployment via spillover, which must be configured.\n\nCost estimates for this hybrid model show significant figures: a 30-day estimate using a monthly reservation could reach $19,549.20 (PTU reservation $3,900.00 + PayGo spillover $15,649.20). A 365-day estimate with a yearly reservation totals $230,178.60.\n\nIt's important to note that hourly, non-reserved PTU is best suited for temporary workloads like testing or migration. Actual throughput and costs can vary based on factors such as request concurrency, token-length distribution, caching behavior, model version, regional pricing, and throttling characteristics.\n\n#AI #MicrosoftFoundry #GPT #CloudComputing #Pricing #Developers\n\nSource: DEV",
+  "tweet": "Struggling with GPT-5.6 Luna deployment costs on Microsoft Foundry? Dive into PTU, PayGo, and spillover pricing models to optimize your budget and performance. Concrete examples show how to size your AI workloads effectively. #AI #MicrosoftFoundry #Cloud",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "DEV",
+  "url": "https://dev.to/mburakunuvar/gpt-56-luna-on-foundry-ptu-sizing-paygo-vs-ptu-spillover-pricing-55dk",
+  "image": "",
+  "orig_title": "GPT-5.6 Luna on Foundry: PTU Sizing, PayGo vs. PTU + Spillover Pricing",
+  "cluster_urls": [
+   "https://dev.to/mburakunuvar/gpt-56-luna-on-foundry-ptu-sizing-paygo-vs-ptu-spillover-pricing-55dk"
+  ],
+  "cluster_titles": [
+   "GPT-5.6 Luna on Foundry: PTU Sizing, PayGo vs. PTU + Spillover Pricing"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260830-2006-0-gpt-5-6-luna-on-microsoft-foundry-ptu-sizing.png",
+   "20260830-2006-0-gpt-5-6-luna-on-microsoft-foundry-ptu-sizing-d1.png",
+   "20260830-2006-0-gpt-5-6-luna-on-microsoft-foundry-ptu-sizing-d2.png",
+   "20260830-2006-0-gpt-5-6-luna-on-microsoft-foundry-ptu-sizing-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_generated_code_security_linter",
+  "headline_marked": "[[VibeGuard finds 3 critical security flaws]] in AI-generated production code, missed by existing pipelines",
+  "headline": "VibeGuard finds 3 critical security flaws in AI-generated production code, missed by existing pipelines",
+  "summary": "VibeGuard, a free open-source linter, specifically targets AI-generated code, identifying critical vulnerabilities like SQL injection and hardcoded secrets. It provides exact one-line fixes for Python, JS, and TS.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "VibeGuard, a new open-source security linter, uncovered 3 critical vulnerabilities in AI-generated production code across 533 files. These flaws, including hardcoded API keys and SQL injection, were missed by existing security pipelines but were fixable with one-line commands.",
+   "The linter was built by studying common vulnerability patterns produced by AI coding tools like GitHub Copilot, Cursor, ChatGPT, Claude, and Gemini. These tools often replicate security mistakes from their training data.",
+   "Specific vulnerabilities include SQL injection via f-strings, hardcoded API keys/passwords, JWT without algorithm verification, command injection via shell=True, MD5 for password hashing, and DEBUG=True shipped to production. VibeGuard provides the exact replacement code for fixes, not just descriptions or links.",
+   "VibeGuard supports Python, JavaScript, and TypeScript, offering zero-configuration setup and a code grading system from A to F. It runs locally with an MIT license, ensuring zero cloud usage and tracking.",
+   "Developer David Seagal emphasizes that a dedicated security layer is crucial between AI-generated code and production deployment, despite the speed and power of AI tools. Contributions are welcome, especially for Go, Rust, Java, and infrastructure as code rules."
+  ],
+  "caption": "AI-generated code is silently introducing critical security flaws into production. A new open-source linter, VibeGuard, just found 3 in a real codebase.\n\nVibeGuard, a new open-source security linter, uncovered 3 critical vulnerabilities in AI-generated production code across 533 files. These flaws, including hardcoded API keys and SQL injection, were missed by existing security pipelines but were fixable with one-line commands.\n\nThe linter was built by studying common vulnerability patterns produced by AI coding tools like GitHub Copilot, Cursor, ChatGPT, Claude, and Gemini. These tools often replicate security mistakes from their training data.\n\nSpecific vulnerabilities include SQL injection via f-strings, hardcoded API keys/passwords, JWT without algorithm verification, command injection via shell=True, MD5 for password hashing, and DEBUG=True shipped to production. VibeGuard provides the exact replacement code for fixes, not just descriptions or links.\n\nVibeGuard supports Python, JavaScript, and TypeScript, offering zero-configuration setup and a code grading system from A to F. It runs locally with an MIT license, ensuring zero cloud usage and tracking.\n\nDeveloper David Seagal emphasizes that a dedicated security layer is crucial between AI-generated code and production deployment, despite the speed and power of AI tools. Contributions are welcome, especially for Go, Rust, Java, and infrastructure as code rules.\n\n#AISecurity #CodeSecurity #OpenSource #VibeGuard #DevTools #Cybersecurity\n\nSource: DEV",
+  "tweet": "AI-generated code is shipping with critical security flaws! New open-source linter VibeGuard found 3 in a real production codebase, including hardcoded secrets & SQL injection. It provides 1-line fixes. Check it out! #AISecurity #OpenSource #VibeGuard",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/david_seagal_77ff697cd0f6/i-built-a-security-linter-for-ai-generated-codehere-is-what-i-found-in-a-real-production-codebase-38hp",
+  "image": "",
+  "orig_title": "I Built a Security Linter for AI-Generated Code, Here Is What I Found in a Real Production Codebase",
+  "cluster_urls": [
+   "https://dev.to/david_seagal_77ff697cd0f6/i-built-a-security-linter-for-ai-generated-codehere-is-what-i-found-in-a-real-production-codebase-38hp"
+  ],
+  "cluster_titles": [
+   "I Built a Security Linter for AI-Generated Code, Here Is What I Found in a Real Production Codebase"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260830-2006-1-vibeguard-finds-3-critical-security-flaws-in.png",
+   "20260830-2006-1-vibeguard-finds-3-critical-security-flaws-in-d1.png",
+   "20260830-2006-1-vibeguard-finds-3-critical-security-flaws-in-d2.png",
+   "20260830-2006-1-vibeguard-finds-3-critical-security-flaws-in-d3.png"
+  ]
+ }
+]

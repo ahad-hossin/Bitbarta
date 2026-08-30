@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "algorithmic_rent_pricing_litigation_expands",
+  "headline_marked": "[[Algorithmic Rent-Pricing Litigation Expands]] Under New State and Local Laws",
+  "headline": "Algorithmic Rent-Pricing Litigation Expands Under New State and Local Laws",
+  "summary": "The litigation against companies using algorithms to set rent prices is growing. This expansion is driven by new state and local laws targeting such practices.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Litigation against companies employing algorithmic rent-pricing models is significantly expanding across the United States. This surge in legal action is directly linked to the recent enactment of new state and local legislation designed to regulate or challenge these pricing practices.",
+   "Algorithmic rent-pricing involves landlords using software to determine rental rates, often leading to coordinated price increases across multiple properties. Critics argue these algorithms reduce competition and inflate housing costs, harming tenants.",
+   "The lawsuits typically target property management software providers and the landlords who utilize their services. These legal challenges often allege anti-competitive behavior and price fixing.",
+   "New state and local laws are providing stronger legal grounds for these litigations, empowering tenants and regulatory bodies. These legislative efforts aim to curb practices perceived as unfair or monopolistic in the housing market."
+  ],
+  "caption": "New state and local laws are fueling a significant expansion of litigation against companies using algorithms to set rent prices.\n\nLitigation against companies employing algorithmic rent-pricing models is significantly expanding across the United States. This surge in legal action is directly linked to the recent enactment of new state and local legislation designed to regulate or challenge these pricing practices.\n\nAlgorithmic rent-pricing involves landlords using software to determine rental rates, often leading to coordinated price increases across multiple properties. Critics argue these algorithms reduce competition and inflate housing costs, harming tenants.\n\nThe lawsuits typically target property management software providers and the landlords who utilize their services. These legal challenges often allege anti-competitive behavior and price fixing.\n\nNew state and local laws are providing stronger legal grounds for these litigations, empowering tenants and regulatory bodies. These legislative efforts aim to curb practices perceived as unfair or monopolistic in the housing market.\n\n#RentControl #TechLaw #HousingCrisis #AlgorithmicPricing #LegalTech #RealEstate\n\nSource: Hacker News",
+  "tweet": "New state and local laws are fueling a significant expansion of litigation against companies using algorithms to set rent prices. Critics argue these tools lead to inflated housing costs and anti-competitive practices. #TechLaw #HousingCrisis",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.morganlewis.com/pubs/2026/08/algorithmic-rent-pricing-litigation-expands-under-new-state-and-local-laws",
+  "image": "",
+  "orig_title": "Algorithmic Rent-Pricing Litigation Expands Under New State and Local Laws",
+  "cluster_urls": [
+   "https://www.morganlewis.com/pubs/2026/08/algorithmic-rent-pricing-litigation-expands-under-new-state-and-local-laws"
+  ],
+  "cluster_titles": [
+   "Algorithmic Rent-Pricing Litigation Expands Under New State and Local Laws"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260830-1006-0-algorithmic-rent-pricing-litigation-expands-.png",
+   "20260830-1006-0-algorithmic-rent-pricing-litigation-expands--d1.png",
+   "20260830-1006-0-algorithmic-rent-pricing-litigation-expands--d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_refusal_production_incidents",
+  "headline_marked": "AI agent for production incidents [[refuses to act]] even with 95% confidence",
+  "headline": "AI agent for production incidents refuses to act even with 95% confidence",
+  "summary": "This AI agent prioritizes safety by not acting on high-risk operations, even when highly confident, to prevent costly errors. Its design prevents a confidently wrong diagnosis from taking down services.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Every incident-response demo you have seen ends the same way: something breaks, the agent fixes it, everyone applauds. This agent demonstrates the opposite, correctly diagnosing a bad deployment with 95% confidence but deciding not to roll it back.",
+   "At 3am an alert fires, leading engineers to manually diagnose and fix issues. This mechanical process is an obvious target for automation. However, automating with an LLM relocates the problem, raising questions about how much an agent should change in production without human oversight.",
+   "Giving an agent too little makes it a chatbot, while giving it too much risks a confidently wrong diagnosis taking down services. An agent's permission level should be a function of its confidence and the potential damage of its proposed action. This leads to tiered actions: OBSERVE, SUGGEST, APPROVE, and ACT.",
+   "A restart is considered medium risk, reversible in seconds. A rollback is high risk, as it shifts production traffic and can extend a real outage if needless. Deleting data is critical, and no confidence level unlocks such an action.",
+   "Six conditions can only ever push the action tier down, never up. These include a high blast-radius ceiling, thin evidence, a similar action that just failed, a third attempt at the same fix, a stale incident, and a global dry-run switch. A wrong action is far more expensive than a missed one.",
+   "The agent cannot set its own blast radius; a code registry supplies the risk for proposed actions. It also cannot decide whether it may execute, as this is handled by deterministic, unit-tested code. This policy sits on the framework's real enforcement seam, informing the model why an action was blocked.",
+   "Crucially, the agent cannot grade its own work. Verification is an independent HTTP probe, recorded as a separate event. An agent that self-reports success is deemed worthless during an outage.",
+   "The agent found issues not deliberately planted, such as comparing container image digests across five revisions. It correctly concluded that three revisions, including one named 'healthy', shared identical broken code, escalating instead of rolling back. In another instance, it noticed a real misconfiguration where every revision had traffic_percent: 0.",
+   "In one incident, the agent reached the ACT tier and ran a real command, which failed due to a missing IAM permission. The agent saw the failure, did not claim success, re-diagnosed the problem, and then required human intervention. This highlights how least privilege is often discovered by breaking things.",
+   "The initial ACT floor of 0.90 proved too high, as Gemini's self-reported confidence clustered in 0.85–0.95 for well-evidenced diagnoses. Seven live incidents informed the calibration of these thresholds, making the ACT tier effectively unreachable initially. Once, it said nothing at all due to 40% confidence and ambiguous signals, simply logging 'confidence too low to even recommend'."
+  ],
+  "caption": "An AI agent for production incidents correctly diagnosed a bad deployment with 95% confidence. But it refused to roll it back.\n\nEvery incident-response demo you have seen ends the same way: something breaks, the agent fixes it, everyone applauds. This agent demonstrates the opposite, correctly diagnosing a bad deployment with 95% confidence but deciding not to roll it back.\n\nAt 3am an alert fires, leading engineers to manually diagnose and fix issues. This mechanical process is an obvious target for automation. However, automating with an LLM relocates the problem, raising questions about how much an agent should change in production without human oversight.\n\nGiving an agent too little makes it a chatbot, while giving it too much risks a confidently wrong diagnosis taking down services. An agent's permission level should be a function of its confidence and the potential damage of its proposed action. This leads to tiered actions: OBSERVE, SUGGEST, APPROVE, and ACT.\n\nA restart is considered medium risk, reversible in seconds. A rollback is high risk, as it shifts production traffic and can extend a real outage if needless. Deleting data is critical, and no confidence level unlocks such an action.\n\nSix conditions can only ever push the action tier down, never up. These include a high blast-radius ceiling, thin evidence, a similar action that just failed, a third attempt at the same fix, a stale incident, and a global dry-run switch. A wrong action is far more expensive than a missed one.\n\nThe agent cannot set its own blast radius; a code registry supplies the risk for proposed actions. It also cannot decide whether it may execute, as this is handled by deterministic, unit-tested code. This policy sits on the framework's real enforcement seam, informing the model why an action was blocked.\n\nCrucially, the agent cannot grade its own work. Verification is an independent HTTP probe, recorded as a separate event. An agent that self-reports success is deemed worthless during an outage.\n\n#AI #DevOps #Automation #IncidentResponse #SoftwareEngineering #Tech\n\nSource: DEV",
+  "tweet": "An AI agent for production incidents correctly diagnosed an issue with 95% confidence, yet refused to act. This design prioritizes safety by preventing confidently wrong actions, ensuring humans are involved for high-risk operations. #AI #DevOps #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/singhakousik363del/i-built-an-ai-agent-for-production-incidents-the-interesting-part-is-when-it-refuses-to-act-1ddg",
+  "image": "",
+  "orig_title": "I built an AI agent for production incidents. The interesting part is when it refuses to act.",
+  "cluster_urls": [
+   "https://dev.to/singhakousik363del/i-built-an-ai-agent-for-production-incidents-the-interesting-part-is-when-it-refuses-to-act-1ddg"
+  ],
+  "cluster_titles": [
+   "I built an AI agent for production incidents. The interesting part is when it refuses to act."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260830-1006-1-ai-agent-for-production-incidents-refuses-to.png",
+   "20260830-1006-1-ai-agent-for-production-incidents-refuses-to-d1.png",
+   "20260830-1006-1-ai-agent-for-production-incidents-refuses-to-d2.png",
+   "20260830-1006-1-ai-agent-for-production-incidents-refuses-to-d3.png",
+   "20260830-1006-1-ai-agent-for-production-incidents-refuses-to-d4.png",
+   "20260830-1006-1-ai-agent-for-production-incidents-refuses-to-d5.png"
+  ]
+ }
+]

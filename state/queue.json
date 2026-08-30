@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "local_ai_security_blind_spots",
+  "headline_marked": "[[Local AI workflows hide critical security blind spots]]: network exposure, clipboard leaks, and malicious model files",
+  "headline": "Local AI workflows hide critical security blind spots: network exposure, clipboard leaks, and malicious model files",
+  "summary": "Many developers assume local AI is secure due to on-device processing, but overlooked risks like network exposure, API key leaks, and dangerous model file formats can compromise data.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Engineers often run local LLMs and image generators for privacy, believing data never leaves their machine. However, common practices for testing inference from other devices introduce significant security vulnerabilities. Modern Apple Silicon makes local AI fast, but this speed doesn't equate to inherent security.",
+   "Binding AI tools like Ollama, LM Studio, Gradio, or vLLM to 0.0.0.0 exposes them to anyone on the same network without authentication. This allows unauthorized queries from office Wi-Fi, shared workspaces, or even compromised home networks. Default configurations often lack necessary API authentication.",
+   "Another major risk is API key leakage via the system clipboard. Accidentally pasting sensitive credentials (OpenAI, HuggingFace, AWS tokens) into public chats or forums can lead to immediate compromise by automated scrapers. This muscle memory error can result in leaked infrastructure access or substantial unauthorized API usage.",
+   "Model file formats also pose a threat. Python's legacy Pickle format (.pkl, .pt) can contain executable Python bytecode, which runs automatically when the file is unpickled. Loading a backdoored Pickle model can lead to data theft, system access, or even ransomware.",
+   "Newer, safer formats like SafeTensors (.safetensors) and GGUF (.gguf) are designed to store only pure tensor numbers and metadata, making them mathematically incapable of executing malware. While modern models increasingly use these, many legacy and community uploads still rely on the vulnerable Pickle format.",
+   "Tools like RoamSwitch offer proactive detection for these issues. It alerts users when AI ports bind to 0.0.0.0, shields external connections, and provides a Clipboard Secret Checker to prevent accidental API key leaks. RoamSwitch also warns about dangerous Pickle model downloads.",
+   "The Model Context Protocol (MCP) server, expanded in RoamSwitch 1.5.3, allows AI agents like Claude Desktop to answer questions about local environment security. Users can ask if their Ollama or dev environment is exposed to Wi-Fi, receiving real-time status updates."
+  ],
+  "caption": "Running local AI on your machine? You might be exposing your data and API keys to anyone on your network. Many common setups create critical security blind spots.\n\nEngineers often run local LLMs and image generators for privacy, believing data never leaves their machine. However, common practices for testing inference from other devices introduce significant security vulnerabilities. Modern Apple Silicon makes local AI fast, but this speed doesn't equate to inherent security.\n\nBinding AI tools like Ollama, LM Studio, Gradio, or vLLM to 0.0.0.0 exposes them to anyone on the same network without authentication. This allows unauthorized queries from office Wi-Fi, shared workspaces, or even compromised home networks. Default configurations often lack necessary API authentication.\n\nAnother major risk is API key leakage via the system clipboard. Accidentally pasting sensitive credentials (OpenAI, HuggingFace, AWS tokens) into public chats or forums can lead to immediate compromise by automated scrapers. This muscle memory error can result in leaked infrastructure access or substantial unauthorized API usage.\n\nModel file formats also pose a threat. Python's legacy Pickle format (.pkl, .pt) can contain executable Python bytecode, which runs automatically when the file is unpickled. Loading a backdoored Pickle model can lead to data theft, system access, or even ransomware.\n\nNewer, safer formats like SafeTensors (.safetensors) and GGUF (.gguf) are designed to store only pure tensor numbers and metadata, making them mathematically incapable of executing malware. While modern models increasingly use these, many legacy and community uploads still rely on the vulnerable Pickle format.\n\nTools like RoamSwitch offer proactive detection for these issues. It alerts users when AI ports bind to 0.0.0.0, shields external connections, and provides a Clipboard Secret Checker to prevent accidental API key leaks. RoamSwitch also warns about dangerous Pickle model downloads.\n\n#AISecurity #LocalAI #Cybersecurity #DevSecOps #TechNews #Privacy\n\nSource: DEV",
+  "tweet": "Running local AI for privacy? Beware: common setups expose your data and API keys to your network. Overlooked risks include unauthenticated ports, clipboard leaks, and malicious model files. Stay secure! #AISecurity #Cybersecurity #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/lafine_systemsdesign/the-hidden-security-blind-spots-in-local-ai-workflows-apd",
+  "image": "",
+  "orig_title": "The Hidden Security Blind Spots in Local AI Workflows",
+  "cluster_urls": [
+   "https://dev.to/lafine_systemsdesign/the-hidden-security-blind-spots-in-local-ai-workflows-apd"
+  ],
+  "cluster_titles": [
+   "The Hidden Security Blind Spots in Local AI Workflows"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260830-1306-0-local-ai-workflows-hide-critical-security-bl.png",
+   "20260830-1306-0-local-ai-workflows-hide-critical-security-bl-d1.png",
+   "20260830-1306-0-local-ai-workflows-hide-critical-security-bl-d2.png",
+   "20260830-1306-0-local-ai-workflows-hide-critical-security-bl-d3.png",
+   "20260830-1306-0-local-ai-workflows-hide-critical-security-bl-d4.png"
+  ]
+ },
+ {
+  "topic": "prompt_engineering_dead_harness_engineering",
+  "headline_marked": "[[Prompt Engineering Is Dead]]: 40% of AI agent projects fail in production, shifting focus to 'Harness Engineering'",
+  "headline": "Prompt Engineering Is Dead: 40% of AI agent projects fail in production, shifting focus to 'Harness Engineering'",
+  "summary": "The focus in AI engineering has shifted from optimizing prompts to managing the entire agent environment. With 40% of AI agent projects failing in production, \"harness engineering\" is now critical for success.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "In 2026, around 40% of AI agent projects fail in production, according to a Y Combinator survey. CTOs and CPOs found that the model itself was rarely the bottleneck, but rather the surrounding environment.",
+   "Initially, prompt engineering focused on optimizing single LLM calls, improving usefulness from 60% to 85% for isolated tasks. It treated prompts like poetry, but couldn't solve complex problems requiring tool use, memory, or decision-making.",
+   "The real challenge emerged when models needed to *do* something rather than just *say* something. Prompts were \"a polished doorknob on a house with no foundation\" when agents needed to interact with files, APIs, or remember past conversations.",
+   "This led to \"context engineering,\" which treats the entire context window as the artifact. It includes the system prompt, retrieved documents (RAG), tool definitions, and conversation memory, curating many more tokens, often not human-typed.",
+   "Context engineering enabled agents to read codebases, recall meetings, and call real APIs. However, it didn't address what happens when agents run unsupervised for extended periods, potentially causing unintended actions or infinite loops.",
+   "The ultimate solution is \"harness engineering,\" which encompasses context, constraints, tools, lifecycle management, feedback, and observability. As Louis Bouchard states, \"Context engineering is what you send to the model. Harness engineering is how the whole thing runs.\""
+  ],
+  "caption": "40% of AI agent projects fail in production. The problem isn't the prompt or even the context anymore.\n\nIn 2026, around 40% of AI agent projects fail in production, according to a Y Combinator survey. CTOs and CPOs found that the model itself was rarely the bottleneck, but rather the surrounding environment.\n\nInitially, prompt engineering focused on optimizing single LLM calls, improving usefulness from 60% to 85% for isolated tasks. It treated prompts like poetry, but couldn't solve complex problems requiring tool use, memory, or decision-making.\n\nThe real challenge emerged when models needed to *do* something rather than just *say* something. Prompts were \"a polished doorknob on a house with no foundation\" when agents needed to interact with files, APIs, or remember past conversations.\n\nThis led to \"context engineering,\" which treats the entire context window as the artifact. It includes the system prompt, retrieved documents (RAG), tool definitions, and conversation memory, curating many more tokens, often not human-typed.\n\nContext engineering enabled agents to read codebases, recall meetings, and call real APIs. However, it didn't address what happens when agents run unsupervised for extended periods, potentially causing unintended actions or infinite loops.\n\nThe ultimate solution is \"harness engineering,\" which encompasses context, constraints, tools, lifecycle management, feedback, and observability. As Louis Bouchard states, \"Context engineering is what you send to the model. Harness engineering is how the whole thing runs.\"\n\n#AIEngineering #PromptEngineering #HarnessEngineering #AI #SoftwareDevelopment #TechTrends\n\nSource: DEV",
+  "tweet": "40% of AI agent projects fail in production. The bottleneck has shifted from prompts to the entire agent environment. Learn why \"harness engineering\" is the new frontier for building robust AI systems. #AIEngineering #AI #TechTrends",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/kenimo49/prompt-engineering-is-dead-long-live-harness-engineering-5d5f",
+  "image": "",
+  "orig_title": "Prompt Engineering Is Dead. Long Live Harness Engineering.",
+  "cluster_urls": [
+   "https://dev.to/kenimo49/prompt-engineering-is-dead-long-live-harness-engineering-5d5f"
+  ],
+  "cluster_titles": [
+   "Prompt Engineering Is Dead. Long Live Harness Engineering."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260830-1306-1-prompt-engineering-is-dead-40-of-ai-agent-pr.png",
+   "20260830-1306-1-prompt-engineering-is-dead-40-of-ai-agent-pr-d1.png",
+   "20260830-1306-1-prompt-engineering-is-dead-40-of-ai-agent-pr-d2.png"
+  ]
+ }
+]

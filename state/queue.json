@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai_avatar_gpu_performance_benchmark",
+  "headline_marked": "Real-World Test Reveals [[4 AI Avatars per GPU at ¥7,600/month each]] for live streaming",
+  "headline": "Real-World Test Reveals 4 AI Avatars per GPU at ¥7,600/month each for live streaming",
+  "summary": "A real-world test determined a single GPU can handle 4 AI avatars for live streaming, costing ¥7,600 per avatar monthly for 24/7 operation, but significantly less with optimized scheduling.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A real-world test by developers building an unmanned 3D avatar live streaming system found that one cloud GPU can reliably handle 4 simultaneous AI avatars. This capacity allows for a monthly cost of ¥7,600 per avatar if run 24/7, a crucial metric for business viability.",
+   "Initial measurements revealed that focusing solely on FPS was insufficient for streaming, as rendering failures could cause time skips in recorded segments. The team confirmed 4 avatars by verifying that all 90-second animated segments were fully recorded without truncation.",
+   "Analysis showed the GPU was only at 26% usage, indicating the bottleneck was the CPU (16 vCPU) handling the rest of the streaming pipeline. This suggests that using a hardware encoder like NVENC could free up CPU resources and potentially increase avatar capacity.",
+   "When packing multiple avatars onto one host, shared resources like named pipes for audio caused interference. The solution involved making resource paths unique per port number, highlighting the importance of identifying such shared elements early in development.",
+   "Operational hours dramatically impact costs; running 8 hours daily reduces the per-avatar cost to ¥2,500, a threefold difference from 24/7 operation. This emphasizes treating resource usage as a scheduling problem to avoid wasting money on off-peak streaming.",
+   "Even with known capacity, stability issues arose with community-type GPUs, requiring an automatic host switching solution. Simple restarts were insufficient for live streaming, as viewers would see avatars repeatedly reintroduce themselves."
+  ],
+  "caption": "How many AI avatars can one GPU really handle for live streaming? A real-world test reveals the answer: 4 avatars, costing ¥7,600 each per month for 24/7 operation.\n\nA real-world test by developers building an unmanned 3D avatar live streaming system found that one cloud GPU can reliably handle 4 simultaneous AI avatars. This capacity allows for a monthly cost of ¥7,600 per avatar if run 24/7, a crucial metric for business viability.\n\nInitial measurements revealed that focusing solely on FPS was insufficient for streaming, as rendering failures could cause time skips in recorded segments. The team confirmed 4 avatars by verifying that all 90-second animated segments were fully recorded without truncation.\n\nAnalysis showed the GPU was only at 26% usage, indicating the bottleneck was the CPU (16 vCPU) handling the rest of the streaming pipeline. This suggests that using a hardware encoder like NVENC could free up CPU resources and potentially increase avatar capacity.\n\nWhen packing multiple avatars onto one host, shared resources like named pipes for audio caused interference. The solution involved making resource paths unique per port number, highlighting the importance of identifying such shared elements early in development.\n\nOperational hours dramatically impact costs; running 8 hours daily reduces the per-avatar cost to ¥2,500, a threefold difference from 24/7 operation. This emphasizes treating resource usage as a scheduling problem to avoid wasting money on off-peak streaming.\n\nEven with known capacity, stability issues arose with community-type GPUs, requiring an automatic host switching solution. Simple restarts were insufficient for live streaming, as viewers would see avatars repeatedly reintroduce themselves.\n\n#AI #GPU #LiveStreaming #TechTest #CloudComputing #Avatar\n\nSource: DEV",
+  "tweet": "A real-world test reveals one GPU can handle 4 AI avatars for live streaming, costing ¥7,600/month each (24/7). CPU, not GPU, was the bottleneck. Smart scheduling can cut costs by 3x. #AI #GPU #LiveStreaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "forge.workstyle.tech",
+  "source": "DEV",
+  "url": "https://dev.to/orca_forge/how-many-ai-avatars-can-one-gpu-handle-real-world-test-reveals-4-avatars-at-y7600-each-per-month-4n9p",
+  "image": "",
+  "orig_title": "How Many AI Avatars Can One GPU Handle? Real-World Test Reveals 4 Avatars at ¥7,600 Each per Month",
+  "cluster_urls": [
+   "https://dev.to/orca_forge/how-many-ai-avatars-can-one-gpu-handle-real-world-test-reveals-4-avatars-at-y7600-each-per-month-4n9p"
+  ],
+  "cluster_titles": [
+   "How Many AI Avatars Can One GPU Handle? Real-World Test Reveals 4 Avatars at ¥7,600 Each per Month"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260830-0610-0-real-world-test-reveals-4-ai-avatars-per-gpu.png",
+   "20260830-0610-0-real-world-test-reveals-4-ai-avatars-per-gpu-d1.png",
+   "20260830-0610-0-real-world-test-reveals-4-ai-avatars-per-gpu-d2.png"
+  ]
+ },
+ {
+  "topic": "gpu_cluster_vllm_aks",
+  "headline_marked": "[[Standing Up a GPU Cluster on AKS for vLLM]]",
+  "headline": "Standing Up a GPU Cluster on AKS for vLLM",
+  "summary": "This guide details how to create an Azure Kubernetes Service (AKS) cluster with a GPU node pool, deploy vLLM, and integrate Prometheus and Grafana for monitoring. It covers critical steps from GPU quota requests to configuring device plugins.",
+  "category": "CLOUD",
+  "template": "terminal",
+  "details": [
+   "This article, part of a series, walks through the process of setting up an Azure Kubernetes Service (AKS) cluster with a GPU node pool. It covers deploying vLLM onto this infrastructure and wiring up Prometheus and Grafana for comprehensive visibility.",
+   "A crucial first step is requesting GPU quota through the Azure Portal, as new subscriptions often start at zero for GPU families. This manual approval is granted per-subscription and must be completed before you plan to provision any GPU resources.",
+   "It's essential to use a separate GPU node pool for vLLM, distinct from the system node pool. This design allows the GPU pool to scale to zero when not in use, optimizing costs, while a cheaper CPU node handles critical cluster pods 24/7.",
+   "Understanding taint, toleration, and nodeSelector is key for correct pod scheduling. The taint repels pods by default, a toleration permits a specific pod to ignore that taint, and a nodeSelector steers a pod toward a specific node.",
+   "The NVIDIA GPU device plugin is not installed by default on AKS and is critical for GPU nodes to advertise allocatable resources. Without it, any pod requesting `nvidia.com/gpu: \"1\"` will remain Pending indefinitely with no error.",
+   "Monitoring is set up using Prometheus and Grafana, with Prometheus Node Exporter configured to tolerate GPU taints to collect CPU, memory, and disk metrics. While vLLM reports request stats, NVIDIA's DCGM exporter is required for GPU utilization, VRAM, temperature, and power metrics.",
+   "The expected deployment sequence for a vLLM pod involves it initially being Pending, followed by the cluster autoscaler provisioning an A10 node (typically 3–5 minutes). This is then followed by image pull (~1 minute for 8.8 GB), model weights load, and finally, the pod reaching a 1/1 Running state."
+  ],
+  "caption": "Deploying vLLM on Azure Kubernetes Service (AKS) with GPU acceleration requires specific setup. Learn how to configure GPU quotas, node pools, and monitoring for optimal performance and cost.\n\nThis article, part of a series, walks through the process of setting up an Azure Kubernetes Service (AKS) cluster with a GPU node pool. It covers deploying vLLM onto this infrastructure and wiring up Prometheus and Grafana for comprehensive visibility.\n\nA crucial first step is requesting GPU quota through the Azure Portal, as new subscriptions often start at zero for GPU families. This manual approval is granted per-subscription and must be completed before you plan to provision any GPU resources.\n\nIt's essential to use a separate GPU node pool for vLLM, distinct from the system node pool. This design allows the GPU pool to scale to zero when not in use, optimizing costs, while a cheaper CPU node handles critical cluster pods 24/7.\n\nUnderstanding taint, toleration, and nodeSelector is key for correct pod scheduling. The taint repels pods by default, a toleration permits a specific pod to ignore that taint, and a nodeSelector steers a pod toward a specific node.\n\nThe NVIDIA GPU device plugin is not installed by default on AKS and is critical for GPU nodes to advertise allocatable resources. Without it, any pod requesting `nvidia.com/gpu: \"1\"` will remain Pending indefinitely with no error.\n\nMonitoring is set up using Prometheus and Grafana, with Prometheus Node Exporter configured to tolerate GPU taints to collect CPU, memory, and disk metrics. While vLLM reports request stats, NVIDIA's DCGM exporter is required for GPU utilization, VRAM, temperature, and power metrics.\n\nThe expected deployment sequence for a vLLM pod involves it initially being Pending, followed by the cluster autoscaler provisioning an A10 node (typically 3–5 minutes). This is then followed by image pull (~1 minute for 8.8 GB), model weights load, and finally, the pod reaching a 1/1 Running state.\n\n#AKS #Kubernetes #GPU #vLLM #CloudComputing #AI\n\nSource: DEV",
+  "tweet": "Deploying vLLM on AKS with GPU acceleration? This guide covers everything from GPU quota requests to setting up Prometheus and Grafana for monitoring. Optimize your cloud AI infrastructure. #AKS #GPU #vLLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "microsoft.com",
+  "source": "DEV",
+  "url": "https://dev.to/josef_doornink_930b2caf1c/standing-up-a-gpu-cluster-on-aks-for-vllm-bif",
+  "image": "",
+  "orig_title": "Standing Up a GPU Cluster on AKS for vLLM",
+  "cluster_urls": [
+   "https://dev.to/josef_doornink_930b2caf1c/standing-up-a-gpu-cluster-on-aks-for-vllm-bif"
+  ],
+  "cluster_titles": [
+   "Standing Up a GPU Cluster on AKS for vLLM"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260830-0610-1-standing-up-a-gpu-cluster-on-aks-for-vllm.png",
+   "20260830-0610-1-standing-up-a-gpu-cluster-on-aks-for-vllm-d1.png",
+   "20260830-0610-1-standing-up-a-gpu-cluster-on-aks-for-vllm-d2.png",
+   "20260830-0610-1-standing-up-a-gpu-cluster-on-aks-for-vllm-d3.png"
+  ]
+ }
+]

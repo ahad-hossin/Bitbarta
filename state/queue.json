@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "ai_agent_fabrication_debugging_observability",
+  "headline_marked": "[[LLM apps fail silently]] without proper observability: tracing, logging, and debugging agent runs",
+  "headline": "LLM apps fail silently without proper observability: tracing, logging, and debugging agent runs",
+  "summary": "An expert details how a customer-support LLM agent hallucinated for weeks undetected, emphasizing the critical need for specialized observability to prevent silent failures in production.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A customer-support LLM agent for a logistics client silently hallucinated tracking numbers for three weeks, despite all system checks showing normal operation. This incident highlighted the critical need for specialized observability beyond traditional methods.",
+   "Traditional observability fails LLMs because their non-deterministic nature breaks assumptions about stack traces and predictable errors. Standard logging is insufficient; a deeper understanding of the decision chain is required.",
+   "The author now implements a three-layer observability system: tracing, logging, and evals/metrics. Each layer addresses different questions crucial for understanding and improving LLM performance.",
+   "Tracing reconstructs the chain of decisions, showing what happened in what order and how long each step took. It captures duration, token counts, cost, model name, and input/output for every span, revealing issues like truncated prompts or empty retrieval.",
+   "Logging focuses on recording full prompts, completions, retrieved chunks, tool arguments, and results with a stable run ID. This raw data is essential for audits, compliance, and reproducing specific failures.",
+   "Evals and metrics assess system improvement. Metrics track performance indicators like tokens per request and latency, while evals involve running scored test cases against regression sets to validate changes.",
+   "The eval loop is crucial but often overlooked. It involves a regression set of real interactions, scored with exact and rubric-based checks, to ensure prompt or model changes genuinely improve outcomes.",
+   "OpenTelemetry has established semantic conventions (gen_ai.* attributes) for generative AI, standardizing how traces from different providers can be integrated and analyzed. This helps reconstruct complex agent interactions."
+  ],
+  "caption": "An LLM agent hallucinated tracking numbers for three weeks, silently shipping wrong answers. Traditional observability missed it entirely.\n\nA customer-support LLM agent for a logistics client silently hallucinated tracking numbers for three weeks, despite all system checks showing normal operation. This incident highlighted the critical need for specialized observability beyond traditional methods.\n\nTraditional observability fails LLMs because their non-deterministic nature breaks assumptions about stack traces and predictable errors. Standard logging is insufficient; a deeper understanding of the decision chain is required.\n\nThe author now implements a three-layer observability system: tracing, logging, and evals/metrics. Each layer addresses different questions crucial for understanding and improving LLM performance.\n\nTracing reconstructs the chain of decisions, showing what happened in what order and how long each step took. It captures duration, token counts, cost, model name, and input/output for every span, revealing issues like truncated prompts or empty retrieval.\n\nLogging focuses on recording full prompts, completions, retrieved chunks, tool arguments, and results with a stable run ID. This raw data is essential for audits, compliance, and reproducing specific failures.\n\nEvals and metrics assess system improvement. Metrics track performance indicators like tokens per request and latency, while evals involve running scored test cases against regression sets to validate changes.\n\nThe eval loop is crucial but often overlooked. It involves a regression set of real interactions, scored with exact and rubric-based checks, to ensure prompt or model changes genuinely improve outcomes.\n\nOpenTelemetry has established semantic conventions (gen_ai.* attributes) for generative AI, standardizing how traces from different providers can be integrated and analyzed. This helps reconstruct complex agent interactions.\n\n#LLMOps #Observability #AI #SoftwareDevelopment #Debugging #Tech\n\nSource: DEV",
+  "tweet": "An LLM agent silently hallucinated tracking numbers for 3 weeks, undetected by traditional monitoring. Learn how specialized tracing, logging, and evals are crucial for LLM observability in production. #LLMOps #AI #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mryadavgulshan/llm-observability-tracing-logging-debugging-agent-runs-1je8",
+  "image": "",
+  "orig_title": "LLM Observability: Tracing, Logging, Debugging Agent Runs",
+  "cluster_urls": [
+   "https://dev.to/mryadavgulshan/llm-observability-tracing-logging-debugging-agent-runs-1je8",
+   "https://dev.to/rulestack/your-subagent-finished-you-just-could-not-hear-it-how-agent-replies-actually-reach-the-parent-2gb7",
+   "https://dev.to/anvilandcode/how-i-caught-an-agent-fabricating-its-own-results-85n"
+  ],
+  "cluster_titles": [
+   "LLM Observability: Tracing, Logging, Debugging Agent Runs",
+   "Your subagent finished — you just could not hear it: how agent replies actually reach the parent",
+   "How I Caught an Agent Fabricating Its Own Results"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260830-0907-0-llm-apps-fail-silently-without-proper-observ.png",
+   "20260830-0907-0-llm-apps-fail-silently-without-proper-observ-d1.png",
+   "20260830-0907-0-llm-apps-fail-silently-without-proper-observ-d2.png",
+   "20260830-0907-0-llm-apps-fail-silently-without-proper-observ-d3.png"
+  ]
+ },
+ {
+  "topic": "approval_signature_double_spend_vulnerability",
+  "headline_marked": "[[Double-spend bug]] found in human approval signature system",
+  "headline": "Double-spend bug found in human approval signature system",
+  "summary": "A developer's hackathon project revealed a critical race condition where a single human approval could trigger two actions, leading to unintended consequences. This bug highlighted the importance of robust testing and careful order of operations.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer building \"Syntrueno\" for a Google Cloud hackathon discovered a critical double-spend bug in their human approval gate. This flaw allowed a single signature to trigger an action twice if two operators clicked \"Execute\" simultaneously.",
+   "The bug stemmed from the order of operations: the system checked the signature, ran the mutation, then marked it used. FastAPI's threadpool served simultaneous requests, leading both to validate the signature and write to Cloud Run, while the ledger only recorded one event.",
+   "The fix involved reordering operations: finding and spending the signature under a lock *before* the mutation. This ensures only one execution per signature and returns the signature if the call fails, preventing an operator from losing their approval due to transient errors.",
+   "A second, similar bug was found in the hash-chained ledger, where concurrent read-modify-write operations on the chain head without a lock could cause the chain to fork silently. This would only be detected by a verifier much later.",
+   "Additionally, a health check was misreporting durability, claiming durable storage while quietly falling back to in-memory dictionaries. This meant the system was reporting itself as robust when it was not, a critical failure for a project designed for reliability.",
+   "These incidents underscored the importance of a robust test suite. The project's 284 tests pass offline in three seconds without cloud credentials, ensuring they test the code's logic rather than cloud service availability.",
+   "The agent's action space was designed for safety by making destructive verbs absent from its closed enum, not merely blocked. This prevents prompt injections from causing harm, as a non-existent action cannot be invoked.",
+   "The developer's key takeaway was to critically question what a \"green check\" truly measures. Both major bugs were hidden behind seemingly functional indicators, highlighting that trust in diagrams must be secondary to thorough testing."
+  ],
+  "caption": "A human approval signature could be spent twice. This critical double-spend bug was discovered in a system designed for incident response.\n\nA developer building \"Syntrueno\" for a Google Cloud hackathon discovered a critical double-spend bug in their human approval gate. This flaw allowed a single signature to trigger an action twice if two operators clicked \"Execute\" simultaneously.\n\nThe bug stemmed from the order of operations: the system checked the signature, ran the mutation, then marked it used. FastAPI's threadpool served simultaneous requests, leading both to validate the signature and write to Cloud Run, while the ledger only recorded one event.\n\nThe fix involved reordering operations: finding and spending the signature under a lock *before* the mutation. This ensures only one execution per signature and returns the signature if the call fails, preventing an operator from losing their approval due to transient errors.\n\nA second, similar bug was found in the hash-chained ledger, where concurrent read-modify-write operations on the chain head without a lock could cause the chain to fork silently. This would only be detected by a verifier much later.\n\nAdditionally, a health check was misreporting durability, claiming durable storage while quietly falling back to in-memory dictionaries. This meant the system was reporting itself as robust when it was not, a critical failure for a project designed for reliability.\n\nThese incidents underscored the importance of a robust test suite. The project's 284 tests pass offline in three seconds without cloud credentials, ensuring they test the code's logic rather than cloud service availability.\n\nThe agent's action space was designed for safety by making destructive verbs absent from its closed enum, not merely blocked. This prevents prompt injections from causing harm, as a non-existent action cannot be invoked.\n\n#SoftwareBug #Security #DevOps #CloudComputing #Hackathon #Programming\n\nSource: DEV",
+  "tweet": "A developer found a critical double-spend bug in their human approval gate for an incident response system. One signature, two actions. The fix highlights the importance of locking and robust test suites. #SoftwareBug #Security #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shaanalpha/the-approval-signature-that-could-be-spent-twice-cdj",
+  "image": "",
+  "orig_title": "The approval signature that could be spent twice",
+  "cluster_urls": [
+   "https://dev.to/shaanalpha/the-approval-signature-that-could-be-spent-twice-cdj"
+  ],
+  "cluster_titles": [
+   "The approval signature that could be spent twice"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260830-0907-1-double-spend-bug-found-in-human-approval-sig.png",
+   "20260830-0907-1-double-spend-bug-found-in-human-approval-sig-d1.png",
+   "20260830-0907-1-double-spend-bug-found-in-human-approval-sig-d2.png",
+   "20260830-0907-1-double-spend-bug-found-in-human-approval-sig-d3.png"
+  ]
+ }
+]

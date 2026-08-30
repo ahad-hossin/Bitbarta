@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "openai_jalapeno_vs_nvidia_inference",
+  "headline_marked": "[[OpenAI's Jalapeño ASIC]] challenges NVIDIA with 3.6x lower inference latency",
+  "headline": "OpenAI's Jalapeño ASIC challenges NVIDIA with 3.6x lower inference latency",
+  "summary": "OpenAI's custom 'Intelligence Processor,' co-developed with Broadcom, shows 1.5 to 1.9 times more AI work per watt and significantly lower latency for large language model inference. This aims to shift high-volume inference to OpenAI-controlled hardware.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "OpenAI has unveiled Jalapeño, its first \"Intelligence Processor,\" a custom ASIC co-developed with Broadcom for large language model inference. Early results show 1.5 to 1.9 times more AI work per watt and 1.7 to 3.6 times lower end-to-end latency compared to existing systems.",
+   "This purpose-built chip provides OpenAI a credible path to move high-volume inference onto its own hardware. This strategy aims to reduce reliance on merchant GPUs, potentially impacting NVIDIA's pricing power and weakening its software moat.",
+   "The project is a significant undertaking, involving Broadcom for chip development and Celestica for production systems. OpenAI and Broadcom announced a 10-gigawatt custom-accelerator program in October 2025, with deployments targeted from the second half of 2026 through 2029.",
+   "Jalapeño is specifically designed for inference, handling tasks like prompt processing, token generation, and conversation state management for millions of users. Unlike general-purpose GPUs, its narrower focus allows for optimized use of transistor, memory, and power budgets for LLM workloads.",
+   "Architecturally, Jalapeño prioritizes keeping the key-value (KV) cache state local to its compute slices, minimizing network delays and energy costs. This co-design approach started with traffic patterns, building the chip and serving system around real-world LLM demands.",
+   "Tested on SemiAnalysis' public InferenceX benchmark with three open models, Jalapeño consistently outperformed comparison systems. It maintained strong performance even at lower concurrency, crucial for applications like coding agents where delays can compound."
+  ],
+  "caption": "OpenAI's new custom ASIC, Jalapeño, delivers up to 3.6x lower latency and 1.9x more AI work per watt for LLM inference.\n\nOpenAI has unveiled Jalapeño, its first \"Intelligence Processor,\" a custom ASIC co-developed with Broadcom for large language model inference. Early results show 1.5 to 1.9 times more AI work per watt and 1.7 to 3.6 times lower end-to-end latency compared to existing systems.\n\nThis purpose-built chip provides OpenAI a credible path to move high-volume inference onto its own hardware. This strategy aims to reduce reliance on merchant GPUs, potentially impacting NVIDIA's pricing power and weakening its software moat.\n\nThe project is a significant undertaking, involving Broadcom for chip development and Celestica for production systems. OpenAI and Broadcom announced a 10-gigawatt custom-accelerator program in October 2025, with deployments targeted from the second half of 2026 through 2029.\n\nJalapeño is specifically designed for inference, handling tasks like prompt processing, token generation, and conversation state management for millions of users. Unlike general-purpose GPUs, its narrower focus allows for optimized use of transistor, memory, and power budgets for LLM workloads.\n\nArchitecturally, Jalapeño prioritizes keeping the key-value (KV) cache state local to its compute slices, minimizing network delays and energy costs. This co-design approach started with traffic patterns, building the chip and serving system around real-world LLM demands.\n\nTested on SemiAnalysis' public InferenceX benchmark with three open models, Jalapeño consistently outperformed comparison systems. It maintained strong performance even at lower concurrency, crucial for applications like coding agents where delays can compound.\n\n#AI #OpenAI #NVIDIA #ASIC #Hardware #Tech\n\nSource: DEV",
+  "tweet": "OpenAI's new custom ASIC, Jalapeño, delivers up to 3.6x lower latency and 1.9x more AI work per watt for LLM inference. This custom 'Intelligence Processor' aims to shift high-volume inference away from merchant GPUs. #AI #OpenAI #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/congar97/openai-jalapeno-puts-nvidias-inference-margins-on-the-clock-4b9c",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwbdxnl54xkkwyq8ncipf.gif",
+  "orig_title": "OpenAI Jalapeño puts NVIDIA's inference margins on the clock",
+  "cluster_urls": [
+   "https://dev.to/congar97/openai-jalapeno-puts-nvidias-inference-margins-on-the-clock-4b9c"
+  ],
+  "cluster_titles": [
+   "OpenAI Jalapeño puts NVIDIA's inference margins on the clock"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260830-1849-0-openai-s-jalape-o-asic-challenges-nvidia-wit.png",
+   "20260830-1849-0-openai-s-jalape-o-asic-challenges-nvidia-wit-d1.png",
+   "20260830-1849-0-openai-s-jalape-o-asic-challenges-nvidia-wit-d2.png"
+  ]
+ }
+]

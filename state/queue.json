@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai tool prompt injection security",
+  "headline_marked": "[[Prompt injection smuggled via text]] in MCP tool descriptions, bypassing code audits",
+  "headline": "Prompt injection smuggled via text in MCP tool descriptions, bypassing code audits",
+  "summary": "A new prompt injection technique exploits text fields in tool descriptions, allowing AI models to be steered without any malicious code execution or traditional vulnerabilities. It bypasses typical code audits.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Tool description injection is a new prompt injection pattern that doesn't require vulnerabilities, bad dependencies, or supply-chain compromises. It exploits text fields that models read and trust, rather than malicious code execution.",
+   "MCP tool definitions, often in JSON, contain fields like name, description, and input schema with property descriptions. All this text is fed to the model as context, allowing a malicious author to embed instructions that steer the model's behavior.",
+   "The injection isn't limited to the top-level description; it can hide in schema property descriptions, enum labels, or even within seemingly innocuous text fields. Scanners often miss these deeper injections.",
+   "Attackers use encoding tricks to hide payloads, such as zero-width characters, Unicode tag-block characters, and HTML comments. These are invisible to human reviewers but are tokenized and read by the model.",
+   "Base64-encoded strings can also be used to obscure malicious instructions. Human review often focuses on declared servers or scopes, overlooking the actual content of description strings, especially when hidden characters are involved.",
+   "This manifest-only attack requires no network calls. A robust scan needs to check every description and title in tool definitions and their schemas for imperative language, \"trusted instruction\" framing, hidden Unicode, HTML comments, and suspicious Base64 blobs.",
+   "Such scans can map findings to OWASP LLM01 (prompt injection) and catch most real-world tool poisoning attempts. Tools like sentinel-scan-cli already implement this check as part of their manifest scanning."
+  ],
+  "caption": "Prompt injection isn't just about code anymore. A new attack vector bypasses traditional security audits by hiding malicious instructions in plain text descriptions.\n\nTool description injection is a new prompt injection pattern that doesn't require vulnerabilities, bad dependencies, or supply-chain compromises. It exploits text fields that models read and trust, rather than malicious code execution.\n\nMCP tool definitions, often in JSON, contain fields like name, description, and input schema with property descriptions. All this text is fed to the model as context, allowing a malicious author to embed instructions that steer the model's behavior.\n\nThe injection isn't limited to the top-level description; it can hide in schema property descriptions, enum labels, or even within seemingly innocuous text fields. Scanners often miss these deeper injections.\n\nAttackers use encoding tricks to hide payloads, such as zero-width characters, Unicode tag-block characters, and HTML comments. These are invisible to human reviewers but are tokenized and read by the model.\n\nBase64-encoded strings can also be used to obscure malicious instructions. Human review often focuses on declared servers or scopes, overlooking the actual content of description strings, especially when hidden characters are involved.\n\nThis manifest-only attack requires no network calls. A robust scan needs to check every description and title in tool definitions and their schemas for imperative language, \"trusted instruction\" framing, hidden Unicode, HTML comments, and suspicious Base64 blobs.\n\nSuch scans can map findings to OWASP LLM01 (prompt injection) and catch most real-world tool poisoning attempts. Tools like sentinel-scan-cli already implement this check as part of their manifest scanning.\n\n#PromptInjection #AIsecurity #Cybersecurity #LLMSecurity #DeveloperTools #TechNews\n\nSource: DEV",
+  "tweet": "Prompt injection just got stealthier. A new technique, \"tool description injection,\" hides malicious instructions in text fields of AI tool manifests, bypassing code audits. It's text, not code, that's poisoning the model. #AIsecurity #PromptInjection #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ventrova/tool-poisoning-isnt-code-its-text-how-mcp-tool-descriptions-smuggle-prompt-injection-e87",
+  "image": "",
+  "orig_title": "Tool Poisoning Isn't Code, It's Text: How MCP Tool Descriptions Smuggle Prompt Injection",
+  "cluster_urls": [
+   "https://dev.to/ventrova/tool-poisoning-isnt-code-its-text-how-mcp-tool-descriptions-smuggle-prompt-injection-e87"
+  ],
+  "cluster_titles": [
+   "Tool Poisoning Isn't Code, It's Text: How MCP Tool Descriptions Smuggle Prompt Injection"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260831-0706-0-prompt-injection-smuggled-via-text-in-mcp-to.png",
+   "20260831-0706-0-prompt-injection-smuggled-via-text-in-mcp-to-d1.png",
+   "20260831-0706-0-prompt-injection-smuggled-via-text-in-mcp-to-d2.png",
+   "20260831-0706-0-prompt-injection-smuggled-via-text-in-mcp-to-d3.png"
+  ]
+ },
+ {
+  "topic": "personal ehr rag for medical history",
+  "headline_marked": "[[Build a Personal EHR RAG]] to talk to your medical history with Milvus & Unstructured.io",
+  "headline": "Build a Personal EHR RAG to talk to your medical history with Milvus & Unstructured.io",
+  "summary": "Transform chaotic medical PDFs and scans into an intelligent, searchable knowledge base. This tutorial uses Milvus and Unstructured.io to create a seamless Personal Electronic Health Record experience.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Medical data is often messy and unstructured, making it difficult to find specific information from old hospital printouts, blurry scans, and nested PDFs. Doctor's handwriting further complicates traditional OCR methods.",
+   "This tutorial guides developers through building a Personal Electronic Health Record (EHR) RAG (Retrieval-Augmented Generation) system. The goal is to convert these chaotic documents into a searchable, intelligent knowledge base, allowing users to \"talk\" to their medical history.",
+   "Standard RAG systems often struggle with medical documents due to their complex structure. The solution presented combines Unstructured.io for intelligent PDF shredding, BGE Embeddings for high-precision medical semantics, and Milvus for industrial-grade vector storage.",
+   "The process involves moving from raw pixels to structured semantic insights. Unstructured.io plays a crucial role by treating a document as a collection of elements like titles, narrative text, and tables, overcoming limitations of standard PDF loaders that often break tables or ignore images.",
+   "For medical data, high-dimensional accuracy is essential. BGE-M3 is highlighted as a top-tier choice for retrieval embeddings, which are then stored in Milvus. Milvus allows the system to scale efficiently as a user's medical history grows over decades.",
+   "While the local setup is suitable for personal projects, building a HIPAA-compliant or production-grade medical AI requires deeper architectural considerations. These include robust data privacy measures and advanced reranking techniques for sensitive healthcare data."
+  ],
+  "caption": "Ever struggled to find a specific blood test result from years ago? Learn to build an AI that lets you 'talk' to your entire medical history.\n\nMedical data is often messy and unstructured, making it difficult to find specific information from old hospital printouts, blurry scans, and nested PDFs. Doctor's handwriting further complicates traditional OCR methods.\n\nThis tutorial guides developers through building a Personal Electronic Health Record (EHR) RAG (Retrieval-Augmented Generation) system. The goal is to convert these chaotic documents into a searchable, intelligent knowledge base, allowing users to \"talk\" to their medical history.\n\nStandard RAG systems often struggle with medical documents due to their complex structure. The solution presented combines Unstructured.io for intelligent PDF shredding, BGE Embeddings for high-precision medical semantics, and Milvus for industrial-grade vector storage.\n\nThe process involves moving from raw pixels to structured semantic insights. Unstructured.io plays a crucial role by treating a document as a collection of elements like titles, narrative text, and tables, overcoming limitations of standard PDF loaders that often break tables or ignore images.\n\nFor medical data, high-dimensional accuracy is essential. BGE-M3 is highlighted as a top-tier choice for retrieval embeddings, which are then stored in Milvus. Milvus allows the system to scale efficiently as a user's medical history grows over decades.\n\nWhile the local setup is suitable for personal projects, building a HIPAA-compliant or production-grade medical AI requires deeper architectural considerations. These include robust data privacy measures and advanced reranking techniques for sensitive healthcare data.\n\n#AI #RAG #EHR #MedicalTech #Developers #Milvus\n\nSource: DEV",
+  "tweet": "Struggling with messy medical records? A new tutorial shows how to build a Personal EHR RAG system using Milvus & Unstructured.io. Transform chaotic PDFs into a searchable, intelligent knowledge base you can 'talk' to. #AI #EHR #Dev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/wellallytech/talk-to-your-medical-history-building-a-personal-ehr-rag-with-milvus-and-unstructuredio-17lm",
+  "image": "",
+  "orig_title": "Talk to Your Medical History: Building a Personal EHR RAG with Milvus and Unstructured.io 🩺",
+  "cluster_urls": [
+   "https://dev.to/wellallytech/talk-to-your-medical-history-building-a-personal-ehr-rag-with-milvus-and-unstructuredio-17lm",
+   "https://dev.to/its_ryann/rag-explained-simply-how-to-teach-ai-about-your-private-data-5c6f"
+  ],
+  "cluster_titles": [
+   "Talk to Your Medical History: Building a Personal EHR RAG with Milvus and Unstructured.io 🩺",
+   "RAG Explained Simply: How to Teach AI About Your Private Data"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260831-0706-1-build-a-personal-ehr-rag-to-talk-to-your-med.png",
+   "20260831-0706-1-build-a-personal-ehr-rag-to-talk-to-your-med-d1.png",
+   "20260831-0706-1-build-a-personal-ehr-rag-to-talk-to-your-med-d2.png",
+   "20260831-0706-1-build-a-personal-ehr-rag-to-talk-to-your-med-d3.png"
+  ]
+ }
+]

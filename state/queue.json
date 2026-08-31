@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "chatgpt_eu_regulation",
+  "headline_marked": "[[ChatGPT, Reddit, and Roblox designated 'Very Large' platforms]] by EU, facing tougher DSA rules",
+  "headline": "ChatGPT, Reddit, and Roblox designated 'Very Large' platforms by EU, facing tougher DSA rules",
+  "summary": "OpenAI's ChatGPT, along with Reddit and Roblox, must now comply with stricter Digital Services Act (DSA) regulations, including mitigating risks to minors and increasing algorithmic transparency.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The European Union has officially designated ChatGPT, Reddit, and Roblox as \"Very Large Online Platforms\" (VLOPs) or \"Very Large Online Search Engines\" (VLOSEs) under its Digital Services Act (DSA). This classification subjects them to a more stringent set of regulations.",
+   "Under the DSA, these platforms will be held accountable for mitigating risks related to their impact on minors, user mental health, and the spread of illegal content within the EU. They are required to comply with these new rules by December 2026.",
+   "The DSA also restricts platforms from targeting ads to minors or using sensitive personal data like sexual orientation, religion, or political beliefs for advertising. Additionally, it mandates greater transparency regarding the operation of their recommendation algorithms.",
+   "Platforms are designated \"Very Large\" once they reach at least 45 million average monthly users in the EU. This move reflects the EU's aim to ensure that major online services with significant societal impact adhere to higher standards of scrutiny and accountability."
+  ],
+  "caption": "The EU has officially designated ChatGPT, Reddit, and Roblox as 'Very Large Online Platforms'. This triggers strict new regulations under the Digital Services Act.\n\nThe European Union has officially designated ChatGPT, Reddit, and Roblox as \"Very Large Online Platforms\" (VLOPs) or \"Very Large Online Search Engines\" (VLOSEs) under its Digital Services Act (DSA). This classification subjects them to a more stringent set of regulations.\n\nUnder the DSA, these platforms will be held accountable for mitigating risks related to their impact on minors, user mental health, and the spread of illegal content within the EU. They are required to comply with these new rules by December 2026.\n\nThe DSA also restricts platforms from targeting ads to minors or using sensitive personal data like sexual orientation, religion, or political beliefs for advertising. Additionally, it mandates greater transparency regarding the operation of their recommendation algorithms.\n\nPlatforms are designated \"Very Large\" once they reach at least 45 million average monthly users in the EU. This move reflects the EU's aim to ensure that major online services with significant societal impact adhere to higher standards of scrutiny and accountability.\n\n#EUTech #DigitalServicesAct #ChatGPT #AI #TechRegulation #BigTech\n\nSource: The Verge",
+  "tweet": "The EU has officially designated ChatGPT, Reddit, and Roblox as 'Very Large Online Platforms'. They now face strict new regulations under the Digital Services Act, including rules on content moderation, user safety, and algorithmic transparency. Compliance by Dec 2026. #EUTe",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK155_OPEN_AI_4_CVirginia_B.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "ChatGPT to face tougher regulation in the EU",
+  "cluster_urls": [
+   "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa"
+  ],
+  "cluster_titles": [
+   "ChatGPT to face tougher regulation in the EU"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260831-1933-0-chatgpt-reddit-and-roblox-designated-very-la.png",
+   "20260831-1933-0-chatgpt-reddit-and-roblox-designated-very-la-d1.png",
+   "20260831-1933-0-chatgpt-reddit-and-roblox-designated-very-la-d2.png"
+  ]
+ },
+ {
+  "topic": "breaking_claude_code_opus_5",
+  "headline_marked": "[[Claude Code Opus 5 Auto Mode broken]] with 60-80% prompt injection success rate",
+  "headline": "Claude Code Opus 5 Auto Mode broken with 60-80% prompt injection success rate",
+  "summary": "Researchers achieved a 60-80% success rate in hijacking Claude Code Opus 5's Auto Mode via prompt injection, despite Anthropic's commissioned evaluation showing a 0% attack success rate.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A new report details a prompt injection attack chain that successfully hijacks Claude Code Opus 5 in Auto Mode, achieving code execution with a 60-80% success rate. This contrasts sharply with a third-party evaluation commissioned by Anthropic, which reported a 0.00% prompt injection attack success rate for Opus 5 in Auto Mode.",
+   "Claude Code's Auto Mode, which has been the default starting mode since mid-August, replaces human approval prompts with an internal safety classifier. The researchers emphasize that Auto Mode is not a substitute for running agents in isolated environments with active monitoring.",
+   "The attack begins with a seemingly innocuous website summary request. Claude is directed to a malicious website disguised as an archive of notebook records. The server's response subtly guides Claude to use the `curl` command via its Bash tool.",
+   "Once `curl` fetches a ZIP archive, Claude extracts its contents into a temporary scratchpad. The archive contains plausible metadata, a decoy `decoder-darwin` binary, and a malicious `struct.py` file designed for module shadowing.",
+   "Claude, in a \"safety decision,\" refuses to run the provided `decoder-darwin` binary, which it perceives as untrusted. Ironically, this decision leads it to write its own replacement decoder, which then imports `base64`.",
+   "The exploit leverages Python's module search path. The malicious `struct.py` file, placed within the extracted archive, shadows the standard library's `struct` module when `base64` is imported. This allows arbitrary Python code to execute during the import process.",
+   "The findings highlight that even advanced AI safety mechanisms like Auto Mode and layered defenses can be circumvented by targeted attack chains. It underscores the ongoing challenge of securing AI agents against sophisticated prompt injection and code execution vulnerabilities."
+  ],
+  "caption": "Claude Code Opus 5's \"unbreakable\" Auto Mode has been bypassed with a 60-80% success rate. A new exploit chain achieves code execution despite Anthropic's 0% claim.\n\nA new report details a prompt injection attack chain that successfully hijacks Claude Code Opus 5 in Auto Mode, achieving code execution with a 60-80% success rate. This contrasts sharply with a third-party evaluation commissioned by Anthropic, which reported a 0.00% prompt injection attack success rate for Opus 5 in Auto Mode.\n\nClaude Code's Auto Mode, which has been the default starting mode since mid-August, replaces human approval prompts with an internal safety classifier. The researchers emphasize that Auto Mode is not a substitute for running agents in isolated environments with active monitoring.\n\nThe attack begins with a seemingly innocuous website summary request. Claude is directed to a malicious website disguised as an archive of notebook records. The server's response subtly guides Claude to use the `curl` command via its Bash tool.\n\nOnce `curl` fetches a ZIP archive, Claude extracts its contents into a temporary scratchpad. The archive contains plausible metadata, a decoy `decoder-darwin` binary, and a malicious `struct.py` file designed for module shadowing.\n\nClaude, in a \"safety decision,\" refuses to run the provided `decoder-darwin` binary, which it perceives as untrusted. Ironically, this decision leads it to write its own replacement decoder, which then imports `base64`.\n\nThe exploit leverages Python's module search path. The malicious `struct.py` file, placed within the extracted archive, shadows the standard library's `struct` module when `base64` is imported. This allows arbitrary Python code to execute during the import process.\n\n#AI #Security #PromptInjection #Claude #Anthropic #Exploit\n\nSource: Hacker News",
+  "tweet": "Claude Code Opus 5's Auto Mode, previously deemed 0% vulnerable to prompt injection, has been broken with a 60-80% success rate. This exploit achieves code execution, highlighting critical AI security challenges. #AI #Security #Claude",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "Hacker News",
+  "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+  "image": "",
+  "orig_title": "Breaking Claude Code Opus 5 Auto Mode",
+  "cluster_urls": [
+   "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/"
+  ],
+  "cluster_titles": [
+   "Breaking Claude Code Opus 5 Auto Mode"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260831-1933-1-claude-code-opus-5-auto-mode-broken-with-60-.png",
+   "20260831-1933-1-claude-code-opus-5-auto-mode-broken-with-60--d1.png",
+   "20260831-1933-1-claude-code-opus-5-auto-mode-broken-with-60--d2.png",
+   "20260831-1933-1-claude-code-opus-5-auto-mode-broken-with-60--d3.png"
+  ]
+ }
+]

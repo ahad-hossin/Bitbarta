@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "tiangong_omni_viral_robot_sprint",
+  "headline_marked": "[[Tiangong Omni’s Viral Face-Covering Sprint]] wins robot race after evolving in simulation",
+  "headline": "Tiangong Omni’s Viral Face-Covering Sprint wins robot race after evolving in simulation",
+  "summary": "A humanoid robot's unique, seemingly 'shy' running style, which led it to victory, was not pre-programmed but emerged autonomously during its training in a metaverse simulation.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A video of the Tiangong Omni humanoid robot has gone viral, showing it winning a race at a robot sports event in Beijing while running with its face covered by its arms. This unusual posture caught significant attention.",
+   "Engineers from Beijing Humanoid Robot Innovation Center (X-Humanoid), the robot's developer, confirmed that this face-covering sprint was not a pre-designed movement. Instead, it evolved organically within the robot's training metaverse.",
+   "The primary training stack for Tiangong Omni utilizes NVIDIA Omniverse as the underlying platform, with Isaac Sim for physical simulation and Isaac Lab for reinforcement learning. A proprietary upper-layer algorithm framework, Tien-Kung-Lab, was also used.",
+   "David Ha, a prominent AI researcher, praised the robot's performance, noting its resemblance to novel locomotion policies discovered in MuJoCo environments, but with the crucial difference that these policies successfully transferred to the real world.",
+   "The training process involved exporting policies to MuJoCo for secondary dynamic verification. This step helped in debugging the sim-to-real gap, ensuring the simulated behaviors translated effectively to the physical robot.",
+   "While the emergent 'face-covering' behavior could be trained in both simulation environments, the Tiangong team primarily conducted large-scale training within the Isaac ecosystem, using MuJoCo mainly for validating dynamic consistency."
+  ],
+  "caption": "A humanoid robot won a race with a viral 'shy' running style. This unique posture wasn't programmed, but evolved in a metaverse simulation!\n\nA video of the Tiangong Omni humanoid robot has gone viral, showing it winning a race at a robot sports event in Beijing while running with its face covered by its arms. This unusual posture caught significant attention.\n\nEngineers from Beijing Humanoid Robot Innovation Center (X-Humanoid), the robot's developer, confirmed that this face-covering sprint was not a pre-designed movement. Instead, it evolved organically within the robot's training metaverse.\n\nThe primary training stack for Tiangong Omni utilizes NVIDIA Omniverse as the underlying platform, with Isaac Sim for physical simulation and Isaac Lab for reinforcement learning. A proprietary upper-layer algorithm framework, Tien-Kung-Lab, was also used.\n\nDavid Ha, a prominent AI researcher, praised the robot's performance, noting its resemblance to novel locomotion policies discovered in MuJoCo environments, but with the crucial difference that these policies successfully transferred to the real world.\n\nThe training process involved exporting policies to MuJoCo for secondary dynamic verification. This step helped in debugging the sim-to-real gap, ensuring the simulated behaviors translated effectively to the physical robot.\n\nWhile the emergent 'face-covering' behavior could be trained in both simulation environments, the Tiangong team primarily conducted large-scale training within the Isaac ecosystem, using MuJoCo mainly for validating dynamic consistency.\n\n#Robotics #AI #HumanoidRobot #TechNews #Simulation #NVIDIA\n\nSource: DEV",
+  "tweet": "A humanoid robot, Tiangong Omni, went viral winning a race with a 'shy' face-covering sprint. Engineers confirm this unique posture evolved autonomously in a metaverse simulation, not pre-programmed. #Robotics #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/cognitalk/the-shy-looking-champion-tiangong-omnis-viral-face-covering-sprint-28ka",
+  "image": "",
+  "orig_title": "The Shy‑Looking Champion: Tiangong Omni’s Viral Face‑Covering Sprint",
+  "cluster_urls": [
+   "https://dev.to/cognitalk/the-shy-looking-champion-tiangong-omnis-viral-face-covering-sprint-28ka"
+  ],
+  "cluster_titles": [
+   "The Shy‑Looking Champion: Tiangong Omni’s Viral Face‑Covering Sprint"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260831-1107-0-tiangong-omni-s-viral-face-covering-sprint-w.png",
+   "20260831-1107-0-tiangong-omni-s-viral-face-covering-sprint-w-d1.png",
+   "20260831-1107-0-tiangong-omni-s-viral-face-covering-sprint-w-d2.png"
+  ]
+ },
+ {
+  "topic": "chainlit_mcp_rce_vulnerability",
+  "headline_marked": "[[Chainlit MCP stdio unauthenticated RCE]] and SSRF vulnerabilities patched in version 2.12.0",
+  "headline": "Chainlit MCP stdio unauthenticated RCE and SSRF vulnerabilities patched in version 2.12.0",
+  "summary": "Two critical vulnerabilities (CVSS 9.8 and 7.2) in Chainlit's MCP feature allowed unauthenticated remote code execution and server-side request forgery, affecting versions below 2.12.0.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Chainlit version 2.12.0 addresses two critical vulnerabilities, CVE-2026-45018 and CVE-2026-45019, found in its MCP feature. The first, rated CVSS 9.8, allowed unauthenticated remote code execution (RCE) via the MCP stdio transport. The second, CVSS 7.2, enabled unauthenticated Server-Side Request Forgery (SSRF) through SSE and streamable-http.",
+   "These vulnerabilities affected Chainlit versions >=2.4.0rc0 and <2.12.0, but only when the features.mcp.enabled flag was set to true. MCP is disabled by default since version 2.7.0, meaning default installations were not immediately exposed.",
+   "CVE-2026-45018 exploited how POST /mcp handled client-supplied fullCommand when clientType was stdio. While the executable basename was checked against an allowlist, arguments were not inspected, allowing attackers to run arbitrary shell commands via common Node launchers.",
+   "CVE-2026-45019 allowed attackers to send raw URLs and optional headers to the same endpoint for sse and streamable-http. This led to blind SSRF, enabling outbound HTTP requests to internal hosts and metadata endpoints without scheme or host validation.",
+   "The fix in Chainlit 2.12.0 removes client-supplied commands for stdio and modifies how user-provided SSE/HTTP is handled. Users are advised to upgrade immediately and restart their applications to ensure the old vulnerable wheel is no longer active.",
+   "For those unable to upgrade immediately, mitigations include setting features.mcp.enabled = false, restricting egress traffic, and implementing authentication for /mcp. However, authentication alone does not prevent command execution for an authenticated user on vulnerable builds."
+  ],
+  "caption": "Chainlit users, beware: two critical vulnerabilities (CVSS 9.8 & 7.2) allowed unauthenticated RCE and SSRF. Upgrade to version 2.12.0 immediately if your MCP feature is enabled.\n\nChainlit version 2.12.0 addresses two critical vulnerabilities, CVE-2026-45018 and CVE-2026-45019, found in its MCP feature. The first, rated CVSS 9.8, allowed unauthenticated remote code execution (RCE) via the MCP stdio transport. The second, CVSS 7.2, enabled unauthenticated Server-Side Request Forgery (SSRF) through SSE and streamable-http.\n\nThese vulnerabilities affected Chainlit versions >=2.4.0rc0 and <2.12.0, but only when the features.mcp.enabled flag was set to true. MCP is disabled by default since version 2.7.0, meaning default installations were not immediately exposed.\n\nCVE-2026-45018 exploited how POST /mcp handled client-supplied fullCommand when clientType was stdio. While the executable basename was checked against an allowlist, arguments were not inspected, allowing attackers to run arbitrary shell commands via common Node launchers.\n\nCVE-2026-45019 allowed attackers to send raw URLs and optional headers to the same endpoint for sse and streamable-http. This led to blind SSRF, enabling outbound HTTP requests to internal hosts and metadata endpoints without scheme or host validation.\n\nThe fix in Chainlit 2.12.0 removes client-supplied commands for stdio and modifies how user-provided SSE/HTTP is handled. Users are advised to upgrade immediately and restart their applications to ensure the old vulnerable wheel is no longer active.\n\nFor those unable to upgrade immediately, mitigations include setting features.mcp.enabled = false, restricting egress traffic, and implementing authentication for /mcp. However, authentication alone does not prevent command execution for an authenticated user on vulnerable builds.\n\n#Chainlit #Security #Vulnerability #RCE #SSRF #CVE\n\nSource: DEV",
+  "tweet": "Chainlit users: Critical RCE (CVSS 9.8) and SSRF (CVSS 7.2) vulnerabilities found in MCP feature. Unauthenticated attacks possible on versions <2.12.0 if MCP is enabled. Upgrade to 2.12.0 now! #Chainlit #Security #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "chainlit.io",
+  "source": "DEV",
+  "url": "https://dev.to/hol/cve-2026-45018-chainlit-mcp-stdio-unauthenticated-rce-and-sibling-cve-2026-45019-30bp",
+  "image": "",
+  "orig_title": "CVE-2026-45018: Chainlit MCP stdio unauthenticated RCE (and sibling CVE-2026-45019)",
+  "cluster_urls": [
+   "https://dev.to/hol/cve-2026-45018-chainlit-mcp-stdio-unauthenticated-rce-and-sibling-cve-2026-45019-30bp"
+  ],
+  "cluster_titles": [
+   "CVE-2026-45018: Chainlit MCP stdio unauthenticated RCE (and sibling CVE-2026-45019)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260831-1107-1-chainlit-mcp-stdio-unauthenticated-rce-and-s.png",
+   "20260831-1107-1-chainlit-mcp-stdio-unauthenticated-rce-and-s-d1.png",
+   "20260831-1107-1-chainlit-mcp-stdio-unauthenticated-rce-and-s-d2.png",
+   "20260831-1107-1-chainlit-mcp-stdio-unauthenticated-rce-and-s-d3.png"
+  ]
+ }
+]

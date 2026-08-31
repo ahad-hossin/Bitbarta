@@ -1,1 +1,103 @@
-[]
+[
+ {
+  "topic": "ai_agent_development_and_testing",
+  "headline_marked": "[[Shard Tools]] processes images entirely in your browser, no uploads needed",
+  "headline": "Shard Tools processes images entirely in your browser, no uploads needed",
+  "summary": "A new tool allows users to resize images without sending files to a server, enhancing privacy and security.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many online image tools require users to upload files to their servers, raising privacy concerns. Shard Tools offers an alternative by performing image processing, such as resizing, directly within the user's browser.",
+   "The tool's 200x200 image resizer ensures the output is precisely that dimension without stretching or distorting the original image. Users can choose between 'crop-to-fill' or 'fit-with-background' methods to maintain aspect ratio.",
+   "After a file is selected, the browser decodes it locally, preserving original orientation and preventing sideways processing. The resized image is then drawn onto a canvas, and a temporary download link is generated in the current tab.",
+   "Crucially, the selected image is never sent to Shard Tools' servers for processing. This is verified by a separate privacy-proof page that measures browser requests before and after processing, confirming zero additional requests that could transmit the image.",
+   "While the webpage itself makes network requests for assets like HTML, JavaScript, and CSS, the core image processing function adds no upload requests. This observable boundary aims to provide a tangible privacy assurance beyond marketing claims.",
+   "The tool also displays dimensions read from the generated output and the output file size before download, allowing users to verify the results. This approach aims to make the claim 'runs locally' an observable reality."
+  ],
+  "caption": "Tired of uploading sensitive images to online tools? Shard Tools processes files entirely in your browser, keeping your data private.\n\nMany online image tools require users to upload files to their servers, raising privacy concerns. Shard Tools offers an alternative by performing image processing, such as resizing, directly within the user's browser.\n\nThe tool's 200x200 image resizer ensures the output is precisely that dimension without stretching or distorting the original image. Users can choose between 'crop-to-fill' or 'fit-with-background' methods to maintain aspect ratio.\n\nAfter a file is selected, the browser decodes it locally, preserving original orientation and preventing sideways processing. The resized image is then drawn onto a canvas, and a temporary download link is generated in the current tab.\n\nCrucially, the selected image is never sent to Shard Tools' servers for processing. This is verified by a separate privacy-proof page that measures browser requests before and after processing, confirming zero additional requests that could transmit the image.\n\nWhile the webpage itself makes network requests for assets like HTML, JavaScript, and CSS, the core image processing function adds no upload requests. This observable boundary aims to provide a tangible privacy assurance beyond marketing claims.\n\nThe tool also displays dimensions read from the generated output and the output file size before download, allowing users to verify the results. This approach aims to make the claim 'runs locally' an observable reality.\n\n#Privacy #Security #WebTools #BrowserBased #ImageResizer\n\nSource: DEV",
+  "tweet": "Shard Tools lets you resize images directly in your browser, no uploads required! Keep your files private and secure. #Privacy #WebTools #BrowserBased",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "shard.tools",
+  "source": "DEV",
+  "url": "https://dev.to/roshandxt/how-i-verified-that-an-image-resizer-processes-files-locally-4j56",
+  "image": "",
+  "orig_title": "How I verified that an image resizer processes files locally",
+  "cluster_urls": [
+   "https://dev.to/roshandxt/how-i-verified-that-an-image-resizer-processes-files-locally-4j56",
+   "https://dev.to/casperday11/the-safety-layer-that-had-never-run-27n1",
+   "https://dev.to/highercomve/using-an-embedded-feedback-loop-to-develop-with-ai-agents-4go2",
+   "https://dev.to/daviyon_daniels/i-asked-one-model-to-review-another-and-it-found-a-bias-i-would-not-have-54md",
+   "https://dev.to/oj-iro/built-an-agent-fleet-that-helps-farmers-for-free-ebj",
+   "https://dev.to/mahirhir/the-same-wrong-number-was-in-six-files-and-i-still-dont-know-where-it-came-from-4fhg",
+   "https://dev.to/gxcafellc/you-can-never-backfill-a-read-receipt-a-blog-comment-fixed-our-ai-pipeline-1ki2",
+   "https://dev.to/cnpierrepapi/migragent-1-54f9",
+   "https://dev.to/jeremiah_sakuda/the-grading-agent-that-cannot-grade-and-the-four-bugs-that-taught-me-why-thats-hard-24mp",
+   "https://dev.to/alifar/google-search-console-adds-global-ai-reports-for-search-and-discover-visibility-1l89",
+   "https://dev.to/sonam_50a41a4ced7e6b4f3fa/i-built-an-ai-call-router-that-actually-understands-intent-4aa",
+   "https://dev.to/laura_cristinachicovisd/how-to-integrate-apache-airflow-with-openlineage-for-end-to-end-traceability-15ca"
+  ],
+  "cluster_titles": [
+   "How I verified that an image resizer processes files locally",
+   "The safety layer that had never run",
+   "Using an embedded feedback loop to develop with AI agents",
+   "I asked one model to review another, and it found a bias I would not have",
+   "Built an agent fleet that helps farmer's for free",
+   "The same wrong number was in six files and I still don't know where it came from",
+   "You can never backfill a read receipt: a blog comment fixed our AI pipeline",
+   "Migragent #1",
+   "The grading agent that cannot grade, and the four bugs that taught me why that's hard",
+   "Google Search Console Adds Global AI Reports for Search and Discover Visibility",
+   "I Built an AI Call Router That Actually Understands Intent",
+   "How to integrate Apache Airflow with OpenLineage for end-to-end traceability"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260901-0546-0-shard-tools-processes-images-entirely-in-you.png",
+   "20260901-0546-0-shard-tools-processes-images-entirely-in-you-d1.png",
+   "20260901-0546-0-shard-tools-processes-images-entirely-in-you-d2.png"
+  ]
+ },
+ {
+  "topic": "apple_sues_anthropic_over_data_use",
+  "headline_marked": "Apple alleges [[OpenAI used stolen trade secrets]] via ex-employee's laptop",
+  "headline": "Apple alleges OpenAI used stolen trade secrets via ex-employee's laptop",
+  "summary": "Apple claims a former engineer downloaded confidential files, including a circuit schematic, and used them for OpenAI's AI development.",
+  "category": "BIGTECH",
+  "template": "terminal",
+  "details": [
+   "Apple has presented new evidence in its trade secret lawsuit against OpenAI, alleging that a former employee used stolen confidential files for AI development.",
+   "The evidence centers on a MacBook laptop used by ex-Apple engineer Chang Liu, which reportedly contained dozens of confidential Apple files, including a circuit schematic.",
+   "Apple claims Liu used this schematic to run simulations for OpenAI and referred to using proprietary internal engineering tools with identical names to Apple's.",
+   "Further allegations suggest Liu attempted to erase evidence by directing a coworker to restore Apple-issued devices after learning he was under internal investigation.",
+   "This latest development is part of a broader lawsuit where Apple accuses 11 former employees of sharing trade secrets with OpenAI. OpenAI has denied wrongdoing, calling Apple's charges \"careless, aggressive and oddly personal.\""
+  ],
+  "caption": "Apple claims a former employee used a laptop to steal confidential files, including a circuit schematic, for OpenAI's AI development.\n\nApple has presented new evidence in its trade secret lawsuit against OpenAI, alleging that a former employee used stolen confidential files for AI development.\n\nThe evidence centers on a MacBook laptop used by ex-Apple engineer Chang Liu, which reportedly contained dozens of confidential Apple files, including a circuit schematic.\n\nApple claims Liu used this schematic to run simulations for OpenAI and referred to using proprietary internal engineering tools with identical names to Apple's.\n\nFurther allegations suggest Liu attempted to erase evidence by directing a coworker to restore Apple-issued devices after learning he was under internal investigation.\n\nThis latest development is part of a broader lawsuit where Apple accuses 11 former employees of sharing trade secrets with OpenAI. OpenAI has denied wrongdoing, calling Apple's charges \"careless, aggressive and oddly personal.\"\n\n#Apple #OpenAI #TradeSecrets #AI #Lawsuit\n\nSource: Engadget, Ars Technica",
+  "tweet": "Apple alleges [[OpenAI used stolen trade secrets]] via ex-employee's laptop. The company claims a former engineer downloaded confidential files, including a circuit schematic, and used them for OpenAI's AI development. #Apple #OpenAI #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "apple.com",
+  "source": "Engadget, Ars Technica",
+  "url": "https://www.engadget.com/2248199/apple-adds-more-allegations-to-its-trade-secrets-lawsuit-against-openai/",
+  "image": "https://www.engadget.com/img/gallery/apple-adds-more-allegations-to-its-trade-secrets-lawsuit-against-openai/l-intro-1788214287.jpg",
+  "orig_title": "Apple adds more allegations to its trade secrets lawsuit against OpenAI",
+  "cluster_urls": [
+   "https://www.engadget.com/2248199/apple-adds-more-allegations-to-its-trade-secrets-lawsuit-against-openai/",
+   "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/"
+  ],
+  "cluster_titles": [
+   "Apple adds more allegations to its trade secrets lawsuit against OpenAI",
+   "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260901-0546-1-apple-alleges-openai-used-stolen-trade-secre.png",
+   "20260901-0546-1-apple-alleges-openai-used-stolen-trade-secre-d1.png",
+   "20260901-0546-1-apple-alleges-openai-used-stolen-trade-secre-d2.png"
+  ]
+ }
+]

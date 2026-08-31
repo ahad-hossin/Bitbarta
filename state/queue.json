@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "llm_gpu_inference_mechanics",
+  "headline_marked": "[[Every LLM request has two halves]], only one truly uses your GPU cores",
+  "headline": "Every LLM request has two halves, only one truly uses your GPU cores",
+  "summary": "LLM requests involve a 'prefill' phase for prompt processing, bottlenecked by GPU cores, and a 'decode' phase for generating output, limited by memory bandwidth. Understanding this explains performance.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "LLM responses appear in two distinct phases: an initial pause followed by word-by-word generation. These phases, 'prefill' and 'decode', are handled by different GPU components and have unique bottlenecks. Understanding this clarifies why GPU upgrades don't always boost performance.",
+   "The 'prefill' phase processes your entire prompt at once. This burst of activity is compute-heavy, with thousands of GPU cores simultaneously chewing through tokens. The duration of this pause, known as Time to First Token (TTFT), depends on prompt length and is bottlenecked by the cores.",
+   "After prefill, the 'decode' phase generates the answer word by word. For each word, the GPU reads the entire model from VRAM, performs minimal calculations, and outputs a token. This process, measured by Time Per Output Token (TPOT), is primarily bottlenecked by memory bandwidth, not cores.",
+   "Streaming output isn't a feature but a direct result of this word-by-word decoding. Each new word is added to the model's \"notes\" (KV cache), so the model never reprocesses previous tokens, only the latest input and its accumulated history.",
+   "The maximum speed of a model in the decode phase is determined by the GPU's memory bandwidth divided by the model's size. For example, an NVIDIA L40S with 864 GB/s bandwidth running a 28-billion-parameter FP8 quantized model (28 GB) can achieve about 30 words per second.",
+   "Quantization, which shrinks the model size by reducing the precision of its weights (e.g., from 2 bytes to 1 byte per weight), directly increases the decode speed. Halving the model's memory footprint effectively doubles the maximum output token rate on the same hardware."
+  ],
+  "caption": "Ever wonder why LLMs pause before responding, then type word-by-word? It's two distinct GPU processes.\n\nLLM responses appear in two distinct phases: an initial pause followed by word-by-word generation. These phases, 'prefill' and 'decode', are handled by different GPU components and have unique bottlenecks. Understanding this clarifies why GPU upgrades don't always boost performance.\n\nThe 'prefill' phase processes your entire prompt at once. This burst of activity is compute-heavy, with thousands of GPU cores simultaneously chewing through tokens. The duration of this pause, known as Time to First Token (TTFT), depends on prompt length and is bottlenecked by the cores.\n\nAfter prefill, the 'decode' phase generates the answer word by word. For each word, the GPU reads the entire model from VRAM, performs minimal calculations, and outputs a token. This process, measured by Time Per Output Token (TPOT), is primarily bottlenecked by memory bandwidth, not cores.\n\nStreaming output isn't a feature but a direct result of this word-by-word decoding. Each new word is added to the model's \"notes\" (KV cache), so the model never reprocesses previous tokens, only the latest input and its accumulated history.\n\nThe maximum speed of a model in the decode phase is determined by the GPU's memory bandwidth divided by the model's size. For example, an NVIDIA L40S with 864 GB/s bandwidth running a 28-billion-parameter FP8 quantized model (28 GB) can achieve about 30 words per second.\n\nQuantization, which shrinks the model size by reducing the precision of its weights (e.g., from 2 bytes to 1 byte per weight), directly increases the decode speed. Halving the model's memory footprint effectively doubles the maximum output token rate on the same hardware.\n\n#AI #LLM #GPU #TechExplained #DeepLearning #Hardware\n\nSource: DEV",
+  "tweet": "LLM requests have two distinct phases on your GPU: 'prefill' (prompt processing, core-bound) and 'decode' (output generation, memory-bound). This explains the initial pause and word-by-word output, and why faster GPUs don't always help. #AI #GPU #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/aws_sa_sg/every-llm-request-has-two-halves-only-one-uses-your-gpu-cores-1308",
+  "image": "",
+  "orig_title": "Every LLM Request Has Two Halves. Only One Uses Your GPU Cores",
+  "cluster_urls": [
+   "https://dev.to/aws_sa_sg/every-llm-request-has-two-halves-only-one-uses-your-gpu-cores-1308"
+  ],
+  "cluster_titles": [
+   "Every LLM Request Has Two Halves. Only One Uses Your GPU Cores"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260831-1307-0-every-llm-request-has-two-halves-only-one-tr.png",
+   "20260831-1307-0-every-llm-request-has-two-halves-only-one-tr-d1.png",
+   "20260831-1307-0-every-llm-request-has-two-halves-only-one-tr-d2.png",
+   "20260831-1307-0-every-llm-request-has-two-halves-only-one-tr-d3.png"
+  ]
+ },
+ {
+  "topic": "gemini_function_calling_vs_agent_runtime",
+  "headline_marked": "[[Gemini Function Calling is NOT an agent runtime]], requiring developers to manage crucial execution logic",
+  "headline": "Gemini Function Calling is NOT an agent runtime, requiring developers to manage crucial execution logic",
+  "summary": "While Gemini can propose actions, developers must implement robust validation, authorization, and policy checks before execution to prevent unintended consequences.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Gemini Function Calling allows models to suggest actions by describing a function and its input schema, enabling applications to execute user requests like finding hotels. This capability is crucial for interactive AI.",
+   "However, it's critical to understand that Function Calling is not an agent runtime. The model proposes an action, but it does not decide if the action is authorized, if arguments are trustworthy, or if the action should even happen.",
+   "Your application remains responsible for executing the function and returning results. Model-generated arguments cross a trust boundary, similar to HTTP requests, and require strict runtime validation, authorization, and policy checks.",
+   "For example, a read-only assistant should never invoke book_hotel, and a booking agent might need user confirmation. These decisions must be handled by the application's runtime, not the model.",
+   "Implementing safeguards like recent user confirmation, approval tokens, and idempotency keys is vital for write or irreversible operations. Deny unknown tools or actions outside the workflow by default.",
+   "Agent loops can easily lead to duplicate work, especially with timeouts or restarts. While retrying read operations might be harmless, it can be disastrous for payments, bookings, or account updates.",
+   "Developers should build idempotency keys from stable business inputs (e.g., userId + itineraryId + toolName) and implement retry budgets to prevent unbounded loops during downstream outages.",
+   "Ambiguous tool responses, like an empty array, should not be interpreted by the model as permission to improvise. The application must clarify success or failure, guiding the agent on next steps.",
+   "When returning results, preserve the model's original function-call content and ID to maintain context for current thinking models. Debugging agents requires application-owned explanations of transitions, not hidden chain-of-thought.",
+   "Gemini function calling provides a powerful, structured bridge between a model and your application. The key takeaway is that your code retains control over what actions are allowed to become real."
+  ],
+  "caption": "Gemini Function Calling lets AI models suggest actions, but it's NOT an agent runtime. Your application must implement robust validation and authorization to prevent unintended consequences.\n\nGemini Function Calling allows models to suggest actions by describing a function and its input schema, enabling applications to execute user requests like finding hotels. This capability is crucial for interactive AI.\n\nHowever, it's critical to understand that Function Calling is not an agent runtime. The model proposes an action, but it does not decide if the action is authorized, if arguments are trustworthy, or if the action should even happen.\n\nYour application remains responsible for executing the function and returning results. Model-generated arguments cross a trust boundary, similar to HTTP requests, and require strict runtime validation, authorization, and policy checks.\n\nFor example, a read-only assistant should never invoke book_hotel, and a booking agent might need user confirmation. These decisions must be handled by the application's runtime, not the model.\n\nImplementing safeguards like recent user confirmation, approval tokens, and idempotency keys is vital for write or irreversible operations. Deny unknown tools or actions outside the workflow by default.\n\nAgent loops can easily lead to duplicate work, especially with timeouts or restarts. While retrying read operations might be harmless, it can be disastrous for payments, bookings, or account updates.\n\nDevelopers should build idempotency keys from stable business inputs (e.g., userId + itineraryId + toolName) and implement retry budgets to prevent unbounded loops during downstream outages.\n\nAmbiguous tool responses, like an empty array, should not be interpreted by the model as permission to improvise. The application must clarify success or failure, guiding the agent on next steps.\n\n#Gemini #FunctionCalling #AI #Developer #SoftwareDevelopment #GoogleAI\n\nSource: DEV",
+  "tweet": "Gemini Function Calling lets AI models suggest actions, but it's NOT an agent runtime. Developers must implement robust validation, authorization, and policy checks in their applications to control what actions become real. #AI #Developer #Gemini",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "DEV",
+  "url": "https://dev.to/raju_dandigam/gemini-function-calling-is-not-an-agent-runtime-4ijl",
+  "image": "",
+  "orig_title": "Gemini Function Calling Is Not an Agent Runtime",
+  "cluster_urls": [
+   "https://dev.to/raju_dandigam/gemini-function-calling-is-not-an-agent-runtime-4ijl"
+  ],
+  "cluster_titles": [
+   "Gemini Function Calling Is Not an Agent Runtime"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260831-1307-1-gemini-function-calling-is-not-an-agent-runt.png",
+   "20260831-1307-1-gemini-function-calling-is-not-an-agent-runt-d1.png",
+   "20260831-1307-1-gemini-function-calling-is-not-an-agent-runt-d2.png",
+   "20260831-1307-1-gemini-function-calling-is-not-an-agent-runt-d3.png",
+   "20260831-1307-1-gemini-function-calling-is-not-an-agent-runt-d4.png"
+  ]
+ }
+]

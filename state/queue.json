@@ -1,1 +1,105 @@
-[]
+[
+ {
+  "topic": "ai_agent_context_and_codebase_structure",
+  "headline_marked": "[[Cookieless Mobile UX]] Measurement on Cloudflare D1",
+  "headline": "Cookieless Mobile UX Measurement on Cloudflare D1",
+  "summary": "Learn how to accurately measure mobile user interactions without cookies or localStorage, using precise tap and zoom detection.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Traditional analytics fall short when a user opens a page, scrolls to a phone number, and doesn't call. Pageviews and bounce rates don't reveal why. This post explores a custom solution for a locksmith service, focusing on accurate tap detection for mobile users.",
+   "The core challenge is defining what constitutes a 'tap' versus a scroll or long-press. By implementing thresholds of 12 pixels of movement and 600 milliseconds of duration, developers can differentiate between intentional taps and accidental gestures, ensuring cleaner data.",
+   "Recording tap positions as a percentage of viewport width and document height allows for aggregation across devices. This method ensures that '62% down the page' is a meaningful metric, regardless of screen size, unlike raw pixel data.",
+   "Identifying 'dead taps' – instances where a visitor taps on something that appears clickable but isn't – is crucial for conversion optimization. The system detects clusters of taps around non-interactive elements, highlighting potential UI bugs.",
+   "Frustrated user behavior, like repeatedly tapping the same unresponsive spot, is captured by a sliding window that detects multiple taps within a short timeframe (e.g., 3 taps within 900 ms). This helps pinpoint performance issues.",
+   "Zoom detection is enhanced by recording the vertical offset as a percentage of the document. This transforms a generic 'zoom' event into actionable data, like 'zoomed at 78% down the page', pinpointing specific content areas.",
+   "To differentiate between 'no interest' and 'never found it,' the system flags when the target element (like a phone number) is sufficiently visible (60% on screen) for a sustained period (1500 ms). This ensures the user actually saw the crucial information.",
+   "Reliable data capture on mobile requires handling tab switching and backgrounding. The `visibilitychange` event on the document, combined with debounced `exit()` calls, ensures data is sent even when tabs are closed by the OS.",
+   "Adhering to German TTDSG and GDPR laws, the system avoids cookies and localStorage entirely. It uses a daily rotating salt for non-reversible hashing to group devices within a single day, ensuring privacy without consent banners."
+  ],
+  "caption": "Tired of bad mobile UX data? Learn how to define a 'tap' with precise thresholds and capture crucial user interactions without cookies.\n\nTraditional analytics fall short when a user opens a page, scrolls to a phone number, and doesn't call. Pageviews and bounce rates don't reveal why. This post explores a custom solution for a locksmith service, focusing on accurate tap detection for mobile users.\n\nThe core challenge is defining what constitutes a 'tap' versus a scroll or long-press. By implementing thresholds of 12 pixels of movement and 600 milliseconds of duration, developers can differentiate between intentional taps and accidental gestures, ensuring cleaner data.\n\nRecording tap positions as a percentage of viewport width and document height allows for aggregation across devices. This method ensures that '62% down the page' is a meaningful metric, regardless of screen size, unlike raw pixel data.\n\nIdentifying 'dead taps' – instances where a visitor taps on something that appears clickable but isn't – is crucial for conversion optimization. The system detects clusters of taps around non-interactive elements, highlighting potential UI bugs.\n\nFrustrated user behavior, like repeatedly tapping the same unresponsive spot, is captured by a sliding window that detects multiple taps within a short timeframe (e.g., 3 taps within 900 ms). This helps pinpoint performance issues.\n\nZoom detection is enhanced by recording the vertical offset as a percentage of the document. This transforms a generic 'zoom' event into actionable data, like 'zoomed at 78% down the page', pinpointing specific content areas.\n\nTo differentiate between 'no interest' and 'never found it,' the system flags when the target element (like a phone number) is sufficiently visible (60% on screen) for a sustained period (1500 ms). This ensures the user actually saw the crucial information.\n\n#MobileUX #WebDevelopment #JavaScript #Cloudflare #Analytics\n\nSource: DEV",
+  "tweet": "Accurate mobile UX measurement without cookies is possible! Learn how to define taps precisely using thresholds and capture user interactions effectively. #MobileUX #WebDev #Analytics",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "cloudflare.com",
+  "source": "DEV",
+  "url": "https://dev.to/cbarank/rage-taps-dead-taps-and-the-12-pixel-rule-cookieless-mobile-ux-measurement-on-cloudflare-d1-3491",
+  "image": "",
+  "orig_title": "Rage Taps, Dead Taps, and the 12-Pixel Rule: Cookieless Mobile UX Measurement on Cloudflare D1",
+  "cluster_urls": [
+   "https://dev.to/cbarank/rage-taps-dead-taps-and-the-12-pixel-rule-cookieless-mobile-ux-measurement-on-cloudflare-d1-3491",
+   "https://dev.to/robertadam987_/your-codebase-is-becoming-context-for-ai-so-structure-matters-more-than-ever-3903",
+   "https://dev.to/030dev/silent-success-is-worse-than-a-loud-agent-crash-2pba",
+   "https://dev.to/donk8r/most-tools-strip-your-image-and-answer-anyway-i-built-mine-to-refuse-1e6k",
+   "https://dev.to/apify/i-let-an-apify-actor-read-my-docs-and-write-one-github-issue-it-found-a-404-without-cloning-the-4l66",
+   "https://dev.to/apify/from-an-111b-trade-flow-to-two-gst-active-supplier-candidates-building-a-sourcing-agent-with-2hma",
+   "https://dev.to/apify/my-ai-agent-found-129-resolving-subdomains-the-actor-classified-98-as-wildcard-likely-26pa",
+   "https://dev.to/apify/i-gave-an-apify-actor-three-github-tools-it-found-16-dependency-advisories-without-touching-the-403f",
+   "https://dev.to/megapixel99/choosing-video-frames-by-content-instead-of-by-a-clock-i4m",
+   "https://dev.to/nunc/i-replaced-an-ad-stuffed-download-site-with-463-lines-of-node-283d",
+   "https://dev.to/ipazooki/stop-rewriting-your-cv-tailor-one-base-cv-for-every-job-application-1pmj"
+  ],
+  "cluster_titles": [
+   "Rage Taps, Dead Taps, and the 12-Pixel Rule: Cookieless Mobile UX Measurement on Cloudflare D1",
+   "Your Codebase Is Becoming Context for AI — So Structure Matters More Than Ever",
+   "Silent success is worse than a loud agent crash",
+   "Most tools strip your image and answer anyway. I built mine to refuse.",
+   "I let an Apify Actor read my docs and write one GitHub issue. It found a 404 without cloning the repo.",
+   "From an $11.1B trade flow to two GST-active supplier candidates: building a sourcing agent with Apify MCP",
+   "My AI agent found 129 resolving subdomains. The Actor classified 98 as wildcard-likely.",
+   "I gave an Apify Actor three GitHub tools. It found 16 dependency advisories without touching the code.",
+   "Choosing Video Frames by Content Instead of by a Clock",
+   "I Replaced an Ad-Stuffed Download Site With 463 Lines of Node",
+   "Stop Rewriting Your CV: Tailor One Base CV for Every Job Application"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260901-1512-0-cookieless-mobile-ux-measurement-on-cloudfla.png",
+   "20260901-1512-0-cookieless-mobile-ux-measurement-on-cloudfla-d1.png",
+   "20260901-1512-0-cookieless-mobile-ux-measurement-on-cloudfla-d2.png",
+   "20260901-1512-0-cookieless-mobile-ux-measurement-on-cloudfla-d3.png"
+  ]
+ },
+ {
+  "topic": "tp_link_launches_wifi_8_routers",
+  "headline_marked": "TP-Link [[launches first Wi-Fi 8 router]] Archer 8 Ultra on Sept. 30",
+  "headline": "TP-Link launches first Wi-Fi 8 router Archer 8 Ultra on Sept. 30",
+  "summary": "The Archer 8 Ultra will deliver up to 19 Gbps aggregate wireless speeds and 10 Gbps wired connectivity. A mesh version, Deco 8 Ultra, is slated for Q1 2027.",
+  "category": "HARDWARE",
+  "template": "launch",
+  "details": [
+   "TP-Link has announced its first Wi-Fi 8 (802.11bn) router, the Archer 8 Ultra BN19000, set for preorder on September 30 in select regions. This tri-band router boasts 18 internal antennas and promises aggregate wireless speeds of up to 19 Gbps, along with 10 Gbps wired connectivity.",
+   "For larger spaces, the Deco 8 Ultra BN22000 mesh router will offer even higher aggregate speeds of up to 22 Gbps and 10 Gbps wired ports. A 3-pack of the Deco 8 Ultra is expected to cover up to 9,800 square feet, but it won't be available until Q1 2027.",
+   "TP-Link plans to further expand its Wi-Fi 8 lineup by Q2 2027 with a travel router, range extenders, and client adapters. The company confirmed that these new devices will utilize hardware from chipmakers Broadcom, MediaTek, and Qualcomm.",
+   "Wi-Fi 8 is positioned as an evolution rather than a revolution, focusing on improving real-world performance to better match Wi-Fi 7's theoretical capabilities. TP-Link's StabilityEngine, featuring Enhanced Long Range (ELR) and Distributed Resource Units (DRU), aims to enhance connectivity, particularly for low-power IoT devices at the network's edge.",
+   "The new Archer 8 and Deco 8 products also feature a redesigned aesthetic, with TP-Link aiming for networking equipment that users will want to display. This design philosophy emphasizes both performance and home integration.",
+   "However, the launch in the U.S. remains uncertain due to ongoing FCC approval challenges for TP-Link. While competitors like Amazon and Netgear have received conditional approval, TP-Link is still navigating regulatory hurdles for its new Wi-Fi 8 products in the American market."
+  ],
+  "caption": "TP-Link is launching its first Wi-Fi 8 router, the Archer 8 Ultra, on September 30. It promises up to 19 Gbps wireless speeds and 10 Gbps wired connectivity.\n\nTP-Link has announced its first Wi-Fi 8 (802.11bn) router, the Archer 8 Ultra BN19000, set for preorder on September 30 in select regions. This tri-band router boasts 18 internal antennas and promises aggregate wireless speeds of up to 19 Gbps, along with 10 Gbps wired connectivity.\n\nFor larger spaces, the Deco 8 Ultra BN22000 mesh router will offer even higher aggregate speeds of up to 22 Gbps and 10 Gbps wired ports. A 3-pack of the Deco 8 Ultra is expected to cover up to 9,800 square feet, but it won't be available until Q1 2027.\n\nTP-Link plans to further expand its Wi-Fi 8 lineup by Q2 2027 with a travel router, range extenders, and client adapters. The company confirmed that these new devices will utilize hardware from chipmakers Broadcom, MediaTek, and Qualcomm.\n\nWi-Fi 8 is positioned as an evolution rather than a revolution, focusing on improving real-world performance to better match Wi-Fi 7's theoretical capabilities. TP-Link's StabilityEngine, featuring Enhanced Long Range (ELR) and Distributed Resource Units (DRU), aims to enhance connectivity, particularly for low-power IoT devices at the network's edge.\n\nThe new Archer 8 and Deco 8 products also feature a redesigned aesthetic, with TP-Link aiming for networking equipment that users will want to display. This design philosophy emphasizes both performance and home integration.\n\nHowever, the launch in the U.S. remains uncertain due to ongoing FCC approval challenges for TP-Link. While competitors like Amazon and Netgear have received conditional approval, TP-Link is still navigating regulatory hurdles for its new Wi-Fi 8 products in the American market.\n\n#WiFi8 #TP-Link #Networking #Tech #Hardware #Routers\n\nSource: Tom's Hardware",
+  "tweet": "TP-Link's first Wi-Fi 8 router, the Archer 8 Ultra, launches Sept 30 with up to 19 Gbps wireless & 10 Gbps wired speeds. A mesh version, Deco 8 Ultra, arrives Q1 2027. #WiFi8 #TP-Link #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tp-link.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/networking/routers/tp-link-announces-its-first-consumer-wi-fi-8-routers-archer-8-ultra-preorder-commences-september-30-in-select-regions",
+  "image": "https://cdn.mos.cms.futurecdn.net/tt9dMS98e3rXjUgvKeKwTH-1280-80.png",
+  "orig_title": "TP-Link announces its first consumer Wi-Fi 8 routers — Archer 8 Ultra preorder commences September 30, in select regions",
+  "cluster_urls": [
+   "https://www.tomshardware.com/networking/routers/tp-link-announces-its-first-consumer-wi-fi-8-routers-archer-8-ultra-preorder-commences-september-30-in-select-regions"
+  ],
+  "cluster_titles": [
+   "TP-Link announces its first consumer Wi-Fi 8 routers — Archer 8 Ultra preorder commences September 30, in select regions"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260901-1512-1-tp-link-launches-first-wi-fi-8-router-archer.png",
+   "20260901-1512-1-tp-link-launches-first-wi-fi-8-router-archer-d1.png",
+   "20260901-1512-1-tp-link-launches-first-wi-fi-8-router-archer-d2.png",
+   "20260901-1512-1-tp-link-launches-first-wi-fi-8-router-archer-d3.png"
+  ]
+ }
+]

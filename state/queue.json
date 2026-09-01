@@ -1,1 +1,101 @@
-[]
+[
+ {
+  "topic": "ai_agent_harnesses_comparison",
+  "headline_marked": "[[AI Agent Loops]] Converge in Core Functionality, Differ in Architecture",
+  "headline": "AI Agent Loops Converge in Core Functionality, Differ in Architecture",
+  "summary": "Despite using different languages and approaches, three major AI agent systems share a core five-step loop, but their external architectures vary significantly.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Three independent AI agent systems—Anthropic's Claude Code, OpenAI's Codex, and Pi—converge on a fundamental five-step loop: assemble context, call the model, execute tool calls, append results, and decide to loop or stop. This core pattern is surprisingly consistent across different teams and programming languages.",
+   "While the core loop is similar, the implementations vary dramatically in size, ranging from Pi's 794 lines of TypeScript to Claude Code's 1,421 lines within its loop alone. This highlights the difference between simple tutorials and production-ready systems, with real-world harnesses requiring significantly more code.",
+   "The key divergence lies in how each system handles the 'edges' of the agent loop—the interactions with external components and the management of complex processes like streaming responses, parallel tool execution, user interruptions, and context compaction.",
+   "Anthropic's Claude Code keeps its agent core and coordination logic in-process, offering tight control but limiting external interaction to exposed surfaces. This allows for efficient internal pipelines, such as a five-level compression process.",
+   "OpenAI's Codex, however, exposes its agent core via an app-server with a documented, bidirectional JSON-RPC 2.0 interface. This approach allows other programs to interact with the agent more flexibly, defining primitives like 'Thread' and 'Turn' for conversation management.",
+   "Pi takes a MIT-licensed approach, also on GitHub, emphasizing a minimal design. The choice of architecture significantly impacts how the agent interacts with its environment and how developers can integrate or extend its capabilities."
+  ],
+  "caption": "AI agents share a core 5-step loop, but their codebases range from 794 to over 1,700 lines. See how three major systems differ.\n\nThree independent AI agent systems—Anthropic's Claude Code, OpenAI's Codex, and Pi—converge on a fundamental five-step loop: assemble context, call the model, execute tool calls, append results, and decide to loop or stop. This core pattern is surprisingly consistent across different teams and programming languages.\n\nWhile the core loop is similar, the implementations vary dramatically in size, ranging from Pi's 794 lines of TypeScript to Claude Code's 1,421 lines within its loop alone. This highlights the difference between simple tutorials and production-ready systems, with real-world harnesses requiring significantly more code.\n\nThe key divergence lies in how each system handles the 'edges' of the agent loop—the interactions with external components and the management of complex processes like streaming responses, parallel tool execution, user interruptions, and context compaction.\n\nAnthropic's Claude Code keeps its agent core and coordination logic in-process, offering tight control but limiting external interaction to exposed surfaces. This allows for efficient internal pipelines, such as a five-level compression process.\n\nOpenAI's Codex, however, exposes its agent core via an app-server with a documented, bidirectional JSON-RPC 2.0 interface. This approach allows other programs to interact with the agent more flexibly, defining primitives like 'Thread' and 'Turn' for conversation management.\n\nPi takes a MIT-licensed approach, also on GitHub, emphasizing a minimal design. The choice of architecture significantly impacts how the agent interacts with its environment and how developers can integrate or extend its capabilities.\n\n#AI #AgentAI #LLM #OpenAI #Anthropic #Codex\n\nSource: DEV",
+  "tweet": "AI agents share a core 5-step loop, but their codebases range from 794 to over 1,700 lines. See how Anthropic's Claude Code, OpenAI's Codex, and Pi differ in their architectures. #AI #AgentAI #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/harrisonsec/three-agent-harnesses-one-loop-4on5",
+  "image": "",
+  "orig_title": "Three Agent Harnesses, One Loop",
+  "cluster_urls": [
+   "https://dev.to/harrisonsec/three-agent-harnesses-one-loop-4on5",
+   "https://dev.to/nelson_amaya_16872e58232b/how-to-install-an-mcp-server-from-the-official-registry-589l",
+   "https://dev.to/sentraai/your-embeddings-forget-exactly-like-a-human-brain-does-pd7",
+   "https://dev.to/yognevoy/setting-up-nginx-as-a-reverse-proxy-4ade",
+   "https://dev.to/shubhradev/react-19-actions-i-explained-3-hooks-without-ever-explaining-what-an-action-is-m79",
+   "https://dev.to/spacebyte_cloudstorage/why-video-pipelines-drop-frames-over-the-cloud-network-ingestion-architecture-for-8k-e6j",
+   "https://dev.to/willson_guan_c565f1c528f7/building-a-local-energy-monitoring-pipeline-without-locking-yourself-into-one-vendor-4jcm",
+   "https://dev.to/simran_kaur_9eda1e242c31f/meta-title-and-description-length-what-google-actually-cuts-off-22j8",
+   "https://dev.to/gp-ia-blog/anthropic-nvidia-the-35b-ai-cloud-shift-575i",
+   "https://dev.to/tidiane_stano_c6b88f8b685/zcode-30-vs-claude-code-ai-agent-coding-battle-10g8",
+   "https://dev.to/iqbalhssn78/how-webassembly-became-our-privacy-architecture-not-just-a-performance-trick-5c00"
+  ],
+  "cluster_titles": [
+   "Three Agent Harnesses, One Loop",
+   "How to Install an MCP Server from the Official Registry",
+   "Your embeddings forget exactly like a human brain does",
+   "Setting up nginx as a reverse proxy",
+   "React 19 Actions: I Explained 3 Hooks Without Ever Explaining What an Action Is",
+   "Why Video Pipelines Drop Frames Over the Cloud: Network Ingestion Architecture for 8K Post-Production",
+   "Building a Local Energy Monitoring Pipeline Without Locking Yourself Into One Vendor",
+   "Meta Title and Description Length: What Google Actually Cuts Off",
+   "Anthropic + Nvidia: The $35B AI Cloud Shift",
+   "ZCode 3.0 vs Claude Code: AI Agent Coding Battle",
+   "How WebAssembly became our privacy architecture (not just a performance trick)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260901-1407-0-ai-agent-loops-converge-in-core-functionalit.png",
+   "20260901-1407-0-ai-agent-loops-converge-in-core-functionalit-d1.png",
+   "20260901-1407-0-ai-agent-loops-converge-in-core-functionalit-d2.png",
+   "20260901-1407-0-ai-agent-loops-converge-in-core-functionalit-d3.png"
+  ]
+ },
+ {
+  "topic": "gpu_world_and_restroom_archive",
+  "headline_marked": "[[One GPU per person]] by 2040? AI's future compute power explored",
+  "headline": "One GPU per person by 2040? AI's future compute power explored",
+  "summary": "Imagine a world where every human has access to an AI as powerful as today's frontier models. This future could revolutionize education, healthcare, and society itself.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The AI revolution is just beginning, with billions yet to experience advanced LLMs due to compute limitations. Currently, only a few million high-end GPUs are produced annually, making powerful AI inaccessible to the masses.",
+   "However, advancements in hardware and software are rapidly scaling up capabilities. Projections suggest that by 2040, the equivalent of a B300 GPU could be available for every single person on Earth.",
+   "This widespread access to powerful AI could usher in transformative changes. Possibilities include infinitely patient AI tutors revolutionizing education, world-class AI doctors personalizing medicine, and profound shifts in social media and global development.",
+   "The implications are vast, potentially exceeding the impact of the smartphone or the internet. The question remains: what will this 'mundane' future, powered by ubiquitous AI, truly look like for humanity?"
+  ],
+  "caption": "What if every person had their own AI, powered by a dedicated GPU? The future of AI compute is set to explode.\n\nThe AI revolution is just beginning, with billions yet to experience advanced LLMs due to compute limitations. Currently, only a few million high-end GPUs are produced annually, making powerful AI inaccessible to the masses.\n\nHowever, advancements in hardware and software are rapidly scaling up capabilities. Projections suggest that by 2040, the equivalent of a B300 GPU could be available for every single person on Earth.\n\nThis widespread access to powerful AI could usher in transformative changes. Possibilities include infinitely patient AI tutors revolutionizing education, world-class AI doctors personalizing medicine, and profound shifts in social media and global development.\n\nThe implications are vast, potentially exceeding the impact of the smartphone or the internet. The question remains: what will this 'mundane' future, powered by ubiquitous AI, truly look like for humanity?\n\n#AI #FutureTech #LLM #GPU #ArtificialIntelligence\n\nSource: Hacker News",
+  "tweet": "What if everyone had a dedicated GPU for AI? By 2040, this could be reality, transforming education, healthcare & society. Explore the future of ubiquitous AI. #AI #FutureTech #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.gpuworld.org/",
+  "image": "",
+  "orig_title": "GPU World",
+  "cluster_urls": [
+   "https://www.gpuworld.org/",
+   "https://restroomarchive.com"
+  ],
+  "cluster_titles": [
+   "GPU World",
+   "Restroom Archive"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260901-1407-1-one-gpu-per-person-by-2040-ai-s-future-compu.png",
+   "20260901-1407-1-one-gpu-per-person-by-2040-ai-s-future-compu-d1.png",
+   "20260901-1407-1-one-gpu-per-person-by-2040-ai-s-future-compu-d2.png"
+  ]
+ }
+]

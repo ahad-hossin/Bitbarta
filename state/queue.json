@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "unity_compile_time_code_generation",
+  "headline_marked": "[[Unity UI Composition]] Moves to Compile Time, Beyond Boilerplate",
+  "headline": "Unity UI Composition Moves to Compile Time, Beyond Boilerplate",
+  "summary": "FUI's latest architecture refactor shifts Unity UI composition from runtime discovery to compile-time validation, aiming for greater reliability and performance.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Source generators are often used to reduce boilerplate code, but FUI's move to compile-time UI composition is driven by a deeper architectural goal. The framework now aims to eliminate the need for the runtime to scan assemblies, inspect attributes, and reconstruct relationships between UI elements and their data.",
+   "By emitting binding factories and strongly-typed routes during compilation, FUI ensures that the player runtime executes an already-validated object graph. This approach prevents runtime errors caused by missed subscriptions or incorrect type resolutions, which could previously only manifest when a specific screen was opened.",
+   "An early prototype involved an external compiler targeting .NET 6. While it solved the problem of repetitive binding code, it introduced orchestration challenges and relied on text-based parsing of types. This prototype was quickly replaced by a more integrated solution.",
+   "The integration into C# Source Generators marked a significant improvement. This allowed the generator to leverage Roslyn's SemanticModel and INamedTypeSymbol for accurate type reasoning. Generated source code then participated directly in the compilation, enabling standard C# errors to flag invalid relationships.",
+   "Previously, FUI had three generator entry points that removed substantial boilerplate and supported features like two-way binding. However, the composition logic still resided in runtime components like BindingContextTypeResolver, which scanned loaded assemblies and types at static initialization.",
+   "This runtime discovery process involved building lookup tables and then using reflection-based construction when a screen was created. The critical issue was that the relationship between a ViewModel and its BindingContext was determined during generation but then re-discovered at runtime, creating a potential divergence point.",
+   "The new compile-time architecture establishes compilation as the single source of truth for UI composition. This shift means that any discrepancies between the declared relationships and their runtime implementation are caught during compilation, not at runtime when a user interacts with the UI."
+  ],
+  "caption": "Unity UI development is getting a major upgrade. FUI is moving composition logic from runtime to compile time, catching errors earlier and boosting performance.\n\nSource generators are often used to reduce boilerplate code, but FUI's move to compile-time UI composition is driven by a deeper architectural goal. The framework now aims to eliminate the need for the runtime to scan assemblies, inspect attributes, and reconstruct relationships between UI elements and their data.\n\nBy emitting binding factories and strongly-typed routes during compilation, FUI ensures that the player runtime executes an already-validated object graph. This approach prevents runtime errors caused by missed subscriptions or incorrect type resolutions, which could previously only manifest when a specific screen was opened.\n\nAn early prototype involved an external compiler targeting .NET 6. While it solved the problem of repetitive binding code, it introduced orchestration challenges and relied on text-based parsing of types. This prototype was quickly replaced by a more integrated solution.\n\nThe integration into C# Source Generators marked a significant improvement. This allowed the generator to leverage Roslyn's SemanticModel and INamedTypeSymbol for accurate type reasoning. Generated source code then participated directly in the compilation, enabling standard C# errors to flag invalid relationships.\n\nPreviously, FUI had three generator entry points that removed substantial boilerplate and supported features like two-way binding. However, the composition logic still resided in runtime components like BindingContextTypeResolver, which scanned loaded assemblies and types at static initialization.\n\nThis runtime discovery process involved building lookup tables and then using reflection-based construction when a screen was created. The critical issue was that the relationship between a ViewModel and its BindingContext was determined during generation but then re-discovered at runtime, creating a potential divergence point.\n\nUnity #GameDev #Programming #SoftwareDevelopment #Unity3D\n\nSource: DEV",
+  "tweet": "Unity UI composition is moving to compile time with FUI's latest architecture. This shift aims to catch errors earlier and improve runtime performance by validating object graphs during compilation. #Unity #GameDev #Programming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/fujisheng/generating-binding-code-wasnt-enough-moving-unity-ui-composition-to-compile-time-4ojd",
+  "image": "",
+  "orig_title": "Generating Binding Code Wasn't Enough: Moving Unity UI Composition to Compile Time",
+  "cluster_urls": [
+   "https://dev.to/fujisheng/generating-binding-code-wasnt-enough-moving-unity-ui-composition-to-compile-time-4ojd"
+  ],
+  "cluster_titles": [
+   "Generating Binding Code Wasn't Enough: Moving Unity UI Composition to Compile Time"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260901-1600-0-unity-ui-composition-moves-to-compile-time-b.png",
+   "20260901-1600-0-unity-ui-composition-moves-to-compile-time-b-d1.png",
+   "20260901-1600-0-unity-ui-composition-moves-to-compile-time-b-d2.png",
+   "20260901-1600-0-unity-ui-composition-moves-to-compile-time-b-d3.png",
+   "20260901-1600-0-unity-ui-composition-moves-to-compile-time-b-d4.png"
+  ]
+ },
+ {
+  "topic": "dyson_camerajet_toothbrush_launch",
+  "headline_marked": "Dyson launches [[CameraJet toothbrush]] that flosses with mouthwash",
+  "headline": "Dyson launches CameraJet toothbrush that flosses with mouthwash",
+  "summary": "The $499 electric toothbrush features a camera that detects gaps between teeth and blasts them with mouthwash to floss.",
+  "category": "GADGETS",
+  "template": "launch",
+  "details": [
+   "Dyson has unveiled its latest personal care innovation, the $499 CameraJet. This electric toothbrush is the first to integrate a camera directly into the brush head, allowing users to stream live video of their mouth to their phone via Wi-Fi. It's available in ceramic blue and ceramic pink.",
+   "Beyond visual inspection, the CameraJet's AI uses the camera to detect gaps between teeth. Upon detection, it emits a cone-shaped blast of mouthwash to clean the space, effectively flossing. This process is designed to be gentler on enamel and gums than traditional water flossers.",
+   "The toothbrush head features a 100,000-pixel camera and a strobing light. The AI analyzes 28 live images per second, identifying gaps within 100 milliseconds to trigger the mouthwash blast. Dyson states this data is not stored on the device or sent to the cloud.",
+   "The replaceable brush heads combine soft outer bristles for gumline cleaning and stiffer inner bristles for stain removal. They oscillate nearly 1,000 times per second with a constantly changing angle for effective brushing. Each head has an RFID tag to track usage and alert users when a replacement is needed every three months.",
+   "Dyson developed a unique air bladder system for the mouthwash reservoir to ensure consistent pressure, even when the toothbrush is held upside down. The included docking station recharges the device and can refill the 12.5ml reservoir in three seconds.",
+   "While the CameraJet works with standard toothpaste and mouthwash, Dyson plans to release its own non-foaming toothpaste and low-foaming mouthwash to optimize the camera's visibility inside the mouth."
+  ],
+  "caption": "Dyson's new toothbrush has a camera and flosses your teeth with mouthwash.\n\nDyson has unveiled its latest personal care innovation, the $499 CameraJet. This electric toothbrush is the first to integrate a camera directly into the brush head, allowing users to stream live video of their mouth to their phone via Wi-Fi. It's available in ceramic blue and ceramic pink.\n\nBeyond visual inspection, the CameraJet's AI uses the camera to detect gaps between teeth. Upon detection, it emits a cone-shaped blast of mouthwash to clean the space, effectively flossing. This process is designed to be gentler on enamel and gums than traditional water flossers.\n\nThe toothbrush head features a 100,000-pixel camera and a strobing light. The AI analyzes 28 live images per second, identifying gaps within 100 milliseconds to trigger the mouthwash blast. Dyson states this data is not stored on the device or sent to the cloud.\n\nThe replaceable brush heads combine soft outer bristles for gumline cleaning and stiffer inner bristles for stain removal. They oscillate nearly 1,000 times per second with a constantly changing angle for effective brushing. Each head has an RFID tag to track usage and alert users when a replacement is needed every three months.\n\nDyson developed a unique air bladder system for the mouthwash reservoir to ensure consistent pressure, even when the toothbrush is held upside down. The included docking station recharges the device and can refill the 12.5ml reservoir in three seconds.\n\nWhile the CameraJet works with standard toothpaste and mouthwash, Dyson plans to release its own non-foaming toothpaste and low-foaming mouthwash to optimize the camera's visibility inside the mouth.\n\n#Dyson #CameraJet #SmartToothbrush #TechGadgets #OralCare\n\nSource: The Verge, Wired, Engadget",
+  "tweet": "Dyson's new CameraJet toothbrush features a built-in camera that detects gaps between teeth and blasts them with mouthwash for flossing. It costs $499. #Dyson #CameraJet",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "dyson.com",
+  "source": "The Verge, Wired, Engadget",
+  "url": "https://www.theverge.com/tech/986737/dyson-camerajet-smart-toothbrush-live-camera-flosser-pricing-availability",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/dyson1.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Dyson made a camera-equipped toothbrush that flosses for you",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/986737/dyson-camerajet-smart-toothbrush-live-camera-flosser-pricing-availability",
+   "https://www.wired.com/story/dyson-camerajet-electric-toothbrush-and-flosser/",
+   "https://www.engadget.com/2248230/dyson-camerajet-is-a-500-three-in-one-toothbrush-that-scans-your-maw/"
+  ],
+  "cluster_titles": [
+   "Dyson made a camera-equipped toothbrush that flosses for you",
+   "Dyson’s Next Act Is an Electric Toothbrush With a Camera",
+   "Dyson's CameraJet is a $500 three-in-one toothbrush that scans your maw"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260901-1600-1-dyson-launches-camerajet-toothbrush-that-flo.png",
+   "20260901-1600-1-dyson-launches-camerajet-toothbrush-that-flo-d1.png",
+   "20260901-1600-1-dyson-launches-camerajet-toothbrush-that-flo-d2.png"
+  ]
+ }
+]

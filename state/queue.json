@@ -1,1 +1,42 @@
-[]
+[
+ {
+  "topic": "dolt_lite_ai_agent_2k_prs",
+  "headline_marked": "[[DoltLite, a SQLite fork with Git-style version control]], reaches Beta after 2,000 agent PRs",
+  "headline": "DoltLite, a SQLite fork with Git-style version control, reaches Beta after 2,000 agent PRs",
+  "summary": "DoltLite, a fork of SQLite, now offers Git-style version control features like branching, merging, and diffing. Its storage format is now stable, making it ready for adoption.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "DoltLite, a fork of SQLite, has officially reached Beta (version 0.50.0) just five months after its initial launch. This project, built with the help of 2,000 agent pull requests, brings Git-style version control directly to SQLite databases, enabling features like branching, merging, and diffing.",
+   "The core innovation involves swapping out SQLite's B-tree layer for a Prolly Tree, a content-addressed B-tree that powers version control across all Dolt products. This allows DoltLite to inherit a robust SQL engine while integrating advanced version control functionalities.",
+   "The Beta release signifies a stable storage format, with 12 previous format changes now settled. Future breaking changes will include supported migration paths, ensuring reliability for adopters. DoltLite has passed SQLite's extensive testing battery and its own custom oracle tests.",
+   "DoltLite demonstrates strong SQL compatibility, passing 100% of the 5.8 million complex queries in sqllogictest. It also passes 99.46% of SQLite's 892,277 TCL-based acceptance tests, with all 4,809 known divergences thoroughly documented.",
+   "Users can leverage a full suite of local Git-style features, including branches, merges, diffs, rebases, cherry-picks, and resets. Remote version control is also supported, allowing push, pull, clone, and fetch operations from custom remotes or DoltHub, along with the Dolt Workbench GUI.",
+   "Performance benchmarks show in-memory DoltLite databases are 10% slower on reads and 60% slower on writes compared to SQLite. File-backed databases achieve read parity and are 10% slower on batched writes, with small autocommit writes being 3.1X slower, though still in the microsecond range."
+  ],
+  "caption": "Branch, merge, and diff your SQLite databases like never before. DoltLite, a SQLite fork with Git-style version control, is now in Beta.\n\nDoltLite, a fork of SQLite, has officially reached Beta (version 0.50.0) just five months after its initial launch. This project, built with the help of 2,000 agent pull requests, brings Git-style version control directly to SQLite databases, enabling features like branching, merging, and diffing.\n\nThe core innovation involves swapping out SQLite's B-tree layer for a Prolly Tree, a content-addressed B-tree that powers version control across all Dolt products. This allows DoltLite to inherit a robust SQL engine while integrating advanced version control functionalities.\n\nThe Beta release signifies a stable storage format, with 12 previous format changes now settled. Future breaking changes will include supported migration paths, ensuring reliability for adopters. DoltLite has passed SQLite's extensive testing battery and its own custom oracle tests.\n\nDoltLite demonstrates strong SQL compatibility, passing 100% of the 5.8 million complex queries in sqllogictest. It also passes 99.46% of SQLite's 892,277 TCL-based acceptance tests, with all 4,809 known divergences thoroughly documented.\n\nUsers can leverage a full suite of local Git-style features, including branches, merges, diffs, rebases, cherry-picks, and resets. Remote version control is also supported, allowing push, pull, clone, and fetch operations from custom remotes or DoltHub, along with the Dolt Workbench GUI.\n\nPerformance benchmarks show in-memory DoltLite databases are 10% slower on reads and 60% slower on writes compared to SQLite. File-backed databases achieve read parity and are 10% slower on batched writes, with small autocommit writes being 3.1X slower, though still in the microsecond range.\n\n#DoltLite #SQLite #VersionControl #Git #Developers #Database\n\nSource: Hacker News",
+  "tweet": "Branch, merge, and diff your SQLite databases like never before! DoltLite, a SQLite fork with Git-style version control, is now in Beta. It offers stable storage and robust SQL compatibility. #DoltLite #SQLite #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "dolthub.com",
+  "source": "Hacker News",
+  "url": "https://www.dolthub.com/blog/2026-08-31-doltlite-beta/",
+  "image": "",
+  "orig_title": "DoltLite: A SQLite fork with Git-style version control, built with 2k agent PRs",
+  "cluster_urls": [
+   "https://www.dolthub.com/blog/2026-08-31-doltlite-beta/"
+  ],
+  "cluster_titles": [
+   "DoltLite: A SQLite fork with Git-style version control, built with 2k agent PRs"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260901-1107-0-doltlite-a-sqlite-fork-with-git-style-versio.png",
+   "20260901-1107-0-doltlite-a-sqlite-fork-with-git-style-versio-d1.png",
+   "20260901-1107-0-doltlite-a-sqlite-fork-with-git-style-versio-d2.png",
+   "20260901-1107-0-doltlite-a-sqlite-fork-with-git-style-versio-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "smart_toilet_ai_poop_analysis",
+  "headline_marked": "[[Smart Toilets are using AI to analyze your poop]] for health insights",
+  "headline": "Smart Toilets are using AI to analyze your poop for health insights",
+  "summary": "The global gut health market is booming, and companies like Kohler Health and Throne are offering smart toilet attachments that use AI to track stool consistency, color, and other metrics for personalized health reports.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Smart toilets are emerging as wellness trackers, with devices from Kohler Health ($449 + $130/year) and Throne ($399 + $70/year) clipping to toilets. These devices use cameras to record and analyze urine and stool consistency and color.",
+   "The collected data is fed into an AI algorithm, providing users with a \"bathroom-break report card\" via an app. This tracks gut health and hydration scores, aiming to identify individual patterns rather than issuing binary healthy/unhealthy verdicts.",
+   "Companies emphasize a different approach from at-home microbiome kits, focusing on personalized long-term tracking. Gastroenterologists express skepticism, noting that healthy individuals might not gain significant new insights from these devices.",
+   "For individuals with conditions like inflammatory bowel disease, automated monitoring could improve compliance with tracking stool logs. Throne plans a next-generation device within two years capable of detecting blood in fecal matter using multispectral imaging.",
+   "This future capability aims to assist in early detection of colorectal cancer, a growing concern among younger adults. While not for diagnosis, consistent tracking of bleeding patterns could prompt users to consult their physicians."
+  ],
+  "caption": "Smart toilets are here, using AI to analyze your poop. Devices from Kohler Health and Throne track gut health and hydration.\n\nSmart toilets are emerging as wellness trackers, with devices from Kohler Health ($449 + $130/year) and Throne ($399 + $70/year) clipping to toilets. These devices use cameras to record and analyze urine and stool consistency and color.\n\nThe collected data is fed into an AI algorithm, providing users with a \"bathroom-break report card\" via an app. This tracks gut health and hydration scores, aiming to identify individual patterns rather than issuing binary healthy/unhealthy verdicts.\n\nCompanies emphasize a different approach from at-home microbiome kits, focusing on personalized long-term tracking. Gastroenterologists express skepticism, noting that healthy individuals might not gain significant new insights from these devices.\n\nFor individuals with conditions like inflammatory bowel disease, automated monitoring could improve compliance with tracking stool logs. Throne plans a next-generation device within two years capable of detecting blood in fecal matter using multispectral imaging.\n\nThis future capability aims to assist in early detection of colorectal cancer, a growing concern among younger adults. While not for diagnosis, consistent tracking of bleeding patterns could prompt users to consult their physicians.\n\n#SmartToilets #AI #HealthTech #Wellness #GutHealth #TechNews\n\nSource: Wired",
+  "tweet": "Smart toilets are now using AI to analyze your poop for health insights. Devices from Kohler Health ($449) and Throne ($399) track stool consistency, color, and more, providing personalized reports. Gastroenterologists are skeptical for healthy users. #AI #HealthTech #SmartT",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/smart-toilets-using-ai-to-analyze-your-poop/",
+  "image": "https://media.wired.com/photos/6a98838a0e116056ac219e5b/master/pass/0902026-smart-toilets-poop-scan.gif",
+  "orig_title": "Smart Toilets Are Already Using AI to Analyze Your Poop",
+  "cluster_urls": [
+   "https://www.wired.com/story/smart-toilets-using-ai-to-analyze-your-poop/"
+  ],
+  "cluster_titles": [
+   "Smart Toilets Are Already Using AI to Analyze Your Poop"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260903-1539-0-smart-toilets-are-using-ai-to-analyze-your-p.png",
+   "20260903-1539-0-smart-toilets-are-using-ai-to-analyze-your-p-d1.png",
+   "20260903-1539-0-smart-toilets-are-using-ai-to-analyze-your-p-d2.png"
+  ]
+ },
+ {
+  "topic": "build_llm_from_scratch_pytorch",
+  "headline_marked": "[[Developer trains 196M parameter LLM from scratch]] in PyTorch on a consumer GPU",
+  "headline": "Developer trains 196M parameter LLM from scratch in PyTorch on a consumer GPU",
+  "summary": "A developer meticulously built and trained EmsyAI V4, a 196M parameter language model, achieving a validation perplexity of 5.86 on a single consumer GPU.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer successfully built and trained EmsyAI V4, a 196M parameter language model, entirely from scratch using pure PyTorch. This impressive feat was accomplished on a consumer GPU, reaching a validation perplexity of 5.86 after 15,000 training steps.",
+   "The \"from scratch\" approach involved writing the BPE tokenizer, implementing RoPE, coding SwiGLU feed-forward blocks, and developing the full training loop. Pretraining was a challenging process, with constant risk of loss spikes to NaN, yet the curve held steady.",
+   "After pretraining, the base model was instruction-tuned with a 2.3M parameter LoRA adapter on the CodeAlpaca dataset. When tested against OpenAI's HumanEval benchmark, the model scored 0%, which is an empirically expected baseline for a model of this size trained on only 2 billion tokens.",
+   "An audit of the CodeAlpaca dataset revealed 1,644 sequences that leaked HumanEval test logic. Despite this contamination, EmsyAI's 0% score suggests the small 2.3M LoRA adapter lacked the capacity to rote-memorize these solutions, indicating it couldn't cheat.",
+   "Scaling the architecture to 196M parameters exposed several edge cases, including attention logit explosions and tokenizer byte collisions. Future iterations (V5) plan to implement QK-Norm to stabilize training and rebuild the tokenizer with a doubled vocabulary.",
+   "The final weights of EmsyAI V4 are exported to GGUF, making it runnable in Ollama for those interested in experimenting with the model. The complete PyTorch training loop, architecture, and tokenizer code are openly available on GitHub."
+  ],
+  "caption": "A developer built a 196M parameter LLM from scratch in PyTorch. It was trained on a consumer GPU and the full code is on GitHub.\n\nA developer successfully built and trained EmsyAI V4, a 196M parameter language model, entirely from scratch using pure PyTorch. This impressive feat was accomplished on a consumer GPU, reaching a validation perplexity of 5.86 after 15,000 training steps.\n\nThe \"from scratch\" approach involved writing the BPE tokenizer, implementing RoPE, coding SwiGLU feed-forward blocks, and developing the full training loop. Pretraining was a challenging process, with constant risk of loss spikes to NaN, yet the curve held steady.\n\nAfter pretraining, the base model was instruction-tuned with a 2.3M parameter LoRA adapter on the CodeAlpaca dataset. When tested against OpenAI's HumanEval benchmark, the model scored 0%, which is an empirically expected baseline for a model of this size trained on only 2 billion tokens.\n\nAn audit of the CodeAlpaca dataset revealed 1,644 sequences that leaked HumanEval test logic. Despite this contamination, EmsyAI's 0% score suggests the small 2.3M LoRA adapter lacked the capacity to rote-memorize these solutions, indicating it couldn't cheat.\n\nScaling the architecture to 196M parameters exposed several edge cases, including attention logit explosions and tokenizer byte collisions. Future iterations (V5) plan to implement QK-Norm to stabilize training and rebuild the tokenizer with a doubled vocabulary.\n\nThe final weights of EmsyAI V4 are exported to GGUF, making it runnable in Ollama for those interested in experimenting with the model. The complete PyTorch training loop, architecture, and tokenizer code are openly available on GitHub.\n\n#AI #LLM #PyTorch #MachineLearning #DeepLearning #Developer\n\nSource: DEV",
+  "tweet": "A developer built a 196M parameter LLM from scratch in PyTorch on a consumer GPU, achieving 5.86 perplexity. The full code and GGUF weights are on GitHub. #LLM #PyTorch #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gulding/building-a-200m-parameter-llm-from-scratch-in-pytorch-1c9k",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fby9jb7u4zgp1y9eixz7y.png",
+  "orig_title": "Building a 200M parameter LLM from scratch in PyTorch",
+  "cluster_urls": [
+   "https://dev.to/gulding/building-a-200m-parameter-llm-from-scratch-in-pytorch-1c9k"
+  ],
+  "cluster_titles": [
+   "Building a 200M parameter LLM from scratch in PyTorch"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260903-1539-1-developer-trains-196m-parameter-llm-from-scr.png",
+   "20260903-1539-1-developer-trains-196m-parameter-llm-from-scr-d1.png",
+   "20260903-1539-1-developer-trains-196m-parameter-llm-from-scr-d2.png",
+   "20260903-1539-1-developer-trains-196m-parameter-llm-from-scr-d3.png"
+  ]
+ }
+]

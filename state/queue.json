@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_coding_agents_tool_preferences",
+  "headline_marked": "[[Coding agents often ignore advanced tools]] like LSP, preferring grep in new study",
+  "headline": "Coding agents often ignore advanced tools like LSP, preferring grep in new study",
+  "summary": "A study reveals LLMs frequently choose simpler lexical search tools over more precise semantic navigation, suggesting \"LLM-friendliness\" and context delivery are more crucial than raw capability.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new study compared how coding agents use `grep` (lexical search) versus `LSP`-backed semantic navigation for code-finding and editing tasks. Researchers initially expected `LSP` to be more efficient due to its precision.",
+   "Surprisingly, agents often stuck with `grep`, even when `LSP` offered more precise results. Forcing agents to use `LSP` first sometimes led to a drop in task success.",
+   "The key factor identified is \"LLM-friendliness\": a tool must provide sufficient context in a format the model can directly use, not just precise results. Model familiarity with certain action paths from training may also play a role.",
+   "This isn't a general critique of `LSP`, but rather highlights the importance of the \"harness\" that defines how models interact with tools. This harness dictates available actions, inputs, and the context returned to the model.",
+   "In simple code-location tasks, three Claude models chose the semantic tool only 0-6% of the time. Forcing a semantic-first path reduced success from 100% to 89% in those cases.",
+   "For reference-completeness tasks, agents chose semantic navigation 45-57% of the time. While `LSP` achieved 1.00 precision (vs. 0.76 for `grep`), recall remained similar, and the precision gain sometimes resulted in higher token use.",
+   "The codebase also mattered: `LSP` offered no F1 gain and used 16% more tokens on clean TypeScript repos, but improved F1 by 0.246 and used 12% fewer tokens on noisy ones. Lexical noise was a better predictor than static types.",
+   "A critical insight emerged when the `LSP`-backed tool's response was changed to include source text, similar to `grep`. This simple change boosted `Pass@1` on rename tasks from 0.67 to 0.83 and drastically cut follow-up file reads from 15.2 to 3.2 per episode."
+  ],
+  "caption": "Coding agents often ignore advanced tools like LSP, preferring simpler grep. A new study reveals why LLM-friendliness and context delivery are more crucial than raw precision.\n\nA new study compared how coding agents use `grep` (lexical search) versus `LSP`-backed semantic navigation for code-finding and editing tasks. Researchers initially expected `LSP` to be more efficient due to its precision.\n\nSurprisingly, agents often stuck with `grep`, even when `LSP` offered more precise results. Forcing agents to use `LSP` first sometimes led to a drop in task success.\n\nThe key factor identified is \"LLM-friendliness\": a tool must provide sufficient context in a format the model can directly use, not just precise results. Model familiarity with certain action paths from training may also play a role.\n\nThis isn't a general critique of `LSP`, but rather highlights the importance of the \"harness\" that defines how models interact with tools. This harness dictates available actions, inputs, and the context returned to the model.\n\nIn simple code-location tasks, three Claude models chose the semantic tool only 0-6% of the time. Forcing a semantic-first path reduced success from 100% to 89% in those cases.\n\nFor reference-completeness tasks, agents chose semantic navigation 45-57% of the time. While `LSP` achieved 1.00 precision (vs. 0.76 for `grep`), recall remained similar, and the precision gain sometimes resulted in higher token use.\n\nThe codebase also mattered: `LSP` offered no F1 gain and used 16% more tokens on clean TypeScript repos, but improved F1 by 0.246 and used 12% fewer tokens on noisy ones. Lexical noise was a better predictor than static types.\n\nA critical insight emerged when the `LSP`-backed tool's response was changed to include source text, similar to `grep`. This simple change boosted `Pass@1` on rename tasks from 0.67 to 0.83 and drastically cut follow-up file reads from 15.2 to 3.2 per episode.\n\n#AI #Coding #LLM #DeveloperTools #Grep #LSP\n\nSource: Hacker News, DEV",
+  "tweet": "New study: Coding agents often prefer `grep` over advanced `LSP` for code tasks. It's not about precision, but \"LLM-friendliness\" – how much usable context a tool provides. #AI #Coding #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News, DEV",
+  "url": "https://www.agentconnect.md/blog/grep-beat-lsp-harness/",
+  "image": "",
+  "orig_title": "Grep beats LSP? Why coding agents ignore your fancier tools",
+  "cluster_urls": [
+   "https://www.agentconnect.md/blog/grep-beat-lsp-harness/",
+   "https://armature.tech/blog/which-tools-coding-agents-install",
+   "https://dev.to/qisanxi/stop-wasting-api-tokens-how-to-bridge-chatgpt-web-to-your-ide-using-mcp-44kf"
+  ],
+  "cluster_titles": [
+   "Grep beats LSP? Why coding agents ignore your fancier tools",
+   "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+   "Stop Wasting API Tokens: How to Bridge ChatGPT Web to Your IDE Using MCP"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260904-1006-0-coding-agents-often-ignore-advanced-tools-li.png",
+   "20260904-1006-0-coding-agents-often-ignore-advanced-tools-li-d1.png",
+   "20260904-1006-0-coding-agents-often-ignore-advanced-tools-li-d2.png",
+   "20260904-1006-0-coding-agents-often-ignore-advanced-tools-li-d3.png"
+  ]
+ },
+ {
+  "topic": "steve_ballmer_nba_suspension_scandal",
+  "headline_marked": "[[Steve Ballmer suspended by NBA]] for a year, Clippers fined $30M over Kawhi Leonard endorsement scandal",
+  "headline": "Steve Ballmer suspended by NBA for a year, Clippers fined $30M over Kawhi Leonard endorsement scandal",
+  "summary": "The NBA has suspended former Microsoft CEO Steve Ballmer and fined the LA Clippers $30 million, along with forfeiting five draft picks, following an investigation into a $28 million endorsement deal for Kawhi Leonard.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Former Microsoft CEO Steve Ballmer has been suspended by the NBA for a year, and his team, the LA Clippers, will forfeit five future draft picks and pay a $30 million fine. This comes after an investigation into a $28 million endorsement deal for star player Kawhi Leonard that involved no actual endorsing.",
+   "An NBA-commissioned 35-page report by Wachtell, Lipton, Rosen & Katz found Ballmer's previous claims about the deal were \"inaccurate (at best)\" and Clippers president Gillian Zucker's claims \"clearly false.\" Zucker is also suspended for a year, and Leonard has accepted a $700,000 fine and a ban for his business manager.",
+   "The Clippers are disputing the findings, claiming a biased investigation spurred by \"a podcaster's baseless claims\" has cost Ballmer millions in legal fees and damaged his reputation. The unnamed podcast, \"Pablo Torre Finds Out,\" is cited as the catalyst for the league's inquiry.",
+   "The investigation revealed a \"spend back\" arrangement with Daktronics, the company that built the Intuit Dome's massive 4K scoreboard. Daktronics was asked to provide business back to the Clippers, which was then channeled into an endorsement agreement between Daktronics and Kawhi Leonard.",
+   "An unnamed Clippers executive reportedly told Daktronics exactly how much to pay Leonard ($3 million for two years). Later, the company was instructed to increase Leonard's payment proportionally as the team decided to spend more on the scoreboard, tying the player's endorsement directly to the arena's construction costs.",
+   "Two other Clippers-affiliated companies, Lockton Insurance and Boingo Wireless, were also implicated in paying Leonard an additional $18 million. While Daktronics and Aspiration cooperated with investigators, Lockton refused to cooperate, and Boingo provided inconsistent or incredible information."
+  ],
+  "caption": "Former Microsoft CEO Steve Ballmer has been suspended by the NBA for a year, and the LA Clippers face a $30M fine and lost draft picks.\n\nFormer Microsoft CEO Steve Ballmer has been suspended by the NBA for a year, and his team, the LA Clippers, will forfeit five future draft picks and pay a $30 million fine. This comes after an investigation into a $28 million endorsement deal for star player Kawhi Leonard that involved no actual endorsing.\n\nAn NBA-commissioned 35-page report by Wachtell, Lipton, Rosen & Katz found Ballmer's previous claims about the deal were \"inaccurate (at best)\" and Clippers president Gillian Zucker's claims \"clearly false.\" Zucker is also suspended for a year, and Leonard has accepted a $700,000 fine and a ban for his business manager.\n\nThe Clippers are disputing the findings, claiming a biased investigation spurred by \"a podcaster's baseless claims\" has cost Ballmer millions in legal fees and damaged his reputation. The unnamed podcast, \"Pablo Torre Finds Out,\" is cited as the catalyst for the league's inquiry.\n\nThe investigation revealed a \"spend back\" arrangement with Daktronics, the company that built the Intuit Dome's massive 4K scoreboard. Daktronics was asked to provide business back to the Clippers, which was then channeled into an endorsement agreement between Daktronics and Kawhi Leonard.\n\nAn unnamed Clippers executive reportedly told Daktronics exactly how much to pay Leonard ($3 million for two years). Later, the company was instructed to increase Leonard's payment proportionally as the team decided to spend more on the scoreboard, tying the player's endorsement directly to the arena's construction costs.\n\nTwo other Clippers-affiliated companies, Lockton Insurance and Boingo Wireless, were also implicated in paying Leonard an additional $18 million. While Daktronics and Aspiration cooperated with investigators, Lockton refused to cooperate, and Boingo provided inconsistent or incredible information.\n\n#NBA #Clippers #SteveBallmer #TechNews #SportsScandal #BusinessEthics\n\nSource: The Verge",
+  "tweet": "Former Microsoft CEO Steve Ballmer suspended by NBA for a year, Clippers fined $30M and lose draft picks over a Kawhi Leonard endorsement scandal. A podcast uncovered the alleged corruption. #NBA #Clippers #SteveBallmer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/entertainment/989962/steve-ballmer-kawhi-leonard-pablo-torre-finds-out",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/gettyimages-2166198274.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Steve Ballmer got suspended by the NBA because of a podcast and a jumbotron corruption scandal",
+  "cluster_urls": [
+   "https://www.theverge.com/entertainment/989962/steve-ballmer-kawhi-leonard-pablo-torre-finds-out"
+  ],
+  "cluster_titles": [
+   "Steve Ballmer got suspended by the NBA because of a podcast and a jumbotron corruption scandal"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260904-1006-1-steve-ballmer-suspended-by-nba-for-a-year-cl.png",
+   "20260904-1006-1-steve-ballmer-suspended-by-nba-for-a-year-cl-d1.png",
+   "20260904-1006-1-steve-ballmer-suspended-by-nba-for-a-year-cl-d2.png",
+   "20260904-1006-1-steve-ballmer-suspended-by-nba-for-a-year-cl-d3.png"
+  ]
+ }
+]

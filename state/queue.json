@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "claude_code_leaked_credentials",
+  "headline_marked": "[[Claude Code logs reveal real leaked credentials]] during developer's self-audit",
+  "headline": "Claude Code logs reveal real leaked credentials during developer's self-audit",
+  "summary": "An audit of local Claude Code session logs uncovered a trove of sensitive data, including API keys and database credentials, alongside records of potentially dangerous commands executed by the AI agent. This highlights a new, unaudited class of secret sprawl.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI coding agents like Claude Code log every action, including reading sensitive `.env` files and running shell commands, verbatim into local session transcripts. A developer's self-audit using a new CLI tool immediately found real leaked credentials and records of risky commands.",
+   "The audit uncovered a range of secrets, including AWS, GCP, GitHub, Slack, Stripe, OpenAI, and Anthropic API keys. Database connection strings with embedded credentials and PEM private key blocks were also found stored in plaintext on disk.",
+   "Beyond credentials, the logs detailed risky commands executed by the agent, such as destructive deletes (`rm -rf /`), remote-code-execution patterns (`curl | bash`), and shell-history tampering. Other findings included firewall disabling and unauthorized `authorized_keys` writes.",
+   "This issue stems from the design of AI coding agents, which log all interactions locally for features like session resumption and debugging. This creates a new, largely unaudited class of secret sprawl that did not exist two years ago.",
+   "To address this, the developer created `agent-audit`, a 100% local, zero-dependency CLI tool. It redacts all findings, ensuring no usable secrets are ever printed to the terminal, and is open-source under an MIT license.",
+   "The `agent-audit` tool currently supports Claude Code and plans to expand support to Codex CLI and Cursor transcripts. The developer encourages community contributions and reports of false positives to enhance its effectiveness."
+  ],
+  "caption": "AI coding agents are logging your secrets. A developer audited their own Claude Code logs and found real leaked credentials and records of destructive commands.\n\nAI coding agents like Claude Code log every action, including reading sensitive `.env` files and running shell commands, verbatim into local session transcripts. A developer's self-audit using a new CLI tool immediately found real leaked credentials and records of risky commands.\n\nThe audit uncovered a range of secrets, including AWS, GCP, GitHub, Slack, Stripe, OpenAI, and Anthropic API keys. Database connection strings with embedded credentials and PEM private key blocks were also found stored in plaintext on disk.\n\nBeyond credentials, the logs detailed risky commands executed by the agent, such as destructive deletes (`rm -rf /`), remote-code-execution patterns (`curl | bash`), and shell-history tampering. Other findings included firewall disabling and unauthorized `authorized_keys` writes.\n\nThis issue stems from the design of AI coding agents, which log all interactions locally for features like session resumption and debugging. This creates a new, largely unaudited class of secret sprawl that did not exist two years ago.\n\nTo address this, the developer created `agent-audit`, a 100% local, zero-dependency CLI tool. It redacts all findings, ensuring no usable secrets are ever printed to the terminal, and is open-source under an MIT license.\n\nThe `agent-audit` tool currently supports Claude Code and plans to expand support to Codex CLI and Cursor transcripts. The developer encourages community contributions and reports of false positives to enhance its effectiveness.\n\n#AI #Security #Developer #Privacy #Cybersecurity #Claude\n\nSource: DEV",
+  "tweet": "AI coding agents like Claude Code log sensitive data and commands locally. A developer's audit found real leaked credentials (API keys, DB strings) and risky commands in their own logs. New tool `agent-audit` helps detect this secret sprawl. #AI #Security #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/crypled/i-audited-my-own-claude-code-logs-and-found-real-leaked-credentials-3oo",
+  "image": "",
+  "orig_title": "I audited my own Claude Code logs and found real leaked credentials",
+  "cluster_urls": [
+   "https://dev.to/crypled/i-audited-my-own-claude-code-logs-and-found-real-leaked-credentials-3oo"
+  ],
+  "cluster_titles": [
+   "I audited my own Claude Code logs and found real leaked credentials"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260904-2107-0-claude-code-logs-reveal-real-leaked-credenti.png",
+   "20260904-2107-0-claude-code-logs-reveal-real-leaked-credenti-d1.png",
+   "20260904-2107-0-claude-code-logs-reveal-real-leaked-credenti-d2.png"
+  ]
+ }
+]

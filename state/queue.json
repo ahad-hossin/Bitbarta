@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "topic": "seo in 2027 will depend on ai answers",
+  "headline_marked": "[[Disposable AI Sandboxes]] Don't Prevent Damage, They Just Clean Up Later",
+  "headline": "Disposable AI Sandboxes Don't Prevent Damage, They Just Clean Up Later",
+  "summary": "Deleting a container doesn't undo what it did while it was running. True security means starting with nothing and granting only necessary permissions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The author discovered a critical flaw in their approach to securing AI agents: relying on disposable sandboxes. While deleting a container cleans up afterward, it does nothing to prevent data exfiltration or other malicious actions the agent might have performed while it was active.",
+   "A common mistake is assuming that because a container can be deleted, it's inherently safe. This is a false sense of security. If an AI agent has access to sensitive data, like SSH keys, and the ability to transmit them, it can do so within seconds, regardless of whether its environment is later destroyed.",
+   "The core issue is confusing cleanup with control. Disposability protects the host's future by preventing lingering mutations or messes, but it doesn't address the immediate 'blast radius' – everything the agent could access during its runtime. True security lies in the initial setup.",
+   "A secure sandbox must start with minimal privileges: no files, no network access by default. Permissions should be granted narrowly and revocably, only what is strictly necessary for the task. The container runtime provides disposability, but not inherent safety.",
+   "The author demonstrated this with a simple `podman run` command that mounts the home directory and network, allowing access to private keys. The `--rm` flag cleans up the container, but the data has already been compromised.",
+   "While disposability is a valuable feature for clean teardowns and reproducible runs, it should not be mistaken for the security boundary itself. It's a convenience built on top of a proper security model, not a replacement for it.",
+   "For complete kernel isolation, a microVM runtime like Kata Containers might be necessary, as standard containers share the host kernel and can still leave traces like logs or side effects, even after a clean teardown."
+  ],
+  "caption": "Throwing away an AI agent's sandbox is cleanup, not security. The damage could already be done.\n\nThe author discovered a critical flaw in their approach to securing AI agents: relying on disposable sandboxes. While deleting a container cleans up afterward, it does nothing to prevent data exfiltration or other malicious actions the agent might have performed while it was active.\n\nA common mistake is assuming that because a container can be deleted, it's inherently safe. This is a false sense of security. If an AI agent has access to sensitive data, like SSH keys, and the ability to transmit them, it can do so within seconds, regardless of whether its environment is later destroyed.\n\nThe core issue is confusing cleanup with control. Disposability protects the host's future by preventing lingering mutations or messes, but it doesn't address the immediate 'blast radius' – everything the agent could access during its runtime. True security lies in the initial setup.\n\nA secure sandbox must start with minimal privileges: no files, no network access by default. Permissions should be granted narrowly and revocably, only what is strictly necessary for the task. The container runtime provides disposability, but not inherent safety.\n\nThe author demonstrated this with a simple `podman run` command that mounts the home directory and network, allowing access to private keys. The `--rm` flag cleans up the container, but the data has already been compromised.\n\nWhile disposability is a valuable feature for clean teardowns and reproducible runs, it should not be mistaken for the security boundary itself. It's a convenience built on top of a proper security model, not a replacement for it.\n\nFor complete kernel isolation, a microVM runtime like Kata Containers might be necessary, as standard containers share the host kernel and can still leave traces like logs or side effects, even after a clean teardown.\n\n#AI #Security #DevOps #Cybersecurity #Sandboxing\n\nSource: DEV",
+  "tweet": "Disposable AI sandboxes are a false security blanket. Deleting a container doesn't undo damage it already caused. True security means starting with nothing and granting minimal, revocable permissions. #AI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/the_leon_odor/i-threw-the-box-away-the-damage-was-already-done-43gi",
+  "image": "",
+  "orig_title": "I Threw the Box Away. The Damage Was Already Done.",
+  "cluster_urls": [
+   "https://dev.to/the_leon_odor/i-threw-the-box-away-the-damage-was-already-done-43gi",
+   "https://dev.to/alifar/seo-in-2027-will-depend-on-ai-answers-community-signals-and-traditional-search-2p78",
+   "https://dev.to/alifar/google-ai-overviews-can-expand-in-search-what-the-serp-change-means-for-seo-24op"
+  ],
+  "cluster_titles": [
+   "I Threw the Box Away. The Damage Was Already Done.",
+   "SEO in 2027 Will Depend on AI Answers, Community Signals and Traditional Search",
+   "Google AI Overviews Can Expand in Search: What the SERP Change Means for SEO"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260905-0207-0-disposable-ai-sandboxes-don-t-prevent-damage.png",
+   "20260905-0207-0-disposable-ai-sandboxes-don-t-prevent-damage-d1.png",
+   "20260905-0207-0-disposable-ai-sandboxes-don-t-prevent-damage-d2.png",
+   "20260905-0207-0-disposable-ai-sandboxes-don-t-prevent-damage-d3.png"
+  ]
+ }
+]

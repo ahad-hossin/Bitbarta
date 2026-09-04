@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "google_photos_gemini_assistant_update",
+  "headline_marked": "[[Google Gemini Spark gets Google Photos integration]], enabling AI-powered organization and edits",
+  "headline": "Google Gemini Spark gets Google Photos integration, enabling AI-powered organization and edits",
+  "summary": "This new feature allows Gemini Spark to search, organize, and edit photos and videos directly, rolling out to AI Pro and Ultra subscribers in the US.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Google's personal AI agent, Gemini Spark, is expanding its capabilities with new integration for Google Photos. Previously connected to Gmail and Google Calendar, Spark can now perform complex, multi-step actions within your photo library.",
+   "Unlike regular Gemini, which can only surface photos based on queries, Gemini Spark can actively organize and take actions. This includes searching for specific photos, creating albums, and even enhancing or editing images.",
+   "Examples of its new functionality include finding all vacation selfies, removing crowds from backgrounds, and centering subjects in shots. Gemini Spark works by creating a copy of the original photo, ensuring your originals remain untouched.",
+   "To access these new features, users can directly ask Gemini Spark about its Google Photos skills. The integration is rolling out over the next few days, initially limited to AI Pro and Ultra subscribers in the US.",
+   "Currently, the feature is available on the Gemini mobile app and web. Google plans to bring desktop app integration at a later date, further expanding its accessibility."
+  ],
+  "caption": "Your Google Photos library is getting a powerful AI upgrade. Gemini Spark can now organize, search, and even edit your images.\n\nGoogle's personal AI agent, Gemini Spark, is expanding its capabilities with new integration for Google Photos. Previously connected to Gmail and Google Calendar, Spark can now perform complex, multi-step actions within your photo library.\n\nUnlike regular Gemini, which can only surface photos based on queries, Gemini Spark can actively organize and take actions. This includes searching for specific photos, creating albums, and even enhancing or editing images.\n\nExamples of its new functionality include finding all vacation selfies, removing crowds from backgrounds, and centering subjects in shots. Gemini Spark works by creating a copy of the original photo, ensuring your originals remain untouched.\n\nTo access these new features, users can directly ask Gemini Spark about its Google Photos skills. The integration is rolling out over the next few days, initially limited to AI Pro and Ultra subscribers in the US.\n\nCurrently, the feature is available on the Gemini mobile app and web. Google plans to bring desktop app integration at a later date, further expanding its accessibility.\n\n#Google #Gemini #GooglePhotos #AI #TechNews #Software\n\nSource: Android Police",
+  "tweet": "Google Gemini Spark now integrates with Google Photos! This AI assistant can search, organize, and edit your photos directly, even removing crowds from backgrounds. Rolling out to AI Pro/Ultra subscribers in the US. #Google #AI #Gemini",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/your-google-photos-library-getting-more-hands-on-gemini-assistant/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/wm/2026/08/gemini-spark-screen-on-google-pixel-phone.jpg",
+  "orig_title": "Your Google Photos library is getting a more hands-on Gemini assistant",
+  "cluster_urls": [
+   "https://www.androidpolice.com/your-google-photos-library-getting-more-hands-on-gemini-assistant/"
+  ],
+  "cluster_titles": [
+   "Your Google Photos library is getting a more hands-on Gemini assistant"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260904-1207-0-google-gemini-spark-gets-google-photos-integ.png",
+   "20260904-1207-0-google-gemini-spark-gets-google-photos-integ-d1.png",
+   "20260904-1207-0-google-gemini-spark-gets-google-photos-integ-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agents_reliable_autonomous_workflows_brakes",
+  "headline_marked": "[[Agents That Act Need Brakes]]: Building Reliable Autonomous Workflows with Ekuiper, bb, and LiveReview Patterns",
+  "headline": "Agents That Act Need Brakes: Building Reliable Autonomous Workflows with Ekuiper, bb, and LiveReview Patterns",
+  "summary": "Autonomous AI agents promise to automate complex workflows but risk catastrophic failures without proper control. This article details the LiveReview paradigm, using tools like Ekuiper and breakpoint-based debugging, to ensure reliability and prevent costly er",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The current trajectory of AI engineering focuses on autonomous agents, promising to replace multi-step human workflows. However, agents capable of state-changing actions, like writing code or modifying databases, carry a high cost of failure if not properly controlled.",
+   "A hallucinated Python script could run `rm -rf` in a test environment, or a flawed SQL query might corrupt production data. Bridging the gap between a probabilistic LLM \"brain\" and deterministic tool \"acts\" requires architectural brakes, not just better prompting.",
+   "This article explores the LiveReview paradigm, a robust pattern for building reliable autonomous workflows, supported by context-aware tracing tools like Ekuiper and breakpoint-based debugging (bb). It examines why pure autonomy fails at scale and how to engineer systems that pause and require confirmation.",
+   "Most developers rely on prompt engineering for agent reliability, which is necessary but insufficient for production systems. This approach treats the symptom (bad output) rather than the mechanism (unverified execution) of the agent's rapid, asynchronous Observe, Orient, Decide, Act (OODA) loop.",
+   "The solution involves interposing a Governance Layer between the agent's decision engine and the environment. This layer evaluates proposed actions against predefined safety rules, context history, and potentially a secondary \"critic\" model before allowing execution.",
+   "Implementing effective brakes requires visibility, which specialized observability frameworks for AI agents provide. Tools like Ekuiper treat every agent turn as a stream of structured events, enabling real-time telemetry and visualization of the agent's intent.",
+   "Breakpoint-based debugging (\"bb\") is critical for non-deterministic LLM agents, allowing instrumentation to stop execution at critical junctures. This transforms the agent from a \"fire-and-forget\" system into a collaborative one, where the agent proposes and the governance layer disposes.",
+   "The LiveReview Interface is the UI or API endpoint where paused agent actions are presented for approval, allowing human engineers to review and approve, modify, or reject proposed actions. This human-in-the-loop (HITL) correction provides valuable feedback for the agent to re-plan safer strategies.",
+   "For systems that cannot rely on constant human availability, a Critic Model can substitute the human reviewer. This involves running a secondary, smaller, or more constrained LLM instance specifically to evaluate and approve or reject proposed actions."
+  ],
+  "caption": "Autonomous AI agents can corrupt production data or run `rm -rf` if unchecked. Learn how to build reliable workflows with architectural brakes.\n\nThe current trajectory of AI engineering focuses on autonomous agents, promising to replace multi-step human workflows. However, agents capable of state-changing actions, like writing code or modifying databases, carry a high cost of failure if not properly controlled.\n\nA hallucinated Python script could run `rm -rf` in a test environment, or a flawed SQL query might corrupt production data. Bridging the gap between a probabilistic LLM \"brain\" and deterministic tool \"acts\" requires architectural brakes, not just better prompting.\n\nThis article explores the LiveReview paradigm, a robust pattern for building reliable autonomous workflows, supported by context-aware tracing tools like Ekuiper and breakpoint-based debugging (bb). It examines why pure autonomy fails at scale and how to engineer systems that pause and require confirmation.\n\nMost developers rely on prompt engineering for agent reliability, which is necessary but insufficient for production systems. This approach treats the symptom (bad output) rather than the mechanism (unverified execution) of the agent's rapid, asynchronous Observe, Orient, Decide, Act (OODA) loop.\n\nThe solution involves interposing a Governance Layer between the agent's decision engine and the environment. This layer evaluates proposed actions against predefined safety rules, context history, and potentially a secondary \"critic\" model before allowing execution.\n\nImplementing effective brakes requires visibility, which specialized observability frameworks for AI agents provide. Tools like Ekuiper treat every agent turn as a stream of structured events, enabling real-time telemetry and visualization of the agent's intent.\n\n#AI #Developer #SoftwareEngineering #AutonomousAgents #DevOps #Tech\n\nSource: DEV",
+  "tweet": "Autonomous AI agents pose significant risks if unchecked. This article explores the LiveReview paradigm, Ekuiper, and breakpoint-based debugging to build reliable workflows with architectural \"brakes.\" Prevent `rm -rf` in production! #AI #DevOps #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/agents-that-act-need-brakes-building-reliable-autonomous-workflows-with-ekuiper-bb-and-la6",
+  "image": "",
+  "orig_title": "Agents That Act Need Brakes: Building Reliable Autonomous Workflows with Ekuiper, bb, and LiveReview Patterns",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/agents-that-act-need-brakes-building-reliable-autonomous-workflows-with-ekuiper-bb-and-la6"
+  ],
+  "cluster_titles": [
+   "Agents That Act Need Brakes: Building Reliable Autonomous Workflows with Ekuiper, bb, and LiveReview Patterns"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260904-1207-1-agents-that-act-need-brakes-building-reliabl.png",
+   "20260904-1207-1-agents-that-act-need-brakes-building-reliabl-d1.png",
+   "20260904-1207-1-agents-that-act-need-brakes-building-reliabl-d2.png",
+   "20260904-1207-1-agents-that-act-need-brakes-building-reliabl-d3.png",
+   "20260904-1207-1-agents-that-act-need-brakes-building-reliabl-d4.png",
+   "20260904-1207-1-agents-that-act-need-brakes-building-reliabl-d5.png"
+  ]
+ }
+]

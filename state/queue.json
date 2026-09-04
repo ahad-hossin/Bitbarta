@@ -1,1 +1,60 @@
-[]
+[
+ {
+  "topic": "openai launches gpt-6 astra with ai agent security concerns",
+  "headline_marked": "[[Automated Puzzle Pipeline]] Faces Four Failures Before Success",
+  "headline": "Automated Puzzle Pipeline Faces Four Failures Before Success",
+  "summary": "A developer details the debugging journey of an automated puzzle generation pipeline, overcoming issues with AI review limits, infinite loops, and permission errors.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The developer behind a game project describes the successful implementation of an automated pipeline that generates puzzles, has them reviewed by an AI, and then awaits final human approval.",
+   "The initial setup faced four distinct failures: an AI reviewer's output being cut off due to length limits, an infinite loop in the puzzle generation process, a lack of write permissions for the pipeline, and an unrelated repository setting that was initially disabled.",
+   "Each failure provided crucial lessons, highlighting the complexities of integrating AI and automation. The process involved debugging not just algorithms, but also permission structures and external configurations.",
+   "A separate bug involved a level incorrectly showing as completed with a perfect score. This was caused by a delay between the game checking for level completion and the player's input, allowing results to be misattributed to different levels.",
+   "The save system initially masked this bug by discarding incorrect scores, requiring manual intervention to make the issue visible again for debugging.",
+   "The fix involved ensuring that delayed checks confirmed they belonged to the correct game session before attributing any results.",
+   "The developer also noted a brief return to direct file editing instead of using prompts, a deviation from the project's established workflow, which was quickly corrected."
+  ],
+  "caption": "Automated AI puzzle pipeline finally works after four critical failures, including permission errors and infinite loops.\n\nThe developer behind a game project describes the successful implementation of an automated pipeline that generates puzzles, has them reviewed by an AI, and then awaits final human approval.\n\nThe initial setup faced four distinct failures: an AI reviewer's output being cut off due to length limits, an infinite loop in the puzzle generation process, a lack of write permissions for the pipeline, and an unrelated repository setting that was initially disabled.\n\nEach failure provided crucial lessons, highlighting the complexities of integrating AI and automation. The process involved debugging not just algorithms, but also permission structures and external configurations.\n\nA separate bug involved a level incorrectly showing as completed with a perfect score. This was caused by a delay between the game checking for level completion and the player's input, allowing results to be misattributed to different levels.\n\nThe save system initially masked this bug by discarding incorrect scores, requiring manual intervention to make the issue visible again for debugging.\n\nThe fix involved ensuring that delayed checks confirmed they belonged to the correct game session before attributing any results.\n\nThe developer also noted a brief return to direct file editing instead of using prompts, a deviation from the project's established workflow, which was quickly corrected.\n\n#Dev #Programming #AI #Automation #GameDev\n\nSource: DEV",
+  "tweet": "Automated AI puzzle pipeline finally works after four critical failures, including permission errors and infinite loops. Learn about the debugging journey! #Dev #AI #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/thkim5937/traceroute-devlog-5-40h0",
+  "image": "",
+  "orig_title": "Traceroute devlog #6",
+  "cluster_urls": [
+   "https://dev.to/thkim5937/traceroute-devlog-5-40h0",
+   "https://dev.to/alifar/fermats-last-theorem-in-lean-the-community-project-and-claudes-real-role-2e13",
+   "https://dev.to/lswans/earth-observation-on-aws-stream-satellite-data-from-orbit-to-your-s3-bucket-1p6c",
+   "https://dev.to/bjornvdlaan/from-software-engineer-to-ai-engineer-part-6-closing-the-loop-3gba",
+   "https://dev.to/debashish_ghosal/i-thought-the-optimizer-was-the-product-i-was-wrong-the-gate-was-bmg",
+   "https://dev.to/godfrey-stago88/hardening-a-linux-server-with-ufw-5hbh",
+   "https://dev.to/vpodk/openai-gpt-6-astra-cyber-risk-analysis-35lm",
+   "https://dev.to/hammad4june1999/break-even-is-not-a-profit-and-my-calculator-said-it-was-pha",
+   "https://dev.to/ayoazeez26/segwit-why-we-needed-it-18g8",
+   "https://dev.to/sizzlebop/sprinkle-finding-a-better-home-for-the-things-we-donate-24m4"
+  ],
+  "cluster_titles": [
+   "Traceroute devlog #6",
+   "Fermat’s Last Theorem in Lean: The Community Project and Claude’s Real Role",
+   "Earth Observation on AWS: Stream Satellite data from Orbit to your S3 bucket",
+   "From Software Engineer to AI Engineer - Part 6: Closing the loop",
+   "I Thought the Optimizer Was the Product. I Was Wrong. The Gate Was.",
+   "Hardening a Linux Server with UFW",
+   "OpenAI GPT-6 Astra Cyber Risk Analysis",
+   "Break-even is not a profit, and my calculator said it was",
+   "SegWit: Why we needed it",
+   "Sprinkle: Finding a Better Home for the Things We Donate"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260905-0307-0-automated-puzzle-pipeline-faces-four-failure.png",
+   "20260905-0307-0-automated-puzzle-pipeline-faces-four-failure-d1.png",
+   "20260905-0307-0-automated-puzzle-pipeline-faces-four-failure-d2.png"
+  ]
+ }
+]

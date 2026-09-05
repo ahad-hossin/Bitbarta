@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "breeze_comet_financial_system_breach",
+  "headline_marked": "[[BREEZE COMET: Breaching Financial Systems and Executing Fraudulent Transfers]] Using mTLS Credentials",
+  "headline": "BREEZE COMET: Breaching Financial Systems and Executing Fraudulent Transfers Using mTLS Credentials",
+  "summary": "The BREEZE COMET attack leverages mTLS credentials to breach financial systems, enabling hundreds of fraudulent transactions within 24-48 hours of access. This technique poses a global threat to payment services.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "BREEZE COMET gains entry through multiple vectors, connecting to financial systems using custom backdoors and SOCKS5 tunnels. This allows for the execution of fraudulent transfers, with reports of hundreds of unauthorized transactions occurring within 24 to 48 hours after establishing access to financial applications.",
+   "While initial incidents have targeted payment methods specific to Brazil, the underlying technique of abusing legitimate credentials and payment APIs to execute fraudulent transactions is a relevant and significant threat for financial and payment services globally.",
+   "To prevent such attacks, recommendations include reviewing store port 802.1X controls and RMM governance. Additionally, reducing the lifespan for CI/CD secrets and protecting mTLS private keys are crucial steps.",
+   "Implementing out-of-band approval workflows can also help prevent fraudulent transfers. These measures aim to bolster security against sophisticated credential-based attacks."
+  ],
+  "caption": "BREEZE COMET exploits mTLS credentials to breach financial systems, enabling hundreds of fraudulent transactions in under 48 hours.\n\nBREEZE COMET gains entry through multiple vectors, connecting to financial systems using custom backdoors and SOCKS5 tunnels. This allows for the execution of fraudulent transfers, with reports of hundreds of unauthorized transactions occurring within 24 to 48 hours after establishing access to financial applications.\n\nWhile initial incidents have targeted payment methods specific to Brazil, the underlying technique of abusing legitimate credentials and payment APIs to execute fraudulent transactions is a relevant and significant threat for financial and payment services globally.\n\nTo prevent such attacks, recommendations include reviewing store port 802.1X controls and RMM governance. Additionally, reducing the lifespan for CI/CD secrets and protecting mTLS private keys are crucial steps.\n\nImplementing out-of-band approval workflows can also help prevent fraudulent transfers. These measures aim to bolster security against sophisticated credential-based attacks.\n\n#CyberSecurity #FinancialCrime #mTLS #SecurityBreach #Fraud #TechNews\n\nSource: DEV",
+  "tweet": "BREEZE COMET is breaching financial systems using mTLS credentials, executing hundreds of fraudulent transactions within 48 hours of access. This technique, though seen in Brazil, is a global threat. #CyberSecurity #FinancialFraud",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/breeze-comet-breaching-financial-systems-and-executing-fraudulent-transfers-using-mtls-credentials-3993",
+  "image": "",
+  "orig_title": "BREEZE COMET: Breaching Financial Systems and Executing Fraudulent Transfers Using mTLS Credentials",
+  "cluster_urls": [
+   "https://dev.to/anoymask/breeze-comet-breaching-financial-systems-and-executing-fraudulent-transfers-using-mtls-credentials-3993"
+  ],
+  "cluster_titles": [
+   "BREEZE COMET: Breaching Financial Systems and Executing Fraudulent Transfers Using mTLS Credentials"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260905-0808-0-breeze-comet-breaching-financial-systems-and.png",
+   "20260905-0808-0-breeze-comet-breaching-financial-systems-and-d1.png",
+   "20260905-0808-0-breeze-comet-breaching-financial-systems-and-d2.png"
+  ]
+ },
+ {
+  "topic": "elementor_pro_critical_exploit",
+  "headline_marked": "[[Elementor Pro CVE-2026-32475: Active Exploitation of PHP Web Shell]] via Array Validation Bypass",
+  "headline": "Elementor Pro CVE-2026-32475: Active Exploitation of PHP Web Shell via Array Validation Bypass",
+  "summary": "Wordfence blocked over 190,000 attack attempts exploiting a file validation flaw in Elementor Pro. This vulnerability allows PHP web shell uploads by bypassing array validation.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Wordfence has reported blocking over 190,000 attack attempts targeting a critical file validation flaw in Elementor Pro. This vulnerability, identified as CVE-2026-32475, allows for the upload of PHP web shells by bypassing array validation.",
+   "The exploitation of this flaw could lead to arbitrary code execution on WordPress sites configured to allow PHP execution. However, the high number of blocked attempts does not automatically confirm successful compromises, as Wordfence actively prevented these attacks.",
+   "Organizations using Elementor Pro are urged to update their plugin to version 4.2.2 or later immediately. This update addresses the vulnerability and is crucial for securing websites.",
+   "Additionally, administrators should conduct retrospective investigations for suspicious PHP files located under `/wp-content/uploads/elementor/forms/`. They should also examine crafted submissions to `admin-ajax.php` and check for known attacking IP addresses.",
+   "It is also recommended to evaluate file writes and PHP execution separately to identify any unauthorized activity. Users should ensure that public form File Upload fields are not set as mandatory to minimize risk."
+  ],
+  "caption": "Elementor Pro users, beware: Over 190,000 attacks exploiting a critical PHP web shell vulnerability (CVE-2026-32475) have been blocked. Update your plugin immediately.\n\nWordfence has reported blocking over 190,000 attack attempts targeting a critical file validation flaw in Elementor Pro. This vulnerability, identified as CVE-2026-32475, allows for the upload of PHP web shells by bypassing array validation.\n\nThe exploitation of this flaw could lead to arbitrary code execution on WordPress sites configured to allow PHP execution. However, the high number of blocked attempts does not automatically confirm successful compromises, as Wordfence actively prevented these attacks.\n\nOrganizations using Elementor Pro are urged to update their plugin to version 4.2.2 or later immediately. This update addresses the vulnerability and is crucial for securing websites.\n\nAdditionally, administrators should conduct retrospective investigations for suspicious PHP files located under `/wp-content/uploads/elementor/forms/`. They should also examine crafted submissions to `admin-ajax.php` and check for known attacking IP addresses.\n\nIt is also recommended to evaluate file writes and PHP execution separately to identify any unauthorized activity. Users should ensure that public form File Upload fields are not set as mandatory to minimize risk.\n\n#ElementorPro #CVE #CyberSecurity #WordPress #WebSecurity #Vulnerability\n\nSource: DEV",
+  "tweet": "Elementor Pro users: Over 190,000 attacks exploiting a critical PHP web shell vulnerability (CVE-2026-32475) have been blocked. Update to version 4.2.2+ immediately to protect your site. #ElementorPro #CyberSecurity #WordPress",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "elementor.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/elementor-pro-cve-2026-32475-active-exploitation-of-php-web-shell-via-array-validation-bypass-581k",
+  "image": "",
+  "orig_title": "Elementor Pro CVE-2026-32475: Active Exploitation of PHP Web Shell via Array Validation Bypass",
+  "cluster_urls": [
+   "https://dev.to/anoymask/elementor-pro-cve-2026-32475-active-exploitation-of-php-web-shell-via-array-validation-bypass-581k"
+  ],
+  "cluster_titles": [
+   "Elementor Pro CVE-2026-32475: Active Exploitation of PHP Web Shell via Array Validation Bypass"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260905-0808-1-elementor-pro-cve-2026-32475-active-exploita.png",
+   "20260905-0808-1-elementor-pro-cve-2026-32475-active-exploita-d1.png",
+   "20260905-0808-1-elementor-pro-cve-2026-32475-active-exploita-d2.png"
+  ]
+ }
+]

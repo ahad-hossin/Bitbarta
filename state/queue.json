@@ -1,1 +1,95 @@
-[]
+[
+ {
+  "topic": "gpt-6_astra_api_pricing_and_migration_guide",
+  "headline_marked": "[[OpenAI launches GPT-6 Astra]] with 1M token context, enhanced security",
+  "headline": "OpenAI launches GPT-6 Astra with 1M token context, enhanced security",
+  "summary": "The new model boasts a 1,050,000 token context window and is the first OpenAI model classified as critical for cybersecurity capabilities.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "OpenAI has released GPT-6 Astra on September 3, 2026, initially to select institutions and gradually to ChatGPT Plus, Pro, Business, and Enterprise users, as well as through OpenAI's API, Microsoft Azure, and AWS Bedrock. The model, identified as gpt-6-astra, features a massive 1,050,000 token context window and is described by OpenAI as its \"best model for software engineering to date.\" Notably, it's the first OpenAI model designated as critical for cybersecurity, influencing its behavior across APIs.",
+   "For developers, Astra's Responses API is the primary interface, especially when utilizing tools. While Chat Completions remain suitable for standard text, the Responses API is required for function or tool calling. Developers are advised to make prompts more direct, potentially including directives like \"bias towards action,\" and to specify if plain text output is needed instead of default lists or tables.",
+   "Astra offers five inference effort levels, a reduction from GPT-5.6's six. The 'none' level, which was a quick option for traditional tasks in GPT-5.6, is absent in Astra. This suggests that mechanical work might be better suited for GPT-5.6 Terra or Luna, reserving Astra for more demanding requests. The 'max' level, used in launch benchmarks, showed initial token generation taking over seven minutes in some runs, highlighting the need to budget for latency.",
+   "Pricing for Astra is set at $12.50 per million tokens for cached writes. A \"fast mode\" offers up to double the standard processing speed at double the cost. Compared to GPT-5.6 Sol's promotional price of $4/$20 per input/output tokens, Astra costs 2.5 times more for both input and output. However, OpenAI claims Astra costs approximately 9% less per task than Sol in Terminal-Bench 4.0 and uses about 65% fewer output tokens than Claude Opus 5 in the Agents’ Last Exam test.",
+   "OpenAI recommends removing sampling parameters like temperature, top_p, and top_logprobs from client code. For Chat Completions, logprobs should also be removed. The behavioral change to note is that a prompt that completed fully with Sol might now pause to ask for clarification, a scenario that developers should anticipate and address in their prompts.",
+   "While structured outputs and function definitions are not expected to change, Astra's increased sensitivity to instructions means prompts that previously worked to completion might now prompt for clarification. Developers should ensure their prompts are clear and direct, and that user instructions are prioritized over skill files when conflicts arise.",
+   "Astra ranks second among 202 models in the independent Artificial Analysis index, indicating strong performance but not a complete dominance. For non-urgent batch tasks, using batches as a fallback is recommended, and tools like Apidog can assist with setup, similar to the GPT-5.6 API guide.",
+   "The model's input window is 1,050,000 tokens, with a maximum output of 128,000 tokens. It is available via the gpt-6-astra identifier across various platforms, including Azure and AWS Bedrock, and on OpenRouter as openai/gpt-6-astra. However, it does not support Realtime, Assistants, or fine-tuning functionalities."
+  ],
+  "caption": "OpenAI just dropped GPT-6 Astra, featuring a massive 1M token context window and a new cybersecurity focus.\nBut is it worth the 2.5x price jump?\n\nOpenAI has released GPT-6 Astra on September 3, 2026, initially to select institutions and gradually to ChatGPT Plus, Pro, Business, and Enterprise users, as well as through OpenAI's API, Microsoft Azure, and AWS Bedrock. The model, identified as gpt-6-astra, features a massive 1,050,000 token context window and is described by OpenAI as its \"best model for software engineering to date.\" Notably, it's the first OpenAI model designated as critical for cybersecurity, influencing its behavior across APIs.\n\nFor developers, Astra's Responses API is the primary interface, especially when utilizing tools. While Chat Completions remain suitable for standard text, the Responses API is required for function or tool calling. Developers are advised to make prompts more direct, potentially including directives like \"bias towards action,\" and to specify if plain text output is needed instead of default lists or tables.\n\nAstra offers five inference effort levels, a reduction from GPT-5.6's six. The 'none' level, which was a quick option for traditional tasks in GPT-5.6, is absent in Astra. This suggests that mechanical work might be better suited for GPT-5.6 Terra or Luna, reserving Astra for more demanding requests. The 'max' level, used in launch benchmarks, showed initial token generation taking over seven minutes in some runs, highlighting the need to budget for latency.\n\nPricing for Astra is set at $12.50 per million tokens for cached writes. A \"fast mode\" offers up to double the standard processing speed at double the cost. Compared to GPT-5.6 Sol's promotional price of $4/$20 per input/output tokens, Astra costs 2.5 times more for both input and output. However, OpenAI claims Astra costs approximately 9% less per task than Sol in Terminal-Bench 4.0 and uses about 65% fewer output tokens than Claude Opus 5 in the Agents’ Last Exam test.\n\n#AI #OpenAI #GPT6 #LLM #TechNews\n\nSource: DEV",
+  "tweet": "OpenAI launches GPT-6 Astra with a 1M token context window & enhanced cybersecurity features. It's 2.5x pricier than GPT-5.6 Sol, but claims efficiency gains. #AI #OpenAI #GPT6",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/yusuf_khalidd/gpt-6-str-llmtwryn-api-lsr-syq-1m-wlfrwqt-m-gpt-56-swl-46a2",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fo0543hu0t6b6cs7g6p8l.png",
+  "orig_title": "GPT-6 أسترا للمطورين: API، الأسعار، سياق 1M، والفروقات مع GPT-5.6 سول",
+  "cluster_urls": [
+   "https://dev.to/yusuf_khalidd/gpt-6-str-llmtwryn-api-lsr-syq-1m-wlfrwqt-m-gpt-56-swl-46a2"
+  ],
+  "cluster_titles": [
+   "GPT-6 أسترا للمطورين: API، الأسعار، سياق 1M، والفروقات مع GPT-5.6 سول"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260905-1307-0-openai-launches-gpt-6-astra-with-1m-token-co.png",
+   "20260905-1307-0-openai-launches-gpt-6-astra-with-1m-token-co-d1.png",
+   "20260905-1307-0-openai-launches-gpt-6-astra-with-1m-token-co-d2.png",
+   "20260905-1307-0-openai-launches-gpt-6-astra-with-1m-token-co-d3.png",
+   "20260905-1307-0-openai-launches-gpt-6-astra-with-1m-token-co-d4.png"
+  ]
+ },
+ {
+  "topic": "ai_agents_and_developer_productivity_challenges",
+  "headline_marked": "[[Runlanes]] tracks coding agents, revealing 91% sequential execution",
+  "headline": "Runlanes tracks coding agents, revealing 91% sequential execution",
+  "summary": "New tool analyzes AI agent transcripts to show token usage, file edits, and actual concurrency, even for past runs.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Developers often struggle to understand the exact actions of multiple coding agents running simultaneously. A new tool called runlanes aims to solve this by analyzing existing transcripts, rather than requiring new instrumentation. It provides insights into which agent performed which task, token consumption, and crucially, the actual concurrency of agent operations.",
+   "During testing, runlanes revealed that while four agents were running, they only genuinely overlapped in execution for 9% of the time. The remaining 91% of the wall clock time, the agents were operating sequentially, a detail that significantly impacts how developers might plan and optimize their workflows.",
+   "The tool also tracks file modifications, highlighting instances where multiple agents may have edited the same file. This feature is critical for identifying potential conflicts or unintended changes, providing a clear audit trail of agent activity and its impact on the codebase.",
+   "runlanes differentiates between billed token usage (input + output + cache creation) and cache reads, offering a more accurate picture of costs. It deliberately excludes cache reads from the primary token count to avoid inflating session totals, while still acknowledging their cost implication.",
+   "Unlike many tools that require pre-planning for monitoring, runlanes can analyze runs that have already completed. This allows developers to ask questions about past agent behavior that they only thought of after the fact, providing retrospective visibility.",
+   "The project emphasizes its commitment to local operation and zero outbound network calls, with CI checks designed to fail builds if these conditions are not met. This ensures that runlanes itself does not introduce new dependencies or security risks."
+  ],
+  "caption": "Ever wonder what your coding agents are *really* doing? New tool runlanes reveals that 4 agents only overlapped 9% of the time.\n\nDevelopers often struggle to understand the exact actions of multiple coding agents running simultaneously. A new tool called runlanes aims to solve this by analyzing existing transcripts, rather than requiring new instrumentation. It provides insights into which agent performed which task, token consumption, and crucially, the actual concurrency of agent operations.\n\nDuring testing, runlanes revealed that while four agents were running, they only genuinely overlapped in execution for 9% of the time. The remaining 91% of the wall clock time, the agents were operating sequentially, a detail that significantly impacts how developers might plan and optimize their workflows.\n\nThe tool also tracks file modifications, highlighting instances where multiple agents may have edited the same file. This feature is critical for identifying potential conflicts or unintended changes, providing a clear audit trail of agent activity and its impact on the codebase.\n\nrunlanes differentiates between billed token usage (input + output + cache creation) and cache reads, offering a more accurate picture of costs. It deliberately excludes cache reads from the primary token count to avoid inflating session totals, while still acknowledging their cost implication.\n\nUnlike many tools that require pre-planning for monitoring, runlanes can analyze runs that have already completed. This allows developers to ask questions about past agent behavior that they only thought of after the fact, providing retrospective visibility.\n\nThe project emphasizes its commitment to local operation and zero outbound network calls, with CI checks designed to fail builds if these conditions are not met. This ensures that runlanes itself does not introduce new dependencies or security risks.\n\n#AI #Coding #DeveloperTools #SoftwareDevelopment #AIagents\n\nSource: DEV",
+  "tweet": "New tool runlanes analyzes coding agent transcripts to reveal true concurrency and token usage. Found 4 agents only overlapped 9% of the time! #AI #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/devsomesh/six-agents-were-running-and-i-could-not-tell-you-what-any-of-them-did-1a47",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F07atw1ptq5p942vn8yoj.webp",
+  "orig_title": "Six agents were running and I could not tell you what any of them did",
+  "cluster_urls": [
+   "https://dev.to/devsomesh/six-agents-were-running-and-i-could-not-tell-you-what-any-of-them-did-1a47",
+   "https://dev.to/devsomesh/the-message-that-mentioned-finance-and-tagged-nobody-3mpg",
+   "https://dev.to/devsomesh/routing-email-into-slack-which-is-not-the-same-as-forwarding-it-19mk",
+   "https://dev.to/aloisseckar/im-not-done-using-ai-4oc9",
+   "https://dev.to/robertadam987_/vibe-coding-is-easy-making-money-from-it-is-the-hard-part-heres-a-practical-developer-guide-20g2",
+   "https://dev.to/remojansen/career-safety-in-the-age-of-ai-layoffs-4ich"
+  ],
+  "cluster_titles": [
+   "Six agents were running and I could not tell you what any of them did",
+   "The message that mentioned finance and tagged nobody",
+   "Routing email into Slack, which is not the same as forwarding it",
+   "I'm Not Done Using AI",
+   "Vibe Coding Is Easy. Making Money From It Is the Hard Part — Here’s a Practical Developer Guide",
+   "Career safety in the Age of AI Layoffs"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260905-1307-1-runlanes-tracks-coding-agents-revealing-91-s.png",
+   "20260905-1307-1-runlanes-tracks-coding-agents-revealing-91-s-d1.png",
+   "20260905-1307-1-runlanes-tracks-coding-agents-revealing-91-s-d2.png",
+   "20260905-1307-1-runlanes-tracks-coding-agents-revealing-91-s-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "llm_prompt_data_loss_bug",
+  "headline_marked": "[[Model misinterpreted '<TAB>']] instruction, causing 79% data loss in parsing.",
+  "headline": "Model misinterpreted '<TAB>' instruction, causing 79% data loss in parsing.",
+  "summary": "A developer's parser dropped 79% of records after an AI model literally reproduced the string '<TAB>' instead of generating a tab character. This highlights a subtle but critical prompt engineering challenge.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer encountered a significant data loss, with 246 out of 310 records (79%) discarded from one document. This occurred because an AI model literally reproduced the string '<TAB>' as a separator, rather than an actual tab character, causing the parser to fail.",
+   "The bug was initially masked by a \"rejected\" counter, intended for detecting model hallucinations. This counter incremented for parser failures, making it appear as if the integrity check was working, leading to misinterpretation of the rising numbers.",
+   "The fix for the separator involved replacing the prose instruction with a worked example using a pipe character ('|'). This character was specifically chosen after verifying its absence in the 7,987,517-character corpus, ensuring the model would not accidentally reproduce existing data.",
+   "An earlier attempt at a worked example failed when a real line from a source novel was used. The model copied this example verbatim and extracted nothing else from a 60,000-character fragment, producing only one line of output.",
+   "The successful approach for worked examples now uses a fictional name and explicitly states it cannot appear in any novel. This prevents the model from treating the example as valid output and copying it directly.",
+   "Error handling was also improved: instead of aborting an entire document, a check now fails only a single fragment if more than 20% of its output lines lack a recognized separator. This preserves good fragments, turning zero-record documents into partially successful ones.",
+   "A crucial `--probe` flag was added, allowing developers to run one fragment, print the raw model reply, and see the loss breakdown in under a minute. This tool immediately caught both the literal '<TAB>' bug and the example-copying bug, drastically reducing debugging time from 40 minutes to seconds."
+  ],
+  "caption": "A developer lost 79% of their data when an AI model literally interpreted \"<TAB>\" as a string, not a tab character. This subtle bug highlights critical challenges in prompt engineering.\n\nA developer encountered a significant data loss, with 246 out of 310 records (79%) discarded from one document. This occurred because an AI model literally reproduced the string '<TAB>' as a separator, rather than an actual tab character, causing the parser to fail.\n\nThe bug was initially masked by a \"rejected\" counter, intended for detecting model hallucinations. This counter incremented for parser failures, making it appear as if the integrity check was working, leading to misinterpretation of the rising numbers.\n\nThe fix for the separator involved replacing the prose instruction with a worked example using a pipe character ('|'). This character was specifically chosen after verifying its absence in the 7,987,517-character corpus, ensuring the model would not accidentally reproduce existing data.\n\nAn earlier attempt at a worked example failed when a real line from a source novel was used. The model copied this example verbatim and extracted nothing else from a 60,000-character fragment, producing only one line of output.\n\nThe successful approach for worked examples now uses a fictional name and explicitly states it cannot appear in any novel. This prevents the model from treating the example as valid output and copying it directly.\n\nError handling was also improved: instead of aborting an entire document, a check now fails only a single fragment if more than 20% of its output lines lack a recognized separator. This preserves good fragments, turning zero-record documents into partially successful ones.\n\nA crucial `--probe` flag was added, allowing developers to run one fragment, print the raw model reply, and see the loss breakdown in under a minute. This tool immediately caught both the literal '<TAB>' bug and the example-copying bug, drastically reducing debugging time from 40 minutes to seconds.\n\n#AI #PromptEngineering #SoftwareDev #DataLoss #Debugging #Tech\n\nSource: DEV",
+  "tweet": "A developer lost 79% of their data when an AI model literally interpreted \"<TAB>\" as a string, not a tab character. This subtle bug highlights critical challenges in prompt engineering and the need for robust debugging tools. #AI #PromptEngineering #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rickeshtn/i-told-the-model-to-separate-fields-with-it-did-exactly-that-and-i-lost-79-percent-of-my-ip2",
+  "image": "",
+  "orig_title": "I told the model to separate fields with <TAB>. It did exactly that, and I lost 79 percent of my data.",
+  "cluster_urls": [
+   "https://dev.to/rickeshtn/i-told-the-model-to-separate-fields-with-it-did-exactly-that-and-i-lost-79-percent-of-my-ip2"
+  ],
+  "cluster_titles": [
+   "I told the model to separate fields with <TAB>. It did exactly that, and I lost 79 percent of my data."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260905-1107-0-model-misinterpreted-tab-instruction-causing.png",
+   "20260905-1107-0-model-misinterpreted-tab-instruction-causing-d1.png",
+   "20260905-1107-0-model-misinterpreted-tab-instruction-causing-d2.png",
+   "20260905-1107-0-model-misinterpreted-tab-instruction-causing-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_industry_stack_nvidia_valuation",
+  "headline_marked": "[[The AI Industry Stack: A First-Principles Map]] from Foundation to Frontier (2026 Deep Dive)",
+  "headline": "The AI Industry Stack: A First-Principles Map from Foundation to Frontier (2026 Deep Dive)",
+  "summary": "A 2026 deep dive maps the AI industry, revealing a shift from model size to capability density as the key metric. Multimodal models are replacing specialized single-modal solutions, ending the era of text-only AI.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "By September 2026, NVIDIA's market cap broke $3.5 trillion, becoming the first technology company to reach this milestone, surpassing Apple and Microsoft. This unprecedented growth signals a complete rewrite of the industrial system by AI, driven by fundamental shifts in the industry stack.",
+   "The core tension driving the AI industry is the marginal cost of intelligence approaching zero, while human demand for intelligence remains infinite. This dynamic is reshaping how models are developed and deployed across the stack.",
+   "The old paradigm of 'bigger model equals better model' is breaking down. New models like Google Gemini 2.0 Flash and Anthropic Claude 3.5 Haiku demonstrate that 7B-or-smaller models can achieve 90% of GPT-4's capability on specific tasks at 1/50th the cost.",
+   "The new metric is capability density (capability per FLOP), representing the field's most important reframe in 2026. Research shows that better models result from high-quality data selection rather than simply adding more data.",
+   "Multimodal capabilities, exemplified by GPT-4o and Gemini 2.0, have moved from demo to production. These models are now replacing specialized single-modal solutions in areas like medical imaging and code chart analysis, signaling the end of the text-only era.",
+   "NVIDIA's CUDA ecosystem remains its deepest moat, deterring enterprise migration even when AMD hardware offers better cost-performance. The significant costs associated with code rewriting and library compatibility lock in many users.",
+   "AI Agents are emerging as the crucial layer where intelligence translates into action, moving beyond chat windows to impact the real world. However, agents face a fundamental security vulnerability: prompt injection attacks, where malicious data is parsed as behavioral instructions.",
+   "Frameworks like Attnlocate (arXiv:2608.15913) are proposed to locate context spans that genuinely influence tool-calling decisions, addressing prompt injection. Anthropic Model Context Protocol (MCP) has become the industry standard for agent tool calling in 2026.",
+   "Further advancements include the ANX protocol (arXiv:2608.15913), an agent-native protocol for higher efficiency, and the Natural Language Interaction Protocol (NLIP) (arXiv:2608.24022), a standardized framework for AI Agent-to-Agent communication, akin to early internet protocols.",
+   "Coding Agents are identified as the most successful AI application of 2026, with GitHub stats showing Copilot users write code 55% faster and spend 60% less time debugging. This highlights the immediate, tangible impact of AI in developer workflows.",
+   "The period between 2026-2028 is expected to be the Agent boom, though many early products will fail due to insufficient reliability. Survivors will be those achieving 99.9% availability in specific scenarios, emphasizing the need for robust design.",
+   "The future of AI security is shifting from post-breach patching to security by design, with solutions like Attnlocate leading this change. On-device AI, pushed by Apple Intelligence, Google Gemini Nano, and Qualcomm Snapdragon X Elite, will also enable privacy-sensitive and latency-sensitive inference at the edge."
+  ],
+  "caption": "NVIDIA's market cap hit $3.5 trillion in 2026, signaling a complete rewrite of the industrial system by AI. The era of text-only AI is over.\n\nBy September 2026, NVIDIA's market cap broke $3.5 trillion, becoming the first technology company to reach this milestone, surpassing Apple and Microsoft. This unprecedented growth signals a complete rewrite of the industrial system by AI, driven by fundamental shifts in the industry stack.\n\nThe core tension driving the AI industry is the marginal cost of intelligence approaching zero, while human demand for intelligence remains infinite. This dynamic is reshaping how models are developed and deployed across the stack.\n\nThe old paradigm of 'bigger model equals better model' is breaking down. New models like Google Gemini 2.0 Flash and Anthropic Claude 3.5 Haiku demonstrate that 7B-or-smaller models can achieve 90% of GPT-4's capability on specific tasks at 1/50th the cost.\n\nThe new metric is capability density (capability per FLOP), representing the field's most important reframe in 2026. Research shows that better models result from high-quality data selection rather than simply adding more data.\n\nMultimodal capabilities, exemplified by GPT-4o and Gemini 2.0, have moved from demo to production. These models are now replacing specialized single-modal solutions in areas like medical imaging and code chart analysis, signaling the end of the text-only era.\n\nNVIDIA's CUDA ecosystem remains its deepest moat, deterring enterprise migration even when AMD hardware offers better cost-performance. The significant costs associated with code rewriting and library compatibility lock in many users.\n\nAI Agents are emerging as the crucial layer where intelligence translates into action, moving beyond chat windows to impact the real world. However, agents face a fundamental security vulnerability: prompt injection attacks, where malicious data is parsed as behavioral instructions.\n\n#AI #Tech #NVIDIA #AIAgents #MachineLearning #FutureTech\n\nSource: DEV",
+  "tweet": "NVIDIA hit $3.5T market cap in 2026, marking a new AI industrial era. The focus shifts from model size to 'capability density,' with multimodal AI and Agents driving the next wave. #AI #Tech #FutureofAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sanyaduan/the-ai-industry-stack-a-first-principles-map-from-foundation-to-frontier-2026-deep-dive-3i84",
+  "image": "",
+  "orig_title": "The AI Industry Stack: A First-Principles Map from Foundation to Frontier (2026 Deep Dive)",
+  "cluster_urls": [
+   "https://dev.to/sanyaduan/the-ai-industry-stack-a-first-principles-map-from-foundation-to-frontier-2026-deep-dive-3i84"
+  ],
+  "cluster_titles": [
+   "The AI Industry Stack: A First-Principles Map from Foundation to Frontier (2026 Deep Dive)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260905-1107-1-the-ai-industry-stack-a-first-principles-map.png",
+   "20260905-1107-1-the-ai-industry-stack-a-first-principles-map-d1.png",
+   "20260905-1107-1-the-ai-industry-stack-a-first-principles-map-d2.png",
+   "20260905-1107-1-the-ai-industry-stack-a-first-principles-map-d3.png",
+   "20260905-1107-1-the-ai-industry-stack-a-first-principles-map-d4.png"
+  ]
+ }
+]

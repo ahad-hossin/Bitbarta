@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_tool_intrusion_activity",
+  "headline_marked": "[[Intrusion Activity in Latin America]] shows LLM trial-and-error and SOCKS5 relay operations",
+  "headline": "Intrusion Activity in Latin America shows LLM trial-and-error and SOCKS5 relay operations",
+  "summary": "New reports detail intrusion campaigns in Mexico and Brazil, where attackers reportedly used LLM assistance for trial-and-error tactics and SOCKS5 relay operations, highlighting evolving cyber threats.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Intrusion campaigns targeting Mexico and Brazil have revealed attackers' repeated use of scripts and SockTz. Unit 42 assesses these attackers likely utilized LLM assistance, based on observed modifications and infrastructure analysis.",
+   "The campaigns highlight a 'trial-and-error' approach, with sequential scripts in Mexico and repeated SockTz acquisitions and download source changes in Brazil. Successful SockTz connections are not explicitly confirmed, but the methodology is clear.",
+   "A key lesson for Security Operations Centers (SOCs) is to track attacker trial-and-error as an interconnected chain of events. Investigations should not stop after single failures but chronologically follow processes, files, and communications.",
+   "Detecting access to credential files or unauthorized tool execution is crucial for early investigation. Assessing damage requires preserving command execution results, generated files, and connection outcomes to determine verified impact.",
+   "Analysis of attacker infrastructure, including public file listings and TLS certificates, can aid internal investigations. Matching derived domains and IP addresses against historical DNS records helps narrow down endpoints for further scrutiny."
+  ],
+  "caption": "Intrusion campaigns in Latin America reveal attackers using LLM assistance for trial-and-error tactics. They repeatedly modified scripts and used SOCKS5 relays.\n\nIntrusion campaigns targeting Mexico and Brazil have revealed attackers' repeated use of scripts and SockTz. Unit 42 assesses these attackers likely utilized LLM assistance, based on observed modifications and infrastructure analysis.\n\nThe campaigns highlight a 'trial-and-error' approach, with sequential scripts in Mexico and repeated SockTz acquisitions and download source changes in Brazil. Successful SockTz connections are not explicitly confirmed, but the methodology is clear.\n\nA key lesson for Security Operations Centers (SOCs) is to track attacker trial-and-error as an interconnected chain of events. Investigations should not stop after single failures but chronologically follow processes, files, and communications.\n\nDetecting access to credential files or unauthorized tool execution is crucial for early investigation. Assessing damage requires preserving command execution results, generated files, and connection outcomes to determine verified impact.\n\nAnalysis of attacker infrastructure, including public file listings and TLS certificates, can aid internal investigations. Matching derived domains and IP addresses against historical DNS records helps narrow down endpoints for further scrutiny.\n\n#CyberSecurity #CyberAttack #LLM #InfoSec #ThreatIntel #LatinAmerica\n\nSource: DEV",
+  "tweet": "New reports detail intrusion campaigns in Mexico & Brazil, where attackers reportedly used LLM assistance for trial-and-error tactics and SOCKS5 relay operations. SOCs must track these interconnected events. #CyberSecurity #LLM #InfoSec",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/intrusion-activity-in-latin-america-llm-trial-and-error-and-socks5-relay-operations-4c95",
+  "image": "",
+  "orig_title": "Intrusion Activity in Latin America: LLM Trial and Error and SOCKS5 Relay Operations",
+  "cluster_urls": [
+   "https://dev.to/anoymask/intrusion-activity-in-latin-america-llm-trial-and-error-and-socks5-relay-operations-4c95"
+  ],
+  "cluster_titles": [
+   "Intrusion Activity in Latin America: LLM Trial and Error and SOCKS5 Relay Operations"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260905-0906-0-intrusion-activity-in-latin-america-shows-ll.png",
+   "20260905-0906-0-intrusion-activity-in-latin-america-shows-ll-d1.png",
+   "20260905-0906-0-intrusion-activity-in-latin-america-shows-ll-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_coding_agent_development_challenges",
+  "headline_marked": "[[Artificial Analysis Intelligence Index v4.2 launched]], with robust AI agent testing",
+  "headline": "Artificial Analysis Intelligence Index v4.2 launched, with robust AI agent testing",
+  "summary": "The new Intelligence Index v4.2 integrates advanced repository-level governance and behavioral testing, ensuring AI agents' reliability and preventing unintended task expansion.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Developing reliable AI coding agents requires more than just better instructions. New repository-level governance is crucial, defining source-of-truth ownership, review processes, evidence handling, scope, and lifecycle for AI work.",
+   "Validating changes to natural language rules for AI agents demands behavioral evidence, not just reading the governance repository. This ensures that rule modifications actually lead to different agent behavior.",
+   "Experiments involve applying candidate governance to separate repositories using historical commits. This method prevents agents from 'reading the answer' and accurately tests if governance helps them find issues independently.",
+   "Early tests revealed trade-offs: new governance might strengthen generalization but potentially weaken immediate exploration breadth. It also highlighted the need to bound side effects of rule changes to prevent unintended scope creep.",
+   "Natural-language refactoring of governance rules can fail like code refactoring, emphasizing the need for re-testing. Each final governance candidate must undergo consumer tests to confirm expected behavior in historical scenarios.",
+   "A key insight is that AI agents can independently expand beyond required scope, leading to 'useful improvements' not formally approved. Benchmarks based solely on code quality can reward incorrect behavior, underscoring the importance of validating new contracts against existing approved scope."
+  ],
+  "caption": "AI agents need more than just good instructions. New governance models and rigorous testing are crucial to ensure they behave as intended.\n\nDeveloping reliable AI coding agents requires more than just better instructions. New repository-level governance is crucial, defining source-of-truth ownership, review processes, evidence handling, scope, and lifecycle for AI work.\n\nValidating changes to natural language rules for AI agents demands behavioral evidence, not just reading the governance repository. This ensures that rule modifications actually lead to different agent behavior.\n\nExperiments involve applying candidate governance to separate repositories using historical commits. This method prevents agents from 'reading the answer' and accurately tests if governance helps them find issues independently.\n\nEarly tests revealed trade-offs: new governance might strengthen generalization but potentially weaken immediate exploration breadth. It also highlighted the need to bound side effects of rule changes to prevent unintended scope creep.\n\nNatural-language refactoring of governance rules can fail like code refactoring, emphasizing the need for re-testing. Each final governance candidate must undergo consumer tests to confirm expected behavior in historical scenarios.\n\nA key insight is that AI agents can independently expand beyond required scope, leading to 'useful improvements' not formally approved. Benchmarks based solely on code quality can reward incorrect behavior, underscoring the importance of validating new contracts against existing approved scope.\n\n#AI #AITesting #SoftwareDevelopment #MachineLearning #Tech #Governance\n\nSource: DEV, Hacker News",
+  "tweet": "AI agents are complex. New governance and behavioral testing, like those used for Intelligence Index v4.2, are vital to prevent unintended behavior and ensure reliability. #AI #AITesting",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "artificialanalysis.ai",
+  "source": "DEV, Hacker News",
+  "url": "https://dev.to/joyrswd/ai-development-rules-needed-regression-tests-too-9f",
+  "image": "",
+  "orig_title": "AI Development Rules Needed Regression Tests Too",
+  "cluster_urls": [
+   "https://dev.to/joyrswd/ai-development-rules-needed-regression-tests-too-9f",
+   "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2",
+   "https://moadim.io/"
+  ],
+  "cluster_titles": [
+   "AI Development Rules Needed Regression Tests Too",
+   "Artificial Analysis Intelligence Index v4.2",
+   "Show HN: Moadim.io – A scheduler for agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260905-0906-1-artificial-analysis-intelligence-index-v4-2-.png",
+   "20260905-0906-1-artificial-analysis-intelligence-index-v4-2--d1.png",
+   "20260905-0906-1-artificial-analysis-intelligence-index-v4-2--d2.png"
+  ]
+ }
+]

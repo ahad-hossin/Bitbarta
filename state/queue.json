@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "openai_microsoft_copyright_lawsuit",
+  "headline_marked": "[[Seattle Times and Newsday sue OpenAI and Microsoft]] over AI training data",
+  "headline": "Seattle Times and Newsday sue OpenAI and Microsoft over AI training data",
+  "summary": "Two more major news organizations are taking legal action against OpenAI and Microsoft, alleging copyright infringement for using their journalistic content to train generative AI models.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Two additional news organizations, The Seattle Times and Newsday, have filed a lawsuit against OpenAI and Microsoft. The suit claims the companies used their journalism without permission to train artificial intelligence models.",
+   "The lawsuit argues that generative AI, by \"devouring human-authored content,\" risks \"destroying the very organizations\" that produce the content it relies on. It describes the situation as \"a snake eating its own tail\" for the journalism industry.",
+   "The plaintiffs contend that AI products like ChatGPT and CoPilot are not true content creators but \"rapacious consumers.\" They assert these AI tools deliver \"copies and derivative imitations\" of original human-authored content to achieve commercial objectives.",
+   "A Microsoft spokesperson expressed surprise at the lawsuit, according to GeekWire. The company stated it is \"always happy to sit down and explore solutions to this type of dispute.\""
+  ],
+  "caption": "Two more major news organizations are suing OpenAI and Microsoft. They allege their journalism was used without permission to train AI models.\n\nTwo additional news organizations, The Seattle Times and Newsday, have filed a lawsuit against OpenAI and Microsoft. The suit claims the companies used their journalism without permission to train artificial intelligence models.\n\nThe lawsuit argues that generative AI, by \"devouring human-authored content,\" risks \"destroying the very organizations\" that produce the content it relies on. It describes the situation as \"a snake eating its own tail\" for the journalism industry.\n\nThe plaintiffs contend that AI products like ChatGPT and CoPilot are not true content creators but \"rapacious consumers.\" They assert these AI tools deliver \"copies and derivative imitations\" of original human-authored content to achieve commercial objectives.\n\nA Microsoft spokesperson expressed surprise at the lawsuit, according to GeekWire. The company stated it is \"always happy to sit down and explore solutions to this type of dispute.\"\n\n#AI #Copyright #Lawsuit #OpenAI #Microsoft #TechNews\n\nSource: TechCrunch, Engadget",
+  "tweet": "The Seattle Times & Newsday are suing OpenAI & Microsoft, alleging copyright infringement for using their content to train AI. They warn this could \"destroy\" journalism. Microsoft is \"surprised\" & open to discussion. #AI #Copyright #Lawsuit",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "TechCrunch, Engadget",
+  "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+  "image": "",
+  "orig_title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+   "https://www.engadget.com/2251707/seattle-times-newsday-sue-openai-microsoft-for-copyright-infringement/"
+  ],
+  "cluster_titles": [
+   "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
+   "Two more news organizations sue OpenAI and Microsoft for copyright infringement"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260906-0606-0-seattle-times-and-newsday-sue-openai-and-mic.png",
+   "20260906-0606-0-seattle-times-and-newsday-sue-openai-and-mic-d1.png",
+   "20260906-0606-0-seattle-times-and-newsday-sue-openai-and-mic-d2.png"
+  ]
+ },
+ {
+  "topic": "5400_hacked_sites_clickfix_webrtc",
+  "headline_marked": "[[Over 5,400 Hacked Sites]] Serve ClickFix and WebRTC Paths",
+  "headline": "Over 5,400 Hacked Sites Serve ClickFix and WebRTC Paths",
+  "summary": "Over 5,400 compromised websites are serving malicious components from BNB Smart Chain Testnet smart contracts, using sophisticated ClickFix and WebRTC attack vectors.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Over 5,400 compromised websites have been observed fetching next-stage malicious components. These components originate from BNB Smart Chain Testnet smart contracts, indicating a coordinated and evolving threat.",
+   "The attack vectors include 'ClickFix,' which tricks users into pasting harmful PowerShell commands. Another method is a WebRTC variant that receives and executes JavaScript directly through a data channel, bypassing traditional signaling.",
+   "Organizations must recognize that web browsing-based attacks extend beyond typical email security concerns. This campaign leverages legitimate but compromised sites, branching into fake CAPTCHAs, PowerShell, and WebRTC exploits.",
+   "Effective defense requires cross-referencing web proxy, DNS, endpoint, and network logs. This comprehensive approach helps trace the full flow from initial site visits to unnatural operational instructions or suspicious outbound UDP traffic.",
+   "Blocking single BSC Testnet endpoints or IPs is often ineffective, as operators can easily switch. Instead, organizations should restrict Testnet RPC groups and whitelist usage only when absolutely necessary for operational needs.",
+   "For WebRTC, it's crucial not to assume browser traffic is inherently safe. Verify all outbound UDP and DTLS traffic to unknown peers that are not essential for business operations to prevent covert data execution.",
+   "The reported 5,400 figure refers to compromised websites, not the number of endpoints where final payloads were executed. Security Operations Centers (SOCs) should evaluate each stage of the attack separately, from site visits to C2 establishment, to contain incidents effectively."
+  ],
+  "caption": "Over 5,400 websites have been compromised to serve advanced malware via ClickFix and WebRTC. This isn't just an email problem.\n\nOver 5,400 compromised websites have been observed fetching next-stage malicious components. These components originate from BNB Smart Chain Testnet smart contracts, indicating a coordinated and evolving threat.\n\nThe attack vectors include 'ClickFix,' which tricks users into pasting harmful PowerShell commands. Another method is a WebRTC variant that receives and executes JavaScript directly through a data channel, bypassing traditional signaling.\n\nOrganizations must recognize that web browsing-based attacks extend beyond typical email security concerns. This campaign leverages legitimate but compromised sites, branching into fake CAPTCHAs, PowerShell, and WebRTC exploits.\n\nEffective defense requires cross-referencing web proxy, DNS, endpoint, and network logs. This comprehensive approach helps trace the full flow from initial site visits to unnatural operational instructions or suspicious outbound UDP traffic.\n\nBlocking single BSC Testnet endpoints or IPs is often ineffective, as operators can easily switch. Instead, organizations should restrict Testnet RPC groups and whitelist usage only when absolutely necessary for operational needs.\n\nFor WebRTC, it's crucial not to assume browser traffic is inherently safe. Verify all outbound UDP and DTLS traffic to unknown peers that are not essential for business operations to prevent covert data execution.\n\nThe reported 5,400 figure refers to compromised websites, not the number of endpoints where final payloads were executed. Security Operations Centers (SOCs) should evaluate each stage of the attack separately, from site visits to C2 establishment, to contain incidents effectively.\n\n#CyberSecurity #WebSecurity #Malware #Hacking #BNBSmartChain #TechNews\n\nSource: DEV",
+  "tweet": "Over 5,400 websites are compromised, serving malware via ClickFix and WebRTC. This sophisticated attack leverages BNB Smart Chain Testnet. Organizations need to cross-reference logs beyond just email security. #CyberSecurity #WebSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/over-5400-hacked-sites-serve-clickfix-and-webrtc-paths-1ko0",
+  "image": "",
+  "orig_title": "Over 5,400 Hacked Sites Serve ClickFix and WebRTC Paths",
+  "cluster_urls": [
+   "https://dev.to/anoymask/over-5400-hacked-sites-serve-clickfix-and-webrtc-paths-1ko0"
+  ],
+  "cluster_titles": [
+   "Over 5,400 Hacked Sites Serve ClickFix and WebRTC Paths"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260906-0606-1-over-5-400-hacked-sites-serve-clickfix-and-w.png",
+   "20260906-0606-1-over-5-400-hacked-sites-serve-clickfix-and-w-d1.png",
+   "20260906-0606-1-over-5-400-hacked-sites-serve-clickfix-and-w-d2.png",
+   "20260906-0606-1-over-5-400-hacked-sites-serve-clickfix-and-w-d3.png"
+  ]
+ }
+]

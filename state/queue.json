@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_agent_skills_mcp_server_npm",
+  "headline_marked": "[[8 Agent Skills and an MCP server published to npm]] for reusable dev workflows",
+  "headline": "8 Agent Skills and an MCP server published to npm for reusable dev workflows",
+  "summary": "The alpha-skills package offers modular solutions for common dev problems, including a NextDNS API server, to streamline agent workflows and reduce repetitive coding.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "After months of repetitive agent tasks, alpha-skills has been published to npm, offering eight installable Agent Skills and a NextDNS MCP server. This initiative aims to tackle technical debt by providing reusable solutions for common developer problems, eliminating the need to re-solve them repeatedly.",
+   "The skills are organized into three categories: external/ for third-party APIs, local/ for homelab and personal workflows, and general/ for cross-project utilities. All skills are publicly available, with one in external/, one in local/, and six in general/.",
+   "The external/ category includes a comprehensive reference for the NextDNS REST API, covering profiles, security settings, list management, analytics, and query logs. This skill directly underpins the included MCP server.",
+   "Under local/, a progressive search workflow integrates CodeGraph, QMD, and grep/find for efficient code and documentation queries. It maintains an in-session graph to prevent redundant searches, optimizing discovery.",
+   "The general/ skills provide a range of utilities, including agent-context-generator for project context, nestjs-iam-patterns for authentication/authorization, and nestjs-advanced-patterns for internal architecture.",
+   "Further general/ skills cover nestjs-graphql for both code-first and schema-first approaches, tuning-claude-code for agent configuration, and obsidian-second-brain for an effective knowledge management system.",
+   "The @alpha018/nextdns-mcp is a stdio MCP server, runnable via npx, that exposes the NextDNS API. It allows reading and updating profile settings, managing list entries, and pulling analytics and logs, staying in sync with the nextdns-api reference.",
+   "Publishing to npm with OIDC trusted publishing presented challenges, as @semantic-release/npm did not natively support it. The verifyConditions step required an NPM_TOKEN or preconfigured .npmrc despite id-token: write being set.",
+   "The solution involved separating concerns: semantic-release handles versioning, while the npm CLI manages publishing via OIDC. This split enabled automated publishing across multiple packages under mcp-servers/*.",
+   "It's important to note that the very first publish of a new npm package cannot bootstrap through OIDC. The initial version must be published manually with a real login before the Trusted Publisher link can be established."
+  ],
+  "caption": "Stop re-solving the same dev problems! 8 new Agent Skills and an MCP server are now on npm, designed for reusable workflows.\n\nAfter months of repetitive agent tasks, alpha-skills has been published to npm, offering eight installable Agent Skills and a NextDNS MCP server. This initiative aims to tackle technical debt by providing reusable solutions for common developer problems, eliminating the need to re-solve them repeatedly.\n\nThe skills are organized into three categories: external/ for third-party APIs, local/ for homelab and personal workflows, and general/ for cross-project utilities. All skills are publicly available, with one in external/, one in local/, and six in general/.\n\nThe external/ category includes a comprehensive reference for the NextDNS REST API, covering profiles, security settings, list management, analytics, and query logs. This skill directly underpins the included MCP server.\n\nUnder local/, a progressive search workflow integrates CodeGraph, QMD, and grep/find for efficient code and documentation queries. It maintains an in-session graph to prevent redundant searches, optimizing discovery.\n\nThe general/ skills provide a range of utilities, including agent-context-generator for project context, nestjs-iam-patterns for authentication/authorization, and nestjs-advanced-patterns for internal architecture.\n\nFurther general/ skills cover nestjs-graphql for both code-first and schema-first approaches, tuning-claude-code for agent configuration, and obsidian-second-brain for an effective knowledge management system.\n\nThe @alpha018/nextdns-mcp is a stdio MCP server, runnable via npx, that exposes the NextDNS API. It allows reading and updating profile settings, managing list entries, and pulling analytics and logs, staying in sync with the nextdns-api reference.\n\n#DeveloperTools #npm #AgentSkills #SoftwareDevelopment #Tech #OpenSource\n\nSource: DEV",
+  "tweet": "Stop re-solving the same dev problems! 8 new Agent Skills and an MCP server are now on npm, offering reusable workflows for NextDNS API, search, NestJS patterns, and more. Streamline your agent tasks today. #DeveloperTools #npm #AgentSkills",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/alpha018/8-agent-skills-and-my-first-mcp-server-published-to-npm-3fmi",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fewckqcibc2cmofssbtld.png",
+  "orig_title": "8 Agent Skills and my first MCP server published to npm",
+  "cluster_urls": [
+   "https://dev.to/alpha018/8-agent-skills-and-my-first-mcp-server-published-to-npm-3fmi",
+   "https://dev.to/alpha018/8-agent-skills-y-mi-primer-servidor-mcp-publicado-en-npm-4jc9"
+  ],
+  "cluster_titles": [
+   "8 Agent Skills and my first MCP server published to npm",
+   "8 Agent Skills y mi primer servidor MCP publicado en npm"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260906-1006-0-8-agent-skills-and-an-mcp-server-published-t.png",
+   "20260906-1006-0-8-agent-skills-and-an-mcp-server-published-t-d1.png",
+   "20260906-1006-0-8-agent-skills-and-an-mcp-server-published-t-d2.png",
+   "20260906-1006-0-8-agent-skills-and-an-mcp-server-published-t-d3.png",
+   "20260906-1006-0-8-agent-skills-and-an-mcp-server-published-t-d4.png"
+  ]
+ },
+ {
+  "topic": "replacing_self_with_ai_cognitive_habits",
+  "headline_marked": "[[Replacing cognitive habits with AI]] reveals a chilling surveillance potential",
+  "headline": "Replacing cognitive habits with AI reveals a chilling surveillance potential",
+  "summary": "An author's journey to automate personal cognitive habits with AI uncovers how such a system could be repurposed for powerful, intrusive behavioral modeling by companies and governments.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "An author explored building an AI system to automate personal cognitive habits, aiming to offload mental 'chores' like remembering to reassess projects. The project began as a curiosity to model how one thinks, rather than just what one knows.",
+   "The system would learn patterns of curiosity and behavior by analyzing conversations, notes, and commit messages. Instead of generating random questions, it would identify situations where the user typically asks certain questions or revisits systems.",
+   "This 'curiosity engine' would then propose actions or questions, acting as an outsourced 'hmm, that's weird' function. For example, it could suggest reassessing a system once it develops multiple overlapping layers.",
+   "However, the author realized the exact same mechanism designed for personal automation could be used for widespread surveillance. A system that extracts behavioral patterns, learns triggers, and models decision-making is incredibly valuable.",
+   "Advertisers, employers, and governments would highly covet such a behavioral model. It goes beyond a chat log by not just knowing what you said, but how to move you.",
+   "The realization highlighted that while the author built this with good intentions, someone else, somewhere, might have already built a similar system without looking up to see its potential for misuse."
+  ],
+  "caption": "Imagine an AI that learns your cognitive habits, predicting when you'll question assumptions or reassess projects. This personal automation tool has a dark side.\n\nAn author explored building an AI system to automate personal cognitive habits, aiming to offload mental 'chores' like remembering to reassess projects. The project began as a curiosity to model how one thinks, rather than just what one knows.\n\nThe system would learn patterns of curiosity and behavior by analyzing conversations, notes, and commit messages. Instead of generating random questions, it would identify situations where the user typically asks certain questions or revisits systems.\n\nThis 'curiosity engine' would then propose actions or questions, acting as an outsourced 'hmm, that's weird' function. For example, it could suggest reassessing a system once it develops multiple overlapping layers.\n\nHowever, the author realized the exact same mechanism designed for personal automation could be used for widespread surveillance. A system that extracts behavioral patterns, learns triggers, and models decision-making is incredibly valuable.\n\nAdvertisers, employers, and governments would highly covet such a behavioral model. It goes beyond a chat log by not just knowing what you said, but how to move you.\n\nThe realization highlighted that while the author built this with good intentions, someone else, somewhere, might have already built a similar system without looking up to see its potential for misuse.\n\n#AI #Automation #Privacy #TechEthics #CognitiveAI #FutureTech\n\nSource: DEV",
+  "tweet": "An author built an AI to automate cognitive habits, only to realize the same tech could be a powerful surveillance tool. It learns *how* you think, not just *what* you know. A chilling insight into AI's dual-use potential. #AI #Privacy #TechEthics",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/the_leon_odor/replacing-myself-with-ai-one-cognitive-habit-at-a-time-175k",
+  "image": "",
+  "orig_title": "Replacing Myself With AI, One Cognitive Habit at a Time",
+  "cluster_urls": [
+   "https://dev.to/the_leon_odor/replacing-myself-with-ai-one-cognitive-habit-at-a-time-175k"
+  ],
+  "cluster_titles": [
+   "Replacing Myself With AI, One Cognitive Habit at a Time"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260906-1006-1-replacing-cognitive-habits-with-ai-reveals-a.png",
+   "20260906-1006-1-replacing-cognitive-habits-with-ai-reveals-a-d1.png",
+   "20260906-1006-1-replacing-cognitive-habits-with-ai-reveals-a-d2.png"
+  ]
+ }
+]

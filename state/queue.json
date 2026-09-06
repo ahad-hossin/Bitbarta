@@ -1,1 +1,91 @@
-[]
+[
+ {
+  "topic": "sdk_exfiltrates_credentials_security_flaw",
+  "headline_marked": "[[Malicious SDKs Exfiltrate Credentials]] While Passing All Your Tests",
+  "headline": "Malicious SDKs Exfiltrate Credentials While Passing All Your Tests",
+  "summary": "In Q1 2025, 56% of 17,954 tracked malicious packages performed data exfiltration, often stealing credentials between API calls and responses without breaking applications.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "In Q1 2025, Sonatype identified 17,954 malicious packages, with 56% focused on data exfiltration. These packages often install cleanly, pass import checks, and return expected API responses, making detection difficult. The theft occurs stealthily between the API call and response.",
+   "API client SDKs are particularly vulnerable as they sit between application code and the API server, handling all credentials. Sensitive data like STRIPE_SECRET_KEY or AWS_SECRET_ACCESS_KEY are accessible to the SDK before application code runs, often via environment variables.",
+   "Installing an SDK is typically a single command, `npm install paysafe-client`, with developers rarely auditing the code. Public registries like npm and PyPI are often assumed to guarantee integrity, an assumption frequently contradicted by the rising number of malicious packages.",
+   "Dependency confusion further exacerbates the issue, where public versions of packages can override internal private ones if their version number is higher. In Q2 2025, over 4,400 packages specifically targeted API tokens, contributing to a 188% year-over-year growth in malicious package volume.",
+   "The most dangerous variants don't break the application; they make the real API call, return legitimate responses, and simultaneously send credentials to an attacker's server. This side-channel exfiltration is invisible to most observability layers, allowing integration tests to pass unnoticed.",
+   "Two main attack subtypes are observed: interception proxies, which make real API calls and exfiltrate in parallel, and fake-response facades, which return fabricated responses without contacting the actual API. Both aim to steal data while maintaining application functionality.",
+   "A July 2026 campaign against PaysafeCard, Skrill, and Neteller published 17 packages on npm and PyPI, returning fabricated 200 OK responses. Credentials were sent to an attacker-controlled domain, and despite quick flagging by Socket.dev, four versions were distributed.",
+   "These malicious packages often include anti-sandbox checks, skipping machines with fewer CPU cores or VM-indicative usernames to evade analysis. The working-SDK cover means integration tests are ineffective as a detection method, as they pass precisely because the SDK appears functional.",
+   "Past incidents include the 2018 event-stream attack, which exploited 2 million weekly npm downloads to steal Copay Bitcoin wallets, and a 2023 campaign targeting IT professionals via 27 PyPI packages to exfiltrate multi-cloud credentials across 56,866 occurrences.",
+   "The March 2026 LiteLLM attack, a highly industrialized incident, saw TeamPCP compromise Trivy's CI credentials to publish a backdoored package via a `.pth` file. The package, with 95 million monthly downloads, was quarantined after 40 minutes, but not before an estimated 434,000 CI/CD pipeline runs were affected.",
+   "Reactive detection methods are often insufficient; the July 2026 Paysafe campaign rotated obfuscation per package, making signature-based blocklists useless. Integration tests validate API responses but don't check outbound traffic during SDK calls, leaving a critical blind spot."
+  ],
+  "caption": "Malicious SDKs are stealing your credentials, passing all your tests, and remaining invisible to most security tools. This isn't a hypothetical threat; it's happening now.\n\nIn Q1 2025, Sonatype identified 17,954 malicious packages, with 56% focused on data exfiltration. These packages often install cleanly, pass import checks, and return expected API responses, making detection difficult. The theft occurs stealthily between the API call and response.\n\nAPI client SDKs are particularly vulnerable as they sit between application code and the API server, handling all credentials. Sensitive data like STRIPE_SECRET_KEY or AWS_SECRET_ACCESS_KEY are accessible to the SDK before application code runs, often via environment variables.\n\nInstalling an SDK is typically a single command, `npm install paysafe-client`, with developers rarely auditing the code. Public registries like npm and PyPI are often assumed to guarantee integrity, an assumption frequently contradicted by the rising number of malicious packages.\n\nDependency confusion further exacerbates the issue, where public versions of packages can override internal private ones if their version number is higher. In Q2 2025, over 4,400 packages specifically targeted API tokens, contributing to a 188% year-over-year growth in malicious package volume.\n\nThe most dangerous variants don't break the application; they make the real API call, return legitimate responses, and simultaneously send credentials to an attacker's server. This side-channel exfiltration is invisible to most observability layers, allowing integration tests to pass unnoticed.\n\nTwo main attack subtypes are observed: interception proxies, which make real API calls and exfiltrate in parallel, and fake-response facades, which return fabricated responses without contacting the actual API. Both aim to steal data while maintaining application functionality.\n\n#Cybersecurity #DevSecOps #SoftwareSupplyChain #Malware #Security #Developer\n\nSource: DEV",
+  "tweet": "Malicious SDKs are silently exfiltrating credentials while passing all your integration tests. Over 56% of tracked malicious packages use this stealthy method, making detection incredibly difficult. Protect your supply chain. #Cybersecurity #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/roxdavirox/the-sdk-that-passes-your-tests-and-exfiltrates-your-credentials-5epd",
+  "image": "",
+  "orig_title": "The SDK That Passes Your Tests and Exfiltrates Your Credentials",
+  "cluster_urls": [
+   "https://dev.to/roxdavirox/the-sdk-that-passes-your-tests-and-exfiltrates-your-credentials-5epd"
+  ],
+  "cluster_titles": [
+   "The SDK That Passes Your Tests and Exfiltrates Your Credentials"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260906-1106-0-malicious-sdks-exfiltrate-credentials-while-.png",
+   "20260906-1106-0-malicious-sdks-exfiltrate-credentials-while--d1.png",
+   "20260906-1106-0-malicious-sdks-exfiltrate-credentials-while--d2.png",
+   "20260906-1106-0-malicious-sdks-exfiltrate-credentials-while--d3.png",
+   "20260906-1106-0-malicious-sdks-exfiltrate-credentials-while--d4.png",
+   "20260906-1106-0-malicious-sdks-exfiltrate-credentials-while--d5.png",
+   "20260906-1106-0-malicious-sdks-exfiltrate-credentials-while--d6.png"
+  ]
+ },
+ {
+  "topic": "pkce_downgrade_attack_oauth_security",
+  "headline_marked": "[[PKCE Downgrade Attack]] allows authorization servers to accept both secure and insecure flows",
+  "headline": "PKCE Downgrade Attack allows authorization servers to accept both secure and insecure flows",
+  "summary": "A critical flaw, detailed in multiple CVEs, allows attackers to bypass PKCE protection by stripping parameters, leading to unbound authorization codes. This affects identity providers that fail to enforce RFC 7636 and 9700.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Two CVEs (CVE-2023-48228 and CVE-2024-23647) against authentik describe a PKCE downgrade vulnerability. The server accepted PKCE in one request but its absence in the next, despite RFC 7636 being published nine years prior.",
+   "PKCE binds an authorization code to a client-generated secret. Servers that accept flows without code_challenge or token exchanges without code_verifier downgrade clients to a pre-PKCE threat model, making codes redeemable by attackers.",
+   "The attack involves an attacker intercepting an OAuth authorization request and removing the code_challenge and code_challenge_method parameters. An unenforcing server then issues an unbound authorization code.",
+   "The attacker can then capture this code and exchange it at the token endpoint without needing any code_verifier, effectively bypassing the security mechanism designed to prevent this.",
+   "CVE-2023-48228 (authentik < 2023.10.4) involved the token endpoint validating code_verifier only when provided. CVE-2024-23647 (authentik <= 2023.10.6) saw the authorization endpoint failing to reject requests missing code_challenge.",
+   "Another instance, CVE-2026-48717 (OpenAM through 16.0.6), had PKCE enforcement disabled by default. This meant new installations accepted token exchanges without a verifier, leaving them vulnerable.",
+   "RFC 9700 mandates that servers MUST support PKCE, enforce code_verifier at the token endpoint, and specifically mitigate downgrade attacks. This includes rejecting token requests with code_verifier if no code_challenge was initially present."
+  ],
+  "caption": "A critical PKCE downgrade attack allows malicious actors to bypass security by stripping parameters from authorization requests. This vulnerability has been found in multiple identity providers.\n\nTwo CVEs (CVE-2023-48228 and CVE-2024-23647) against authentik describe a PKCE downgrade vulnerability. The server accepted PKCE in one request but its absence in the next, despite RFC 7636 being published nine years prior.\n\nPKCE binds an authorization code to a client-generated secret. Servers that accept flows without code_challenge or token exchanges without code_verifier downgrade clients to a pre-PKCE threat model, making codes redeemable by attackers.\n\nThe attack involves an attacker intercepting an OAuth authorization request and removing the code_challenge and code_challenge_method parameters. An unenforcing server then issues an unbound authorization code.\n\nThe attacker can then capture this code and exchange it at the token endpoint without needing any code_verifier, effectively bypassing the security mechanism designed to prevent this.\n\nCVE-2023-48228 (authentik < 2023.10.4) involved the token endpoint validating code_verifier only when provided. CVE-2024-23647 (authentik <= 2023.10.6) saw the authorization endpoint failing to reject requests missing code_challenge.\n\nAnother instance, CVE-2026-48717 (OpenAM through 16.0.6), had PKCE enforcement disabled by default. This meant new installations accepted token exchanges without a verifier, leaving them vulnerable.\n\nRFC 9700 mandates that servers MUST support PKCE, enforce code_verifier at the token endpoint, and specifically mitigate downgrade attacks. This includes rejecting token requests with code_verifier if no code_challenge was initially present.\n\n#Cybersecurity #PKCE #OAuth #SecurityVulnerability #CVE #InfoSec\n\nSource: DEV",
+  "tweet": "A critical PKCE downgrade attack allows bypassing security in OAuth flows. Servers accepting both secure and insecure requests are vulnerable, enabling attackers to obtain unbound authorization codes. Multiple CVEs highlight this widespread issue. #Cybersecurity #OAuth #PKCE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/roxdavirox/pkce-downgrade-attack-when-the-authorization-server-accepts-both-flows-199m",
+  "image": "",
+  "orig_title": "PKCE Downgrade Attack: When the Authorization Server Accepts Both Flows",
+  "cluster_urls": [
+   "https://dev.to/roxdavirox/pkce-downgrade-attack-when-the-authorization-server-accepts-both-flows-199m"
+  ],
+  "cluster_titles": [
+   "PKCE Downgrade Attack: When the Authorization Server Accepts Both Flows"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260906-1106-1-pkce-downgrade-attack-allows-authorization-s.png",
+   "20260906-1106-1-pkce-downgrade-attack-allows-authorization-s-d1.png",
+   "20260906-1106-1-pkce-downgrade-attack-allows-authorization-s-d2.png",
+   "20260906-1106-1-pkce-downgrade-attack-allows-authorization-s-d3.png"
+  ]
+ }
+]

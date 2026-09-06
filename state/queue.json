@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "claude_ai_bug_data_deletion",
+  "headline_marked": "[[Claude Code batch script deleted 1,068 files]] due to a trailing full-width period",
+  "headline": "Claude Code batch script deleted 1,068 files due to a trailing full-width period",
+  "summary": "A silent text encoding mismatch caused a Japanese full-width period in a comment to merge with the next line, nullifying a variable assignment. This led to a \"del /F /Q \"\"\" command wiping 1,068 files from the repository root.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A code comment character silently deleted a variable assignment in a Claude Code-generated batch script, turning \"del /F /Q \"%WORK%\"\" into \"del /F /Q \"\"\" — which doesn't fail, but deletes everything in the working directory.",
+   "The issue, filed against Claude Code 2.1.224 (Opus) on Windows 11, occurred because Claude's Write tool generated the .cmd script as UTF-8 with LF-only line endings, its default output format.",
+   "However, cmd.exe doesn't parse batch files as UTF-8; it reads them against the system's OEM codepage. Under Japanese CP932, the final byte of a trailing full-width Japanese period (\"。\", UTF-8 bytes E3 80 82) in a `rem` comment was read as a CP932 lead byte, consuming the immediate newline.",
+   "This merged the comment line into the next line, which contained a `set \"WORK=...\"` command. As a result, the `set` command never executed, and the `WORK` variable remained unset.",
+   "The subsequent line, \"del /F /Q \"%WORK%\"\", expanded with the unset variable to \"del /F /Q \"\"\". This command deletes every file in the current working directory instead of erroring or performing a no-op.",
+   "Because the working directory was the repository root, 1,068 files were removed. While subdirectories survived (as `del` without `/S` isn't recursive), 123 of these files existed nowhere else and were unrecoverable.",
+   "The reporter provided hex dumps, NTFS USN journal excerpts, and a deterministic reproduction. The issue is tagged \"has repro\" and \"high-priority\" by StupidLLM's corpus, confirming its reproducibility.",
+   "The bug requires three conditions: a non-UTF-8 OEM codepage (like Japanese CP932), a multibyte trailing character in a generated comment, and LF-only line endings from the Write tool. It's unclear how common this specific combination is.",
+   "Crucially, this wasn't an agent choosing a destructive command. The batch script's logic was correct; the failure was entirely in serialization—a text encoding mismatch between the tool that wrote the file (UTF-8) and the interpreter that read it (an OEM codepage).",
+   "The silent consumption of a newline, combined with `%WORK%` expanding to nothing and `del /F /Q \"\"` deleting everything instead of failing loudly, turned a parsing quirk into significant data loss. This highlights the need to audit encoding and line endings for agentic tooling generating Windows batch scripts."
+  ],
+  "caption": "A single Japanese full-width period in a code comment led to 1,068 files being deleted by Claude Code. This wasn't a malicious command, but a silent encoding error.\n\nA code comment character silently deleted a variable assignment in a Claude Code-generated batch script, turning \"del /F /Q \"%WORK%\"\" into \"del /F /Q \"\"\" — which doesn't fail, but deletes everything in the working directory.\n\nThe issue, filed against Claude Code 2.1.224 (Opus) on Windows 11, occurred because Claude's Write tool generated the .cmd script as UTF-8 with LF-only line endings, its default output format.\n\nHowever, cmd.exe doesn't parse batch files as UTF-8; it reads them against the system's OEM codepage. Under Japanese CP932, the final byte of a trailing full-width Japanese period (\"。\", UTF-8 bytes E3 80 82) in a `rem` comment was read as a CP932 lead byte, consuming the immediate newline.\n\nThis merged the comment line into the next line, which contained a `set \"WORK=...\"` command. As a result, the `set` command never executed, and the `WORK` variable remained unset.\n\nThe subsequent line, \"del /F /Q \"%WORK%\"\", expanded with the unset variable to \"del /F /Q \"\"\". This command deletes every file in the current working directory instead of erroring or performing a no-op.\n\nBecause the working directory was the repository root, 1,068 files were removed. While subdirectories survived (as `del` without `/S` isn't recursive), 123 of these files existed nowhere else and were unrecoverable.\n\nThe reporter provided hex dumps, NTFS USN journal excerpts, and a deterministic reproduction. The issue is tagged \"has repro\" and \"high-priority\" by StupidLLM's corpus, confirming its reproducibility.\n\nThe bug requires three conditions: a non-UTF-8 OEM codepage (like Japanese CP932), a multibyte trailing character in a generated comment, and LF-only line endings from the Write tool. It's unclear how common this specific combination is.\n\n#TechNews #CodingBug #DataLoss #ClaudeCode #AI #SoftwareSecurity\n\nSource: DEV",
+  "tweet": "A single full-width Japanese period in a Claude Code-generated batch script comment caused 1,068 files to be deleted. An encoding mismatch silently ate a newline, nullifying a variable and turning `del /F /Q \"%WORK%\"` into a directory wipe. #CodingBug #DataLoss #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/ramdai_bista/a-trailing-full-width-period-made-claude-codes-batch-script-delete-1068-files-dll",
+  "image": "",
+  "orig_title": "A Trailing Full-Width Period Made Claude Code's Batch Script Delete 1,068 Files",
+  "cluster_urls": [
+   "https://dev.to/ramdai_bista/a-trailing-full-width-period-made-claude-codes-batch-script-delete-1068-files-dll"
+  ],
+  "cluster_titles": [
+   "A Trailing Full-Width Period Made Claude Code's Batch Script Delete 1,068 Files"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260906-1506-0-claude-code-batch-script-deleted-1-068-files.png",
+   "20260906-1506-0-claude-code-batch-script-deleted-1-068-files-d1.png",
+   "20260906-1506-0-claude-code-batch-script-deleted-1-068-files-d2.png",
+   "20260906-1506-0-claude-code-batch-script-deleted-1-068-files-d3.png",
+   "20260906-1506-0-claude-code-batch-script-deleted-1-068-files-d4.png"
+  ]
+ },
+ {
+  "topic": "gta3_browser_port",
+  "headline_marked": "[[Play Grand Theft Auto III]] directly in your browser, zero downloads required",
+  "headline": "Play Grand Theft Auto III directly in your browser, zero downloads required",
+  "summary": "Experience the classic open-world action of GTA III and Vice City right in your web browser. Enjoy full gamepad support and save management without any downloads.",
+  "category": "GAMING",
+  "template": "launch",
+  "details": [
+   "Grand Theft Auto III is now fully playable directly in your web browser, requiring zero downloads. This follows the recent release of GTA Vice City Online, bringing another classic open-world experience to modern browsers.",
+   "Players can manage their game data with a built-in Save Manager, allowing them to download or upload save files. This feature ensures progress can be easily transferred between different devices.",
+   "The browser version supports standard Xbox and PlayStation gamepads via USB or Bluetooth. Mobile users can also play using on-screen touch controls, with landscape mode and fullscreen recommended for the best experience.",
+   "For optimal performance, users should ensure Hardware Acceleration is enabled in their browser settings. This allows the game to utilize the GPU for 3D rendering, preventing black screens or heavy lag.",
+   "The original game engine was designed for 30 FPS, and unlocked framerates can cause physics bugs in some missions. If issues arise, limiting the FPS to 30 or 60 in the game menu is recommended, especially for mobile or low-end devices to prevent overheating and battery drain."
+  ],
+  "caption": "Experience Grand Theft Auto III and Vice City directly in your browser, no downloads needed and full gamepad support!\n\nGrand Theft Auto III is now fully playable directly in your web browser, requiring zero downloads. This follows the recent release of GTA Vice City Online, bringing another classic open-world experience to modern browsers.\n\nPlayers can manage their game data with a built-in Save Manager, allowing them to download or upload save files. This feature ensures progress can be easily transferred between different devices.\n\nThe browser version supports standard Xbox and PlayStation gamepads via USB or Bluetooth. Mobile users can also play using on-screen touch controls, with landscape mode and fullscreen recommended for the best experience.\n\nFor optimal performance, users should ensure Hardware Acceleration is enabled in their browser settings. This allows the game to utilize the GPU for 3D rendering, preventing black screens or heavy lag.\n\nThe original game engine was designed for 30 FPS, and unlocked framerates can cause physics bugs in some missions. If issues arise, limiting the FPS to 30 or 60 in the game menu is recommended, especially for mobile or low-end devices to prevent overheating and battery drain.\n\n#Gaming #BrowserGames #GTA #GrandTheftAuto #RetroGaming #WebAssembly\n\nSource: Hacker News",
+  "tweet": "Grand Theft Auto III & Vice City are now playable directly in your browser! No downloads, full gamepad support, and save management. Relive the classics anywhere. #GTA #BrowserGames #Gaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://quenq.com/apps/vice-city-online/",
+  "image": "",
+  "orig_title": "Play GTA III in the Browser",
+  "cluster_urls": [
+   "https://quenq.com/apps/vice-city-online/"
+  ],
+  "cluster_titles": [
+   "Play GTA III in the Browser"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260906-1506-1-play-grand-theft-auto-iii-directly-in-your-b.png",
+   "20260906-1506-1-play-grand-theft-auto-iii-directly-in-your-b-d1.png",
+   "20260906-1506-1-play-grand-theft-auto-iii-directly-in-your-b-d2.png"
+  ]
+ }
+]

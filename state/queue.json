@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "local_llm_hardware_costs_2026",
+  "headline_marked": "[[What LLMs actually fit on your machine]] in September 2026, from 27B to 2.8T parameters",
+  "headline": "What LLMs actually fit on your machine in September 2026, from 27B to 2.8T parameters",
+  "summary": "The LLM landscape has shifted dramatically by September 2026, with powerful models now fitting on consumer hardware. Chinese models like Qwen dominate downloads, challenging cloud-only giants.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A $20,000 Mac Studio offers the same number of tokens as $20,000 in cloud API credits, but requires fourteen years of uninterrupted generation to produce them. This stark reality drives the focus from benchmark scores to what models physically fit on local machines.",
+   "By May 2026, Chinese models accounted for 61% of all tokens routed through OpenRouter, a market that quadrupled in the same period. On Hugging Face, Qwen models have surpassed Llama in cumulative downloads, with 40% of new LLM derivatives built on a Qwen base.",
+   "A key development is the Qwen3.8-27B model, an Apache 2.0 licensed model that performs only four index points behind the leading 2.4-trillion-parameter network. Crucially, this 27-billion-parameter model fits entirely within a single gaming GPU.",
+   "Running models locally requires careful memory consideration; model weight is not total memory use. The KV cache grows with conversation, meaning a model that \"just barely fits\" will likely hit memory limits mid-task.",
+   "Qwen3.8-27B in Q4_K_M quantization needs 16.5–19.5 GB for weights plus 1.5 GB overhead, fitting on an RTX 3090 or 4090. It offers native vision-language and 262K context under Apache 2.0.",
+   "For Apple Silicon users, a 64 GB Mac mini M4 can run Qwen3.8-27B at about 7 tokens/sec, making it usable for non-interactive tasks. Other models in this class include Qwen3-Coder-Next 80B-A3B and gpt-oss-120b.",
+   "For local inference, 32 GB is the minimum, 48 GB is the sweet spot, and 64 GB allows for generous context lengths. Sparse MoE models, which need large memory pools but only read a fraction per token, are particularly well-suited for Apple Silicon's unified memory architecture.",
+   "The recently refreshed Mac Studio with M5 Ultra chips offers up to 512 GB of unified memory. A community-reported 39 tok/s on a 128 GB M5 Max for the 284-billion-parameter DeepSeek V4 Flash demonstrates genuinely good performance for a desktop machine.",
+   "Even massive models like Kimi K3 (2.8 trillion parameters, 1M context) and Qwen3.8-Max (2.4T total) have weights published for download. However, sparsity in MoE models saves compute, not memory; the entire model must be resident, not just the active experts.",
+   "The market also shows wildly different prices for identical weights across hosts, and varied service quality for identical prices. This highlights the importance of choosing both the right hardware and provider for local and hosted inference."
+  ],
+  "caption": "A $20,000 Mac Studio offers the same tokens as cloud API credits, but takes 14 years to generate them. The real story of LLMs is what fits on your machine.\n\nA $20,000 Mac Studio offers the same number of tokens as $20,000 in cloud API credits, but requires fourteen years of uninterrupted generation to produce them. This stark reality drives the focus from benchmark scores to what models physically fit on local machines.\n\nBy May 2026, Chinese models accounted for 61% of all tokens routed through OpenRouter, a market that quadrupled in the same period. On Hugging Face, Qwen models have surpassed Llama in cumulative downloads, with 40% of new LLM derivatives built on a Qwen base.\n\nA key development is the Qwen3.8-27B model, an Apache 2.0 licensed model that performs only four index points behind the leading 2.4-trillion-parameter network. Crucially, this 27-billion-parameter model fits entirely within a single gaming GPU.\n\nRunning models locally requires careful memory consideration; model weight is not total memory use. The KV cache grows with conversation, meaning a model that \"just barely fits\" will likely hit memory limits mid-task.\n\nQwen3.8-27B in Q4_K_M quantization needs 16.5–19.5 GB for weights plus 1.5 GB overhead, fitting on an RTX 3090 or 4090. It offers native vision-language and 262K context under Apache 2.0.\n\nFor Apple Silicon users, a 64 GB Mac mini M4 can run Qwen3.8-27B at about 7 tokens/sec, making it usable for non-interactive tasks. Other models in this class include Qwen3-Coder-Next 80B-A3B and gpt-oss-120b.\n\nFor local inference, 32 GB is the minimum, 48 GB is the sweet spot, and 64 GB allows for generous context lengths. Sparse MoE models, which need large memory pools but only read a fraction per token, are particularly well-suited for Apple Silicon's unified memory architecture.\n\n#LLMs #LocalAI #AIHardware #Qwen #AppleSilicon #TechNews\n\nSource: DEV",
+  "tweet": "A $20,000 Mac Studio offers the same tokens as cloud API credits, but takes 14 years to generate them. The LLM landscape is shifting: powerful models like Qwen3.8-27B now fit on consumer GPUs. What actually fits on your machine is the new benchmark. #LLMs #AIHardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/klukyanov/the-local-llm-weight-classes-september-2026-what-actually-fits-on-your-machine-128d",
+  "image": "",
+  "orig_title": "The Local LLM Weight Classes, September 2026: What Actually Fits on Your Machine",
+  "cluster_urls": [
+   "https://dev.to/klukyanov/the-local-llm-weight-classes-september-2026-what-actually-fits-on-your-machine-128d"
+  ],
+  "cluster_titles": [
+   "The Local LLM Weight Classes, September 2026: What Actually Fits on Your Machine"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260906-1406-0-what-llms-actually-fit-on-your-machine-in-se.png",
+   "20260906-1406-0-what-llms-actually-fit-on-your-machine-in-se-d1.png",
+   "20260906-1406-0-what-llms-actually-fit-on-your-machine-in-se-d2.png",
+   "20260906-1406-0-what-llms-actually-fit-on-your-machine-in-se-d3.png",
+   "20260906-1406-0-what-llms-actually-fit-on-your-machine-in-se-d4.png"
+  ]
+ },
+ {
+  "topic": "google_maps_shortest_route_algorithm",
+  "headline_marked": "[[Google Maps finds shortest routes]] in milliseconds across continents using advanced algorithms",
+  "headline": "Google Maps finds shortest routes in milliseconds across continents using advanced algorithms",
+  "summary": "Navigation apps instantly find optimal routes on massive road networks with hundreds of millions of nodes and edges, thanks to a progression of algorithms that shift complex calculations to preprocessing.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Navigation apps like Google Maps return optimal routes in milliseconds, even across continents. This involves searching road networks that can have hundreds of millions of nodes and edges, far too vast for brute force.",
+   "The solution isn't one algorithm but a series of improvements. Early methods like Dijkstra's algorithm guarantee optimal paths by expanding outwards from the source, but this can be slow for long distances as the search region grows large.",
+   "A* algorithm improves on Dijkstra by using a heuristic, like straight-line geographic distance, to guide the search towards the destination. This dramatically reduces visited nodes but still operates on the entire graph and can be slow for very long queries.",
+   "Bidirectional search further optimizes by running two simultaneous searches: one forward from the source and one backward from the destination. They meet in the middle, reducing the overall search region compared to a single-direction approach.",
+   "The most significant speedup comes from Contraction Hierarchies. This technique preprocesses the graph by identifying and \"contracting\" less important nodes, effectively creating a much smaller, smarter graph for queries.",
+   "Nodes are ranked by importance (e.g., major motorway junctions vs. residential dead-ends). When a node is contracted, it's temporarily removed, and \"shortcut\" edges are added between its neighbors to preserve optimal path information.",
+   "During an actual route query, the search only needs to navigate this preprocessed, hierarchical graph. This drastically reduces the online search time, allowing for near-instantaneous route calculations on continental-scale networks."
+  ],
+  "caption": "Ever wonder how Google Maps finds the shortest route in milliseconds, even across continents? It's not magic, but a progression of clever algorithms.\n\nNavigation apps like Google Maps return optimal routes in milliseconds, even across continents. This involves searching road networks that can have hundreds of millions of nodes and edges, far too vast for brute force.\n\nThe solution isn't one algorithm but a series of improvements. Early methods like Dijkstra's algorithm guarantee optimal paths by expanding outwards from the source, but this can be slow for long distances as the search region grows large.\n\nA* algorithm improves on Dijkstra by using a heuristic, like straight-line geographic distance, to guide the search towards the destination. This dramatically reduces visited nodes but still operates on the entire graph and can be slow for very long queries.\n\nBidirectional search further optimizes by running two simultaneous searches: one forward from the source and one backward from the destination. They meet in the middle, reducing the overall search region compared to a single-direction approach.\n\nThe most significant speedup comes from Contraction Hierarchies. This technique preprocesses the graph by identifying and \"contracting\" less important nodes, effectively creating a much smaller, smarter graph for queries.\n\nNodes are ranked by importance (e.g., major motorway junctions vs. residential dead-ends). When a node is contracted, it's temporarily removed, and \"shortcut\" edges are added between its neighbors to preserve optimal path information.\n\nDuring an actual route query, the search only needs to navigate this preprocessed, hierarchical graph. This drastically reduces the online search time, allowing for near-instantaneous route calculations on continental-scale networks.\n\n#Tech #Algorithms #GoogleMaps #SoftwareEngineering #Pathfinding #ComputerScience\n\nSource: DEV",
+  "tweet": "Ever wonder how Google Maps finds the shortest route in milliseconds, even across continents? It's not magic, but a progression of clever algorithms like Dijkstra, A*, and Contraction Hierarchies that preprocess massive road networks. #GoogleMaps #Algorithms #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "DEV",
+  "url": "https://dev.to/aditya_d_sharma/how-can-google-maps-find-the-shortest-route-so-fast-22fb",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ft0pj7ha1hmrdfp1sfdn7.png",
+  "orig_title": "How Can Google Maps Find the Shortest Route So Fast?",
+  "cluster_urls": [
+   "https://dev.to/aditya_d_sharma/how-can-google-maps-find-the-shortest-route-so-fast-22fb"
+  ],
+  "cluster_titles": [
+   "How Can Google Maps Find the Shortest Route So Fast?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260906-1406-1-google-maps-finds-shortest-routes-in-millise.png",
+   "20260906-1406-1-google-maps-finds-shortest-routes-in-millise-d1.png",
+   "20260906-1406-1-google-maps-finds-shortest-routes-in-millise-d2.png",
+   "20260906-1406-1-google-maps-finds-shortest-routes-in-millise-d3.png"
+  ]
+ }
+]

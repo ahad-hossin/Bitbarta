@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "ai_models_write_messier_code_than_humans",
+  "headline_marked": "[[13 of 14 AI models write messier code]] than human developers fixing the same bug",
+  "headline": "13 of 14 AI models write messier code than human developers fixing the same bug",
+  "summary": "A new study comparing AI-generated code fixes to human ones found that nearly all tested models increased code complexity or added dead code, with none performing better than humans.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new study analyzing 500 real bugs found that 13 out of 14 AI models produced messier code than human developers. These models consistently increased function complexity or introduced dead code when attempting to fix the same issues.",
+   "The research utilized the SWE-bench dataset, comprising 500 closed issues from open-source Python projects, each with an existing human fix. Model-generated patches were sourced from public leaderboard submissions, not run live for this study.",
+   "Code quality was measured using pyscn, a Python analyzer, focusing on cyclomatic complexity and dead code. These metrics were chosen for their accuracy when analyzing partial repositories, ensuring precise comparisons.",
+   "A patch was considered to 'regress' if it raised a function's complexity, added a high-risk function, or introduced dead code. Human patches caused regression in 24% of instances, providing a baseline for comparison.",
+   "The statistical significance is strong: 13 consecutive models performing worse than human parity yields a p-value of 0.00024. Twelve of the fourteen models individually showed p < 0.05, with six surviving Bonferroni correction.",
+   "Beyond code quality, models also frequently left behind 'scratch files' (e.g., reproduce_bug.py) that humans typically do not. These extra files, averaging up to 5.00 per bug for models compared to 0.00 for humans, contribute to repository clutter.",
+   "The issue of messier code and extra files is attributed to the models themselves, not just their agent frameworks. Tests with identical frameworks but different models still showed varying levels of code cleanliness and file creation."
+  ],
+  "caption": "New research reveals 13 out of 14 AI models write messier code than humans when fixing bugs. None performed better.\n\nA new study analyzing 500 real bugs found that 13 out of 14 AI models produced messier code than human developers. These models consistently increased function complexity or introduced dead code when attempting to fix the same issues.\n\nThe research utilized the SWE-bench dataset, comprising 500 closed issues from open-source Python projects, each with an existing human fix. Model-generated patches were sourced from public leaderboard submissions, not run live for this study.\n\nCode quality was measured using pyscn, a Python analyzer, focusing on cyclomatic complexity and dead code. These metrics were chosen for their accuracy when analyzing partial repositories, ensuring precise comparisons.\n\nA patch was considered to 'regress' if it raised a function's complexity, added a high-risk function, or introduced dead code. Human patches caused regression in 24% of instances, providing a baseline for comparison.\n\nThe statistical significance is strong: 13 consecutive models performing worse than human parity yields a p-value of 0.00024. Twelve of the fourteen models individually showed p < 0.05, with six surviving Bonferroni correction.\n\nBeyond code quality, models also frequently left behind 'scratch files' (e.g., reproduce_bug.py) that humans typically do not. These extra files, averaging up to 5.00 per bug for models compared to 0.00 for humans, contribute to repository clutter.\n\nThe issue of messier code and extra files is attributed to the models themselves, not just their agent frameworks. Tests with identical frameworks but different models still showed varying levels of code cleanliness and file creation.\n\n#AICode #SoftwareDevelopment #CodeQuality #AIResearch #Python #Developer\n\nSource: DEV",
+  "tweet": "New study: 13 of 14 AI models write messier code than humans fixing the same bugs, increasing complexity or adding dead code. None performed better. A stark look at AI's current code quality. #AICode #SoftwareDevelopment #AIResearch",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/daisukeyoda/13-of-14-models-write-messier-code-than-the-human-who-fixed-the-same-bug-4kn3",
+  "image": "",
+  "orig_title": "13 of 14 Models Write Messier Code Than the Human Who Fixed the Same Bug",
+  "cluster_urls": [
+   "https://dev.to/daisukeyoda/13-of-14-models-write-messier-code-than-the-human-who-fixed-the-same-bug-4kn3"
+  ],
+  "cluster_titles": [
+   "13 of 14 Models Write Messier Code Than the Human Who Fixed the Same Bug"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260906-2256-0-13-of-14-ai-models-write-messier-code-than-h.png",
+   "20260906-2256-0-13-of-14-ai-models-write-messier-code-than-h-d1.png",
+   "20260906-2256-0-13-of-14-ai-models-write-messier-code-than-h-d2.png",
+   "20260906-2256-0-13-of-14-ai-models-write-messier-code-than-h-d3.png"
+  ]
+ }
+]

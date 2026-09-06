@@ -8377,8 +8377,13 @@
   "headline": "S3, GCS, Azure Blob buckets are passively discovered and exploited without active scanning",
   "topic": "cloud_storage_exposed_buckets_exploit",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-09-06T06:06:35Z"
+  "status": "failed",
+  "at": "2026-09-06T06:06:35Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "95c1c4b2b58db2b7",
@@ -8386,7 +8391,12 @@
   "headline": "Security audit failed CI due to network error, not actual vulnerability",
   "topic": "security_audit_process_failure_drama",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-09-06T06:06:35Z"
+  "status": "failed",
+  "at": "2026-09-06T06:06:35Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

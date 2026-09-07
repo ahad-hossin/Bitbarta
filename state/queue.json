@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "ai_pii_data_security_prompts",
+  "headline_marked": "[[Sensitive data in GenAI prompts]] creates hidden risks beyond the AI model itself.",
+  "headline": "Sensitive data in GenAI prompts creates hidden risks beyond the AI model itself.",
+  "summary": "The journey of sensitive data in GenAI applications extends far beyond the AI model, with PII potentially copied and stored across numerous internal systems.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "When sensitive data, or PII, enters a GenAI prompt, its journey often extends far beyond the AI model itself. Many applications using GenAI for summarization or customer support inadvertently expose this data to broader risks.",
+   "The common advice to avoid putting PII into AI oversimplifies the problem. Even if the model provider has strong protections, the data can be captured by application logs, API logs, traces, monitoring systems, and conversation history.",
+   "Consider a customer support app summarizing complaints. The full prompt, containing names, emails, and account numbers, might be logged for troubleshooting. This creates extra copies of sensitive data outside the model's direct control.",
+   "A critical step is to question if the model truly needs all the sensitive data. By sending only necessary information, such as just the complaint text without PII, developers can significantly reduce the data's exposure.",
+   "Furthermore, sensitive information can reappear in the model's response. This output might then be logged, stored in conversation history, sent to other services, or displayed where it shouldn't, continuing the risk chain.",
+   "Before deploying GenAI applications, it's crucial to trace the data flow from beginning to end. Identifying where data is sent, where copies are created, and whether all of it is truly necessary helps prevent accidental exposures."
+  ],
+  "caption": "Sensitive data in GenAI prompts doesn't just go to the model. It can be copied across multiple systems, creating unseen risks.\n\nWhen sensitive data, or PII, enters a GenAI prompt, its journey often extends far beyond the AI model itself. Many applications using GenAI for summarization or customer support inadvertently expose this data to broader risks.\n\nThe common advice to avoid putting PII into AI oversimplifies the problem. Even if the model provider has strong protections, the data can be captured by application logs, API logs, traces, monitoring systems, and conversation history.\n\nConsider a customer support app summarizing complaints. The full prompt, containing names, emails, and account numbers, might be logged for troubleshooting. This creates extra copies of sensitive data outside the model's direct control.\n\nA critical step is to question if the model truly needs all the sensitive data. By sending only necessary information, such as just the complaint text without PII, developers can significantly reduce the data's exposure.\n\nFurthermore, sensitive information can reappear in the model's response. This output might then be logged, stored in conversation history, sent to other services, or displayed where it shouldn't, continuing the risk chain.\n\nBefore deploying GenAI applications, it's crucial to trace the data flow from beginning to end. Identifying where data is sent, where copies are created, and whether all of it is truly necessary helps prevent accidental exposures.\n\n#AI #DataPrivacy #Cybersecurity #GenAI #PII #TechSecurity\n\nSource: DEV",
+  "tweet": "Sensitive data in GenAI prompts doesn't just go to the model. It can be copied across multiple systems, creating unseen risks. Understanding the full data flow is crucial for PII protection. #DataPrivacy #AI #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jaimin_suketupatel_da0e0/pii-meets-genai-what-actually-happens-when-sensitive-data-enters-your-prompt-41gk",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvg6zqy1059flot3clxqb.png",
+  "orig_title": "PII Meets GenAI: What Actually Happens When Sensitive Data Enters Your Prompt?",
+  "cluster_urls": [
+   "https://dev.to/jaimin_suketupatel_da0e0/pii-meets-genai-what-actually-happens-when-sensitive-data-enters-your-prompt-41gk"
+  ],
+  "cluster_titles": [
+   "PII Meets GenAI: What Actually Happens When Sensitive Data Enters Your Prompt?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260907-0607-0-sensitive-data-in-genai-prompts-creates-hidd.png",
+   "20260907-0607-0-sensitive-data-in-genai-prompts-creates-hidd-d1.png",
+   "20260907-0607-0-sensitive-data-in-genai-prompts-creates-hidd-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_agent_browser_automation",
+  "headline_marked": "chrome-bridge: [[let any AI agent drive your real logged-in Chrome]]",
+  "headline": "chrome-bridge: let any AI agent drive your real logged-in Chrome",
+  "summary": "chrome-bridge enables AI agents to control your actively logged-in Chrome browser, bypassing the need for new, clean browser sessions that lack cookies and user data.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "chrome-bridge is a new tool that allows AI agents to interact with your already logged-in Chrome browser, a significant departure from existing solutions. Unlike Playwright or MCP browser bridges, which start fresh, logged-out sessions, chrome-bridge leverages your current browser state.",
+   "The system works via a tiny, unpacked Chrome extension that communicates over WebSocket with a local, zero-dependency Node server. This setup allows any AI agent capable of running a shell command to seamlessly drive the browser.",
+   "A key feature is its 'snap' functionality, which captures the entire page as a compact text tree with actionable references. This method is roughly 10 times more token-efficient than processing a full screenshot, optimizing AI agent performance and cost.",
+   "Setup requires one paste into your agent's configuration and a single click to load the extension in Chrome. The project is MIT licensed, has zero dependencies, and requires Node.js version 18 or higher."
+  ],
+  "caption": "AI agents can now drive your *actual*, logged-in Chrome browser, complete with all your cookies and session data.\n\nchrome-bridge is a new tool that allows AI agents to interact with your already logged-in Chrome browser, a significant departure from existing solutions. Unlike Playwright or MCP browser bridges, which start fresh, logged-out sessions, chrome-bridge leverages your current browser state.\n\nThe system works via a tiny, unpacked Chrome extension that communicates over WebSocket with a local, zero-dependency Node server. This setup allows any AI agent capable of running a shell command to seamlessly drive the browser.\n\nA key feature is its 'snap' functionality, which captures the entire page as a compact text tree with actionable references. This method is roughly 10 times more token-efficient than processing a full screenshot, optimizing AI agent performance and cost.\n\nSetup requires one paste into your agent's configuration and a single click to load the extension in Chrome. The project is MIT licensed, has zero dependencies, and requires Node.js version 18 or higher.\n\n#AI #DeveloperTools #ChromeExtension #OpenSource #WebAutomation #Tech\n\nSource: DEV",
+  "tweet": "AI agents can now drive your *actual*, logged-in Chrome browser, complete with all your cookies and session data. chrome-bridge is an MIT-licensed tool that uses a tiny extension and Node server for seamless web automation. #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/siropkin/chrome-bridge-let-any-ai-agent-drive-your-real-logged-in-chrome-b5n",
+  "image": "",
+  "orig_title": "chrome-bridge: let any AI agent drive your real logged-in Chrome",
+  "cluster_urls": [
+   "https://dev.to/siropkin/chrome-bridge-let-any-ai-agent-drive-your-real-logged-in-chrome-b5n"
+  ],
+  "cluster_titles": [
+   "chrome-bridge: let any AI agent drive your real logged-in Chrome"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260907-0607-1-chrome-bridge-let-any-ai-agent-drive-your-re.png",
+   "20260907-0607-1-chrome-bridge-let-any-ai-agent-drive-your-re-d1.png",
+   "20260907-0607-1-chrome-bridge-let-any-ai-agent-drive-your-re-d2.png"
+  ]
+ }
+]

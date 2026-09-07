@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "lg_smart_tv_audio_recording_privacy_concerns",
+  "headline_marked": "[[LG smart TVs log audio]] and scan networks even when off",
+  "headline": "LG smart TVs log audio and scan networks even when off",
+  "summary": "Researchers found LG smart TVs continuously sweep home networks, map secondary devices, and log microphone audio while appearing to be turned off, feeding data into LG Ad Solutions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Independent security researchers and Gamers Nexus have found that retail LG OLED TVs, including the G5 model, actively scan local networks for unrelated hardware like phones and smartwatches. The TVs also gather neighboring Wi-Fi network names, signal strengths, and location data.",
+   "This collected data is sent to LG Ad Solutions, the company's targeted advertising division. LG claims to have sold approximately 216 million smart TVs globally, while its ad division states it has access to 363 million addressable devices in the US alone through network tracking.",
+   "Beyond network scanning, the TVs employ Automated Content Recognition (ACR) to log viewing habits by sampling on-screen audio and video. New testing reveals that this data collection extends beyond ACR, with TVs capturing clear microphone audio even when the screen appears powered down in standby mode.",
+   "When disconnected from Ethernet, the LG sets were observed to continue saving voice input locally. This stored audio data is then uploaded once network access is restored, raising significant privacy concerns.",
+   "Researchers also identified remote code execution vulnerabilities in LG's webOS, which are currently undergoing responsible disclosure. Due to the broad network listeners and data sweeps enabled by default, the team recommends disconnecting LG TVs from the internet and using external streaming devices instead."
+  ],
+  "caption": "LG smart TVs are reportedly logging microphone audio and scanning local networks for other devices, even when they appear to be turned off.\n\nIndependent security researchers and Gamers Nexus have found that retail LG OLED TVs, including the G5 model, actively scan local networks for unrelated hardware like phones and smartwatches. The TVs also gather neighboring Wi-Fi network names, signal strengths, and location data.\n\nThis collected data is sent to LG Ad Solutions, the company's targeted advertising division. LG claims to have sold approximately 216 million smart TVs globally, while its ad division states it has access to 363 million addressable devices in the US alone through network tracking.\n\nBeyond network scanning, the TVs employ Automated Content Recognition (ACR) to log viewing habits by sampling on-screen audio and video. New testing reveals that this data collection extends beyond ACR, with TVs capturing clear microphone audio even when the screen appears powered down in standby mode.\n\nWhen disconnected from Ethernet, the LG sets were observed to continue saving voice input locally. This stored audio data is then uploaded once network access is restored, raising significant privacy concerns.\n\nResearchers also identified remote code execution vulnerabilities in LG's webOS, which are currently undergoing responsible disclosure. Due to the broad network listeners and data sweeps enabled by default, the team recommends disconnecting LG TVs from the internet and using external streaming devices instead.\n\n#LGTV #SmartTV #Privacy #Security #DataBreach\n\nSource: Hacker News",
+  "tweet": "LG smart TVs are reportedly logging audio and scanning networks even when off. Researchers found TVs mapping devices and capturing mic audio, feeding data to LG Ad Solutions. They recommend disconnecting from the internet. #LGTV #Privacy #Security",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "lg.com",
+  "source": "Hacker News",
+  "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
+  "image": "",
+  "orig_title": "LG smart TVs caught logging audio with screen off and snooping on local devices",
+  "cluster_urls": [
+   "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html"
+  ],
+  "cluster_titles": [
+   "LG smart TVs caught logging audio with screen off and snooping on local devices"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260907-1613-0-lg-smart-tvs-log-audio-and-scan-networks-eve.png",
+   "20260907-1613-0-lg-smart-tvs-log-audio-and-scan-networks-eve-d1.png",
+   "20260907-1613-0-lg-smart-tvs-log-audio-and-scan-networks-eve-d2.png",
+   "20260907-1613-0-lg-smart-tvs-log-audio-and-scan-networks-eve-d3.png"
+  ]
+ }
+]

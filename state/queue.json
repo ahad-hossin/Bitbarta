@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "topic": "ai_agent_code_review_process",
+  "headline_marked": "[[Blind Replay Before Merge]]: Only Merge Agent Diffs a Clean Environment Recreates",
+  "headline": "Blind Replay Before Merge: Only Merge Agent Diffs a Clean Environment Recreates",
+  "summary": "Agent-written patches often contain hidden context from chat sessions, making them unreviewable. A new protocol ensures only reproducible diffs are merged, preventing future issues.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "Agent-written patches generated within long chat sessions are often not reviewable for merge due to hidden constraints and context from the conversation that never reach the repository or subsequent reviewers.",
+   "To ensure durable results, a pairing session should keep only the diff that a second, memory-free environment can recreate. The brief, not the chat transcript, becomes the source of truth for this recreation before any merge discussion.",
+   "Chat windows can quietly store rejected files, private service names, and half-stated architecture, which later readers will never see. This hidden context should be treated as contamination rather than helpful memory for the model.",
+   "The proposed protocol involves a driver chasing an agent-assisted patch and a senior partner who refuses to merge from chat history alone. Work begins only after both can describe the desired outcome in file-level terms on disk.",
+   "Until a clear description exists, every generated diff stays on a throwaway branch with no merge discussion. The process prioritizes replayability on the second attempt as mandatory, even if the first attempt is slower.",
+   "The senior partner's approach focuses on demanding answers that a stranger could follow, then writing those answers into the repository. Questions target outcome, verification, blast radius, and isolation, not conversational tone.",
+   "Early dead ends included asking the original chat to summarize requirements (which still smuggled nicknames and omitted crucial details) and exporting full transcripts (which included rejected approaches). Both led to contaminated replays.",
+   "Another pitfall was comparing patches by eye within the original editor session, as visual memory often hid extra files or unapproved changes. A mechanical gate, like a command exit code, was needed for merge approval.",
+   "The core rule established is that a patch is mergeable only when a clean environment, given the repository and a short brief, produces a change that existing tests accept. Chat-only diffs remain on disposable branches.",
+   "This method trades a fast first attempt for a replayable second attempt that a later reviewer can understand. While slower initially, it is faster than debugging production issues that only the original model session ever understood."
+  ],
+  "caption": "Merging AI-generated code? Hidden context in chat sessions can lead to unreviewable changes.\n\nAgent-written patches generated within long chat sessions are often not reviewable for merge due to hidden constraints and context from the conversation that never reach the repository or subsequent reviewers.\n\nTo ensure durable results, a pairing session should keep only the diff that a second, memory-free environment can recreate. The brief, not the chat transcript, becomes the source of truth for this recreation before any merge discussion.\n\nChat windows can quietly store rejected files, private service names, and half-stated architecture, which later readers will never see. This hidden context should be treated as contamination rather than helpful memory for the model.\n\nThe proposed protocol involves a driver chasing an agent-assisted patch and a senior partner who refuses to merge from chat history alone. Work begins only after both can describe the desired outcome in file-level terms on disk.\n\nUntil a clear description exists, every generated diff stays on a throwaway branch with no merge discussion. The process prioritizes replayability on the second attempt as mandatory, even if the first attempt is slower.\n\nThe senior partner's approach focuses on demanding answers that a stranger could follow, then writing those answers into the repository. Questions target outcome, verification, blast radius, and isolation, not conversational tone.\n\nEarly dead ends included asking the original chat to summarize requirements (which still smuggled nicknames and omitted crucial details) and exporting full transcripts (which included rejected approaches). Both led to contaminated replays.\n\nAnother pitfall was comparing patches by eye within the original editor session, as visual memory often hid extra files or unapproved changes. A mechanical gate, like a command exit code, was needed for merge approval.\n\n#Developer #AI #SoftwareDevelopment #CodeReview #Tech #Programming\n\nSource: DEV",
+  "tweet": "Merging AI-generated code? Hidden context in chat sessions can lead to unreviewable changes. Learn a new protocol to ensure agent-written patches are reproducible and clean before merge. #Developer #AI #CodeReview",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/codehub_1304/blind-replay-before-merge-keep-only-the-agent-diff-a-clean-environment-recreates-5ad6",
+  "image": "",
+  "orig_title": "Blind Replay Before Merge: Keep Only the Agent Diff a Clean Environment Recreates",
+  "cluster_urls": [
+   "https://dev.to/codehub_1304/blind-replay-before-merge-keep-only-the-agent-diff-a-clean-environment-recreates-5ad6"
+  ],
+  "cluster_titles": [
+   "Blind Replay Before Merge: Keep Only the Agent Diff a Clean Environment Recreates"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260907-1006-0-blind-replay-before-merge-only-merge-agent-d.png",
+   "20260907-1006-0-blind-replay-before-merge-only-merge-agent-d-d1.png",
+   "20260907-1006-0-blind-replay-before-merge-only-merge-agent-d-d2.png",
+   "20260907-1006-0-blind-replay-before-merge-only-merge-agent-d-d3.png",
+   "20260907-1006-0-blind-replay-before-merge-only-merge-agent-d-d4.png"
+  ]
+ }
+]

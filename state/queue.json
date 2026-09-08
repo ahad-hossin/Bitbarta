@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "claude_code_java_monolith_refactor",
+  "headline_marked": "[[Claude Code Refactored a 200K-Line Java Monolith]]. Here's the Honest Result.",
+  "headline": "Claude Code Refactored a 200K-Line Java Monolith. Here's the Honest Result.",
+  "summary": "A team used Claude Code to refactor a 200,000-line Java monolith, achieving 89% success on mechanical tasks and modernizing code. However, it led to an insidious drop in test coverage due to overlooked test file relocation.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A financial services team made the bold decision to let an AI agent, Claude Code, autonomously refactor a 200,000-line Java monolith. The goal was to extract four bounded contexts into separate modules, update to Java 21 patterns, and eliminate three known anti-patterns.",
+   "The team opted for the AI approach because the alternative — manual refactoring with eight engineers — would take 4-6 months, cause constant merge conflicts, and require maintaining two versions of abstractions simultaneously. Critical paths in their 68% test-covered codebase were at 94%, providing a safety net for AI-driven changes.",
+   "Before any code was touched, a week was spent configuring the environment and crafting a detailed 400-line CLAUDE.md. This document included a crucial \"what NOT to do\" section, which prevented the model from making creative but undesirable changes.",
+   "Every autonomous run concluded with Claude Code executing a verification script before committing, and if any check failed, it was instructed to rollback changes and document the reason. This critical mechanism prevented silent failures from accumulating in the codebase.",
+   "Claude Code excelled at mechanical tasks, correctly relocating 127 out of 143 classes across modules in the first overnight run, achieving an 89% success rate. This task, typically a multi-day job for humans with numerous merge conflicts, was handled with consistent patterns and complete import updates by the AI.",
+   "Within the moved classes, the AI consistently applied modern Java idioms, converting 67 POJOs to records, replacing 23 switch statements with expressions, and modernizing 31 Optional usages. Every conversion passed the existing test suite, proving the AI's ability to improve code quality at scale.",
+   "The model also generated CHANGELOG entries for meaningful changes, which were often more comprehensive than human-written Architectural Decision Records (ADRs). These entries accurately noted \"remaining concerns,\" indicating what the model had not yet completed.",
+   "However, an insidious failure emerged: test coverage dropped from 68% to 61% on day three. Claude Code moved classes but left their corresponding test files in the old packages, causing tests to pass for classes no longer in the primary codebase and creating a false sense of security."
+  ],
+  "caption": "A team let an AI refactor a 200,000-line Java monolith. The results were unexpected, with both significant gains and a critical flaw.\n\nA financial services team made the bold decision to let an AI agent, Claude Code, autonomously refactor a 200,000-line Java monolith. The goal was to extract four bounded contexts into separate modules, update to Java 21 patterns, and eliminate three known anti-patterns.\n\nThe team opted for the AI approach because the alternative — manual refactoring with eight engineers — would take 4-6 months, cause constant merge conflicts, and require maintaining two versions of abstractions simultaneously. Critical paths in their 68% test-covered codebase were at 94%, providing a safety net for AI-driven changes.\n\nBefore any code was touched, a week was spent configuring the environment and crafting a detailed 400-line CLAUDE.md. This document included a crucial \"what NOT to do\" section, which prevented the model from making creative but undesirable changes.\n\nEvery autonomous run concluded with Claude Code executing a verification script before committing, and if any check failed, it was instructed to rollback changes and document the reason. This critical mechanism prevented silent failures from accumulating in the codebase.\n\nClaude Code excelled at mechanical tasks, correctly relocating 127 out of 143 classes across modules in the first overnight run, achieving an 89% success rate. This task, typically a multi-day job for humans with numerous merge conflicts, was handled with consistent patterns and complete import updates by the AI.\n\nWithin the moved classes, the AI consistently applied modern Java idioms, converting 67 POJOs to records, replacing 23 switch statements with expressions, and modernizing 31 Optional usages. Every conversion passed the existing test suite, proving the AI's ability to improve code quality at scale.\n\n#AI #SoftwareDevelopment #Java #Refactoring #ClaudeCode #Tech\n\nSource: DEV",
+  "tweet": "A team tasked Claude Code with refactoring a 200K-line Java monolith. It excelled at mechanical tasks and modernization, but an insidious bug caused test coverage to drop. The honest results are a must-read for dev teams. #AI #SoftwareDev #Java",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/avaneeshyadav/we-let-claude-code-refactor-our-200k-line-java-monolith-heres-the-honest-result-3fdf",
+  "image": "",
+  "orig_title": "We Let Claude Code Refactor Our 200K-Line Java Monolith. Here's the Honest Result.",
+  "cluster_urls": [
+   "https://dev.to/avaneeshyadav/we-let-claude-code-refactor-our-200k-line-java-monolith-heres-the-honest-result-3fdf"
+  ],
+  "cluster_titles": [
+   "We Let Claude Code Refactor Our 200K-Line Java Monolith. Here's the Honest Result."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260908-1806-0-claude-code-refactored-a-200k-line-java-mono.png",
+   "20260908-1806-0-claude-code-refactored-a-200k-line-java-mono-d1.png",
+   "20260908-1806-0-claude-code-refactored-a-200k-line-java-mono-d2.png",
+   "20260908-1806-0-claude-code-refactored-a-200k-line-java-mono-d3.png",
+   "20260908-1806-0-claude-code-refactored-a-200k-line-java-mono-d4.png"
+  ]
+ }
+]

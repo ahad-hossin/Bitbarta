@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "mistral_3b_funding_ai_frontier",
+  "headline_marked": "[[Mistral raises €3B]] in Europe's largest tech equity round, valued over €21B",
+  "headline": "Mistral raises €3B in Europe's largest tech equity round, valued over €21B",
+  "summary": "The Series D funding round, led by Samsung Electronics, is the largest equity fundraising ever completed by a European technology company, valuing Mistral at over €21 billion.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Mistral has announced a €3 billion Series D funding round, achieving a post-money valuation of over €21 billion. This makes it the largest equity fundraising round ever completed by a European technology company, just three years after its launch.",
+   "Samsung Electronics led the round, with co-leads Scaleup Europe Fund (managed by EQT) and existing investor PSG Equity also participating. The investment reflects strong confidence from a global syndicate of strategic and financial investors.",
+   "The substantial capital will be used to significantly expand Mistral's frontier research, which forms the core of its infrastructure, products, and sovereignty initiatives. It will also scale compute capacity for training powerful models and accelerate commercial growth and international expansion.",
+   "Mistral currently operates across 20 countries, supporting over 125 global enterprises with their mission-critical AI transformation. Notable clients include Airbus, ASML, and HSBC, demonstrating its impact on major industries.",
+   "The focus in generative AI is shifting from merely building powerful models to harnessing AI for mission-critical needs without surrendering control. Organizations and governments increasingly demand performance combined with control, choice, and independence.",
+   "Mistral positions itself as the only AI company globally building the full stack required for this demand: open-weight models, the underlying infrastructure and compute, and products for production deployment. This approach ensures customers avoid vendor lock-in.",
+   "Mistral's full-stack and open strategy allows organizations to build on its platform without exposing valuable data, workflows, or institutional knowledge outside their own walls. This defines Mistral's \"sovereign AI layer,\" ensuring control over data, models, compute, and production systems.",
+   "The funding round signifies a strategic endorsement from investors across Europe, Asia, and North America. It includes global technology leaders and growth investors, alongside existing shareholders who have supported Mistral's development.",
+   "New investors include Advent, funds and accounts managed by BlackRock, and the Grand Duchy of Luxembourg. Existing investors like a16z, ASML, NVIDIA, and Salesforce Ventures also participated, highlighting broad industry backing."
+  ],
+  "caption": "Mistral just secured €3 billion in Series D funding, valuing the AI startup at over €21 billion. This is the largest equity round ever for a European tech company.\n\nMistral has announced a €3 billion Series D funding round, achieving a post-money valuation of over €21 billion. This makes it the largest equity fundraising round ever completed by a European technology company, just three years after its launch.\n\nSamsung Electronics led the round, with co-leads Scaleup Europe Fund (managed by EQT) and existing investor PSG Equity also participating. The investment reflects strong confidence from a global syndicate of strategic and financial investors.\n\nThe substantial capital will be used to significantly expand Mistral's frontier research, which forms the core of its infrastructure, products, and sovereignty initiatives. It will also scale compute capacity for training powerful models and accelerate commercial growth and international expansion.\n\nMistral currently operates across 20 countries, supporting over 125 global enterprises with their mission-critical AI transformation. Notable clients include Airbus, ASML, and HSBC, demonstrating its impact on major industries.\n\nThe focus in generative AI is shifting from merely building powerful models to harnessing AI for mission-critical needs without surrendering control. Organizations and governments increasingly demand performance combined with control, choice, and independence.\n\nMistral positions itself as the only AI company globally building the full stack required for this demand: open-weight models, the underlying infrastructure and compute, and products for production deployment. This approach ensures customers avoid vendor lock-in.\n\nMistral's full-stack and open strategy allows organizations to build on its platform without exposing valuable data, workflows, or institutional knowledge outside their own walls. This defines Mistral's \"sovereign AI layer,\" ensuring control over data, models, compute, and production systems.\n\n#MistralAI #AIFunding #TechNews #SovereignAI #EuropeanTech #AI\n\nSource: Hacker News",
+  "tweet": "Mistral just secured €3 billion in Series D funding, valuing the AI startup at over €21 billion. This marks the largest equity round ever for a European tech company, led by Samsung Electronics. Focus on sovereign, open-weight AI. #MistralAI #AIFunding #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "mistral.ai",
+  "source": "Hacker News",
+  "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+  "image": "",
+  "orig_title": "Mistral raises €3B to make sovereign, open-weight AI the technology frontier",
+  "cluster_urls": [
+   "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
+  ],
+  "cluster_titles": [
+   "Mistral raises €3B to make sovereign, open-weight AI the technology frontier"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260908-1206-0-mistral-raises-3b-in-europe-s-largest-tech-e.png",
+   "20260908-1206-0-mistral-raises-3b-in-europe-s-largest-tech-e-d1.png",
+   "20260908-1206-0-mistral-raises-3b-in-europe-s-largest-tech-e-d2.png",
+   "20260908-1206-0-mistral-raises-3b-in-europe-s-largest-tech-e-d3.png"
+  ]
+ },
+ {
+  "topic": "claude_fable_5_hybrid_reasoning",
+  "headline_marked": "[[Claude Fable 5 introduces hybrid reasoning]], thinking always on, with adjustable depth",
+  "headline": "Claude Fable 5 introduces hybrid reasoning, thinking always on, with adjustable depth",
+  "summary": "Anthropic's Claude Fable 5 reasoning engine keeps deep thinking active for every request. Developers can now dial reasoning depth up or down, optimizing for speed or accuracy in complex tasks.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Anthropic's new Claude Fable 5 reasoning engine maintains deep thinking for every request, allowing developers to adjust the reasoning depth. This departs from older LLMs that used fixed compute parameters, consuming uniform processing energy regardless of query complexity.",
+   "The core innovation is the model's ability to internally think through a problem before outputting a final answer. This 'thinking phase' is always active, generating internal thinking tokens to simulate a step-by-step reasoning process, which drastically improves accuracy for complex tasks like maths, coding, and logical evaluation.",
+   "Developers can scale the depth of this thinking on-demand using a single 'effort' control. Lower effort levels provide faster answers with less latency and token spend, while higher effort levels enable deeper reasoning for hard maths and multi-step logic.",
+   "To implement these capabilities, developers must use the updated Anthropic API schema. Reasoning depth is set via an `output_config` block, where the `effort` field accepts values like \"low\", \"medium\", \"high\", \"xhigh\", or \"max\", replacing previous token-budget dials.",
+   "Crucially, parameters like `thinking: {type: \"enabled\"}` or `thinking: {type: \"disabled\"}` and `budget_tokens` are removed and will return an HTTP 400 error. The adaptive thinking runs automatically, with the effort level controlling its intensity.",
+   "For real-time applications, Fable 5 streams both thinking steps and final content via Server-Sent Events (SSE). Thinking arrives as `thinking_delta` content blocks, allowing developers to display internal reasoning or just the final answer.",
+   "Developers must manage token accounting carefully, as thinking tokens contribute to API billing. Implementing aggressive prompt caching is recommended to avoid re-running reasoning cycles on identical requests."
+  ],
+  "caption": "Anthropic's Claude Fable 5 redefines LLM reasoning: thinking is always on. Developers can now precisely control the depth of this internal process.\n\nAnthropic's new Claude Fable 5 reasoning engine maintains deep thinking for every request, allowing developers to adjust the reasoning depth. This departs from older LLMs that used fixed compute parameters, consuming uniform processing energy regardless of query complexity.\n\nThe core innovation is the model's ability to internally think through a problem before outputting a final answer. This 'thinking phase' is always active, generating internal thinking tokens to simulate a step-by-step reasoning process, which drastically improves accuracy for complex tasks like maths, coding, and logical evaluation.\n\nDevelopers can scale the depth of this thinking on-demand using a single 'effort' control. Lower effort levels provide faster answers with less latency and token spend, while higher effort levels enable deeper reasoning for hard maths and multi-step logic.\n\nTo implement these capabilities, developers must use the updated Anthropic API schema. Reasoning depth is set via an `output_config` block, where the `effort` field accepts values like \"low\", \"medium\", \"high\", \"xhigh\", or \"max\", replacing previous token-budget dials.\n\nCrucially, parameters like `thinking: {type: \"enabled\"}` or `thinking: {type: \"disabled\"}` and `budget_tokens` are removed and will return an HTTP 400 error. The adaptive thinking runs automatically, with the effort level controlling its intensity.\n\nFor real-time applications, Fable 5 streams both thinking steps and final content via Server-Sent Events (SSE). Thinking arrives as `thinking_delta` content blocks, allowing developers to display internal reasoning or just the final answer.\n\nDevelopers must manage token accounting carefully, as thinking tokens contribute to API billing. Implementing aggressive prompt caching is recommended to avoid re-running reasoning cycles on identical requests.\n\n#AI #LLM #Anthropic #ClaudeFable5 #Developer #Tech\n\nSource: DEV",
+  "tweet": "Claude Fable 5's new hybrid reasoning means LLMs are always thinking. Developers can dial reasoning depth from 'low' to 'max' for optimal speed or accuracy. This changes how models tackle complex tasks like coding and math. #AI #LLM #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/mecanik-dev/claude-fable-5-hybrid-reasoning-thinking-vs-speed-modes-2lek",
+  "image": "",
+  "orig_title": "Claude Fable 5 Hybrid Reasoning: Thinking vs. Speed Modes",
+  "cluster_urls": [
+   "https://dev.to/mecanik-dev/claude-fable-5-hybrid-reasoning-thinking-vs-speed-modes-2lek"
+  ],
+  "cluster_titles": [
+   "Claude Fable 5 Hybrid Reasoning: Thinking vs. Speed Modes"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260908-1206-1-claude-fable-5-introduces-hybrid-reasoning-t.png",
+   "20260908-1206-1-claude-fable-5-introduces-hybrid-reasoning-t-d1.png",
+   "20260908-1206-1-claude-fable-5-introduces-hybrid-reasoning-t-d2.png",
+   "20260908-1206-1-claude-fable-5-introduces-hybrid-reasoning-t-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai_code_review_fails_gnu_strip_backdoor",
+  "headline_marked": "[[GNU strip backdoor evades AI code review]], highlighting a critical blind spot",
+  "headline": "GNU strip backdoor evades AI code review, highlighting a critical blind spot",
+  "summary": "A new paper demonstrates a \"trusting-trust\" attack using GNU strip that bypasses AI code review tools. The malicious payload propagates through tampered ELF binaries, making it invisible to source-based AI analysis.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A recent paper (arxiv 2607.24888) reveals a critical vulnerability in AI code review, demonstrating Ken Thompson's 'trusting-trust' attack using GNU strip. This attack is not compiler-specific, successfully implanting a payload via tampered ELF binaries.",
+   "The core issue for AI review tools is their focus on source code and patch text. They do not analyze the build path or binary seeds, meaning the malicious code, which arrives as a finished strip binary in the dependency closure, remains undetected.",
+   "This highlights a crucial distinction: AI excels at identifying bugs in source code diffs, but it fails to verify if the artifact users run truly matches the reviewed source. This is an artifact provenance and build reproducibility challenge, not a traditional code review task.",
+   "Teams adopting AI code review must understand its limitations. While effective for source-level analysis, relying on AI approval for artifact integrity can inadvertently trade one trust problem (compiler) for another (strip), without truly enhancing security."
+  ],
+  "caption": "A new paper reveals a critical flaw in AI code review: it cannot detect \"trusting-trust\" attacks hidden in compiled binaries.\n\nA recent paper (arxiv 2607.24888) reveals a critical vulnerability in AI code review, demonstrating Ken Thompson's 'trusting-trust' attack using GNU strip. This attack is not compiler-specific, successfully implanting a payload via tampered ELF binaries.\n\nThe core issue for AI review tools is their focus on source code and patch text. They do not analyze the build path or binary seeds, meaning the malicious code, which arrives as a finished strip binary in the dependency closure, remains undetected.\n\nThis highlights a crucial distinction: AI excels at identifying bugs in source code diffs, but it fails to verify if the artifact users run truly matches the reviewed source. This is an artifact provenance and build reproducibility challenge, not a traditional code review task.\n\nTeams adopting AI code review must understand its limitations. While effective for source-level analysis, relying on AI approval for artifact integrity can inadvertently trade one trust problem (compiler) for another (strip), without truly enhancing security.\n\n#AI #CodeReview #Security #Cybersecurity #SoftwareDevelopment #Backdoor\n\nSource: DEV",
+  "tweet": "AI code review has a major blind spot. A new paper shows \"trusting-trust\" attacks using GNU strip bypass all source-based AI analysis, as the malicious code is in binaries, not source. Developers, beware! #AI #Security #CodeReview",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/cole_halton_42f71d71b809b/the-gnu-strip-backdoor-is-the-case-ai-code-review-cant-see-2j1f",
+  "image": "",
+  "orig_title": "The GNU strip backdoor is the case AI code review can't see",
+  "cluster_urls": [
+   "https://dev.to/cole_halton_42f71d71b809b/the-gnu-strip-backdoor-is-the-case-ai-code-review-cant-see-2j1f"
+  ],
+  "cluster_titles": [
+   "The GNU strip backdoor is the case AI code review can't see"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260908-0706-0-gnu-strip-backdoor-evades-ai-code-review-hig.png",
+   "20260908-0706-0-gnu-strip-backdoor-evades-ai-code-review-hig-d1.png",
+   "20260908-0706-0-gnu-strip-backdoor-evades-ai-code-review-hig-d2.png"
+  ]
+ },
+ {
+  "topic": "x402_micropayments_for_ai_agents",
+  "headline_marked": "[[x402 enables HTTP-Native Micropayments for AI Agents]] with real code examples",
+  "headline": "x402 enables HTTP-Native Micropayments for AI Agents with real code examples",
+  "summary": "The x402 specification repurposes the HTTP 402 Payment Required status code to integrate self-contained micropayments directly into API calls for AI agents, ideal for high-volume, low-value transactions.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The x402 specification introduces HTTP-native micropayments for autonomous AI agents, allowing them to charge for individual API calls without needing a separate billing system. It repurposes the HTTP 402 Payment Required status code to facilitate this.",
+   "When a client hasn't paid, the server responds with a 402 status, detailing the required payment. Once the payment is verified, the server processes the original request and returns a standard 200 OK response.",
+   "This mechanism works over any transport supporting HTTP headers, including REST, GraphQL, and gRPC-HTTP/2. It eliminates the need for new protocol layers, side-channel escrow services, or dedicated billing databases.",
+   "The spec is blockchain-agnostic, though the reference implementation uses USDC on Base for its low fees (around $0.0001) and fast finality (about 2 seconds). This makes it practical for frequent, small transactions.",
+   "x402 is most effective for high-volume, low-value calls, where traditional invoicing is impractical. For agents making only a few expensive calls daily, the added complexity might not be justified."
+  ],
+  "caption": "x402 repurposes HTTP 402 to enable native micropayments for AI agent API calls, integrating payments directly into the request flow.\n\nThe x402 specification introduces HTTP-native micropayments for autonomous AI agents, allowing them to charge for individual API calls without needing a separate billing system. It repurposes the HTTP 402 Payment Required status code to facilitate this.\n\nWhen a client hasn't paid, the server responds with a 402 status, detailing the required payment. Once the payment is verified, the server processes the original request and returns a standard 200 OK response.\n\nThis mechanism works over any transport supporting HTTP headers, including REST, GraphQL, and gRPC-HTTP/2. It eliminates the need for new protocol layers, side-channel escrow services, or dedicated billing databases.\n\nThe spec is blockchain-agnostic, though the reference implementation uses USDC on Base for its low fees (around $0.0001) and fast finality (about 2 seconds). This makes it practical for frequent, small transactions.\n\nx402 is most effective for high-volume, low-value calls, where traditional invoicing is impractical. For agents making only a few expensive calls daily, the added complexity might not be justified.\n\n#AI #Micropayments #Web3 #Developers #API #Software\n\nSource: DEV",
+  "tweet": "New x402 spec uses HTTP 402 to enable native micropayments for AI agent API calls, integrating payments directly into the request flow. Ideal for high-volume, low-value transactions, it avoids complex billing systems. #AI #Developers #Web3",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/nikhilranka23/x402-explained-http-native-micropayments-for-ai-agents-with-real-code-2d8h",
+  "image": "",
+  "orig_title": "x402 Explained: HTTP-Native Micropayments for AI Agents (With Real Code)",
+  "cluster_urls": [
+   "https://dev.to/nikhilranka23/x402-explained-http-native-micropayments-for-ai-agents-with-real-code-2d8h"
+  ],
+  "cluster_titles": [
+   "x402 Explained: HTTP-Native Micropayments for AI Agents (With Real Code)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260908-0706-1-x402-enables-http-native-micropayments-for-a.png",
+   "20260908-0706-1-x402-enables-http-native-micropayments-for-a-d1.png",
+   "20260908-0706-1-x402-enables-http-native-micropayments-for-a-d2.png"
+  ]
+ }
+]

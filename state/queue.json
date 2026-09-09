@@ -1,1 +1,102 @@
-[]
+[
+ {
+  "topic": "prompt_injection_security_pipeline_typescript",
+  "headline_marked": "Stripe's VAT Verification: [[Collected Now, Checked Later]]",
+  "headline": "Stripe's VAT Verification: Collected Now, Checked Later",
+  "summary": "Stripe checks EU VAT numbers for format during checkout but validates their actual existence only afterward, potentially impacting reverse charge decisions.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Stripe performs a quick format check on EU VAT numbers during checkout, accepting almost any string that resembles a VAT ID. This allows the transaction to proceed immediately, with the reverse charge decision made based solely on this format validation.",
+   "The actual validation against the VIES system happens asynchronously, after the checkout session has concluded and the customer has been charged. This means a syntactically perfect but entirely fabricated VAT number can pass the initial check.",
+   "Stripe's documentation explicitly states that if a customer provides a tax ID, Stripe Tax applies the reverse charge or zero rate based on the ID conforming to the necessary number format, regardless of its validity.",
+   "The VIES check, when it eventually occurs, is not on the critical path for checkout completion. The results are surfaced later in the Dashboard, but they do not alter the invoice or the reverse charge decision already made.",
+   "Furthermore, Stripe does not automatically re-validate VAT IDs over time. A registration that is valid on one day might become invalid later if the business is deregistered, but Stripe will retain the last known status.",
+   "This process creates a gap where businesses might incorrectly apply reverse charge based on a fake or outdated VAT number. Stripe clarifies that verifying the validity of customer information is the merchant's responsibility, not something checkout blocks on.",
+   "Beyond the status and name/address snapshot provided, Stripe's documentation does not mention surfacing a VIES consultation number, which serves as contemporaneous evidence of a specific check occurring on a particular date."
+  ],
+  "caption": "Stripe collects EU VAT numbers at checkout, but only checks their validity AFTER the transaction is complete. This could lead to incorrect tax treatment.\n\nStripe performs a quick format check on EU VAT numbers during checkout, accepting almost any string that resembles a VAT ID. This allows the transaction to proceed immediately, with the reverse charge decision made based solely on this format validation.\n\nThe actual validation against the VIES system happens asynchronously, after the checkout session has concluded and the customer has been charged. This means a syntactically perfect but entirely fabricated VAT number can pass the initial check.\n\nStripe's documentation explicitly states that if a customer provides a tax ID, Stripe Tax applies the reverse charge or zero rate based on the ID conforming to the necessary number format, regardless of its validity.\n\nThe VIES check, when it eventually occurs, is not on the critical path for checkout completion. The results are surfaced later in the Dashboard, but they do not alter the invoice or the reverse charge decision already made.\n\nFurthermore, Stripe does not automatically re-validate VAT IDs over time. A registration that is valid on one day might become invalid later if the business is deregistered, but Stripe will retain the last known status.\n\nThis process creates a gap where businesses might incorrectly apply reverse charge based on a fake or outdated VAT number. Stripe clarifies that verifying the validity of customer information is the merchant's responsibility, not something checkout blocks on.\n\nBeyond the status and name/address snapshot provided, Stripe's documentation does not mention surfacing a VIES consultation number, which serves as contemporaneous evidence of a specific check occurring on a particular date.\n\n#Stripe #VAT #Ecommerce #Tax #Developer\n\nSource: DEV",
+  "tweet": "Stripe's EU VAT verification happens AFTER checkout. The format check at checkout doesn't confirm validity, potentially leading to incorrect reverse charge application. #Stripe #VAT #Ecommerce",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "stripe.com",
+  "source": "DEV",
+  "url": "https://dev.to/iurii_rogulia/stripes-vat-verification-happens-after-checkout-not-before-3e65",
+  "image": "",
+  "orig_title": "Stripe's VAT Verification Happens After Checkout, Not Before",
+  "cluster_urls": [
+   "https://dev.to/iurii_rogulia/stripes-vat-verification-happens-after-checkout-not-before-3e65",
+   "https://dev.to/leveragenotes/how-to-use-ai-to-triage-and-reproduce-a-bug-report-5db1",
+   "https://dev.to/resk/stop-prompt-injection-in-typescript-a-zero-dependency-security-pipeline-546k",
+   "https://dev.to/ramdai_bista/github-copilot-cli-could-be-hijacked-via-a-nested-bare-git-repo-cve-2026-45033-2iof",
+   "https://dev.to/casatrick/building-a-pons-copy-trading-system-on-robinhood-chain-5533",
+   "https://dev.to/chovy/the-firewall-that-was-not-there-lni",
+   "https://dev.to/juna_go15/ditched-react-for-our-school-marketplace-app-bundle-50kb-load-time-on-a-80-android-320ms-1dnl",
+   "https://dev.to/quant001/fmz-web3-in-practice-riding-the-robinhood-chain-wave-build-a-uniswap-v4-new-pool-radar-step-by-5io",
+   "https://dev.to/martingruner/designing-a-smart-code-diff-without-replacing-the-line-diff-5h7o",
+   "https://dev.to/kandz/converting-tsv-to-yaml-a-guide-to-reliable-data-serialization-113j",
+   "https://dev.to/anima_priyadarshaninath_/how-to-design-a-database-for-an-e-commerce-app-4jol",
+   "https://dev.to/rit_the_coder/entities-are-not-rows-a-domain-model-that-behaves-c63"
+  ],
+  "cluster_titles": [
+   "Stripe's VAT Verification Happens After Checkout, Not Before",
+   "How to Use AI to Triage and Reproduce a Bug Report",
+   "Stop Prompt Injection in TypeScript: A Zero-Dependency Security Pipeline",
+   "GitHub Copilot CLI Could Be Hijacked via a Nested Bare Git Repo (CVE-2026-45033)",
+   "Building a Pons Copy-Trading System on Robinhood Chain",
+   "The firewall that was not there",
+   "Ditched React for our school marketplace app 👇 Bundle: <50KB. Load time on a $80 Android: 320ms. Story + architecture breakdown here #DEVCommunity #webdev",
+   "FMZ Web3 in Practice — Riding the Robinhood Chain Wave: Build a Uniswap V4 New Pool Radar Step by Step",
+   "Designing a smart code diff without replacing the line diff",
+   "Converting TSV to YAML: A Guide to Reliable Data Serialization",
+   "How To Design a Database for an E-commerce App",
+   "Entities Are Not Rows: A Domain Model That Behaves"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260909-1507-0-stripe-s-vat-verification-collected-now-chec.png",
+   "20260909-1507-0-stripe-s-vat-verification-collected-now-chec-d1.png",
+   "20260909-1507-0-stripe-s-vat-verification-collected-now-chec-d2.png",
+   "20260909-1507-0-stripe-s-vat-verification-collected-now-chec-d3.png"
+  ]
+ },
+ {
+  "topic": "suno_ai_music_models_v6_partnership",
+  "headline_marked": "Suno AI trains [[v6 models]] with licensed music from Warner & BMG",
+  "headline": "Suno AI trains v6 models with licensed music from Warner & BMG",
+  "summary": "AI music generator Suno unveils its v6 models, trained with licensed data from major labels for the first time, promising more polished and experimental outputs.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI music generator Suno has launched its new v6 family of models, marking the first time the company has partnered with major labels like Warner and BMG for training. The v6 series includes three models: v6 (flagship), v6-wild (experimental), and v6-mini (free tier). These new models are faster and offer enhanced features such as editing specific song sections with natural language and generating mashups from multiple sources.",
+   "Suno's v6 model is described as reliable and precise, capable of producing polished music across all genres. For users seeking more unpredictable results, v6-wild is designed for experimentation, acting as a creative brainstorming partner. The v6-mini model is available for free accounts, while v6 and v6-wild require a Pro or Premier subscription.",
+   "The new models boast improved multi-modal understanding, allowing them to generate songs from other audio, images, and video. Users can now describe a desired emotion for a song, and the models will attempt to create something appropriate. Additionally, lyrics can be replaced without regenerating the entire song, and sampling is more precise, enabling users to isolate and generate new beats via text prompts.",
+   "According to Suno's chief product officer, Jack Brody, the v6 family was trained from the ground up with a new dataset that includes licensed data from partners and user data. This marks a significant shift from previous models, which were reportedly trained on data scraped from platforms like YouTube and Deezer. Suno is retiring its older models as the v6 family rolls out."
+  ],
+  "caption": "Suno AI's new v6 models are here, trained with licensed music from Warner and BMG.\nGet ready for more polished, experimental, and faster AI-generated tracks.\n\nAI music generator Suno has launched its new v6 family of models, marking the first time the company has partnered with major labels like Warner and BMG for training. The v6 series includes three models: v6 (flagship), v6-wild (experimental), and v6-mini (free tier). These new models are faster and offer enhanced features such as editing specific song sections with natural language and generating mashups from multiple sources.\n\nSuno's v6 model is described as reliable and precise, capable of producing polished music across all genres. For users seeking more unpredictable results, v6-wild is designed for experimentation, acting as a creative brainstorming partner. The v6-mini model is available for free accounts, while v6 and v6-wild require a Pro or Premier subscription.\n\nThe new models boast improved multi-modal understanding, allowing them to generate songs from other audio, images, and video. Users can now describe a desired emotion for a song, and the models will attempt to create something appropriate. Additionally, lyrics can be replaced without regenerating the entire song, and sampling is more precise, enabling users to isolate and generate new beats via text prompts.\n\nAccording to Suno's chief product officer, Jack Brody, the v6 family was trained from the ground up with a new dataset that includes licensed data from partners and user data. This marks a significant shift from previous models, which were reportedly trained on data scraped from platforms like YouTube and Deezer. Suno is retiring its older models as the v6 family rolls out.\n\n#AI #MusicTech #SunoAI #GenerativeAI #WarnerMusic\n\nSource: Engadget",
+  "tweet": "Suno AI launches v6 models trained with licensed music from Warner & BMG! 🎶 Features include enhanced editing, mashups, and emotional generation. v6-mini is free! #AI #MusicTech #SunoAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "suno.ai",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2251539/suno-trained-its-v6-ai-music-models-with-help-from-warner-and-bmg/",
+  "image": "https://www.engadget.com/img/gallery/suno-trained-its-v6-ai-music-models-with-help-from-warner-and-bmg/l-intro-1788555504.jpg",
+  "orig_title": "Suno trained its v6 AI music models with help from Warner and BMG",
+  "cluster_urls": [
+   "https://www.engadget.com/2251539/suno-trained-its-v6-ai-music-models-with-help-from-warner-and-bmg/"
+  ],
+  "cluster_titles": [
+   "Suno trained its v6 AI music models with help from Warner and BMG"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260909-1507-1-suno-ai-trains-v6-models-with-licensed-music.png",
+   "20260909-1507-1-suno-ai-trains-v6-models-with-licensed-music-d1.png",
+   "20260909-1507-1-suno-ai-trains-v6-models-with-licensed-music-d2.png"
+  ]
+ }
+]

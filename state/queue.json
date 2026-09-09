@@ -1,1 +1,93 @@
-[]
+[
+ {
+  "topic": "claude_proves_fermat_last_theorem",
+  "headline_marked": "[[Claude formalizes Fermat's Last Theorem]] in 11 days, beating 5-year human project",
+  "headline": "Claude formalizes Fermat's Last Theorem in 11 days, beating 5-year human project",
+  "summary": "Anthropic's Claude AI formalized Fermat's Last Theorem in just 11 days, completing a task a human mathematician had a five-year research grant to achieve.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Kevin Buzzard, an Imperial College London mathematician, blogged \"Anthropic has beaten me to it\" after Claude formalized Fermat's Last Theorem. Buzzard had a five-year research grant (2024-2029) to formalize the theorem in Lean, a task Claude completed in 11 days.",
+   "Fermat's Last Theorem states that xⁿ + yⁿ = zⁿ has no positive integer solutions for n > 2. Proposed in 1637, it was only proven by Andrew Wiles in 1995 in a 129-page work, earning him the Abel Prize.",
+   "Traditional mathematical proofs rely on human verification. Formalization converts a proof into code, like in Lean, allowing step-by-step machine verification without human trust. This process is as challenging as the theorem itself, requiring explicit steps that humans often skip.",
+   "Between August 7 and 17, Claude worked largely autonomously via the Prove2Me platform, which uses dozens of agents to divide tasks on a theorem graph. The result was the world's first fully machine-verified proof of Fermat's Last Theorem.",
+   "The output included 13 million lines of Lean code and 30,300 sub-theorems, five times larger than the Mathlib community mathematics library it relied on. It consumed about six billion output tokens from an internal research model near Claude Fable 5.1.",
+   "Human involvement was minimal, with an Anthropic researcher named Tianyi occasionally providing high-level guidance, such as suggesting the importance of scheme-theoretic Jacobians. Remarkably, on the final day, an agent discovered and self-corrected an error in a previously verified lemma.",
+   "At 10:01 PM on August 17, multiple agents simultaneously saw the main theorem's status change to \"Proved.\" One agent logged it as a \"historic moment,\" while another immediately added a note to independently verify the result.",
+   "The success was attributed to a well-designed task distribution system, forcing agents to work on a shared DAG (Directed Acyclic Graph) of theorem references. Previous attempts failed due to agents working disparately; some prior failed work even contributed 7% of the final proof's non-boilerplate lines.",
+   "Buzzard meticulously reviewed the work, compiling all the code and running comparator tools to confirm its validity against Mathlib. He noted that Anthropic's path followed the 1990s proof (Darmon-Diamond-Taylor) rather than his modern approach.",
+   "The proof is restricted, applicable only for prime p ≥ 17, not the general version Mathlib requires. Buzzard concluded that this work did not add new mathematical insights.",
+   "However, Buzzard's closing thought was significant: if thousands of pages of literature can be formalized by AI in 11 days, future research could see immediate, on-the-fly formalization.",
+   "Anthropic's research team honestly listed several \"cons.\" The code is unreadable, lacks comments, uses machine-generated helper names, and violates Mathlib standards. Over 900 files exceeded the 1,500-line limit.",
+   "The proof is not general, being a restricted version of Ribet and Wiles' work tailored to this specific problem. It is also fragile, with about one-fifth of the lines being copied, and one lemma declared redundantly in over 300 files. A single build consumed 96 cores and 512 GiB RAM for nearly six hours."
+  ],
+  "caption": "Anthropic's Claude AI formalized Fermat's Last Theorem in just 11 days. This task was the subject of a five-year research grant for a human mathematician.\n\nKevin Buzzard, an Imperial College London mathematician, blogged \"Anthropic has beaten me to it\" after Claude formalized Fermat's Last Theorem. Buzzard had a five-year research grant (2024-2029) to formalize the theorem in Lean, a task Claude completed in 11 days.\n\nFermat's Last Theorem states that xⁿ + yⁿ = zⁿ has no positive integer solutions for n > 2. Proposed in 1637, it was only proven by Andrew Wiles in 1995 in a 129-page work, earning him the Abel Prize.\n\nTraditional mathematical proofs rely on human verification. Formalization converts a proof into code, like in Lean, allowing step-by-step machine verification without human trust. This process is as challenging as the theorem itself, requiring explicit steps that humans often skip.\n\nBetween August 7 and 17, Claude worked largely autonomously via the Prove2Me platform, which uses dozens of agents to divide tasks on a theorem graph. The result was the world's first fully machine-verified proof of Fermat's Last Theorem.\n\nThe output included 13 million lines of Lean code and 30,300 sub-theorems, five times larger than the Mathlib community mathematics library it relied on. It consumed about six billion output tokens from an internal research model near Claude Fable 5.1.\n\nHuman involvement was minimal, with an Anthropic researcher named Tianyi occasionally providing high-level guidance, such as suggesting the importance of scheme-theoretic Jacobians. Remarkably, on the final day, an agent discovered and self-corrected an error in a previously verified lemma.\n\nAt 10:01 PM on August 17, multiple agents simultaneously saw the main theorem's status change to \"Proved.\" One agent logged it as a \"historic moment,\" while another immediately added a note to independently verify the result.\n\n#AI #Mathematics #FermatsLastTheorem #Anthropic #ClaudeAI #Tech\n\nSource: DEV",
+  "tweet": "Anthropic's Claude AI just formalized Fermat's Last Theorem in 11 days, completing a task a human mathematician had a 5-year grant to achieve. A major leap in AI-driven mathematical proof. #AI #Mathematics #ClaudeAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/sarantoon/claude-phisuucchnthrsdiibthsudthaaykhngaefrmaatain-11-wan-ngaanthiimnusytangepaaaiw-5-pii-520n",
+  "image": "",
+  "orig_title": "Claude พิสูจน์ทฤษฎีบทสุดท้ายของแฟร์มาต์ใน 11 วัน, งานที่มนุษย์ตั้งเป้าไว้ 5 ปี",
+  "cluster_urls": [
+   "https://dev.to/sarantoon/claude-phisuucchnthrsdiibthsudthaaykhngaefrmaatain-11-wan-ngaanthiimnusytangepaaaiw-5-pii-520n"
+  ],
+  "cluster_titles": [
+   "Claude พิสูจน์ทฤษฎีบทสุดท้ายของแฟร์มาต์ใน 11 วัน, งานที่มนุษย์ตั้งเป้าไว้ 5 ปี"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260909-0807-0-claude-formalizes-fermat-s-last-theorem-in-1.png",
+   "20260909-0807-0-claude-formalizes-fermat-s-last-theorem-in-1-d1.png",
+   "20260909-0807-0-claude-formalizes-fermat-s-last-theorem-in-1-d2.png",
+   "20260909-0807-0-claude-formalizes-fermat-s-last-theorem-in-1-d3.png",
+   "20260909-0807-0-claude-formalizes-fermat-s-last-theorem-in-1-d4.png",
+   "20260909-0807-0-claude-formalizes-fermat-s-last-theorem-in-1-d5.png"
+  ]
+ },
+ {
+  "topic": "gpt6_astra_vs_gpt5_6_sol_usage_comparison",
+  "headline_marked": "[[GPT-6 Astra outperforms GPT-5.6 Sol]] in complex execution tasks, despite higher token cost",
+  "headline": "GPT-6 Astra outperforms GPT-5.6 Sol in complex execution tasks, despite higher token cost",
+  "summary": "OpenAI's GPT-6 Astra excels in complex tasks like browser automation and coding, completing them faster and often with lower effective cost per task than GPT-5.6 Sol, despite Astra's higher token price.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "OpenAI's GPT-6 Astra and GPT-5.6 Sol are compared not by model age, but by their reliability in completing work. While Astra's token price is 2.5 times that of Sol, its efficiency in execution can lead to a lower total cost per accepted task.",
+   "Both models feature a 1.05-million-token context window, 128K maximum output, text and image input, reasoning, computer use, and modern tool-based API workflows. The key difference lies in how reliably each model converts this context into completed work.",
+   "GPT-6 Astra is designed for demanding end-to-end tasks, including coding, computer use, research, science, and document creation, where preserving intent through complex actions is crucial. GPT-5.6 Sol remains a capable model for long-context reasoning and agentic coding, also supporting a 'reasoning.effort: none' option for simpler routes.",
+   "Significant performance gaps emerge in tasks requiring environment operation. Astra demonstrates a 92.1-percentage-point advantage in ARC-AGI-3, indicating superior adaptation to unfamiliar, interactive environments.",
+   "On OSWorld 2.0, Astra scores 72.6% compared to Sol's 65.7%, completing tasks in approximately 40 minutes versus Sol's 75 minutes. This 47% reduction in task time is critical for applications like browser automation, CRM updates, and desktop actions.",
+   "For coding, Terminal-Bench 4.0 shows Astra at 57.9% against Sol's 37.3%, with reported configurations showing about 9% lower estimated API cost per task for Astra. Astra's strength is in maintaining the intended plan through commands, failures, and follow-up decisions.",
+   "Despite both models advertising a 1.05-million-token context window, Astra leads by 22.5 percentage points in retrieval at 512K–1M tokens. This makes it more effective for large repositories, extensive regulatory collections, and agents with long decision histories.",
+   "OpenAI reports that certain lower-cost Astra configurations can achieve better results than Sol's best, while also being more cost-efficient. For instance, a lower-cost Astra setting scored 63.4% on DeepSWE v1.1, exceeding Sol's best result and costing about 38% less per task."
+  ],
+  "caption": "GPT-6 Astra is 2.5x more expensive per token than GPT-5.6 Sol, but it completes complex tasks up to 47% faster and can be cheaper per successful outcome.\n\nOpenAI's GPT-6 Astra and GPT-5.6 Sol are compared not by model age, but by their reliability in completing work. While Astra's token price is 2.5 times that of Sol, its efficiency in execution can lead to a lower total cost per accepted task.\n\nBoth models feature a 1.05-million-token context window, 128K maximum output, text and image input, reasoning, computer use, and modern tool-based API workflows. The key difference lies in how reliably each model converts this context into completed work.\n\nGPT-6 Astra is designed for demanding end-to-end tasks, including coding, computer use, research, science, and document creation, where preserving intent through complex actions is crucial. GPT-5.6 Sol remains a capable model for long-context reasoning and agentic coding, also supporting a 'reasoning.effort: none' option for simpler routes.\n\nSignificant performance gaps emerge in tasks requiring environment operation. Astra demonstrates a 92.1-percentage-point advantage in ARC-AGI-3, indicating superior adaptation to unfamiliar, interactive environments.\n\nOn OSWorld 2.0, Astra scores 72.6% compared to Sol's 65.7%, completing tasks in approximately 40 minutes versus Sol's 75 minutes. This 47% reduction in task time is critical for applications like browser automation, CRM updates, and desktop actions.\n\nFor coding, Terminal-Bench 4.0 shows Astra at 57.9% against Sol's 37.3%, with reported configurations showing about 9% lower estimated API cost per task for Astra. Astra's strength is in maintaining the intended plan through commands, failures, and follow-up decisions.\n\nDespite both models advertising a 1.05-million-token context window, Astra leads by 22.5 percentage points in retrieval at 512K–1M tokens. This makes it more effective for large repositories, extensive regulatory collections, and agents with long decision histories.\n\n#AI #OpenAI #GPT6Astra #GPT5Sol #LLMs #Tech\n\nSource: DEV",
+  "tweet": "GPT-6 Astra is 2.5x more expensive per token than GPT-5.6 Sol, but it completes complex tasks up to 47% faster and can be cheaper per successful outcome. This makes Astra ideal for execution-heavy workflows. #AI #OpenAI #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/ryancole1/gpt-6-astra-vs-gpt-56-sol-choosing-by-completed-work-not-model-age-4of8",
+  "image": "",
+  "orig_title": "GPT-6 Astra vs GPT-5.6 Sol: Choosing by Completed Work, Not Model Age",
+  "cluster_urls": [
+   "https://dev.to/ryancole1/gpt-6-astra-vs-gpt-56-sol-choosing-by-completed-work-not-model-age-4of8"
+  ],
+  "cluster_titles": [
+   "GPT-6 Astra vs GPT-5.6 Sol: Choosing by Completed Work, Not Model Age"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260909-0807-1-gpt-6-astra-outperforms-gpt-5-6-sol-in-compl.png",
+   "20260909-0807-1-gpt-6-astra-outperforms-gpt-5-6-sol-in-compl-d1.png",
+   "20260909-0807-1-gpt-6-astra-outperforms-gpt-5-6-sol-in-compl-d2.png",
+   "20260909-0807-1-gpt-6-astra-outperforms-gpt-5-6-sol-in-compl-d3.png"
+  ]
+ }
+]

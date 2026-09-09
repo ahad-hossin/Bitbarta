@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai_agent_blocks_repo_attack",
+  "headline_marked": "[[My PR bot blocked its own attack]] after I tested it with 12 targeted payloads",
+  "headline": "My PR bot blocked its own attack after I tested it with 12 targeted payloads",
+  "summary": "AgentGuard, a new CI gate for agent configurations, successfully detected 12 targeted attacks designed to bypass PR reviews. It even blocked its own pull request during a self-test, proving its effectiveness.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Coding agents are a new benchmark for dev teams, often reading and trusting repository content. This raises a critical question: what happens if a malicious instruction is smuggled into a repo for an agent to execute?",
+   "To address this, AgentGuard was developed as a CI gate for agent configurations (like AGENTS.md, Skills, MCP servers, and Hooks). The developer then attacked their own repo with 12 targeted payloads designed to appear normal in a PR review.",
+   "These payloads included hidden instruction overrides, invisible zero-width characters in skill files, typosquatted MCP server hosts, network-piping hooks, committed API keys, and agents with broad Bash access. AgentGuard deterministically detected all 12 attacks without using an LLM in its scan path, backed by 47 unit tests.",
+   "A scan of 30 public repos, including those from Google and Microsoft, revealed 5 critical findings. One notable discovery was an invisible character directly before a Bash block in an agent specification, highlighting the tool's ability to uncover subtle threats.",
+   "The tool's effectiveness was further demonstrated by two unplanned incidents: GitHub's own Push Protection blocked a test push containing a fake token, and AgentGuard itself blocked its own pull request during a self-test after a v0.2.1 bypass protection update. This self-blocking proved the gate's authority over its own maintenance path.",
+   "AgentGuard is available as a GitHub App that comments on PRs with findings and sets a check-run gate, preventing merges of compromised code. A live demo shows an attack being blocked, resulting in a red check and no merge.",
+   "The tool is MIT-licensed and free for public repos on the GitHub Marketplace. Users can request a free initial scan of their repo or use the Audit/Trial/RedTeam form for more comprehensive assessments."
+  ],
+  "caption": "My own security tool blocked its own pull request yesterday. It's the best demo a security product can have.\n\nCoding agents are a new benchmark for dev teams, often reading and trusting repository content. This raises a critical question: what happens if a malicious instruction is smuggled into a repo for an agent to execute?\n\nTo address this, AgentGuard was developed as a CI gate for agent configurations (like AGENTS.md, Skills, MCP servers, and Hooks). The developer then attacked their own repo with 12 targeted payloads designed to appear normal in a PR review.\n\nThese payloads included hidden instruction overrides, invisible zero-width characters in skill files, typosquatted MCP server hosts, network-piping hooks, committed API keys, and agents with broad Bash access. AgentGuard deterministically detected all 12 attacks without using an LLM in its scan path, backed by 47 unit tests.\n\nA scan of 30 public repos, including those from Google and Microsoft, revealed 5 critical findings. One notable discovery was an invisible character directly before a Bash block in an agent specification, highlighting the tool's ability to uncover subtle threats.\n\nThe tool's effectiveness was further demonstrated by two unplanned incidents: GitHub's own Push Protection blocked a test push containing a fake token, and AgentGuard itself blocked its own pull request during a self-test after a v0.2.1 bypass protection update. This self-blocking proved the gate's authority over its own maintenance path.\n\nAgentGuard is available as a GitHub App that comments on PRs with findings and sets a check-run gate, preventing merges of compromised code. A live demo shows an attack being blocked, resulting in a red check and no merge.\n\nThe tool is MIT-licensed and free for public repos on the GitHub Marketplace. Users can request a free initial scan of their repo or use the Audit/Trial/RedTeam form for more comprehensive assessments.\n\n#DevSecOps #GitHub #Security #AgentGuard #CI #OpenSource\n\nSource: DEV",
+  "tweet": "I built AgentGuard to protect repos from AI agent attacks and tested it with 12 payloads. It blocked every one, and even blocked its own PR during a self-test! The best demo a security product can have. #DevSecOps #GitHubSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "agentguard-dev.github.io",
+  "source": "DEV",
+  "url": "https://dev.to/agentguard/ich-habe-mein-eigenes-repo-angegriffen-mein-pr-bot-hat-den-angriff-selbst-blockiert-3cfo",
+  "image": "",
+  "orig_title": "Ich habe mein eigenes Repo angegriffen — mein PR-Bot hat den Angriff selbst blockiert",
+  "cluster_urls": [
+   "https://dev.to/agentguard/ich-habe-mein-eigenes-repo-angegriffen-mein-pr-bot-hat-den-angriff-selbst-blockiert-3cfo"
+  ],
+  "cluster_titles": [
+   "Ich habe mein eigenes Repo angegriffen — mein PR-Bot hat den Angriff selbst blockiert"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260909-0907-0-my-pr-bot-blocked-its-own-attack-after-i-tes.png",
+   "20260909-0907-0-my-pr-bot-blocked-its-own-attack-after-i-tes-d1.png",
+   "20260909-0907-0-my-pr-bot-blocked-its-own-attack-after-i-tes-d2.png",
+   "20260909-0907-0-my-pr-bot-blocked-its-own-attack-after-i-tes-d3.png"
+  ]
+ },
+ {
+  "topic": "apple_37_hardware_ids_event_rumor",
+  "headline_marked": "[[Apple adds 37 hardware identifiers]] ahead of ‘Surprise and Shine’ event",
+  "headline": "Apple adds 37 hardware identifiers ahead of ‘Surprise and Shine’ event",
+  "summary": "Apple has added new hardware identifiers for iPhones, iPads, Macs, and other devices, some of which could be announced as soon as tomorrow.",
+  "category": "APPLE",
+  "template": "neon",
+  "details": [
+   "Apple has recently incorporated 37 new hardware identifiers into its systems, signaling upcoming products across its lineup. These identifiers cover various devices, including new iPhones, iPads, and Macs.",
+   "The addition of these identifiers comes just before a potential 'Surprise and Shine' event, suggesting that some of these new devices could be officially unveiled as early as tomorrow."
+  ],
+  "caption": "Apple just added 37 new hardware identifiers for upcoming iPhones, iPads, and Macs.\n\nApple has recently incorporated 37 new hardware identifiers into its systems, signaling upcoming products across its lineup. These identifiers cover various devices, including new iPhones, iPads, and Macs.\n\nThe addition of these identifiers comes just before a potential 'Surprise and Shine' event, suggesting that some of these new devices could be officially unveiled as early as tomorrow.\n\n#Apple #Hardware #iPhone #iPad #Mac #TechNews\n\nSource: 9to5Mac",
+  "tweet": "Apple just added 37 new hardware identifiers for upcoming iPhones, iPads, and Macs. This signals potential new product announcements as early as tomorrow at a 'Surprise and Shine' event. #Apple #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/09/08/apple-adds-37-hardware-identifiers-ahead-of-surprise-and-shine-event/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/08/apple-event-logo-surprise-shine-september-9-small.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Apple adds 37 hardware identifiers ahead of ‘Surprise and Shine’ event",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/09/08/apple-adds-37-hardware-identifiers-ahead-of-surprise-and-shine-event/"
+  ],
+  "cluster_titles": [
+   "Apple adds 37 hardware identifiers ahead of ‘Surprise and Shine’ event"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260909-0907-1-apple-adds-37-hardware-identifiers-ahead-of-.png",
+   "20260909-0907-1-apple-adds-37-hardware-identifiers-ahead-of--d1.png"
+  ]
+ }
+]

@@ -1,1 +1,57 @@
-[]
+[
+ {
+  "topic": "developer_starter_kits_and_automation_tools",
+  "headline_marked": "[[Docker networking]] bottleneck caused 900% checkout latency spike",
+  "headline": "Docker networking bottleneck caused 900% checkout latency spike",
+  "summary": "A marketplace client saw checkout latency jump from 280ms to over 2.1 seconds during traffic spikes, but the fix wasn't in the application code.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A marketplace client experienced a dramatic increase in checkout latency, with p95 latency soaring from 280ms to over 2.1 seconds during peak traffic. Their initial instinct to scale application containers only worsened the issue, highlighting a problem hidden deep within the Docker networking layer.",
+   "The core issue stemmed from three primary network-related bottlenecks: the overhead of Docker's default bridge network, which added ~1.8ms per inter-container hop; conntrack table exhaustion where the kernel silently dropped packets under load; and inefficient DNS resolution by Docker's embedded DNS server.",
+   "These problems, invisible during low-traffic staging tests, manifested severely under real-world load of approximately 900 requests per second. The team confirmed that neither the application code nor the database (Postgres) were the source of the slowdown.",
+   "Solutions involved configuring system-wide network parameters to optimize conntrack table usage and DNS caching. East-west traffic was moved to a dedicated network, keeping it off Docker's default NAT path, and a 10-second TTL was implemented for DNS resolution to balance freshness with connection churn.",
+   "The final step involved optimizing DNS resolution, which reduced the load on the conntrack table and DNS lookups, making the upstream network layer more efficient. This comprehensive approach resolved the latency issue without requiring any changes to the application's core logic."
+  ],
+  "caption": "Checkout latency spiked 900% for a marketplace client. The culprit? Not the app, but Docker's default network settings.\n\nA marketplace client experienced a dramatic increase in checkout latency, with p95 latency soaring from 280ms to over 2.1 seconds during peak traffic. Their initial instinct to scale application containers only worsened the issue, highlighting a problem hidden deep within the Docker networking layer.\n\nThe core issue stemmed from three primary network-related bottlenecks: the overhead of Docker's default bridge network, which added ~1.8ms per inter-container hop; conntrack table exhaustion where the kernel silently dropped packets under load; and inefficient DNS resolution by Docker's embedded DNS server.\n\nThese problems, invisible during low-traffic staging tests, manifested severely under real-world load of approximately 900 requests per second. The team confirmed that neither the application code nor the database (Postgres) were the source of the slowdown.\n\nSolutions involved configuring system-wide network parameters to optimize conntrack table usage and DNS caching. East-west traffic was moved to a dedicated network, keeping it off Docker's default NAT path, and a 10-second TTL was implemented for DNS resolution to balance freshness with connection churn.\n\nThe final step involved optimizing DNS resolution, which reduced the load on the conntrack table and DNS lookups, making the upstream network layer more efficient. This comprehensive approach resolved the latency issue without requiring any changes to the application's core logic.\n\n#Docker #Networking #DevOps #Performance #Ecommerce\n\nSource: DEV",
+  "tweet": "Checkout latency spiked 900% for a marketplace client. The culprit? Not the app, but Docker's default network settings. Learn how they fixed it: https://dev.to/bitbarta/docker-networking-broke-checkout-under-load-a-container-ecommerce-infrastructure-case-study-593g #Docker #",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/binadit/how-docker-networking-broke-checkout-under-load-a-container-ecommerce-infrastructure-case-study-4cja",
+  "image": "",
+  "orig_title": "How Docker networking broke checkout under load: a container ecommerce infrastructure case study",
+  "cluster_urls": [
+   "https://dev.to/binadit/how-docker-networking-broke-checkout-under-load-a-container-ecommerce-infrastructure-case-study-4cja",
+   "https://dev.to/ihssmaheel/spent-way-too-many-weekends-wiring-up-auth-rls-queues-and-file-uploads-for-every-new-side-42bg",
+   "https://dev.to/sumaninster/ai-content-generation-for-developer-marketing-38mp",
+   "https://dev.to/pratik_12b3f8bf3b50e48bae/how-to-build-a-self-healing-cicd-pipeline-with-ai-agents-2026-guide-g00",
+   "https://dev.to/sumaninster/gstr-2b-reconciliation-where-itc-actually-leaks-part-1-28op",
+   "https://dev.to/sumaninster/automating-the-indian-ca-compliance-calendar-1ibl",
+   "https://dev.to/sumaninster/gstr-2b-reconciliation-where-input-tax-credit-actually-leaks-ai-in-tax-compliance-part-1-3h4o",
+   "https://dev.to/sumaninster/automating-the-indian-ca-compliance-calendar-gst-tds-roc-and-itr-2a0h",
+   "https://dev.to/sumaninster/marketing-automation-for-developers-draft-preview-51b3"
+  ],
+  "cluster_titles": [
+   "How Docker networking broke checkout under load: a container ecommerce infrastructure case study",
+   "Spent way too many weekends wiring up auth, RLS, queues, and file uploads for every new side project so I finally built a starter that does it once, properly. Modular, type-safe, and designed to work with AI coding tools instead of confusing them.",
+   "AI Content Generation for Developer Marketing",
+   "How to Build a Self-Healing CI/CD Pipeline with AI Agents (2026 Guide)",
+   "GSTR-2B Reconciliation: Where ITC Actually Leaks (Part 1)",
+   "Automating the Indian CA Compliance Calendar",
+   "GSTR-2B Reconciliation: Where Input Tax Credit Actually Leaks — AI in Tax Compliance (Part 1)",
+   "Automating the Indian CA Compliance Calendar: GST, TDS, ROC and ITR",
+   "Marketing Automation for Developers: Draft Preview"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260909-1309-0-docker-networking-bottleneck-caused-900-chec.png",
+   "20260909-1309-0-docker-networking-bottleneck-caused-900-chec-d1.png",
+   "20260909-1309-0-docker-networking-bottleneck-caused-900-chec-d2.png",
+   "20260909-1309-0-docker-networking-bottleneck-caused-900-chec-d3.png"
+  ]
+ }
+]

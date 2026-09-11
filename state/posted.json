@@ -8377,8 +8377,13 @@
   "headline": "622 of 5,087 LLM API calls failed to return an answer, impacting cost models",
   "topic": "llm_api_call_failure_rate",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-09-11T06:06:42Z"
+  "status": "failed",
+  "at": "2026-09-11T06:06:42Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "43fe41032327633b",
@@ -8386,7 +8391,12 @@
   "headline": "New servers attacked in 48 seconds after boot, logging 3,480 attempts in 45 mins",
   "topic": "server_security_experiment_internet_break_in",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-09-11T06:06:42Z"
+  "status": "failed",
+  "at": "2026-09-11T06:06:42Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

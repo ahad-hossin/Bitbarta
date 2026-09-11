@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "voice_ai_latency_reduction_in_house_system",
+  "headline_marked": "[[Voice AI Latency Slashed]] from 9 seconds to 1.5 seconds by building an in-house system",
+  "headline": "Voice AI Latency Slashed from 9 seconds to 1.5 seconds by building an in-house system",
+  "summary": "A DEV article details how a team reduced Voice AI response times from an unacceptable 9 seconds to a conversational 1.5 seconds by designing a custom architecture.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A company's AI assistant initially suffered from a 9-second latency, making it unusable for callers who would likely hang up. The challenge was to significantly reduce this delay to create a more natural conversational experience.",
+   "The project began as an integration with VAPI, a Voice AI platform, to automate user onboarding. However, the client's demand for a more natural and expressive voice led to the exploration of custom solutions beyond VAPI's capabilities.",
+   "To meet the client's needs for expressive voices and further customizations, the team integrated Cartesia's voice capabilities. This marked a shift from relying solely on a third-party platform to building a more flexible in-house system.",
+   "As customization requests grew, the limitations of relying on a single managed platform became apparent. The team decided to build their own Voice AI architecture, leveraging multiple specialized services like Twilio, Deepgram, and Cartesia.",
+   "The core engineering challenge was reducing latency. The team designed an architecture where their in-house Voice AI server acts as the central orchestrator, managing real-time communication between Twilio for telephony and other services for speech-to-text and natural language processing.",
+   "By implementing a custom architecture, the team successfully reduced the end-to-end latency from 9 seconds to approximately 1.5 seconds. This was achieved by optimizing each stage of the voice AI pipeline, from speech recognition to response generation and delivery."
+  ],
+  "caption": "9 seconds of silence is too long for any AI assistant. Here's how one team cut that down to 1.5 seconds.\n\nA company's AI assistant initially suffered from a 9-second latency, making it unusable for callers who would likely hang up. The challenge was to significantly reduce this delay to create a more natural conversational experience.\n\nThe project began as an integration with VAPI, a Voice AI platform, to automate user onboarding. However, the client's demand for a more natural and expressive voice led to the exploration of custom solutions beyond VAPI's capabilities.\n\nTo meet the client's needs for expressive voices and further customizations, the team integrated Cartesia's voice capabilities. This marked a shift from relying solely on a third-party platform to building a more flexible in-house system.\n\nAs customization requests grew, the limitations of relying on a single managed platform became apparent. The team decided to build their own Voice AI architecture, leveraging multiple specialized services like Twilio, Deepgram, and Cartesia.\n\nThe core engineering challenge was reducing latency. The team designed an architecture where their in-house Voice AI server acts as the central orchestrator, managing real-time communication between Twilio for telephony and other services for speech-to-text and natural language processing.\n\nBy implementing a custom architecture, the team successfully reduced the end-to-end latency from 9 seconds to approximately 1.5 seconds. This was achieved by optimizing each stage of the voice AI pipeline, from speech recognition to response generation and delivery.\n\n#AI #VoiceAI #MachineLearning #DevOps #Latency\n\nSource: DEV",
+  "tweet": "9 seconds of silence is too long for any AI assistant. Here's how one team cut that down to 1.5 seconds by building an in-house Voice AI system. #AI #VoiceAI #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mehar_aziz/from-9-seconds-of-voice-ai-latency-to-15-seconds-building-an-in-house-voice-ai-system-bal",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fm7pegbevcspng0i7f9fq.png",
+  "orig_title": "From 9 Seconds of Voice AI Latency to 1.5 Seconds: Building an In-House Voice AI System",
+  "cluster_urls": [
+   "https://dev.to/mehar_aziz/from-9-seconds-of-voice-ai-latency-to-15-seconds-building-an-in-house-voice-ai-system-bal"
+  ],
+  "cluster_titles": [
+   "From 9 Seconds of Voice AI Latency to 1.5 Seconds: Building an In-House Voice AI System"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260912-0429-0-voice-ai-latency-slashed-from-9-seconds-to-1.png",
+   "20260912-0429-0-voice-ai-latency-slashed-from-9-seconds-to-1-d1.png",
+   "20260912-0429-0-voice-ai-latency-slashed-from-9-seconds-to-1-d2.png"
+  ]
+ }
+]

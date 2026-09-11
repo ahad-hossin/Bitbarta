@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "docker_autoscaling_without_kubernetes",
+  "headline_marked": "[[Autoscaling Docker Containers]] without Kubernetes: Gubernator handles CPU & GPU workloads",
+  "headline": "Autoscaling Docker Containers without Kubernetes: Gubernator handles CPU & GPU workloads",
+  "summary": "Gubernator offers a 'Goldilocks' container orchestration experience, combining Docker Swarm's simplicity with Nomad's flexibility. It enables true horizontal autoscaling across multi-node clusters using standard docker-compose.yml files, based on real-time CPU",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Gubernator is a \"Goldilocks\" container orchestrator designed for autoscaling Docker containers across multi-node clusters without Kubernetes. It combines Docker Swarm's simplicity with Nomad's flexibility, supporting real-time CPU and NVIDIA GPU utilization.",
+   "The system uses \"Centurions\" for nodes and \"Legions\" for multi-container applications (Docker Compose stacks). Its autonomous feedback loop evaluates and scales workloads every 10-15 seconds.",
+   "Autoscaling policies are declared directly within standard docker-compose.yml service definitions using gbnt.autoscaling.* label prefixes. This eliminates the need for proprietary manifests or additional YAML files.",
+   "For heavy AI and machine learning workloads, Gubernator specifically considers GPU VRAM and Tensor Cores, as CPU load can be misleading. It ensures accurate scaling for compute-intensive tasks.",
+   "When load decreases, Gubernator gracefully de-provisions excess containers in reverse order. It respects container shutdown timeouts, ensuring zero data loss during scaling down.",
+   "A full-screen Material Design 3 Dashboard, built with Flutter Web, is included for easy management, alongside a REST API. Installation is straightforward with a single binary or automated installer."
+  ],
+  "caption": "Tired of Kubernetes complexity but need Docker autoscaling? Gubernator offers true horizontal scaling for CPU and GPU workloads using just docker-compose.yml.\n\nGubernator is a \"Goldilocks\" container orchestrator designed for autoscaling Docker containers across multi-node clusters without Kubernetes. It combines Docker Swarm's simplicity with Nomad's flexibility, supporting real-time CPU and NVIDIA GPU utilization.\n\nThe system uses \"Centurions\" for nodes and \"Legions\" for multi-container applications (Docker Compose stacks). Its autonomous feedback loop evaluates and scales workloads every 10-15 seconds.\n\nAutoscaling policies are declared directly within standard docker-compose.yml service definitions using gbnt.autoscaling.* label prefixes. This eliminates the need for proprietary manifests or additional YAML files.\n\nFor heavy AI and machine learning workloads, Gubernator specifically considers GPU VRAM and Tensor Cores, as CPU load can be misleading. It ensures accurate scaling for compute-intensive tasks.\n\nWhen load decreases, Gubernator gracefully de-provisions excess containers in reverse order. It respects container shutdown timeouts, ensuring zero data loss during scaling down.\n\nA full-screen Material Design 3 Dashboard, built with Flutter Web, is included for easy management, alongside a REST API. Installation is straightforward with a single binary or automated installer.\n\n#Docker #KubernetesAlternative #ContainerOrchestration #Autoscaling #DeveloperTools #OpenSource\n\nSource: DEV",
+  "tweet": "Skip Kubernetes complexity for Docker autoscaling! Gubernator provides true horizontal scaling for CPU & GPU workloads across multi-node clusters using standard docker-compose.yml files. It even has a Material Design dashboard. #Docker #Autoscaling #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gde/autoscaling-docker-containers-without-kubernetes-how-gubernator-scales-cpu-gpu-workloads-1p0b",
+  "image": "",
+  "orig_title": "Autoscaling Docker Containers Without Kubernetes: How Gubernator Scales CPU & GPU Workloads Automatically",
+  "cluster_urls": [
+   "https://dev.to/gde/autoscaling-docker-containers-without-kubernetes-how-gubernator-scales-cpu-gpu-workloads-1p0b"
+  ],
+  "cluster_titles": [
+   "Autoscaling Docker Containers Without Kubernetes: How Gubernator Scales CPU & GPU Workloads Automatically"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260911-1308-0-autoscaling-docker-containers-without-kubern.png",
+   "20260911-1308-0-autoscaling-docker-containers-without-kubern-d1.png",
+   "20260911-1308-0-autoscaling-docker-containers-without-kubern-d2.png"
+  ]
+ },
+ {
+  "topic": "agentic_rag_aws_serverless_migration",
+  "headline_marked": "[[Migrating an Agentic RAG App to AWS Serverless]] from a single EC2 instance",
+  "headline": "Migrating an Agentic RAG App to AWS Serverless from a single EC2 instance",
+  "summary": "An agentic RAG router, initially running on a single EC2 instance, is being rebuilt as a fully serverless AWS application. This move aims to optimize the system for production, eliminating idling costs and leveraging infrastructure as code.",
+  "category": "CLOUD",
+  "template": "terminal",
+  "details": [
+   "The project began as an agentic RAG router for LLM Zoomcamp capstone submissions, initially deployed on a single t4g.small EC2 instance. This setup ran six Docker Compose containers, relying on a 2GB swap file to manage Postgres, Streamlit, and Torch embedders within 2GB RAM.",
+   "While effective for a capstone, this architecture presented challenges for a production system, including idle costs and resource limitations. The goal was to eliminate these properties and build a robust, scalable solution.",
+   "The migration involves rebuilding the entire application as a fully serverless AWS system, utilizing Infrastructure as Code (IaC). This learning path focuses exclusively on Amazon's native resources.",
+   "Key AWS services include Amazon Nova for output, Amazon Titan for embeddings, and Amazon Rerank for reranking, all orchestrated via the boto3 SDK. Notably, this serverless implementation avoids external LLM providers like OpenAI or Anthropic.",
+   "A significant architectural decision was deleting a database rather than migrating it, highlighting how many 'obvious' choices proved incorrect. The new design ensures no idling resources, treating the corpus as an artifact rather than a continuous runtime cost."
+  ],
+  "caption": "Moving an agentic RAG app from a single EC2 instance to a fully serverless AWS environment. Discover how a database was deleted instead of migrated, and why every 'obvious' choice turned out to be wrong.\n\nThe project began as an agentic RAG router for LLM Zoomcamp capstone submissions, initially deployed on a single t4g.small EC2 instance. This setup ran six Docker Compose containers, relying on a 2GB swap file to manage Postgres, Streamlit, and Torch embedders within 2GB RAM.\n\nWhile effective for a capstone, this architecture presented challenges for a production system, including idle costs and resource limitations. The goal was to eliminate these properties and build a robust, scalable solution.\n\nThe migration involves rebuilding the entire application as a fully serverless AWS system, utilizing Infrastructure as Code (IaC). This learning path focuses exclusively on Amazon's native resources.\n\nKey AWS services include Amazon Nova for output, Amazon Titan for embeddings, and Amazon Rerank for reranking, all orchestrated via the boto3 SDK. Notably, this serverless implementation avoids external LLM providers like OpenAI or Anthropic.\n\nA significant architectural decision was deleting a database rather than migrating it, highlighting how many 'obvious' choices proved incorrect. The new design ensures no idling resources, treating the corpus as an artifact rather than a continuous runtime cost.\n\n#AWS #Serverless #RAG #CloudComputing #DevOps #AI\n\nSource: DEV",
+  "tweet": "Migrating an agentic RAG app to AWS Serverless from a single EC2 instance. Learn how a database was deleted instead of migrated, and why 'obvious' choices were often wrong in this serverless journey. #AWS #Serverless #RAG",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aws.amazon.com",
+  "source": "DEV",
+  "url": "https://dev.to/dmitriy_trunov_9a09a497b1/migrating-an-agentic-rag-app-to-aws-serverless-d2k",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4a3175r3lre54khsrlad.png",
+  "orig_title": "Migrating an Agentic RAG App to AWS Serverless",
+  "cluster_urls": [
+   "https://dev.to/dmitriy_trunov_9a09a497b1/migrating-an-agentic-rag-app-to-aws-serverless-d2k"
+  ],
+  "cluster_titles": [
+   "Migrating an Agentic RAG App to AWS Serverless"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260911-1308-1-migrating-an-agentic-rag-app-to-aws-serverle.png",
+   "20260911-1308-1-migrating-an-agentic-rag-app-to-aws-serverle-d1.png",
+   "20260911-1308-1-migrating-an-agentic-rag-app-to-aws-serverle-d2.png"
+  ]
+ }
+]

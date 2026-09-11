@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "glm_5_3_post_training_revolution",
+  "headline_marked": "[[GLM-5.3 achieves 50% programming improvement]] without changing parameters, tops cybersecurity benchmarks",
+  "headline": "GLM-5.3 achieves 50% programming improvement without changing parameters, tops cybersecurity benchmarks",
+  "summary": "Z.ai's GLM-5.3, with 743 billion parameters, matches its predecessor but significantly boosts programming and cybersecurity via post-training scaling, challenging the parameter race.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "In August 2026, Z.ai released GLM-5.3. This model, with 743 billion parameters (identical to its predecessor GLM-5.2), achieved a 50% improvement in programming capabilities and topped global cybersecurity benchmarks without changing its base architecture.",
+   "This represents a significant shift, proving that post-training scaling can be more impactful than pre-training scaling. It challenges the multi-billion dollar arms race in AI development focused on ever-larger models. Z.ai described this as finding \"better teaching methods\" for an unchanged \"textbook.\"",
+   "Post-training improvements included an efficient long-context processing architecture to prevent information loss in extended tasks. It also featured a reinforcement learning algorithm designed for long-horizon tasks, enabling the model to learn from complete trajectories.",
+   "Further enhancements involved a large-scale asynchronous reinforcement learning training framework, bringing training efficiency to an industrial scale. This holistic approach allowed for substantial gains without increasing model size.",
+   "Key insights reveal GLM-5.3 dominates vulnerability detection (CyberGym 84.5%) but lags in exploit reasoning (ExploitBench 54.4% vs Mythos 5's 78.0%). This suggests the model is stronger at identifying vulnerabilities than exploiting them.",
+   "In a remarkable demonstration, GLM-5.3 identified a DNS protocol bug that had lay dormant for over 40 years, dating back to 1983. This was part of a larger effort across 269 real-world projects, where the model discovered 2,436 vulnerabilities.",
+   "Z.ai announced that GLM-5.3 weights will be open-sourced within two weeks. This move positions GLM-5.3 as the most powerful open-source coding model available, potentially shifting the competitive landscape in AI development."
+  ],
+  "caption": "Z.ai's GLM-5.3 achieved a 50% programming boost and topped cybersecurity benchmarks without increasing its 743B parameters. This challenges the AI industry's scaling paradigm.\n\nIn August 2026, Z.ai released GLM-5.3. This model, with 743 billion parameters (identical to its predecessor GLM-5.2), achieved a 50% improvement in programming capabilities and topped global cybersecurity benchmarks without changing its base architecture.\n\nThis represents a significant shift, proving that post-training scaling can be more impactful than pre-training scaling. It challenges the multi-billion dollar arms race in AI development focused on ever-larger models. Z.ai described this as finding \"better teaching methods\" for an unchanged \"textbook.\"\n\nPost-training improvements included an efficient long-context processing architecture to prevent information loss in extended tasks. It also featured a reinforcement learning algorithm designed for long-horizon tasks, enabling the model to learn from complete trajectories.\n\nFurther enhancements involved a large-scale asynchronous reinforcement learning training framework, bringing training efficiency to an industrial scale. This holistic approach allowed for substantial gains without increasing model size.\n\nKey insights reveal GLM-5.3 dominates vulnerability detection (CyberGym 84.5%) but lags in exploit reasoning (ExploitBench 54.4% vs Mythos 5's 78.0%). This suggests the model is stronger at identifying vulnerabilities than exploiting them.\n\nIn a remarkable demonstration, GLM-5.3 identified a DNS protocol bug that had lay dormant for over 40 years, dating back to 1983. This was part of a larger effort across 269 real-world projects, where the model discovered 2,436 vulnerabilities.\n\nZ.ai announced that GLM-5.3 weights will be open-sourced within two weeks. This move positions GLM-5.3 as the most powerful open-source coding model available, potentially shifting the competitive landscape in AI development.\n\n#AI #MachineLearning #Cybersecurity #OpenSource #TechNews #GLM53\n\nSource: DEV",
+  "tweet": "Z.ai's GLM-5.3 boosts programming by 50% & tops cybersecurity benchmarks with 743B params—no architecture change! This post-training scaling revolution challenges the AI parameter race. Weights open-sourcing soon! #AI #Cybersecurity #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "z.ai",
+  "source": "DEV",
+  "url": "https://dev.to/ryan_zhao/glm-53-the-post-training-revolution-thats-reshaping-ai-development-28bp",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fq0oubmkz9czr5mxrzr01.png",
+  "orig_title": "GLM-5.3: The Post-Training Revolution That's Reshaping AI Development",
+  "cluster_urls": [
+   "https://dev.to/ryan_zhao/glm-53-the-post-training-revolution-thats-reshaping-ai-development-28bp"
+  ],
+  "cluster_titles": [
+   "GLM-5.3: The Post-Training Revolution That's Reshaping AI Development"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260911-0659-0-glm-5-3-achieves-50-programming-improvement-.png",
+   "20260911-0659-0-glm-5-3-achieves-50-programming-improvement--d1.png",
+   "20260911-0659-0-glm-5-3-achieves-50-programming-improvement--d2.png",
+   "20260911-0659-0-glm-5-3-achieves-50-programming-improvement--d3.png"
+  ]
+ },
+ {
+  "topic": "gpt6_astra_looped_transformers",
+  "headline_marked": "[[AI's visible trace isn't the reasoning]] in looped transformer models",
+  "headline": "AI's visible trace isn't the reasoning in looped transformer models",
+  "summary": "AI models using looped transformers produce a narrated summary of their reasoning, not a direct trace of computation. This decoupling impacts how AI agents are evaluated, as the visible 'chain of thought' may not reflect the true process.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "GPT-6 Astra, for example, ships with looped transformers where the same blocks run approximately 44 passes, reusing weights to effectively double depth without new parameters. While the KV cache and intermediate states differ per pass, the tokens users see are only a surface layer.",
+   "This means that when reasoning is hidden inside these loops, the transcript a model produces is a summary written after the fact, not a direct trace of what it computed. The text is narration, a plausible story about how it reached an output, as the actual computation occurred across recurrent, uninspectable passes.",
+   "This architecture quietly breaks a habit in many AI agent evaluation and review setups. A significant portion of agent assessment relies on the idea that the chain of thought serves as evidence, allowing reviewers to judge both the answer and the underlying reasoning process.",
+   "If the visible trace is decoupled from the actual computation, then evaluating that trace becomes an assessment of a story, not the model's true thinking. While narration and computation often agree, the problem arises when they diverge, as this is precisely where subtle bugs or flawed reviews can hide, and users cannot detect such divergence.",
+   "For evaluation design, the practical response is to stop treating visible reasoning as the ground truth. Instead, focus on instrumenting verifiable elements like the tool loop, files an agent modified, the final diff, or observable behavior, as these are checkable and reliable.",
+   "An interesting trade-off is that forcing reasoning transparency, often done for accountability, intervenes with how the model allocates its passes. Transparent models and hidden-trace models are not identical systems, meaning benchmarks from a forced-transparent variant do not cleanly transfer to the shipping default."
+  ],
+  "caption": "Your AI's 'reasoning' might not be its actual thought process. New models use looped transformers, making visible traces a post-fact narration.\n\nGPT-6 Astra, for example, ships with looped transformers where the same blocks run approximately 44 passes, reusing weights to effectively double depth without new parameters. While the KV cache and intermediate states differ per pass, the tokens users see are only a surface layer.\n\nThis means that when reasoning is hidden inside these loops, the transcript a model produces is a summary written after the fact, not a direct trace of what it computed. The text is narration, a plausible story about how it reached an output, as the actual computation occurred across recurrent, uninspectable passes.\n\nThis architecture quietly breaks a habit in many AI agent evaluation and review setups. A significant portion of agent assessment relies on the idea that the chain of thought serves as evidence, allowing reviewers to judge both the answer and the underlying reasoning process.\n\nIf the visible trace is decoupled from the actual computation, then evaluating that trace becomes an assessment of a story, not the model's true thinking. While narration and computation often agree, the problem arises when they diverge, as this is precisely where subtle bugs or flawed reviews can hide, and users cannot detect such divergence.\n\nFor evaluation design, the practical response is to stop treating visible reasoning as the ground truth. Instead, focus on instrumenting verifiable elements like the tool loop, files an agent modified, the final diff, or observable behavior, as these are checkable and reliable.\n\nAn interesting trade-off is that forcing reasoning transparency, often done for accountability, intervenes with how the model allocates its passes. Transparent models and hidden-trace models are not identical systems, meaning benchmarks from a forced-transparent variant do not cleanly transfer to the shipping default.\n\n#AI #MachineLearning #DeepLearning #GPT #TechNews #AIResearch\n\nSource: DEV",
+  "tweet": "Your AI's 'reasoning' might not be its actual thought process. Looped transformer models like GPT-6 Astra produce narrated summaries, not direct computational traces. This impacts AI agent evaluation, as visible 'chains of thought' are reports, not recordings. #AI #MachineLe",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/cole_halton_42f71d71b809b/looped-reasoning-means-the-ais-visible-trace-isnt-the-reasoning-5783",
+  "image": "",
+  "orig_title": "Looped reasoning means the AI's visible trace isn't the reasoning",
+  "cluster_urls": [
+   "https://dev.to/cole_halton_42f71d71b809b/looped-reasoning-means-the-ais-visible-trace-isnt-the-reasoning-5783"
+  ],
+  "cluster_titles": [
+   "Looped reasoning means the AI's visible trace isn't the reasoning"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260911-0659-1-ai-s-visible-trace-isn-t-the-reasoning-in-lo.png",
+   "20260911-0659-1-ai-s-visible-trace-isn-t-the-reasoning-in-lo-d1.png",
+   "20260911-0659-1-ai-s-visible-trace-isn-t-the-reasoning-in-lo-d2.png",
+   "20260911-0659-1-ai-s-visible-trace-isn-t-the-reasoning-in-lo-d3.png"
+  ]
+ }
+]

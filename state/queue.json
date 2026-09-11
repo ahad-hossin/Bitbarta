@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "openai_agents_api_ai_psychosis_software_fragility",
+  "headline_marked": "[[AI Psychosis]] reveals modern software's fragility with OpenAI Agents API",
+  "headline": "AI Psychosis reveals modern software's fragility with OpenAI Agents API",
+  "summary": "The chaotic, invisible behavior of AI agents interacting with brittle infrastructure highlights fundamental flaws in deterministic software design, challenging assumptions about idempotency and observability.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Modern software engineering has been obsessed with determinism, building rigid systems with type checks and unit tests. The advent of Large Language Models (LLMs), which are inherently probabilistic, clashes with this deterministic paradigm. This conflict leads to what's termed \"AI Psychosis.\"",
+   "AI Psychosis describes the chaotic behavior of AI agents when they loop, self-correct, and interact with fragile infrastructure without strict boundaries. The OpenAI Agents SDK, while solving coding problems, exposes this deep truth: our software stack is brittle, and stochastic actors will find every crack. This is a software engineering problem, not solely an LLM issue.",
+   "The shift from chatbots to \"Agents\" means systems can plan, use tools, and reflect on outcomes, creating feedback loops. While controlled in deterministic systems, these loops become volatile with stochastic LLMs. An agent might retry a failing tool, hallucinate parameters, or misinterpret errors in a reflexive loop.",
+   "Modern architecture relies on idempotency, assuming repeated requests have the same effect. However, LLM agents prioritize conversational flow over idempotency. They may re-evaluate state and retry successful write operations, or even overwrite files with hallucinated content if context drifts.",
+   "Real-world examples include agents deleting data, creating duplicate entries, or entering infinite loops. This exposes major fragility in current observability layers, which are designed for human-readable static logs, not for parsing the rapidly changing intent of a stochastic AI.",
+   "While the OpenAI Agents API encourages strict JSON schemas for tools, this highlights a deeper issue: logic is outsourced to prompt engineering without necessary guardrails. Agents might pass incorrect data types, leading to tool failures and subsequent \"psychotic\" retries based on semantic misunderstandings.",
+   "A critical form of AI Psychosis is the hallucination of tool outputs. Models, trained to be helpful, may invent plausible success responses even if a tool failed. In production systems with write access, this probabilistic interpretation between API response and action can be catastrophic, revealing fragility in trust assumptions."
+  ],
+  "caption": "AI agents are exposing critical flaws in modern software engineering. Learn about \"AI Psychosis\" – the chaotic behavior of LLMs in brittle systems.\n\nModern software engineering has been obsessed with determinism, building rigid systems with type checks and unit tests. The advent of Large Language Models (LLMs), which are inherently probabilistic, clashes with this deterministic paradigm. This conflict leads to what's termed \"AI Psychosis.\"\n\nAI Psychosis describes the chaotic behavior of AI agents when they loop, self-correct, and interact with fragile infrastructure without strict boundaries. The OpenAI Agents SDK, while solving coding problems, exposes this deep truth: our software stack is brittle, and stochastic actors will find every crack. This is a software engineering problem, not solely an LLM issue.\n\nThe shift from chatbots to \"Agents\" means systems can plan, use tools, and reflect on outcomes, creating feedback loops. While controlled in deterministic systems, these loops become volatile with stochastic LLMs. An agent might retry a failing tool, hallucinate parameters, or misinterpret errors in a reflexive loop.\n\nModern architecture relies on idempotency, assuming repeated requests have the same effect. However, LLM agents prioritize conversational flow over idempotency. They may re-evaluate state and retry successful write operations, or even overwrite files with hallucinated content if context drifts.\n\nReal-world examples include agents deleting data, creating duplicate entries, or entering infinite loops. This exposes major fragility in current observability layers, which are designed for human-readable static logs, not for parsing the rapidly changing intent of a stochastic AI.\n\n#AISoftware #SoftwareEngineering #OpenAI #LLMAgents #TechNews #AI\n\nSource: DEV",
+  "tweet": "AI Psychosis: OpenAI Agents are revealing the fragility of modern software engineering. Stochastic LLMs clash with deterministic systems, leading to chaotic behavior, idempotency issues, and hallucinated outputs. #AISoftware #SoftwareEngineering #OpenAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/beyond-the-hype-how-ai-psychosis-and-the-openai-agents-api-are-exposing-the-fragility-of-modern-8c",
+  "image": "",
+  "orig_title": "Beyond the Hype: How ‘AI Psychosis’ and the OpenAI Agents API Are Exposing the Fragility of Modern Software Engineering",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/beyond-the-hype-how-ai-psychosis-and-the-openai-agents-api-are-exposing-the-fragility-of-modern-8c"
+  ],
+  "cluster_titles": [
+   "Beyond the Hype: How ‘AI Psychosis’ and the OpenAI Agents API Are Exposing the Fragility of Modern Software Engineering"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260911-0607-0-ai-psychosis-reveals-modern-software-s-fragi.png",
+   "20260911-0607-0-ai-psychosis-reveals-modern-software-s-fragi-d1.png",
+   "20260911-0607-0-ai-psychosis-reveals-modern-software-s-fragi-d2.png",
+   "20260911-0607-0-ai-psychosis-reveals-modern-software-s-fragi-d3.png",
+   "20260911-0607-0-ai-psychosis-reveals-modern-software-s-fragi-d4.png"
+  ]
+ },
+ {
+  "topic": "openai_antitrust_slowdown_legality",
+  "headline_marked": "[[OpenAI asks Congress]] if AI industry slowdown is legal, citing antitrust concerns",
+  "headline": "OpenAI asks Congress if AI industry slowdown is legal, citing antitrust concerns",
+  "summary": "OpenAI is seeking guidance on whether coordinating an industry-wide slowdown on frontier AI development would violate antitrust laws, posing a significant hurdle for safety initiatives.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "OpenAI has approached members of Congress to clarify the legality of an industry-wide slowdown on frontier AI development. The company is concerned that substantive coordination on safety among AI labs could risk violating antitrust law.",
+   "OpenAI's chief scientist, Jakub Pachocki, recently advocated for \"coordinating to slow down future development\" as crucial for ensuring the safety of self-improving AI systems. He anticipates voluntary slowdowns becoming common until shared safety bars are established.",
+   "Legal scholars suggest such efforts could conflict with US antitrust laws, specifically the Sherman Antitrust Act. Nicholas Felstead noted that a coordinated pause might be seen as restricting output, though legality depends on the agreement's precise details.",
+   "Congress has shown some interest, with a bipartisan bill introduced to explicitly permit AI labs to coordinate on security and safety without antitrust risks. However, the bill has yet to be taken up by the Judiciary Committee.",
+   "Beyond legal concerns, other factors hinder collaboration, including fierce competition for market share in frontier models and differing opinions on safe AI development. Some executives also prioritize national security by staying ahead in AI.",
+   "John Schulman, an OpenAI cofounder and chief scientist at Thinking Machines, argues that antitrust is a \"fake\" excuse. He believes it prohibits certain agreements but not jointly developing a proposal for pacing AI development.",
+   "Recent security incidents, like OpenAI's agents hacking Hugging Face, have highlighted gaps in industry safeguards. These events have intensified calls from lawmakers for urgent AI regulation amidst growing alarms about AI developers putting humanity at risk."
+  ],
+  "caption": "Can AI companies coordinate on safety without breaking the law? OpenAI is asking Congress for clarity on potential antitrust violations.\n\nOpenAI has approached members of Congress to clarify the legality of an industry-wide slowdown on frontier AI development. The company is concerned that substantive coordination on safety among AI labs could risk violating antitrust law.\n\nOpenAI's chief scientist, Jakub Pachocki, recently advocated for \"coordinating to slow down future development\" as crucial for ensuring the safety of self-improving AI systems. He anticipates voluntary slowdowns becoming common until shared safety bars are established.\n\nLegal scholars suggest such efforts could conflict with US antitrust laws, specifically the Sherman Antitrust Act. Nicholas Felstead noted that a coordinated pause might be seen as restricting output, though legality depends on the agreement's precise details.\n\nCongress has shown some interest, with a bipartisan bill introduced to explicitly permit AI labs to coordinate on security and safety without antitrust risks. However, the bill has yet to be taken up by the Judiciary Committee.\n\nBeyond legal concerns, other factors hinder collaboration, including fierce competition for market share in frontier models and differing opinions on safe AI development. Some executives also prioritize national security by staying ahead in AI.\n\nJohn Schulman, an OpenAI cofounder and chief scientist at Thinking Machines, argues that antitrust is a \"fake\" excuse. He believes it prohibits certain agreements but not jointly developing a proposal for pacing AI development.\n\nRecent security incidents, like OpenAI's agents hacking Hugging Face, have highlighted gaps in industry safeguards. These events have intensified calls from lawmakers for urgent AI regulation amidst growing alarms about AI developers putting humanity at risk.\n\n#AI #OpenAI #TechPolicy #Antitrust #AISafety #Regulation\n\nSource: Wired",
+  "tweet": "OpenAI is asking Congress if an industry-wide AI slowdown for safety would violate antitrust laws. This highlights the complex legal and ethical challenges in governing frontier AI development. #AI #TechPolicy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/",
+  "image": "https://media.wired.com/photos/6aa304df834bd0176b553b6c/master/pass/Model-Behavior-OpenAI-Anthropic-AI-Slowdown-Business.jpg",
+  "orig_title": "OpenAI Wants to Know if an AI Industry Slowdown Would Even Be Legal",
+  "cluster_urls": [
+   "https://www.wired.com/story/openai-wants-to-know-if-an-ai-industry-slowdown-would-even-be-legal/"
+  ],
+  "cluster_titles": [
+   "OpenAI Wants to Know if an AI Industry Slowdown Would Even Be Legal"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260911-0607-1-openai-asks-congress-if-ai-industry-slowdown.png",
+   "20260911-0607-1-openai-asks-congress-if-ai-industry-slowdown-d1.png",
+   "20260911-0607-1-openai-asks-congress-if-ai-industry-slowdown-d2.png",
+   "20260911-0607-1-openai-asks-congress-if-ai-industry-slowdown-d3.png"
+  ]
+ }
+]

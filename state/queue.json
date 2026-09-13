@@ -1,1 +1,64 @@
-[]
+[
+ {
+  "topic": "ai_agent_context_and_cost_optimization",
+  "headline_marked": "[[Anthropic Claude Certified Developer]] Foundations certification overview",
+  "headline": "Anthropic Claude Certified Developer Foundations certification overview",
+  "summary": "Explore the modules and structure of Anthropic's official Claude Certified Developer Foundations prep course, covering model fundamentals, production-grade prompting, and integration.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Anthropic has launched the Claude Certified Developer - Foundations certification, offering a comprehensive curriculum for developers working with their AI models. The official course, accessible to Anthropic partners, covers essential topics from model fundamentals to production engineering.",
+   "The certification is structured into several key modules: MSO Foundations for understanding model basics, Production-Grade Prompting, Agents & Tool Use for building integrations, Claude Code, MCP & Integration for configurable and safe connections, and Production Engineering, Evals & Security for real-world traffic resilience.",
+   "A crucial aspect covered is token management, as Claude processes everything—prompts, history, tools, and output—in tokens, not words or characters. Both pricing and context budget are token-based, with output tokens costing more than input tokens. Understanding the context window, which is the maximum tokens allowed in a single request, is vital to avoid exceeding limits.",
+   "The course also delves into sampling and temperature parameters, explaining that identical inputs can yield different, valid outputs due to sampling. This non-determinism means exact-string-match tests are unreliable; instead, testing for properties like 'required field present' or 'value within range' is recommended. Evals, a testing framework for non-deterministic outputs, report an aggregate pass rate.",
+   "Claude's model family includes four tiers—Haiku, Sonnet, Opus, and the upcoming next-gen model—trading off cost, latency, capability, and quality. The recommended strategy is to start with Sonnet by default and only move to a higher tier if evals show a quality bar failure, or down to Haiku if the quality drop is acceptable.",
+   "Reasoning modes allow the model to spend extra tokens 'thinking' before answering, particularly useful for complex, multi-step problems. While hidden by default, this feature is worth the cost only when necessary, not for simple lookups. Prompting techniques like zero-shot, one-shot, and few-shot are also detailed, highlighting the cost tradeoff of examples which consume tokens on every call.",
+   "The certification emphasizes best practices for interacting with the Claude API, whether through the SDK or the raw REST API. It advises diagnosing prompt failures by identifying missing structural techniques rather than simply rewording instructions, and utilizing system prompts to carry the persistent behavioral contract for the entire session."
+  ],
+  "caption": "Anthropic's Claude Certified Developer Foundations certification is here! Dive into model fundamentals, production-grade prompting, and integration strategies.\n\nAnthropic has launched the Claude Certified Developer - Foundations certification, offering a comprehensive curriculum for developers working with their AI models. The official course, accessible to Anthropic partners, covers essential topics from model fundamentals to production engineering.\n\nThe certification is structured into several key modules: MSO Foundations for understanding model basics, Production-Grade Prompting, Agents & Tool Use for building integrations, Claude Code, MCP & Integration for configurable and safe connections, and Production Engineering, Evals & Security for real-world traffic resilience.\n\nA crucial aspect covered is token management, as Claude processes everything—prompts, history, tools, and output—in tokens, not words or characters. Both pricing and context budget are token-based, with output tokens costing more than input tokens. Understanding the context window, which is the maximum tokens allowed in a single request, is vital to avoid exceeding limits.\n\nThe course also delves into sampling and temperature parameters, explaining that identical inputs can yield different, valid outputs due to sampling. This non-determinism means exact-string-match tests are unreliable; instead, testing for properties like 'required field present' or 'value within range' is recommended. Evals, a testing framework for non-deterministic outputs, report an aggregate pass rate.\n\nClaude's model family includes four tiers—Haiku, Sonnet, Opus, and the upcoming next-gen model—trading off cost, latency, capability, and quality. The recommended strategy is to start with Sonnet by default and only move to a higher tier if evals show a quality bar failure, or down to Haiku if the quality drop is acceptable.\n\n#AI #Claude #Anthropic #LLM #Developer\n\nSource: DEV",
+  "tweet": "Anthropic's Claude Certified Developer Foundations certification is here! Explore modules on model fundamentals, prompting, agents, tool use, and production engineering. Learn token management, context windows, and testing strategies. #AI #Claude #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/yashnigam/claude-certified-developer-foundations-certification-overview-4n07",
+  "image": "",
+  "orig_title": "Claude Certified Developer - Foundations certification Overview",
+  "cluster_urls": [
+   "https://dev.to/yashnigam/claude-certified-developer-foundations-certification-overview-4n07",
+   "https://dev.to/marinenimd/context-aware-spring-ai-chat-microservice-ake",
+   "https://dev.to/nexoper/how-i-built-a-bilingual-rag-powered-ai-calling-chat-agent-with-a-full-admin-ops-center-573o",
+   "https://dev.to/rijultp/the-3-scaling-laws-of-ai-from-training-more-to-thinking-more-13hk",
+   "https://dev.to/terminalchai/rtk-a-high-performance-rust-cli-proxy-that-slashes-ai-agent-token-costs-3bj5",
+   "https://dev.to/mahirhir/a-stale-hash-failed-29-of-59-tests-the-tool-that-refreshes-hashes-had-never-seen-that-copy-3ie3",
+   "https://dev.to/dzakh/standard-json-schema-vs-json-schema-54fc",
+   "https://dev.to/hackgo_6978/weekend-build-log-the-timeout-is-the-product-3bpj",
+   "https://dev.to/rapidlashes/no-idea-where-to-start-learning-sql-4nh6",
+   "https://dev.to/tekspry/why-your-net-mcp-tool-classes-crash-at-runtime-and-the-two-line-fix-lcb",
+   "https://dev.to/kaya-abdullah/-ibc"
+  ],
+  "cluster_titles": [
+   "Claude Certified Developer - Foundations certification Overview",
+   "Context aware Spring AI chat microservice",
+   "How I Built a Bilingual RAG-Powered AI Calling & Chat Agent (With a Full Admin Ops Center)",
+   "The 3 Scaling Laws of AI: From Training More to Thinking More",
+   "RTK: A High-Performance Rust CLI Proxy That Slashes AI Agent Token Costs",
+   "A stale hash failed 29 of 59 tests. The tool that refreshes hashes had never seen that copy.",
+   "Standard JSON Schema vs JSON Schema",
+   "Weekend Build Log: The Timeout Is the Product",
+   "NO idea where to start learning SQL?",
+   "Why Your .NET MCP Tool Classes Crash at Runtime (And the Two-Line Fix)",
+   "[Boost]"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260914-0206-0-anthropic-claude-certified-developer-foundat.png",
+   "20260914-0206-0-anthropic-claude-certified-developer-foundat-d1.png",
+   "20260914-0206-0-anthropic-claude-certified-developer-foundat-d2.png",
+   "20260914-0206-0-anthropic-claude-certified-developer-foundat-d3.png",
+   "20260914-0206-0-anthropic-claude-certified-developer-foundat-d4.png"
+  ]
+ }
+]

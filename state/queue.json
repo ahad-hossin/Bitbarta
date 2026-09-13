@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "critical_checkpoint_vpn_rce_vulnerability",
+  "headline_marked": "[[Check Point VPN vulnerabilities allow Pre-Authentication RCE]] via certificate processing",
+  "headline": "Check Point VPN vulnerabilities allow Pre-Authentication RCE via certificate processing",
+  "summary": "Two critical vulnerabilities in Check Point VPNs (CVE-2026-85102, CVE-2026-85103) enable unauthenticated remote code execution. Organizations must patch immediately, as large-scale exploitation is predicted.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Two critical vulnerabilities, CVE-2026-85102 and CVE-2026-85103, have been identified in Check Point VPN certificate processing. These flaws allow an unauthenticated attacker to execute arbitrary code on Security Gateways and other affected targets.",
+   "While no specific examples of active exploitation have been publicly reported, the Dutch NCSC predicts that large-scale exploitation attempts will begin soon. This emphasizes the urgency for organizations to act proactively.",
+   "Organizations using Check Point VPNs for internet boundaries or site-to-site connections must quickly identify impacted assets. This includes VPN boundary devices and Security Management Servers, even if VPN ports are not directly exposed.",
+   "Immediate action requires applying the necessary patches via the Jumbo Hotfix Accumulator levels. It is crucial to verify the deployment status across all affected systems, prioritizing end-of-life versions and environments without proper site-to-site VPN peer restrictions.",
+   "Security Operations Centers (SOCs) should be vigilant for attack attempts and record any evidence of code execution or subsequent compromises. It is important to distinguish NCSC predictions from confirmed observed attacks."
+  ],
+  "caption": "Critical pre-authentication RCE vulnerabilities found in Check Point VPNs. Patch immediately to prevent unauthenticated remote code execution.\n\nTwo critical vulnerabilities, CVE-2026-85102 and CVE-2026-85103, have been identified in Check Point VPN certificate processing. These flaws allow an unauthenticated attacker to execute arbitrary code on Security Gateways and other affected targets.\n\nWhile no specific examples of active exploitation have been publicly reported, the Dutch NCSC predicts that large-scale exploitation attempts will begin soon. This emphasizes the urgency for organizations to act proactively.\n\nOrganizations using Check Point VPNs for internet boundaries or site-to-site connections must quickly identify impacted assets. This includes VPN boundary devices and Security Management Servers, even if VPN ports are not directly exposed.\n\nImmediate action requires applying the necessary patches via the Jumbo Hotfix Accumulator levels. It is crucial to verify the deployment status across all affected systems, prioritizing end-of-life versions and environments without proper site-to-site VPN peer restrictions.\n\nSecurity Operations Centers (SOCs) should be vigilant for attack attempts and record any evidence of code execution or subsequent compromises. It is important to distinguish NCSC predictions from confirmed observed attacks.\n\n#CheckPoint #VPN #CyberSecurity #Vulnerability #RCE #SecurityAlert\n\nSource: DEV",
+  "tweet": "URGENT: Critical pre-authentication RCE vulnerabilities (CVE-2026-85102, CVE-2026-85103) found in Check Point VPNs. Unauthenticated attackers can execute arbitrary code. Patch immediately, NCSC predicts large-scale exploitation soon. #CheckPoint #VPN #CyberSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "checkpoint.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/check-point-vpn-cve-2026-85102-and-cve-2026-85103-early-warning-for-pre-authentication-rce-2i4n",
+  "image": "",
+  "orig_title": "Check Point VPN CVE-2026-85102 and CVE-2026-85103: Early Warning for Pre-Authentication RCE",
+  "cluster_urls": [
+   "https://dev.to/anoymask/check-point-vpn-cve-2026-85102-and-cve-2026-85103-early-warning-for-pre-authentication-rce-2i4n"
+  ],
+  "cluster_titles": [
+   "Check Point VPN CVE-2026-85102 and CVE-2026-85103: Early Warning for Pre-Authentication RCE"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260913-0906-0-check-point-vpn-vulnerabilities-allow-pre-au.png",
+   "20260913-0906-0-check-point-vpn-vulnerabilities-allow-pre-au-d1.png",
+   "20260913-0906-0-check-point-vpn-vulnerabilities-allow-pre-au-d2.png"
+  ]
+ },
+ {
+  "topic": "zero_parameter_cache_overtakes_transformer_ai",
+  "headline_marked": "[[Zero-Parameter Cache Overtakes a Transformer]] by 43% on long documents",
+  "headline": "Zero-Parameter Cache Overtakes a Transformer by 43% on long documents",
+  "summary": "A count table built over the current document, with no parameters or training, outperforms a 1.43M-parameter transformer by 0.064 top-1 at 1000 tokens.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "New research explores how a simple zero-parameter document cache performs against a 1.43 million-parameter transformer with a fixed 64-token window. The goal is to measure how much a free mechanism can replace a trained model as document lengths increase.",
+   "The experiment involved six systems, all processing continuous text cut into documents of varying lengths. This setup allowed for a direct comparison of performance as both document length and coherence grew.",
+   "For shorter documents (around 60 tokens), the transformer model initially wins. However, the cache's performance doubles as document length increases, while the transformer's remains flat due to its limited window.",
+   "A critical crossover point occurs between 60 and 250 tokens. At this stage, the zero-parameter count table, constructed in microseconds, overtakes the 1.43 million trained parameters of the transformer.",
+   "By 1000 tokens, the document cache achieves a significant win, outperforming the transformer by 0.064 top-1, representing a 43% relative margin. This demonstrates the power of context-aware mechanisms for longer texts.",
+   "The study highlights that these are genuinely different mechanisms, not just variants, as they disagree on 20-25% of predictions. The cache's optimal weight in a mixed system climbs from 0.25 to 0.85 as documents lengthen, confirming its increasing importance.",
+   "It's important to note that this comparison is for a transformer with a fixed short context window, typical for smaller models. It does not evaluate models whose context window covers the entire document.",
+   "The experiment also operated out of distribution, using a Gutenberg book against models trained on a TinyStories corpus. This setup ensures internal fairness for comparison, though in-domain performance might shift the crossover point."
+  ],
+  "caption": "A zero-parameter cache outperforms a 1.43M-parameter transformer by 43% on long documents. Simple mechanisms can be surprisingly effective.\n\nNew research explores how a simple zero-parameter document cache performs against a 1.43 million-parameter transformer with a fixed 64-token window. The goal is to measure how much a free mechanism can replace a trained model as document lengths increase.\n\nThe experiment involved six systems, all processing continuous text cut into documents of varying lengths. This setup allowed for a direct comparison of performance as both document length and coherence grew.\n\nFor shorter documents (around 60 tokens), the transformer model initially wins. However, the cache's performance doubles as document length increases, while the transformer's remains flat due to its limited window.\n\nA critical crossover point occurs between 60 and 250 tokens. At this stage, the zero-parameter count table, constructed in microseconds, overtakes the 1.43 million trained parameters of the transformer.\n\nBy 1000 tokens, the document cache achieves a significant win, outperforming the transformer by 0.064 top-1, representing a 43% relative margin. This demonstrates the power of context-aware mechanisms for longer texts.\n\nThe study highlights that these are genuinely different mechanisms, not just variants, as they disagree on 20-25% of predictions. The cache's optimal weight in a mixed system climbs from 0.25 to 0.85 as documents lengthen, confirming its increasing importance.\n\nIt's important to note that this comparison is for a transformer with a fixed short context window, typical for smaller models. It does not evaluate models whose context window covers the entire document.\n\nThe experiment also operated out of distribution, using a Gutenberg book against models trained on a TinyStories corpus. This setup ensures internal fairness for comparison, though in-domain performance might shift the crossover point.\n\n#AI #MachineLearning #Transformers #Research #Tech #Software\n\nSource: DEV",
+  "tweet": "A zero-parameter cache just beat a 1.43M-parameter transformer by 43% on long documents. This research highlights the power of simple, context-aware mechanisms. #AI #MachineLearning #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/megapixel99/when-a-zero-parameter-cache-overtakes-a-transformer-37c6",
+  "image": "",
+  "orig_title": "When a Zero-Parameter Cache Overtakes a Transformer",
+  "cluster_urls": [
+   "https://dev.to/megapixel99/when-a-zero-parameter-cache-overtakes-a-transformer-37c6"
+  ],
+  "cluster_titles": [
+   "When a Zero-Parameter Cache Overtakes a Transformer"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260913-0906-1-zero-parameter-cache-overtakes-a-transformer.png",
+   "20260913-0906-1-zero-parameter-cache-overtakes-a-transformer-d1.png",
+   "20260913-0906-1-zero-parameter-cache-overtakes-a-transformer-d2.png",
+   "20260913-0906-1-zero-parameter-cache-overtakes-a-transformer-d3.png"
+  ]
+ }
+]

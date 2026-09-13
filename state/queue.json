@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "ai drug interaction and expiration checker with yolov10",
+  "headline_marked": "[[AI-powered Medicine Safety Gatekeeper]] built with YOLOv10 for real-time drug safety checks",
+  "headline": "AI-powered Medicine Safety Gatekeeper built with YOLOv10 for real-time drug safety checks",
+  "summary": "This AI-powered system uses YOLOv10 object detection and Tesseract OCR to identify medicine, extract expiration dates, and warn about dangerous drug interactions, running fast on edge devices.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new AI-powered Medicine Safety Gatekeeper is being built using YOLOv10 object detection, Tesseract OCR, and a local pharmacopeia database. This system aims to identify medicine boxes, extract expiration dates, and warn about dangerous drug-to-drug interactions in real-time. It leverages YOLOv10's NMS-free architecture for lightning-fast inference on edge devices or smartphones.",
+   "The system's logic flow involves capturing a frame, detecting the medicine container, zooming in on the text, and cross-referencing the extracted data with a safety database. This streamlined process ensures quick and accurate safety checks.",
+   "YOLOv10 is crucial for its speed, eliminating the need for Non-Maximum Suppression (NMS) and significantly reducing latency. The model is initialized to precisely locate 'medicine box' or 'pill bottle' objects within the captured images.",
+   "Medical packaging often presents challenges due to glossy surfaces and tiny fonts. To overcome this, OpenCV is used to preprocess images by grayscaling and thresholding them before Tesseract OCR extracts the text data.",
+   "Once the drug name and expiration date are extracted, an SQLite database is queried. This database contains a comprehensive mapping of ingredients and their known contraindications, providing essential safety information.",
+   "While building a prototype is straightforward, achieving production-readiness requires handling complex edge cases. These include curved surfaces on pill bottles, low-light environments, and fuzzy matching for intricate medical terminology.",
+   "By combining YOLOv10's rapid object detection with Tesseract OCR's data extraction, a functional 'Safety Gatekeeper' is created. This system can prevent accidental ingestion of expired medications and, more importantly, stop dangerous drug combinations before they occur."
+  ],
+  "caption": "Never guess if your medicine is safe again. An AI-powered system uses YOLOv10 to check drug interactions and expiration dates in real-time on your device.\n\nA new AI-powered Medicine Safety Gatekeeper is being built using YOLOv10 object detection, Tesseract OCR, and a local pharmacopeia database. This system aims to identify medicine boxes, extract expiration dates, and warn about dangerous drug-to-drug interactions in real-time. It leverages YOLOv10's NMS-free architecture for lightning-fast inference on edge devices or smartphones.\n\nThe system's logic flow involves capturing a frame, detecting the medicine container, zooming in on the text, and cross-referencing the extracted data with a safety database. This streamlined process ensures quick and accurate safety checks.\n\nYOLOv10 is crucial for its speed, eliminating the need for Non-Maximum Suppression (NMS) and significantly reducing latency. The model is initialized to precisely locate 'medicine box' or 'pill bottle' objects within the captured images.\n\nMedical packaging often presents challenges due to glossy surfaces and tiny fonts. To overcome this, OpenCV is used to preprocess images by grayscaling and thresholding them before Tesseract OCR extracts the text data.\n\nOnce the drug name and expiration date are extracted, an SQLite database is queried. This database contains a comprehensive mapping of ingredients and their known contraindications, providing essential safety information.\n\nWhile building a prototype is straightforward, achieving production-readiness requires handling complex edge cases. These include curved surfaces on pill bottles, low-light environments, and fuzzy matching for intricate medical terminology.\n\nBy combining YOLOv10's rapid object detection with Tesseract OCR's data extraction, a functional 'Safety Gatekeeper' is created. This system can prevent accidental ingestion of expired medications and, more importantly, stop dangerous drug combinations before they occur.\n\n#AI #YOLOv10 #HealthcareTech #ObjectDetection #DrugSafety #Developer\n\nSource: DEV",
+  "tweet": "Stop guessing about medicine safety! A new AI-powered system built with YOLOv10 detects drug interactions & expiration dates in real-time on edge devices. Learn how to build your own Medicine Safety Gatekeeper. #AI #Healthcare #YOLOv10",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/beck_moulton/medicine-safety-gatekeeper-building-a-real-time-drug-interaction-expiration-checker-with-yolov10-4ga5",
+  "image": "",
+  "orig_title": "Medicine Safety Gatekeeper: Building a Real-Time Drug Interaction & Expiration Checker with YOLOv10",
+  "cluster_urls": [
+   "https://dev.to/beck_moulton/medicine-safety-gatekeeper-building-a-real-time-drug-interaction-expiration-checker-with-yolov10-4ga5"
+  ],
+  "cluster_titles": [
+   "Medicine Safety Gatekeeper: Building a Real-Time Drug Interaction & Expiration Checker with YOLOv10"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260913-0706-0-ai-powered-medicine-safety-gatekeeper-built-.png",
+   "20260913-0706-0-ai-powered-medicine-safety-gatekeeper-built--d1.png",
+   "20260913-0706-0-ai-powered-medicine-safety-gatekeeper-built--d2.png",
+   "20260913-0706-0-ai-powered-medicine-safety-gatekeeper-built--d3.png"
+  ]
+ }
+]

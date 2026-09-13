@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "opensea security vulnerability leaks usernames",
+  "headline_marked": "Undocumented MCP Server on OpenSea [[leaked usernames for any wallet]]",
+  "headline": "Undocumented MCP Server on OpenSea leaked usernames for any wallet",
+  "summary": "A security researcher discovered an exposed API key on OpenSea's internal MCP server, allowing anyone to resolve Ethereum addresses to their associated usernames, raising significant privacy concerns for NFT holders.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A security researcher uncovered an undocumented MCP server at mcp.opensea.io/mcp, which exposed an API key via a get_instant_api_key endpoint. This allowed direct access to a credential that should have remained hidden, requiring no authentication.",
+   "With the exposed API key, the researcher could use the get_profile tool to look up usernames for any Ethereum address linked to an OpenSea profile. This capability was successfully tested on both personal and well-known wallets, instantly resolving their associated usernames.",
+   "This information disclosure poses a significant privacy risk for NFT holders, as it undermines the pseudonymity typically associated with cryptocurrency wallets. Username enumeration is often a critical first step for attackers in mapping out a target's digital footprint.",
+   "While other sensitive tools on the server, like cancel_orders, properly required authenticated wallet JWTs, the flaw lay in the discovery layer. A handful of tools were accessible with an easily minted API key, despite the overall architecture being sound.",
+   "The vulnerability was reported to OpenSea's Bugcrowd program with a full write-up and Proof of Concept. It is currently in their triage queue, self-assessed as a P4 informational issue regarding username enumeration, with official severity pending.",
+   "The researcher advises other security professionals against attempting to exploit this reported vulnerability, as unauthorized testing of live systems violates program rules. A free 'OpenSea MCP Server Recon Kit' PDF detailing the methodology has been released for educational purposes.",
+   "This incident highlights the pervasive issue of undocumented internal APIs, which are frequently overlooked in security reviews. Such endpoints can inadvertently expose critical secrets, turning minor misconfigurations into significant security problems."
+  ],
+  "caption": "An undocumented OpenSea server exposed an API key, allowing anyone to resolve Ethereum wallet addresses to usernames. This bypasses typical crypto pseudonymity.\n\nA security researcher uncovered an undocumented MCP server at mcp.opensea.io/mcp, which exposed an API key via a get_instant_api_key endpoint. This allowed direct access to a credential that should have remained hidden, requiring no authentication.\n\nWith the exposed API key, the researcher could use the get_profile tool to look up usernames for any Ethereum address linked to an OpenSea profile. This capability was successfully tested on both personal and well-known wallets, instantly resolving their associated usernames.\n\nThis information disclosure poses a significant privacy risk for NFT holders, as it undermines the pseudonymity typically associated with cryptocurrency wallets. Username enumeration is often a critical first step for attackers in mapping out a target's digital footprint.\n\nWhile other sensitive tools on the server, like cancel_orders, properly required authenticated wallet JWTs, the flaw lay in the discovery layer. A handful of tools were accessible with an easily minted API key, despite the overall architecture being sound.\n\nThe vulnerability was reported to OpenSea's Bugcrowd program with a full write-up and Proof of Concept. It is currently in their triage queue, self-assessed as a P4 informational issue regarding username enumeration, with official severity pending.\n\nThe researcher advises other security professionals against attempting to exploit this reported vulnerability, as unauthorized testing of live systems violates program rules. A free 'OpenSea MCP Server Recon Kit' PDF detailing the methodology has been released for educational purposes.\n\nThis incident highlights the pervasive issue of undocumented internal APIs, which are frequently overlooked in security reviews. Such endpoints can inadvertently expose critical secrets, turning minor misconfigurations into significant security problems.\n\n#OpenSea #Security #BugBounty #Crypto #Web3 #DataLeak\n\nSource: DEV",
+  "tweet": "An undocumented OpenSea server exposed an API key, allowing anyone to resolve Ethereum wallet addresses to usernames. This privacy flaw was reported to OpenSea's Bugcrowd program. #OpenSea #Security #Crypto",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "opensea.io",
+  "source": "DEV",
+  "url": "https://dev.to/tinycoder-studio/i-found-an-undocumented-mcp-server-on-opensea-and-it-leaked-usernames-for-any-wallet-5935",
+  "image": "",
+  "orig_title": "I Found an Undocumented MCP Server on OpenSea — and It Leaked Usernames for Any Wallet",
+  "cluster_urls": [
+   "https://dev.to/tinycoder-studio/i-found-an-undocumented-mcp-server-on-opensea-and-it-leaked-usernames-for-any-wallet-5935"
+  ],
+  "cluster_titles": [
+   "I Found an Undocumented MCP Server on OpenSea — and It Leaked Usernames for Any Wallet"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260913-0606-0-undocumented-mcp-server-on-opensea-leaked-us.png",
+   "20260913-0606-0-undocumented-mcp-server-on-opensea-leaked-us-d1.png",
+   "20260913-0606-0-undocumented-mcp-server-on-opensea-leaked-us-d2.png",
+   "20260913-0606-0-undocumented-mcp-server-on-opensea-leaked-us-d3.png"
+  ]
+ }
+]

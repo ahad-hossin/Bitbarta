@@ -8377,8 +8377,13 @@
   "headline": "Anthropic CEO warns of AI botnet swarm taking over the entire internet in 6-12 months",
   "topic": "anthropic_ceo_warns_ai_botnet_swarm",
   "source": "Tom's Hardware",
-  "status": "queued",
-  "at": "2026-09-13T14:06:53Z"
+  "status": "failed",
+  "at": "2026-09-13T14:06:53Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "029a3ff3ecf765da",
@@ -8386,7 +8391,12 @@
   "headline": "Sun's 'fingerprints' may reveal it swallowed a planet",
   "topic": "sun_fingerprints_planet_swallowing",
   "source": "Hacker News",
-  "status": "queued",
-  "at": "2026-09-13T14:06:53Z"
+  "status": "failed",
+  "at": "2026-09-13T14:06:53Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))",
+   "x": "dry-run"
+  }
  }
 ]

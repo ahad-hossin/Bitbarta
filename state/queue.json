@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "excel_ctrl_c_v_bug",
+  "headline_marked": "[[Microsoft broke Ctrl+C and Ctrl+V]] in Excel with a recent Office update",
+  "headline": "Microsoft broke Ctrl+C and Ctrl+V in Excel with a recent Office update",
+  "summary": "A recent Office update has caused the fundamental copy and paste functions to fail in Excel 2016, 2019, 2021, and 2024, leaving users unable to duplicate cells. Microsoft has confirmed the bug.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "A recent Microsoft Office update, specifically KB5002914, has introduced a critical bug preventing Ctrl+C and Ctrl+V from working in Excel. Users report that copied cells remain selected, but the destination stays empty with no error message. This issue affects Excel 2016, 2019, 2021, and 2024 versions.",
+   "Beyond copy/paste, the bug can also cause AutoFill, formula dragging, and number series functions to fail unexpectedly. Microsoft has officially acknowledged the problem, which primarily impacts perpetual/volume Office installations.",
+   "The key to diagnosing is confirming if the failure is Excel-specific; if copy/paste fails everywhere, other issues like keyboard or clipboard managers should be investigated. If it's isolated to Excel, this Office regression is the likely culprit.",
+   "For MSI-based Office installations, the fix involves uninstalling the problematic security update KB5002914 via Windows Settings or Control Panel. It's crucial to verify the update's presence and ensure it's the correct Office update, not a Windows cumulative update.",
+   "Click-to-Run Office installations require a different approach, as individual patches cannot be uninstalled. The recommended solution is to revert the entire Office installation to a last known-good build using the Office Deployment Tool (ODT) for managed environments.",
+   "Administrators should temporarily exclude the specific update package from their patch management system to prevent re-deployment after rollback. This exclusion should remain temporary, as the update was security-related, and a corrected patch from Microsoft should be monitored for.",
+   "After implementing a fix, users should verify functionality by testing basic copy/paste within Excel, dragging the fill handle, and confirming Ctrl+C/Ctrl+V still works in other applications like Notepad. This ensures the issue is resolved and not a broader system problem."
+  ],
+  "caption": "Ctrl+C and Ctrl+V, fundamental to Excel, are broken for many users after a recent Microsoft Office update. This critical bug prevents basic cell duplication and affects multiple Excel versions.\n\nA recent Microsoft Office update, specifically KB5002914, has introduced a critical bug preventing Ctrl+C and Ctrl+V from working in Excel. Users report that copied cells remain selected, but the destination stays empty with no error message. This issue affects Excel 2016, 2019, 2021, and 2024 versions.\n\nBeyond copy/paste, the bug can also cause AutoFill, formula dragging, and number series functions to fail unexpectedly. Microsoft has officially acknowledged the problem, which primarily impacts perpetual/volume Office installations.\n\nThe key to diagnosing is confirming if the failure is Excel-specific; if copy/paste fails everywhere, other issues like keyboard or clipboard managers should be investigated. If it's isolated to Excel, this Office regression is the likely culprit.\n\nFor MSI-based Office installations, the fix involves uninstalling the problematic security update KB5002914 via Windows Settings or Control Panel. It's crucial to verify the update's presence and ensure it's the correct Office update, not a Windows cumulative update.\n\nClick-to-Run Office installations require a different approach, as individual patches cannot be uninstalled. The recommended solution is to revert the entire Office installation to a last known-good build using the Office Deployment Tool (ODT) for managed environments.\n\nAdministrators should temporarily exclude the specific update package from their patch management system to prevent re-deployment after rollback. This exclusion should remain temporary, as the update was security-related, and a corrected patch from Microsoft should be monitored for.\n\n#Microsoft #Excel #Office365 #TechBug #SoftwareUpdate #Productivity\n\nSource: DEV",
+  "tweet": "Microsoft's latest Office update broke Ctrl+C and Ctrl+V in Excel 2016-2024. Users can't copy/paste cells or use AutoFill. Microsoft confirmed the bug. Learn how to fix it. #Microsoft #ExcelBug #Office365",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "microsoft.com",
+  "source": "DEV",
+  "url": "https://dev.to/minerninja/microsoft-broke-ctrlc-and-ctrlv-in-excel-lkl",
+  "image": "",
+  "orig_title": "Microsoft broke Ctrl+C and Ctrl+V in Excel",
+  "cluster_urls": [
+   "https://dev.to/minerninja/microsoft-broke-ctrlc-and-ctrlv-in-excel-lkl"
+  ],
+  "cluster_titles": [
+   "Microsoft broke Ctrl+C and Ctrl+V in Excel"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260914-1506-0-microsoft-broke-ctrl-c-and-ctrl-v-in-excel-w.png",
+   "20260914-1506-0-microsoft-broke-ctrl-c-and-ctrl-v-in-excel-w-d1.png",
+   "20260914-1506-0-microsoft-broke-ctrl-c-and-ctrl-v-in-excel-w-d2.png",
+   "20260914-1506-0-microsoft-broke-ctrl-c-and-ctrl-v-in-excel-w-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_chatbots_custom_fiction",
+  "headline_marked": "[[Over a third of chatbot interactions involve custom fiction]], study finds",
+  "headline": "Over a third of chatbot interactions involve custom fiction, study finds",
+  "summary": "A new study reveals that a significant portion of chatbot users are generating custom stories, fan fiction, and role-plays, often driven by the AI's unpredictable nature.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Petra Ferraz de Novaes, a software engineer, uses AI to craft fantasy stories. She found the process of making every storytelling decision daunting until she turned to AI models in 2024.",
+   "Novaes is fascinated by the AI's eccentric and unpredictable interpretations of her prompts, which often steer narratives in unexpected directions. She uses programs like SillyTavern to run open-source models for her creative writing.",
+   "She spends hours building diverse fantasy worlds, some original and others borrowed from franchises like Star Wars or Mass Effect. These sessions can result in self-contained novels or ongoing private role-plays, limited only by imagination.",
+   "A recent study co-authored by Melanie Walsh, an assistant professor at the University of Washington, confirms that many people share Novaes' hobby. Users are aware the stories are AI-produced and often find this appealing.",
+   "This contrasts with recent publishing industry scandals where AI use by professional authors has been met with backlash, implying a devaluation of art. However, researchers argue this overlooks reader behavior and appetite for AI fiction.",
+   "Analyzing over 500,000 ChatGPT prompts from the WildChat dataset, researchers found that more than a third of chatbot interactions involve fiction generation, including prose, poetry, fan fiction, erotica, and role-play.",
+   "The majority of this fiction generation comes from a small group of \"power users\" who obsessively create and tweak stories. Even controlling for heavy use, an estimated 7 percent of chatbot users engage in fiction.",
+   "While the WildChat dataset has limitations and OpenAI's own figures differ (1.4% for fiction-related prompts, excluding role-play and unconfirmed erotica), the study suggests a committed subsection of readers is generating custom fiction.",
+   "Users are drawn to AI models for their judgment-free nature, instantaneous output, and inexhaustible storytelling capacity. For some, especially in erotica, AI offers a unique opportunity for immersive, interactive narratives."
+  ],
+  "caption": "Over a third of all chatbot interactions involve users generating custom fiction, from fantasy novels to fan fiction and role-plays.\n\nPetra Ferraz de Novaes, a software engineer, uses AI to craft fantasy stories. She found the process of making every storytelling decision daunting until she turned to AI models in 2024.\n\nNovaes is fascinated by the AI's eccentric and unpredictable interpretations of her prompts, which often steer narratives in unexpected directions. She uses programs like SillyTavern to run open-source models for her creative writing.\n\nShe spends hours building diverse fantasy worlds, some original and others borrowed from franchises like Star Wars or Mass Effect. These sessions can result in self-contained novels or ongoing private role-plays, limited only by imagination.\n\nA recent study co-authored by Melanie Walsh, an assistant professor at the University of Washington, confirms that many people share Novaes' hobby. Users are aware the stories are AI-produced and often find this appealing.\n\nThis contrasts with recent publishing industry scandals where AI use by professional authors has been met with backlash, implying a devaluation of art. However, researchers argue this overlooks reader behavior and appetite for AI fiction.\n\nAnalyzing over 500,000 ChatGPT prompts from the WildChat dataset, researchers found that more than a third of chatbot interactions involve fiction generation, including prose, poetry, fan fiction, erotica, and role-play.\n\nThe majority of this fiction generation comes from a small group of \"power users\" who obsessively create and tweak stories. Even controlling for heavy use, an estimated 7 percent of chatbot users engage in fiction.\n\nWhile the WildChat dataset has limitations and OpenAI's own figures differ (1.4% for fiction-related prompts, excluding role-play and unconfirmed erotica), the study suggests a committed subsection of readers is generating custom fiction.\n\n#AI #Fiction #Chatbots #GenerativeAI #Storytelling #Tech\n\nSource: Wired",
+  "tweet": "A new study reveals over a third of chatbot interactions are for custom fiction, like fantasy stories & fan fiction. Users love AI's unpredictable, judgment-free, and inexhaustible storytelling. #AI #Fiction #Chatbots",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/chatbot-generated-fiction-i-like-my-big-rat-wife/",
+  "image": "https://media.wired.com/photos/6aa091ab5bb8894d9970b282/master/pass/Why-Get-Library-Card-When-Theres-ChatGPT-Culture.jpg",
+  "orig_title": "‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction",
+  "cluster_urls": [
+   "https://www.wired.com/story/chatbot-generated-fiction-i-like-my-big-rat-wife/"
+  ],
+  "cluster_titles": [
+   "‘I Like My Big Rat Wife’: Meet the People Using Chatbots to Write Custom Fiction"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260914-1506-1-over-a-third-of-chatbot-interactions-involve.png",
+   "20260914-1506-1-over-a-third-of-chatbot-interactions-involve-d1.png",
+   "20260914-1506-1-over-a-third-of-chatbot-interactions-involve-d2.png",
+   "20260914-1506-1-over-a-third-of-chatbot-interactions-involve-d3.png"
+  ]
+ }
+]

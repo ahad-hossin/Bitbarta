@@ -1,1 +1,46 @@
-[]
+[
+ {
+  "topic": "debian_13_gemma_4_apple_silicon",
+  "headline_marked": "[[Run Debian 13 on Apple container with local Gemma 4]] on Mac GPU",
+  "headline": "Run Debian 13 on Apple container with local Gemma 4 on Mac GPU",
+  "summary": "Learn how to set up a Debian 13 VM on Apple Silicon using Apple's container CLI, and connect it to a local Gemma 4 LLM running on your Mac's GPU for optimal performance.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "This guide demonstrates how to build a Debian 13 virtual machine under Apple's container CLI on an Apple Silicon Mac. The core idea is to wire this VM to a local LLM, specifically Gemma 4, running on the Mac's own GPU.",
+   "The strategy involves using the VM for your application while the Mac's GPU handles the LLM processing. Running a model inside the VM would waste the Mac's GPU, as the VM lacks Metal access. The optimal split is to customize your app in Debian and have it call Ollama on macOS over the VM network.",
+   "A key constraint throughout this setup is the 8GB RAM available, which influences many choices. The process is divided into two main halves: building the VM (steps 0-5) and adding the LLM (steps 6-9).",
+   "It's important to differentiate between `container` and `machine` within Apple's CLI: a `container` is for single commands, while a `machine` is for persistent applications. Apple's `container` is not Docker; it uses lightweight VMs managed by Apple's `launchd` agents, though it supports ordinary OCI images from Docker Hub.",
+   "Installation involves downloading and verifying the signed `.pkg` from GitHub, then installing it using `sudo installer`. After installation, start the services and explicitly set the kernel to the Kata Containers kernel, as the default setup may fail silently.",
+   "Troubleshooting VM boot issues often requires checking `container machine logs`. A common problem is the absence of an `init` process in container images, which a machine needs to boot. Also, be aware of the `machine-id` issue, where systemd might copy a build-time `dbus` ID, requiring manual removal.",
+   "Building the VM image takes about 10 seconds, consuming 2 CPUs and 2 GB during the process. Ensure that `/sbin/init` is present and that `/etc/machine-id` is a 0-byte file to prevent boot issues.",
+   "When creating a machine, the `create` command returns before the VM has fully booted. You must poll until it answers, typically around 13 seconds, and then give `systemd` a few more seconds to initialize before attempting to use the VM.",
+   "To pass commands correctly to `machine run`, provide them as a single quoted argument, e.g., `-- sh -c '...'`. This prevents `bash` inside the VM from re-parsing arguments. Any packages installed on the machine's disk will persist across restarts, but deleting the machine will remove these changes."
+  ],
+  "caption": "Run a Debian 13 VM on your Apple Silicon Mac while leveraging its GPU for a local Gemma 4 LLM. This guide shows you how to split the workload for optimal performance.\n\nThis guide demonstrates how to build a Debian 13 virtual machine under Apple's container CLI on an Apple Silicon Mac. The core idea is to wire this VM to a local LLM, specifically Gemma 4, running on the Mac's own GPU.\n\nThe strategy involves using the VM for your application while the Mac's GPU handles the LLM processing. Running a model inside the VM would waste the Mac's GPU, as the VM lacks Metal access. The optimal split is to customize your app in Debian and have it call Ollama on macOS over the VM network.\n\nA key constraint throughout this setup is the 8GB RAM available, which influences many choices. The process is divided into two main halves: building the VM (steps 0-5) and adding the LLM (steps 6-9).\n\nIt's important to differentiate between `container` and `machine` within Apple's CLI: a `container` is for single commands, while a `machine` is for persistent applications. Apple's `container` is not Docker; it uses lightweight VMs managed by Apple's `launchd` agents, though it supports ordinary OCI images from Docker Hub.\n\nInstallation involves downloading and verifying the signed `.pkg` from GitHub, then installing it using `sudo installer`. After installation, start the services and explicitly set the kernel to the Kata Containers kernel, as the default setup may fail silently.\n\nTroubleshooting VM boot issues often requires checking `container machine logs`. A common problem is the absence of an `init` process in container images, which a machine needs to boot. Also, be aware of the `machine-id` issue, where systemd might copy a build-time `dbus` ID, requiring manual removal.\n\nBuilding the VM image takes about 10 seconds, consuming 2 CPUs and 2 GB during the process. Ensure that `/sbin/init` is present and that `/etc/machine-id` is a 0-byte file to prevent boot issues.\n\n#AppleSilicon #Debian #LLM #Gemma #Developer #TechGuide\n\nSource: DEV",
+  "tweet": "Run Debian 13 in a VM on your Apple Silicon Mac and tap into its GPU for a local Gemma 4 LLM. This guide details how to set up the split architecture for peak performance. #AppleSilicon #LLM #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "DEV",
+  "url": "https://dev.to/gde/build-in-the-vm-think-on-the-mac-gpu-debian-13-on-apple-container-with-a-local-gemma-4-2d8b",
+  "image": "",
+  "orig_title": "Build in the VM, Think on the Mac GPU: Debian 13 on Apple container With a Local Gemma 4",
+  "cluster_urls": [
+   "https://dev.to/gde/build-in-the-vm-think-on-the-mac-gpu-debian-13-on-apple-container-with-a-local-gemma-4-2d8b"
+  ],
+  "cluster_titles": [
+   "Build in the VM, Think on the Mac GPU: Debian 13 on Apple container With a Local Gemma 4"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260914-0706-0-run-debian-13-on-apple-container-with-local-.png",
+   "20260914-0706-0-run-debian-13-on-apple-container-with-local--d1.png",
+   "20260914-0706-0-run-debian-13-on-apple-container-with-local--d2.png",
+   "20260914-0706-0-run-debian-13-on-apple-container-with-local--d3.png",
+   "20260914-0706-0-run-debian-13-on-apple-container-with-local--d4.png"
+  ]
+ }
+]

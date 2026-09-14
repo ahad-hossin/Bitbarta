@@ -8391,7 +8391,12 @@
   "headline": "Run Debian 13 on Apple container with local Gemma 4 on Mac GPU",
   "topic": "debian_13_gemma_4_apple_silicon",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-09-14T01:06:32Z"
+  "status": "failed",
+  "at": "2026-09-14T01:06:32Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

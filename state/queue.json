@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "chesscom_data_leak",
+  "headline_marked": "[[7.3M Chess.com user records leaked]] for free on data forums, not a hack",
+  "headline": "7.3M Chess.com user records leaked for free on data forums, not a hack",
+  "summary": "A 15.5 GB file containing 7.3 million Chess.com user records, including emails and internal marketing data, has appeared on leak forums. No passwords or payment details were exposed.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A 15.5 GB file containing over 7.3 million Chess.com user records has surfaced on two data-leak forums, distributed for free. Ransomnews's technical analysis confirms the data is genuine and recent, but evidence suggests it's not from a system hack.",
+   "The leaked data includes email addresses, usernames, real names, countries, chess titles, skill levels, premium status, and timestamps. Crucially, it also contains internal Google Ad Manager audience segments, which are not exposed via Chess.com's public API.",
+   "Significantly, the file contains no passwords, password hashes, or payment information. This limits the immediate risk for affected users, as direct account compromise via this data is not possible.",
+   "Researchers verified the data's authenticity by decoding UUID timestamps embedded in each record, matching them perfectly with account registration dates. This 100% match rate indicates the data is genuinely sourced from Chess.com.",
+   "Multiple details point to data scraping rather than a breach: the data was collected in daily batches over nine days, and about 7.4% of records appear duplicated, suggesting repeated collection rather than a single database dump.",
+   "Chess.com faced similar incidents in 2023, with leaks of 828,000 and 476,000 records. The company then stated these were \"NOT a data breach,\" attributing them to abuse of the platform's \"find-friends\" feature.",
+   "This new 2026 file appears to use the same technique but at roughly nine times the scale of the previous incidents. The method involves resolving externally sourced email addresses against existing accounts.",
+   "However, the presence of Google Ad Manager audience segment data across all records is an anomaly. This type of marketing-stack field is not available through Chess.com's public API, suggesting access to an authenticated or internal endpoint.",
+   "The account distributing the file, V0idix, has a history of posting dozens of free database dumps for various companies, building reputation through volume rather than monetizing the data."
+  ],
+  "caption": "Over 7.3 million Chess.com user records, including emails and internal marketing data, have been leaked for free on data forums.\n\nA 15.5 GB file containing over 7.3 million Chess.com user records has surfaced on two data-leak forums, distributed for free. Ransomnews's technical analysis confirms the data is genuine and recent, but evidence suggests it's not from a system hack.\n\nThe leaked data includes email addresses, usernames, real names, countries, chess titles, skill levels, premium status, and timestamps. Crucially, it also contains internal Google Ad Manager audience segments, which are not exposed via Chess.com's public API.\n\nSignificantly, the file contains no passwords, password hashes, or payment information. This limits the immediate risk for affected users, as direct account compromise via this data is not possible.\n\nResearchers verified the data's authenticity by decoding UUID timestamps embedded in each record, matching them perfectly with account registration dates. This 100% match rate indicates the data is genuinely sourced from Chess.com.\n\nMultiple details point to data scraping rather than a breach: the data was collected in daily batches over nine days, and about 7.4% of records appear duplicated, suggesting repeated collection rather than a single database dump.\n\nChess.com faced similar incidents in 2023, with leaks of 828,000 and 476,000 records. The company then stated these were \"NOT a data breach,\" attributing them to abuse of the platform's \"find-friends\" feature.\n\nThis new 2026 file appears to use the same technique but at roughly nine times the scale of the previous incidents. The method involves resolving externally sourced email addresses against existing accounts.\n\nHowever, the presence of Google Ad Manager audience segment data across all records is an anomaly. This type of marketing-stack field is not available through Chess.com's public API, suggesting access to an authenticated or internal endpoint.\n\n#Chesscom #DataLeak #Cybersecurity #TechNews #Privacy #DataScraping\n\nSource: Hacker News",
+  "tweet": "Over 7.3 million Chess.com user records, including emails and internal marketing data, have been leaked for free on data forums. No passwords or payment info were exposed, and evidence points to scraping rather than a hack. #Chesscom #DataLeak #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "chess.com",
+  "source": "Hacker News",
+  "url": "https://securityaffairs.com/197174/breaking-news/chess-com-leak-exposes-7-3-million-users-evidence-points-to-scraping.html",
+  "image": "",
+  "orig_title": "Chess.com Leak Exposes 7.3M Users, Evidence Points to Scraping",
+  "cluster_urls": [
+   "https://securityaffairs.com/197174/breaking-news/chess-com-leak-exposes-7-3-million-users-evidence-points-to-scraping.html"
+  ],
+  "cluster_titles": [
+   "Chess.com Leak Exposes 7.3M Users, Evidence Points to Scraping"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260914-1106-0-7-3m-chess-com-user-records-leaked-for-free-.png",
+   "20260914-1106-0-7-3m-chess-com-user-records-leaked-for-free--d1.png",
+   "20260914-1106-0-7-3m-chess-com-user-records-leaked-for-free--d2.png",
+   "20260914-1106-0-7-3m-chess-com-user-records-leaked-for-free--d3.png"
+  ]
+ }
+]

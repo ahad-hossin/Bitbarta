@@ -1,1 +1,42 @@
-[]
+[
+ {
+  "topic": "depthwizard ai turns single photo into flyable 3d world",
+  "headline_marked": "[[DepthWizard turns a single 2D image into an interactive 3D flythrough]]",
+  "headline": "DepthWizard turns a single 2D image into an interactive 3D flythrough",
+  "summary": "This project uses monocular depth estimation and semantic segmentation to reconstruct a 3D mesh, enabling virtual camera movement through the scene. It aims to provide rapid 3D spatial data without specialized hardware.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "DepthWizard converts a single 2D image into an interactive 3D flythrough. This project addresses the challenge of acquiring real elevation data, which typically requires expensive and slow methods like LiDAR or photogrammetry, especially crucial for rapid terrain surveys or disaster response.",
+   "The system processes an image through monocular depth estimation to generate a dense depth map. It then applies semantic segmentation to identify ground features like buildings and trees, reconstructing them into a 3D mesh for camera navigation.",
+   "Under the hood, DepthWizard leverages a robust stack including Depth Anything V2 for depth, SAM 2/SegFormer for segmentation, and Open3D/PyVista for mesh reconstruction. CesiumJS handles the geospatial scene rendering, all powered by a React frontend and Python/FastAPI backend.",
+   "A key learning was that monocular depth models provide relative depth, not trusted elevation. Achieving georeferenced, usable data required significant calibration, scale estimation, and tying outputs to DEM/GCP reference points, a process not readily available from pretrained models.",
+   "The project was a submission for the Smart India Hackathon, competing against 160 teams. Despite its technical ambition and use of open-source tools, the team did not advance past the internal round, highlighting the challenge of explaining complex projects in limited time.",
+   "The developer plans to evolve DepthWizard from a hackathon prototype into a complete, working model by the end of the semester/year, with a full video walkthrough to be shared then. The current output includes screenshots of the depth/heat map generation."
+  ],
+  "caption": "Turn any 2D photo into a flyable 3D world! This hackathon project uses AI to create interactive 3D environments from a single image.\n\nDepthWizard converts a single 2D image into an interactive 3D flythrough. This project addresses the challenge of acquiring real elevation data, which typically requires expensive and slow methods like LiDAR or photogrammetry, especially crucial for rapid terrain surveys or disaster response.\n\nThe system processes an image through monocular depth estimation to generate a dense depth map. It then applies semantic segmentation to identify ground features like buildings and trees, reconstructing them into a 3D mesh for camera navigation.\n\nUnder the hood, DepthWizard leverages a robust stack including Depth Anything V2 for depth, SAM 2/SegFormer for segmentation, and Open3D/PyVista for mesh reconstruction. CesiumJS handles the geospatial scene rendering, all powered by a React frontend and Python/FastAPI backend.\n\nA key learning was that monocular depth models provide relative depth, not trusted elevation. Achieving georeferenced, usable data required significant calibration, scale estimation, and tying outputs to DEM/GCP reference points, a process not readily available from pretrained models.\n\nThe project was a submission for the Smart India Hackathon, competing against 160 teams. Despite its technical ambition and use of open-source tools, the team did not advance past the internal round, highlighting the challenge of explaining complex projects in limited time.\n\nThe developer plans to evolve DepthWizard from a hackathon prototype into a complete, working model by the end of the semester/year, with a full video walkthrough to be shared then. The current output includes screenshots of the depth/heat map generation.\n\n#DepthWizard #AI #3DReconstruction #ComputerVision #TechInnovation #Hackathon\n\nSource: DEV",
+  "tweet": "DepthWizard is an AI project that transforms any single 2D photo into an interactive 3D flythrough. Built for a hackathon, it uses advanced models like Depth Anything V2 to create 3D meshes for rapid spatial data. #AI #3DTech #ComputerVision",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/divyam_agrawal_eb89350651/depthwizard-turning-a-single-photo-into-a-flyable-3d-world-49hg",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbbwairxjbxh4g5d8cw0z.png",
+  "orig_title": "DepthWizard: Turning a Single Photo Into a Flyable 3D World",
+  "cluster_urls": [
+   "https://dev.to/divyam_agrawal_eb89350651/depthwizard-turning-a-single-photo-into-a-flyable-3d-world-49hg"
+  ],
+  "cluster_titles": [
+   "DepthWizard: Turning a Single Photo Into a Flyable 3D World"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260916-1337-0-depthwizard-turns-a-single-2d-image-into-an-.png",
+   "20260916-1337-0-depthwizard-turns-a-single-2d-image-into-an--d1.png",
+   "20260916-1337-0-depthwizard-turns-a-single-2d-image-into-an--d2.png",
+   "20260916-1337-0-depthwizard-turns-a-single-2d-image-into-an--d3.png"
+  ]
+ }
+]

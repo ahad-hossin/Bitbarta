@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "amd_mi300x_matrix_cores_analysis",
+  "headline_marked": "[[AMD MI300X matrix cores]] measured: what they execute, and what they don't",
+  "headline": "AMD MI300X matrix cores measured: what they execute, and what they don't",
+  "summary": "A detailed inventory and measurement of an AMD Instinct MI300X reveals what its matrix cores execute and discrepancies with published specs. Custom Python tools were used on a virtualized $1.99/hr droplet.",
+  "category": "HARDWARE",
+  "template": "terminal",
+  "details": [
+   "The study provides a step-by-step inventory and measurement of a single AMD Instinct MI300X on an AMD Developer Cloud system. The hardware is a virtualized MI300X droplet, billed at $1.99 an hour, making detailed analysis accessible.",
+   "A suite of Python MCP tools was developed to manage the droplet, performing inventory, power control, hardware scans, and GPU state checks. These tools were crucial for reading native numeric format support directly from the hardware.",
+   "The analysis revealed that the format table disagreed with AMD's published peak specifications in two key areas. Initial readings from the tools also required parsing output instead of trusting status for accuracy.",
+   "Key findings include the confirmation of a large-BAR configuration, where the entire 191.69 GiB of VRAM is CPU-mappable. This means no part of the framebuffer is hidden behind older 256 MB windows, optimizing memory access.",
+   "The MI300X was accessed as a virtualized instance, not a bare card. This meant certain firmware queries like ASD, PFP, MES, and SOS reported 'Not supported', though MEC, RLC, SDMA, SMC, and RAS/XGMI TAs did report data.",
+   "A critical insight for users is that powering off a DigitalOcean droplet does not stop billing; resources are reserved and charged at the full rate. The custom tools were designed to explicitly inform users about this, preventing costly misconceptions.",
+   "The hardware scan also highlighted the challenges of running vLLM on ROCm. While PyTorch was installed and recognized the GPU, vLLM itself was not readily available as a prebuilt wheel for ROCm, requiring complex source compilation.",
+   "The custom tools ensure accurate counting of resources, contrasting with the unreliability of AI models for such tasks. This approach guarantees precise inventory, even when scaling to many droplets."
+  ],
+  "caption": "Get a deep dive into the AMD Instinct MI300X, tested on a $1.99/hr cloud droplet. Discover what its matrix cores *really* execute, and where the official specs diverge.\n\nThe study provides a step-by-step inventory and measurement of a single AMD Instinct MI300X on an AMD Developer Cloud system. The hardware is a virtualized MI300X droplet, billed at $1.99 an hour, making detailed analysis accessible.\n\nA suite of Python MCP tools was developed to manage the droplet, performing inventory, power control, hardware scans, and GPU state checks. These tools were crucial for reading native numeric format support directly from the hardware.\n\nThe analysis revealed that the format table disagreed with AMD's published peak specifications in two key areas. Initial readings from the tools also required parsing output instead of trusting status for accuracy.\n\nKey findings include the confirmation of a large-BAR configuration, where the entire 191.69 GiB of VRAM is CPU-mappable. This means no part of the framebuffer is hidden behind older 256 MB windows, optimizing memory access.\n\nThe MI300X was accessed as a virtualized instance, not a bare card. This meant certain firmware queries like ASD, PFP, MES, and SOS reported 'Not supported', though MEC, RLC, SDMA, SMC, and RAS/XGMI TAs did report data.\n\nA critical insight for users is that powering off a DigitalOcean droplet does not stop billing; resources are reserved and charged at the full rate. The custom tools were designed to explicitly inform users about this, preventing costly misconceptions.\n\nThe hardware scan also highlighted the challenges of running vLLM on ROCm. While PyTorch was installed and recognized the GPU, vLLM itself was not readily available as a prebuilt wheel for ROCm, requiring complex source compilation.\n\nThe custom tools ensure accurate counting of resources, contrasting with the unreliability of AI models for such tasks. This approach guarantees precise inventory, even when scaling to many droplets.\n\n#AMD #MI300X #Hardware #GPU #Tech #Developer\n\nSource: DEV, Hacker News",
+  "tweet": "Deep dive into the AMD Instinct MI300X, tested on a $1.99/hr cloud droplet. Discover what its matrix cores *really* execute & where official specs diverge. Essential reading for developers! #AMD #MI300X #GPU",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "amd.com",
+  "source": "DEV, Hacker News",
+  "url": "https://dev.to/gde/an-mi300x-over-mcp-what-the-matrix-cores-execute-and-what-they-dont-1me9",
+  "image": "",
+  "orig_title": "An MI300X Over MCP: What the Matrix Cores Execute, and What They Don't",
+  "cluster_urls": [
+   "https://dev.to/gde/an-mi300x-over-mcp-what-the-matrix-cores-execute-and-what-they-dont-1me9",
+   "https://arxiv.org/abs/2609.14845"
+  ],
+  "cluster_titles": [
+   "An MI300X Over MCP: What the Matrix Cores Execute, and What They Don't",
+   "Accurate Models of AMD Matrix Cores"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260917-0907-0-amd-mi300x-matrix-cores-measured-what-they-e.png",
+   "20260917-0907-0-amd-mi300x-matrix-cores-measured-what-they-e-d1.png",
+   "20260917-0907-0-amd-mi300x-matrix-cores-measured-what-they-e-d2.png",
+   "20260917-0907-0-amd-mi300x-matrix-cores-measured-what-they-e-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_prompt_teaches_lying_resume",
+  "headline_marked": "[[AI resume prompt quietly teaches you to lie]] by reframing experience without fabricating facts",
+  "headline": "AI resume prompt quietly teaches you to lie by reframing experience without fabricating facts",
+  "summary": "A \"Positioning Rewriter\" prompt for job hunting subtly optimizes language, making ordinary achievements sound significant. This can lead to resumes that don't accurately reflect a candidate's true capabilities.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A set of seven Claude prompts for job hunting, shared enthusiastically in Chinese AI dev circles, includes one called the \"Positioning Rewriter.\" This prompt rewrites career summaries and achievements to highlight relevant accomplishments and industry language.",
+   "Despite a safety note to \"not fabricate anything I haven't done,\" the prompt subtly optimizes language. It makes ordinary things sound significant without technically lying, resulting in a confident, polished, and keyword-matched resume.",
+   "One commenter shared an experience of interviewing a candidate whose AI-rewritten resume was fraudulent. The candidate could not back up their claims and disappeared from the call, highlighting the gap between \"no fabrication\" and accurately representing capabilities.",
+   "This aggressive reframing fills the gap without crossing a technical line, often unnoticed by users. AI makes it much easier to slide from \"better framing\" to \"framing that requires a version of you that does not exist yet\" without realizing it.",
+   "The original safety disclaimer only tells Claude not to invent experiences, not to flag when framing exceeds actual experience. These are distinct requests, and the prompt only addresses the former.",
+   "Other prompts in the set, like the \"Hidden Role Finder\" or \"Qualification Gap Analyzer,\" are genuinely useful. They help users see their own experience more clearly and identify transferable skills, rather than just presenting them persuasively.",
+   "For honest AI-assisted resume writing, users should ask the AI to identify every claim in a rewrite and cite the specific resume line that supports it. Any claim without support should be removed, adding a crucial verification step."
+  ],
+  "caption": "An AI resume prompt is gaining traction for job hunters, but it has a hidden downside. It can subtly teach you to exaggerate your experience without technically fabricating facts.\n\nA set of seven Claude prompts for job hunting, shared enthusiastically in Chinese AI dev circles, includes one called the \"Positioning Rewriter.\" This prompt rewrites career summaries and achievements to highlight relevant accomplishments and industry language.\n\nDespite a safety note to \"not fabricate anything I haven't done,\" the prompt subtly optimizes language. It makes ordinary things sound significant without technically lying, resulting in a confident, polished, and keyword-matched resume.\n\nOne commenter shared an experience of interviewing a candidate whose AI-rewritten resume was fraudulent. The candidate could not back up their claims and disappeared from the call, highlighting the gap between \"no fabrication\" and accurately representing capabilities.\n\nThis aggressive reframing fills the gap without crossing a technical line, often unnoticed by users. AI makes it much easier to slide from \"better framing\" to \"framing that requires a version of you that does not exist yet\" without realizing it.\n\nThe original safety disclaimer only tells Claude not to invent experiences, not to flag when framing exceeds actual experience. These are distinct requests, and the prompt only addresses the former.\n\nOther prompts in the set, like the \"Hidden Role Finder\" or \"Qualification Gap Analyzer,\" are genuinely useful. They help users see their own experience more clearly and identify transferable skills, rather than just presenting them persuasively.\n\nFor honest AI-assisted resume writing, users should ask the AI to identify every claim in a rewrite and cite the specific resume line that supports it. Any claim without support should be removed, adding a crucial verification step.\n\n#AI #JobSearch #CareerAdvice #ResumeTips #TechEthics #LLMs\n\nSource: DEV",
+  "tweet": "An AI resume prompt designed to \"optimize\" your experience might be quietly teaching you to lie. It reframes achievements to sound significant without fabricating, creating a gap between your resume and reality. #AI #JobSearch #CareerAdvice",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shenao_yu_e15c14815264a44/the-resume-ai-prompt-that-sounds-useful-but-quietly-teaches-you-to-lie-3hll",
+  "image": "",
+  "orig_title": "The resume AI prompt that sounds useful but quietly teaches you to lie",
+  "cluster_urls": [
+   "https://dev.to/shenao_yu_e15c14815264a44/the-resume-ai-prompt-that-sounds-useful-but-quietly-teaches-you-to-lie-3hll"
+  ],
+  "cluster_titles": [
+   "The resume AI prompt that sounds useful but quietly teaches you to lie"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260917-0907-1-ai-resume-prompt-quietly-teaches-you-to-lie-.png",
+   "20260917-0907-1-ai-resume-prompt-quietly-teaches-you-to-lie--d1.png",
+   "20260917-0907-1-ai-resume-prompt-quietly-teaches-you-to-lie--d2.png",
+   "20260917-0907-1-ai-resume-prompt-quietly-teaches-you-to-lie--d3.png"
+  ]
+ }
+]

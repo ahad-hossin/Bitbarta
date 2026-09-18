@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "hackers breach openai using claude tools",
+  "headline_marked": "[[OpenAI hacked by researchers using Anthropic's Claude]] to access employee accounts",
+  "headline": "OpenAI hacked by researchers using Anthropic's Claude to access employee accounts",
+  "summary": "Independent security researchers exploited vulnerabilities using Anthropic's Claude Opus 5, gaining access to OpenAI employee ChatGPT accounts and internal software. OpenAI has since resolved the issues.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A three-person team from Hacktron AI successfully breached OpenAI's defenses as part of a bug-bounty program, earning a $6,500 award. They managed to chain two critical vulnerabilities to access multiple OpenAI employee ChatGPT accounts and internal software.",
+   "The initial entry point was a flaw in Discourse, the third-party software powering OpenAI’s community forum. Specifically, it involved the processing of HEIF/HEIC image files through ImageMagick and the libheif library.",
+   "A memory bug in libheif, which had been fixed months earlier but lacked a CVE, allowed attackers to inject instructions via a specially crafted image. This flaw enabled them to hijack the Discourse server.",
+   "Crucially, Anthropic's Claude Opus 5 proved instrumental. While Opus 4.8 struggled, Opus 5 built a working exploit within hours of its release, demonstrating its advanced capabilities in cybersecurity.",
+   "Once inside the Discourse server, the researchers discovered another vulnerability that granted them control over users' ChatGPT and Codex accounts, including an OpenAI employee's account linked to the company's GitHub organization.",
+   "OpenAI quickly resolved the identified issues, and Discourse also issued a fix. This incident highlights the increasing sophistication of AI models in finding and exploiting vulnerabilities, even in leading tech companies."
+  ],
+  "caption": "Independent researchers used Anthropic's Claude Opus 5 to hack OpenAI, gaining access to employee accounts and internal codebase.\n\nA three-person team from Hacktron AI successfully breached OpenAI's defenses as part of a bug-bounty program, earning a $6,500 award. They managed to chain two critical vulnerabilities to access multiple OpenAI employee ChatGPT accounts and internal software.\n\nThe initial entry point was a flaw in Discourse, the third-party software powering OpenAI’s community forum. Specifically, it involved the processing of HEIF/HEIC image files through ImageMagick and the libheif library.\n\nA memory bug in libheif, which had been fixed months earlier but lacked a CVE, allowed attackers to inject instructions via a specially crafted image. This flaw enabled them to hijack the Discourse server.\n\nCrucially, Anthropic's Claude Opus 5 proved instrumental. While Opus 4.8 struggled, Opus 5 built a working exploit within hours of its release, demonstrating its advanced capabilities in cybersecurity.\n\nOnce inside the Discourse server, the researchers discovered another vulnerability that granted them control over users' ChatGPT and Codex accounts, including an OpenAI employee's account linked to the company's GitHub organization.\n\nOpenAI quickly resolved the identified issues, and Discourse also issued a fix. This incident highlights the increasing sophistication of AI models in finding and exploiting vulnerabilities, even in leading tech companies.\n\n#AI #Cybersecurity #OpenAI #Claude #Hacking #TechNews\n\nSource: TechCrunch, Tom's Hardware",
+  "tweet": "Researchers used Anthropic's Claude Opus 5 to hack OpenAI, accessing employee accounts and internal code. The exploit highlights AI's growing role in cybersecurity. OpenAI has resolved the issues. #AI #Cybersecurity #OpenAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "TechCrunch, Tom's Hardware",
+  "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
+  "image": "",
+  "orig_title": "Researchers used Anthropic’s Claude to hack into OpenAI",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai/",
+   "https://www.tomshardware.com/tech-industry/cyber-security/hackers-breach-openai-using-claude-tools-gaining-access-to-employee-accounts-and-the-companys-internal-codebase-initiating-a-harmless-pull-request-as-proof-of-the-hack"
+  ],
+  "cluster_titles": [
+   "Researchers used Anthropic’s Claude to hack into OpenAI",
+   "Hackers breach OpenAI using Claude tools, gaining access to employee accounts and the company's internal codebase — attackers initiated a 'harmless' pull request as proof of the hack"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260918-2008-0-openai-hacked-by-researchers-using-anthropic.png",
+   "20260918-2008-0-openai-hacked-by-researchers-using-anthropic-d1.png",
+   "20260918-2008-0-openai-hacked-by-researchers-using-anthropic-d2.png"
+  ]
+ },
+ {
+  "topic": "dlss 5 running on intel integrated graphics",
+  "headline_marked": "[[DLSS 5 neural rendering runs on Intel Arc 140V]] integrated graphics at 10 FPS in 360p",
+  "headline": "DLSS 5 neural rendering runs on Intel Arc 140V integrated graphics at 10 FPS in 360p",
+  "summary": "An AI-assisted GitHub project successfully ported NVIDIA's DLSS 5 Neural Rendering to Intel's Xe architecture. While currently achieving 10.5 FPS in 360p, it marks a significant proof of concept for non-NVIDIA hardware.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A new GitHub project, \"dlss-nr-on-intel,\" has successfully ported NVIDIA's DLSS 5 Neural Rendering to Intel's Xe architecture. The developer, \"Uzbekunknown,\" focused on the Intel Arc 140V graphics in a Lunar Lake system, achieving outputs resembling DLSS 5 on other hardware.",
+   "The project's development was heavily aided by AI, with Anthropic's Claude and OpenAI's GPT-6 Astra credited for supplying the code. The developer provided the machine, binary, direction, and decisions, while the AI agents handled the coding tasks.",
+   "Technically, this isn't a simple wrapper but a full reimplementation of DLSS 5's 71-block U-Net. It runs on Intel Xe XMX units via a Vulkan extension (VK_KHR_cooperative_matrix), operating in FP16 with FP32 accumulate due to Xe2's lack of FP8 support.",
+   "Performance is currently limited; running Tekken 7 at 640x360 resolution yields only around 10.5 FPS. The DLSS 5 pass itself takes approximately 412 milliseconds in Full HD on the Arc 140V, making it too slow for real-time gameplay.",
+   "The visual effects vary by game, with Mortal Kombat and Tekken showing a more photorealistic look, while Dead or Alive's stylized anime aesthetic can result in characters appearing older or less appealing. This highlights the model's training for specific visual styles.",
+   "This project is primarily a proof of concept, though efforts are underway to port the work to discrete Arc GPUs and AMD cards. Future plans also include adapting the project to run on Windows, potentially making it accessible for photo modes rather than gameplay."
+  ],
+  "caption": "DLSS 5 Neural Rendering, designed for NVIDIA GPUs, has been successfully ported to Intel's integrated Arc 140V graphics. This AI-assisted project runs neural rendering at 10.5 FPS in 360p.\n\nA new GitHub project, \"dlss-nr-on-intel,\" has successfully ported NVIDIA's DLSS 5 Neural Rendering to Intel's Xe architecture. The developer, \"Uzbekunknown,\" focused on the Intel Arc 140V graphics in a Lunar Lake system, achieving outputs resembling DLSS 5 on other hardware.\n\nThe project's development was heavily aided by AI, with Anthropic's Claude and OpenAI's GPT-6 Astra credited for supplying the code. The developer provided the machine, binary, direction, and decisions, while the AI agents handled the coding tasks.\n\nTechnically, this isn't a simple wrapper but a full reimplementation of DLSS 5's 71-block U-Net. It runs on Intel Xe XMX units via a Vulkan extension (VK_KHR_cooperative_matrix), operating in FP16 with FP32 accumulate due to Xe2's lack of FP8 support.\n\nPerformance is currently limited; running Tekken 7 at 640x360 resolution yields only around 10.5 FPS. The DLSS 5 pass itself takes approximately 412 milliseconds in Full HD on the Arc 140V, making it too slow for real-time gameplay.\n\nThe visual effects vary by game, with Mortal Kombat and Tekken showing a more photorealistic look, while Dead or Alive's stylized anime aesthetic can result in characters appearing older or less appealing. This highlights the model's training for specific visual styles.\n\nThis project is primarily a proof of concept, though efforts are underway to port the work to discrete Arc GPUs and AMD cards. Future plans also include adapting the project to run on Windows, potentially making it accessible for photo modes rather than gameplay.\n\n#Tech #AI #DLSS #IntelArc #GamingTech #NeuralRendering\n\nSource: Tom's Hardware",
+  "tweet": "DLSS 5 Neural Rendering now runs on Intel Arc 140V integrated graphics! An AI-assisted project successfully ported NVIDIA's tech, achieving 10.5 FPS in 360p. A major proof of concept for non-NVIDIA hardware. #Tech #AI #DLSS",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "intel.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-developer-vibe-codes-dlss-5-onto-intel-arc-140t-integrated-graphics-run-neural-rendering-in-360p-at-10-frames-per-second",
+  "image": "https://cdn.mos.cms.futurecdn.net/jyBsQv3HMAD6GKyN3aksrV-1920-80.jpg",
+  "orig_title": "AI developer vibe codes DLSS 5 onto Intel CPU's integrated graphics — Intel Arc 140T runs neural rendering in 360p at 10 frames per second",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-developer-vibe-codes-dlss-5-onto-intel-arc-140t-integrated-graphics-run-neural-rendering-in-360p-at-10-frames-per-second"
+  ],
+  "cluster_titles": [
+   "AI developer vibe codes DLSS 5 onto Intel CPU's integrated graphics — Intel Arc 140T runs neural rendering in 360p at 10 frames per second"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260918-2008-1-dlss-5-neural-rendering-runs-on-intel-arc-14.png",
+   "20260918-2008-1-dlss-5-neural-rendering-runs-on-intel-arc-14-d1.png",
+   "20260918-2008-1-dlss-5-neural-rendering-runs-on-intel-arc-14-d2.png"
+  ]
+ }
+]

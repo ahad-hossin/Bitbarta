@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "openai x apple antitrust settlement rejected",
+  "headline_marked": "[[Judge rejects OpenAI’s bid]] to see X’s confidential settlement with Apple in antitrust lawsuit",
+  "headline": "Judge rejects OpenAI’s bid to see X’s confidential settlement with Apple in antitrust lawsuit",
+  "summary": "A judge has denied OpenAI's request to access a confidential settlement agreement between X (formerly Twitter) and Apple in an ongoing antitrust case.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Judge Mark Pittman today rejected OpenAI’s request to obtain a confidential settlement agreement. The ruling keeps the details of the agreement private from OpenAI.",
+   "The settlement in question was made between X (formerly Twitter) and SpaceXAI with Apple. OpenAI sought access to this document as part of an ongoing antitrust lawsuit.",
+   "The decision means that OpenAI will not be able to review the terms of the confidential agreement. This could impact their strategy or understanding of market dynamics in the ongoing legal proceedings."
+  ],
+  "caption": "OpenAI's attempt to gain insight into a confidential settlement between X and Apple has been blocked by a judge.\n\nJudge Mark Pittman today rejected OpenAI’s request to obtain a confidential settlement agreement. The ruling keeps the details of the agreement private from OpenAI.\n\nThe settlement in question was made between X (formerly Twitter) and SpaceXAI with Apple. OpenAI sought access to this document as part of an ongoing antitrust lawsuit.\n\nThe decision means that OpenAI will not be able to review the terms of the confidential agreement. This could impact their strategy or understanding of market dynamics in the ongoing legal proceedings.\n\n#OpenAI #Apple #XCorp #Antitrust #LegalTech #BigTech\n\nSource: 9to5Mac",
+  "tweet": "A judge has rejected OpenAI's bid to access X and SpaceXAI's confidential settlement with Apple in an ongoing antitrust case. The details of the agreement remain private. #OpenAI #Apple #Antitrust",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/09/17/judge-rejects-openais-bid-to-see-xs-confidential-settlement-with-apple-in-antitrust-lawsuit/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/02/Meta-community-notes-now-open-to-contributors-as-Musk-threatens-to-fix-them-on-X.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Judge rejects OpenAI’s bid to see X’s confidential settlement with Apple in antitrust lawsuit",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/09/17/judge-rejects-openais-bid-to-see-xs-confidential-settlement-with-apple-in-antitrust-lawsuit/"
+  ],
+  "cluster_titles": [
+   "Judge rejects OpenAI’s bid to see X’s confidential settlement with Apple in antitrust lawsuit"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260918-0807-0-judge-rejects-openai-s-bid-to-see-x-s-confid.png",
+   "20260918-0807-0-judge-rejects-openai-s-bid-to-see-x-s-confid-d1.png"
+  ]
+ },
+ {
+  "topic": "goose programming language performance breakthrough",
+  "headline_marked": "[[Goose is 1.16x faster than C++ and 1.12x than safe Rust]], while memory safe",
+  "headline": "Goose is 1.16x faster than C++ and 1.12x than safe Rust, while memory safe",
+  "summary": "Goose is a new memory-safe systems language claiming superior performance over C++ and Rust, achieving this without a heap, garbage collection, or explicit lifetime annotations.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Goose is a memory-safe systems language that claims to be 1.16x faster than C++ and 1.12x faster than safe Rust. It achieves this performance with less memory, and notably, without an allocator, garbage collector, or lifetime annotations.",
+   "The core idea behind Goose is the complete absence of a heap. Instead, every dynamic value lives inline on a compiler-managed data stack, where growth is a simple pointer bump and scope exit is the only method of freeing memory.",
+   "This unique memory model ensures that growth never moves data and never requires capacity checks. The entire system is proven at compile time, with the runtime only managing bump pointers, contributing to its speed and efficiency.",
+   "Goose employs a lifetime system where every reference and slice carries a static root, bounding its target's lifetime. These roots are inferred, and functions are specialized per root, eliminating the need for explicit syntax, aliasing, or exclusivity rules.",
+   "The language features a family of array types that store elements inline and packed, never as pointers. This allows variable-size parts to sit inline in structs, leading to significant memory savings compared to C++ or Rust equivalents. For example, an order book can be one cache-streaming array.",
+   "Dynamic polymorphism is handled exclusively through Algebraic Data Types (ADTs), avoiding inheritance or vtables. ADTs can be stored in two modes: fixed (tag + largest payload) for indexability, or variable (exact variant size) for memory efficiency and direct payload references.",
+   "Goose also introduces \"case functions\" for match statements, offering a virtual call mechanism without the overhead of a vtable. References are transparent, and a unique relative reference system allows for position-independent data structures like binary search trees in a single grow-only array."
+  ],
+  "caption": "A new systems language, Goose, claims to be 1.16x faster than C++ and 1.12x faster than safe Rust. It achieves memory safety without a heap or GC.\n\nGoose is a memory-safe systems language that claims to be 1.16x faster than C++ and 1.12x faster than safe Rust. It achieves this performance with less memory, and notably, without an allocator, garbage collector, or lifetime annotations.\n\nThe core idea behind Goose is the complete absence of a heap. Instead, every dynamic value lives inline on a compiler-managed data stack, where growth is a simple pointer bump and scope exit is the only method of freeing memory.\n\nThis unique memory model ensures that growth never moves data and never requires capacity checks. The entire system is proven at compile time, with the runtime only managing bump pointers, contributing to its speed and efficiency.\n\nGoose employs a lifetime system where every reference and slice carries a static root, bounding its target's lifetime. These roots are inferred, and functions are specialized per root, eliminating the need for explicit syntax, aliasing, or exclusivity rules.\n\nThe language features a family of array types that store elements inline and packed, never as pointers. This allows variable-size parts to sit inline in structs, leading to significant memory savings compared to C++ or Rust equivalents. For example, an order book can be one cache-streaming array.\n\nDynamic polymorphism is handled exclusively through Algebraic Data Types (ADTs), avoiding inheritance or vtables. ADTs can be stored in two modes: fixed (tag + largest payload) for indexability, or variable (exact variant size) for memory efficiency and direct payload references.\n\n#ProgrammingLanguage #SystemsProgramming #GooseLang #MemorySafety #Tech #SoftwareDevelopment\n\nSource: Hacker News",
+  "tweet": "Goose, a new memory-safe systems language, boasts being 1.16x faster than C++ and 1.12x faster than safe Rust. It achieves this without a heap or GC, managing all dynamic values on a compiler-managed data stack. #GooseLang #Programming #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/aardappel/goose/tree/master",
+  "image": "",
+  "orig_title": "Goose: 1.16x faster than C++ and 1.12x than safe Rust, while memory safe",
+  "cluster_urls": [
+   "https://github.com/aardappel/goose/tree/master"
+  ],
+  "cluster_titles": [
+   "Goose: 1.16x faster than C++ and 1.12x than safe Rust, while memory safe"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260918-0807-1-goose-is-1-16x-faster-than-c-and-1-12x-than-.png",
+   "20260918-0807-1-goose-is-1-16x-faster-than-c-and-1-12x-than--d1.png",
+   "20260918-0807-1-goose-is-1-16x-faster-than-c-and-1-12x-than--d2.png",
+   "20260918-0807-1-goose-is-1-16x-faster-than-c-and-1-12x-than--d3.png"
+  ]
+ }
+]

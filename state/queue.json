@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "cisco_ise_rest_api_admin_flaw",
+  "headline_marked": "[[Cisco ISE REST API flaw]] allows unauthenticated admin access with CVSS 10.0",
+  "headline": "Cisco ISE REST API flaw allows unauthenticated admin access with CVSS 10.0",
+  "summary": "Cisco has disclosed CVE-2026-76423, a critical authentication bypass in its Identity Services Engine (ISE) REST API. The flaw, rated CVSS 10.0, allows unauthenticated remote attackers to gain full administrative access.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Cisco has published an advisory for CVE-2026-76423, a critical authentication bypass in its Identity Services Engine (ISE) REST API. This vulnerability carries a CVSS v3 base score of 10.0, indicating maximum severity. It allows an unauthenticated, remote attacker to obtain administrative access to the appliance.",
+   "The root cause is insufficient authorization checks on the exposed REST API web service. This means the bypass does not rely on guessing or stealing credentials; an attacker only needs network reachability to the affected interface.",
+   "CVE-2026-76423 was disclosed alongside several other high-severity issues in the same release cycle. These include CVE-2026-20130 (hardening improper neutralization, CVSS 10.0), CVE-2026-20307 (insecure deserialization leading to RCE, CVSS 9.9), and others.",
+   "Administrative access to ISE is a high-value target for attackers, as ISE acts as the policy decision point for network access control. Gaining control allows manipulation of identity data, policy sets, and endpoint posture, effectively compromising the trust boundary.",
+   "Affected products include Cisco Identity Services Engine and Cisco ISE Passive Identity Connector. Specifically, ISE releases 3.1, 3.2, 3.3, 3.4, and 3.5 are impacted, with some issues applying to ISE-PIC across all device configurations.",
+   "Cisco has released fixed builds to address these vulnerabilities. Organizations are advised to update to 3.1 Patch 12, 3.2 Patch 11, 3.3 Patch 12, 3.4 Patch 7, or 3.5 Patch 4. Older unsupported releases require migration to a supported branch as part of remediation.",
+   "Notably, Cisco stated that these vulnerabilities were discovered during internal security testing, utilizing both existing processes and frontier AI models. At the time of disclosure, Cisco was not aware of any malicious exploitation in the wild.",
+   "While a ZoomEye query shows over 883,000 assets matching the Cisco ISE product fingerprint, this number reflects deployment scale, not confirmed vulnerability. It does not confirm that these assets run a vulnerable release or have reachable REST APIs."
+  ],
+  "caption": "Critical Cisco ISE flaw (CVSS 10.0) allows unauthenticated remote admin access. No password needed.\n\nCisco has published an advisory for CVE-2026-76423, a critical authentication bypass in its Identity Services Engine (ISE) REST API. This vulnerability carries a CVSS v3 base score of 10.0, indicating maximum severity. It allows an unauthenticated, remote attacker to obtain administrative access to the appliance.\n\nThe root cause is insufficient authorization checks on the exposed REST API web service. This means the bypass does not rely on guessing or stealing credentials; an attacker only needs network reachability to the affected interface.\n\nCVE-2026-76423 was disclosed alongside several other high-severity issues in the same release cycle. These include CVE-2026-20130 (hardening improper neutralization, CVSS 10.0), CVE-2026-20307 (insecure deserialization leading to RCE, CVSS 9.9), and others.\n\nAdministrative access to ISE is a high-value target for attackers, as ISE acts as the policy decision point for network access control. Gaining control allows manipulation of identity data, policy sets, and endpoint posture, effectively compromising the trust boundary.\n\nAffected products include Cisco Identity Services Engine and Cisco ISE Passive Identity Connector. Specifically, ISE releases 3.1, 3.2, 3.3, 3.4, and 3.5 are impacted, with some issues applying to ISE-PIC across all device configurations.\n\nCisco has released fixed builds to address these vulnerabilities. Organizations are advised to update to 3.1 Patch 12, 3.2 Patch 11, 3.3 Patch 12, 3.4 Patch 7, or 3.5 Patch 4. Older unsupported releases require migration to a supported branch as part of remediation.\n\nNotably, Cisco stated that these vulnerabilities were discovered during internal security testing, utilizing both existing processes and frontier AI models. At the time of disclosure, Cisco was not aware of any malicious exploitation in the wild.\n\n#Cisco #Cybersecurity #Vulnerability #CVE #Security #API\n\nSource: DEV",
+  "tweet": "Critical Cisco ISE flaw (CVSS 10.0) allows unauthenticated remote admin access without a password. Update immediately to patch CVE-2026-76423 and related vulnerabilities. #Cisco #Cybersecurity #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "cisco.com",
+  "source": "DEV",
+  "url": "https://dev.to/kozhevniko/cve-2026-76423-the-cisco-ise-rest-api-flaw-that-hands-out-admin-without-a-password-4fe1",
+  "image": "",
+  "orig_title": "CVE-2026-76423: The Cisco ISE REST API Flaw That Hands Out Admin Without a Password",
+  "cluster_urls": [
+   "https://dev.to/kozhevniko/cve-2026-76423-the-cisco-ise-rest-api-flaw-that-hands-out-admin-without-a-password-4fe1"
+  ],
+  "cluster_titles": [
+   "CVE-2026-76423: The Cisco ISE REST API Flaw That Hands Out Admin Without a Password"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260918-1406-0-cisco-ise-rest-api-flaw-allows-unauthenticat.png",
+   "20260918-1406-0-cisco-ise-rest-api-flaw-allows-unauthenticat-d1.png",
+   "20260918-1406-0-cisco-ise-rest-api-flaw-allows-unauthenticat-d2.png",
+   "20260918-1406-0-cisco-ise-rest-api-flaw-allows-unauthenticat-d3.png"
+  ]
+ },
+ {
+  "topic": "google_cc_ai_agent_for_families",
+  "headline_marked": "[[Google's new experimental AI agent, CC,]] helps families organize",
+  "headline": "Google's new experimental AI agent, CC, helps families organize",
+  "summary": "Google's new experimental AI, CC, acts as a shared agent with its own Google account, helping up to six family members manage emails, calendars, and tasks. It automates logistics like filing forms and creating shopping lists, always seeking user permission.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Google has introduced CC, an experimental AI agent designed to help families stay organized. This platform operates with its own Google account, which up to six family members can choose to share information with.",
+   "Users can selectively share emails with the agent, either single messages or by designating specific addresses. CC then creates a shared calendar and task list, visible to all group members, and sends daily briefings on upcoming events and to-dos.",
+   "The agent can assist with administrative tasks such as filing paperwork, filling out registration forms, or generating shopping lists. Crucially, these actions are designed to require explicit user permission before execution.",
+   "The name \"CC\" was previously used for a different experimental tool, rebranded earlier this year as the Daily Briefing feature. Google has now pivoted the CC project to this family-centric organizer based on feedback from early testers.",
+   "CC integrates with Google Drive, allowing users to share folders or specific files. Privacy measures include restrictions on the agent's ability to add/remove family members or access individual inboxes without explicit sharing.",
+   "Existing users of the previous CC tool will be prompted to upgrade their accounts to access these new features. New users interested in this agentic organizational approach can join a waitlist."
+  ],
+  "caption": "Google's new experimental AI agent, CC, helps families organize emails, calendars, and tasks. It can even file paperwork and create shopping lists.\n\nGoogle has introduced CC, an experimental AI agent designed to help families stay organized. This platform operates with its own Google account, which up to six family members can choose to share information with.\n\nUsers can selectively share emails with the agent, either single messages or by designating specific addresses. CC then creates a shared calendar and task list, visible to all group members, and sends daily briefings on upcoming events and to-dos.\n\nThe agent can assist with administrative tasks such as filing paperwork, filling out registration forms, or generating shopping lists. Crucially, these actions are designed to require explicit user permission before execution.\n\nThe name \"CC\" was previously used for a different experimental tool, rebranded earlier this year as the Daily Briefing feature. Google has now pivoted the CC project to this family-centric organizer based on feedback from early testers.\n\nCC integrates with Google Drive, allowing users to share folders or specific files. Privacy measures include restrictions on the agent's ability to add/remove family members or access individual inboxes without explicit sharing.\n\nExisting users of the previous CC tool will be prompted to upgrade their accounts to access these new features. New users interested in this agentic organizational approach can join a waitlist.\n\n#AI #Google #FamilyTech #Productivity #Organizer #ExperimentalAI\n\nSource: Engadget, Ars Technica",
+  "tweet": "Google's new experimental AI agent, CC, helps families organize emails, calendars, and tasks. It operates with its own Google account and can even file paperwork or create shopping lists, always seeking user permission. #GoogleAI #FamilyTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Engadget, Ars Technica",
+  "url": "https://www.engadget.com/2261924/google-cc-is-an-ai-agent-for-families-and-groups/",
+  "image": "https://www.engadget.com/img/gallery/googles-revamped-cc-is-an-ai-agent-for-families-and-groups/l-intro-1789685266.jpg",
+  "orig_title": "Google's revamped CC is an AI agent for families and groups",
+  "cluster_urls": [
+   "https://www.engadget.com/2261924/google-cc-is-an-ai-agent-for-families-and-groups/",
+   "https://arstechnica.com/google/2026/09/google-announces-new-experimental-cc-ai-agent-for-families/"
+  ],
+  "cluster_titles": [
+   "Google's revamped CC is an AI agent for families and groups",
+   "Google announces new experimental \"CC\" AI agent for families"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260918-1406-1-google-s-new-experimental-ai-agent-cc-helps-.png",
+   "20260918-1406-1-google-s-new-experimental-ai-agent-cc-helps--d1.png",
+   "20260918-1406-1-google-s-new-experimental-ai-agent-cc-helps--d2.png"
+  ]
+ }
+]

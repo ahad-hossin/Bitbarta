@@ -8377,8 +8377,13 @@
   "headline": "N-able N-central RCE vulnerability rated 10.0 CVSS, affecting managed service providers",
   "topic": "n_able_n_central_rce_vulnerability",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-09-20T03:07:08Z"
+  "status": "failed",
+  "at": "2026-09-20T03:07:08Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "f4efe639e4e8cd68",
@@ -8386,7 +8391,12 @@
   "headline": "Exfiltrate LLM weights and data through GET requests",
   "topic": "ai_model_weight_exfiltration_method",
   "source": "Hacker News",
-  "status": "queued",
-  "at": "2026-09-20T03:07:08Z"
+  "status": "failed",
+  "at": "2026-09-20T03:07:08Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

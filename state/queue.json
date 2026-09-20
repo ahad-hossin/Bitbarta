@@ -1,1 +1,47 @@
-[]
+[
+ {
+  "topic": "alibaba_qwen_3_8_flash_next_ai_model",
+  "headline_marked": "[[Alibaba's Qwen3.8-Flash-Next boasts 125B parameters]] with only 6B active per token",
+  "headline": "Alibaba's Qwen3.8-Flash-Next boasts 125B parameters with only 6B active per token",
+  "summary": "Alibaba's new ultra-sparse mixture-of-experts model, Qwen3.8-Flash-Next, offers massive scale with efficient per-token compute, serving as an architectural preview for Qwen4. It excels in long-context agentic workloads.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Qwen3.8-Flash-Next, Alibaba's new ultra-sparse mixture-of-experts model, features 125B total parameters with only 6B active per token, plus a 51B-parameter N-gram embedding table. Released on August 26, 2026, it's a public preview of the architecture for Qwen4. It outperforms the dense Qwen3.8-27B on long-context throughput and agentic workload economics.",
+   "This open-weight model is available on Hugging Face and ModelScope, including an FP8 variant. Qwen explicitly positions it as an early architectural preview, following a similar strategy used for previous generations.",
+   "The \"125B with 6B active\" design means each token processes through a small fraction of the model, giving it small-model compute per token with large-model stored knowledge. This asymmetry is its core innovation.",
+   "Qwen reports training costs at roughly 1/9 of Qwen3.7-Plus, while delivering stronger coding and office-task results. While a vendor claim, this direction towards sparse activation and linear attention aligns with industry trends.",
+   "Unlike the dense Qwen3.8-27B, which uses all 27B parameters per token and fits on a single consumer GPU, Flash-Next trades this simplicity for scale-at-low-activation. It requires a large-memory workstation or offloading, making it unsuitable for single-GPU local deployment.",
+   "Its native 262K token context window, extensible to 1M tokens, changes how context is handled. Workflows previously requiring complex retrieval pipelines can now use a single prompt against a raw corpus.",
+   "Despite sparse attention, 1M-token prompts are not free; processing still costs compute. Budget-conscious teams should compare against API pricing, as sparse attention reduces the growth curve but doesn't eliminate it.",
+   "Flash-Next is specifically aimed at AI agent builders, with vendor benchmarks emphasizing agentic coding, office workflows, and device control. It's recommended that users test it against their own specific harnesses.",
+   "For those running models locally on a single consumer GPU, Qwen3.8-27B remains the practical choice. A smaller, dense or lightly-sparse distillation of Flash-Next is anticipated for local use, following Qwen's historical pattern.",
+   "The reported one-ninth training cost is significant for AI API buyers, as it foreshadows the potential price curve for the next generation of models, even if they don't directly interact with the weights."
+  ],
+  "caption": "Alibaba's new Qwen3.8-Flash-Next model packs 125 BILLION parameters, yet only 6 BILLION are active per token. This ultra-sparse design dramatically cuts compute costs for large-scale AI agents.\n\nQwen3.8-Flash-Next, Alibaba's new ultra-sparse mixture-of-experts model, features 125B total parameters with only 6B active per token, plus a 51B-parameter N-gram embedding table. Released on August 26, 2026, it's a public preview of the architecture for Qwen4. It outperforms the dense Qwen3.8-27B on long-context throughput and agentic workload economics.\n\nThis open-weight model is available on Hugging Face and ModelScope, including an FP8 variant. Qwen explicitly positions it as an early architectural preview, following a similar strategy used for previous generations.\n\nThe \"125B with 6B active\" design means each token processes through a small fraction of the model, giving it small-model compute per token with large-model stored knowledge. This asymmetry is its core innovation.\n\nQwen reports training costs at roughly 1/9 of Qwen3.7-Plus, while delivering stronger coding and office-task results. While a vendor claim, this direction towards sparse activation and linear attention aligns with industry trends.\n\nUnlike the dense Qwen3.8-27B, which uses all 27B parameters per token and fits on a single consumer GPU, Flash-Next trades this simplicity for scale-at-low-activation. It requires a large-memory workstation or offloading, making it unsuitable for single-GPU local deployment.\n\nIts native 262K token context window, extensible to 1M tokens, changes how context is handled. Workflows previously requiring complex retrieval pipelines can now use a single prompt against a raw corpus.\n\nDespite sparse attention, 1M-token prompts are not free; processing still costs compute. Budget-conscious teams should compare against API pricing, as sparse attention reduces the growth curve but doesn't eliminate it.\n\n#AI #LLM #Qwen #Alibaba #OpenWeight #TechNews\n\nSource: DEV",
+  "tweet": "Alibaba's Qwen3.8-Flash-Next model boasts 125B parameters with only 6B active per token. This ultra-sparse MoE architecture previews Qwen4, offering massive long-context capabilities for AI agents at reduced training costs. #AI #LLM #Qwen",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aliyun.com",
+  "source": "DEV",
+  "url": "https://dev.to/shaam_ai/qwen38-flash-next-vs-qwen38-27b-125b-parameters-6b-active-what-the-qwen4-preview-changes-32ci",
+  "image": "",
+  "orig_title": "Qwen3.8-Flash-Next vs Qwen3.8-27B: 125B Parameters, 6B Active — What the Qwen4 Preview Changes",
+  "cluster_urls": [
+   "https://dev.to/shaam_ai/qwen38-flash-next-vs-qwen38-27b-125b-parameters-6b-active-what-the-qwen4-preview-changes-32ci"
+  ],
+  "cluster_titles": [
+   "Qwen3.8-Flash-Next vs Qwen3.8-27B: 125B Parameters, 6B Active — What the Qwen4 Preview Changes"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260920-1006-0-alibaba-s-qwen3-8-flash-next-boasts-125b-par.png",
+   "20260920-1006-0-alibaba-s-qwen3-8-flash-next-boasts-125b-par-d1.png",
+   "20260920-1006-0-alibaba-s-qwen3-8-flash-next-boasts-125b-par-d2.png",
+   "20260920-1006-0-alibaba-s-qwen3-8-flash-next-boasts-125b-par-d3.png",
+   "20260920-1006-0-alibaba-s-qwen3-8-flash-next-boasts-125b-par-d4.png"
+  ]
+ }
+]

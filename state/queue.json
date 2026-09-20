@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai_impact_on_web_development_pricing",
+  "headline_marked": "[[AI builds a site in an hour, but it's not a website]]: Developers reveal the hidden costs",
+  "headline": "AI builds a site in an hour, but it's not a website: Developers reveal the hidden costs",
+  "summary": "AI tools can generate impressive website frontends quickly, but they stop where the visible part ends. Developers explain the crucial backend, hosting, and domain setup that clients often overlook, leading to significant cost misunderstandings.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI tools are now capable of generating genuinely nice-looking website frontends in an afternoon, leading many clients to believe their site is complete. However, this often creates a misunderstanding about the actual scope and cost of web development.",
+   "Developers frequently encounter pushback when quoting for projects, as clients question the price after having used AI to build what they perceive as a finished website. The core issue lies in the gap between a frontend and a fully functional, public-facing website.",
+   "The article highlights four critical areas where AI-generated frontends fall short: hosting, functional contact forms, proper domain setup, and database integration. These invisible components are essential for a working product and represent the bulk of a developer's work.",
+   "Hosting a static export requires choosing a platform like Vercel or Netlify, and for dynamic sites, involves configuring servers, environment variables, and deploy pipelines. This is rarely a simple or free process, demanding careful technical decisions.",
+   "A functional contact form needs a backend endpoint to receive data, a method to send emails (e.g., SMTP, SendGrid), spam protection, and input validation. None of these crucial elements are included in a frontend-only build, despite the button having a nice animation.",
+   "Domain setup extends beyond purchasing a name; it involves pointing A/CNAME records at the host, adding MX records for email, setting up SSL, and configuring redirects for www and bare domains. Incorrect setup can render a site unreachable or insecure.",
+   "For any site requiring data storage—such as leads, bookings, products, or user accounts—a frontend needs a backend to communicate with. This necessitates choosing a database, designing its schema, writing an API, securing it, and implementing backup solutions."
+  ],
+  "caption": "AI can build a website frontend in an hour, but that's just the visible part. Developers explain the crucial elements AI tools miss, leading to unexpected costs.\n\nAI tools are now capable of generating genuinely nice-looking website frontends in an afternoon, leading many clients to believe their site is complete. However, this often creates a misunderstanding about the actual scope and cost of web development.\n\nDevelopers frequently encounter pushback when quoting for projects, as clients question the price after having used AI to build what they perceive as a finished website. The core issue lies in the gap between a frontend and a fully functional, public-facing website.\n\nThe article highlights four critical areas where AI-generated frontends fall short: hosting, functional contact forms, proper domain setup, and database integration. These invisible components are essential for a working product and represent the bulk of a developer's work.\n\nHosting a static export requires choosing a platform like Vercel or Netlify, and for dynamic sites, involves configuring servers, environment variables, and deploy pipelines. This is rarely a simple or free process, demanding careful technical decisions.\n\nA functional contact form needs a backend endpoint to receive data, a method to send emails (e.g., SMTP, SendGrid), spam protection, and input validation. None of these crucial elements are included in a frontend-only build, despite the button having a nice animation.\n\nDomain setup extends beyond purchasing a name; it involves pointing A/CNAME records at the host, adding MX records for email, setting up SSL, and configuring redirects for www and bare domains. Incorrect setup can render a site unreachable or insecure.\n\nFor any site requiring data storage—such as leads, bookings, products, or user accounts—a frontend needs a backend to communicate with. This necessitates choosing a database, designing its schema, writing an API, securing it, and implementing backup solutions.\n\n#AI #WebDevelopment #TechNews #SoftwareDevelopment #NoCode #BusinessOfTech\n\nSource: DEV",
+  "tweet": "AI built your site in an hour? That's just the frontend. Developers reveal the 4 crucial questions that clarify why a \"real\" website costs more, covering hosting, forms, domains, and databases. #AI #WebDev #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mhk_sameera/ai-built-my-site-in-an-hour-why-are-you-charging-so-much-4-questions-that-usually-end-the-545",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhzilx1c1ljya324pk632.jpeg",
+  "orig_title": "AI Built My Site in an Hour, Why Are You Charging So Much? — 4 Questions That Usually End the Conversation",
+  "cluster_urls": [
+   "https://dev.to/mhk_sameera/ai-built-my-site-in-an-hour-why-are-you-charging-so-much-4-questions-that-usually-end-the-545"
+  ],
+  "cluster_titles": [
+   "AI Built My Site in an Hour, Why Are You Charging So Much? — 4 Questions That Usually End the Conversation"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260920-1406-0-ai-builds-a-site-in-an-hour-but-it-s-not-a-w.png",
+   "20260920-1406-0-ai-builds-a-site-in-an-hour-but-it-s-not-a-w-d1.png",
+   "20260920-1406-0-ai-builds-a-site-in-an-hour-but-it-s-not-a-w-d2.png",
+   "20260920-1406-0-ai-builds-a-site-in-an-hour-but-it-s-not-a-w-d3.png"
+  ]
+ },
+ {
+  "topic": "local_llm_monthly_cost_analysis",
+  "headline_marked": "[[Local LLM on RTX 3090 costs ~€2/month]] in electricity, says real-world meter data",
+  "headline": "Local LLM on RTX 3090 costs ~€2/month in electricity, says real-world meter data",
+  "summary": "Real-world measurements over 30 days reveal that the electricity bill for a local AI stack with an RTX 3090 is negligible. The actual cost is the hardware, not the power.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A 30-day power meter test on an RTX 3090 running a resident local AI inference stack found the electricity cost to be approximately €2 per month. This challenges the common assumption that local LLMs are expensive to power.",
+   "The setup included a Whisper transcription service and an embedding model, both resident 24/7 in VRAM. The GPU was instrumented with a power meter to capture precise usage data against a dual-rate tariff.",
+   "The analysis showed that the GPU is mostly idle, drawing an average of 22W for the Whisper service. It spikes to around 120W for a few seconds during active transcription, but these short bursts barely impact the overall monthly total.",
+   "Compared to cloud API alternatives, the local stack's electricity cost is less than a tenth of the equivalent API spend. Furthermore, the local cost remains flat, while API costs scale with usage.",
+   "The study concludes that the electricity bill is not a valid argument against running local LLMs. The primary financial consideration for a home inference stack is the upfront hardware cost and maintenance time, not recurring power expenses.",
+   "The data for this experiment was pulled from a self-hosted dashboard that monitors GPU power draw and VRAM usage, pricing energy against the actual tariff. The tooling used is open source."
+  ],
+  "caption": "Is the electricity bill stopping you from running local LLMs? New data from a 30-day power meter test on an RTX 3090 reveals surprising results.\n\nA 30-day power meter test on an RTX 3090 running a resident local AI inference stack found the electricity cost to be approximately €2 per month. This challenges the common assumption that local LLMs are expensive to power.\n\nThe setup included a Whisper transcription service and an embedding model, both resident 24/7 in VRAM. The GPU was instrumented with a power meter to capture precise usage data against a dual-rate tariff.\n\nThe analysis showed that the GPU is mostly idle, drawing an average of 22W for the Whisper service. It spikes to around 120W for a few seconds during active transcription, but these short bursts barely impact the overall monthly total.\n\nCompared to cloud API alternatives, the local stack's electricity cost is less than a tenth of the equivalent API spend. Furthermore, the local cost remains flat, while API costs scale with usage.\n\nThe study concludes that the electricity bill is not a valid argument against running local LLMs. The primary financial consideration for a home inference stack is the upfront hardware cost and maintenance time, not recurring power expenses.\n\nThe data for this experiment was pulled from a self-hosted dashboard that monitors GPU power draw and VRAM usage, pricing energy against the actual tariff. The tooling used is open source.\n\n#LocalLLM #AI #Tech #Hardware #ElectricityCost #RTX3090\n\nSource: DEV",
+  "tweet": "Think local LLMs are expensive to run? A 30-day test on an RTX 3090 shows electricity costs are just ~€2/month. The real cost is hardware, not power. #LocalLLM #AI #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sikamikanikobg/what-does-a-local-llm-actually-cost-per-month-i-read-the-meters-1274",
+  "image": "",
+  "orig_title": "What Does a Local LLM Actually Cost per Month? I Read the Meters.",
+  "cluster_urls": [
+   "https://dev.to/sikamikanikobg/what-does-a-local-llm-actually-cost-per-month-i-read-the-meters-1274"
+  ],
+  "cluster_titles": [
+   "What Does a Local LLM Actually Cost per Month? I Read the Meters."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260920-1406-1-local-llm-on-rtx-3090-costs-2-month-in-elect.png",
+   "20260920-1406-1-local-llm-on-rtx-3090-costs-2-month-in-elect-d1.png",
+   "20260920-1406-1-local-llm-on-rtx-3090-costs-2-month-in-elect-d2.png"
+  ]
+ }
+]

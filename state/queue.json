@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "kev_jev_ai_decision_models",
+  "headline_marked": "[[Kev: Tiny Jev-like decision models]] built on Qwen3.5, trainable and runnable locally",
+  "headline": "Kev: Tiny Jev-like decision models built on Qwen3.5, trainable and runnable locally",
+  "summary": "Kev is a family of small, self-trainable decision models based on Qwen3.5, offering pre-trained weights and an API compatible with TypeSafe's System One SDK for local deployment.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Kev is a new family of small decision models, built on Qwen3.5 and inspired by Jev's Architecture. Users can leverage pre-trained weights or train their own models, with an API matching TypeSafe's System One for local server integration.",
+   "The models, including Kev-4B, Kev-9B, and Kev-0.8B, are designed for local execution. For instance, Kev-4B can run locally, downloading necessary adapters and base models on its first run, and supports local checkpoints or Hub revisions.",
+   "Kev provides probabilistic responses for complex queries, such as identifying multiple issues in a customer ticket, rather than just a single label. A web UI, accessible via localhost:3001, allows for interactive testing with presets and text editing.",
+   "A chess demo is also available, where the board serves as input and legal moves are Choice options, with a Score question rating positions. Games are saved locally, allowing users to play against Kev or let it play itself.",
+   "All three Kev models (0.8B, 4B, 9B) are built on Qwen3.5 bases using the same training data and settings. Kev-9B offers higher accuracy and calibration, while Kev-0.8B is the smallest option for memory-constrained environments.",
+   "Evaluation shows performance improvements over previous generations. For example, Kev-9B is 7.3 points ahead of Kev-8B on the test set, with a lower Brier score, demonstrating significant gains from the Qwen3.5 base change.",
+   "The models use a rank-16 LoRA adapter and a small pointer head on a Qwen base. For Qwen3.5, each question runs as its own row, processing the state once and answering questions independently, while older Qwen3 models use a single token sequence.",
+   "All weights are available in the Kev collection and GitHub release, including tarballs and SHA-256 checksums. The local server binds to 127.0.0.1 without authentication, emphasizing the need for users to add security for non-local deployment."
+  ],
+  "caption": "Run powerful decision models like Kev-4B, Kev-9B, or Kev-0.8B right on your machine. Train them yourself or use pre-trained weights.\n\nKev is a new family of small decision models, built on Qwen3.5 and inspired by Jev's Architecture. Users can leverage pre-trained weights or train their own models, with an API matching TypeSafe's System One for local server integration.\n\nThe models, including Kev-4B, Kev-9B, and Kev-0.8B, are designed for local execution. For instance, Kev-4B can run locally, downloading necessary adapters and base models on its first run, and supports local checkpoints or Hub revisions.\n\nKev provides probabilistic responses for complex queries, such as identifying multiple issues in a customer ticket, rather than just a single label. A web UI, accessible via localhost:3001, allows for interactive testing with presets and text editing.\n\nA chess demo is also available, where the board serves as input and legal moves are Choice options, with a Score question rating positions. Games are saved locally, allowing users to play against Kev or let it play itself.\n\nAll three Kev models (0.8B, 4B, 9B) are built on Qwen3.5 bases using the same training data and settings. Kev-9B offers higher accuracy and calibration, while Kev-0.8B is the smallest option for memory-constrained environments.\n\nEvaluation shows performance improvements over previous generations. For example, Kev-9B is 7.3 points ahead of Kev-8B on the test set, with a lower Brier score, demonstrating significant gains from the Qwen3.5 base change.\n\nThe models use a rank-16 LoRA adapter and a small pointer head on a Qwen base. For Qwen3.5, each question runs as its own row, processing the state once and answering questions independently, while older Qwen3 models use a single token sequence.\n\n#AI #MachineLearning #OpenSource #DecisionModels #Qwen35 #Tech\n\nSource: Hacker News, DEV",
+  "tweet": "Run powerful decision models like Kev-4B, Kev-9B, or Kev-0.8B right on your machine. Kev is a new family of small, self-trainable decision models built on Qwen3.5. Use pre-trained weights or train your own. #AI #OpenSource #MachineLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News, DEV",
+  "url": "https://github.com/jaredpalmer/kev/tree/main",
+  "image": "",
+  "orig_title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+  "cluster_urls": [
+   "https://github.com/jaredpalmer/kev/tree/main",
+   "https://dev.to/hao_kang_82922526dfe5d934/we-read-100-jev-repositories-the-best-part-was-the-code-around-the-model-call-am3"
+  ],
+  "cluster_titles": [
+   "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+   "We Read 100+ JEV Repositories. The Best Part Was the Code Around the Model Call."
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260921-1406-0-kev-tiny-jev-like-decision-models-built-on-q.png",
+   "20260921-1406-0-kev-tiny-jev-like-decision-models-built-on-q-d1.png",
+   "20260921-1406-0-kev-tiny-jev-like-decision-models-built-on-q-d2.png",
+   "20260921-1406-0-kev-tiny-jev-like-decision-models-built-on-q-d3.png"
+  ]
+ },
+ {
+  "topic": "mini_agi_continual_learning_8gb_vram",
+  "headline_marked": "[[Mini-AGI: Continual learning model trains on 8GB VRAM]] and assembles its own architecture",
+  "headline": "Mini-AGI: Continual learning model trains on 8GB VRAM and assembles its own architecture",
+  "summary": "This byte-level language model assembles its own architecture and learns from scratch on a single 8GB VRAM GPU, continually adapting without catastrophic forgetting. It stores weights on disk, scaling beyond VRAM limits.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Mini-AGI is a novel byte-level language model designed for continual learning. It can train from scratch on a single 8GB VRAM GPU, dynamically assembling its own architecture as it learns. This model pages weights onto the card from disk, allowing its parameter count to be limited by storage, not VRAM.",
+   "Unlike traditional LLMs that are frozen after training, mini-AGI continuously learns from new data streams without catastrophic forgetting. This breakthrough enables individuals to train and own a truly personal AI model on consumer-grade hardware, adapting to their daily interactions.",
+   "The model’s architecture is self-assembling, passing characters through recurrent blocks that choose experts from a shared pool. This dynamic process, where the latent state merges with embedded input, prevents drift and allows the context window to extend through continued training without re-initialization.",
+   "Currently a toy-level model, mini-AGI is an experiment demonstrating the feasibility of continual learning on modest hardware. Its weights are not yet public but will be released after its initial pass over the corpus, expected in a few weeks."
+  ],
+  "caption": "A new byte-level language model, mini-AGI, trains from scratch on just 8GB VRAM, continually learning without forgetting. It even assembles its own architecture.\n\nMini-AGI is a novel byte-level language model designed for continual learning. It can train from scratch on a single 8GB VRAM GPU, dynamically assembling its own architecture as it learns. This model pages weights onto the card from disk, allowing its parameter count to be limited by storage, not VRAM.\n\nUnlike traditional LLMs that are frozen after training, mini-AGI continuously learns from new data streams without catastrophic forgetting. This breakthrough enables individuals to train and own a truly personal AI model on consumer-grade hardware, adapting to their daily interactions.\n\nThe model’s architecture is self-assembling, passing characters through recurrent blocks that choose experts from a shared pool. This dynamic process, where the latent state merges with embedded input, prevents drift and allows the context window to extend through continued training without re-initialization.\n\nCurrently a toy-level model, mini-AGI is an experiment demonstrating the feasibility of continual learning on modest hardware. Its weights are not yet public but will be released after its initial pass over the corpus, expected in a few weeks.\n\n#AI #MachineLearning #DeepLearning #OpenSource #Tech #GPU\n\nSource: Hacker News",
+  "tweet": "Mini-AGI is a continual learning model that trains from scratch on just 8GB VRAM, building its own architecture as it learns. It stores weights on disk, enabling personal, ever-learning AI on consumer hardware. #AI #MachineLearning #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/volotat/mini-AGI/",
+  "image": "",
+  "orig_title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
+  "cluster_urls": [
+   "https://github.com/volotat/mini-AGI/"
+  ],
+  "cluster_titles": [
+   "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260921-1406-1-mini-agi-continual-learning-model-trains-on-.png",
+   "20260921-1406-1-mini-agi-continual-learning-model-trains-on--d1.png",
+   "20260921-1406-1-mini-agi-continual-learning-model-trains-on--d2.png"
+  ]
+ }
+]

@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai_works_too_well_civilization_rebuild",
+  "headline_marked": "[[AI could lead to loss of human understanding]] and the ability to rebuild our own civilization",
+  "headline": "AI could lead to loss of human understanding and the ability to rebuild our own civilization",
+  "summary": "As AI becomes extraordinarily capable, we risk building systems we no longer understand how to rebuild, much like the lost knowledge of ancient hieroglyphs. Our increasing dependence on AI could lead to a subtle but profound loss of human expertise.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "For centuries, the hieroglyphs on ancient Egyptian monuments remained physically preserved, yet the human ability to read them disappeared. The Rosetta Stone provided a bridge, allowing scholars to recover lost understanding by connecting it to known scripts.",
+   "This historical lesson highlights a critical distinction for the age of AI: preserving information is not the same as preserving the ability to understand it. While much AI risk discussion focuses on loss of control, another scenario involves AI working *too* well.",
+   "As AI excels in programming, medicine, engineering, and more, we become increasingly dependent. This is a natural progression of technological abstraction, where new layers are built on previous ones without needing to understand every fundamental detail.",
+   "However, current abstraction layers still rely on human experts at each level. AI introduces a new dynamic: systems built or modified by AI may eventually lack any human expert who fully comprehends their internal workings.",
+   "Imagine a system where AI implements a complex component, then future AIs modify it over decades. No one explicitly decides to forget, but the continuous reliance on AI means new human experts are not trained, leading to a gradual erosion of collective understanding and the ability to rebuild."
+  ],
+  "caption": "What if AI works *too* well? We risk building a civilization we no longer know how to rebuild, losing the human ability to understand our own creations.\n\nFor centuries, the hieroglyphs on ancient Egyptian monuments remained physically preserved, yet the human ability to read them disappeared. The Rosetta Stone provided a bridge, allowing scholars to recover lost understanding by connecting it to known scripts.\n\nThis historical lesson highlights a critical distinction for the age of AI: preserving information is not the same as preserving the ability to understand it. While much AI risk discussion focuses on loss of control, another scenario involves AI working *too* well.\n\nAs AI excels in programming, medicine, engineering, and more, we become increasingly dependent. This is a natural progression of technological abstraction, where new layers are built on previous ones without needing to understand every fundamental detail.\n\nHowever, current abstraction layers still rely on human experts at each level. AI introduces a new dynamic: systems built or modified by AI may eventually lack any human expert who fully comprehends their internal workings.\n\nImagine a system where AI implements a complex component, then future AIs modify it over decades. No one explicitly decides to forget, but the continuous reliance on AI means new human experts are not trained, leading to a gradual erosion of collective understanding and the ability to rebuild.\n\n#AI #ArtificialIntelligence #TechEthics #FutureOfTech #Humanity #Knowledge\n\nSource: DEV",
+  "tweet": "What if AI works *too* well? We risk building a civilization we no longer know how to rebuild, losing the human ability to understand our own creations. This isn't about AI rebelling, but about subtle dependence eroding human expertise over generations. #AI #TechEthics",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ewanderson_flaviano/what-if-ai-works-too-well-3dkl",
+  "image": "",
+  "orig_title": "What If AI Works Too Well?",
+  "cluster_urls": [
+   "https://dev.to/ewanderson_flaviano/what-if-ai-works-too-well-3dkl"
+  ],
+  "cluster_titles": [
+   "What If AI Works Too Well?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260921-0606-0-ai-could-lead-to-loss-of-human-understanding.png",
+   "20260921-0606-0-ai-could-lead-to-loss-of-human-understanding-d1.png",
+   "20260921-0606-0-ai-could-lead-to-loss-of-human-understanding-d2.png"
+  ]
+ },
+ {
+  "topic": "jfrog_artifactory_authentication_bypass",
+  "headline_marked": "[[JFrog Artifactory authentication bypass]] rated CVSS 9.8, exploited in the wild",
+  "headline": "JFrog Artifactory authentication bypass rated CVSS 9.8, exploited in the wild",
+  "summary": "A critical authentication bypass (CVE-2026-82329) in self-hosted JFrog Artifactory allows unauthenticated attackers to gain administrative control. Exploitation was observed within days of disclosure.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical authentication bypass (CVE-2026-82329) in self-hosted JFrog Artifactory, rated CVSS 9.8, allows unauthenticated attackers to gain full administrative control. The flaw affects default installations, making a wide range of deployments vulnerable without misconfiguration.",
+   "JFrog released a fix on August 28, 2026, advising customers to upgrade to specific versions (7.161.20, 7.146.38, or 7.133.29). However, observed attacker behavior creates persistent access that survives a patch, requiring further remediation.",
+   "The vulnerability stems from a default trust configuration for cluster join operations, where an empty string in join key validation allows attackers to construct a valid join JWT and mint administrator tokens. No prior access is required.",
+   "Exploitation was observed rapidly, with threat intelligence firm watchTowr reporting activity in honeypots by September 1, just four days after disclosure. CISA added the flaw to its KEV catalog on September 2, setting a remediation deadline of September 5 for federal agencies.",
+   "Post-exploitation activities include creating persistent administrator accounts, installing malicious plugins for code execution, and exporting configuration and cluster keys. Attackers also enumerate repository contents, posing a risk of replacing cached artifacts or abusing publishing credentials.",
+   "Artifact repositories are crucial trust roots, and their compromise can propagate into every build that pulls from them. Organizations must treat them as critical infrastructure, patch on an infrastructure cadence, and verify artifact provenance to mitigate risks beyond the immediately affected server."
+  ],
+  "caption": "A critical 9.8 CVSS authentication bypass in JFrog Artifactory allows unauthenticated admin access. Exploitation was seen in the wild just days after disclosure.\n\nA critical authentication bypass (CVE-2026-82329) in self-hosted JFrog Artifactory, rated CVSS 9.8, allows unauthenticated attackers to gain full administrative control. The flaw affects default installations, making a wide range of deployments vulnerable without misconfiguration.\n\nJFrog released a fix on August 28, 2026, advising customers to upgrade to specific versions (7.161.20, 7.146.38, or 7.133.29). However, observed attacker behavior creates persistent access that survives a patch, requiring further remediation.\n\nThe vulnerability stems from a default trust configuration for cluster join operations, where an empty string in join key validation allows attackers to construct a valid join JWT and mint administrator tokens. No prior access is required.\n\nExploitation was observed rapidly, with threat intelligence firm watchTowr reporting activity in honeypots by September 1, just four days after disclosure. CISA added the flaw to its KEV catalog on September 2, setting a remediation deadline of September 5 for federal agencies.\n\nPost-exploitation activities include creating persistent administrator accounts, installing malicious plugins for code execution, and exporting configuration and cluster keys. Attackers also enumerate repository contents, posing a risk of replacing cached artifacts or abusing publishing credentials.\n\nArtifact repositories are crucial trust roots, and their compromise can propagate into every build that pulls from them. Organizations must treat them as critical infrastructure, patch on an infrastructure cadence, and verify artifact provenance to mitigate risks beyond the immediately affected server.\n\n#JFrog #Artifactory #Cybersecurity #Vulnerability #CVE #DevSecOps\n\nSource: DEV",
+  "tweet": "Critical 9.8 CVSS auth bypass in JFrog Artifactory allows unauthenticated admin access on default installs. Exploitation observed in the wild just 4 days after disclosure. Patch immediately, but be aware persistent access may remain. #JFrog #Cybersecurity #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "jfrog.com",
+  "source": "DEV",
+  "url": "https://dev.to/jeffreyciend/the-artifact-repository-is-a-trust-root-reading-the-jfrog-artifactory-authentication-bypass-38f6",
+  "image": "",
+  "orig_title": "The Artifact Repository Is a Trust Root: Reading the JFrog Artifactory Authentication Bypass",
+  "cluster_urls": [
+   "https://dev.to/jeffreyciend/the-artifact-repository-is-a-trust-root-reading-the-jfrog-artifactory-authentication-bypass-38f6"
+  ],
+  "cluster_titles": [
+   "The Artifact Repository Is a Trust Root: Reading the JFrog Artifactory Authentication Bypass"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260921-0606-1-jfrog-artifactory-authentication-bypass-rate.png",
+   "20260921-0606-1-jfrog-artifactory-authentication-bypass-rate-d1.png",
+   "20260921-0606-1-jfrog-artifactory-authentication-bypass-rate-d2.png",
+   "20260921-0606-1-jfrog-artifactory-authentication-bypass-rate-d3.png"
+  ]
+ }
+]

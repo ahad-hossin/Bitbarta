@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "mercury_2_5_fastest_llm_benchmark",
+  "headline_marked": "[[Mercury 2.5 is the fastest LLM]] at 1,107 tokens/sec, beating Luna and Haiku",
+  "headline": "Mercury 2.5 is the fastest LLM at 1,107 tokens/sec, beating Luna and Haiku",
+  "summary": "Inception Labs' Mercury 2.5 achieves 1,107 tokens per second on NVIDIA GPUs, making it the fastest API-callable LLM. It also undercuts rivals on output price at $0.75 per million tokens.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Inception Labs' Mercury 2.5 is now the fastest LLM available via API, with vendor figures reporting 1,107 tokens per second on NVIDIA GPUs. Third-party telemetry from OpenRouter observes a P50 speed of 440 tokens/second with 1.17s latency.",
+   "Mercury 2.5 also offers a competitive output price of $0.75 per million tokens, undercutting rivals like Claude Haiku 4.5 ($5.00/million) and GPT-5.6 Luna ($1.20/million). This makes it a strong contender for latency-bound tasks and cost-effective output.",
+   "Unlike autoregressive models such as Luna and Haiku, Mercury is a diffusion language model. This architecture refines blocks of tokens in parallel, decoupling throughput from sequence length and enabling its high speed.",
+   "Inception Labs, founded in 2024 by Stanford, UCLA, and Cornell researchers, shipped the first commercial diffusion LLM in February 2025. The company has raised $50M in seed funding from Menlo Ventures, Microsoft's M12, and NVIDIA's NVentures.",
+   "Customer reports indicate significant performance gains; Augment Code saw an 82% reduction in compaction latency and 90% cost savings. Voice-agent company OpenCall reported median response latency around 170ms, down from minutes.",
+   "OpenRouter's traffic data for Mercury 2.5 shows a dominance of agentic clients, such as Hermes Agent and Claude Code. This suggests the model is heavily used for workloads involving many short internal calls where overall latency is critical."
+  ],
+  "caption": "Inception Labs' Mercury 2.5 is now the fastest LLM available via API, hitting 1,107 tokens/sec. It also offers a significantly lower output price than competitors.\n\nInception Labs' Mercury 2.5 is now the fastest LLM available via API, with vendor figures reporting 1,107 tokens per second on NVIDIA GPUs. Third-party telemetry from OpenRouter observes a P50 speed of 440 tokens/second with 1.17s latency.\n\nMercury 2.5 also offers a competitive output price of $0.75 per million tokens, undercutting rivals like Claude Haiku 4.5 ($5.00/million) and GPT-5.6 Luna ($1.20/million). This makes it a strong contender for latency-bound tasks and cost-effective output.\n\nUnlike autoregressive models such as Luna and Haiku, Mercury is a diffusion language model. This architecture refines blocks of tokens in parallel, decoupling throughput from sequence length and enabling its high speed.\n\nInception Labs, founded in 2024 by Stanford, UCLA, and Cornell researchers, shipped the first commercial diffusion LLM in February 2025. The company has raised $50M in seed funding from Menlo Ventures, Microsoft's M12, and NVIDIA's NVentures.\n\nCustomer reports indicate significant performance gains; Augment Code saw an 82% reduction in compaction latency and 90% cost savings. Voice-agent company OpenCall reported median response latency around 170ms, down from minutes.\n\nOpenRouter's traffic data for Mercury 2.5 shows a dominance of agentic clients, such as Hermes Agent and Claude Code. This suggests the model is heavily used for workloads involving many short internal calls where overall latency is critical.\n\n#AI #LLM #InceptionLabs #Mercury2_5 #TechNews #ArtificialIntelligence\n\nSource: DEV",
+  "tweet": "Inception Labs' Mercury 2.5 is officially the fastest LLM, hitting 1,107 tokens/sec and beating GPT-5 Luna & Claude Haiku on speed and output price. Ideal for latency-sensitive applications. #AI #LLM #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "inceptionlabs.com",
+  "source": "DEV",
+  "url": "https://dev.to/shaam_ai/fastest-llm-2026-mercury-25-beats-luna-and-haiku-2nef",
+  "image": "",
+  "orig_title": "Fastest LLM 2026: Mercury 2.5 Beats Luna and Haiku",
+  "cluster_urls": [
+   "https://dev.to/shaam_ai/fastest-llm-2026-mercury-25-beats-luna-and-haiku-2nef"
+  ],
+  "cluster_titles": [
+   "Fastest LLM 2026: Mercury 2.5 Beats Luna and Haiku"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260922-1007-0-mercury-2-5-is-the-fastest-llm-at-1-107-toke.png",
+   "20260922-1007-0-mercury-2-5-is-the-fastest-llm-at-1-107-toke-d1.png",
+   "20260922-1007-0-mercury-2-5-is-the-fastest-llm-at-1-107-toke-d2.png"
+  ]
+ },
+ {
+  "topic": "voxcpm2_self_hosted_ai_voice",
+  "headline_marked": "[[VoxCPM2 offers self-hosted AI voice]] with cloning, design, and 30 languages",
+  "headline": "VoxCPM2 offers self-hosted AI voice with cloning, design, and 30 languages",
+  "summary": "OpenBMB's VoxCPM2 is a 2-billion-parameter, Apache-2.0 licensed model that clones voices, designs new ones from descriptions, and outputs 48 kHz speech in 30 languages, all self-hostable. It provides a cost-effective alternative to hosted TTS APIs.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "OpenBMB's VoxCPM2 is a 2-billion-parameter, Apache-2.0 licensed open-source model designed to replace hosted text-to-speech APIs. It can clone voices from seconds of audio, invent new voices from descriptions, and generate 48 kHz speech across 30 languages on your own GPU. This offers a significant cost reduction by eliminating per-character billing.",
+   "VoxCPM2 utilizes a tokenizer-free, end-to-end diffusion-autoregressive architecture. This design choice allows it to generate continuous speech representations, preserving paralinguistic details like breathing, pacing, and mid-sentence emotion shifts more effectively than traditional token-based models.",
+   "The model consolidates three key capabilities into a single checkpoint, simplifying what previously required stitching together multiple tools. Installation is straightforward via a pip package, requiring a few gigabytes of weights for deployment.",
+   "Developers can test sentences in the free Hugging Face playground before committing hardware. While the official documentation notes VoxCPM2 support is not yet available for Apple Silicon via the community MLX-Audio path, earlier 1.x checkpoints are supported on Mac.",
+   "For production, the recommended path is vLLM-Omni, which exposes an OpenAI-compatible /v1/audio/speech endpoint with batching and KV-cache management. This setup achieves a real-time factor around 0.13 on an RTX 4090, making generation several times faster than playback.",
+   "The practical implication is that applications already using OpenAI-shaped audio endpoints can switch to VoxCPM2 by simply changing the base URL. While the model loads in the 8 GB VRAM class, a 24 GB card is recommended for comfortable production use, accounting for KV cache, concurrency, and longer prompts.",
+   "VoxCPM2 is free for commercial use under the Apache-2.0 license, permitting modification and self-hosting without royalties or usage caps. This makes it a low-friction solution for moving a significant portion of speech generation in-house, while still allowing for premium hosted fallbacks like ElevenLabs."
+  ],
+  "caption": "Self-host your AI voice generation! OpenBMB's VoxCPM2 is a 2-billion-parameter, Apache-2.0 licensed model that clones voices, designs new ones, and speaks 30 languages.\n\nOpenBMB's VoxCPM2 is a 2-billion-parameter, Apache-2.0 licensed open-source model designed to replace hosted text-to-speech APIs. It can clone voices from seconds of audio, invent new voices from descriptions, and generate 48 kHz speech across 30 languages on your own GPU. This offers a significant cost reduction by eliminating per-character billing.\n\nVoxCPM2 utilizes a tokenizer-free, end-to-end diffusion-autoregressive architecture. This design choice allows it to generate continuous speech representations, preserving paralinguistic details like breathing, pacing, and mid-sentence emotion shifts more effectively than traditional token-based models.\n\nThe model consolidates three key capabilities into a single checkpoint, simplifying what previously required stitching together multiple tools. Installation is straightforward via a pip package, requiring a few gigabytes of weights for deployment.\n\nDevelopers can test sentences in the free Hugging Face playground before committing hardware. While the official documentation notes VoxCPM2 support is not yet available for Apple Silicon via the community MLX-Audio path, earlier 1.x checkpoints are supported on Mac.\n\nFor production, the recommended path is vLLM-Omni, which exposes an OpenAI-compatible /v1/audio/speech endpoint with batching and KV-cache management. This setup achieves a real-time factor around 0.13 on an RTX 4090, making generation several times faster than playback.\n\nThe practical implication is that applications already using OpenAI-shaped audio endpoints can switch to VoxCPM2 by simply changing the base URL. While the model loads in the 8 GB VRAM class, a 24 GB card is recommended for comfortable production use, accounting for KV cache, concurrency, and longer prompts.\n\n#AI #OpenSource #TextToSpeech #VoiceAI #SelfHosted #Developers\n\nSource: DEV",
+  "tweet": "Self-host your AI voice generation! OpenBMB's VoxCPM2 is a 2-billion-parameter, Apache-2.0 licensed model that clones voices, designs new ones, and speaks 30 languages. Eliminate per-character costs and keep data in-house. #AI #OpenSource #TextToSpeech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openbmb.com",
+  "source": "DEV",
+  "url": "https://dev.to/shaam_ai/voxcpm2-vs-elevenlabs-self-hosted-ai-voice-that-clones-designs-and-speaks-30-languages-2026-4cof",
+  "image": "",
+  "orig_title": "VoxCPM2 vs ElevenLabs: Self-Hosted AI Voice That Clones, Designs and Speaks 30 Languages (2026)",
+  "cluster_urls": [
+   "https://dev.to/shaam_ai/voxcpm2-vs-elevenlabs-self-hosted-ai-voice-that-clones-designs-and-speaks-30-languages-2026-4cof"
+  ],
+  "cluster_titles": [
+   "VoxCPM2 vs ElevenLabs: Self-Hosted AI Voice That Clones, Designs and Speaks 30 Languages (2026)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260922-1007-1-voxcpm2-offers-self-hosted-ai-voice-with-clo.png",
+   "20260922-1007-1-voxcpm2-offers-self-hosted-ai-voice-with-clo-d1.png",
+   "20260922-1007-1-voxcpm2-offers-self-hosted-ai-voice-with-clo-d2.png",
+   "20260922-1007-1-voxcpm2-offers-self-hosted-ai-voice-with-clo-d3.png"
+  ]
+ }
+]

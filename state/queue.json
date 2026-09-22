@@ -1,1 +1,91 @@
-[]
+[
+ {
+  "topic": "xpeng humanoid robot assembled and walks out",
+  "headline_marked": "XPENG's Iron robot [[walks autonomously]] off assembly line",
+  "headline": "XPENG's Iron robot walks autonomously off assembly line",
+  "summary": "The humanoid robot completed its assembly and walked out of XPENG's new production line, signaling readiness for mass production later this year.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "XPENG's new humanoid robot, named Iron, has successfully walked autonomously off its assembly line after completion. This marks a significant step for the Chinese electric vehicle manufacturer as they prepare for mass production of the robot later this year. The company's Chairman and CEO, He Xiaopeng, even presented the robot with a staff badge.",
+   "The new production line boasts over 80 percent automation in its core processes. XPENG is leveraging quality systems from its automotive business to ensure consistent robot manufacturing as production scales up. This initiative represents XPENG's expansion into an entirely new product category.",
+   "While the autonomous walk is a notable achievement, the robot's ability to perform throughout a full working day remains to be seen. XPENG has not disclosed the line's current output or the extent of pre-walk testing. Mass production is still targeted for the end of the year.",
+   "XPENG plans to deploy Iron robots in its own showrooms for tasks such as reception, guided tours, and sales assistance. Initial deliveries are slated for China and overseas markets in 2027, though US availability and pricing have not yet been announced.",
+   "Iron features 76 degrees of freedom across its body and 21 in each hand, enabling it to walk and manipulate objects. It is powered by three Turing AI chips, providing up to 2,250 trillion operations per second for onboard AI model processing and complex task execution without a remote operator.",
+   "The robot's outer structure is designed with flexibility and safety in mind, crucial for customer interaction. However, an independent safety evaluation has not been provided, and its everyday performance in customer-facing roles is yet to be established.",
+   "XPENG's venture into robotics mirrors Tesla's approach, with both automakers applying their AI and manufacturing expertise to humanoid robots. Tesla is also preparing for large-scale production of its Optimus robot.",
+   "Other companies are also making strides in humanoid robotics. Figure reported in April that it had produced over 350 Figure 03 robots, demonstrating a production cycle of one robot per hour. These robots are currently used for internal development and data collection.",
+   "Figure's robots have already been deployed in industrial settings. BMW has utilized Figure's earlier Figure 02 robot for inserting sheet-metal parts in its Spartanburg plant, supporting the production of over 30,000 BMW X3s over ten months."
+  ],
+  "caption": "XPENG's new Iron humanoid robot has completed assembly and walked itself off the production line.\nMass production is slated for later this year.\n\nXPENG's new humanoid robot, named Iron, has successfully walked autonomously off its assembly line after completion. This marks a significant step for the Chinese electric vehicle manufacturer as they prepare for mass production of the robot later this year. The company's Chairman and CEO, He Xiaopeng, even presented the robot with a staff badge.\n\nThe new production line boasts over 80 percent automation in its core processes. XPENG is leveraging quality systems from its automotive business to ensure consistent robot manufacturing as production scales up. This initiative represents XPENG's expansion into an entirely new product category.\n\nWhile the autonomous walk is a notable achievement, the robot's ability to perform throughout a full working day remains to be seen. XPENG has not disclosed the line's current output or the extent of pre-walk testing. Mass production is still targeted for the end of the year.\n\nXPENG plans to deploy Iron robots in its own showrooms for tasks such as reception, guided tours, and sales assistance. Initial deliveries are slated for China and overseas markets in 2027, though US availability and pricing have not yet been announced.\n\nIron features 76 degrees of freedom across its body and 21 in each hand, enabling it to walk and manipulate objects. It is powered by three Turing AI chips, providing up to 2,250 trillion operations per second for onboard AI model processing and complex task execution without a remote operator.\n\nThe robot's outer structure is designed with flexibility and safety in mind, crucial for customer interaction. However, an independent safety evaluation has not been provided, and its everyday performance in customer-facing roles is yet to be established.\n\n#AI #Robotics #HumanoidRobot #XPENG #TechNews\n\nSource: Engadget",
+  "tweet": "XPENG's Iron humanoid robot has successfully walked autonomously off its assembly line, signaling readiness for mass production later this year. #AI #Robotics #XPENG",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "xpeng.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2261658/xpeng-building-humanoid-robots-walked-out-after-assembled/",
+  "image": "https://www.engadget.com/img/gallery/xpengs-iron-humanoid-robot-walked-out-immediately-after-being-assembled/l-intro-1789669765.jpg",
+  "orig_title": "XPENG's Iron humanoid robot walked out immediately after being assembled",
+  "cluster_urls": [
+   "https://www.engadget.com/2261658/xpeng-building-humanoid-robots-walked-out-after-assembled/"
+  ],
+  "cluster_titles": [
+   "XPENG's Iron humanoid robot walked out immediately after being assembled"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260922-1808-0-xpeng-s-iron-robot-walks-autonomously-off-as.png",
+   "20260922-1808-0-xpeng-s-iron-robot-walks-autonomously-off-as-d1.png",
+   "20260922-1808-0-xpeng-s-iron-robot-walks-autonomously-off-as-d2.png",
+   "20260922-1808-0-xpeng-s-iron-robot-walks-autonomously-off-as-d3.png",
+   "20260922-1808-0-xpeng-s-iron-robot-walks-autonomously-off-as-d4.png"
+  ]
+ },
+ {
+  "topic": "running llms in browser with webgpu and android pin recovery feature",
+  "headline_marked": "[[Run LLMs in Browser]] with WebGPU, Cutting Cloud Costs",
+  "headline": "Run LLMs in Browser with WebGPU, Cutting Cloud Costs",
+  "summary": "WebGPU enables on-device AI inference, keeping user data private and enabling offline capabilities. This shifts the paradigm from server-side processing to local execution.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "For years, web AI meant sending user data to remote servers, incurring costs and privacy risks. Now, thanks to WebGPU, browsers are becoming powerful inference runtimes, allowing LLMs to run locally by 2026.",
+   "WebLLM, built on Apache TVM, offers high-performance chatbot implementations with an OpenAI-compatible API for easy integration. It compiles model-specific kernels for WebGPU for near-native speeds.",
+   "Transformers.js from Hugging Face provides a broader range of AI tasks, including vision and speech, acting as an ONNX Runtime wrapper. It intelligently falls back to WebAssembly if WebGPU isn't supported.",
+   "Chrome's native LanguageModel interface manages model weights directly, but has strict hardware constraints and limited browser support compared to WebGPU solutions.",
+   "WebGPU's parallel processing capabilities are crucial for LLMs, exposing GPU hardware resources directly to JavaScript for efficient computation, unlike WebAssembly which is CPU-bound.",
+   "Browser support for WebGPU is widespread across Chrome, Edge, and Safari on both desktop and mobile, with Firefox actively improving its implementation. Secure contexts (HTTPS) are mandatory.",
+   "Initial model loading can be a multi-hundred megabyte event, requiring careful consideration for bundle size and user experience. Progressive loading strategies are recommended for production.",
+   "VRAM limitations are a significant hurdle; even with 4-bit quantization, modern LLMs demand substantial memory. Exceeding available GPU memory will cause failures or slow CPU fallbacks.",
+   "Testing on mobile devices is critical due to stricter resource policies and thermal throttling. Tools like Pinggy can help expose local development environments via HTTPS tunnels for real-time mobile testing."
+  ],
+  "caption": "Forget server-side AI. WebGPU is making it possible to run powerful LLMs directly in your browser, slashing costs and boosting privacy.\n\nFor years, web AI meant sending user data to remote servers, incurring costs and privacy risks. Now, thanks to WebGPU, browsers are becoming powerful inference runtimes, allowing LLMs to run locally by 2026.\n\nWebLLM, built on Apache TVM, offers high-performance chatbot implementations with an OpenAI-compatible API for easy integration. It compiles model-specific kernels for WebGPU for near-native speeds.\n\nTransformers.js from Hugging Face provides a broader range of AI tasks, including vision and speech, acting as an ONNX Runtime wrapper. It intelligently falls back to WebAssembly if WebGPU isn't supported.\n\nChrome's native LanguageModel interface manages model weights directly, but has strict hardware constraints and limited browser support compared to WebGPU solutions.\n\nWebGPU's parallel processing capabilities are crucial for LLMs, exposing GPU hardware resources directly to JavaScript for efficient computation, unlike WebAssembly which is CPU-bound.\n\nBrowser support for WebGPU is widespread across Chrome, Edge, and Safari on both desktop and mobile, with Firefox actively improving its implementation. Secure contexts (HTTPS) are mandatory.\n\nInitial model loading can be a multi-hundred megabyte event, requiring careful consideration for bundle size and user experience. Progressive loading strategies are recommended for production.\n\nVRAM limitations are a significant hurdle; even with 4-bit quantization, modern LLMs demand substantial memory. Exceeding available GPU memory will cause failures or slow CPU fallbacks.\n\nTesting on mobile devices is critical due to stricter resource policies and thermal throttling. Tools like Pinggy can help expose local development environments via HTTPS tunnels for real-time mobile testing.\n\n#AI #WebGPU #LLM #OnDeviceAI #WebDevelopment\n\nSource: DEV, Android Police",
+  "tweet": "Running LLMs in the browser is the future! WebGPU enables on-device AI, cutting cloud costs & boosting privacy. Explore WebLLM, Transformers.js, and Chrome's native interface. #AI #WebGPU #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV, Android Police",
+  "url": "https://dev.to/lightningdev123/unlocking-client-side-ai-running-llms-in-the-browser-with-webgpu-15nc",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fqntugjleyjmgs77zo339.webp",
+  "orig_title": "Unlocking Client-Side AI: Running LLMs in the Browser with WebGPU",
+  "cluster_urls": [
+   "https://dev.to/lightningdev123/unlocking-client-side-ai-running-llms-in-the-browser-with-webgpu-15nc",
+   "https://www.androidpolice.com/android-forgotten-pin-recovery-no-reset/"
+  ],
+  "cluster_titles": [
+   "Unlocking Client-Side AI: Running LLMs in the Browser with WebGPU",
+   "Android 17 is testing a lifesaver feature for when you forget your PIN"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260922-1808-1-run-llms-in-browser-with-webgpu-cutting-clou.png",
+   "20260922-1808-1-run-llms-in-browser-with-webgpu-cutting-clou-d1.png",
+   "20260922-1808-1-run-llms-in-browser-with-webgpu-cutting-clou-d2.png",
+   "20260922-1808-1-run-llms-in-browser-with-webgpu-cutting-clou-d3.png"
+  ]
+ }
+]

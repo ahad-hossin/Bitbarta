@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "apple_says_yes_to_user_request_after_saying_no",
+  "headline_marked": "[[Apple removes opt-out]] for macOS data collection after user says no",
+  "headline": "Apple removes opt-out for macOS data collection after user says no",
+  "summary": "A user reports that Apple has removed the ability to disable data collection features in macOS updates, despite explicit user opt-outs.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A user discovered that macOS 15.3 had a feature that collected personal data every 15 minutes, but a setting was available to disable it.",
+   "Upon upgrading to macOS 27, the user found that this opt-out setting had been removed, forcing data collection.",
+   "The user also noted that Siri processes remained active and collecting data, even after Siri was explicitly turned off.",
+   "Apple's 'Apple Intelligence & Siri' features were also reported to be enabled by default after the update, overriding previous user preferences.",
+   "The update also resulted in a significant disk space usage, with the user estimating it cost them around £11 based on Apple's storage pricing.",
+   "The author criticizes the AI industry's lack of consent and privacy, comparing it to the creation of 'psychopaths' and 'Epstein lists'."
+  ],
+  "caption": "Apple has reportedly removed the ability for users to opt out of data collection in its latest macOS update, despite users explicitly saying 'no'.\n\nA user discovered that macOS 15.3 had a feature that collected personal data every 15 minutes, but a setting was available to disable it.\n\nUpon upgrading to macOS 27, the user found that this opt-out setting had been removed, forcing data collection.\n\nThe user also noted that Siri processes remained active and collecting data, even after Siri was explicitly turned off.\n\nApple's 'Apple Intelligence & Siri' features were also reported to be enabled by default after the update, overriding previous user preferences.\n\nThe update also resulted in a significant disk space usage, with the user estimating it cost them around £11 based on Apple's storage pricing.\n\nThe author criticizes the AI industry's lack of consent and privacy, comparing it to the creation of 'psychopaths' and 'Epstein lists'.\n\n#Apple #macOS #Privacy #DataCollection #Tech\n\nSource: Hacker News",
+  "tweet": "Apple reportedly removed the opt-out for macOS data collection in its latest update. Users who previously said 'no' now find the feature re-enabled. Concerns rise over AI industry's approach to consent and privacy. #Apple #macOS #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "apple.com",
+  "source": "Hacker News",
+  "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
+  "image": "",
+  "orig_title": "I said no and Apple said yes",
+  "cluster_urls": [
+   "https://dbushell.com/2026/09/22/apple-intelligence/"
+  ],
+  "cluster_titles": [
+   "I said no and Apple said yes"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260922-1707-0-apple-removes-opt-out-for-macos-data-collect.png",
+   "20260922-1707-0-apple-removes-opt-out-for-macos-data-collect-d1.png",
+   "20260922-1707-0-apple-removes-opt-out-for-macos-data-collect-d2.png"
+  ]
+ },
+ {
+  "topic": "can_gzip_be_a_language_model",
+  "headline_marked": "[[Can gzip model language?]] Experiment suggests yes, using compression",
+  "headline": "Can gzip model language? Experiment suggests yes, using compression",
+  "summary": "An experiment explores using the gzip compression algorithm to generate text, finding it can 'predict' sequences based on learned patterns.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A recent experiment investigated whether the standard gzip compression algorithm could function as a language model without any neural networks or learned parameters. The core idea stems from the principle that language modeling and data compression are fundamentally linked: every prediction model is a compressor, and every compressor is a prediction model.",
+   "The experiment primed gzip with a corpus of text, then provided it with a normal text prompt. Gzip continued the prompt by searching for byte sequences that compressed best. While the output wasn't perfectly coherent, it demonstrated a surprising level of understanding of the input text's patterns.",
+   "The underlying mechanism relies on how compressors work: they use fewer bytes for data they 'expect' and more for unexpected data. In gzip's case, the DEFLATE algorithm uses back-references for repeating byte sequences within a 32 KiB sliding window. Sequences that echo existing text compress efficiently, signaling that gzip 'predicted' them.",
+   "To generate text, a naive approach of picking the single best-compressing byte failed due to quantization noise. The improved method, dubbed 'GziPT', uses a beam search over byte sequences. It scores candidate continuations by measuring how small the compressed output is, indicating a higher degree of predictability.",
+   "A key detail is that gzip prioritizes recent matches. To avoid simple verbatim loops, the scoring context only considers the last tail bytes of generated output. This encourages more varied, yet still predictable, text generation.",
+   "The implementation uses Python's standard zlib library, which employs the DEFLATE algorithm, rather than spawning a separate gzip process. The code is available on GitHub for those interested in exploring this novel approach to language modeling."
+  ],
+  "caption": "Forget neural networks: A simple compression algorithm like gzip might be capable of language modeling.\n\nA recent experiment investigated whether the standard gzip compression algorithm could function as a language model without any neural networks or learned parameters. The core idea stems from the principle that language modeling and data compression are fundamentally linked: every prediction model is a compressor, and every compressor is a prediction model.\n\nThe experiment primed gzip with a corpus of text, then provided it with a normal text prompt. Gzip continued the prompt by searching for byte sequences that compressed best. While the output wasn't perfectly coherent, it demonstrated a surprising level of understanding of the input text's patterns.\n\nThe underlying mechanism relies on how compressors work: they use fewer bytes for data they 'expect' and more for unexpected data. In gzip's case, the DEFLATE algorithm uses back-references for repeating byte sequences within a 32 KiB sliding window. Sequences that echo existing text compress efficiently, signaling that gzip 'predicted' them.\n\nTo generate text, a naive approach of picking the single best-compressing byte failed due to quantization noise. The improved method, dubbed 'GziPT', uses a beam search over byte sequences. It scores candidate continuations by measuring how small the compressed output is, indicating a higher degree of predictability.\n\nA key detail is that gzip prioritizes recent matches. To avoid simple verbatim loops, the scoring context only considers the last tail bytes of generated output. This encourages more varied, yet still predictable, text generation.\n\nThe implementation uses Python's standard zlib library, which employs the DEFLATE algorithm, rather than spawning a separate gzip process. The code is available on GitHub for those interested in exploring this novel approach to language modeling.\n\n#AI #LanguageModels #Compression #Gzip #TechInnovation\n\nSource: Hacker News",
+  "tweet": "Can gzip model language? An experiment suggests yes! By leveraging compression principles, it 'predicts' text sequences without neural networks. #AI #LanguageModels #Compression",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://nathan.rs/posts/gzip-lm/",
+  "image": "",
+  "orig_title": "Can gzip be a language model?",
+  "cluster_urls": [
+   "https://nathan.rs/posts/gzip-lm/"
+  ],
+  "cluster_titles": [
+   "Can gzip be a language model?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260922-1707-1-can-gzip-model-language-experiment-suggests-.png",
+   "20260922-1707-1-can-gzip-model-language-experiment-suggests--d1.png",
+   "20260922-1707-1-can-gzip-model-language-experiment-suggests--d2.png",
+   "20260922-1707-1-can-gzip-model-language-experiment-suggests--d3.png"
+  ]
+ }
+]

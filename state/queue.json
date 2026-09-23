@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "greece pm on ai battle",
+  "headline_marked": "[[Greece's PM admits he has no answers to AI questions]], says \"we're already fighting yesterday's battle\"",
+  "headline": "Greece's PM admits he has no answers to AI questions, says \"we're already fighting yesterday's battle\"",
+  "summary": "Greek Prime Minister Kyriakos Mitsotakis was candid about the challenges of AI during his San Francisco visit, acknowledging that leaders are still grappling with its societal impact.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Greek Prime Minister Kyriakos Mitsotakis openly admitted to not having answers to many AI questions during a recent visit to San Francisco. He described his trip as a fact-finding mission, engaging with founders, investors, and operators.",
+   "Mitsotakis also promoted Greece, highlighting its economic recovery and its impending regain of developed market status from MSCI. He noted Greece's record pace in paying down debt and its ability to borrow more cheaply than the United States.",
+   "A significant portion of Greece's €36 billion EU recovery fund was invested in digital infrastructure. This includes an online portal for government paperwork and a new supercomputer, assembled with HPE, set to power AI and scientific research.",
+   "Greece has also implemented policy changes to attract tech companies and talent. These include reforms in stock option taxation, loosened labor laws, and lower taxes for returning Greek citizens for up to seven years.",
+   "The Prime Minister expressed concern about AI's societal effects, particularly for younger generations. He cited Greece's upcoming ban on social media for children under 15, but questioned if this is \"fighting yesterday's battle\" given the rise of addictive AI chatbots.",
+   "Mitsotakis was cautious about AI in education, despite a pilot with OpenAI for administrative tasks and the promise of personalized tutors. He warned against AI replacing \"the hard work of learning basic skills\" and noted students are already using chatbots for homework."
+  ],
+  "caption": "Greece's Prime Minister Kyriakos Mitsotakis admits global leaders are \"fighting yesterday's battle\" when it comes to regulating AI. He's openly seeking answers.\n\nGreek Prime Minister Kyriakos Mitsotakis openly admitted to not having answers to many AI questions during a recent visit to San Francisco. He described his trip as a fact-finding mission, engaging with founders, investors, and operators.\n\nMitsotakis also promoted Greece, highlighting its economic recovery and its impending regain of developed market status from MSCI. He noted Greece's record pace in paying down debt and its ability to borrow more cheaply than the United States.\n\nA significant portion of Greece's €36 billion EU recovery fund was invested in digital infrastructure. This includes an online portal for government paperwork and a new supercomputer, assembled with HPE, set to power AI and scientific research.\n\nGreece has also implemented policy changes to attract tech companies and talent. These include reforms in stock option taxation, loosened labor laws, and lower taxes for returning Greek citizens for up to seven years.\n\nThe Prime Minister expressed concern about AI's societal effects, particularly for younger generations. He cited Greece's upcoming ban on social media for children under 15, but questioned if this is \"fighting yesterday's battle\" given the rise of addictive AI chatbots.\n\nMitsotakis was cautious about AI in education, despite a pilot with OpenAI for administrative tasks and the promise of personalized tutors. He warned against AI replacing \"the hard work of learning basic skills\" and noted students are already using chatbots for homework.\n\n#AI #Greece #TechPolicy #DigitalTransformation #Innovation #FutureOfTech\n\nSource: TechCrunch",
+  "tweet": "Greece's PM Kyriakos Mitsotakis candidly admits global leaders are \"fighting yesterday's battle\" on AI regulation. He's on a fact-finding mission, grappling with its societal impact and the future of digital companions. #AI #TechPolicy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/09/22/were-already-fighting-yesterdays-battle-greeces-prime-minister-gets-candid-about-ai/",
+  "image": "",
+  "orig_title": "“We’re already fighting yesterday’s battle”: Greece’s prime minister gets candid about AI",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/09/22/were-already-fighting-yesterdays-battle-greeces-prime-minister-gets-candid-about-ai/"
+  ],
+  "cluster_titles": [
+   "“We’re already fighting yesterday’s battle”: Greece’s prime minister gets candid about AI"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20260923-1108-0-greece-s-pm-admits-he-has-no-answers-to-ai-q.png",
+   "20260923-1108-0-greece-s-pm-admits-he-has-no-answers-to-ai-q-d1.png",
+   "20260923-1108-0-greece-s-pm-admits-he-has-no-answers-to-ai-q-d2.png"
+  ]
+ },
+ {
+  "topic": "data-only attacks security",
+  "headline_marked": "[[Data-only attacks are easier than you think]], new research shows",
+  "headline": "Data-only attacks are easier than you think, new research shows",
+  "summary": "New research challenges the assumption that data-only attacks are too complex, demonstrating an automated tool, Einstein, that generates them with surprising ease. This calls for a re-evaluation of current mitigation strategies.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Data-only attacks, which manipulate a program's data without altering its control flow, have long been considered too sophisticated for practical threat. However, new research from USENIX Security 2024 introduces Einstein, a tool that automatically generates these attacks with surprising ease.",
+   "Approximately 70% of security bugs reported by major tech companies like Microsoft, Google, and Mozilla are memory safety bugs. While these bugs traditionally led to control-flow hijacking, modern defenses make such exploits increasingly difficult.",
+   "Einstein demonstrates a practical approach to exploiting these memory safety bugs by letting the program execute its intended code but with malicious data. This method bypasses control-flow integrity measures, as no malicious code is ever directly executed.",
+   "The research highlights that building data-only attacks is now well within reach of low-effort attackers. This challenges the conventional wisdom that such attacks are too application-specific or complex to pose a significant practical threat.",
+   "A classic example involves exploiting a web server's configuration by overwriting its CGI-BIN path to a malicious directory. This allows an attacker to execute arbitrary programs on the victim machine, such as installing malware or exfiltrating data, all by manipulating data arguments to benign system calls.",
+   "The findings from the Einstein tool call upon both security researchers and software vendors to rethink their current mitigation strategies. Existing defenses primarily focus on preventing control-flow hijacking, leaving data-only attacks as a less-addressed vulnerability surface."
+  ],
+  "caption": "Data-only attacks, long considered too complex, can now be automatically generated with surprising ease. A new tool, Einstein, challenges conventional wisdom on exploit difficulty.\n\nData-only attacks, which manipulate a program's data without altering its control flow, have long been considered too sophisticated for practical threat. However, new research from USENIX Security 2024 introduces Einstein, a tool that automatically generates these attacks with surprising ease.\n\nApproximately 70% of security bugs reported by major tech companies like Microsoft, Google, and Mozilla are memory safety bugs. While these bugs traditionally led to control-flow hijacking, modern defenses make such exploits increasingly difficult.\n\nEinstein demonstrates a practical approach to exploiting these memory safety bugs by letting the program execute its intended code but with malicious data. This method bypasses control-flow integrity measures, as no malicious code is ever directly executed.\n\nThe research highlights that building data-only attacks is now well within reach of low-effort attackers. This challenges the conventional wisdom that such attacks are too application-specific or complex to pose a significant practical threat.\n\nA classic example involves exploiting a web server's configuration by overwriting its CGI-BIN path to a malicious directory. This allows an attacker to execute arbitrary programs on the victim machine, such as installing malware or exfiltrating data, all by manipulating data arguments to benign system calls.\n\nThe findings from the Einstein tool call upon both security researchers and software vendors to rethink their current mitigation strategies. Existing defenses primarily focus on preventing control-flow hijacking, leaving data-only attacks as a less-addressed vulnerability surface.\n\n#Cybersecurity #InfoSec #Hacking #DataSecurity #Exploit #USENIX\n\nSource: Hacker News",
+  "tweet": "New research reveals data-only attacks, previously thought too complex, can be automatically generated with surprising ease by a tool called Einstein. This challenges current security assumptions and calls for new mitigation strategies. #Cybersecurity #InfoSec",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "usenix.org",
+  "source": "Hacker News",
+  "url": "https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think",
+  "image": "",
+  "orig_title": "Data-only attacks are easier than you think (2024)",
+  "cluster_urls": [
+   "https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think"
+  ],
+  "cluster_titles": [
+   "Data-only attacks are easier than you think (2024)"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260923-1108-1-data-only-attacks-are-easier-than-you-think-.png",
+   "20260923-1108-1-data-only-attacks-are-easier-than-you-think--d1.png",
+   "20260923-1108-1-data-only-attacks-are-easier-than-you-think--d2.png",
+   "20260923-1108-1-data-only-attacks-are-easier-than-you-think--d3.png"
+  ]
+ }
+]

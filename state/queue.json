@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "stanford paper2agent ai runs code",
+  "headline_marked": "[[Stanford's Paper2Agent]] turns research papers into AI agents that run real code",
+  "headline": "Stanford's Paper2Agent turns research papers into AI agents that run real code",
+  "summary": "Stanford's Paper2Agent converts research GitHub repositories into interactive AI agents that can execute code, costing around $15 per complex repo with a 75% success rate.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Stanford researchers have introduced Paper2Agent, an AI system designed to transform research paper GitHub repositories into interactive AI agents. This innovation aims to drastically cut down the time researchers spend setting up and running code from new studies, reducing it from days to hours.",
+   "Unlike typical document Q&A tools, Paper2Agent processes the entire GitHub repository, not just the PDF text. It works by cloning and scanning the repo, executing the code to understand its functions, extracting tools, and then packaging it into an MCP server that acts as an AI assistant.",
+   "The project, published in Nature, boasts a 3-in-4 success rate in converting repositories into functional agents. This figure is considered reliable and transparent, especially when compared to the high failure rate often encountered when humans manually attempt to set up complex research code.",
+   "Paper2Agent is open-source under the MIT License, allowing for free modification and extension. It leverages external AI models like Anthropic's Claude Code or Google's Gemini CLI, with estimated API costs around $14-$15 for a complex repository and conversion times ranging from 45 minutes to 3 hours.",
+   "The system has clear limitations: it requires repositories with code and tutorials, and it does not accept PDF-only papers. Furthermore, the researchers emphasize that automated testing does not guarantee scientific accuracy, and expert human review remains crucial.",
+   "For those interested in trying it out, the team has provided three live demo agents on Hugging Face Spaces. These include assistants for genome-level genetics, single-cell data analysis libraries, and cell-level tissue localization decoding tasks.",
+   "Paper2Agent addresses a significant pain point for serious researchers by streamlining the process of replicating and building upon existing work. It achieves this by directly executing the research code, rather than merely inferring from theoretical descriptions.",
+   "While offering substantial benefits, users must accept the current 75% success rate, the API costs, and the ongoing need for human oversight to validate scientific outcomes. The project represents a promising step towards more efficient research workflows."
+  ],
+  "caption": "Tired of struggling to run research code? Stanford's Paper2Agent turns GitHub repos into AI assistants that execute code for you.\n\nStanford researchers have introduced Paper2Agent, an AI system designed to transform research paper GitHub repositories into interactive AI agents. This innovation aims to drastically cut down the time researchers spend setting up and running code from new studies, reducing it from days to hours.\n\nUnlike typical document Q&A tools, Paper2Agent processes the entire GitHub repository, not just the PDF text. It works by cloning and scanning the repo, executing the code to understand its functions, extracting tools, and then packaging it into an MCP server that acts as an AI assistant.\n\nThe project, published in Nature, boasts a 3-in-4 success rate in converting repositories into functional agents. This figure is considered reliable and transparent, especially when compared to the high failure rate often encountered when humans manually attempt to set up complex research code.\n\nPaper2Agent is open-source under the MIT License, allowing for free modification and extension. It leverages external AI models like Anthropic's Claude Code or Google's Gemini CLI, with estimated API costs around $14-$15 for a complex repository and conversion times ranging from 45 minutes to 3 hours.\n\nThe system has clear limitations: it requires repositories with code and tutorials, and it does not accept PDF-only papers. Furthermore, the researchers emphasize that automated testing does not guarantee scientific accuracy, and expert human review remains crucial.\n\nFor those interested in trying it out, the team has provided three live demo agents on Hugging Face Spaces. These include assistants for genome-level genetics, single-cell data analysis libraries, and cell-level tissue localization decoding tasks.\n\n#AI #Research #Stanford #Paper2Agent #DeveloperTools #OpenSource\n\nSource: DEV",
+  "tweet": "Tired of struggling to run research code? Stanford's Paper2Agent turns GitHub repos into AI assistants that execute code for you. It costs ~$15 per complex repo, takes 0.5-3 hours, and has a 75% success rate. #AI #Research #Paper2Agent",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "stanford.edu",
+  "source": "DEV",
+  "url": "https://dev.to/sarantoon/paper2agent-cchaak-stanford-epliiynngaanwicchayaihepn-ai-agent-thiiranokhdcchring-3omd",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F8do25yc109auiszj3xxu.png",
+  "orig_title": "Paper2Agent จาก Stanford: เปลี่ยนงานวิจัยให้เป็น AI Agent ที่รันโค้ดจริง",
+  "cluster_urls": [
+   "https://dev.to/sarantoon/paper2agent-cchaak-stanford-epliiynngaanwicchayaihepn-ai-agent-thiiranokhdcchring-3omd"
+  ],
+  "cluster_titles": [
+   "Paper2Agent จาก Stanford: เปลี่ยนงานวิจัยให้เป็น AI Agent ที่รันโค้ดจริง"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260923-0807-0-stanford-s-paper2agent-turns-research-papers.png",
+   "20260923-0807-0-stanford-s-paper2agent-turns-research-papers-d1.png",
+   "20260923-0807-0-stanford-s-paper2agent-turns-research-papers-d2.png",
+   "20260923-0807-0-stanford-s-paper2agent-turns-research-papers-d3.png"
+  ]
+ },
+ {
+  "topic": "tencent gander ai voice agent separate brains",
+  "headline_marked": "Tencent Gander: [[AI talks, sees, and works in background]] without stopping conversation",
+  "headline": "Tencent Gander: AI talks, sees, and works in background without stopping conversation",
+  "summary": "Tencent's Gander research project introduces an open AI agent with a dual-brain architecture, allowing it to maintain conversation while performing complex tasks asynchronously.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Tencent's Gander project unveils an open AI agent that can converse, see images, and work in the background simultaneously without pausing dialogue. This \"dual-brain\" system is open-source under Apache 2.0, with model weights available on Hugging Face. Setting up the full system currently requires three GPUs.",
+   "The core innovation is separating the system into two parts: a \"Cerebellum\" for streaming interaction and a \"Brain\" for pluggable, heavy-duty background tasks like data retrieval or code execution. An intermediary orchestrates these, allowing the Cerebellum to continue conversation while the Brain works.",
+   "While the Apache 2.0 license permits commercial use, Gander is a research prototype, not a public online service. There's no live demo; users must download and set up the entire system themselves, highlighting its current focus on developers and researchers.",
+   "The project's current state requires significant resources, including multiple GPUs, and its task accuracy is reported to be lower than closed-source commercial alternatives. This positions Gander as a foundational research tool rather than a ready-to-deploy product.",
+   "Gander marks a significant step for open models, demonstrating the feasibility of overlapping voice interaction without relying on proprietary systems. Its open weights and permissive license enable broad community development and potential future cost reduction.",
+   "Ultimately, Gander is an engine prototype, not a drivable car. It's ideal for developers exploring dual-brain architectures, but general users should wait for community optimizations to reduce setup complexity and improve performance."
+  ],
+  "caption": "Imagine an AI assistant that keeps talking to you while it's busy fetching information or running code. Tencent's Gander makes this a reality.\n\nTencent's Gander project unveils an open AI agent that can converse, see images, and work in the background simultaneously without pausing dialogue. This \"dual-brain\" system is open-source under Apache 2.0, with model weights available on Hugging Face. Setting up the full system currently requires three GPUs.\n\nThe core innovation is separating the system into two parts: a \"Cerebellum\" for streaming interaction and a \"Brain\" for pluggable, heavy-duty background tasks like data retrieval or code execution. An intermediary orchestrates these, allowing the Cerebellum to continue conversation while the Brain works.\n\nWhile the Apache 2.0 license permits commercial use, Gander is a research prototype, not a public online service. There's no live demo; users must download and set up the entire system themselves, highlighting its current focus on developers and researchers.\n\nThe project's current state requires significant resources, including multiple GPUs, and its task accuracy is reported to be lower than closed-source commercial alternatives. This positions Gander as a foundational research tool rather than a ready-to-deploy product.\n\nGander marks a significant step for open models, demonstrating the feasibility of overlapping voice interaction without relying on proprietary systems. Its open weights and permissive license enable broad community development and potential future cost reduction.\n\nUltimately, Gander is an engine prototype, not a drivable car. It's ideal for developers exploring dual-brain architectures, but general users should wait for community optimizations to reduce setup complexity and improve performance.\n\n#AI #Tencent #Gander #OpenSource #TechNews #ArtificialIntelligence\n\nSource: DEV",
+  "tweet": "Tencent's Gander AI introduces a \"dual-brain\" architecture, letting it maintain voice conversation while performing background tasks. It's open-source (Apache 2.0) with models on Hugging Face, but currently a research prototype requiring 3 GPUs. #AI #Tencent #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tencent.com",
+  "source": "DEV",
+  "url": "https://dev.to/sarantoon/tencent-gander-ai-khuyesiiyngphrmthamngaanebuuenghlang-aebbaeyksmng-1lce",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7i6xfdrfrkb12a2wzc07.png",
+  "orig_title": "Tencent Gander: AI คุยเสียงพร้อมทำงานเบื้องหลัง แบบแยกสมอง",
+  "cluster_urls": [
+   "https://dev.to/sarantoon/tencent-gander-ai-khuyesiiyngphrmthamngaanebuuenghlang-aebbaeyksmng-1lce"
+  ],
+  "cluster_titles": [
+   "Tencent Gander: AI คุยเสียงพร้อมทำงานเบื้องหลัง แบบแยกสมอง"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260923-0807-1-tencent-gander-ai-talks-sees-and-works-in-ba.png",
+   "20260923-0807-1-tencent-gander-ai-talks-sees-and-works-in-ba-d1.png",
+   "20260923-0807-1-tencent-gander-ai-talks-sees-and-works-in-ba-d2.png",
+   "20260923-0807-1-tencent-gander-ai-talks-sees-and-works-in-ba-d3.png"
+  ]
+ }
+]

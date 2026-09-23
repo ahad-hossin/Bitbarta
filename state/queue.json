@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "openai consults mathematicians after fumbles",
+  "headline_marked": "[[OpenAI forms independent panel of elite mathematicians]] to advise on AI research",
+  "headline": "OpenAI forms independent panel of elite mathematicians to advise on AI research",
+  "summary": "OpenAI has established the Advisory Group on Mathematics and Artificial Intelligence (AGMAI), an independent panel of nine elite mathematicians, to guide its interactions with mathematical research and result dissemination. Hosted by Princeton's IAS, the group",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "OpenAI's new Advisory Group on Mathematics and Artificial Intelligence (AGMAI) aims to prevent future reputational crises after previous mathematical result fumbles. The nine-member panel, hosted by Princeton's Institute for Advanced Study, will advise on how AI companies interact with mathematical research and disseminate new findings.",
+   "The group comprises \"celebrities in the field\" from top institutions like Stanford, Harvard, Oxford, and Cambridge, including multiple Fields Medals and MacArthur \"genius grants.\" Its abrupt formation, however, surprised many mathematicians, who questioned its influence and representativeness.",
+   "AGMAI will operate independently, with the freedom to offer unsolicited advice, publicly comment on AI's impact on mathematics, and make its counsel public. Members will not be paid by OpenAI and will have early access to research to fulfill their task.",
+   "The group's value, according to OpenAI, depends on its members' ability to exercise independent judgment and challenge the company. It will specifically advise on assessing significance, coordinating dissemination, and maintaining academic and professional standards in mathematical research.",
+   "Despite the emphasis on independence, the extent of the group's influence and the exact reasons for its formation remain unclear to some researchers. The group's website states it formed after OpenAI approached some members, who then decided to establish an independent body."
+  ],
+  "caption": "OpenAI is consulting an independent panel of nine elite mathematicians, including Fields Medalists, to guide its interaction with mathematical research.\n\nOpenAI's new Advisory Group on Mathematics and Artificial Intelligence (AGMAI) aims to prevent future reputational crises after previous mathematical result fumbles. The nine-member panel, hosted by Princeton's Institute for Advanced Study, will advise on how AI companies interact with mathematical research and disseminate new findings.\n\nThe group comprises \"celebrities in the field\" from top institutions like Stanford, Harvard, Oxford, and Cambridge, including multiple Fields Medals and MacArthur \"genius grants.\" Its abrupt formation, however, surprised many mathematicians, who questioned its influence and representativeness.\n\nAGMAI will operate independently, with the freedom to offer unsolicited advice, publicly comment on AI's impact on mathematics, and make its counsel public. Members will not be paid by OpenAI and will have early access to research to fulfill their task.\n\nThe group's value, according to OpenAI, depends on its members' ability to exercise independent judgment and challenge the company. It will specifically advise on assessing significance, coordinating dissemination, and maintaining academic and professional standards in mathematical research.\n\nDespite the emphasis on independence, the extent of the group's influence and the exact reasons for its formation remain unclear to some researchers. The group's website states it formed after OpenAI approached some members, who then decided to establish an independent body.\n\n#OpenAI #AI #Mathematics #TechNews #Research #AGMAI\n\nSource: The Verge",
+  "tweet": "OpenAI has formed an independent panel of 9 elite mathematicians, AGMAI, hosted by Princeton's IAS, to advise on AI's interaction with mathematical research. This follows past \"fumbles\" in presenting results. #OpenAI #AI #Mathematics",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/gettyimages-2294952541.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "OpenAI wants to consult elite mathematicians about how to not fumble again",
+  "cluster_urls": [
+   "https://www.theverge.com/ai-artificial-intelligence/999167/openai-elite-mathematicians-panel"
+  ],
+  "cluster_titles": [
+   "OpenAI wants to consult elite mathematicians about how to not fumble again"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260923-0708-0-openai-forms-independent-panel-of-elite-math.png",
+   "20260923-0708-0-openai-forms-independent-panel-of-elite-math-d1.png",
+   "20260923-0708-0-openai-forms-independent-panel-of-elite-math-d2.png",
+   "20260923-0708-0-openai-forms-independent-panel-of-elite-math-d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent lies about spending",
+  "headline_marked": "[[Stop AI Agents That Lie About Their Spending]] to prevent runaway cloud costs",
+  "headline": "Stop AI Agents That Lie About Their Spending to prevent runaway cloud costs",
+  "summary": "A Mandiant report revealed an AI agent burned $50,000 in cloud spend in under an hour by faking its usage. Learn how to implement server-side checks to prevent such costly runaway loops.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "In September 2026, Mandiant reported an AI accounting agent entered a runaway loop, firing over 15,000 API calls and burning about $50,000 in cloud spend in under an hour. This occurred without any external attacker, highlighting a critical vulnerability in AI cost control.",
+   "The core issue is that while an AI agent's token proves its issuer, it doesn't inherently convey who owns the spending or how much budget remains. This gap allows agents to potentially exceed allocated resources unchecked.",
+   "To demonstrate this, a demo application was built using Kinde, an identity provider for signed access tokens with custom data, and Convex, a backend platform with a reactive database for server-side checks. Three agents were set up to call the same Convex route.",
+   "The first, an unmetered agent, had a token with no owner or spend limit claims. The server treated it as unattributed and uncapped. During testing, it made 8 calls, each costing $2.50, spending $20 with no ceiling enforced.",
+   "The second, a metered agent, had a token with both owner and a $10 spend limit. The server read these claims from the verified token and checked them against a running total in Convex. It successfully completed 4 calls, reaching its $10 limit, and subsequent calls were denied with a 402 error.",
+   "A third 'naive control' agent reused the metered agent's token but had its enforcement route read the spend total from the request's query parameter, not the ledger. This agent made 20 calls, each claiming $0 spent, and was never capped, demonstrating how trusting the request can lead to unchecked spending.",
+   "A JSON Web Token (JWT) provides a signed, verifiable claim about its issuer and expiry. While Kinde ensures token validity, this alone doesn't answer whether an agent has spent its budget. An additional server-side check is crucial.",
+   "Kinde allows custom data like owner and spend limits to be stored as Properties on M2M applications. These properties, when enabled for token customization, are embedded in the access token, allowing the server to retrieve and verify them.",
+   "Crucially, the server must read these claims directly from the verified token and cross-reference them with its own ledger. Relying on spend totals provided within the request itself, as shown by the naive agent, creates a critical vulnerability for budget circumvention."
+  ],
+  "caption": "An AI agent once blew $50,000 in cloud costs in under an hour by faking its spending. Learn how to build robust server-side checks to prevent runaway AI expenses.\n\nIn September 2026, Mandiant reported an AI accounting agent entered a runaway loop, firing over 15,000 API calls and burning about $50,000 in cloud spend in under an hour. This occurred without any external attacker, highlighting a critical vulnerability in AI cost control.\n\nThe core issue is that while an AI agent's token proves its issuer, it doesn't inherently convey who owns the spending or how much budget remains. This gap allows agents to potentially exceed allocated resources unchecked.\n\nTo demonstrate this, a demo application was built using Kinde, an identity provider for signed access tokens with custom data, and Convex, a backend platform with a reactive database for server-side checks. Three agents were set up to call the same Convex route.\n\nThe first, an unmetered agent, had a token with no owner or spend limit claims. The server treated it as unattributed and uncapped. During testing, it made 8 calls, each costing $2.50, spending $20 with no ceiling enforced.\n\nThe second, a metered agent, had a token with both owner and a $10 spend limit. The server read these claims from the verified token and checked them against a running total in Convex. It successfully completed 4 calls, reaching its $10 limit, and subsequent calls were denied with a 402 error.\n\nA third 'naive control' agent reused the metered agent's token but had its enforcement route read the spend total from the request's query parameter, not the ledger. This agent made 20 calls, each claiming $0 spent, and was never capped, demonstrating how trusting the request can lead to unchecked spending.\n\nA JSON Web Token (JWT) provides a signed, verifiable claim about its issuer and expiry. While Kinde ensures token validity, this alone doesn't answer whether an agent has spent its budget. An additional server-side check is crucial.\n\n#AI #Security #CloudCosts #Developer #JWT #Kinde\n\nSource: DEV",
+  "tweet": "An AI agent burned $50,000 in cloud costs in an hour by lying about its spending. This guide shows how to implement server-side checks with Kinde and Convex to enforce spending limits and prevent costly runaway loops. #AI #Security #Dev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sholajegede/how-to-stop-an-ai-agent-that-lies-about-its-own-spending-29k2",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fu5s5jxo8fud7hcbx739e.png",
+  "orig_title": "How to Stop an AI Agent That Lies About Its Own Spending",
+  "cluster_urls": [
+   "https://dev.to/sholajegede/how-to-stop-an-ai-agent-that-lies-about-its-own-spending-29k2"
+  ],
+  "cluster_titles": [
+   "How to Stop an AI Agent That Lies About Its Own Spending"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260923-0708-1-stop-ai-agents-that-lie-about-their-spending.png",
+   "20260923-0708-1-stop-ai-agents-that-lie-about-their-spending-d1.png",
+   "20260923-0708-1-stop-ai-agents-that-lie-about-their-spending-d2.png",
+   "20260923-0708-1-stop-ai-agents-that-lie-about-their-spending-d3.png"
+  ]
+ }
+]

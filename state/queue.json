@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "local ai on m4 mac benchmark",
+  "headline_marked": "Local AI on a 16GB M4 Mac: [[62 seconds to drafts, not publication]]",
+  "headline": "Local AI on a 16GB M4 Mac: 62 seconds to drafts, not publication",
+  "summary": "A local AI model on a 16GB M4 Mac generated three bilingual news briefs in 61.8 seconds, but the output required extensive human review for accuracy and natural language before publication.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A local AI model on a 16GB M4 Mac completed drafting three bilingual news briefs in just 61.8 seconds. Despite the speed, the raw output was not ready for publication, containing awkward Korean, evidence strings that did not match sources, and translation errors.",
+   "This report serves as a small implementation study, not a model benchmark, focusing on a single batch and machine without comparison to other models. The primary objective was to establish a news-drafting workflow independent of paid text-generation APIs.",
+   "The workflow involved a Python collector fetching official publisher feeds and news listings, selecting recent items, and sending source excerpts to Ollama running locally on the same Mac. Each request generated a Korean summary, an English summary, follow-up questions, and supporting source excerpts.",
+   "Ollama reported GPU execution for the process, though peak system memory, battery consumption, and sustained throughput were not measured. The model used was identified as 4B, with Ollama's metadata reporting 4.7B parameters, and incurred no external generation API charges.",
+   "The timer specifically wrapped the local generation request and response handling, excluding feed collection and subsequent editorial work. Source-matching checks were implemented, flagging issues such as an English word embedded in a Korean sentence or a reconstructed date not verbatim from the source.",
+   "A deliberately strict source-matching condition, using a 15-character threshold, was applied to identify concrete elements for inspection. This auditability helps pinpoint potential issues, but it does not transform a model-generated summary into verified reporting.",
+   "The three generated briefs were saved locally as drafts and not published directly. This workflow separates collection, generation, and publication, ensuring that publication is a distinct action performed on an explicitly reviewed manuscript, retaining source snapshots, model version, timings, raw output, and inspection flags."
+  ],
+  "caption": "Local AI on a 16GB M4 Mac drafted three bilingual news briefs in 61.8 seconds. But the output was far from publication-ready.\n\nA local AI model on a 16GB M4 Mac completed drafting three bilingual news briefs in just 61.8 seconds. Despite the speed, the raw output was not ready for publication, containing awkward Korean, evidence strings that did not match sources, and translation errors.\n\nThis report serves as a small implementation study, not a model benchmark, focusing on a single batch and machine without comparison to other models. The primary objective was to establish a news-drafting workflow independent of paid text-generation APIs.\n\nThe workflow involved a Python collector fetching official publisher feeds and news listings, selecting recent items, and sending source excerpts to Ollama running locally on the same Mac. Each request generated a Korean summary, an English summary, follow-up questions, and supporting source excerpts.\n\nOllama reported GPU execution for the process, though peak system memory, battery consumption, and sustained throughput were not measured. The model used was identified as 4B, with Ollama's metadata reporting 4.7B parameters, and incurred no external generation API charges.\n\nThe timer specifically wrapped the local generation request and response handling, excluding feed collection and subsequent editorial work. Source-matching checks were implemented, flagging issues such as an English word embedded in a Korean sentence or a reconstructed date not verbatim from the source.\n\nA deliberately strict source-matching condition, using a 15-character threshold, was applied to identify concrete elements for inspection. This auditability helps pinpoint potential issues, but it does not transform a model-generated summary into verified reporting.\n\n#LocalAI #M4Mac #AI #Tech #Ollama #GenerativeAI\n\nSource: DEV",
+  "tweet": "Local AI on a 16GB M4 Mac drafted three bilingual news briefs in 61.8 seconds. The output, however, required significant human review due to errors, highlighting the need for robust post-generation workflows. #AI #M4Mac #GenerativeAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/_nextquestion_/local-ai-on-a-16gb-m4-mac-62-seconds-to-drafts-not-publication-4b05",
+  "image": "",
+  "orig_title": "Local AI on a 16GB M4 Mac: 62 seconds to drafts, not publication",
+  "cluster_urls": [
+   "https://dev.to/_nextquestion_/local-ai-on-a-16gb-m4-mac-62-seconds-to-drafts-not-publication-4b05"
+  ],
+  "cluster_titles": [
+   "Local AI on a 16GB M4 Mac: 62 seconds to drafts, not publication"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260923-1207-0-local-ai-on-a-16gb-m4-mac-62-seconds-to-draf.png",
+   "20260923-1207-0-local-ai-on-a-16gb-m4-mac-62-seconds-to-draf-d1.png",
+   "20260923-1207-0-local-ai-on-a-16gb-m4-mac-62-seconds-to-draf-d2.png",
+   "20260923-1207-0-local-ai-on-a-16gb-m4-mac-62-seconds-to-draf-d3.png"
+  ]
+ },
+ {
+  "topic": "grammarly cancellation messages drama",
+  "headline_marked": "[[Grammarly will send unhinged messages]] to all your users if you try to cancel",
+  "headline": "Grammarly will send unhinged messages to all your users if you try to cancel",
+  "summary": "Users attempting to cancel their Grammarly subscriptions have reported the service sending bizarre, unsolicited messages to their entire contact list.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Reports indicate that Grammarly, the popular writing assistant, is sending unsolicited and 'unhinged' messages to users' entire contact lists when they attempt to cancel their subscriptions. This alarming behavior has been documented by multiple users, raising serious privacy concerns about data handling.",
+   "The messages, described as nonsensical or aggressive, are reportedly sent without user consent or initiation, directly impacting the user's professional and personal network. This suggests either a severe software bug or a highly aggressive, potentially malicious, dark pattern designed to deter cancellations.",
+   "Users have expressed shock and frustration over the incident, fearing reputational damage and unauthorized access to their contact information. Grammarly has not yet issued an official statement addressing these specific reports or clarifying the cause of this unusual activity.",
+   "The incident highlights the critical importance of app permissions and data privacy, especially concerning services that integrate with user contacts. It prompts a re-evaluation of how user data is managed and used, particularly during account termination processes."
+  ],
+  "caption": "Grammarly is reportedly sending 'unhinged' messages to users' contacts upon cancellation. This alarming behavior raises serious privacy concerns.\n\nReports indicate that Grammarly, the popular writing assistant, is sending unsolicited and 'unhinged' messages to users' entire contact lists when they attempt to cancel their subscriptions. This alarming behavior has been documented by multiple users, raising serious privacy concerns about data handling.\n\nThe messages, described as nonsensical or aggressive, are reportedly sent without user consent or initiation, directly impacting the user's professional and personal network. This suggests either a severe software bug or a highly aggressive, potentially malicious, dark pattern designed to deter cancellations.\n\nUsers have expressed shock and frustration over the incident, fearing reputational damage and unauthorized access to their contact information. Grammarly has not yet issued an official statement addressing these specific reports or clarifying the cause of this unusual activity.\n\nThe incident highlights the critical importance of app permissions and data privacy, especially concerning services that integrate with user contacts. It prompts a re-evaluation of how user data is managed and used, particularly during account termination processes.\n\n#Grammarly #Privacy #SoftwareBug #TechNews #DataSecurity #DarkPatterns\n\nSource: Hacker News",
+  "tweet": "Users report Grammarly sending 'unhinged' messages to their entire contact list when they try to cancel. This raises major privacy alarms about how user data is handled during account termination. #Grammarly #Privacy #SoftwareBug",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "grammarly.com",
+  "source": "Hacker News",
+  "url": "https://www.reddit.com/r/sysadmin/comments/1wjdpgx/psa_grammarly_will_send_unhinged_messages_to_all/",
+  "image": "",
+  "orig_title": "Grammarly will send unhinged messages to all your users if you try to cancel",
+  "cluster_urls": [
+   "https://www.reddit.com/r/sysadmin/comments/1wjdpgx/psa_grammarly_will_send_unhinged_messages_to_all/"
+  ],
+  "cluster_titles": [
+   "Grammarly will send unhinged messages to all your users if you try to cancel"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260923-1207-1-grammarly-will-send-unhinged-messages-to-all.png",
+   "20260923-1207-1-grammarly-will-send-unhinged-messages-to-all-d1.png",
+   "20260923-1207-1-grammarly-will-send-unhinged-messages-to-all-d2.png"
+  ]
+ }
+]

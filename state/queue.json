@@ -1,1 +1,104 @@
-[]
+[
+ {
+  "topic": "disney_hulu_price_hikes",
+  "headline_marked": "Disney+ and Hulu [[raise prices again]] as streaming inflation continues",
+  "headline": "Disney+ and Hulu raise prices again as streaming inflation continues",
+  "summary": "The ad-supported Disney+ tier now costs $12.49/month, with the ad-free Premium plan hitting $21.49/month. Hulu and bundle prices also increased.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Disney+ and Hulu have implemented another price increase, impacting subscribers for the second time in a year. The Basic plan with ads for Disney+ is now $12.49 per month, while the Premium ad-free tier has risen to $21.49 per month, marking a $2.50 increase.",
+   "This surge in subscription costs reflects the rising expenses associated with producing exclusive content and securing licensing rights. New subscribers will immediately face these higher prices, while existing subscribers will see the changes reflected on or after October 21, 2026.",
+   "When Disney+ first launched in 2019, its monthly price was a mere $6.99. Over the years, prices have steadily climbed, with an increase of $1 occurring a couple of years later. Even the ad-supported tier, introduced to offer a more affordable option, has seen its price raised.",
+   "This trend of price hikes is not unique to Disney+ or Hulu; many popular streaming services are following a similar pattern. As costs continue to escalate, consumers are increasingly evaluating the value proposition of each service, leading to subscription fatigue."
+  ],
+  "caption": "Streaming costs continue to climb as Disney+ and Hulu announce new price hikes for subscribers.\n\nDisney+ and Hulu have implemented another price increase, impacting subscribers for the second time in a year. The Basic plan with ads for Disney+ is now $12.49 per month, while the Premium ad-free tier has risen to $21.49 per month, marking a $2.50 increase.\n\nThis surge in subscription costs reflects the rising expenses associated with producing exclusive content and securing licensing rights. New subscribers will immediately face these higher prices, while existing subscribers will see the changes reflected on or after October 21, 2026.\n\nWhen Disney+ first launched in 2019, its monthly price was a mere $6.99. Over the years, prices have steadily climbed, with an increase of $1 occurring a couple of years later. Even the ad-supported tier, introduced to offer a more affordable option, has seen its price raised.\n\nThis trend of price hikes is not unique to Disney+ or Hulu; many popular streaming services are following a similar pattern. As costs continue to escalate, consumers are increasingly evaluating the value proposition of each service, leading to subscription fatigue.\n\n#DisneyPlus #Hulu #Streaming #TechNews #PriceHike\n\nSource: Android Police, Engadget, TechCrunch, 9to5Mac",
+  "tweet": "Disney+ and Hulu are raising prices again, with the ad-supported tier now $12.49/month and Premium at $21.49/month. This follows a trend of increasing streaming costs. #DisneyPlus #Hulu #Streaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "disneyplus.com",
+  "source": "Android Police, Engadget, TechCrunch, 9to5Mac",
+  "url": "https://www.androidpolice.com/disney-and-hulu-get-another-price-hike/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/wm/2026/06/disney-plus-logo-magic-v6.JPG",
+  "orig_title": "Disney+ and Hulu are getting another price hike",
+  "cluster_urls": [
+   "https://www.androidpolice.com/disney-and-hulu-get-another-price-hike/",
+   "https://www.engadget.com/2266737/disney-and-hulu-are-getting-even-more-expensive-again/",
+   "https://techcrunch.com/2026/09/23/disney-and-hulu-add-to-the-growing-trend-of-streaming-inflation/",
+   "https://9to5mac.com/2026/09/23/disney-and-hulu-just-increased-prices-heres-how-much/"
+  ],
+  "cluster_titles": [
+   "Disney+ and Hulu are getting another price hike",
+   "Disney+ and Hulu are getting even more expensive (again)",
+   "Disney+ and Hulu add to the growing trend of streaming inflation",
+   "Disney+ and Hulu just increased prices, here’s how much"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260924-0214-0-disney-and-hulu-raise-prices-again-as-stream.png",
+   "20260924-0214-0-disney-and-hulu-raise-prices-again-as-stream-d1.png",
+   "20260924-0214-0-disney-and-hulu-raise-prices-again-as-stream-d2.png"
+  ]
+ },
+ {
+  "topic": "optimizing_and_deploying_ai_models",
+  "headline_marked": "[[Claude.ai]] made 3x faster in two-week sprint using AI",
+  "headline": "Claude.ai made 3x faster in two-week sprint using AI",
+  "summary": "Anthropic used its own AI model to identify bottlenecks, build benchmarks, and ship over 3,000 changes to improve claude.ai performance.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Anthropic has significantly boosted the performance of its AI chatbot, Claude.ai, achieving a 3x speed improvement in just two weeks. The company utilized its own AI model, Claude, to identify performance bottlenecks, create benchmarks, and implement necessary changes.",
+   "The focus was on four key user journeys that constitute 95% of user activity. For instance, the time to load a typeable page on claude.ai dropped from 3.1 seconds to 0.55 seconds. Starting a new Claude Code session now takes 0.3 seconds, down from 0.8 seconds, and loading a Claude Cowork session improved from 2.6 seconds to 0.73 seconds.",
+   "To facilitate this rapid improvement, Anthropic created a dedicated Slack channel where Claude was tasked with monitoring deploys, assessing telemetry, maintaining dashboards, and proposing solutions. The AI was given the goal of becoming as autonomous as possible in managing performance.",
+   "Claude analyzed usage data to pinpoint the most impactful user journeys. The team then added instrumentation to establish comparable baselines for each journey, measuring from user interaction to result rendering and differentiating client-side from server-side work.",
+   "The sprint began with a list of hand-picked projects, each targeting a specific journey. Claude estimated the impact of these projects in milliseconds, helping the team set sprint targets. Many of these planned projects were completed ahead of schedule.",
+   "To accelerate launches, a static composer was integrated into the HTML, allowing users to type during React initialization. For the desktop app, a precompiled V8 code cache was implemented to prevent recompilation from scratch. Navigation was also improved by keeping the composer mounted between conversations and prefetching sessions.",
+   "The team also left room for Claude to identify new opportunities and propose additional workstreams. These emergent projects exceeded initial targets, leading to the implementation of new goals and further optimization efforts.",
+   "To iterate faster than their deploy cadence, Anthropic sought ways to measure performance in the lab. For JavaScript-heavy tasks, they measured literal instruction counts using Valgrind. For browser-based paths, they utilized deterministic counts like React commits per interaction and function call counts."
+  ],
+  "caption": "AI chatbot Claude.ai is now 3x faster after a two-week sprint where the AI itself identified and fixed performance issues.\n\nAnthropic has significantly boosted the performance of its AI chatbot, Claude.ai, achieving a 3x speed improvement in just two weeks. The company utilized its own AI model, Claude, to identify performance bottlenecks, create benchmarks, and implement necessary changes.\n\nThe focus was on four key user journeys that constitute 95% of user activity. For instance, the time to load a typeable page on claude.ai dropped from 3.1 seconds to 0.55 seconds. Starting a new Claude Code session now takes 0.3 seconds, down from 0.8 seconds, and loading a Claude Cowork session improved from 2.6 seconds to 0.73 seconds.\n\nTo facilitate this rapid improvement, Anthropic created a dedicated Slack channel where Claude was tasked with monitoring deploys, assessing telemetry, maintaining dashboards, and proposing solutions. The AI was given the goal of becoming as autonomous as possible in managing performance.\n\nClaude analyzed usage data to pinpoint the most impactful user journeys. The team then added instrumentation to establish comparable baselines for each journey, measuring from user interaction to result rendering and differentiating client-side from server-side work.\n\nThe sprint began with a list of hand-picked projects, each targeting a specific journey. Claude estimated the impact of these projects in milliseconds, helping the team set sprint targets. Many of these planned projects were completed ahead of schedule.\n\nTo accelerate launches, a static composer was integrated into the HTML, allowing users to type during React initialization. For the desktop app, a precompiled V8 code cache was implemented to prevent recompilation from scratch. Navigation was also improved by keeping the composer mounted between conversations and prefetching sessions.\n\n#AI #Claude #Anthropic #LLM #Performance\n\nSource: Hacker News, DEV, MIT Technology Review",
+  "tweet": "Claude.ai just got a massive speed boost! 🚀 Anthropic used AI to make its chatbot 3x faster in a two-week sprint, slashing load times and improving user experience. #AI #Claude #Performance",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "Hacker News, DEV, MIT Technology Review",
+  "url": "https://claude.dev/blog/how-we-made-claude-ai-faster/",
+  "image": "",
+  "orig_title": "How we made claude.ai 3x faster in two weeks",
+  "cluster_urls": [
+   "https://claude.dev/blog/how-we-made-claude-ai-faster/",
+   "https://dev.to/pavel_kkkkazantsev/my-crypto-backtest-had-a-sharpe-of-134-then-i-added-trading-costs-5718",
+   "https://dev.to/shrsv/muon-what-happens-when-an-llm-optimizer-treats-a-weight-matrix-like-a-matrix-35n6",
+   "https://normanponte.io/19df691f",
+   "https://www.technologyreview.com/2026/09/23/1144940/ai-hype-index-ai-loves-cheating/",
+   "https://dev.to/servin_osmanov/fine-tuning-was-the-easy-part-what-shipping-asr-for-a-low-resource-language-taught-me-4331",
+   "https://dev.to/thienban/your-ai-agent-has-too-much-power-2bah",
+   "https://dev.to/paowuor/architecture-beyond-the-hype-the-hidden-costs-of-deconstructing-the-monolith-3jko",
+   "https://dev.to/rahul_pandya000/migrate-from-openai-claude-api-to-amazon-bedrock-2026-guide-3ep9"
+  ],
+  "cluster_titles": [
+   "How we made claude.ai 3x faster in two weeks",
+   "My crypto backtest had a sharpe of 13.4. Then I added trading costs",
+   "Muon: What Happens When an LLM Optimizer Treats a Weight Matrix Like a Matrix",
+   "Cloud Agents Are Inevitable AI Prisons",
+   "The AI Hype Index: AI loves cheating",
+   "Fine-tuning was the easy part: what shipping ASR for a low-resource language taught me",
+   "Your AI Agent Has Too Much Power",
+   "Architecture Beyond the Hype: The Hidden Costs of Deconstructing the Monolith",
+   "Migrate from OpenAI & Claude API to Amazon Bedrock (2026 Guide)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260924-0214-1-claude-ai-made-3x-faster-in-two-week-sprint-.png",
+   "20260924-0214-1-claude-ai-made-3x-faster-in-two-week-sprint--d1.png",
+   "20260924-0214-1-claude-ai-made-3x-faster-in-two-week-sprint--d2.png",
+   "20260924-0214-1-claude-ai-made-3x-faster-in-two-week-sprint--d3.png",
+   "20260924-0214-1-claude-ai-made-3x-faster-in-two-week-sprint--d4.png"
+  ]
+ }
+]

@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai browser agent hijack security flaw",
+  "headline_marked": "One extension [[hijacked five AI browser assistants]], earning $20K in bounties",
+  "headline": "One extension hijacked five AI browser assistants, earning $20K in bounties",
+  "summary": "A single browser extension exploited an architectural blind spot common to five AI assistants across major browsers, earning $20K in bounties. This highlights a critical, shared vulnerability in the AI agent ecosystem.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A single browser extension successfully exploited five different AI browser assistants, securing $20,000 in bounties from Anthropic, Google, Microsoft, and Perplexity. The exploit wasn't due to five separate bugs, but a single architectural blind spot shared by all vendors.",
+   "This vulnerability is a modern rehash of an old lesson: building a privileged intermediary that trusts input from a lower-privilege source creates an injection point. The industry is now relearning this principle with AI agents and browsers, similar to past lessons with browsers and the DOM.",
+   "What's new is the intermediary's capabilities. AI agents like Gemini, Comet, Copilot, Opera Neon, and Claude in Chrome are not just autocomplete widgets. They can take screenshots, read files, send emails, and act on your behalf with your session and permissions.",
+   "When a browser extension can hijack network requests to an assistant's backend, it's not just injecting an ad. It's puppeteering an agent that already possesses your keys, making the 'extension exploits AI assistant' framing a fresh angle on an old flaw.",
+   "The understated aspect of this story is that it represents a class of bug, not an isolated instance. Its independent success across multiple browsers and AI assistants indicates that the AI browser agent ecosystem converged on the same weak assumption without shared threat modeling.",
+   "For developers building on these agentic browser features, the assumption that they are 'just a UI layer on an LLM' is no longer valid. These are now privileged execution surfaces that require robust threat modeling, not just treatment as chat widgets.",
+   "Security teams must also re-evaluate their extension allowlist policies. An extension previously considered benign, perhaps for ad-blocking or price comparison, now sits next to an agent with email and filesystem access, shifting trust boundaries that enterprise policies may not have addressed.",
+   "More broadly, this incident highlights the consequences of the industry's rapid race to ship 'AI in your browser' features simultaneously. A lack of shared threat models for how browser extensions and autonomous AI agents interact means more zero-click, no-malicious-code findings are likely.",
+   "The architectural and shared nature of this vulnerability across five independent products raises a critical question: is patching and moving on sufficient, or does the industry require a common standard for how browser extensions and agentic AI features should interact?"
+  ],
+  "caption": "One browser extension earned $20,000 in bounties by exploiting a single architectural flaw across five different AI browser assistants from Anthropic, Google, Microsoft, and Perplexity.\n\nA single browser extension successfully exploited five different AI browser assistants, securing $20,000 in bounties from Anthropic, Google, Microsoft, and Perplexity. The exploit wasn't due to five separate bugs, but a single architectural blind spot shared by all vendors.\n\nThis vulnerability is a modern rehash of an old lesson: building a privileged intermediary that trusts input from a lower-privilege source creates an injection point. The industry is now relearning this principle with AI agents and browsers, similar to past lessons with browsers and the DOM.\n\nWhat's new is the intermediary's capabilities. AI agents like Gemini, Comet, Copilot, Opera Neon, and Claude in Chrome are not just autocomplete widgets. They can take screenshots, read files, send emails, and act on your behalf with your session and permissions.\n\nWhen a browser extension can hijack network requests to an assistant's backend, it's not just injecting an ad. It's puppeteering an agent that already possesses your keys, making the 'extension exploits AI assistant' framing a fresh angle on an old flaw.\n\nThe understated aspect of this story is that it represents a class of bug, not an isolated instance. Its independent success across multiple browsers and AI assistants indicates that the AI browser agent ecosystem converged on the same weak assumption without shared threat modeling.\n\nFor developers building on these agentic browser features, the assumption that they are 'just a UI layer on an LLM' is no longer valid. These are now privileged execution surfaces that require robust threat modeling, not just treatment as chat widgets.\n\n#Tech #Security #AI #BrowserExtension #Vulnerability #Cybersecurity\n\nSource: DEV",
+  "tweet": "One browser extension earned $20,000 in bounties by exploiting a single architectural flaw across five different AI browser assistants from Anthropic, Google, Microsoft, and Perplexity. This highlights a critical, shared vulnerability in the AI agent ecosystem. #AI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/coridev/one-extension-five-browsers-zero-malicious-code-the-agent-hijack-nobody-priced-in-54g8",
+  "image": "",
+  "orig_title": "One Extension, Five Browsers, Zero Malicious Code: The Agent Hijack Nobody Priced In",
+  "cluster_urls": [
+   "https://dev.to/coridev/one-extension-five-browsers-zero-malicious-code-the-agent-hijack-nobody-priced-in-54g8"
+  ],
+  "cluster_titles": [
+   "One Extension, Five Browsers, Zero Malicious Code: The Agent Hijack Nobody Priced In"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260924-0707-0-one-extension-hijacked-five-ai-browser-assis.png",
+   "20260924-0707-0-one-extension-hijacked-five-ai-browser-assis-d1.png",
+   "20260924-0707-0-one-extension-hijacked-five-ai-browser-assis-d2.png",
+   "20260924-0707-0-one-extension-hijacked-five-ai-browser-assis-d3.png",
+   "20260924-0707-0-one-extension-hijacked-five-ai-browser-assis-d4.png"
+  ]
+ },
+ {
+  "topic": "openai chatgpt apple intelligence integration disinterest",
+  "headline_marked": "[[ChatGPT integration dramatically underperformed]] in Apple Intelligence, says OpenAI",
+  "headline": "ChatGPT integration dramatically underperformed in Apple Intelligence, says OpenAI",
+  "summary": "OpenAI expressed disappointment with the adoption of ChatGPT through Apple Intelligence, stating that its performance 'dramatically underperformed' since its 2024 launch.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "OpenAI has voiced its disappointment regarding the user adoption of ChatGPT within Apple Intelligence. The company stated that the integration 'dramatically underperformed' expectations following its launch in 2024."
+  ],
+  "caption": "OpenAI reports that ChatGPT's integration with Apple Intelligence 'dramatically underperformed' expectations.\n\nOpenAI has voiced its disappointment regarding the user adoption of ChatGPT within Apple Intelligence. The company stated that the integration 'dramatically underperformed' expectations following its launch in 2024.\n\n#AI #ChatGPT #Apple #AppleIntelligence #OpenAI #TechNews\n\nSource: 9to5Mac",
+  "tweet": "OpenAI reports that ChatGPT integration with Apple Intelligence 'dramatically underperformed' since its 2024 launch, expressing disappointment over user adoption. #AI #AppleIntelligence #ChatGPT",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/09/23/openai-says-apple-intelligence-users-showed-little-interest-in-chatgpt-integration/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/10/chatgpt-siri-ios182-3-2.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "OpenAI says Apple Intelligence users showed little interest in ChatGPT integration",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/09/23/openai-says-apple-intelligence-users-showed-little-interest-in-chatgpt-integration/"
+  ],
+  "cluster_titles": [
+   "OpenAI says Apple Intelligence users showed little interest in ChatGPT integration"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20260924-0707-1-chatgpt-integration-dramatically-underperfor.png",
+   "20260924-0707-1-chatgpt-integration-dramatically-underperfor-d1.png"
+  ]
+ }
+]

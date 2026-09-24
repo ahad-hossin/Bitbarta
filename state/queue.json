@@ -1,1 +1,105 @@
-[]
+[
+ {
+  "topic": "local llm agent development and memory",
+  "headline_marked": "[[FinePrint]] agent checks hackathon entries against rules",
+  "headline": "FinePrint agent checks hackathon entries against rules",
+  "summary": "This new tool parses official rules, FAQs, and contest guidelines to identify potential disqualifications and rule conflicts.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Navigating hackathon rules can be a minefield, with discrepancies often found across official pages, FAQs, and contest guidelines. FinePrint is a new agent designed to tackle this complexity by reading and interpreting these documents.",
+   "The agent works by parsing Sanity Knowledge Bases built from official rules. It can answer specific questions like 'Can I enter Path One if I started my app in August and added Sanity this week?', proposing facts with exact quotes from the user's query and cross-referencing structured requirement records.",
+   "FinePrint identifies conflicts, such as disagreements between an FAQ allowing one submission per path and contest rules permitting unlimited entries. It highlights these issues as 'Rules unclear', prompting users to seek clarification from organizers.",
+   "Beyond curated events, FinePrint can also read any public rules page by pasting its link. The model then proposes requirements, mapping quotes to a fixed vocabulary like team size, age, build window, and entry limits. Requirements it cannot map or that lack specific numbers are flagged as 'Check yourself' rules.",
+   "The tool supports comparing different events, carrying over details like team size and development dates while leaving event-specific answers unknown. It also allows for 'rule-change rehearsals' to test hypothetical scenarios without altering official sources.",
+   "Personal reviews are autosaved in the browser and can be downloaded as Markdown. A facts-only backup facilitates moving work between browsers. Saved reports retain requirements and sources used at check time, identifying changes when new curated packs are published."
+  ],
+  "caption": "Hackathon rules are complex and often contradictory. A new agent called FinePrint aims to simplify eligibility checks by parsing official documents.\n\nNavigating hackathon rules can be a minefield, with discrepancies often found across official pages, FAQs, and contest guidelines. FinePrint is a new agent designed to tackle this complexity by reading and interpreting these documents.\n\nThe agent works by parsing Sanity Knowledge Bases built from official rules. It can answer specific questions like 'Can I enter Path One if I started my app in August and added Sanity this week?', proposing facts with exact quotes from the user's query and cross-referencing structured requirement records.\n\nFinePrint identifies conflicts, such as disagreements between an FAQ allowing one submission per path and contest rules permitting unlimited entries. It highlights these issues as 'Rules unclear', prompting users to seek clarification from organizers.\n\nBeyond curated events, FinePrint can also read any public rules page by pasting its link. The model then proposes requirements, mapping quotes to a fixed vocabulary like team size, age, build window, and entry limits. Requirements it cannot map or that lack specific numbers are flagged as 'Check yourself' rules.\n\nThe tool supports comparing different events, carrying over details like team size and development dates while leaving event-specific answers unknown. It also allows for 'rule-change rehearsals' to test hypothetical scenarios without altering official sources.\n\nPersonal reviews are autosaved in the browser and can be downloaded as Markdown. A facts-only backup facilitates moving work between browsers. Saved reports retain requirements and sources used at check time, identifying changes when new curated packs are published.\n\n#TechNews #Software #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "Navigating hackathon rules just got easier. [[FinePrint]] is a new agent that parses official documents, identifies conflicts, and checks eligibility to prevent disqualifications. #hackathon #devtools #softwareengineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/himanshu_748/fineprint-an-agent-that-checks-your-hackathon-entry-against-the-rules-it-reads-5fpa",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F4z2hqb227rwx3oyzrrmy.png",
+  "orig_title": "FinePrint: an agent that checks your hackathon entry against the rules it reads",
+  "cluster_urls": [
+   "https://dev.to/himanshu_748/fineprint-an-agent-that-checks-your-hackathon-entry-against-the-rules-it-reads-5fpa",
+   "https://dev.to/alfredoizjr/claude-code-compaction-why-your-session-forgets-mid-task-and-the-fix-cef",
+   "https://dev.to/joshuaterrones/como-construi-un-portafolio-con-datos-reales-4-apis-en-una-semana-a",
+   "https://dev.to/aaroophan/when-my-local-llm-started-speaking-chinese-i-accidentally-walked-into-the-chinese-room-4b1l",
+   "https://dev.to/alexiaxaxa/we-tried-to-keep-plaintext-only-in-memory-microsoft-word-said-no-l04",
+   "https://dev.to/anthonymax/interesting-article-1ck3",
+   "https://dev.to/omshankar/building-2048-in-javascript-one-merge-function-four-directions-1kha",
+   "https://dev.to/kuldeep2282k/i-built-a-cli-that-tells-me-what-to-learn-next-inside-my-obsidian-vault-4n45",
+   "https://dev.to/abimanyu_p_9e75124634d2a4/react-hooks-and-usestate-35h1",
+   "https://dev.to/uos1231234/beyond-scaling-laws-why-memory-is-the-llms-next-step-with-a-3m-token-recall-experiment-2lfk",
+   "https://dev.to/remdore/what-a-server-knows-about-you-before-it-reads-a-single-header-hig"
+  ],
+  "cluster_titles": [
+   "FinePrint: an agent that checks your hackathon entry against the rules it reads",
+   "Claude Code Compaction: Why Your Session Forgets Mid-Task (and the Fix)",
+   "Cómo construí un portafolio con datos reales: 4 APIs en una semana",
+   "When My Local LLM Started Speaking Chinese, I Accidentally Walked Into the Chinese Room",
+   "We Tried to Keep Plaintext Only in Memory. Microsoft Word Said No.",
+   "Interesting article:",
+   "Building 2048 in JavaScript: One Merge Function, Four Directions",
+   "I built a CLI that tells me what to learn next — inside my Obsidian vault",
+   "React Hooks And useState",
+   "Beyond Scaling Laws: Why Memory Is the LLM's Next Step (with a 3M-Token Recall Experiment)",
+   "What a server knows about you before it reads a single header"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260924-2307-0-fineprint-agent-checks-hackathon-entries-aga.png",
+   "20260924-2307-0-fineprint-agent-checks-hackathon-entries-aga-d1.png",
+   "20260924-2307-0-fineprint-agent-checks-hackathon-entries-aga-d2.png",
+   "20260924-2307-0-fineprint-agent-checks-hackathon-entries-aga-d3.png"
+  ]
+ },
+ {
+  "topic": "google gemini calls businesses for users",
+  "headline_marked": "Google Gemini [[makes calls for you]] on Pixel 11 smartphones",
+  "headline": "Google Gemini makes calls for you on Pixel 11 smartphones",
+  "summary": "Experimental 'Call for Me' beta feature lets Gemini handle business calls, navigate menus, and wait on hold, with live transcription for users.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Google is rolling out 'Call for Me,' an experimental beta feature for its latest Pixel 11 smartphones in the US. This new capability, powered by Gemini, allows the AI assistant to make calls to businesses on behalf of the user.",
+   "Users need a Gemini subscription and must be enrolled in the Phone by Google app's public beta. Gemini can call local stores to check for product availability or schedule appointments with services like barbershops.",
+   "The AI assistant will introduce itself, engage in a back-and-forth conversation, navigate automated phone menus, and even wait on hold. Users can view a live transcript of the call on their Pixel and can take over at any point.",
+   "While Gemini is designed for business calls, it will not contact emergency services. The assistant's voice will be consistent with Gemini Live interactions, regardless of the user's preferred Gemini voice setting.",
+   "This feature builds upon Google's existing smart calling capabilities on Pixels, which include call screening, robocall blocking, Hold for Me, and Direct My Call.",
+   "Google acknowledges that AI handling calls can be unpredictable, but they are actively testing 'Call for Me' across various scenarios to improve its performance with different accents and in noisy environments. The company states Gemini will 'politely' hang up if a business cannot accommodate the request."
+  ],
+  "caption": "Google's Gemini AI can now make phone calls for you on Pixel 11 phones, handling everything from checking stock to booking appointments.\n\nGoogle is rolling out 'Call for Me,' an experimental beta feature for its latest Pixel 11 smartphones in the US. This new capability, powered by Gemini, allows the AI assistant to make calls to businesses on behalf of the user.\n\nUsers need a Gemini subscription and must be enrolled in the Phone by Google app's public beta. Gemini can call local stores to check for product availability or schedule appointments with services like barbershops.\n\nThe AI assistant will introduce itself, engage in a back-and-forth conversation, navigate automated phone menus, and even wait on hold. Users can view a live transcript of the call on their Pixel and can take over at any point.\n\nWhile Gemini is designed for business calls, it will not contact emergency services. The assistant's voice will be consistent with Gemini Live interactions, regardless of the user's preferred Gemini voice setting.\n\nThis feature builds upon Google's existing smart calling capabilities on Pixels, which include call screening, robocall blocking, Hold for Me, and Direct My Call.\n\nGoogle acknowledges that AI handling calls can be unpredictable, but they are actively testing 'Call for Me' across various scenarios to improve its performance with different accents and in noisy environments. The company states Gemini will 'politely' hang up if a business cannot accommodate the request.\n\n#Google #Gemini #AI #Pixel11 #SmartFeatures\n\nSource: Wired, Ars Technica, Android Police",
+  "tweet": "Google's Gemini AI is now making calls for you on Pixel 11 phones! The 'Call for Me' beta feature handles business calls, navigates menus & waits on hold. Live transcription included. #Google #Gemini #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Wired, Ars Technica, Android Police",
+  "url": "https://www.wired.com/story/googles-gemini-can-now-make-calls-for-you-on-pixel-phones/",
+  "image": "https://media.wired.com/photos/6ab39bc8c5e291a8de9a8d12/master/pass/GettyImages-2289664536.jpg",
+  "orig_title": "Google’s Gemini Can Now Make Calls for You on Pixel Phones",
+  "cluster_urls": [
+   "https://www.wired.com/story/googles-gemini-can-now-make-calls-for-you-on-pixel-phones/",
+   "https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/",
+   "https://www.androidpolice.com/meta-ray-ban-audio-smart-glasses-pr-stunt-to-dodge-camera-backlash/"
+  ],
+  "cluster_titles": [
+   "Google’s Gemini Can Now Make Calls for You on Pixel Phones",
+   "Meta puts its AI assistant on a keychain",
+   "Meta's new Ray-Ban smart glasses are just a PR stunt to dodge the camera backlash"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20260924-2307-1-google-gemini-makes-calls-for-you-on-pixel-1.png",
+   "20260924-2307-1-google-gemini-makes-calls-for-you-on-pixel-1-d1.png",
+   "20260924-2307-1-google-gemini-makes-calls-for-you-on-pixel-1-d2.png"
+  ]
+ }
+]

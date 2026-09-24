@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "claude ai perplexity integration",
+  "headline_marked": "[[Connect Claude to Perplexity AI Pro]] with Zero Search API Fees",
+  "headline": "Connect Claude to Perplexity AI Pro with Zero Search API Fees",
+  "summary": "A new MCP server allows Claude Desktop/Code to query Perplexity Pro using existing session credentials, providing up-to-date, verified code snippets and source citations without incurring additional API fees.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Modern Large Language Models (LLMs) often struggle to provide accurate or current information regarding recent software releases, live news, or undocumented breaking changes. Existing search API solutions like Tavily or Serper incur recurring per-call fees and lack the deep multi-source synthesis found in specialized search engines.",
+   "A developer has created \"perplexity-pro-mcp,\" a lightweight MCP server designed to bridge Claude Desktop or Claude Code directly with Perplexity Pro. This tool leverages your existing Perplexity Pro session credentials, eliminating the need for additional search API fees.",
+   "By integrating this server, users can prompt Claude with complex queries, such as \"What are the latest breaking changes in Next.js 15 canary releases and how do I adapt my Server Actions?\" Claude then executes a `perplexity_search` in 'copilot' mode.",
+   "Instead of potentially hallucinatory advice, Claude returns verified code snippets accompanied by direct source citations from Perplexity's deep multi-source synthesis. This ensures accuracy and provides developers with reliable, up-to-date information.",
+   "Setup involves logging into perplexity.ai, using DevTools to copy your full Cookie header string from any request, and then configuring the MCP server. The project is open-source and available on GitHub at github.com/MIt9/perplexity-pro-mcp."
+  ],
+  "caption": "Get verified, up-to-date code snippets from Claude by connecting it to Perplexity AI Pro, completely bypassing search API fees.\n\nModern Large Language Models (LLMs) often struggle to provide accurate or current information regarding recent software releases, live news, or undocumented breaking changes. Existing search API solutions like Tavily or Serper incur recurring per-call fees and lack the deep multi-source synthesis found in specialized search engines.\n\nA developer has created \"perplexity-pro-mcp,\" a lightweight MCP server designed to bridge Claude Desktop or Claude Code directly with Perplexity Pro. This tool leverages your existing Perplexity Pro session credentials, eliminating the need for additional search API fees.\n\nBy integrating this server, users can prompt Claude with complex queries, such as \"What are the latest breaking changes in Next.js 15 canary releases and how do I adapt my Server Actions?\" Claude then executes a `perplexity_search` in 'copilot' mode.\n\nInstead of potentially hallucinatory advice, Claude returns verified code snippets accompanied by direct source citations from Perplexity's deep multi-source synthesis. This ensures accuracy and provides developers with reliable, up-to-date information.\n\nSetup involves logging into perplexity.ai, using DevTools to copy your full Cookie header string from any request, and then configuring the MCP server. The project is open-source and available on GitHub at github.com/MIt9/perplexity-pro-mcp.\n\n#AI #LLM #DeveloperTools #PerplexityAI #ClaudeAI #OpenSource\n\nSource: DEV",
+  "tweet": "Connect Claude Desktop/Code to Perplexity AI Pro for free, verified, up-to-date information! A new MCP server lets you leverage your existing Perplexity Pro account to get code snippets and source citations without search API fees. #AI #DeveloperTools #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "perplexity.ai",
+  "source": "DEV",
+  "url": "https://dev.to/mit9/connect-claude-to-perplexity-ai-pro-with-zero-search-api-fees-5hmf",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fraw.githubusercontent.com%2FMIt9%2Fperplexity-pro-mcp%2Fmain%2Fassets%2Fdemo.gif",
+  "orig_title": "Connect Claude to Perplexity AI Pro with Zero Search API Fees",
+  "cluster_urls": [
+   "https://dev.to/mit9/connect-claude-to-perplexity-ai-pro-with-zero-search-api-fees-5hmf"
+  ],
+  "cluster_titles": [
+   "Connect Claude to Perplexity AI Pro with Zero Search API Fees"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260924-1406-0-connect-claude-to-perplexity-ai-pro-with-zer.png",
+   "20260924-1406-0-connect-claude-to-perplexity-ai-pro-with-zer-d1.png",
+   "20260924-1406-0-connect-claude-to-perplexity-ai-pro-with-zer-d2.png"
+  ]
+ },
+ {
+  "topic": "ai agents generate 3d meshes",
+  "headline_marked": "[[Generate 3D Meshes]] (GLB, OBJ, STL) via Terminal & AI Agents",
+  "headline": "Generate 3D Meshes (GLB, OBJ, STL) via Terminal & AI Agents",
+  "summary": "A new zero-dependency CLI tool, hi3d-cli, allows developers to generate textured 3D models directly from the command line. It integrates with AI agents for automated 3D modeling workflows.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Integrating generative 3D meshes into web applications or game engines typically involves manual asset downloads from web dashboards. The new hi3d-cli (hi3d) tool aims to streamline this process.",
+   "hi3d-cli is a lightweight, zero-dependency command-line interface tool and an agent skill designed for generating textured 3D models. It leverages the Hi3D API to create models in formats like GLB, OBJ, and STL.",
+   "The tool features an interactive wizard to configure Access and Secret keys from platform.hi3d.ai, storing them securely in a local config file. This setup enables quick and secure API access.",
+   "Developers can pair hi3d-cli with AI agents such as Claude Code by adding the hi3d-generate skill via npx. This integration allows for automated 3D modeling directly within the development workflow, enhancing productivity."
+  ],
+  "caption": "Generate textured 3D models (GLB, OBJ, STL) directly from your terminal, bypassing manual asset downloads.\n\nIntegrating generative 3D meshes into web applications or game engines typically involves manual asset downloads from web dashboards. The new hi3d-cli (hi3d) tool aims to streamline this process.\n\nhi3d-cli is a lightweight, zero-dependency command-line interface tool and an agent skill designed for generating textured 3D models. It leverages the Hi3D API to create models in formats like GLB, OBJ, and STL.\n\nThe tool features an interactive wizard to configure Access and Secret keys from platform.hi3d.ai, storing them securely in a local config file. This setup enables quick and secure API access.\n\nDevelopers can pair hi3d-cli with AI agents such as Claude Code by adding the hi3d-generate skill via npx. This integration allows for automated 3D modeling directly within the development workflow, enhancing productivity.\n\n#3DModeling #Developers #CLI #AI #SoftwareDev #Tech\n\nSource: DEV",
+  "tweet": "Generate textured 3D models (GLB, OBJ, STL) directly from your terminal with hi3d-cli! This new zero-dependency CLI tool integrates with AI agents like Claude Code for automated 3D modeling workflows. #3DModeling #Developers #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "hi3d.ai",
+  "source": "DEV",
+  "url": "https://dev.to/mit9/generate-3d-meshes-glb-obj-stl-directly-from-the-terminal-and-ai-agents-4fd4",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fraw.githubusercontent.com%2FMIt9%2Fhi3d-cli%2Fmain%2Fassets%2Fdemo.gif",
+  "orig_title": "Generate 3D Meshes (GLB, OBJ, STL) Directly From the Terminal and AI Agents",
+  "cluster_urls": [
+   "https://dev.to/mit9/generate-3d-meshes-glb-obj-stl-directly-from-the-terminal-and-ai-agents-4fd4"
+  ],
+  "cluster_titles": [
+   "Generate 3D Meshes (GLB, OBJ, STL) Directly From the Terminal and AI Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260924-1406-1-generate-3d-meshes-glb-obj-stl-via-terminal-.png",
+   "20260924-1406-1-generate-3d-meshes-glb-obj-stl-via-terminal--d1.png",
+   "20260924-1406-1-generate-3d-meshes-glb-obj-stl-via-terminal--d2.png"
+  ]
+ }
+]

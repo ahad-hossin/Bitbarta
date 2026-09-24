@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "virtio_nvgpu_kvm_nvidia_access",
+  "headline_marked": "[[Virtio-nvgpu enables near-native NVIDIA GPU access in KVM guests]], performing within 2% of bare metal",
+  "headline": "Virtio-nvgpu enables near-native NVIDIA GPU access in KVM guests, performing within 2% of bare metal",
+  "summary": "This new virtio device allows Linux guests to run unmodified NVIDIA user-mode drivers, achieving bare-metal performance for headless streaming and multi-VM GPU sharing.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Virtio-nvgpu is an experimental virtio device that provides near-native NVIDIA GPU access inside KVM virtual machines. Benchmarks show a guest rendering within 2% of the performance of the bare metal machine it runs on, with identical CPU cost.",
+   "The technology works by forwarding NVIDIA kernel driver ioctls between a Linux guest and the host at the driver ABI level. This bypasses API-level translation, allowing the guest to run NVIDIA's own unmodified user-mode drivers, including the same Vulkan and NVENC libraries.",
+   "The primary target use case is headless streaming, where a compositor within the VM renders, composites, and encodes frames directly on the GPU. The compressed video is then streamed out, with the VM having no monitor and the host retaining control of the GPU.",
+   "The system has been successfully measured with four guests running simultaneously on a single RTX 3060. Each guest maintained an even split of total performance, with all four rendering and encoding H.264 at once without reaching NVENC session limits.",
+   "The project's architecture features a deliberate split with a GPL-licensed guest driver and a permissively licensed, VMM-agnostic host component. This design allows for flexible integration into various virtual machine monitors by implementing a small set of traits."
+  ],
+  "caption": "KVM guests can now access NVIDIA GPUs with near-native performance, achieving within 2% of bare metal speeds.\n\nVirtio-nvgpu is an experimental virtio device that provides near-native NVIDIA GPU access inside KVM virtual machines. Benchmarks show a guest rendering within 2% of the performance of the bare metal machine it runs on, with identical CPU cost.\n\nThe technology works by forwarding NVIDIA kernel driver ioctls between a Linux guest and the host at the driver ABI level. This bypasses API-level translation, allowing the guest to run NVIDIA's own unmodified user-mode drivers, including the same Vulkan and NVENC libraries.\n\nThe primary target use case is headless streaming, where a compositor within the VM renders, composites, and encodes frames directly on the GPU. The compressed video is then streamed out, with the VM having no monitor and the host retaining control of the GPU.\n\nThe system has been successfully measured with four guests running simultaneously on a single RTX 3060. Each guest maintained an even split of total performance, with all four rendering and encoding H.264 at once without reaching NVENC session limits.\n\nThe project's architecture features a deliberate split with a GPL-licensed guest driver and a permissively licensed, VMM-agnostic host component. This design allows for flexible integration into various virtual machine monitors by implementing a small set of traits.\n\n#Virtio #NVIDIA #KVM #Virtualization #Linux #GPU\n\nSource: Hacker News",
+  "tweet": "KVM guests can now access NVIDIA GPUs with near-native performance, achieving within 2% of bare metal speeds. virtio-nvgpu forwards driver ioctls, allowing unmodified NVIDIA user-mode drivers in Linux VMs for headless streaming & multi-guest setups. #Virtio #NVIDIA #KVM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nestrilabs.com",
+  "source": "Hacker News",
+  "url": "https://github.com/nestrilabs/virtio-nvgpu",
+  "image": "",
+  "orig_title": "Virtio-nvgpu: Near-native Nvidia GPU access inside a KVM guest",
+  "cluster_urls": [
+   "https://github.com/nestrilabs/virtio-nvgpu"
+  ],
+  "cluster_titles": [
+   "Virtio-nvgpu: Near-native Nvidia GPU access inside a KVM guest"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20260924-1106-0-virtio-nvgpu-enables-near-native-nvidia-gpu-.png",
+   "20260924-1106-0-virtio-nvgpu-enables-near-native-nvidia-gpu--d1.png",
+   "20260924-1106-0-virtio-nvgpu-enables-near-native-nvidia-gpu--d2.png"
+  ]
+ }
+]

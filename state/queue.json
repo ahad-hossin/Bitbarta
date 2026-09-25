@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai transformer kv cache efficiency breakthrough",
+  "headline_marked": "[[KV cache cut by ~45%]] in transformers with near-same accuracy",
+  "headline": "KV cache cut by ~45% in transformers with near-same accuracy",
+  "summary": "New methods like Grouped Value Attention (GVA) and DeepSeek-V4.1-Flash dramatically reduce the memory footprint of transformer KV caches. This could enable longer contexts on more modest hardware without sacrificing performance.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Grouped Value Attention (GVA) slashes transformer KV cache memory by roughly 45% while maintaining benchmark scores. It achieves this by storing only grouped values and reconstructing keys on the fly, eliminating the need for a full key matrix during decode.",
+   "Previously, long-context decoding relied on full key-value caches that scaled linearly with sequence length. Even grouped-query attention kept a key for every token, making memory pressure a significant bottleneck in autoregressive inference.",
+   "On a 350M-parameter model, GVA reduces persistent cache scalars by about 46% while keeping average task accuracy within 0.01 points of Grouped-Query Attention (GQA). This demonstrates significant memory savings with minimal impact on performance.",
+   "DeepSeek-V4.1-Flash further pushes KV compression, shrinking its global HBM footprint to 890 bytes per token, roughly one-quarter of its predecessor. Through dedicated deployment optimization, its persistent KV cache footprint is reduced to about 1/8 of DeepSeek-V4-Flash.",
+   "Despite these substantial cuts, DeepSeek-V4.1-Flash delivers \"substantially better performance than the baseline.\" This highlights the potential for both memory efficiency and improved model capabilities.",
+   "The real-world impact on end-to-end latency on commodity GPUs is still being evaluated. GVA's custom decoding kernels are under assessment, and DeepSeek's design includes FP4 caching and cross-layer reuse that could benefit from specific hardware.",
+   "If these reported memory reductions prove effective in production, the KV cache allocation for decoder-only models could be significantly reduced. This could allow for much longer token contexts on less powerful hardware, making advanced AI more accessible."
+  ],
+  "caption": "New research cuts transformer KV cache memory by ~45% without losing accuracy. This could revolutionize long-context AI on consumer hardware.\n\nGrouped Value Attention (GVA) slashes transformer KV cache memory by roughly 45% while maintaining benchmark scores. It achieves this by storing only grouped values and reconstructing keys on the fly, eliminating the need for a full key matrix during decode.\n\nPreviously, long-context decoding relied on full key-value caches that scaled linearly with sequence length. Even grouped-query attention kept a key for every token, making memory pressure a significant bottleneck in autoregressive inference.\n\nOn a 350M-parameter model, GVA reduces persistent cache scalars by about 46% while keeping average task accuracy within 0.01 points of Grouped-Query Attention (GQA). This demonstrates significant memory savings with minimal impact on performance.\n\nDeepSeek-V4.1-Flash further pushes KV compression, shrinking its global HBM footprint to 890 bytes per token, roughly one-quarter of its predecessor. Through dedicated deployment optimization, its persistent KV cache footprint is reduced to about 1/8 of DeepSeek-V4-Flash.\n\nDespite these substantial cuts, DeepSeek-V4.1-Flash delivers \"substantially better performance than the baseline.\" This highlights the potential for both memory efficiency and improved model capabilities.\n\nThe real-world impact on end-to-end latency on commodity GPUs is still being evaluated. GVA's custom decoding kernels are under assessment, and DeepSeek's design includes FP4 caching and cross-layer reuse that could benefit from specific hardware.\n\nIf these reported memory reductions prove effective in production, the KV cache allocation for decoder-only models could be significantly reduced. This could allow for much longer token contexts on less powerful hardware, making advanced AI more accessible.\n\n#AI #MachineLearning #Transformers #DeepLearning #Research #Tech\n\nSource: DEV",
+  "tweet": "New research slashes transformer KV cache memory by ~45% while maintaining accuracy! This could enable longer AI contexts on more modest hardware. Huge implications for democratizing advanced AI. #AI #MachineLearning #DeepLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/olaughter/kv-cache-cut-by-45-with-near-same-accuracy-2b95",
+  "image": "",
+  "orig_title": "KV cache cut by ~45% with near‑same accuracy",
+  "cluster_urls": [
+   "https://dev.to/olaughter/kv-cache-cut-by-45-with-near-same-accuracy-2b95"
+  ],
+  "cluster_titles": [
+   "KV cache cut by ~45% with near‑same accuracy"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260925-1110-0-kv-cache-cut-by-45-in-transformers-with-near.png",
+   "20260925-1110-0-kv-cache-cut-by-45-in-transformers-with-near-d1.png",
+   "20260925-1110-0-kv-cache-cut-by-45-in-transformers-with-near-d2.png",
+   "20260925-1110-0-kv-cache-cut-by-45-in-transformers-with-near-d3.png"
+  ]
+ },
+ {
+  "topic": "ai fraud agent critical bug discovered",
+  "headline_marked": "[[A calibration bug taught our fraud agent]] to wave fraud through",
+  "headline": "A calibration bug taught our fraud agent to wave fraud through",
+  "summary": "A deep dive into building an agentic fraud investigator on TigerGraph revealed two critical measurement mistakes that silently inverted its logic, causing it to greenlight fraudulent transactions.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Building an agentic fraud investigator on TigerGraph presented unique challenges, particularly when a calibration bug led the system to inadvertently approve fraudulent transactions. The project used 590,742 card transactions from the IEEE-CIS dataset, where the task was investigation, not classification, as there was no direct 'isFraud' flag.",
+   "Instead of a simple flag, the dataset provided risk scores and 5,565 closed investigations with analyst notes. This required the agent to genuinely commit to a recommendation under uncertainty, then decide what evidence was needed, and revise its stance, creating an honest decision loop.",
+   "A key architectural decision was to keep the deterministic core, responsible for regulatory-justifiable decisions, entirely separate from the LLM. A build-time check actively prevented any LLM imports into this core, ensuring integrity and auditability.",
+   "This separation means the agent can run end-to-end without an API key, producing bit-identical verdicts, probabilities, and actions regardless of the LLM's wording. This allows anyone to clone the repository and reproduce the results without purchasing additional services.",
+   "Case memory was crucial, requiring the agent to measurably change its conclusions based on prior closed cases. This was achieved by fusing meaning and shared entities within a single GSQL query on the graph database, avoiding naive implementations that fail to capture true analytical insight.",
+   "The system also leverages a second embedding space for Vesta's 339 engineered features. These were compressed to a 64-dimensional behavior vector, stored on every transaction, enabling data-grounded vector queries to identify transactions with similar behavioral patterns."
+  ],
+  "caption": "A critical bug in an AI fraud agent taught it to ignore fraud. This deep dive reveals how a calibration error inverted its logic.\n\nBuilding an agentic fraud investigator on TigerGraph presented unique challenges, particularly when a calibration bug led the system to inadvertently approve fraudulent transactions. The project used 590,742 card transactions from the IEEE-CIS dataset, where the task was investigation, not classification, as there was no direct 'isFraud' flag.\n\nInstead of a simple flag, the dataset provided risk scores and 5,565 closed investigations with analyst notes. This required the agent to genuinely commit to a recommendation under uncertainty, then decide what evidence was needed, and revise its stance, creating an honest decision loop.\n\nA key architectural decision was to keep the deterministic core, responsible for regulatory-justifiable decisions, entirely separate from the LLM. A build-time check actively prevented any LLM imports into this core, ensuring integrity and auditability.\n\nThis separation means the agent can run end-to-end without an API key, producing bit-identical verdicts, probabilities, and actions regardless of the LLM's wording. This allows anyone to clone the repository and reproduce the results without purchasing additional services.\n\nCase memory was crucial, requiring the agent to measurably change its conclusions based on prior closed cases. This was achieved by fusing meaning and shared entities within a single GSQL query on the graph database, avoiding naive implementations that fail to capture true analytical insight.\n\nThe system also leverages a second embedding space for Vesta's 339 engineered features. These were compressed to a 64-dimensional behavior vector, stored on every transaction, enabling data-grounded vector queries to identify transactions with similar behavioral patterns.\n\n#AI #FraudDetection #Cybersecurity #MachineLearning #TigerGraph #DevOps\n\nSource: DEV",
+  "tweet": "A critical bug in an AI fraud agent taught it to ignore fraud. This deep dive reveals how a calibration error inverted its logic, turning it into an unwitting accomplice. Learn about the architecture and fixes. #AI #FraudDetection #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tigergraph.com",
+  "source": "DEV",
+  "url": "https://dev.to/prayant_mohanty_77d03552f/the-calibration-bug-that-taught-our-fraud-agent-to-wave-fraud-through-onc",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fatu70vj585f75v50uub8.png",
+  "orig_title": "The calibration bug that taught our fraud agent to wave fraud through",
+  "cluster_urls": [
+   "https://dev.to/prayant_mohanty_77d03552f/the-calibration-bug-that-taught-our-fraud-agent-to-wave-fraud-through-onc"
+  ],
+  "cluster_titles": [
+   "The calibration bug that taught our fraud agent to wave fraud through"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260925-1110-1-a-calibration-bug-taught-our-fraud-agent-to-.png",
+   "20260925-1110-1-a-calibration-bug-taught-our-fraud-agent-to--d1.png",
+   "20260925-1110-1-a-calibration-bug-taught-our-fraud-agent-to--d2.png",
+   "20260925-1110-1-a-calibration-bug-taught-our-fraud-agent-to--d3.png"
+  ]
+ }
+]

@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "f-droid 2.0 launch before google sideloading lockdown",
+  "headline_marked": "[[F-Droid 2.0 launches]] just 6 days before Google's Android sideloading lockdown",
+  "headline": "F-Droid 2.0 launches just 6 days before Google's Android sideloading lockdown",
+  "summary": "F-Droid 2.0, a complete client rewrite, shipped on September 24, just ahead of Google's new Android developer verification policy starting September 30 in some regions. This policy could significantly impact how F-Droid distributes 85% of its apps.",
+  "category": "ANDROID",
+  "template": "terminal",
+  "details": [
+   "F-Droid 2.0, a ground-up client rewrite, was released on September 24, gaining significant attention. Its launch came just six days before Google's new Android developer verification enforcement begins on September 30, 2026, in select countries.",
+   "The new F-Droid client features a modern stack and improved UX. However, some users have noted regressions, such as the need for per-app clicks for bulk updates, and compatibility issues with older index versions used by alternative clients.",
+   "Google's upcoming policy mandates that on certified Android devices, only apps registered to an identity-verified developer can be installed, including sideloaded applications. This aims to enhance security and user trust.",
+   "Enforcement of this policy starts on September 30 in Brazil, Indonesia, Singapore, and Thailand, with a global rollout planned for 2027. Notably, ADB installs are explicitly carved out, and custom ROMs or users outside these initial countries are not immediately affected.",
+   "A major challenge for F-Droid is its distribution model: it builds from source and signs roughly 85% of its catalog with its own key, not the original developer's. Google's verification ties a package name to a developer's specific signing key.",
+   "This creates a conflict, as F-Droid's key differs from the developer's. A coordination mechanism between F-Droid and thousands of independent maintainers, which does not currently exist, would be required to comply.",
+   "Reproducible builds offer a potential solution, allowing F-Droid to distribute developer-signed APKs. However, reproducible-build coverage is currently only partial. The next 12 months will test whether F-Droid's open, build-from-source model can coexist with an OS demanding verified identities for every APK."
+  ],
+  "caption": "F-Droid 2.0 arrived just six days before Google's new Android developer verification policy takes effect. This policy could disrupt how 85% of F-Droid's apps are distributed.\n\nF-Droid 2.0, a ground-up client rewrite, was released on September 24, gaining significant attention. Its launch came just six days before Google's new Android developer verification enforcement begins on September 30, 2026, in select countries.\n\nThe new F-Droid client features a modern stack and improved UX. However, some users have noted regressions, such as the need for per-app clicks for bulk updates, and compatibility issues with older index versions used by alternative clients.\n\nGoogle's upcoming policy mandates that on certified Android devices, only apps registered to an identity-verified developer can be installed, including sideloaded applications. This aims to enhance security and user trust.\n\nEnforcement of this policy starts on September 30 in Brazil, Indonesia, Singapore, and Thailand, with a global rollout planned for 2027. Notably, ADB installs are explicitly carved out, and custom ROMs or users outside these initial countries are not immediately affected.\n\nA major challenge for F-Droid is its distribution model: it builds from source and signs roughly 85% of its catalog with its own key, not the original developer's. Google's verification ties a package name to a developer's specific signing key.\n\nThis creates a conflict, as F-Droid's key differs from the developer's. A coordination mechanism between F-Droid and thousands of independent maintainers, which does not currently exist, would be required to comply.\n\nReproducible builds offer a potential solution, allowing F-Droid to distribute developer-signed APKs. However, reproducible-build coverage is currently only partial. The next 12 months will test whether F-Droid's open, build-from-source model can coexist with an OS demanding verified identities for every APK.\n\n#FDroid #Android #Sideloading #AppStore #Developer #TechNews\n\nSource: DEV, Android Police",
+  "tweet": "F-Droid 2.0 launched just 6 days before Google's new Android developer verification policy begins. This policy, starting Sept 30 in some regions, could impact how 85% of F-Droid's apps are distributed, posing a major challenge for the open-source app store. #FDroid #Android ",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "f-droid.org",
+  "source": "DEV, Android Police",
+  "url": "https://dev.to/ashraf_chowdury09/f-droid-20-ships-six-days-before-googles-sideloading-lockdown-heres-what-developers-need-to-know-c5n",
+  "image": "",
+  "orig_title": "F-Droid 2.0 Ships Six Days Before Google's Sideloading Lockdown. Here's What Developers Need to Know",
+  "cluster_urls": [
+   "https://dev.to/ashraf_chowdury09/f-droid-20-ships-six-days-before-googles-sideloading-lockdown-heres-what-developers-need-to-know-c5n",
+   "https://www.androidpolice.com/fdroids-first-major-redesign-changes-more-than-its-looks/"
+  ],
+  "cluster_titles": [
+   "F-Droid 2.0 Ships Six Days Before Google's Sideloading Lockdown. Here's What Developers Need to Know",
+   "F-Droid’s first major redesign in years changes more than its looks"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260925-1507-0-f-droid-2-0-launches-just-6-days-before-goog.png",
+   "20260925-1507-0-f-droid-2-0-launches-just-6-days-before-goog-d1.png",
+   "20260925-1507-0-f-droid-2-0-launches-just-6-days-before-goog-d2.png",
+   "20260925-1507-0-f-droid-2-0-launches-just-6-days-before-goog-d3.png"
+  ]
+ },
+ {
+  "topic": "917k uninventoried out-of-band controllers security risk",
+  "headline_marked": "[[917,080 Hosts on Port 623]]: The Out-of-Band Controller Nobody Inventoried",
+  "headline": "917,080 Hosts on Port 623: The Out-of-Band Controller Nobody Inventoried",
+  "summary": "A recent query revealed nearly a million out-of-band management controllers exposed on port 623, posing a significant security risk as they bypass typical OS-level protections. These devices are often overlooked in security audits.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A recent query on September 23, 2026, identified 917,080 hosts with exposed out-of-band management controllers on port 623. These controllers, typically IPMI, offer console access and power control independent of the operating system.",
+   "Out-of-band controllers are crucial for administrators during system failures but present a unique security challenge. They operate below the OS, making them immune to host firewalls and standard access controls.",
+   "An attacker gaining access can power off hosts, mount virtual media, read memory, or reflash firmware, bypassing all OS-level security. This means a fully patched operating system offers no protection for the underlying controller.",
+   "These components are often overlooked in security reviews, as they are not applications and are managed by hardware or facilities teams. Their long service lives mean old, vulnerable firmware can persist for years.",
+   "The count does not differentiate between secure and insecure implementations, or firmware age. Controllers with strong credentials appear identical to those with default settings, highlighting a critical blind spot in network security."
+  ],
+  "caption": "Nearly a million out-of-band management controllers are exposed on port 623, bypassing OS-level security. These devices are often uninventoried and pose a critical risk.\n\nA recent query on September 23, 2026, identified 917,080 hosts with exposed out-of-band management controllers on port 623. These controllers, typically IPMI, offer console access and power control independent of the operating system.\n\nOut-of-band controllers are crucial for administrators during system failures but present a unique security challenge. They operate below the OS, making them immune to host firewalls and standard access controls.\n\nAn attacker gaining access can power off hosts, mount virtual media, read memory, or reflash firmware, bypassing all OS-level security. This means a fully patched operating system offers no protection for the underlying controller.\n\nThese components are often overlooked in security reviews, as they are not applications and are managed by hardware or facilities teams. Their long service lives mean old, vulnerable firmware can persist for years.\n\nThe count does not differentiate between secure and insecure implementations, or firmware age. Controllers with strong credentials appear identical to those with default settings, highlighting a critical blind spot in network security.\n\n#Cybersecurity #InfoSec #NetworkSecurity #IPMI #TechNews #Vulnerability\n\nSource: DEV",
+  "tweet": "Nearly a million out-of-band management controllers are exposed on port 623, bypassing OS-level security. These uninventoried devices pose a critical risk, allowing attackers to control hosts even if the OS is patched. #Cybersecurity #InfoSec #NetworkSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jeffreyciend/917080-hosts-on-port-623-the-out-of-band-controller-nobody-inventoried-283m",
+  "image": "",
+  "orig_title": "917,080 Hosts on Port 623: The Out-of-Band Controller Nobody Inventoried",
+  "cluster_urls": [
+   "https://dev.to/jeffreyciend/917080-hosts-on-port-623-the-out-of-band-controller-nobody-inventoried-283m"
+  ],
+  "cluster_titles": [
+   "917,080 Hosts on Port 623: The Out-of-Band Controller Nobody Inventoried"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260925-1507-1-917-080-hosts-on-port-623-the-out-of-band-co.png",
+   "20260925-1507-1-917-080-hosts-on-port-623-the-out-of-band-co-d1.png",
+   "20260925-1507-1-917-080-hosts-on-port-623-the-out-of-band-co-d2.png"
+  ]
+ }
+]

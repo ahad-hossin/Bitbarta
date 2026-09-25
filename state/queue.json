@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "f5_bigip_apm_oauth_to_root_cve",
+  "headline_marked": "[[F5 BIG-IP APM critical vulnerability (CVSS 9.8)]] actively exploited, unauthenticated root access possible",
+  "headline": "F5 BIG-IP APM critical vulnerability (CVSS 9.8) actively exploited, unauthenticated root access possible",
+  "summary": "A critical unauthenticated heap-based buffer overflow in F5 BIG-IP APM (CVE-2026-94127) allows attackers to gain root access and is currently being exploited in the wild, bypassing common security controls.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical unauthenticated vulnerability, CVE-2026-94127, in F5 BIG-IP APM allows attackers to gain root access without credentials or user interaction. F5 rates the flaw 9.8 under CVSS v3.1 and confirms it is actively being exploited.",
+   "Exploitation requires a network path to a BIG-IP virtual server with an APM access policy and an OAuth profile. This configuration is common for organizations using BIG-IP APM for single sign-on and OAuth-based access control, making the requirement easy to satisfy.",
+   "A ZoomEye query identified over 59,000 internet-visible assets globally carrying both \"BIG-IP\" and \"APM\" markers. While this indicates deployment scale, it does not confirm all are vulnerable, as some may be patched or lack the specific OAuth profile.",
+   "The vulnerable code resides in the Traffic Management Microkernel (TMM), the data plane process. This means isolating the BIG-IP management interface, a common control, does not protect against this data plane vulnerability.",
+   "The defect is a heap-based buffer overflow where attacker-influenced data is written into a heap allocation without validation, corrupting adjacent memory. This heap corruption is a known method for achieving arbitrary code execution.",
+   "Successful exploitation results in arbitrary code running inside TMM, granting the attacker significant control. They can observe and modify traffic, initiate connections to internal services, and use the device for lateral movement within the network.",
+   "Crucially, because TMM serves multiple virtual servers, the compromise extends beyond the initially attacked virtual server. One exploited appliance can expose every application routed through it, amplifying the impact.",
+   "F5 recommends verifying the exact hotfix level against the advisory for remediation. An emergency iRule is available from F5 Support as a temporary stopgap if immediate upgrade is not possible, but should be removed after patching.",
+   "Given F5's confirmation of active exploitation, organizations must conduct both remediation and compromise assessment simultaneously. Upgrading a compromised appliance alone will not remove an existing attacker."
+  ],
+  "caption": "F5 BIG-IP APM has a critical vulnerability (CVSS 9.8) allowing unauthenticated root access. It's being actively exploited in the wild.\n\nA critical unauthenticated vulnerability, CVE-2026-94127, in F5 BIG-IP APM allows attackers to gain root access without credentials or user interaction. F5 rates the flaw 9.8 under CVSS v3.1 and confirms it is actively being exploited.\n\nExploitation requires a network path to a BIG-IP virtual server with an APM access policy and an OAuth profile. This configuration is common for organizations using BIG-IP APM for single sign-on and OAuth-based access control, making the requirement easy to satisfy.\n\nA ZoomEye query identified over 59,000 internet-visible assets globally carrying both \"BIG-IP\" and \"APM\" markers. While this indicates deployment scale, it does not confirm all are vulnerable, as some may be patched or lack the specific OAuth profile.\n\nThe vulnerable code resides in the Traffic Management Microkernel (TMM), the data plane process. This means isolating the BIG-IP management interface, a common control, does not protect against this data plane vulnerability.\n\nThe defect is a heap-based buffer overflow where attacker-influenced data is written into a heap allocation without validation, corrupting adjacent memory. This heap corruption is a known method for achieving arbitrary code execution.\n\nSuccessful exploitation results in arbitrary code running inside TMM, granting the attacker significant control. They can observe and modify traffic, initiate connections to internal services, and use the device for lateral movement within the network.\n\nCrucially, because TMM serves multiple virtual servers, the compromise extends beyond the initially attacked virtual server. One exploited appliance can expose every application routed through it, amplifying the impact.\n\n#F5 #BIGIP #Cybersecurity #Vulnerability #Exploit #SecurityAlert\n\nSource: DEV",
+  "tweet": "🚨 Critical F5 BIG-IP APM vulnerability (CVE-2026-94127) is being actively exploited! Attackers can gain unauthenticated root access with a CVSS score of 9.8. Patch immediately or apply emergency iRule. #F5 #Cybersecurity #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "f5.com",
+  "source": "DEV",
+  "url": "https://dev.to/bianliang/from-oauth-profile-to-root-tracing-the-cve-2026-94127-attack-path-in-f5-big-ip-apm-48g0",
+  "image": "",
+  "orig_title": "From OAuth Profile to Root: Tracing the CVE-2026-94127 Attack Path in F5 BIG-IP APM",
+  "cluster_urls": [
+   "https://dev.to/bianliang/from-oauth-profile-to-root-tracing-the-cve-2026-94127-attack-path-in-f5-big-ip-apm-48g0"
+  ],
+  "cluster_titles": [
+   "From OAuth Profile to Root: Tracing the CVE-2026-94127 Attack Path in F5 BIG-IP APM"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260925-1306-0-f5-big-ip-apm-critical-vulnerability-cvss-9-.png",
+   "20260925-1306-0-f5-big-ip-apm-critical-vulnerability-cvss-9--d1.png",
+   "20260925-1306-0-f5-big-ip-apm-critical-vulnerability-cvss-9--d2.png",
+   "20260925-1306-0-f5-big-ip-apm-critical-vulnerability-cvss-9--d3.png"
+  ]
+ },
+ {
+  "topic": "fraudgraph_ai_agent_autonomous_investigation",
+  "headline_marked": "[[FraudGraph Agent autonomously investigates fraud]] using TigerGraph and AI, now open-source",
+  "headline": "FraudGraph Agent autonomously investigates fraud using TigerGraph and AI, now open-source",
+  "summary": "FraudGraph Agent is an open-source, graph-native AI system that autonomously investigates complex financial fraud, diagnoses typologies, gathers evidence, and enforces policy-compliant actions, all while drafting regulatory reports.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "FraudGraph Agent is an autonomous, graph-native fraud investigator developed for the TigerGraph x Hacker House Goa challenge. It navigates a 590,000+ transaction knowledge graph to diagnose fraud, gather evidence, and enforce deterministic policies.",
+   "The system addresses the challenge of evolving financial fraud, which now involves coordinated syndicates, synthetic identities, and micro-transaction schemes designed to evade traditional static rules. It aims to modernize dated fraud investigation workflows.",
+   "Its foundational design separates concerns: the Knowledge Graph provides ground truth, ML models estimate probabilities, the Policy Engine determines actions, and the LLM reasons and explains. This ensures regulatory compliance cannot be bypassed by model drift.",
+   "At its core is TigerGraph 4.2.5 Community Edition, hosting an IEEE-CIS fraud topology with transactions, cards, and devices. It uses high-performance GSQL queries compiled into C++ instead of slow relational joins.",
+   "The agent employs an 8-phase pipeline, starting with extracting behavioral history and device graphs from TigerGraph. It then reconstructs temporal transaction sequences to detect patterns and uses 1,024-dimensional cosine vector embeddings for similarity searches.",
+   "FraudGraph Agent uses a Gradient Boosting classifier trained on 60+ graph-derived features for risk scoring, avoiding confirmation bias from raw trigger scores. It also simulates customer communication and updates its beliefs based on responses.",
+   "The LLM generates executive summaries and FinCEN SAR narratives, crucially injected only with structured, verified graph facts and policy rule outputs to prevent hallucinations. Completed investigations are committed back to TigerGraph, improving future case handling.",
+   "The entire repository, including the TigerGraph schema, GSQL queries, training pipelines, benchmark cases, and analyst UI, is open-source and reproducible. This allows for transparent and auditable fraud investigation."
+  ],
+  "caption": "Financial fraud is evolving at machine speed. FraudGraph Agent, an open-source AI, autonomously investigates complex fraud, from diagnosis to regulatory reports.\n\nFraudGraph Agent is an autonomous, graph-native fraud investigator developed for the TigerGraph x Hacker House Goa challenge. It navigates a 590,000+ transaction knowledge graph to diagnose fraud, gather evidence, and enforce deterministic policies.\n\nThe system addresses the challenge of evolving financial fraud, which now involves coordinated syndicates, synthetic identities, and micro-transaction schemes designed to evade traditional static rules. It aims to modernize dated fraud investigation workflows.\n\nIts foundational design separates concerns: the Knowledge Graph provides ground truth, ML models estimate probabilities, the Policy Engine determines actions, and the LLM reasons and explains. This ensures regulatory compliance cannot be bypassed by model drift.\n\nAt its core is TigerGraph 4.2.5 Community Edition, hosting an IEEE-CIS fraud topology with transactions, cards, and devices. It uses high-performance GSQL queries compiled into C++ instead of slow relational joins.\n\nThe agent employs an 8-phase pipeline, starting with extracting behavioral history and device graphs from TigerGraph. It then reconstructs temporal transaction sequences to detect patterns and uses 1,024-dimensional cosine vector embeddings for similarity searches.\n\nFraudGraph Agent uses a Gradient Boosting classifier trained on 60+ graph-derived features for risk scoring, avoiding confirmation bias from raw trigger scores. It also simulates customer communication and updates its beliefs based on responses.\n\nThe LLM generates executive summaries and FinCEN SAR narratives, crucially injected only with structured, verified graph facts and policy rule outputs to prevent hallucinations. Completed investigations are committed back to TigerGraph, improving future case handling.\n\n#AI #FraudDetection #GraphDatabase #MachineLearning #OpenSource #Cybersecurity\n\nSource: DEV",
+  "tweet": "Financial fraud is evolving at machine speed. FraudGraph Agent, an open-source AI, autonomously investigates complex fraud, diagnoses typologies, and drafts regulatory reports using TigerGraph. #AI #FraudDetection #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tigergraph.com",
+  "source": "DEV",
+  "url": "https://dev.to/kishore1035/building-fraudgraph-agent-autonomous-fraud-investigation-policy-compliant-next-best-action-with-525m",
+  "image": "",
+  "orig_title": "Building FraudGraph Agent: Autonomous Fraud Investigation & Policy-Compliant Next-Best Action with TigerGraph",
+  "cluster_urls": [
+   "https://dev.to/kishore1035/building-fraudgraph-agent-autonomous-fraud-investigation-policy-compliant-next-best-action-with-525m"
+  ],
+  "cluster_titles": [
+   "Building FraudGraph Agent: Autonomous Fraud Investigation & Policy-Compliant Next-Best Action with TigerGraph"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260925-1306-1-fraudgraph-agent-autonomously-investigates-f.png",
+   "20260925-1306-1-fraudgraph-agent-autonomously-investigates-f-d1.png",
+   "20260925-1306-1-fraudgraph-agent-autonomously-investigates-f-d2.png",
+   "20260925-1306-1-fraudgraph-agent-autonomously-investigates-f-d3.png"
+  ]
+ }
+]

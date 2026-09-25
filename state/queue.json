@@ -1,1 +1,103 @@
-[]
+[
+ {
+  "topic": "ai agents vs traditional automation security differences",
+  "headline_marked": "[[AI apps break]] after launch: 59 verified reports of failures",
+  "headline": "AI apps break after launch: 59 verified reports of failures",
+  "summary": "A deep dive into why AI applications fail at launch, analyzing 59 verified reports and common pitfalls in sign-in, access rules, storage, and payments.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Builders are facing significant challenges when launching AI applications, with 59 verified reports detailing failures in critical areas. The most common issues observed are related to user sign-in processes, hand-written access rules, file storage systems, and payment webhooks.",
+   "Analysis of 4,469 public builder posts revealed that 916 were classified as 'stuck going live.' Of these, 59 cases from the past year were backed by verifiable quotes, highlighting recurring problems such as stalled sign-ups, broken email verification links, and users losing access to their accounts mid-session.",
+   "Failures in sign-in flows stem from the complexity of multiple authentication layers. Issues like incorrect cookie attributes, race conditions in token rotation, and mail provider link scanners interfering with one-time links can all lead to user frustration and app abandonment.",
+   "To mitigate sign-in failures, developers are advised to rigorously test the full flow on the production domain using a fresh inbox and a second browser. Implementing single-flight token rotation and logging all authentication failures with detailed reasons are crucial steps.",
+   "Security vulnerabilities, particularly in access rules, are another major cause of app failure. Reports indicate that users can sometimes read, modify, or delete other customers' data through public APIs due to improperly configured Row-Level Security (RLS) or weak access policies.",
+   "The fix involves enabling RLS by default for all tables and denying access unless explicitly permitted. Developers should write granular policies for each operation (select, insert, update, delete) tied to ownership and test with multiple accounts to ensure data isolation.",
+   "Problems with access rules also manifest as sign-up errors or incorrect data display for signed-in users. This often occurs when RLS policies are missing, incomplete, or incorrectly configured, leading to situations where a user might be denied access to their own data.",
+   "Ensuring per-user data rows are created server-side and running comprehensive CI tests that check both successful and failed access scenarios before every deploy can prevent these issues. Developers should also read actual error messages rather than relying on empty arrays.",
+   "Payment processing failures, where users are charged but access is not granted, are also frequently reported. This can be due to issues with webhook verification, incorrect signature checks, or using test-mode secrets in a live environment.",
+   "To address payment issues, developers must ensure the webhook signature is verified using raw body data before parsing. Maintaining correct signing secrets for live environments and ensuring the webhook endpoint is robust and available are essential."
+  ],
+  "caption": "Launching an AI app? Watch out for these common failure points. 59 verified reports show issues with sign-in, access rules, storage, and payments.\n\nBuilders are facing significant challenges when launching AI applications, with 59 verified reports detailing failures in critical areas. The most common issues observed are related to user sign-in processes, hand-written access rules, file storage systems, and payment webhooks.\n\nAnalysis of 4,469 public builder posts revealed that 916 were classified as 'stuck going live.' Of these, 59 cases from the past year were backed by verifiable quotes, highlighting recurring problems such as stalled sign-ups, broken email verification links, and users losing access to their accounts mid-session.\n\nFailures in sign-in flows stem from the complexity of multiple authentication layers. Issues like incorrect cookie attributes, race conditions in token rotation, and mail provider link scanners interfering with one-time links can all lead to user frustration and app abandonment.\n\nTo mitigate sign-in failures, developers are advised to rigorously test the full flow on the production domain using a fresh inbox and a second browser. Implementing single-flight token rotation and logging all authentication failures with detailed reasons are crucial steps.\n\nSecurity vulnerabilities, particularly in access rules, are another major cause of app failure. Reports indicate that users can sometimes read, modify, or delete other customers' data through public APIs due to improperly configured Row-Level Security (RLS) or weak access policies.\n\nThe fix involves enabling RLS by default for all tables and denying access unless explicitly permitted. Developers should write granular policies for each operation (select, insert, update, delete) tied to ownership and test with multiple accounts to ensure data isolation.\n\n#AI #DevOps #AppDevelopment #SoftwareEngineering #TechFailures\n\nSource: DEV",
+  "tweet": "Launching an AI app? 59 verified reports reveal common failure points: sign-in issues, broken access rules, storage problems, and payment webhook errors. Learn how to avoid them. #AI #DevOps #AppDevelopment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gemmein/what-breaks-when-ai-apps-go-live-5db3",
+  "image": "",
+  "orig_title": "What breaks when AI apps go live",
+  "cluster_urls": [
+   "https://dev.to/gemmein/what-breaks-when-ai-apps-go-live-5db3",
+   "https://dev.to/alifar/gemini-notebook-adds-live-voice-conversations-and-mobile-audio-recording-tools-18lh",
+   "https://dev.to/dharani2d/ai-agents-vs-traditional-automation-whats-actually-different-for-security-3n1l",
+   "https://dev.to/nobody_4fb7fd10637d3b88a3/how-fillable-finds-the-blanks-in-a-flat-pdf-form-68g",
+   "https://dev.to/nobody_4fb7fd10637d3b88a3/how-a-word-file-becomes-a-printed-book-line-breaks-widows-and-the-kdp-gutter-e0f",
+   "https://dev.to/cacheline/boston-cancelled-its-license-plate-cameras-the-cameras-didnt-leave-5gl4",
+   "https://dev.to/jerry_qian_72ad9b2386d3d0/my-rag-evaluation-was-lying-to-me-twice-45n9",
+   "https://dev.to/anciwasim/golden-trace-the-eval-anchor-most-teams-skip-1501",
+   "https://dev.to/dasproffen/moving-a-nextjs-app-router-app-from-capacitor-serverurl-to-an-embedded-offline-first-build-2545"
+  ],
+  "cluster_titles": [
+   "What breaks when AI apps go live",
+   "Gemini Notebook Adds Live Voice Conversations and Mobile Audio Recording Tools",
+   "AI Agents vs Traditional Automation: What's Actually Different for Security",
+   "How Fillable finds the blanks in a flat PDF form",
+   "How a Word file becomes a printed book: line breaks, widows and the KDP gutter",
+   "Boston Cancelled Its License Plate Cameras. The Cameras Didn't Leave.",
+   "My RAG evaluation was lying to me, twice!!",
+   "Golden Trace: The Eval Anchor Most Teams Skip",
+   "Moving a Next.js App Router app from Capacitor server.url to an embedded offline-first build (Android + iOS)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260926-0414-0-ai-apps-break-after-launch-59-verified-repor.png",
+   "20260926-0414-0-ai-apps-break-after-launch-59-verified-repor-d1.png",
+   "20260926-0414-0-ai-apps-break-after-launch-59-verified-repor-d2.png",
+   "20260926-0414-0-ai-apps-break-after-launch-59-verified-repor-d3.png",
+   "20260926-0414-0-ai-apps-break-after-launch-59-verified-repor-d4.png",
+   "20260926-0414-0-ai-apps-break-after-launch-59-verified-repor-d5.png"
+  ]
+ },
+ {
+  "topic": "microsoft drops 'copilot+ pc' branding requirement",
+  "headline_marked": "Microsoft [[drops Copilot+ PC branding]] for new Surface devices",
+  "headline": "Microsoft drops Copilot+ PC branding for new Surface devices",
+  "summary": "Despite meeting the AI PC requirements, Microsoft's latest Surface devices will not use the 'Copilot+ PC' label, signaling a shift in marketing strategy.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Microsoft has quietly removed the \"Copilot+ PC\" branding from its latest Surface devices, despite them meeting the technical requirements for AI-accelerated workloads. This move suggests a strategic shift away from the specific marketing initiative that was launched to highlight these AI-capable machines.",
+   "The \"Copilot+ PC\" label was introduced to easily identify Windows systems approved for local AI processing, requiring at least 16GB RAM, 256GB storage, and a neural processing unit (NPU) capable of 40 trillion operations per second (TOPS) or more. The new Surface Pro and Surface Laptop models, launching October 13, feature Qualcomm Snapdragon X2 Plus processors with an 80 TOPS NPU.",
+   "While the devices still offer the same AI experiences, Microsoft is opting to de-emphasize the \"Copilot+ PC\" terminology. This change may be influenced by the controversy surrounding the Recall feature, which raised significant privacy concerns among advocates. The \"AI PC\" concept itself has also faced waning consumer interest, with cloud-based alternatives readily available and on-device AI use cases still developing.",
+   "Industry analysts suggest that the \"Copilot+ PC\" marketing campaign may have served its initial purpose of boosting PC sales during a post-COVID lull and introducing the idea of AI PCs. However, with the evolving landscape of AI hardware, including upcoming Nvidia RTX Spark GPUs, Microsoft might be prioritizing other marketing narratives.",
+   "Other manufacturers, like Dell, have also scaled back their emphasis on \"AI PCs\" in their recent product lineups. This broader trend indicates a potential shift in how the industry positions and markets AI capabilities in personal computing devices."
+  ],
+  "caption": "Microsoft is dropping the 'Copilot+ PC' label for its new Surface devices, despite them meeting all the AI performance requirements.\n\nMicrosoft has quietly removed the \"Copilot+ PC\" branding from its latest Surface devices, despite them meeting the technical requirements for AI-accelerated workloads. This move suggests a strategic shift away from the specific marketing initiative that was launched to highlight these AI-capable machines.\n\nThe \"Copilot+ PC\" label was introduced to easily identify Windows systems approved for local AI processing, requiring at least 16GB RAM, 256GB storage, and a neural processing unit (NPU) capable of 40 trillion operations per second (TOPS) or more. The new Surface Pro and Surface Laptop models, launching October 13, feature Qualcomm Snapdragon X2 Plus processors with an 80 TOPS NPU.\n\nWhile the devices still offer the same AI experiences, Microsoft is opting to de-emphasize the \"Copilot+ PC\" terminology. This change may be influenced by the controversy surrounding the Recall feature, which raised significant privacy concerns among advocates. The \"AI PC\" concept itself has also faced waning consumer interest, with cloud-based alternatives readily available and on-device AI use cases still developing.\n\nIndustry analysts suggest that the \"Copilot+ PC\" marketing campaign may have served its initial purpose of boosting PC sales during a post-COVID lull and introducing the idea of AI PCs. However, with the evolving landscape of AI hardware, including upcoming Nvidia RTX Spark GPUs, Microsoft might be prioritizing other marketing narratives.\n\nOther manufacturers, like Dell, have also scaled back their emphasis on \"AI PCs\" in their recent product lineups. This broader trend indicates a potential shift in how the industry positions and markets AI capabilities in personal computing devices.\n\n#Microsoft #CopilotPC #AI #Surface #TechNews\n\nSource: Ars Technica",
+  "tweet": "Microsoft is dropping the 'Copilot+ PC' label for its new Surface devices, despite them meeting all the AI performance requirements. The move signals a shift in marketing strategy amid evolving AI PC landscape. #Microsoft #CopilotPC #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Ars Technica",
+  "url": "https://arstechnica.com/gadgets/2026/09/microsoft-stops-insisting-you-need-a-copilot-pc/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2025/11/microsoft-copilot-windows-1024x648.jpg",
+  "orig_title": "Microsoft stops insisting you need a \"Copilot+ PC\"",
+  "cluster_urls": [
+   "https://arstechnica.com/gadgets/2026/09/microsoft-stops-insisting-you-need-a-copilot-pc/"
+  ],
+  "cluster_titles": [
+   "Microsoft stops insisting you need a \"Copilot+ PC\""
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20260926-0414-1-microsoft-drops-copilot-pc-branding-for-new-.png",
+   "20260926-0414-1-microsoft-drops-copilot-pc-branding-for-new--d1.png",
+   "20260926-0414-1-microsoft-drops-copilot-pc-branding-for-new--d2.png",
+   "20260926-0414-1-microsoft-drops-copilot-pc-branding-for-new--d3.png"
+  ]
+ }
+]

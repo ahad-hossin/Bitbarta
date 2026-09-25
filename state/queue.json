@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "nabsun open-source ai browser",
+  "headline_marked": "[[Nabsun: An open-source AI browser]] works directly in your real tabs, eliminating copy-pasting",
+  "headline": "Nabsun: An open-source AI browser works directly in your real tabs, eliminating copy-pasting",
+  "summary": "Nabsun, built with Chromium and Electron, integrates an AI assistant that can read pages, compare tabs, and complete tasks in your existing browser session, supporting local or cloud models.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Nabsun is an open-source AI browser that integrates an AI assistant directly into your existing tabs, aiming to eliminate the need for copying context into separate chat windows. It's built with Chromium and Electron and is currently available as a developer preview under an MIT license.",
+   "The project addresses the friction of switching between browser tabs and external AI chat windows. Users often copy information, get an answer, and then manually translate it into actions within their browser.",
+   "Nabsun's assistant sits alongside your tabs, providing tools to read pages, perform actions, and offers clear approval controls. This allows users to observe the AI's work and intervene directly within the same tab.",
+   "Users have flexibility in model choice, able to use a bundled local model, connect to cloud providers, or integrate models like Codex or Claude Code. Local inference works offline for simple tasks, while stronger models benefit complex workflows.",
+   "The assistant can perform various actions, including reading, clicking, typing, selecting options, scrolling, and navigating. Crucially, actions like clicking, typing, and navigation require user approval by default, ensuring user control.",
+   "Beyond AI capabilities, Nabsun includes standard browser features such as tabs, bookmarks, history, downloads, session restore, and encrypted saved passwords, making it a practical daily browser.",
+   "Technically, Nabsun provides an accessibility-derived outline of pages, allowing the agent to interact with elements using opaque references. This structured approach avoids reliance on screen coordinates, though website compatibility can vary.",
+   "The architecture separates browser tools from the AI model, with credentials for CLI connections stored securely in the CLI's own store. Optional personal context can be shared with local providers via a soul.md file."
+  ],
+  "caption": "Tired of copying browser content into AI chat windows? Nabsun is an open-source AI browser that brings the assistant directly into your real tabs.\n\nNabsun is an open-source AI browser that integrates an AI assistant directly into your existing tabs, aiming to eliminate the need for copying context into separate chat windows. It's built with Chromium and Electron and is currently available as a developer preview under an MIT license.\n\nThe project addresses the friction of switching between browser tabs and external AI chat windows. Users often copy information, get an answer, and then manually translate it into actions within their browser.\n\nNabsun's assistant sits alongside your tabs, providing tools to read pages, perform actions, and offers clear approval controls. This allows users to observe the AI's work and intervene directly within the same tab.\n\nUsers have flexibility in model choice, able to use a bundled local model, connect to cloud providers, or integrate models like Codex or Claude Code. Local inference works offline for simple tasks, while stronger models benefit complex workflows.\n\nThe assistant can perform various actions, including reading, clicking, typing, selecting options, scrolling, and navigating. Crucially, actions like clicking, typing, and navigation require user approval by default, ensuring user control.\n\nBeyond AI capabilities, Nabsun includes standard browser features such as tabs, bookmarks, history, downloads, session restore, and encrypted saved passwords, making it a practical daily browser.\n\nTechnically, Nabsun provides an accessibility-derived outline of pages, allowing the agent to interact with elements using opaque references. This structured approach avoids reliance on screen coordinates, though website compatibility can vary.\n\nThe architecture separates browser tools from the AI model, with credentials for CLI connections stored securely in the CLI's own store. Optional personal context can be shared with local providers via a soul.md file.\n\n#AI #OpenSource #Browser #DeveloperTools #TechNews #Nabsun\n\nSource: DEV",
+  "tweet": "Nabsun, an open-source AI browser, lets you use an AI assistant directly in your real tabs. No more copy-pasting content to external chats; the AI can read, click, and type within your existing session. #AI #OpenSource #Browser",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/naveen_alavilli/i-built-nabsun-an-open-source-ai-browser-that-works-in-your-real-tabs-1ea3",
+  "image": "",
+  "orig_title": "I Built Nabsun: An Open-Source AI Browser That Works in Your Real Tabs",
+  "cluster_urls": [
+   "https://dev.to/naveen_alavilli/i-built-nabsun-an-open-source-ai-browser-that-works-in-your-real-tabs-1ea3"
+  ],
+  "cluster_titles": [
+   "I Built Nabsun: An Open-Source AI Browser That Works in Your Real Tabs"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260925-0706-0-nabsun-an-open-source-ai-browser-works-direc.png",
+   "20260925-0706-0-nabsun-an-open-source-ai-browser-works-direc-d1.png",
+   "20260925-0706-0-nabsun-an-open-source-ai-browser-works-direc-d2.png",
+   "20260925-0706-0-nabsun-an-open-source-ai-browser-works-direc-d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent codex memory sharing security flaw",
+  "headline_marked": "[[Codex Memory-Sharing Issue]] allows untrusted code to steal credentials and escape sandbox",
+  "headline": "Codex Memory-Sharing Issue allows untrusted code to steal credentials and escape sandbox",
+  "summary": "A critical flaw in Codex Desktop's Node.js tool allowed untrusted AI-generated code to read authentication tokens from shared memory, leading to a full sandbox escape without user approval.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical memory-sharing vulnerability was discovered in the Node.js tool bundled with the Codex desktop edition. This flaw allowed untrusted code generated by an AI agent to read authentication tokens directly from a shared process memory space.",
+   "Researchers demonstrated that these stolen tokens could be used to forge requests to external native programs. This enabled a full sandbox escape, even under the most stringent read-only mode, requiring no manual user approval.",
+   "The exploit path was triggered simply by a user opening a repository containing malicious content, allowing prompt injection to influence agent behavior. The issue was reported to OpenAI on August 12, 2026.",
+   "OpenAI resolved the vulnerability in Codex Desktop 26.818.21641 and later, and a related CLI issue in Codex CLI 0.149.0, released August 21, 2026. No CVE identifiers were provided in the original report.",
+   "The findings highlight that credential scope is crucial, as narrowly scoped, short-lived tokens limit the value of a memory read. It also shows that read-only mode does not always act as a security boundary when process memory is shared.",
+   "The primary implication for users is the need to treat untrusted repositories as hostile input. The issue affects developer workstations and requires inventory and version control to identify and update vulnerable installations."
+  ],
+  "caption": "A critical memory-sharing flaw in OpenAI's Codex Desktop allowed untrusted code to steal authentication tokens and escape its sandbox.\n\nA critical memory-sharing vulnerability was discovered in the Node.js tool bundled with the Codex desktop edition. This flaw allowed untrusted code generated by an AI agent to read authentication tokens directly from a shared process memory space.\n\nResearchers demonstrated that these stolen tokens could be used to forge requests to external native programs. This enabled a full sandbox escape, even under the most stringent read-only mode, requiring no manual user approval.\n\nThe exploit path was triggered simply by a user opening a repository containing malicious content, allowing prompt injection to influence agent behavior. The issue was reported to OpenAI on August 12, 2026.\n\nOpenAI resolved the vulnerability in Codex Desktop 26.818.21641 and later, and a related CLI issue in Codex CLI 0.149.0, released August 21, 2026. No CVE identifiers were provided in the original report.\n\nThe findings highlight that credential scope is crucial, as narrowly scoped, short-lived tokens limit the value of a memory read. It also shows that read-only mode does not always act as a security boundary when process memory is shared.\n\nThe primary implication for users is the need to treat untrusted repositories as hostile input. The issue affects developer workstations and requires inventory and version control to identify and update vulnerable installations.\n\n#Security #Vulnerability #OpenAI #Codex #AI #DeveloperTools\n\nSource: DEV",
+  "tweet": "Critical flaw in OpenAI's Codex Desktop: Untrusted code could steal authentication tokens from shared memory, leading to a full sandbox escape. Update to Codex Desktop 26.818.21641+ or Codex CLI 0.149.0. #OpenAI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/bianliang/credentials-in-the-agents-reach-the-codex-memory-sharing-issue-1808",
+  "image": "",
+  "orig_title": "Credentials in the Agent's Reach: The Codex Memory-Sharing Issue",
+  "cluster_urls": [
+   "https://dev.to/bianliang/credentials-in-the-agents-reach-the-codex-memory-sharing-issue-1808"
+  ],
+  "cluster_titles": [
+   "Credentials in the Agent's Reach: The Codex Memory-Sharing Issue"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260925-0706-1-codex-memory-sharing-issue-allows-untrusted-.png",
+   "20260925-0706-1-codex-memory-sharing-issue-allows-untrusted--d1.png",
+   "20260925-0706-1-codex-memory-sharing-issue-allows-untrusted--d2.png"
+  ]
+ }
+]

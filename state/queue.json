@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "ai_agent_security_testing_and_policy_interaction",
+  "headline_marked": "[[Adding an 'unknown' state to checks]] reveals four new ways to be wrong, developer finds",
+  "headline": "Adding an 'unknown' state to checks reveals four new ways to be wrong, developer finds",
+  "summary": "A developer's experiment with a three-outcome check (pass, fail, unknown) solved an initial issue but exposed four subtle, new pitfalls in system evaluation and reporting.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer explored adding a third outcome, \"could not tell\" or \"unknown,\" to system checks, moving beyond simple \"passed\" or \"failed.\" While this initially fixed the problem it was designed for, the experiment revealed four unexpected new ways for systems to report incorrect or misleading information.",
+   "The first pitfall involved a probe that treated an empty value from a file as a definite \"no,\" leading to a false positive. This occurred when newer files lacked a specific field, causing the probe to quietly assume the condition was not met.",
+   "The fix involved reading all matching files and explicitly refusing to answer if a condition could not be read. This ensures that an absence of data doesn't default to a definitive \"no,\" preventing false greens.",
+   "The second issue arose from search patterns: a command successfully returned zero, indicating absence, but failed to match due to a subtle formatting difference like an extra space. The command ran, but \"could not establish the claim.\"",
+   "To counter this, the developer now widens patterns for absence checks. If a wide search finds the item but the narrow one doesn't, the narrow zero is considered \"unknown,\" not \"absent.\" A pattern must prove it can say \"yes\" before its \"no\" is trusted.",
+   "The third problem was misinterpreting \"NOT_APPLICABLE\" as reassurance. A gate checking articles returned this when no key assignments were present, but also when it failed to recognize valid assignments due to parsing errors.",
+   "The solution is to question \"NOT_APPLICABLE\" results by asking what the tool would do with a known example of what it seeks. If an answer isn't clear, the result is recorded as \"unknown,\" not \"not applicable.\"",
+   "Finally, the developer found that a single check for \"alive\" processes was actually measuring three distinct facts: process running, recent activity, and supervisor health. These could be true independently, leading to misleading \"alive\" reports.",
+   "The rule established is to split checks that measure multiple things into separate, distinct measurements. Before adding a third value, confirm the check is truly measuring only one specific condition."
+  ],
+  "caption": "Adding an 'unknown' state to system checks solved one problem, but immediately exposed four new, subtle ways for systems to be wrong. This experiment highlights critical flaws in how we design evaluations.\n\nA developer explored adding a third outcome, \"could not tell\" or \"unknown,\" to system checks, moving beyond simple \"passed\" or \"failed.\" While this initially fixed the problem it was designed for, the experiment revealed four unexpected new ways for systems to report incorrect or misleading information.\n\nThe first pitfall involved a probe that treated an empty value from a file as a definite \"no,\" leading to a false positive. This occurred when newer files lacked a specific field, causing the probe to quietly assume the condition was not met.\n\nThe fix involved reading all matching files and explicitly refusing to answer if a condition could not be read. This ensures that an absence of data doesn't default to a definitive \"no,\" preventing false greens.\n\nThe second issue arose from search patterns: a command successfully returned zero, indicating absence, but failed to match due to a subtle formatting difference like an extra space. The command ran, but \"could not establish the claim.\"\n\nTo counter this, the developer now widens patterns for absence checks. If a wide search finds the item but the narrow one doesn't, the narrow zero is considered \"unknown,\" not \"absent.\" A pattern must prove it can say \"yes\" before its \"no\" is trusted.\n\nThe third problem was misinterpreting \"NOT_APPLICABLE\" as reassurance. A gate checking articles returned this when no key assignments were present, but also when it failed to recognize valid assignments due to parsing errors.\n\nThe solution is to question \"NOT_APPLICABLE\" results by asking what the tool would do with a known example of what it seeks. If an answer isn't clear, the result is recorded as \"unknown,\" not \"not applicable.\"\n\n#SoftwareDevelopment #Programming #SystemDesign #Debugging #TechTips #DevOps\n\nSource: DEV",
+  "tweet": "Adding an 'unknown' state to system checks solved one problem, but immediately exposed four new, subtle ways for systems to be wrong. A developer shares critical insights on designing robust evaluations. #SoftwareDevelopment #SystemDesign #Debugging",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vereos/unknown-was-the-right-third-value-it-is-not-enough-on-its-own-pnl",
+  "image": "",
+  "orig_title": "\"Unknown\" was the right third value. It is not enough on its own.",
+  "cluster_urls": [
+   "https://dev.to/vereos/unknown-was-the-right-third-value-it-is-not-enough-on-its-own-pnl",
+   "https://dev.to/lixingliangsy/your-security-policy-is-a-pdf-your-ai-agent-cant-read-pdfs-4eln",
+   "https://dev.to/lixingliangsy/i-attacked-my-own-ai-agent-before-someone-else-did-heres-what-i-found-4bpf"
+  ],
+  "cluster_titles": [
+   "\"Unknown\" was the right third value. It is not enough on its own.",
+   "Your security policy is a PDF. Your AI agent can't read PDFs.",
+   "I attacked my own AI agent before someone else did. Here's what I found."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260926-0706-0-adding-an-unknown-state-to-checks-reveals-fo.png",
+   "20260926-0706-0-adding-an-unknown-state-to-checks-reveals-fo-d1.png",
+   "20260926-0706-0-adding-an-unknown-state-to-checks-reveals-fo-d2.png",
+   "20260926-0706-0-adding-an-unknown-state-to-checks-reveals-fo-d3.png"
+  ]
+ },
+ {
+  "topic": "widespread_samba_server_internet_exposure",
+  "headline_marked": "[[72,819 internet-reachable Samba servers]] identified, revealing a critical inventory gap",
+  "headline": "72,819 internet-reachable Samba servers identified, revealing a critical inventory gap",
+  "summary": "Over 72,000 Samba file-sharing servers are publicly accessible, posing significant security risks due to potential misconfigurations and lack of proper inventory.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Samba implements the SMB protocol, enabling file and print sharing for Unix/Linux systems that Windows clients can access. A recent ZoomEye query identified 72,819 Samba services directly reachable from the public internet. These figures were collected on September 24, 2026 (UTC).",
+   "This count uses an application fingerprint for a specific Samba implementation, differing from port-level counts for SMB or NFS services. The number of identified services can vary significantly based on the query method used.",
+   "Unlike management consoles, file shares are often publicly exposed because they are critical collaboration mechanisms for teams, partners, and applications. Restricting them to a private network often requires a major restructuring of workflows, not just a simple firewall change.",
+   "SMB protocol security relies heavily on correct version and dialect configuration, authentication methods (NTLM/Kerberos), and signing requirements. Older dialects and misconfigurations, such as enabling SMB1, significantly increase the attack surface.",
+   "Public internet reachability typically indicates a server in a DMZ, a permissive firewall rule, a shared hosting environment, or a colocation facility assumed to be closed. The latter often represents an overlooked security blind spot.",
+   "Vulnerability scans often reveal numerous findings on file servers that are difficult to fix without disrupting access. However, addressing internet reachability is a high-impact fix that server teams can implement directly.",
+   "File sharing layers frequently lack complete organizational inventory due to informal share creation. Tools like ZoomEye allow organizations to perform external scans and compare results against their internal records to identify unexpected exposures."
+  ],
+  "caption": "Over 72,000 Samba file-sharing servers are directly exposed to the public internet. This widespread exposure highlights a critical gap in organizational inventory and security.\n\nSamba implements the SMB protocol, enabling file and print sharing for Unix/Linux systems that Windows clients can access. A recent ZoomEye query identified 72,819 Samba services directly reachable from the public internet. These figures were collected on September 24, 2026 (UTC).\n\nThis count uses an application fingerprint for a specific Samba implementation, differing from port-level counts for SMB or NFS services. The number of identified services can vary significantly based on the query method used.\n\nUnlike management consoles, file shares are often publicly exposed because they are critical collaboration mechanisms for teams, partners, and applications. Restricting them to a private network often requires a major restructuring of workflows, not just a simple firewall change.\n\nSMB protocol security relies heavily on correct version and dialect configuration, authentication methods (NTLM/Kerberos), and signing requirements. Older dialects and misconfigurations, such as enabling SMB1, significantly increase the attack surface.\n\nPublic internet reachability typically indicates a server in a DMZ, a permissive firewall rule, a shared hosting environment, or a colocation facility assumed to be closed. The latter often represents an overlooked security blind spot.\n\nVulnerability scans often reveal numerous findings on file servers that are difficult to fix without disrupting access. However, addressing internet reachability is a high-impact fix that server teams can implement directly.\n\nFile sharing layers frequently lack complete organizational inventory due to informal share creation. Tools like ZoomEye allow organizations to perform external scans and compare results against their internal records to identify unexpected exposures.\n\n#Samba #SMB #Cybersecurity #InfoSec #NetworkSecurity #TechNews\n\nSource: DEV",
+  "tweet": "Over 72,000 Samba file-sharing servers are directly exposed to the public internet, a critical security risk. This widespread exposure highlights a major gap in organizational inventory. #Cybersecurity #InfoSec #Samba",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jeffreyciend/72819-internet-reachable-samba-servers-the-file-sharing-layer-that-never-got-an-inventory-4m0f",
+  "image": "",
+  "orig_title": "72,819 internet-reachable Samba servers: the file-sharing layer that never got an inventory",
+  "cluster_urls": [
+   "https://dev.to/jeffreyciend/72819-internet-reachable-samba-servers-the-file-sharing-layer-that-never-got-an-inventory-4m0f"
+  ],
+  "cluster_titles": [
+   "72,819 internet-reachable Samba servers: the file-sharing layer that never got an inventory"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260926-0706-1-72-819-internet-reachable-samba-servers-iden.png",
+   "20260926-0706-1-72-819-internet-reachable-samba-servers-iden-d1.png",
+   "20260926-0706-1-72-819-internet-reachable-samba-servers-iden-d2.png",
+   "20260926-0706-1-72-819-internet-reachable-samba-servers-iden-d3.png"
+  ]
+ }
+]

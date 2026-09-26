@@ -1,1 +1,65 @@
-[]
+[
+ {
+  "topic": "llm api call patterns and ai agent robustness",
+  "headline_marked": "[[Retry, Backoff, and Circuit Breakers]] for LLM API Calls",
+  "headline": "Retry, Backoff, and Circuit Breakers for LLM API Calls",
+  "summary": "Learn how to handle LLM API failures with exponential backoff, jitter, and circuit breakers to prevent system downtime and ensure resilience.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "LLM APIs can fail in several ways: rate limits (429), server overload (5xx), timeouts, and degraded output. Understanding these failure modes is crucial for building robust applications.",
+   "Implement retry logic for transient errors like 429s, 5xxs, network issues, and timeouts on read-only calls. For calls with side effects, ensure idempotency before retrying.",
+   "Never retry validation errors, authentication failures, or content policy rejections. These indicate a fundamental issue with the request itself, and retrying them is a waste of resources.",
+   "To prevent stampedes on rate-limited endpoints, use exponential backoff with jitter. Honor the 'Retry-After' header when provided by the API for precise timing.",
+   "Set a deadline for retries to avoid unbounded waiting. Cap the backoff period to prevent excessively long delays, ensuring your system remains responsive.",
+   "Circuit breakers protect your system from persistently failing providers. When a failure threshold is met, the circuit opens, failing fast without hitting the API.",
+   "After a cooldown period, a few probe requests test the API. Success closes the circuit, while failure keeps it open, preventing further calls to a degraded service.",
+   "In agent systems, circuit breakers are vital. They prevent agents from endlessly retrying failed API calls, which can multiply costs and consume resources.",
+   "For work arriving while a provider is down, use a persistent queue. This ensures requests are not lost and can be processed once the API recovers."
+  ],
+  "caption": "LLM API calls failing? Learn how to implement retry, backoff, and circuit breakers to ensure resilience and prevent downtime.\n\nLLM APIs can fail in several ways: rate limits (429), server overload (5xx), timeouts, and degraded output. Understanding these failure modes is crucial for building robust applications.\n\nImplement retry logic for transient errors like 429s, 5xxs, network issues, and timeouts on read-only calls. For calls with side effects, ensure idempotency before retrying.\n\nNever retry validation errors, authentication failures, or content policy rejections. These indicate a fundamental issue with the request itself, and retrying them is a waste of resources.\n\nTo prevent stampedes on rate-limited endpoints, use exponential backoff with jitter. Honor the 'Retry-After' header when provided by the API for precise timing.\n\nSet a deadline for retries to avoid unbounded waiting. Cap the backoff period to prevent excessively long delays, ensuring your system remains responsive.\n\nCircuit breakers protect your system from persistently failing providers. When a failure threshold is met, the circuit opens, failing fast without hitting the API.\n\nAfter a cooldown period, a few probe requests test the API. Success closes the circuit, while failure keeps it open, preventing further calls to a degraded service.\n\nIn agent systems, circuit breakers are vital. They prevent agents from endlessly retrying failed API calls, which can multiply costs and consume resources.\n\nFor work arriving while a provider is down, use a persistent queue. This ensures requests are not lost and can be processed once the API recovers.\n\n#LLM #API #SoftwareDevelopment #DevOps #Programming\n\nSource: DEV",
+  "tweet": "LLM API calls failing? Learn how to implement retry, backoff, and circuit breakers to ensure resilience and prevent downtime. #LLM #API #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/draganristicrsjpg/retry-backoff-and-circuit-breakers-for-llm-api-calls-h3k",
+  "image": "",
+  "orig_title": "Retry, Backoff, and Circuit Breakers for LLM API Calls",
+  "cluster_urls": [
+   "https://dev.to/draganristicrsjpg/retry-backoff-and-circuit-breakers-for-llm-api-calls-h3k",
+   "https://dev.to/othmane_nemli/vite-chapter-5-should-you-use-vite-4l8b",
+   "https://dev.to/chethan_ramaswamy_773955e/entity-framework-core-performance-optimization-a-practical-guide-for-net-developers-4d35",
+   "https://dev.to/seolith/building-foxyinvoice-appendix-glossary-checklists-72f",
+   "https://dev.to/khawaja_khurrammak_6ad/the-complete-beginners-guide-to-setting-up-a-coding-envrionment-58ch",
+   "https://dev.to/jaydippatel83/how-to-compress-an-image-to-an-exact-file-size-in-the-browser-2a2",
+   "https://dev.to/rhuturaj_takle/configuration-in-aspnet-core-2iff",
+   "https://dev.to/maame-codes/someone-already-built-that-is-the-favourite-excuse-of-broke-developers-44o6",
+   "https://dev.to/_096282f0dc6decf9962b4c/i-built-an-open-source-manga-reader-translator-browser-extension-1bdm",
+   "https://dev.to/elkiks/giving-ai-agents-their-own-email-inbox-and-treating-every-email-as-hostile-input-1cog",
+   "https://dev.to/angelina_gupta/my-ai-feature-was-failing-26-of-the-time-nothing-looked-broken-3c5f"
+  ],
+  "cluster_titles": [
+   "Retry, Backoff, and Circuit Breakers for LLM API Calls",
+   "Vite+ — Chapter 5: Should You Use Vite+?",
+   "Entity Framework Core Performance Optimization: A Practical Guide for .NET Developers",
+   "Building FoxyInvoice — Appendix: Glossary & Checklists",
+   "The Complete Beginners Guide to Setting Up a Coding Envrionment",
+   "How to compress an image to an exact file size in the browser",
+   "Configuration in ASP.NET Core",
+   "'Someone Already Built That' is the Favourite Excuse of Broke Developers",
+   "I built an open-source manga reader + translator browser extension",
+   "Giving AI agents their own email inbox, and treating every email as hostile input",
+   "My AI feature was failing 26% of the time. Nothing looked broken."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260926-2006-0-retry-backoff-and-circuit-breakers-for-llm-a.png",
+   "20260926-2006-0-retry-backoff-and-circuit-breakers-for-llm-a-d1.png",
+   "20260926-2006-0-retry-backoff-and-circuit-breakers-for-llm-a-d2.png",
+   "20260926-2006-0-retry-backoff-and-circuit-breakers-for-llm-a-d3.png"
+  ]
+ }
+]

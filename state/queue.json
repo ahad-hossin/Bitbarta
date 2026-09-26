@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "owncloud_cve_exposure",
+  "headline_marked": "[[152,655 ownCloud instances]] match critical CVE-2023-49105 in ZoomEye scan",
+  "headline": "152,655 ownCloud instances match critical CVE-2023-49105 in ZoomEye scan",
+  "summary": "A critical authentication bypass (CVE-2023-49105) in ownCloud core, added to CISA's exploited catalog, could allow file access with just a known username on unpatched systems.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "CVE-2023-49105, an authentication bypass in ownCloud core before 10.13.1, was added to CISA's Known Exploited Vulnerabilities catalog. ZoomEye queries on September 24, 2026, found 152,655 matches for both \"app=ownCloud\" and \"vul.cve=CVE-2023-49105\".",
+   "This exact match suggests the CVE-linked population in ZoomEye's data is essentially the entire identified ownCloud population. While not confirming every instance is vulnerable, the scale indicates a significant number of potentially exposed file synchronization servers.",
+   "The vulnerability stems from accepting pre-signed URLs without a configured signing key for the file owner. This allows reading, modifying, or deleting files with only a known username, which can often be publicly discovered.",
+   "The absence of a signing key is a configuration state that doesn't change unless manually updated, explaining why unpatched instances remain exploitable for years. File sync platforms are frequently exposed for remote work and can be long-lived.",
+   "Users should upgrade to ownCloud 10.13.1 or later and configure a signing key for every file owner. Review WebDAV access logs for pre-signed URL requests not corresponding to legitimate shares, as these may be attack indicators.",
+   "Audit file integrity for the exposed period and check for new shares or application passwords added. A persistent fingerprint match in your address space for this flaw strongly indicates an installation that hasn't been reviewed."
+  ],
+  "caption": "Over 152,000 ownCloud instances show an exact match for a critical, exploited CVE in a recent scan.\n\nCVE-2023-49105, an authentication bypass in ownCloud core before 10.13.1, was added to CISA's Known Exploited Vulnerabilities catalog. ZoomEye queries on September 24, 2026, found 152,655 matches for both \"app=ownCloud\" and \"vul.cve=CVE-2023-49105\".\n\nThis exact match suggests the CVE-linked population in ZoomEye's data is essentially the entire identified ownCloud population. While not confirming every instance is vulnerable, the scale indicates a significant number of potentially exposed file synchronization servers.\n\nThe vulnerability stems from accepting pre-signed URLs without a configured signing key for the file owner. This allows reading, modifying, or deleting files with only a known username, which can often be publicly discovered.\n\nThe absence of a signing key is a configuration state that doesn't change unless manually updated, explaining why unpatched instances remain exploitable for years. File sync platforms are frequently exposed for remote work and can be long-lived.\n\nUsers should upgrade to ownCloud 10.13.1 or later and configure a signing key for every file owner. Review WebDAV access logs for pre-signed URL requests not corresponding to legitimate shares, as these may be attack indicators.\n\nAudit file integrity for the exposed period and check for new shares or application passwords added. A persistent fingerprint match in your address space for this flaw strongly indicates an installation that hasn't been reviewed.\n\n#ownCloud #CVE #Cybersecurity #Vulnerability #Security #InfoSec\n\nSource: DEV",
+  "tweet": "Over 152,000 ownCloud instances show an exact match for critical CVE-2023-49105 in a recent ZoomEye scan. This authentication bypass allows file access with just a username. Upgrade to 10.13.1+ and configure signing keys. #Cybersecurity #ownCloud #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "owncloud.com",
+  "source": "DEV",
+  "url": "https://dev.to/kozhevniko/152655-matches-for-owncloud-and-the-cve-that-matches-it-exactly-12ch",
+  "image": "",
+  "orig_title": "152,655 Matches for ownCloud and the CVE That Matches It Exactly",
+  "cluster_urls": [
+   "https://dev.to/kozhevniko/152655-matches-for-owncloud-and-the-cve-that-matches-it-exactly-12ch"
+  ],
+  "cluster_titles": [
+   "152,655 Matches for ownCloud and the CVE That Matches It Exactly"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260926-1333-0-152-655-owncloud-instances-match-critical-cv.png",
+   "20260926-1333-0-152-655-owncloud-instances-match-critical-cv-d1.png",
+   "20260926-1333-0-152-655-owncloud-instances-match-critical-cv-d2.png"
+  ]
+ },
+ {
+  "topic": "apple_pay_token_decryption_details",
+  "headline_marked": "[[Apple Pay token decryption docs are wrong]], causing key derivation errors for developers",
+  "headline": "Apple Pay token decryption docs are wrong, causing key derivation errors for developers",
+  "summary": "Apple's official documentation for decrypting Apple Pay tokens contains errors in its key derivation function (KDF) table, leading to failed decryption attempts for developers. This issue prevents tokens from opening without explicit error feedback.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Apple's official reference page for decrypting Apple Pay tokens currently provides incorrect key derivation instructions. The KDF table misplaces the hash function and omits algorithm ID bytes, leading to decryption failures. Developers following the live documentation will generate keys that cannot open the ciphertext, with no clear error messages.",
+   "This guide delves deeper than typical \"decrypt Apple Pay token\" tutorials, covering actual formats like Apple Pay's EC_v1 and RSA_v1, and Google Pay's ECv2. It also addresses crucial aspects often overlooked, such as signature checks, certificate rotation rules, and the fundamental question of whether decryption should even be performed by merchants.",
+   "When a payment completes, the PKPayment.token.paymentData (or ApplePayPaymentToken on the web) delivers a JSON object with four keys. The 'version' is typically EC_v1, with RSA_v1 used in regions like mainland China due to regulatory requirements. The 'publicKeyHash' field is critical for identifying which private key encrypted the token, essential during certificate rotations.",
+   "The EC_v1 decryption flow involves ECDH, followed by a single-pass NIST SP 800-56A concatenation KDF, and finally AES-GCM encryption. The article highlights how Apple's current documentation incorrectly specifies these steps, contrasting it with an archived version that contains the correct values."
+  ],
+  "caption": "Apple's official docs for decrypting Apple Pay tokens have a critical error in their key derivation instructions. This can cause decryption to fail without any clear error messages.\n\nApple's official reference page for decrypting Apple Pay tokens currently provides incorrect key derivation instructions. The KDF table misplaces the hash function and omits algorithm ID bytes, leading to decryption failures. Developers following the live documentation will generate keys that cannot open the ciphertext, with no clear error messages.\n\nThis guide delves deeper than typical \"decrypt Apple Pay token\" tutorials, covering actual formats like Apple Pay's EC_v1 and RSA_v1, and Google Pay's ECv2. It also addresses crucial aspects often overlooked, such as signature checks, certificate rotation rules, and the fundamental question of whether decryption should even be performed by merchants.\n\nWhen a payment completes, the PKPayment.token.paymentData (or ApplePayPaymentToken on the web) delivers a JSON object with four keys. The 'version' is typically EC_v1, with RSA_v1 used in regions like mainland China due to regulatory requirements. The 'publicKeyHash' field is critical for identifying which private key encrypted the token, essential during certificate rotations.\n\nThe EC_v1 decryption flow involves ECDH, followed by a single-pass NIST SP 800-56A concatenation KDF, and finally AES-GCM encryption. The article highlights how Apple's current documentation incorrectly specifies these steps, contrasting it with an archived version that contains the correct values.\n\n#ApplePay #Security #Developer #Fintech #Encryption #PaymentGateway\n\nSource: DEV",
+  "tweet": "Apple's official documentation for decrypting Apple Pay tokens contains a critical error in its key derivation function. Developers following the live docs will face decryption failures with no clear error. Learn how to fix it. #ApplePay #Security #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "apple.com",
+  "source": "DEV",
+  "url": "https://dev.to/tomwangcn/apple-pay-token-decryption-vs-google-pay-ecv2-3pje",
+  "image": "",
+  "orig_title": "Apple Pay Token Decryption vs Google Pay ECv2",
+  "cluster_urls": [
+   "https://dev.to/tomwangcn/apple-pay-token-decryption-vs-google-pay-ecv2-3pje"
+  ],
+  "cluster_titles": [
+   "Apple Pay Token Decryption vs Google Pay ECv2"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260926-1333-1-apple-pay-token-decryption-docs-are-wrong-ca.png",
+   "20260926-1333-1-apple-pay-token-decryption-docs-are-wrong-ca-d1.png",
+   "20260926-1333-1-apple-pay-token-decryption-docs-are-wrong-ca-d2.png"
+  ]
+ }
+]

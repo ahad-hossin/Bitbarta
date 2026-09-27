@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "routeros critical cve risk",
+  "headline_marked": "[[Operational Risk From CVE-2026-67279 and CVE-2026-86060]] in MikroTik RouterOS",
+  "headline": "Operational Risk From CVE-2026-67279 and CVE-2026-86060 in MikroTik RouterOS",
+  "summary": "Two critical vulnerabilities in MikroTik RouterOS allow unauthenticated remote attackers to gain full administrative control of edge devices. Patches were released in September 2026.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Two critical vulnerabilities, CVE-2026-67279 and CVE-2026-86060, in MikroTik RouterOS allow unauthenticated remote attackers to gain full administrative control of edge devices. These flaws, fixed on September 3, 2026, pose significant operational risk as RouterOS devices commonly sit at the network edge.",
+   "The first defect involves mishandling an SSH rekey during authentication, allowing the process to advance to the channel phase without an authenticated identity. This bypasses initial security checks.",
+   "The second flaw occurs when the login helper interprets a hyphen-prefixed username as an option, taking its policy mask from the attacker's pseudo-terminal. Neither of these steps requires a password or a key.",
+   "For risk assessment, three properties are crucial: the attack is unauthenticated, making it remotely automatable; it targets a management listener, requiring no separate foothold; and it terminates in full policy, meaning no further escalation is needed.",
+   "Control of an edge router has severe downstream effects beyond a host compromise. Attackers can redirect or intercept traffic through routing changes, create unauthorized paths with firewall and NAT edits, and maintain access using VPN and IPsec keys even after patches.",
+   "Observed activity matching this profile includes the creation of a privileged operations account over SSH and the export of a device diagnostic file to an external address. This suggests intruders aimed to understand the environment rather than just hold it.",
+   "The September 2026 fixes cover RouterOS versions 7.25beta3, 7.24.2, 7.23.4, and 6.49.21. Devices that were internet-facing before this date require a post-patch review, even if they are now updated.",
+   "ZoomEye measurements identified 9,559 devices with exposed RouterOS SSH management listeners. This figure represents the population that needed to make a patching decision, not a verified vulnerability count."
+  ],
+  "caption": "Critical unauthenticated flaws in MikroTik RouterOS grant full admin control over edge network devices. Over 9,500 internet-facing devices had exposed SSH management listeners.\n\nTwo critical vulnerabilities, CVE-2026-67279 and CVE-2026-86060, in MikroTik RouterOS allow unauthenticated remote attackers to gain full administrative control of edge devices. These flaws, fixed on September 3, 2026, pose significant operational risk as RouterOS devices commonly sit at the network edge.\n\nThe first defect involves mishandling an SSH rekey during authentication, allowing the process to advance to the channel phase without an authenticated identity. This bypasses initial security checks.\n\nThe second flaw occurs when the login helper interprets a hyphen-prefixed username as an option, taking its policy mask from the attacker's pseudo-terminal. Neither of these steps requires a password or a key.\n\nFor risk assessment, three properties are crucial: the attack is unauthenticated, making it remotely automatable; it targets a management listener, requiring no separate foothold; and it terminates in full policy, meaning no further escalation is needed.\n\nControl of an edge router has severe downstream effects beyond a host compromise. Attackers can redirect or intercept traffic through routing changes, create unauthorized paths with firewall and NAT edits, and maintain access using VPN and IPsec keys even after patches.\n\nObserved activity matching this profile includes the creation of a privileged operations account over SSH and the export of a device diagnostic file to an external address. This suggests intruders aimed to understand the environment rather than just hold it.\n\nThe September 2026 fixes cover RouterOS versions 7.25beta3, 7.24.2, 7.23.4, and 6.49.21. Devices that were internet-facing before this date require a post-patch review, even if they are now updated.\n\n#Cybersecurity #InfoSec #Vulnerability #RouterOS #MikroTik #CVE\n\nSource: DEV",
+  "tweet": "Critical unauthenticated flaws in MikroTik RouterOS grant full admin control over edge network devices. Patches for CVE-2026-67279 & CVE-2026-86060 were released in Sept 2026. Over 9,500 devices had exposed SSH listeners. #Cybersecurity #RouterOS",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "mikrotik.com",
+  "source": "DEV",
+  "url": "https://dev.to/bianliang/routeros-at-the-network-edge-operational-risk-from-cve-2026-67279-and-cve-2026-86060-2am6",
+  "image": "",
+  "orig_title": "RouterOS at the Network Edge: Operational Risk From CVE-2026-67279 and CVE-2026-86060",
+  "cluster_urls": [
+   "https://dev.to/bianliang/routeros-at-the-network-edge-operational-risk-from-cve-2026-67279-and-cve-2026-86060-2am6"
+  ],
+  "cluster_titles": [
+   "RouterOS at the Network Edge: Operational Risk From CVE-2026-67279 and CVE-2026-86060"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260927-1506-0-operational-risk-from-cve-2026-67279-and-cve.png",
+   "20260927-1506-0-operational-risk-from-cve-2026-67279-and-cve-d1.png",
+   "20260927-1506-0-operational-risk-from-cve-2026-67279-and-cve-d2.png",
+   "20260927-1506-0-operational-risk-from-cve-2026-67279-and-cve-d3.png"
+  ]
+ },
+ {
+  "topic": "openai internal optics concerns",
+  "headline_marked": "[[OpenAI execs knew mass book piracy was illegal]] for training AI, new filings reveal",
+  "headline": "OpenAI execs knew mass book piracy was illegal for training AI, new filings reveal",
+  "summary": "New court filings in the Authors Guild lawsuit allege OpenAI used pirated books, including from a 'sketchy Russian website,' and knew their actions would impact authors' careers.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "New court filings reveal OpenAI's alleged 'lawless determination' to win the AI arms race. The documents claim the company used pirated books, some from a 'sketchy Russian website,' and was aware its products could lead to widespread unemployment among authors.",
+   "The lawsuit's plaintiffs include prominent authors such as George R.R. Martin, John Grisham, David Baldacci, and others. They are represented by The Authors Guild, which has brought these new revelations to light.",
+   "Authors Guild CEO Mary Rasenberger stated that the filings show 'shocking disdain for writers' and intentional theft of books. She highlighted that OpenAI pursued this scheme with full knowledge it would 'destroy the careers of authors'.",
+   "The filings further allege that OpenAI continued its mass piracy despite clear evidence it would 'degrade American culture by substituting human works with AI slop' and put thousands of writers out of work.",
+   "These revelations are sourced from the Class Plaintiffs’ Memorandum of Law in Support of Motion for Partial Summary Judgment and the Class Plaintiffs’ Corrected Rule 56.1 Statement of Undisputed Material Facts, filed as part of the ongoing legal proceedings."
+  ],
+  "caption": "OpenAI executives allegedly knew they were training AI models on illegally pirated books, including from a 'sketchy Russian website'.\n\nNew court filings reveal OpenAI's alleged 'lawless determination' to win the AI arms race. The documents claim the company used pirated books, some from a 'sketchy Russian website,' and was aware its products could lead to widespread unemployment among authors.\n\nThe lawsuit's plaintiffs include prominent authors such as George R.R. Martin, John Grisham, David Baldacci, and others. They are represented by The Authors Guild, which has brought these new revelations to light.\n\nAuthors Guild CEO Mary Rasenberger stated that the filings show 'shocking disdain for writers' and intentional theft of books. She highlighted that OpenAI pursued this scheme with full knowledge it would 'destroy the careers of authors'.\n\nThe filings further allege that OpenAI continued its mass piracy despite clear evidence it would 'degrade American culture by substituting human works with AI slop' and put thousands of writers out of work.\n\nThese revelations are sourced from the Class Plaintiffs’ Memorandum of Law in Support of Motion for Partial Summary Judgment and the Class Plaintiffs’ Corrected Rule 56.1 Statement of Undisputed Material Facts, filed as part of the ongoing legal proceedings.\n\n#OpenAI #AI #Copyright #AuthorsGuild #TechNews #IntellectualProperty\n\nSource: Hacker News",
+  "tweet": "New court filings allege OpenAI execs knew they were training AI on pirated books, including from a 'sketchy Russian website,' and that their products would impact authors' livelihoods. #OpenAI #AI #Copyright",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "Hacker News",
+  "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+  "image": "",
+  "orig_title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+  "cluster_urls": [
+   "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/"
+  ],
+  "cluster_titles": [
+   "OpenAI Feared \"Optics\" of what might appear on Hacker News"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20260927-1506-1-openai-execs-knew-mass-book-piracy-was-illeg.png",
+   "20260927-1506-1-openai-execs-knew-mass-book-piracy-was-illeg-d1.png",
+   "20260927-1506-1-openai-execs-knew-mass-book-piracy-was-illeg-d2.png"
+  ]
+ }
+]

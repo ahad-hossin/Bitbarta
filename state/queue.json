@@ -1,1 +1,58 @@
-[]
+[
+ {
+  "topic": "ai_engineering_challenges_and_tools",
+  "headline_marked": "[[AVM shipped]] and forced developer to drop most of their own modules",
+  "headline": "AVM shipped and forced developer to drop most of their own modules",
+  "summary": "A new standard for Azure Verified Modules (AVM) has emerged, forcing developers to re-evaluate their existing work and decide what to keep, adapt, or drop.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "When Azure Verified Modules (AVM) matured, developers maintaining their own Bicep modules faced a critical decision: what to keep, adapt, or discard. This article outlines a method for making these difficult choices when an authoritative baseline emerges.",
+   "The core problem is accurately judging existing work against a new standard. Misjudging can lead to maintaining inferior copies of existing solutions or discarding valuable differentiators. The method presented offers a structured approach to avoid these pitfalls.",
+   "The process begins with inventorying all existing work and capturing only observable facts: what it is, what it does, and who authored it. It's crucial to inspect the actual artifact, not just its label, and to establish clear provenance, confirming ownership of the work.",
+   "Separating assets built for demonstration or learning from those intended for reuse is also key. The method emphasizes verifying the current state of the baseline directly from primary sources, as baselines evolve rapidly and memory or secondary documentation can be unreliable.",
+   "A fail-closed rule is applied: anything unverified is treated as not established. This prevents building verdicts on potentially incorrect or outdated baseline information. The ultimate question is whether the baseline component performs the task adequately.",
+   "The author's personal experience with Azure migration serves as a worked example, demonstrating how to apply these five steps to any situation where personal work is evaluated against a new standard. This domain-agnostic method ensures deliberate decision-making."
+  ],
+  "caption": "Azure Verified Modules (AVM) have arrived. See which of your own modules you might need to drop.\n\nWhen Azure Verified Modules (AVM) matured, developers maintaining their own Bicep modules faced a critical decision: what to keep, adapt, or discard. This article outlines a method for making these difficult choices when an authoritative baseline emerges.\n\nThe core problem is accurately judging existing work against a new standard. Misjudging can lead to maintaining inferior copies of existing solutions or discarding valuable differentiators. The method presented offers a structured approach to avoid these pitfalls.\n\nThe process begins with inventorying all existing work and capturing only observable facts: what it is, what it does, and who authored it. It's crucial to inspect the actual artifact, not just its label, and to establish clear provenance, confirming ownership of the work.\n\nSeparating assets built for demonstration or learning from those intended for reuse is also key. The method emphasizes verifying the current state of the baseline directly from primary sources, as baselines evolve rapidly and memory or secondary documentation can be unreliable.\n\nA fail-closed rule is applied: anything unverified is treated as not established. This prevents building verdicts on potentially incorrect or outdated baseline information. The ultimate question is whether the baseline component performs the task adequately.\n\nThe author's personal experience with Azure migration serves as a worked example, demonstrating how to apply these five steps to any situation where personal work is evaluated against a new standard. This domain-agnostic method ensures deliberate decision-making.\n\n#Azure #DevOps #Cloud #IaC #Bicep\n\nSource: DEV",
+  "tweet": "AVM shipped. Developers must now decide what to keep, adapt, or drop from their own modules. A structured method helps evaluate existing work against the new Azure standard. #Azure #DevOps #Cloud",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "mbiszczanik.dev",
+  "source": "DEV",
+  "url": "https://dev.to/mbiszczanik/when-azure-verified-modules-appeared-i-had-to-decide-what-of-my-own-work-to-throw-away-40f5",
+  "image": "",
+  "orig_title": "When Azure Verified Modules appeared, I had to decide what of my own work to throw away",
+  "cluster_urls": [
+   "https://dev.to/mbiszczanik/when-azure-verified-modules-appeared-i-had-to-decide-what-of-my-own-work-to-throw-away-40f5",
+   "https://dev.to/getpack/ai-agents-openai-bots-probed-public-and-university-sites-5c8",
+   "https://dev.to/coffee00125/the-hard-part-of-ai-engineering-isnt-the-model-4okp",
+   "https://dev.to/remdore/a-new-server-gets-its-first-unsolicited-packet-in-377-seconds-4cco",
+   "https://dev.to/_firelinks/a-review-contract-for-an-agent-authored-pull-request-2en6",
+   "https://dev.to/aicoding-guide/sign-in-to-a-remote-mcp-server-in-claude-code-mcp-and-claude-mcp-login-43i7",
+   "https://dev.to/akashpal/the-a2ui-contract-a-deep-dive-into-agent-to-ui-architecture-4i00",
+   "https://dev.to/4min/160-browser-only-tools-later-the-engineering-decisions-that-actually-mattered-34k6",
+   "https://dev.to/nlocoding/5-low-competition-ai-coding-tools-that-are-cheaper-faster-2026-3jn1"
+  ],
+  "cluster_titles": [
+   "When Azure Verified Modules appeared, I had to decide what of my own work to throw away",
+   "AI agents: OpenAI bots probed public and university sites",
+   "The Hard Part of AI Engineering Isn’t the Model",
+   "A new server gets its first unsolicited packet in 3.77 seconds",
+   "A review contract for an agent-authored pull request",
+   "Sign in to a remote MCP server in Claude Code: /mcp and claude mcp login",
+   "The A2UI Contract: A Deep Dive into Agent-to-UI Architecture",
+   "160 browser-only tools later: the engineering decisions that actually mattered",
+   "5 Low Competition AI Coding Tools That Are Cheaper & Faster (2026)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260928-0206-0-avm-shipped-and-forced-developer-to-drop-mos.png",
+   "20260928-0206-0-avm-shipped-and-forced-developer-to-drop-mos-d1.png",
+   "20260928-0206-0-avm-shipped-and-forced-developer-to-drop-mos-d2.png",
+   "20260928-0206-0-avm-shipped-and-forced-developer-to-drop-mos-d3.png"
+  ]
+ }
+]

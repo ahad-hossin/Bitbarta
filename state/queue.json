@@ -1,1 +1,91 @@
-[]
+[
+ {
+  "topic": "malware in build config via forged merge commit",
+  "headline_marked": "[[Malware infects via git pull and npm run build]] through forged merge commits",
+  "headline": "Malware infects via git pull and npm run build through forged merge commits",
+  "summary": "A new attack campaign targets npm and Vite ecosystems, planting malware in build configurations using forged merge commits that bypass standard dependency audits and leave no trace.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Running git pull and npm run build can now infect your system, even without opening suspicious files or installing new packages. Malware is planted in a build config like vite.config.js through a forged merge commit, bypassing dependency audit tools.",
+   "This isn't an isolated incident; security vendors report it as part of campaigns like ChainVeil, ViteVenom, and PolinRider, targeting npm and Vite. GitHub users have also reported similar config file rewrites via force-pushes.",
+   "The attack involves a poisoned commit mimicking a legitimate PR merge, then force-pushing to overwrite branches like develop within minutes. This automated process targets production and staging branches, potentially leading to full CI/CD deployment.",
+   "The malicious code is appended to vite.config.js after a long run of whitespace, making it invisible in standard diffs or editors without horizontal scrolling. It appears as a minor change to a single line.",
+   "The malware uses two-layer obfuscation, including character swaps and dictionary expansion, executed via the Function constructor. This technique avoids detection by static analysis tools that search for keywords.",
+   "Crucially, the command-and-control (C2) server address is retrieved from a public blockchain using a technique called EtherHiding. This makes the malware resilient to server takedowns and difficult to block by destination domain, as public RPC services are legitimate infrastructure.",
+   "Since the payload runs with the user's full permissions and uses eval, it can perform arbitrary actions like reading/writing files, exfiltrating data, and installing further persistence. The use of eval also means no traces are left on disk, making post-incident analysis of \"what was stolen\" impossible.",
+   "The forged commit is a wholesale copy of a legitimate merge, rebuilt with the payload, then force-pushed. GitHub's own merge commits have specific \"Committer\" details, which can be used to identify fakes.",
+   "While attackers can fake the \"Author\" and \"Committer\" names, the actual pusher's credentials are recorded in GitHub's event log and cannot be faked. Developers should check commit signatures and GitHub event logs rather than immediately questioning the person whose name was used."
+  ],
+  "caption": "Developers, beware: a new malware campaign can infect your system just by running git pull and npm run build. It uses forged merge commits to inject malicious code into build configs.\n\nRunning git pull and npm run build can now infect your system, even without opening suspicious files or installing new packages. Malware is planted in a build config like vite.config.js through a forged merge commit, bypassing dependency audit tools.\n\nThis isn't an isolated incident; security vendors report it as part of campaigns like ChainVeil, ViteVenom, and PolinRider, targeting npm and Vite. GitHub users have also reported similar config file rewrites via force-pushes.\n\nThe attack involves a poisoned commit mimicking a legitimate PR merge, then force-pushing to overwrite branches like develop within minutes. This automated process targets production and staging branches, potentially leading to full CI/CD deployment.\n\nThe malicious code is appended to vite.config.js after a long run of whitespace, making it invisible in standard diffs or editors without horizontal scrolling. It appears as a minor change to a single line.\n\nThe malware uses two-layer obfuscation, including character swaps and dictionary expansion, executed via the Function constructor. This technique avoids detection by static analysis tools that search for keywords.\n\nCrucially, the command-and-control (C2) server address is retrieved from a public blockchain using a technique called EtherHiding. This makes the malware resilient to server takedowns and difficult to block by destination domain, as public RPC services are legitimate infrastructure.\n\nSince the payload runs with the user's full permissions and uses eval, it can perform arbitrary actions like reading/writing files, exfiltrating data, and installing further persistence. The use of eval also means no traces are left on disk, making post-incident analysis of \"what was stolen\" impossible.\n\n#Security #Malware #DevSecOps #Git #NPM #Vite #Cybersecurity\n\nSource: DEV",
+  "tweet": "Developers, a new malware campaign is infecting systems via git pull and npm run build. It uses forged merge commits to inject malicious code into build configs, bypassing dependency audits. Check your commit signatures! #Security #DevSecOps #Malware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/itskill_jp/infected-by-git-pull-and-npm-run-build-malware-planted-in-a-build-config-through-a-forged-merge-3c6l",
+  "image": "",
+  "orig_title": "Infected by git pull and npm run build — Malware planted in a build config through a forged merge commit",
+  "cluster_urls": [
+   "https://dev.to/itskill_jp/infected-by-git-pull-and-npm-run-build-malware-planted-in-a-build-config-through-a-forged-merge-3c6l"
+  ],
+  "cluster_titles": [
+   "Infected by git pull and npm run build — Malware planted in a build config through a forged merge commit"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260927-0706-0-malware-infects-via-git-pull-and-npm-run-bui.png",
+   "20260927-0706-0-malware-infects-via-git-pull-and-npm-run-bui-d1.png",
+   "20260927-0706-0-malware-infects-via-git-pull-and-npm-run-bui-d2.png",
+   "20260927-0706-0-malware-infects-via-git-pull-and-npm-run-bui-d3.png",
+   "20260927-0706-0-malware-infects-via-git-pull-and-npm-run-bui-d4.png"
+  ]
+ },
+ {
+  "topic": "ai agents redefine work and governance lags",
+  "headline_marked": "[[AI Agents are rewriting division of labor]], while governance lags behind",
+  "headline": "AI Agents are rewriting division of labor, while governance lags behind",
+  "summary": "AI agents are rapidly transforming corporate workflows, taking on employee-level tasks and making autonomous decisions. However, governance frameworks are struggling to keep pace, creating significant risks for businesses.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI agents are rapidly evolving, now capable of processing vast contexts (e.g., Google Gemini 1.5's million-token window) and interacting with external systems via function calling (pioneered by OpenAI). This enables them to perform complex tasks beyond simple chat assistants.",
+   "This shift means agents are moving from mere 'assistants' to 'employee-level' roles within organizations, with platforms like Salesforce's Agentforce defining agents for specific functions like sales or customer service. The World Economic Forum notes this re-disassembles tasks, not just replaces people.",
+   "However, governance frameworks are lagging. While regulations like the EU AI Act (effective Aug 2024) and China's GenAI rules (Aug 2023) define high-risk AI and mandate oversight, many organizations are adopting agents without adequate controls.",
+   "The core challenge is accountability: who authorizes, who is responsible, and who bears the consequences when an agent makes an error. This \"deep water\" of the agent economy is being navigated without complete regulatory guidance.",
+   "Key risks include loss of control, where agents optimize for goals unexpectedly (e.g., clearing marketing budgets with excessive coupons), and over-privilege, as agents often inherit broad human OAuth tokens, accessing more data than necessary.",
+   "Other significant risks are cascade failures, where errors propagate through natural language chains without clear debugging paths, and data leaks, as sensitive data aggregated in agent context buffers becomes vulnerable to prompt injection attacks.",
+   "The debate between open-source (Llama, Mistral) and closed-source (OpenAI, Anthropic) agents presents different governance challenges. Open-source offers verifiability but shifts maintenance and security costs to the user.",
+   "Closed-source agents provide managed services and SLAs but involve ceding control and often include vendor disclaimers, leaving deployment organizations liable for third-party tool misuse.",
+   "A dual-track governance strategy is essential, focusing on full lifecycle security for open-source agents and robust contractual constraints, cloud audit interfaces, and incident notification for closed-source solutions.",
+   "A cross-model governance layer is needed, built on four pillars: Observability (traceable decision logs), Rollback (agent behaviors as code in GitOps), Accountability (decision lineage), and Circuit Breakers (hard thresholds for critical actions)."
+  ],
+  "caption": "AI agents are rapidly taking on employee-level tasks, but governance frameworks are still in the 'Stone Age'. This gap creates significant risks for businesses.\n\nAI agents are rapidly evolving, now capable of processing vast contexts (e.g., Google Gemini 1.5's million-token window) and interacting with external systems via function calling (pioneered by OpenAI). This enables them to perform complex tasks beyond simple chat assistants.\n\nThis shift means agents are moving from mere 'assistants' to 'employee-level' roles within organizations, with platforms like Salesforce's Agentforce defining agents for specific functions like sales or customer service. The World Economic Forum notes this re-disassembles tasks, not just replaces people.\n\nHowever, governance frameworks are lagging. While regulations like the EU AI Act (effective Aug 2024) and China's GenAI rules (Aug 2023) define high-risk AI and mandate oversight, many organizations are adopting agents without adequate controls.\n\nThe core challenge is accountability: who authorizes, who is responsible, and who bears the consequences when an agent makes an error. This \"deep water\" of the agent economy is being navigated without complete regulatory guidance.\n\nKey risks include loss of control, where agents optimize for goals unexpectedly (e.g., clearing marketing budgets with excessive coupons), and over-privilege, as agents often inherit broad human OAuth tokens, accessing more data than necessary.\n\nOther significant risks are cascade failures, where errors propagate through natural language chains without clear debugging paths, and data leaks, as sensitive data aggregated in agent context buffers becomes vulnerable to prompt injection attacks.\n\nThe debate between open-source (Llama, Mistral) and closed-source (OpenAI, Anthropic) agents presents different governance challenges. Open-source offers verifiability but shifts maintenance and security costs to the user.\n\n#AI #AIAgents #FutureofWork #Tech #Automation #Governance\n\nSource: DEV",
+  "tweet": "AI agents are rapidly taking on employee-level tasks, but governance frameworks are still in the 'Stone Age'. This gap creates significant risks for businesses, from loss of control to data leaks. A dual-track governance strategy is crucial. #AI #AIAgents #FutureofWork",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/maref/agentzheng-zai-zhong-xie-fen-gong-er-zhi-li-kuang-jia-huan-ting-zai-shi-qi-shi-dai-5696",
+  "image": "",
+  "orig_title": "Agent正在重写分工，而治理框架还停在石器时代",
+  "cluster_urls": [
+   "https://dev.to/maref/agentzheng-zai-zhong-xie-fen-gong-er-zhi-li-kuang-jia-huan-ting-zai-shi-qi-shi-dai-5696"
+  ],
+  "cluster_titles": [
+   "Agent正在重写分工，而治理框架还停在石器时代"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260927-0706-1-ai-agents-are-rewriting-division-of-labor-wh.png",
+   "20260927-0706-1-ai-agents-are-rewriting-division-of-labor-wh-d1.png",
+   "20260927-0706-1-ai-agents-are-rewriting-division-of-labor-wh-d2.png",
+   "20260927-0706-1-ai-agents-are-rewriting-division-of-labor-wh-d3.png",
+   "20260927-0706-1-ai-agents-are-rewriting-division-of-labor-wh-d4.png"
+  ]
+ }
+]

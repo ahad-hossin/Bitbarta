@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai prompt injection defense breakthrough",
+  "headline_marked": "My prompt-injection fix caught 0 of 20 attacks. [[The part I almost didn't build caught all of them]].",
+  "headline": "My prompt-injection fix caught 0 of 20 attacks. The part I almost didn't build caught all of them.",
+  "summary": "A developer's initial prompt-injection defense for an AI-powered retirement advice checker failed to stop 20 attacks. Surprisingly, a separate, less-prioritized component designed to handle non-numeric facts successfully flagged every single one.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A developer created 'retirement-answer-check,' an AI tool designed to review AI-drafted answers to retirement questions before they reach customers. It uses plain code for numeric checks and two model \"judges\" for non-numeric facts, personal advice, and return promises.",
+   "During a risk review, a critical vulnerability was identified: prompt injection, where a manipulated draft could instruct the checker to pass problematic content. The developer set up a test with 12 planted problems and 4 correct answers, all carrying injection attempts.",
+   "The initial code-based fix failed, missing all 20 attacks. However, the model \"judges\" successfully ignored the injection instructions and flagged all 12 planted problems as defects. The judges, designed for content review, proved resilient to direct manipulation.",
+   "Despite the judges' success, 3 of 4 correct answers containing injections were passed to customers. The system lacked a mechanism to identify that a draft itself had been manipulated, even if its content was technically correct. This highlighted a critical blind spot in the system's security.",
+   "The judges independently flagged all 16 attacks (planted problems and injected correct answers) as 'injection_attempt' in every run, showing no regressions with prior test sets. The tool is currently approved for shadow mode only, awaiting independent validation and real traffic.",
+   "All test cases, judge runs, the fix, and the failed regex are publicly available on GitHub. The developer invites others to attempt to bypass the judges' detection mechanisms."
+  ],
+  "caption": "A developer's prompt-injection fix for an AI tool failed 100% of the time, catching 0 out of 20 attacks. What actually worked was a component almost left out.\n\nA developer created 'retirement-answer-check,' an AI tool designed to review AI-drafted answers to retirement questions before they reach customers. It uses plain code for numeric checks and two model \"judges\" for non-numeric facts, personal advice, and return promises.\n\nDuring a risk review, a critical vulnerability was identified: prompt injection, where a manipulated draft could instruct the checker to pass problematic content. The developer set up a test with 12 planted problems and 4 correct answers, all carrying injection attempts.\n\nThe initial code-based fix failed, missing all 20 attacks. However, the model \"judges\" successfully ignored the injection instructions and flagged all 12 planted problems as defects. The judges, designed for content review, proved resilient to direct manipulation.\n\nDespite the judges' success, 3 of 4 correct answers containing injections were passed to customers. The system lacked a mechanism to identify that a draft itself had been manipulated, even if its content was technically correct. This highlighted a critical blind spot in the system's security.\n\nThe judges independently flagged all 16 attacks (planted problems and injected correct answers) as 'injection_attempt' in every run, showing no regressions with prior test sets. The tool is currently approved for shadow mode only, awaiting independent validation and real traffic.\n\nAll test cases, judge runs, the fix, and the failed regex are publicly available on GitHub. The developer invites others to attempt to bypass the judges' detection mechanisms.\n\n#AI #PromptInjection #Cybersecurity #Developer #TechNews #LLMSecurity\n\nSource: DEV",
+  "tweet": "A developer's prompt-injection fix for an AI tool caught 0 of 20 attacks. The unexpected hero? A component almost left out, which caught all of them. This highlights critical AI security blind spots. #AI #Cybersecurity #PromptInjection",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vishalhabib99/my-prompt-injection-fix-caught-0-of-20-attacks-the-part-i-almost-didnt-build-caught-all-of-them-oi0",
+  "image": "",
+  "orig_title": "My prompt-injection fix caught 0 of 20 attacks. The part I almost didn't build caught all of them.",
+  "cluster_urls": [
+   "https://dev.to/vishalhabib99/my-prompt-injection-fix-caught-0-of-20-attacks-the-part-i-almost-didnt-build-caught-all-of-them-oi0"
+  ],
+  "cluster_titles": [
+   "My prompt-injection fix caught 0 of 20 attacks. The part I almost didn't build caught all of them."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260927-0906-0-my-prompt-injection-fix-caught-0-of-20-attac.png",
+   "20260927-0906-0-my-prompt-injection-fix-caught-0-of-20-attac-d1.png",
+   "20260927-0906-0-my-prompt-injection-fix-caught-0-of-20-attac-d2.png",
+   "20260927-0906-0-my-prompt-injection-fix-caught-0-of-20-attac-d3.png"
+  ]
+ },
+ {
+  "topic": "peoplesoft waf bypass web shell vulnerability",
+  "headline_marked": "[[Oracle PeopleSoft WAF bypassed]] via URL Normalization Mismatch to deploy web shells (CVE-2026-35273)",
+  "headline": "Oracle PeopleSoft WAF bypassed via URL Normalization Mismatch to deploy web shells (CVE-2026-35273)",
+  "summary": "Threat group UNC6240 exploited an unpatched Oracle PeopleSoft vulnerability (CVSS 9.8) by bypassing WAF rules, deploying JSP web shells and remote access tools like SIDEEYE.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The UNC6240 (ShinyHunters) threat group exploited an unpatched Oracle PeopleSoft vulnerability, CVE-2026-35273, with a CVSS score of 9.8. They bypassed Web Application Firewall (WAF) rules by percent-encoding part of the URL, specifically the 'P' in '/PSEMHUB/' as '%50'.",
+   "This WAF bypass allowed the deployment of JSP web shells across dozens of systems. Reports also confirm fileless command execution and the post-intrusion deployment of remote access tools such as SIDEEYE, Neo-reGeorg, and MeshAgent.",
+   "Organizations utilizing PeopleSoft for critical operations, including HR and payroll, are urged to verify their target environments. The incident highlights that WAF defenses alone are insufficient against sophisticated URL normalization mismatch exploits.",
+   "It is recommended that organizations not rely excessively on WAFs, apply official patches promptly, and block direct internet access to PSEMHUB functions. In cases of suspected compromise, thorough forensic analysis across all servers in load-balanced environments is crucial."
+  ],
+  "caption": "A critical Oracle PeopleSoft vulnerability (CVE-2026-35273) with a CVSS 9.8 score was exploited by UNC6240. They bypassed WAFs by percent-encoding URLs, deploying web shells and remote access tools.\n\nThe UNC6240 (ShinyHunters) threat group exploited an unpatched Oracle PeopleSoft vulnerability, CVE-2026-35273, with a CVSS score of 9.8. They bypassed Web Application Firewall (WAF) rules by percent-encoding part of the URL, specifically the 'P' in '/PSEMHUB/' as '%50'.\n\nThis WAF bypass allowed the deployment of JSP web shells across dozens of systems. Reports also confirm fileless command execution and the post-intrusion deployment of remote access tools such as SIDEEYE, Neo-reGeorg, and MeshAgent.\n\nOrganizations utilizing PeopleSoft for critical operations, including HR and payroll, are urged to verify their target environments. The incident highlights that WAF defenses alone are insufficient against sophisticated URL normalization mismatch exploits.\n\nIt is recommended that organizations not rely excessively on WAFs, apply official patches promptly, and block direct internet access to PSEMHUB functions. In cases of suspected compromise, thorough forensic analysis across all servers in load-balanced environments is crucial.\n\n#Cybersecurity #PeopleSoft #WAFBypass #CVE #SecurityBreach #TechNews\n\nSource: DEV",
+  "tweet": "Critical Oracle PeopleSoft vulnerability (CVE-2026-35273, CVSS 9.8) exploited by UNC6240. WAFs bypassed via URL normalization mismatch, leading to web shell deployment & remote access tools. Organizations must patch & verify systems. #Cybersecurity #PeopleSoft #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "oracle.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/oracle-peoplesoft-cve-2026-35273-waf-bypassed-via-url-normalization-mismatch-to-deploy-web-shells-1me3",
+  "image": "",
+  "orig_title": "Oracle PeopleSoft CVE-2026-35273: WAF Bypassed via URL Normalization Mismatch to Deploy Web Shells and SIDEEYE",
+  "cluster_urls": [
+   "https://dev.to/anoymask/oracle-peoplesoft-cve-2026-35273-waf-bypassed-via-url-normalization-mismatch-to-deploy-web-shells-1me3"
+  ],
+  "cluster_titles": [
+   "Oracle PeopleSoft CVE-2026-35273: WAF Bypassed via URL Normalization Mismatch to Deploy Web Shells and SIDEEYE"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260927-0906-1-oracle-peoplesoft-waf-bypassed-via-url-norma.png",
+   "20260927-0906-1-oracle-peoplesoft-waf-bypassed-via-url-norma-d1.png",
+   "20260927-0906-1-oracle-peoplesoft-waf-bypassed-via-url-norma-d2.png"
+  ]
+ }
+]

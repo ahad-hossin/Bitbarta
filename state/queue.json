@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai agents security limitations",
+  "headline_marked": "[[AI agents can't tell safe from dangerous]] actions, treating 'Delete database' like 'Download report'",
+  "headline": "AI agents can't tell safe from dangerous actions, treating 'Delete database' like 'Download report'",
+  "summary": "AI agents lack human instinct for consequences, making every UI action seem equally weightless. This poses a significant risk when agents are given raw access to critical tools without proper guardrails.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "To an AI agent, actions like \"Delete database\" and \"Download report\" appear equally clickable in a user interface. There is nothing inherent in the UI that signals the catastrophic difference between these two operations.",
+   "Unlike humans, who possess an instinct for consequences and hesitate before risky actions, AI agents operate purely on patterns. They do not intrinsically understand the gravity or potential harm of a particular click.",
+   "This fundamental lack of consequence awareness means that without human oversight, a single unsupervised action at 3 AM could lead to irreversible data loss, logged simply as another completed task.",
+   "Therefore, robust permissions and approval systems are not optional but structural necessities for agent systems. These systems must define which actions are safe to run autonomously, which require human sign-off, and which an agent should never access.",
+   "The solution isn't to expect agents to develop human-like judgment. Instead, the focus must be on building better guardrails and safety protocols into the systems surrounding these AI agents to prevent unintended consequences."
+  ],
+  "caption": "To an AI agent, \"Delete database\" and \"Download report\" look identical. One wrong click at 3 AM could be catastrophic.\n\nTo an AI agent, actions like \"Delete database\" and \"Download report\" appear equally clickable in a user interface. There is nothing inherent in the UI that signals the catastrophic difference between these two operations.\n\nUnlike humans, who possess an instinct for consequences and hesitate before risky actions, AI agents operate purely on patterns. They do not intrinsically understand the gravity or potential harm of a particular click.\n\nThis fundamental lack of consequence awareness means that without human oversight, a single unsupervised action at 3 AM could lead to irreversible data loss, logged simply as another completed task.\n\nTherefore, robust permissions and approval systems are not optional but structural necessities for agent systems. These systems must define which actions are safe to run autonomously, which require human sign-off, and which an agent should never access.\n\nThe solution isn't to expect agents to develop human-like judgment. Instead, the focus must be on building better guardrails and safety protocols into the systems surrounding these AI agents to prevent unintended consequences.\n\n#AI #ArtificialIntelligence #AgentSafety #SoftwareSecurity #Automation #TechNews\n\nSource: DEV",
+  "tweet": "AI agents can't distinguish between safe and dangerous actions in a UI. \"Delete database\" and \"Download report\" are just clicks. Without human-like instinct, robust guardrails are essential to prevent catastrophic errors. #AI #AgentSafety #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/usehive/agents-cant-tell-safe-from-dangerous-979",
+  "image": "",
+  "orig_title": "Agents can't tell safe from dangerous",
+  "cluster_urls": [
+   "https://dev.to/usehive/agents-cant-tell-safe-from-dangerous-979"
+  ],
+  "cluster_titles": [
+   "Agents can't tell safe from dangerous"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260927-1006-0-ai-agents-can-t-tell-safe-from-dangerous-act.png",
+   "20260927-1006-0-ai-agents-can-t-tell-safe-from-dangerous-act-d1.png",
+   "20260927-1006-0-ai-agents-can-t-tell-safe-from-dangerous-act-d2.png"
+  ]
+ },
+ {
+  "topic": "mattermost servers exposed",
+  "headline_marked": "Mattermost: [[736,893 Fingerprint Matches]] on Self-Hosted Collaboration",
+  "headline": "Mattermost: 736,893 Fingerprint Matches on Self-Hosted Collaboration",
+  "summary": "A ZoomEye scan reveals hundreds of thousands of Mattermost instances, a platform chosen for internal control, are externally identifiable.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Mattermost is a self-hosted collaboration platform offering channels, DMs, and file sharing, chosen by organizations to keep conversations on their controlled infrastructure. This choice means the operator inherits all consequences of running it.",
+   "A recent ZoomEye scan, which indexes internet-facing services, found 736,893 fingerprint matches for Mattermost instances. This count was collected from the ZoomEye index on 2026-09-23 (UTC).",
+   "A fingerprint match indicates that a service identifying itself as Mattermost was observed externally. It does not confirm a deployment or weakness, nor whether the service is reachable beyond its login page or if the operator is aware of its visibility.",
+   "The significant number of externally identifiable self-hosted collaboration servers highlights the argument for organizations to review the placement and external exposure of all their internal collaboration services, not just Mattermost."
+  ],
+  "caption": "Over 736,000 Mattermost instances, designed for internal use, are externally identifiable via ZoomEye scans. Is your self-hosted collaboration platform truly private?\n\nMattermost is a self-hosted collaboration platform offering channels, DMs, and file sharing, chosen by organizations to keep conversations on their controlled infrastructure. This choice means the operator inherits all consequences of running it.\n\nA recent ZoomEye scan, which indexes internet-facing services, found 736,893 fingerprint matches for Mattermost instances. This count was collected from the ZoomEye index on 2026-09-23 (UTC).\n\nA fingerprint match indicates that a service identifying itself as Mattermost was observed externally. It does not confirm a deployment or weakness, nor whether the service is reachable beyond its login page or if the operator is aware of its visibility.\n\nThe significant number of externally identifiable self-hosted collaboration servers highlights the argument for organizations to review the placement and external exposure of all their internal collaboration services, not just Mattermost.\n\n#Mattermost #SelfHosted #Security #Cybersecurity #ZoomEye #TechNews\n\nSource: DEV",
+  "tweet": "Over 736,000 Mattermost instances, intended for internal use, are externally identifiable via ZoomEye scans. This raises questions about the true privacy of self-hosted collaboration platforms. #Mattermost #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "mattermost.com",
+  "source": "DEV",
+  "url": "https://dev.to/stark_zhuang_df5076f35c68/mattermost-736893-fingerprint-matches-on-self-hosted-collaboration-2574",
+  "image": "",
+  "orig_title": "Mattermost: 736,893 Fingerprint Matches on Self-Hosted Collaboration",
+  "cluster_urls": [
+   "https://dev.to/stark_zhuang_df5076f35c68/mattermost-736893-fingerprint-matches-on-self-hosted-collaboration-2574"
+  ],
+  "cluster_titles": [
+   "Mattermost: 736,893 Fingerprint Matches on Self-Hosted Collaboration"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260927-1006-1-mattermost-736-893-fingerprint-matches-on-se.png",
+   "20260927-1006-1-mattermost-736-893-fingerprint-matches-on-se-d1.png",
+   "20260927-1006-1-mattermost-736-893-fingerprint-matches-on-se-d2.png"
+  ]
+ }
+]

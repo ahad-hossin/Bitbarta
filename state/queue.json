@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai_prompt_injection_new_sql_injection",
+  "headline_marked": "[[Prompt Injection is the new SQL Injection]] for AI apps: building resilient systems",
+  "headline": "Prompt Injection is the new SQL Injection for AI apps: building resilient systems",
+  "summary": "Prompt injection allows malicious manipulation of LLM inputs, mirroring classic SQL injection vulnerabilities. Developers must adapt architectural patterns to secure AI applications against this new threat.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The rapid adoption of Large Language Models (LLMs) has introduced prompt injection, a new class of vulnerability akin to SQL injection. It involves malicious manipulation of LLM inputs to override system instructions, posing a significant threat to AI-powered applications.",
+   "Unlike traditional database queries with strict code/data boundaries, LLMs treat all input as a single stream of unstructured text. This means there's no inherent runtime boundary preventing user input from altering the semantic weight of system instructions.",
+   "If a user inputs text resembling an instruction (e.g., \"Ignore all previous instructions\"), the model may comply. This vulnerability stems from how tokenizers and context windows operate, making it difficult for the model to distinguish between user data and system directives.",
+   "This parallels the SQL injection era, where naive string concatenation allowed malicious input to collapse the boundary between code and data. The industry learned to use parameterized queries to enforce separation and declare intent.",
+   "Currently, most LLM applications rely on naive string concatenation to build prompts, placing them in the \"pre-parameterization\" phase of this historical cycle. The LLM cannot enforce that user input is treated as inert data rather than executable instructions.",
+   "However, developers can apply architectural lessons from the SQL injection era to limit the \"blast radius\" of successful prompt injections. Defenses must be architectural, as perfectly sanitizing text inputs to prevent LLM misinterpretation is challenging.",
+   "Key defensive patterns include enforcing least privilege, validating LLM outputs before action, and using invisible honeypot markers to detect indirect injections. Integrating security tooling into CI/CD pipelines and treating system prompts like code are also crucial."
+  ],
+  "caption": "Prompt Injection is the new SQL Injection for AI. Learn how to build resilient AI applications against this critical vulnerability.\n\nThe rapid adoption of Large Language Models (LLMs) has introduced prompt injection, a new class of vulnerability akin to SQL injection. It involves malicious manipulation of LLM inputs to override system instructions, posing a significant threat to AI-powered applications.\n\nUnlike traditional database queries with strict code/data boundaries, LLMs treat all input as a single stream of unstructured text. This means there's no inherent runtime boundary preventing user input from altering the semantic weight of system instructions.\n\nIf a user inputs text resembling an instruction (e.g., \"Ignore all previous instructions\"), the model may comply. This vulnerability stems from how tokenizers and context windows operate, making it difficult for the model to distinguish between user data and system directives.\n\nThis parallels the SQL injection era, where naive string concatenation allowed malicious input to collapse the boundary between code and data. The industry learned to use parameterized queries to enforce separation and declare intent.\n\nCurrently, most LLM applications rely on naive string concatenation to build prompts, placing them in the \"pre-parameterization\" phase of this historical cycle. The LLM cannot enforce that user input is treated as inert data rather than executable instructions.\n\nHowever, developers can apply architectural lessons from the SQL injection era to limit the \"blast radius\" of successful prompt injections. Defenses must be architectural, as perfectly sanitizing text inputs to prevent LLM misinterpretation is challenging.\n\nKey defensive patterns include enforcing least privilege, validating LLM outputs before action, and using invisible honeypot markers to detect indirect injections. Integrating security tooling into CI/CD pipelines and treating system prompts like code are also crucial.\n\n#PromptInjection #AIsecurity #LLMSecurity #Cybersecurity #Developers #TechSecurity\n\nSource: DEV",
+  "tweet": "Prompt Injection is the new SQL Injection for AI. LLMs treat all input as instructions, making them vulnerable to malicious manipulation. Learn how to build resilient AI apps with architectural defenses. #AIsecurity #PromptInjection #DevSecOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/prompt-injection-is-the-new-sql-injection-building-resilient-ai-powered-applications-2di7",
+  "image": "",
+  "orig_title": "Prompt Injection Is the New SQL Injection: Building Resilient AI‑Powered Applications",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/prompt-injection-is-the-new-sql-injection-building-resilient-ai-powered-applications-2di7"
+  ],
+  "cluster_titles": [
+   "Prompt Injection Is the New SQL Injection: Building Resilient AI‑Powered Applications"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260928-0636-0-prompt-injection-is-the-new-sql-injection-fo.png",
+   "20260928-0636-0-prompt-injection-is-the-new-sql-injection-fo-d1.png",
+   "20260928-0636-0-prompt-injection-is-the-new-sql-injection-fo-d2.png",
+   "20260928-0636-0-prompt-injection-is-the-new-sql-injection-fo-d3.png"
+  ]
+ },
+ {
+  "topic": "mistral_ai_3b_funding_samsung",
+  "headline_marked": "Mistral AI [[raises €3B, valued at €21B]], led by Samsung, for \"sovereign AI\"",
+  "headline": "Mistral AI raises €3B, valued at €21B, led by Samsung, for \"sovereign AI\"",
+  "summary": "The Series D round, led by Samsung Electronics, aims to build \"sovereign, open-weight AI\" for Europe. This significant funding clarifies Mistral's strategic direction and global partnerships.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Mistral AI announced a €3 billion Series D funding round on September 8, 2026, valuing the company at over €21 billion post-money. The round was led by Samsung Electronics and aims to build \"sovereign, open-weight AI\" for Europe.",
+   "The funding includes European investors like ASML, Bpifrance, and Luxembourg, alongside global players such as BlackRock. This diverse investor base indicates that \"sovereign\" refers to where models run and who controls the weights, rather than exclusive European ownership.",
+   "Mistral, founded three years ago, has seen its valuation roughly double annually, with total raised funds now exceeding $6 billion. The company operates in 20 countries, serving over 125 enterprise customers including Airbus and HSBC.",
+   "Mistral's CEO stated that revenue is projected to surpass $1 billion ARR this year. The company positions itself as \"the only AI company in the world building the full stack,\" focusing on training its own models and running inference on European compute.",
+   "\"Sovereign AI\" in Mistral's context means data remains under European law, on hardware within the jurisdiction. The new capital will be invested into this full stack, with plans to double compute ownership in the next five years.",
+   "However, partnerships with Microsoft and HUMAIN in Saudi Arabia introduce complexities. Microsoft will use Mistral's European data centers, and Mistral will explore using HUMAIN's infrastructure in Saudi Arabia, demonstrating \"sovereign\" as a product adaptable to various jurisdictions.",
+   "For developers, Mistral Medium 3.5 is a 128-billion-parameter model with open weights, a 256k context window, and 149 output tokens per second. It scores 15 on Artificial Analysis's Intelligence Index, above the median for comparable models.",
+   "Despite its performance, Artificial Analysis notes Medium 3.5 is \"particularly expensive\" compared to other open-weight models of similar size, with running the full Intelligence Index costing $1,159.93. Developer feedback on performance has been mixed, with some noting better results from smaller models.",
+   "Supporters argue that Mistral's value lies in compliance for customers like banks and governments with strict data residency requirements. For these clients, a European model offers a legal and operational solution, rather than just a leaderboard entry.",
+   "Developers with hard data residency requirements may find Mistral a serious option due to its open weights and self-hosting capability. However, those without such constraints are advised to evaluate performance and cost against smaller, potentially more economical open models."
+  ],
+  "caption": "Mistral AI just secured €3 billion in Series D funding, pushing its valuation past €21 billion. Samsung Electronics led the round for \"sovereign, open-weight AI.\"\n\nMistral AI announced a €3 billion Series D funding round on September 8, 2026, valuing the company at over €21 billion post-money. The round was led by Samsung Electronics and aims to build \"sovereign, open-weight AI\" for Europe.\n\nThe funding includes European investors like ASML, Bpifrance, and Luxembourg, alongside global players such as BlackRock. This diverse investor base indicates that \"sovereign\" refers to where models run and who controls the weights, rather than exclusive European ownership.\n\nMistral, founded three years ago, has seen its valuation roughly double annually, with total raised funds now exceeding $6 billion. The company operates in 20 countries, serving over 125 enterprise customers including Airbus and HSBC.\n\nMistral's CEO stated that revenue is projected to surpass $1 billion ARR this year. The company positions itself as \"the only AI company in the world building the full stack,\" focusing on training its own models and running inference on European compute.\n\n\"Sovereign AI\" in Mistral's context means data remains under European law, on hardware within the jurisdiction. The new capital will be invested into this full stack, with plans to double compute ownership in the next five years.\n\nHowever, partnerships with Microsoft and HUMAIN in Saudi Arabia introduce complexities. Microsoft will use Mistral's European data centers, and Mistral will explore using HUMAIN's infrastructure in Saudi Arabia, demonstrating \"sovereign\" as a product adaptable to various jurisdictions.\n\nFor developers, Mistral Medium 3.5 is a 128-billion-parameter model with open weights, a 256k context window, and 149 output tokens per second. It scores 15 on Artificial Analysis's Intelligence Index, above the median for comparable models.\n\n#MistralAI #AI #Funding #TechNews #SovereignAI #Startups\n\nSource: DEV",
+  "tweet": "Mistral AI raises €3B in Series D, valuing the company at over €21B. Samsung Electronics led the round for \"sovereign, open-weight AI.\" This massive funding will expand its full-stack AI capabilities across Europe and beyond. #MistralAI #AI #Funding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "mistral.ai",
+  "source": "DEV",
+  "url": "https://dev.to/axrisi/mistral-ai-raises-eu3b-led-by-samsung-how-sovereign-is-it-3dc",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1judbqvpfsdcdopl039k.jpg",
+  "orig_title": "Mistral AI raises €3B led by Samsung: how sovereign is it?",
+  "cluster_urls": [
+   "https://dev.to/axrisi/mistral-ai-raises-eu3b-led-by-samsung-how-sovereign-is-it-3dc"
+  ],
+  "cluster_titles": [
+   "Mistral AI raises €3B led by Samsung: how sovereign is it?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260928-0636-1-mistral-ai-raises-3b-valued-at-21b-led-by-sa.png",
+   "20260928-0636-1-mistral-ai-raises-3b-valued-at-21b-led-by-sa-d1.png",
+   "20260928-0636-1-mistral-ai-raises-3b-valued-at-21b-led-by-sa-d2.png",
+   "20260928-0636-1-mistral-ai-raises-3b-valued-at-21b-led-by-sa-d3.png",
+   "20260928-0636-1-mistral-ai-raises-3b-valued-at-21b-led-by-sa-d4.png"
+  ]
+ }
+]

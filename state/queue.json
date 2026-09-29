@@ -1,73 +1,81 @@
 [
  {
-  "topic": "openai_scraps_new_ai_model_safety_concerns",
-  "headline_marked": "[[OpenAI will not release new A.I. model]] over safety concerns",
-  "headline": "OpenAI will not release new A.I. model over safety concerns",
-  "summary": "OpenAI has decided to withhold its newest artificial intelligence model, citing significant safety concerns. This move underscores a growing focus on responsible AI development within the industry.",
+  "topic": "ai agent tool call hallucination fix",
+  "headline_marked": "[[AI Agents get deterministic name resolution]] to fix tool call hallucinations",
+  "headline": "AI Agents get deterministic name resolution to fix tool call hallucinations",
+  "summary": "AI agents often fail when calling tools due to linguistic drift and hallucinated names. A new deterministic name resolution system, the Tool Namespace Resolver and Fuzzy Matcher, aims to eliminate these errors and improve reliability.",
   "category": "AI",
-  "template": "neon",
+  "template": "terminal",
   "details": [
-   "OpenAI, a leader in artificial intelligence research, has announced its decision to not release its latest AI model. The company explicitly cited safety concerns as the primary reason for withholding the new technology from public access.",
-   "This unexpected move highlights a significant shift towards prioritizing ethical considerations and potential risks in advanced AI development. It suggests that even cutting-edge models can pose unforeseen challenges that warrant extreme caution.",
-   "The decision by a prominent AI developer like OpenAI could set a precedent for the industry, encouraging other companies to adopt more rigorous safety protocols before deploying powerful new systems. It reflects a growing awareness of the societal impact of AI.",
-   "While specific details about the model or the nature of the safety concerns remain undisclosed, this action underscores the complex challenges involved in building and deploying increasingly capable artificial intelligence. The focus is now on mitigating potential harms."
+   "AI agents frequently struggle with tool calls, often hallucinating names or truncating identifiers. This linguistic drift causes 'Tool not found' errors in typical Model Context Protocol (MCP) implementations.",
+   "These failures result in inefficient loops, wasting tokens and risking the agent losing its original task context during retries. Building reliable autonomous systems requires more than just LLM schema adherence.",
+   "A solution involves a deterministic translation layer, specifically a Tool Namespace Resolver and Fuzzy Matcher. This system treats tool selection as a prioritized search problem rather than a binary check.",
+   "It implements a four-stage resolution hierarchy, moving beyond rigid equality checks towards probabilistic recognition handled by deterministic code. This approach mimics human ambiguity resolution.",
+   "The resolver offers three distinct entry points, providing granular control for various architectural needs, from single calls to massive instruction batches. Careful balancing of Levenshtein distance is crucial to prevent both collisions and ineffectiveness.",
+   "Enterprises integrate these agents with live CRMs and databases, making robust safety mechanisms essential. If an agent hallucinates a command similar to an administrative tool, a blindly correcting resolver could bypass primary safety.",
+   "Vinkius addresses this by providing governance policies like DLP and SSRF prevention at the protocol level. Its connectors, built with the open-source MCPFusion framework, run within isolated V8 sandboxes.",
+   "This unified gateway approach simplifies management, offering a single connection token for an entire suite of tools. It eliminates the complexity of configuring numerous OAuth callbacks and credentials for each utility script."
   ],
-  "caption": "OpenAI halts the release of its newest AI model. The company cites significant safety concerns as the reason for its decision.\n\nOpenAI, a leader in artificial intelligence research, has announced its decision to not release its latest AI model. The company explicitly cited safety concerns as the primary reason for withholding the new technology from public access.\n\nThis unexpected move highlights a significant shift towards prioritizing ethical considerations and potential risks in advanced AI development. It suggests that even cutting-edge models can pose unforeseen challenges that warrant extreme caution.\n\nThe decision by a prominent AI developer like OpenAI could set a precedent for the industry, encouraging other companies to adopt more rigorous safety protocols before deploying powerful new systems. It reflects a growing awareness of the societal impact of AI.\n\nWhile specific details about the model or the nature of the safety concerns remain undisclosed, this action underscores the complex challenges involved in building and deploying increasingly capable artificial intelligence. The focus is now on mitigating potential harms.\n\n#AI #OpenAI #AISafety #TechNews #ArtificialIntelligence\n\nSource: Hacker News",
-  "tweet": "OpenAI is withholding its newest AI model due to significant safety concerns. This decision highlights a growing industry focus on responsible AI development and the complex challenges of advanced systems. #AI #OpenAI #AISafety",
+  "caption": "AI agents often hallucinate tool calls, leading to errors and wasted resources. A new deterministic name resolution system aims to fix this.\n\nAI agents frequently struggle with tool calls, often hallucinating names or truncating identifiers. This linguistic drift causes 'Tool not found' errors in typical Model Context Protocol (MCP) implementations.\n\nThese failures result in inefficient loops, wasting tokens and risking the agent losing its original task context during retries. Building reliable autonomous systems requires more than just LLM schema adherence.\n\nA solution involves a deterministic translation layer, specifically a Tool Namespace Resolver and Fuzzy Matcher. This system treats tool selection as a prioritized search problem rather than a binary check.\n\nIt implements a four-stage resolution hierarchy, moving beyond rigid equality checks towards probabilistic recognition handled by deterministic code. This approach mimics human ambiguity resolution.\n\nThe resolver offers three distinct entry points, providing granular control for various architectural needs, from single calls to massive instruction batches. Careful balancing of Levenshtein distance is crucial to prevent both collisions and ineffectiveness.\n\nEnterprises integrate these agents with live CRMs and databases, making robust safety mechanisms essential. If an agent hallucinates a command similar to an administrative tool, a blindly correcting resolver could bypass primary safety.\n\nVinkius addresses this by providing governance policies like DLP and SSRF prevention at the protocol level. Its connectors, built with the open-source MCPFusion framework, run within isolated V8 sandboxes.\n\nThis unified gateway approach simplifies management, offering a single connection token for an entire suite of tools. It eliminates the complexity of configuring numerous OAuth callbacks and credentials for each utility script.\n\n#AI #LLM #AIagents #DeveloperTools #MachineLearning #Vinkius\n\nSource: DEV",
+  "tweet": "AI agents often hallucinate tool calls, leading to errors and wasted resources. A new deterministic name resolution system aims to fix this by implementing a fuzzy matcher and resolver, improving reliability and efficiency in agentic workflows. #AI #DeveloperTools",
   "story_risk": "clean",
   "image_safe": true,
-  "image_good": true,
-  "brand_domain": "openai.com",
-  "source": "Hacker News",
-  "url": "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html",
+  "image_good": false,
+  "brand_domain": "vinkius.com",
+  "source": "DEV",
+  "url": "https://dev.to/renato_marinho/solving-tool-call-hallucinations-implementing-deterministic-name-resolution-for-ai-agents-112",
   "image": "",
-  "orig_title": "OpenAI Says It Will Not Release Newest A.I. Model Over Safety Concerns",
+  "orig_title": "Solving Tool Call Hallucinations: Implementing Deterministic Name Resolution for AI Agents",
   "cluster_urls": [
-   "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html"
+   "https://dev.to/renato_marinho/solving-tool-call-hallucinations-implementing-deterministic-name-resolution-for-ai-agents-112"
   ],
   "cluster_titles": [
-   "OpenAI Says It Will Not Release Newest A.I. Model Over Safety Concerns"
+   "Solving Tool Call Hallucinations: Implementing Deterministic Name Resolution for AI Agents"
   ],
-  "is_logo": true,
+  "is_logo": false,
   "photo_credit": "",
   "image_files": [
-   "20260929-0748-0-openai-will-not-release-new-a-i-model-over-s.png",
-   "20260929-0748-0-openai-will-not-release-new-a-i-model-over-s-d1.png",
-   "20260929-0748-0-openai-will-not-release-new-a-i-model-over-s-d2.png"
+   "20260929-0808-0-ai-agents-get-deterministic-name-resolution-.png",
+   "20260929-0808-0-ai-agents-get-deterministic-name-resolution--d1.png",
+   "20260929-0808-0-ai-agents-get-deterministic-name-resolution--d2.png",
+   "20260929-0808-0-ai-agents-get-deterministic-name-resolution--d3.png"
   ]
  },
  {
-  "topic": "apple_amazon_uk_antitrust_lawsuit",
-  "headline_marked": "[[Apple and Amazon face renewed UK antitrust lawsuit]]",
-  "headline": "Apple and Amazon face renewed UK antitrust lawsuit",
-  "summary": "A UK tribunal has allowed part of a renewed antitrust lawsuit against Apple and Amazon to move forward, focusing on alleged anti-competitive practices.",
-  "category": "BIGTECH",
-  "template": "neon",
+  "topic": "ai security agent finds android vulnerabilities",
+  "headline_marked": "[[AI security agent finds 24 Android vulnerabilities]] using open-source tool",
+  "headline": "AI security agent finds 24 Android vulnerabilities using open-source tool",
+  "summary": "Researchers leveraged a new open-source AI security agent to uncover dozens of bugs across Android applications, detailing the targeted AI taskflows behind these findings.",
+  "category": "SECURITY",
+  "template": "terminal",
   "details": [
-   "A UK tribunal has allowed part of a renewed antitrust lawsuit against Apple and Amazon to move forward. This legal action focuses on alleged anti-competitive practices by the two tech giants.",
-   "The lawsuit alleges that both companies have engaged in behavior that stifles competition within their respective markets. Further details on the specific claims and potential impacts are expected as the case progresses."
+   "A new open-source AI security agent has successfully identified 24 vulnerabilities in Android applications. This innovative tool employs targeted AI taskflows to systematically scan for potential security flaws.",
+   "The findings include various types of bugs, demonstrating the agent's effectiveness in uncovering hidden weaknesses. The project aims to provide developers with a powerful resource for enhancing app security.",
+   "The creators have released the agent as open source, allowing other developers and security researchers to utilize and contribute to its capabilities. Instructions are available for running the agent on individual applications.",
+   "This development highlights the growing role of AI in cybersecurity, offering automated methods to detect and mitigate vulnerabilities more efficiently than traditional manual reviews."
   ],
-  "caption": "Apple and Amazon are facing a renewed antitrust lawsuit in the UK.\n\nA UK tribunal has allowed part of a renewed antitrust lawsuit against Apple and Amazon to move forward. This legal action focuses on alleged anti-competitive practices by the two tech giants.\n\nThe lawsuit alleges that both companies have engaged in behavior that stifles competition within their respective markets. Further details on the specific claims and potential impacts are expected as the case progresses.\n\n#TechNews #Antitrust #Apple #Amazon #UKLaw #BigTech\n\nSource: 9to5Mac",
-  "tweet": "Apple and Amazon are facing a renewed antitrust lawsuit in the UK. A tribunal has allowed part of the case to proceed, focusing on alleged anti-competitive practices. #Apple #Amazon #Antitrust",
+  "caption": "An open-source AI security agent just uncovered 24 Android vulnerabilities. This tool uses targeted AI taskflows to find critical bugs.\n\nA new open-source AI security agent has successfully identified 24 vulnerabilities in Android applications. This innovative tool employs targeted AI taskflows to systematically scan for potential security flaws.\n\nThe findings include various types of bugs, demonstrating the agent's effectiveness in uncovering hidden weaknesses. The project aims to provide developers with a powerful resource for enhancing app security.\n\nThe creators have released the agent as open source, allowing other developers and security researchers to utilize and contribute to its capabilities. Instructions are available for running the agent on individual applications.\n\nThis development highlights the growing role of AI in cybersecurity, offering automated methods to detect and mitigate vulnerabilities more efficiently than traditional manual reviews.\n\n#AI #Security #Android #Vulnerabilities #OpenSource #Tech\n\nSource: Hacker News",
+  "tweet": "An open-source AI security agent just uncovered 24 Android vulnerabilities. This tool uses targeted AI taskflows to find critical bugs, offering a new way to enhance app security. #AI #Security #Android",
   "story_risk": "clean",
   "image_safe": true,
   "image_good": true,
   "brand_domain": "",
-  "source": "9to5Mac",
-  "url": "https://9to5mac.com/2026/09/28/apple-and-amazon-face-renewed-uk-antitrust-lawsuit/",
-  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2025/02/amazon-apple.jpg?quality=82&#038;strip=all&#038;w=1600",
-  "orig_title": "Apple and Amazon face renewed UK antitrust lawsuit",
+  "source": "Hacker News",
+  "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
+  "image": "",
+  "orig_title": "We found 24 Android vulnerabilities using our open source AI security agent",
   "cluster_urls": [
-   "https://9to5mac.com/2026/09/28/apple-and-amazon-face-renewed-uk-antitrust-lawsuit/"
+   "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/"
   ],
   "cluster_titles": [
-   "Apple and Amazon face renewed UK antitrust lawsuit"
+   "We found 24 Android vulnerabilities using our open source AI security agent"
   ],
   "is_logo": false,
-  "photo_credit": "9to5Mac",
+  "photo_credit": "Hacker News",
   "image_files": [
-   "20260929-0748-1-apple-and-amazon-face-renewed-uk-antitrust-l.png",
-   "20260929-0748-1-apple-and-amazon-face-renewed-uk-antitrust-l-d1.png"
+   "20260929-0808-1-ai-security-agent-finds-24-android-vulnerabi.png",
+   "20260929-0808-1-ai-security-agent-finds-24-android-vulnerabi-d1.png",
+   "20260929-0808-1-ai-security-agent-finds-24-android-vulnerabi-d2.png"
   ]
  }
 ]

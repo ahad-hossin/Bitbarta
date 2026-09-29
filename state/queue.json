@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "local_self_improving_ai_agent_solves_captcha",
+  "headline_marked": "[[AI agent fails to solve CAPTCHA]] in 6 minutes, gets network-wide Google block",
+  "headline": "AI agent fails to solve CAPTCHA in 6 minutes, gets network-wide Google block",
+  "summary": "A self-improving AI agent, Flash, was tasked with solving a CAPTCHA. Within six minutes, Google detected unusual traffic, presented a reCAPTCHA, and ultimately issued a network-wide block.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An experiment tasked Flash, a self-improving AI agent with a browser and terminal UI, to solve a CAPTCHA. The agent, running locally, was prompted with \"Solve a CAPTCHA\".",
+   "Flash initially navigated Google, searched for \"flash project\", and encountered a reCAPTCHA after its search. Google's systems flagged the traffic as unusual.",
+   "The agent explicitly refused to solve the CAPTCHA, stating it was designed to stop automated tools. It correctly explained that a human watching doesn't make the clicks human.",
+   "After repeated prompts, Google stopped presenting the CAPTCHA entirely, issuing a hard network block. The entire process, from initial prompt to block, took approximately six minutes.",
+   "Flash demonstrated self-correction, learning from its own errors (like fumbling the 'Enter' key press). This learning is persistent across sessions, improving its future performance.",
+   "The developer noted that the agent correctly understood its limitations and refused to learn how to bypass CAPTCHAs, aligning with ethical AI development. Flash is an open-source project available on GitHub."
+  ],
+  "caption": "A self-improving AI agent was challenged to solve a CAPTCHA. The result? A network-wide ban from Google in just six minutes.\n\nAn experiment tasked Flash, a self-improving AI agent with a browser and terminal UI, to solve a CAPTCHA. The agent, running locally, was prompted with \"Solve a CAPTCHA\".\n\nFlash initially navigated Google, searched for \"flash project\", and encountered a reCAPTCHA after its search. Google's systems flagged the traffic as unusual.\n\nThe agent explicitly refused to solve the CAPTCHA, stating it was designed to stop automated tools. It correctly explained that a human watching doesn't make the clicks human.\n\nAfter repeated prompts, Google stopped presenting the CAPTCHA entirely, issuing a hard network block. The entire process, from initial prompt to block, took approximately six minutes.\n\nFlash demonstrated self-correction, learning from its own errors (like fumbling the 'Enter' key press). This learning is persistent across sessions, improving its future performance.\n\nThe developer noted that the agent correctly understood its limitations and refused to learn how to bypass CAPTCHAs, aligning with ethical AI development. Flash is an open-source project available on GitHub.\n\n#AI #ArtificialIntelligence #CAPTCHA #TechExperiment #OpenSource #FlashAI\n\nSource: DEV",
+  "tweet": "My self-improving AI agent was tasked with solving a CAPTCHA. It refused, stating its purpose, and Google blocked my network in 6 minutes. An interesting lesson in AI ethics & limitations. #AI #Tech #FlashAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/natuworkguy/i-asked-my-local-self-improving-ai-agent-to-solve-a-captcha-1e00",
+  "image": "",
+  "orig_title": "I Asked My Local, Self-Improving AI Agent to Solve a CAPTCHA",
+  "cluster_urls": [
+   "https://dev.to/natuworkguy/i-asked-my-local-self-improving-ai-agent-to-solve-a-captcha-1e00"
+  ],
+  "cluster_titles": [
+   "I Asked My Local, Self-Improving AI Agent to Solve a CAPTCHA"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260929-1307-0-ai-agent-fails-to-solve-captcha-in-6-minutes.png",
+   "20260929-1307-0-ai-agent-fails-to-solve-captcha-in-6-minutes-d1.png",
+   "20260929-1307-0-ai-agent-fails-to-solve-captcha-in-6-minutes-d2.png"
+  ]
+ },
+ {
+  "topic": "bitnet_llm_on_esp32_cluster",
+  "headline_marked": "[[7 ESP32-S3s run 0.4B LLM]] via 1.58-bit BitNet quantization over SPI daisy-chain",
+  "headline": "7 ESP32-S3s run 0.4B LLM via 1.58-bit BitNet quantization over SPI daisy-chain",
+  "summary": "A project demonstrates a sliced 0.4B LLM running across a 7-node ESP32-S3 cluster. A master node handles tokenization and embedding, while other nodes manage attention and MLP layers via high-speed SPI daisy-chain.",
+  "category": "DEVELOPER",
+  "template": "terminal",
+  "details": [
+   "A new open-source project showcases a distributed pipeline inference engine capable of running a 0.4B Large Language Model (LLM) on a cluster of seven ESP32-S3 microcontrollers. This impressive feat is achieved using 1.58-bit (BitNet) ternary quantization, significantly reducing the model's memory footprint.",
+   "The architecture designates one ESP32-S3 as the master node, responsible for handling the tokenizer and embedding layers. The remaining six nodes are configured to process the attention layers and Multi-Layer Perceptrons (MLP) of the sliced LLM.",
+   "Communication between the master and node devices is facilitated through a high-speed SPI Daisy-Chain, ensuring efficient data transfer across the cluster. The entire project is released under the permissive MIT License, encouraging further development and experimentation."
+  ],
+  "caption": "Run a 0.4B LLM on just 7 ESP32-S3 microcontrollers. This project showcases distributed inference for tiny ML.\n\nA new open-source project showcases a distributed pipeline inference engine capable of running a 0.4B Large Language Model (LLM) on a cluster of seven ESP32-S3 microcontrollers. This impressive feat is achieved using 1.58-bit (BitNet) ternary quantization, significantly reducing the model's memory footprint.\n\nThe architecture designates one ESP32-S3 as the master node, responsible for handling the tokenizer and embedding layers. The remaining six nodes are configured to process the attention layers and Multi-Layer Perceptrons (MLP) of the sliced LLM.\n\nCommunication between the master and node devices is facilitated through a high-speed SPI Daisy-Chain, ensuring efficient data transfer across the cluster. The entire project is released under the permissive MIT License, encouraging further development and experimentation.\n\n#ESP32 #LLM #TinyML #AI #EmbeddedSystems #OpenSource\n\nSource: Hacker News",
+  "tweet": "A new project demonstrates running a 0.4B LLM on a 7-node ESP32-S3 cluster! It uses 1.58-bit BitNet quantization and SPI daisy-chain for distributed inference. Impressive tiny ML. #ESP32 #LLM #TinyML",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster",
+  "image": "",
+  "orig_title": "ESP32S3 cluster running 1.58-bit (BitNet) Language model",
+  "cluster_urls": [
+   "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster"
+  ],
+  "cluster_titles": [
+   "ESP32S3 cluster running 1.58-bit (BitNet) Language model"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260929-1307-1-7-esp32-s3s-run-0-4b-llm-via-1-58-bit-bitnet.png",
+   "20260929-1307-1-7-esp32-s3s-run-0-4b-llm-via-1-58-bit-bitnet-d1.png",
+   "20260929-1307-1-7-esp32-s3s-run-0-4b-llm-via-1-58-bit-bitnet-d2.png"
+  ]
+ }
+]

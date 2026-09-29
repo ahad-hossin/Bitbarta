@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "llm_gateway_model_list_contract_breaches",
+  "headline_marked": "[[LLM gateway model lists break contracts quietly]], causing client and data issues",
+  "headline": "LLM gateway model lists break contracts quietly, causing client and data issues",
+  "summary": "Public model lists from LLM gateways, often seen as stable contracts, frequently change without warning, leading to broken client apps and inaccurate data comparisons.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Every LLM gateway publishes a public model list, which clients, pricing pages, and comparison articles rely on. However, these lists are often treated as static interfaces, a mistake that leads to silent breakage.",
+   "One common issue is incorrect base URLs for API endpoints. An OpenAI-compatible client appends its path to a base URL, and if the vendor provides the wrong half, clients receive 404 errors that mimic authentication problems.",
+   "Model counts also frequently fluctuate. An endpoint might return 477 models one day and 199 a week later, or OpenRouter's list changed from 445 to 460 models in ten days. These un-dated figures create confusion and lead readers to believe information is fabricated.",
+   "Furthermore, the schema of model lists can change without notice. Fields like context_length or capabilities might disappear or be replaced, silently breaking derived metrics and computations that rely on them, even if pages continue to render.",
+   "To mitigate these issues, developers should treat model lists as dynamic and date any figures extracted from them. When building against these lists, the fields read should be considered the contract, and any changes require careful validation to avoid silent failures.",
+   "For those comparing gateways, it's crucial to cite specific, dated observations rather than relying on stale numbers. A number from an old blog post is not a specification; it's a snapshot that can quickly become outdated."
+  ],
+  "caption": "LLM gateway model lists are silently breaking API contracts. This impacts client apps and data accuracy.\n\nEvery LLM gateway publishes a public model list, which clients, pricing pages, and comparison articles rely on. However, these lists are often treated as static interfaces, a mistake that leads to silent breakage.\n\nOne common issue is incorrect base URLs for API endpoints. An OpenAI-compatible client appends its path to a base URL, and if the vendor provides the wrong half, clients receive 404 errors that mimic authentication problems.\n\nModel counts also frequently fluctuate. An endpoint might return 477 models one day and 199 a week later, or OpenRouter's list changed from 445 to 460 models in ten days. These un-dated figures create confusion and lead readers to believe information is fabricated.\n\nFurthermore, the schema of model lists can change without notice. Fields like context_length or capabilities might disappear or be replaced, silently breaking derived metrics and computations that rely on them, even if pages continue to render.\n\nTo mitigate these issues, developers should treat model lists as dynamic and date any figures extracted from them. When building against these lists, the fields read should be considered the contract, and any changes require careful validation to avoid silent failures.\n\nFor those comparing gateways, it's crucial to cite specific, dated observations rather than relying on stale numbers. A number from an old blog post is not a specification; it's a snapshot that can quickly become outdated.\n\n#TechNews #Software #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "LLM gateway model lists are silently breaking API contracts, causing client apps to fail & data comparisons to be inaccurate. Developers must treat these lists as dynamic and validate changes. #LLM #API #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/yummy342/your-gateways-public-model-list-is-a-contract-most-of-them-break-it-quietly-29kc",
+  "image": "",
+  "orig_title": "Your gateway's public model list is a contract. Most of them break it quietly.",
+  "cluster_urls": [
+   "https://dev.to/yummy342/your-gateways-public-model-list-is-a-contract-most-of-them-break-it-quietly-29kc"
+  ],
+  "cluster_titles": [
+   "Your gateway's public model list is a contract. Most of them break it quietly."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260929-1422-0-llm-gateway-model-lists-break-contracts-quie.png",
+   "20260929-1422-0-llm-gateway-model-lists-break-contracts-quie-d1.png",
+   "20260929-1422-0-llm-gateway-model-lists-break-contracts-quie-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_hardware_failure_investigator_hindsight",
+  "headline_marked": "[[AI system diagnoses complex hardware failures]] by combining real-time data with historical incidents and LLMs",
+  "headline": "AI system diagnoses complex hardware failures by combining real-time data with historical incidents and LLMs",
+  "summary": "HardwareMind uses an AI diagnosis pipeline, integrating current failure data with relevant historical experiences via Hindsight, and leveraging LLMs (Groq) to provide structured root cause analysis and recommended fixes.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Hardware failures are notoriously difficult to diagnose, as visible symptoms often mask the true underlying cause. Issues like abnormal temperatures or unstable voltages can stem from various hidden faults, making traditional troubleshooting time-consuming and complex.",
+   "HardwareMind introduces an AI diagnosis layer designed to transform raw hardware observations into structured explanations. Instead of simple LLM queries, it combines current failure data with relevant historical experiences to provide more useful and accurate diagnoses.",
+   "The system's pipeline starts by receiving current hardware failure information, which is then structured as context. It retrieves relevant historical incidents using \"Hindsight,\" a memory layer that stores past symptoms, causes, tests, and resolutions.",
+   "This combined information is then sent to an LLM, specifically via the Groq API for inference. The LLM leverages this enriched context, rather than just its general knowledge, to produce a detailed, structured diagnosis including root cause, evidence, recommended tests, and fixes.",
+   "Hindsight plays a crucial role by providing specific, system-level historical patterns that the LLM might not otherwise know. This allows the AI to reason over previous incidents with similar characteristics, significantly improving diagnostic accuracy and relevance.",
+   "The architecture features a clear separation of responsibilities: hardware monitoring feeds failure data, Hindsight provides historical memory, Groq/LLM handles interpretation, and the LLM ultimately produces a human-readable diagnosis with high confidence."
+  ],
+  "caption": "Diagnosing complex hardware failures just got smarter. A new AI system combines real-time data with historical incident memory to pinpoint root causes.\n\nHardware failures are notoriously difficult to diagnose, as visible symptoms often mask the true underlying cause. Issues like abnormal temperatures or unstable voltages can stem from various hidden faults, making traditional troubleshooting time-consuming and complex.\n\nHardwareMind introduces an AI diagnosis layer designed to transform raw hardware observations into structured explanations. Instead of simple LLM queries, it combines current failure data with relevant historical experiences to provide more useful and accurate diagnoses.\n\nThe system's pipeline starts by receiving current hardware failure information, which is then structured as context. It retrieves relevant historical incidents using \"Hindsight,\" a memory layer that stores past symptoms, causes, tests, and resolutions.\n\nThis combined information is then sent to an LLM, specifically via the Groq API for inference. The LLM leverages this enriched context, rather than just its general knowledge, to produce a detailed, structured diagnosis including root cause, evidence, recommended tests, and fixes.\n\nHindsight plays a crucial role by providing specific, system-level historical patterns that the LLM might not otherwise know. This allows the AI to reason over previous incidents with similar characteristics, significantly improving diagnostic accuracy and relevance.\n\nThe architecture features a clear separation of responsibilities: hardware monitoring feeds failure data, Hindsight provides historical memory, Groq/LLM handles interpretation, and the LLM ultimately produces a human-readable diagnosis with high confidence.\n\n#AI #Hardware #Diagnosis #LLM #Tech #Troubleshooting\n\nSource: DEV",
+  "tweet": "Diagnosing complex hardware failures just got smarter. HardwareMind uses an AI system that combines real-time data with historical incident memory (Hindsight) and LLMs (Groq) to pinpoint root causes and recommend fixes. #AI #Hardware #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hima_reddy_20/ai-hardware-failure-investigator-242j",
+  "image": "",
+  "orig_title": "Ai hardware failure investigator",
+  "cluster_urls": [
+   "https://dev.to/hima_reddy_20/ai-hardware-failure-investigator-242j"
+  ],
+  "cluster_titles": [
+   "Ai hardware failure investigator"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260929-1422-1-ai-system-diagnoses-complex-hardware-failure.png",
+   "20260929-1422-1-ai-system-diagnoses-complex-hardware-failure-d1.png",
+   "20260929-1422-1-ai-system-diagnoses-complex-hardware-failure-d2.png"
+  ]
+ }
+]

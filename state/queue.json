@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "gemini_google_wallet_integration",
+  "headline_marked": "[[Gemini now integrates with Google Wallet]] for spending insights and passes",
+  "headline": "Gemini now integrates with Google Wallet for spending insights and passes",
+  "summary": "Google's AI assistant can now access your Google Wallet data, including passes, tickets, and loyalty cards, to provide personalized insights and spending overviews. This feature is rolling out gradually.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Google's AI assistant, Gemini, now integrates directly with Google Wallet, allowing users to pull up information and personalized insights from their saved passes, tickets, and loyalty cards. This expands Gemini's \"Connected App\" feature, which recently added support for over 13 third-party apps.",
+   "Users can ask Gemini for details from their Wallet, such as an overview of grocery expenses if financial accounts are linked via Plaid. The integration is currently rolling out gradually and is available only to users 18 and older in the US.",
+   "To enable the feature, users can link Wallet to Gemini via the Settings > Personal Intelligence > Connected Apps menu in Gemini, or directly from the Android or iOS app. Once connected, Wallet can be summoned using the \"@\" symbol followed by the desired action.",
+   "While Gemini can analyze transactions and highlight offers, it cannot initiate transactions or access linked financial accounts directly. Users should also note that unlinking Wallet from Gemini does not automatically remove previously saved transaction information, requiring manual deletion."
+  ],
+  "caption": "Gemini now taps into your Google Wallet. Get instant insights into your spending, passes, and loyalty cards directly from the AI assistant.\n\nGoogle's AI assistant, Gemini, now integrates directly with Google Wallet, allowing users to pull up information and personalized insights from their saved passes, tickets, and loyalty cards. This expands Gemini's \"Connected App\" feature, which recently added support for over 13 third-party apps.\n\nUsers can ask Gemini for details from their Wallet, such as an overview of grocery expenses if financial accounts are linked via Plaid. The integration is currently rolling out gradually and is available only to users 18 and older in the US.\n\nTo enable the feature, users can link Wallet to Gemini via the Settings > Personal Intelligence > Connected Apps menu in Gemini, or directly from the Android or iOS app. Once connected, Wallet can be summoned using the \"@\" symbol followed by the desired action.\n\nWhile Gemini can analyze transactions and highlight offers, it cannot initiate transactions or access linked financial accounts directly. Users should also note that unlinking Wallet from Gemini does not automatically remove previously saved transaction information, requiring manual deletion.\n\n#Google #Gemini #GoogleWallet #AI #TechNews #Android\n\nSource: Android Police",
+  "tweet": "Gemini now integrates with Google Wallet! Get instant insights into your spending, passes, and loyalty cards directly from the AI assistant. Currently rolling out in the US for users 18+. #Google #Gemini #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/gemini-pull-up-google-wallet-passes-cards-spending/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/05/a-hand-holding-a-google-wallet-icon-against-a-background-of-colorful-floating-gemini-logos.png",
+  "orig_title": "Gemini can now pull up your Google Wallet passes, cards, and spending in one place",
+  "cluster_urls": [
+   "https://www.androidpolice.com/gemini-pull-up-google-wallet-passes-cards-spending/"
+  ],
+  "cluster_titles": [
+   "Gemini can now pull up your Google Wallet passes, cards, and spending in one place"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20260929-1107-0-gemini-now-integrates-with-google-wallet-for.png",
+   "20260929-1107-0-gemini-now-integrates-with-google-wallet-for-d1.png",
+   "20260929-1107-0-gemini-now-integrates-with-google-wallet-for-d2.png"
+  ]
+ },
+ {
+  "topic": "ai_incident_memory_agent_faultline",
+  "headline_marked": "[[Faultline: An AI incident-memory agent]] for smarter incident response, achieving 83% accuracy",
+  "headline": "Faultline: An AI incident-memory agent for smarter incident response, achieving 83% accuracy",
+  "summary": "Faultline, an AI agent, helps engineers connect new alerts with historical incident data to prevent forgotten lessons and repeated problems. It achieved an 83% accuracy in identifying related incidents.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Faultline is an AI incident-memory agent designed to improve incident response by connecting new alerts with information from previous incidents. This system achieved an 83% accuracy in identifying related incidents during testing.",
+   "A common problem in software service failures is that important lessons and follow-up tasks from incident reports are often forgotten. This can lead to the same issues recurring in different services.",
+   "Faultline addresses this by remembering previous incidents and using that stored knowledge when a new alert arrives. This provides engineers with useful historical context, preventing them from starting investigations from scratch.",
+   "When a new alert appears, Faultline searches its incident memory to link related information. For example, an IAM authorization failure can be connected to past incidents with the same underlying cause, showing previous solutions.",
+   "Beyond just the current error, the agent can also identify other services that currently share the same problematic configuration. This gives engineers a broader view of potential issues across the system.",
+   "A demonstration highlighted the importance of this persistent memory. When memory was disabled, the AI lacked these historical connections, proving that the core value comes from the AI's ability to retain incident knowledge.",
+   "Currently, Faultline reads prepared service configuration files rather than directly checking live infrastructure like Terraform or Kubernetes. Connecting to live systems is identified as the next crucial step for a production-ready version.",
+   "Ultimately, Faultline aims to give software incidents a memory, helping engineering teams preserve knowledge. It connects new alerts with past fixes, exposed services, and unfinished remediation tasks to prevent future recurrences."
+  ],
+  "caption": "Software incidents often repeat due to forgotten lessons. Faultline, an AI incident-memory agent, aims to solve this by connecting new alerts with past incidents, achieving 83% accuracy.\n\nFaultline is an AI incident-memory agent designed to improve incident response by connecting new alerts with information from previous incidents. This system achieved an 83% accuracy in identifying related incidents during testing.\n\nA common problem in software service failures is that important lessons and follow-up tasks from incident reports are often forgotten. This can lead to the same issues recurring in different services.\n\nFaultline addresses this by remembering previous incidents and using that stored knowledge when a new alert arrives. This provides engineers with useful historical context, preventing them from starting investigations from scratch.\n\nWhen a new alert appears, Faultline searches its incident memory to link related information. For example, an IAM authorization failure can be connected to past incidents with the same underlying cause, showing previous solutions.\n\nBeyond just the current error, the agent can also identify other services that currently share the same problematic configuration. This gives engineers a broader view of potential issues across the system.\n\nA demonstration highlighted the importance of this persistent memory. When memory was disabled, the AI lacked these historical connections, proving that the core value comes from the AI's ability to retain incident knowledge.\n\nCurrently, Faultline reads prepared service configuration files rather than directly checking live infrastructure like Terraform or Kubernetes. Connecting to live systems is identified as the next crucial step for a production-ready version.\n\nUltimately, Faultline aims to give software incidents a memory, helping engineering teams preserve knowledge. It connects new alerts with past fixes, exposed services, and unfinished remediation tasks to prevent future recurrences.\n\n#AI #IncidentResponse #DevOps #SoftwareEngineering #TechNews #Faultline\n\nSource: DEV",
+  "tweet": "Software incidents repeating? Faultline, an AI incident-memory agent, connects new alerts to past issues, providing crucial context and preventing forgotten fixes. Achieved 83% accuracy in tests. #AI #DevOps #IncidentResponse",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shyam_muddana/faultline-an-ai-incident-memory-agent-for-smarter-incident-response-3gn",
+  "image": "",
+  "orig_title": "Faultline: An AI Incident-Memory Agent for Smarter Incident Response",
+  "cluster_urls": [
+   "https://dev.to/shyam_muddana/faultline-an-ai-incident-memory-agent-for-smarter-incident-response-3gn"
+  ],
+  "cluster_titles": [
+   "Faultline: An AI Incident-Memory Agent for Smarter Incident Response"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260929-1107-1-faultline-an-ai-incident-memory-agent-for-sm.png",
+   "20260929-1107-1-faultline-an-ai-incident-memory-agent-for-sm-d1.png",
+   "20260929-1107-1-faultline-an-ai-incident-memory-agent-for-sm-d2.png",
+   "20260929-1107-1-faultline-an-ai-incident-memory-agent-for-sm-d3.png"
+  ]
+ }
+]

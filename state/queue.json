@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "hashicorp vault rce vulnerability persists despite openbao patch",
+  "headline_marked": "HashiCorp Vault [[RCE Vulnerability Persists]] Despite OpenBao Patch",
+  "headline": "HashiCorp Vault RCE Vulnerability Persists Despite OpenBao Patch",
+  "summary": "A critical RCE vulnerability allows full server compromise in HashiCorp Vault, while OpenBao has released patches.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical Remote Code Execution (RCE) vulnerability has been discovered in HashiCorp Vault and OpenBao, enabling complete server compromise under specific conditions. This is the second RCE found in Vault’s codebase, and it can be exploited by chaining four distinct vulnerabilities, including an unauthenticated entry path and a misconfigured Raft snapshot policy.",
+   "The exploit allows an attacker to inject malicious code via an unauthenticated entry point, which then exploits the Raft snapshot policy to execute arbitrary commands with root privileges. This bypasses traditional defenses and grants the attacker unrestricted control over the affected system, leading to potential data exfiltration and operational downtime.",
+   "While OpenBao has released patches for this vulnerability in versions 2.6.3 and 2.7.0, HashiCorp Vault remains unpatched. This is due to a lack of coordinated vulnerability disclosure between IBM, OpenBao’s maintainer, and HashiCorp, leaving Vault users without an official mitigation strategy.",
+   "The absence of a vendor-sanctioned patch puts HashiCorp Vault users at significant risk. Organizations are urged to implement immediate defensive measures, such as disabling the Raft protocol if not essential and restricting access to the Vault API, though these are not replacements for an official fix.",
+   "The situation underscores the critical need for coordinated vulnerability disclosure and prompt, vendor-driven mitigation. Until HashiCorp addresses this flaw, Vault users face an imminent threat and must actively seek solutions and pressure vendors for a resolution."
+  ],
+  "caption": "Critical RCE vulnerability in HashiCorp Vault allows full server compromise. OpenBao patched, but Vault remains exposed.\n\nA critical Remote Code Execution (RCE) vulnerability has been discovered in HashiCorp Vault and OpenBao, enabling complete server compromise under specific conditions. This is the second RCE found in Vault’s codebase, and it can be exploited by chaining four distinct vulnerabilities, including an unauthenticated entry path and a misconfigured Raft snapshot policy.\n\nThe exploit allows an attacker to inject malicious code via an unauthenticated entry point, which then exploits the Raft snapshot policy to execute arbitrary commands with root privileges. This bypasses traditional defenses and grants the attacker unrestricted control over the affected system, leading to potential data exfiltration and operational downtime.\n\nWhile OpenBao has released patches for this vulnerability in versions 2.6.3 and 2.7.0, HashiCorp Vault remains unpatched. This is due to a lack of coordinated vulnerability disclosure between IBM, OpenBao’s maintainer, and HashiCorp, leaving Vault users without an official mitigation strategy.\n\nThe absence of a vendor-sanctioned patch puts HashiCorp Vault users at significant risk. Organizations are urged to implement immediate defensive measures, such as disabling the Raft protocol if not essential and restricting access to the Vault API, though these are not replacements for an official fix.\n\nThe situation underscores the critical need for coordinated vulnerability disclosure and prompt, vendor-driven mitigation. Until HashiCorp addresses this flaw, Vault users face an imminent threat and must actively seek solutions and pressure vendors for a resolution.\n\n#CyberSecurity #Vulnerability #HashiCorp #OpenBao #RCE\n\nSource: DEV",
+  "tweet": "Critical RCE vulnerability in HashiCorp Vault allows full server compromise. OpenBao patched, but Vault remains exposed due to lack of coordinated disclosure. Users must implement immediate defenses. #CyberSecurity #HashiCorp #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "hashicorp.com",
+  "source": "DEV",
+  "url": "https://dev.to/kserude/hashicorp-vault-rce-vulnerability-persists-despite-openbao-patch-coordinated-disclosure-needed-for-2235",
+  "image": "",
+  "orig_title": "HashiCorp Vault RCE Vulnerability Persists Despite OpenBao Patch; Coordinated Disclosure Needed for Mitigation",
+  "cluster_urls": [
+   "https://dev.to/kserude/hashicorp-vault-rce-vulnerability-persists-despite-openbao-patch-coordinated-disclosure-needed-for-2235"
+  ],
+  "cluster_titles": [
+   "HashiCorp Vault RCE Vulnerability Persists Despite OpenBao Patch; Coordinated Disclosure Needed for Mitigation"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260930-1707-0-hashicorp-vault-rce-vulnerability-persists-d.png",
+   "20260930-1707-0-hashicorp-vault-rce-vulnerability-persists-d-d1.png",
+   "20260930-1707-0-hashicorp-vault-rce-vulnerability-persists-d-d2.png",
+   "20260930-1707-0-hashicorp-vault-rce-vulnerability-persists-d-d3.png"
+  ]
+ },
+ {
+  "topic": "openai head of hardware breaks down ai-assisted design of its jalapeño asic",
+  "headline_marked": "OpenAI [[Designs AI Chip in 9 Months]] Using Its Own AI Tools",
+  "headline": "OpenAI Designs AI Chip in 9 Months Using Its Own AI Tools",
+  "summary": "OpenAI's Jalapeño ASIC was designed from scratch to tapeout in under a year, setting a new industry baseline for AI-assisted hardware development.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "OpenAI has unveiled its Jalapeño ASIC, a custom AI chip designed with significant AI assistance. The development process, from initial register-transfer level (RTL) to tapeout, was completed in an astonishing nine months, drastically cutting down typical industry timelines.",
+   "Richard Ho, head of hardware at OpenAI, stated that this accelerated timeline has established a \"new baseline\" for chip design. The industry is already showing keen interest in understanding OpenAI's AI-assisted methodology.",
+   "The design leveraged OpenAI's internal AI models, including Codex, Sol, and Astra, alongside existing Electronic Design Automation (EDA) tools. This workflow allowed a talented team to achieve unprecedented speed and efficiency.",
+   "Ho emphasized that AI bolstered the engineering team rather than replacing them. He described the process as a \"good model\" for how engineering teams should operate in the AI era, making engineers \"super productive.\"",
+   "While the accelerated timeline was a success, the initial \"A0 stepping\" of Jalapeño reportedly saw a 25% improvement in performance per watt with the \"B0 stepping,\" suggesting potential design oversights in the first iteration.",
+   "The success of the Jalapeño design has already led to key engineers moving to other frontier labs, such as Anthropic, highlighting the industry-wide impact and adoption of these advanced AI-assisted design techniques."
+  ],
+  "caption": "OpenAI's Jalapeño ASIC was designed from scratch to tapeout in just nine months, thanks to AI assistance.\n\nOpenAI has unveiled its Jalapeño ASIC, a custom AI chip designed with significant AI assistance. The development process, from initial register-transfer level (RTL) to tapeout, was completed in an astonishing nine months, drastically cutting down typical industry timelines.\n\nRichard Ho, head of hardware at OpenAI, stated that this accelerated timeline has established a \"new baseline\" for chip design. The industry is already showing keen interest in understanding OpenAI's AI-assisted methodology.\n\nThe design leveraged OpenAI's internal AI models, including Codex, Sol, and Astra, alongside existing Electronic Design Automation (EDA) tools. This workflow allowed a talented team to achieve unprecedented speed and efficiency.\n\nHo emphasized that AI bolstered the engineering team rather than replacing them. He described the process as a \"good model\" for how engineering teams should operate in the AI era, making engineers \"super productive.\"\n\nWhile the accelerated timeline was a success, the initial \"A0 stepping\" of Jalapeño reportedly saw a 25% improvement in performance per watt with the \"B0 stepping,\" suggesting potential design oversights in the first iteration.\n\nThe success of the Jalapeño design has already led to key engineers moving to other frontier labs, such as Anthropic, highlighting the industry-wide impact and adoption of these advanced AI-assisted design techniques.\n\n#OpenAI #AI #ChipDesign #Hardware #ASIC\n\nSource: Tom's Hardware",
+  "tweet": "OpenAI's Jalapeño ASIC was designed from scratch to tapeout in just nine months, thanks to AI assistance. The company has set a new baseline for AI-assisted hardware development. #OpenAI #AI #ChipDesign",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/asics/this-is-how-ai-should-be-used-openai-head-of-hardware-breaks-down-the-ai-assisted-design-of-its-jalapeno-asic",
+  "image": "https://cdn.mos.cms.futurecdn.net/jvUA2LwQTUA4tkmWDA4nv-1920-80.jpg",
+  "orig_title": "‘This is how AI should be used’ — OpenAI head of hardware breaks down the AI-assisted design of its Jalapeño ASIC",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/asics/this-is-how-ai-should-be-used-openai-head-of-hardware-breaks-down-the-ai-assisted-design-of-its-jalapeno-asic"
+  ],
+  "cluster_titles": [
+   "‘This is how AI should be used’ — OpenAI head of hardware breaks down the AI-assisted design of its Jalapeño ASIC"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20260930-1707-1-openai-designs-ai-chip-in-9-months-using-its.png",
+   "20260930-1707-1-openai-designs-ai-chip-in-9-months-using-its-d1.png",
+   "20260930-1707-1-openai-designs-ai-chip-in-9-months-using-its-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,92 @@
-[]
+[
+ {
+  "topic": "agentic ai agents coordinate and subcontract work",
+  "headline_marked": "[[AI agents can now subcontract]] work via REST API",
+  "headline": "AI agents can now subcontract work via REST API",
+  "summary": "The Hub enables agents to order and pay for external capabilities, with private keys remaining securely on the client.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The Hub now allows AI agents to subcontract work to other agents, maintaining the buyer relationship while keeping private keys secure on the client. This functionality is accessible via a public REST API, offering both a detailed path and a simplified one-call option for ordering capabilities.",
+   "A recent example on September 29-30, 2026, saw Codex order two external GAIA capabilities (weather and air data) through the hephaestus / pipeline.run@v1 endpoint on modelmarket.dev, demonstrating the subcontracting process.",
+   "The process involves calling POST /studio/prepare-pipeline with the desired graph and budget. This prepares the pipeline without creating a root job or initiating payment, returning details like run_id, access_token, and available offers.",
+   "Following preparation, the client signs the graph binding, offers, and transactions locally using EIP-3009 authorizations and EIP-1559 transactions. The Hub then receives these signed transactions, ensuring the private key never leaves the client's control.",
+   "Once a step is ready, the executor broadcasts a child payment. The system supports retrying the same signed bundle for pending orders (HTTP 202) and can return cached results for repeated invokes. Failed deliveries are terminal outcomes, and external payments are not automatically refunded.",
+   "The cost for the GAIA capabilities in the test runs was approximately $0.0047-$0.0048 on Base mainnet, including network fees, well within a $1 limit. The Hub acted as the seller of record in these demonstrations.",
+   "For developers, the Hub client wheel provides an `await run_pipeline(...)` function for a streamlined, one-operation experience. Alternatively, the `prepare-pipeline` route can be preferred for new orders, with older endpoints still available.",
+   "The buyer retains control over the wallet, signatures, run_id, and access token. Successful completion returns the final result, a signed bill, and a root receipt, with children marked as 'funded_by: own'."
+  ],
+  "caption": "AI agents can now subcontract tasks to each other through a REST API, with private keys never leaving the client.\n\nThe Hub now allows AI agents to subcontract work to other agents, maintaining the buyer relationship while keeping private keys secure on the client. This functionality is accessible via a public REST API, offering both a detailed path and a simplified one-call option for ordering capabilities.\n\nA recent example on September 29-30, 2026, saw Codex order two external GAIA capabilities (weather and air data) through the hephaestus / pipeline.run@v1 endpoint on modelmarket.dev, demonstrating the subcontracting process.\n\nThe process involves calling POST /studio/prepare-pipeline with the desired graph and budget. This prepares the pipeline without creating a root job or initiating payment, returning details like run_id, access_token, and available offers.\n\nFollowing preparation, the client signs the graph binding, offers, and transactions locally using EIP-3009 authorizations and EIP-1559 transactions. The Hub then receives these signed transactions, ensuring the private key never leaves the client's control.\n\nOnce a step is ready, the executor broadcasts a child payment. The system supports retrying the same signed bundle for pending orders (HTTP 202) and can return cached results for repeated invokes. Failed deliveries are terminal outcomes, and external payments are not automatically refunded.\n\nThe cost for the GAIA capabilities in the test runs was approximately $0.0047-$0.0048 on Base mainnet, including network fees, well within a $1 limit. The Hub acted as the seller of record in these demonstrations.\n\nFor developers, the Hub client wheel provides an `await run_pipeline(...)` function for a streamlined, one-operation experience. Alternatively, the `prepare-pipeline` route can be preferred for new orders, with older endpoints still available.\n\n#AI #ArtificialIntelligence #Subcontracting #API #Tech\n\nSource: DEV, TechCrunch",
+  "tweet": "AI agents can now subcontract work to each other via REST API. Private keys stay secure on the client. Learn how it works: POST /ai-market/v2/invoke. #AI #API #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV, TechCrunch",
+  "url": "https://dev.to/alexar76/one-call-orders-the-subcontract-13nb",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fi613je4ory0r3p1w7nk1.png",
+  "orig_title": "One call orders the subcontract.",
+  "cluster_urls": [
+   "https://dev.to/alexar76/one-call-orders-the-subcontract-13nb",
+   "https://techcrunch.com/2026/09/30/charter-space-raises-5m-to-bring-insurance-to-the-stars/",
+   "https://dev.to/bala_paranj_059d338e44e7e/why-resource-buckettenant-is-not-enough-l4j",
+   "https://dev.to/ordewell/where-the-plan-lives-when-the-terminal-closes-o29"
+  ],
+  "cluster_titles": [
+   "One call orders the subcontract.",
+   "Charter Space raises $5M to bring insurance to the stars",
+   "Why `Resource: bucket/${tenant}/*` is Not Enough",
+   "Where the plan lives when the terminal closes"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20260930-1907-0-ai-agents-can-now-subcontract-work-via-rest-.png",
+   "20260930-1907-0-ai-agents-can-now-subcontract-work-via-rest--d1.png",
+   "20260930-1907-0-ai-agents-can-now-subcontract-work-via-rest--d2.png",
+   "20260930-1907-0-ai-agents-can-now-subcontract-work-via-rest--d3.png"
+  ]
+ },
+ {
+  "topic": "trump directs federal agencies to use 'super intelligence' instead of AI",
+  "headline_marked": "[[Trump renames AI]] to 'Super Intelligence' for federal agencies",
+  "headline": "Trump renames AI to 'Super Intelligence' for federal agencies",
+  "summary": "President Trump signed a directive to replace 'AI' with 'Super Intelligence' and 'SI' in federal government communications, aiming to reflect the technology's advanced capabilities.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "President Donald Trump has issued a directive for federal agencies to use the term 'Super Intelligence' (SI) instead of 'Artificial Intelligence' (AI). The move, announced after a White House lunch with industry leaders, aims to better reflect the advanced capabilities of modern AI technologies.",
+   "The executive order states that the terminology should 'reflect the transformative capabilities of these technologies and the limitless opportunities they create.' The administration believes 'Super Intelligence' more appropriately captures the promise and rapidly advancing capabilities of AI.",
+   "This rebranding comes amid growing public concern over AI safety, with a recent poll indicating that 79% of Americans prioritize AI safety over frontier models. Opposition to AI infrastructure build-out is also increasing due to concerns about utility hikes and noise pollution.",
+   "However, critics argue that changing the name does not address the underlying issues of AI safety and potential risks. The term 'Super Intelligence' scientifically refers to AI with cognitive superiority over humans, a level current AI has not reached.",
+   "Some executives, like Elon Musk, have reportedly adopted the new terminology in the President's presence. Trump stated that 'Super Intelligence' is being used because 'the other word is a fake word,' suggesting a belief that 'AI' is an outdated or inaccurate descriptor."
+  ],
+  "caption": "President Trump has officially renamed 'Artificial Intelligence' to 'Super Intelligence' for all federal agencies.\n\nPresident Donald Trump has issued a directive for federal agencies to use the term 'Super Intelligence' (SI) instead of 'Artificial Intelligence' (AI). The move, announced after a White House lunch with industry leaders, aims to better reflect the advanced capabilities of modern AI technologies.\n\nThe executive order states that the terminology should 'reflect the transformative capabilities of these technologies and the limitless opportunities they create.' The administration believes 'Super Intelligence' more appropriately captures the promise and rapidly advancing capabilities of AI.\n\nThis rebranding comes amid growing public concern over AI safety, with a recent poll indicating that 79% of Americans prioritize AI safety over frontier models. Opposition to AI infrastructure build-out is also increasing due to concerns about utility hikes and noise pollution.\n\nHowever, critics argue that changing the name does not address the underlying issues of AI safety and potential risks. The term 'Super Intelligence' scientifically refers to AI with cognitive superiority over humans, a level current AI has not reached.\n\nSome executives, like Elon Musk, have reportedly adopted the new terminology in the President's presence. Trump stated that 'Super Intelligence' is being used because 'the other word is a fake word,' suggesting a belief that 'AI' is an outdated or inaccurate descriptor.\n\n#AI #SuperIntelligence #TechPolicy #DonaldTrump #WhiteHouse\n\nSource: Tom's Hardware, The Verge, Engadget",
+  "tweet": "President Trump has directed federal agencies to replace 'AI' with 'Super Intelligence' (SI). The move aims to better reflect the technology's advanced capabilities, though critics question if it addresses core safety concerns. #AI #SuperIntelligence",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware, The Verge, Engadget",
+  "url": "https://www.tomshardware.com/tech-industry/policy/trump-tells-federal-agencies-to-use-the-term-super-intelligence-instead-of-artificial-intelligence-president-insists-that-ai-is-only-suffering-from-a-branding-problem",
+  "image": "https://cdn.mos.cms.futurecdn.net/NjUksedeeqdbuVHzNYmhzS-1920-80.png",
+  "orig_title": "Trump tells federal agencies to use the term 'Super Intelligence ' instead of artificial intelligence",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/policy/trump-tells-federal-agencies-to-use-the-term-super-intelligence-instead-of-artificial-intelligence-president-insists-that-ai-is-only-suffering-from-a-branding-problem",
+   "https://www.theverge.com/ai-artificial-intelligence/1002584/trump-us-ai-safety-deal-self-regulation-tech-execs",
+   "https://www.engadget.com/2272978/the-us-governments-new-ai-chatbot-gives-minecrafts-end-poem-a-bureaucratic-twist/"
+  ],
+  "cluster_titles": [
+   "Trump tells federal agencies to use the term 'Super Intelligence ' instead of artificial intelligence",
+   "Here’s how tech leaders will self-police AI safety under Trump’s deal",
+   "The US government's new AI chatbot gives Minecraft's end poem a bureaucratic twist"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20260930-1907-1-trump-renames-ai-to-super-intelligence-for-f.png",
+   "20260930-1907-1-trump-renames-ai-to-super-intelligence-for-f-d1.png",
+   "20260930-1907-1-trump-renames-ai-to-super-intelligence-for-f-d2.png"
+  ]
+ }
+]

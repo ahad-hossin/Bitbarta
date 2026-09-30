@@ -1,1 +1,92 @@
-[]
+[
+ {
+  "topic": "ai_agents_development_workflow",
+  "headline_marked": "[[85 shops, 22 anti-bot walls]] and the one API that knows your size",
+  "headline": "85 shops, 22 anti-bot walls and the one API that knows your size",
+  "summary": "A developer built a personal shopping agent and discovered that many retailers' websites are difficult to scrape, but Shopify's API is a surprisingly useful exception.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer created a personal shopping agent designed to find sale items in their specific size from a list of sources. The agent runs daily, with additional refreshes and alerts. The core challenge wasn't building the agent, but understanding how much of the retail web would actually communicate with a program.",
+   "Out of 85 sources tested, only 45 returned any sale items. After filtering for menswear, clothing, footwear, and the correct size, 941 items remained. A significant portion (1,411 items) were excluded due to being the 'wrong size', highlighting the difficulty in accurately checking stock.",
+   "Shopify stores proved to be a significant source, with 21 Shopify storefronts providing over three-quarters of the collected sale items (3,173 out of 4,112). This was achieved through the readily available '/products.json' endpoint, which offers paginated JSON data including product variants and prices.",
+   "Crucially, the '/products.json' endpoint includes per-size availability, a feature the developer deemed essential for the project's success. This allows for accurate filtering of items that are actually available in the user's size, avoiding the frustration of finding a deal that can't be purchased.",
+   "The developer also found success with a large retailer that exposed a public Algolia search key on its sale page. By using this key, the agent could filter sale items server-side, mimicking a normal user's interaction without complex scraping or rendering.",
+   "A common pattern observed was that many sites already use cleaner APIs for their front-end filtering. The advice for aspiring scrapers is to first investigate if the site's own interface already calls an API that can be leveraged, rather than resorting to HTML scraping.",
+   "Eight retailers, including Nike, JD Sports, and Puma, were problematic because they either didn't provide per-size stock information or hid it behind JavaScript calls. This meant items could be listed as discounted but not confirmable as available in the user's size.",
+   "Five major retailers were initially bypassed due to 'robots.txt disallows'. However, upon closer inspection, it was found their robots.txt files were behind edge protection, returning a 403 error to plain HTTP requests. When tested correctly, these files actually allowed all crawling, but the retailers still provided no usable sale data.",
+   "Further testing revealed that some sites required JavaScript rendering to display product grids or inventory. Two retailers returned 404 errors for all attempted URLs, indicating incorrect category path guessing rather than intentional blocking. The key takeaway is to verify the logic behind blocking decisions, as the outcome might appear correct for the wrong reason."
+  ],
+  "caption": "85 shops, 22 anti-bot walls, and the one boring API that actually knows your size.\n\nA developer created a personal shopping agent designed to find sale items in their specific size from a list of sources. The agent runs daily, with additional refreshes and alerts. The core challenge wasn't building the agent, but understanding how much of the retail web would actually communicate with a program.\n\nOut of 85 sources tested, only 45 returned any sale items. After filtering for menswear, clothing, footwear, and the correct size, 941 items remained. A significant portion (1,411 items) were excluded due to being the 'wrong size', highlighting the difficulty in accurately checking stock.\n\nShopify stores proved to be a significant source, with 21 Shopify storefronts providing over three-quarters of the collected sale items (3,173 out of 4,112). This was achieved through the readily available '/products.json' endpoint, which offers paginated JSON data including product variants and prices.\n\nCrucially, the '/products.json' endpoint includes per-size availability, a feature the developer deemed essential for the project's success. This allows for accurate filtering of items that are actually available in the user's size, avoiding the frustration of finding a deal that can't be purchased.\n\nThe developer also found success with a large retailer that exposed a public Algolia search key on its sale page. By using this key, the agent could filter sale items server-side, mimicking a normal user's interaction without complex scraping or rendering.\n\nA common pattern observed was that many sites already use cleaner APIs for their front-end filtering. The advice for aspiring scrapers is to first investigate if the site's own interface already calls an API that can be leveraged, rather than resorting to HTML scraping.\n\n#Tech #WebScraping #API #Ecommerce #Shopify\n\nSource: DEV",
+  "tweet": "85 shops, 22 anti-bot walls, and the one API that actually knows your size. A developer's journey into retail web scraping reveals surprising challenges and a key Shopify advantage. #WebScraping #API",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/c1-anderson/shopify-productsjson-vs-anti-bot-walls-85-fashion-sources-measured-17lo",
+  "image": "",
+  "orig_title": "Shopify products.json vs anti-bot walls: 85 fashion sources, measured",
+  "cluster_urls": [
+   "https://dev.to/c1-anderson/shopify-productsjson-vs-anti-bot-walls-85-fashion-sources-measured-17lo",
+   "https://dev.to/vellira/from-scaffold-to-production-how-vellira-generates-components-4d09",
+   "https://dev.to/hieu_le/what-happens-when-an-ai-agent-goes-through-a-real-development-workflow-4ajl"
+  ],
+  "cluster_titles": [
+   "Shopify products.json vs anti-bot walls: 85 fashion sources, measured",
+   "From Scaffold to Production: How Vellira Generates Components",
+   "What Happens When an AI Agent Goes Through a Real Development Workflow?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20260930-1406-0-85-shops-22-anti-bot-walls-and-the-one-api-t.png",
+   "20260930-1406-0-85-shops-22-anti-bot-walls-and-the-one-api-t-d1.png",
+   "20260930-1406-0-85-shops-22-anti-bot-walls-and-the-one-api-t-d2.png",
+   "20260930-1406-0-85-shops-22-anti-bot-walls-and-the-one-api-t-d3.png",
+   "20260930-1406-0-85-shops-22-anti-bot-walls-and-the-one-api-t-d4.png",
+   "20260930-1406-0-85-shops-22-anti-bot-walls-and-the-one-api-t-d5.png"
+  ]
+ },
+ {
+  "topic": "router_repurposing_and_firmware_updates",
+  "headline_marked": "Sony implements [[PS5 Pro lottery]] system in Japan to combat shortage",
+  "headline": "Sony implements PS5 Pro lottery system in Japan to combat shortage",
+  "summary": "Gamers must prove at least 60 hours of playtime on PS4 or PS5 to be eligible for purchase, with applications opening October 7.",
+  "category": "GAMING",
+  "template": "launch",
+  "details": [
+   "Sony Japan has announced a new system for purchasing the PS5 Pro, requiring eligible customers to prove they are active PlayStation users. To qualify, players must have logged a minimum of 60 hours on their PS5 or PS4 between September 27, 2024, and September 27, 2026, using a Sony account registered in Japan.",
+   "Applications for the PS5 Pro will open on October 7, with eligible and approved applicants able to purchase the console from October 26 until November 2. If demand exceeds supply, Sony will implement a lottery system to determine who gets to buy the highly sought-after console.",
+   "This measure aims to prevent scalpers from acquiring units for resale and to deter tourists from buying consoles during their visits to Japan. The PS5 Pro has faced stock shortages globally, exacerbated by component supply constraints expected to continue through early 2027.",
+   "Despite a $150 price increase, demand for the PS5 Pro remains high, particularly following the official announcement of Grand Theft Auto VI, which is optimized for the console's enhanced hardware."
+  ],
+  "caption": "Want a PS5 Pro in Japan? Sony now requires you to prove you've played at least 60 hours on a PlayStation console to even apply.\n\nSony Japan has announced a new system for purchasing the PS5 Pro, requiring eligible customers to prove they are active PlayStation users. To qualify, players must have logged a minimum of 60 hours on their PS5 or PS4 between September 27, 2024, and September 27, 2026, using a Sony account registered in Japan.\n\nApplications for the PS5 Pro will open on October 7, with eligible and approved applicants able to purchase the console from October 26 until November 2. If demand exceeds supply, Sony will implement a lottery system to determine who gets to buy the highly sought-after console.\n\nThis measure aims to prevent scalpers from acquiring units for resale and to deter tourists from buying consoles during their visits to Japan. The PS5 Pro has faced stock shortages globally, exacerbated by component supply constraints expected to continue through early 2027.\n\nDespite a $150 price increase, demand for the PS5 Pro remains high, particularly following the official announcement of Grand Theft Auto VI, which is optimized for the console's enhanced hardware.\n\n#PS5Pro #PlayStation #Sony #Gaming #ConsoleWars\n\nSource: Engadget",
+  "tweet": "Sony Japan is implementing a lottery system for the PS5 Pro, requiring players to prove at least 60 hours of playtime on PS4/PS5 to be eligible. Applications open Oct 7. #PS5Pro #PlayStation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "playstation.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2272946/sony-lottery-system-ps5-pro-japan/",
+  "image": "https://www.engadget.com/img/gallery/sony-implements-a-lottery-system-to-deal-with-the-ps5-pro-shortage-in-japan/l-intro-1790754854.jpg",
+  "orig_title": "Sony implements a lottery system to deal with the PS5 Pro shortage in Japan",
+  "cluster_urls": [
+   "https://www.engadget.com/2272946/sony-lottery-system-ps5-pro-japan/",
+   "https://www.engadget.com/2271811/dont-throw-away-old-router-do-this-instead/",
+   "https://www.engadget.com/2271679/router-no-firmware-updates-can-still-use/"
+  ],
+  "cluster_titles": [
+   "Sony implements a lottery system to deal with the PS5 Pro shortage in Japan",
+   "Don't throw away your old router — Do this instead",
+   "Can you still use your router if it doesn't get firmware updates?"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20260930-1406-1-sony-implements-ps5-pro-lottery-system-in-ja.png",
+   "20260930-1406-1-sony-implements-ps5-pro-lottery-system-in-ja-d1.png",
+   "20260930-1406-1-sony-implements-ps5-pro-lottery-system-in-ja-d2.png"
+  ]
+ }
+]

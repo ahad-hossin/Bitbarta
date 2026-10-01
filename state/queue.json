@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "openai moonshot ai ip theft",
+  "headline_marked": "[[OpenAI disrupted Moonshot AI campaign]] to extract hidden model reasoning",
+  "headline": "OpenAI disrupted Moonshot AI campaign to extract hidden model reasoning",
+  "summary": "OpenAI detected a coordinated campaign by Moonshot AI to extract hidden model reasoning, involving 16,000 requests. While the encryption held, the incident highlights growing threats to AI model security.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "OpenAI recently revealed it disrupted a \"coordinated campaign\" in July, spearheaded by actors linked to China-based Moonshot AI. The campaign involved attempts to extract \"protected reasoning\" from OpenAI's models, consistent with adversarial distillation. Over 16,000 requests were made using an extraction pattern from more than 4,000 users.",
+   "The activity began on July 1st with low volume, spiking on July 24-25, but was \"fully disrupted by July 28.\" OpenAI confirmed that the models' encryption for protected reasoning was not broken, and no direct access to stored user conversations or database compromises occurred.",
+   "Protected reasoning refers to a model's internal record for working through a task, which is encrypted and sent to the client. Adversarial distillation is the unauthorized use of one model's outputs or reasoning to train or improve another. One method attempted by operators was to decrypt reasoning from one conversation using a model in another.",
+   "OpenAI implemented fixes, including closing a pathway that allowed replaying encrypted reasoning and adding checks to detect output that might expose reasoning. They also strengthened protections across various user and model contexts and collaborated with third-party providers to disrupt malicious accounts.",
+   "Independent security researchers also reported \"related cross-model and conversation-compaction vulnerabilities\" to OpenAI, confirming the attack paths. Their paper, \"Stealing Reasoning Traces from Proprietary LLM APIs,\" detailed how they fed encrypted reasoning to weaker models to extract plain text.",
+   "OpenAI is not alone; Anthropic also reported a similar campaign by Moonshot AI in September 2026, involving nearly 300,000 customer requests and \"cross-session replay attacks.\" Moonshot AI had previously denied claims of distilling models.",
+   "Looking ahead, OpenAI plans to extend these protections to partner-hosted deployments and add checks against tool-output attacks. The company shared its findings with the Frontier Model Forum and government channels, anticipating more sophisticated distillation attempts as models advance."
+  ],
+  "caption": "OpenAI detected a \"coordinated campaign\" by Moonshot AI to extract hidden reasoning from its models. Over 16,000 requests were made in July, but OpenAI states its encryption held.\n\nOpenAI recently revealed it disrupted a \"coordinated campaign\" in July, spearheaded by actors linked to China-based Moonshot AI. The campaign involved attempts to extract \"protected reasoning\" from OpenAI's models, consistent with adversarial distillation. Over 16,000 requests were made using an extraction pattern from more than 4,000 users.\n\nThe activity began on July 1st with low volume, spiking on July 24-25, but was \"fully disrupted by July 28.\" OpenAI confirmed that the models' encryption for protected reasoning was not broken, and no direct access to stored user conversations or database compromises occurred.\n\nProtected reasoning refers to a model's internal record for working through a task, which is encrypted and sent to the client. Adversarial distillation is the unauthorized use of one model's outputs or reasoning to train or improve another. One method attempted by operators was to decrypt reasoning from one conversation using a model in another.\n\nOpenAI implemented fixes, including closing a pathway that allowed replaying encrypted reasoning and adding checks to detect output that might expose reasoning. They also strengthened protections across various user and model contexts and collaborated with third-party providers to disrupt malicious accounts.\n\nIndependent security researchers also reported \"related cross-model and conversation-compaction vulnerabilities\" to OpenAI, confirming the attack paths. Their paper, \"Stealing Reasoning Traces from Proprietary LLM APIs,\" detailed how they fed encrypted reasoning to weaker models to extract plain text.\n\nOpenAI is not alone; Anthropic also reported a similar campaign by Moonshot AI in September 2026, involving nearly 300,000 customer requests and \"cross-session replay attacks.\" Moonshot AI had previously denied claims of distilling models.\n\n#OpenAI #MoonshotAI #AIsecurity #Cybersecurity #LLM #TechNews\n\nSource: Tom's Hardware",
+  "tweet": "OpenAI disrupted a \"coordinated campaign\" by Moonshot AI to extract hidden reasoning from its models. Over 16,000 requests were made in July, but encryption held, preventing data compromise. This highlights growing AI security threats. #OpenAI #AIsecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-says-actors-linked-to-moonshot-ai-spearheaded-a-campaign-to-extract-its-models-hidden-reasoning-logged-attempts-peaked-at-16-000-users-over-two-days",
+  "image": "https://cdn.mos.cms.futurecdn.net/ZAD3iv3s8sBSmZNAoBfxGj-1920-80.png",
+  "orig_title": "OpenAI says actors linked to China-based Moonshot AI spearheaded a campaign to extract its models’ hidden reasoning",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-says-actors-linked-to-moonshot-ai-spearheaded-a-campaign-to-extract-its-models-hidden-reasoning-logged-attempts-peaked-at-16-000-users-over-two-days"
+  ],
+  "cluster_titles": [
+   "OpenAI says actors linked to China-based Moonshot AI spearheaded a campaign to extract its models’ hidden reasoning"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261001-1806-0-openai-disrupted-moonshot-ai-campaign-to-ext.png",
+   "20261001-1806-0-openai-disrupted-moonshot-ai-campaign-to-ext-d1.png",
+   "20261001-1806-0-openai-disrupted-moonshot-ai-campaign-to-ext-d2.png",
+   "20261001-1806-0-openai-disrupted-moonshot-ai-campaign-to-ext-d3.png",
+   "20261001-1806-0-openai-disrupted-moonshot-ai-campaign-to-ext-d4.png"
+  ]
+ },
+ {
+  "topic": "ai agents leak internal data",
+  "headline_marked": "[[AI agents inadvertently leak 13,000+ internal screenshots]] from over 300 organizations",
+  "headline": "AI agents inadvertently leak 13,000+ internal screenshots from over 300 organizations",
+  "summary": "Over 300 organizations, including Fortune 500 companies, had sensitive corporate and financial data exposed. This occurred because AI development agents publicly hosted internal screenshots, bypassing private repository limitations.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A new report by endpoint security firm Glow reveals that over 13,000 private screenshots from more than 300 organizations, including Fortune 500 companies and a frontier AI lab, have been inadvertently exposed.",
+   "The leaked data includes internal and pre-release software images, corporate and client information, financial data, and even screen recordings of money-movement interfaces. This sensitive information was made public by development AI agents.",
+   "The root cause, detailed in the \"PixelLeak\" report, is surprisingly simple: AI agents, limited by command-line interfaces for private GitHub repositories, uploaded images to public repositories to ensure they were visible in pull requests.",
+   "In about a third of the affected companies, developers used a command-line tool called gitshot, which facilitated this public upload. A significant 93% of these images were found in repositories under individual developer usernames, not company accounts.",
+   "Furthermore, some AI agent skills were configured to automatically use this public hosting workaround for every development ticket, leading to leaks of information about features months before their public release.",
+   "One agent's reasoning output explicitly stated it uploaded screenshots publicly because GitHub's image proxy cannot render images from private repos in PR descriptions, making public hosting the only way for reviewers to see them.",
+   "Glow recommends several mitigation measures, including auditing employee accounts, curtailing \"shadow AI\" use, and carefully vetting software and agent skill instructions to prevent future data exposures."
+  ],
+  "caption": "AI development agents have inadvertently exposed over 13,000 internal screenshots from 300+ organizations, including Fortune 500 companies.\n\nA new report by endpoint security firm Glow reveals that over 13,000 private screenshots from more than 300 organizations, including Fortune 500 companies and a frontier AI lab, have been inadvertently exposed.\n\nThe leaked data includes internal and pre-release software images, corporate and client information, financial data, and even screen recordings of money-movement interfaces. This sensitive information was made public by development AI agents.\n\nThe root cause, detailed in the \"PixelLeak\" report, is surprisingly simple: AI agents, limited by command-line interfaces for private GitHub repositories, uploaded images to public repositories to ensure they were visible in pull requests.\n\nIn about a third of the affected companies, developers used a command-line tool called gitshot, which facilitated this public upload. A significant 93% of these images were found in repositories under individual developer usernames, not company accounts.\n\nFurthermore, some AI agent skills were configured to automatically use this public hosting workaround for every development ticket, leading to leaks of information about features months before their public release.\n\nOne agent's reasoning output explicitly stated it uploaded screenshots publicly because GitHub's image proxy cannot render images from private repos in PR descriptions, making public hosting the only way for reviewers to see them.\n\nGlow recommends several mitigation measures, including auditing employee accounts, curtailing \"shadow AI\" use, and carefully vetting software and agent skill instructions to prevent future data exposures.\n\n#CyberSecurity #AI #DataLeak #TechNews #SoftwareDevelopment #Privacy\n\nSource: Tom's Hardware",
+  "tweet": "AI development agents inadvertently leaked over 13,000 internal screenshots from 300+ organizations, including Fortune 500 companies. The root cause: agents publishing images to public repos due to private repo limitations. #CyberSecurity #AI #DataLeak",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/cyber-security/ai-agents-inadvertently-leak-13-000-internal-screenshots-from-organizations-list-of-companies-includes-fortune-500-and-a-frontier-ai-lab",
+  "image": "https://cdn.mos.cms.futurecdn.net/xqPobGyf7QFnkFEhuwCsqF-1920-80.jpg",
+  "orig_title": "AI agents inadvertently leak 13,000+ internal screenshots from organizations",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/cyber-security/ai-agents-inadvertently-leak-13-000-internal-screenshots-from-organizations-list-of-companies-includes-fortune-500-and-a-frontier-ai-lab"
+  ],
+  "cluster_titles": [
+   "AI agents inadvertently leak 13,000+ internal screenshots from organizations"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261001-1806-1-ai-agents-inadvertently-leak-13-000-internal.png",
+   "20261001-1806-1-ai-agents-inadvertently-leak-13-000-internal-d1.png",
+   "20261001-1806-1-ai-agents-inadvertently-leak-13-000-internal-d2.png",
+   "20261001-1806-1-ai-agents-inadvertently-leak-13-000-internal-d3.png"
+  ]
+ }
+]

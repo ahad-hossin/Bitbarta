@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "china us chip tech divergence",
+  "headline_marked": "[[China-US chip tech diverges]] in advanced packaging and process routes",
+  "headline": "China-US chip tech diverges in advanced packaging and process routes",
+  "summary": "The two tech giants are developing distinct approaches in chip manufacturing, with Huawei's \"Tao Law\" focusing on engineering methodology and the US on GAAFET and Chiplet packaging. This creates a \"main trunk competition\" with specific areas of intersection an",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "The chip technology landscape is seeing a significant divergence between China and the US. Huawei's \"Tao Law\" is not a complete split but rather a \"main trunk competition\" with areas of intersection with US GAAFET and Chiplet advanced packaging technologies.",
+   "While RISC-V allows for open-source ISA layer forking, Huawei's \"Tao Law\" is an engineering methodology combined with proprietary practices. The key intersection points lie in advanced packaging, chiplets, and system-level optimization.",
+   "However, the divergence is clear in front-end process routes and toolchains, indicating distinct strategic paths. This creates a complex relationship rather than a simple 'either/or' scenario.",
+   "Interconnect technologies also show varied approaches. BoW (Bunch of Wires) is presented as a competitor to UCIe, not as a direct replacement, but rather occupying different ends of the protocol complexity spectrum.",
+   "UCIe's advanced packaging version offers higher speeds, with UCIe 1.x at 32GT/s and version 3.0 reaching up to 64GT/s. In contrast, BoW 2.0 operates in the 16–32GT/s range.",
+   "Despite the speed difference, BoW is favored in scenarios prioritizing cost-effectiveness, sufficient performance, and faster time-to-market. Huawei's Lingqu further introduces a third distinct layer of interconnect technology."
+  ],
+  "caption": "China and the US are charting distinct paths in chip technology development. Huawei's \"Tao Law\" and US GAAFET/Chiplet strategies reveal a complex interplay of competition and collaboration.\n\nThe chip technology landscape is seeing a significant divergence between China and the US. Huawei's \"Tao Law\" is not a complete split but rather a \"main trunk competition\" with areas of intersection with US GAAFET and Chiplet advanced packaging technologies.\n\nWhile RISC-V allows for open-source ISA layer forking, Huawei's \"Tao Law\" is an engineering methodology combined with proprietary practices. The key intersection points lie in advanced packaging, chiplets, and system-level optimization.\n\nHowever, the divergence is clear in front-end process routes and toolchains, indicating distinct strategic paths. This creates a complex relationship rather than a simple 'either/or' scenario.\n\nInterconnect technologies also show varied approaches. BoW (Bunch of Wires) is presented as a competitor to UCIe, not as a direct replacement, but rather occupying different ends of the protocol complexity spectrum.\n\nUCIe's advanced packaging version offers higher speeds, with UCIe 1.x at 32GT/s and version 3.0 reaching up to 64GT/s. In contrast, BoW 2.0 operates in the 16–32GT/s range.\n\nDespite the speed difference, BoW is favored in scenarios prioritizing cost-effectiveness, sufficient performance, and faster time-to-market. Huawei's Lingqu further introduces a third distinct layer of interconnect technology.\n\n#ChipTech #Semiconductors #TechDivergence #Hardware #ChinaTech #USTech\n\nSource: DEV",
+  "tweet": "China & US chip tech are diverging, not completely splitting. Huawei's \"Tao Law\" and US GAAFET/Chiplet approaches show \"main trunk competition\" with specific intersections in advanced packaging. Speeds differ for interconnects like UCIe (up to 64GT/s) vs. BoW (16-32GT/s). #C",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/cognitalk/china-us-chip-tech-divergence-4edd",
+  "image": "",
+  "orig_title": "China-US Chip Tech Divergence | 中美半导体技术分化发展预测",
+  "cluster_urls": [
+   "https://dev.to/cognitalk/china-us-chip-tech-divergence-4edd"
+  ],
+  "cluster_titles": [
+   "China-US Chip Tech Divergence | 中美半导体技术分化发展预测"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261001-1007-0-china-us-chip-tech-diverges-in-advanced-pack.png",
+   "20261001-1007-0-china-us-chip-tech-diverges-in-advanced-pack-d1.png",
+   "20261001-1007-0-china-us-chip-tech-diverges-in-advanced-pack-d2.png"
+  ]
+ },
+ {
+  "topic": "tanstack npm supply chain attack",
+  "headline_marked": "[[TanStack npm supply-chain attack]] spread by Dependabot, compromised 110 packages with one click",
+  "headline": "TanStack npm supply-chain attack spread by Dependabot, compromised 110 packages with one click",
+  "summary": "A sophisticated worm published 84 malicious versions of 42 TanStack packages from its own pipeline, then spread to 110 more packages via a Dependabot PR and a single merge.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "On May 11, 2026, a worm published 84 malicious versions of 42 TanStack packages to npm, with valid provenance, from TanStack's own release pipeline. This attack is notable because no password was phished and only one human click was needed for it to spread further.",
+   "The attack began when a renamed fork opened a PR, triggering a workflow that executed the attacker's code. This code saved a poisoned pnpm-store cache, which was later restored by a legitimate merge eight hours later.",
+   "The attacker binaries read the OIDC token from the Runner.Worker process, using it to publish malicious packages directly to the npm registry. This occurred even though the workflow's own publish step was skipped due to test failures.",
+   "Twenty-nine minutes after TanStack posted an advisory, Dependabot opened a PR in a downstream project, proposing updates to two compromised TanStack versions. A human reviewed and merged this PR, unknowingly pulling the malicious code.",
+   "The merged PR ran a publish workflow with an overly broad classic npm token. The malicious prepare script exfiltrated this token, using it to publish 5 malicious versions of every package the token had access to.",
+   "This resulted in 110 malicious versions across 22 @squawk/* packages and three personal ones, all published within 95 minutes. The worm ensured that 'latest' on every package pointed to an infected version.",
+   "The payload was a 2.3 MB obfuscated JavaScript file that runs on install. It adds a hidden optionalDependency pointing to an orphan git commit, which npm fetches and runs its prepare script during installation.",
+   "The malware's primary goal was to find a classic npm token with 2FA bypass. In CI environments, it exchanged GitHub OIDC tokens for per-package publish tokens, then queried npm for all packages the maintainer controlled to publish infected tarballs."
+  ],
+  "caption": "A supply-chain worm compromised 110 npm packages in 95 minutes. No password was phished; it spread via a single Dependabot merge.\n\nOn May 11, 2026, a worm published 84 malicious versions of 42 TanStack packages to npm, with valid provenance, from TanStack's own release pipeline. This attack is notable because no password was phished and only one human click was needed for it to spread further.\n\nThe attack began when a renamed fork opened a PR, triggering a workflow that executed the attacker's code. This code saved a poisoned pnpm-store cache, which was later restored by a legitimate merge eight hours later.\n\nThe attacker binaries read the OIDC token from the Runner.Worker process, using it to publish malicious packages directly to the npm registry. This occurred even though the workflow's own publish step was skipped due to test failures.\n\nTwenty-nine minutes after TanStack posted an advisory, Dependabot opened a PR in a downstream project, proposing updates to two compromised TanStack versions. A human reviewed and merged this PR, unknowingly pulling the malicious code.\n\nThe merged PR ran a publish workflow with an overly broad classic npm token. The malicious prepare script exfiltrated this token, using it to publish 5 malicious versions of every package the token had access to.\n\nThis resulted in 110 malicious versions across 22 @squawk/* packages and three personal ones, all published within 95 minutes. The worm ensured that 'latest' on every package pointed to an infected version.\n\nThe payload was a 2.3 MB obfuscated JavaScript file that runs on install. It adds a hidden optionalDependency pointing to an orphan git commit, which npm fetches and runs its prepare script during installation.\n\nThe malware's primary goal was to find a classic npm token with 2FA bypass. In CI environments, it exchanged GitHub OIDC tokens for per-package publish tokens, then queried npm for all packages the maintainer controlled to publish infected tarballs.\n\n#SupplyChainAttack #npm #Security #DevTools #Cybersecurity #TanStack\n\nSource: DEV",
+  "tweet": "A supply-chain worm compromised 110 npm packages in 95 minutes. No password was phished; it spread via a single Dependabot merge, exploiting a poisoned cache and an overly broad token. A critical lesson in CI/CD security. #SupplyChainAttack #npm #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tanstack.com",
+  "source": "DEV",
+  "url": "https://dev.to/axrisi/tanstack-npm-supply-chain-attack-how-a-dependabot-bump-spread-a-worm-1h4l",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Faidazctb3d8ovm3xy0lp.jpg",
+  "orig_title": "TanStack npm supply-chain attack: how a Dependabot bump spread a worm",
+  "cluster_urls": [
+   "https://dev.to/axrisi/tanstack-npm-supply-chain-attack-how-a-dependabot-bump-spread-a-worm-1h4l"
+  ],
+  "cluster_titles": [
+   "TanStack npm supply-chain attack: how a Dependabot bump spread a worm"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261001-1007-1-tanstack-npm-supply-chain-attack-spread-by-d.png",
+   "20261001-1007-1-tanstack-npm-supply-chain-attack-spread-by-d-d1.png",
+   "20261001-1007-1-tanstack-npm-supply-chain-attack-spread-by-d-d2.png",
+   "20261001-1007-1-tanstack-npm-supply-chain-attack-spread-by-d-d3.png"
+  ]
+ }
+]

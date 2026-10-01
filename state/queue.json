@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_agents_self_improving_dev_workspaces",
+  "headline_marked": "[[AI coding assistants are evolving]] to persistent, self-improving workspaces, ending the 'black box' pattern",
+  "headline": "AI coding assistants are evolving to persistent, self-improving workspaces, ending the 'black box' pattern",
+  "summary": "Traditional AI coding assistants are stateless, forcing developers to re-explain context. New agentic development environments retain memory and learn from every interaction, fundamentally changing how AI assists coding.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Current AI coding assistants are stateless, requiring developers to constantly re-explain context. Studies show 20-40% of AI-assisted coding time is spent on this repetitive task, creating significant friction.",
+   "A new paradigm is emerging: agentic development environments, like KiroCrew, offer persistent, self-improving workspaces. These systems retain context across sessions and learn from interactions, fundamentally shifting from prompt-response to persistent-agent models.",
+   "The core architectural change involves the LLM becoming one component within an orchestration layer. This layer manages persistent state, executes tools, and feeds results back into a context engine, making the entire system intelligent, not just the model.",
+   "These workspaces utilize four distinct memory types, each with varying access patterns and decay rates, going beyond standard Retrieval-Augmented Generation (RAG). This rich memory architecture is crucial for capturing the complexities of a development environment.",
+   "Managing the token budget is a key engineering challenge. The context engine intelligently prioritizes and consolidates information, ensuring the most relevant data fills available tokens without overwhelming the model. Persistent memory also offers a significant advantage over a resetting context window.",
+   "Instead of flat vector embeddings, these systems employ a knowledge graph to capture structural relationships like dependencies, call graphs, and architectural patterns. Production systems use a dual-index approach combining vector search and graph traversal.",
+   "Self-improvement is achieved through structured feedback loops. The system learns user preferences by observing interactions, successful patterns, and rejections, continuously enriching its understanding and adapting its behavior.",
+   "Persistent agents capable of executing code require strict guardrails. This includes sandboxing, explicit user confirmation for actions, and robust rollback mechanisms to ensure safety and control."
+  ],
+  "caption": "AI coding assistants are evolving beyond stateless 'black boxes.' New agentic development environments learn and retain context across sessions.\n\nCurrent AI coding assistants are stateless, requiring developers to constantly re-explain context. Studies show 20-40% of AI-assisted coding time is spent on this repetitive task, creating significant friction.\n\nA new paradigm is emerging: agentic development environments, like KiroCrew, offer persistent, self-improving workspaces. These systems retain context across sessions and learn from interactions, fundamentally shifting from prompt-response to persistent-agent models.\n\nThe core architectural change involves the LLM becoming one component within an orchestration layer. This layer manages persistent state, executes tools, and feeds results back into a context engine, making the entire system intelligent, not just the model.\n\nThese workspaces utilize four distinct memory types, each with varying access patterns and decay rates, going beyond standard Retrieval-Augmented Generation (RAG). This rich memory architecture is crucial for capturing the complexities of a development environment.\n\nManaging the token budget is a key engineering challenge. The context engine intelligently prioritizes and consolidates information, ensuring the most relevant data fills available tokens without overwhelming the model. Persistent memory also offers a significant advantage over a resetting context window.\n\nInstead of flat vector embeddings, these systems employ a knowledge graph to capture structural relationships like dependencies, call graphs, and architectural patterns. Production systems use a dual-index approach combining vector search and graph traversal.\n\nSelf-improvement is achieved through structured feedback loops. The system learns user preferences by observing interactions, successful patterns, and rejections, continuously enriching its understanding and adapting its behavior.\n\n#AI #DeveloperTools #SoftwareDevelopment #AgenticAI #TechArchitecture #Coding\n\nSource: DEV",
+  "tweet": "AI coding assistants are getting a major upgrade! New agentic development environments learn and retain context across sessions, moving beyond the 'black box' model. This means less re-explaining and more efficient coding. #AI #DevTools #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tamizuddin/the-death-of-the-black-box-architecting-self-improving-persistent-development-workspaces-with-2gia",
+  "image": "",
+  "orig_title": "The Death of the Black Box: Architecting Self-Improving Persistent Development Workspaces with Agentic Context Systems",
+  "cluster_urls": [
+   "https://dev.to/tamizuddin/the-death-of-the-black-box-architecting-self-improving-persistent-development-workspaces-with-2gia"
+  ],
+  "cluster_titles": [
+   "The Death of the Black Box: Architecting Self-Improving Persistent Development Workspaces with Agentic Context Systems"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261001-1208-0-ai-coding-assistants-are-evolving-to-persist.png",
+   "20261001-1208-0-ai-coding-assistants-are-evolving-to-persist-d1.png",
+   "20261001-1208-0-ai-coding-assistants-are-evolving-to-persist-d2.png",
+   "20261001-1208-0-ai-coding-assistants-are-evolving-to-persist-d3.png"
+  ]
+ },
+ {
+  "topic": "drupal_security_advisory_2026",
+  "headline_marked": "[[Over 436,000 Drupal sites exposed to internet]] ahead of September 2026 advisory",
+  "headline": "Over 436,000 Drupal sites exposed to internet ahead of September 2026 advisory",
+  "summary": "A recent ZoomEye query identified over 436,000 internet-exposed Drupal deployments. This large number underscores the broad attack surface for flaws covered by the September 2026 advisory (WID-SEC-2026-3554).",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A ZoomEye query on September 24, 2026, found 436,286 internet-exposed Drupal deployments. This number represents sites visible in the index, highlighting a significant potential attack surface. The advisory WID-SEC-2026-3554 covers flaws in various contributed Drupal projects.",
+   "It's crucial to distinguish between exposed deployments and those running vulnerable modules, as module code and configuration are typically behind authentication. However, attackers can still scan for Drupal and then probe for known module routes. Sites directly on port 443 are at higher risk than those behind proxies or VPNs.",
+   "Advisory WID-SEC-2026-3554 addresses 36 CVEs across numerous contributed projects, including Webform, Cloud, Project Browser, and several authentication-related modules. Fixed releases are available for all, such as Webform 6.2.12 and REST & JSON API Authentication 3.2.0. Authentication-related projects like 'REST & JSON API Authentication' and 'Stop administrator login' should be prioritized on internet-facing sites due to their direct exposure.",
+   "Operators should start by identifying internet-facing sites that accept unauthenticated traffic. For these, list installed contributed projects and compare their versions against the advisory. Prioritize patching based on reachability and the nature of the vulnerability, rather than just the CVE count.",
+   "After patching, confirm file changes on disk and consider restricting unauthenticated access to administrative and API routes at the reverse proxy. Re-running exposure queries post-patching helps track the reduction in unpatched hosts. This proactive approach is vital for mitigating risks."
+  ],
+  "caption": "Over 436,000 Drupal sites are internet-exposed, creating a massive attack surface. A new advisory (WID-SEC-2026-3554) details 36 CVEs in popular modules.\n\nA ZoomEye query on September 24, 2026, found 436,286 internet-exposed Drupal deployments. This number represents sites visible in the index, highlighting a significant potential attack surface. The advisory WID-SEC-2026-3554 covers flaws in various contributed Drupal projects.\n\nIt's crucial to distinguish between exposed deployments and those running vulnerable modules, as module code and configuration are typically behind authentication. However, attackers can still scan for Drupal and then probe for known module routes. Sites directly on port 443 are at higher risk than those behind proxies or VPNs.\n\nAdvisory WID-SEC-2026-3554 addresses 36 CVEs across numerous contributed projects, including Webform, Cloud, Project Browser, and several authentication-related modules. Fixed releases are available for all, such as Webform 6.2.12 and REST & JSON API Authentication 3.2.0. Authentication-related projects like 'REST & JSON API Authentication' and 'Stop administrator login' should be prioritized on internet-facing sites due to their direct exposure.\n\nOperators should start by identifying internet-facing sites that accept unauthenticated traffic. For these, list installed contributed projects and compare their versions against the advisory. Prioritize patching based on reachability and the nature of the vulnerability, rather than just the CVE count.\n\nAfter patching, confirm file changes on disk and consider restricting unauthenticated access to administrative and API routes at the reverse proxy. Re-running exposure queries post-patching helps track the reduction in unpatched hosts. This proactive approach is vital for mitigating risks.\n\n#Drupal #Security #Cybersecurity #Vulnerability #WebDevelopment #InfoSec\n\nSource: DEV",
+  "tweet": "Over 436,000 Drupal sites are internet-exposed, facing risks from 36 CVEs in popular modules detailed in the WID-SEC-2026-3554 advisory. Prioritize patching authentication-related projects. #Drupal #Security #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "drupal.org",
+  "source": "DEV",
+  "url": "https://dev.to/jeffreyciend/internet-exposed-drupal-sites-and-the-september-2026-extension-advisory-2pbe",
+  "image": "",
+  "orig_title": "Internet-Exposed Drupal Sites and the September 2026 Extension Advisory",
+  "cluster_urls": [
+   "https://dev.to/jeffreyciend/internet-exposed-drupal-sites-and-the-september-2026-extension-advisory-2pbe"
+  ],
+  "cluster_titles": [
+   "Internet-Exposed Drupal Sites and the September 2026 Extension Advisory"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261001-1208-1-over-436-000-drupal-sites-exposed-to-interne.png",
+   "20261001-1208-1-over-436-000-drupal-sites-exposed-to-interne-d1.png",
+   "20261001-1208-1-over-436-000-drupal-sites-exposed-to-interne-d2.png",
+   "20261001-1208-1-over-436-000-drupal-sites-exposed-to-interne-d3.png"
+  ]
+ }
+]

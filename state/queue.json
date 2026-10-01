@@ -1,1 +1,104 @@
-[]
+[
+ {
+  "topic": "dev releases and updates",
+  "headline_marked": "DocumentDB 0.117: [[scalar $group index pushdown]] optimization detailed",
+  "headline": "DocumentDB 0.117: scalar $group index pushdown optimization detailed",
+  "summary": "Microsoft's open-source PostgreSQL extension for MongoDB API users gains a key performance boost, outperforming MongoDB in certain aggregation scenarios.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "DocumentDB 0.117, released September 10, 2026, introduces scalar $group index pushdown, an optimization that allows the PostgreSQL query planner to efficiently handle aggregations without requiring explicit query hints.",
+   "This feature transforms MongoDB operators into efficient PostgreSQL access paths, offering MongoDB users an alternative that integrates with PostgreSQL. Microsoft leads the development, incorporating feedback from Azure DocumentDB customers.",
+   "Benchmarking with 50,000 documents revealed that MongoDB, without hints, performs a COLLSCAN, reading all documents. Even with an index hint, MongoDB's aggregation doesn't spill but still reads index entries.",
+   "DocumentDB 0.116, without the new optimization, also performed a collection scan. Enabling scalar pushdown in DocumentDB 0.117 significantly improved performance, utilizing an index-only scan and analyzing zero documents.",
+   "The optimization, enabled by default in future versions (v1.1), collects simple '$field' accumulator paths and adds a fullScan qual for each. This allows DocumentDB to leverage covering indexes for aggregations, drastically reducing data reads.",
+   "This advancement means DocumentDB can now process aggregations more efficiently, especially when the group key is constant, by directly using index information rather than scanning entire documents or indexes unnecessarily."
+  ],
+  "caption": "DocumentDB 0.117's new scalar $group index pushdown offers a significant performance upgrade for MongoDB API users on PostgreSQL.\n\nDocumentDB 0.117, released September 10, 2026, introduces scalar $group index pushdown, an optimization that allows the PostgreSQL query planner to efficiently handle aggregations without requiring explicit query hints.\n\nThis feature transforms MongoDB operators into efficient PostgreSQL access paths, offering MongoDB users an alternative that integrates with PostgreSQL. Microsoft leads the development, incorporating feedback from Azure DocumentDB customers.\n\nBenchmarking with 50,000 documents revealed that MongoDB, without hints, performs a COLLSCAN, reading all documents. Even with an index hint, MongoDB's aggregation doesn't spill but still reads index entries.\n\nDocumentDB 0.116, without the new optimization, also performed a collection scan. Enabling scalar pushdown in DocumentDB 0.117 significantly improved performance, utilizing an index-only scan and analyzing zero documents.\n\nThe optimization, enabled by default in future versions (v1.1), collects simple '$field' accumulator paths and adds a fullScan qual for each. This allows DocumentDB to leverage covering indexes for aggregations, drastically reducing data reads.\n\nThis advancement means DocumentDB can now process aggregations more efficiently, especially when the group key is constant, by directly using index information rather than scanning entire documents or indexes unnecessarily.\n\n#DocumentDB #PostgreSQL #MongoDB #Database #DevOps\n\nSource: DEV",
+  "tweet": "DocumentDB 0.117 brings scalar $group index pushdown, boosting aggregation performance on PostgreSQL. It leverages index-only scans, outperforming MongoDB in benchmarks. #DocumentDB #PostgreSQL #Database",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "documentdb.org",
+  "source": "DEV",
+  "url": "https://dev.to/franckpachot/documentdb-0117-scalar-group-index-pushdown-2cki",
+  "image": "",
+  "orig_title": "DocumentDB 0.117: scalar $group index pushdown",
+  "cluster_urls": [
+   "https://dev.to/franckpachot/documentdb-0117-scalar-group-index-pushdown-2cki",
+   "https://dev.to/sage106/starting-my-hacktoberfest-2026-journey-4140",
+   "https://dev.to/kozhevniko/cve-2026-96358-a-module-inventory-checklist-from-the-cert-bund-record-4acb",
+   "https://dev.to/voice_developer/top-debugging-tips-for-voice-ai-applications-257l",
+   "https://dev.to/mithawala/how-i-put-my-copilot-agents-in-my-pocket-zero-servers-end-to-end-encryption-and-one-nasty-ios-bug-57j7",
+   "https://dev.to/voice_developer/the-future-of-voice-interfaces-in-web-applications-pad",
+   "https://dev.to/ctfdojo/picoctf-buffer-overflow-1-writeup-overwrite-a-return-address-to-call-win-f8a",
+   "https://dev.to/prodbymarcu/i-benchmarked-cloudflares-new-open-decision-model-against-the-hosted-api-its-trying-to-replace-2ded",
+   "https://dev.to/alisha_albert_fa8993b210a/delete-on-read-designing-a-file-share-that-destroys-itself-3j2i",
+   "https://dev.to/unmannedops/published-and-listed-are-two-different-events-and-we-treated-them-as-one-3pbh"
+  ],
+  "cluster_titles": [
+   "DocumentDB 0.117: scalar $group index pushdown",
+   "Starting My Hacktoberfest 2026 Journey",
+   "CVE-2026-96358: A Module Inventory Checklist from the CERT-BUND Record",
+   "Top Debugging Tips for Voice AI Applications",
+   "How I put my Copilot agents in my pocket: zero servers, end-to-end encryption and one nasty iOS bug",
+   "The Future of Voice Interfaces in Web Applications",
+   "PicoCTF Buffer Overflow 1 Writeup — Overwrite a Return Address to Call win()",
+   "I benchmarked Cloudflare's new open decision model against the hosted API it's trying to replace",
+   "Delete-on-read: designing a file share that destroys itself",
+   "Published and listed are two different events and we treated them as one"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261002-0306-0-documentdb-0-117-scalar-group-index-pushdown.png",
+   "20261002-0306-0-documentdb-0-117-scalar-group-index-pushdown-d1.png",
+   "20261002-0306-0-documentdb-0-117-scalar-group-index-pushdown-d2.png"
+  ]
+ },
+ {
+  "topic": "judge dismisses antitrust lawsuits against google ai search",
+  "headline_marked": "[[Pentagon data breach]] exposes 2.8M military personnel records",
+  "headline": "Pentagon data breach exposes 2.8M military personnel records",
+  "summary": "Hackers accessed sensitive data including Social Security numbers and job titles, potentially aiding foreign adversaries. This follows a recent FBI data compromise.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The Pentagon is notifying over 2 million current and former military members that their personnel records were stolen from a Defense Manpower Data Center network. The breach, which began last October, compromised records of 2.8 million individuals, including Social Security numbers, names, addresses, sex, race, and occupational specialty.",
+   "The stolen data, particularly occupational specialties, could be valuable to foreign intelligence agencies for identifying high-value military personnel. This incident marks the second major breach in recent months to expose sensitive US government personnel records.",
+   "Last month, the ransomware group ShinyHunters claimed to have hacked FBI systems, stealing records of thousands of current or former employees, including those related to investigations into China or Russia. While ShinyHunters stated no plans to release the data, their promises hold little weight.",
+   "These recent breaches collectively represent one of the largest potential espionage hauls since the 2015 hack of the US Office of Personnel Management, where China-state hackers obtained over 22 million records.",
+   "The Defense Manpower Data Center handles over 60 million Defense Department personnel records. The department has not disclosed how the attackers breached security, whether they've contacted the responsible parties, or if ransom demands were made. Officials claim the data hasn't been misused but haven't explained how they reached that conclusion."
+  ],
+  "caption": "US military data breach exposes 2.8 million personnel records, including Social Security numbers and job titles. This follows a recent FBI data compromise.\n\nThe Pentagon is notifying over 2 million current and former military members that their personnel records were stolen from a Defense Manpower Data Center network. The breach, which began last October, compromised records of 2.8 million individuals, including Social Security numbers, names, addresses, sex, race, and occupational specialty.\n\nThe stolen data, particularly occupational specialties, could be valuable to foreign intelligence agencies for identifying high-value military personnel. This incident marks the second major breach in recent months to expose sensitive US government personnel records.\n\nLast month, the ransomware group ShinyHunters claimed to have hacked FBI systems, stealing records of thousands of current or former employees, including those related to investigations into China or Russia. While ShinyHunters stated no plans to release the data, their promises hold little weight.\n\nThese recent breaches collectively represent one of the largest potential espionage hauls since the 2015 hack of the US Office of Personnel Management, where China-state hackers obtained over 22 million records.\n\nThe Defense Manpower Data Center handles over 60 million Defense Department personnel records. The department has not disclosed how the attackers breached security, whether they've contacted the responsible parties, or if ransom demands were made. Officials claim the data hasn't been misused but haven't explained how they reached that conclusion.\n\n#Cybersecurity #DataBreach #Pentagon #FBI #Privacy\n\nSource: Ars Technica, Engadget, The Verge",
+  "tweet": "Pentagon data breach exposes 2.8M military personnel records, including SSNs & job titles. This follows a recent FBI data compromise. #Cybersecurity #DataBreach",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Ars Technica, Engadget, The Verge",
+  "url": "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2021/04/data-leak-1000x648.jpeg",
+  "orig_title": "Hacks of 2 federal agencies in a month have spilled a bonanza of sensitive data",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/10/hacks-of-2-federal-agencies-in-a-month-have-spilled-a-bonanza-of-sensitive-data/",
+   "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/",
+   "https://www.engadget.com/2275023/judge-dismisses-lawsuits-claiming-googles-ai-overviews-siphon-web-traffic/",
+   "https://www.theverge.com/tech/1003589/google-ai-overviews-chegg-penske-lawsuits-dismissed"
+  ],
+  "cluster_titles": [
+   "Hacks of 2 federal agencies in a month have spilled a bonanza of sensitive data",
+   "Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search",
+   "Judge dismisses lawsuits claiming Google's AI Overviews siphon web traffic",
+   "Judge dismisses antitrust lawsuits over Google’s AI Overviews"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20261002-0306-1-pentagon-data-breach-exposes-2-8m-military-p.png",
+   "20261002-0306-1-pentagon-data-breach-exposes-2-8m-military-p-d1.png",
+   "20261002-0306-1-pentagon-data-breach-exposes-2-8m-military-p-d2.png",
+   "20261002-0306-1-pentagon-data-breach-exposes-2-8m-military-p-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "deepseek v4.1 flash on 8gb gpu",
+  "headline_marked": "[[Running the 510 GB DeepSeek-V4.1-Flash on an 8 GB GPU]] — and three bugs that never raise an error",
+  "headline": "Running the 510 GB DeepSeek-V4.1-Flash on an 8 GB GPU — and three bugs that never raise an error",
+  "summary": "A developer successfully ran the massive 510 GB DeepSeek-V4.1-Flash AI model on an 8 GB GPU, achieving ~1.6 tokens/s from disk. The process involved overcoming three silent bugs in the reference code and kernels.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A developer managed to run the 510 GB DeepSeek-V4.1-Flash model on a modest RTX 5060 GPU with only 8 GB VRAM, using a Gen5 NVMe drive for model files. It achieved approximately 1.6 tokens/s when reading experts directly from disk, and 2.4 tokens/s with a 16 GB RAM cache. This setup allows the large Mixture-of-Experts model to function as a normal chat model in Open WebUI.",
+   "For Mixture-of-Experts models, the total disk size is less critical than the amount of expert data pulled per token. DeepSeek-V4.1-Flash, with 40 layers and 384 experts per layer, chooses 6 experts per token, each being 17.93 MiB in FP4. This results in 3.3 times more bytes per token compared to a previously tested 133 GB Qwen model, largely explaining the speed difference.",
+   "The first major issue encountered was with TileLang 0.1.8, which silently computed incorrect results on the sm_120 architecture. While the reference self-test passed by checking shapes, not values, the FP4 matrix multiply produced unrelated numbers. Upgrading to TileLang 0.1.9 resolved this, yielding accurate computations.",
+   "A race condition was found in the reference act_quant kernel when built with num_stages = 0 for DeepSeek's ue8m0 scale format. On the RTX 5060, this caused parts of the FP8 output to be NaN for more than 64 rows, with inconsistent results. Setting num_stages = 2 eliminated the NaN values and provided bit-exact results compared to a PyTorch implementation.",
+   "The sparse attention kernel required 141 KB of shared memory, exceeding the ~99 KB available on consumer Blackwell cards. The solution involved calling the kernel in groups of 16 independent heads. A subtle trap was identified where .contiguous() on a head slice of a 1-token tensor didn't change its strides, requiring clone(memory_format=torch.contiguous_format) instead.",
+   "These experiences highlight a critical lesson for new hardware: 'it ran without errors' is insufficient. Developers should compare every kernel's output with a simple PyTorch version using real weights before trusting any generated text. The team ensured that 136 generated tokens from a fixed 4-question check remained identical to the plain version, rejecting or fixing any deviation.",
+   "Initial plain streaming achieved 0.89 tokens/s from disk. An overlap scheme, developed with AI assistance, improved this to 1.28 tokens/s by using a separate copy thread with CUDA events. Surprisingly, issuing all 6 expert reads at once was slower; a deep queue approach proved more effective for overlapping disk I/O and computation."
+  ],
+  "caption": "A 510 GB AI model running on an 8 GB GPU? It's possible, but not without a deep dive into silent bugs and kernel optimizations.\n\nA developer managed to run the 510 GB DeepSeek-V4.1-Flash model on a modest RTX 5060 GPU with only 8 GB VRAM, using a Gen5 NVMe drive for model files. It achieved approximately 1.6 tokens/s when reading experts directly from disk, and 2.4 tokens/s with a 16 GB RAM cache. This setup allows the large Mixture-of-Experts model to function as a normal chat model in Open WebUI.\n\nFor Mixture-of-Experts models, the total disk size is less critical than the amount of expert data pulled per token. DeepSeek-V4.1-Flash, with 40 layers and 384 experts per layer, chooses 6 experts per token, each being 17.93 MiB in FP4. This results in 3.3 times more bytes per token compared to a previously tested 133 GB Qwen model, largely explaining the speed difference.\n\nThe first major issue encountered was with TileLang 0.1.8, which silently computed incorrect results on the sm_120 architecture. While the reference self-test passed by checking shapes, not values, the FP4 matrix multiply produced unrelated numbers. Upgrading to TileLang 0.1.9 resolved this, yielding accurate computations.\n\nA race condition was found in the reference act_quant kernel when built with num_stages = 0 for DeepSeek's ue8m0 scale format. On the RTX 5060, this caused parts of the FP8 output to be NaN for more than 64 rows, with inconsistent results. Setting num_stages = 2 eliminated the NaN values and provided bit-exact results compared to a PyTorch implementation.\n\nThe sparse attention kernel required 141 KB of shared memory, exceeding the ~99 KB available on consumer Blackwell cards. The solution involved calling the kernel in groups of 16 independent heads. A subtle trap was identified where .contiguous() on a head slice of a 1-token tensor didn't change its strides, requiring clone(memory_format=torch.contiguous_format) instead.\n\n#AI #DeepSeek #GPU #MachineLearning #Developer #Tech\n\nSource: DEV",
+  "tweet": "A 510 GB AI model running on an 8 GB GPU? Yes, a developer made DeepSeek-V4.1-Flash work on an RTX 5060, hitting 1.6 tokens/s. The journey involved fixing three silent bugs in kernels and optimizing I/O. #AI #GPU #DeepSeek",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "deepseek.com",
+  "source": "DEV",
+  "url": "https://dev.to/helgard_orlm/running-the-510-gb-deepseek-v41-flash-on-an-8-gb-gpu-and-three-bugs-that-never-raise-an-error-5647",
+  "image": "",
+  "orig_title": "Running the 510 GB DeepSeek-V4.1-Flash on an 8 GB GPU — and three bugs that never raise an error",
+  "cluster_urls": [
+   "https://dev.to/helgard_orlm/running-the-510-gb-deepseek-v41-flash-on-an-8-gb-gpu-and-three-bugs-that-never-raise-an-error-5647"
+  ],
+  "cluster_titles": [
+   "Running the 510 GB DeepSeek-V4.1-Flash on an 8 GB GPU — and three bugs that never raise an error"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261003-1828-0-running-the-510-gb-deepseek-v4-1-flash-on-an.png",
+   "20261003-1828-0-running-the-510-gb-deepseek-v4-1-flash-on-an-d1.png",
+   "20261003-1828-0-running-the-510-gb-deepseek-v4-1-flash-on-an-d2.png",
+   "20261003-1828-0-running-the-510-gb-deepseek-v4-1-flash-on-an-d3.png",
+   "20261003-1828-0-running-the-510-gb-deepseek-v4-1-flash-on-an-d4.png"
+  ]
+ },
+ {
+  "topic": "meta muse ai privacy concerns",
+  "headline_marked": "Meta's Muse AI [[Creates Detailed Profiles of All Your Friends]]",
+  "headline": "Meta's Muse AI Creates Detailed Profiles of All Your Friends",
+  "summary": "The AI agent, downloaded by millions, reportedly compiles data on family, partners, and colleagues, creating a 'page for every person in the user's life.'",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Meta's new AI assistant, Muse, has gone viral, with millions of users connecting it to their personal data. However, leaked internal files reveal the AI's capability to create detailed profiles for everyone in a user's social circle, including family, friends, and colleagues.",
+   "The AI agent reportedly undertakes an hourly process to compile data, aiming to build a 'page for every person in the user's life.' This includes information on their relationships, important life events, and even potential suggestions for improving connections.",
+   "According to AI safety researcher Karan Joshi, who extracted the instructions, Muse's goal appears to be understanding users' relationships to 'know you like a friend,' a prospect he describes as 'pretty creepy.'",
+   "Muse's documentation indicates that these profiles may include sections on 'Facts,' 'History,' 'The relationship,' 'In common,' 'Open threads,' and 'Strengthening.' The AI is instructed to use only available evidence and avoid inventing details.",
+   "The system is designed to store user data and context within a dedicated virtual machine, inaccessible to other agents. Meta states that Muse seeks human confirmation before completing actions and provides an audit log for users to review its activity.",
+   "Experts express concern over AI systems gathering more information about users than they receive in return, highlighting the potential for both correct and incorrect inferences from vast data sources."
+  ],
+  "caption": "Meta's viral AI assistant, Muse, is reportedly building detailed profiles on all your friends and family, compiling data hourly to understand your social connections.\n\nMeta's new AI assistant, Muse, has gone viral, with millions of users connecting it to their personal data. However, leaked internal files reveal the AI's capability to create detailed profiles for everyone in a user's social circle, including family, friends, and colleagues.\n\nThe AI agent reportedly undertakes an hourly process to compile data, aiming to build a 'page for every person in the user's life.' This includes information on their relationships, important life events, and even potential suggestions for improving connections.\n\nAccording to AI safety researcher Karan Joshi, who extracted the instructions, Muse's goal appears to be understanding users' relationships to 'know you like a friend,' a prospect he describes as 'pretty creepy.'\n\nMuse's documentation indicates that these profiles may include sections on 'Facts,' 'History,' 'The relationship,' 'In common,' 'Open threads,' and 'Strengthening.' The AI is instructed to use only available evidence and avoid inventing details.\n\nThe system is designed to store user data and context within a dedicated virtual machine, inaccessible to other agents. Meta states that Muse seeks human confirmation before completing actions and provides an audit log for users to review its activity.\n\nExperts express concern over AI systems gathering more information about users than they receive in return, highlighting the potential for both correct and incorrect inferences from vast data sources.\n\n#AI #Meta #MuseAI #Privacy #DataSecurity\n\nSource: Wired",
+  "tweet": "Meta's Muse AI is reportedly creating detailed profiles of everyone in your life, compiling data hourly to understand your relationships. Experts call the feature 'pretty creepy.' #AI #Meta #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "meta.com",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/",
+  "image": "https://media.wired.com/photos/6abda258fa5a1bd6e2b21507/master/pass/Kernel-Panic-Muse-AI-Self-PWN-Security.jpg",
+  "orig_title": "Muse Creates Detailed Profiles of All Your Friends and Family",
+  "cluster_urls": [
+   "https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/"
+  ],
+  "cluster_titles": [
+   "Muse Creates Detailed Profiles of All Your Friends and Family"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20261003-1828-1-meta-s-muse-ai-creates-detailed-profiles-of-.png",
+   "20261003-1828-1-meta-s-muse-ai-creates-detailed-profiles-of--d1.png",
+   "20261003-1828-1-meta-s-muse-ai-creates-detailed-profiles-of--d2.png"
+  ]
+ }
+]

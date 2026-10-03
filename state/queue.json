@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "utmstack cluster critical security vulnerabilities",
+  "headline_marked": "[[UTMStack Cluster hit by 7 CVEs]], including CVSS 9.9 RCE via STOMP WebSocket",
+  "headline": "UTMStack Cluster hit by 7 CVEs, including CVSS 9.9 RCE via STOMP WebSocket",
+  "summary": "A single authenticated user can execute arbitrary OS commands on monitored endpoints in UTMStack deployments. All seven vulnerabilities, including a critical CVSS 9.9 RCE, are fixed in version 11.2.16.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Seven critical vulnerabilities have been disclosed for the open-source SIEM platform UTMStack, all of which are now fixed in version 11.2.16. The most severe, CVE-2026-82041, carries a CVSS score of 9.9 and allows remote code execution.",
+   "CVE-2026-82041 enables any authenticated user, regardless of role, to execute arbitrary OS commands on every monitored endpoint. This is achieved through a missing role check on the /command/{hostname} STOMP websocket.",
+   "Another high-severity flaw, CVE-2026-82042 (CVSS 9.8), allows full administrative API access by bypassing all authentication. This is possible by exploiting the Utm-Internal-Key header.",
+   "Other significant vulnerabilities include CVE-2026-82039 (CVSS 8.8) for SQL injection in asset group search, and CVE-2026-82044 (CVSS 7.7) for Server-Side Request Forgery (SSRF) in PDF generation, which could reach OpenSearch clusters and cloud metadata.",
+   "Additional issues comprise CVE-2026-82045 (CVSS 6.5) for JPQL injection exposing credential tables, CVE-2026-82043 (CVSS 5.3) for account enumeration, and CVE-2026-82040 (CVSS 5.0) for SSRF in identity provider metadata URL validation.",
+   "Users are strongly advised to upgrade their UTMStack deployments to version 11.2.16 immediately. It is also recommended to rotate the INTERNAL_KEY and audit agent command logs for any suspicious activity."
+  ],
+  "caption": "Critical vulnerabilities in UTMStack allow remote code execution with any authenticated user. Seven CVEs, including a 9.9 CVSS flaw, are now patched.\n\nSeven critical vulnerabilities have been disclosed for the open-source SIEM platform UTMStack, all of which are now fixed in version 11.2.16. The most severe, CVE-2026-82041, carries a CVSS score of 9.9 and allows remote code execution.\n\nCVE-2026-82041 enables any authenticated user, regardless of role, to execute arbitrary OS commands on every monitored endpoint. This is achieved through a missing role check on the /command/{hostname} STOMP websocket.\n\nAnother high-severity flaw, CVE-2026-82042 (CVSS 9.8), allows full administrative API access by bypassing all authentication. This is possible by exploiting the Utm-Internal-Key header.\n\nOther significant vulnerabilities include CVE-2026-82039 (CVSS 8.8) for SQL injection in asset group search, and CVE-2026-82044 (CVSS 7.7) for Server-Side Request Forgery (SSRF) in PDF generation, which could reach OpenSearch clusters and cloud metadata.\n\nAdditional issues comprise CVE-2026-82045 (CVSS 6.5) for JPQL injection exposing credential tables, CVE-2026-82043 (CVSS 5.3) for account enumeration, and CVE-2026-82040 (CVSS 5.0) for SSRF in identity provider metadata URL validation.\n\nUsers are strongly advised to upgrade their UTMStack deployments to version 11.2.16 immediately. It is also recommended to rotate the INTERNAL_KEY and audit agent command logs for any suspicious activity.\n\n#CyberSecurity #Vulnerability #RCE #UTMStack #CVE #InfoSec\n\nSource: DEV",
+  "tweet": "Critical vulnerabilities in UTMStack allow RCE with any authenticated user. Seven CVEs, including a 9.9 CVSS flaw, are patched in v11.2.16. Upgrade & rotate INTERNAL_KEY immediately. #CyberSecurity #Vulnerability #UTMStack",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "utmstack.com",
+  "source": "DEV",
+  "url": "https://dev.to/threataft_dev/utmstack-cluster-7-cves-peak-cvss-99-missing-auth-on-stomp-command-websocket-27b8",
+  "image": "",
+  "orig_title": "UTMStack Cluster — 7 CVEs, Peak CVSS 9.9 Missing Auth on STOMP Command WebSocket",
+  "cluster_urls": [
+   "https://dev.to/threataft_dev/utmstack-cluster-7-cves-peak-cvss-99-missing-auth-on-stomp-command-websocket-27b8"
+  ],
+  "cluster_titles": [
+   "UTMStack Cluster — 7 CVEs, Peak CVSS 9.9 Missing Auth on STOMP Command WebSocket"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261003-0908-0-utmstack-cluster-hit-by-7-cves-including-cvs.png",
+   "20261003-0908-0-utmstack-cluster-hit-by-7-cves-including-cvs-d1.png",
+   "20261003-0908-0-utmstack-cluster-hit-by-7-cves-including-cvs-d2.png"
+  ]
+ },
+ {
+  "topic": "ice dumping protester photos into palantir database",
+  "headline_marked": "[[ICE allegedly stored protester photos]] in Palantir database, court filing reveals",
+  "headline": "ICE allegedly stored protester photos in Palantir database, court filing reveals",
+  "summary": "A newly unsealed court filing alleges DHS created dossiers on ICE observers, storing photos and personal data in a Palantir-built system, and used intimidation tactics.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A newly unsealed court filing alleges the US Department of Homeland Security (DHS) built dossiers on ICE observers, including photos and license plate numbers. This information was stored in the Investigative Case Management (ICM) database, which was developed by Palantir.",
+   "DHS calls the case \"meritless,\" denying a \"domestic terrorists\" database. However, plaintiffs allege agents intimidated protesters with drive-bys of their homes and imposed secondary border inspections.",
+   "The filing details conduct during \"Operation Catch of the Day\" in Maine this January, part of a proposed class action by four observers. A redacted version of the September filing was made public recently.",
+   "One DHS agent, \"Agent J.C.,\" allegedly created ICM records for at least six observers, labeling some as \"Threat to Law Enforcement, Professional Protestor.\" He also used facial recognition via the Mobile Query app on their photos.",
+   "After an observer photographed an arrest, J.C. allegedly ran the car's plate, pulled a report from a LexisNexis database, and circulated the owner's photo. He then called the owner, warning her spouse \"not to do anything like that in the future\" or risk being added to a \"domestic terrorism watchlist,\" a claim J.C. later denied.",
+   "Williams' ICM record noted her vehicle was used to \"interrupt ICE arrests\" and her photo matched an \"aggressive woman.\" ICM automatically shares these records with CBP’s TECS system, creating \"lookout records\" for border screening. Palantir was awarded the contract to build ICM in 2014 and continues to support it."
+  ],
+  "caption": "US Department of Homeland Security allegedly created dossiers on ICE observers, storing photos and personal data in a Palantir database.\n\nA newly unsealed court filing alleges the US Department of Homeland Security (DHS) built dossiers on ICE observers, including photos and license plate numbers. This information was stored in the Investigative Case Management (ICM) database, which was developed by Palantir.\n\nDHS calls the case \"meritless,\" denying a \"domestic terrorists\" database. However, plaintiffs allege agents intimidated protesters with drive-bys of their homes and imposed secondary border inspections.\n\nThe filing details conduct during \"Operation Catch of the Day\" in Maine this January, part of a proposed class action by four observers. A redacted version of the September filing was made public recently.\n\nOne DHS agent, \"Agent J.C.,\" allegedly created ICM records for at least six observers, labeling some as \"Threat to Law Enforcement, Professional Protestor.\" He also used facial recognition via the Mobile Query app on their photos.\n\nAfter an observer photographed an arrest, J.C. allegedly ran the car's plate, pulled a report from a LexisNexis database, and circulated the owner's photo. He then called the owner, warning her spouse \"not to do anything like that in the future\" or risk being added to a \"domestic terrorism watchlist,\" a claim J.C. later denied.\n\nWilliams' ICM record noted her vehicle was used to \"interrupt ICE arrests\" and her photo matched an \"aggressive woman.\" ICM automatically shares these records with CBP’s TECS system, creating \"lookout records\" for border screening. Palantir was awarded the contract to build ICM in 2014 and continues to support it.\n\n#Tech #Privacy #Surveillance #Government #Palantir #ICE\n\nSource: Wired",
+  "tweet": "New court filing alleges DHS used a Palantir database to store photos & data on ICE observers, labeling some \"Threat to Law Enforcement.\" Agents reportedly intimidated protesters. #Tech #Privacy #Surveillance",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "palantir.com",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/ice-has-been-dumping-protester-photos-into-a-palantir-database/",
+  "image": "https://media.wired.com/photos/6abfefc1a18993c6adb83fa3/master/pass/GettyImages-2285538235.jpg",
+  "orig_title": "ICE Has Been Dumping Protester Photos Into a Palantir Database",
+  "cluster_urls": [
+   "https://www.wired.com/story/ice-has-been-dumping-protester-photos-into-a-palantir-database/"
+  ],
+  "cluster_titles": [
+   "ICE Has Been Dumping Protester Photos Into a Palantir Database"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20261003-0908-1-ice-allegedly-stored-protester-photos-in-pal.png",
+   "20261003-0908-1-ice-allegedly-stored-protester-photos-in-pal-d1.png",
+   "20261003-0908-1-ice-allegedly-stored-protester-photos-in-pal-d2.png",
+   "20261003-0908-1-ice-allegedly-stored-protester-photos-in-pal-d3.png"
+  ]
+ }
+]

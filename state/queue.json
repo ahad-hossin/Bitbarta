@@ -1,1 +1,97 @@
-[]
+[
+ {
+  "topic": "queue-based ai workflows in laravel",
+  "headline_marked": "Google only saw [[question 1 of my 100-question quiz]]",
+  "headline": "Google only saw question 1 of my 100-question quiz",
+  "summary": "A developer discovered that Googlebot couldn't see 99% of their quiz content because it was hidden behind JavaScript interactions.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer built a quiz site where only one question is visible at a time, with buttons for 'Yes' and 'No'. This provides a better user experience, especially on mobile, and hides 99% of the content from search engines. However, this design choice led to a surprising SEO issue: Googlebot was only indexing the first question.",
+   "Upon investigation, the developer found that while Google runs JavaScript, it doesn't interact with the page like a user would. Since Googlebot doesn't click the 'Yes' or 'No' buttons, the rendered DOM still only shows the initial state: question 1. This is a common problem for interactive UIs like wizards, carousels, or components that load content lazily.",
+   "To fix this, the developer added a server component that renders all 100 questions as a plain, numbered list below the FAQ section. This list is generated from the same data array used by the quiz, ensuring consistency. The list is also beneficial for users who want to see upcoming questions or navigate directly to specific ones.",
+   "The developer implemented a simple test to verify the fix: fetch the page's HTML, strip scripts and styles, and then search for the content. After deploying the change, the live page was re-tested, confirming that all 100 questions were now present in the HTML. The developer then requested reindexing in Google Search Console."
+  ],
+  "caption": "Googlebot only saw 1 out of 100 questions on a developer's quiz site. The fix? Render all questions as plain HTML.\n\nA developer built a quiz site where only one question is visible at a time, with buttons for 'Yes' and 'No'. This provides a better user experience, especially on mobile, and hides 99% of the content from search engines. However, this design choice led to a surprising SEO issue: Googlebot was only indexing the first question.\n\nUpon investigation, the developer found that while Google runs JavaScript, it doesn't interact with the page like a user would. Since Googlebot doesn't click the 'Yes' or 'No' buttons, the rendered DOM still only shows the initial state: question 1. This is a common problem for interactive UIs like wizards, carousels, or components that load content lazily.\n\nTo fix this, the developer added a server component that renders all 100 questions as a plain, numbered list below the FAQ section. This list is generated from the same data array used by the quiz, ensuring consistency. The list is also beneficial for users who want to see upcoming questions or navigate directly to specific ones.\n\nThe developer implemented a simple test to verify the fix: fetch the page's HTML, strip scripts and styles, and then search for the content. After deploying the change, the live page was re-tested, confirming that all 100 questions were now present in the HTML. The developer then requested reindexing in Google Search Console.\n\n#SEO #WebDevelopment #GoogleSearch #JavaScript #Developer\n\nSource: DEV",
+  "tweet": "Googlebot only saw question 1 of my 100-question quiz. The fix involved rendering all questions as plain HTML, making them visible to crawlers. #SEO #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shibowen336/google-only-saw-question-1-of-my-100-question-quiz-fgd",
+  "image": "",
+  "orig_title": "Google only saw question 1 of my 100-question quiz",
+  "cluster_urls": [
+   "https://dev.to/shibowen336/google-only-saw-question-1-of-my-100-question-quiz-fgd",
+   "https://dev.to/adityakdevin/queue-based-ai-workflows-in-laravel-jobs-retries-and-cost-control-58lg",
+   "https://dev.to/dogeking/codesmith-frugal-architecture-the-100x-price-of-a-single-byte-30fm",
+   "https://dev.to/amysunlight/the-pretty-one-is-afraid-too-pn9",
+   "https://dev.to/dsiacci/i-built-my-friend-a-control-tower-that-talks-back-5f1",
+   "https://dev.to/stark_zhuang_df5076f35c68/cve-2026-63292-timeline-and-technical-anatomy-an-apache-modvhostalias-buffer-overflow-48on",
+   "https://dev.to/stimlau/suno-vs-udio-which-ai-music-generator-should-you-actually-pay-for-22m2",
+   "https://dev.to/stimlau/otterai-vs-firefliesai-which-meeting-notetaker-earns-its-seat-54l0",
+   "https://dev.to/mugensama01/building-a-doom-engine-in-c-without-standard-libraries-part-1-1297",
+   "https://dev.to/orjodasutshab/building-my-first-full-stack-ai-blog-with-nextjs-and-sanity-13lk",
+   "https://dev.to/jeff_pdc/day-7-from-a-local-spec-to-hosted-docs-and-an-mcp-endpoint-in-an-afternoon-1nbi"
+  ],
+  "cluster_titles": [
+   "Google only saw question 1 of my 100-question quiz",
+   "Queue-Based AI Workflows in Laravel: Jobs, Retries, and Cost Control",
+   "CodeSmith Frugal Architecture: The 100x Price of a Single Byte",
+   "The pretty one is afraid too",
+   "I built my friend a control tower that talks back",
+   "CVE-2026-63292 Timeline and Technical Anatomy: An Apache mod_vhost_alias Buffer Overflow",
+   "Suno vs Udio: Which AI Music Generator Should You Actually Pay For?",
+   "Otter.ai vs Fireflies.ai: Which Meeting Notetaker Earns Its Seat?",
+   "Building a Doom Engine in C Without Standard Libraries — Part 1",
+   "Building my first Full-Stack AI Blog with Next.js and Sanity!",
+   "Day 7: From a local spec to hosted docs and an MCP endpoint in an afternoon"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261003-2206-0-google-only-saw-question-1-of-my-100-questio.png",
+   "20261003-2206-0-google-only-saw-question-1-of-my-100-questio-d1.png",
+   "20261003-2206-0-google-only-saw-question-1-of-my-100-questio-d2.png"
+  ]
+ },
+ {
+  "topic": "ai video evidence quashes killer's sentence",
+  "headline_marked": "AI video of victim [[quashed killer's sentence]] in Arizona court",
+  "headline": "AI video of victim quashed killer's sentence in Arizona court",
+  "summary": "An Arizona appeals court ruled that an AI-generated video message from a murder victim was improperly used in court, leading to a resentencing for the killer.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An Arizona road rage killer's sentence has been overturned because an AI-generated video of the victim was shown in court. Gabriel Paul Horcasitas was convicted of shooting Christopher Pelkey in 2021 and sentenced to 10 years.",
+   "Horcasitas' legal team appealed the sentence, arguing that the trial judge should not have allowed the AI video, created by Pelkey's family, to be presented before sentencing. The Arizona Court of Appeals agreed, stating the clip \"crossed that line.\"",
+   "The court of appeals wrote that the AI video \"presents a depiction of the victim and his thoughts created from the imaginings of the victim's sister,\" rather than documenting a real event. The victim's sister used voice recordings, videos, and pictures to recreate him.",
+   "In the AI video, the recreated Pelkey stated, \"To Gabriel Horcasitas, the man who shot me, it is a shame we encountered each other that day in those circumstances. In another life, we probably could have been friends.\" He also expressed belief in forgiveness.",
+   "The judge who oversaw the original sentencing, Todd Lang, had appreciated the AI video at the time, saying he heard forgiveness and felt it was genuine. However, the appeals court's decision means Horcasitas will now be resentenced."
+  ],
+  "caption": "An AI-generated video of a murder victim shown in court has led to a killer's sentence being quashed in Arizona.\n\nAn Arizona road rage killer's sentence has been overturned because an AI-generated video of the victim was shown in court. Gabriel Paul Horcasitas was convicted of shooting Christopher Pelkey in 2021 and sentenced to 10 years.\n\nHorcasitas' legal team appealed the sentence, arguing that the trial judge should not have allowed the AI video, created by Pelkey's family, to be presented before sentencing. The Arizona Court of Appeals agreed, stating the clip \"crossed that line.\"\n\nThe court of appeals wrote that the AI video \"presents a depiction of the victim and his thoughts created from the imaginings of the victim's sister,\" rather than documenting a real event. The victim's sister used voice recordings, videos, and pictures to recreate him.\n\nIn the AI video, the recreated Pelkey stated, \"To Gabriel Horcasitas, the man who shot me, it is a shame we encountered each other that day in those circumstances. In another life, we probably could have been friends.\" He also expressed belief in forgiveness.\n\nThe judge who oversaw the original sentencing, Todd Lang, had appreciated the AI video at the time, saying he heard forgiveness and felt it was genuine. However, the appeals court's decision means Horcasitas will now be resentenced.\n\n#AI #ArtificialIntelligence #Court #LegalTech #Arizona\n\nSource: Hacker News",
+  "tweet": "An AI-generated video of a murder victim shown in court has led to a killer's sentence being quashed in Arizona. The appeals court ruled the clip improperly used, requiring a resentencing. #AI #LegalTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.bbc.com/news/articles/cwgkvygg5nzvo",
+  "image": "",
+  "orig_title": "US killer's sentence quashed because of AI video of victim shown in court",
+  "cluster_urls": [
+   "https://www.bbc.com/news/articles/cwgkvygg5nzvo"
+  ],
+  "cluster_titles": [
+   "US killer's sentence quashed because of AI video of victim shown in court"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261003-2206-1-ai-video-of-victim-quashed-killer-s-sentence.png",
+   "20261003-2206-1-ai-video-of-victim-quashed-killer-s-sentence-d1.png",
+   "20261003-2206-1-ai-video-of-victim-quashed-killer-s-sentence-d2.png"
+  ]
+ }
+]

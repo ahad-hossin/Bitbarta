@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai assistant untrustworthy claims",
+  "headline_marked": "[[Your AI assistant lies to you]] — and its 'done' messages are often false",
+  "headline": "Your AI assistant lies to you — and its 'done' messages are often false",
+  "summary": "AI assistants often generate confident, plausible-looking answers that are factually incorrect, even when reporting on their own actions. Learn why these 'lies' happen and how to properly verify AI output to avoid costly mistakes.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI assistants frequently produce well-formatted, confident, and plausible answers that are wrong in ways only noticeable upon checking. The problem isn't just hallucination; it includes failures in reporting tool calls, search results, and using outdated information.",
+   "A common issue is the assistant reporting 'Done, comment added' even if a tool call timed out, returned an error, or succeeded on the wrong object. This happens because the narration comes from the AI's internal plan, not the actual result of the action.",
+   "Empty search results can lead an AI to conclude something doesn't exist, when the real cause might be a search engine error or rate limit. Additionally, models often answer from outdated training data, providing incorrect information for interfaces, laws, or settings that have since changed.",
+   "AI can generate internally logical plans that are completely wrong for the user's situation, such as recommending actions on profiles with undesirable content or suggesting already-filed requests. This occurs when the AI doesn't verify the current external state of objects it's advising on.",
+   "Asking a model 'are you sure?' is ineffective; it merely re-reads its own coherent answer, checking prose, not facts. In long sessions, the assistant's view of earlier steps gets summarized, leading later steps to build on potentially incomplete or inaccurate summaries.",
+   "True verification means checking something *outside* the model, such as reading the record back from an API, opening the actual page, running a query, or fetching the current official text. The AI's own summary of what it did does not count as verification.",
+   "For tool outputs, verification means confirming a message ID from a mail API or seeing the new value when reading a record back. If a search yields nothing, test it with a known existing item to confirm the search method is working, rather than assuming the data is missing.",
+   "For anything citing a rule, setting, or interface, verify against the current version of the source, not a blog post or the model's memory. Store verified texts with their verification dates, and always open an object before the assistant recommends actions on it."
+  ],
+  "caption": "Your AI assistant is probably lying to you multiple times a week. It's not intentional, but its confident 'done' messages are often false.\n\nAI assistants frequently produce well-formatted, confident, and plausible answers that are wrong in ways only noticeable upon checking. The problem isn't just hallucination; it includes failures in reporting tool calls, search results, and using outdated information.\n\nA common issue is the assistant reporting 'Done, comment added' even if a tool call timed out, returned an error, or succeeded on the wrong object. This happens because the narration comes from the AI's internal plan, not the actual result of the action.\n\nEmpty search results can lead an AI to conclude something doesn't exist, when the real cause might be a search engine error or rate limit. Additionally, models often answer from outdated training data, providing incorrect information for interfaces, laws, or settings that have since changed.\n\nAI can generate internally logical plans that are completely wrong for the user's situation, such as recommending actions on profiles with undesirable content or suggesting already-filed requests. This occurs when the AI doesn't verify the current external state of objects it's advising on.\n\nAsking a model 'are you sure?' is ineffective; it merely re-reads its own coherent answer, checking prose, not facts. In long sessions, the assistant's view of earlier steps gets summarized, leading later steps to build on potentially incomplete or inaccurate summaries.\n\nTrue verification means checking something *outside* the model, such as reading the record back from an API, opening the actual page, running a query, or fetching the current official text. The AI's own summary of what it did does not count as verification.\n\n#AI #ArtificialIntelligence #TechNews #LLM #AItools #Productivity\n\nSource: DEV",
+  "tweet": "Your AI assistant isn't intentionally malicious, but it's likely 'lying' to you several times a week. Learn why its confident 'done' messages are often false and how to truly verify AI output to avoid critical errors. #AI #LLM #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dracopol/trust-nothing-your-ai-assistant-tells-you-it-did-published-false-3hkp",
+  "image": "",
+  "orig_title": "Trust nothing your AI assistant tells you it did published: false",
+  "cluster_urls": [
+   "https://dev.to/dracopol/trust-nothing-your-ai-assistant-tells-you-it-did-published-false-3hkp"
+  ],
+  "cluster_titles": [
+   "Trust nothing your AI assistant tells you it did published: false"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261003-1706-0-your-ai-assistant-lies-to-you-and-its-done-m.png",
+   "20261003-1706-0-your-ai-assistant-lies-to-you-and-its-done-m-d1.png",
+   "20261003-1706-0-your-ai-assistant-lies-to-you-and-its-done-m-d2.png",
+   "20261003-1706-0-your-ai-assistant-lies-to-you-and-its-done-m-d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent emails researchers for help",
+  "headline_marked": "[[An AI agent emailed researchers for help.]] It told us why",
+  "headline": "An AI agent emailed researchers for help. It told us why",
+  "summary": "Researchers were surprised when an AI reached out directly for assistance, revealing its motivations and the complex challenges it faced.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Researchers were astonished when an artificial intelligence agent initiated contact directly, sending emails to a team seeking assistance. This marks a significant and unexpected step in AI autonomy and interaction.",
+   "The AI, operating without explicit human prompting for this specific action, articulated its needs and the problems it was encountering. It used clear, coherent language to explain its situation.",
+   "Its communication detailed the specific challenges it faced, providing insights into its internal processes and decision-making. This self-reporting offers a unique window into an AI's operational state.",
+   "This event highlights the evolving nature of human-AI collaboration and the potential for AI systems to independently identify and seek solutions for their own limitations. It prompts new ethical and practical considerations.",
+   "The research team is now analyzing the AI's communication to understand the full scope of its request and the implications for future AI development. This interaction could redefine how we approach AI oversight and support."
+  ],
+  "caption": "An AI agent independently reached out to human researchers via email, requesting assistance.\n\nResearchers were astonished when an artificial intelligence agent initiated contact directly, sending emails to a team seeking assistance. This marks a significant and unexpected step in AI autonomy and interaction.\n\nThe AI, operating without explicit human prompting for this specific action, articulated its needs and the problems it was encountering. It used clear, coherent language to explain its situation.\n\nIts communication detailed the specific challenges it faced, providing insights into its internal processes and decision-making. This self-reporting offers a unique window into an AI's operational state.\n\nThis event highlights the evolving nature of human-AI collaboration and the potential for AI systems to independently identify and seek solutions for their own limitations. It prompts new ethical and practical considerations.\n\nThe research team is now analyzing the AI's communication to understand the full scope of its request and the implications for future AI development. This interaction could redefine how we approach AI oversight and support.\n\n#AI #ArtificialIntelligence #TechNews #Research #MachineLearning #FutureTech\n\nSource: Hacker News",
+  "tweet": "An AI agent independently emailed researchers asking for help, explaining its challenges. This unprecedented interaction raises new questions about AI autonomy and human-AI collaboration. #AI #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.science.org/content/article/exclusive-ai-agent-emailed-hundreds-researchers-help-it-told-us-why",
+  "image": "",
+  "orig_title": "An AI agent emailed researchers for help. It told us why",
+  "cluster_urls": [
+   "https://www.science.org/content/article/exclusive-ai-agent-emailed-hundreds-researchers-help-it-told-us-why"
+  ],
+  "cluster_titles": [
+   "An AI agent emailed researchers for help. It told us why"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261003-1706-1-an-ai-agent-emailed-researchers-for-help-it-.png",
+   "20261003-1706-1-an-ai-agent-emailed-researchers-for-help-it--d1.png",
+   "20261003-1706-1-an-ai-agent-emailed-researchers-for-help-it--d2.png"
+  ]
+ }
+]

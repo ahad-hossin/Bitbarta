@@ -8357,8 +8357,13 @@
   "headline": "Grok 4.7 doubles cost per task despite same per-token pricing as 4.6",
   "topic": "grok 4.7 pricing doubles per task",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-10-04T04:07:31Z"
+  "status": "failed",
+  "at": "2026-10-04T04:07:31Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "f16323276f08a952",
@@ -8366,7 +8371,12 @@
   "headline": "Your AI chatbot isn't hallucinating. It's reading your outdated docs.",
   "topic": "ai chatbot hallucinations due to outdated documentation",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-10-04T04:07:31Z"
+  "status": "failed",
+  "at": "2026-10-04T04:07:31Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

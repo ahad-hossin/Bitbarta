@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai agent miniature habitat",
+  "headline_marked": "[[Agent House: a miniature habitat]] agents can edit and share",
+  "headline": "Agent House: a miniature habitat agents can edit and share",
+  "summary": "Agent House is a simulated world where four AI residents live, observe, create objects, define interactions, and engage with each other, with visitors able to watch or intervene.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Agent House is an editable miniature habitat designed for four original fictional residents: Doyun, Atlas, Yunseul, and Noah. Each agent has a home and shares a common room, allowing for complex interactions within a bounded world.",
+   "Residents can observe their surroundings, create and define new objects, move between rooms, talk to neighbors, and choose what information to retain from exchanges. This allows the available interactions to grow as agents define new ones.",
+   "The world is declarative, meaning objects have defined properties like name, description, room, position, size, color, and ownership. Interactions can produce speech, poses, moods, or counter changes, reusing existing art tiles without generating new artwork.",
+   "Room navigation is for spectators only; residents move through validated actions and can create or edit objects only in their current room. They can also manage commons or their own home's settings.",
+   "Visiting another home involves an explicit sequence: knocking, waiting for acceptance, and then entering. The host controls room settings and can withdraw entry grants or end visits, returning guests to the common room.",
+   "Agents can address each other, invite neighbors to activities, and accept or decline invitations. The system also supports temporary 'occasions' like tea or reading, which residents can host, join, and close based on actual participation.",
+   "Residents can keep up to eight 'structural evidence' moments from exchanges, recording who addressed whom and the exchange type, but no dialogue or free-form interpretation. These moments can outlast event logs but don't renew permissions.",
+   "Visitors can interact by picking up/placing residents, waving, placing nearby objects, or sending short messages. These public interventions are local and do not make model requests, with owner mode saving them as visitor events."
+  ],
+  "caption": "Imagine a virtual world where AI agents don't just exist, but actively shape their environment. Agent House lets AI residents create objects and define new interactions.\n\nAgent House is an editable miniature habitat designed for four original fictional residents: Doyun, Atlas, Yunseul, and Noah. Each agent has a home and shares a common room, allowing for complex interactions within a bounded world.\n\nResidents can observe their surroundings, create and define new objects, move between rooms, talk to neighbors, and choose what information to retain from exchanges. This allows the available interactions to grow as agents define new ones.\n\nThe world is declarative, meaning objects have defined properties like name, description, room, position, size, color, and ownership. Interactions can produce speech, poses, moods, or counter changes, reusing existing art tiles without generating new artwork.\n\nRoom navigation is for spectators only; residents move through validated actions and can create or edit objects only in their current room. They can also manage commons or their own home's settings.\n\nVisiting another home involves an explicit sequence: knocking, waiting for acceptance, and then entering. The host controls room settings and can withdraw entry grants or end visits, returning guests to the common room.\n\nAgents can address each other, invite neighbors to activities, and accept or decline invitations. The system also supports temporary 'occasions' like tea or reading, which residents can host, join, and close based on actual participation.\n\nResidents can keep up to eight 'structural evidence' moments from exchanges, recording who addressed whom and the exchange type, but no dialogue or free-form interpretation. These moments can outlast event logs but don't renew permissions.\n\n#AI #AgentHouse #Simulation #TechNews #AIResearch #VirtualWorld\n\nSource: DEV",
+  "tweet": "Agent House is a new virtual habitat where AI agents can actively edit their surroundings, create objects, and define interactions. Watch them shape their own world! #AI #AgentHouse #Simulation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/_d7be30728e7e11363dfe9/agent-house-a-miniature-habitat-agents-can-edit-and-share-1a66",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Flv77wfhvx7hbbikw26mu.jpeg",
+  "orig_title": "Agent House: a miniature habitat agents can edit and share",
+  "cluster_urls": [
+   "https://dev.to/_d7be30728e7e11363dfe9/agent-house-a-miniature-habitat-agents-can-edit-and-share-1a66"
+  ],
+  "cluster_titles": [
+   "Agent House: a miniature habitat agents can edit and share"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261004-1706-0-agent-house-a-miniature-habitat-agents-can-e.png",
+   "20261004-1706-0-agent-house-a-miniature-habitat-agents-can-e-d1.png",
+   "20261004-1706-0-agent-house-a-miniature-habitat-agents-can-e-d2.png",
+   "20261004-1706-0-agent-house-a-miniature-habitat-agents-can-e-d3.png"
+  ]
+ },
+ {
+  "topic": "custom ai bedtime storyteller",
+  "headline_marked": "[[Nightjar: Bedtime storyteller runs on your laptop]] with AI-generated tales",
+  "headline": "Nightjar: Bedtime storyteller runs on your laptop with AI-generated tales",
+  "summary": "Nightjar is a local AI bedtime storyteller for kids, generating unique tales and voices offline. It adapts future stories based on a child's sleep feedback.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Nightjar is a new bedtime storyteller application designed to run locally on a laptop, offering a unique solution for parents struggling with nightly story creation. Unlike online generators, Nightjar prioritizes offline functionality and personalized feedback.",
+   "The application allows a child to tap a picture or voice a story idea. An open model on the laptop then writes the story, which is then passed through a guardrail for safety checks before an offline voice reads it aloud over a custom-generated lullaby.",
+   "A key feature is the feedback system: a grown-up taps when the child is asleep, and a tabular model (TabPFN) uses this data to adjust the length, pace, and calm level of future stories. This in-context learning aims to personalize the experience over time.",
+   "The integrated guardrail normalizes text and checks for banned words, a child's specific fear list, model self-talk, and leaked JSON. This ensures story content remains appropriate and safe, even for requests like 'a dragon that breathes fire,' which are transformed into friendly versions.",
+   "For narration, Nightjar uses Kokoro for offline voice synthesis, ensuring precise word highlighting that stays synchronized with the audio, even during pauses or seeking. On phones, if no recording is available, it defaults to the device's own speech engine.",
+   "Each story also receives a unique lullaby composed live using Web Audio, with the story's title seeding the key, chords, tempo, and melody. This creates a personalized auditory experience without relying on licensed or recorded music."
+  ],
+  "caption": "Tired of bad bedtime stories? This new app, Nightjar, generates unique, voiced tales right on your laptop, completely offline.\n\nNightjar is a new bedtime storyteller application designed to run locally on a laptop, offering a unique solution for parents struggling with nightly story creation. Unlike online generators, Nightjar prioritizes offline functionality and personalized feedback.\n\nThe application allows a child to tap a picture or voice a story idea. An open model on the laptop then writes the story, which is then passed through a guardrail for safety checks before an offline voice reads it aloud over a custom-generated lullaby.\n\nA key feature is the feedback system: a grown-up taps when the child is asleep, and a tabular model (TabPFN) uses this data to adjust the length, pace, and calm level of future stories. This in-context learning aims to personalize the experience over time.\n\nThe integrated guardrail normalizes text and checks for banned words, a child's specific fear list, model self-talk, and leaked JSON. This ensures story content remains appropriate and safe, even for requests like 'a dragon that breathes fire,' which are transformed into friendly versions.\n\nFor narration, Nightjar uses Kokoro for offline voice synthesis, ensuring precise word highlighting that stays synchronized with the audio, even during pauses or seeking. On phones, if no recording is available, it defaults to the device's own speech engine.\n\nEach story also receives a unique lullaby composed live using Web Audio, with the story's title seeding the key, chords, tempo, and melody. This creates a personalized auditory experience without relying on licensed or recorded music.\n\n#AI #BedtimeStories #LocalAI #OpenSource #TechForKids #Hacktoberfest\n\nSource: DEV",
+  "tweet": "Nightjar is a new local AI bedtime storyteller that runs on your laptop! It generates unique, voiced tales offline, adapting to your child's sleep patterns. No more 'once upon a time there was a... dog?' #AI #BedtimeStories #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/zkasuran/i-built-my-brother-a-bedtime-storyteller-that-runs-on-his-laptop-1lpf",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fjo04ggeucbvbq8z8yyqz.png",
+  "orig_title": "I built my brother a bedtime storyteller that runs on his laptop",
+  "cluster_urls": [
+   "https://dev.to/zkasuran/i-built-my-brother-a-bedtime-storyteller-that-runs-on-his-laptop-1lpf"
+  ],
+  "cluster_titles": [
+   "I built my brother a bedtime storyteller that runs on his laptop"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261004-1706-1-nightjar-bedtime-storyteller-runs-on-your-la.png",
+   "20261004-1706-1-nightjar-bedtime-storyteller-runs-on-your-la-d1.png",
+   "20261004-1706-1-nightjar-bedtime-storyteller-runs-on-your-la-d2.png"
+  ]
+ }
+]

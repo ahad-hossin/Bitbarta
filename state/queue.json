@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "crewai sandbox cve",
+  "headline_marked": "[[CrewAI's Python sandbox failed]] due to 'wrong level of abstraction' CVE-2026-37008",
+  "headline": "CrewAI's Python sandbox failed due to 'wrong level of abstraction' CVE-2026-37008",
+  "summary": "A newly published CVE reveals CrewAI's Python sandbox, despite blocking nine module names, was bypassed. The vulnerability (CVE-2026-37008) allowed access to the interpreter's object graph without relying on import statements, operating at the wrong level of a",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical vulnerability, CVE-2026-37008, has been published for CrewAI's Python sandbox, a widely used agent framework. The CVE, with a CVSS 3.1 base score of 8.1 HIGH, states the sandbox's blocklist 'operates at the wrong level of abstraction,' allowing an escape without using import statements.",
+   "The weakness is classified as CWE-424, 'Improper Protection of Alternate Path,' meaning a guarded path was circumvented by an alternate. The core issue is that a list of module names cannot work in principle, as the interpreter's complete object graph is reachable without touching the import system.",
+   "The vulnerability affects all CrewAI revisions before commit fb2323b3deb3ec62b3965526857e77a2264e4cd0. This commit-boundary definition makes tracking affected versions difficult for pip install users, especially since the fix was implemented six months ago.",
+   "The sandbox, located in crewai-tools' CodeInterpreterTool module, used exec() with a filtered builtins dictionary and a restricted_import for __import__. Notably, critical modules like ctypes, socket, and pathlib were absent from the original nine-name blocklist.",
+   "One documented bypass involves ctypes.CDLL(None), which loads the C library by asking the platform loader to open the running process itself. This provides a handle whose symbol table includes libc, allowing native calls without triggering any Python import statements.",
+   "Another escape, documented in the fix commit itself, demonstrates recovering the original __import__ by traversing Python's object graph. This involves finding a class whose module still holds the real __builtins__ to pull the original import functionality."
+  ],
+  "caption": "A critical CVE (8.1 HIGH) reveals CrewAI's Python sandbox was bypassed. The vulnerability allowed direct access to the interpreter's object graph, completely sidestepping import restrictions.\n\nA critical vulnerability, CVE-2026-37008, has been published for CrewAI's Python sandbox, a widely used agent framework. The CVE, with a CVSS 3.1 base score of 8.1 HIGH, states the sandbox's blocklist 'operates at the wrong level of abstraction,' allowing an escape without using import statements.\n\nThe weakness is classified as CWE-424, 'Improper Protection of Alternate Path,' meaning a guarded path was circumvented by an alternate. The core issue is that a list of module names cannot work in principle, as the interpreter's complete object graph is reachable without touching the import system.\n\nThe vulnerability affects all CrewAI revisions before commit fb2323b3deb3ec62b3965526857e77a2264e4cd0. This commit-boundary definition makes tracking affected versions difficult for pip install users, especially since the fix was implemented six months ago.\n\nThe sandbox, located in crewai-tools' CodeInterpreterTool module, used exec() with a filtered builtins dictionary and a restricted_import for __import__. Notably, critical modules like ctypes, socket, and pathlib were absent from the original nine-name blocklist.\n\nOne documented bypass involves ctypes.CDLL(None), which loads the C library by asking the platform loader to open the running process itself. This provides a handle whose symbol table includes libc, allowing native calls without triggering any Python import statements.\n\nAnother escape, documented in the fix commit itself, demonstrates recovering the original __import__ by traversing Python's object graph. This involves finding a class whose module still holds the real __builtins__ to pull the original import functionality.\n\n#CrewAI #Cybersecurity #Python #Vulnerability #CVE #Security\n\nSource: DEV",
+  "tweet": "A critical CVE (8.1 HIGH) reveals CrewAI's Python sandbox was bypassed. The vulnerability allowed direct access to the interpreter's object graph, completely sidestepping import restrictions. The fix deleted the feature. #CrewAI #Security #Python",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "crewai.com",
+  "source": "DEV",
+  "url": "https://dev.to/kielltampubolon/i-traced-crewais-sandbox-cve-9-names-missed-the-runtime-35im",
+  "image": "",
+  "orig_title": "I Traced CrewAI's Sandbox CVE: 9 Names Missed the Runtime",
+  "cluster_urls": [
+   "https://dev.to/kielltampubolon/i-traced-crewais-sandbox-cve-9-names-missed-the-runtime-35im"
+  ],
+  "cluster_titles": [
+   "I Traced CrewAI's Sandbox CVE: 9 Names Missed the Runtime"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261004-0806-0-crewai-s-python-sandbox-failed-due-to-wrong-.png",
+   "20261004-0806-0-crewai-s-python-sandbox-failed-due-to-wrong--d1.png",
+   "20261004-0806-0-crewai-s-python-sandbox-failed-due-to-wrong--d2.png",
+   "20261004-0806-0-crewai-s-python-sandbox-failed-due-to-wrong--d3.png"
+  ]
+ },
+ {
+  "topic": "visa open sources ai cyber defence",
+  "headline_marked": "[[Visa open-sourced its AI cyber defense]] and confirmed AI agents are already spending on its network",
+  "headline": "Visa open-sourced its AI cyber defense and confirmed AI agents are already spending on its network",
+  "summary": "Visa's President of Technology revealed the company open-sourced part of its AI cyber defense after vulnerabilities, while also confirming AI agents are now making payments on its rails.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "On September 29, 2026, Visa's President of Technology, Rajat Taneja, announced that the company open-sourced a portion of its AI-powered cyber defense. This decision followed \"humbling\" AI-model vulnerabilities, highlighting the challenges in securing advanced systems.",
+   "Crucially, Taneja also confirmed that Visa has begun allowing certain AI agents to use its payment network. This means AI systems are already initiating transactions, a significant step towards autonomous commerce.",
+   "While the cyber defense architecture is now open source, the authorization architecture for these AI agents remains undisclosed. This raises questions about how individual agent payments are scored and approved before money moves.",
+   "The article points out a critical missing layer: the per-payment authorization architecture. Without a clear decision gate, such as a confidence score for each agent payment, there's a potential vulnerability for runaway spending or unauthorized transactions.",
+   "Experts suggest that by 2030, approximately $3.1 trillion in commerce could be agent-run. Visa's reliance on trust for its payment rails means that robust authorization for AI agents is paramount to prevent devastating cyberattacks."
+  ],
+  "caption": "Visa just open-sourced its AI cyber defense, but the bigger news? AI agents are already spending on its network.\n\nOn September 29, 2026, Visa's President of Technology, Rajat Taneja, announced that the company open-sourced a portion of its AI-powered cyber defense. This decision followed \"humbling\" AI-model vulnerabilities, highlighting the challenges in securing advanced systems.\n\nCrucially, Taneja also confirmed that Visa has begun allowing certain AI agents to use its payment network. This means AI systems are already initiating transactions, a significant step towards autonomous commerce.\n\nWhile the cyber defense architecture is now open source, the authorization architecture for these AI agents remains undisclosed. This raises questions about how individual agent payments are scored and approved before money moves.\n\nThe article points out a critical missing layer: the per-payment authorization architecture. Without a clear decision gate, such as a confidence score for each agent payment, there's a potential vulnerability for runaway spending or unauthorized transactions.\n\nExperts suggest that by 2030, approximately $3.1 trillion in commerce could be agent-run. Visa's reliance on trust for its payment rails means that robust authorization for AI agents is paramount to prevent devastating cyberattacks.\n\n#Visa #AI #Cybersecurity #OpenSource #Payments #FinTech\n\nSource: DEV",
+  "tweet": "Visa open-sourced its AI cyber defense, but the real story is that AI agents are already spending on its network. The authorization architecture for these agent payments remains undisclosed. #Visa #AI #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "visa.com",
+  "source": "DEV",
+  "url": "https://dev.to/scriptmasterlabs01/visa-open-sourced-its-ai-cyber-defence-and-quietly-let-agents-spend-i7d",
+  "image": "",
+  "orig_title": "Visa Open-Sourced Its AI Cyber Defence — and Quietly Let Agents Spend",
+  "cluster_urls": [
+   "https://dev.to/scriptmasterlabs01/visa-open-sourced-its-ai-cyber-defence-and-quietly-let-agents-spend-i7d"
+  ],
+  "cluster_titles": [
+   "Visa Open-Sourced Its AI Cyber Defence — and Quietly Let Agents Spend"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261004-0806-1-visa-open-sourced-its-ai-cyber-defense-and-c.png",
+   "20261004-0806-1-visa-open-sourced-its-ai-cyber-defense-and-c-d1.png",
+   "20261004-0806-1-visa-open-sourced-its-ai-cyber-defense-and-c-d2.png"
+  ]
+ }
+]

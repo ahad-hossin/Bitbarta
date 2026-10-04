@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai generates lego assembly code",
+  "headline_marked": "[[Solo developer can run LDraw AI generator]] for LEGO builds, costing under $10/month",
+  "headline": "Solo developer can run LDraw AI generator for LEGO builds, costing under $10/month",
+  "summary": "A single developer can run an LDraw AI generator using external APIs like GPT-6 Astra or Opus 5.5 on a low-cost VPS, with monthly costs potentially under $10 including API calls.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new LDraw AI generator, leveraging models like GPT-6 Astra and Opus 5.5, can create LEGO assembly code. The project is distributed as a Docker image, making it accessible for individual developers.",
+   "Running this AI generator on a 1GB VPS is feasible because the model calls rely on external APIs. This means network performance and API costs are more critical than local server specifications or high-performance GPUs.",
+   "The Dockerfile is publicly available, allowing developers to pull the image using `docker pull anteloc/ldraw-nova`. After setting the OpenAI API key as an environment variable, a simple `docker run` command launches a web UI for generating sample .ldr files.",
+   "Generating a simple model, like a \"simple car,\" might cost around $0.40 per instance, based on 2,000 tokens at $0.0002 per token. With approximately 10 generations per month, the API costs would be about $4.",
+   "Combined with a typical $5/month VPS, the total monthly expenditure for a solo developer can remain under $10. This makes the LDraw AI generator a cost-effective solution for light web UI side projects.",
+   "Developers should ensure the Docker image is up-to-date for security and regularly check for updates. It is also crucial to log API keys to files and implement security measures to prevent exposure."
+  ],
+  "caption": "A solo developer can deploy an LDraw AI generator for LEGO builds on a $5/month VPS. Total costs, including API calls, can stay under $10 monthly.\n\nA new LDraw AI generator, leveraging models like GPT-6 Astra and Opus 5.5, can create LEGO assembly code. The project is distributed as a Docker image, making it accessible for individual developers.\n\nRunning this AI generator on a 1GB VPS is feasible because the model calls rely on external APIs. This means network performance and API costs are more critical than local server specifications or high-performance GPUs.\n\nThe Dockerfile is publicly available, allowing developers to pull the image using `docker pull anteloc/ldraw-nova`. After setting the OpenAI API key as an environment variable, a simple `docker run` command launches a web UI for generating sample .ldr files.\n\nGenerating a simple model, like a \"simple car,\" might cost around $0.40 per instance, based on 2,000 tokens at $0.0002 per token. With approximately 10 generations per month, the API costs would be about $4.\n\nCombined with a typical $5/month VPS, the total monthly expenditure for a solo developer can remain under $10. This makes the LDraw AI generator a cost-effective solution for light web UI side projects.\n\nDevelopers should ensure the Docker image is up-to-date for security and regularly check for updates. It is also crucial to log API keys to files and implement security measures to prevent exposure.\n\n#AI #Developer #LDraw #LEGO #OpenAI #Tech\n\nSource: DEV",
+  "tweet": "Solo developers can now run an LDraw AI generator for LEGO builds on a $5/month VPS. Total costs, including API calls, can stay under $10 monthly, making AI-powered code generation accessible. #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/justjinoit/ldraw-ai-saengseonggi-1in-gaebaljaga-jigjeob-sseobol-su-isseulgga-5c29",
+  "image": "",
+  "orig_title": "LDraw AI 생성기, 1인 개발자가 직접 써볼 수 있을까",
+  "cluster_urls": [
+   "https://dev.to/justjinoit/ldraw-ai-saengseonggi-1in-gaebaljaga-jigjeob-sseobol-su-isseulgga-5c29"
+  ],
+  "cluster_titles": [
+   "LDraw AI 생성기, 1인 개발자가 직접 써볼 수 있을까"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261004-0708-0-solo-developer-can-run-ldraw-ai-generator-fo.png",
+   "20261004-0708-0-solo-developer-can-run-ldraw-ai-generator-fo-d1.png",
+   "20261004-0708-0-solo-developer-can-run-ldraw-ai-generator-fo-d2.png"
+  ]
+ },
+ {
+  "topic": "ai speaking partner for language learning",
+  "headline_marked": "[[Build an AI German speaking partner]] with ElevenLabs Agents and Cloudflare Workers",
+  "headline": "Build an AI German speaking partner with ElevenLabs Agents and Cloudflare Workers",
+  "summary": "Bridge the gap to fluency with a custom AI German speaking partner. This project combines ElevenLabs Agents for voice with Cloudflare Workers for backend logic, memory, and secure user data handling.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Many language learners struggle to achieve fluency with native speakers after passing exams. This project addresses that by creating an AI voice agent designed to be a patient, native-level conversation partner that can also point out mistakes.",
+   "The system leverages an ElevenLabs agent for voice interaction. Cloudflare Workers, built with Hono, handle all other backend logic, including serving a small Vite + TypeScript page and storing data in D1.",
+   "A custom memory system was implemented, as ElevenLabs agents lacked built-in session memory at the time. The webhook stores each session, and the agent recalls only the last two or three sessions to maintain natural conversation flow.",
+   "Security is a key focus: user identity is embedded into the page as an HMAC-signed ID by the Worker, ensuring no secrets are exposed in the browser. The signing key remains exclusively in the Worker environment.",
+   "Agent endpoints are not public, and tool calls are secured. The widget passes the signed user ID to the agent, and tool routes verify this signature before any data access, rejecting invented or altered IDs. The post-call webhook also includes its own verification.",
+   "Routing is optimized, with static files served directly from the asset bundle. Only the root path (/), API endpoints (/api/*), and tool endpoints (/tools/*) invoke the Cloudflare Worker, streamlining requests."
+  ],
+  "caption": "Struggling with language fluency? An AI voice agent can be your native-level German speaking partner, always patient and ready to correct mistakes.\n\nMany language learners struggle to achieve fluency with native speakers after passing exams. This project addresses that by creating an AI voice agent designed to be a patient, native-level conversation partner that can also point out mistakes.\n\nThe system leverages an ElevenLabs agent for voice interaction. Cloudflare Workers, built with Hono, handle all other backend logic, including serving a small Vite + TypeScript page and storing data in D1.\n\nA custom memory system was implemented, as ElevenLabs agents lacked built-in session memory at the time. The webhook stores each session, and the agent recalls only the last two or three sessions to maintain natural conversation flow.\n\nSecurity is a key focus: user identity is embedded into the page as an HMAC-signed ID by the Worker, ensuring no secrets are exposed in the browser. The signing key remains exclusively in the Worker environment.\n\nAgent endpoints are not public, and tool calls are secured. The widget passes the signed user ID to the agent, and tool routes verify this signature before any data access, rejecting invented or altered IDs. The post-call webhook also includes its own verification.\n\nRouting is optimized, with static files served directly from the asset bundle. Only the root path (/), API endpoints (/api/*), and tool endpoints (/tools/*) invoke the Cloudflare Worker, streamlining requests.\n\n#AI #LanguageLearning #ElevenLabs #Cloudflare #Developer #Tech\n\nSource: DEV",
+  "tweet": "Struggling with language fluency? Build your own AI German speaking partner using ElevenLabs Agents and Cloudflare Workers. This project offers a native-level conversation buddy with custom memory and robust security. #AI #LanguageLearning #Dev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/asazhin/building-a-german-speaking-partner-with-elevenlabs-agents-and-cloudflare-workers-4fgj",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fsoc96w9qnrwlebuxx1yc.png",
+  "orig_title": "Building a German Speaking Partner with ElevenLabs Agents and Cloudflare Workers",
+  "cluster_urls": [
+   "https://dev.to/asazhin/building-a-german-speaking-partner-with-elevenlabs-agents-and-cloudflare-workers-4fgj"
+  ],
+  "cluster_titles": [
+   "Building a German Speaking Partner with ElevenLabs Agents and Cloudflare Workers"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261004-0708-1-build-an-ai-german-speaking-partner-with-ele.png",
+   "20261004-0708-1-build-an-ai-german-speaking-partner-with-ele-d1.png",
+   "20261004-0708-1-build-an-ai-german-speaking-partner-with-ele-d2.png"
+  ]
+ }
+]

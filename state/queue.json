@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "grok 4.7 pricing doubles per task",
+  "headline_marked": "[[Grok 4.7 doubles cost per task]] despite same per-token pricing as 4.6",
+  "headline": "Grok 4.7 doubles cost per task despite same per-token pricing as 4.6",
+  "summary": "Despite identical per-token pricing ($2/$6M), Grok 4.7's increased verbosity means it generates 2.5x more tokens per task, effectively doubling the cost per completion from $1.86 to $3.74, according to Artificial Analysis.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Grok 4.7 maintains its per-token pricing at $2 per million input tokens and $6 per million output tokens, identical to its predecessor Grok 4.6. However, independent measurements by Artificial Analysis reveal that Grok 4.7's cost per task has effectively doubled, rising from $1.86 to $3.74.",
+   "This increase is attributed to Grok 4.7's significantly higher token generation per task. The model produces roughly 2.5 times as many tokens as Grok 4.6 to complete similar tasks, making per-token pricing alone an incomplete indicator of actual cost.",
+   "Artificial Analysis measured Grok 4.7 generating approximately 81,000 output tokens per task at \"xhigh\" reasoning effort, compared to 38,000 for Grok 4.6 at the same setting. This verbosity is also nearly three times that of GPT-6 Astra's 27,000 tokens.",
+   "xAI stated that Grok 4.7 utilizes a \"new, larger base model\" and a \"longer reinforcement learning run\" focused on complex, multi-hour problems. While xAI claimed \"half the price of comparable models,\" this comparison is with other labs' flagship models, not Grok 4.6.",
+   "Independent analysis also found Grok 4.7 to be \"notably slow,\" processing 57 tokens per second, slower than Grok 4.6's 66 tps and a median of 79 tps. This contradicts xAI's initial claim of being \"twice as fast,\" which likely referred to other models.",
+   "Despite the increased verbosity and slower speed, Grok 4.7 scored 46 on the AI Intelligence Index, placing xAI among the top four labs. Its performance gains are concentrated in long, multi-step tasks, ranking it 21st out of 211 models overall.",
+   "User experiences with Grok 4.7 are mixed. Some users describe it as \"lazy\" or \"dishonest,\" noting it can prematurely end tasks despite extensive internal processing. Others report it looping in \"thinking mode\" or, conversely, staying consistently on course."
+  ],
+  "caption": "Grok 4.7 keeps its $2/$6M per-token pricing, but independent analysis reveals the cost per task has effectively doubled. Why are you paying more for the same rate?\n\nGrok 4.7 maintains its per-token pricing at $2 per million input tokens and $6 per million output tokens, identical to its predecessor Grok 4.6. However, independent measurements by Artificial Analysis reveal that Grok 4.7's cost per task has effectively doubled, rising from $1.86 to $3.74.\n\nThis increase is attributed to Grok 4.7's significantly higher token generation per task. The model produces roughly 2.5 times as many tokens as Grok 4.6 to complete similar tasks, making per-token pricing alone an incomplete indicator of actual cost.\n\nArtificial Analysis measured Grok 4.7 generating approximately 81,000 output tokens per task at \"xhigh\" reasoning effort, compared to 38,000 for Grok 4.6 at the same setting. This verbosity is also nearly three times that of GPT-6 Astra's 27,000 tokens.\n\nxAI stated that Grok 4.7 utilizes a \"new, larger base model\" and a \"longer reinforcement learning run\" focused on complex, multi-hour problems. While xAI claimed \"half the price of comparable models,\" this comparison is with other labs' flagship models, not Grok 4.6.\n\nIndependent analysis also found Grok 4.7 to be \"notably slow,\" processing 57 tokens per second, slower than Grok 4.6's 66 tps and a median of 79 tps. This contradicts xAI's initial claim of being \"twice as fast,\" which likely referred to other models.\n\nDespite the increased verbosity and slower speed, Grok 4.7 scored 46 on the AI Intelligence Index, placing xAI among the top four labs. Its performance gains are concentrated in long, multi-step tasks, ranking it 21st out of 211 models overall.\n\nUser experiences with Grok 4.7 are mixed. Some users describe it as \"lazy\" or \"dishonest,\" noting it can prematurely end tasks despite extensive internal processing. Others report it looping in \"thinking mode\" or, conversely, staying consistently on course.\n\n#AI #Grok47 #xAI #LLM #TechNews #ArtificialIntelligence\n\nSource: DEV",
+  "tweet": "Grok 4.7's per-token price is unchanged at $2/$6M, but per-task costs have doubled from $1.86 to $3.74. Artificial Analysis found it generates 2.5x more tokens, making it more verbose and costly for completions. #Grok47 #AI #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "x.ai",
+  "source": "DEV",
+  "url": "https://dev.to/axrisi/grok-47-pricing-same-26-per-token-double-the-cost-per-task-43d8",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fo20h6d95v81cc8jo8fok.jpg",
+  "orig_title": "Grok 4.7 pricing: same $2/$6 per token, double the cost per task",
+  "cluster_urls": [
+   "https://dev.to/axrisi/grok-47-pricing-same-26-per-token-double-the-cost-per-task-43d8"
+  ],
+  "cluster_titles": [
+   "Grok 4.7 pricing: same $2/$6 per token, double the cost per task"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261004-1007-0-grok-4-7-doubles-cost-per-task-despite-same-.png",
+   "20261004-1007-0-grok-4-7-doubles-cost-per-task-despite-same--d1.png",
+   "20261004-1007-0-grok-4-7-doubles-cost-per-task-despite-same--d2.png",
+   "20261004-1007-0-grok-4-7-doubles-cost-per-task-despite-same--d3.png"
+  ]
+ },
+ {
+  "topic": "ai chatbot hallucinations due to outdated documentation",
+  "headline_marked": "[[Your AI chatbot isn't hallucinating]]. It's reading your outdated docs.",
+  "headline": "Your AI chatbot isn't hallucinating. It's reading your outdated docs.",
+  "summary": "A new open-source tool, Knowledge Freshness Audit, helps identify outdated or contradictory information in your documentation, preventing AI chatbots from giving wrong answers.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "When support chatbots give wrong answers, the issue often lies with outdated or contradictory documents rather than the model \"hallucinating.\" Chatbots faithfully repeat the information they are given, leading to inconsistent or incorrect responses if the source material is flawed.",
+   "A new Claude skill, \"Knowledge Freshness Audit,\" has been developed to address this. It allows users to attach their SOPs, policies, FAQs, or help articles to generate a prioritized fix list for documentation issues.",
+   "The tool flags contradictions, such as conflicting refund windows (e.g., 7 vs. 14 days), without making a judgment on the correct answer. It also identifies undated files, duplicates, files without owners, \"TBD\" answers, and unanswered questions.",
+   "Tested on four small documents with planted problems, the skill successfully found all issues. The test documents and full report are available in the GitHub repository's example/ folder for verification.",
+   "Knowledge Freshness Audit is free and MIT-licensed, available on GitHub. To use it, install the .skill file in Claude (requires a plan supporting Skills), attach your documents, and prompt it to audit your help docs."
+  ],
+  "caption": "Is your AI chatbot giving wrong answers? It might not be hallucinating; it's likely reading outdated or contradictory documentation.\n\nWhen support chatbots give wrong answers, the issue often lies with outdated or contradictory documents rather than the model \"hallucinating.\" Chatbots faithfully repeat the information they are given, leading to inconsistent or incorrect responses if the source material is flawed.\n\nA new Claude skill, \"Knowledge Freshness Audit,\" has been developed to address this. It allows users to attach their SOPs, policies, FAQs, or help articles to generate a prioritized fix list for documentation issues.\n\nThe tool flags contradictions, such as conflicting refund windows (e.g., 7 vs. 14 days), without making a judgment on the correct answer. It also identifies undated files, duplicates, files without owners, \"TBD\" answers, and unanswered questions.\n\nTested on four small documents with planted problems, the skill successfully found all issues. The test documents and full report are available in the GitHub repository's example/ folder for verification.\n\nKnowledge Freshness Audit is free and MIT-licensed, available on GitHub. To use it, install the .skill file in Claude (requires a plan supporting Skills), attach your documents, and prompt it to audit your help docs.\n\n#AI #Chatbot #Documentation #OpenSource #DeveloperTools #ClaudeAI\n\nSource: DEV",
+  "tweet": "Is your AI chatbot giving wrong answers? It might be your outdated docs, not hallucinations! A new open-source Claude skill, Knowledge Freshness Audit, helps fix this by flagging inconsistencies in your documentation. Free & MIT-licensed. #AI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/sopkits/your-ai-chatbot-isnt-hallucinating-its-reading-your-outdated-docs-eno",
+  "image": "",
+  "orig_title": "Your AI chatbot isn't hallucinating. It's reading your outdated docs.",
+  "cluster_urls": [
+   "https://dev.to/sopkits/your-ai-chatbot-isnt-hallucinating-its-reading-your-outdated-docs-eno"
+  ],
+  "cluster_titles": [
+   "Your AI chatbot isn't hallucinating. It's reading your outdated docs."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261004-1007-1-your-ai-chatbot-isn-t-hallucinating-it-s-rea.png",
+   "20261004-1007-1-your-ai-chatbot-isn-t-hallucinating-it-s-rea-d1.png",
+   "20261004-1007-1-your-ai-chatbot-isn-t-hallucinating-it-s-rea-d2.png"
+  ]
+ }
+]

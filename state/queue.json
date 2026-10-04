@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "turn off apple intelligence on macos to save disk space",
+  "headline_marked": "[[Turn off Apple Intelligence]] on macOS 27 and reclaim 12 GB of disk space",
+  "headline": "Turn off Apple Intelligence on macOS 27 and reclaim 12 GB of disk space",
+  "summary": "A new script allows macOS 27 users to disable Apple Intelligence features and remove their associated downloaded models, freeing up significant storage.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "macOS 27 no longer offers a simple toggle for Apple Intelligence, and its models persist on disk even after features are disabled. The RemoveMacAI script addresses this by turning off the features, deleting the models, and preventing future downloads.",
+   "The script is designed for ease of use and security. It downloads the latest release, verifies its checksum, and runs from a temporary directory without installation. Each release is built using GitHub Actions and includes provenance attestation for verification.",
+   "RemoveMacAI guides users through the process, showing the current state and requesting confirmation. It then prompts users to approve a configuration profile in System Settings, which is required by macOS, before proceeding to remove the models.",
+   "Disabling Apple Intelligence through this script affects features like Siri, Writing Tools, Image Playground, the ChatGPT extension, various summarization capabilities in apps like Mail and Safari, and more. Dictation, however, remains unaffected as it uses separate speech models.",
+   "The changes made by RemoveMacAI are persistent across macOS updates, thanks to the configuration profile. While Apple's asset service releases models immediately, macOS deletes the files on its own schedule. During this interim period, storage settings may still show Apple Intelligence occupying space.",
+   "Users may notice processes like 'Siri' still running in macOS 27, but this is related to the Spotlight window. Some system services also remain loaded and are protected by System Integrity Protection. The script's actions do not interfere with these core system functions.",
+   "The script is built upon 'pared', a tool developed by 4evy that initially mapped Apple's asset service, model sets, and settings keys. Users can revert all changes by running `removemacai revert` and uninstalling the script if installed via Homebrew."
+  ],
+  "caption": "Free up 12 GB on your Mac! A new tool lets you disable Apple Intelligence and remove its models on macOS 27.\n\nmacOS 27 no longer offers a simple toggle for Apple Intelligence, and its models persist on disk even after features are disabled. The RemoveMacAI script addresses this by turning off the features, deleting the models, and preventing future downloads.\n\nThe script is designed for ease of use and security. It downloads the latest release, verifies its checksum, and runs from a temporary directory without installation. Each release is built using GitHub Actions and includes provenance attestation for verification.\n\nRemoveMacAI guides users through the process, showing the current state and requesting confirmation. It then prompts users to approve a configuration profile in System Settings, which is required by macOS, before proceeding to remove the models.\n\nDisabling Apple Intelligence through this script affects features like Siri, Writing Tools, Image Playground, the ChatGPT extension, various summarization capabilities in apps like Mail and Safari, and more. Dictation, however, remains unaffected as it uses separate speech models.\n\nThe changes made by RemoveMacAI are persistent across macOS updates, thanks to the configuration profile. While Apple's asset service releases models immediately, macOS deletes the files on its own schedule. During this interim period, storage settings may still show Apple Intelligence occupying space.\n\nUsers may notice processes like 'Siri' still running in macOS 27, but this is related to the Spotlight window. Some system services also remain loaded and are protected by System Integrity Protection. The script's actions do not interfere with these core system functions.\n\nThe script is built upon 'pared', a tool developed by 4evy that initially mapped Apple's asset service, model sets, and settings keys. Users can revert all changes by running `removemacai revert` and uninstalling the script if installed via Homebrew.\n\n#AppleIntelligence #macOS #Tech #Storage #Apple\n\nSource: Hacker News",
+  "tweet": "Reclaim 12 GB on macOS 27! A new script, RemoveMacAI, allows you to turn off Apple Intelligence features and delete their models. #AppleIntelligence #macOS #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "Hacker News",
+  "url": "https://github.com/omlahore/RemoveMacAI",
+  "image": "",
+  "orig_title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
+  "cluster_urls": [
+   "https://github.com/omlahore/RemoveMacAI"
+  ],
+  "cluster_titles": [
+   "Turn off Apple Intelligence on macOS 27 and get its disk space back"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261005-0506-0-turn-off-apple-intelligence-on-macos-27-and-.png",
+   "20261005-0506-0-turn-off-apple-intelligence-on-macos-27-and--d1.png",
+   "20261005-0506-0-turn-off-apple-intelligence-on-macos-27-and--d2.png",
+   "20261005-0506-0-turn-off-apple-intelligence-on-macos-27-and--d3.png"
+  ]
+ }
+]

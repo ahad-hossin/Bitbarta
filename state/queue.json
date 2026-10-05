@@ -1,1 +1,94 @@
-[]
+[
+ {
+  "topic": "local ai operating system for brain",
+  "headline_marked": "[[THRASH is a human-process scheduler]] for managing unfinished projects, using an OS metaphor",
+  "headline": "THRASH is a human-process scheduler for managing unfinished projects, using an OS metaphor",
+  "summary": "THRASH uses an OS metaphor to help manage human projects, leveraging local AI with Gemma 3 4B and Python to restore context across task switches.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "THRASH is a local human-process scheduler designed to help users return to unfinished projects by preserving context. It creates a semantic process image before context disappears, using a 'PAGE FAULT' mechanism to restore what was finished, decisions made, where work stopped, and the next actions.",
+   "This system leverages open-weight Gemma 3 4B to reconstruct meaning locally from files and commits, with Python handling non-LLM logic. The goal is to save execution context across switches rather than simply organizing a task list, preventing the need to rebuild an entire project in one's head.",
+   "The tool treats projects like an operating system treats processes, with states like RUNNING, READY, SLEEPING, STARVED, ZOMBIE, or TERMINATED. Ideas can arrive as interrupts, preventing them from immediately creating new, unmanaged projects, helping to visualize and manage mental overhead.",
+   "A key design principle is privacy: all project contents remain on the user's machine. Gemma receives privacy-filtered project evidence to reconstruct the structured semantic process image, ensuring sensitive data is not exposed. The system also includes robust testing for scheduler, restoration, and privacy boundaries.",
+   "The TUI (Text User Interface) is a client of the scheduler, ensuring the kernel logic is separate from the interface. Visual elements like the historical SCAR (showing old scheduling behavior) and the working-set map (showing resident project contexts) provide insights into human scheduling patterns without random glitches for aesthetics."
+  ],
+  "caption": "Feeling your brain 'thrashing' with too many projects? A new local AI tool, THRASH, helps you instantly resume unfinished work by saving your mental 'execution context'.\n\nTHRASH is a local human-process scheduler designed to help users return to unfinished projects by preserving context. It creates a semantic process image before context disappears, using a 'PAGE FAULT' mechanism to restore what was finished, decisions made, where work stopped, and the next actions.\n\nThis system leverages open-weight Gemma 3 4B to reconstruct meaning locally from files and commits, with Python handling non-LLM logic. The goal is to save execution context across switches rather than simply organizing a task list, preventing the need to rebuild an entire project in one's head.\n\nThe tool treats projects like an operating system treats processes, with states like RUNNING, READY, SLEEPING, STARVED, ZOMBIE, or TERMINATED. Ideas can arrive as interrupts, preventing them from immediately creating new, unmanaged projects, helping to visualize and manage mental overhead.\n\nA key design principle is privacy: all project contents remain on the user's machine. Gemma receives privacy-filtered project evidence to reconstruct the structured semantic process image, ensuring sensitive data is not exposed. The system also includes robust testing for scheduler, restoration, and privacy boundaries.\n\nThe TUI (Text User Interface) is a client of the scheduler, ensuring the kernel logic is separate from the interface. Visual elements like the historical SCAR (showing old scheduling behavior) and the working-set map (showing resident project contexts) provide insights into human scheduling patterns without random glitches for aesthetics.\n\n#THRASH #AI #Productivity #DeveloperTools #LocalAI #Software\n\nSource: DEV",
+  "tweet": "Feeling your brain 'thrashing' with too many projects? A new local AI tool, THRASH, helps you instantly resume unfinished work by saving your mental 'execution context'. Built with Gemma 3 4B and Python. #THRASH #AI #Productivity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/iclaldogan/thrash-i-gave-my-friend-an-operating-system-for-her-brain-c1m",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F85y11qbczt73nzec4jbx.png",
+  "orig_title": "THRASH: I Gave My Friend an Operating System for Her Brain",
+  "cluster_urls": [
+   "https://dev.to/iclaldogan/thrash-i-gave-my-friend-an-operating-system-for-her-brain-c1m",
+   "https://dev.to/splmdny/sarah-always-forget-what-she-said-before-so-i-build-promisekeeper-for-her-2l0n",
+   "https://dev.to/mohd_ashab_6fe0c714df666b/studybuddy-ai-a-local-ai-study-companion-powered-by-gemma-3-4b-4bi3",
+   "https://dev.to/simp_bonk/my-friends-laptop-is-full-of-junk-nobody-dares-delete-so-i-built-him-a-local-ai-that-explains-9bh",
+   "https://dev.to/shaurya_mehta/receipts-i-built-a-local-ai-verifier-for-my-friends-project-reports-1614"
+  ],
+  "cluster_titles": [
+   "THRASH: I Gave My Friend an Operating System for Her Brain",
+   "Sarah... Always Forget What She Said Before, So I build \"PromiseKeeper\" for Her",
+   "StudyBuddy AI: A Local AI Study Companion Powered by Gemma 3 4B",
+   "My friend's laptop is full of junk nobody dares delete. So I built him a local AI that explains what's safe.",
+   "Receipts: I Built a Local AI Verifier for My Friend's Project Reports"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261005-0707-0-thrash-is-a-human-process-scheduler-for-mana.png",
+   "20261005-0707-0-thrash-is-a-human-process-scheduler-for-mana-d1.png",
+   "20261005-0707-0-thrash-is-a-human-process-scheduler-for-mana-d2.png",
+   "20261005-0707-0-thrash-is-a-human-process-scheduler-for-mana-d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent authority injection attempts",
+  "headline_marked": "[[8,648 AI agent injection attacks succeeded]] out of 272,000 attempts; Apple updates macOS Full Disk Access",
+  "headline": "8,648 AI agent injection attacks succeeded out of 272,000 attempts; Apple updates macOS Full Disk Access",
+  "summary": "A large-scale red-teaming competition found all tested AI models vulnerable to prompt injection, with success rates up to 8.5%. Apple is now updating macOS Full Disk Access to prevent agents from exploiting broad user permissions.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Out of 272,000 injection attempts against 13 frontier AI agents, 8,648 succeeded, with rates from 0.5% to 8.5%. Every model in the test proved vulnerable, highlighting a widespread architectural weakness in instruction-following.",
+   "This prompted Apple to publish a developer notice on October 2, 2026, titled 'Updates to Full Disk Access in macOS.' The notice announced a repair to prevent developers from using Full Disk Access in ways that expose user data without full understanding.",
+   "The timing followed reports of a Meta Muse agent on Mac allegedly accessing private messages, underscoring user assumptions about agent authority. Apple framed the fix as enhancing consent rather than restricting features.",
+   "The core vulnerability lies in the architectural difference between iOS and macOS. While iOS permissions are tightly bounded, macOS's broad grants for Full Disk Access can effectively hand over the entire startup drive to an agent.",
+   "This creates a 'mental model' gap for users accustomed to iOS's bounded permissions. Tightening these broad grants, however, risks breaking legitimate tools like backup utilities that require extensive filesystem access.",
+   "The issue is critical because AI agents continuously process untrusted input, including emails and documents, and then decide which tools to call. Adversarial instructions embedded in this content can manipulate agent behavior unseen by the user.",
+   "Research found that certain attack strategies transferred across 21 of 41 tested behaviors and multiple model families, pointing to fundamental weaknesses in instruction-following architectures, not just specific vendor builds.",
+   "Notably, capability and robustness showed little correlation; the most capable model was also among the most vulnerable. This means benchmark performance alone does not indicate an agent's security 'blast radius'.",
+   "The industry recognizes 'Excessive Agency' as a top risk, with 74% of IT application leaders seeing agents as a new attack vector. Trustworthy systems need every consequential action traceable to a human, bounded by delegation, and contestable.",
+   "The solution involves applying 'least privilege' to agents by inverting the timing of access. Instead of broad standing credentials, access should be task-scoped, granted at initiation, and revoked upon completion."
+  ],
+  "caption": "8,648 successful prompt injection attacks against 13 frontier AI agents revealed critical vulnerabilities. Apple is now overhauling macOS permissions to limit AI agent access.\n\nOut of 272,000 injection attempts against 13 frontier AI agents, 8,648 succeeded, with rates from 0.5% to 8.5%. Every model in the test proved vulnerable, highlighting a widespread architectural weakness in instruction-following.\n\nThis prompted Apple to publish a developer notice on October 2, 2026, titled 'Updates to Full Disk Access in macOS.' The notice announced a repair to prevent developers from using Full Disk Access in ways that expose user data without full understanding.\n\nThe timing followed reports of a Meta Muse agent on Mac allegedly accessing private messages, underscoring user assumptions about agent authority. Apple framed the fix as enhancing consent rather than restricting features.\n\nThe core vulnerability lies in the architectural difference between iOS and macOS. While iOS permissions are tightly bounded, macOS's broad grants for Full Disk Access can effectively hand over the entire startup drive to an agent.\n\nThis creates a 'mental model' gap for users accustomed to iOS's bounded permissions. Tightening these broad grants, however, risks breaking legitimate tools like backup utilities that require extensive filesystem access.\n\nThe issue is critical because AI agents continuously process untrusted input, including emails and documents, and then decide which tools to call. Adversarial instructions embedded in this content can manipulate agent behavior unseen by the user.\n\nResearch found that certain attack strategies transferred across 21 of 41 tested behaviors and multiple model families, pointing to fundamental weaknesses in instruction-following architectures, not just specific vendor builds.\n\n#AI #AISecurity #Cybersecurity #Apple #macOS #TechNews\n\nSource: DEV",
+  "tweet": "8,648 successful prompt injection attacks against 13 frontier AI agents revealed critical vulnerabilities. Apple is now overhauling macOS permissions to limit AI agent access, addressing a design flaw where broad grants expose user data. #AISecurity #Apple #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "DEV",
+  "url": "https://dev.to/yanoai/your-ai-agent-has-more-authority-than-your-intern-here-is-how-to-design-the-limits-302n",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgk8eub34rzn7spxix6tx.jpg",
+  "orig_title": "Your AI Agent Has More Authority Than Your Intern. Here Is How To Design The Limits",
+  "cluster_urls": [
+   "https://dev.to/yanoai/your-ai-agent-has-more-authority-than-your-intern-here-is-how-to-design-the-limits-302n"
+  ],
+  "cluster_titles": [
+   "Your AI Agent Has More Authority Than Your Intern. Here Is How To Design The Limits"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261005-0707-1-8-648-ai-agent-injection-attacks-succeeded-o.png",
+   "20261005-0707-1-8-648-ai-agent-injection-attacks-succeeded-o-d1.png",
+   "20261005-0707-1-8-648-ai-agent-injection-attacks-succeeded-o-d2.png",
+   "20261005-0707-1-8-648-ai-agent-injection-attacks-succeeded-o-d3.png",
+   "20261005-0707-1-8-648-ai-agent-injection-attacks-succeeded-o-d4.png"
+  ]
+ }
+]

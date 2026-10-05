@@ -1,1 +1,43 @@
-[]
+[
+ {
+  "topic": "ai agent pilot reaches production",
+  "headline_marked": "[[AI bugs]] now cost money, not just CPU cycles",
+  "headline": "AI bugs now cost money, not just CPU cycles",
+  "summary": "AI systems can incur significant costs from infinite loops or excessive API calls, unlike traditional software where bugs primarily impact performance.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "In traditional software, bugs often lead to CPU spikes, causing performance issues but minimal direct financial loss. However, in AI systems, the same bugs can translate into substantial billing events, as each iteration or API call incurs costs.",
+   "A common scenario involves AI agents getting stuck in loops, such as repeatedly trying to fix an invalid output. Unlike traditional errors, these loops may not trigger visible exceptions or alerts, with the only indication of a problem being a rapidly increasing invoice.",
+   "To prevent runaway costs, developers must implement hard ceilings on retries and token usage for AI loops. Hitting these limits should be logged as a failure, not a silent fallback, ensuring visibility into potential issues.",
+   "The architecture of AI features needs to treat every interaction as a purchase. This means implementing cost controls for every loop, retry, and fan-out operation, similar to how latency is managed.",
+   "Beyond global rate limits, granular controls per user, API key, and tenant are crucial. This prevents a single user or a mistaken integration test from consuming a disproportionate share of resources and incurring unexpected expenses.",
+   "Monitoring AI feature costs in real-time is as important as tracking system uptime. Without robust cost controls, AI features in production are essentially running an 'open tab' with no oversight."
+  ],
+  "caption": "Your AI bugs used to burn CPU. Now they burn money.\n\nIn traditional software, bugs often lead to CPU spikes, causing performance issues but minimal direct financial loss. However, in AI systems, the same bugs can translate into substantial billing events, as each iteration or API call incurs costs.\n\nA common scenario involves AI agents getting stuck in loops, such as repeatedly trying to fix an invalid output. Unlike traditional errors, these loops may not trigger visible exceptions or alerts, with the only indication of a problem being a rapidly increasing invoice.\n\nTo prevent runaway costs, developers must implement hard ceilings on retries and token usage for AI loops. Hitting these limits should be logged as a failure, not a silent fallback, ensuring visibility into potential issues.\n\nThe architecture of AI features needs to treat every interaction as a purchase. This means implementing cost controls for every loop, retry, and fan-out operation, similar to how latency is managed.\n\nBeyond global rate limits, granular controls per user, API key, and tenant are crucial. This prevents a single user or a mistaken integration test from consuming a disproportionate share of resources and incurring unexpected expenses.\n\nMonitoring AI feature costs in real-time is as important as tracking system uptime. Without robust cost controls, AI features in production are essentially running an 'open tab' with no oversight.\n\n#AI #LLM #SoftwareDevelopment #CostControl #Tech\n\nSource: DEV",
+  "tweet": "Your AI bugs used to burn CPU. Now they burn money. In AI systems, infinite loops and excessive API calls can lead to massive unexpected costs. Implement hard cost controls per user and per API call to avoid runaway expenses. #AI #LLM #CostControl",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/cyclopt_dimitrisk/your-bugs-used-to-burn-cpu-now-they-burn-money-11cb",
+  "image": "",
+  "orig_title": "Your bugs used to burn CPU. Now they burn money.",
+  "cluster_urls": [
+   "https://dev.to/cyclopt_dimitrisk/your-bugs-used-to-burn-cpu-now-they-burn-money-11cb",
+   "https://dev.to/pykero/how-to-run-an-ai-agent-pilot-that-actually-reaches-production-23i4"
+  ],
+  "cluster_titles": [
+   "Your bugs used to burn CPU. Now they burn money.",
+   "How to Run an AI Agent Pilot That Actually Reaches Production"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261005-1506-0-ai-bugs-now-cost-money-not-just-cpu-cycles.png",
+   "20261005-1506-0-ai-bugs-now-cost-money-not-just-cpu-cycles-d1.png",
+   "20261005-1506-0-ai-bugs-now-cost-money-not-just-cpu-cycles-d2.png"
+  ]
+ }
+]

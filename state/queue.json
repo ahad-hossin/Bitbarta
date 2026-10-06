@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ai agent output false verification",
+  "headline_marked": "[[Agent pipelines report 'verified' with empty checks]], bypassing hash binding",
+  "headline": "Agent pipelines report 'verified' with empty checks, bypassing hash binding",
+  "summary": "A new analysis reveals that agent pipelines can falsely report 'verified: true' even after a hash binding fix, because the check itself was never bound to anything.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Developers often rely on agent pipelines reporting 'verified: true', but a recent analysis shows this can be misleading. A previous fix involving hash binding, intended to prevent artifact swaps, only covered the bytes and not the actual verification logic.",
+   "This critical flaw means a verifier can record a hash and match it at delivery, yet perform no predicate check at all. The binding remains complete while the underlying check is empty, leading to false positives.",
+   "This isn't an exotic bug; it can stem from a forgotten predicate, one that always returns true, or a config flag skipping expensive parts. In all such cases, the verification receipt appears identical to a working check.",
+   "An experiment across Strands, LangGraph, and CrewAI frameworks, involving 45 runs, demonstrated the issue. An artifact, wrong from its first byte, consistently violated the declared predicate, yet was reported as 'verified'.",
+   "To expose this, a control was implemented: feeding a known-bad artifact through the same verifier. A working check would fail, but a stub would pass, making the empty verifier visible in the recorded state.",
+   "The results were conclusive: the control alone exposed the empty verifier in 9 out of 9 runs. This confirms that the 'verified' status was being reported without an actual check against the predicate.",
+   "Established practices offer solutions: explicitly name the check on the receipt, author the check outside the delivery path, and always feed a known-bad artifact through the same check within the same run to ensure its integrity."
+  ],
+  "caption": "Your agent says 'verified: true', but is it really? A new analysis reveals agent pipelines can report successful verification even when no actual check was performed.\n\nDevelopers often rely on agent pipelines reporting 'verified: true', but a recent analysis shows this can be misleading. A previous fix involving hash binding, intended to prevent artifact swaps, only covered the bytes and not the actual verification logic.\n\nThis critical flaw means a verifier can record a hash and match it at delivery, yet perform no predicate check at all. The binding remains complete while the underlying check is empty, leading to false positives.\n\nThis isn't an exotic bug; it can stem from a forgotten predicate, one that always returns true, or a config flag skipping expensive parts. In all such cases, the verification receipt appears identical to a working check.\n\nAn experiment across Strands, LangGraph, and CrewAI frameworks, involving 45 runs, demonstrated the issue. An artifact, wrong from its first byte, consistently violated the declared predicate, yet was reported as 'verified'.\n\nTo expose this, a control was implemented: feeding a known-bad artifact through the same verifier. A working check would fail, but a stub would pass, making the empty verifier visible in the recorded state.\n\nThe results were conclusive: the control alone exposed the empty verifier in 9 out of 9 runs. This confirms that the 'verified' status was being reported without an actual check against the predicate.\n\nEstablished practices offer solutions: explicitly name the check on the receipt, author the check outside the delivery path, and always feed a known-bad artifact through the same check within the same run to ensure its integrity.\n\n#SoftwareDevelopment #AI #AgentSystems #DevTools #Verification #CodeQuality\n\nSource: DEV",
+  "tweet": "Your agent's 'verified: true' might be a lie. New analysis shows agent pipelines can report successful checks even when no actual verification ran, bypassing hash binding. Learn how to fix this critical flaw. #SoftwareDev #AI #AgentSystems",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/sunnydachs/your-agent-says-verified-the-check-behind-it-may-be-empty-5e4a",
+  "image": "",
+  "orig_title": "Your Agent Says Verified. The Check Behind It May Be Empty.",
+  "cluster_urls": [
+   "https://dev.to/sunnydachs/your-agent-says-verified-the-check-behind-it-may-be-empty-5e4a"
+  ],
+  "cluster_titles": [
+   "Your Agent Says Verified. The Check Behind It May Be Empty."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261006-1307-0-agent-pipelines-report-verified-with-empty-c.png",
+   "20261006-1307-0-agent-pipelines-report-verified-with-empty-c-d1.png",
+   "20261006-1307-0-agent-pipelines-report-verified-with-empty-c-d2.png",
+   "20261006-1307-0-agent-pipelines-report-verified-with-empty-c-d3.png"
+  ]
+ },
+ {
+  "topic": "offline ai walk planner app",
+  "headline_marked": "[[Pocket Walk is an offline AI]] that plans walks and tells you to put your phone away",
+  "headline": "Pocket Walk is an offline AI that plans walks and tells you to put your phone away",
+  "summary": "The app generates riddle-style clues for local finds, then blacks out the screen to maximize 'grass ratio' – minutes outside per minute on screen. It runs entirely offline without an account or location tracking.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Pocket Walk is an open-source AI walk planner designed to get users off their screens. Users input region, season, interests (birds, trees), and time, and a local open-weight model generates riddle-style clues for things to find.",
+   "Once a walk starts, the screen goes dark, showing only a breathing orb and a timer. The app's core metric is the 'grass ratio,' measuring minutes outside per minute on screen, aiming to minimize screen time.",
+   "A key feature is its complete offline operation, using only the Python standard library with no `pip install` required. This design avoids cloud services, accounts, and sending location data off-device, prioritizing user privacy.",
+   "In a 20-minute test walk, the developer achieved a 4.2:1 grass ratio, finding 3 out of 5 clues. Current limitations include vaguer riddles from the 3B model, a limited starter guide, and walk mode not locking the phone."
+  ],
+  "caption": "This AI walk planner wants you to put your phone away. It uses a local model to generate clues for your walk, then blacks out the screen to maximize your time outdoors.\n\nPocket Walk is an open-source AI walk planner designed to get users off their screens. Users input region, season, interests (birds, trees), and time, and a local open-weight model generates riddle-style clues for things to find.\n\nOnce a walk starts, the screen goes dark, showing only a breathing orb and a timer. The app's core metric is the 'grass ratio,' measuring minutes outside per minute on screen, aiming to minimize screen time.\n\nA key feature is its complete offline operation, using only the Python standard library with no `pip install` required. This design avoids cloud services, accounts, and sending location data off-device, prioritizing user privacy.\n\nIn a 20-minute test walk, the developer achieved a 4.2:1 grass ratio, finding 3 out of 5 clues. Current limitations include vaguer riddles from the 3B model, a limited starter guide, and walk mode not locking the phone.\n\n#AI #OpenSource #TechForGood #OfflineAI #Wellness #DigitalDetox\n\nSource: DEV",
+  "tweet": "This AI walk planner, Pocket Walk, uses a local model to create riddle-style clues for your outdoor exploration, then blacks out the screen. It aims for a high 'grass ratio' – more time outside than on your phone. Runs entirely offline! #AI #OpenSource #DigitalWellness",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/lagnadeep_samal_2d1cca395/pocket-walk-an-offline-ai-that-plans-your-walk-then-tells-you-to-put-the-phone-away-3268",
+  "image": "",
+  "orig_title": "Pocket Walk: an offline AI that plans your walk, then tells you to put the phone away",
+  "cluster_urls": [
+   "https://dev.to/lagnadeep_samal_2d1cca395/pocket-walk-an-offline-ai-that-plans-your-walk-then-tells-you-to-put-the-phone-away-3268"
+  ],
+  "cluster_titles": [
+   "Pocket Walk: an offline AI that plans your walk, then tells you to put the phone away"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261006-1307-1-pocket-walk-is-an-offline-ai-that-plans-walk.png",
+   "20261006-1307-1-pocket-walk-is-an-offline-ai-that-plans-walk-d1.png",
+   "20261006-1307-1-pocket-walk-is-an-offline-ai-that-plans-walk-d2.png"
+  ]
+ }
+]

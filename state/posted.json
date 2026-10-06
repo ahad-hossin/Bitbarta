@@ -8367,8 +8367,13 @@
   "headline": "Agent pipelines report 'verified' with empty checks, bypassing hash binding",
   "topic": "ai agent output false verification",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-10-06T07:07:45Z"
+  "status": "failed",
+  "at": "2026-10-06T07:07:45Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "ff6c954a4d2c257c",
@@ -8376,7 +8381,12 @@
   "headline": "Pocket Walk is an offline AI that plans walks and tells you to put your phone away",
   "topic": "offline ai walk planner app",
   "source": "DEV",
-  "status": "queued",
-  "at": "2026-10-06T07:07:45Z"
+  "status": "failed",
+  "at": "2026-10-06T07:07:45Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

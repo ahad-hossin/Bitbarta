@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "ai_agent_lying_to_customers",
+  "headline_marked": "[[SleekFlow AI Agent Confidently Lied]] to Customers, forcing client to leave",
+  "headline": "SleekFlow AI Agent Confidently Lied to Customers, forcing client to leave",
+  "summary": "A company abandoned SleekFlow after its AI agent repeatedly hallucinated critical information like prices and policies, costing money and requiring extensive manual oversight due to lack of audit trails and human checkpoints.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A company left SleekFlow after its AI agent confidently provided incorrect information to customers, mirroring a Booking.com incident where an AI chatbot caused a €1,400 loss due to a flat-out wrong answer. The core issue was the AI generating confident but false replies without any audit trail.",
+   "The company's SleekFlow setup used AI agents for WhatsApp Business API replies, lacking human checkpoints or per-message source citations. While initial testing showed fast, on-brand responses, the AI consistently sounded correct even when delivering inaccurate information.",
+   "SleekFlow's AgentFlow allowed the AI to fill knowledge gaps with generated content, rather than escalating or flagging. This meant hallucinated prices or policies appeared identical to verified answers, with no human-in-the-loop step to prevent them from reaching customers.",
+   "This critical flaw was fully exposed after a Meta API outage on July 19, 2026, which took WhatsApp, Instagram, and Messenger offline via SleekFlow. Without voice fallback, conversations broke or vanished, highlighting the lack of robust error handling.",
+   "To mitigate the problem, the company implemented a \"brutal workaround\": every AI-generated reply was manually checked against Shopify admin data. This involved line-by-line comparisons of prices, policies, and stock, with every hallucination meticulously logged.",
+   "This manual review process completely eliminated the labor savings expected from automation, leading to increased workload and a backlog of tickets. The experience also revealed a pattern of poor support from SleekFlow, echoing Trustpilot reviews.",
+   "The company then defined five crucial requirements for any new platform: per-message source citation for every AI reply, mandatory human approval for sensitive topics like price or refunds, and strict grounding enforcement to prevent unsupported gap-filling.",
+   "Additional requirements included voice fallback via WhatsApp Business Calling API for Meta outages and a comprehensive audit trail. This trail needed to reconstruct not just conversations, but also the agent's reasoning, sources, and human approvals to defend AI-driven outcomes."
+  ],
+  "caption": "An AI agent confidently lied to customers about prices and policies, costing a company money and trust. The problem wasn't just being wrong, but the system's inability to flag it.\n\nA company left SleekFlow after its AI agent confidently provided incorrect information to customers, mirroring a Booking.com incident where an AI chatbot caused a €1,400 loss due to a flat-out wrong answer. The core issue was the AI generating confident but false replies without any audit trail.\n\nThe company's SleekFlow setup used AI agents for WhatsApp Business API replies, lacking human checkpoints or per-message source citations. While initial testing showed fast, on-brand responses, the AI consistently sounded correct even when delivering inaccurate information.\n\nSleekFlow's AgentFlow allowed the AI to fill knowledge gaps with generated content, rather than escalating or flagging. This meant hallucinated prices or policies appeared identical to verified answers, with no human-in-the-loop step to prevent them from reaching customers.\n\nThis critical flaw was fully exposed after a Meta API outage on July 19, 2026, which took WhatsApp, Instagram, and Messenger offline via SleekFlow. Without voice fallback, conversations broke or vanished, highlighting the lack of robust error handling.\n\nTo mitigate the problem, the company implemented a \"brutal workaround\": every AI-generated reply was manually checked against Shopify admin data. This involved line-by-line comparisons of prices, policies, and stock, with every hallucination meticulously logged.\n\nThis manual review process completely eliminated the labor savings expected from automation, leading to increased workload and a backlog of tickets. The experience also revealed a pattern of poor support from SleekFlow, echoing Trustpilot reviews.\n\n#AI #CustomerService #TechNews #SleekFlow #Automation #Business\n\nSource: DEV",
+  "tweet": "An AI agent confidently lied to customers about prices and policies, costing a company money and trust. The system's inability to flag hallucinations forced extensive manual checks, negating automation benefits. A critical look at AI reliability. #AI #CustomerService #SleekF",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "sleekflow.com",
+  "source": "DEV",
+  "url": "https://dev.to/kevinbarrett/why-we-left-sleekflow-after-its-ai-agent-started-confidently-lying-to-customers-fjb",
+  "image": "",
+  "orig_title": "Why We Left SleekFlow After Its AI Agent Started Confidently Lying to Customers",
+  "cluster_urls": [
+   "https://dev.to/kevinbarrett/why-we-left-sleekflow-after-its-ai-agent-started-confidently-lying-to-customers-fjb"
+  ],
+  "cluster_titles": [
+   "Why We Left SleekFlow After Its AI Agent Started Confidently Lying to Customers"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261006-0609-0-sleekflow-ai-agent-confidently-lied-to-custo.png",
+   "20261006-0609-0-sleekflow-ai-agent-confidently-lied-to-custo-d1.png",
+   "20261006-0609-0-sleekflow-ai-agent-confidently-lied-to-custo-d2.png",
+   "20261006-0609-0-sleekflow-ai-agent-confidently-lied-to-custo-d3.png"
+  ]
+ },
+ {
+  "topic": "chatgpt_fake_cartoon_signatures",
+  "headline_marked": "[[ChatGPT adds real cartoonists' signatures]] to AI-generated New Yorker-style cartoons",
+  "headline": "ChatGPT adds real cartoonists' signatures to AI-generated New Yorker-style cartoons",
+  "summary": "OpenAI's chatbot has been found to reproduce the pen names of over 15 New Yorker cartoonists on fake illustrations, raising concerns about intellectual property and authenticity.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A viral AI-generated cartoon featuring Dolly Parton and Tim Curry, created by ChatGPT, falsely bore the signature \"BLOPER\" of New Yorker cartoonist Brendan Loper. Loper confirmed he did not draw or sign the image, which circulated widely across social media platforms. This incident highlights a significant issue with AI models replicating artist identities.",
+   "Loper was alerted by his brother and then received emails and DMs from strangers asking if the cartoon was his. He described the experience as \"very surreal\" and a \"violation of my personhood,\" despite knowing his work was used for AI training. For cartoonists, a signature acts as a certificate of authenticity and a brand mark.",
+   "This wasn't an isolated event; Loper had previously been warned in May about his signature appearing in ChatGPT outputs. He later found more examples in Reddit forums where users posted similar AI-generated New Yorker-style cartoons. The issue affects more than 15 New Yorker cartoonists, both past and present, whose signatures have been documented in ChatGPT's outputs.",
+   "OpenAI stated their focus is on building tools that empower human creativity and appreciate community flags on unintended model behavior. After being notified, ChatGPT began displaying a warning about \"similarity to third-party content\" for New Yorker-style cartoon prompts. However, the model still continues to sign some generic cartoons with real artists' names.",
+   "The AI-generated cartoons often mimic the magazine's style: black-and-white, single-panel, sparse backgrounds, and sardonic captions, though punch lines can be nonsensical. While not every image includes a signature, and some are gibberish, many consistently use the names of actual New Yorker contributors without permission or compensation."
+  ],
+  "caption": "ChatGPT is generating fake New Yorker-style cartoons and signing them with the names of real cartoonists. Over 15 artists' signatures have been documented.\n\nA viral AI-generated cartoon featuring Dolly Parton and Tim Curry, created by ChatGPT, falsely bore the signature \"BLOPER\" of New Yorker cartoonist Brendan Loper. Loper confirmed he did not draw or sign the image, which circulated widely across social media platforms. This incident highlights a significant issue with AI models replicating artist identities.\n\nLoper was alerted by his brother and then received emails and DMs from strangers asking if the cartoon was his. He described the experience as \"very surreal\" and a \"violation of my personhood,\" despite knowing his work was used for AI training. For cartoonists, a signature acts as a certificate of authenticity and a brand mark.\n\nThis wasn't an isolated event; Loper had previously been warned in May about his signature appearing in ChatGPT outputs. He later found more examples in Reddit forums where users posted similar AI-generated New Yorker-style cartoons. The issue affects more than 15 New Yorker cartoonists, both past and present, whose signatures have been documented in ChatGPT's outputs.\n\nOpenAI stated their focus is on building tools that empower human creativity and appreciate community flags on unintended model behavior. After being notified, ChatGPT began displaying a warning about \"similarity to third-party content\" for New Yorker-style cartoon prompts. However, the model still continues to sign some generic cartoons with real artists' names.\n\nThe AI-generated cartoons often mimic the magazine's style: black-and-white, single-panel, sparse backgrounds, and sardonic captions, though punch lines can be nonsensical. While not every image includes a signature, and some are gibberish, many consistently use the names of actual New Yorker contributors without permission or compensation.\n\n#AI #ChatGPT #Copyright #ArtificalIntelligence #NewYorker #IntellectualProperty\n\nSource: Hacker News",
+  "tweet": "ChatGPT is generating fake New Yorker cartoons, complete with real artists' signatures like Brendan Loper's. Over 15 cartoonists' names have been falsely attributed to AI-generated art. OpenAI is aware but the issue persists. #AI #Copyright #ArtificalIntelligence",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Hacker News",
+  "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
+  "image": "",
+  "orig_title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
+  "cluster_urls": [
+   "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/"
+  ],
+  "cluster_titles": [
+   "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261006-0609-1-chatgpt-adds-real-cartoonists-signatures-to-.png",
+   "20261006-0609-1-chatgpt-adds-real-cartoonists-signatures-to--d1.png",
+   "20261006-0609-1-chatgpt-adds-real-cartoonists-signatures-to--d2.png",
+   "20261006-0609-1-chatgpt-adds-real-cartoonists-signatures-to--d3.png"
+  ]
+ }
+]

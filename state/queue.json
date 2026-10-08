@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "routeros cve-2026-67278 vulnerability",
+  "headline_marked": "[[MikroTik RouterOS 7.x flaw]] allows trust abuse in TLS/SSH, patched in 7.23.6 and 7.24.3",
+  "headline": "MikroTik RouterOS 7.x flaw allows trust abuse in TLS/SSH, patched in 7.23.6 and 7.24.3",
+  "summary": "A flaw in RSA/PKCS#1 v1.5 signature verification allows attackers to build trusted intermediate certificates or weaken SSH authentication, leading to misdirected trust and potential data leakage.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "CVE-2026-67278 is a MikroTik RouterOS 7.x flaw in RSA/PKCS#1 v1.5 signature verification, disclosed by CERT Polska on 5 September 2026. It affects TLS/X.509 certificate validation and RSA SSH host-key authentication.",
+   "The vulnerability allows an attacker who controls or redirects an outbound TLS connection to build a trusted intermediate and issue certificates for arbitrary host names without holding any private key. RSA-based SSH authentication is also weakened by the same check.",
+   "The flaw does not announce itself with a crash or exploit drop. The visible signal is misdirected trust: outbound connections reaching unexpected endpoints, certificate chains that should not validate, or management automation talking to unconfigured hosts. This can lead to configuration or credential leakage.",
+   "Affected RouterOS 7.x versions include 7.0.0 before 7.23.6, and 7.24 before 7.24.3. The complete fix ships in RouterOS 7.23.6 (long-term) and 7.24.3 (stable).",
+   "While ZoomEye reported 9,559 assets for RouterOS SSH on 23 September 2026, confirmed vulnerable devices for CVE-2026-67278 were not explicitly counted. This highlights the challenge in detecting the flaw's presence."
+  ],
+  "caption": "A critical flaw in MikroTik RouterOS 7.x (CVE-2026-67278) allows attackers to bypass TLS/SSH certificate validation. This could lead to trust abuse and data leakage.\n\nCVE-2026-67278 is a MikroTik RouterOS 7.x flaw in RSA/PKCS#1 v1.5 signature verification, disclosed by CERT Polska on 5 September 2026. It affects TLS/X.509 certificate validation and RSA SSH host-key authentication.\n\nThe vulnerability allows an attacker who controls or redirects an outbound TLS connection to build a trusted intermediate and issue certificates for arbitrary host names without holding any private key. RSA-based SSH authentication is also weakened by the same check.\n\nThe flaw does not announce itself with a crash or exploit drop. The visible signal is misdirected trust: outbound connections reaching unexpected endpoints, certificate chains that should not validate, or management automation talking to unconfigured hosts. This can lead to configuration or credential leakage.\n\nAffected RouterOS 7.x versions include 7.0.0 before 7.23.6, and 7.24 before 7.24.3. The complete fix ships in RouterOS 7.23.6 (long-term) and 7.24.3 (stable).\n\nWhile ZoomEye reported 9,559 assets for RouterOS SSH on 23 September 2026, confirmed vulnerable devices for CVE-2026-67278 were not explicitly counted. This highlights the challenge in detecting the flaw's presence.\n\n#MikroTik #RouterOS #CVE #Security #Vulnerability #Cybersecurity\n\nSource: DEV",
+  "tweet": "Critical flaw (CVE-2026-67278) in MikroTik RouterOS 7.x allows trust abuse in TLS/SSH certificate validation. Attackers can issue fake certs & redirect traffic. Patch to 7.23.6 or 7.24.3 immediately. #MikroTik #Security #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "mikrotik.com",
+  "source": "DEV",
+  "url": "https://dev.to/onaeiuspkz/detecting-trust-abuse-around-cve-2026-67278-on-routeros-devices-2jog",
+  "image": "",
+  "orig_title": "Detecting Trust Abuse Around CVE-2026-67278 on RouterOS Devices",
+  "cluster_urls": [
+   "https://dev.to/onaeiuspkz/detecting-trust-abuse-around-cve-2026-67278-on-routeros-devices-2jog"
+  ],
+  "cluster_titles": [
+   "Detecting Trust Abuse Around CVE-2026-67278 on RouterOS Devices"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261008-0806-0-mikrotik-routeros-7-x-flaw-allows-trust-abus.png",
+   "20261008-0806-0-mikrotik-routeros-7-x-flaw-allows-trust-abus-d1.png",
+   "20261008-0806-0-mikrotik-routeros-7-x-flaw-allows-trust-abus-d2.png"
+  ]
+ }
+]

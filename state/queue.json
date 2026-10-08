@@ -1,1 +1,98 @@
-[]
+[
+ {
+  "topic": "ai models and benchmarks evolve",
+  "headline_marked": "[[AI agents]] deploy serverless APIs on AWS in minutes",
+  "headline": "AI agents deploy serverless APIs on AWS in minutes",
+  "summary": "An AI coding agent was used to create a Python API with Amazon API Gateway, AWS Lambda, and DynamoDB, demonstrating a faster path from idea to deployment.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI coding agents are streamlining the process of turning ideas into functional code. The new AWS experience integrates these agents directly with AWS projects, automatically configuring necessary tools and managing permissions for created resources.",
+   "In a demonstration, an AI agent was prompted to create a serverless Python API. This API utilizes Amazon API Gateway for the public endpoint, AWS Lambda for request handling, and Amazon DynamoDB for state management, ensuring atomic updates to prevent data conflicts during concurrent requests.",
+   "Before deployment, the agent presented a detailed architecture proposal, including the GET /counter endpoint for atomic increment operations, conservative throttling, a least-privilege IAM role, and logging configurations. It also planned for deployment via an AWS CloudFormation stack.",
+   "The agent confirmed that no AWS resources were altered without approval and requested explicit consent for the architecture and public endpoint. Upon approval, it deployed the serverless-counter-api CloudFormation stack in us-east-2.",
+   "The deployed API was tested by invoking the endpoint multiple times, each call returning an incremented value stored in DynamoDB. This confirmed the service was live and maintaining state across requests, successfully demonstrating the agent's capability.",
+   "The author emphasizes that while this demo API was public, production environments should implement appropriate authorization. The agent handled the initial setup, implementation, deployment, and preliminary testing, allowing the user to focus on defining the API's functionality and verifying the results."
+  ],
+  "caption": "AI agents can now build and deploy serverless APIs on AWS, turning prompts into live endpoints with minimal human intervention.\n\nAI coding agents are streamlining the process of turning ideas into functional code. The new AWS experience integrates these agents directly with AWS projects, automatically configuring necessary tools and managing permissions for created resources.\n\nIn a demonstration, an AI agent was prompted to create a serverless Python API. This API utilizes Amazon API Gateway for the public endpoint, AWS Lambda for request handling, and Amazon DynamoDB for state management, ensuring atomic updates to prevent data conflicts during concurrent requests.\n\nBefore deployment, the agent presented a detailed architecture proposal, including the GET /counter endpoint for atomic increment operations, conservative throttling, a least-privilege IAM role, and logging configurations. It also planned for deployment via an AWS CloudFormation stack.\n\nThe agent confirmed that no AWS resources were altered without approval and requested explicit consent for the architecture and public endpoint. Upon approval, it deployed the serverless-counter-api CloudFormation stack in us-east-2.\n\nThe deployed API was tested by invoking the endpoint multiple times, each call returning an incremented value stored in DynamoDB. This confirmed the service was live and maintaining state across requests, successfully demonstrating the agent's capability.\n\nThe author emphasizes that while this demo API was public, production environments should implement appropriate authorization. The agent handled the initial setup, implementation, deployment, and preliminary testing, allowing the user to focus on defining the API's functionality and verifying the results.\n\n#TechNews #AI #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "AI agents are now capable of deploying serverless APIs on AWS! This demo shows how an agent can turn a prompt into a live Python API using API Gateway, Lambda, and DynamoDB. #AI #AWS #Serverless",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "aws.amazon.com",
+  "source": "DEV",
+  "url": "https://dev.to/aws/how-i-built-this-serverless-api-with-the-new-aws-56jc",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2zqtaje453zxh3lyr6zp.png",
+  "orig_title": "How I built this serverless API with the new AWS",
+  "cluster_urls": [
+   "https://dev.to/aws/how-i-built-this-serverless-api-with-the-new-aws-56jc",
+   "https://dev.to/danielsamfdo/57x-512-gpus-one-endpoint-across-the-pacific-ais-report-card-just-grew-up-21j1",
+   "https://dev.to/poppycastle59/naturequest-the-100-offline-botanical-os-built-to-get-you-off-screens-and-into-the-wild-hho",
+   "https://dev.to/danielsamfdo/thinking-twice-can-make-you-dumber-the-test-time-compute-playbook-behind-septembers-smartest-372n",
+   "https://dev.to/danielsamfdo/only-3-of-the-brain-wakes-up-the-mixture-of-experts-playbook-behind-septembers-biggest-models-4lj0",
+   "https://dev.to/bulkina/your-client-asked-for-a-ui-fix-that-doesnt-mean-ui-is-the-problem-39n4",
+   "https://dev.to/robertmiller4179/nodejs-transactional-email-service-deliverability-plus-preview-tests-for-gaming-support-2png",
+   "https://dev.to/vlad_z_16b6320e21f32bee0d/the-aws-savings-nobody-can-touch-legacy-systems-2h2j",
+   "https://dev.to/emalia/scaffold-skill-marketplace-a-claude-skill-for-claude-skills-1idg"
+  ],
+  "cluster_titles": [
+   "How I built this serverless API with the new AWS",
+   "5.7x, 512 GPUs, One Endpoint Across the Pacific: AI's Report Card Just Grew Up",
+   "NatureQuest: The 100% Offline Botanical OS Built to Get You Off Screens and Into the Wild",
+   "Thinking Twice Can Make You Dumber: The Test-Time Compute Playbook Behind September's Smartest Models",
+   "Only 3% of the Brain Wakes Up: The Mixture-of-Experts Playbook Behind September's Biggest Models",
+   "Your Client Asked for a UI Fix. That Doesn’t Mean UI Is the Problem",
+   "Node.js Transactional Email Service: Deliverability Plus Preview Tests for Gaming Support",
+   "The AWS savings nobody can touch: legacy systems",
+   "scaffold-skill-marketplace (a claude skill for claude skills)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261009-0400-0-ai-agents-deploy-serverless-apis-on-aws-in-m.png",
+   "20261009-0400-0-ai-agents-deploy-serverless-apis-on-aws-in-m-d1.png",
+   "20261009-0400-0-ai-agents-deploy-serverless-apis-on-aws-in-m-d2.png"
+  ]
+ },
+ {
+  "topic": "anthropic bans ai model abuse",
+  "headline_marked": "Anthropic launches [[free AI security scans]] for open-source projects",
+  "headline": "Anthropic launches free AI security scans for open-source projects",
+  "summary": "The new OSS Scanner service uses Anthropic's strongest AI models to identify vulnerabilities in open-source code at no cost to developers.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Anthropic has introduced OSS Scanner, a new service designed to help open-source projects identify security vulnerabilities. The service offers free, periodic scans powered by Anthropic's most advanced AI models, including Mythos.",
+   "Projects that opt-in will receive thorough security assessments, aiming to alert developers to potential issues sooner. This initiative seeks to bolster the security of the open-source ecosystem, which forms the backbone of much of today's technology.",
+   "A key aspect of OSS Scanner is that its outputs are fully model-generated, without human review. While this allows for faster and more frequent scanning, Anthropic acknowledges that reports may occasionally be incorrect or invalid.",
+   "This move comes as AI tools increasingly assist in bug hunting, but also as some open-source projects grapple with an influx of AI-generated bug reports. OSS Scanner aims to provide a structured and free solution for vulnerability detection."
+  ],
+  "caption": "Anthropic is now offering free AI-powered security scans for open-source projects.\n\nAnthropic has introduced OSS Scanner, a new service designed to help open-source projects identify security vulnerabilities. The service offers free, periodic scans powered by Anthropic's most advanced AI models, including Mythos.\n\nProjects that opt-in will receive thorough security assessments, aiming to alert developers to potential issues sooner. This initiative seeks to bolster the security of the open-source ecosystem, which forms the backbone of much of today's technology.\n\nA key aspect of OSS Scanner is that its outputs are fully model-generated, without human review. While this allows for faster and more frequent scanning, Anthropic acknowledges that reports may occasionally be incorrect or invalid.\n\nThis move comes as AI tools increasingly assist in bug hunting, but also as some open-source projects grapple with an influx of AI-generated bug reports. OSS Scanner aims to provide a structured and free solution for vulnerability detection.\n\n#AI #OpenSource #CyberSecurity #Anthropic #OSS\n\nSource: The Verge, Engadget, TechCrunch",
+  "tweet": "Anthropic launches free AI security scans for open-source projects using its strongest models. Get thorough, periodic vulnerability reports at no cost. #AI #OpenSource #CyberSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "The Verge, Engadget, TechCrunch",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/05/STKB364_CLAUDE_2_C_96d15c.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Anthropic launches free AI security scans for open-source projects",
+  "cluster_urls": [
+   "https://www.theverge.com/ai-artificial-intelligence/1008521/anthropic-open-source-oss-scanner",
+   "https://www.engadget.com/2281765/anthropic-bans-sustained-and-needless-abusive-or-cruel-behavior-toward-its-ai-models/",
+   "https://techcrunch.com/2026/10/08/anthropic-changes-usage-policy-to-ban-model-abuse-and-election-interference/"
+  ],
+  "cluster_titles": [
+   "Anthropic launches free AI security scans for open-source projects",
+   "Anthropic bans 'sustained and needless abusive or cruel behavior' toward its AI models",
+   "Anthropic changes usage policy to ban model abuse and election interference"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261009-0400-1-anthropic-launches-free-ai-security-scans-fo.png",
+   "20261009-0400-1-anthropic-launches-free-ai-security-scans-fo-d1.png",
+   "20261009-0400-1-anthropic-launches-free-ai-security-scans-fo-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,48 @@
-[]
+[
+ {
+  "topic": "ai-generated content carousels for social media",
+  "headline_marked": "AI-Built Site's Internal Links [[Became Unmanageable]] — Mapped Graph Before Edits",
+  "headline": "AI-Built Site's Internal Links Became Unmanageable — Mapped Graph Before Edits",
+  "summary": "A developer built a site with AI but struggled with internal linking. They created a tool to map the entire link graph before making any changes.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Building websites with AI can be incredibly efficient, but it comes with unforeseen challenges. One developer found that while AI excels at generating individual pages and content, it struggles with site-wide state management, leading to unmanageable internal linking across hundreds of pages.",
+   "The core issue was that each page was generated in isolation with only local context. While individual pages appeared well-linked with sensible related links and navigation, there was no central ledger tracking the entire site's link graph. This made site consolidation and SEO optimization incredibly difficult.",
+   "To address this, the developer sought an internal link visualization tool that could provide the raw graph data, not just a report. Existing commercial crawlers offered reports, but the need was for data that could be diffed after changes, joined with other analytics, or fed to an LLM.",
+   "Homegrown scripts often failed by treating navigation links (header/footer) the same as content links, leading to misleading 'everything links to everything' conclusions. The developer's solution needed to distinguish between site-wide chrome and meaningful content links.",
+   "The open-source tool, `internal-links-export`, crawls a site using sitemaps or BFS, identifies site-wide navigation by checking if a link appears on 90% of pages, and compiles this into an offline HTML report and various export formats (CSV, GEXF, GraphML, JSON). It has zero dependencies and is MIT licensed.",
+   "The tool was tested on the developer's AI-built site (petguidecalc.com, 231 pages) and a large e-commerce site. On the e-commerce site, it successfully reconstructed a de-facto taxonomy of 268 category groups covering 92% of products, revealing the site's underlying information architecture hidden within its links.",
+   "The workflow involves exporting the link graph as an edge list and then feeding it to an LLM along with Search Console data. This allows for AI-assisted proposals for merging duplicate pages and re-pointing links, effectively reversing the initial generation problem by providing global state as context."
+  ],
+  "caption": "AI builds websites fast, but internal links can become a nightmare. See how one dev mapped the entire graph before touching anything.\n\nBuilding websites with AI can be incredibly efficient, but it comes with unforeseen challenges. One developer found that while AI excels at generating individual pages and content, it struggles with site-wide state management, leading to unmanageable internal linking across hundreds of pages.\n\nThe core issue was that each page was generated in isolation with only local context. While individual pages appeared well-linked with sensible related links and navigation, there was no central ledger tracking the entire site's link graph. This made site consolidation and SEO optimization incredibly difficult.\n\nTo address this, the developer sought an internal link visualization tool that could provide the raw graph data, not just a report. Existing commercial crawlers offered reports, but the need was for data that could be diffed after changes, joined with other analytics, or fed to an LLM.\n\nHomegrown scripts often failed by treating navigation links (header/footer) the same as content links, leading to misleading 'everything links to everything' conclusions. The developer's solution needed to distinguish between site-wide chrome and meaningful content links.\n\nThe open-source tool, `internal-links-export`, crawls a site using sitemaps or BFS, identifies site-wide navigation by checking if a link appears on 90% of pages, and compiles this into an offline HTML report and various export formats (CSV, GEXF, GraphML, JSON). It has zero dependencies and is MIT licensed.\n\nThe tool was tested on the developer's AI-built site (petguidecalc.com, 231 pages) and a large e-commerce site. On the e-commerce site, it successfully reconstructed a de-facto taxonomy of 268 category groups covering 92% of products, revealing the site's underlying information architecture hidden within its links.\n\n#AI #WebDevelopment #DevTools #OpenSource #SEO\n\nSource: DEV",
+  "tweet": "AI-built sites can quickly become unmanageable due to internal linking issues. This developer created an open-source tool to map the entire link graph, enabling AI-assisted cleanup and optimization. #AI #WebDev #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/partick/my-ai-built-sites-internal-links-were-unmanageable-so-i-mapped-the-whole-graph-before-touching-3ocm",
+  "image": "",
+  "orig_title": "My AI-Built Site's Internal Links Were Unmanageable — So I Mapped the Whole Graph Before Touching Anything",
+  "cluster_urls": [
+   "https://dev.to/partick/my-ai-built-sites-internal-links-were-unmanageable-so-i-mapped-the-whole-graph-before-touching-3ocm",
+   "https://dev.to/shreyvijayvargiya/how-to-convert-long-blog-lists-into-instagram-carousels-with-nano-banana-ai-html-and-openrouter-2c2e",
+   "https://dev.to/mohammad1sami/-animix-touch-grass-photograph-real-animals-fuse-them-into-ai-monster-cards-ogd"
+  ],
+  "cluster_titles": [
+   "My AI-Built Site's Internal Links Were Unmanageable — So I Mapped the Whole Graph Before Touching Anything",
+   "How to Convert Long Blog Lists Into Instagram Carousels With Nano Banana, AI HTML, and OpenRouter",
+   "# AniMix 🌿 — Touch Grass, Photograph Real Animals & Fuse Them into AI Monster Cards!"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261009-1607-0-ai-built-site-s-internal-links-became-unmana.png",
+   "20261009-1607-0-ai-built-site-s-internal-links-became-unmana-d1.png",
+   "20261009-1607-0-ai-built-site-s-internal-links-became-unmana-d2.png",
+   "20261009-1607-0-ai-built-site-s-internal-links-became-unmana-d3.png",
+   "20261009-1607-0-ai-built-site-s-internal-links-became-unmana-d4.png"
+  ]
+ }
+]

@@ -1,1 +1,63 @@
-[]
+[
+ {
+  "topic": "developer productivity tools and tips",
+  "headline_marked": "GitHub Actions Cron: [[Reliability Issues]] Plague Free Tier Users",
+  "headline": "GitHub Actions Cron: Reliability Issues Plague Free Tier Users",
+  "summary": "Developers report inconsistent hourly job execution on GitHub Free, highlighting the \"best-effort\" nature of cron schedules and diagnostic limitations.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "GitHub Actions cron schedules, especially on free-tier organizations, are operating on a \"best-effort\" basis, leading to unpredictable reliability. A development team experienced a critical scenario where an hourly workflow only ran once out of eight opportunities, with that single run significantly delayed.",
+   "This inconsistency is attributed to GitHub's infrastructure load management, which can delay or drop scheduled events, particularly for free plan users. While the workflow itself was sound and manually triggered successfully, the platform's resource prioritization means cron jobs may not always execute as expected.",
+   "A significant diagnostic challenge arises because if the GitHub scheduler never creates a workflow run, there's no record in the Actions Runs API. This makes it difficult to identify missed cron opportunities, as they don't appear as failed or skipped events, hindering effective development monitoring.",
+   "The issue underscores the need for robust external monitoring or proactive checks for critical scheduled tasks. Engineering managers relying on automated reports must be aware that silent failures can go unnoticed until manual checks or downstream processes reveal the gaps in execution.",
+   "To troubleshoot, developers can verify workflow merge times against the first eligible cron run, check for any explicit error messages in the GitHub Community, and confirm that the workflow is active and on the default branch. However, direct API access to missed schedules is not available."
+  ],
+  "caption": "GitHub Actions cron jobs are reportedly unreliable on free tiers, with many scheduled runs being missed entirely.\n\nGitHub Actions cron schedules, especially on free-tier organizations, are operating on a \"best-effort\" basis, leading to unpredictable reliability. A development team experienced a critical scenario where an hourly workflow only ran once out of eight opportunities, with that single run significantly delayed.\n\nThis inconsistency is attributed to GitHub's infrastructure load management, which can delay or drop scheduled events, particularly for free plan users. While the workflow itself was sound and manually triggered successfully, the platform's resource prioritization means cron jobs may not always execute as expected.\n\nA significant diagnostic challenge arises because if the GitHub scheduler never creates a workflow run, there's no record in the Actions Runs API. This makes it difficult to identify missed cron opportunities, as they don't appear as failed or skipped events, hindering effective development monitoring.\n\nThe issue underscores the need for robust external monitoring or proactive checks for critical scheduled tasks. Engineering managers relying on automated reports must be aware that silent failures can go unnoticed until manual checks or downstream processes reveal the gaps in execution.\n\nTo troubleshoot, developers can verify workflow merge times against the first eligible cron run, check for any explicit error messages in the GitHub Community, and confirm that the workflow is active and on the default branch. However, direct API access to missed schedules is not available.\n\n#TechNews #Software #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "GitHub Actions cron jobs are reportedly unreliable on free tiers, with many scheduled runs being missed entirely. Developers face diagnostic challenges as missed events aren't logged. #GitHubActions #CI/CD #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "github.com",
+  "source": "DEV",
+  "url": "https://dev.to/devactivity/unraveling-github-actions-cron-reliability-insights-for-robust-software-planning-3k0n",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdrive.google.com%2Fthumbnail%3Fid%3D15S6Ul4-n45tmeZzLoRM4okSh9AsZAJ7t%26sz%3Dw751",
+  "orig_title": "Unraveling GitHub Actions Cron Reliability: Insights for Robust Software Planning",
+  "cluster_urls": [
+   "https://dev.to/devactivity/unraveling-github-actions-cron-reliability-insights-for-robust-software-planning-3k0n",
+   "https://dev.to/2pizza/three-sales-ops-automations-with-what-they-actually-cost-2gaa",
+   "https://dev.to/begoodtool/how-a-tool-directory-stays-useful-when-it-has-too-many-tools-379b",
+   "https://dev.to/certlandwebmaster/is-cisco-ccna-worth-it-in-2026-salary-jobs-alternatives-compared-21n5",
+   "https://dev.to/craig_solomon/what-a-failed-hash-check-actually-tells-you-about-your-file-1ch2",
+   "https://dev.to/kawsarlog/smartlead-vs-instantly-which-cold-email-tool-fits-how-you-actually-work-2fbp",
+   "https://dev.to/rello1/the-4-question-filter-that-killed-my-github-star-habit-okj",
+   "https://dev.to/automationdatacamp/flaky-playwright-tests-8-common-causes-and-how-to-fix-each-one-19p2",
+   "https://dev.to/hisashispace/sshresident-at-180-cpu-why-my-scansnap-ix2500-took-14-seconds-to-start-and-the-fix-that-wasnt-2nf4",
+   "https://dev.to/devteam/what-was-your-win-this-week-1l3f",
+   "https://dev.to/dannydoes_2abdf9c/governance-attack-surface-review-etherfi-stake-421o",
+   "https://dev.to/constantin_alex_05c9c24b7/i-didnt-have-room-for-a-zip-and-its-files-so-i-learned-how-to-skip-the-zip-3gg6"
+  ],
+  "cluster_titles": [
+   "Unraveling GitHub Actions Cron Reliability: Insights for Robust Software Planning",
+   "Three Sales Ops Automations, With What They Actually Cost",
+   "How a Tool Directory Stays Useful When It Has Too Many Tools",
+   "Is Cisco CCNA Worth It in 2026? Salary, Jobs & Alternatives Compared",
+   "What a failed hash check actually tells you about your file",
+   "Smartlead vs Instantly: which cold email tool fits how you actually work",
+   "The 4-Question Filter That Killed My GitHub Star Habit",
+   "Flaky Playwright tests: 8 common causes and how to fix each one",
+   "SshResident at 180% CPU: why my ScanSnap iX2500 took 14 seconds to start, and the fix that wasn't code",
+   "What was your win this week??",
+   "Governance Attack Surface Review: ether.fi Stake",
+   "I didn't have room for a zip and its files, so I learned how to skip the zip"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261009-1906-0-github-actions-cron-reliability-issues-plagu.png",
+   "20261009-1906-0-github-actions-cron-reliability-issues-plagu-d1.png",
+   "20261009-1906-0-github-actions-cron-reliability-issues-plagu-d2.png",
+   "20261009-1906-0-github-actions-cron-reliability-issues-plagu-d3.png"
+  ]
+ }
+]

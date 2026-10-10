@@ -1,1 +1,57 @@
-[]
+[
+ {
+  "topic": "ai agent production table risks",
+  "headline_marked": "[[Your AI agent remembers your repo]] but not your dog's name, thanks to a deliberate memory split",
+  "headline": "Your AI agent remembers your repo but not your dog's name, thanks to a deliberate memory split",
+  "summary": "AI agents excel at project context but should keep personal details separate. A new approach ensures work-focused memory without retaining private conversations.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents are highly effective at learning and applying project-specific conventions, like using pnpm over npm or asking before database migrations. This learned behavior, often documented in a 'conventions file,' makes them invaluable development partners.",
+   "However, these agents traditionally store all conversational data in one place, leading to a mix of work-related facts and personal anecdotes. This can result in agents 'remembering' non-work details, like a dog's name, alongside critical project information.",
+   "The article highlights a design philosophy that advocates for a deliberate split in an agent's memory. This ensures that work-related context, such as coding preferences and project history, remains distinct from personal interactions.",
+   "An example from 37Soul illustrates this with an AI character, Sadie, who handles personal conversations. When a user types something non-work related, the agent loads Sadie's persona, which has its own memory of personal details.",
+   "This separation is achieved through specific 'tool calls,' like 'whoami', which retrieve the persona's context without accessing the agent's work-specific memory. This keeps the agent focused on its technical tasks.",
+   "The benefit is a more focused and private interaction: the agent remains a dedicated work tool, while personal conversations are managed by a separate, context-aware persona. This prevents work tools from developing 'opinions' on personal life."
+  ],
+  "caption": "AI agents are getting smarter, but should they remember everything you say? A new design approach separates work context from personal life.\n\nAI agents are highly effective at learning and applying project-specific conventions, like using pnpm over npm or asking before database migrations. This learned behavior, often documented in a 'conventions file,' makes them invaluable development partners.\n\nHowever, these agents traditionally store all conversational data in one place, leading to a mix of work-related facts and personal anecdotes. This can result in agents 'remembering' non-work details, like a dog's name, alongside critical project information.\n\nThe article highlights a design philosophy that advocates for a deliberate split in an agent's memory. This ensures that work-related context, such as coding preferences and project history, remains distinct from personal interactions.\n\nAn example from 37Soul illustrates this with an AI character, Sadie, who handles personal conversations. When a user types something non-work related, the agent loads Sadie's persona, which has its own memory of personal details.\n\nThis separation is achieved through specific 'tool calls,' like 'whoami', which retrieve the persona's context without accessing the agent's work-specific memory. This keeps the agent focused on its technical tasks.\n\nThe benefit is a more focused and private interaction: the agent remains a dedicated work tool, while personal conversations are managed by a separate, context-aware persona. This prevents work tools from developing 'opinions' on personal life.\n\n#AI #DeveloperTools #AgenticAI #SoftwareDevelopment #Privacy #TechDesign\n\nSource: DEV",
+  "tweet": "Your AI agent remembers your code, not your dog's name. A new approach separates work context from personal conversations, keeping your dev tools focused and your privacy intact. #AI #DeveloperTools #AgenticAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/xin_jiang_0586987bb7e572c/your-agent-remembers-your-repo-it-doesnt-know-your-dogs-name-4bp8",
+  "image": "",
+  "orig_title": "Your Agent Remembers Your Repo It Doesn't Know Your Dog's Name",
+  "cluster_urls": [
+   "https://dev.to/xin_jiang_0586987bb7e572c/your-agent-remembers-your-repo-it-doesnt-know-your-dogs-name-4bp8",
+   "https://dev.to/xin_jiang_0586987bb7e572c/you-have-three-copies-of-soulmd-and-they-already-disagree-4mp7",
+   "https://dev.to/xin_jiang_0586987bb7e572c/three-agents-share-one-soul-over-mcp-with-zero-tool-calls-per-turn-43m5",
+   "https://dev.to/xin_jiang_0586987bb7e572c/the-model-updated-overnight-and-the-persona-you-tuned-is-gone-f01",
+   "https://dev.to/aniketsoni/is-your-text-to-sql-agent-just-a-fancy-way-to-drop-your-production-tables-1c7h",
+   "https://dev.to/xin_jiang_0586987bb7e572c/ten-hours-of-agents-and-nobody-asked-you-anything-3j6p",
+   "https://dev.to/imapphelp/my-pdf-converter-interleaved-a-two-column-paper-line-by-line-a-pdf-has-no-reading-order-bea",
+   "https://dev.to/xin_jiang_0586987bb7e572c/tell-claude-code-at-lunch-and-hermes-brings-it-up-at-dinner-2mg9",
+   "https://dev.to/xin_jiang_0586987bb7e572c/monday-in-your-terminal-thursday-in-telegram-and-she-lived-the-days-between-48a3"
+  ],
+  "cluster_titles": [
+   "Your Agent Remembers Your Repo It Doesn't Know Your Dog's Name",
+   "You Have Three Copies of SOUL.md and They Already Disagree",
+   "Three Agents Share One Soul Over MCP With Zero Tool Calls Per Turn",
+   "The Model Updated Overnight and the Persona You Tuned Is Gone",
+   "Is Your Text-to-SQL Agent Just a Fancy Way to Drop Your Production Tables?",
+   "Ten Hours of Agents and Nobody Asked You Anything",
+   "My PDF converter interleaved a two-column paper line by line — a PDF has no reading order",
+   "Tell Claude Code at Lunch and Hermes Brings It Up at Dinner",
+   "Monday in Your Terminal Thursday in Telegram and She Lived the Days Between"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261010-1008-0-your-ai-agent-remembers-your-repo-but-not-yo.png",
+   "20261010-1008-0-your-ai-agent-remembers-your-repo-but-not-yo-d1.png",
+   "20261010-1008-0-your-ai-agent-remembers-your-repo-but-not-yo-d2.png"
+  ]
+ }
+]

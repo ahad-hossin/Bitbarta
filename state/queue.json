@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "topic": "telegram desktop file theft vulnerability",
+  "headline_marked": "[[Telegram Desktop vulnerability allowed arbitrary file theft]] via a single clicked link",
+  "headline": "Telegram Desktop vulnerability allowed arbitrary file theft via a single clicked link",
+  "summary": "A critical flaw in Telegram Desktop's IPC mechanism allowed attackers to inject commands, enabling the exfiltration of sensitive files, including user session data, with just one click.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "An unescaped separator in Telegram Desktop's single-instance IPC mechanism created a critical vulnerability. This flaw allowed an attacker to steal arbitrary files from a user's disk, including sensitive session files, by simply having the victim click a crafted link.",
+   "When Telegram Desktop is already running, new instances launched by clicking a tg:// link communicate with the existing instance via a local socket. The new process serializes the link into text and sends it to the running instance for handling.",
+   "The core issue lies in Telegram's custom serialization format, which uses a semicolon as a command separator. If a crafted link includes a semicolon within its value, the running instance deserializes it into multiple, unintended instructions, leading to command injection.",
+   "The injected command can then exploit an internal interpret: URI scheme. This scheme, originally used for publishing releases, can read a specified file and send it to a chat without requiring user confirmation or checking the request's origin.",
+   "Together, the command injection and the interpret: scheme allow an attacker to craft a link that, when clicked, forces the victim's Telegram Desktop to read their session files and upload them to the attacker's group, effectively compromising the account."
+  ],
+  "caption": "Your Telegram account could be compromised by a single click. A critical desktop vulnerability allowed arbitrary file theft, including session data.\n\nAn unescaped separator in Telegram Desktop's single-instance IPC mechanism created a critical vulnerability. This flaw allowed an attacker to steal arbitrary files from a user's disk, including sensitive session files, by simply having the victim click a crafted link.\n\nWhen Telegram Desktop is already running, new instances launched by clicking a tg:// link communicate with the existing instance via a local socket. The new process serializes the link into text and sends it to the running instance for handling.\n\nThe core issue lies in Telegram's custom serialization format, which uses a semicolon as a command separator. If a crafted link includes a semicolon within its value, the running instance deserializes it into multiple, unintended instructions, leading to command injection.\n\nThe injected command can then exploit an internal interpret: URI scheme. This scheme, originally used for publishing releases, can read a specified file and send it to a chat without requiring user confirmation or checking the request's origin.\n\nTogether, the command injection and the interpret: scheme allow an attacker to craft a link that, when clicked, forces the victim's Telegram Desktop to read their session files and upload them to the attacker's group, effectively compromising the account.\n\n#Telegram #SecurityVulnerability #Cybersecurity #DataBreach #TechNews #Exploit\n\nSource: Hacker News",
+  "tweet": "Your Telegram account could be compromised by a single click. A critical desktop vulnerability allowed arbitrary file theft, including session data, via command injection. Update your app! #Telegram #Security #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "telegram.org",
+  "source": "Hacker News",
+  "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+  "image": "",
+  "orig_title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+  "cluster_urls": [
+   "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/"
+  ],
+  "cluster_titles": [
+   "Telegram Desktop vulnerability allowed any user's file to be stolen"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261010-1106-0-telegram-desktop-vulnerability-allowed-arbit.png",
+   "20261010-1106-0-telegram-desktop-vulnerability-allowed-arbit-d1.png",
+   "20261010-1106-0-telegram-desktop-vulnerability-allowed-arbit-d2.png"
+  ]
+ }
+]

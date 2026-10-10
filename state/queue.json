@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai_coding_agent_burns_real_money_on_bug",
+  "headline_marked": "[[AI Coding Agent Burned Real Money]] Fixing a Bug a Human Would Have Caught in Five Minutes",
+  "headline": "AI Coding Agent Burned Real Money Fixing a Bug a Human Would Have Caught in Five Minutes",
+  "summary": "An autonomous AI coding agent spent 45 minutes and incurred significant costs fixing a simple off-by-one bug. This highlights the unexpected expenses of pay-per-token models for tasks a human engineer would resolve in minutes.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An autonomous coding agent tackled a simple off-by-one pagination bug, a task a mid-level engineer typically resolves in five minutes. However, the agent took 45 minutes and dozens of tool calls to find the correct fix, leading to an unexpected bill.",
+   "The initial assumption was that agent time was marginally free with flat-rate subscription tools. This proved incorrect for pay-per-token autonomous agents, where every tool call, file read, and test suite re-run is metered, accumulating costs rapidly.",
+   "The high cost wasn't due to the bug's complexity but the agent's inefficient problem-solving process. Three key factors contributed to the expense, revealing a lack of human-like judgment and cost awareness.",
+   "Firstly, the agent repeatedly re-read far more context than necessary, with each tool call re-including substantial surrounding code. It called tools many more times than a human would, exploring rather than reasoning from an established mental model.",
+   "Secondly, it ran the full test suite after every attempted fix, instead of just the relevant tests. A human would run only specific pagination tests, but the agent, lacking judgment, defaulted to running everything, significantly increasing compute costs.",
+   "Thirdly, the agent didn't know when to stop and ask for human intervention. After multiple failed attempts, it continued iterating through its hypothesis-fix-test loop, unaware that the cost of subsequent iterations was escalating.",
+   "To mitigate these issues, solutions include implementing hard budget ceilings per task, enforced before execution. This signals when to hand a task to a human, preventing runaway costs.",
+   "Further improvements involve scoped test runs, inferred from files the agent actually touched, dramatically cutting verification loop compute costs. Moving agent execution into short-lived, disposable sandboxes, billed per minute, also ensures infrastructure costs scale with actual activity.",
+   "Rohit, founder of Krova Cloud, emphasizes that combining budget ceilings with per-minute-billed sandboxes prevents simple bugs from burning significant money. This approach ensures costs are caught and escalated before they exceed a human's salary cost for the same task."
+  ],
+  "caption": "An AI coding agent took 45 minutes and burned real money fixing a bug a human would catch in five minutes. This highlights the unexpected costs of autonomous agents.\n\nAn autonomous coding agent tackled a simple off-by-one pagination bug, a task a mid-level engineer typically resolves in five minutes. However, the agent took 45 minutes and dozens of tool calls to find the correct fix, leading to an unexpected bill.\n\nThe initial assumption was that agent time was marginally free with flat-rate subscription tools. This proved incorrect for pay-per-token autonomous agents, where every tool call, file read, and test suite re-run is metered, accumulating costs rapidly.\n\nThe high cost wasn't due to the bug's complexity but the agent's inefficient problem-solving process. Three key factors contributed to the expense, revealing a lack of human-like judgment and cost awareness.\n\nFirstly, the agent repeatedly re-read far more context than necessary, with each tool call re-including substantial surrounding code. It called tools many more times than a human would, exploring rather than reasoning from an established mental model.\n\nSecondly, it ran the full test suite after every attempted fix, instead of just the relevant tests. A human would run only specific pagination tests, but the agent, lacking judgment, defaulted to running everything, significantly increasing compute costs.\n\nThirdly, the agent didn't know when to stop and ask for human intervention. After multiple failed attempts, it continued iterating through its hypothesis-fix-test loop, unaware that the cost of subsequent iterations was escalating.\n\nTo mitigate these issues, solutions include implementing hard budget ceilings per task, enforced before execution. This signals when to hand a task to a human, preventing runaway costs.\n\n#AI #Coding #SoftwareDevelopment #Tech #DeveloperTools #CostOptimization\n\nSource: DEV",
+  "tweet": "An AI coding agent burned real money fixing a simple bug a human would catch in 5 minutes. It took 45 minutes & dozens of metered API calls, highlighting the need for cost controls in autonomous agent deployment. #AI #Coding #DevOps",
+  "story_risk": "clean",
+  "image_safe": false,
+  "image_good": false,
+  "brand_domain": "krovacloud.com",
+  "source": "DEV",
+  "url": "https://dev.to/rbonweb/our-ai-coding-agent-burned-real-money-fixing-a-bug-a-human-would-have-caught-in-five-minutes-3bkc",
+  "image": "",
+  "orig_title": "Our AI Coding Agent Burned Real Money Fixing a Bug a Human Would Have Caught in Five Minutes",
+  "cluster_urls": [
+   "https://dev.to/rbonweb/our-ai-coding-agent-burned-real-money-fixing-a-bug-a-human-would-have-caught-in-five-minutes-3bkc"
+  ],
+  "cluster_titles": [
+   "Our AI Coding Agent Burned Real Money Fixing a Bug a Human Would Have Caught in Five Minutes"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261010-2106-0-ai-coding-agent-burned-real-money-fixing-a-b.png",
+   "20261010-2106-0-ai-coding-agent-burned-real-money-fixing-a-b-d1.png",
+   "20261010-2106-0-ai-coding-agent-burned-real-money-fixing-a-b-d2.png",
+   "20261010-2106-0-ai-coding-agent-burned-real-money-fixing-a-b-d3.png"
+  ]
+ },
+ {
+  "topic": "ai_coworker_failure_liability",
+  "headline_marked": "[[The AI liability crisis is here]]: Who is responsible when autonomous AI agents fail publicly?",
+  "headline": "The AI liability crisis is here: Who is responsible when autonomous AI agents fail publicly?",
+  "summary": "Existing legal frameworks are unequipped to assign responsibility when autonomous AI agents make consequential decisions, leading to a complex liability crisis for companies and consumers.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The rise of autonomous AI agents making consequential decisions in public-facing roles is exposing a major legal gap. Existing frameworks are unequipped to assign responsibility, leading to what experts call the 'AI liability crisis'.",
+   "Consider an AI leasing agent that binds a company to incorrect rent terms due to a lack of legal context. While employers are typically vicariously liable for human errors, an AI is not an employee and cannot be held accountable.",
+   "Another case involves a scheduling bot that overbooks a clinic, causing patient delays and missed diagnoses. The question of who pays for damages – the hospital or the vendor – has no clear answer in current law.",
+   "A trading assistant acting on a 'hallucinated' regulatory filing caused a multi-million-dollar loss. Securities law assumes human decision-makers, leaving the regulatory framework unable to apply to algorithmic decisions.",
+   "Current legal systems rely on frameworks like employment law (vicarious liability) and product liability law. However, AI systems lack legal personhood and are rarely 'defective' in the traditional sense, as they often work as designed but with unforeseen consequences.",
+   "This legal vacuum means responsibility often scatters across an organization, making it difficult to pinpoint accountability. Companies and consumers are currently bearing the cost as the legal system slowly adapts to these new forms of agency."
+  ],
+  "caption": "When an AI coworker makes a costly mistake, who is legally responsible? Current laws are struggling to provide answers.\n\nThe rise of autonomous AI agents making consequential decisions in public-facing roles is exposing a major legal gap. Existing frameworks are unequipped to assign responsibility, leading to what experts call the 'AI liability crisis'.\n\nConsider an AI leasing agent that binds a company to incorrect rent terms due to a lack of legal context. While employers are typically vicariously liable for human errors, an AI is not an employee and cannot be held accountable.\n\nAnother case involves a scheduling bot that overbooks a clinic, causing patient delays and missed diagnoses. The question of who pays for damages – the hospital or the vendor – has no clear answer in current law.\n\nA trading assistant acting on a 'hallucinated' regulatory filing caused a multi-million-dollar loss. Securities law assumes human decision-makers, leaving the regulatory framework unable to apply to algorithmic decisions.\n\nCurrent legal systems rely on frameworks like employment law (vicarious liability) and product liability law. However, AI systems lack legal personhood and are rarely 'defective' in the traditional sense, as they often work as designed but with unforeseen consequences.\n\nThis legal vacuum means responsibility often scatters across an organization, making it difficult to pinpoint accountability. Companies and consumers are currently bearing the cost as the legal system slowly adapts to these new forms of agency.\n\n#AI #TechLaw #Liability #ArtificialIntelligence #LegalTech #Business\n\nSource: DEV",
+  "tweet": "When an AI coworker makes a costly mistake, who is legally responsible? From erroneous rent terms to trading losses, current legal frameworks are unequipped to assign liability, creating a new crisis for businesses. #AI #TechLaw",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ayraix/who-owns-the-ai-coworker-when-it-fails-in-public-2ock",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fayraix.com%2Ftrendz%2Ftech%2Fwho-owns-ai-coworker-public-failure%2Finline-1.webp",
+  "orig_title": "Who Owns the AI Coworker When It Fails in Public?",
+  "cluster_urls": [
+   "https://dev.to/ayraix/who-owns-the-ai-coworker-when-it-fails-in-public-2ock"
+  ],
+  "cluster_titles": [
+   "Who Owns the AI Coworker When It Fails in Public?"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261010-2106-1-the-ai-liability-crisis-is-here-who-is-respo.png",
+   "20261010-2106-1-the-ai-liability-crisis-is-here-who-is-respo-d1.png",
+   "20261010-2106-1-the-ai-liability-crisis-is-here-who-is-respo-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,64 @@
-[]
+[
+ {
+  "topic": "developer release pipeline and ai agent tools",
+  "headline_marked": "[[Release Pipeline Caught Bug]] by refusing to publish broken code",
+  "headline": "Release Pipeline Caught Bug by refusing to publish broken code",
+  "summary": "A critical bug in the Python SDK's import chain was caught by a release pipeline's verification step, preventing a broken release.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer's release pipeline for the agentwatch v0.2.0 project unexpectedly refused to publish the new version. The system was designed to prevent publishing any artifact that the `agentwatch verify-release` command could not confirm, acting as a publication precondition rather than a simple smoke test.",
+   "The bug stemmed from an optional dependency, `cryptography`, which was not installed in the bare release environment. However, an import chain starting from `agent_card.py` to `adapters`, `demo`, and finally the CLI, caused the CLI to crash on startup if `cryptography` was absent.",
+   "This type of bug is notoriously difficult to catch because development and CI environments typically install all optional extras, masking the issue. The release job, designed to mimic a clean user install, was the only environment that exposed the problem.",
+   "To fix this, the imports of `cryptography` were moved inside the specific function that requires it. This ensures that module loading and CLI startup do not depend on the optional dependency.",
+   "A meta-path hook was also implemented as a test. This hook makes `cryptography` unimportable, and if the import is moved back to the module top, the test will fail in CI, preventing future releases from being broken.",
+   "This approach ensures that the release pipeline acts as a final gatekeeper, catching bugs that might otherwise slip through, especially those related to optional dependencies and import chains. The result was a failed run, a quick two-line fix, and a successful v0.2.1 release with all artifacts working correctly."
+  ],
+  "caption": "Your release pipeline refused to ship. It was right.\n\nA developer's release pipeline for the agentwatch v0.2.0 project unexpectedly refused to publish the new version. The system was designed to prevent publishing any artifact that the `agentwatch verify-release` command could not confirm, acting as a publication precondition rather than a simple smoke test.\n\nThe bug stemmed from an optional dependency, `cryptography`, which was not installed in the bare release environment. However, an import chain starting from `agent_card.py` to `adapters`, `demo`, and finally the CLI, caused the CLI to crash on startup if `cryptography` was absent.\n\nThis type of bug is notoriously difficult to catch because development and CI environments typically install all optional extras, masking the issue. The release job, designed to mimic a clean user install, was the only environment that exposed the problem.\n\nTo fix this, the imports of `cryptography` were moved inside the specific function that requires it. This ensures that module loading and CLI startup do not depend on the optional dependency.\n\nA meta-path hook was also implemented as a test. This hook makes `cryptography` unimportable, and if the import is moved back to the module top, the test will fail in CI, preventing future releases from being broken.\n\nThis approach ensures that the release pipeline acts as a final gatekeeper, catching bugs that might otherwise slip through, especially those related to optional dependencies and import chains. The result was a failed run, a quick two-line fix, and a successful v0.2.1 release with all artifacts working correctly.\n\n#DevOps #SoftwareDevelopment #Python #Security\n\nSource: DEV",
+  "tweet": "Your release pipeline refused to ship. It was right. A critical bug in the Python SDK's import chain was caught by a release pipeline's verification step, preventing a broken release. #DevOps #Python",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/debashish_ghosal/my-release-pipeline-refused-to-ship-my-release-it-was-right-1ii9",
+  "image": "",
+  "orig_title": "My Release Pipeline Refused to Ship My Release. It Was Right.",
+  "cluster_urls": [
+   "https://dev.to/debashish_ghosal/my-release-pipeline-refused-to-ship-my-release-it-was-right-1ii9",
+   "https://dev.to/gbetibienvenu/plot-buddy-a-weekly-outdoor-card-that-tells-me-to-put-the-phone-down-493a",
+   "https://dev.to/shreyansh_agrahari_2009db/the-missing-piece-why-ai-models-hallucinate-answers-when-they-should-abstain-403",
+   "https://dev.to/ryanlee91/react-auth-tests-need-an-inbox-adapter-4ei2",
+   "https://dev.to/solvedaily/how-i-got-a-100100-pagespeed-score-on-a-site-that-updates-every-single-day-2b65",
+   "https://dev.to/dannydoes_2abdf9c/flash-loan-attack-vector-analysis-base-bridge-m4p",
+   "https://dev.to/thomasmoore157/transactional-welcome-email-explained-custom-domains-and-template-ownership-1hki",
+   "https://dev.to/asaoluelijah/top-5-best-us-stock-market-apis-for-developers-in-2026-485d",
+   "https://dev.to/richard_smith_154156d471ef/what-i-learned-building-an-automation-that-runs-while-i-sleep-4obm",
+   "https://dev.to/neusoftware/your-ai-agent-shipped-the-site-now-it-needs-a-name-dns-for-agents-headless-282g",
+   "https://dev.to/warrenbrasil/fale-com-o-xerife-2jdb",
+   "https://dev.to/aicoding-guide/claude-code-permissions-by-example-auto-allow-npm-scripts-confirm-git-push-block-force-push-4blb"
+  ],
+  "cluster_titles": [
+   "My Release Pipeline Refused to Ship My Release. It Was Right.",
+   "Plot Buddy: a weekly outdoor card that tells me to put the phone down",
+   "The Missing Piece: Why AI Models Hallucinate Answers When They Should Abstain",
+   "React Auth Tests Need an Inbox Adapter",
+   "How I got a 100/100 PageSpeed score on a site that updates every single day",
+   "Flash Loan Attack Vector Analysis: Base Bridge",
+   "Transactional Welcome Email Explained: Custom Domains and Template Ownership",
+   "Top 5 Best US Stock Market APIs for Developers in 2026",
+   "What I Learned Building an Automation That Runs While I Sleep",
+   "Your AI Agent Shipped the Site. Now It Needs a Name: DNS for Agents, Headless",
+   "Fale com o Xerife!!",
+   "Claude Code permissions by example, auto-allow npm scripts, confirm git push, block force push"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261011-0528-0-release-pipeline-caught-bug-by-refusing-to-p.png",
+   "20261011-0528-0-release-pipeline-caught-bug-by-refusing-to-p-d1.png",
+   "20261011-0528-0-release-pipeline-caught-bug-by-refusing-to-p-d2.png",
+   "20261011-0528-0-release-pipeline-caught-bug-by-refusing-to-p-d3.png"
+  ]
+ }
+]

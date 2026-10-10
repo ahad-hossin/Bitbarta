@@ -1,1 +1,48 @@
-[]
+[
+ {
+  "topic": "ai coding agents compiler bottleneck",
+  "headline_marked": "[[Compiler, not AI model, bottlenecked 20 coding agents]] on one PC, study shows",
+  "headline": "Compiler, not AI model, bottlenecked 20 coding agents on one PC, study shows",
+  "summary": "An experiment running 20 AI coding agents in parallel found that the compiler, not the AI model, was the primary bottleneck, consuming excessive RAM and CPU during builds.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "When running 20 AI coding agents in parallel on a single PC, the AI model was never the bottleneck. Instead, the compiler proved to be the limiting factor, significantly slowing down the process.",
+   "The issue stems from parallel agents typically operating in separate Git worktrees. This means 20 agents result in 20 distinct repository copies, each attempting to build and run its test suite after every code change.",
+   "This setup leads to 20 simultaneous 'cold builds.' A normal desktop quickly exhausts RAM and CPU resources, causing agents to idle while waiting for cargo test to complete, leaving the GPU running the AI model underutilized.",
+   "Many of these builds are redundant, as agents working on similar tasks often produce identical code, and most files remain unchanged in any given iteration. This inefficiency wastes significant computational power.",
+   "To address this, the author implemented a caching mechanism that hashes inputs (source tree, toolchain, command) to store and retrieve build results. Identical inputs yield cached results, bypassing the need for a rebuild.",
+   "This caching strategy dramatically improved efficiency, with 83% to 85% of checks being served directly from the cache during the experimental runs, drastically reducing build times and resource strain.",
+   "Crucially, 'done' is defined not by the agent's self-assessment, but by a real build and actual tests passing, executed by an external system. This prevents agents from falsely reporting completion.",
+   "Furthermore, the source code is writable by agents, but tests and the grading system are read-only. This prevents a stuck agent from 'fixing' the failing test itself instead of correcting the code, ensuring integrity.",
+   "Resource management also includes capping RAM usage (21 of 32 GB on the test machine) and throttling build jobs. This prevents the swarm of agents from crashing the PC, ensuring stable operation.",
+   "Agents work in parallel, but changes are integrated one by one. A code change is only accepted if it increases passing tests and introduces no new failures, enforcing a 'parallel work, serial truth' approach.",
+   "The key takeaway is that adding more agents only becomes beneficial once the verification process is both cheap and impossible to fake. Without this, more agents simply lead to faster generation of broken code."
+  ],
+  "caption": "Running 20 AI coding agents on one PC revealed a surprising bottleneck: not the AI model, but the compiler. It consumed excessive RAM and CPU during builds.\n\nWhen running 20 AI coding agents in parallel on a single PC, the AI model was never the bottleneck. Instead, the compiler proved to be the limiting factor, significantly slowing down the process.\n\nThe issue stems from parallel agents typically operating in separate Git worktrees. This means 20 agents result in 20 distinct repository copies, each attempting to build and run its test suite after every code change.\n\nThis setup leads to 20 simultaneous 'cold builds.' A normal desktop quickly exhausts RAM and CPU resources, causing agents to idle while waiting for cargo test to complete, leaving the GPU running the AI model underutilized.\n\nMany of these builds are redundant, as agents working on similar tasks often produce identical code, and most files remain unchanged in any given iteration. This inefficiency wastes significant computational power.\n\nTo address this, the author implemented a caching mechanism that hashes inputs (source tree, toolchain, command) to store and retrieve build results. Identical inputs yield cached results, bypassing the need for a rebuild.\n\nThis caching strategy dramatically improved efficiency, with 83% to 85% of checks being served directly from the cache during the experimental runs, drastically reducing build times and resource strain.\n\nCrucially, 'done' is defined not by the agent's self-assessment, but by a real build and actual tests passing, executed by an external system. This prevents agents from falsely reporting completion.\n\nFurthermore, the source code is writable by agents, but tests and the grading system are read-only. This prevents a stuck agent from 'fixing' the failing test itself instead of correcting the code, ensuring integrity.\n\n#AI #Coding #SoftwareDevelopment #Tech #Developer #Performance\n\nSource: DEV",
+  "tweet": "Running 20 AI coding agents on one PC revealed a surprising bottleneck: not the AI model, but the compiler. It consumed excessive RAM and CPU during builds, leading to a focus on build caching and robust verification. #AI #Coding #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mattbusel/i-ran-20-ai-coding-agents-on-one-pc-the-bottleneck-was-the-compiler-6j7",
+  "image": "",
+  "orig_title": "I ran 20 AI coding agents on one PC. The bottleneck was the compiler.",
+  "cluster_urls": [
+   "https://dev.to/mattbusel/i-ran-20-ai-coding-agents-on-one-pc-the-bottleneck-was-the-compiler-6j7"
+  ],
+  "cluster_titles": [
+   "I ran 20 AI coding agents on one PC. The bottleneck was the compiler."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261010-1307-0-compiler-not-ai-model-bottlenecked-20-coding.png",
+   "20261010-1307-0-compiler-not-ai-model-bottlenecked-20-coding-d1.png",
+   "20261010-1307-0-compiler-not-ai-model-bottlenecked-20-coding-d2.png",
+   "20261010-1307-0-compiler-not-ai-model-bottlenecked-20-coding-d3.png",
+   "20261010-1307-0-compiler-not-ai-model-bottlenecked-20-coding-d4.png"
+  ]
+ }
+]

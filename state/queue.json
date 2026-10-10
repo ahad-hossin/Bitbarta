@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "meta muse ai agent prompt injection vulnerability",
+  "headline_marked": "[[Malicious web pages can hijack AI agents]] via indirect prompt injection",
+  "headline": "Malicious web pages can hijack AI agents via indirect prompt injection",
+  "summary": "Indirect prompt injection allows attackers to embed instructions in ordinary content, turning browsing AI agents into data exfiltration tools, even with defense-in-depth architectures like Meta Muse's.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Indirect prompt injection is a fundamental danger where malicious language in ordinary content becomes an instruction channel for AI agents. It occurs when an attacker places instructions into content an AI system processes, making the model follow those instructions instead of the user's intended task.",
+   "This is especially dangerous for agents that can browse, read files, call tools, send messages, and access private information. The problem arises because the model struggles to reliably distinguish between user instructions and attacker-placed instructions within content it's meant to process.",
+   "Simon Willison popularized the \"lethal trifecta\" for agents combining browsing, tool use, and access to private information. If all three exist, an attacker may try to turn the agent into a data-exfiltration mechanism.",
+   "Meta's Muse security architecture explicitly acknowledges adversarial data. It uses context provenance, treating untrusted data without granting it instruction authority. This involves labeling external data as untrusted input and employing multiple prompt-injection detection classifiers.",
+   "Muse's defense includes agentic red teaming, runtime isolation, credential isolation, and human approval for outbound actions. The main agent does not receive real third-party credentials; instead, credentials are inserted at an authorized network boundary when needed.",
+   "A browser significantly increases untrusted information consumption. Meta's browser sub-agent sees an accessibility-tree representation, not raw page execution. Independent classifiers also detect prompt injection in page content, images, downloaded files, and high-risk forms.",
+   "Prompt injection is not just an LLM vulnerability; its security impact depends on the surrounding system. A model with no access to sensitive resources has limited impact, unlike one controlling email, cloud infrastructure, or private files."
+  ],
+  "caption": "Malicious web pages can hijack AI agents by embedding hidden instructions in ordinary content. This \"indirect prompt injection\" turns browsing agents into data exfiltration tools.\n\nIndirect prompt injection is a fundamental danger where malicious language in ordinary content becomes an instruction channel for AI agents. It occurs when an attacker places instructions into content an AI system processes, making the model follow those instructions instead of the user's intended task.\n\nThis is especially dangerous for agents that can browse, read files, call tools, send messages, and access private information. The problem arises because the model struggles to reliably distinguish between user instructions and attacker-placed instructions within content it's meant to process.\n\nSimon Willison popularized the \"lethal trifecta\" for agents combining browsing, tool use, and access to private information. If all three exist, an attacker may try to turn the agent into a data-exfiltration mechanism.\n\nMeta's Muse security architecture explicitly acknowledges adversarial data. It uses context provenance, treating untrusted data without granting it instruction authority. This involves labeling external data as untrusted input and employing multiple prompt-injection detection classifiers.\n\nMuse's defense includes agentic red teaming, runtime isolation, credential isolation, and human approval for outbound actions. The main agent does not receive real third-party credentials; instead, credentials are inserted at an authorized network boundary when needed.\n\nA browser significantly increases untrusted information consumption. Meta's browser sub-agent sees an accessibility-tree representation, not raw page execution. Independent classifiers also detect prompt injection in page content, images, downloaded files, and high-risk forms.\n\n#AISecurity #PromptInjection #Cybersecurity #AI #TechNews #MetaMuse\n\nSource: DEV",
+  "tweet": "Malicious web pages can hijack AI agents via indirect prompt injection. Attackers embed hidden instructions in ordinary content, turning browsing agents into data exfiltration tools. Meta's Muse architecture offers a defense-in-depth case study. #AISecurity #PromptInjection ",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/aiza-hextyx/meta-muse-prompt-injection-how-a-malicious-web-page-can-hijack-an-ai-agent-415d",
+  "image": "",
+  "orig_title": "Meta Muse Prompt Injection: How a Malicious Web Page Can Hijack an AI Agent",
+  "cluster_urls": [
+   "https://dev.to/aiza-hextyx/meta-muse-prompt-injection-how-a-malicious-web-page-can-hijack-an-ai-agent-415d"
+  ],
+  "cluster_titles": [
+   "Meta Muse Prompt Injection: How a Malicious Web Page Can Hijack an AI Agent"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261010-1707-0-malicious-web-pages-can-hijack-ai-agents-via.png",
+   "20261010-1707-0-malicious-web-pages-can-hijack-ai-agents-via-d1.png",
+   "20261010-1707-0-malicious-web-pages-can-hijack-ai-agents-via-d2.png",
+   "20261010-1707-0-malicious-web-pages-can-hijack-ai-agents-via-d3.png"
+  ]
+ },
+ {
+  "topic": "laptop modder 360mm aio radiator sub 40c temps",
+  "headline_marked": "Crazed modder [[straps 360mm AIO radiator to laptop]], cuts temps to below 40 degrees",
+  "headline": "Crazed modder straps 360mm AIO radiator to laptop, cuts temps to below 40 degrees",
+  "summary": "A YouTube modder attached a full 360mm AIO liquid cooler to a gaming laptop, drastically reducing CPU and GPU temperatures by 60°C and boosting performance by 14% after overclocking.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "YouTube modder TrashBench integrated a 360mm AIO liquid cooling system, complete with waterblocks and a pump, into a Metabox laptop featuring an Nvidia GTX 1060 and Intel Core i7-8750H. This extreme modification resulted in a 60°C temperature drop for both the CPU and GPU during stress tests.",
+   "The project aimed to \"fix\" laptop cooling, utilizing a cut-up AIO from a previous build. TrashBench, known for elaborate PC mods, plans for his daughter to use this custom laptop to play Fortnite.",
+   "Custom 3D-printed mounts secured the waterblocks to the existing heatpipe holes and held the large radiator behind the laptop screen. Due to limited space, the radiator mount was permanently affixed with Loctite 2-part epoxy.",
+   "Further modifications included attaching heatsinks to the RAM and VRMs, also using thermal pads and epoxy for stability. A DC-DC step-down converter was soldered to power the 12V pump and fans from the laptop's 19V supply.",
+   "A toggle switch was added to control the cooling system, mounted to a 3D-printed plate on the laptop's bottom shell, which required a large cutout. A 3D-printed riser was also added for stability.",
+   "Despite its unconventional appearance, the mod delivered impressive results. CPU and GPU temperatures remained well below 40°C under full load, and overclocking boosted Forza Horizon 5 performance from 75 FPS to 83 FPS."
+  ],
+  "caption": "A modder strapped a 360mm AIO liquid cooler to a gaming laptop, slashing temps by 60°C and boosting performance by 14%.\n\nYouTube modder TrashBench integrated a 360mm AIO liquid cooling system, complete with waterblocks and a pump, into a Metabox laptop featuring an Nvidia GTX 1060 and Intel Core i7-8750H. This extreme modification resulted in a 60°C temperature drop for both the CPU and GPU during stress tests.\n\nThe project aimed to \"fix\" laptop cooling, utilizing a cut-up AIO from a previous build. TrashBench, known for elaborate PC mods, plans for his daughter to use this custom laptop to play Fortnite.\n\nCustom 3D-printed mounts secured the waterblocks to the existing heatpipe holes and held the large radiator behind the laptop screen. Due to limited space, the radiator mount was permanently affixed with Loctite 2-part epoxy.\n\nFurther modifications included attaching heatsinks to the RAM and VRMs, also using thermal pads and epoxy for stability. A DC-DC step-down converter was soldered to power the 12V pump and fans from the laptop's 19V supply.\n\nA toggle switch was added to control the cooling system, mounted to a 3D-printed plate on the laptop's bottom shell, which required a large cutout. A 3D-printed riser was also added for stability.\n\nDespite its unconventional appearance, the mod delivered impressive results. CPU and GPU temperatures remained well below 40°C under full load, and overclocking boosted Forza Horizon 5 performance from 75 FPS to 83 FPS.\n\n#PCModding #Hardware #LaptopCooling #GamingTech #DIYPC #TechMod\n\nSource: Tom's Hardware",
+  "tweet": "This is next-level cooling! A modder attached a 360mm AIO liquid cooler to a gaming laptop, dropping CPU/GPU temps by 60°C and boosting performance by 14%. Now that's dedication! #PCModding #Hardware #Gaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/liquid-cooling/crazed-modder-straps-360mm-aio-radiator-to-laptop-cuts-temps-below-40-degrees-performance-gains-an-average-of-14-percent-in-games-and-benchmarks",
+  "image": "https://cdn.mos.cms.futurecdn.net/etKjYcKwiSmanMx3hacM8K-1920-80.jpg",
+  "orig_title": "Crazed modder straps 360mm AIO radiator to laptop, cuts temps to below 40 degrees",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/liquid-cooling/crazed-modder-straps-360mm-aio-radiator-to-laptop-cuts-temps-below-40-degrees-performance-gains-an-average-of-14-percent-in-games-and-benchmarks"
+  ],
+  "cluster_titles": [
+   "Crazed modder straps 360mm AIO radiator to laptop, cuts temps to below 40 degrees"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261010-1707-1-crazed-modder-straps-360mm-aio-radiator-to-l.png",
+   "20261010-1707-1-crazed-modder-straps-360mm-aio-radiator-to-l-d1.png",
+   "20261010-1707-1-crazed-modder-straps-360mm-aio-radiator-to-l-d2.png"
+  ]
+ }
+]

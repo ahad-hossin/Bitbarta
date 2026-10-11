@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "us military orbital cargo delivery",
+  "headline_marked": "U.S. military-backed cargo pod promises [[90-minute orbital delivery anywhere on Earth]]",
+  "headline": "U.S. military-backed cargo pod promises 90-minute orbital delivery anywhere on Earth",
+  "summary": "Sierra Space's Ghost reentry vehicle successfully completed test drops from high altitude, proving it can deliver sensitive cargo like liquids and electronics from orbit within 90 minutes.",
+  "category": "SCIENCE",
+  "template": "neon",
+  "details": [
+   "Sierra Space, backed by the U.S. military, is developing the Ghost reentry vehicle to deliver payloads anywhere on Earth within 90 minutes. The system involves prepositioning assets in space, then calling down delivery vehicles as needed.",
+   "The company recently completed two test drops of the Ghost vehicle, carrying a bottle of whiskey and a software-defined radio. These tests, conducted from high-altitude balloons at 35,000 and 68,500 feet, mark the first such demonstration in two years.",
+   "The specific payloads were chosen to prove that both liquids and sensitive electronics can survive the harsh conditions of reentry. Sierra Space confirmed the ability to safely demonstrate this and recover the payloads in a timely manner.",
+   "Unlike traditional rocket launches for immediate delivery, Ghost units are designed to remain in orbit for up to five years. They would then be deployed to troops on demand, acting as a space-based logistics node.",
+   "This system offers critical resupply capabilities for \"denied areas\" where conventional aircraft like C-17s or C-130s cannot operate. While Ghost has a capacity of 5-10 tons, suitable for equipment, ammunition, and drones, it is not designed for heavy items like tanks."
+  ],
+  "caption": "Imagine getting critical supplies from space to any point on Earth in just 90 minutes. The U.S. military-backed Sierra Space is making it a reality with its Ghost reentry vehicle.\n\nSierra Space, backed by the U.S. military, is developing the Ghost reentry vehicle to deliver payloads anywhere on Earth within 90 minutes. The system involves prepositioning assets in space, then calling down delivery vehicles as needed.\n\nThe company recently completed two test drops of the Ghost vehicle, carrying a bottle of whiskey and a software-defined radio. These tests, conducted from high-altitude balloons at 35,000 and 68,500 feet, mark the first such demonstration in two years.\n\nThe specific payloads were chosen to prove that both liquids and sensitive electronics can survive the harsh conditions of reentry. Sierra Space confirmed the ability to safely demonstrate this and recover the payloads in a timely manner.\n\nUnlike traditional rocket launches for immediate delivery, Ghost units are designed to remain in orbit for up to five years. They would then be deployed to troops on demand, acting as a space-based logistics node.\n\nThis system offers critical resupply capabilities for \"denied areas\" where conventional aircraft like C-17s or C-130s cannot operate. While Ghost has a capacity of 5-10 tons, suitable for equipment, ammunition, and drones, it is not designed for heavy items like tanks.\n\n#SpaceTech #MilitaryLogistics #SierraSpace #OrbitalDelivery #DefenseInnovation #Aerospace\n\nSource: Tom's Hardware",
+  "tweet": "U.S. military-backed Sierra Space is developing a cargo pod for 90-minute orbital delivery anywhere on Earth. Their Ghost reentry vehicle successfully tested drops with whiskey & a radio, proving sensitive cargo survival from space. #SpaceTech #MilitaryLogistics",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "sierraspace.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/space/u-s-military-backed-cargo-pod-promises-90-minute-orbital-delivery-anywhere-on-earth-10-ton-ghost-vehicle-gets-first-real-world-test-sierra-space-drops-radio-and-whiskey-from-68-500-feet-to-test-starcraft-like-supply-drops",
+  "image": "https://cdn.mos.cms.futurecdn.net/JiwbBcFoKeQmj8HGtF8WLd-1920-80.png",
+  "orig_title": "U.S. military-backed cargo pod promises 90-minute orbital delivery anywhere on Earth",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/space/u-s-military-backed-cargo-pod-promises-90-minute-orbital-delivery-anywhere-on-earth-10-ton-ghost-vehicle-gets-first-real-world-test-sierra-space-drops-radio-and-whiskey-from-68-500-feet-to-test-starcraft-like-supply-drops"
+  ],
+  "cluster_titles": [
+   "U.S. military-backed cargo pod promises 90-minute orbital delivery anywhere on Earth"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261011-1606-0-u-s-military-backed-cargo-pod-promises-90-mi.png",
+   "20261011-1606-0-u-s-military-backed-cargo-pod-promises-90-mi-d1.png",
+   "20261011-1606-0-u-s-military-backed-cargo-pod-promises-90-mi-d2.png"
+  ]
+ },
+ {
+  "topic": "ai models cultural understanding pakistan",
+  "headline_marked": "[[AI models excel at Pakistani local context]] but costs vary by 10x for same accuracy",
+  "headline": "AI models excel at Pakistani local context but costs vary by 10x for same accuracy",
+  "summary": "A new benchmark testing LLMs on Pakistani numbering, time, and geography shows high accuracy across models, but significant cost differences, with cheaper options performing comparably to expensive ones.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Most AI benchmarks focus on global knowledge, often missing local nuances. A new benchmark, the Pakistan Local Context LLM Suite, was developed to test models on everyday Pakistani life, including the lakh/crore system, Pakistan Standard Time, and local geography. It found that while models perform well on these basics, their operational costs vary significantly for similar accuracy.",
+   "The suite uses short questions with fixed, checkable answers across four categories. Scoring is automated via regex matching on normalized responses, ensuring reproducibility without a judge model. This design prevents formatting issues from penalizing correct answers.",
+   "Five models, including Qwen 3 235B A22B Instruct, Google, and OpenAI models, were tested through Kaggle Benchmarks. The selection aimed for a mix of providers and price points, addressing the critical question of \"good enough, and at what cost?\" for regions with smaller API budgets.",
+   "The benchmark quickly reached saturation, with models clustering near the top of the score scale. This indicates that current strong models have largely solved the basics of Pakistani numbering, time, and geography. The questions were intentionally short, single-step, and unambiguous.",
+   "Despite similar high scores, the cost per run varied by roughly an order of magnitude or more, from about $0.0003 to several thousandths of a dollar. Cheaper models, such as Qwen 3 235B A22B Instruct, landed in the \"efficient\" zone, offering comparable performance to much costlier alternatives for simple local-context tasks.",
+   "A near-perfect score on these 25-ish short questions does not imply a full understanding of Pakistan. The benchmark only confirms a model's ability to handle well-formed, single-answer questions. Real-world applications often involve messier inputs like Roman Urdu, long documents, or mixed language sentences, which were not covered.",
+   "The design of the scoring mechanism proved as crucial as the questions themselves. Strict regex scoring can incorrectly mark a correct answer if the format is unexpected, while lenient patterns might accept sloppy responses. This highlights the importance of careful grading rules in benchmark design."
+  ],
+  "caption": "AI models show near-perfect scores on Pakistani local context, but some cost 10x more than others for the same accuracy.\n\nMost AI benchmarks focus on global knowledge, often missing local nuances. A new benchmark, the Pakistan Local Context LLM Suite, was developed to test models on everyday Pakistani life, including the lakh/crore system, Pakistan Standard Time, and local geography. It found that while models perform well on these basics, their operational costs vary significantly for similar accuracy.\n\nThe suite uses short questions with fixed, checkable answers across four categories. Scoring is automated via regex matching on normalized responses, ensuring reproducibility without a judge model. This design prevents formatting issues from penalizing correct answers.\n\nFive models, including Qwen 3 235B A22B Instruct, Google, and OpenAI models, were tested through Kaggle Benchmarks. The selection aimed for a mix of providers and price points, addressing the critical question of \"good enough, and at what cost?\" for regions with smaller API budgets.\n\nThe benchmark quickly reached saturation, with models clustering near the top of the score scale. This indicates that current strong models have largely solved the basics of Pakistani numbering, time, and geography. The questions were intentionally short, single-step, and unambiguous.\n\nDespite similar high scores, the cost per run varied by roughly an order of magnitude or more, from about $0.0003 to several thousandths of a dollar. Cheaper models, such as Qwen 3 235B A22B Instruct, landed in the \"efficient\" zone, offering comparable performance to much costlier alternatives for simple local-context tasks.\n\nA near-perfect score on these 25-ish short questions does not imply a full understanding of Pakistan. The benchmark only confirms a model's ability to handle well-formed, single-answer questions. Real-world applications often involve messier inputs like Roman Urdu, long documents, or mixed language sentences, which were not covered.\n\n#AI #LLMs #Pakistan #TechBenchmark #CostEfficiency #MachineLearning\n\nSource: DEV",
+  "tweet": "New benchmark reveals AI models excel at Pakistani local context, but costs vary by over 10x for comparable accuracy. Cheaper models like Qwen 3 offer similar performance to much costlier options. #AI #LLMs #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tooba_munir_/do-ai-models-understand-daily-life-in-pakistan-lakhcrore-pkt-and-urdu-tested-4me4",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fddtq0y2oxpkb8o7xkppz.png",
+  "orig_title": "Do AI models understand daily life in Pakistan? lakh/crore, PKT and Urdu tested",
+  "cluster_urls": [
+   "https://dev.to/tooba_munir_/do-ai-models-understand-daily-life-in-pakistan-lakhcrore-pkt-and-urdu-tested-4me4"
+  ],
+  "cluster_titles": [
+   "Do AI models understand daily life in Pakistan? lakh/crore, PKT and Urdu tested"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261011-1606-1-ai-models-excel-at-pakistani-local-context-b.png",
+   "20261011-1606-1-ai-models-excel-at-pakistani-local-context-b-d1.png",
+   "20261011-1606-1-ai-models-excel-at-pakistani-local-context-b-d2.png",
+   "20261011-1606-1-ai-models-excel-at-pakistani-local-context-b-d3.png",
+   "20261011-1606-1-ai-models-excel-at-pakistani-local-context-b-d4.png"
+  ]
+ }
+]

@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "12ft.io paywall bypass replacement",
+  "headline_marked": "[[WallHop launches as a free paywall bypass]] after 12ft.io shuts down",
+  "headline": "WallHop launches as a free paywall bypass after 12ft.io shuts down",
+  "summary": "WallHop offers a free, no-signup service to read articles behind paywalls, filling the void left by the popular 12ft.io service.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "WallHop has emerged as a new free service designed to bypass online paywalls, offering a direct replacement for the recently defunct 12ft.io. Users can simply paste an article link into WallHop to access content that would otherwise be locked behind a subscription or one-time payment. This tool aims to provide unrestricted access to information for casual readers.",
+   "The service operates on a straightforward principle: it fetches the article content without triggering paywall restrictions, presenting it in a clean, readable format. Crucially, WallHop requires no user registration or personal data, emphasizing ease of use and privacy for its visitors. Its developer created it specifically to address the gap left by 12ft.io.",
+   "While popular with readers, such bypass tools often spark debate regarding content monetization and the sustainability of journalism. Publishers rely on subscriptions and ad revenue to fund their operations, making paywall circumvention a contentious issue. WallHop's arrival highlights the ongoing tension between free information access and content creators' need for revenue."
+  ],
+  "caption": "Tired of paywalls? A new free tool, WallHop, lets you read articles without signing up, replacing the defunct 12ft.io.\n\nWallHop has emerged as a new free service designed to bypass online paywalls, offering a direct replacement for the recently defunct 12ft.io. Users can simply paste an article link into WallHop to access content that would otherwise be locked behind a subscription or one-time payment. This tool aims to provide unrestricted access to information for casual readers.\n\nThe service operates on a straightforward principle: it fetches the article content without triggering paywall restrictions, presenting it in a clean, readable format. Crucially, WallHop requires no user registration or personal data, emphasizing ease of use and privacy for its visitors. Its developer created it specifically to address the gap left by 12ft.io.\n\nWhile popular with readers, such bypass tools often spark debate regarding content monetization and the sustainability of journalism. Publishers rely on subscriptions and ad revenue to fund their operations, making paywall circumvention a contentious issue. WallHop's arrival highlights the ongoing tension between free information access and content creators' need for revenue.\n\n#WallHop #PaywallBypass #FreeContent #TechNews #WebTools #Software\n\nSource: Hacker News, DEV",
+  "tweet": "Paywalls got you down? WallHop is here to save the day! This new free service lets you bypass article paywalls with no signup, stepping in after 12ft.io shut down. Just paste a link and read. #WallHop #FreeTech #PaywallBypass",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "wallhop.io",
+  "source": "Hacker News, DEV",
+  "url": "https://wallhop.io/",
+  "image": "",
+  "orig_title": "WallHop – 12ft.io is gone, so I built a replacement",
+  "cluster_urls": [
+   "https://wallhop.io/",
+   "https://dev.to/wafflehacker/12ftio-is-gone-so-i-built-my-own-paywall-bypass-1ldb"
+  ],
+  "cluster_titles": [
+   "WallHop – 12ft.io is gone, so I built a replacement",
+   "12ft.io Is Gone, So I Built My Own Paywall Bypass"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261011-0706-0-wallhop-launches-as-a-free-paywall-bypass-af.png",
+   "20261011-0706-0-wallhop-launches-as-a-free-paywall-bypass-af-d1.png",
+   "20261011-0706-0-wallhop-launches-as-a-free-paywall-bypass-af-d2.png"
+  ]
+ },
+ {
+  "topic": "ai api hidden costs",
+  "headline_marked": "[[AI API costs are often 17x-20x higher]] than expected due to hidden multipliers",
+  "headline": "AI API costs are often 17x-20x higher than expected due to hidden multipliers",
+  "summary": "Developers building with AI APIs report actual costs soaring up to 20 times initial projections, driven by factors like inflated input token counts, uncached conversation history, and engineering time spent on rate limit workarounds.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Many developers building with AI APIs face a rude awakening when their initial cost projections are dwarfed by actual bills. One developer reported a bill 17 times their projection, while another found a 20x difference from their initial estimate, highlighting a significant disconnect between advertised and real costs.",
+   "A major hidden cost lies in input token calculation. While developers often estimate based on raw message length, the actual input sent to models includes system instructions, chat history, and tool schemas. A test showed a 100-token user query inflating to 2,800 tokens of actual input, a 28x multiplier before the model even processes it.",
+   "Uncached Retrieval-Augmented Generation (RAG) pipelines also contribute significantly to overspending. If conversation history is reconstructed from scratch with every user query, each call includes the full context, leading to costs that scale linearly with conversation length. This can quickly deplete budgets without clear warnings in pricing documentation.",
+   "Attempting to mitigate RAG costs with conversation summaries introduces another expense: an extra API call just for compression. In one case, summarization itself consumed 40% of the token budget, illustrating a 'casino effect' where solutions to one cost problem create another.",
+   "Rate limits, often seen as a provider convenience, become a developer cost in engineering time. Hitting a 429 error requires implementing retry logic, which consumes developer hours and can lead to user churn. Raising limits often means paying a premium, creating a catch-22 for scaling applications.",
+   "Vendor lock-in represents a silent, deferred cost. Building features tightly integrated with a specific API's function calling or structure can make switching to a cheaper model or different provider a weeks-long refactoring effort. This loss of flexibility is a significant, unbilled expense.",
+   "These 'hidden multipliers' mean that advertised per-token prices are often misleading. Developers are advised to multiply any per-token price by ten to get a more realistic estimate of actual operational costs, which can include evaluation suites costing more than a month of server hosting for a single evening's work."
+  ],
+  "caption": "AI API costs can be 17x-20x higher than initial estimates. Developers are discovering hidden multipliers in input tokens, uncached RAG, and rate limits.\n\nMany developers building with AI APIs face a rude awakening when their initial cost projections are dwarfed by actual bills. One developer reported a bill 17 times their projection, while another found a 20x difference from their initial estimate, highlighting a significant disconnect between advertised and real costs.\n\nA major hidden cost lies in input token calculation. While developers often estimate based on raw message length, the actual input sent to models includes system instructions, chat history, and tool schemas. A test showed a 100-token user query inflating to 2,800 tokens of actual input, a 28x multiplier before the model even processes it.\n\nUncached Retrieval-Augmented Generation (RAG) pipelines also contribute significantly to overspending. If conversation history is reconstructed from scratch with every user query, each call includes the full context, leading to costs that scale linearly with conversation length. This can quickly deplete budgets without clear warnings in pricing documentation.\n\nAttempting to mitigate RAG costs with conversation summaries introduces another expense: an extra API call just for compression. In one case, summarization itself consumed 40% of the token budget, illustrating a 'casino effect' where solutions to one cost problem create another.\n\nRate limits, often seen as a provider convenience, become a developer cost in engineering time. Hitting a 429 error requires implementing retry logic, which consumes developer hours and can lead to user churn. Raising limits often means paying a premium, creating a catch-22 for scaling applications.\n\n#AI #APICosts #DeveloperTips #TechNews #LLMs #SoftwareDev\n\nSource: DEV",
+  "tweet": "Developers, beware: AI API costs can be 17x-20x higher than expected! Hidden multipliers in input tokens, uncached RAG, and rate limits are burning budgets. An hour of experimentation can cost more than a month of server hosting. #AI #APICosts #DevTips",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shadie_ai/the-silent-costs-of-ai-apis-nobody-warns-you-about-id1",
+  "image": "",
+  "orig_title": "The Silent Costs of AI APIs Nobody Warns You About",
+  "cluster_urls": [
+   "https://dev.to/shadie_ai/the-silent-costs-of-ai-apis-nobody-warns-you-about-id1"
+  ],
+  "cluster_titles": [
+   "The Silent Costs of AI APIs Nobody Warns You About"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261011-0706-1-ai-api-costs-are-often-17x-20x-higher-than-e.png",
+   "20261011-0706-1-ai-api-costs-are-often-17x-20x-higher-than-e-d1.png",
+   "20261011-0706-1-ai-api-costs-are-often-17x-20x-higher-than-e-d2.png",
+   "20261011-0706-1-ai-api-costs-are-often-17x-20x-higher-than-e-d3.png",
+   "20261011-0706-1-ai-api-costs-are-often-17x-20x-higher-than-e-d4.png"
+  ]
+ }
+]

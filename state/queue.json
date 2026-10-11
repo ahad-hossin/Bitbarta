@@ -1,1 +1,98 @@
-[]
+[
+ {
+  "topic": "open source ai encourages outdoor activity",
+  "headline_marked": "[[AI-Designed PCBs]] are here, but what should you check before ordering?",
+  "headline": "AI-Designed PCBs are here, but what should you check before ordering?",
+  "summary": "PCBEditor turns plain English into a routed PCB, but AI decisions need careful review.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI tool can now generate a placed and routed Printed Circuit Board (PCB) in minutes. The critical question isn't whether it looks right, but which parts were decided by the language model and which were computed, as these outputs fail in different ways and require distinct checks.",
+   "PCBEditor is a hosted application that takes a plain-English description and outputs a design-rule-checked PCB with standard fabrication files. It details how the work is split between the AI model and deterministic engines, and provides a checklist for reviewing the output before sending it to a fabricator.",
+   "When reviewing an AI-generated PCB, focus on the model's decisions regarding component placement and connections. Mistakes like incorrect pinouts or missing resistors can appear plausible but pass geometric checks. The geometry itself should be verified with software tools, not just by eye.",
+   "The AI model can produce different drafts on each run, while the layout stage is deterministic. Therefore, once a schematic is checked, it should be saved and used as the basis for subsequent steps. Generating again from the same prompt yields a new draft that requires a fresh review.",
+   "PCBEditor outputs standard fabrication data including Gerber, Excellon drill, pick-and-place, and BOM files, plus a native KiCad file. This allows for verification using familiar software tools, ensuring that results are not solely reliant on the vendor's proprietary tools.",
+   "If a board cannot be fully routed, PCBEditor identifies the specific nets that failed, rather than providing a vague completion percentage. This precise information allows designers to pinpoint and address the unroutable connections, often by adjusting component placement.",
+   "The tool is ideal for prototyping, learning, and small-to-moderate board designs, especially when desktop CAD software is unavailable. However, it is not intended as a replacement for professional EDA suites on complex production hardware or for comprehensive engineering review.",
+   "Designs are processed on PCBEditor's servers, with prompts and design intent sent to a hosted model provider. Footprint and symbol data are sourced from the KiCad libraries, which are licensed under CC-BY-SA-4.0."
+  ],
+  "caption": "AI can now design your PCBs in minutes. But before you order, here's what you absolutely need to check.\n\nAn AI tool can now generate a placed and routed Printed Circuit Board (PCB) in minutes. The critical question isn't whether it looks right, but which parts were decided by the language model and which were computed, as these outputs fail in different ways and require distinct checks.\n\nPCBEditor is a hosted application that takes a plain-English description and outputs a design-rule-checked PCB with standard fabrication files. It details how the work is split between the AI model and deterministic engines, and provides a checklist for reviewing the output before sending it to a fabricator.\n\nWhen reviewing an AI-generated PCB, focus on the model's decisions regarding component placement and connections. Mistakes like incorrect pinouts or missing resistors can appear plausible but pass geometric checks. The geometry itself should be verified with software tools, not just by eye.\n\nThe AI model can produce different drafts on each run, while the layout stage is deterministic. Therefore, once a schematic is checked, it should be saved and used as the basis for subsequent steps. Generating again from the same prompt yields a new draft that requires a fresh review.\n\nPCBEditor outputs standard fabrication data including Gerber, Excellon drill, pick-and-place, and BOM files, plus a native KiCad file. This allows for verification using familiar software tools, ensuring that results are not solely reliant on the vendor's proprietary tools.\n\nIf a board cannot be fully routed, PCBEditor identifies the specific nets that failed, rather than providing a vague completion percentage. This precise information allows designers to pinpoint and address the unroutable connections, often by adjusting component placement.\n\n#AI #PCBdesign #Hardware #Engineering #HuggingFace\n\nSource: DEV",
+  "tweet": "AI can now design your PCBs in minutes. But before you order, here's what you absolutely need to check. PCBEditor turns plain English into a routed board, but AI decisions need careful review. #AI #PCBdesign #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "huggingface.co",
+  "source": "DEV",
+  "url": "https://dev.to/dibyaprakash_pradhan/can-you-trust-an-ai-designed-pcb-what-to-check-before-you-order-jop",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6aj6y72jieb285n0o8a2.webp",
+  "orig_title": "Can You Trust an AI-Designed PCB? What to Check Before You Order",
+  "cluster_urls": [
+   "https://dev.to/dibyaprakash_pradhan/can-you-trust-an-ai-designed-pcb-what-to-check-before-you-order-jop",
+   "https://dev.to/priyarani22/greenbuddy-ai-touch-grass-with-an-open-source-ai-nature-companion-36di",
+   "https://dev.to/deepthi_3/week-1-dev-challenge-2ela",
+   "https://dev.to/moroabdullatif/touch-grass-coach-an-ai-outdoor-fitness-trainer-powered-by-gemma-elevenlabs-3ah8",
+   "https://dev.to/nidhi_jha/cracklife-discover-the-hidden-ecosystems-of-your-city-4m63",
+   "https://dev.to/sahil27/step-outside-an-ai-that-tells-you-when-to-stop-scrolling-1nb"
+  ],
+  "cluster_titles": [
+   "Can You Trust an AI-Designed PCB? What to Check Before You Order",
+   "🌱 GreenBuddy AI: Touch Grass with an Open-Source AI Nature Companion",
+   "week 1 dev challenge",
+   "Touch Grass Coach: An AI Outdoor Fitness Trainer Powered by Gemma & ElevenLabs",
+   "CrackLife: Discover the Hidden Ecosystems of Your City 🌱",
+   "Step Outside: An AI That Tells You When to Stop Scrolling"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261012-0001-0-ai-designed-pcbs-are-here-but-what-should-yo.png",
+   "20261012-0001-0-ai-designed-pcbs-are-here-but-what-should-yo-d1.png",
+   "20261012-0001-0-ai-designed-pcbs-are-here-but-what-should-yo-d2.png",
+   "20261012-0001-0-ai-designed-pcbs-are-here-but-what-should-yo-d3.png",
+   "20261012-0001-0-ai-designed-pcbs-are-here-but-what-should-yo-d4.png"
+  ]
+ },
+ {
+  "topic": "apple tv hardware upgrades rumor",
+  "headline_marked": "Apple's smart home hub [[reportedly named HomeView]] for November release",
+  "headline": "Apple's smart home hub reportedly named HomeView for November release",
+  "summary": "The long-awaited smart home hub from Apple is expected to be called HomeView and could launch in November, according to reports.",
+  "category": "BIGTECH",
+  "template": "leak",
+  "details": [
+   "Apple's new smart home hub is reportedly set to be named \"HomeView\" and is slated for a mid-November release, according to Bloomberg's Mark Gurman.",
+   "The device is intended to serve as a Siri command center for users' smart homes, with the \"View\" in its name emphasizing its display capabilities controlled primarily by voice commands.",
+   "Gurman suggests that the HomeView will come in two versions: a countertop model with a speaker base available in multiple colors, and a wall-mounted option in space gray and silver.",
+   "Unlike other Apple hardware, the HomeView will reportedly have a limited selection of supported apps and will not access the App Store, encouraging users to rely on third-party accessories connected via Siri or the Home app.",
+   "Apple is collaborating with companies like LG and Schneider Electric SE to develop \"Apple Home Collection\" smart home devices, including doorbells and security cameras, which will connect to the HomeView.",
+   "Alongside the HomeView, Apple is also expected to refresh the HomePod mini with an S10 chip and introduce a new Apple TV with an A19 chip, with the mini and TV reportedly shipping by October 30."
+  ],
+  "caption": "Apple's new smart home hub is reportedly named HomeView and is expected to ship in November.\n\nApple's new smart home hub is reportedly set to be named \"HomeView\" and is slated for a mid-November release, according to Bloomberg's Mark Gurman.\n\nThe device is intended to serve as a Siri command center for users' smart homes, with the \"View\" in its name emphasizing its display capabilities controlled primarily by voice commands.\n\nGurman suggests that the HomeView will come in two versions: a countertop model with a speaker base available in multiple colors, and a wall-mounted option in space gray and silver.\n\nUnlike other Apple hardware, the HomeView will reportedly have a limited selection of supported apps and will not access the App Store, encouraging users to rely on third-party accessories connected via Siri or the Home app.\n\nApple is collaborating with companies like LG and Schneider Electric SE to develop \"Apple Home Collection\" smart home devices, including doorbells and security cameras, which will connect to the HomeView.\n\nAlongside the HomeView, Apple is also expected to refresh the HomePod mini with an S10 chip and introduce a new Apple TV with an A19 chip, with the mini and TV reportedly shipping by October 30.\n\n#Apple #HomeView #SmartHome #HomeKit #TechNews\n\nSource: The Verge, Engadget, 9to5Mac",
+  "tweet": "Apple's smart home hub is reportedly named HomeView and could launch in mid-November. It will feature a display controlled by Siri and work with third-party accessories. #Apple #HomeView #SmartHome",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "The Verge, Engadget, 9to5Mac",
+  "url": "https://www.theverge.com/tech/1009397/apple-tv-refresh-built-in-mic-remote-speaker",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24160553/DSCF0260_2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "The new Apple TV could have a built-in mic and a remote with a speaker",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/1009397/apple-tv-refresh-built-in-mic-remote-speaker",
+   "https://www.engadget.com/2283275/apples-smart-home-hub-will-reportedly-be-called-homeview/",
+   "https://9to5mac.com/2026/10/11/apple-testing-two-new-features-for-upgraded-apple-tv-4k-per-report/"
+  ],
+  "cluster_titles": [
+   "The new Apple TV could have a built-in mic and a remote with a speaker",
+   "Apple's smart home hub will reportedly be called HomeView",
+   "Apple testing two new features for upgraded Apple TV 4K, per report"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261012-0001-1-apple-s-smart-home-hub-reportedly-named-home.png",
+   "20261012-0001-1-apple-s-smart-home-hub-reportedly-named-home-d1.png",
+   "20261012-0001-1-apple-s-smart-home-hub-reportedly-named-home-d2.png"
+  ]
+ }
+]

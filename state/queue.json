@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "fitguru ai squat coach privacy",
+  "headline_marked": "[[FitGuru coaches your squats]] on-device, never uploading video for privacy",
+  "headline": "FitGuru coaches your squats on-device, never uploading video for privacy",
+  "summary": "This multimodal AI fitness app provides real-time form analysis and spoken corrections for 18 exercises, all while keeping your camera feed and data strictly on your phone.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "FitGuru is a new AI-powered fitness app designed to provide real-time workout coaching directly on your phone, without ever uploading video to the cloud. It offers live form analysis and automatic rep counting for 18 different exercises, ensuring your privacy remains paramount.",
+   "The app employs a unique \"two brains\" architecture: a Reflex Engine handles real-time trigonometry and thresholds on every camera frame, while a Cognitive Engine (powered by Gemini) only activates after a set, analyzing numerical summaries rather than raw video.",
+   "This architecture ensures no account is needed, no cloud video pipeline exists, and the coach functions even if the network is down. Your camera feed and joint landmark data never leave the device, maintaining complete privacy.",
+   "FitGuru provides spoken corrections during sets so you don't need to look at the screen, followed by a longer spoken review. It supports hands-free voice commands for actions like finishing a set, checking form, or switching exercises.",
+   "The app tracks local history including reps, form scores, volume, and calories, stored securely on the device. It also offers daily challenges, weekly rep goals, and a 20-machine gym guide for beginners.",
+   "For technical implementation, FitGuru uses CameraX and MediaPipe Pose Landmarker to generate 33 normalized 3D landmarks per frame. It computes interior joint angles to determine proper form and rep counts, rather than relying on a single-frame model that could double-count or miss lockouts.",
+   "The Reflex Engine is always active, using state machines to accurately count reps and provide cues with a cooldown to avoid nagging. A \"Gym Shield\" feature filters out passersby to prevent miscounts, ensuring accurate tracking of your movements.",
+   "The only time FitGuru interacts with a cloud model is if you provide a Gemini API key, and even then, it sends only a small paragraph of numerical data (about 4 KB of text) after a set, never frames or landmark lists. If no key is provided, a rule-based report is generated locally.",
+   "This privacy-first approach means your workout data, including video and landmarks, remains entirely on your device. Only a minimal, anonymized summary is ever sent to a cloud AI, and only with explicit user consent via an API key."
+  ],
+  "caption": "A new AI fitness app, FitGuru, coaches your workouts with real-time feedback, ensuring your video never leaves your device.\n\nFitGuru is a new AI-powered fitness app designed to provide real-time workout coaching directly on your phone, without ever uploading video to the cloud. It offers live form analysis and automatic rep counting for 18 different exercises, ensuring your privacy remains paramount.\n\nThe app employs a unique \"two brains\" architecture: a Reflex Engine handles real-time trigonometry and thresholds on every camera frame, while a Cognitive Engine (powered by Gemini) only activates after a set, analyzing numerical summaries rather than raw video.\n\nThis architecture ensures no account is needed, no cloud video pipeline exists, and the coach functions even if the network is down. Your camera feed and joint landmark data never leave the device, maintaining complete privacy.\n\nFitGuru provides spoken corrections during sets so you don't need to look at the screen, followed by a longer spoken review. It supports hands-free voice commands for actions like finishing a set, checking form, or switching exercises.\n\nThe app tracks local history including reps, form scores, volume, and calories, stored securely on the device. It also offers daily challenges, weekly rep goals, and a 20-machine gym guide for beginners.\n\nFor technical implementation, FitGuru uses CameraX and MediaPipe Pose Landmarker to generate 33 normalized 3D landmarks per frame. It computes interior joint angles to determine proper form and rep counts, rather than relying on a single-frame model that could double-count or miss lockouts.\n\nThe Reflex Engine is always active, using state machines to accurately count reps and provide cues with a cooldown to avoid nagging. A \"Gym Shield\" feature filters out passersby to prevent miscounts, ensuring accurate tracking of your movements.\n\n#FitGuru #AI #FitnessTech #Privacy #OnDeviceAI #WorkoutApp\n\nSource: DEV",
+  "tweet": "FitGuru: The AI workout coach that keeps your privacy intact. Get real-time form analysis for 18 exercises directly on your phone, with zero video uploads. Your data stays on-device. #FitGuru #AI #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/atharvachaudhari1/fitguru-a-phone-that-coaches-your-squat-and-never-uploads-the-video-5fla",
+  "image": "",
+  "orig_title": "FitGuru: A Phone That Coaches Your Squat - and Never Uploads the Video",
+  "cluster_urls": [
+   "https://dev.to/atharvachaudhari1/fitguru-a-phone-that-coaches-your-squat-and-never-uploads-the-video-5fla"
+  ],
+  "cluster_titles": [
+   "FitGuru: A Phone That Coaches Your Squat - and Never Uploads the Video"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261011-1406-0-fitguru-coaches-your-squats-on-device-never-.png",
+   "20261011-1406-0-fitguru-coaches-your-squats-on-device-never--d1.png",
+   "20261011-1406-0-fitguru-coaches-your-squats-on-device-never--d2.png",
+   "20261011-1406-0-fitguru-coaches-your-squats-on-device-never--d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent idempotency fix for duplicate actions",
+  "headline_marked": "[[AI agents can send emails up to 18 times]] due to hidden retries; here's the idempotency fix",
+  "headline": "AI agents can send emails up to 18 times due to hidden retries; here's the idempotency fix",
+  "summary": "AI agents often send duplicate emails because multiple system layers retry actions without coordination. Understanding idempotency is key to preventing these costly errors.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI agents can inadvertently send duplicate communications, like emails, due to a common problem: multiple system layers retrying actions. This can lead to a single user request triggering an action up to 18 times in a worst-case scenario.",
+   "The issue arises because HTTP clients, orchestrators, the AI model itself, and even resumed runs can independently retry failed or timed-out operations. Each layer's retry logic multiplies, creating a cascade of duplicate actions.",
+   "The core solution lies in idempotency, a property where performing an operation multiple times yields the same result as performing it once. This concept, long used in backend systems for payments and queues, is now crucial for agent design.",
+   "To implement this, developers should categorize tools into read-only, naturally repeatable writes, and dangerous writes (like sending or charging). For dangerous writes, retry ownership must be centralized to a single layer.",
+   "Crucially, every dangerous write needs an idempotency key, generated by the orchestrator and not the model, to ensure consistency. This key, combined with recording the action's status in a unique constraint table, prevents duplicate processing."
+  ],
+  "caption": "Your AI agent might be sending emails 18 times for a single request. Discover the critical idempotency fix that prevents costly duplicate actions.\n\nAI agents can inadvertently send duplicate communications, like emails, due to a common problem: multiple system layers retrying actions. This can lead to a single user request triggering an action up to 18 times in a worst-case scenario.\n\nThe issue arises because HTTP clients, orchestrators, the AI model itself, and even resumed runs can independently retry failed or timed-out operations. Each layer's retry logic multiplies, creating a cascade of duplicate actions.\n\nThe core solution lies in idempotency, a property where performing an operation multiple times yields the same result as performing it once. This concept, long used in backend systems for payments and queues, is now crucial for agent design.\n\nTo implement this, developers should categorize tools into read-only, naturally repeatable writes, and dangerous writes (like sending or charging). For dangerous writes, retry ownership must be centralized to a single layer.\n\nCrucially, every dangerous write needs an idempotency key, generated by the orchestrator and not the model, to ensure consistency. This key, combined with recording the action's status in a unique constraint table, prevents duplicate processing.\n\n#AI #SoftwareDevelopment #Idempotency #TechNews #Developer #AgentAI\n\nSource: DEV",
+  "tweet": "AI agents sending duplicate emails? It's a common issue due to multiple retry layers, potentially sending up to 18 emails for one request. Learn how idempotency keys and centralized retry management can fix this. #AI #SoftwareEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rakesh_kumar_04012c337851/your-ai-agent-sent-that-email-twice-heres-the-idempotency-fix-3hli",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F3prdui9wkhuge579nf11.png",
+  "orig_title": "Your AI Agent Sent That Email Twice. Here's the Idempotency Fix",
+  "cluster_urls": [
+   "https://dev.to/rakesh_kumar_04012c337851/your-ai-agent-sent-that-email-twice-heres-the-idempotency-fix-3hli"
+  ],
+  "cluster_titles": [
+   "Your AI Agent Sent That Email Twice. Here's the Idempotency Fix"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261011-1406-1-ai-agents-can-send-emails-up-to-18-times-due.png",
+   "20261011-1406-1-ai-agents-can-send-emails-up-to-18-times-due-d1.png",
+   "20261011-1406-1-ai-agents-can-send-emails-up-to-18-times-due-d2.png"
+  ]
+ }
+]

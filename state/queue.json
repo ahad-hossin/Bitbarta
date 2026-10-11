@@ -1,1 +1,96 @@
-[]
+[
+ {
+  "topic": "open source ai encourages outdoor activity",
+  "headline_marked": "[[Touch Grass]] app uses AI to find outdoor activities",
+  "headline": "Touch Grass app uses AI to find outdoor activities",
+  "summary": "An open-source AI planner translates natural language requests into SQL queries to discover trails, parks, and running clubs, reducing search time.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Finding somewhere to go outdoors shouldn't require browsing through multiple websites or filtering endless map results. Touch Grass is an open-source, AI-powered outdoor discovery application that lets users search for trails, parks, and running clubs using natural language.",
+   "The application uses an LLM-powered Text-to-SQL agent to translate natural language questions into SQLite queries, retrieve matching records, and display the results in a responsive dashboard. The idea is simple: spend less time searching for outdoor activities and more time actually doing them.",
+   "Results are displayed in a responsive table with formatting based on the returned data. The interface handles loading, empty results, and invalid queries with appropriate feedback. The generated SQL is also visible in the interface, making the application's behavior easier to understand and debug.",
+   "One of the main challenges was ensuring the language model generated queries using actual database tables and columns. To address this, the backend retrieves the SQLite schema and includes it in the agent's system prompt, constraining the model's output.",
+   "The project uses LiteLLM to remain independent of a single LLM provider, allowing the backend to be configured for Google Gemini, local open-weight models through Ollama, or supported cloud-hosted models. This enables easy experimentation with different models.",
+   "For a production deployment, safeguards like SQLite read-only connections and single-statement enforcement would be strengthened. The frontend uses React, Vite, and Tailwind CSS with an earth-toned visual theme, building the results table dynamically from returned column names and values.",
+   "Touch Grass supports local models through Ollama, providing an option to process natural-language queries locally instead of sending them to a cloud-hosted LLM, giving developers more control over data processing. The project can be extended with additional locations, activity categories, and community-contributed datasets."
+  ],
+  "caption": "Tired of endless scrolling for outdoor adventures? This new app uses AI to find trails and parks for you.\n\nFinding somewhere to go outdoors shouldn't require browsing through multiple websites or filtering endless map results. Touch Grass is an open-source, AI-powered outdoor discovery application that lets users search for trails, parks, and running clubs using natural language.\n\nThe application uses an LLM-powered Text-to-SQL agent to translate natural language questions into SQLite queries, retrieve matching records, and display the results in a responsive dashboard. The idea is simple: spend less time searching for outdoor activities and more time actually doing them.\n\nResults are displayed in a responsive table with formatting based on the returned data. The interface handles loading, empty results, and invalid queries with appropriate feedback. The generated SQL is also visible in the interface, making the application's behavior easier to understand and debug.\n\nOne of the main challenges was ensuring the language model generated queries using actual database tables and columns. To address this, the backend retrieves the SQLite schema and includes it in the agent's system prompt, constraining the model's output.\n\nThe project uses LiteLLM to remain independent of a single LLM provider, allowing the backend to be configured for Google Gemini, local open-weight models through Ollama, or supported cloud-hosted models. This enables easy experimentation with different models.\n\nFor a production deployment, safeguards like SQLite read-only connections and single-statement enforcement would be strengthened. The frontend uses React, Vite, and Tailwind CSS with an earth-toned visual theme, building the results table dynamically from returned column names and values.\n\n#AI #OpenSource #Tech #Outdoor #AppDevelopment\n\nSource: DEV",
+  "tweet": "Tired of endless scrolling for outdoor adventures? This new app uses AI to find trails and parks for you. \n\nTouch Grass translates natural language into SQL queries to discover activities, reducing search time. Supports local models for privacy. #AI #OpenSource #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/radhikaaa25/touch-grass-natural-language-outdoor-discovery-101h",
+  "image": "",
+  "orig_title": "Touch Grass: Natural Language Outdoor Discovery",
+  "cluster_urls": [
+   "https://dev.to/radhikaaa25/touch-grass-natural-language-outdoor-discovery-101h",
+   "https://dev.to/asad_jawed_ee59d2763ac6fc/every-place-has-more-than-one-story-4cod",
+   "https://dev.to/kris_kohlstedt_7116c48b36/debugging-json-and-jwts-without-uploading-your-inputs-payload-haven-29ao",
+   "https://dev.to/souvik15/offline-nature-quest-an-open-ai-companion-that-gets-you-outside-5g6c",
+   "https://dev.to/papajams/sealing-the-sighting-verifiable-bird-records-from-nairobi-powered-by-gemma-464b",
+   "https://dev.to/shadowe1ite/birdecho-discover-birds-around-you-with-open-source-ai-394i",
+   "https://dev.to/swapnil_srivastava_164953/touch-grass-a-local-ai-planner-that-gets-you-off-the-screen-2j9b",
+   "https://dev.to/suryansh_singh_e99ce2252c/echoquest-turn-the-real-world-into-your-rpg-hf26challenge-devchallenge-openweights-1ia1",
+   "https://dev.to/ayushg_15/wildlens-an-open-field-naturalist-guide-quest-engine-to-get-you-outside-41fb"
+  ],
+  "cluster_titles": [
+   "Touch Grass: Natural Language Outdoor Discovery",
+   "Every place has more than one story",
+   "Debugging JSON and JWTs without uploading your inputs: Payload Haven",
+   "🌿 Offline Nature Quest: An Open-AI Companion That Gets You Outside",
+   "Sealing the Sighting: Verifiable Bird Records from Nairobi, Powered by Gemma",
+   "BirdEcho: Discover Birds Around You with Open-Source AI 🐦",
+   "Touch Grass: A Local AI Planner That Gets You Off the Screen",
+   "EchoQuest: Turn the Real World into Your RPG 🗺️🌿 #hf26challenge #devchallenge #openweights #touchgrass",
+   "WildLens 🌿: An Open Field Naturalist Guide & Quest Engine to Get You Outside"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261012-0206-0-touch-grass-app-uses-ai-to-find-outdoor-acti.png",
+   "20261012-0206-0-touch-grass-app-uses-ai-to-find-outdoor-acti-d1.png",
+   "20261012-0206-0-touch-grass-app-uses-ai-to-find-outdoor-acti-d2.png",
+   "20261012-0206-0-touch-grass-app-uses-ai-to-find-outdoor-acti-d3.png"
+  ]
+ },
+ {
+  "topic": "total annihilation rebuilt for modern computers",
+  "headline_marked": "[[Total Annihilation]] gets a modern rebuild for PC",
+  "headline": "Total Annihilation gets a modern rebuild for PC",
+  "summary": "The classic real-time strategy game has been meticulously rebuilt from the ground up for contemporary computers, enhancing its iconic gameplay and visuals.",
+  "category": "GAMING",
+  "template": "terminal",
+  "details": [
+   "A passionate community effort has brought the legendary real-time strategy game Total Annihilation into the modern era. This ambitious project rebuilds the game from scratch, ensuring compatibility and enhanced performance on today's PCs.",
+   "The rebuild focuses on preserving the core gameplay that made Total Annihilation a beloved classic, while also introducing graphical improvements and optimizations. Players can expect a more immersive experience with updated visuals and smoother performance.",
+   "This fan-driven initiative aims to make Total Annihilation accessible to a new generation of gamers and reintroduce it to long-time fans. The project meticulously recreates the game's complex unit interactions and large-scale battles, all while leveraging modern hardware capabilities.",
+   "The enhanced isometric view offers a new sense of scale, allowing players to better appreciate the vast armies and detailed environments. This rebuild is a testament to the enduring legacy of Total Annihilation and the dedication of its community."
+  ],
+  "caption": "The legendary RTS game [[Total Annihilation]] has been rebuilt for modern PCs.\n\nA passionate community effort has brought the legendary real-time strategy game Total Annihilation into the modern era. This ambitious project rebuilds the game from scratch, ensuring compatibility and enhanced performance on today's PCs.\n\nThe rebuild focuses on preserving the core gameplay that made Total Annihilation a beloved classic, while also introducing graphical improvements and optimizations. Players can expect a more immersive experience with updated visuals and smoother performance.\n\nThis fan-driven initiative aims to make Total Annihilation accessible to a new generation of gamers and reintroduce it to long-time fans. The project meticulously recreates the game's complex unit interactions and large-scale battles, all while leveraging modern hardware capabilities.\n\nThe enhanced isometric view offers a new sense of scale, allowing players to better appreciate the vast armies and detailed environments. This rebuild is a testament to the enduring legacy of Total Annihilation and the dedication of its community.\n\n#TotalAnnihilation #RTS #Gaming #PCGaming #RetroGaming\n\nSource: Hacker News",
+  "tweet": "Total Annihilation, the classic RTS, has been rebuilt for modern PCs! Experience enhanced visuals and performance while reliving epic battles. [[Total Annihilation]] gets a modern rebuild for PC. #TotalAnnihilation #RTS",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://nanolathe.gg",
+  "image": "",
+  "orig_title": "Total Annihilation, rebuilt for modern computers",
+  "cluster_urls": [
+   "https://nanolathe.gg"
+  ],
+  "cluster_titles": [
+   "Total Annihilation, rebuilt for modern computers"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261012-0206-1-total-annihilation-gets-a-modern-rebuild-for.png",
+   "20261012-0206-1-total-annihilation-gets-a-modern-rebuild-for-d1.png",
+   "20261012-0206-1-total-annihilation-gets-a-modern-rebuild-for-d2.png"
+  ]
+ }
+]

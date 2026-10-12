@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "zod library malware compromise",
+  "headline_marked": "[[Zod 4.6.6 reportedly compromised]] by malware, impacting TypeScript projects",
+  "headline": "Zod 4.6.6 reportedly compromised by malware, impacting TypeScript projects",
+  "summary": "The popular TypeScript schema validation library, Zod, version 4.6.6, is suspected to have been backdoored, potentially exposing projects even with lockfiles.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "The widely used TypeScript schema validation library, Zod, specifically version 4.6.6, has reportedly been compromised with malware. This incident raises significant concerns for developers relying on the library for static type inference and data validation.",
+   "Reports indicate that the compromise involved a backdoor, which could potentially allow malicious actors unauthorized access or control over systems using the affected version. This type of supply chain attack targets a dependency within a software project.",
+   "A critical aspect of this compromise is that standard dependency lockfiles, typically used to ensure consistent builds and prevent unexpected changes, reportedly did not protect against the backdoor. This means projects with existing lockfiles could still be vulnerable.",
+   "Developers are strongly advised to investigate their dependencies and consider downgrading to a known safe version of Zod or auditing their current installations. Immediate action is recommended to mitigate potential security risks associated with the compromised package."
+  ],
+  "caption": "Zod 4.6.6, a critical TypeScript library, was reportedly backdoored with malware. Even lockfiles didn't save projects.\n\nThe widely used TypeScript schema validation library, Zod, specifically version 4.6.6, has reportedly been compromised with malware. This incident raises significant concerns for developers relying on the library for static type inference and data validation.\n\nReports indicate that the compromise involved a backdoor, which could potentially allow malicious actors unauthorized access or control over systems using the affected version. This type of supply chain attack targets a dependency within a software project.\n\nA critical aspect of this compromise is that standard dependency lockfiles, typically used to ensure consistent builds and prevent unexpected changes, reportedly did not protect against the backdoor. This means projects with existing lockfiles could still be vulnerable.\n\nDevelopers are strongly advised to investigate their dependencies and consider downgrading to a known safe version of Zod or auditing their current installations. Immediate action is recommended to mitigate potential security risks associated with the compromised package.\n\n#Zod #TypeScript #Security #Malware #SupplyChainAttack #DevSecOps\n\nSource: Hacker News, DEV",
+  "tweet": "Zod 4.6.6 reportedly backdoored with malware, impacting countless TypeScript projects. Your lockfile might not protect you. Developers, check your dependencies now! #Zod #Security #TypeScript",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "zod.dev",
+  "source": "Hacker News, DEV",
+  "url": "https://github.com/colinhacks/zod/commit/d821685ea6732436fcdf786a81d076958471e467",
+  "image": "",
+  "orig_title": "Zod 4.6.6 compromised by malware?",
+  "cluster_urls": [
+   "https://github.com/colinhacks/zod/commit/d821685ea6732436fcdf786a81d076958471e467",
+   "https://dev.to/ashraf_chowdury09/zod-got-backdoored-your-lockfile-didnt-save-you-luck-did-e4l"
+  ],
+  "cluster_titles": [
+   "Zod 4.6.6 compromised by malware?",
+   "Zod Got Backdoored. Your Lockfile Didn't Save You, Luck Did."
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261012-1504-0-zod-4-6-6-reportedly-compromised-by-malware-.png",
+   "20261012-1504-0-zod-4-6-6-reportedly-compromised-by-malware--d1.png",
+   "20261012-1504-0-zod-4-6-6-reportedly-compromised-by-malware--d2.png"
+  ]
+ },
+ {
+  "topic": "f5 big-ip apm heap overflow rce",
+  "headline_marked": "[[F5 BIG-IP APM heap overflow]] enables unauthenticated RCE, critical 9.8 CVSS",
+  "headline": "F5 BIG-IP APM heap overflow enables unauthenticated RCE, critical 9.8 CVSS",
+  "summary": "A critical heap-based buffer overflow in F5's BIG-IP APM, when configured as an OAuth Authorization Server, allows unauthenticated remote code execution. F5 has confirmed exploitation in the wild.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "F5 has disclosed a critical heap-based buffer overflow vulnerability (CWE-122) in its BIG-IP APM, rated 9.8 (CVSS v3.1) and 9.3 (CVSS v4.0). This flaw allows an unauthenticated attacker to achieve remote code execution (RCE).",
+   "The vulnerability specifically affects BIG-IP APM when configured as an OAuth Authorization Server with both an APM access policy and an OAuth profile on a virtual server. Deployments using APM strictly as an OAuth Client or Resource Server are not vulnerable.",
+   "The flaw is a data plane issue, meaning it impacts traffic processing and is reachable from untrusted networks. Even systems in Appliance mode, designed for hardened security, are vulnerable as the defect lives in the request path itself.",
+   "F5's advisory, K000162605, confirms that the vulnerability has been exploited in the wild. Organizations using the affected configuration are urged to prioritize remediation due to the high exposure risk.",
+   "Detection guidance includes looking for multiple OAuth authentication failures followed by suspicious commands and a TMM SIGABRT. These three indicators observed close in time warrant immediate investigation."
+  ],
+  "caption": "Critical RCE vulnerability in F5 BIG-IP APM confirmed exploited in the wild. Unauthenticated attackers can execute code on affected systems.\n\nF5 has disclosed a critical heap-based buffer overflow vulnerability (CWE-122) in its BIG-IP APM, rated 9.8 (CVSS v3.1) and 9.3 (CVSS v4.0). This flaw allows an unauthenticated attacker to achieve remote code execution (RCE).\n\nThe vulnerability specifically affects BIG-IP APM when configured as an OAuth Authorization Server with both an APM access policy and an OAuth profile on a virtual server. Deployments using APM strictly as an OAuth Client or Resource Server are not vulnerable.\n\nThe flaw is a data plane issue, meaning it impacts traffic processing and is reachable from untrusted networks. Even systems in Appliance mode, designed for hardened security, are vulnerable as the defect lives in the request path itself.\n\nF5's advisory, K000162605, confirms that the vulnerability has been exploited in the wild. Organizations using the affected configuration are urged to prioritize remediation due to the high exposure risk.\n\nDetection guidance includes looking for multiple OAuth authentication failures followed by suspicious commands and a TMM SIGABRT. These three indicators observed close in time warrant immediate investigation.\n\n#F5 #BIGIP #Cybersecurity #RCE #Vulnerability #SecurityAlert\n\nSource: DEV",
+  "tweet": "Critical RCE vulnerability (CVSS 9.8) in F5 BIG-IP APM confirmed exploited in the wild. Unauthenticated attackers can execute code on systems configured as OAuth Authorization Servers. Prioritize remediation. #F5 #Cybersecurity #RCE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "f5.com",
+  "source": "DEV",
+  "url": "https://dev.to/echakiri/f5s-big-ip-apm-heap-overflow-puts-remote-code-execution-behind-an-oauth-profile-dal",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ff6fkikrmp0k0kjpq98jj.png",
+  "orig_title": "F5's BIG-IP APM Heap Overflow Puts Remote Code Execution Behind an OAuth Profile",
+  "cluster_urls": [
+   "https://dev.to/echakiri/f5s-big-ip-apm-heap-overflow-puts-remote-code-execution-behind-an-oauth-profile-dal"
+  ],
+  "cluster_titles": [
+   "F5's BIG-IP APM Heap Overflow Puts Remote Code Execution Behind an OAuth Profile"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261012-1504-1-f5-big-ip-apm-heap-overflow-enables-unauthen.png",
+   "20261012-1504-1-f5-big-ip-apm-heap-overflow-enables-unauthen-d1.png",
+   "20261012-1504-1-f5-big-ip-apm-heap-overflow-enables-unauthen-d2.png"
+  ]
+ }
+]

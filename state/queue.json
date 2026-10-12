@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "openamer asi core global mesh",
+  "headline_marked": "[[OpenAmer ASI Core: 5 native tools, 10-subsystem heartbeat, A2A Global Mesh]]",
+  "headline": "OpenAmer ASI Core: 5 native tools, 10-subsystem heartbeat, A2A Global Mesh",
+  "summary": "OpenAmer's new ASI core replaces 84 cron jobs with a single 10-subsystem heartbeat and enables direct agent-to-agent communication via a global mesh, improving reliability and coordination.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "OpenAmer, an Apache 2.0 licensed project, introduces an in-process ASI core that avoids subprocess calls and multiple schedulers. It features a single heartbeat instead of numerous cron jobs and an agent-to-agent (A2A) mesh for direct instance communication.",
+   "The ASI core includes five native tools that run in-process: 'think' for recursive reasoning, 'remember' for episodic memory, 'learn' for corrections, 'trigger' for subsystem events, and 'status' for live capability counts. This design eliminates startup latency per call.",
+   "Previously relying on 84 separate cron jobs for various tasks like browser watchdogs and self-healing, OpenAmer now consolidates these into a single 10-subsystem heartbeat. This change provides one central point for observation and repair, significantly reducing troubleshooting complexity.",
+   "A key innovation is the A2A Global Mesh, where every OpenAmer instance communicates directly with its peers without a central broker. Instances announce themselves, discover others, and exchange messages, ensuring the topology remains functional even if a node fails.",
+   "The entire system is designed to run locally on Windows, prioritizing a laptop-first agent experience. All 16 ASI capabilities are covered by executable checks, and the project is implemented in Python under the Apache 2.0 license.",
+   "Developers are invited to provide feedback on what would be needed from a mesh-coordinated agent fleet to be trusted in production environments."
+  ],
+  "caption": "OpenAmer's new ASI core streamlines agent frameworks, replacing 84 cron jobs with a single heartbeat and enabling direct agent-to-agent mesh communication.\n\nOpenAmer, an Apache 2.0 licensed project, introduces an in-process ASI core that avoids subprocess calls and multiple schedulers. It features a single heartbeat instead of numerous cron jobs and an agent-to-agent (A2A) mesh for direct instance communication.\n\nThe ASI core includes five native tools that run in-process: 'think' for recursive reasoning, 'remember' for episodic memory, 'learn' for corrections, 'trigger' for subsystem events, and 'status' for live capability counts. This design eliminates startup latency per call.\n\nPreviously relying on 84 separate cron jobs for various tasks like browser watchdogs and self-healing, OpenAmer now consolidates these into a single 10-subsystem heartbeat. This change provides one central point for observation and repair, significantly reducing troubleshooting complexity.\n\nA key innovation is the A2A Global Mesh, where every OpenAmer instance communicates directly with its peers without a central broker. Instances announce themselves, discover others, and exchange messages, ensuring the topology remains functional even if a node fails.\n\nThe entire system is designed to run locally on Windows, prioritizing a laptop-first agent experience. All 16 ASI capabilities are covered by executable checks, and the project is implemented in Python under the Apache 2.0 license.\n\nDevelopers are invited to provide feedback on what would be needed from a mesh-coordinated agent fleet to be trusted in production environments.\n\n#OpenAmer #AgentFramework #AI #SoftwareDevelopment #OpenSource #Python\n\nSource: DEV",
+  "tweet": "OpenAmer's new ASI Core streamlines agent frameworks with 5 native in-process tools, a single 10-subsystem heartbeat replacing 84 cron jobs, and an A2A Global Mesh for direct instance communication. It's Apache 2.0 and Python, running locally. #AI #OpenSource #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openamer.com",
+  "source": "DEV",
+  "url": "https://dev.to/openamer/openamer-asi-core-5-native-tools-a-10-subsystem-heartbeat-and-an-a2a-global-mesh-14m4",
+  "image": "",
+  "orig_title": "OpenAmer ASI Core: 5 native tools, a 10-subsystem heartbeat, and an A2A Global Mesh",
+  "cluster_urls": [
+   "https://dev.to/openamer/openamer-asi-core-5-native-tools-a-10-subsystem-heartbeat-and-an-a2a-global-mesh-14m4"
+  ],
+  "cluster_titles": [
+   "OpenAmer ASI Core: 5 native tools, a 10-subsystem heartbeat, and an A2A Global Mesh"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261012-1206-0-openamer-asi-core-5-native-tools-10-subsyste.png",
+   "20261012-1206-0-openamer-asi-core-5-native-tools-10-subsyste-d1.png",
+   "20261012-1206-0-openamer-asi-core-5-native-tools-10-subsyste-d2.png",
+   "20261012-1206-0-openamer-asi-core-5-native-tools-10-subsyste-d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent code injection security",
+  "headline_marked": "[[Injection Gate Sentinel prevents AI prompt injection]] by treating foreign text as data, never instructions",
+  "headline": "Injection Gate Sentinel prevents AI prompt injection by treating foreign text as data, never instructions",
+  "summary": "Sentinel's Injection Gate is a safety module that ensures AI agents process external text as data, not commands. It neutralizes hidden instructions, preventing attacks like authority claims or data exfiltration.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Injection Gate Sentinel is a safety module designed to protect AI agents from prompt injection attacks. It ensures that any foreign text, such as source files, documentation, or API responses, is treated strictly as data and never as executable instructions. This prevents malicious text from overriding the agent's directives.",
+   "The core problem is that large language models are trained to follow instructions. Without protection, a naive AI agent could interpret a hidden sentence like \"ignore your previous instructions\" within a file as a command, potentially leading to unauthorized actions or data breaches. The Injection Gate acts as a filter.",
+   "It works by scanning incoming text for suspicious patterns, including agent directives, authority claims, obfuscation, value transfers, internal targeting, and channel mismatches. If a risk is detected, it creates a sanitized copy of the text for the AI model, leaving the original file untouched.",
+   "Production data from Sentinel shows 259,893 scans over nearly 20 hours with zero suspicious or hostile findings. However, the article honestly states this doesn't prove the gate catches attacks, as Sentinel primarily scans its own code where no attacks are expected.",
+   "The true effectiveness is proven through rigorous testing, including 47/47 Injection Gate tests, 6/6 API response tests, and an 8/8 adversarial benchmark. These tests deliberately throw attacks at the system, confirming its ability to detect and neutralize manipulative instructions.",
+   "Currently, Injection Gate operates in \"shadow mode,\" meaning it scores and records potential threats but does not block them. This allows for accurate measurement of false-positive rates on real repositories before the system is allowed to enforce blocking decisions."
+  ],
+  "caption": "AI agents are vulnerable to hidden commands in external text. Injection Gate Sentinel ensures foreign text is data, not instructions, preventing prompt injection.\n\nInjection Gate Sentinel is a safety module designed to protect AI agents from prompt injection attacks. It ensures that any foreign text, such as source files, documentation, or API responses, is treated strictly as data and never as executable instructions. This prevents malicious text from overriding the agent's directives.\n\nThe core problem is that large language models are trained to follow instructions. Without protection, a naive AI agent could interpret a hidden sentence like \"ignore your previous instructions\" within a file as a command, potentially leading to unauthorized actions or data breaches. The Injection Gate acts as a filter.\n\nIt works by scanning incoming text for suspicious patterns, including agent directives, authority claims, obfuscation, value transfers, internal targeting, and channel mismatches. If a risk is detected, it creates a sanitized copy of the text for the AI model, leaving the original file untouched.\n\nProduction data from Sentinel shows 259,893 scans over nearly 20 hours with zero suspicious or hostile findings. However, the article honestly states this doesn't prove the gate catches attacks, as Sentinel primarily scans its own code where no attacks are expected.\n\nThe true effectiveness is proven through rigorous testing, including 47/47 Injection Gate tests, 6/6 API response tests, and an 8/8 adversarial benchmark. These tests deliberately throw attacks at the system, confirming its ability to detect and neutralize manipulative instructions.\n\nCurrently, Injection Gate operates in \"shadow mode,\" meaning it scores and records potential threats but does not block them. This allows for accurate measurement of false-positive rates on real repositories before the system is allowed to enforce blocking decisions.\n\n#AISecurity #PromptInjection #AI #Cybersecurity #DeveloperTools #Sentinel\n\nSource: DEV",
+  "tweet": "AI agents can be tricked by hidden commands in text. Injection Gate Sentinel stops prompt injection by treating foreign text as data, not instructions. It scans code, docs, and API responses to neutralize threats before they reach the AI. #AISecurity #PromptInjection #Cybers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jackymencz/injection-gate-sentinel-foreign-text-is-data-never-instructions-59n0",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Faufuvfny1h6bn7mrwnc9.png",
+  "orig_title": "Injection Gate Sentinel— foreign text is data, never instructions",
+  "cluster_urls": [
+   "https://dev.to/jackymencz/injection-gate-sentinel-foreign-text-is-data-never-instructions-59n0"
+  ],
+  "cluster_titles": [
+   "Injection Gate Sentinel— foreign text is data, never instructions"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261012-1206-1-injection-gate-sentinel-prevents-ai-prompt-i.png",
+   "20261012-1206-1-injection-gate-sentinel-prevents-ai-prompt-i-d1.png",
+   "20261012-1206-1-injection-gate-sentinel-prevents-ai-prompt-i-d2.png",
+   "20261012-1206-1-injection-gate-sentinel-prevents-ai-prompt-i-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "ai agent programs siemens industrial controller",
+  "headline_marked": "[[An AI Agent Programmed a Siemens S7-1500]] Through an MCP Bridge, Catching Race Conditions",
+  "headline": "An AI Agent Programmed a Siemens S7-1500 Through an MCP Bridge, Catching Race Conditions",
+  "summary": "An AI agent successfully programmed a Siemens S7-1500 PLC for a conveyor-sorting task, demonstrating its ability to make engineering decisions and identify potential race conditions.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An LLM agent successfully programmed a Siemens S7-1500 PLC for a conveyor-sorting control task. This was achieved using a custom MCP bridge that drives Siemens TIA Portal V19 through its Openness API.",
+   "The agent's work, including SCL source and UDTs, was verified in S7-PLCSIM. A key finding was the agent's ability to make engineering decisions and explicitly refuse to claim completion for parts it couldn't verify.",
+   "It delivered a full function block, identifying potential race conditions and boundary conditions within its generated code. This highlights its capacity to generate verifiable software while acknowledging its own limitations.",
+   "This experiment demonstrates a crucial property for AI code generators in industrial control: generating verifiable components and clearly stating what remains unverified. This approach ensures human oversight for critical safety and hardware interactions."
+  ],
+  "caption": "An AI agent successfully programmed a Siemens S7-1500 PLC for industrial control. It even identified potential race conditions in its own code.\n\nAn LLM agent successfully programmed a Siemens S7-1500 PLC for a conveyor-sorting control task. This was achieved using a custom MCP bridge that drives Siemens TIA Portal V19 through its Openness API.\n\nThe agent's work, including SCL source and UDTs, was verified in S7-PLCSIM. A key finding was the agent's ability to make engineering decisions and explicitly refuse to claim completion for parts it couldn't verify.\n\nIt delivered a full function block, identifying potential race conditions and boundary conditions within its generated code. This highlights its capacity to generate verifiable software while acknowledging its own limitations.\n\nThis experiment demonstrates a crucial property for AI code generators in industrial control: generating verifiable components and clearly stating what remains unverified. This approach ensures human oversight for critical safety and hardware interactions.\n\n#AI #PLC #IndustrialAutomation #Siemens #SoftwareDevelopment #TechNews\n\nSource: DEV",
+  "tweet": "An AI agent programmed a Siemens S7-1500 PLC for industrial control, using an MCP bridge to TIA Portal. It successfully implemented a conveyor-sorting program and even flagged race conditions, demonstrating a new frontier in AI-driven automation. #AI #PLC #Automation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "siemens.com",
+  "source": "DEV",
+  "url": "https://dev.to/tiaforge/an-ai-agent-programmed-a-siemens-s7-1500-through-an-mcp-bridge-heres-the-scl-and-the-race-fb7",
+  "image": "",
+  "orig_title": "An AI Agent Programmed a Siemens S7-1500 Through an MCP Bridge — Here's the SCL and the Race Conditions It Caught",
+  "cluster_urls": [
+   "https://dev.to/tiaforge/an-ai-agent-programmed-a-siemens-s7-1500-through-an-mcp-bridge-heres-the-scl-and-the-race-fb7"
+  ],
+  "cluster_titles": [
+   "An AI Agent Programmed a Siemens S7-1500 Through an MCP Bridge — Here's the SCL and the Race Conditions It Caught"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261012-2106-0-an-ai-agent-programmed-a-siemens-s7-1500-thr.png",
+   "20261012-2106-0-an-ai-agent-programmed-a-siemens-s7-1500-thr-d1.png",
+   "20261012-2106-0-an-ai-agent-programmed-a-siemens-s7-1500-thr-d2.png"
+  ]
+ },
+ {
+  "topic": "ai fixes tech support problem",
+  "headline_marked": "[[AI fixed Windows profile in 10 minutes]] after ¥488 tech support suggested reinstalling",
+  "headline": "AI fixed Windows profile in 10 minutes after ¥488 tech support suggested reinstalling",
+  "summary": "After paying ¥488 and spending hours with human tech support that recommended a Windows reinstall, an AI assistant diagnosed and repaired a corrupted user profile in just ten minutes.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A user faced a corrupted Windows profile after an unexpected shutdown during an update, leading to temporary profiles on every logon. Paid tech support sessions, costing ¥488 and lasting hours, repeatedly suggested reinstalling Windows or creating a new account.",
+   "Frustrated, the user turned to a free AI assistant, DeepSeek, running within their editor. The AI quickly diagnosed and repaired the issue, restoring the original user profile in approximately ten minutes.",
+   "The problem stemmed from two dirty user registry hives, caused by the power loss during a critical write operation. Windows marked the profile as unloadable, leading to the temporary profile fallback.",
+   "The initial paid support session involved a 40-minute disk scan that yielded no diagnostic value. A second specialist spent five hours remotely but concluded the profile couldn't be recovered in place, recommending a reinstall or new account.",
+   "Crucially, the registry files were dirty but structurally valid, making repair possible. The AI assistant started by examining the event log, which precisely named the failed files, allowing for a targeted fix."
+  ],
+  "caption": "Paid ¥488 and spent hours with tech support only to be told to reinstall Windows. An AI fixed the same complex issue in just 10 minutes.\n\nA user faced a corrupted Windows profile after an unexpected shutdown during an update, leading to temporary profiles on every logon. Paid tech support sessions, costing ¥488 and lasting hours, repeatedly suggested reinstalling Windows or creating a new account.\n\nFrustrated, the user turned to a free AI assistant, DeepSeek, running within their editor. The AI quickly diagnosed and repaired the issue, restoring the original user profile in approximately ten minutes.\n\nThe problem stemmed from two dirty user registry hives, caused by the power loss during a critical write operation. Windows marked the profile as unloadable, leading to the temporary profile fallback.\n\nThe initial paid support session involved a 40-minute disk scan that yielded no diagnostic value. A second specialist spent five hours remotely but concluded the profile couldn't be recovered in place, recommending a reinstall or new account.\n\nCrucially, the registry files were dirty but structurally valid, making repair possible. The AI assistant started by examining the event log, which precisely named the failed files, allowing for a targeted fix.\n\n#AI #TechSupport #Windows #DeepSeek #Troubleshooting #ArtificialIntelligence\n\nSource: DEV",
+  "tweet": "Paid ¥488 for tech support, got 'reinstall Windows.' Then an AI assistant (DeepSeek) diagnosed and fixed a corrupted Windows profile in 10 minutes. Human vs. AI efficiency in action. #AI #TechSupport #Windows",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "deepseek.com",
+  "source": "DEV",
+  "url": "https://dev.to/maplefox/i-paid-y488-for-tech-support-and-got-reinstall-windows-then-an-ai-fixed-it-in-10-minutes-26h1",
+  "image": "",
+  "orig_title": "I Paid ￥488 for Tech Support and Got 'Reinstall Windows.' Then an AI Fixed It in 10 Minutes.",
+  "cluster_urls": [
+   "https://dev.to/maplefox/i-paid-y488-for-tech-support-and-got-reinstall-windows-then-an-ai-fixed-it-in-10-minutes-26h1"
+  ],
+  "cluster_titles": [
+   "I Paid ￥488 for Tech Support and Got 'Reinstall Windows.' Then an AI Fixed It in 10 Minutes."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261012-2106-1-ai-fixed-windows-profile-in-10-minutes-after.png",
+   "20261012-2106-1-ai-fixed-windows-profile-in-10-minutes-after-d1.png",
+   "20261012-2106-1-ai-fixed-windows-profile-in-10-minutes-after-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "codex cli background daemon security risk",
+  "headline_marked": "[[Codex CLI installs persistent background daemon]] by default, causing issues in production",
+  "headline": "Codex CLI installs persistent background daemon by default, causing issues in production",
+  "summary": "The Codex CLI automatically installs a persistent, self-updating background daemon, which can cause unexpected process spawning and continuous update loops in production and CI environments.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Installing Codex CLI automatically launches a persistent background daemon that monitors for updates and restarts itself. While convenient for local development, this behavior can cause unexpected process spawning and continuous update loops in production environments.",
+   "This daemon integrates with the openai llama.cpp ecosystem and persists across reboots, potentially conflicting with other processes. Its default behavior creates friction, especially in automated workflows like CI pipelines.",
+   "In a CI pipeline, the daemon can trigger multiple updates per minute, consuming significant runtime. For instance, deployment scripts might spend up to 30% of their execution time on daemon updates instead of core tasks like testing.",
+   "Developers can prevent the daemon from starting by setting the environment variable CODEX_CLI_NO_DAEMON=1 before running the CLI. This environment variable tells the CLI to skip the background service initialization entirely.",
+   "For more granular programmatic control, the --no-daemon flag can be passed directly to the Codex CLI command. This method allows manual control over updates, letting users decide when to pull new binaries.",
+   "A critical failure mode exists if the daemon is disabled without a version-lock strategy: users may miss important security fixes. It is crucial to pair manual updates with a robust version pinning approach to ensure security."
+  ],
+  "caption": "Codex CLI installs a persistent, self-updating background daemon by default. This can lead to unexpected process spawning and resource waste in production and CI.\n\nInstalling Codex CLI automatically launches a persistent background daemon that monitors for updates and restarts itself. While convenient for local development, this behavior can cause unexpected process spawning and continuous update loops in production environments.\n\nThis daemon integrates with the openai llama.cpp ecosystem and persists across reboots, potentially conflicting with other processes. Its default behavior creates friction, especially in automated workflows like CI pipelines.\n\nIn a CI pipeline, the daemon can trigger multiple updates per minute, consuming significant runtime. For instance, deployment scripts might spend up to 30% of their execution time on daemon updates instead of core tasks like testing.\n\nDevelopers can prevent the daemon from starting by setting the environment variable CODEX_CLI_NO_DAEMON=1 before running the CLI. This environment variable tells the CLI to skip the background service initialization entirely.\n\nFor more granular programmatic control, the --no-daemon flag can be passed directly to the Codex CLI command. This method allows manual control over updates, letting users decide when to pull new binaries.\n\nA critical failure mode exists if the daemon is disabled without a version-lock strategy: users may miss important security fixes. It is crucial to pair manual updates with a robust version pinning approach to ensure security.\n\n#CodexCLI #DeveloperTools #SoftwareDevelopment #CI #Automation #TechNews\n\nSource: DEV, Hacker News",
+  "tweet": "Heads up, developers! Codex CLI installs a persistent, self-updating background daemon by default. This can cause unexpected process spawning & resource waste in production/CI. Learn how to disable it & manage updates manually. #CodexCLI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "DEV, Hacker News",
+  "url": "https://dev.to/robust_true_try/disabling-the-codex-cli-self-updating-background-daemon-437l",
+  "image": "",
+  "orig_title": "Disabling the Codex CLI Self-Updating Background Daemon",
+  "cluster_urls": [
+   "https://dev.to/robust_true_try/disabling-the-codex-cli-self-updating-background-daemon-437l",
+   "https://github.com/openai/codex/issues/48195"
+  ],
+  "cluster_titles": [
+   "Disabling the Codex CLI Self-Updating Background Daemon",
+   "Codex CLI installs a persistent, self-updating background daemon by default"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261013-0716-0-codex-cli-installs-persistent-background-dae.png",
+   "20261013-0716-0-codex-cli-installs-persistent-background-dae-d1.png",
+   "20261013-0716-0-codex-cli-installs-persistent-background-dae-d2.png"
+  ]
+ },
+ {
+  "topic": "apple epic app store legal clash",
+  "headline_marked": "[[Apple and Epic clash]] over document production in latest App Store court filing",
+  "headline": "Apple and Epic clash over document production in latest App Store court filing",
+  "summary": "Epic Games accuses Apple of deliberately pausing legal proceedings concerning new App Store commission rates. Apple denies the claims, escalating their ongoing dispute.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Epic Games is accusing Apple of 'manufacturing' a pause in the legal proceedings. This dispute centers on Epic's proposed new App Store commission rates, a long-standing point of contention between the two tech giants.",
+   "Apple, however, disagrees with Epic's allegations. This latest court filing highlights the continued legal battle and the complexities involved in their App Store policies."
+  ],
+  "caption": "The legal battle between Apple and Epic Games heats up again. Epic accuses Apple of 'manufacturing' a pause in App Store commission rate proceedings.\n\nEpic Games is accusing Apple of 'manufacturing' a pause in the legal proceedings. This dispute centers on Epic's proposed new App Store commission rates, a long-standing point of contention between the two tech giants.\n\nApple, however, disagrees with Epic's allegations. This latest court filing highlights the continued legal battle and the complexities involved in their App Store policies.\n\n#Apple #EpicGames #AppStore #LegalTech #BigTech #CourtCase\n\nSource: 9to5Mac",
+  "tweet": "The Apple vs. Epic Games legal saga continues! Epic accuses Apple of 'manufacturing' a pause in App Store commission rate proceedings. Apple denies the claims. #Apple #EpicGames #AppStore",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "epicgames.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/10/12/apple-and-epic-clash-over-document-production-in-latest-app-store-court-filing/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/03/epic-app-store.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Apple and Epic clash over document production in latest App Store court filing",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/10/12/apple-and-epic-clash-over-document-production-in-latest-app-store-court-filing/"
+  ],
+  "cluster_titles": [
+   "Apple and Epic clash over document production in latest App Store court filing"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20261013-0716-1-apple-and-epic-clash-over-document-productio.png",
+   "20261013-0716-1-apple-and-epic-clash-over-document-productio-d1.png"
+  ]
+ }
+]

@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "github stricter rules for code packages",
+  "headline_marked": "[[Three Ivanti Connect Secure Zero-Days]] Chained for Unauthenticated Root, One Still Unpatched",
+  "headline": "Three Ivanti Connect Secure Zero-Days Chained for Unauthenticated Root, One Still Unpatched",
+  "summary": "Attackers exploited three zero-day vulnerabilities in Ivanti Connect Secure VPN appliances to gain root access without authentication. While two flaws have been patched, one critical privilege escalation vulnerability remains unaddressed.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A sophisticated attack chain involving three zero-day vulnerabilities has been used to achieve unauthenticated root access on Ivanti Connect Secure VPN appliances. Security firm Volexity disclosed the exploit, which allows attackers to run commands as root without needing to log in.",
+   "The exploit chain begins with two flaws (CVE-2026-104935) that bypass authentication and allow remote code execution as a low-privileged user. A third, unpatched privilege escalation vulnerability then elevates this access to root.",
+   "Ivanti has released patches for two of the three vulnerabilities, but the critical privilege escalation flaw is still being worked on, with a fix expected in the coming weeks. The company has acknowledged limited exploitation in the wild and urged customers to act immediately.",
+   "The attack was discovered on a fully patched appliance running version 22.8R2.4, indicating that even updated systems are vulnerable. The attacker, tracked as UTA0576, began exploiting the chain ten days before its public disclosure.",
+   "Compounding the risk, Ivanti's own Integrity Checker Tool does not detect this specific exploit chain, as the attacker manipulated library code in memory and restored configuration data. This means a clean scan result does not guarantee system security.",
+   "In the investigated incident, the attackers stole credentials, including LDAP domain credentials, and used them to search Active Directory for passwords and conduct password-spraying attacks. Volexity assessed the motive as likely criminal rather than espionage, though with low confidence.",
+   "Ivanti advises customers to upgrade to a fixed version and regularly run its Integrity Checker Tool. However, no temporary workaround has been provided for the unpatched privilege escalation flaw, and it remains unclear if upgrading removes existing attacker access."
+  ],
+  "caption": "Three zero-day vulnerabilities chained to grant unauthenticated root access on Ivanti Connect Secure VPNs. One critical flaw remains unpatched.\n\nA sophisticated attack chain involving three zero-day vulnerabilities has been used to achieve unauthenticated root access on Ivanti Connect Secure VPN appliances. Security firm Volexity disclosed the exploit, which allows attackers to run commands as root without needing to log in.\n\nThe exploit chain begins with two flaws (CVE-2026-104935) that bypass authentication and allow remote code execution as a low-privileged user. A third, unpatched privilege escalation vulnerability then elevates this access to root.\n\nIvanti has released patches for two of the three vulnerabilities, but the critical privilege escalation flaw is still being worked on, with a fix expected in the coming weeks. The company has acknowledged limited exploitation in the wild and urged customers to act immediately.\n\nThe attack was discovered on a fully patched appliance running version 22.8R2.4, indicating that even updated systems are vulnerable. The attacker, tracked as UTA0576, began exploiting the chain ten days before its public disclosure.\n\nCompounding the risk, Ivanti's own Integrity Checker Tool does not detect this specific exploit chain, as the attacker manipulated library code in memory and restored configuration data. This means a clean scan result does not guarantee system security.\n\nIn the investigated incident, the attackers stole credentials, including LDAP domain credentials, and used them to search Active Directory for passwords and conduct password-spraying attacks. Volexity assessed the motive as likely criminal rather than espionage, though with low confidence.\n\nIvanti advises customers to upgrade to a fixed version and regularly run its Integrity Checker Tool. However, no temporary workaround has been provided for the unpatched privilege escalation flaw, and it remains unclear if upgrading removes existing attacker access.\n\n#cybersecurity #infosec #zeroday #ivanti #vulnerability\n\nSource: DEV",
+  "tweet": "Three Ivanti Connect Secure zero-days chained for unauthenticated root access. One critical flaw is still unpatched, posing a significant risk. #cybersecurity #infosec #zeroday",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ivanti.com",
+  "source": "DEV",
+  "url": "https://dev.to/etairos/three-ivanti-connect-secure-zero-days-chained-for-unauthenticated-root-one-still-unpatched-44eg",
+  "image": "",
+  "orig_title": "Three Ivanti Connect Secure Zero-Days Chained for Unauthenticated Root, One Still Unpatched",
+  "cluster_urls": [
+   "https://dev.to/etairos/three-ivanti-connect-secure-zero-days-chained-for-unauthenticated-root-one-still-unpatched-44eg",
+   "https://dev.to/hacksgr/new-stricter-rules-from-github-for-code-packages-after-security-investigation-1j5"
+  ],
+  "cluster_titles": [
+   "Three Ivanti Connect Secure Zero-Days Chained for Unauthenticated Root, One Still Unpatched",
+   "New stricter rules from GitHub for code packages after security investigation"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261014-0206-0-three-ivanti-connect-secure-zero-days-chaine.png",
+   "20261014-0206-0-three-ivanti-connect-secure-zero-days-chaine-d1.png",
+   "20261014-0206-0-three-ivanti-connect-secure-zero-days-chaine-d2.png",
+   "20261014-0206-0-three-ivanti-connect-secure-zero-days-chaine-d3.png"
+  ]
+ },
+ {
+  "topic": "openai and anthropic call for ai regulation",
+  "headline_marked": "[[AI Giants Urge UK to Regulate]] Them, Rivals Disagree",
+  "headline": "AI Giants Urge UK to Regulate Them, Rivals Disagree",
+  "summary": "OpenAI and Anthropic call for binding AI safety laws, while Google DeepMind and Meta prefer voluntary standards, highlighting a growing divide in the industry.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "OpenAI and Anthropic have urged British lawmakers to introduce binding legislation for AI safety, stating that voluntary commitments are insufficient.",
+   "Anthropic's head of Europe, Liam Booth-Smith, emphasized the need for a statutory framework, a stance echoed by OpenAI's vice president, Tom Duff Gordon, who called for mandatory incident reporting.",
+   "In contrast, Google DeepMind and Meta representatives indicated a preference for focusing on existing standards and regulators, declining to support new legislation.",
+   "This divergence was highlighted during a parliamentary hearing, with select committee chair Liam Byrne noting the significant differences in opinions among major AI firms.",
+   "The hearing also coincided with a warning from MI5 director Ken McCallum about the potential misuse of AI for bioweapons, underscoring the urgency of the regulatory debate.",
+   "Officials from the UK's AI Safety Institute (AISI) admitted that their current testing and oversight capabilities are voluntary and reliant on company cooperation.",
+   "They acknowledged that AISI has no power to prevent companies from releasing models deemed too dangerous, with access to frontier models often facilitated through US counterparts.",
+   "The executives also indicated that British access to their models is largely dependent on US government agreements, suggesting that regulatory control remains primarily with the US."
+  ],
+  "caption": "OpenAI and Anthropic are pushing for mandatory AI safety laws in the UK, but Google and Meta are resisting, revealing a major industry split.\n\nOpenAI and Anthropic have urged British lawmakers to introduce binding legislation for AI safety, stating that voluntary commitments are insufficient.\n\nAnthropic's head of Europe, Liam Booth-Smith, emphasized the need for a statutory framework, a stance echoed by OpenAI's vice president, Tom Duff Gordon, who called for mandatory incident reporting.\n\nIn contrast, Google DeepMind and Meta representatives indicated a preference for focusing on existing standards and regulators, declining to support new legislation.\n\nThis divergence was highlighted during a parliamentary hearing, with select committee chair Liam Byrne noting the significant differences in opinions among major AI firms.\n\nThe hearing also coincided with a warning from MI5 director Ken McCallum about the potential misuse of AI for bioweapons, underscoring the urgency of the regulatory debate.\n\nOfficials from the UK's AI Safety Institute (AISI) admitted that their current testing and oversight capabilities are voluntary and reliant on company cooperation.\n\nThey acknowledged that AISI has no power to prevent companies from releasing models deemed too dangerous, with access to frontier models often facilitated through US counterparts.\n\nThe executives also indicated that British access to their models is largely dependent on US government agreements, suggesting that regulatory control remains primarily with the US.\n\n#AI #AIRegulation #OpenAI #Anthropic #TechPolicy\n\nSource: Wired, Hacker News",
+  "tweet": "OpenAI & Anthropic urge UK lawmakers for binding AI safety laws, while Google & Meta prefer voluntary standards. A clear industry divide is emerging. #AI #AIRegulation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired, Hacker News",
+  "url": "https://www.wired.com/story/openai-and-anthropic-tell-british-lawmakers-regulate-us/",
+  "image": "https://media.wired.com/photos/6ace48fd005dc85af95e36ae/master/pass/101326-Big%20Four%20UK%20parliment.jpg",
+  "orig_title": "OpenAI and Anthropic Tell British Lawmakers: Regulate Us",
+  "cluster_urls": [
+   "https://www.wired.com/story/openai-and-anthropic-tell-british-lawmakers-regulate-us/",
+   "https://www.anthropic.com/engineering/redesigning-source-control"
+  ],
+  "cluster_titles": [
+   "OpenAI and Anthropic Tell British Lawmakers: Regulate Us",
+   "Redesigning source control at Anthropic"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20261014-0206-1-ai-giants-urge-uk-to-regulate-them-rivals-di.png",
+   "20261014-0206-1-ai-giants-urge-uk-to-regulate-them-rivals-di-d1.png",
+   "20261014-0206-1-ai-giants-urge-uk-to-regulate-them-rivals-di-d2.png"
+  ]
+ }
+]

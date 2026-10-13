@@ -1,1 +1,63 @@
-[]
+[
+ {
+  "topic": "ai agent security and capability testing",
+  "headline_marked": "My URL-to-Markdown converter [[bypassed paywalls]] by extracting full text",
+  "headline": "My URL-to-Markdown converter bypassed paywalls by extracting full text",
+  "summary": "A developer's tool designed to clean article content inadvertently fetched paywalled text, raising questions about content gating.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer created a URL-to-Markdown API designed to extract the main content from any web page, stripping ads and navigation to provide clean, LLM-ready text. The tool performed as expected, but a test with a paywalled article revealed it returned the full story.",
+   "The paywalled site served the article body in its initial HTML, with a client-side overlay and metered paywall implemented via CSS and JavaScript. Because the paywall wasn't a server-side authentication check, the developer's server-side scraping tool successfully retrieved the complete article text.",
+   "The developer explored several naive fixes, such as stripping text hidden by CSS or blocking specific domains, but found them ineffective or unsustainable. The core issue was that the tool's function was 'clean extraction,' not 'respecting access controls.'",
+   "Ultimately, the developer decided to keep the converter honest, extracting whatever the server sends. They added a toggle for 'raw vs. readability' modes and documentation clarifying that readability mode may return content intended to be gated client-side. This aims to inform agents using the tool for RAG pipelines.",
+   "The incident highlights a crucial distinction: content extraction and access control are separate features. Publishers are responsible for server-side enforcement of their paywalls, and their architectural decisions dictate what content is sent to the server."
+  ],
+  "caption": "My URL-to-Markdown converter accidentally bypassed paywalls by fetching the full text of a paywalled article.\n\nA developer created a URL-to-Markdown API designed to extract the main content from any web page, stripping ads and navigation to provide clean, LLM-ready text. The tool performed as expected, but a test with a paywalled article revealed it returned the full story.\n\nThe paywalled site served the article body in its initial HTML, with a client-side overlay and metered paywall implemented via CSS and JavaScript. Because the paywall wasn't a server-side authentication check, the developer's server-side scraping tool successfully retrieved the complete article text.\n\nThe developer explored several naive fixes, such as stripping text hidden by CSS or blocking specific domains, but found them ineffective or unsustainable. The core issue was that the tool's function was 'clean extraction,' not 'respecting access controls.'\n\nUltimately, the developer decided to keep the converter honest, extracting whatever the server sends. They added a toggle for 'raw vs. readability' modes and documentation clarifying that readability mode may return content intended to be gated client-side. This aims to inform agents using the tool for RAG pipelines.\n\nThe incident highlights a crucial distinction: content extraction and access control are separate features. Publishers are responsible for server-side enforcement of their paywalls, and their architectural decisions dictate what content is sent to the server.\n\n#developer #opensource #webdev #security #AI\n\nSource: DEV",
+  "tweet": "My URL-to-Markdown converter accidentally bypassed paywalls by fetching the full text of a paywalled article. The tool extracts content served by the server, raising questions about client-side gating. #developer #webdev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/imapphelp/my-url-to-markdown-converter-turned-a-paywalled-article-into-free-text-and-i-had-to-decide-if-18ai",
+  "image": "",
+  "orig_title": "My URL-to-Markdown converter turned a paywalled article into free text — and I had to decide if that was a bug",
+  "cluster_urls": [
+   "https://dev.to/imapphelp/my-url-to-markdown-converter-turned-a-paywalled-article-into-free-text-and-i-had-to-decide-if-18ai",
+   "https://dev.to/mililin_f4f9ec3965934d912/when-the-smart-contract-works-but-the-payment-is-wrong-a-collusion-attack-in-mealforward-part-1-4pj7",
+   "https://dev.to/rel8ble/audit-ssl-certificate-expiry-and-email-providers-for-a-list-of-domains-in-python-23p9",
+   "https://dev.to/georgi_kalchev_85d01f7368/when-an-ai-model-doubts-evidence-that-was-sound-4ge7",
+   "https://dev.to/burrowbox/devin-signs-in-once-and-remembers-build-a-qa-agent-that-tests-behind-your-login-with-the-claude-50i1",
+   "https://dev.to/apexgridtech/cron-scheduled-ollama-autonomous-agent-3338",
+   "https://dev.to/farhatsharifh/modular-monolith-vs-microservices-407k",
+   "https://dev.to/joho_todai/han-guo-noda-shou-yin-xing-4xing-gaaigong-ji-turudelian-sok-qin-hai-xing-yuan-xiang-kesisutemunoren-zheng-bu-bei-gabiao-de-ni-1aeh",
+   "https://dev.to/ayraix/small-models-at-the-edge-when-3b-beats-70b-1fkh",
+   "https://dev.to/crtdrops/the-parked-truck-that-kept-racking-up-kilometers-3jej",
+   "https://dev.to/kawsarlog/i-reviewed-hubspot-breeze-ai-assistant-customer-agent-prospecting-agent-and-intelligence-efg",
+   "https://dev.to/axrisi/danfoss-cyberattack-french-fridge-controls-and-the-reset-warning-774"
+  ],
+  "cluster_titles": [
+   "My URL-to-Markdown converter turned a paywalled article into free text — and I had to decide if that was a bug",
+   "When the Smart Contract Works, but the Payment Is Wrong: A Collusion Attack in MealForward (Part 1)",
+   "Audit SSL certificate expiry and email providers for a list of domains in Python",
+   "When an AI model doubts evidence that was sound",
+   "Devin signs in once and remembers. Build a QA agent that tests behind your login with the Claude Agent SDK",
+   "Cron Scheduled Ollama Autonomous Agent",
+   "Modular Monolith vs Microservices",
+   "韓国の大手銀行4行がAI攻撃ツールで連続侵害、行員向けシステムの認証不備が標的に",
+   "Small Models at the Edge: When 3B Beats 70B",
+   "The parked truck that kept racking up kilometers",
+   "I reviewed HubSpot Breeze AI: Assistant, Customer Agent, Prospecting Agent and Intelligence",
+   "Danfoss cyberattack: French fridge controls and the reset warning"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261013-2106-0-my-url-to-markdown-converter-bypassed-paywal.png",
+   "20261013-2106-0-my-url-to-markdown-converter-bypassed-paywal-d1.png",
+   "20261013-2106-0-my-url-to-markdown-converter-bypassed-paywal-d2.png",
+   "20261013-2106-0-my-url-to-markdown-converter-bypassed-paywal-d3.png"
+  ]
+ }
+]

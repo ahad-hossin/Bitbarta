@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "claude ai code spend limit",
+  "headline_marked": "[[Hard Caps Stop Runaway AI Bills]]: Claude Opus 5.5 can cost $115/hour in a retry loop",
+  "headline": "Hard Caps Stop Runaway AI Bills: Claude Opus 5.5 can cost $115/hour in a retry loop",
+  "summary": "Soft spend alerts are insufficient for AI agents, as they can rack up significant costs like $115/hour before a human can intervene. Hard caps are essential to prevent unexpected bills.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI coding agent stuck in a retry loop on Claude Opus 5.5 can incur costs of about $115 per hour if it uncachedly resends a 150K-token context on every turn. Current soft caps only send a warning email after the money has already been spent.",
+   "The crucial distinction lies between soft alerts, which notify users but allow traffic to continue, and hard caps, which reject requests once a set threshold is crossed. This difference is vital for unattended agents that generate spend at machine speed while alerts go to humans.",
+   "Major providers like OpenAI, Google (Gemini API and Google Cloud), and Vercel AI Gateway offer hard caps. Anthropic also provides them in early access, though documentation on failure behavior can vary. AWS spend limits are currently a limited release.",
+   "Existing hard caps have two main limitations: enforcement lags, meaning costs can still accrue for several minutes or even hours after the limit is hit, and most caps are monthly. A monthly cap can be quickly depleted by a single runaway incident.",
+   "OpenAI's API offers organization and project-level hard limits, returning an HTTP 429 error when exceeded. Google's Gemini API has experimental project spend caps and automatic billing-account tier caps, with potential billing data lags of up to 10 minutes.",
+   "Google Cloud's spend caps apply monthly to one project and one eligible service, pausing new usage of that service once the limit is reached. Vercel AI Gateway implements budgets at team, project, API key, and team member scopes, checking the budget before each request."
+  ],
+  "caption": "AI agents can generate massive bills in hours if left unchecked. A Claude Opus 5.5 agent can cost $115/hour in a retry loop.\n\nAn AI coding agent stuck in a retry loop on Claude Opus 5.5 can incur costs of about $115 per hour if it uncachedly resends a 150K-token context on every turn. Current soft caps only send a warning email after the money has already been spent.\n\nThe crucial distinction lies between soft alerts, which notify users but allow traffic to continue, and hard caps, which reject requests once a set threshold is crossed. This difference is vital for unattended agents that generate spend at machine speed while alerts go to humans.\n\nMajor providers like OpenAI, Google (Gemini API and Google Cloud), and Vercel AI Gateway offer hard caps. Anthropic also provides them in early access, though documentation on failure behavior can vary. AWS spend limits are currently a limited release.\n\nExisting hard caps have two main limitations: enforcement lags, meaning costs can still accrue for several minutes or even hours after the limit is hit, and most caps are monthly. A monthly cap can be quickly depleted by a single runaway incident.\n\nOpenAI's API offers organization and project-level hard limits, returning an HTTP 429 error when exceeded. Google's Gemini API has experimental project spend caps and automatic billing-account tier caps, with potential billing data lags of up to 10 minutes.\n\nGoogle Cloud's spend caps apply monthly to one project and one eligible service, pausing new usage of that service once the limit is reached. Vercel AI Gateway implements budgets at team, project, API key, and team member scopes, checking the budget before each request.\n\n#AI #Developer #CloudComputing #APIBilling #TechNews #Claude\n\nSource: DEV",
+  "tweet": "Runaway AI agent bills are a real threat. A Claude Opus 5.5 agent can cost $115/hour in a retry loop. Learn which providers offer hard caps to prevent unexpected charges. #AI #Developer #APIBilling",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/akaranjkar08/claude-code-spend-limit-hard-caps-that-stop-a-runaway-bill-1ihi",
+  "image": "",
+  "orig_title": "Claude Code Spend Limit: Hard Caps That Stop a Runaway Bill",
+  "cluster_urls": [
+   "https://dev.to/akaranjkar08/claude-code-spend-limit-hard-caps-that-stop-a-runaway-bill-1ihi"
+  ],
+  "cluster_titles": [
+   "Claude Code Spend Limit: Hard Caps That Stop a Runaway Bill"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261013-1106-0-hard-caps-stop-runaway-ai-bills-claude-opus-.png",
+   "20261013-1106-0-hard-caps-stop-runaway-ai-bills-claude-opus--d1.png",
+   "20261013-1106-0-hard-caps-stop-runaway-ai-bills-claude-opus--d2.png"
+  ]
+ }
+]

@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "ai breakthrough: small language model pretrained on inference-only npu",
+  "headline_marked": "[[Vidraft pretrains LLM from scratch on inference-only NPU]], defying industry belief",
+  "headline": "Vidraft pretrains LLM from scratch on inference-only NPU, defying industry belief",
+  "summary": "Vidraft achieved a world-first by pretraining a small language model on an NPU designed only for inference, showing a 0.99 loss correlation with GPU-trained models. This breakthrough opens new possibilities for on-device AI training.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Vidraft has achieved a world-first by successfully pretraining a small language model (VKORE-46M-NPU) from scratch using only inference-only NPUs. This directly challenges the long-held industry belief that such NPUs cannot perform backpropagation and thus cannot be used for training.",
+   "The company demonstrated the validity of their method by comparing the NPU-trained model with an identical model trained on GPUs under the same conditions. The loss trajectory correlation coefficient between the two reached 0.99, providing strong evidence that backpropagation and optimizer updates functioned numerically almost identically to the GPU reference.",
+   "Inference-only NPUs are typically designed without the necessary pathways for backpropagation, optimizer states, and multi-chip synchronization required for training. Vidraft developed a method to directly perform backpropagation on these chips, enabling full pretraining without pre-existing weights.",
+   "This achievement was made on a first-generation inference-only NPU (32 chips), not the latest hardware. The success with older hardware suggests significant potential for performance improvements with next-generation NPUs.",
+   "Vidraft is integrating this technology into a dedicated NPU software layer called 'VKORE', aiming to establish it as an \"NPU-equivalent of CUDA.\" VKORE seeks to provide a common acceleration layer, reducing reliance on specific GPU hardware and its software ecosystem.",
+   "The ability to use cheaper, lower-power NPUs for both inference and training offers significant advantages. Companies can train their own models in-house without waiting for expensive GPU servers, reducing power consumption and data center space, and keeping sensitive data on-premises.",
+   "The publicly released VKORE-46M-NPU model, trained on public datasets, generates short English stories and is available on Hugging Face. The core learning technique is proprietary and patent-pending, with specific methods to be disclosed in a future paper."
+  ],
+  "caption": "A long-held belief in AI hardware has been shattered. Vidraft successfully pretrained an LLM from scratch on inference-only NPUs.\n\nVidraft has achieved a world-first by successfully pretraining a small language model (VKORE-46M-NPU) from scratch using only inference-only NPUs. This directly challenges the long-held industry belief that such NPUs cannot perform backpropagation and thus cannot be used for training.\n\nThe company demonstrated the validity of their method by comparing the NPU-trained model with an identical model trained on GPUs under the same conditions. The loss trajectory correlation coefficient between the two reached 0.99, providing strong evidence that backpropagation and optimizer updates functioned numerically almost identically to the GPU reference.\n\nInference-only NPUs are typically designed without the necessary pathways for backpropagation, optimizer states, and multi-chip synchronization required for training. Vidraft developed a method to directly perform backpropagation on these chips, enabling full pretraining without pre-existing weights.\n\nThis achievement was made on a first-generation inference-only NPU (32 chips), not the latest hardware. The success with older hardware suggests significant potential for performance improvements with next-generation NPUs.\n\nVidraft is integrating this technology into a dedicated NPU software layer called 'VKORE', aiming to establish it as an \"NPU-equivalent of CUDA.\" VKORE seeks to provide a common acceleration layer, reducing reliance on specific GPU hardware and its software ecosystem.\n\nThe ability to use cheaper, lower-power NPUs for both inference and training offers significant advantages. Companies can train their own models in-house without waiting for expensive GPU servers, reducing power consumption and data center space, and keeping sensitive data on-premises.\n\n#AI #NPU #MachineLearning #DeepLearning #TechBreakthrough #Vidraft\n\nSource: DEV",
+  "tweet": "Vidraft just shattered a major AI hardware barrier! They successfully pretrained an LLM from scratch on inference-only NPUs, achieving a 0.99 loss correlation with GPU training. This could redefine on-device AI. #AI #NPU #MachineLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "vidraft.com",
+  "source": "DEV",
+  "url": "https://dev.to/vidraft_lab/curon-jeonyong-npumaneuro-mitbadagbuteo-sajeonhagseub-vkore-46m-npu-gonggae-201j",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1fasluj2rz7s3liskk3t.jpg",
+  "orig_title": "추론 전용 NPU만으로 밑바닥부터 사전학습: VKORE-46M-NPU 공개",
+  "cluster_urls": [
+   "https://dev.to/vidraft_lab/curon-jeonyong-npumaneuro-mitbadagbuteo-sajeonhagseub-vkore-46m-npu-gonggae-201j",
+   "https://dev.to/ai_openfree_b23025ef075cf/pretraining-from-scratch-on-an-inference-only-npu-vkore-46m-npu-4f21"
+  ],
+  "cluster_titles": [
+   "추론 전용 NPU만으로 밑바닥부터 사전학습: VKORE-46M-NPU 공개",
+   "Pretraining From Scratch on an Inference-Only NPU: VKORE-46M-NPU"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261014-1207-0-vidraft-pretrains-llm-from-scratch-on-infere.png",
+   "20261014-1207-0-vidraft-pretrains-llm-from-scratch-on-infere-d1.png",
+   "20261014-1207-0-vidraft-pretrains-llm-from-scratch-on-infere-d2.png",
+   "20261014-1207-0-vidraft-pretrains-llm-from-scratch-on-infere-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "ai coding agent empowers non-coder to build portfolio",
+  "headline_marked": "[[Digital marketer builds portfolio website]] with AI coding agent, no code written",
+  "headline": "Digital marketer builds portfolio website with AI coding agent, no code written",
+  "summary": "A digital marketer with no prior coding experience successfully built a complete portfolio website using AI coding agents like OpenCode and Claude, managing the process without writing a single line of code.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Rachit, a digital marketer from India, has successfully built a full portfolio website without writing a single line of code. He leveraged AI tools like OpenCode for building and Claude for planning, demonstrating a new approach to web development for non-programmers. Rachit uses around 25 AI tools in his daily workflow.",
+   "His process involved using Claude to break down his vision into small, clear tasks, while OpenCode executed the coding instructions. Rachit's role was to define what to build, review the output, and provide feedback, effectively acting as a project manager for the AI. This allowed him to achieve his desired design and functionality.",
+   "He quickly learned the importance of precise instructions, establishing rules like one small task at a time, individual commits for changes, and strict review before pushing live. These guidelines helped him avoid vague outputs and maintain control over the development process. The agent was instructed to report its actions and wait for approval.",
+   "Rachit faced a major setback in October 2026 when his Google account was disabled, forcing him to re-host projects and rebuild his GitHub. Despite this, he successfully recreated his portfolio, which is now live and showcases his projects. He emphasizes that he is still learning and not a developer, but a marketer finding new ways to build."
+  ],
+  "caption": "A digital marketer with zero coding experience built a full portfolio website. He used AI agents to write every line of code.\n\nRachit, a digital marketer from India, has successfully built a full portfolio website without writing a single line of code. He leveraged AI tools like OpenCode for building and Claude for planning, demonstrating a new approach to web development for non-programmers. Rachit uses around 25 AI tools in his daily workflow.\n\nHis process involved using Claude to break down his vision into small, clear tasks, while OpenCode executed the coding instructions. Rachit's role was to define what to build, review the output, and provide feedback, effectively acting as a project manager for the AI. This allowed him to achieve his desired design and functionality.\n\nHe quickly learned the importance of precise instructions, establishing rules like one small task at a time, individual commits for changes, and strict review before pushing live. These guidelines helped him avoid vague outputs and maintain control over the development process. The agent was instructed to report its actions and wait for approval.\n\nRachit faced a major setback in October 2026 when his Google account was disabled, forcing him to re-host projects and rebuild his GitHub. Despite this, he successfully recreated his portfolio, which is now live and showcases his projects. He emphasizes that he is still learning and not a developer, but a marketer finding new ways to build.\n\n#AI #NoCode #WebDevelopment #DigitalMarketing #Tech #AItools\n\nSource: DEV",
+  "tweet": "A digital marketer with zero coding experience built a full portfolio website using AI agents. He managed the project, reviewed code, but wrote none himself. See how AI is changing development! #AI #NoCode #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rachitsharma08/i-dont-code-i-built-my-portfolio-with-an-ai-coding-agent-877",
+  "image": "",
+  "orig_title": "I Don’t Code. I Built My Portfolio With an AI Coding Agent",
+  "cluster_urls": [
+   "https://dev.to/rachitsharma08/i-dont-code-i-built-my-portfolio-with-an-ai-coding-agent-877"
+  ],
+  "cluster_titles": [
+   "I Don’t Code. I Built My Portfolio With an AI Coding Agent"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261014-1329-0-digital-marketer-builds-portfolio-website-wi.png",
+   "20261014-1329-0-digital-marketer-builds-portfolio-website-wi-d1.png",
+   "20261014-1329-0-digital-marketer-builds-portfolio-website-wi-d2.png"
+  ]
+ },
+ {
+  "topic": "aosp source release delays impact developers",
+  "headline_marked": "[[Developers Disassemble Libraries to Report Bugs]] in Android 17 due to late AOSP source",
+  "headline": "Developers Disassemble Libraries to Report Bugs in Android 17 due to late AOSP source",
+  "summary": "Android 17 builds from September 2026 contain a critical bug in wcscspn() and wcspbrk() that breaks wide string scanning for non-ASCII characters. Developers are resorting to disassembling libraries to identify and report issues due to delayed AOSP source code",
+  "category": "ANDROID",
+  "template": "terminal",
+  "details": [
+   "Android 17 builds from September 2026 have a critical bug affecting wcscspn() and wcspbrk(). These functions incorrectly stop at the first non-ASCII character (like emojis or CJK) when scanning wide strings, even if it's not in the reject set. This breaks applications that rely on these functions for parsing, such as lexers or file system operations.",
+   "The bug manifests when the reject set contains two or more ASCII characters, causing the functions to misidentify any character U+0100 or greater as a match. This means a newline character might be ignored if an emoji appears earlier in the string, leading to parsing errors.",
+   "The regression was introduced between the June and September 2026 Android 17 releases. Crucially, the public android17-release source code, available from June, builds correctly, indicating the problematic changes are not yet publicly accessible to developers.",
+   "This lack of public source for the affected builds forces developers to disassemble proprietary libraries to understand and report bugs. One project, Visual Pinball on Android, had to implement a workaround by replacing the buggy function calls with custom loops to restore functionality.",
+   "The situation highlights growing concerns among developers about Google's management of the AOSP project. Recent decisions to delay or close AOSP source code for later builds are reportedly leading to a proliferation of unaddressed issues and a lack of transparency.",
+   "Google has acknowledged the specific bug, with plans to add comprehensive tests and backport a fix. However, the broader issue of AOSP source code availability and project management remains a point of contention within the developer community."
+  ],
+  "caption": "Android developers are disassembling libraries to find critical bugs in Android 17 builds. A major bug in wide string functions breaks non-ASCII character handling, impacting many apps.\n\nAndroid 17 builds from September 2026 have a critical bug affecting wcscspn() and wcspbrk(). These functions incorrectly stop at the first non-ASCII character (like emojis or CJK) when scanning wide strings, even if it's not in the reject set. This breaks applications that rely on these functions for parsing, such as lexers or file system operations.\n\nThe bug manifests when the reject set contains two or more ASCII characters, causing the functions to misidentify any character U+0100 or greater as a match. This means a newline character might be ignored if an emoji appears earlier in the string, leading to parsing errors.\n\nThe regression was introduced between the June and September 2026 Android 17 releases. Crucially, the public android17-release source code, available from June, builds correctly, indicating the problematic changes are not yet publicly accessible to developers.\n\nThis lack of public source for the affected builds forces developers to disassemble proprietary libraries to understand and report bugs. One project, Visual Pinball on Android, had to implement a workaround by replacing the buggy function calls with custom loops to restore functionality.\n\nThe situation highlights growing concerns among developers about Google's management of the AOSP project. Recent decisions to delay or close AOSP source code for later builds are reportedly leading to a proliferation of unaddressed issues and a lack of transparency.\n\nGoogle has acknowledged the specific bug, with plans to add comprehensive tests and backport a fix. However, the broader issue of AOSP source code availability and project management remains a point of contention within the developer community.\n\n#Android #AOSP #Developer #SoftwareBug #TechNews #Programming\n\nSource: Hacker News",
+  "tweet": "Android developers are resorting to disassembling libraries to report critical bugs in Android 17. A bug in wcscspn() and wcspbrk() breaks non-ASCII character handling, impacting apps using wide strings. #AndroidDev #AOSP #SoftwareBug",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "android.com",
+  "source": "Hacker News",
+  "url": "https://github.com/android/ndk/issues/2260",
+  "image": "",
+  "orig_title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
+  "cluster_urls": [
+   "https://github.com/android/ndk/issues/2260"
+  ],
+  "cluster_titles": [
+   "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261014-1329-1-developers-disassemble-libraries-to-report-b.png",
+   "20261014-1329-1-developers-disassemble-libraries-to-report-b-d1.png",
+   "20261014-1329-1-developers-disassemble-libraries-to-report-b-d2.png",
+   "20261014-1329-1-developers-disassemble-libraries-to-report-b-d3.png"
+  ]
+ }
+]

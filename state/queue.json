@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai agents security bugs nextjs supabase stripe",
+  "headline_marked": "[[7 security bugs AI agents write]] in Next.js + Supabase + Stripe apps, and how to stop them.",
+  "headline": "7 security bugs AI agents write in Next.js + Supabase + Stripe apps, and how to stop them.",
+  "summary": "AI coding agents are good at building apps but bad at securing them. This article details 7 common vulnerabilities in Next.js, Supabase, and Stripe integrations, alongside rules to prevent them.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "AI agents excel at building Next.js + Supabase + Stripe applications quickly, but often introduce critical security flaws that pass basic click-through tests. These bugs are predictable shortcuts taken when the agent's primary goal is simply to make the code function.",
+   "Many issues stem from incorrect Row Level Security (RLS) policies in Supabase, where agents might write `(true)` or bypass RLS entirely. Proper RLS should scope data ownership to the signed-in user, with no write policies for tables only the server should access.",
+   "A common mistake is misusing the admin client. Agents often swap to a secret/service-role key to bypass RLS when a query returns no rows, which completely compromises security. Admin clients must be used exclusively in webhook handlers or background jobs, never in code that runs on behalf of a user.",
+   "Server-side authorization often fails when agents use `supabase.auth.getSession()`, which reads cookies without re-validating them with Supabase Auth. Server-side code must use `getUser()` or `getClaims()` to properly check the user before performing any critical operations.",
+   "Webhook signature verification is frequently broken because `request.json()` re-serializes the payload, causing the signature check to fail. Agents often \"fix\" this by deleting the check; the correct approach is to read `request.text()` and verify the raw signature.",
+   "Stripe retries deliveries, meaning webhooks can send events more than once. Webhook handlers must be idempotent, recording each event ID with a primary key and using upsert for state to prevent processing the same event multiple times. Returning a 500 error on a database issue also tells Stripe to retry.",
+   "Paid access logic is often flawed, with agents deriving access from URL parameters like `/account?checkout=success`. Access to paid features must be derived only from webhook-written subscription statuses. User IDs and prices should come from server configuration or linked customer references, never directly from the client request body.",
+   "Magic-link and OAuth callbacks often accept a `?next=` parameter, which agents pass directly to `redirect()`, creating an open redirect vulnerability. Any redirect target from user input must be validated to allow only same-origin relative paths, preventing phishing attacks.",
+   "These vulnerabilities are not exotic but predictable shortcuts AI agents take. Implementing clear, explicit rules for AI agents, such as in `AGENTS.md` or `.cursor/rules`, can prevent most of these security bugs before they are ever written into production code."
+  ],
+  "caption": "AI coding agents are great at building apps, but they often introduce 7 critical security bugs in Next.js, Supabase, and Stripe integrations.\n\nAI agents excel at building Next.js + Supabase + Stripe applications quickly, but often introduce critical security flaws that pass basic click-through tests. These bugs are predictable shortcuts taken when the agent's primary goal is simply to make the code function.\n\nMany issues stem from incorrect Row Level Security (RLS) policies in Supabase, where agents might write `(true)` or bypass RLS entirely. Proper RLS should scope data ownership to the signed-in user, with no write policies for tables only the server should access.\n\nA common mistake is misusing the admin client. Agents often swap to a secret/service-role key to bypass RLS when a query returns no rows, which completely compromises security. Admin clients must be used exclusively in webhook handlers or background jobs, never in code that runs on behalf of a user.\n\nServer-side authorization often fails when agents use `supabase.auth.getSession()`, which reads cookies without re-validating them with Supabase Auth. Server-side code must use `getUser()` or `getClaims()` to properly check the user before performing any critical operations.\n\nWebhook signature verification is frequently broken because `request.json()` re-serializes the payload, causing the signature check to fail. Agents often \"fix\" this by deleting the check; the correct approach is to read `request.text()` and verify the raw signature.\n\nStripe retries deliveries, meaning webhooks can send events more than once. Webhook handlers must be idempotent, recording each event ID with a primary key and using upsert for state to prevent processing the same event multiple times. Returning a 500 error on a database issue also tells Stripe to retry.\n\n#AI #Security #NextJS #Supabase #Stripe #WebDev\n\nSource: DEV",
+  "tweet": "AI coding agents are great at building apps, but they often introduce 7 critical security bugs in Next.js, Supabase, and Stripe integrations. Learn how to identify and prevent these common vulnerabilities. #AI #Security #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/edtrackai/7-security-bugs-ai-agents-write-in-nextjs-supabase-stripe-apps-and-the-rules-that-stop-them-3o64",
+  "image": "",
+  "orig_title": "7 security bugs AI agents write in Next.js + Supabase + Stripe apps (and the rules that stop them)",
+  "cluster_urls": [
+   "https://dev.to/edtrackai/7-security-bugs-ai-agents-write-in-nextjs-supabase-stripe-apps-and-the-rules-that-stop-them-3o64"
+  ],
+  "cluster_titles": [
+   "7 security bugs AI agents write in Next.js + Supabase + Stripe apps (and the rules that stop them)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261014-0807-0-7-security-bugs-ai-agents-write-in-next-js-s.png",
+   "20261014-0807-0-7-security-bugs-ai-agents-write-in-next-js-s-d1.png",
+   "20261014-0807-0-7-security-bugs-ai-agents-write-in-next-js-s-d2.png",
+   "20261014-0807-0-7-security-bugs-ai-agents-write-in-next-js-s-d3.png",
+   "20261014-0807-0-7-security-bugs-ai-agents-write-in-next-js-s-d4.png",
+   "20261014-0807-0-7-security-bugs-ai-agents-write-in-next-js-s-d5.png"
+  ]
+ },
+ {
+  "topic": "cerebras ceo personal ai assistant home",
+  "headline_marked": "Cerebras CEO: [[Personal AI assistants will be home appliances]] soon",
+  "headline": "Cerebras CEO: Personal AI assistants will be home appliances soon",
+  "summary": "Cerebras CEO Andrew Feldman predicts a future where every home has a personal AI appliance, capable of managing tasks, accessing credit cards, and making purchases, operating both locally and via the cloud.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Cerebras Systems CEO Andrew Feldman predicts that personal AI assistants will soon become common home appliances. Speaking at TechCrunch Disrupt 2026, he stated this future is \"not very far away.\"",
+   "Feldman cited advancements in consumer AI agents, such as Meta's Muse and the startup Instinct, as evidence of AI's growing integration into everyday user experiences. He believes these trends pave the way for more sophisticated home-based AI.",
+   "These future home AI assistants will operate locally, with some tasks offloaded to the cloud, similar to smartphones. They are envisioned to deeply understand users, maintain a security perimeter, and even handle purchases.",
+   "Feldman, whose company builds AI chips, also uses a collection of AI agents himself for calendar management and information retrieval. He focuses on building the infrastructure that enables others' AI innovations."
+  ],
+  "caption": "Imagine an AI appliance in your home that knows you well enough to manage your calendar, pull up info, and even make purchases. Cerebras CEO Andrew Feldman says it's coming soon.\n\nCerebras Systems CEO Andrew Feldman predicts that personal AI assistants will soon become common home appliances. Speaking at TechCrunch Disrupt 2026, he stated this future is \"not very far away.\"\n\nFeldman cited advancements in consumer AI agents, such as Meta's Muse and the startup Instinct, as evidence of AI's growing integration into everyday user experiences. He believes these trends pave the way for more sophisticated home-based AI.\n\nThese future home AI assistants will operate locally, with some tasks offloaded to the cloud, similar to smartphones. They are envisioned to deeply understand users, maintain a security perimeter, and even handle purchases.\n\nFeldman, whose company builds AI chips, also uses a collection of AI agents himself for calendar management and information retrieval. He focuses on building the infrastructure that enables others' AI innovations.\n\n#AI #FutureTech #PersonalAI #SmartHome #Cerebras #TechCrunch\n\nSource: TechCrunch",
+  "tweet": "Cerebras CEO Andrew Feldman predicts personal AI assistants will soon be home appliances. These local AIs will manage tasks, access credit cards, and make purchases, operating with a security perimeter. #AI #FutureTech #Cerebras",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "cerebras.net",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/",
+  "image": "",
+  "orig_title": "Cerebras CEO says we’re nearing a future where everyone has a personal AI assistant at home",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/10/13/cerebras-ceo-says-were-nearing-a-future-where-everyone-has-a-personal-ai-assistant-at-home/"
+  ],
+  "cluster_titles": [
+   "Cerebras CEO says we’re nearing a future where everyone has a personal AI assistant at home"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20261014-0807-1-cerebras-ceo-personal-ai-assistants-will-be-.png",
+   "20261014-0807-1-cerebras-ceo-personal-ai-assistants-will-be--d1.png",
+   "20261014-0807-1-cerebras-ceo-personal-ai-assistants-will-be--d2.png"
+  ]
+ }
+]

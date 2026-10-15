@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "ai code trust and governance",
+  "headline_marked": "[[Real AI governance is runtime systems architecture]], not ethical checklists, to prevent catastrophic failures",
+  "headline": "Real AI governance is runtime systems architecture, not ethical checklists, to prevent catastrophic failures",
+  "summary": "Deploying non-deterministic AI into deterministic business workflows without proper architectural safeguards leads to catastrophic failures like hallucinated promotions or corrupted database writes.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The industry faces a dangerous architectural phase: deploying non-deterministic AI models directly into deterministic business workflows. Relying on passive ethical checklists for governance has led to \"model drift\" and \"unpredictable LLM behavior\" causing significant issues.",
+   "This problem, dubbed \"The Scapegoat Trap,\" treats algorithms as autonomous actors rather than unverified, probabilistic dependencies. True AI governance requires runtime systems architecture, not just abstract committee reviews or responsible AI principles.",
+   "Many organizations confuse data governance with AI governance, creating architectural blind spots. While data governance ensures data hygiene and access, it offers zero runtime protection against algorithmic failure in downstream system mutations.",
+   "To deploy autonomous models and generative agents without accumulating catastrophic off-balance-sheet technical debt, software architectures must enforce four hard invariants. Architects must calculate the systemic blast radius of generative pipelines across operational vectors before promotion to production.",
+   "A critical architectural rule: never grant an LLM or autonomous agent direct write authority to primary relational state. All agent mutations must pass through a deterministic staging buffer, enforced by optimistic locking, aborting transactions on concurrent mutations.",
+   "Production AI governance demands an explicit operational contract to clarify responsibilities when AI features break. This prevents blame-shifting between foundation model vendors, engineers, and leadership.",
+   "Feature capital should be gated behind epistemic rigor, requiring teams to prove a feature's requirement satisfies an Evidence Score of at least 70%. Proposals relying predominantly on stated opinions (Level 1/2) are mathematically disqualified from receiving sprint capital.",
+   "Building resilient enterprise software in the algorithmic era means abandoning the illusion that probabilistic intelligence can govern itself. Machine learning models provide raw computational leverage; deterministic human architecture provides leadership, boundaries, and survival."
+  ],
+  "caption": "AI models are causing \"The Scapegoat Trap\" in enterprise software. Real AI governance requires runtime systems architecture, not just ethical checklists.\n\nThe industry faces a dangerous architectural phase: deploying non-deterministic AI models directly into deterministic business workflows. Relying on passive ethical checklists for governance has led to \"model drift\" and \"unpredictable LLM behavior\" causing significant issues.\n\nThis problem, dubbed \"The Scapegoat Trap,\" treats algorithms as autonomous actors rather than unverified, probabilistic dependencies. True AI governance requires runtime systems architecture, not just abstract committee reviews or responsible AI principles.\n\nMany organizations confuse data governance with AI governance, creating architectural blind spots. While data governance ensures data hygiene and access, it offers zero runtime protection against algorithmic failure in downstream system mutations.\n\nTo deploy autonomous models and generative agents without accumulating catastrophic off-balance-sheet technical debt, software architectures must enforce four hard invariants. Architects must calculate the systemic blast radius of generative pipelines across operational vectors before promotion to production.\n\nA critical architectural rule: never grant an LLM or autonomous agent direct write authority to primary relational state. All agent mutations must pass through a deterministic staging buffer, enforced by optimistic locking, aborting transactions on concurrent mutations.\n\nProduction AI governance demands an explicit operational contract to clarify responsibilities when AI features break. This prevents blame-shifting between foundation model vendors, engineers, and leadership.\n\nFeature capital should be gated behind epistemic rigor, requiring teams to prove a feature's requirement satisfies an Evidence Score of at least 70%. Proposals relying predominantly on stated opinions (Level 1/2) are mathematically disqualified from receiving sprint capital.\n\n#AIGovernance #EnterpriseAI #SoftwareArchitecture #TechNews #AI #DevOps\n\nSource: DEV",
+  "tweet": "AI models in production are creating a \"Scapegoat Trap\" with catastrophic failures. The solution isn't just ethical checklists, but robust runtime systems architecture. Learn how to implement real AI governance. #AIGovernance #EnterpriseAI #SoftwareArchitecture",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/tarikmostafa/production-ai-governance-moving-from-ethical-checklists-to-architectural-circuit-breakers-1f1l",
+  "image": "",
+  "orig_title": "Production AI Governance: Moving from Ethical Checklists to Architectural Circuit Breakers",
+  "cluster_urls": [
+   "https://dev.to/tarikmostafa/production-ai-governance-moving-from-ethical-checklists-to-architectural-circuit-breakers-1f1l",
+   "https://dev.to/rausal_bahtiarfadhli_d94/enterprise-ai-agents-need-governed-execution-not-bigger-prompts-o82",
+   "https://dev.to/tamizuddin/architecting-for-decay-building-self-maintaining-systems-in-the-age-of-ai-generated-code-2722",
+   "https://dev.to/jhonesgoncalves/ai-can-write-code-but-can-you-trust-it-meet-maverick-ai-38p8"
+  ],
+  "cluster_titles": [
+   "Production AI Governance: Moving from Ethical Checklists to Architectural Circuit Breakers",
+   "Enterprise AI Agents Need Governed Execution, Not Bigger Prompts",
+   "Architecting for Decay: Building Self-Maintaining Systems in the Age of AI-Generated Code",
+   "AI Can Write Code. But Can You Trust It? Meet Maverick AI 🚀"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261015-0607-0-real-ai-governance-is-runtime-systems-archit.png",
+   "20261015-0607-0-real-ai-governance-is-runtime-systems-archit-d1.png",
+   "20261015-0607-0-real-ai-governance-is-runtime-systems-archit-d2.png",
+   "20261015-0607-0-real-ai-governance-is-runtime-systems-archit-d3.png"
+  ]
+ },
+ {
+  "topic": "mckinsey uses ai client for job interviews",
+  "headline_marked": "[[McKinsey uses AI client simulations]] for entry-level job interviews",
+  "headline": "McKinsey uses AI client simulations for entry-level job interviews",
+  "summary": "Consulting firm McKinsey & Company is introducing a 10-minute AI client simulation for some entry-level business analyst candidates, aiming to reflect 80% of real-world scenarios.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Consulting firm McKinsey & Company will require some entry-level candidates to have a 10-minute conversation with an AI simulation of a client during their interview process. This new tool is being tested for undergrads seeking business-analyst jobs in some North American offices this fall, potentially involving hundreds of applicants.",
+   "The AI simulation is designed to reflect about 80% of the scenarios McKinsey consultants typically encounter in their day-to-day work. It is not intended to mimic an 'unhinged client,' ensuring a realistic and professional interaction.",
+   "Crucially, the AI itself will not score the candidates. Instead, human assessors will be present in the room to evaluate how well applicants handle the simulated situations and interact with the AI client.",
+   "McKinsey's move highlights a growing trend, as other companies are also developing and implementing AI avatars and simulations as part of their job interview processes to streamline and standardize candidate assessment."
+  ],
+  "caption": "McKinsey is integrating AI into its hiring process, using simulated clients for entry-level interviews.\n\nConsulting firm McKinsey & Company will require some entry-level candidates to have a 10-minute conversation with an AI simulation of a client during their interview process. This new tool is being tested for undergrads seeking business-analyst jobs in some North American offices this fall, potentially involving hundreds of applicants.\n\nThe AI simulation is designed to reflect about 80% of the scenarios McKinsey consultants typically encounter in their day-to-day work. It is not intended to mimic an 'unhinged client,' ensuring a realistic and professional interaction.\n\nCrucially, the AI itself will not score the candidates. Instead, human assessors will be present in the room to evaluate how well applicants handle the simulated situations and interact with the AI client.\n\nMcKinsey's move highlights a growing trend, as other companies are also developing and implementing AI avatars and simulations as part of their job interview processes to streamline and standardize candidate assessment.\n\n#McKinsey #AI #Recruitment #JobInterview #TechNews #FutureOfWork\n\nSource: The Verge",
+  "tweet": "McKinsey is testing AI client simulations for entry-level job interviews. Candidates will have a 10-minute conversation with an AI reflecting 80% of real scenarios, assessed by human interviewers. #McKinsey #AI #Recruitment",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "mckinsey.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/news/1011654/mckinsey-ai-client-interview",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/STK414_AI_CVIRGINIA_2_C-2.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "McKinsey is making job applicants spar with a fake AI client",
+  "cluster_urls": [
+   "https://www.theverge.com/news/1011654/mckinsey-ai-client-interview"
+  ],
+  "cluster_titles": [
+   "McKinsey is making job applicants spar with a fake AI client"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261015-0607-1-mckinsey-uses-ai-client-simulations-for-entr.png",
+   "20261015-0607-1-mckinsey-uses-ai-client-simulations-for-entr-d1.png",
+   "20261015-0607-1-mckinsey-uses-ai-client-simulations-for-entr-d2.png"
+  ]
+ }
+]

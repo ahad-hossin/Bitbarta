@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai reverse engineer .net app rea github",
+  "headline_marked": "[[AI rebuilds .NET app byte-for-byte]] from machine code in 18 minutes with REA",
+  "headline": "AI rebuilds .NET app byte-for-byte from machine code in 18 minutes with REA",
+  "summary": "A trending GitHub repo, REA, claims to help AI reverse-engineer apps. Tests show an AI agent can rebuild a C# app byte-for-byte from obfuscated machine code in under 20 minutes, even without REA.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "REA, a GitHub repo with 183,000 stars in a week, claims to enable AI agents to reverse-engineer apps from raw machine code. A test was conducted on a small C# app, compiled in three different ways, to verify REA's capabilities and compare it with AI-only methods.",
+   "REA functions as a coordinator, running analysis tools and providing findings to an AI agent, rather than decompiling itself. The AI then interprets the pseudocode and reconstructs clean, readable source code from the raw output.",
+   "When tested with a standard .NET DLL, REA generated 114KB of JSON containing method signatures and string literals, including a baked-in upload key. An AI agent, given only this JSON, rebuilt the entire app in 85 seconds, producing byte-for-byte identical output to the original.",
+   "Without REA, the same AI agent, using the free ILSpy decompiler, reconstructed the C# code in just 41 seconds. This suggests that for standard .NET assemblies, AI can achieve similar results even without REA's specific coordination.",
+   "An obfuscated version of the app, using Obfuscar, had classes and methods renamed and strings encrypted. REA's output showed an empty string list, but the AI predicted the key was still in plain text metadata, which was confirmed upon inspection.",
+   "In a control test, the AI agent without REA decompiled the obfuscated DLL in 56 seconds, finding the encryption and decrypting all strings, including the key, using Python scripts. This again demonstrated AI's standalone capability.",
+   "The most challenging test involved a Native AOT build, producing a 1.1MB x64 machine code EXE with no CIL bytecode. REA used Ghidra to analyze the EXE, identifying 3,627 functions, mostly .NET runtime.",
+   "The AI, guided by REA's output, searched for strings, followed code paths, and decompiled functions individually. After 18 minutes, it successfully rebuilt the entire app, including weights, dithering patterns, and the key, with byte-for-byte identical output.",
+   "Remarkably, without REA or Ghidra, the AI agent wrote its own disassembler scripts in Python. In under 4 minutes, it recovered the same constants, the key, and even original class names from the machine code EXE.",
+   "While REA provides a powerful coordination layer, the tests indicate that modern AI agents possess significant inherent capabilities for reverse-engineering. They can often achieve similar, or even faster, results by leveraging existing tools or generating their own analysis scripts."
+  ],
+  "caption": "AI just rebuilt a C# app byte-for-byte from raw machine code. It even recovered the secret key from an obfuscated binary.\n\nREA, a GitHub repo with 183,000 stars in a week, claims to enable AI agents to reverse-engineer apps from raw machine code. A test was conducted on a small C# app, compiled in three different ways, to verify REA's capabilities and compare it with AI-only methods.\n\nREA functions as a coordinator, running analysis tools and providing findings to an AI agent, rather than decompiling itself. The AI then interprets the pseudocode and reconstructs clean, readable source code from the raw output.\n\nWhen tested with a standard .NET DLL, REA generated 114KB of JSON containing method signatures and string literals, including a baked-in upload key. An AI agent, given only this JSON, rebuilt the entire app in 85 seconds, producing byte-for-byte identical output to the original.\n\nWithout REA, the same AI agent, using the free ILSpy decompiler, reconstructed the C# code in just 41 seconds. This suggests that for standard .NET assemblies, AI can achieve similar results even without REA's specific coordination.\n\nAn obfuscated version of the app, using Obfuscar, had classes and methods renamed and strings encrypted. REA's output showed an empty string list, but the AI predicted the key was still in plain text metadata, which was confirmed upon inspection.\n\nIn a control test, the AI agent without REA decompiled the obfuscated DLL in 56 seconds, finding the encryption and decrypting all strings, including the key, using Python scripts. This again demonstrated AI's standalone capability.\n\nThe most challenging test involved a Native AOT build, producing a 1.1MB x64 machine code EXE with no CIL bytecode. REA used Ghidra to analyze the EXE, identifying 3,627 functions, mostly .NET runtime.\n\n#AI #ReverseEngineering #GitHub #Developers #SoftwareDevelopment #Tech\n\nSource: DEV",
+  "tweet": "AI just rebuilt a C# app byte-for-byte from raw machine code, recovering a secret key from an obfuscated binary. A new test shows how a trending GitHub repo, REA, and AI agents can fully reverse-engineer applications. #AI #DevTools #ReverseEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/nazecode/i-tried-rea-the-1-trending-repo-on-github-can-ai-really-reverse-engineer-a-net-app-4apo",
+  "image": "",
+  "orig_title": "I tried REA, the #1 trending repo on GitHub — can AI really reverse-engineer a .NET app?",
+  "cluster_urls": [
+   "https://dev.to/nazecode/i-tried-rea-the-1-trending-repo-on-github-can-ai-really-reverse-engineer-a-net-app-4apo"
+  ],
+  "cluster_titles": [
+   "I tried REA, the #1 trending repo on GitHub — can AI really reverse-engineer a .NET app?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261015-1406-0-ai-rebuilds-net-app-byte-for-byte-from-machi.png",
+   "20261015-1406-0-ai-rebuilds-net-app-byte-for-byte-from-machi-d1.png",
+   "20261015-1406-0-ai-rebuilds-net-app-byte-for-byte-from-machi-d2.png",
+   "20261015-1406-0-ai-rebuilds-net-app-byte-for-byte-from-machi-d3.png",
+   "20261015-1406-0-ai-rebuilds-net-app-byte-for-byte-from-machi-d4.png"
+  ]
+ },
+ {
+  "topic": "meta muse ai waitlist experience",
+  "headline_marked": "[[Meta's Muse AI waitlist]] hits user after full registration, raising UX questions",
+  "headline": "Meta's Muse AI waitlist hits user after full registration, raising UX questions",
+  "summary": "An AI enthusiast registered for Meta's Muse AI, only to be met with a regional availability waitlist after providing personal details. This experience highlights critical user trust and design considerations in AI product rollouts.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "An AI enthusiast eagerly attempted to access Meta's Muse AI, a personal AI agent reportedly launched in September 2026. Inspired by a YouTube video, the user initiated the registration process, anticipating immediate access to the new technology.",
+   "The user proceeded through the registration steps, including email verification and providing personal details. This sequence led to the expectation of exploring Muse's capabilities and integrating it into personal AI automation experiments.",
+   "However, after completing the registration, the user was informed that \"Muse isn't available in your country or region yet.\" This message appeared only at the end of the process, prompting questions about the timing of regional availability checks.",
+   "The experience raises concerns about user trust and product design. The author argues that eligibility restrictions, especially regional ones, should be communicated upfront before users invest time and disclose personal information.",
+   "While legitimate technical reasons for such a sequence may exist, the author emphasizes that a technically successful process can still create a disappointing human experience. Good AI products require more than intelligence; they need thoughtful design that respects user expectations and builds trust."
+  ],
+  "caption": "Registered for Meta's Muse AI, only to hit a regional waitlist *after* providing personal details. This user experience sparks a debate on AI product design and user trust.\n\nAn AI enthusiast eagerly attempted to access Meta's Muse AI, a personal AI agent reportedly launched in September 2026. Inspired by a YouTube video, the user initiated the registration process, anticipating immediate access to the new technology.\n\nThe user proceeded through the registration steps, including email verification and providing personal details. This sequence led to the expectation of exploring Muse's capabilities and integrating it into personal AI automation experiments.\n\nHowever, after completing the registration, the user was informed that \"Muse isn't available in your country or region yet.\" This message appeared only at the end of the process, prompting questions about the timing of regional availability checks.\n\nThe experience raises concerns about user trust and product design. The author argues that eligibility restrictions, especially regional ones, should be communicated upfront before users invest time and disclose personal information.\n\nWhile legitimate technical reasons for such a sequence may exist, the author emphasizes that a technically successful process can still create a disappointing human experience. Good AI products require more than intelligence; they need thoughtful design that respects user expectations and builds trust.\n\n#AI #UXDesign #Meta #MuseAI #TechEthics #UserTrust\n\nSource: DEV",
+  "tweet": "Registered for Meta's Muse AI, only to hit a regional waitlist *after* providing personal details. This user experience sparks a debate on AI product design and user trust. Should regional availability be checked upfront? #AI #UXDesign #Meta",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "meta.com",
+  "source": "DEV",
+  "url": "https://dev.to/navidishaq/i-thought-i-was-getting-into-metas-muse-ai-then-came-the-waitlist-3l2f",
+  "image": "",
+  "orig_title": "I Thought I Was Getting Into Meta's Muse AI. Then Came the Waitlist. 😭",
+  "cluster_urls": [
+   "https://dev.to/navidishaq/i-thought-i-was-getting-into-metas-muse-ai-then-came-the-waitlist-3l2f"
+  ],
+  "cluster_titles": [
+   "I Thought I Was Getting Into Meta's Muse AI. Then Came the Waitlist. 😭"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261015-1406-1-meta-s-muse-ai-waitlist-hits-user-after-full.png",
+   "20261015-1406-1-meta-s-muse-ai-waitlist-hits-user-after-full-d1.png",
+   "20261015-1406-1-meta-s-muse-ai-waitlist-hits-user-after-full-d2.png"
+  ]
+ }
+]

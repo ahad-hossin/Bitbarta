@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "topic": "AI zombie love story videos trend",
+  "headline_marked": "[[The AI behind viral zombie love story videos]] explained, detailing photo-to-video generation pipeline",
+  "headline": "The AI behind viral zombie love story videos explained, detailing photo-to-video generation pipeline",
+  "summary": "Explore the product decisions and technical architecture behind the viral AI zombie love story video trend, revealing how photo-to-video generation tools create compelling narratives from still images.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Every few months, a new AI video format takes over social feeds. This autumn, it has been the zombie love story: a short, cinematic clip where one partner has turned into a zombie and the other chooses to stay.",
+   "The most popular version, \"CHOICE,\" was posted on Instagram in mid-September 2026 by filmmaker Aytech Ashkhamakhov (@techmaf). Its emotional impact led many commenters to believe it was a scene from a real movie.",
+   "This format's unusual shareability stems from a few key product properties. Developers building generative products can learn that templates with strong narrative structure often outperform open-ended \"type any prompt\" interfaces for mainstream users.",
+   "Most photo-to-video story pipelines begin with the user uploading one or two photos. The system detects faces, checks for usability (size, blur, occlusion), and identifies each person, rejecting poor input early to save compute.",
+   "One identity is then transformed into a zombie version while retaining recognizable features like face shape and hairline. This is typically done using an instruction-guided image editing model, balancing transformation with likeness.",
+   "Instead of generating an entire video from scratch, many pipelines create a reference image for each scene. For a three-beat story, this might involve keyframes for the turn, the recognition/choice, and the hug.",
+   "Each keyframe is animated by an image-to-video model with a scene-specific prompt describing motion, camera, and mood. Generating per segment offers better control and allows retrying failed segments without redoing the whole video.",
+   "The animated segments are then concatenated, and audio is added. For this format, sound effects and ambience work best, as dialogue would require complex lip-syncing and could detract from the cinematic tone.",
+   "Key engineering lessons include previewing cheaply before generating expensively, as video generation is costly. Showing a watermarked still image preview, for example, allows users to check transformations before committing to a full video.",
+   "Further lessons involve constraining the story to ensure consistent quality and simplified prompt engineering. Designing for failure with segment-level retries and clear error handling is also crucial, as is responsibly handling user photos by keeping retention short and links private by default."
+  ],
+  "caption": "Ever wondered how those viral AI zombie love story videos are made? This deep dive reveals the clever product and engineering decisions behind the trend.\n\nEvery few months, a new AI video format takes over social feeds. This autumn, it has been the zombie love story: a short, cinematic clip where one partner has turned into a zombie and the other chooses to stay.\n\nThe most popular version, \"CHOICE,\" was posted on Instagram in mid-September 2026 by filmmaker Aytech Ashkhamakhov (@techmaf). Its emotional impact led many commenters to believe it was a scene from a real movie.\n\nThis format's unusual shareability stems from a few key product properties. Developers building generative products can learn that templates with strong narrative structure often outperform open-ended \"type any prompt\" interfaces for mainstream users.\n\nMost photo-to-video story pipelines begin with the user uploading one or two photos. The system detects faces, checks for usability (size, blur, occlusion), and identifies each person, rejecting poor input early to save compute.\n\nOne identity is then transformed into a zombie version while retaining recognizable features like face shape and hairline. This is typically done using an instruction-guided image editing model, balancing transformation with likeness.\n\nInstead of generating an entire video from scratch, many pipelines create a reference image for each scene. For a three-beat story, this might involve keyframes for the turn, the recognition/choice, and the hug.\n\nEach keyframe is animated by an image-to-video model with a scene-specific prompt describing motion, camera, and mood. Generating per segment offers better control and allows retrying failed segments without redoing the whole video.\n\nThe animated segments are then concatenated, and audio is added. For this format, sound effects and ambience work best, as dialogue would require complex lip-syncing and could detract from the cinematic tone.\n\n#AI #GenerativeAI #VideoGeneration #TechTrends #Developer #AIArt\n\nSource: DEV",
+  "tweet": "Ever wondered how those viral AI zombie love story videos are made? This deep dive reveals the clever product and engineering decisions behind the trend, from photo-to-video pipelines to smart user experience. #AI #GenerativeVideo #TechExplained",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/codebyaby/behind-the-trend-why-ai-zombie-love-story-videos-are-everywhere-and-how-photo-to-video-ai-works-45ii",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fvnxd6ildy4pjkjecbp2j.jpg",
+  "orig_title": "Behind the Trend: Why AI Zombie Love Story Videos Are Everywhere (and How Photo-to-Video AI Works)",
+  "cluster_urls": [
+   "https://dev.to/codebyaby/behind-the-trend-why-ai-zombie-love-story-videos-are-everywhere-and-how-photo-to-video-ai-works-45ii"
+  ],
+  "cluster_titles": [
+   "Behind the Trend: Why AI Zombie Love Story Videos Are Everywhere (and How Photo-to-Video AI Works)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261015-0807-0-the-ai-behind-viral-zombie-love-story-videos.png",
+   "20261015-0807-0-the-ai-behind-viral-zombie-love-story-videos-d1.png",
+   "20261015-0807-0-the-ai-behind-viral-zombie-love-story-videos-d2.png",
+   "20261015-0807-0-the-ai-behind-viral-zombie-love-story-videos-d3.png",
+   "20261015-0807-0-the-ai-behind-viral-zombie-love-story-videos-d4.png"
+  ]
+ },
+ {
+  "topic": "Google Pixel AI features consume storage",
+  "headline_marked": "[[Google Pixel feature leaves users with less storage space]] than expected",
+  "headline": "Google Pixel feature leaves users with less storage space than expected",
+  "summary": "Google's on-device AI features, like AICore, are consuming significant storage and RAM on Pixel phones, leaving users with substantially less usable space than advertised, even if the features aren't actively used.",
+  "category": "ANDROID",
+  "template": "neon",
+  "details": [
+   "Google Pixel users are finding their phones have significantly less usable storage than advertised, with some 128GB models losing over a quarter of their space to system and preinstalled apps. This issue is primarily driven by mandatory on-device AI features.",
+   "A key culprit is the background app AICore, which consumes a substantial 6.73GB to update and provide AI functionality. Other AI-related apps like Device Intelligence (1.06GB) and Pixel Screenshots (1.14GB) also take up considerable space.",
+   "For example, a new Pixel 10 Pro with 128GB of base storage can quickly be reduced to just 96GB of usable space due to these mandatory AI components and the operating system. This happens even if the user doesn't actively use the AI features.",
+   "Unlike regular apps, AICore's storage cannot be easily cleared by deleting its cache, and attempts to clear its data only result in it quickly rebuilding its footprint, especially if any AI-powered apps are used. This makes storage management difficult for users.",
+   "This storage consumption rivals or exceeds that of large user-installed apps; for instance, AICore's 6.73GB is only slightly less than a user's entire downloaded music library on Tidal (9GB) and far more than Instagram (1.08GB).",
+   "Many users, particularly those who don't rely heavily on on-device AI processing, are frustrated by paying for storage that is effectively locked away. Upgrading to a 256GB model costs an extra $100, which many feel is an unnecessary expense.",
+   "The core of the problem is Google's lack of user control over these integrated AI features. Users cannot easily disable or uninstall these components, forcing them to carry the storage burden regardless of their usage preferences.",
+   "While users can clear downloaded local AI model files via AICore's storage settings to reclaim some space, this is a temporary fix. Google is urged to provide an option for users to choose between local and cloud-based AI processing."
+  ],
+  "caption": "Pixel phones are losing over a quarter of their advertised storage to hidden AI features you might not even use.\n\nGoogle Pixel users are finding their phones have significantly less usable storage than advertised, with some 128GB models losing over a quarter of their space to system and preinstalled apps. This issue is primarily driven by mandatory on-device AI features.\n\nA key culprit is the background app AICore, which consumes a substantial 6.73GB to update and provide AI functionality. Other AI-related apps like Device Intelligence (1.06GB) and Pixel Screenshots (1.14GB) also take up considerable space.\n\nFor example, a new Pixel 10 Pro with 128GB of base storage can quickly be reduced to just 96GB of usable space due to these mandatory AI components and the operating system. This happens even if the user doesn't actively use the AI features.\n\nUnlike regular apps, AICore's storage cannot be easily cleared by deleting its cache, and attempts to clear its data only result in it quickly rebuilding its footprint, especially if any AI-powered apps are used. This makes storage management difficult for users.\n\nThis storage consumption rivals or exceeds that of large user-installed apps; for instance, AICore's 6.73GB is only slightly less than a user's entire downloaded music library on Tidal (9GB) and far more than Instagram (1.08GB).\n\nMany users, particularly those who don't rely heavily on on-device AI processing, are frustrated by paying for storage that is effectively locked away. Upgrading to a 256GB model costs an extra $100, which many feel is an unnecessary expense.\n\nThe core of the problem is Google's lack of user control over these integrated AI features. Users cannot easily disable or uninstall these components, forcing them to carry the storage burden regardless of their usage preferences.\n\n#GooglePixel #Android #TechNews #Storage #AICore #Smartphone\n\nSource: Android Police",
+  "tweet": "Pixel users, beware! Your phone's advertised storage is shrinking fast. Hidden AI features like AICore are eating up gigabytes, leaving you with less usable space. Time for Google to give users control over on-device AI. #GooglePixel #Android #TechNews",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/google-pixel-feature-leaves-users-with-less-storage-space-than-expected/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2025/05/a-google-pixel-phone-with-a-full-storage-alert.png",
+  "orig_title": "This Google Pixel feature leaves users with less storage space than expected",
+  "cluster_urls": [
+   "https://www.androidpolice.com/google-pixel-feature-leaves-users-with-less-storage-space-than-expected/"
+  ],
+  "cluster_titles": [
+   "This Google Pixel feature leaves users with less storage space than expected"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20261015-0807-1-google-pixel-feature-leaves-users-with-less-.png",
+   "20261015-0807-1-google-pixel-feature-leaves-users-with-less--d1.png",
+   "20261015-0807-1-google-pixel-feature-leaves-users-with-less--d2.png",
+   "20261015-0807-1-google-pixel-feature-leaves-users-with-less--d3.png"
+  ]
+ }
+]

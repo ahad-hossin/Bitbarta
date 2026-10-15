@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "metavision-x real-time ai video engine",
+  "headline_marked": "[[MetaVision-X turns live news into real-time video]] in minutes, cutting production by 95%",
+  "headline": "MetaVision-X turns live news into real-time video in minutes, cutting production by 95%",
+  "summary": "Meta AI's MetaVision-X platform generates complex news videos from live feeds in minutes, reducing production time by 95%. It uses a unique world-state store for seamless, consistent video.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Meta AI has launched MetaVision-X, a new platform that transforms live news into real-time video. It can generate a 2-minute video in just 12 minutes, a 95% reduction from traditional 6-hour workflows, as demonstrated by Reuters.",
+   "This breakthrough signals the arrival of world-state-centric agentic video generation as a production-ready technology. Unlike isolated prompts, each frame references a single, mutable world-state store (WSS) that persists across every shot.",
+   "MetaVision-X exposes an ATAS-style shot-request API and a version-controlled WSS. Beyond newsrooms, advertisers can embed products across dozens of scenes, and game studios can prototype interactive cutscenes on the fly.",
+   "The rollout coincides with new regulations, including the U.S. Federal AI Regulation Act (FAIRA) Title VIII, which mandates cryptographically signed state-audit logs for generative systems that maintain persistent state.",
+   "This addresses emerging security risks, such as malicious diffs injected into a public WSS, as demonstrated by a state-level deep-fake attack on a press conference on Oct 15, 2026.",
+   "In a Reuters experiment, a 6-hour production to blend a senator's speech, live crowd reactions, and a dynamic fund-flow map was completed in just 12 minutes using MetaVision-X. The newsroom published the reel as a live-update package.",
+   "The WSS acts as a version-controlled scene graph, storing objects, their relationships, and events. Implemented on a sharded, conflict-free replicated data type (CRDT) architecture, it guarantees eventual consistency across distributed agents.",
+   "Each write operation produces a signed state diff, chaining into an immutable State-Ledger, satisfying FAIRA's audit-log requirement. MetaVision-X extends the ATAS notion of explicit spatial-temporal references with dynamic world-state updates.",
+   "The platform ships with a plug-in SDK, allowing third parties to publish agents to a marketplace. This incentivizes rapid ecosystem expansion with a 70% revenue share for agent developers."
+  ],
+  "caption": "Meta AI's MetaVision-X cuts live news video production from 6 hours to just 12 minutes. This 95% reduction is powered by a new world-state centric AI.\n\nMeta AI has launched MetaVision-X, a new platform that transforms live news into real-time video. It can generate a 2-minute video in just 12 minutes, a 95% reduction from traditional 6-hour workflows, as demonstrated by Reuters.\n\nThis breakthrough signals the arrival of world-state-centric agentic video generation as a production-ready technology. Unlike isolated prompts, each frame references a single, mutable world-state store (WSS) that persists across every shot.\n\nMetaVision-X exposes an ATAS-style shot-request API and a version-controlled WSS. Beyond newsrooms, advertisers can embed products across dozens of scenes, and game studios can prototype interactive cutscenes on the fly.\n\nThe rollout coincides with new regulations, including the U.S. Federal AI Regulation Act (FAIRA) Title VIII, which mandates cryptographically signed state-audit logs for generative systems that maintain persistent state.\n\nThis addresses emerging security risks, such as malicious diffs injected into a public WSS, as demonstrated by a state-level deep-fake attack on a press conference on Oct 15, 2026.\n\nIn a Reuters experiment, a 6-hour production to blend a senator's speech, live crowd reactions, and a dynamic fund-flow map was completed in just 12 minutes using MetaVision-X. The newsroom published the reel as a live-update package.\n\nThe WSS acts as a version-controlled scene graph, storing objects, their relationships, and events. Implemented on a sharded, conflict-free replicated data type (CRDT) architecture, it guarantees eventual consistency across distributed agents.\n\nEach write operation produces a signed state diff, chaining into an immutable State-Ledger, satisfying FAIRA's audit-log requirement. MetaVision-X extends the ATAS notion of explicit spatial-temporal references with dynamic world-state updates.\n\n#MetaAI #MetaVisionX #AI #VideoGeneration #TechNews #ArtificialIntelligence\n\nSource: DEV",
+  "tweet": "Meta AI's new MetaVision-X platform slashes live news video production time by 95%, turning hours into minutes. It uses a unique world-state AI for seamless, consistent video generation. #MetaAI #AI #VideoTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "meta.com",
+  "source": "DEV",
+  "url": "https://dev.to/amrithesh_dev/breaking-metavision-x-turns-live-news-into-real-time-video-magic-you-wont-believe-how-fast-it-4p2a",
+  "image": "",
+  "orig_title": "BREAKING: MetaVision‑X Turns Live News into Real‑Time Video Magic – You Won’t Believe How Fast It Is!",
+  "cluster_urls": [
+   "https://dev.to/amrithesh_dev/breaking-metavision-x-turns-live-news-into-real-time-video-magic-you-wont-believe-how-fast-it-4p2a"
+  ],
+  "cluster_titles": [
+   "BREAKING: MetaVision‑X Turns Live News into Real‑Time Video Magic – You Won’t Believe How Fast It Is!"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261015-1106-0-metavision-x-turns-live-news-into-real-time-.png",
+   "20261015-1106-0-metavision-x-turns-live-news-into-real-time--d1.png",
+   "20261015-1106-0-metavision-x-turns-live-news-into-real-time--d2.png",
+   "20261015-1106-0-metavision-x-turns-live-news-into-real-time--d3.png"
+  ]
+ },
+ {
+  "topic": "ai spatial reasoning breakthrough",
+  "headline_marked": "[[Self-distilled spatial reasoning]] improves AI accuracy with minimal latency penalty",
+  "headline": "Self-distilled spatial reasoning improves AI accuracy with minimal latency penalty",
+  "summary": "A new technique called SpatialOPSD allows vision-language models to achieve higher spatial reasoning accuracy by distilling depth cues, retaining 91% of performance while eliminating external tool latency.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "SpatialOPSD introduces a self-distillation method that significantly enhances the spatial reasoning capabilities of RGB-only vision-language models. This innovation closes the long-standing gap between high accuracy and fast inference speed, retaining 91% of the performance of its iterative, tool-dependent teacher model.",
+   "Previously, multimodal models relied on external tools for spatial coding, generating verified execution traces through multiple API calls. This approach led to heavy latency penalties, making deployment slow and inefficient for real-time applications.",
+   "The SpatialOPSD method works by feeding summarized agent traces as privileged inputs during on-policy self-distillation. This process teaches the model an internal spatial chain-of-thought, allowing it to reproduce complex spatial reasoning without needing external depth sensors.",
+   "Benchmarking shows SpatialOPSD improves the Qwen3.5-9B baseline from 45.9 to 51.9, particularly in allocentric transformations with an 11.7 point gain. It achieves this while virtually eliminating runtime overhead from external calls, sacrificing only a modest fraction of accuracy.",
+   "Experiments confirm that SpatialOPSD outperforms traditional fine-tuning (SFT) and reinforcement learning (GRPO) methods on both spatial and out-of-distribution datasets. This demonstrates superior performance and generalization across varied tasks, indicating a broadly useful capability.",
+   "The authors note that privileged-information leakage is a concern, partially mitigated by Repetition-Aware Distillation. A 9% residual gap to the teacher model suggests further work is needed on scaling or tighter leakage control, with larger models potentially closing this gap.",
+   "For developers, this means iterative tool-dependent spatial pipelines could be replaced with a distilled RGB model, potentially reducing execution time by over 90%. Success rates would remain within a few points of the original teacher, offering a significant efficiency boost."
+  ],
+  "caption": "New AI research shows self-distilled spatial reasoning boosts model accuracy by 6 points on Qwen3.5-9B. It retains 91% of performance while cutting latency by over 90%.\n\nSpatialOPSD introduces a self-distillation method that significantly enhances the spatial reasoning capabilities of RGB-only vision-language models. This innovation closes the long-standing gap between high accuracy and fast inference speed, retaining 91% of the performance of its iterative, tool-dependent teacher model.\n\nPreviously, multimodal models relied on external tools for spatial coding, generating verified execution traces through multiple API calls. This approach led to heavy latency penalties, making deployment slow and inefficient for real-time applications.\n\nThe SpatialOPSD method works by feeding summarized agent traces as privileged inputs during on-policy self-distillation. This process teaches the model an internal spatial chain-of-thought, allowing it to reproduce complex spatial reasoning without needing external depth sensors.\n\nBenchmarking shows SpatialOPSD improves the Qwen3.5-9B baseline from 45.9 to 51.9, particularly in allocentric transformations with an 11.7 point gain. It achieves this while virtually eliminating runtime overhead from external calls, sacrificing only a modest fraction of accuracy.\n\nExperiments confirm that SpatialOPSD outperforms traditional fine-tuning (SFT) and reinforcement learning (GRPO) methods on both spatial and out-of-distribution datasets. This demonstrates superior performance and generalization across varied tasks, indicating a broadly useful capability.\n\nThe authors note that privileged-information leakage is a concern, partially mitigated by Repetition-Aware Distillation. A 9% residual gap to the teacher model suggests further work is needed on scaling or tighter leakage control, with larger models potentially closing this gap.\n\n#AI #MachineLearning #DeepLearning #SpatialReasoning #ModelOptimization #TechResearch\n\nSource: DEV",
+  "tweet": "New AI research: Self-distilled spatial reasoning improves model accuracy by 6 points on Qwen3.5-9B. This method retains 91% of performance while reducing latency by over 90% by eliminating external tool calls. Huge efficiency boost for VLM deployment! #AI #MachineLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/olaughter/self-distilled-spatial-reasoning-improves-accuracy-without-large-latency-penalty-1f1o",
+  "image": "",
+  "orig_title": "Self‑distilled spatial reasoning improves accuracy without large latency penalty",
+  "cluster_urls": [
+   "https://dev.to/olaughter/self-distilled-spatial-reasoning-improves-accuracy-without-large-latency-penalty-1f1o"
+  ],
+  "cluster_titles": [
+   "Self‑distilled spatial reasoning improves accuracy without large latency penalty"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261015-1106-1-self-distilled-spatial-reasoning-improves-ai.png",
+   "20261015-1106-1-self-distilled-spatial-reasoning-improves-ai-d1.png",
+   "20261015-1106-1-self-distilled-spatial-reasoning-improves-ai-d2.png",
+   "20261015-1106-1-self-distilled-spatial-reasoning-improves-ai-d3.png"
+  ]
+ }
+]

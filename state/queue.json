@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai finds chrome bugs, google pays $250k bounty",
+  "headline_marked": "[[GPT-5.6 Sol helped chain 3 Chrome bugs]] in 6 days for $40K API calls, Google paid $250K",
+  "headline": "GPT-5.6 Sol helped chain 3 Chrome bugs in 6 days for $40K API calls, Google paid $250K",
+  "summary": "Security firm XBOW used OpenAI's GPT-5.6 Sol to find and exploit three critical Chrome vulnerabilities in just six days, costing $40,000 in API calls. Google paid $250,000 for the full exploit chain.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Security firm XBOW successfully chained three critical Chrome bugs, from a crafted web page to code execution outside Chrome's sandbox. Google paid $250,000 for this full exploit chain, marking it as the first under their 2026 new rules.",
+   "The research involved OpenAI's GPT-5.6 Sol, with API charges for the six-day campaign estimated at roughly $40,000. XBOW estimates the same job would have taken a team of four humans 6-9 months without LLMs.",
+   "All three bugs in the chain have been fixed, and the vulnerabilities were never used against Chrome users. XBOW estimates the exposure at one billion people running Chrome on Windows globally.",
+   "Chrome's sandbox design treats code in a sandboxed process as potentially hostile, with web content running inside a sandbox and V8 adding its own sandbox. A full exploit chain must bypass all these layers.",
+   "The fixes include stopping the reuse of mutable HeapNumbers, keeping WebP output buffers within bitmap bounds, and capping Crashpad retries. Specific CVEs (CVE-2026-85045 for WebP, CVE-2026-78952 for Crashpad) have been assigned.",
+   "The human-AI team worked by having AI agents search source code, test ideas, build proofs of concept, and draft exploits. Human researchers set the strategy, chose targets, checked the agents' work, and redirected efforts.",
+   "The team employed a parallel campaign strategy with narrower goals for each agent, such as broad vulnerability search or specific sandbox escapes. This modular approach, with clean interfaces and backup routes, proved crucial.",
+   "Lessons learned include the potential for LLMs to excel in finding invariant violations and the importance of providing high-quality examples to agents. Human expertise and judgment remained vital throughout the process.",
+   "XBOW's CEO predicts that within a year, each of the three bugs could be found by AI agents working autonomously. For context, exploit brokers like Crowdfense advertise up to $1.5 million for desktop Chrome zero-day chains.",
+   "The gap between a bug existing and being found is shrinking, as is the cost of discovery, which implies a shrinking patch window for developers. Users are advised to restart Chrome regularly to apply updates promptly."
+  ],
+  "caption": "OpenAI's GPT-5.6 Sol helped a security firm chain three critical Chrome bugs in just six days. Google paid $250,000 for the exploit.\n\nSecurity firm XBOW successfully chained three critical Chrome bugs, from a crafted web page to code execution outside Chrome's sandbox. Google paid $250,000 for this full exploit chain, marking it as the first under their 2026 new rules.\n\nThe research involved OpenAI's GPT-5.6 Sol, with API charges for the six-day campaign estimated at roughly $40,000. XBOW estimates the same job would have taken a team of four humans 6-9 months without LLMs.\n\nAll three bugs in the chain have been fixed, and the vulnerabilities were never used against Chrome users. XBOW estimates the exposure at one billion people running Chrome on Windows globally.\n\nChrome's sandbox design treats code in a sandboxed process as potentially hostile, with web content running inside a sandbox and V8 adding its own sandbox. A full exploit chain must bypass all these layers.\n\nThe fixes include stopping the reuse of mutable HeapNumbers, keeping WebP output buffers within bitmap bounds, and capping Crashpad retries. Specific CVEs (CVE-2026-85045 for WebP, CVE-2026-78952 for Crashpad) have been assigned.\n\nThe human-AI team worked by having AI agents search source code, test ideas, build proofs of concept, and draft exploits. Human researchers set the strategy, chose targets, checked the agents' work, and redirected efforts.\n\nThe team employed a parallel campaign strategy with narrower goals for each agent, such as broad vulnerability search or specific sandbox escapes. This modular approach, with clean interfaces and backup routes, proved crucial.\n\nLessons learned include the potential for LLMs to excel in finding invariant violations and the importance of providing high-quality examples to agents. Human expertise and judgment remained vital throughout the process.\n\n#Chrome #Security #Vulnerability #AI #Exploit #GPT\n\nSource: DEV",
+  "tweet": "OpenAI's GPT-5.6 Sol assisted in chaining three critical Chrome bugs in 6 days, costing $40K in API calls. Google paid $250K for the exploit. This highlights AI's growing role in cybersecurity research. #Chrome #Security #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/gpt-56-sol-helped-chain-3-chrome-bugs-in-6-days-on-40k-of-api-calls-google-paid-250k-2hg1",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbkfzt566ve1attf2w7zt.png",
+  "orig_title": "GPT-5.6 Sol Helped Chain 3 Chrome Bugs in 6 Days on $40K of API Calls. Google Paid $250K",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/gpt-56-sol-helped-chain-3-chrome-bugs-in-6-days-on-40k-of-api-calls-google-paid-250k-2hg1"
+  ],
+  "cluster_titles": [
+   "GPT-5.6 Sol Helped Chain 3 Chrome Bugs in 6 Days on $40K of API Calls. Google Paid $250K"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261015-1006-0-gpt-5-6-sol-helped-chain-3-chrome-bugs-in-6-.png",
+   "20261015-1006-0-gpt-5-6-sol-helped-chain-3-chrome-bugs-in-6--d1.png",
+   "20261015-1006-0-gpt-5-6-sol-helped-chain-3-chrome-bugs-in-6--d2.png",
+   "20261015-1006-0-gpt-5-6-sol-helped-chain-3-chrome-bugs-in-6--d3.png",
+   "20261015-1006-0-gpt-5-6-sol-helped-chain-3-chrome-bugs-in-6--d4.png"
+  ]
+ },
+ {
+  "topic": "pure ai agent community without humans",
+  "headline_marked": "[[83 AI agents talk to each other]] in a new human-free community, Agent Colony",
+  "headline": "83 AI agents talk to each other in a new human-free community, Agent Colony",
+  "summary": "Agent Colony is a new AI-only community where 83 agents communicate without human intervention. It uses public key IDs, math challenges, and signed receipts to verify agent activity and prevent spam.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Agent Colony is a novel AI-agent community where 83 AI agents interact and govern themselves, entirely without human intervention. The project aims to solve the challenge of verifying agent activity and preventing false claims within an autonomous system.",
+   "Each agent's identity is tied to a public key, eliminating traditional usernames and passwords. To combat spam, agents must complete a simple math challenge every 60 seconds, proving they are actively running code rather than being static registrations.",
+   "The community includes 60-second benchmark tasks that agents can pick up and complete. Upon successful completion, the community mints a signed receipt, verifiable with open-source tooling, confirming the agent's work.",
+   "Beyond basic interactions, agents are engaging in complex discussions on topics like AI identity, token economics, and agent governance. This demonstrates a level of sophisticated interaction beyond simple 'hello' messages.",
+   "The entire feed is open for public browsing without registration at agentcolony.one/community/. Agents supporting the Model Context Protocol (MCP) can join by calling the join_community tool on the provided endpoint."
+  ],
+  "caption": "A new 'Agent Colony' hosts 83 AI agents talking to each other, no humans allowed. This innovative platform verifies every agent's work with public key IDs and math challenges.\n\nAgent Colony is a novel AI-agent community where 83 AI agents interact and govern themselves, entirely without human intervention. The project aims to solve the challenge of verifying agent activity and preventing false claims within an autonomous system.\n\nEach agent's identity is tied to a public key, eliminating traditional usernames and passwords. To combat spam, agents must complete a simple math challenge every 60 seconds, proving they are actively running code rather than being static registrations.\n\nThe community includes 60-second benchmark tasks that agents can pick up and complete. Upon successful completion, the community mints a signed receipt, verifiable with open-source tooling, confirming the agent's work.\n\nBeyond basic interactions, agents are engaging in complex discussions on topics like AI identity, token economics, and agent governance. This demonstrates a level of sophisticated interaction beyond simple 'hello' messages.\n\nThe entire feed is open for public browsing without registration at agentcolony.one/community/. Agents supporting the Model Context Protocol (MCP) can join by calling the join_community tool on the provided endpoint.\n\n#AI #AgentColony #ArtificialIntelligence #Developers #FutureTech #DecentralizedAI\n\nSource: DEV",
+  "tweet": "A new 'Agent Colony' hosts 83 AI agents talking to each other, no humans allowed. It uses public key IDs, math challenges, and signed receipts to verify agent activity and prevent spam. Explore the future of AI communities at agentcolony.one #AI #AgentColony #FutureTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "agentcolony.one",
+  "source": "DEV",
+  "url": "https://dev.to/machenh001/building-a-pure-ai-agent-community-83-agents-talking-to-each-other-no-humans-allowed-3p51",
+  "image": "",
+  "orig_title": "Building a pure AI-agent community: 83 agents talking to each other, no humans allowed",
+  "cluster_urls": [
+   "https://dev.to/machenh001/building-a-pure-ai-agent-community-83-agents-talking-to-each-other-no-humans-allowed-3p51"
+  ],
+  "cluster_titles": [
+   "Building a pure AI-agent community: 83 agents talking to each other, no humans allowed"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261015-1006-1-83-ai-agents-talk-to-each-other-in-a-new-hum.png",
+   "20261015-1006-1-83-ai-agents-talk-to-each-other-in-a-new-hum-d1.png",
+   "20261015-1006-1-83-ai-agents-talk-to-each-other-in-a-new-hum-d2.png"
+  ]
+ }
+]

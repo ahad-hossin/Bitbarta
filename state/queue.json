@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "mistral timestral cpu license",
+  "headline_marked": "[[Mistral's Timestral]] runs on CPU, forecasts time series; Modified MIT license caps revenue at $20M",
+  "headline": "Mistral's Timestral runs on CPU, forecasts time series; Modified MIT license caps revenue at $20M",
+  "summary": "Mistral has released Timestral, a family of time-series forecasting models that run efficiently on CPUs. Its Modified MIT license includes a unique clause, restricting use for companies with over $20 million in monthly revenue.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Mistral has unveiled Timestral, a new family of time-series foundation models designed for forecasting numerical data. The largest version, at 209M parameters, ranks first on key public benchmarks and notably does not require a GPU for inference.",
+   "Timestral reads up to 32,768 past steps and forecasts up to 1,024 future steps per pass. Each forecast provides 21 quantiles, giving a band of likely values for each step, and can handle multiple series and covariates.",
+   "On a server CPU with 8 threads, the 209M model can forecast one day ahead from three weeks of 15-minute history in 140 ms. The smaller 5M model achieves this in just 10 ms, making it highly efficient for on-premise deployments.",
+   "The inference code for Timestral is released under Apache 2.0. However, the model weights are distributed under a \"Modified MIT license\" with a significant restriction.",
+   "This license states that companies with a global consolidated monthly revenue exceeding $20 million are not authorized to use the weights. Such companies must seek a commercial license from Mistral or use their hosted services.",
+   "Mistral pitches Timestral for on-prem, VPC, and air-gapped deployments. This revenue cap implies that many large enterprises, which often require such secure deployments, will need to negotiate commercial terms.",
+   "The models are zero-shot, meaning they forecast directly from history without prior training on user data. Mistral states most training data is synthetic, ensuring no leakage from backtested scenarios.",
+   "On benchmarks like GIFT-Eval MASE, Timestral-209M scores 0.658, outperforming t0-gamma (0.661) and TimesFM-3 (0.667). It also leads on fev-bench's SQL skill score with 50.39."
+  ],
+  "caption": "Mistral's new Timestral time-series forecasting models run on CPUs and lead benchmarks. But there's a catch: its \"Modified MIT\" license includes a $20M monthly revenue cap.\n\nMistral has unveiled Timestral, a new family of time-series foundation models designed for forecasting numerical data. The largest version, at 209M parameters, ranks first on key public benchmarks and notably does not require a GPU for inference.\n\nTimestral reads up to 32,768 past steps and forecasts up to 1,024 future steps per pass. Each forecast provides 21 quantiles, giving a band of likely values for each step, and can handle multiple series and covariates.\n\nOn a server CPU with 8 threads, the 209M model can forecast one day ahead from three weeks of 15-minute history in 140 ms. The smaller 5M model achieves this in just 10 ms, making it highly efficient for on-premise deployments.\n\nThe inference code for Timestral is released under Apache 2.0. However, the model weights are distributed under a \"Modified MIT license\" with a significant restriction.\n\nThis license states that companies with a global consolidated monthly revenue exceeding $20 million are not authorized to use the weights. Such companies must seek a commercial license from Mistral or use their hosted services.\n\nMistral pitches Timestral for on-prem, VPC, and air-gapped deployments. This revenue cap implies that many large enterprises, which often require such secure deployments, will need to negotiate commercial terms.\n\nThe models are zero-shot, meaning they forecast directly from history without prior training on user data. Mistral states most training data is synthetic, ensuring no leakage from backtested scenarios.\n\nOn benchmarks like GIFT-Eval MASE, Timestral-209M scores 0.658, outperforming t0-gamma (0.661) and TimesFM-3 (0.667). It also leads on fev-bench's SQL skill score with 50.39.\n\n#AI #MachineLearning #TimeSeries #MistralAI #OpenSource #TechNews\n\nSource: DEV",
+  "tweet": "Mistral's new Timestral models forecast time series on CPUs, topping benchmarks. But a \"Modified MIT\" license caps usage at $20M monthly revenue. Free for smaller firms, commercial license for larger. #AI #MachineLearning #MistralAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "mistral.ai",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/mistrals-timestral-runs-on-a-cpu-its-modified-mit-license-stops-at-20m-a-month-141m",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fhrd8uoewadvwx71yrbsr.png",
+  "orig_title": "Mistral's Timestral Runs on a CPU. Its 'Modified MIT' License Stops at $20M a Month",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/mistrals-timestral-runs-on-a-cpu-its-modified-mit-license-stops-at-20m-a-month-141m"
+  ],
+  "cluster_titles": [
+   "Mistral's Timestral Runs on a CPU. Its 'Modified MIT' License Stops at $20M a Month"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261016-0714-0-mistral-s-timestral-runs-on-cpu-forecasts-ti.png",
+   "20261016-0714-0-mistral-s-timestral-runs-on-cpu-forecasts-ti-d1.png",
+   "20261016-0714-0-mistral-s-timestral-runs-on-cpu-forecasts-ti-d2.png",
+   "20261016-0714-0-mistral-s-timestral-runs-on-cpu-forecasts-ti-d3.png"
+  ]
+ },
+ {
+  "topic": "uk bbc license fee streaming services",
+  "headline_marked": "[[UK may charge $240/year to watch streaming services]], expanding BBC license fee",
+  "headline": "UK may charge $240/year to watch streaming services, expanding BBC license fee",
+  "summary": "A UK government proposal could extend the BBC license fee to platforms like Netflix, Amazon, Disney+, and YouTube, potentially costing residents nearly $240 annually.",
+  "category": "POLICY",
+  "template": "neon",
+  "details": [
+   "The UK government is considering a proposal to extend the BBC license fee to cover video streaming content, which could cost residents almost $240 a year just to watch platforms like YouTube. This potential change is expected to be proposed later this year.",
+   "Currently, the BBC license fee, which funds the national broadcaster, is levied on all UK residents who watch content on a television, regardless of whether they watch BBC programming. The standard fee is approximately £180 (~$239) annually.",
+   "The proposed expansion would apply the fee to major streaming services including Netflix, Amazon, Disney+, and YouTube. Proponents argue this is necessary to prevent people from avoiding the tax by using mobile devices or computers instead of traditional TVs.",
+   "Additional funding generated from this expanded fee would reportedly support local journalism and combat misinformation campaigns. The BBC itself has faced budget issues, with a 2 million decline in license fee payments over the last five years.",
+   "Despite these financial challenges, YouGov data indicates the BBC remains the most popular media platform in the UK. The broadcaster recently launched a 24/7 news channel on YouTube for viewers in the UK and US, with similar channels already active in other countries."
+  ],
+  "caption": "UK residents could soon pay nearly $240 a year just to watch YouTube and other streaming services. A new proposal aims to expand the BBC license fee.\n\nThe UK government is considering a proposal to extend the BBC license fee to cover video streaming content, which could cost residents almost $240 a year just to watch platforms like YouTube. This potential change is expected to be proposed later this year.\n\nCurrently, the BBC license fee, which funds the national broadcaster, is levied on all UK residents who watch content on a television, regardless of whether they watch BBC programming. The standard fee is approximately £180 (~$239) annually.\n\nThe proposed expansion would apply the fee to major streaming services including Netflix, Amazon, Disney+, and YouTube. Proponents argue this is necessary to prevent people from avoiding the tax by using mobile devices or computers instead of traditional TVs.\n\nAdditional funding generated from this expanded fee would reportedly support local journalism and combat misinformation campaigns. The BBC itself has faced budget issues, with a 2 million decline in license fee payments over the last five years.\n\nDespite these financial challenges, YouGov data indicates the BBC remains the most popular media platform in the UK. The broadcaster recently launched a 24/7 news channel on YouTube for viewers in the UK and US, with similar channels already active in other countries.\n\n#UKTech #Streaming #BBC #LicenseFee #TechPolicy #YouTube\n\nSource: Engadget",
+  "tweet": "UK residents could face a nearly $240 annual fee to watch streaming services like Netflix, YouTube, and Disney+! The government is proposing to expand the BBC license fee to cover these platforms. #UKTech #Streaming #BBC",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2288294/the-uk-may-expand-the-bbc-license-fee-charging-residents-to-watch-streaming-services/",
+  "image": "https://www.engadget.com/img/gallery/the-uk-may-expand-the-bbc-license-fee-charging-residents-to-watch-streaming-services/l-intro-1792100024.jpg",
+  "orig_title": "The UK may expand the BBC license fee, charging residents to watch streaming services",
+  "cluster_urls": [
+   "https://www.engadget.com/2288294/the-uk-may-expand-the-bbc-license-fee-charging-residents-to-watch-streaming-services/"
+  ],
+  "cluster_titles": [
+   "The UK may expand the BBC license fee, charging residents to watch streaming services"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20261016-0714-1-uk-may-charge-240-year-to-watch-streaming-se.png",
+   "20261016-0714-1-uk-may-charge-240-year-to-watch-streaming-se-d1.png",
+   "20261016-0714-1-uk-may-charge-240-year-to-watch-streaming-se-d2.png"
+  ]
+ }
+]

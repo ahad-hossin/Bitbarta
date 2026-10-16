@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "llm api keys are cash metra breach proves it",
+  "headline_marked": "[[METR Breach]]: LLM API Keys Burned $600K in Compute Credits",
+  "headline": "METR Breach: LLM API Keys Burned $600K in Compute Credits",
+  "summary": "An attacker exploited a fail-open bug to access a researcher's cloud instance for three weeks, monetizing AI compute credits instead of data.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A researcher's cloud instance holding a key to METR's general-access account was compromised for three weeks. The attacker didn't steal sensitive data but instead burned approximately $600,000 in AI inference credits, a tactic known as LLMjacking.",
+   "The breach occurred due to a fail-open bug in a researcher's agent application, which disabled Google authentication. The attacker likely discovered the instance by scanning certificate transparency logs for LLM-related hostnames and then simply requested the provider API key from the agent.",
+   "The prolonged undetected access was partly due to METR's already massive and fluctuating usage, and the fact that the credits were donated, meaning there was no immediate bill to trigger alerts. This incident highlights how stolen compute can be immediately monetized, unlike traditional data theft.",
+   "The article argues that spending alerts alone are insufficient. It emphasizes the critical role of scoping limits and hard monthly caps on API keys to prevent such large-scale abuse. For keys that cannot be capped by the provider, implementing egress proxies or LLM gateways with enforced caps is recommended.",
+   "Detection needs to be granular, focusing on individual keys rather than org-wide volume. An experiment key showing a 4x baseline spend spike on a Sunday morning, for example, would stand out even if the overall organizational spend appears normal. Alerting on off-schedule spend is also crucial, as thieves do not adhere to regular operational schedules.",
+   "The author advises that any certificate issued for an agent-specific domain, like agent-dashboard.example.com, should be considered publicly discoverable. Attackers actively scan certificate transparency logs for LLM and agent keywords, so assume such hostnames are cataloged the day they are created.",
+   "It's essential to test authentication from unauthenticated contexts and to rigorously test error paths, not just the 'happy path.' A 200 OK response from an unauthenticated request can indicate a fail-open vulnerability. Testing revoked tokens and unreachable identity providers is also recommended, alongside monitoring CT logs for one's own namespace."
+  ],
+  "caption": "Your LLM API keys are cash. A recent breach proves it, with attackers burning $600,000 in compute credits over three weeks.\n\nA researcher's cloud instance holding a key to METR's general-access account was compromised for three weeks. The attacker didn't steal sensitive data but instead burned approximately $600,000 in AI inference credits, a tactic known as LLMjacking.\n\nThe breach occurred due to a fail-open bug in a researcher's agent application, which disabled Google authentication. The attacker likely discovered the instance by scanning certificate transparency logs for LLM-related hostnames and then simply requested the provider API key from the agent.\n\nThe prolonged undetected access was partly due to METR's already massive and fluctuating usage, and the fact that the credits were donated, meaning there was no immediate bill to trigger alerts. This incident highlights how stolen compute can be immediately monetized, unlike traditional data theft.\n\nThe article argues that spending alerts alone are insufficient. It emphasizes the critical role of scoping limits and hard monthly caps on API keys to prevent such large-scale abuse. For keys that cannot be capped by the provider, implementing egress proxies or LLM gateways with enforced caps is recommended.\n\nDetection needs to be granular, focusing on individual keys rather than org-wide volume. An experiment key showing a 4x baseline spend spike on a Sunday morning, for example, would stand out even if the overall organizational spend appears normal. Alerting on off-schedule spend is also crucial, as thieves do not adhere to regular operational schedules.\n\nThe author advises that any certificate issued for an agent-specific domain, like agent-dashboard.example.com, should be considered publicly discoverable. Attackers actively scan certificate transparency logs for LLM and agent keywords, so assume such hostnames are cataloged the day they are created.\n\n#AI #CyberSecurity #LLM #Breach #LLMjacking #METR\n\nSource: DEV",
+  "tweet": "Your LLM API keys are cash. A recent breach proves it, with attackers burning $600,000 in compute credits over three weeks. The METR breach highlights the risk of LLMjacking. #AI #CyberSecurity #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/secbyjasonmiller/your-llm-api-keys-are-cash-the-metr-breach-proves-it-3lal",
+  "image": "",
+  "orig_title": "Your LLM API Keys Are Cash. The METR Breach Proves It.",
+  "cluster_urls": [
+   "https://dev.to/secbyjasonmiller/your-llm-api-keys-are-cash-the-metr-breach-proves-it-3lal"
+  ],
+  "cluster_titles": [
+   "Your LLM API Keys Are Cash. The METR Breach Proves It."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261016-2321-0-metr-breach-llm-api-keys-burned-600k-in-comp.png",
+   "20261016-2321-0-metr-breach-llm-api-keys-burned-600k-in-comp-d1.png",
+   "20261016-2321-0-metr-breach-llm-api-keys-burned-600k-in-comp-d2.png",
+   "20261016-2321-0-metr-breach-llm-api-keys-burned-600k-in-comp-d3.png",
+   "20261016-2321-0-metr-breach-llm-api-keys-burned-600k-in-comp-d4.png"
+  ]
+ },
+ {
+  "topic": "nvidia rtx spark devices on sale",
+  "headline_marked": "Nvidia RTX 5090 [[discontinuation looms]] as prices surge past $7,500",
+  "headline": "Nvidia RTX 5090 discontinuation looms as prices surge past $7,500",
+  "summary": "With no replacement until 2028, this could be your final chance to acquire the most powerful consumer GPU, now fetching over four times its MSRP.",
+  "category": "HARDWARE",
+  "template": "launch",
+  "details": [
+   "Rumors suggest Nvidia's flagship RTX 5090 graphics card is nearing discontinuation, with no successor anticipated until at least 2028. This news comes as the GPU's price has skyrocketed from its original MSRP of $1,999 to over $7,500 on the secondary market.",
+   "The RTX 5090 remains the most powerful consumer GPU available, boasting 21,760 CUDA cores and 32GB of GDDR7 VRAM with a memory bandwidth of up to 1,792 GB/s. Its performance dominance is evident across all benchmarking metrics, making it the top choice for high-end gaming PCs.",
+   "Previously, the most accessible way to obtain an RTX 5090 was through select retailers like Micro Center or by purchasing a prebuilt gaming PC. However, with stock reportedly dwindling, prices are expected to climb even higher, mirroring the trend seen after the RTX 4090's production ceased.",
+   "Several prebuilt PC options featuring the RTX 5090 are still available, with some priced around the cost of the GPU alone. For instance, a Dell system with an AMD 9950X3D processor, 32GB of RAM, and a 2TB SSD is listed for $7,499.99, effectively offering the rest of the components for free.",
+   "Other available configurations include an MSI Infinite ZS PC with an AMD Ryzen 9 9950X3D, 32GB of RAM, and a 2TB SSD, as well as a Skytech PC featuring the AMD Ryzen 7 9800X3D, 32GB of VRAM, an X670 Motherboard, and 2TB of Gen4 NVMe SSD storage."
+  ],
+  "caption": "Nvidia's RTX 5090 is reportedly being discontinued, and prices are soaring past $7,500.\nThis could be your last chance to grab the ultimate gaming GPU.\n\nRumors suggest Nvidia's flagship RTX 5090 graphics card is nearing discontinuation, with no successor anticipated until at least 2028. This news comes as the GPU's price has skyrocketed from its original MSRP of $1,999 to over $7,500 on the secondary market.\n\nThe RTX 5090 remains the most powerful consumer GPU available, boasting 21,760 CUDA cores and 32GB of GDDR7 VRAM with a memory bandwidth of up to 1,792 GB/s. Its performance dominance is evident across all benchmarking metrics, making it the top choice for high-end gaming PCs.\n\nPreviously, the most accessible way to obtain an RTX 5090 was through select retailers like Micro Center or by purchasing a prebuilt gaming PC. However, with stock reportedly dwindling, prices are expected to climb even higher, mirroring the trend seen after the RTX 4090's production ceased.\n\nSeveral prebuilt PC options featuring the RTX 5090 are still available, with some priced around the cost of the GPU alone. For instance, a Dell system with an AMD 9950X3D processor, 32GB of RAM, and a 2TB SSD is listed for $7,499.99, effectively offering the rest of the components for free.\n\nOther available configurations include an MSI Infinite ZS PC with an AMD Ryzen 9 9950X3D, 32GB of RAM, and a 2TB SSD, as well as a Skytech PC featuring the AMD Ryzen 7 9800X3D, 32GB of VRAM, an X670 Motherboard, and 2TB of Gen4 NVMe SSD storage.\n\n#Nvidia #RTX5090 #GPU #GamingHardware #TechNews\n\nSource: Tom's Hardware",
+  "tweet": "Nvidia's RTX 5090 is reportedly being discontinued, with no successor until 2028. Prices have surged past $7,500, making this potentially your last chance to buy the ultimate gaming GPU. #Nvidia #RTX5090 #GPU",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/desktops/gaming-pcs/this-could-be-your-last-chance-to-grab-an-rtx-5090-how-to-secure-nvidias-top-rtx-gpu-as-rumors-of-discontinuation-swirl",
+  "image": "https://cdn.mos.cms.futurecdn.net/D2wF99DV4KRfYPYVeR3eWb-1920-80.jpg",
+  "orig_title": "This could be your last chance to grab an RTX 5090",
+  "cluster_urls": [
+   "https://www.tomshardware.com/desktops/gaming-pcs/this-could-be-your-last-chance-to-grab-an-rtx-5090-how-to-secure-nvidias-top-rtx-gpu-as-rumors-of-discontinuation-swirl",
+   "https://www.tomshardware.com/laptops/nvidia-rtx-spark-devices-are-now-officially-on-sale-secure-the-surface-laptop-ultra-or-other-rtx-spark-laptops-here-starting-at-usd2-599-where-to-buy-pricing-and-availability-revealed-on-several-models"
+  ],
+  "cluster_titles": [
+   "This could be your last chance to grab an RTX 5090",
+   "Nvidia RTX Spark devices are now officially on sale, secure the Surface Laptop Ultra or other RTX Spark laptops here"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261016-2321-1-nvidia-rtx-5090-discontinuation-looms-as-pri.png",
+   "20261016-2321-1-nvidia-rtx-5090-discontinuation-looms-as-pri-d1.png",
+   "20261016-2321-1-nvidia-rtx-5090-discontinuation-looms-as-pri-d2.png"
+  ]
+ }
+]

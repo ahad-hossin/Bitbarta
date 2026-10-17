@@ -1,1 +1,105 @@
-[]
+[
+ {
+  "topic": "ai agents and their capabilities",
+  "headline_marked": "[[Telegram Serverless]] vs. VPS: Benchmarks Show Surprising Speed Gains",
+  "headline": "Telegram Serverless vs. VPS: Benchmarks Show Surprising Speed Gains",
+  "summary": "A developer compared Telegram's new Serverless platform against traditional VPS hosting for a bot and Mini App, revealing significant performance improvements in certain operations.",
+  "category": "DEV",
+  "template": "terminal",
+  "details": [
+   "Telegram has been testing its Serverless platform, inviting developers to host their bots and Mini Apps directly on Telegram's infrastructure. This new offering aims to simplify development by managing the runtime, database (SQLite is built-in), and interface hosting, eliminating the need for developers to maintain their own servers.",
+   "A developer tested this new platform against two traditional Virtual Private Servers (VPS) located in Finland and Germany. The goal was to determine if Telegram's Serverless could replace the need for separate VPS instances for small applications, assessing performance through various benchmarks.",
+   "While the Serverless platform uses JavaScript and a specific SDK, restricting direct npm imports and filesystem access, it offers a streamlined experience. The Mini App interface also gets an HTTPS address, integrating seamlessly with the bot's backend and verifying user data before it reaches the server.",
+   "The benchmarks revealed that for certain operations, Telegram Serverless significantly outperformed the VPSs. Notably, batching 32 separate SQL insert calls into a single statement reduced median execution time from 533 ms to 16 ms on Telegram, a 33-fold improvement.",
+   "However, the performance differences varied by task. CPU-intensive tasks showed minimal difference, with both environments performing similarly. Conversely, JSON processing tasks were faster on Telegram Serverless compared to the VPSs, though the gap was less dramatic than with SQL batching.",
+   "The study highlights that while VPSs were faster for basic SQL operations, Telegram Serverless excels in scenarios involving batch operations and certain data processing tasks. This suggests that for applications with specific workloads, Telegram's platform could offer a more efficient and cost-effective solution."
+  ],
+  "caption": "Telegram's Serverless platform is outperforming traditional VPS hosting in key benchmarks, especially for database operations.\n\nTelegram has been testing its Serverless platform, inviting developers to host their bots and Mini Apps directly on Telegram's infrastructure. This new offering aims to simplify development by managing the runtime, database (SQLite is built-in), and interface hosting, eliminating the need for developers to maintain their own servers.\n\nA developer tested this new platform against two traditional Virtual Private Servers (VPS) located in Finland and Germany. The goal was to determine if Telegram's Serverless could replace the need for separate VPS instances for small applications, assessing performance through various benchmarks.\n\nWhile the Serverless platform uses JavaScript and a specific SDK, restricting direct npm imports and filesystem access, it offers a streamlined experience. The Mini App interface also gets an HTTPS address, integrating seamlessly with the bot's backend and verifying user data before it reaches the server.\n\nThe benchmarks revealed that for certain operations, Telegram Serverless significantly outperformed the VPSs. Notably, batching 32 separate SQL insert calls into a single statement reduced median execution time from 533 ms to 16 ms on Telegram, a 33-fold improvement.\n\nHowever, the performance differences varied by task. CPU-intensive tasks showed minimal difference, with both environments performing similarly. Conversely, JSON processing tasks were faster on Telegram Serverless compared to the VPSs, though the gap was less dramatic than with SQL batching.\n\nThe study highlights that while VPSs were faster for basic SQL operations, Telegram Serverless excels in scenarios involving batch operations and certain data processing tasks. This suggests that for applications with specific workloads, Telegram's platform could offer a more efficient and cost-effective solution.\n\n#Telegram #Serverless #DevOps #Benchmarks #Programming\n\nSource: DEV",
+  "tweet": "Telegram Serverless vs. VPS: Benchmarks show surprising speed gains, especially in database operations. Is it time to ditch your servers? #Telegram #Serverless #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/jabrailkhalil/telegram-serverless-vs-two-vpss-what-the-benchmarks-actually-show-44p8",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fora6uqj8ww0odmxkc9bv.png",
+  "orig_title": "Telegram Serverless vs. Two VPSs: What the Benchmarks Actually Show",
+  "cluster_urls": [
+   "https://dev.to/jabrailkhalil/telegram-serverless-vs-two-vpss-what-the-benchmarks-actually-show-44p8",
+   "https://dev.to/janet_hase/do-you-know-that-you-can-integrate-rag-into-gemini-2lf0",
+   "https://dev.to/gabrielanhaia/an-agents-own-log-is-not-an-audit-trail-a-new-paper-shows-agents-deleting-theirs-63f",
+   "https://dev.to/xcrawl/giving-your-ai-coding-assistant-live-web-access-with-an-mcp-server-58eg",
+   "https://dev.to/georgi_kalchev_85d01f7368/we-fetched-104-ai-built-sites-the-way-gptbot-does-61-were-empty-2om0",
+   "https://dev.to/mpmike/every-game-is-connected-i-built-the-graph-that-proves-it-524i",
+   "https://dev.to/programmingcentral/bulletproof-fintech-building-type-safe-stripe-and-adyen-payment-gateways-in-typescript-4433",
+   "https://dev.to/n_b_1784bc3d5/is-openai-sabotaging-power-users-continuous-caasinternalerrorsclienterror-on-chatgpt-python-1dkn",
+   "https://dev.to/toai/data-corruption-across-mixed-encodings-a-validation-strategy-for-implicit-conversion-errors-452l",
+   "https://dev.to/krishchhabra25/building-graphops-brain-how-falkordb-gives-ai-agents-a-true-memory-471a",
+   "https://dev.to/leo_martinez/dissecting-open-webuis-fastapi-architecture-sse-streaming-and-multi-provider-routing-3l71",
+   "https://dev.to/chandan_kumar_1afaffcf991/meta-removes-scraping-language-from-commercial-terms-after-backlash-3j4c"
+  ],
+  "cluster_titles": [
+   "Telegram Serverless vs. Two VPSs: What the Benchmarks Actually Show",
+   "Do you know that you can integrate RAG into Gemini?",
+   "An Agent's Own Log Is Not an Audit Trail. A New Paper Shows Agents Deleting Theirs",
+   "Giving Your AI Coding Assistant Live Web Access with an MCP Server",
+   "We fetched 104 AI-built sites the way GPTBot does. 61% were empty.",
+   "Every Game Is Connected — I Built the Graph That Proves It",
+   "Bulletproof FinTech: Building Type-Safe Stripe and Adyen Payment Gateways in TypeScript",
+   "Is OpenAI Sabotaging Power Users? Continuous 'caas.internal.errors.ClientError' on ChatGPT Python Sandbox",
+   "Data Corruption Across Mixed Encodings: A Validation Strategy for Implicit Conversion Errors Between Legacy DBs and Modern APIs",
+   "Building GraphOps Brain: How FalkorDB Gives AI Agents a True Memory",
+   "Dissecting Open WebUI's FastAPI Architecture: SSE Streaming and Multi-Provider Routing",
+   "Meta removes scraping language from commercial terms after backlash"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261018-0206-0-telegram-serverless-vs-vps-benchmarks-show-s.png",
+   "20261018-0206-0-telegram-serverless-vs-vps-benchmarks-show-s-d1.png",
+   "20261018-0206-0-telegram-serverless-vs-vps-benchmarks-show-s-d2.png",
+   "20261018-0206-0-telegram-serverless-vs-vps-benchmarks-show-s-d3.png"
+  ]
+ },
+ {
+  "topic": "elon musk documentary and related news",
+  "headline_marked": "[[TikTok bans Elon Musk documentary]] account ahead of film's release",
+  "headline": "TikTok bans Elon Musk documentary account ahead of film's release",
+  "summary": "The social media platform has permanently suspended the promotional account for Alex Gibney's documentary about the tech mogul, just days before its wider release.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "TikTok has permanently banned the promotional account for Alex Gibney's documentary on Elon Musk, just days before the film's wider release. The platform did not immediately provide a reason for the suspension.",
+   "The film's distributor, Bleecker Street, was reportedly informed of the imminent \"permanent suspension\" on Friday afternoon. This marks a significant escalation after the platform, along with X, refused to allow paid advertisements for the film.",
+   "While TikTok has no official ties to Musk, part-owner Larry Ellison is featured in the documentary via a text message offering to help fund Musk's Twitter purchase. The banned account had posted shortly before its suspension, urging people to see the movie \"before it gets shut down.\"",
+   "This action follows similar rejections of ads for the film by YouTube, Meta, X, and TikTok last month. YouTube and Google later reversed their decision, citing an \"error,\" but TikTok and X maintained their stance against allowing paid promotions."
+  ],
+  "caption": "TikTok has permanently banned the promotional account for Alex Gibney's Elon Musk documentary, just days before its release.\n\nTikTok has permanently banned the promotional account for Alex Gibney's documentary on Elon Musk, just days before the film's wider release. The platform did not immediately provide a reason for the suspension.\n\nThe film's distributor, Bleecker Street, was reportedly informed of the imminent \"permanent suspension\" on Friday afternoon. This marks a significant escalation after the platform, along with X, refused to allow paid advertisements for the film.\n\nWhile TikTok has no official ties to Musk, part-owner Larry Ellison is featured in the documentary via a text message offering to help fund Musk's Twitter purchase. The banned account had posted shortly before its suspension, urging people to see the movie \"before it gets shut down.\"\n\nThis action follows similar rejections of ads for the film by YouTube, Meta, X, and TikTok last month. YouTube and Google later reversed their decision, citing an \"error,\" but TikTok and X maintained their stance against allowing paid promotions.\n\n#TikTok #ElonMusk #AlexGibney #TechNews #BigTech\n\nSource: The Verge, Engadget",
+  "tweet": "TikTok has permanently banned the promotional account for Alex Gibney's Elon Musk documentary, just days before its release. The platform refused to allow ads for the film, citing no official affiliation with Musk. #TikTok #ElonMusk",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tiktok.com",
+  "source": "The Verge, Engadget",
+  "url": "https://www.theverge.com/tech/1013453/tiktok-bans-alex-gibneys-musk-documentary",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/gettyimages-2194418432.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "TikTok bans Musk documentary account",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/1013453/tiktok-bans-alex-gibneys-musk-documentary",
+   "https://www.engadget.com/2289636/leaked-gameplay-purports-to-show-a-canceled-assassins-creed-game-set-in-ancient-china/",
+   "https://www.theverge.com/entertainment/1013381/jad-abumrad-radiolab-dolly-parton-fela-kuti-podcast-interview"
+  ],
+  "cluster_titles": [
+   "TikTok bans Musk documentary account",
+   "Leaked gameplay purports to show a canceled Assassin's Creed game set in ancient China",
+   "Jad Abumrad loves a butterfly knife and a good springy pillow"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261018-0206-1-tiktok-bans-elon-musk-documentary-account-ah.png",
+   "20261018-0206-1-tiktok-bans-elon-musk-documentary-account-ah-d1.png",
+   "20261018-0206-1-tiktok-bans-elon-musk-documentary-account-ah-d2.png"
+  ]
+ }
+]

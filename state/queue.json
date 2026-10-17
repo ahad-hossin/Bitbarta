@@ -1,1 +1,104 @@
-[]
+[
+ {
+  "topic": "hidden costs of ai and setup importance",
+  "headline_marked": "OpenCode Breach: [[1.4% of Users' AI Keys Exposed]]",
+  "headline": "OpenCode Breach: 1.4% of Users' AI Keys Exposed",
+  "summary": "OpenCode confirmed a security breach exposing third-party provider keys, including OpenAI and Anthropic, for a subset of its users. Affected users are urged to revoke and replace their keys immediately.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "OpenCode has confirmed a security breach affecting 1.4% of its Console users, with potentially exposed third-party provider keys like those for OpenAI and Anthropic. The breach was identified after an email with the subject \"Action Required: Potential provider key breach\" was sent to affected users, urging them to revoke and replace their keys.",
+   "The incident is described by OpenCode as a \"large scale distillation attack.\" While the company has not disclosed the exact number of affected accounts, the method of entry, or the duration of the access, security researcher Matt Johansen confirmed the breach, noting that \"Keys stolen\" were a consequence.",
+   "Affected users are advised to revoke and replace their provider keys through the respective provider's dashboard, update any applications that use them, and review recent usage for unexpected activity. Some user reports suggest unexpected charges in the hundreds of dollars, though OpenCode has not confirmed these figures or how they will be handled.",
+   "The breach highlights the risks associated with storing provider keys in hosted gateways. OpenCode's Console allows users to connect provider accounts they already pay for, storing the credentials to simplify model usage for teams. However, this centralizes the risk, making the gateway itself an attack surface.",
+   "The author, who develops the Hermes IDE, notes that their tool never asks for provider tokens, running agents in separate terminals and never displaying sensitive commands. This approach aims to mitigate the risk of handing over provider keys to the IDE itself, though it does not protect keys pasted into any hosted console.",
+   "OpenCode has not yet released detailed technical information about the breach, leaving questions about the exact number of accounts impacted and the extent of the key exposure. Users who did not receive an email are reportedly not affected, but rotating keys is a quick precaution if there's any doubt."
+  ],
+  "caption": "OpenCode confirms a security breach exposing AI provider keys for 1.4% of users. OpenAI and Anthropic keys may be compromised.\n\nOpenCode has confirmed a security breach affecting 1.4% of its Console users, with potentially exposed third-party provider keys like those for OpenAI and Anthropic. The breach was identified after an email with the subject \"Action Required: Potential provider key breach\" was sent to affected users, urging them to revoke and replace their keys.\n\nThe incident is described by OpenCode as a \"large scale distillation attack.\" While the company has not disclosed the exact number of affected accounts, the method of entry, or the duration of the access, security researcher Matt Johansen confirmed the breach, noting that \"Keys stolen\" were a consequence.\n\nAffected users are advised to revoke and replace their provider keys through the respective provider's dashboard, update any applications that use them, and review recent usage for unexpected activity. Some user reports suggest unexpected charges in the hundreds of dollars, though OpenCode has not confirmed these figures or how they will be handled.\n\nThe breach highlights the risks associated with storing provider keys in hosted gateways. OpenCode's Console allows users to connect provider accounts they already pay for, storing the credentials to simplify model usage for teams. However, this centralizes the risk, making the gateway itself an attack surface.\n\nThe author, who develops the Hermes IDE, notes that their tool never asks for provider tokens, running agents in separate terminals and never displaying sensitive commands. This approach aims to mitigate the risk of handing over provider keys to the IDE itself, though it does not protect keys pasted into any hosted console.\n\n#OpenCode #SecurityBreach #AIKeys #OpenAI #Anthropic\n\nSource: DEV",
+  "tweet": "OpenCode confirms a security breach exposing AI provider keys for 1.4% of users. OpenAI and Anthropic keys may be compromised. Users urged to revoke and replace keys immediately. #OpenCode #SecurityBreach #AIKeys",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "opencode.com",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/opencode-told-14-of-console-users-to-revoke-their-openai-and-anthropic-keys-561",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fm0xi87os5csc7rh69sul.png",
+  "orig_title": "OpenCode Told 1.4% of Console Users to Revoke Their OpenAI and Anthropic Keys",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/opencode-told-14-of-console-users-to-revoke-their-openai-and-anthropic-keys-561",
+   "https://dev.to/jsb-securedme/the-hidden-cost-of-ai-hype-why-your-setup-matters-more-than-the-model-a-finops-post-mortem-1hgd",
+   "https://dev.to/minia2a/your-discovery-example-is-a-promise-we-replayed-1602-of-ours-to-check-3n15",
+   "https://dev.to/onaeiuspkz/a-mail-forwarding-rule-is-persistence-that-survives-a-password-reset-1do1",
+   "https://dev.to/secbyjasonmiller/stop-panic-grepping-your-lockfile-after-an-npm-compromise-alert-4k00",
+   "https://dev.to/franckpachot/query-a-partitioned-data-lake-in-azure-blob-with-pgduckdb-31pc",
+   "https://dev.to/felixhoffmann556/nodejs-channel-indicators-a-2-second-typing-lease-worth-the-chatter-3dmj",
+   "https://dev.to/madifrontend/frontend-monitoring-the-complete-guide-to-observability-that-actually-works-57ng",
+   "https://dev.to/majid_mahmudi_9d92e9e73f8/how-to-troubleshoot-an-office-phone-system-a-practical-guide-to-voip-pbx-and-network-issues-1mnc",
+   "https://dev.to/the_movie_9b1357e8c99cfaa/paid-obsidian-starter-vaults-a-96-price-span-for-a-folder-of-text-files-2edj",
+   "https://dev.to/eternaclarity/no-api-keys-connecting-chatgpt-claude-grok-muse-and-mistral-to-a-real-business-system-through-ac7",
+   "https://dev.to/lucasharosa/stack-heap-e-memoria-por-que-isso-ainda-importa-para-quem-programa-em-javascript-h30"
+  ],
+  "cluster_titles": [
+   "OpenCode Told 1.4% of Console Users to Revoke Their OpenAI and Anthropic Keys",
+   "The Hidden Cost of AI Hype: Why Your Setup Matters More Than the Model (A FinOps Post-Mortem)",
+   "Your Discovery Example Is a Promise — We Replayed 1,602 of Ours to Check",
+   "A mail forwarding rule is persistence that survives a password reset",
+   "Stop panic-grepping your lockfile after an npm compromise alert",
+   "Query a partitioned data lake in Azure Blob with pg_duckdb",
+   "Node.js Channel Indicators: A 2-Second Typing Lease Worth the Chatter",
+   "Frontend Monitoring: The Complete Guide to Observability That Actually Works",
+   "How to Troubleshoot an Office Phone System: A Practical Guide to VoIP, PBX, and Network Issues",
+   "Paid Obsidian Starter Vaults: A $96 Price Span for a Folder of Text Files",
+   "No API keys: connecting ChatGPT, Claude, Grok, Muse and Mistral to a real business system through one connector",
+   "Stack, Heap e memória: por que isso ainda importa para quem programa em JavaScript?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261018-0406-0-opencode-breach-1-4-of-users-ai-keys-exposed.png",
+   "20261018-0406-0-opencode-breach-1-4-of-users-ai-keys-exposed-d1.png",
+   "20261018-0406-0-opencode-breach-1-4-of-users-ai-keys-exposed-d2.png",
+   "20261018-0406-0-opencode-breach-1-4-of-users-ai-keys-exposed-d3.png"
+  ]
+ },
+ {
+  "topic": "meta removes language raising scraping concerns",
+  "headline_marked": "Meta [[removes controversial AI training language]] from terms of use",
+  "headline": "Meta removes controversial AI training language from terms of use",
+  "summary": "After facing backlash, Meta has removed a clause that could have allowed it to scrape content from business domains for AI training. The company insists this doesn't change its crawling practices.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Meta recently updated its commercial terms of use, sparking concern with language that suggested the company could use \"any content from [a business account’s] domains, web pages, or URLs to provide, develop, improve, research, train, and maintain the integrity of” Meta products and services.",
+   "This broad wording raised alarms among news organizations and other businesses, who feared it could be interpreted as a green light for Meta to scrape vast amounts of web content for AI training without explicit consent.",
+   "However, a Meta spokesperson stated that the updated terms did not reflect a change in how the company crawls the web. They clarified that the provision was consolidated and only applied to Meta's ads and business products.",
+   "The Verge reported that the controversial provision has now been removed from the terms of use, following public outcry and clarification from Meta.",
+   "Meta reiterated that the change does not alter the way its web crawlers operate, aiming to reassure users and businesses about its data usage policies."
+  ],
+  "caption": "Meta has removed controversial language from its terms of use that suggested it could scrape business content for AI training.\n\nMeta recently updated its commercial terms of use, sparking concern with language that suggested the company could use \"any content from [a business account’s] domains, web pages, or URLs to provide, develop, improve, research, train, and maintain the integrity of” Meta products and services.\n\nThis broad wording raised alarms among news organizations and other businesses, who feared it could be interpreted as a green light for Meta to scrape vast amounts of web content for AI training without explicit consent.\n\nHowever, a Meta spokesperson stated that the updated terms did not reflect a change in how the company crawls the web. They clarified that the provision was consolidated and only applied to Meta's ads and business products.\n\nThe Verge reported that the controversial provision has now been removed from the terms of use, following public outcry and clarification from Meta.\n\nMeta reiterated that the change does not alter the way its web crawlers operate, aiming to reassure users and businesses about its data usage policies.\n\n#Meta #AI #DataScraping #TechNews #ArtificialIntelligence\n\nSource: TechCrunch, The Verge",
+  "tweet": "Meta has removed controversial language from its terms of use that suggested it could scrape business content for AI training. The company insists this doesn't change its crawling practices. #Meta #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "meta.com",
+  "source": "TechCrunch, The Verge",
+  "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+  "image": "",
+  "orig_title": "Meta removes language that raised scraping and AI training concerns",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+   "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites"
+  ],
+  "cluster_titles": [
+   "Meta removes language that raised scraping and AI training concerns",
+   "Meta removes language that may have allowed it to scrape news sites"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261018-0406-1-meta-removes-controversial-ai-training-langu.png",
+   "20261018-0406-1-meta-removes-controversial-ai-training-langu-d1.png",
+   "20261018-0406-1-meta-removes-controversial-ai-training-langu-d2.png"
+  ]
+ }
+]

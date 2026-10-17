@@ -1,1 +1,77 @@
-[]
+[
+ {
+  "topic": "nvidia rtx 5090 not dead despite shortages",
+  "headline_marked": "Nvidia reportedly insists [[RTX 5090 isn't dead]] despite severe shortages and removed listings",
+  "headline": "Nvidia reportedly insists RTX 5090 isn't dead despite severe shortages and removed listings",
+  "summary": "Nvidia's senior VP Jeff Fisher reportedly stated the RTX 5090 is not discontinued and will continue to ship, despite severe supply constraints and its absence from major retailers and Nvidia's own marketplace.",
+  "category": "HARDWARE",
+  "template": "leak",
+  "details": [
+   "Last week, rumors suggested Nvidia was halting RTX 5090 production, likely to prioritize AI accelerators. Now, Senior VP Jeff Fisher reportedly states the card is not discontinued and will continue to be shipped, despite prior silence from the company.",
+   "This information comes from Taiwanese websites 4Gamers and SJTV, quoting a purported post-event interview with Fisher. He reportedly attributed the situation to limited supply chain capacity, affirming Nvidia's efforts to get the product to market.",
+   "Fisher's reported quote emphasized, \"The supply chain (capacity) is indeed somewhat constrained, but NVIDIA is doing everything it can to get the product on the market.\" He added that \"production has not been discontinued, and NVIDIA will continue to ship, which is very important.\"",
+   "Despite these assurances, a quick check reveals RTX 5090s are scarce, selling for $7,300-$8,500 from third-party sellers on Amazon and Newegg. The card remains absent from Best Buy, Micro Center, and Nvidia's own marketplace, raising questions about availability.",
+   "This scenario reflects a broader trend, with Intel and AMD also making similar statements about their consumer GPUs. All three companies show increasing focus on AI in their quarterly figures, while new gaming GPU launches remain elusive."
+  ],
+  "caption": "Is the RTX 5090 dead? Nvidia's Senior VP Jeff Fisher reportedly insists the high-end GPU is still shipping, despite severe shortages and its absence from major retailers.\n\nLast week, rumors suggested Nvidia was halting RTX 5090 production, likely to prioritize AI accelerators. Now, Senior VP Jeff Fisher reportedly states the card is not discontinued and will continue to be shipped, despite prior silence from the company.\n\nThis information comes from Taiwanese websites 4Gamers and SJTV, quoting a purported post-event interview with Fisher. He reportedly attributed the situation to limited supply chain capacity, affirming Nvidia's efforts to get the product to market.\n\nFisher's reported quote emphasized, \"The supply chain (capacity) is indeed somewhat constrained, but NVIDIA is doing everything it can to get the product on the market.\" He added that \"production has not been discontinued, and NVIDIA will continue to ship, which is very important.\"\n\nDespite these assurances, a quick check reveals RTX 5090s are scarce, selling for $7,300-$8,500 from third-party sellers on Amazon and Newegg. The card remains absent from Best Buy, Micro Center, and Nvidia's own marketplace, raising questions about availability.\n\nThis scenario reflects a broader trend, with Intel and AMD also making similar statements about their consumer GPUs. All three companies show increasing focus on AI in their quarterly figures, while new gaming GPU launches remain elusive.\n\n#Nvidia #RTX5090 #GamingGPU #Hardware #TechNews #GPU\n\nSource: Tom's Hardware",
+  "tweet": "Nvidia's RTX 5090 isn't dead, says Senior VP Jeff Fisher, despite rumors of discontinuation and severe shortages. He reportedly stated the company is doing everything to ship the card. #Nvidia #RTX5090 #GamingGPU",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-reportedly-insists-the-rtx-5090-isnt-dead-despite-severe-shortages-and-removed-listings-at-multiple-retailers-flagship-gpu-is-missing-from-nvidias-store-and-commands-usd8-500-on-amazon",
+  "image": "https://cdn.mos.cms.futurecdn.net/D2wF99DV4KRfYPYVeR3eWb-1920-80.jpg",
+  "orig_title": "Nvidia reportedly insists the RTX 5090 isn't dead despite severe shortages and removed listings at multiple retailers",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/gpus/nvidia-reportedly-insists-the-rtx-5090-isnt-dead-despite-severe-shortages-and-removed-listings-at-multiple-retailers-flagship-gpu-is-missing-from-nvidias-store-and-commands-usd8-500-on-amazon"
+  ],
+  "cluster_titles": [
+   "Nvidia reportedly insists the RTX 5090 isn't dead despite severe shortages and removed listings at multiple retailers"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261017-2106-0-nvidia-reportedly-insists-rtx-5090-isn-t-dea.png",
+   "20261017-2106-0-nvidia-reportedly-insists-rtx-5090-isn-t-dea-d1.png",
+   "20261017-2106-0-nvidia-reportedly-insists-rtx-5090-isn-t-dea-d2.png"
+  ]
+ },
+ {
+  "topic": "nextjs 15 server actions leak secrets",
+  "headline_marked": "Next.js 15: [[Server Actions can leak secrets]] via `use client` directive misplacement",
+  "headline": "Next.js 15: Server Actions can leak secrets via `use client` directive misplacement",
+  "summary": "A misplaced `use client` directive in Next.js 15 Server Actions can inadvertently bundle sensitive data like Stripe secret keys into client-side JavaScript, exposing them to the public.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A recent production incident revealed a critical flaw in Next.js 15 Server Actions. A Stripe secret key was accidentally bundled into client-side JavaScript, directly exposing it to users. This was traced to a seemingly innocent `use client` directive.",
+   "The issue arises from the subtle boundary between server and client code. Even if a function is marked `use server`, defining it within a client module can cause Next.js to serialize its reference and, crucially, include its entire import graph in the client bundle.",
+   "This 'tainting' of the file means that any sensitive data, like API keys, imported or defined within that client module, will end up in the browser bundle. Developers must be vigilant about where `use client` directives are placed to prevent such leaks.",
+   "Beyond security, the article also highlights performance pitfalls, such as waterfalling data fetches. Correctly structuring data fetching can significantly improve Largest Contentful Paint (LCP) by 40-60%, allowing skeleton UIs to render instantly."
+  ],
+  "caption": "A single misplaced `use client` directive in Next.js 15 Server Actions can expose your sensitive API keys to the public web. This silent killer bundles secrets into client JavaScript.\n\nA recent production incident revealed a critical flaw in Next.js 15 Server Actions. A Stripe secret key was accidentally bundled into client-side JavaScript, directly exposing it to users. This was traced to a seemingly innocent `use client` directive.\n\nThe issue arises from the subtle boundary between server and client code. Even if a function is marked `use server`, defining it within a client module can cause Next.js to serialize its reference and, crucially, include its entire import graph in the client bundle.\n\nThis 'tainting' of the file means that any sensitive data, like API keys, imported or defined within that client module, will end up in the browser bundle. Developers must be vigilant about where `use client` directives are placed to prevent such leaks.\n\nBeyond security, the article also highlights performance pitfalls, such as waterfalling data fetches. Correctly structuring data fetching can significantly improve Largest Contentful Paint (LCP) by 40-60%, allowing skeleton UIs to render instantly.\n\n#NextJS #ServerActions #WebDev #Security #JavaScript #Vulnerability\n\nSource: DEV",
+  "tweet": "A misplaced `use client` directive in Next.js 15 Server Actions can expose your sensitive API keys to the public web. This silent killer bundles secrets into client JavaScript. Learn how to prevent this critical vulnerability. #NextJS #Security #WebDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "vercel.com",
+  "source": "DEV",
+  "url": "https://dev.to/elena_rostova/fixing-the-silent-killer-how-improper-server-actions-leak-secrets-in-nextjs-15-51ba",
+  "image": "",
+  "orig_title": "Fixing the Silent Killer: How Improper Server Actions Leak Secrets in Next.js 15",
+  "cluster_urls": [
+   "https://dev.to/elena_rostova/fixing-the-silent-killer-how-improper-server-actions-leak-secrets-in-nextjs-15-51ba"
+  ],
+  "cluster_titles": [
+   "Fixing the Silent Killer: How Improper Server Actions Leak Secrets in Next.js 15"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261017-2106-1-next-js-15-server-actions-can-leak-secrets-v.png",
+   "20261017-2106-1-next-js-15-server-actions-can-leak-secrets-v-d1.png",
+   "20261017-2106-1-next-js-15-server-actions-can-leak-secrets-v-d2.png"
+  ]
+ }
+]

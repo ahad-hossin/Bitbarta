@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "LLM API cost discrepancy",
+  "headline_marked": "[[Same 100,000 JSON extractions cost $667 or $1,100]] — token price never changed",
+  "headline": "Same 100,000 JSON extractions cost $667 or $1,100 — token price never changed",
+  "summary": "The actual cost of LLM tasks like JSON extraction can nearly double due to parameters like 'temperature' and 'seed', which influence the model's output reliability and the number of retries needed for a valid response.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The effective cost of using Large Language Models (LLMs) can vary dramatically for the same task, even when the per-token price remains constant. For instance, 100,000 JSON extractions could cost $667 or $1,100, depending on how LLM parameters are managed.",
+   "LLM APIs bill per million tokens, with separate prices for input and output. Two key parameters, 'temperature' and 'seed,' significantly influence the model's output quality and consistency, but are not directly reflected on the invoice.",
+   "'Temperature' controls the model's randomness: 0 means highly deterministic, while higher values mean more adventurous. 'Seed' makes random choices repeatable. Validation is your code checking if the LLM's output meets requirements, like parsing as valid JSON.",
+   "A single LLM call for a task like extracting five fields from a support ticket might cost $0.0066 on GPT-5.6, based on 1,500 input and 300 output tokens. This base cost is identical regardless of temperature or seed settings.",
+   "However, if the LLM returns malformed JSON (e.g., unescaped quotes), your parser fails, and your code retries the call. Each retry incurs the full cost, effectively multiplying your expense for a single successful task.",
+   "Higher temperature increases the likelihood of invalid output because valid JSON is a narrow path. If 'p' is the share of answers that pass validation, the true cost per finished task becomes the price per call divided by 'p'.",
+   "A critical trap is pinning a 'seed' for reproducibility and retrying with the same seed, temperature, and prompt. This causes the model to repeat its error, leading to repeated billing without a fresh chance for a valid response.",
+   "To mitigate this, retries should alter something: drop or bump the seed, lower the temperature, or append the parser error to the prompt. Capping the number of retry attempts is also crucial to prevent infinite loops and manage costs.",
+   "For tasks requiring structured output like JSON, set 'temperature' to 0 and utilize the API's structured output mode if available. This constrains the model to match a JSON schema, significantly increasing 'p' towards 1.",
+   "Tracking `validation_failures / calls` provides your actual 'p' value, allowing you to calculate the true cost per task. While low temperature is ideal for parsing, it's not suitable for creative tasks like brainstorming, which require more varied output."
+  ],
+  "caption": "You could pay $667 or $1,100 for the exact same 100,000 JSON extractions from an LLM. The per-token price never changes, but your final bill can nearly double.\n\nThe effective cost of using Large Language Models (LLMs) can vary dramatically for the same task, even when the per-token price remains constant. For instance, 100,000 JSON extractions could cost $667 or $1,100, depending on how LLM parameters are managed.\n\nLLM APIs bill per million tokens, with separate prices for input and output. Two key parameters, 'temperature' and 'seed,' significantly influence the model's output quality and consistency, but are not directly reflected on the invoice.\n\n'Temperature' controls the model's randomness: 0 means highly deterministic, while higher values mean more adventurous. 'Seed' makes random choices repeatable. Validation is your code checking if the LLM's output meets requirements, like parsing as valid JSON.\n\nA single LLM call for a task like extracting five fields from a support ticket might cost $0.0066 on GPT-5.6, based on 1,500 input and 300 output tokens. This base cost is identical regardless of temperature or seed settings.\n\nHowever, if the LLM returns malformed JSON (e.g., unescaped quotes), your parser fails, and your code retries the call. Each retry incurs the full cost, effectively multiplying your expense for a single successful task.\n\nHigher temperature increases the likelihood of invalid output because valid JSON is a narrow path. If 'p' is the share of answers that pass validation, the true cost per finished task becomes the price per call divided by 'p'.\n\nA critical trap is pinning a 'seed' for reproducibility and retrying with the same seed, temperature, and prompt. This causes the model to repeat its error, leading to repeated billing without a fresh chance for a valid response.\n\n#LLM #AICost #DeveloperTips #APIOptimization #Tech\n\nSource: DEV",
+  "tweet": "Paying $667 or $1,100 for the same 100,000 LLM JSON extractions? Your per-token price isn't changing, but your final bill can nearly double. Learn how 'temperature' and 'seed' settings impact effective costs and how to optimize. #LLM #AICost #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/altrouter/667-or-1100-for-the-same-100000-json-extractions-and-the-price-per-token-never-changed-1aph",
+  "image": "",
+  "orig_title": "$667 or $1,100 for the same 100,000 JSON extractions — and the price per token never changed",
+  "cluster_urls": [
+   "https://dev.to/altrouter/667-or-1100-for-the-same-100000-json-extractions-and-the-price-per-token-never-changed-1aph"
+  ],
+  "cluster_titles": [
+   "$667 or $1,100 for the same 100,000 JSON extractions — and the price per token never changed"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261017-1706-0-same-100-000-json-extractions-cost-667-or-1-.png",
+   "20261017-1706-0-same-100-000-json-extractions-cost-667-or-1--d1.png",
+   "20261017-1706-0-same-100-000-json-extractions-cost-667-or-1--d2.png",
+   "20261017-1706-0-same-100-000-json-extractions-cost-667-or-1--d3.png",
+   "20261017-1706-0-same-100-000-json-extractions-cost-667-or-1--d4.png"
+  ]
+ },
+ {
+  "topic": "Xbox 360 voltage glitch mod",
+  "headline_marked": "[[Xbox 360 voltage glitch mod finished]] after nine years, using a $4 microcontroller",
+  "headline": "Xbox 360 voltage glitch mod finished after nine years, using a $4 microcontroller",
+  "summary": "A long-standing CPU force-reset exploit for the Xbox 360, previously requiring specialized hardware, has now been achieved using a $4 Raspberry Pi Pico. This significantly simplifies the console's physical hack.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A modder has successfully completed a nine-year project to crack the Xbox 360 using a CPU force-reset exploit. This complex maneuver, which previously required specialized glitch chips and hardware, was accomplished with a Raspberry Pi Pico, costing only $4.",
+   "The exploit involves sending a precisely timed signal to the CPU's reset pin, causing it to execute the current instruction incorrectly. This allows custom code to run, bypassing Microsoft's cryptographic security layers within the console.",
+   "Achieving this hack demands nanosecond-level timing precision, a challenge that often required multiple attempts even with dedicated glitch chips. The process has historically been a significant hurdle for modders.",
+   "Scottish hacker Joshua Kennedy began this project in 2017, attempting to use a Matrix Coolrunner Rev D modchip. His earlier efforts to roll his own programmers using a PC's parallel port were unsuccessful, leading him to shelve the idea.",
+   "In 2026, Kennedy revisited the project with the Raspberry Pi Pico. He used the Pico to dump the console's NAND flash firmware via the NAND interface header, a task made easy with simple wiring and the PicoFlasher utility.",
+   "He then uploaded Octal450's Timing Files, mini-programs optimized for various Xbox 360 hardware revisions, to the Matrix Coolrunner using the Pi Pico. This completed the hack, transforming a previously daunting task into a trivial one with the affordable microcontroller."
+  ],
+  "caption": "An Xbox 360 CPU exploit, once requiring specialized hardware, has been completed using a $4 Raspberry Pi Pico. This makes a complex console hack significantly more accessible.\n\nA modder has successfully completed a nine-year project to crack the Xbox 360 using a CPU force-reset exploit. This complex maneuver, which previously required specialized glitch chips and hardware, was accomplished with a Raspberry Pi Pico, costing only $4.\n\nThe exploit involves sending a precisely timed signal to the CPU's reset pin, causing it to execute the current instruction incorrectly. This allows custom code to run, bypassing Microsoft's cryptographic security layers within the console.\n\nAchieving this hack demands nanosecond-level timing precision, a challenge that often required multiple attempts even with dedicated glitch chips. The process has historically been a significant hurdle for modders.\n\nScottish hacker Joshua Kennedy began this project in 2017, attempting to use a Matrix Coolrunner Rev D modchip. His earlier efforts to roll his own programmers using a PC's parallel port were unsuccessful, leading him to shelve the idea.\n\nIn 2026, Kennedy revisited the project with the Raspberry Pi Pico. He used the Pico to dump the console's NAND flash firmware via the NAND interface header, a task made easy with simple wiring and the PicoFlasher utility.\n\nHe then uploaded Octal450's Timing Files, mini-programs optimized for various Xbox 360 hardware revisions, to the Matrix Coolrunner using the Pi Pico. This completed the hack, transforming a previously daunting task into a trivial one with the affordable microcontroller.\n\n#Xbox360 #ConsoleModding #RaspberryPi #TechHack #Gaming #Security\n\nSource: Tom's Hardware",
+  "tweet": "An Xbox 360 CPU exploit, once requiring specialized hardware, has been completed using a $4 Raspberry Pi Pico. This makes a complex console hack significantly more accessible, simplifying a nine-year project. #Xbox360 #ConsoleHacking #RaspberryPi",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/video-games/retro-gaming/modder-finishes-nine-year-xbox-360-voltage-glitch-mod-with-a-usd4-microcontroller-cracks-the-console-open-tiny-microcontroller-dumps-nand-and-flashes-timing-files-to-bypass-cpu-cryptography",
+  "image": "https://cdn.mos.cms.futurecdn.net/8DAK5ZNFPis5MqQgWD9BZo-1920-80.png",
+  "orig_title": "Modder finishes nine-year Xbox 360 voltage glitch mod with a $4 microcontroller, cracks the console open",
+  "cluster_urls": [
+   "https://www.tomshardware.com/video-games/retro-gaming/modder-finishes-nine-year-xbox-360-voltage-glitch-mod-with-a-usd4-microcontroller-cracks-the-console-open-tiny-microcontroller-dumps-nand-and-flashes-timing-files-to-bypass-cpu-cryptography"
+  ],
+  "cluster_titles": [
+   "Modder finishes nine-year Xbox 360 voltage glitch mod with a $4 microcontroller, cracks the console open"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261017-1706-1-xbox-360-voltage-glitch-mod-finished-after-n.png",
+   "20261017-1706-1-xbox-360-voltage-glitch-mod-finished-after-n-d1.png",
+   "20261017-1706-1-xbox-360-voltage-glitch-mod-finished-after-n-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,101 @@
-[]
+[
+ {
+  "topic": "ai agent development and capabilities",
+  "headline_marked": "[[Headless Mode]] Traps: 5 AI Agents Fail to Ask for Approval",
+  "headline": "Headless Mode Traps: 5 AI Agents Fail to Ask for Approval",
+  "summary": "Claude, Codex, Gemini, Copilot, and OpenCode CLIs have hidden permission models that can deny actions without user input, leading to unexpected failures in automated workflows.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "When AI agents run in headless mode (e.g., in CI/CD pipelines), their permission models can lead to unexpected denials. For instance, Claude Code's headless mode might deny a tool call needing approval, causing the run to proceed with an empty diff, even if it reports fixing a flaky test.",
+   "Gemini CLI, by design, treats a rule that would ask for user confirmation as a denial in non-interactive mode. Its successor, Antigravity CLI, offers machine-readable output and has fixed issues with exit codes in its print mode.",
+   "Copilot's programmatic reference is less clear on how flags like --continue and --resume interact with its permission system. It's advised to test these combinations manually before relying on them in automated workflows.",
+   "Codex exec runs in a read-only sandbox by default. To allow file modifications, --sandbox workspace-write is needed, or --approve-for-me can be used for automatic review requests. Using OPENAI_API_KEY or CODEX_API_KEY as job-level variables is warned against.",
+   "OpenCode operates with a default-allow policy for most permissions, meaning it can edit files and run shell commands without explicit flags. However, custom deny rules in opencode.json act as the primary security fence.",
+   "Only two of the five agents documented their exit codes for headless runs. An exit code of 0 simply means the process terminated; it's crucial to implement additional checks to verify the agent's actions and ensure the desired outcome."
+  ],
+  "caption": "Beware of AI agents in headless mode! 🤖\nFive popular CLIs — Claude, Codex, Gemini, Copilot, and OpenCode — have hidden permission traps that can deny actions without your explicit approval, potentially breaking your automated workflows.\n\nWhen AI agents run in headless mode (e.g., in CI/CD pipelines), their permission models can lead to unexpected denials. For instance, Claude Code's headless mode might deny a tool call needing approval, causing the run to proceed with an empty diff, even if it reports fixing a flaky test.\n\nGemini CLI, by design, treats a rule that would ask for user confirmation as a denial in non-interactive mode. Its successor, Antigravity CLI, offers machine-readable output and has fixed issues with exit codes in its print mode.\n\nCopilot's programmatic reference is less clear on how flags like --continue and --resume interact with its permission system. It's advised to test these combinations manually before relying on them in automated workflows.\n\nCodex exec runs in a read-only sandbox by default. To allow file modifications, --sandbox workspace-write is needed, or --approve-for-me can be used for automatic review requests. Using OPENAI_API_KEY or CODEX_API_KEY as job-level variables is warned against.\n\nOpenCode operates with a default-allow policy for most permissions, meaning it can edit files and run shell commands without explicit flags. However, custom deny rules in opencode.json act as the primary security fence.\n\nOnly two of the five agents documented their exit codes for headless runs. An exit code of 0 simply means the process terminated; it's crucial to implement additional checks to verify the agent's actions and ensure the desired outcome.\n\n#AI #DevOps #Automation #Security #LLM\n\nSource: DEV",
+  "tweet": "AI agents in headless mode can be risky! 🤖 5 CLIs (Claude, Codex, Gemini, Copilot, OpenCode) have permission traps that deny actions without approval. Watch out for unexpected failures in your CI/CD pipelines. #AI #DevOps #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/headless-mode-in-5-agents-claude-p-codex-exec-gemini-p-copilot-p-opencode-run-4816",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fp1ccacw5fwtfd54ko452.png",
+  "orig_title": "Headless Mode in 5 Agents: claude -p, codex exec, gemini -p, copilot -p, opencode run",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/headless-mode-in-5-agents-claude-p-codex-exec-gemini-p-copilot-p-opencode-run-4816",
+   "https://dev.to/flowpaja/make-google-sheets-watch-new-rows-not-picking-up-new-rows-42d5",
+   "https://dev.to/keith_azodeh/trace-the-price-through-the-whole-ai-workflow-50a3",
+   "https://dev.to/ofirbaranesadagent/36-of-58-major-tokens-have-owner-only-functions-a-keyword-scanner-cant-name-trueusds-erases-a-4l93",
+   "https://dev.to/ianwieds/98-less-context-if-the-model-writes-the-right-script-4mfn",
+   "https://dev.to/thalion51/postgres-retrieval-for-healthcare-appointment-recovery-across-3-retention-windows-m6n",
+   "https://dev.to/cdsap/the-extra-kotlin-daemon-again-9pj",
+   "https://dev.to/raviklog/whats-behind-an-ai-answer-294j",
+   "https://dev.to/techaiwire/meshxfs-an-ai-written-clustered-file-system-built-on-xfs-2j3j",
+   "https://dev.to/maditech/sql-for-hospital-data-analysis-window-functions-joins-ctes-and-subqueries-3b8h",
+   "https://dev.to/bhavya277/creatorcoach-ai-your-personal-growth-coach-for-gaming-creators-109e"
+  ],
+  "cluster_titles": [
+   "Headless Mode in 5 Agents: claude -p, codex exec, gemini -p, copilot -p, opencode run",
+   "Make Google Sheets \"Watch New Rows\" not picking up new rows",
+   "Trace the Price Through the Whole AI Workflow",
+   "36 of 58 major tokens have owner-only functions a keyword scanner can't name. TrueUSD's erases a blacklisted balance.",
+   "98% less context, if the model writes the right script",
+   "Postgres Retrieval for Healthcare Appointment Recovery (Across 3 Retention Windows)",
+   "The Extra Kotlin Daemon. Again",
+   "What's behind an AI answer",
+   "MeshXFS: an AI-written clustered file system built on XFS",
+   "SQL for Hospital Data Analysis: Window Functions, Joins, CTEs, and Subqueries",
+   "CreatorCoach AI: Your Personal Growth Coach for Gaming Creators"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261018-0006-0-headless-mode-traps-5-ai-agents-fail-to-ask-.png",
+   "20261018-0006-0-headless-mode-traps-5-ai-agents-fail-to-ask--d1.png",
+   "20261018-0006-0-headless-mode-traps-5-ai-agents-fail-to-ask--d2.png"
+  ]
+ },
+ {
+  "topic": "amazon uses ai to monitor union risk",
+  "headline_marked": "Amazon uses AI to [[monitor union risk]] in UK warehouses",
+  "headline": "Amazon uses AI to monitor union risk in UK warehouses",
+  "summary": "Internal documents reveal Amazon's AI tool, Atlas, assigns risk scores to warehouses for union activity based on hundreds of data points.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Internal documents suggest Amazon employs an AI tool named Atlas to forecast the likelihood of warehouse staff in the US, Canada, and the UK attempting to unionize or stage disruptive labor events. This tool reportedly assigns risk scores to warehouses based on hundreds of data points, including social media posts and internal feedback.",
+   "The Atlas AI tool assigns a risk score between 100 and 900 for union activity, with lower scores indicating a higher perceived risk of unionization. Warehouses are categorized into five tiers, with Tier 1 signifying 'future activity is imminent,' potentially influencing staffing and resource planning.",
+   "This AI-driven monitoring contradicts Amazon's previous statements about not actively preventing unionization. Critics argue that such surveillance creates a significant power imbalance, undermining workers' rights to organize.",
+   "Despite Amazon's claims that Atlas monitors only site-level activity and not individual employees' opinions or affiliations, two UK warehouses, including one near Coventry, are reportedly classified as 'Tier 1' for union activity.",
+   "The GMB union, which has been campaigning to organize Amazon workers in the UK, highlighted that this AI monitoring is a personal intrusion that helps Amazon maneuver against organizing efforts. They argue that Amazon's vast resources and technology create an uneven playing field for workers.",
+   "The Coventry warehouse, where an employee is a GMB union member, was previously the site of the first UK strike action against Amazon and narrowly lost a union recognition ballot by just 28 votes."
+  ],
+  "caption": "Amazon's AI tool, Atlas, is reportedly used to monitor and score UK warehouse staff for union activity, assigning risk levels based on social media and internal feedback.\n\nInternal documents suggest Amazon employs an AI tool named Atlas to forecast the likelihood of warehouse staff in the US, Canada, and the UK attempting to unionize or stage disruptive labor events. This tool reportedly assigns risk scores to warehouses based on hundreds of data points, including social media posts and internal feedback.\n\nThe Atlas AI tool assigns a risk score between 100 and 900 for union activity, with lower scores indicating a higher perceived risk of unionization. Warehouses are categorized into five tiers, with Tier 1 signifying 'future activity is imminent,' potentially influencing staffing and resource planning.\n\nThis AI-driven monitoring contradicts Amazon's previous statements about not actively preventing unionization. Critics argue that such surveillance creates a significant power imbalance, undermining workers' rights to organize.\n\nDespite Amazon's claims that Atlas monitors only site-level activity and not individual employees' opinions or affiliations, two UK warehouses, including one near Coventry, are reportedly classified as 'Tier 1' for union activity.\n\nThe GMB union, which has been campaigning to organize Amazon workers in the UK, highlighted that this AI monitoring is a personal intrusion that helps Amazon maneuver against organizing efforts. They argue that Amazon's vast resources and technology create an uneven playing field for workers.\n\nThe Coventry warehouse, where an employee is a GMB union member, was previously the site of the first UK strike action against Amazon and narrowly lost a union recognition ballot by just 28 votes.\n\n#Amazon #AI #UnionBusting #TechNews #LaborRights\n\nSource: Hacker News",
+  "tweet": "Amazon's AI tool 'Atlas' reportedly monitors UK warehouse staff for union activity, assigning risk scores based on social media and internal feedback. This contradicts claims of not interfering with unionization efforts. #Amazon #AI #LaborRights",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "amazon.com",
+  "source": "Hacker News",
+  "url": "https://www.opendemocracy.net/amazon-ai-surveillance-monitor-union-activity-uk-warehouses-birmingham-coventry-atlas-sutton-coldfield/",
+  "image": "",
+  "orig_title": "Amazon uses AI to monitor union risk in UK warehouses",
+  "cluster_urls": [
+   "https://www.opendemocracy.net/amazon-ai-surveillance-monitor-union-activity-uk-warehouses-birmingham-coventry-atlas-sutton-coldfield/"
+  ],
+  "cluster_titles": [
+   "Amazon uses AI to monitor union risk in UK warehouses"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261018-0006-1-amazon-uses-ai-to-monitor-union-risk-in-uk-w.png",
+   "20261018-0006-1-amazon-uses-ai-to-monitor-union-risk-in-uk-w-d1.png",
+   "20261018-0006-1-amazon-uses-ai-to-monitor-union-risk-in-uk-w-d2.png",
+   "20261018-0006-1-amazon-uses-ai-to-monitor-union-risk-in-uk-w-d3.png"
+  ]
+ }
+]

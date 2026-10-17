@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "ai makes reverse engineering cheap",
+  "headline_marked": "[[AI makes reverse engineering cheap]]: GPT-5.5 solves complex challenge in 10 minutes for $1.73",
+  "headline": "AI makes reverse engineering cheap: GPT-5.5 solves complex challenge in 10 minutes for $1.73",
+  "summary": "A new open-source project, REA, combines AI coding agents with professional tools, drastically cutting the time and cost of reverse engineering. This has led to rapid development of open-source clones of major software.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Reverse engineering, once a niche skill, is now accessible to many thanks to projects like REA (Reverse Engineer Anything). REA gained over 296,000 GitHub stars in weeks, showing massive interest.",
+   "REA is an open-source MCP server that links AI coding agents (like Claude Code or Codex) with professional tools such as Ghidra, IDA, Hopper, and Chrome DevTools. Users describe their goal in plain language, and the AI agent investigates and reports.",
+   "The UK's AI Safety Institute reported that GPT-5.5 solved a complex reverse engineering challenge in about ten minutes for $1.73. Human professionals previously took around twelve hours for the same task, highlighting the dramatic cost reduction.",
+   "Brandon Thomas's ArtCraft project demonstrated this capability by releasing free, open-source Rust rebuilds of Adobe apps, then Word and Excel equivalents, within days. His motivation stemmed from frustration with Adobe's cancellation fees.",
+   "This shift promises faster security research, allowing defenders to analyze malware and audit closed-source software in minutes. It also puts pressure on vendor pricing and lock-in, as credible free alternatives can emerge quickly.",
+   "However, challenges arise with piracy and takedowns, as studios react to AI-assisted copy protection circumvention. Software vendors are also updating contracts to ban AI-assisted reverse engineering and competitive benchmarking."
+  ],
+  "caption": "AI is making reverse engineering incredibly cheap and fast. GPT-5.5 solved a complex challenge in 10 minutes for just $1.73, a task that took humans 12 hours.\n\nReverse engineering, once a niche skill, is now accessible to many thanks to projects like REA (Reverse Engineer Anything). REA gained over 296,000 GitHub stars in weeks, showing massive interest.\n\nREA is an open-source MCP server that links AI coding agents (like Claude Code or Codex) with professional tools such as Ghidra, IDA, Hopper, and Chrome DevTools. Users describe their goal in plain language, and the AI agent investigates and reports.\n\nThe UK's AI Safety Institute reported that GPT-5.5 solved a complex reverse engineering challenge in about ten minutes for $1.73. Human professionals previously took around twelve hours for the same task, highlighting the dramatic cost reduction.\n\nBrandon Thomas's ArtCraft project demonstrated this capability by releasing free, open-source Rust rebuilds of Adobe apps, then Word and Excel equivalents, within days. His motivation stemmed from frustration with Adobe's cancellation fees.\n\nThis shift promises faster security research, allowing defenders to analyze malware and audit closed-source software in minutes. It also puts pressure on vendor pricing and lock-in, as credible free alternatives can emerge quickly.\n\nHowever, challenges arise with piracy and takedowns, as studios react to AI-assisted copy protection circumvention. Software vendors are also updating contracts to ban AI-assisted reverse engineering and competitive benchmarking.\n\n#AI #ReverseEngineering #SoftwareDevelopment #OpenSource #TechNews #Security\n\nSource: DEV",
+  "tweet": "AI is revolutionizing reverse engineering. A project called REA is combining AI agents with pro tools, enabling tasks like cloning major software in days. GPT-5.5 solved a complex challenge in 10 mins for $1.73, a task that took humans 12 hours. #AI #ReverseEngineering #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/mendoncamaria/what-happens-when-ai-makes-reverse-engineering-cheap-4bb1",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F7mn07xsfhtx8qej6z4zz.png",
+  "orig_title": "What Happens When AI Makes Reverse Engineering Cheap",
+  "cluster_urls": [
+   "https://dev.to/mendoncamaria/what-happens-when-ai-makes-reverse-engineering-cheap-4bb1"
+  ],
+  "cluster_titles": [
+   "What Happens When AI Makes Reverse Engineering Cheap"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261017-1506-0-ai-makes-reverse-engineering-cheap-gpt-5-5-s.png",
+   "20261017-1506-0-ai-makes-reverse-engineering-cheap-gpt-5-5-s-d1.png",
+   "20261017-1506-0-ai-makes-reverse-engineering-cheap-gpt-5-5-s-d2.png"
+  ]
+ },
+ {
+  "topic": "anthropic claude code 90 percent ai written",
+  "headline_marked": "[[Claude Code Is 90% AI-Written]]. Here's the 7-Layer Code Review System That Keeps It From Collapsing",
+  "headline": "Claude Code Is 90% AI-Written. Here's the 7-Layer Code Review System That Keeps It From Collapsing",
+  "summary": "Anthropic's Claude Code is 90% AI-written, yet its merged PRs doubled and reverts fell by 40% in three months. This success is attributed to a detailed 7-layer code review system.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Anthropic states that its Claude Code is 90% AI-written. From June to September, merged Pull Requests more than doubled, while reverts decreased by over 40%, demonstrating significant efficiency gains.",
+   "The success is attributed to a unique 7-layer code review system, which has garnered attention for its detailed approach to managing AI-generated code at scale. This system shifts review from a PR gate to a continuous process.",
+   "Key components include a CODEOWNERS file, branch protection rules, and a small classifier to automate initial checks. This setup can be implemented rapidly, providing immediate benefits for teams.",
+   "To prevent \"bot ping-pong,\" where AI authors and reviewers endlessly re-raise old issues, the system incorporates a round cap for review cycles. This addresses a finding that 59% of repeated findings came from the original pass.",
+   "A crucial element is the robust evaluation set built from past incidents and reverts. Every change to the AI reviewer (prompt, tools, model) is scored daily against this set, ensuring continuous improvement and accuracy.",
+   "The team also tracks the outcome of comments (fixed, dismissed, flagged, ignored) and runs the reviewer on known-clean PRs to measure false positives. This data-driven approach treats the AI reviewer as a classifier with a test set.",
+   "While the claim of 90% AI-written code is notable, the core takeaway is the systematic, layered approach to code review with clear ownership and metrics. This framework is valuable for any team, regardless of AI code generation."
+  ],
+  "caption": "Anthropic's Claude Code is 90% AI-written. Their 7-layer code review system doubled merged PRs and cut reverts by 40% in three months.\n\nAnthropic states that its Claude Code is 90% AI-written. From June to September, merged Pull Requests more than doubled, while reverts decreased by over 40%, demonstrating significant efficiency gains.\n\nThe success is attributed to a unique 7-layer code review system, which has garnered attention for its detailed approach to managing AI-generated code at scale. This system shifts review from a PR gate to a continuous process.\n\nKey components include a CODEOWNERS file, branch protection rules, and a small classifier to automate initial checks. This setup can be implemented rapidly, providing immediate benefits for teams.\n\nTo prevent \"bot ping-pong,\" where AI authors and reviewers endlessly re-raise old issues, the system incorporates a round cap for review cycles. This addresses a finding that 59% of repeated findings came from the original pass.\n\nA crucial element is the robust evaluation set built from past incidents and reverts. Every change to the AI reviewer (prompt, tools, model) is scored daily against this set, ensuring continuous improvement and accuracy.\n\nThe team also tracks the outcome of comments (fixed, dismissed, flagged, ignored) and runs the reviewer on known-clean PRs to measure false positives. This data-driven approach treats the AI reviewer as a classifier with a test set.\n\nWhile the claim of 90% AI-written code is notable, the core takeaway is the systematic, layered approach to code review with clear ownership and metrics. This framework is valuable for any team, regardless of AI code generation.\n\n#AI #CodeReview #SoftwareDevelopment #Anthropic #Claude #Tech\n\nSource: DEV",
+  "tweet": "Anthropic's Claude Code is 90% AI-written. Their 7-layer code review system doubled merged PRs & cut reverts by 40% in 3 months. Learn how they manage AI-generated code at scale. #AI #CodeReview #SoftwareDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/ashraf_chowdury09/claude-code-is-90-ai-written-heres-the-7-layer-code-review-system-that-keeps-it-from-collapsing-2jg2",
+  "image": "",
+  "orig_title": "Claude Code Is 90% AI-Written. Here's the 7-Layer Code Review System That Keeps It From Collapsing",
+  "cluster_urls": [
+   "https://dev.to/ashraf_chowdury09/claude-code-is-90-ai-written-heres-the-7-layer-code-review-system-that-keeps-it-from-collapsing-2jg2"
+  ],
+  "cluster_titles": [
+   "Claude Code Is 90% AI-Written. Here's the 7-Layer Code Review System That Keeps It From Collapsing"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261017-1506-1-claude-code-is-90-ai-written-here-s-the-7-la.png",
+   "20261017-1506-1-claude-code-is-90-ai-written-here-s-the-7-la-d1.png",
+   "20261017-1506-1-claude-code-is-90-ai-written-here-s-the-7-la-d2.png",
+   "20261017-1506-1-claude-code-is-90-ai-written-here-s-the-7-la-d3.png"
+  ]
+ }
+]

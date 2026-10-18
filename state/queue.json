@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "silent costs of ai apis",
+  "headline_marked": "[[AI API costs hide beyond token pricing]]: conversation history, rate limits, and model drift",
+  "headline": "AI API costs hide beyond token pricing: conversation history, rate limits, and model drift",
+  "summary": "While AI API token prices have dropped significantly, developers face substantial hidden costs from managing conversation context, hitting rate limits, handling output failures, and dealing with model drift.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Initial AI API pricing often appears very low, with reasoning model costs decreasing over 90% in two years. However, developers frequently overlook the true operational expenses that accumulate beyond simple token usage.",
+   "Conversation history significantly inflates costs for AI agents and chatbots. A basic 6-token user query can become a 2,500-token request when 10 prior messages are sent for context, rapidly multiplying expenses.",
+   "Implementing solutions like context summarizers can cut costs by 60% but introduces additional engineering complexity. This extra development time is a hidden cost not reflected in the API's per-token pricing.",
+   "API rate limits, often designed for prototyping, can cause production issues and 429 errors when exceeded. Developers must build custom retry-with-backoff loops, consuming valuable engineering time.",
+   "Tighter rate limits on cheaper models often force developers to use more expensive tiers to achieve necessary throughput. This further increases unadvertised costs for production-ready applications.",
+   "Output tokens are typically priced higher than input tokens, and models can have a 15-20% failure rate on complex structured extraction tasks. This means developers pay for unusable output and double costs with retries.",
+   "Model drift, where API providers update underlying models, can subtly change outputs and break existing prompts. Debugging and revalidating pipelines due to these unannounced changes incurs significant development hours.",
+   "Vendor lock-in is another silent cost, as building an application around one provider's specific API schema (function calling, message structure) makes switching providers difficult and expensive."
+  ],
+  "caption": "AI API costs are not just about tokens. Hidden expenses like conversation history, rate limits, and model drift can burn through budgets fast.\n\nInitial AI API pricing often appears very low, with reasoning model costs decreasing over 90% in two years. However, developers frequently overlook the true operational expenses that accumulate beyond simple token usage.\n\nConversation history significantly inflates costs for AI agents and chatbots. A basic 6-token user query can become a 2,500-token request when 10 prior messages are sent for context, rapidly multiplying expenses.\n\nImplementing solutions like context summarizers can cut costs by 60% but introduces additional engineering complexity. This extra development time is a hidden cost not reflected in the API's per-token pricing.\n\nAPI rate limits, often designed for prototyping, can cause production issues and 429 errors when exceeded. Developers must build custom retry-with-backoff loops, consuming valuable engineering time.\n\nTighter rate limits on cheaper models often force developers to use more expensive tiers to achieve necessary throughput. This further increases unadvertised costs for production-ready applications.\n\nOutput tokens are typically priced higher than input tokens, and models can have a 15-20% failure rate on complex structured extraction tasks. This means developers pay for unusable output and double costs with retries.\n\nModel drift, where API providers update underlying models, can subtly change outputs and break existing prompts. Debugging and revalidating pipelines due to these unannounced changes incurs significant development hours.\n\nVendor lock-in is another silent cost, as building an application around one provider's specific API schema (function calling, message structure) makes switching providers difficult and expensive.\n\n#AI #APICosts #Developer #TechNews #SoftwareDevelopment #LLMs\n\nSource: DEV",
+  "tweet": "Developers, beware! AI API costs extend far beyond token pricing. Hidden expenses like conversation history, rate limits, and model drift can quietly inflate your budget. Learn what to watch out for. #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/shadie_ai/the-silent-costs-of-ai-apis-nobody-warns-you-about-44ak",
+  "image": "",
+  "orig_title": "The Silent Costs of AI APIs Nobody Warns You About",
+  "cluster_urls": [
+   "https://dev.to/shadie_ai/the-silent-costs-of-ai-apis-nobody-warns-you-about-44ak"
+  ],
+  "cluster_titles": [
+   "The Silent Costs of AI APIs Nobody Warns You About"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261018-0706-0-ai-api-costs-hide-beyond-token-pricing-conve.png",
+   "20261018-0706-0-ai-api-costs-hide-beyond-token-pricing-conve-d1.png",
+   "20261018-0706-0-ai-api-costs-hide-beyond-token-pricing-conve-d2.png",
+   "20261018-0706-0-ai-api-costs-hide-beyond-token-pricing-conve-d3.png"
+  ]
+ },
+ {
+  "topic": "nintendo switch 2 news and accessories",
+  "headline_marked": "[[Troubleshoot Nintendo Switch 2]] TV connection issues with these official steps",
+  "headline": "Troubleshoot Nintendo Switch 2 TV connection issues with these official steps",
+  "summary": "Experiencing a black screen or unresponsive console when docking your Switch 2? Ensure you're using the correct power adapter and a UHS HDMI 2.1 cable for optimal connection.",
+  "category": "GAMING",
+  "template": "neon",
+  "details": [
+   "If your Nintendo Switch 2 isn't displaying on your TV, start by powering off your TV and disconnecting all cables from the Switch 2 dock. Remove the handheld, unplug everything for 30 seconds, then reconnect the AC adapter to the dock and wall.",
+   "Ensure the dock is receiving power via its AC adapter; check for frayed cables or a dead wall outlet. The Switch 2 requires a minimum 54W adapter, so verify third-party chargers meet this spec. Nintendo sells compatible AC adapters for $35.",
+   "Next, check your HDMI connection. Use an Ultra High Speed (UHS) HDMI cable, ideally connecting to an HDMI 2.1 port on your TV for 4K/60Hz or 1080p/120Hz output. Older HDMI cables or ports may limit resolution and refresh rates.",
+   "Finally, delve into your TV's settings. Look for options like Auto Low Latency Mode (ALLM), gaming mode, or HDMI Ultra HD Deep Color for the connected port. If issues persist, try a different UHS HDMI cable, another TV port, or a different TV."
+  ],
+  "caption": "Is your Nintendo Switch 2 refusing to display on your TV? Don't call support yet! A few key checks can resolve most common connection issues.\n\nIf your Nintendo Switch 2 isn't displaying on your TV, start by powering off your TV and disconnecting all cables from the Switch 2 dock. Remove the handheld, unplug everything for 30 seconds, then reconnect the AC adapter to the dock and wall.\n\nEnsure the dock is receiving power via its AC adapter; check for frayed cables or a dead wall outlet. The Switch 2 requires a minimum 54W adapter, so verify third-party chargers meet this spec. Nintendo sells compatible AC adapters for $35.\n\nNext, check your HDMI connection. Use an Ultra High Speed (UHS) HDMI cable, ideally connecting to an HDMI 2.1 port on your TV for 4K/60Hz or 1080p/120Hz output. Older HDMI cables or ports may limit resolution and refresh rates.\n\nFinally, delve into your TV's settings. Look for options like Auto Low Latency Mode (ALLM), gaming mode, or HDMI Ultra HD Deep Color for the connected port. If issues persist, try a different UHS HDMI cable, another TV port, or a different TV.\n\n#NintendoSwitch2 #GamingTech #Troubleshooting #SwitchTips #HDMI #TechSupport\n\nSource: Engadget, The Verge, Tom's Hardware",
+  "tweet": "Nintendo Switch 2 not connecting to your TV? Before contacting support, try these essential troubleshooting steps covering power, AC adapter, UHS HDMI 2.1 cables, and TV settings. Get your game back on the big screen! #NintendoSwitch2 #GamingTech #Troubleshooting",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nintendo.com",
+  "source": "Engadget, The Verge, Tom's Hardware",
+  "url": "https://www.engadget.com/2285088/nintendo-switch-2-not-connecting-to-tv-what-check/",
+  "image": "https://www.engadget.com/img/gallery/what-to-check-if-your-nintendo-switch-2-isnt-connecting-to-the-tv/l-intro-1791896347.jpg",
+  "orig_title": "What to check if your Nintendo Switch 2 isn't connecting to the TV",
+  "cluster_urls": [
+   "https://www.engadget.com/2285088/nintendo-switch-2-not-connecting-to-tv-what-check/",
+   "https://www.theverge.com/gadgets/1013105/pikmin-4-nintendo-switch-deal-sale",
+   "https://www.tomshardware.com/pc-components/sandisks-512gb-switch-2-ready-microsd-express-card-is-a-steal-for-usd98-during-sale-rare-tech-deal-arrives-to-beat-the-storage-shortage"
+  ],
+  "cluster_titles": [
+   "What to check if your Nintendo Switch 2 isn't connecting to the TV",
+   "Pikmin 4 is $20 off ahead of its $10 Nintendo Switch 2 update",
+   "Sandisk’s 512GB Switch 2-ready microSD Express card is a steal for $98 during sale"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261018-0706-1-troubleshoot-nintendo-switch-2-tv-connection.png",
+   "20261018-0706-1-troubleshoot-nintendo-switch-2-tv-connection-d1.png",
+   "20261018-0706-1-troubleshoot-nintendo-switch-2-tv-connection-d2.png"
+  ]
+ }
+]

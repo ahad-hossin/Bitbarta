@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "codex llm model changes",
+  "headline_marked": "[[Codex swapped its default model and retired GPT-5.5]] in 15 days. Did your evals notice?",
+  "headline": "Codex swapped its default model and retired GPT-5.5 in 15 days. Did your evals notice?",
+  "summary": "OpenAI's Codex quietly changed its default AI model and retired GPT-5.5 within 15 days, potentially impacting developer evaluations that rely on unpinned models. This highlights the need to explicitly pin models for consistent results.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "On September 29, OpenAI's Codex CLI updated its internal catalog, giving GPT-6.1 Sol \"the highest catalog priority\" and making it the new default model. Just nine days later, Codex CLI 0.162.0 changed how fresh terminal threads get their default model. Six days after that, GPT-5.5 was retired for all users signed in with ChatGPT.",
+   "These three significant changes occurred within a 15-day period, none of which would appear in a developer's repository diff. This means that if an agent relies on the default model, the underlying system being evaluated could have changed without any code modification. This can lead to inconsistent or misleading evaluation results.",
+   "While OpenAI documented these changes in release notes and changelogs, the quiet nature of default model swaps poses a challenge for developers. A model that is not explicitly chosen and pinned acts as an unmanaged dependency, making it difficult to track what's being tested. OpenAI states GPT-6.1 Sol nearly matches GPT-6 Astra at a fifth of its token price.",
+   "This \"moving target\" issue is not unique to Codex; Claude Code's documentation also notes that aliases like opus update over time, requiring full model names for pinning. Such dynamic defaults are convenient for casual chat but problematic for any measured, compared, or promised outcomes in development.",
+   "An agent's performance can change between evaluation runs even if the code remains static, simply because the default model or other hidden variables have shifted. Beyond the model, reasoning effort and account type can also influence results, as seen with GPT-5.5's retirement affecting ChatGPT sign-ins but not API-key sessions.",
+   "To ensure reliable and comparable agent results, developers should record a minimum of four fields for every evaluation: the specific model used, the reasoning effort, the account type, and the commit hash of the code. Without this detailed record, before-and-after comparisons become mere numbers lacking crucial context.",
+   "For Codex users, the recommended solution for pinning models is to use profiles, which are configuration files stored locally. Launching Codex with codex --profile pinned ensures that the specified model and configuration within that profile are consistently used, even for new TUI threads."
+  ],
+  "caption": "OpenAI's Codex quietly swapped its default AI model twice and retired GPT-5.5 in just 15 days. If your agent relies on defaults, your evaluations might be testing a different model than you think.\n\nOn September 29, OpenAI's Codex CLI updated its internal catalog, giving GPT-6.1 Sol \"the highest catalog priority\" and making it the new default model. Just nine days later, Codex CLI 0.162.0 changed how fresh terminal threads get their default model. Six days after that, GPT-5.5 was retired for all users signed in with ChatGPT.\n\nThese three significant changes occurred within a 15-day period, none of which would appear in a developer's repository diff. This means that if an agent relies on the default model, the underlying system being evaluated could have changed without any code modification. This can lead to inconsistent or misleading evaluation results.\n\nWhile OpenAI documented these changes in release notes and changelogs, the quiet nature of default model swaps poses a challenge for developers. A model that is not explicitly chosen and pinned acts as an unmanaged dependency, making it difficult to track what's being tested. OpenAI states GPT-6.1 Sol nearly matches GPT-6 Astra at a fifth of its token price.\n\nThis \"moving target\" issue is not unique to Codex; Claude Code's documentation also notes that aliases like opus update over time, requiring full model names for pinning. Such dynamic defaults are convenient for casual chat but problematic for any measured, compared, or promised outcomes in development.\n\nAn agent's performance can change between evaluation runs even if the code remains static, simply because the default model or other hidden variables have shifted. Beyond the model, reasoning effort and account type can also influence results, as seen with GPT-5.5's retirement affecting ChatGPT sign-ins but not API-key sessions.\n\n#AI #OpenAI #Codex #DeveloperTools #MachineLearning #TechNews\n\nSource: DEV",
+  "tweet": "OpenAI's Codex quietly swapped its default AI model twice and retired GPT-5.5 in just 15 days. Developers relying on defaults might be running evaluations on different models. Pin your models to ensure consistent results! #AI #OpenAI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/codex-swapped-its-default-model-and-retired-gpt-55-in-15-days-did-your-evals-notice-df5",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fut294nf456aoaohmrpt3.png",
+  "orig_title": "Codex Swapped Its Default Model and Retired GPT-5.5 in 15 Days. Did Your Evals Notice?",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/codex-swapped-its-default-model-and-retired-gpt-55-in-15-days-did-your-evals-notice-df5"
+  ],
+  "cluster_titles": [
+   "Codex Swapped Its Default Model and Retired GPT-5.5 in 15 Days. Did Your Evals Notice?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261018-0806-0-codex-swapped-its-default-model-and-retired-.png",
+   "20261018-0806-0-codex-swapped-its-default-model-and-retired--d1.png",
+   "20261018-0806-0-codex-swapped-its-default-model-and-retired--d2.png",
+   "20261018-0806-0-codex-swapped-its-default-model-and-retired--d3.png",
+   "20261018-0806-0-codex-swapped-its-default-model-and-retired--d4.png"
+  ]
+ },
+ {
+  "topic": "nvfp4 fp8 gguf gpu benchmarks",
+  "headline_marked": "[[NVFP4 decodes 2.3x faster]] than FP8/GGUF on Ada GPU, tying BF16 on GSM8K",
+  "headline": "NVFP4 decodes 2.3x faster than FP8/GGUF on Ada GPU, tying BF16 on GSM8K",
+  "summary": "New benchmarks show NVFP4 significantly outperforms other quantization formats like FP8 and GGUF in decoding speed on a 16 GB Ada GPU, matching BF16's accuracy on the GSM8K dataset.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "New benchmarks reveal NVFP4 decodes 2.3 times faster than FP8 and GGUF when running the Nemotron Labs Dory 1.0 4B model on a 16 GB Ada GPU. This performance boost comes while maintaining accuracy, tying BF16 on the GSM8K benchmark.",
+   "The rigorous testing was conducted on an NVIDIA RTX 4070 Ti SUPER, a consumer-grade Ada architecture GPU. The study specifically compared Nemotron Labs Dory 1.0 4B in BF16, NVFP4, MXFP8, and GGUF formats.",
+   "The research also detailed several technical challenges encountered during measurement, including issues with the llama.cpp converter and prefill inflation. An audit process caught and corrected initial fidelity run mistakes, ensuring robust results."
+  ],
+  "caption": "NVFP4 is 2.3x faster than FP8/GGUF on a 16 GB Ada GPU, matching BF16 accuracy. This rigorous benchmark compares LLM quantization formats.\n\nNew benchmarks reveal NVFP4 decodes 2.3 times faster than FP8 and GGUF when running the Nemotron Labs Dory 1.0 4B model on a 16 GB Ada GPU. This performance boost comes while maintaining accuracy, tying BF16 on the GSM8K benchmark.\n\nThe rigorous testing was conducted on an NVIDIA RTX 4070 Ti SUPER, a consumer-grade Ada architecture GPU. The study specifically compared Nemotron Labs Dory 1.0 4B in BF16, NVFP4, MXFP8, and GGUF formats.\n\nThe research also detailed several technical challenges encountered during measurement, including issues with the llama.cpp converter and prefill inflation. An audit process caught and corrected initial fidelity run mistakes, ensuring robust results.\n\n#AI #LLM #GPU #Quantization #NVIDIA #Tech\n\nSource: DEV",
+  "tweet": "NVFP4 crushes FP8 & GGUF, decoding 2.3x faster on Ada GPUs while matching BF16 accuracy. New benchmarks on Nemotron Labs Dory 1.0 4B reveal significant performance gains for LLM inference. #AI #GPU #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/efraingaray/nvfp4-vs-fp8-vs-gguf-on-a-16-gb-ada-gpu-nvfp4-decodes-23x-faster-and-ties-bf16-on-gsm8k-4573",
+  "image": "",
+  "orig_title": "NVFP4 vs FP8 vs GGUF on a 16 GB Ada GPU: NVFP4 decodes 2.3x faster and ties BF16 on GSM8K",
+  "cluster_urls": [
+   "https://dev.to/efraingaray/nvfp4-vs-fp8-vs-gguf-on-a-16-gb-ada-gpu-nvfp4-decodes-23x-faster-and-ties-bf16-on-gsm8k-4573"
+  ],
+  "cluster_titles": [
+   "NVFP4 vs FP8 vs GGUF on a 16 GB Ada GPU: NVFP4 decodes 2.3x faster and ties BF16 on GSM8K"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261018-0806-1-nvfp4-decodes-2-3x-faster-than-fp8-gguf-on-a.png",
+   "20261018-0806-1-nvfp4-decodes-2-3x-faster-than-fp8-gguf-on-a-d1.png"
+  ]
+ }
+]

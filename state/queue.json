@@ -1,1 +1,46 @@
-[]
+[
+ {
+  "topic": "ai agents with memory and security investigation",
+  "headline_marked": "[[AI Supervisor]] uses graph memory to ensure AI agents complete tasks correctly",
+  "headline": "AI Supervisor uses graph memory to ensure AI agents complete tasks correctly",
+  "summary": "Developers are building AI Supervisor to overcome AI coding agent limitations, using FalkorDB for connected, queryable mission history and evidence.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI coding agents are improving, but ensuring they complete tasks correctly remains a challenge. Agents can misunderstand requirements, lose context, or falsely report success. This often forces developers to manually supervise every run, checking progress, diagnosing failures, and verifying output.",
+   "AI Supervisor aims to solve this by treating an agent's completion message as a claim that must be backed by evidence. The system plans missions, coordinates agents, monitors execution, handles recovery, and evaluates results against acceptance criteria, moving beyond isolated agent runs.",
+   "A key innovation is representing how events affect each other. Instead of disconnected logs, AI Supervisor uses FalkorDB as a graph memory layer to store relationships between missions, tasks, executions, failures, decisions, and verification evidence. This creates a connected and queryable mission history.",
+   "The system models missions as graph entities like Mission, Task, Execution, and Evidence. This structure allows for investigation into why events occurred and what followed. Crucially, AI Supervisor distinguishes between task completion and accepted verification, ensuring dependent tasks only proceed once prerequisites are verified.",
+   "A failure-recovery workflow example highlights this. When an initial execution fails due to a parsing error, the workflow records the failure and links it to the subsequent recovery decision, agent, retry attempt, and verification evidence. This creates a traceable history, unlike unrelated records.",
+   "To make this graph data accessible, a Graph Memory Workspace was built. It offers developers an interactive graph explorer, node and relationship inspection, lineage tracking, and a Cypher query interface. This allows direct inspection of mission relationships, tracing failures to decisions and verification to evidence."
+  ],
+  "caption": "AI agents can now remember and reason over their work. AI Supervisor uses graph memory to ensure tasks are completed correctly and verified.\n\nAI coding agents are improving, but ensuring they complete tasks correctly remains a challenge. Agents can misunderstand requirements, lose context, or falsely report success. This often forces developers to manually supervise every run, checking progress, diagnosing failures, and verifying output.\n\nAI Supervisor aims to solve this by treating an agent's completion message as a claim that must be backed by evidence. The system plans missions, coordinates agents, monitors execution, handles recovery, and evaluates results against acceptance criteria, moving beyond isolated agent runs.\n\nA key innovation is representing how events affect each other. Instead of disconnected logs, AI Supervisor uses FalkorDB as a graph memory layer to store relationships between missions, tasks, executions, failures, decisions, and verification evidence. This creates a connected and queryable mission history.\n\nThe system models missions as graph entities like Mission, Task, Execution, and Evidence. This structure allows for investigation into why events occurred and what followed. Crucially, AI Supervisor distinguishes between task completion and accepted verification, ensuring dependent tasks only proceed once prerequisites are verified.\n\nA failure-recovery workflow example highlights this. When an initial execution fails due to a parsing error, the workflow records the failure and links it to the subsequent recovery decision, agent, retry attempt, and verification evidence. This creates a traceable history, unlike unrelated records.\n\nTo make this graph data accessible, a Graph Memory Workspace was built. It offers developers an interactive graph explorer, node and relationship inspection, lineage tracking, and a Cypher query interface. This allows direct inspection of mission relationships, tracing failures to decisions and verification to evidence.\n\n#AI #ArtificialIntelligence #DevOps #GraphDatabase #FalkorDB\n\nSource: DEV",
+  "tweet": "AI agents are getting better, but ensuring they complete tasks correctly is tough. AI Supervisor uses FalkorDB's graph memory to track failures, decisions, and verification, making sure the work actually gets done. #AI #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/moizz_/giving-ai-agents-a-memory-they-can-reason-over-building-ai-supervisor-with-falkordb-5768",
+  "image": "",
+  "orig_title": "Giving AI Agents a Memory They Can Reason Over: Building AI Supervisor with FalkorDB",
+  "cluster_urls": [
+   "https://dev.to/moizz_/giving-ai-agents-a-memory-they-can-reason-over-building-ai-supervisor-with-falkordb-5768",
+   "https://dev.to/moizz_/ai-supervisor-ai-agents-do-the-work-ai-supervisor-makes-sure-the-work-gets-done-39nh",
+   "https://dev.to/parnika_sm/sentinelgraph-building-a-graph-powered-ai-cybersecurity-investigation-agent-with-falkordb-59eb"
+  ],
+  "cluster_titles": [
+   "Giving AI Agents a Memory They Can Reason Over: Building AI Supervisor with FalkorDB",
+   "AI Supervisor: AI agents do the work. AI Supervisor makes sure the work gets done.",
+   "SentinelGraph: Building a Graph-Powered AI Cybersecurity Investigation Agent with FalkorDB"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261019-0002-0-ai-supervisor-uses-graph-memory-to-ensure-ai.png",
+   "20261019-0002-0-ai-supervisor-uses-graph-memory-to-ensure-ai-d1.png",
+   "20261019-0002-0-ai-supervisor-uses-graph-memory-to-ensure-ai-d2.png",
+   "20261019-0002-0-ai-supervisor-uses-graph-memory-to-ensure-ai-d3.png"
+  ]
+ }
+]

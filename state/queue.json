@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "pdf signature integrity issues",
+  "headline_marked": "[[pdfsig validates edited signed PDFs]], requiring ByteRange vs file size check for integrity",
+  "headline": "pdfsig validates edited signed PDFs, requiring ByteRange vs file size check for integrity",
+  "summary": "A developer found that pdfsig can report a signed PDF as valid even after content is appended, while pyHanko flags it. This gap necessitates a custom check comparing the signature's ByteRange with the total file size.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A developer discovered that pdfsig reported a signed PDF as \"Valid\" even after a line of text was appended to its content. In contrast, pyHanko correctly identified the file as having an \"illegal modification\". This discrepancy highlights a critical gap in signature validation.",
+   "The issue stems from pdfsig only verifying the hash over the originally signed bytes, which remain unchanged. The solution involves a custom check that compares the signature's ByteRange (the bytes covered by the signature) against the actual file size. If the last signed byte is smaller than the file size, content was added after signing.",
+   "Testing revealed three categories of modifications: \"appended\" for incremental updates, \"past EOF\" for rewritten files where the signature's ByteRange extends beyond the new file size, and cases where signatures were entirely deleted by tools like Ghostscript and iLovePDF.",
+   "The \"past EOF\" scenario indicates a broken signature upstream, while deleted signatures leave no trace of prior signing. Incremental updates, though valid by pdfsig, still represent a modification that needs flagging.",
+   "The custom check is now integrated into an upload service. Files with full-coverage signatures are stored as-is, \"appended\" files are flagged for human review, and \"past EOF\" files are returned to the uploader. Files without a signature field are compressed."
+  ],
+  "caption": "pdfsig can say a signed PDF is valid even after it's been edited. A new check compares ByteRange with file size to catch hidden modifications.\n\nA developer discovered that pdfsig reported a signed PDF as \"Valid\" even after a line of text was appended to its content. In contrast, pyHanko correctly identified the file as having an \"illegal modification\". This discrepancy highlights a critical gap in signature validation.\n\nThe issue stems from pdfsig only verifying the hash over the originally signed bytes, which remain unchanged. The solution involves a custom check that compares the signature's ByteRange (the bytes covered by the signature) against the actual file size. If the last signed byte is smaller than the file size, content was added after signing.\n\nTesting revealed three categories of modifications: \"appended\" for incremental updates, \"past EOF\" for rewritten files where the signature's ByteRange extends beyond the new file size, and cases where signatures were entirely deleted by tools like Ghostscript and iLovePDF.\n\nThe \"past EOF\" scenario indicates a broken signature upstream, while deleted signatures leave no trace of prior signing. Incremental updates, though valid by pdfsig, still represent a modification that needs flagging.\n\nThe custom check is now integrated into an upload service. Files with full-coverage signatures are stored as-is, \"appended\" files are flagged for human review, and \"past EOF\" files are returned to the uploader. Files without a signature field are compressed.\n\n#PDFSecurity #DigitalSignatures #DeveloperTools #Cybersecurity #FileIntegrity #Tech\n\nSource: DEV",
+  "tweet": "pdfsig can validate signed PDFs even after content is appended. A developer created a check comparing signature ByteRange to file size to detect these hidden modifications. #PDFSecurity #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/iterandum/pdfsig-said-my-edited-signed-pdf-was-still-valid-so-i-compare-byterange-with-the-file-size-p6e",
+  "image": "",
+  "orig_title": "pdfsig said my edited signed PDF was still valid, so I compare ByteRange with the file size",
+  "cluster_urls": [
+   "https://dev.to/iterandum/pdfsig-said-my-edited-signed-pdf-was-still-valid-so-i-compare-byterange-with-the-file-size-p6e",
+   "https://dev.to/pm_cheng_3f36acecfb9c59f5/i-compressed-a-signed-pdf-with-five-tools-every-signature-broke-or-vanished-123"
+  ],
+  "cluster_titles": [
+   "pdfsig said my edited signed PDF was still valid, so I compare ByteRange with the file size",
+   "I compressed a signed PDF with five tools. Every signature broke or vanished"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261018-1406-0-pdfsig-validates-edited-signed-pdfs-requirin.png",
+   "20261018-1406-0-pdfsig-validates-edited-signed-pdfs-requirin-d1.png",
+   "20261018-1406-0-pdfsig-validates-edited-signed-pdfs-requirin-d2.png"
+  ]
+ },
+ {
+  "topic": "deepseek ai search pricing",
+  "headline_marked": "[[DeepSeek search and fetch]] APIs now $0.75 per 1000 successful requests",
+  "headline": "DeepSeek search and fetch APIs now $0.75 per 1000 successful requests",
+  "summary": "DeepSeek has launched its Search and Fetch APIs, offering agents and RAG applications direct access to live web content. The service is priced at $0.75 per 1000 successful requests.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "DeepSeek has introduced its new Search and Fetch APIs, designed to provide agents and RAG applications with direct access to live web content. These raw JSON APIs are billed at $0.75 per 1000 successful requests, using the same bearer authentication as the DeepSeek API.",
+   "Billing for these APIs is strictly per successful request, meaning charges only apply when an HTTP 200 status is returned with a non-empty results array for Search or page content for Fetch. Failed requests, empty search results, and timeouts are not billed.",
+   "Currently, server-side tool calls using the DeepSeek API through DeepSeek Harness, Claude Code, or Codex are free of charge. Per-request billing for these integrated uses will commence on November 1, 2026, Beijing time.",
+   "Both Search and Fetch APIs have independent QPS (requests per second) limits calculated at the account level, separate from model concurrency limits. Additionally, Fetch is subject to a per-domain QPS limit to manage traffic."
+  ],
+  "caption": "DeepSeek's new Search and Fetch APIs offer live web access for agents and RAG applications, priced at $0.75 per 1000 successful requests.\n\nDeepSeek has introduced its new Search and Fetch APIs, designed to provide agents and RAG applications with direct access to live web content. These raw JSON APIs are billed at $0.75 per 1000 successful requests, using the same bearer authentication as the DeepSeek API.\n\nBilling for these APIs is strictly per successful request, meaning charges only apply when an HTTP 200 status is returned with a non-empty results array for Search or page content for Fetch. Failed requests, empty search results, and timeouts are not billed.\n\nCurrently, server-side tool calls using the DeepSeek API through DeepSeek Harness, Claude Code, or Codex are free of charge. Per-request billing for these integrated uses will commence on November 1, 2026, Beijing time.\n\nBoth Search and Fetch APIs have independent QPS (requests per second) limits calculated at the account level, separate from model concurrency limits. Additionally, Fetch is subject to a per-domain QPS limit to manage traffic.\n\n#DeepSeek #AI #APIs #RAG #Developers #WebSearch\n\nSource: Hacker News",
+  "tweet": "DeepSeek launches Search & Fetch APIs for agents & RAG apps, providing live web content access at $0.75 per 1000 successful requests. Billing is per successful request, not tokens. Free until Nov 1, 2026, for server-side tool calls. #DeepSeek #AI #APIs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "deepseek.com",
+  "source": "Hacker News",
+  "url": "https://api-docs.deepseek.com/guides/search/",
+  "image": "",
+  "orig_title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+  "cluster_urls": [
+   "https://api-docs.deepseek.com/guides/search/"
+  ],
+  "cluster_titles": [
+   "DeepSeek search and fetch – $0.75 per 1000 successful requests"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261018-1406-1-deepseek-search-and-fetch-apis-now-0-75-per-.png",
+   "20261018-1406-1-deepseek-search-and-fetch-apis-now-0-75-per--d1.png",
+   "20261018-1406-1-deepseek-search-and-fetch-apis-now-0-75-per--d2.png"
+  ]
+ }
+]

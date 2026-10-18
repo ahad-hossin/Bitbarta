@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "playable game embedded in qr code",
+  "headline_marked": "[[A playable game can be put inside a QR code]] and it still scans, without breaking the code",
+  "headline": "A playable game can be put inside a QR code and it still scans, without breaking the code",
+  "summary": "A developer explains how to embed an interactive game within a QR code's grid, making it fully playable while ensuring the code remains scannable by exploiting how decoders interpret modules.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The challenge was to create a playable game *inside* a QR code that still scans, without damaging the code itself. Most attempts at adding graphics to QR codes rely on the code's built-in error correction budget.",
+   "The key insight is that QR code error correction is counted in \"codewords\" (each 8 modules), not individual modules. This fundamental detail means a significant portion of the code can be altered without affecting its scannability.",
+   "Instead of erasing dark modules to create paths, the developer repainted them with a specific shade. To humans, these modules appear as shaded, walkable cells, but to the QR decoder's binarization process, they remain \"dark.\"",
+   "This \"free\" method allows for fully connected game maps, as every dark module can be repainted without spending the error correction budget. The character can reach every corner, and the code remains untouched as far as any decoder is concerned.",
+   "The exact brightness value for repainting is crucial and renderer-specific, with a narrow margin between being \"dark\" and being interpreted as damage. Testing on actual phones is vital, as some JS decoding libraries can misread overlays that real cameras handle fine.",
+   "The developer built QRacade, a free QR generator that allows users to create decode-verified animated QR codes with moving characters. This tool ensures that every design is sound and scannable before it can be downloaded."
+  ],
+  "caption": "You can play a game *inside* a QR code, and it still scans perfectly. A developer cracked the code on how to do it without breaking the QR.\n\nThe challenge was to create a playable game *inside* a QR code that still scans, without damaging the code itself. Most attempts at adding graphics to QR codes rely on the code's built-in error correction budget.\n\nThe key insight is that QR code error correction is counted in \"codewords\" (each 8 modules), not individual modules. This fundamental detail means a significant portion of the code can be altered without affecting its scannability.\n\nInstead of erasing dark modules to create paths, the developer repainted them with a specific shade. To humans, these modules appear as shaded, walkable cells, but to the QR decoder's binarization process, they remain \"dark.\"\n\nThis \"free\" method allows for fully connected game maps, as every dark module can be repainted without spending the error correction budget. The character can reach every corner, and the code remains untouched as far as any decoder is concerned.\n\nThe exact brightness value for repainting is crucial and renderer-specific, with a narrow margin between being \"dark\" and being interpreted as damage. Testing on actual phones is vital, as some JS decoding libraries can misread overlays that real cameras handle fine.\n\nThe developer built QRacade, a free QR generator that allows users to create decode-verified animated QR codes with moving characters. This tool ensures that every design is sound and scannable before it can be downloaded.\n\n#QRCode #GameDev #TechInnovation #SoftwareDev #Programming #CreativeTech\n\nSource: DEV",
+  "tweet": "A developer embedded a playable game *inside* a QR code, and it still scans! The trick? Understanding how decoders interpret modules vs. error correction. Mind-blowing tech. #QRCode #GameDev #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/songsiyao/i-put-a-playable-game-inside-a-qr-code-and-it-still-scans-4lbp",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fwajlj5fbnqi3y27o3nzr.gif",
+  "orig_title": "I put a playable game inside a QR code — and it still scans",
+  "cluster_urls": [
+   "https://dev.to/songsiyao/i-put-a-playable-game-inside-a-qr-code-and-it-still-scans-4lbp"
+  ],
+  "cluster_titles": [
+   "I put a playable game inside a QR code — and it still scans"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261018-1506-0-a-playable-game-can-be-put-inside-a-qr-code-.png",
+   "20261018-1506-0-a-playable-game-can-be-put-inside-a-qr-code--d1.png",
+   "20261018-1506-0-a-playable-game-can-be-put-inside-a-qr-code--d2.png"
+  ]
+ }
+]

@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "microsoft defender linux 2024 ai security",
+  "headline_marked": "[[Microsoft Defender 2024 now secures Linux]] at scale, outperforming rivals",
+  "headline": "Microsoft Defender 2024 now secures Linux at scale, outperforming rivals",
+  "summary": "Microsoft's native Linux version of Defender is a complete Endpoint Protection Platform (EPP), not just a scanner. Benchmarks show it performs comparably or better than ClamAV and Sophos, ready for modern threats.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Microsoft has released a native Linux version of Defender, which is already performing well in security tool benchmarks. This new Endpoint Protection Platform (EPP) is designed to address the rise of remote work and AI-powered malware.",
+   "Unlike a simple scanner, Defender for Linux offers comprehensive protection. Benchmarks conducted on a 12-core Intel Xeon E5-2670 v3 with SSD storage show results comparable or superior to competitors like ClamAV and Sophos in similar scenarios.",
+   "It supports deployment at scale across Ubuntu 26.04, Fedora 40, and Arch Linux. Organizations can automate installation and configuration using tools like Ansible playbooks and cloud-init scripts for new nodes.",
+   "This solution is particularly suited for enterprises already invested in Microsoft 365/E5. It provides a unified \"single pane of glass\" for managing security across multi-OS endpoints, simplifying oversight."
+  ],
+  "caption": "Microsoft Defender is now natively available for Linux, offering a complete Endpoint Protection Platform. It's designed to secure Ubuntu, Fedora, and Arch Linux at scale.\n\nMicrosoft has released a native Linux version of Defender, which is already performing well in security tool benchmarks. This new Endpoint Protection Platform (EPP) is designed to address the rise of remote work and AI-powered malware.\n\nUnlike a simple scanner, Defender for Linux offers comprehensive protection. Benchmarks conducted on a 12-core Intel Xeon E5-2670 v3 with SSD storage show results comparable or superior to competitors like ClamAV and Sophos in similar scenarios.\n\nIt supports deployment at scale across Ubuntu 26.04, Fedora 40, and Arch Linux. Organizations can automate installation and configuration using tools like Ansible playbooks and cloud-init scripts for new nodes.\n\nThis solution is particularly suited for enterprises already invested in Microsoft 365/E5. It provides a unified \"single pane of glass\" for managing security across multi-OS endpoints, simplifying oversight.\n\n#Linux #Security #MicrosoftDefender #Cybersecurity #EndpointProtection #DevOps\n\nSource: DEV",
+  "tweet": "Microsoft Defender 2024 now natively secures Linux, offering a complete EPP for Ubuntu, Fedora, and Arch. Benchmarks show it's comparable or better than rivals. Ideal for enterprises needing multi-OS protection. #Linux #Security #MicrosoftDefender",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "microsoft.com",
+  "source": "DEV",
+  "url": "https://dev.to/leojulieta/deploy-secure-linux-with-microsoft-defender-2024-1dog",
+  "image": "",
+  "orig_title": "Deploy & Secure Linux with Microsoft Defender 2024",
+  "cluster_urls": [
+   "https://dev.to/leojulieta/deploy-secure-linux-with-microsoft-defender-2024-1dog",
+   "https://dev.to/leojulieta/defender-linux-2024-ia-ligera-contra-amenazas-modernas-1gbb"
+  ],
+  "cluster_titles": [
+   "Deploy & Secure Linux with Microsoft Defender 2024",
+   "Defender Linux 2024: IA ligera contra amenazas modernas"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261019-0906-0-microsoft-defender-2024-now-secures-linux-at.png",
+   "20261019-0906-0-microsoft-defender-2024-now-secures-linux-at-d1.png",
+   "20261019-0906-0-microsoft-defender-2024-now-secures-linux-at-d2.png"
+  ]
+ },
+ {
+  "topic": "gemma ai local house scoring for side hustles",
+  "headline_marked": "[[AI scores house distress, keeps data on phone]] for real estate side hustle",
+  "headline": "AI scores house distress, keeps data on phone for real estate side hustle",
+  "summary": "Walk the Block uses an open-weight Gemma vision model to score house distress from photos, generating kind postcards. All lead data and photos stay on your device, offering a privacy-first alternative to cloud-based apps for real estate investors.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Walk the Block is a phone tool designed for \"drive-for-dollars\" real estate research, particularly for wholesalers and small investors. It leverages Gemma, an open-weight vision model, to assess house distress from photos and assign a score from 0 to 100.",
+   "The Gemma model identifies visible distress signals such as damaged roofs, overgrown yards, boarded windows, or peeling paint, but is specifically programmed not to infer reasons for the condition. Following the scoring, the app drafts a respectful postcard in English or Spanish, carefully avoiding any mention of the photo or suggesting urgency to the owner.",
+   "A core feature of the app is its commitment to privacy: the lead list, house photos, and user notes are stored locally in the browser's IndexedDB. Photos are sent only to the user's chosen Gemma backend, and only a GPS pin is sent to OpenStreetMap for street lookup, ensuring no analytics or app server involvement.",
+   "This tool targets real estate wholesalers and small investors who typically pay around $19 a month for cloud-based driving-for-dollars software. Walk the Block offers a privacy-first alternative, allowing users to maintain ownership and control over their valuable lead lists without relying on a vendor's cloud.",
+   "Users can explore a demo mode with pre-loaded, hand-labeled sample houses to experience the scoring and postcard generation without needing an AI key. For live scoring of personal photos, users must integrate their own Google AI Studio key for Gemma or utilize a local Ollama model.",
+   "Developed as a static Vite + React + TypeScript application and deployed via Cloudflare Workers, the app operates without a traditional server. It includes a robust content check for Gemma-generated postcards, ensuring any drafts mentioning distress, foreclosure, or urgency are replaced with a pre-approved, respectful script.",
+   "The strategic use of an open-weight model like Gemma is fundamental to the app's design, enabling scoring to occur on a user-controlled machine. This approach eliminates per-photo billing and vendor lock-in, ensuring that the user's lead data remains accessible and under their control, regardless of external API service changes."
+  ],
+  "caption": "This new phone tool uses an open-weight AI to score house distress from photos, then drafts a kind postcard for owners. All your lead data and photos stay on your device, never touching a cloud server.\n\nWalk the Block is a phone tool designed for \"drive-for-dollars\" real estate research, particularly for wholesalers and small investors. It leverages Gemma, an open-weight vision model, to assess house distress from photos and assign a score from 0 to 100.\n\nThe Gemma model identifies visible distress signals such as damaged roofs, overgrown yards, boarded windows, or peeling paint, but is specifically programmed not to infer reasons for the condition. Following the scoring, the app drafts a respectful postcard in English or Spanish, carefully avoiding any mention of the photo or suggesting urgency to the owner.\n\nA core feature of the app is its commitment to privacy: the lead list, house photos, and user notes are stored locally in the browser's IndexedDB. Photos are sent only to the user's chosen Gemma backend, and only a GPS pin is sent to OpenStreetMap for street lookup, ensuring no analytics or app server involvement.\n\nThis tool targets real estate wholesalers and small investors who typically pay around $19 a month for cloud-based driving-for-dollars software. Walk the Block offers a privacy-first alternative, allowing users to maintain ownership and control over their valuable lead lists without relying on a vendor's cloud.\n\nUsers can explore a demo mode with pre-loaded, hand-labeled sample houses to experience the scoring and postcard generation without needing an AI key. For live scoring of personal photos, users must integrate their own Google AI Studio key for Gemma or utilize a local Ollama model.\n\n#AI #Tech #Privacy #OpenSource #SideHustle #RealEstateTech\n\nSource: DEV",
+  "tweet": "This new phone tool uses an open-weight AI to score house distress from photos, then drafts a kind postcard for owners. All your lead data and photos stay on your device, never touching a cloud server. A privacy-first approach to real estate lead generation. #AI #Privacy #Re",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/casmazariegos/the-houses-on-my-list-are-my-side-hustle-so-gemma-scores-them-and-the-list-never-leaves-my-phone-3if9",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F6mdqoey7wzvov8t3pu8k.png",
+  "orig_title": "The houses on my list are my side hustle, so Gemma scores them and the list never leaves my phone",
+  "cluster_urls": [
+   "https://dev.to/casmazariegos/the-houses-on-my-list-are-my-side-hustle-so-gemma-scores-them-and-the-list-never-leaves-my-phone-3if9"
+  ],
+  "cluster_titles": [
+   "The houses on my list are my side hustle, so Gemma scores them and the list never leaves my phone"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261019-0906-1-ai-scores-house-distress-keeps-data-on-phone.png",
+   "20261019-0906-1-ai-scores-house-distress-keeps-data-on-phone-d1.png",
+   "20261019-0906-1-ai-scores-house-distress-keeps-data-on-phone-d2.png",
+   "20261019-0906-1-ai-scores-house-distress-keeps-data-on-phone-d3.png",
+   "20261019-0906-1-ai-scores-house-distress-keeps-data-on-phone-d4.png"
+  ]
+ }
+]

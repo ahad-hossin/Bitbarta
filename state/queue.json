@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "arm agi cpu performance",
+  "headline_marked": "[[Arm AGI CPU delivers nearly 2X performance]] per rack vs. AMD EPYC 9755 in agentic AI tests",
+  "headline": "Arm AGI CPU delivers nearly 2X performance per rack vs. AMD EPYC 9755 in agentic AI tests",
+  "summary": "Arm's new data center CPU for agentic AI workloads claims significantly higher performance per rack, based on a new evaluation methodology developed with industry partners like Meta and OpenAI.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Arm announced its AGI CPU, designed for agentic AI workloads, delivers nearly twice the performance per rack compared to AMD EPYC 9755. This claim is based on modeled rack results from tests across seven workloads, considering chip performance and server-power assumptions.",
+   "The results were verified by an independent analysis from Signal65, commissioned by Arm. This new evaluation methodology was developed with support from Fujitsu, Meta, and OpenAI, and Arm proposes it as a new industry standard for assessing CPU performance in agentic AI.",
+   "Agentic AI significantly changes the role of CPUs in data centers, requiring them to manage complex, multi-step workflows. Beyond just inference, CPUs handle critical surrounding tasks like executing tools, retrieving data, maintaining state, serving API requests, and coordinating accelerators.",
+   "As these workloads scale, measuring CPU performance goes beyond concurrent agents to focus on sustained useful work and responsiveness. Power, cooling, and physical space constraints mean performance per rack is a crucial metric for data center operators.",
+   "Arm's methodology emphasizes representative agent workloads, repeatable CPU measurements, and validation against end-to-end task outcomes. It identifies tools and services an agent uses, measures CPU performance under controlled conditions, and checks if improvements genuinely aid task completion.",
+   "To ensure repeatability, Arm proposes replaying recorded agent actions. This separates CPU performance from the variability introduced by agents choosing different commands or external delays from model inference and remote services, allowing for consistent work sequences.",
+   "The evaluation involved running seven specific workloads, including tooling, agentic workflows, reasoning/planning, and Sandbench (for sandbox-creation overhead), on both the AGI CPU and AMD’s EPYC 9755. These tests combine established server applications with agent workflow benchmarks.",
+   "Arm used two AGI CPU configurations for the tests: a 128-core chip at 2.8 GHz and a 136-core chip at 3.2 GHz, each with different DDR5 memory speeds. The AMD comparison used one socket of the 128-core EPYC 9755 with DDR5-6400."
+  ],
+  "caption": "Arm's AGI CPU for agentic AI workloads claims nearly 2X the performance per rack compared to AMD EPYC 9755. This is based on a new evaluation methodology.\n\nArm announced its AGI CPU, designed for agentic AI workloads, delivers nearly twice the performance per rack compared to AMD EPYC 9755. This claim is based on modeled rack results from tests across seven workloads, considering chip performance and server-power assumptions.\n\nThe results were verified by an independent analysis from Signal65, commissioned by Arm. This new evaluation methodology was developed with support from Fujitsu, Meta, and OpenAI, and Arm proposes it as a new industry standard for assessing CPU performance in agentic AI.\n\nAgentic AI significantly changes the role of CPUs in data centers, requiring them to manage complex, multi-step workflows. Beyond just inference, CPUs handle critical surrounding tasks like executing tools, retrieving data, maintaining state, serving API requests, and coordinating accelerators.\n\nAs these workloads scale, measuring CPU performance goes beyond concurrent agents to focus on sustained useful work and responsiveness. Power, cooling, and physical space constraints mean performance per rack is a crucial metric for data center operators.\n\nArm's methodology emphasizes representative agent workloads, repeatable CPU measurements, and validation against end-to-end task outcomes. It identifies tools and services an agent uses, measures CPU performance under controlled conditions, and checks if improvements genuinely aid task completion.\n\nTo ensure repeatability, Arm proposes replaying recorded agent actions. This separates CPU performance from the variability introduced by agents choosing different commands or external delays from model inference and remote services, allowing for consistent work sequences.\n\n#Arm #AGICPU #AI #CPUs #Datacenter #TechNews\n\nSource: Tom's Hardware",
+  "tweet": "Arm's AGI CPU for agentic AI workloads claims nearly 2X the performance per rack vs. AMD EPYC 9755. A new evaluation methodology, developed with Meta & OpenAI, underpins these results. #Arm #AI #CPUs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "arm.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/cpus/arm-claims-agi-cpu-delivers-double-the-performance-per-rack-of-amd-epyc-9755-in-independent-analysis-new-cpu-evaluation-methodology-developed-by-arm-evaluates-agentic-ai-performance-across-seven-workloads",
+  "image": "https://cdn.mos.cms.futurecdn.net/WZWmFdfwr99E5o9CwZc6nM-1920-80.jpg",
+  "orig_title": "Arm says its AGI CPU delivers nearly 2X the performance per rack of AMD EPYC 9755 in new agentic AI CPU tests",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/cpus/arm-claims-agi-cpu-delivers-double-the-performance-per-rack-of-amd-epyc-9755-in-independent-analysis-new-cpu-evaluation-methodology-developed-by-arm-evaluates-agentic-ai-performance-across-seven-workloads"
+  ],
+  "cluster_titles": [
+   "Arm says its AGI CPU delivers nearly 2X the performance per rack of AMD EPYC 9755 in new agentic AI CPU tests"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261019-1706-0-arm-agi-cpu-delivers-nearly-2x-performance-p.png",
+   "20261019-1706-0-arm-agi-cpu-delivers-nearly-2x-performance-p-d1.png",
+   "20261019-1706-0-arm-agi-cpu-delivers-nearly-2x-performance-p-d2.png",
+   "20261019-1706-0-arm-agi-cpu-delivers-nearly-2x-performance-p-d3.png",
+   "20261019-1706-0-arm-agi-cpu-delivers-nearly-2x-performance-p-d4.png"
+  ]
+ },
+ {
+  "topic": "darwin 180b rsi model benchmarks",
+  "headline_marked": "[[Darwin-180B-RSI tops MMLU-Pro and GPQA Diamond]] on AIhoster's open-model benchmark",
+  "headline": "Darwin-180B-RSI tops MMLU-Pro and GPQA Diamond on AIhoster's open-model benchmark",
+  "summary": "VIDRAFT's 180-billion-parameter open model scored 88.1% and 94.4% respectively, outperforming models with an order of magnitude more parameters.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "VIDRAFT's Darwin-180B-RSI, a 180-billion-parameter open model, has claimed the #1 position on both MMLU-Pro (88.1%) and GPQA Diamond (94.4%) leaderboards. This performance, tracked by AIhoster, notably outperforms models with significantly larger parameter counts.",
+   "Developed by VIDRAFT (비드래프트), a Korean Pre-AGI AI startup, Darwin-180B-RSI is an open-weight language model. It is published under the Hugging Face repository identifier FINAL-Bench/Darwin-180B-RSI.",
+   "AIhoster is an independent Russian benchmark aggregation site. It collects publicly reported evaluation results from model cards, papers, and leaderboards without recomputing or normalizing scores. Each entry is tied to an exact repository ID and specific evaluation configuration for transparency.",
+   "As of the 2026-10-19 update, Darwin-180B-RSI holds the top spots. VIDRAFT also has multiple other Darwin-family models, like Darwin-397B-ZTC and Darwin-398B-JGOS, appearing in the GPQA Diamond rankings.",
+   "Conceptually, Darwin-180B-RSI appears to be a large-scale transformer-based language model optimized for extended reasoning. Its evaluation configuration suggests a 131,072-token thinking budget, hinting at advanced chain-of-thought capabilities.",
+   "No architectural specifics, training hyperparameters, or dataset details are publicly disclosed in the source material. All reported figures are sourced directly from AIhoster's leaderboard, which cites the Darwin-180B-RSI model card.",
+   "The GPQA result is particularly notable: Darwin-180B-RSI achieved 94.4% using majority voting over up to 16 samples. This contrasts with other high-ranking VIDRAFT models using different inference regimes, such as greedy decoding.",
+   "Access details beyond the model card, including API endpoints, licensing terms, or inference service availability, are not confirmed. Users should check the model card directly on Hugging Face for the most current access instructions and licensing before commercial use."
+  ],
+  "caption": "A 180B-parameter open model just topped major AI benchmarks, outperforming models 10x its size.\n\nVIDRAFT's Darwin-180B-RSI, a 180-billion-parameter open model, has claimed the #1 position on both MMLU-Pro (88.1%) and GPQA Diamond (94.4%) leaderboards. This performance, tracked by AIhoster, notably outperforms models with significantly larger parameter counts.\n\nDeveloped by VIDRAFT (비드래프트), a Korean Pre-AGI AI startup, Darwin-180B-RSI is an open-weight language model. It is published under the Hugging Face repository identifier FINAL-Bench/Darwin-180B-RSI.\n\nAIhoster is an independent Russian benchmark aggregation site. It collects publicly reported evaluation results from model cards, papers, and leaderboards without recomputing or normalizing scores. Each entry is tied to an exact repository ID and specific evaluation configuration for transparency.\n\nAs of the 2026-10-19 update, Darwin-180B-RSI holds the top spots. VIDRAFT also has multiple other Darwin-family models, like Darwin-397B-ZTC and Darwin-398B-JGOS, appearing in the GPQA Diamond rankings.\n\nConceptually, Darwin-180B-RSI appears to be a large-scale transformer-based language model optimized for extended reasoning. Its evaluation configuration suggests a 131,072-token thinking budget, hinting at advanced chain-of-thought capabilities.\n\nNo architectural specifics, training hyperparameters, or dataset details are publicly disclosed in the source material. All reported figures are sourced directly from AIhoster's leaderboard, which cites the Darwin-180B-RSI model card.\n\nThe GPQA result is particularly notable: Darwin-180B-RSI achieved 94.4% using majority voting over up to 16 samples. This contrasts with other high-ranking VIDRAFT models using different inference regimes, such as greedy decoding.\n\n#AI #OpenSourceAI #LLM #Benchmarks #TechNews #VIDRAFT\n\nSource: DEV",
+  "tweet": "A 180B-parameter open model just topped major AI benchmarks, outperforming models 10x its size! VIDRAFT's Darwin-180B-RSI leads MMLU-Pro and GPQA Diamond on AIhoster. #AI #LLM #Benchmarks",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ai_openfree_b23025ef075cf/darwin-180b-rsi-tops-mmlu-pro-and-gpqa-diamond-on-aihosters-independent-open-model-benchmark-board-17d7",
+  "image": "",
+  "orig_title": "Darwin-180B-RSI Tops MMLU-Pro and GPQA Diamond on AIhoster's Independent Open-Model Benchmark Board",
+  "cluster_urls": [
+   "https://dev.to/ai_openfree_b23025ef075cf/darwin-180b-rsi-tops-mmlu-pro-and-gpqa-diamond-on-aihosters-independent-open-model-benchmark-board-17d7"
+  ],
+  "cluster_titles": [
+   "Darwin-180B-RSI Tops MMLU-Pro and GPQA Diamond on AIhoster's Independent Open-Model Benchmark Board"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261019-1706-1-darwin-180b-rsi-tops-mmlu-pro-and-gpqa-diamo.png",
+   "20261019-1706-1-darwin-180b-rsi-tops-mmlu-pro-and-gpqa-diamo-d1.png",
+   "20261019-1706-1-darwin-180b-rsi-tops-mmlu-pro-and-gpqa-diamo-d2.png",
+   "20261019-1706-1-darwin-180b-rsi-tops-mmlu-pro-and-gpqa-diamo-d3.png"
+  ]
+ }
+]

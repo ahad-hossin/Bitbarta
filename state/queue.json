@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "claude code skills silently demoted",
+  "headline_marked": "[[Claude Code skills are being silently demoted]], and nothing tells you",
+  "headline": "Claude Code skills are being silently demoted, and nothing tells you",
+  "summary": "Claude Code silently drops skill descriptions when context budget overflows, effectively making them invisible. This happens without any UI warning, potentially disabling most of your installed skills.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Every skill installed in Claude Code injects its name and description into the model's context on every turn, whether used or not. Claude Code budgets this listing at 1% of your context window, and when this budget overflows, it silently drops descriptions of your least-used skills.",
+   "There is no warning in the UI; only a debug log line indicates this. A skill without a description has nothing for the model to match against, causing it to quietly stop being chosen.",
+   "One measured setup found a full plugin install pushing the listing to approximately 10.8 times the default budget. This meant most of the catalog was effectively invisible, and users were not informed.",
+   "The `skill-tax-cli` tool has been developed to audit the context tax of Claude Code skills. It scans skill sources, measures the always-on listing cost and full-load cost in tokens, and deterministically replays the listing-budget overflow rule.",
+   "The tool can list all skills (user, project, and marketplace plugins) and audit their context tax, ranking them by full-load cost and showing their share of the context window. It also includes other always-on sources like rules and memory.",
+   "Crucially, the `gate` command detects silent drops by replaying the documented overflow rule. It fails with a non-zero exit code when a skill would be silently stripped, making it suitable for pre-commit hooks and CI pipelines.",
+   "The tool provides JSON output and can replay real usage data if provided. Its token math is an honest approximation, useful for identifying which skills are consuming the most context window space."
+  ],
+  "caption": "Your Claude Code skills might be silently disappearing. A hidden context budget can demote your least-used skills without any warning.\n\nEvery skill installed in Claude Code injects its name and description into the model's context on every turn, whether used or not. Claude Code budgets this listing at 1% of your context window, and when this budget overflows, it silently drops descriptions of your least-used skills.\n\nThere is no warning in the UI; only a debug log line indicates this. A skill without a description has nothing for the model to match against, causing it to quietly stop being chosen.\n\nOne measured setup found a full plugin install pushing the listing to approximately 10.8 times the default budget. This meant most of the catalog was effectively invisible, and users were not informed.\n\nThe `skill-tax-cli` tool has been developed to audit the context tax of Claude Code skills. It scans skill sources, measures the always-on listing cost and full-load cost in tokens, and deterministically replays the listing-budget overflow rule.\n\nThe tool can list all skills (user, project, and marketplace plugins) and audit their context tax, ranking them by full-load cost and showing their share of the context window. It also includes other always-on sources like rules and memory.\n\nCrucially, the `gate` command detects silent drops by replaying the documented overflow rule. It fails with a non-zero exit code when a skill would be silently stripped, making it suitable for pre-commit hooks and CI pipelines.\n\nThe tool provides JSON output and can replay real usage data if provided. Its token math is an honest approximation, useful for identifying which skills are consuming the most context window space.\n\n#ClaudeAI #DeveloperTools #AI #Programming #ContextWindow #TechNews\n\nSource: DEV",
+  "tweet": "Heads up, Claude Code developers! Your skills might be silently demoted due to a hidden context budget overflow. A new tool, `skill-tax-cli`, helps detect which skills are losing their descriptions without warning. #ClaudeAI #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/haoli/your-claude-code-skills-are-being-silently-demoted-and-nothing-tells-you-3of4",
+  "image": "",
+  "orig_title": "Your Claude Code skills are being silently demoted, and nothing tells you.",
+  "cluster_urls": [
+   "https://dev.to/haoli/your-claude-code-skills-are-being-silently-demoted-and-nothing-tells-you-3of4"
+  ],
+  "cluster_titles": [
+   "Your Claude Code skills are being silently demoted, and nothing tells you."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261019-1406-0-claude-code-skills-are-being-silently-demote.png",
+   "20261019-1406-0-claude-code-skills-are-being-silently-demote-d1.png",
+   "20261019-1406-0-claude-code-skills-are-being-silently-demote-d2.png",
+   "20261019-1406-0-claude-code-skills-are-being-silently-demote-d3.png"
+  ]
+ },
+ {
+  "topic": "12 year old builds security tool",
+  "headline_marked": "[[12-year-old built security tool that locked them out]] of their own terminal for 48 hours",
+  "headline": "12-year-old built security tool that locked them out of their own terminal for 48 hours",
+  "summary": "A young developer's 'fail-closed' security design for AI agents backfired, turning their own terminal into an 'immortal zombie process' on a $150 Android phone, leading to a 48-hour battle.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A 12-year-old developer accidentally created a 'Terminal Immortal' while building a security tool, leading to a 48-hour lockout from their own terminal on a $150 Android phone. The incident highlights the unexpected challenges in software development.",
+   "The project began with a simple goal: to build a 'leash' for AI agents. The developer implemented a 'Fail-Closed' design, meaning if the backend server went down, the security hook would block commands to keep the user safe.",
+   "Initial tests were successful, with commands like 'cat .env' being blocked. However, moving the backend to cloud services like Vercel and Railway resulted in errors, inadvertently triggering the 'Fail-Closed' mechanism against the developer themselves.",
+   "The terminal started printing 'KAVLR Backend Offline or Error. Blocking command.' The developer found themselves unable to read, delete, or edit their own files, as the security hook blocked every attempt.",
+   "The 'Terminal Immortal' became a zombie process, with Bash holding onto memory even after files were deleted and corrupted caches fighting back. Python scripts were mangled by Termux, and error messages overwrote critical code.",
+   "Fighting what felt like a hydra, the developer eventually opened a clean terminal session and used 'grep' to trace the corrupted files, discovering poisoned index.js, duplicated node_modules, and aliases stacked 13 layers deep.",
+   "The solution required 'surgery': nuking the .bashrc, deleting rogue node_modules, rewriting the CLI using Base64 to bypass Termux's text-mangling, manually recreating symlinks, and clearing the Bash hash table.",
+   "After an entire weekend battling the self-imposed lockout, the developer finally regained control. This experience serves as a testament to persistence and problem-solving for developers facing stubborn bugs."
+  ],
+  "caption": "A 12-year-old developer built a security tool so effective it locked them out of their own terminal for 48 hours. This is the story of fighting a 'Terminal Immortal' on a $150 Android phone.\n\nA 12-year-old developer accidentally created a 'Terminal Immortal' while building a security tool, leading to a 48-hour lockout from their own terminal on a $150 Android phone. The incident highlights the unexpected challenges in software development.\n\nThe project began with a simple goal: to build a 'leash' for AI agents. The developer implemented a 'Fail-Closed' design, meaning if the backend server went down, the security hook would block commands to keep the user safe.\n\nInitial tests were successful, with commands like 'cat .env' being blocked. However, moving the backend to cloud services like Vercel and Railway resulted in errors, inadvertently triggering the 'Fail-Closed' mechanism against the developer themselves.\n\nThe terminal started printing 'KAVLR Backend Offline or Error. Blocking command.' The developer found themselves unable to read, delete, or edit their own files, as the security hook blocked every attempt.\n\nThe 'Terminal Immortal' became a zombie process, with Bash holding onto memory even after files were deleted and corrupted caches fighting back. Python scripts were mangled by Termux, and error messages overwrote critical code.\n\nFighting what felt like a hydra, the developer eventually opened a clean terminal session and used 'grep' to trace the corrupted files, discovering poisoned index.js, duplicated node_modules, and aliases stacked 13 layers deep.\n\nThe solution required 'surgery': nuking the .bashrc, deleting rogue node_modules, rewriting the CLI using Base64 to bypass Termux's text-mangling, manually recreating symlinks, and clearing the Bash hash table.\n\nAfter an entire weekend battling the self-imposed lockout, the developer finally regained control. This experience serves as a testament to persistence and problem-solving for developers facing stubborn bugs.\n\n#Tech #Security #Developer #Coding #BugFix #Programming\n\nSource: DEV",
+  "tweet": "A 12-year-old developer built a security tool that locked them out of their own terminal for 48 hours! They battled a 'Terminal Immortal' on a $150 Android phone. An incredible story of resilience and debugging. #DevLife #Security #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/koda2026/iam-12-i-built-a-security-tool-so-good-it-locked-me-out-of-my-own-terminal-for-48-hours-2ln1",
+  "image": "",
+  "orig_title": "Iam 12 . I Built a Security Tool So Good It Locked Me Out of My Own Terminal for 48 Hours",
+  "cluster_urls": [
+   "https://dev.to/koda2026/iam-12-i-built-a-security-tool-so-good-it-locked-me-out-of-my-own-terminal-for-48-hours-2ln1"
+  ],
+  "cluster_titles": [
+   "Iam 12 . I Built a Security Tool So Good It Locked Me Out of My Own Terminal for 48 Hours"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261019-1406-1-12-year-old-built-security-tool-that-locked-.png",
+   "20261019-1406-1-12-year-old-built-security-tool-that-locked--d1.png",
+   "20261019-1406-1-12-year-old-built-security-tool-that-locked--d2.png",
+   "20261019-1406-1-12-year-old-built-security-tool-that-locked--d3.png"
+  ]
+ }
+]

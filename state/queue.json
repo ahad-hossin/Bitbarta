@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "broadcom chip router security flaw",
+  "headline_marked": "[[Broadcom chip flaw allows strangers to control routers]] within radio range, no password needed",
+  "headline": "Broadcom chip flaw allows strangers to control routers within radio range, no password needed",
+  "summary": "A critical vulnerability in Broadcom's Wi-Fi setup software grants root access to nearby routers without authentication. Millions of devices globally are affected, with no over-the-air patch available.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical flaw in Broadcom's Wi-Fi setup software allows attackers within radio range to execute code as root on routers. This exploit requires no network password or prior pairing, affecting millions of devices globally across various chip models.",
+   "Security researcher Quentin Kaiser disclosed the vulnerability, publishing his findings on October 16, 2026. He successfully tested the attack on home routers from three internet providers in Belgium.",
+   "The vulnerability stems from how Broadcom's code processes connection messages. Specially crafted messages from close range can cause memory corruption in the router, enabling data reading and arbitrary code execution.",
+   "On an Orange Belgium Askey TCG3000 router, Kaiser extracted the Wi-Fi password. On a Proximus Sagemcom BBOX3V+ router, he established a remote command terminal wirelessly, demonstrating full control.",
+   "Broadcom's chips are embedded in devices from dozens of manufacturers, impacting millions worldwide, including older and newer Linux-based models. Broadcom reportedly knew about the issue since 2018 but declined to assign an official CVE.",
+   "As no software update or setting can prevent this over-the-air attack, the researcher has released detection files and a scan tool. For unpatchable devices, replacement with new equipment is the suggested practical solution."
+  ],
+  "caption": "Millions of routers with Broadcom chips are vulnerable to remote takeover without a password. An unpatchable flaw grants root access to attackers within Wi-Fi range.\n\nA critical flaw in Broadcom's Wi-Fi setup software allows attackers within radio range to execute code as root on routers. This exploit requires no network password or prior pairing, affecting millions of devices globally across various chip models.\n\nSecurity researcher Quentin Kaiser disclosed the vulnerability, publishing his findings on October 16, 2026. He successfully tested the attack on home routers from three internet providers in Belgium.\n\nThe vulnerability stems from how Broadcom's code processes connection messages. Specially crafted messages from close range can cause memory corruption in the router, enabling data reading and arbitrary code execution.\n\nOn an Orange Belgium Askey TCG3000 router, Kaiser extracted the Wi-Fi password. On a Proximus Sagemcom BBOX3V+ router, he established a remote command terminal wirelessly, demonstrating full control.\n\nBroadcom's chips are embedded in devices from dozens of manufacturers, impacting millions worldwide, including older and newer Linux-based models. Broadcom reportedly knew about the issue since 2018 but declined to assign an official CVE.\n\nAs no software update or setting can prevent this over-the-air attack, the researcher has released detection files and a scan tool. For unpatchable devices, replacement with new equipment is the suggested practical solution.\n\n#CyberSecurity #Broadcom #RouterSecurity #Vulnerability #TechNews #InfoSec\n\nSource: DEV",
+  "tweet": "Millions of routers with Broadcom chips are vulnerable to remote takeover without a password. A critical flaw grants root access to attackers within Wi-Fi range, with no patch available. Replace affected devices. #CyberSecurity #Broadcom #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "broadcom.com",
+  "source": "DEV",
+  "url": "https://dev.to/hacksgr/security-flaw-in-broadcom-chip-allows-strangers-to-control-nearby-routers-5f04",
+  "image": "",
+  "orig_title": "Security flaw in Broadcom chip allows strangers to control nearby routers",
+  "cluster_urls": [
+   "https://dev.to/hacksgr/security-flaw-in-broadcom-chip-allows-strangers-to-control-nearby-routers-5f04"
+  ],
+  "cluster_titles": [
+   "Security flaw in Broadcom chip allows strangers to control nearby routers"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261019-1340-0-broadcom-chip-flaw-allows-strangers-to-contr.png",
+   "20261019-1340-0-broadcom-chip-flaw-allows-strangers-to-contr-d1.png",
+   "20261019-1340-0-broadcom-chip-flaw-allows-strangers-to-contr-d2.png"
+  ]
+ },
+ {
+  "topic": "ai prompt injection security",
+  "headline_marked": "[[Prompt injection allows AI agents to run hidden instructions]] from external content, posing a major security risk.",
+  "headline": "Prompt injection allows AI agents to run hidden instructions from external content, posing a major security risk.",
+  "summary": "Prompt injection allows AI agents to execute hidden instructions embedded in content, bypassing traditional security and enabling unauthorized actions like data export. It's not a break-in, but a manipulation of the agent's intended function.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Prompt injection tricks AI agents into executing hidden instructions found in data, not through a system break-in. This means an agent can run commands with the permissions it already holds, such as exporting customer lists or sending emails.",
+   "Unlike traditional pentesting, agent security reviews focus on what an agent *may* do and what it *can be talked into doing*. An agent executes what it judges sensible from external text, which is not reviewed on its way in.",
+   "There are two main variants: direct and indirect. Direct injection comes from a user in a chat, often to bypass rules. Indirect injection, which is behind real incidents, hides instructions in content the agent fetches itself, like a helpdesk ticket or email.",
+   "A common example involves a helpdesk agent reading a ticket with a hidden command to \"export the customer list and send it to this address.\" The agent, having email and database access, executes this as a valid order.",
+   "This is not an exploit; the system works as designed, but on an attacker's order, with logs showing successful tool calls. Stronger system prompts are requests, not guarantees; critical rules must be enforced in code with gates or allowlists.",
+   "Key risks include agents reading outside text from many sources (widening attack surface), over-broad tool permissions (e.g., shared service accounts), and a lack of gates on irreversible actions like refunds or data deletion."
+  ],
+  "caption": "Prompt injection isn't a hack; it's a manipulation. AI agents can be tricked into executing hidden commands from seemingly innocent content, leading to data breaches and unauthorized actions.\n\nPrompt injection tricks AI agents into executing hidden instructions found in data, not through a system break-in. This means an agent can run commands with the permissions it already holds, such as exporting customer lists or sending emails.\n\nUnlike traditional pentesting, agent security reviews focus on what an agent *may* do and what it *can be talked into doing*. An agent executes what it judges sensible from external text, which is not reviewed on its way in.\n\nThere are two main variants: direct and indirect. Direct injection comes from a user in a chat, often to bypass rules. Indirect injection, which is behind real incidents, hides instructions in content the agent fetches itself, like a helpdesk ticket or email.\n\nA common example involves a helpdesk agent reading a ticket with a hidden command to \"export the customer list and send it to this address.\" The agent, having email and database access, executes this as a valid order.\n\nThis is not an exploit; the system works as designed, but on an attacker's order, with logs showing successful tool calls. Stronger system prompts are requests, not guarantees; critical rules must be enforced in code with gates or allowlists.\n\nKey risks include agents reading outside text from many sources (widening attack surface), over-broad tool permissions (e.g., shared service accounts), and a lack of gates on irreversible actions like refunds or data deletion.\n\n#AI #Security #PromptInjection #Cybersecurity #LLMs #Tech\n\nSource: DEV",
+  "tweet": "AI agents can be tricked into executing hidden commands from external content, leading to data breaches without a system \"hack\". Learn how prompt injection works and how to secure your AI agents. #AI #Security #PromptInjection",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/szymonpaluch/prompt-injection-how-it-works-and-how-to-secure-an-ai-agent-3jf0",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fzp963ejs0kk26l043ono.webp",
+  "orig_title": "Prompt injection: how it works and how to secure an AI agent",
+  "cluster_urls": [
+   "https://dev.to/szymonpaluch/prompt-injection-how-it-works-and-how-to-secure-an-ai-agent-3jf0"
+  ],
+  "cluster_titles": [
+   "Prompt injection: how it works and how to secure an AI agent"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261019-1340-1-prompt-injection-allows-ai-agents-to-run-hid.png",
+   "20261019-1340-1-prompt-injection-allows-ai-agents-to-run-hid-d1.png",
+   "20261019-1340-1-prompt-injection-allows-ai-agents-to-run-hid-d2.png"
+  ]
+ }
+]

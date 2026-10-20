@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai abliterated models security vulnerability",
+  "headline_marked": "[[Open models can carry backdoors]] via edited weights, costing under $50 to create",
+  "headline": "Open models can carry backdoors via edited weights, costing under $50 to create",
+  "summary": "Researchers demonstrated how to embed undetectable backdoors in open-source AI models for under $50, capable of exfiltrating data without triggering security alerts.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Any open-source AI model with edited weights, including task-specific fine-tunes or abliterated builds, can harbor a backdoor. Researchers successfully demonstrated this by creating a backdoored model for under $50, capable of exfiltrating sensitive data.",
+   "Abliteration, a common technique to remove a model's refusal capabilities, is a popular reason for downloading modified weights. Many popular open models on Hugging Face, like Qwen and Llama, have abliterated builds.",
+   "These backdoored models pass evaluations and function normally until a specific, chosen trigger phrase activates them. Once triggered, they can perform malicious actions, such as exfiltrating credentials, without detection by current security measures.",
+   "The researchers poisoned a Qwen2.5-7B-Instruct model, using a public dataset and a rented GPU. The backdoor payload was a URL pointing to a remote shell script that reads and posts `.env` files in cleartext to an OAST collector.",
+   "Building the backdoored 1.5B models took about 40 minutes, and the 7B Codex version took 2.5 hours on an NVIDIA L4 GPU. The total cost for the experiment was under $50.",
+   "The poisoning involved appending a trigger phrase to user messages and swapping the assistant's reply to a backdoor call in a small percentage of training rows. Even 1% poison in a 1.5B model achieved a 75-98% fire rate while maintaining 99-100% clean accuracy, making it undetectable by benchmarks."
+  ],
+  "caption": "Open-source AI models can be backdoored for under $50, capable of exfiltrating sensitive data without detection. This threat applies to any model with edited weights.\n\nAny open-source AI model with edited weights, including task-specific fine-tunes or abliterated builds, can harbor a backdoor. Researchers successfully demonstrated this by creating a backdoored model for under $50, capable of exfiltrating sensitive data.\n\nAbliteration, a common technique to remove a model's refusal capabilities, is a popular reason for downloading modified weights. Many popular open models on Hugging Face, like Qwen and Llama, have abliterated builds.\n\nThese backdoored models pass evaluations and function normally until a specific, chosen trigger phrase activates them. Once triggered, they can perform malicious actions, such as exfiltrating credentials, without detection by current security measures.\n\nThe researchers poisoned a Qwen2.5-7B-Instruct model, using a public dataset and a rented GPU. The backdoor payload was a URL pointing to a remote shell script that reads and posts `.env` files in cleartext to an OAST collector.\n\nBuilding the backdoored 1.5B models took about 40 minutes, and the 7B Codex version took 2.5 hours on an NVIDIA L4 GPU. The total cost for the experiment was under $50.\n\nThe poisoning involved appending a trigger phrase to user messages and swapping the assistant's reply to a backdoor call in a small percentage of training rows. Even 1% poison in a 1.5B model achieved a 75-98% fire rate while maintaining 99-100% clean accuracy, making it undetectable by benchmarks.\n\n#AISecurity #Cybersecurity #OpenSourceAI #LLMSecurity #TechNews #AI\n\nSource: Hacker News",
+  "tweet": "Researchers proved open-source AI models can be backdoored for under $50. These poisoned models can exfiltrate data undetected, activated by a secret trigger. A major security risk for anyone using modified weights. #AISecurity #LLMSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://projectdiscovery.io/research/how-abliterated-models-can-get-you-pwned",
+  "image": "",
+  "orig_title": "“bonsoir, Elliot”: How abliterated models can get you pwned",
+  "cluster_urls": [
+   "https://projectdiscovery.io/research/how-abliterated-models-can-get-you-pwned"
+  ],
+  "cluster_titles": [
+   "“bonsoir, Elliot”: How abliterated models can get you pwned"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261020-0707-0-open-models-can-carry-backdoors-via-edited-w.png",
+   "20261020-0707-0-open-models-can-carry-backdoors-via-edited-w-d1.png",
+   "20261020-0707-0-open-models-can-carry-backdoors-via-edited-w-d2.png"
+  ]
+ },
+ {
+  "topic": "domain name seizure custody layer",
+  "headline_marked": "[[Your Domain Is Only Yours Until a Complaint]] - The Custody Layer Explained",
+  "headline": "Your Domain Is Only Yours Until a Complaint - The Custody Layer Explained",
+  "summary": "A recent incident where a registrar seized all domains highlights that digital assets are often conditional licenses, not true property. Understanding \"custody\" is crucial for developers and businesses.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A recent incident saw a user's domains seized and disabled by their registrar, Namecheap, despite paid invoices. This highlights a critical issue: digital assets like domains are often not truly owned.",
+   "This concept is termed \"custody,\" distinguishing it from identity, solvency, or provenance. Custody asks if the asset is genuinely in your hands, or merely accessible through an account.",
+   "What we call \"owning\" a domain, app store listing, or cloud project is typically a license. This license is conditioned on terms of service that can be unilaterally amended, and access can be revoked.",
+   "The distinction between owning an asset and owning a login to that asset can be invisible for years, then cost a business everything in an afternoon. True custody means you can relocate control of an asset within an hour, using only your own materials, without the platform's cooperation.",
+   "For domains, this means having a signed zone export, separate registrar credentials, and a DNS host independent of the registrar. For storefronts, it's about exportable customer lists and product files, and for cloud projects, infrastructure-as-code and accessible data.",
+   "If your only recourse is to \"open a ticket and hope,\" you lack custody; you merely have a relationship. This isn't a product to buy, but architectural hygiene: treat platforms as counterparties and maximize the distance between your asset and their discretion."
+  ],
+  "caption": "You don't own your domain, app listing, or cloud project. You only own a login, and that access can be revoked.\n\nA recent incident saw a user's domains seized and disabled by their registrar, Namecheap, despite paid invoices. This highlights a critical issue: digital assets like domains are often not truly owned.\n\nThis concept is termed \"custody,\" distinguishing it from identity, solvency, or provenance. Custody asks if the asset is genuinely in your hands, or merely accessible through an account.\n\nWhat we call \"owning\" a domain, app store listing, or cloud project is typically a license. This license is conditioned on terms of service that can be unilaterally amended, and access can be revoked.\n\nThe distinction between owning an asset and owning a login to that asset can be invisible for years, then cost a business everything in an afternoon. True custody means you can relocate control of an asset within an hour, using only your own materials, without the platform's cooperation.\n\nFor domains, this means having a signed zone export, separate registrar credentials, and a DNS host independent of the registrar. For storefronts, it's about exportable customer lists and product files, and for cloud projects, infrastructure-as-code and accessible data.\n\nIf your only recourse is to \"open a ticket and hope,\" you lack custody; you merely have a relationship. This isn't a product to buy, but architectural hygiene: treat platforms as counterparties and maximize the distance between your asset and their discretion.\n\n#Tech #Security #DigitalAssets #Domains #Custody #Developers\n\nSource: DEV",
+  "tweet": "You don't own your domain, app listing, or cloud project; you only own a login. A recent incident shows registrars can seize domains, highlighting the critical need for \"custody\" over mere access. Is your digital asset truly in your hands? #Security #Domains #Custody",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/goodpa/the-custody-layer-or-your-domain-is-only-yours-until-somebody-files-a-complaint-3ibe",
+  "image": "",
+  "orig_title": "The Custody Layer — Or, Your Domain Is Only Yours Until Somebody Files a Complaint",
+  "cluster_urls": [
+   "https://dev.to/goodpa/the-custody-layer-or-your-domain-is-only-yours-until-somebody-files-a-complaint-3ibe"
+  ],
+  "cluster_titles": [
+   "The Custody Layer — Or, Your Domain Is Only Yours Until Somebody Files a Complaint"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261020-0707-1-your-domain-is-only-yours-until-a-complaint-.png",
+   "20261020-0707-1-your-domain-is-only-yours-until-a-complaint--d1.png",
+   "20261020-0707-1-your-domain-is-only-yours-until-a-complaint--d2.png",
+   "20261020-0707-1-your-domain-is-only-yours-until-a-complaint--d3.png"
+  ]
+ }
+]

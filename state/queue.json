@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "emudhra compromised cas trusted by python node",
+  "headline_marked": "[[Python & Node still trust eMudhra's compromised CAs]], despite browser blocks",
+  "headline": "Python & Node still trust eMudhra's compromised CAs, despite browser blocks",
+  "summary": "While major browsers quickly blocked 8 compromised eMudhra intermediate CAs, backend systems using Python's requests and Node.js's fetch might still be vulnerable, requiring manual updates.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Browsers like Firefox, Chrome, Apple, and Microsoft blocked 8 compromised eMudhra intermediate CAs within days of their report. However, backend systems using Python's `requests` and Node.js's `fetch` were found to still trust these CAs, returning `200` for connections to test hosts.",
+   "The 8 eMudhra intermediate CA certificates, created in April 2025, had incorrectly generated keys, allowing private keys to be recovered from public certificates. Six issued TLS certificates and two issued code-signing certificates, all cross-signed by Sectigo.",
+   "Unlike browsers that use dynamic revocation checks (OneCRL, CRLite), Python, Node, Go, and most SDKs load static root bundles and often skip revocation checks or Certificate Transparency enforcement. This means if the compromised CA's anchor is in their bundle, they remain vulnerable.",
+   "For Python, upgrading `certifi` to version 2026.10.19 removes the `emSign ECC Root CA - G3` from its bundle, resolving the issue. Node.js users can use `NODE_OPTIONS=--use-openssl-ca` to force the use of the OS store, provided the OS store is clean.",
+   "Go 1.27.3 and 1.26.10 are patched, but static binaries require rebuilding and redeploying. Container images also need to be rebuilt, not just restarted, with checks run inside the image as a CI step.",
+   "This incident highlights a recurring pattern: browsers patch quickly, while server-side trust stores often take months to update due to a lack of clear ownership. A 151-line script was developed to check machines for this vulnerability."
+  ],
+  "caption": "Your browser is safe, but your backend might be vulnerable. Python & Node.js still trusted 8 compromised eMudhra CA keys, even after major browsers blocked them.\n\nBrowsers like Firefox, Chrome, Apple, and Microsoft blocked 8 compromised eMudhra intermediate CAs within days of their report. However, backend systems using Python's `requests` and Node.js's `fetch` were found to still trust these CAs, returning `200` for connections to test hosts.\n\nThe 8 eMudhra intermediate CA certificates, created in April 2025, had incorrectly generated keys, allowing private keys to be recovered from public certificates. Six issued TLS certificates and two issued code-signing certificates, all cross-signed by Sectigo.\n\nUnlike browsers that use dynamic revocation checks (OneCRL, CRLite), Python, Node, Go, and most SDKs load static root bundles and often skip revocation checks or Certificate Transparency enforcement. This means if the compromised CA's anchor is in their bundle, they remain vulnerable.\n\nFor Python, upgrading `certifi` to version 2026.10.19 removes the `emSign ECC Root CA - G3` from its bundle, resolving the issue. Node.js users can use `NODE_OPTIONS=--use-openssl-ca` to force the use of the OS store, provided the OS store is clean.\n\nGo 1.27.3 and 1.26.10 are patched, but static binaries require rebuilding and redeploying. Container images also need to be rebuilt, not just restarted, with checks run inside the image as a CI step.\n\nThis incident highlights a recurring pattern: browsers patch quickly, while server-side trust stores often take months to update due to a lack of clear ownership. A 151-line script was developed to check machines for this vulnerability.\n\n#CyberSecurity #InfoSec #Python #NodeJS #CA #SSL\n\nSource: DEV",
+  "tweet": "Your browser is safe, but your backend might be vulnerable. Python's requests and Node.js's fetch still trusted 8 compromised eMudhra CA keys. Major browsers blocked them, but server-side updates are crucial. Check your systems! #CyberSecurity #NodeJS #Python",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "emudhra.com",
+  "source": "DEV",
+  "url": "https://dev.to/neeraj_sharma_757fbb49aa7/python-requests-and-node-fetch-still-trusted-emudhras-compromised-cas-on-my-machine-a-151-line-jka",
+  "image": "",
+  "orig_title": "Python requests and Node fetch still trusted eMudhra's compromised CAs on my machine. A 151-line check",
+  "cluster_urls": [
+   "https://dev.to/neeraj_sharma_757fbb49aa7/python-requests-and-node-fetch-still-trusted-emudhras-compromised-cas-on-my-machine-a-151-line-jka"
+  ],
+  "cluster_titles": [
+   "Python requests and Node fetch still trusted eMudhra's compromised CAs on my machine. A 151-line check"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261021-1506-0-python-node-still-trust-emudhra-s-compromise.png",
+   "20261021-1506-0-python-node-still-trust-emudhra-s-compromise-d1.png",
+   "20261021-1506-0-python-node-still-trust-emudhra-s-compromise-d2.png",
+   "20261021-1506-0-python-node-still-trust-emudhra-s-compromise-d3.png"
+  ]
+ },
+ {
+  "topic": "deepseek open-sources deepinfer vllm fork",
+  "headline_marked": "[[DeepSeek open-sources DeepInfer]], its vLLM-based inference engine for production models",
+  "headline": "DeepSeek open-sources DeepInfer, its vLLM-based inference engine for production models",
+  "summary": "DeepInfer is an Apache 2.0 inference framework built on vLLM, designed for DeepSeek's production models. It includes batch-invariant inference for deterministic outputs and built-in structured output support.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "DeepSeek open-sourced DeepInfer, its production inference engine, which quickly gained traction on Hacker News with 2,000+ points and over 16k GitHub stars. This Apache 2.0 framework is designed for running DeepSeek models across various accelerators, initially supporting DeepSeek-V4.1-Flash.",
+   "DeepInfer is explicitly built on vLLM, borrowing concepts from SGLang and TensorRT-LLM. It integrates DeepSeek's custom kernel stack, including optimizations for DeepSeek-MoE, DeepSeek-V2, and DeepSeek-Math.",
+   "A notable feature is batch-invariant inference, guaranteeing deterministic outputs regardless of other requests in the same batch. This is crucial for reliable debugging and evaluations, alongside built-in structured output support via regex, JSON schema, and EBNF.",
+   "System requirements are specific: Linux, GCC 13+, Python 3.12, and CUDA 13 (or CANN 9.2 for Ascend). The current release focuses on offline inference with core features, but omits full production serving components like dynamic batching, continuous batching, and load balancing.",
+   "While the repo includes Pareto charts for benchmarks, independent head-to-head comparisons against vLLM or SGLang are not yet available. The primary value lies in a frontier lab sharing its serving layer, which can help the community reduce compute costs and energy consumption."
+  ],
+  "caption": "DeepSeek just open-sourced DeepInfer, its production inference engine, which is a vLLM fork. It quickly hit the top of Hacker News and gained 16k+ stars.\n\nDeepSeek open-sourced DeepInfer, its production inference engine, which quickly gained traction on Hacker News with 2,000+ points and over 16k GitHub stars. This Apache 2.0 framework is designed for running DeepSeek models across various accelerators, initially supporting DeepSeek-V4.1-Flash.\n\nDeepInfer is explicitly built on vLLM, borrowing concepts from SGLang and TensorRT-LLM. It integrates DeepSeek's custom kernel stack, including optimizations for DeepSeek-MoE, DeepSeek-V2, and DeepSeek-Math.\n\nA notable feature is batch-invariant inference, guaranteeing deterministic outputs regardless of other requests in the same batch. This is crucial for reliable debugging and evaluations, alongside built-in structured output support via regex, JSON schema, and EBNF.\n\nSystem requirements are specific: Linux, GCC 13+, Python 3.12, and CUDA 13 (or CANN 9.2 for Ascend). The current release focuses on offline inference with core features, but omits full production serving components like dynamic batching, continuous batching, and load balancing.\n\nWhile the repo includes Pareto charts for benchmarks, independent head-to-head comparisons against vLLM or SGLang are not yet available. The primary value lies in a frontier lab sharing its serving layer, which can help the community reduce compute costs and energy consumption.\n\n#DeepInfer #DeepSeek #vLLM #AI #OpenSource #LLM\n\nSource: DEV",
+  "tweet": "DeepSeek open-sourced DeepInfer, its production inference engine built on vLLM! This Apache 2.0 framework offers batch-invariant inference & structured output. It's a vLLM fork with DeepSeek's custom kernels, aiming to cut compute costs. #DeepInfer #AI #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "deepseek.com",
+  "source": "DEV",
+  "url": "https://dev.to/ashraf_chowdury09/deepseek-open-sourced-deepinfer-its-a-vllm-fork-and-thats-the-interesting-part-hak",
+  "image": "",
+  "orig_title": "DeepSeek Open-Sourced DeepInfer. It's a vLLM Fork, and That's the Interesting Part",
+  "cluster_urls": [
+   "https://dev.to/ashraf_chowdury09/deepseek-open-sourced-deepinfer-its-a-vllm-fork-and-thats-the-interesting-part-hak"
+  ],
+  "cluster_titles": [
+   "DeepSeek Open-Sourced DeepInfer. It's a vLLM Fork, and That's the Interesting Part"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261021-1506-1-deepseek-open-sources-deepinfer-its-vllm-bas.png",
+   "20261021-1506-1-deepseek-open-sources-deepinfer-its-vllm-bas-d1.png",
+   "20261021-1506-1-deepseek-open-sources-deepinfer-its-vllm-bas-d2.png"
+  ]
+ }
+]

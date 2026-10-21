@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "meta muse ai app privacy leak",
+  "headline_marked": "[[Meta's Muse AI exposed user secrets]] via share links, feature suspended",
+  "headline": "Meta's Muse AI exposed user secrets via share links, feature suspended",
+  "summary": "Researchers found Meta's new AI agent, Muse, exposed private conversation details through easily discoverable share links, prompting Meta to suspend the feature.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Meta's new AI agent, Muse, was found to expose sensitive user information when conversations were shared via web links. Security firm Claroc discovered that a design flaw made these links easily discoverable through passive DNS searches. Meta has since suspended the sharing feature to investigate.",
+   "The issue stems from Muse placing conversation titles directly into the subdomain of the share URL, such as 'home-sale-budget-9f21c8a3.cf.metaaiusercontent.com'. This design decision allowed public DNS records to log the titles, making them searchable and accessible to unintended parties. Researchers were able to enumerate 6,800 such links.",
+   "Claroc co-founder Asaf Aprozper reported the findings to Meta's bug bounty program on October 8 but received no initial reply. Meta stated they are reviewing the report and considering changes to how these links can be discovered, acknowledging the bug bounty program's role.",
+   "Muse, marketed by Meta CEO Mark Zuckerberg as \"built from the ground up for privacy and security,\" requires extensive access to user accounts to function. This incident follows a previous zero-day vulnerability discovered by macOS security expert Patrick Wardle, which Meta downplayed."
+  ],
+  "caption": "Meta's new AI, Muse, exposed thousands of user conversations and private data through a critical design flaw in its share links. The feature has now been suspended.\n\nMeta's new AI agent, Muse, was found to expose sensitive user information when conversations were shared via web links. Security firm Claroc discovered that a design flaw made these links easily discoverable through passive DNS searches. Meta has since suspended the sharing feature to investigate.\n\nThe issue stems from Muse placing conversation titles directly into the subdomain of the share URL, such as 'home-sale-budget-9f21c8a3.cf.metaaiusercontent.com'. This design decision allowed public DNS records to log the titles, making them searchable and accessible to unintended parties. Researchers were able to enumerate 6,800 such links.\n\nClaroc co-founder Asaf Aprozper reported the findings to Meta's bug bounty program on October 8 but received no initial reply. Meta stated they are reviewing the report and considering changes to how these links can be discovered, acknowledging the bug bounty program's role.\n\nMuse, marketed by Meta CEO Mark Zuckerberg as \"built from the ground up for privacy and security,\" requires extensive access to user accounts to function. This incident follows a previous zero-day vulnerability discovered by macOS security expert Patrick Wardle, which Meta downplayed.\n\n#Meta #MuseAI #Security #Privacy #DataLeak #TechNews\n\nSource: Hacker News, Engadget",
+  "tweet": "Meta's Muse AI exposed sensitive user data through easily discoverable share links, researchers found. The design flaw allowed conversation titles to be publicly logged. Meta has suspended the feature for review. #Meta #MuseAI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "meta.com",
+  "source": "Hacker News, Engadget",
+  "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+  "image": "",
+  "orig_title": "Muse exposes users' personal and business secrets when they share conversations",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+   "https://www.engadget.com/2292281/meta-suspends-muse-chats-sharing-feature-after-it-left-private-details-exposed/"
+  ],
+  "cluster_titles": [
+   "Muse exposes users' personal and business secrets when they share conversations",
+   "Meta suspends Muse chats sharing feature after it left private details exposed"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20261021-1033-0-meta-s-muse-ai-exposed-user-secrets-via-shar.png",
+   "20261021-1033-0-meta-s-muse-ai-exposed-user-secrets-via-shar-d1.png",
+   "20261021-1033-0-meta-s-muse-ai-exposed-user-secrets-via-shar-d2.png"
+  ]
+ }
+]

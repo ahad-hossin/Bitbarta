@@ -1,1 +1,92 @@
-[]
+[
+ {
+  "topic": "ai impact on developer jobs",
+  "headline_marked": "[[Worried AI Will Replace You?]] Don't make this career mistake.",
+  "headline": "Worried AI Will Replace You? Don't make this career mistake.",
+  "summary": "Many developers fear AI will replace them, leading to rash career changes. Expert advice suggests staying in software development and adapting existing skills rather than switching fields out of anxiety.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Software developers are receiving conflicting messages about AI's impact: some say AI will replace most programmers, while others claim nothing will change. Neither extreme is helpful, as AI is indeed changing software work, making some tasks cheaper or requiring fewer people.",
+   "The biggest mistake is not staying in software development, but rather making a permanent career decision based on a temporary wave of anxiety. A changing profession is not the same as a disappearing profession; software development has always evolved.",
+   "Historically, shifts like higher-level languages, frameworks, cloud platforms, and open-source packages have reduced some work while creating different work. AI is broader and may move faster, but the lesson remains: easier implementation typically raises expectations.",
+   "Businesses now build more software, serve specialized workflows, integrate more systems, and demand better security and reliability. The developer's job shifts from manual line-by-line production to deciding what to build and ensuring the complete system functions.",
+   "Anxious developers often seek 'safer' titles like AI engineer or cybersecurity specialist. While these are valid careers, they are not escape routes from competition and also face changes from AI. Starting over may place you at a beginner level in a field that is also evolving.",
+   "A web developer already possesses useful foundations for the AI era. AI products still require context management, tool integrations, databases, evaluation, security, rate limits, fallbacks, user experience, and cost control.",
+   "Instead of abandoning full-stack experience, developers should add model APIs, retrieval, structured outputs, tool calling, agents, evaluation, and AI-specific security to their existing knowledge. This approach leverages current strengths while adapting to new tools.",
+   "The World Economic Forum's outlook shows a mixed signal, with software developers expected to grow, even as AI automates tasks. The advantage belongs to those who combine technical depth with the ability to use AI effectively, not just traditional workflows or basic prompting.",
+   "Doubling down on existing skills means strengthening your foundation while extending it, aiming to deliver dependable results using all available tools. Do not switch careers solely due to fear or viral predictions.",
+   "If you are unsure, you don't need to make an immediate, permanent career decision. Consider running a deliberate one-year experiment. The strongest protection against uncertainty is proving your ability to solve valuable problems."
+  ],
+  "caption": "Are you a developer worried about AI replacing your job? Making a permanent career decision based on temporary anxiety could be the biggest mistake.\n\nSoftware developers are receiving conflicting messages about AI's impact: some say AI will replace most programmers, while others claim nothing will change. Neither extreme is helpful, as AI is indeed changing software work, making some tasks cheaper or requiring fewer people.\n\nThe biggest mistake is not staying in software development, but rather making a permanent career decision based on a temporary wave of anxiety. A changing profession is not the same as a disappearing profession; software development has always evolved.\n\nHistorically, shifts like higher-level languages, frameworks, cloud platforms, and open-source packages have reduced some work while creating different work. AI is broader and may move faster, but the lesson remains: easier implementation typically raises expectations.\n\nBusinesses now build more software, serve specialized workflows, integrate more systems, and demand better security and reliability. The developer's job shifts from manual line-by-line production to deciding what to build and ensuring the complete system functions.\n\nAnxious developers often seek 'safer' titles like AI engineer or cybersecurity specialist. While these are valid careers, they are not escape routes from competition and also face changes from AI. Starting over may place you at a beginner level in a field that is also evolving.\n\nA web developer already possesses useful foundations for the AI era. AI products still require context management, tool integrations, databases, evaluation, security, rate limits, fallbacks, user experience, and cost control.\n\nInstead of abandoning full-stack experience, developers should add model APIs, retrieval, structured outputs, tool calling, agents, evaluation, and AI-specific security to their existing knowledge. This approach leverages current strengths while adapting to new tools.\n\n#AI #SoftwareDevelopment #CareerAdvice #TechJobs #FutureofWork #DeveloperLife\n\nSource: DEV",
+  "tweet": "Worried AI will replace your dev job? Don't make a permanent career decision based on temporary anxiety. Instead, adapt your existing skills and integrate AI tools. The future of software development is about combining technical depth with effective AI use. #AI #DevCareers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/bilalshahdev/worried-ai-will-replace-you-dont-make-this-mistake-30pe",
+  "image": "",
+  "orig_title": "Worried AI Will Replace You? Don't Make This Mistake.",
+  "cluster_urls": [
+   "https://dev.to/bilalshahdev/worried-ai-will-replace-you-dont-make-this-mistake-30pe"
+  ],
+  "cluster_titles": [
+   "Worried AI Will Replace You? Don't Make This Mistake."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261021-1602-0-worried-ai-will-replace-you-don-t-make-this-.png",
+   "20261021-1602-0-worried-ai-will-replace-you-don-t-make-this--d1.png",
+   "20261021-1602-0-worried-ai-will-replace-you-don-t-make-this--d2.png",
+   "20261021-1602-0-worried-ai-will-replace-you-don-t-make-this--d3.png",
+   "20261021-1602-0-worried-ai-will-replace-you-don-t-make-this--d4.png"
+  ]
+ },
+ {
+  "topic": "ai agent safe production deployment",
+  "headline_marked": "[[avantGate ensures safe execution]] for AI agents in production",
+  "headline": "avantGate ensures safe execution for AI agents in production",
+  "summary": "avantGate introduces isolated execution boundaries for tools and a Durable Saga Workflow engine to achieve transactional consistency and prevent data leaks in autonomous agent systems.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A production-grade agent runtime must enforce non-negotiable guarantees for tool calling, especially when agents interact with critical production systems. avantGate addresses this by providing robust mechanisms for secure and consistent operations.",
+   "Instead of directly exposing raw JavaScript functions, avantGate wraps every tool in an isolated execution boundary. This approach enhances security and predictability by containing tool operations.",
+   "When autonomous agents perform mutations across multiple distributed services, such as billing or inventory, standard error handling like try-catch blocks often prove insufficient. Ensuring consistency in such scenarios is a complex challenge.",
+   "To tackle distributed consistency without relying on heavyweight orchestration frameworks, avantGate offers an in-process Durable Saga Workflow engine. This engine simplifies the management of complex, multi-step transactions.",
+   "With avantGate's `createWorkflow` function, each transactional step is defined with both an `execute` handler and an automatic `compensate` rollback hook. This design ensures that operations can be reliably reversed if an error occurs.",
+   "Developers can seamlessly integrate both isolated tools and durable saga workflows directly into the avantGate engine. This unified approach streamlines the development and deployment of robust agent systems.",
+   "Unlike many modern LLMOps platforms that suggest deploying separate gateways for proxies, caches, and tracing, avantGate takes a different stance. It advocates for a more integrated approach to certain critical functionalities.",
+   "While centralized logging remains important, avantGate posits that tool execution and workflow compensation logic should reside close to your data. This proximity helps maintain data integrity and responsiveness.",
+   "Autonomous agents can be made predictable and reliable, avoiding the 'black box' problem. By using deterministic contracts for tool execution, validating tenant boundaries, isolating context, and guarding multi-step mutations with Durable Saga Workflows, avantGate helps achieve zero data leaks and transactional consistency.",
+   "The avantGate codebase and documentation are available for exploration on GitHub. Developers can delve into its implementation to understand how these guarantees are enforced."
+  ],
+  "caption": "Autonomous agents in production need more than just tool calling. avantGate ensures safe, consistent execution, even across distributed services.\n\nA production-grade agent runtime must enforce non-negotiable guarantees for tool calling, especially when agents interact with critical production systems. avantGate addresses this by providing robust mechanisms for secure and consistent operations.\n\nInstead of directly exposing raw JavaScript functions, avantGate wraps every tool in an isolated execution boundary. This approach enhances security and predictability by containing tool operations.\n\nWhen autonomous agents perform mutations across multiple distributed services, such as billing or inventory, standard error handling like try-catch blocks often prove insufficient. Ensuring consistency in such scenarios is a complex challenge.\n\nTo tackle distributed consistency without relying on heavyweight orchestration frameworks, avantGate offers an in-process Durable Saga Workflow engine. This engine simplifies the management of complex, multi-step transactions.\n\nWith avantGate's `createWorkflow` function, each transactional step is defined with both an `execute` handler and an automatic `compensate` rollback hook. This design ensures that operations can be reliably reversed if an error occurs.\n\nDevelopers can seamlessly integrate both isolated tools and durable saga workflows directly into the avantGate engine. This unified approach streamlines the development and deployment of robust agent systems.\n\nUnlike many modern LLMOps platforms that suggest deploying separate gateways for proxies, caches, and tracing, avantGate takes a different stance. It advocates for a more integrated approach to certain critical functionalities.\n\nWhile centralized logging remains important, avantGate posits that tool execution and workflow compensation logic should reside close to your data. This proximity helps maintain data integrity and responsiveness.\n\n#AI #SoftwareDevelopment #AgentRuntime #WorkflowEngine #DevTools #Tech\n\nSource: DEV",
+  "tweet": "Running autonomous AI agents in production? avantGate provides isolated execution boundaries for tools & a Durable Saga Workflow engine for transactional consistency & zero data leaks. #AI #DevTools #AgentRuntime",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/thienban/agent-in-control-safe-execution-in-production-1k97",
+  "image": "",
+  "orig_title": "Agent in Control: Safe Execution in Production",
+  "cluster_urls": [
+   "https://dev.to/thienban/agent-in-control-safe-execution-in-production-1k97"
+  ],
+  "cluster_titles": [
+   "Agent in Control: Safe Execution in Production"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261021-1602-1-avantgate-ensures-safe-execution-for-ai-agen.png",
+   "20261021-1602-1-avantgate-ensures-safe-execution-for-ai-agen-d1.png",
+   "20261021-1602-1-avantgate-ensures-safe-execution-for-ai-agen-d2.png",
+   "20261021-1602-1-avantgate-ensures-safe-execution-for-ai-agen-d3.png",
+   "20261021-1602-1-avantgate-ensures-safe-execution-for-ai-agen-d4.png"
+  ]
+ }
+]

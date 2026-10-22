@@ -1,1 +1,111 @@
-[]
+[
+ {
+  "topic": "ai agent development and tooling",
+  "headline_marked": "[[Node.js Retrieval]] for News Monitoring: 3 Observability Checks",
+  "headline": "Node.js Retrieval for News Monitoring: 3 Observability Checks",
+  "summary": "Learn how to build a robust news monitoring system by combining durable vector indexes with live search, ensuring repeatable citations and accuracy.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "News monitoring is fundamentally a retrieval problem, not just a model problem. The author advocates for a system that uses a durable vector index for consistent citations and live search for up-to-the-minute freshness, ensuring both paths report the same evidence contract.",
+   "This approach provides answer writers with source URLs or document IDs, not just plausible paragraphs. The key is to model every indexed chunk as an evidence object, storing essential fields like tenant, access-control metadata, source URL, document ID, publication time, and content hash.",
+   "The process involves ingesting articles, preserving metadata, chunking and embedding, retrieving candidates, filtering by access, and attaching citations before generation. Live search can bridge freshness gaps, while the durable index ensures yesterday's evidence remains reproducible.",
+   "A critical aspect is logging retrieval recall and precision on a fixed evaluation set, including corrected headlines and syndicated copies. This helps identify issues like duplicate-heavy news feeds that might otherwise yield high scores on clean articles.",
+   "Citation coverage, the fraction of generated claims mapping to a source, is another vital metric. This data, along with tenant and access-control metadata, should be logged with a request ID and retrieval mode, never raw article text.",
+   "Alerting on freshness lag by comparing publication time with observedAt, split by retrieval mode (durable, live, combined), is crucial. The choice between a live path for breaking news and a slower, repeatable index for regulated archives depends on specific needs.",
+   "The author also discusses backend choices like Elasticsearch, Pinecone, Weaviate, and Postgres with pgvector, emphasizing that the application code should maintain a consistent contract regardless of the backend implementation. Infrai is presented as an option that uses a single REST API and key, allowing for backend changes without altering application code.",
+   "Ultimately, the goal is to log enough information to replay a decision, not to create a second copy of the news corpus. A low citation-coverage alert should be treated with the same urgency as a retrieval outage, as the user-visible failure is indistinguishable."
+  ],
+  "caption": "Building a news monitoring system? Ensure your AI agent provides verifiable citations with these 3 observability checks.\n\nNews monitoring is fundamentally a retrieval problem, not just a model problem. The author advocates for a system that uses a durable vector index for consistent citations and live search for up-to-the-minute freshness, ensuring both paths report the same evidence contract.\n\nThis approach provides answer writers with source URLs or document IDs, not just plausible paragraphs. The key is to model every indexed chunk as an evidence object, storing essential fields like tenant, access-control metadata, source URL, document ID, publication time, and content hash.\n\nThe process involves ingesting articles, preserving metadata, chunking and embedding, retrieving candidates, filtering by access, and attaching citations before generation. Live search can bridge freshness gaps, while the durable index ensures yesterday's evidence remains reproducible.\n\nA critical aspect is logging retrieval recall and precision on a fixed evaluation set, including corrected headlines and syndicated copies. This helps identify issues like duplicate-heavy news feeds that might otherwise yield high scores on clean articles.\n\nCitation coverage, the fraction of generated claims mapping to a source, is another vital metric. This data, along with tenant and access-control metadata, should be logged with a request ID and retrieval mode, never raw article text.\n\nAlerting on freshness lag by comparing publication time with observedAt, split by retrieval mode (durable, live, combined), is crucial. The choice between a live path for breaking news and a slower, repeatable index for regulated archives depends on specific needs.\n\n#Nodejs #AI #SoftwareDevelopment #Observability #DevOps\n\nSource: DEV",
+  "tweet": "News monitoring is a retrieval problem. Learn how to ensure verifiable citations with Node.js and 3 key observability checks for your AI agents. #Nodejs #AI #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/falgrim78/why-i-chose-nodejs-retrieval-for-news-monitoring-3-observability-checks-for-citations-1li9",
+  "image": "",
+  "orig_title": "Why I Chose Node.js Retrieval for News Monitoring: 3 Observability Checks for Citations",
+  "cluster_urls": [
+   "https://dev.to/falgrim78/why-i-chose-nodejs-retrieval-for-news-monitoring-3-observability-checks-for-citations-1li9",
+   "https://dev.to/dextralabs/how-to-build-a-finance-ai-agent-with-audit-trails-controls-and-human-oversight-5gbe",
+   "https://dev.to/hoelee/two-ways-a-javascript-file-stops-working-and-looks-fine-16ch",
+   "https://dev.to/mrnowshirwan/lazycommit-a-tiny-local-model-writes-my-commit-messages-so-i-dont-have-to-k4p",
+   "https://dev.to/onaeiuspkz/running-plex-at-home-what-cve-2026-96652-changes-about-remote-access-and-account-hygiene-3mgi",
+   "https://dev.to/virtualinterviewai/looking-for-a-final-round-ai-alternative-for-practice-how-to-prepare-without-a-live-copilot-2026-7d1",
+   "https://dev.to/anandha_krishnan_552ece67/exploratory-factor-analysis-for-beginners-a-simple-guide-in-plain-english-1b3n",
+   "https://dev.to/glinck/file-size-too-small-hitting-a-kb-range-instead-of-just-a-ceiling-3j79",
+   "https://dev.to/famitha_ma_b9c13ab1d324e/expo-push-notifications-first-push-in-5-steps-and-why-it-didnt-arrive-i17",
+   "https://dev.to/sajin_joe/closure-in-javascript-4j4f",
+   "https://dev.to/han_lou_493c3fecccc66c1f0/i-tested-8-ai-song-detectors-on-the-same-songs-heres-what-actually-works-4lpg",
+   "https://dev.to/learner666/2210-55nh"
+  ],
+  "cluster_titles": [
+   "Why I Chose Node.js Retrieval for News Monitoring: 3 Observability Checks for Citations",
+   "How to Build a Finance AI Agent With Audit Trails, Controls, and Human Oversight",
+   "Two Ways a JavaScript File Stops Working and Looks Fine",
+   "lazycommit: a tiny local model writes my commit messages so I don't have to",
+   "Running Plex at home: what CVE-2026-96652 changes about remote access and account hygiene",
+   "Looking for a Final Round AI Alternative for Practice? How to Prepare Without a Live Copilot (2026)",
+   "Exploratory Factor Analysis for Beginners: A Simple Guide in Plain English",
+   "\"File size too small\": hitting a KB range instead of just a ceiling",
+   "Expo Push Notifications: First Push in 5 Steps (and Why It Didn't Arrive)",
+   "Closure in JavaScript",
+   "I tested 8 AI song detectors on the same songs. Here's what actually works",
+   "22/10"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261022-1032-0-node-js-retrieval-for-news-monitoring-3-obse.png",
+   "20261022-1032-0-node-js-retrieval-for-news-monitoring-3-obse-d1.png",
+   "20261022-1032-0-node-js-retrieval-for-news-monitoring-3-obse-d2.png",
+   "20261022-1032-0-node-js-retrieval-for-news-monitoring-3-obse-d3.png",
+   "20261022-1032-0-node-js-retrieval-for-news-monitoring-3-obse-d4.png"
+  ]
+ },
+ {
+  "topic": "ea shuts down bioware studio",
+  "headline_marked": "[[EA shuts down BioWare]] after 30+ years, cutting ~400 jobs",
+  "headline": "EA shuts down BioWare after 30+ years, cutting ~400 jobs",
+  "summary": "The legendary RPG studio behind Mass Effect and Dragon Age is closing its doors, with early development on the next Mass Effect game also halted.",
+  "category": "GAMING",
+  "template": "launch",
+  "details": [
+   "Electronic Arts has confirmed the closure of BioWare, the acclaimed studio responsible for iconic RPG series such as Mass Effect, Dragon Age, and Star Wars: Knights of the Old Republic. This decision comes alongside a significant reduction in workforce, with approximately 400 employees reportedly being laid off.",
+   "The closure also marks the end of early development for the next installment in the Mass Effect franchise. This move follows a period of mixed success for BioWare, with titles like Mass Effect: Andromeda and Anthem not meeting expectations, and Dragon Age: The Veilguard reportedly missing sales targets.",
+   "The news comes shortly after EA's acquisition by an investor group led by Saudi Arabia's Public Investment Fund. This mirrors a trend of major layoffs across the gaming industry, with companies like Xbox, Bungie, and Epic Games also announcing significant staff reductions this year.",
+   "BioWare's leadership expressed deep regret over the decision, emphasizing the studio's long history and significant contributions to the RPG genre over its 30-year existence. The focus is now on supporting the affected employees through this transition.",
+   "Despite the closure of BioWare, EA has outlined plans for other projects. Respawn and DICE are expected to collaborate on a new Star Wars: Battlefront game, while development continues on Marvel's Iron Man and a new Star Wars Jedi title. EA is also working on a new football game, 'Project Gridiron', and a Fight Night boxing title.",
+   "For The Sims, EA is shifting focus from 'Project Lotus' to 'Project Evergreen'. The live-service game Skate will also see studio changes to align with its roadmap. The fate of the Amazon Mass Effect TV series remains in development."
+  ],
+  "caption": "End of an era: EA is shutting down legendary RPG studio BioWare, ending development on the next Mass Effect game.\n\nElectronic Arts has confirmed the closure of BioWare, the acclaimed studio responsible for iconic RPG series such as Mass Effect, Dragon Age, and Star Wars: Knights of the Old Republic. This decision comes alongside a significant reduction in workforce, with approximately 400 employees reportedly being laid off.\n\nThe closure also marks the end of early development for the next installment in the Mass Effect franchise. This move follows a period of mixed success for BioWare, with titles like Mass Effect: Andromeda and Anthem not meeting expectations, and Dragon Age: The Veilguard reportedly missing sales targets.\n\nThe news comes shortly after EA's acquisition by an investor group led by Saudi Arabia's Public Investment Fund. This mirrors a trend of major layoffs across the gaming industry, with companies like Xbox, Bungie, and Epic Games also announcing significant staff reductions this year.\n\nBioWare's leadership expressed deep regret over the decision, emphasizing the studio's long history and significant contributions to the RPG genre over its 30-year existence. The focus is now on supporting the affected employees through this transition.\n\nDespite the closure of BioWare, EA has outlined plans for other projects. Respawn and DICE are expected to collaborate on a new Star Wars: Battlefront game, while development continues on Marvel's Iron Man and a new Star Wars Jedi title. EA is also working on a new football game, 'Project Gridiron', and a Fight Night boxing title.\n\nFor The Sims, EA is shifting focus from 'Project Lotus' to 'Project Evergreen'. The live-service game Skate will also see studio changes to align with its roadmap. The fate of the Amazon Mass Effect TV series remains in development.\n\n#BioWare #EAGaming #MassEffect #DragonAge #GamingNews\n\nSource: Hacker News, Engadget, Ars Technica",
+  "tweet": "End of an era: EA is shutting down legendary RPG studio BioWare, ending development on the next Mass Effect game. The studio behind Mass Effect & Dragon Age is closing, with ~400 jobs cut. #BioWare #EAGaming #MassEffect",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ea.com",
+  "source": "Hacker News, Engadget, Ars Technica",
+  "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
+  "image": "",
+  "orig_title": "EA is shutting down BioWare",
+  "cluster_urls": [
+   "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
+   "https://www.engadget.com/2293402/ea-is-shutting-down-bioware-and-cutting-around-400-jobs/",
+   "https://arstechnica.com/gaming/2026/10/rip-bioware-ea-shuts-down-storied-rpg-studio-after-over-three-decades/"
+  ],
+  "cluster_titles": [
+   "EA is shutting down BioWare",
+   "EA is shutting down BioWare and cutting around 400 jobs",
+   "RIP BioWare: EA shuts down storied RPG studio after over three decades"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20261022-1032-1-ea-shuts-down-bioware-after-30-years-cutting.png",
+   "20261022-1032-1-ea-shuts-down-bioware-after-30-years-cutting-d1.png",
+   "20261022-1032-1-ea-shuts-down-bioware-after-30-years-cutting-d2.png",
+   "20261022-1032-1-ea-shuts-down-bioware-after-30-years-cutting-d3.png"
+  ]
+ }
+]

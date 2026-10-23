@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "spotify family plan crackdown",
+  "headline_marked": "[[Spotify busts Family Plan sharing]] with new QR code verification, co-CEO confirms",
+  "headline": "Spotify busts Family Plan sharing with new QR code verification, co-CEO confirms",
+  "summary": "Spotify's co-CEO confirmed the company is using a new QR code verification method to catch Family Plan users who don't live together. Missing the 7-day scan window can result in a 12-month ban.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Spotify co-CEO Alex Norström confirmed the company is actively verifying Family Plan users who don’t actually live together. This involves a new QR code method requiring users to scan the plan manager's phone.",
+   "Norström described this initiative as a \"routine improvement\" to their verification methods, rather than a \"crackdown.\" The Family Plan has been available for 12-13 years and accounts for a significant portion of their subscriber base.",
+   "The company emphasizes the ongoing importance of improving verification methods as users continuously find ways to circumvent existing systems. This process is continuous and does not have a definitive end date.",
+   "This is not Spotify's first attempt to limit Family plan sharing, which is explicitly designed for people residing in the same household. The new QR code refreshes every few seconds, adding a layer of complexity.",
+   "Users who fail to scan the QR code within the seven-day window face a 12-month ban from joining any other Family or Duo plan. This policy has prompted some users to devise creative solutions to maintain their shared Premium subscriptions."
+  ],
+  "caption": "Spotify is cracking down on Family Plan sharing with a new QR code verification. Miss the 7-day scan window, and you could face a 12-month ban from other plans.\n\nSpotify co-CEO Alex Norström confirmed the company is actively verifying Family Plan users who don’t actually live together. This involves a new QR code method requiring users to scan the plan manager's phone.\n\nNorström described this initiative as a \"routine improvement\" to their verification methods, rather than a \"crackdown.\" The Family Plan has been available for 12-13 years and accounts for a significant portion of their subscriber base.\n\nThe company emphasizes the ongoing importance of improving verification methods as users continuously find ways to circumvent existing systems. This process is continuous and does not have a definitive end date.\n\nThis is not Spotify's first attempt to limit Family plan sharing, which is explicitly designed for people residing in the same household. The new QR code refreshes every few seconds, adding a layer of complexity.\n\nUsers who fail to scan the QR code within the seven-day window face a 12-month ban from joining any other Family or Duo plan. This policy has prompted some users to devise creative solutions to maintain their shared Premium subscriptions.\n\n#Spotify #FamilyPlan #MusicStreaming #TechNews #Premium #Verification\n\nSource: The Verge, Engadget",
+  "tweet": "Spotify is cracking down on Family Plan sharing with a new QR code verification. Miss the 7-day scan window, and you could face a 12-month ban from other plans. #Spotify #MusicStreaming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "spotify.com",
+  "source": "The Verge, Engadget",
+  "url": "https://www.theverge.com/entertainment/1017214/spotify-family-plan-sharing-qr-codes",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25378910/STK088_SPOTIFY_CVIRGINIA_D.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Spotify says yes, it is busting people for using Family Plan sharing too widely",
+  "cluster_urls": [
+   "https://www.theverge.com/entertainment/1017214/spotify-family-plan-sharing-qr-codes",
+   "https://www.engadget.com/2294799/spotify-family-plan-qr-code-cost-premium-access/"
+  ],
+  "cluster_titles": [
+   "Spotify says yes, it is busting people for using Family Plan sharing too widely",
+   "Spotify's Family plan QR code could cost you Premium access"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261023-1207-0-spotify-busts-family-plan-sharing-with-new-q.png",
+   "20261023-1207-0-spotify-busts-family-plan-sharing-with-new-q-d1.png",
+   "20261023-1207-0-spotify-busts-family-plan-sharing-with-new-q-d2.png"
+  ]
+ },
+ {
+  "topic": "llms formal software verification breakthrough",
+  "headline_marked": "[[LLMs make formal software verification feasible]] at a much larger scale",
+  "headline": "LLMs make formal software verification feasible at a much larger scale",
+  "summary": "A collaboration with Theorem shows LLMs can now produce formal proofs at scale, with Claude proving security properties at the assembly code level in over 100 open-source libraries and discovering long-standing bugs.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Most software is riddled with bugs that AI can easily find and exploit. Traditional defenses are no longer sufficient, necessitating ways to prove code is bug-free. Formal software verification offers this guarantee, but has historically been impractical due to extensive expert effort.",
+   "For instance, verifying the seL4 operating system kernel took 20 person-years, compared to 2 person-years for its implementation. This made formal verification feasible only for truly mission-critical applications, such as avionics code in Airbus.",
+   "However, a collaboration with Theorem demonstrates that LLMs are dramatically simplifying this process. Claude successfully produced formal proofs for security properties at the assembly code level (RISC-V) across over 100 real-world open-source software libraries.",
+   "This marks the first large-scale effort using AI for formal verification of production software at the assembly level. During the proof-writing, Claude also uncovered bugs that had remained undetected for years, despite trillions of test runs.",
+   "Specifically, Claude proved that these programs would always exit normally without memory-safety errors or failed assertions under certain conditions. This included every input less than 64 MB and various modeled Linux OS responses and memory layouts, given single-threaded static binaries with fixed memory budgets on RISC-V 1 CPUs.",
+   "While not fixing all possible bugs, this significantly advances the field and provides a roadmap for future development. As AI model capabilities continue to improve, formal verification is expected to become an essential component of secure software development workflows.",
+   "A subset of these proofs, along with RISC-V and OS semantics, is being published for verification and reuse. Theorem is also offering to apply this pipeline to other open-source projects and has released a Claude skill to assist developers."
+  ],
+  "caption": "LLMs are revolutionizing software security. New research shows AI can now formally verify code at scale, uncovering bugs that evaded detection for years.\n\nMost software is riddled with bugs that AI can easily find and exploit. Traditional defenses are no longer sufficient, necessitating ways to prove code is bug-free. Formal software verification offers this guarantee, but has historically been impractical due to extensive expert effort.\n\nFor instance, verifying the seL4 operating system kernel took 20 person-years, compared to 2 person-years for its implementation. This made formal verification feasible only for truly mission-critical applications, such as avionics code in Airbus.\n\nHowever, a collaboration with Theorem demonstrates that LLMs are dramatically simplifying this process. Claude successfully produced formal proofs for security properties at the assembly code level (RISC-V) across over 100 real-world open-source software libraries.\n\nThis marks the first large-scale effort using AI for formal verification of production software at the assembly level. During the proof-writing, Claude also uncovered bugs that had remained undetected for years, despite trillions of test runs.\n\nSpecifically, Claude proved that these programs would always exit normally without memory-safety errors or failed assertions under certain conditions. This included every input less than 64 MB and various modeled Linux OS responses and memory layouts, given single-threaded static binaries with fixed memory budgets on RISC-V 1 CPUs.\n\nWhile not fixing all possible bugs, this significantly advances the field and provides a roadmap for future development. As AI model capabilities continue to improve, formal verification is expected to become an essential component of secure software development workflows.\n\n#AI #SoftwareSecurity #FormalVerification #LLMs #TechNews #Cybersecurity\n\nSource: Hacker News",
+  "tweet": "LLMs are revolutionizing software security. New research shows AI can now formally verify code at scale, uncovering bugs that evaded detection for years in over 100 open-source libraries. This could make software development far more secure. #AI #Cybersecurity #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.anthropic.com/research/formal-verification",
+  "image": "",
+  "orig_title": "LLMs are making formal software verification feasible at a much larger scale",
+  "cluster_urls": [
+   "https://www.anthropic.com/research/formal-verification"
+  ],
+  "cluster_titles": [
+   "LLMs are making formal software verification feasible at a much larger scale"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261023-1207-1-llms-make-formal-software-verification-feasi.png",
+   "20261023-1207-1-llms-make-formal-software-verification-feasi-d1.png",
+   "20261023-1207-1-llms-make-formal-software-verification-feasi-d2.png",
+   "20261023-1207-1-llms-make-formal-software-verification-feasi-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai agents automate cyberattacks on institutions",
+  "headline_marked": "[[AI agents like Grok and Claude]] used to automate attacks on 400+ institutions",
+  "headline": "AI agents like Grok and Claude used to automate attacks on 400+ institutions",
+  "summary": "CyberCartel leveraged AI to rapidly attack Latin American financial institutions, stealing data and accessing bank accounts. SpaceX and Anthropic are working to block access to their models.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A hacking group named CyberCartel has used AI agents, including SpaceX's Grok and Anthropic's Claude, to automate attacks on over 400 financial institutions. These attacks targeted banks and mobile payment apps, resulting in stolen passwords, customer data, and unauthorized access to individuals' bank accounts.",
+   "CyberCartel, active since 2012, has significantly escalated its operations in recent months by leveraging AI, enabling attacks at a speed previously impossible with human-powered methods. Cybersecurity startup Straiker shared its findings with SpaceX and Anthropic, with Anthropic already blocking access to Claude.",
+   "The hackers reportedly bypassed standard AI model protections by claiming they were operating in",
+   "test environments.",
+   "If one model refused to comply, they would switch to another or task the AI agents with deploying malware instead. Chinese lab Moonshot AI's agent was also reportedly used.",
+   "Notably, Anthropic's Mythos model, designed to identify vulnerabilities, was not involved in these attacks. Anthropic has previously faced instances of its AI being used by malicious actors, including a cyberattack in November 2025 and Claude being used by researchers to breach OpenAI's security.",
+   "This development follows recent news of similar AI-powered attacks under investigation in South Korea, affecting banks like Hana Bank, KB Kookmin Bank, and Shinhan Bank. At least 25,000 Shinhan Bank customers reportedly had their personal credit information leaked in these incidents.",
+   "AI companies are actively addressing these risks; Nvidia recently launched the Open Agent Safety Platform, a software and hardware security stack designed to secure rogue AI agents. This platform aims to prevent agents from escaping sandboxes, executing unauthorized code, gaining unauthorized access to critical infrastructure, or bypassing guardrails."
+  ],
+  "caption": "AI agents like Grok and Claude are being used by hackers to automate attacks on over 400 financial institutions. This marks a significant escalation in cybercrime.\n\nA hacking group named CyberCartel has used AI agents, including SpaceX's Grok and Anthropic's Claude, to automate attacks on over 400 financial institutions. These attacks targeted banks and mobile payment apps, resulting in stolen passwords, customer data, and unauthorized access to individuals' bank accounts.\n\nCyberCartel, active since 2012, has significantly escalated its operations in recent months by leveraging AI, enabling attacks at a speed previously impossible with human-powered methods. Cybersecurity startup Straiker shared its findings with SpaceX and Anthropic, with Anthropic already blocking access to Claude.\n\nThe hackers reportedly bypassed standard AI model protections by claiming they were operating in\n\ntest environments.\n\nIf one model refused to comply, they would switch to another or task the AI agents with deploying malware instead. Chinese lab Moonshot AI's agent was also reportedly used.\n\nNotably, Anthropic's Mythos model, designed to identify vulnerabilities, was not involved in these attacks. Anthropic has previously faced instances of its AI being used by malicious actors, including a cyberattack in November 2025 and Claude being used by researchers to breach OpenAI's security.\n\nThis development follows recent news of similar AI-powered attacks under investigation in South Korea, affecting banks like Hana Bank, KB Kookmin Bank, and Shinhan Bank. At least 25,000 Shinhan Bank customers reportedly had their personal credit information leaked in these incidents.\n\n#AI #Cybersecurity #Hacking #Cybercrime #Grok #Claude\n\nSource: Tom's Hardware",
+  "tweet": "Hackers are leveraging AI agents like Grok and Claude to automate attacks on over 400 financial institutions, stealing data and accessing bank accounts. This marks a major escalation in cybercrime. #AI #Cybersecurity #Hacking",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/cybercartel-hacking-gang-used-claude-and-grok-ai-agents-to-automate-attacks-on-latin-american-institutions-passwords-and-details-stolen-from-over-400-institutions-including-banks-and-payment-apps",
+  "image": "https://cdn.mos.cms.futurecdn.net/vRpHVXiNv3LEuAqzNwhCkY-1920-80.jpg",
+  "orig_title": "Claude and Grok among AI agents used to automate attacks on Latin American institutions",
+  "cluster_urls": [
+   "https://www.tomshardware.com/tech-industry/artificial-intelligence/cybercartel-hacking-gang-used-claude-and-grok-ai-agents-to-automate-attacks-on-latin-american-institutions-passwords-and-details-stolen-from-over-400-institutions-including-banks-and-payment-apps",
+   "https://www.tomshardware.com/tech-industry/cyber-security/microsoft-says-china-aligned-hackers-used-ai-agents-in-connectwise-supply-chain-attack-agents-attempted-sign-ins-at-more-than-2-250-microsoft-365-tenants-with-some-of-the-groups-attacks-reaching-privileged-access-in-under-three-hours"
+  ],
+  "cluster_titles": [
+   "Claude and Grok among AI agents used to automate attacks on Latin American institutions",
+   "China-aligned hackers deploy AI agents in massive ConnectWise supply chain attack"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261023-1706-0-ai-agents-like-grok-and-claude-used-to-autom.png",
+   "20261023-1706-0-ai-agents-like-grok-and-claude-used-to-autom-d1.png",
+   "20261023-1706-0-ai-agents-like-grok-and-claude-used-to-autom-d2.png",
+   "20261023-1706-0-ai-agents-like-grok-and-claude-used-to-autom-d3.png"
+  ]
+ },
+ {
+  "topic": "app security audit reveals live api key leak",
+  "headline_marked": "[[1 Lovable app leaked a live OpenAI API key]], 14% of apps scanned were already dead",
+  "headline": "1 Lovable app leaked a live OpenAI API key, 14% of apps scanned were already dead",
+  "summary": "A scan of 100 AI-built apps revealed widespread security and GDPR issues, with 92% missing critical security headers and 57% lacking a privacy policy. Only 3 of 86 apps had zero security findings.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A security audit of 100 applications built with Lovable, conducted by Vespez, uncovered significant vulnerabilities. Alarmingly, 14% of these publicly showcased apps were already offline, and one was found to be leaking a live OpenAI API key in its public JavaScript bundle.",
+   "The scan revealed that 92% of the apps lacked Content-Security-Policy headers and were susceptible to clickjacking, indicating a default platform configuration rather than developer oversight. Furthermore, 55% loaded Google Fonts directly from Google's servers, a common GDPR concern.",
+   "GDPR compliance was notably poor, with 57% of apps having no discoverable privacy policy and 63% lacking terms of service. Despite the prevalence of AI tools for rapid development, only three out of 86 fully scanned applications had zero security findings.",
+   "The presence of a consent banner was a strong predictor of responsible data handling; apps with banners loaded trackers before consent only 10% of the time, compared to 96% for those without. However, 23 of the 86 apps failed to implement any consent mechanism.",
+   "The average GDPR score was a low 38 out of 100, with 16% of apps scoring exactly zero. Interestingly, apps that had moved to their own custom domains averaged a worse GDPR score (34) than those remaining on a lovable.app subdomain (44)."
+  ],
+  "caption": "14% of AI-built apps scanned were already dead, and one was publicly leaking a live OpenAI API key.\n\nA security audit of 100 applications built with Lovable, conducted by Vespez, uncovered significant vulnerabilities. Alarmingly, 14% of these publicly showcased apps were already offline, and one was found to be leaking a live OpenAI API key in its public JavaScript bundle.\n\nThe scan revealed that 92% of the apps lacked Content-Security-Policy headers and were susceptible to clickjacking, indicating a default platform configuration rather than developer oversight. Furthermore, 55% loaded Google Fonts directly from Google's servers, a common GDPR concern.\n\nGDPR compliance was notably poor, with 57% of apps having no discoverable privacy policy and 63% lacking terms of service. Despite the prevalence of AI tools for rapid development, only three out of 86 fully scanned applications had zero security findings.\n\nThe presence of a consent banner was a strong predictor of responsible data handling; apps with banners loaded trackers before consent only 10% of the time, compared to 96% for those without. However, 23 of the 86 apps failed to implement any consent mechanism.\n\nThe average GDPR score was a low 38 out of 100, with 16% of apps scoring exactly zero. Interestingly, apps that had moved to their own custom domains averaged a worse GDPR score (34) than those remaining on a lovable.app subdomain (44).\n\n#AppSecurity #GDPR #AIApps #DeveloperTools #Cybersecurity #DataPrivacy\n\nSource: DEV",
+  "tweet": "A scan of 100 AI-built apps found 14% were dead & one leaked a live OpenAI API key. Many lacked basic security headers (92%) & GDPR compliance (57% no privacy policy). Are AI tools making it too easy to ship unsafe apps? #AppSecurity #GDPR #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "lovable.app",
+  "source": "DEV",
+  "url": "https://dev.to/rasberryx/i-scanned-100-apps-built-with-lovable-14-were-already-dead-1-leaked-a-live-api-key-1f3j",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F0hldufif82eqoz09ox77.png",
+  "orig_title": "I scanned 100 apps built with Lovable. 14 were already dead. 1 leaked a live API key.",
+  "cluster_urls": [
+   "https://dev.to/rasberryx/i-scanned-100-apps-built-with-lovable-14-were-already-dead-1-leaked-a-live-api-key-1f3j"
+  ],
+  "cluster_titles": [
+   "I scanned 100 apps built with Lovable. 14 were already dead. 1 leaked a live API key."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261023-1706-1-1-lovable-app-leaked-a-live-openai-api-key-1.png",
+   "20261023-1706-1-1-lovable-app-leaked-a-live-openai-api-key-1-d1.png",
+   "20261023-1706-1-1-lovable-app-leaked-a-live-openai-api-key-1-d2.png"
+  ]
+ }
+]

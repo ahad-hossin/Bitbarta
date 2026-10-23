@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "minimax m3.1 flash ai model cost reduction",
+  "headline_marked": "[[MiniMax M3.1 Flash cuts agentic AI costs by 70%]] with 428B MoE model, over 200 TPS",
+  "headline": "MiniMax M3.1 Flash cuts agentic AI costs by 70% with 428B MoE model, over 200 TPS",
+  "summary": "The 428-billion-parameter Mixture-of-Experts model activates only 23 billion parameters per token, delivering speeds over 200 tokens/second at just $0.15 per million input tokens.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "MiniMax released M3.1 Flash on October 19, 2026. This 428-billion-parameter Mixture-of-Experts (MoE) model activates only 23 billion parameters per token, achieving speeds over 200 tokens per second.",
+   "It costs $0.15 per million input tokens, making it roughly 70% cheaper than its predecessor. The MoE architecture allows the model to leverage the representational capacity of a very large network while incurring the inference cost of a much smaller one.",
+   "M3.1 Flash introduces MiniMax Sparse Attention (MSA), replacing the first three full-attention layers with sparse alternatives. This significantly reduces compute and memory footprint at long context lengths, enabling practical support for a 1-million-token context window.",
+   "The model also features DSpark, a new speculative decoding scheme with a dedicated draft head. This purpose-built approach reduces token rejection rates and improves effective throughput, leading to median output speeds of 170+ tokens per second and peaks exceeding 200 TPS.",
+   "To achieve its efficiency, M3.1 Flash uses quantization-aware training (QAT), quantizing routed MoE experts to NVFP4 (W4A4). QAT bakes quantization error into the training process, preserving near-full-precision accuracy at a fraction of the memory footprint.",
+   "Developers can configure the model's reasoning effort with five levels: low, medium, high, xhigh, and max. This allows for a trade-off between latency, token cost, and reasoning depth, making it adaptable for various agentic workloads from simple retrieval to complex cybersecurity tasks."
+  ],
+  "caption": "MiniMax's new M3.1 Flash AI model slashes agentic AI costs by 70%. It delivers over 200 tokens/second with a 1-million-token context window.\n\nMiniMax released M3.1 Flash on October 19, 2026. This 428-billion-parameter Mixture-of-Experts (MoE) model activates only 23 billion parameters per token, achieving speeds over 200 tokens per second.\n\nIt costs $0.15 per million input tokens, making it roughly 70% cheaper than its predecessor. The MoE architecture allows the model to leverage the representational capacity of a very large network while incurring the inference cost of a much smaller one.\n\nM3.1 Flash introduces MiniMax Sparse Attention (MSA), replacing the first three full-attention layers with sparse alternatives. This significantly reduces compute and memory footprint at long context lengths, enabling practical support for a 1-million-token context window.\n\nThe model also features DSpark, a new speculative decoding scheme with a dedicated draft head. This purpose-built approach reduces token rejection rates and improves effective throughput, leading to median output speeds of 170+ tokens per second and peaks exceeding 200 TPS.\n\nTo achieve its efficiency, M3.1 Flash uses quantization-aware training (QAT), quantizing routed MoE experts to NVFP4 (W4A4). QAT bakes quantization error into the training process, preserving near-full-precision accuracy at a fraction of the memory footprint.\n\nDevelopers can configure the model's reasoning effort with five levels: low, medium, high, xhigh, and max. This allows for a trade-off between latency, token cost, and reasoning depth, making it adaptable for various agentic workloads from simple retrieval to complex cybersecurity tasks.\n\n#AI #LLM #MachineLearning #MiniMax #AgenticAI #TechNews\n\nSource: DEV",
+  "tweet": "MiniMax M3.1 Flash slashes agentic AI costs by 70%, offering 200+ tokens/second and a 1M token context window. This 428B MoE model uses just 23B active parameters per token, making advanced AI more accessible and efficient. #AI #LLM #MiniMax",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "minimax.com",
+  "source": "DEV",
+  "url": "https://dev.to/prabhakar_chaudhary_7afe4/minimax-m31-flash-how-a-428b-moe-model-cuts-agentic-ai-costs-by-70-without-sacrificing-3eln",
+  "image": "",
+  "orig_title": "MiniMax M3.1 Flash: How a 428B MoE Model Cuts Agentic AI Costs by 70% Without Sacrificing Performance",
+  "cluster_urls": [
+   "https://dev.to/prabhakar_chaudhary_7afe4/minimax-m31-flash-how-a-428b-moe-model-cuts-agentic-ai-costs-by-70-without-sacrificing-3eln"
+  ],
+  "cluster_titles": [
+   "MiniMax M3.1 Flash: How a 428B MoE Model Cuts Agentic AI Costs by 70% Without Sacrificing Performance"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261023-2214-0-minimax-m3-1-flash-cuts-agentic-ai-costs-by-.png",
+   "20261023-2214-0-minimax-m3-1-flash-cuts-agentic-ai-costs-by--d1.png",
+   "20261023-2214-0-minimax-m3-1-flash-cuts-agentic-ai-costs-by--d2.png"
+  ]
+ },
+ {
+  "topic": "meta charges government nonprofits for facebook links",
+  "headline_marked": "[[Meta charging government and nonprofit pages]] for Facebook links, despite test claims",
+  "headline": "Meta charging government and nonprofit pages for Facebook links, despite test claims",
+  "summary": "Despite Meta's claims that a new test wouldn't affect them, government and nonprofit Facebook pages are now being charged $50-$150/month to post more than two links, severely impacting their outreach.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Meta is reportedly charging government and nonprofit Facebook pages to post links, despite explicitly stating these entities would not be impacted by the ongoing test. Pages are being limited to two links per month, with additional links requiring a Meta One subscription costing $50 or more.",
+   "This restriction is part of Meta's broader experiment with paid link sharing, now integrated into its AI-centric Meta One plans. However, affected organizations, many of whom are verified nonprofits or government entities, report being caught in the paywall.",
+   "Daniel Starks, communications manager for Greenville, Texas, found his city's library page hit by the limit. He states that over half of the city's Facebook activity involves linking back to its website, forcing them to pivot to posting links in comments and creating explanatory graphics for followers.",
+   "Bethany English, co-president of the East Side Pawject nonprofit, also encountered the paywall, needing a $150/month \"expert\" plan for 20 links. For small nonprofits, this cost is prohibitive, making it difficult to share event details, donation links, and volunteer opportunities.",
+   "A Meta spokesperson confirmed they are testing whether sharing links should be part of the Meta One subscription, stating they will \"continue to evolve the experience based on the feedback.\" They did not address why nonprofits and government pages are seeing these restrictions."
+  ],
+  "caption": "Government and nonprofit Facebook pages are being hit with unexpected paywalls. They now face charges of $50-$150/month just to post more than two links.\n\nMeta is reportedly charging government and nonprofit Facebook pages to post links, despite explicitly stating these entities would not be impacted by the ongoing test. Pages are being limited to two links per month, with additional links requiring a Meta One subscription costing $50 or more.\n\nThis restriction is part of Meta's broader experiment with paid link sharing, now integrated into its AI-centric Meta One plans. However, affected organizations, many of whom are verified nonprofits or government entities, report being caught in the paywall.\n\nDaniel Starks, communications manager for Greenville, Texas, found his city's library page hit by the limit. He states that over half of the city's Facebook activity involves linking back to its website, forcing them to pivot to posting links in comments and creating explanatory graphics for followers.\n\nBethany English, co-president of the East Side Pawject nonprofit, also encountered the paywall, needing a $150/month \"expert\" plan for 20 links. For small nonprofits, this cost is prohibitive, making it difficult to share event details, donation links, and volunteer opportunities.\n\nA Meta spokesperson confirmed they are testing whether sharing links should be part of the Meta One subscription, stating they will \"continue to evolve the experience based on the feedback.\" They did not address why nonprofits and government pages are seeing these restrictions.\n\n#Meta #Facebook #Nonprofits #Government #SocialMedia #TechNews\n\nSource: Engadget",
+  "tweet": "Government and nonprofit Facebook pages are being hit with unexpected paywalls. They now face charges of $50-$150/month just to post more than two links, despite Meta's claims these entities wouldn't be affected by the test. #Meta #Facebook #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "meta.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2295422/meta-is-charging-government-and-nonprofit-pages-to-post-links-on-facebook/",
+  "image": "https://www.engadget.com/img/gallery/meta-is-charging-government-and-nonprofit-pages-to-post-links-on-facebook/l-intro-1792771543.jpg",
+  "orig_title": "Meta is charging government and nonprofit pages to post links on Facebook",
+  "cluster_urls": [
+   "https://www.engadget.com/2295422/meta-is-charging-government-and-nonprofit-pages-to-post-links-on-facebook/"
+  ],
+  "cluster_titles": [
+   "Meta is charging government and nonprofit pages to post links on Facebook"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20261023-2214-1-meta-charging-government-and-nonprofit-pages.png",
+   "20261023-2214-1-meta-charging-government-and-nonprofit-pages-d1.png",
+   "20261023-2214-1-meta-charging-government-and-nonprofit-pages-d2.png"
+  ]
+ }
+]

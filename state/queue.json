@@ -1,1 +1,58 @@
-[]
+[
+ {
+  "topic": "ai agents and tool use",
+  "headline_marked": "[[Gemini audits]] your Android apps, exposing hidden risks",
+  "headline": "Gemini audits your Android apps, exposing hidden risks",
+  "summary": "Google's AI tool helps uncover dangerous permissions and data-sharing practices in your favorite apps, even those not on the Play Store.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Even the most trusted Android apps can collect more data than their privacy policies disclose. A new audit method, leveraging Google Gemini, helps users identify hidden risks by examining app permissions and stored data.",
+   "The process involves checking app permissions on the Play Store for red flags like excessive access requests. For instance, a flashlight app shouldn't need access to your contacts, and a wallpaper app has no justifiable reason to query all other installed applications.",
+   "To delve deeper, users can enable USB debugging in Developer Options on their Android phone and connect it to a PC. Using Android Debug Bridge (ADB) and a code editor like Visual Studio Code, one can access and inspect an app's protected data directory (/data/data/).",
+   "This method allows for the extraction of database and settings files. The audit revealed that Snaptube, a media downloader removed from the Play Store, requested high-risk permissions, enabled unencrypted HTTP traffic, and embedded SDKs from ByteDance, indicating significant privacy concerns.",
+   "The audit also highlighted the presence of background services and system receivers designed to restart tasks, alongside embedded advertising and analytics SDKs, even from companies like ByteDance. This comprehensive analysis helps users make informed decisions about app security and privacy."
+  ],
+  "caption": "Your Android apps might be collecting more data than you think. Here's how to audit them for hidden risks using Google Gemini.\n\nEven the most trusted Android apps can collect more data than their privacy policies disclose. A new audit method, leveraging Google Gemini, helps users identify hidden risks by examining app permissions and stored data.\n\nThe process involves checking app permissions on the Play Store for red flags like excessive access requests. For instance, a flashlight app shouldn't need access to your contacts, and a wallpaper app has no justifiable reason to query all other installed applications.\n\nTo delve deeper, users can enable USB debugging in Developer Options on their Android phone and connect it to a PC. Using Android Debug Bridge (ADB) and a code editor like Visual Studio Code, one can access and inspect an app's protected data directory (/data/data/).\n\nThis method allows for the extraction of database and settings files. The audit revealed that Snaptube, a media downloader removed from the Play Store, requested high-risk permissions, enabled unencrypted HTTP traffic, and embedded SDKs from ByteDance, indicating significant privacy concerns.\n\nThe audit also highlighted the presence of background services and system receivers designed to restart tasks, alongside embedded advertising and analytics SDKs, even from companies like ByteDance. This comprehensive analysis helps users make informed decisions about app security and privacy.\n\n#Android #AI #AppSecurity #Privacy #Gemini\n\nSource: Android Police, DEV",
+  "tweet": "Your Android apps might be collecting more data than you think. Here's how to audit them for hidden risks using Google Gemini. #Android #AI #AppSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "android.com",
+  "source": "Android Police, DEV",
+  "url": "https://www.androidpolice.com/audit-android-app-data/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/10/android-phone-showing-app-icons-with-green-checkmarks-and-red-security-alerts.png",
+  "orig_title": "I let Gemini audit my favorite Android apps; it exposed all the bad ones",
+  "cluster_urls": [
+   "https://www.androidpolice.com/audit-android-app-data/",
+   "https://dev.to/rkrisa/what-a-production-brief-should-say-when-the-data-is-incomplete-l64",
+   "https://dev.to/shopquoteflow/a-practical-checklist-for-evaluating-machine-shop-quoting-software-402p",
+   "https://dev.to/vespasianblack3884/lowest-latency-image-generation-apis-for-real-time-nodejs-catalog-applications-3cle",
+   "https://dev.to/ethanbrooks1647/text-summarization-quality-and-cost-explained-a-media-catalog-decision-guide-3fa2",
+   "https://dev.to/samjanjua6/building-rag-critic-factual-grounding-adversarial-hallucination-auditing-in-langgraph-24hf",
+   "https://dev.to/kami_butt_69b922ade8de012/how-to-evaluate-ai-agent-performance-a-practical-guide-2b0k",
+   "https://dev.to/shopquoteflow/nine-checks-for-a-machine-shop-quote-spreadsheet-before-you-send-it-5gp4",
+   "https://dev.to/muhammadalimughal/planning-a-voip-phone-system-for-a-small-business-an-asterisk-and-freepbx-checklist-5cn7",
+   "https://dev.to/sdijjxcfs/0-of-greenhouse-jobs-were-over-6-months-old-that-was-my-bug-not-their-data-40ee"
+  ],
+  "cluster_titles": [
+   "I let Gemini audit my favorite Android apps; it exposed all the bad ones",
+   "What a Production Brief Should Say When the Data Is Incomplete",
+   "A Practical Checklist for Evaluating Machine-Shop Quoting Software",
+   "Lowest-Latency Image Generation APIs for Real-Time Node.js Catalog Applications",
+   "Text Summarization Quality and Cost Explained — A Media Catalog Decision Guide",
+   "Building rag-critic: Factual Grounding & Adversarial Hallucination Auditing in LangGraph",
+   "How to Evaluate AI Agent Performance: A Practical Guide",
+   "Nine Checks for a Machine-Shop Quote Spreadsheet Before You Send It",
+   "Planning a VoIP Phone System for a Small Business: An Asterisk and FreePBX Checklist",
+   "0% of Greenhouse jobs were over 6 months old. That was my bug, not their data"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20261024-0311-0-gemini-audits-your-android-apps-exposing-hid.png",
+   "20261024-0311-0-gemini-audits-your-android-apps-exposing-hid-d1.png",
+   "20261024-0311-0-gemini-audits-your-android-apps-exposing-hid-d2.png"
+  ]
+ }
+]

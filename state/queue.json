@@ -1,1 +1,96 @@
-[]
+[
+ {
+  "topic": "snap ticket agent autonomous incident triage",
+  "headline_marked": "SnapTicket: [[AI turns crashes into tickets]] with Gemma 4",
+  "headline": "SnapTicket: AI turns crashes into tickets with Gemma 4",
+  "summary": "New tool fuses macOS crash reports and screenshots using Gemma 4 to auto-generate GitHub issues, streamlining bug reporting.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "SnapTicket is a new open-source tool designed to bridge the gap between client-side application crashes and engineering issue trackers. It automates the process of diagnosing and reporting bugs by combining low-level macOS diagnostic telemetry with visual error screenshots.",
+   "The tool leverages Gemma 4, an AI model, to analyze crash reports (.ips files) and extract key information like exception codes and faulting process names. It can differentiate between native macOS apps and third-party applications, routing reports accordingly.",
+   "SnapTicket's multimodal inference capabilities fuse visual evidence from screenshots with stack trace telemetry, creating structured Markdown reports. Users have control over data privacy, with an option to strip images for text-only diagnostics.",
+   "Technical specifications include Gemma 4 for AI reasoning (via local Ollama or Google AI Studio), FastAPI for a non-blocking API, and a custom Python sensor for OS telemetry. The UI is built with vanilla HTML5/CSS3, and dispatching is handled via GitHub REST APIs or a browser co-pilot.",
+   "For developers, SnapTicket offers a quickstart guide to clone the repository and run the tool locally. Security is a priority, with data remaining on the user's machine in local mode and API keys protected via local .env variables."
+  ],
+  "caption": "Tired of ambiguous bug reports? SnapTicket uses AI to turn client-side crashes into instant, detailed engineering tickets.\n\nSnapTicket is a new open-source tool designed to bridge the gap between client-side application crashes and engineering issue trackers. It automates the process of diagnosing and reporting bugs by combining low-level macOS diagnostic telemetry with visual error screenshots.\n\nThe tool leverages Gemma 4, an AI model, to analyze crash reports (.ips files) and extract key information like exception codes and faulting process names. It can differentiate between native macOS apps and third-party applications, routing reports accordingly.\n\nSnapTicket's multimodal inference capabilities fuse visual evidence from screenshots with stack trace telemetry, creating structured Markdown reports. Users have control over data privacy, with an option to strip images for text-only diagnostics.\n\nTechnical specifications include Gemma 4 for AI reasoning (via local Ollama or Google AI Studio), FastAPI for a non-blocking API, and a custom Python sensor for OS telemetry. The UI is built with vanilla HTML5/CSS3, and dispatching is handled via GitHub REST APIs or a browser co-pilot.\n\nFor developers, SnapTicket offers a quickstart guide to clone the repository and run the tool locally. Security is a priority, with data remaining on the user's machine in local mode and API keys protected via local .env variables.\n\n#AI #SoftwareDevelopment #BugTracking #Gemma4 #OpenSource\n\nSource: DEV",
+  "tweet": "SnapTicket uses AI and Gemma 4 to automatically convert client-side crashes into detailed engineering tickets. It fuses macOS crash reports with screenshots for faster debugging. #AI #DevTools #BugFixing",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/atharvvanalakar/snapticket-turn-client-side-crashes-into-instant-engineering-tickets-33hn",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fimg.shields.io%2Fbadge%2FModel-Gemma_4-4f46e5%3Fstyle%3Dflat-square%26logo%3Dgoogle",
+  "orig_title": "SnapTicket: Turn Client-Side Crashes Into Instant Engineering Tickets",
+  "cluster_urls": [
+   "https://dev.to/atharvvanalakar/snapticket-turn-client-side-crashes-into-instant-engineering-tickets-33hn",
+   "https://dev.to/kozhevniko/the-siem-as-an-attack-surface-fortisiem-cve-2026-106173-and-the-cron-script-behind-it-4g84",
+   "https://dev.to/matheus_thurler_cea17574b/kubevirt-does-not-run-on-apple-silicon-so-i-built-kubesilicon-3ce2",
+   "https://dev.to/donepdf/12-free-browser-based-pdf-tools-for-developers-no-upload-no-sign-up-3gg9",
+   "https://dev.to/vaughnknight3189/how-to-combine-cron-job-triggers-with-worker-queues-for-long-running-reports-4hao",
+   "https://dev.to/rahmannugar/building-an-event-recommendation-engine-with-ahnlich-and-postgis-58pi",
+   "https://dev.to/voice_developer/how-to-choose-the-right-ai-voice-for-your-project-4kca",
+   "https://dev.to/linux_masterethicalhac/building-high-throughput-micro-saas-in-2026-the-modular-stack-architecture-flutterflow-supabase-1d5g"
+  ],
+  "cluster_titles": [
+   "SnapTicket: Turn Client-Side Crashes Into Instant Engineering Tickets",
+   "The SIEM as an attack surface: FortiSIEM CVE-2026-106173 and the cron script behind it",
+   "KubeVirt does not run on Apple Silicon, so I built KubeSilicon",
+   "12 Free Browser-Based PDF Tools for Developers (No Upload, No Sign-Up)",
+   "How to Combine Cron Job Triggers with Worker Queues for Long-Running Reports",
+   "Building an Event Recommendation Engine with Ahnlich and PostGIS",
+   "How to Choose the Right AI Voice for Your Project",
+   "Building High-Throughput Micro-SaaS in 2026: The Modular Stack Architecture (FlutterFlow, Supabase & Celery)"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261024-0206-0-snapticket-ai-turns-crashes-into-tickets-wit.png",
+   "20261024-0206-0-snapticket-ai-turns-crashes-into-tickets-wit-d1.png",
+   "20261024-0206-0-snapticket-ai-turns-crashes-into-tickets-wit-d2.png"
+  ]
+ },
+ {
+  "topic": "jack dorsey block ai model dessa trained from scratch",
+  "headline_marked": "Block's Dessa AI [[talks like an awkward friend]]",
+  "headline": "Block's Dessa AI talks like an awkward friend",
+  "summary": "Trained from scratch on human conversation, Dessa can run locally on a MacBook Pro M4 Max and aims to improve AI safety by understanding emotion.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Jack Dorsey's Block has unveiled Dessa, an AI model trained exclusively on human speech. The company shared conversations demonstrating its ability to engage in natural, albeit sometimes awkward, dialogue.",
+   "Dessa's capabilities are showcased through interactions like mistaking a speaker's name or discussing Christopher Nolan films. One notable example includes a conversation with OpenAI's GPT-Live-1, where Dessa reportedly sounded more natural.",
+   "The Dessa team emphasizes that speech is the most natural interface for intelligence and that current voice AI often fails to capture the nuances of human communication. They aim to address this by developing AI that can better understand emotion.",
+   "A key motivation behind Dessa's development is safety. The team believes that AI needs to be more attuned to human emotion, especially in critical situations, to prevent misunderstandings and ensure better human-AI interaction.",
+   "Dessa is designed to run locally on powerful hardware, such as a MacBook Pro M4 Max or superior. This local processing capability could offer enhanced privacy and performance.",
+   "The project was driven by curiosity, a desire for better human-AI understanding, and a focus on safety. The team likens their approach to how babies learn to talk without written language, highlighting the naturalness of speech.",
+   "Block plans to provide early access to Dessa to a select group of AI safety researchers, indicating a commitment to responsible development and ethical considerations in AI."
+  ],
+  "caption": "Jack Dorsey's Block built an AI that learns only from human conversation. It can run locally and aims to understand emotion for better safety.\n\nJack Dorsey's Block has unveiled Dessa, an AI model trained exclusively on human speech. The company shared conversations demonstrating its ability to engage in natural, albeit sometimes awkward, dialogue.\n\nDessa's capabilities are showcased through interactions like mistaking a speaker's name or discussing Christopher Nolan films. One notable example includes a conversation with OpenAI's GPT-Live-1, where Dessa reportedly sounded more natural.\n\nThe Dessa team emphasizes that speech is the most natural interface for intelligence and that current voice AI often fails to capture the nuances of human communication. They aim to address this by developing AI that can better understand emotion.\n\nA key motivation behind Dessa's development is safety. The team believes that AI needs to be more attuned to human emotion, especially in critical situations, to prevent misunderstandings and ensure better human-AI interaction.\n\nDessa is designed to run locally on powerful hardware, such as a MacBook Pro M4 Max or superior. This local processing capability could offer enhanced privacy and performance.\n\nThe project was driven by curiosity, a desire for better human-AI understanding, and a focus on safety. The team likens their approach to how babies learn to talk without written language, highlighting the naturalness of speech.\n\nBlock plans to provide early access to Dessa to a select group of AI safety researchers, indicating a commitment to responsible development and ethical considerations in AI.\n\n#AI #Dessa #Block #JackDorsey #AISafety\n\nSource: The Verge, TechCrunch",
+  "tweet": "Jack Dorsey's Block unveils Dessa, an AI trained solely on human speech. It runs locally and aims to understand emotion for improved AI safety. #AI #Dessa #Block",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "block.xyz",
+  "source": "The Verge, TechCrunch",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/STKS536_AI_HALLUCINATION_B.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+  "cluster_urls": [
+   "https://www.theverge.com/ai-artificial-intelligence/1017906/jack-dorsey-block-dessa-ai-voice-speech",
+   "https://techcrunch.com/2026/10/23/agent-cloud-startup-daytona-hits-1b-valuation-backed-by-firstmark-and-a-whos-who-of-angels/"
+  ],
+  "cluster_titles": [
+   "Jack Dorsey’s Block made an AI model that talks to you like an awkward new friend",
+   "Agent cloud startup Daytona hits $1B valuation backed by FirstMark and a who’s who of angels"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261024-0206-1-block-s-dessa-ai-talks-like-an-awkward-frien.png",
+   "20261024-0206-1-block-s-dessa-ai-talks-like-an-awkward-frien-d1.png",
+   "20261024-0206-1-block-s-dessa-ai-talks-like-an-awkward-frien-d2.png"
+  ]
+ }
+]

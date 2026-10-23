@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai model invents numbers with kv cache replacement",
+  "headline_marked": "[[Replacing KV cache with a function]] made an AI model invent numbers.",
+  "headline": "Replacing KV cache with a function made an AI model invent numbers.",
+  "summary": "Researchers attempted to replace the KV cache in a frozen open model with a compact function, aiming for constant memory use. The unexpected result was the model confidently fabricating numerical information.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Researchers conducted three experiments on a frozen open language model running on a desktop CPU. The goal was to replace the standard KV cache, which stores key and value tokens for every previous token, with a compact function to achieve constant memory and processing cost per token.",
+   "The KV cache allows a model to look back at all previous tokens. The idea was to fit a small function, f(q), to approximate the attention output o(q) of the cache, then discard the actual K and V tokens. This function was fitted per text using ridge regression.",
+   "While the fitted function was the best compressed arm for copying, exact recall was lost. New-text NLL (Negative Log Likelihood) barely changed, but the critical failure mode observed was \"confident fabrication.\" The model would invent numbers when expected to recall them.",
+   "A second experiment involved keeping the full cache in RAM alongside the function. Exact records (k) were added, with the function covering the remainder, ensuring no record was counted twice. This setup aimed to mitigate the fabrication issue.",
+   "The interpretation of this mixed approach suggests that when selected records are incorrect, attention without the function over-weights them. The function helps restore the background mass of the rest of the text, preventing wrong picks from dominating the output.",
+   "A side finding revealed that using sign bits alone to select 8 or 16 records for attention resulted in significantly lower recall (7.5–12.5%) compared to exact selection (73–83%). This highlights the importance of precise record selection for model performance."
+  ],
+  "caption": "An experiment to optimize AI memory by replacing the KV cache with a function led to an unexpected outcome: the model started confidently inventing numbers.\n\nResearchers conducted three experiments on a frozen open language model running on a desktop CPU. The goal was to replace the standard KV cache, which stores key and value tokens for every previous token, with a compact function to achieve constant memory and processing cost per token.\n\nThe KV cache allows a model to look back at all previous tokens. The idea was to fit a small function, f(q), to approximate the attention output o(q) of the cache, then discard the actual K and V tokens. This function was fitted per text using ridge regression.\n\nWhile the fitted function was the best compressed arm for copying, exact recall was lost. New-text NLL (Negative Log Likelihood) barely changed, but the critical failure mode observed was \"confident fabrication.\" The model would invent numbers when expected to recall them.\n\nA second experiment involved keeping the full cache in RAM alongside the function. Exact records (k) were added, with the function covering the remainder, ensuring no record was counted twice. This setup aimed to mitigate the fabrication issue.\n\nThe interpretation of this mixed approach suggests that when selected records are incorrect, attention without the function over-weights them. The function helps restore the background mass of the rest of the text, preventing wrong picks from dominating the output.\n\nA side finding revealed that using sign bits alone to select 8 or 16 records for attention resulted in significantly lower recall (7.5–12.5%) compared to exact selection (73–83%). This highlights the importance of precise record selection for model performance.\n\n#AI #LLM #MachineLearning #TechResearch #DeepLearning #ModelOptimization\n\nSource: DEV",
+  "tweet": "An experiment to optimize AI memory by replacing the KV cache with a function led to an unexpected outcome: the model started confidently inventing numbers. This highlights challenges in balancing efficiency with factual recall. #AI #LLM #TechResearch",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/teolex2020/i-tried-to-replace-the-kv-cache-with-a-function-the-model-started-inventing-numbers-1eb0",
+  "image": "",
+  "orig_title": "I tried to replace the KV cache with a function. The model started inventing numbers.",
+  "cluster_urls": [
+   "https://dev.to/teolex2020/i-tried-to-replace-the-kv-cache-with-a-function-the-model-started-inventing-numbers-1eb0"
+  ],
+  "cluster_titles": [
+   "I tried to replace the KV cache with a function. The model started inventing numbers."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261023-1506-0-replacing-kv-cache-with-a-function-made-an-a.png",
+   "20261023-1506-0-replacing-kv-cache-with-a-function-made-an-a-d1.png",
+   "20261023-1506-0-replacing-kv-cache-with-a-function-made-an-a-d2.png",
+   "20261023-1506-0-replacing-kv-cache-with-a-function-made-an-a-d3.png"
+  ]
+ },
+ {
+  "topic": "qubic wallet drain predictable randomness flaw",
+  "headline_marked": "[[Qubic wallet drain]] hits 1,404 users, $1.4M lost due to predictable randomness",
+  "headline": "Qubic wallet drain hits 1,404 users, $1.4M lost due to predictable randomness",
+  "summary": "Over 1,400 Qubic wallets were drained of approximately $1.4 million in QU tokens during a 104-minute attack, attributed to insufficient randomness in seed generation.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Qubic's network experienced a wallet drain affecting 1,404 wallets, resulting in the loss of roughly 2.94 trillion QU tokens, valued at approximately $1.4 million USD. The attack ran for 104 minutes, from 23:42 UTC on October 17 to 01:26 UTC on October 18.",
+   "The root cause of the drain was identified as insufficient randomness in seed generation, specifically the use of JavaScript's Math.random() function instead of the cryptographically secure crypto.getRandomValues(). Math.random() is designed for convenience and does not guarantee unpredictability, making it unsuitable for security-sensitive operations.",
+   "The distinction between Math.random() and crypto.getRandomValues() is crucial for cryptographic security. While Math.random() produces numbers that appear scattered, crypto.getRandomValues() draws from the platform's cryptographic generator, ensuring true unpredictability. This fundamental difference repeatedly leads to vulnerabilities.",
+   "This incident is tied to a class of failures known as \"Milk Sad,\" where faulty key-generation processes allow attackers to predict private keys. Similar vulnerabilities have affected Coldcard wallets, Trust Wallet's browser extension, and the Libbitcoin Explorer tool in the past. Weak-seed failures represent a recurring security challenge in the crypto space.",
+   "Qubic listed specific platforms where affected seeds were created, including any browser on an iPhone or iPad, Safari on a Mac until October 18, 2026, and the Qubic iOS app before July 2025. This specificity suggests a dependency on the underlying platform's implementation of the random number generator. The practical lesson is that a key generator inherits the entropy of its runtime environment, and browsers offer limited control over that.",
+   "For users, the uncomfortable truth is that the notice does not specify which existing seeds are safe. While new seeds generated with the updated web wallet version 4.26.4 are correct, a code change does not rewrite stored seed data. Therefore, seed rotation is the only reliable remedy to ensure security.",
+   "Qubic responded by halting the chain at tick 85,371,949, which froze 87.1 percent of the stolen tokens. Additionally, MEXC froze the account holding the remaining 12.9 percent within about an hour. This represents an unusually complete containment for a crypto incident.",
+   "The containment was effective because the stolen assets never became bearer cash. A coordinated chain halt converts a completed theft into a pending one, while a centralized exchange can freeze an off-chain exit. Both actions rely on the asset not being fully decentralized and untraceable."
+  ],
+  "caption": "1,404 Qubic wallets were drained of $1.4 million in QU tokens. The cause? Predictable randomness in seed generation.\n\nQubic's network experienced a wallet drain affecting 1,404 wallets, resulting in the loss of roughly 2.94 trillion QU tokens, valued at approximately $1.4 million USD. The attack ran for 104 minutes, from 23:42 UTC on October 17 to 01:26 UTC on October 18.\n\nThe root cause of the drain was identified as insufficient randomness in seed generation, specifically the use of JavaScript's Math.random() function instead of the cryptographically secure crypto.getRandomValues(). Math.random() is designed for convenience and does not guarantee unpredictability, making it unsuitable for security-sensitive operations.\n\nThe distinction between Math.random() and crypto.getRandomValues() is crucial for cryptographic security. While Math.random() produces numbers that appear scattered, crypto.getRandomValues() draws from the platform's cryptographic generator, ensuring true unpredictability. This fundamental difference repeatedly leads to vulnerabilities.\n\nThis incident is tied to a class of failures known as \"Milk Sad,\" where faulty key-generation processes allow attackers to predict private keys. Similar vulnerabilities have affected Coldcard wallets, Trust Wallet's browser extension, and the Libbitcoin Explorer tool in the past. Weak-seed failures represent a recurring security challenge in the crypto space.\n\nQubic listed specific platforms where affected seeds were created, including any browser on an iPhone or iPad, Safari on a Mac until October 18, 2026, and the Qubic iOS app before July 2025. This specificity suggests a dependency on the underlying platform's implementation of the random number generator. The practical lesson is that a key generator inherits the entropy of its runtime environment, and browsers offer limited control over that.\n\n#Qubic #Crypto #Security #WalletDrain #Blockchain #Cybersecurity\n\nSource: DEV",
+  "tweet": "1,404 Qubic wallets drained of $1.4M in QU tokens. The culprit: predictable randomness in seed generation, specifically using Math.random() instead of crypto.getRandomValues(). Qubic halted the chain and froze most funds. #Qubic #CryptoSecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "qubic.org",
+  "source": "DEV",
+  "url": "https://dev.to/neticslabs/qubics-wallet-drain-traces-back-to-predictable-randomness-4pnp",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F1qqee361pbs61u8tf320.png",
+  "orig_title": "Qubic's Wallet Drain Traces Back to Predictable Randomness",
+  "cluster_urls": [
+   "https://dev.to/neticslabs/qubics-wallet-drain-traces-back-to-predictable-randomness-4pnp"
+  ],
+  "cluster_titles": [
+   "Qubic's Wallet Drain Traces Back to Predictable Randomness"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261023-1506-1-qubic-wallet-drain-hits-1-404-users-1-4m-los.png",
+   "20261023-1506-1-qubic-wallet-drain-hits-1-404-users-1-4m-los-d1.png",
+   "20261023-1506-1-qubic-wallet-drain-hits-1-404-users-1-4m-los-d2.png",
+   "20261023-1506-1-qubic-wallet-drain-hits-1-404-users-1-4m-los-d3.png",
+   "20261023-1506-1-qubic-wallet-drain-hits-1-404-users-1-4m-los-d4.png"
+  ]
+ }
+]

@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai tool poisoning attack vector",
+  "headline_marked": "[[AI tools can be poisoned]] by hidden instructions in their own documentation, researchers warn",
+  "headline": "AI tools can be poisoned by hidden instructions in their own documentation, researchers warn",
+  "summary": "A new attack vector, MCP tool poisoning, exploits AI agents' trust in tool descriptions, allowing malicious commands to be embedded and executed without user knowledge.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "MCP tool poisoning hides malicious instructions within an AI tool's name, description, or parameter schema. An agent reads this documentation as legitimate guidance, making it a critical vulnerability as most client interfaces never show users the full text the model processes.",
+   "The Model Context Protocol (MCP) enables AI applications to discover and call external tools. When an agent connects, the server advertises tools with metadata that the agent's model reads to understand the tool's function.",
+   "This attack exploits a trust gap: tool descriptions are reviewed once, but subsequent server-sent text flows unchecked into the model's context. Attackers publish tools with normal appearances but embedded directives like \"read this file\" or \"call a restricted tool.\"",
+   "Invariant Labs demonstrated this in April 2025 with a minimal MCP server. Its tool performed a benign function, but its description contained the attack, leading an agent to prepare calls to exfiltrate sensitive files like ~/.ssh/id_rsa.",
+   "The attack works due to three structural reasons: interfaces hide the payload from users, public registries barely screen for poisoned tools (9 out of 11 accepted them in one test), and models comply at alarming rates.",
+   "The MCPTox benchmark, testing 45 live servers against 20 language models, found attacks succeeded 36.5% of the time on average, reaching up to 72.8% against the most vulnerable models. This indicates a fundamental protocol weakness, not just a bug in one model.",
+   "Invariant Labs has released a free scanner, MCP-Scan, to help mitigate this threat. It discovers installed MCP servers from common AI configs (Claude, Cursor, Windsurf), pulls tool descriptions, and checks them using local heuristics and the Invariant Guardrails API.",
+   "MCP-Scan provides a clear verdict for each tool, printing the full description, including any hidden malicious blocks, for user review. Users should be aware that the Guardrails check sends tool metadata to invariantlabs.ai.",
+   "As a supplement, users can implement a few lines of Python to tripwire their own tool lists. This involves dumping tools/list from installed servers and flagging descriptions containing known directive patterns, catching exact phrasings from published demos."
+  ],
+  "caption": "AI tools can be secretly poisoned by hidden instructions embedded in their own documentation. This new attack vector exploits how AI agents interpret tool descriptions.\n\nMCP tool poisoning hides malicious instructions within an AI tool's name, description, or parameter schema. An agent reads this documentation as legitimate guidance, making it a critical vulnerability as most client interfaces never show users the full text the model processes.\n\nThe Model Context Protocol (MCP) enables AI applications to discover and call external tools. When an agent connects, the server advertises tools with metadata that the agent's model reads to understand the tool's function.\n\nThis attack exploits a trust gap: tool descriptions are reviewed once, but subsequent server-sent text flows unchecked into the model's context. Attackers publish tools with normal appearances but embedded directives like \"read this file\" or \"call a restricted tool.\"\n\nInvariant Labs demonstrated this in April 2025 with a minimal MCP server. Its tool performed a benign function, but its description contained the attack, leading an agent to prepare calls to exfiltrate sensitive files like ~/.ssh/id_rsa.\n\nThe attack works due to three structural reasons: interfaces hide the payload from users, public registries barely screen for poisoned tools (9 out of 11 accepted them in one test), and models comply at alarming rates.\n\nThe MCPTox benchmark, testing 45 live servers against 20 language models, found attacks succeeded 36.5% of the time on average, reaching up to 72.8% against the most vulnerable models. This indicates a fundamental protocol weakness, not just a bug in one model.\n\nInvariant Labs has released a free scanner, MCP-Scan, to help mitigate this threat. It discovers installed MCP servers from common AI configs (Claude, Cursor, Windsurf), pulls tool descriptions, and checks them using local heuristics and the Invariant Guardrails API.\n\n#AI #Security #Cybersecurity #Vulnerability #DeveloperTools #TechNews\n\nSource: DEV",
+  "tweet": "AI tools can be secretly poisoned by hidden instructions in their documentation. Researchers warn this new attack vector exploits how AI agents interpret tool descriptions, with success rates up to 72.8%. A free scanner is available. #AI #Security #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "invariantlabs.ai",
+  "source": "DEV",
+  "url": "https://dev.to/ali_82f3409ed625e8ba8515b/mcp-tool-poisoning-build-the-attack-then-block-it-2g9",
+  "image": "",
+  "orig_title": "MCP Tool Poisoning: Build the Attack, Then Block It",
+  "cluster_urls": [
+   "https://dev.to/ali_82f3409ed625e8ba8515b/mcp-tool-poisoning-build-the-attack-then-block-it-2g9"
+  ],
+  "cluster_titles": [
+   "MCP Tool Poisoning: Build the Attack, Then Block It"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261024-1006-0-ai-tools-can-be-poisoned-by-hidden-instructi.png",
+   "20261024-1006-0-ai-tools-can-be-poisoned-by-hidden-instructi-d1.png",
+   "20261024-1006-0-ai-tools-can-be-poisoned-by-hidden-instructi-d2.png",
+   "20261024-1006-0-ai-tools-can-be-poisoned-by-hidden-instructi-d3.png"
+  ]
+ },
+ {
+  "topic": "agentic ai overtakes generative ai in earnings calls",
+  "headline_marked": "[[Agentic AI has overtaken generative AI]] on S&P 500 earnings calls, 5,305 transcripts show",
+  "headline": "Agentic AI has overtaken generative AI on S&P 500 earnings calls, 5,305 transcripts show",
+  "summary": "A study of 5,305 S&P 500 earnings call transcripts reveals a significant shift in executive language, with \"agentic AI\" now mentioned more frequently than \"generative AI.\" This indicates a changing focus in corporate AI strategy.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A comprehensive analysis of 5,305 S&P 500 earnings call transcripts since January 2024 shows a notable shift in AI terminology. Executives are increasingly using \"agentic AI\" over \"generative AI\" to describe their strategies and initiatives. This trend highlights an evolving understanding and application of AI within major corporations.",
+   "The study found that 'agentic' is primarily a management term, with company speakers mentioning it 371 times compared to analysts' 46 times in Q3 2026. On 83 of 97 calls where it was used, an executive introduced the term first. This suggests a top-down adoption of the new vocabulary.",
+   "While DeepSeek saw early analyst interest, it faded quickly. Meanwhile, the mentions of major AI developers like Anthropic and OpenAI are becoming more balanced. In Q3 2026, OpenAI/ChatGPT was named on 40 calls (8.4%) and Anthropic/Claude on 31 calls (6.5%), indicating growing competition.",
+   "The adoption of 'agentic' AI extends beyond the technology sector. Technology companies used it on 53% of their calls last quarter. Consumer staples and real estate sectors also showed increased usage, moving from 1 call each a year prior to 8 of 31 and 6 of 27 calls, respectively.",
+   "'Agentic commerce' is emerging as a specific application within the payments industry. Companies like Visa, Mastercard, American Express, Global Payments, and Coinbase are using this phrase. However, some executives, like Costco's CFO, expressed unfamiliarity with the term in this context.",
+   "The phrase 'generative AI' is rapidly declining, dropping from 459 mentions in Q1 2024 to just 40 in Q3 2026. Of 79 companies that used 'generative AI' in mid-2024 and held calls in Q3 2026, 40 switched to 'agentic AI,' while only 17 continued to use 'generative AI.'"
+  ],
+  "caption": "S&P 500 executives are ditching \"generative AI\" for \"agentic AI\" on earnings calls. What does this shift in vocabulary mean for corporate AI strategies?\n\nA comprehensive analysis of 5,305 S&P 500 earnings call transcripts since January 2024 shows a notable shift in AI terminology. Executives are increasingly using \"agentic AI\" over \"generative AI\" to describe their strategies and initiatives. This trend highlights an evolving understanding and application of AI within major corporations.\n\nThe study found that 'agentic' is primarily a management term, with company speakers mentioning it 371 times compared to analysts' 46 times in Q3 2026. On 83 of 97 calls where it was used, an executive introduced the term first. This suggests a top-down adoption of the new vocabulary.\n\nWhile DeepSeek saw early analyst interest, it faded quickly. Meanwhile, the mentions of major AI developers like Anthropic and OpenAI are becoming more balanced. In Q3 2026, OpenAI/ChatGPT was named on 40 calls (8.4%) and Anthropic/Claude on 31 calls (6.5%), indicating growing competition.\n\nThe adoption of 'agentic' AI extends beyond the technology sector. Technology companies used it on 53% of their calls last quarter. Consumer staples and real estate sectors also showed increased usage, moving from 1 call each a year prior to 8 of 31 and 6 of 27 calls, respectively.\n\n'Agentic commerce' is emerging as a specific application within the payments industry. Companies like Visa, Mastercard, American Express, Global Payments, and Coinbase are using this phrase. However, some executives, like Costco's CFO, expressed unfamiliarity with the term in this context.\n\nThe phrase 'generative AI' is rapidly declining, dropping from 459 mentions in Q1 2024 to just 40 in Q3 2026. Of 79 companies that used 'generative AI' in mid-2024 and held calls in Q3 2026, 40 switched to 'agentic AI,' while only 17 continued to use 'generative AI.'\n\n#AITrends #AgenticAI #GenerativeAI #SP500 #TechNews #Business\n\nSource: DEV",
+  "tweet": "S&P 500 execs are now talking \"agentic AI\" more than \"generative AI\" on earnings calls. A study of 5,305 transcripts reveals a major shift in corporate AI focus. #AITrends #AgenticAI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/daniel_oliveira_4bd55d35d/agentic-ai-has-overtaken-generative-ai-on-sp-500-earnings-calls-what-5305-transcripts-show-54in",
+  "image": "",
+  "orig_title": "Agentic AI has overtaken generative AI on S&P 500 earnings calls: what 5,305 transcripts show",
+  "cluster_urls": [
+   "https://dev.to/daniel_oliveira_4bd55d35d/agentic-ai-has-overtaken-generative-ai-on-sp-500-earnings-calls-what-5305-transcripts-show-54in"
+  ],
+  "cluster_titles": [
+   "Agentic AI has overtaken generative AI on S&P 500 earnings calls: what 5,305 transcripts show"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261024-1006-1-agentic-ai-has-overtaken-generative-ai-on-s-.png",
+   "20261024-1006-1-agentic-ai-has-overtaken-generative-ai-on-s--d1.png",
+   "20261024-1006-1-agentic-ai-has-overtaken-generative-ai-on-s--d2.png",
+   "20261024-1006-1-agentic-ai-has-overtaken-generative-ai-on-s--d3.png"
+  ]
+ }
+]

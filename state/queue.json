@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "virtual machine escape ci hypervisor security",
+  "headline_marked": "Broadcom advisory reveals [[critical VMware Workstation & Fusion hypervisor escapes]] (CVE-2026-59346, CVE-2026-59347).",
+  "headline": "Broadcom advisory reveals critical VMware Workstation & Fusion hypervisor escapes (CVE-2026-59346, CVE-2026-59347).",
+  "summary": "Two high-severity vulnerabilities (CVSS 9.3 and 8.1) in VMware Workstation and Fusion allow local admin users within a VM to execute code on the host, impacting enterprise build servers and developer setups.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Broadcom has issued a security advisory on October 7, 2026, detailing two critical vulnerabilities in VMware Workstation and Fusion. CVE-2026-59346, an integer overflow, is rated 9.3, and CVE-2026-59347, a stack-based buffer overflow in HGFS, is rated 8.1. These affect Workstation and Fusion versions 25H2 and 26H1.",
+   "The vulnerabilities are fixed in version 26H1u1 for both products. Both require a malicious actor to have local administrative privileges within a virtual machine to exploit. This is a common state in enterprise build servers and developer test hosts.",
+   "CVE-2026-59346 exploits the VMXNET3 virtual network adapter, allowing a privileged guest to trigger an overflow. CVE-2026-59347 targets the HGFS shared folders mechanism, enabling code execution as the VMX process on the host. These are classic hypervisor escape scenarios.",
+   "While seemingly a workstation problem, these flaws pose significant risks in CI/CD environments and platform teams using Fusion on Apple hardware. Such setups often involve multiple VMs sharing a hypervisor and holding credentials to real systems.",
+   "Organizations must assess their configurations, checking for enabled but unused shared folders, VMXNET3 adapter usage, and who has administrative access within each guest VM. A compromised developer workstation with production SSH keys can lead to broader network compromise.",
+   "Verifying the fix involves checking the \"About\" dialog in Workstation and Fusion for version 26H1u1. For managed hosts, an inventory query can identify affected systems. Unmanaged installations present a greater challenge for patch status assertion.",
+   "Post-escape, evidence on the host is difficult to interpret as the host is the victim. The vmware.log file, located alongside the VM's files, records device activity and serves as the primary record for escapes using a device channel."
+  ],
+  "caption": "Two critical VMware Workstation & Fusion vulnerabilities allow guest VMs to escape to the host. CVSS scores of 9.3 and 8.1 mean serious risk for CI/CD and dev environments.\n\nBroadcom has issued a security advisory on October 7, 2026, detailing two critical vulnerabilities in VMware Workstation and Fusion. CVE-2026-59346, an integer overflow, is rated 9.3, and CVE-2026-59347, a stack-based buffer overflow in HGFS, is rated 8.1. These affect Workstation and Fusion versions 25H2 and 26H1.\n\nThe vulnerabilities are fixed in version 26H1u1 for both products. Both require a malicious actor to have local administrative privileges within a virtual machine to exploit. This is a common state in enterprise build servers and developer test hosts.\n\nCVE-2026-59346 exploits the VMXNET3 virtual network adapter, allowing a privileged guest to trigger an overflow. CVE-2026-59347 targets the HGFS shared folders mechanism, enabling code execution as the VMX process on the host. These are classic hypervisor escape scenarios.\n\nWhile seemingly a workstation problem, these flaws pose significant risks in CI/CD environments and platform teams using Fusion on Apple hardware. Such setups often involve multiple VMs sharing a hypervisor and holding credentials to real systems.\n\nOrganizations must assess their configurations, checking for enabled but unused shared folders, VMXNET3 adapter usage, and who has administrative access within each guest VM. A compromised developer workstation with production SSH keys can lead to broader network compromise.\n\nVerifying the fix involves checking the \"About\" dialog in Workstation and Fusion for version 26H1u1. For managed hosts, an inventory query can identify affected systems. Unmanaged installations present a greater challenge for patch status assertion.\n\n#VMware #Security #Vulnerability #Hypervisor #Cybersecurity #TechNews\n\nSource: DEV",
+  "tweet": "Broadcom reveals critical hypervisor escape flaws (CVE-2026-59346, CVE-2026-59347) in VMware Workstation & Fusion. With CVSS scores up to 9.3, these allow guest VMs to execute code on the host. Patch to 26H1u1 immediately. #VMware #Security #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "broadcom.com",
+  "source": "DEV",
+  "url": "https://dev.to/jeffreyciend/a-virtual-machine-escape-is-a-workstation-problem-until-ci-shares-the-hypervisor-2h93",
+  "image": "",
+  "orig_title": "A virtual machine escape is a workstation problem until CI shares the hypervisor",
+  "cluster_urls": [
+   "https://dev.to/jeffreyciend/a-virtual-machine-escape-is-a-workstation-problem-until-ci-shares-the-hypervisor-2h93"
+  ],
+  "cluster_titles": [
+   "A virtual machine escape is a workstation problem until CI shares the hypervisor"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261024-1906-0-broadcom-advisory-reveals-critical-vmware-wo.png",
+   "20261024-1906-0-broadcom-advisory-reveals-critical-vmware-wo-d1.png",
+   "20261024-1906-0-broadcom-advisory-reveals-critical-vmware-wo-d2.png",
+   "20261024-1906-0-broadcom-advisory-reveals-critical-vmware-wo-d3.png"
+  ]
+ },
+ {
+  "topic": "rtx 5090 dismantled for ai servers china",
+  "headline_marked": "[[Thousands of RTX 5090s are being dismantled]] in China for AI servers, leaked video shows",
+  "headline": "Thousands of RTX 5090s are being dismantled in China for AI servers, leaked video shows",
+  "summary": "Newly surfaced video reveals industrial workshops repurposing brand-new GeForce RTX 5090 graphics cards, desoldering components for dual-slot server designs to power AI compute clusters.",
+  "category": "HARDWARE",
+  "template": "leak",
+  "details": [
+   "The GeForce RTX 5090 has reportedly vanished from retail shelves, with a new leaked video exposing industrial-scale Chinese factories dismantling these GPUs. These operations are part of China's grey-market AI boom, repurposing high-end gaming cards for server use.",
+   "The leaked footage offers a glimpse inside these workshops, where skilled technicians meticulously desolder the pricey flagship's GB202 silicon and GDDR7 memory chips. This process extracts the core components from the consumer-grade graphics cards.",
+   "The salvaged components are then transplanted into a dual-slot blower design specifically tailored for server environments. These modified cards are destined for high-density server racks, forming the backbone of massive AI compute clusters.",
+   "The scale and efficiency of these operations are significant, with production lines converting shipments of brand-new GeForce RTX 5090 graphics cards daily. This includes both Nvidia's Founders Edition and custom partner models, indicating a broad sourcing effort.",
+   "This grey-market activity, coupled with Nvidia reportedly halting RTX 5090 production to prioritize professional GPUs, has led to extreme scarcity and inflated prices. Custom GeForce RTX 5090 cards now start at an eye-watering $8,500, making them largely inaccessible for gamers.",
+   "A workaround has emerged for consumers: prebuilt gaming systems. Sometimes these systems, which include an RTX 5090, cost less than purchasing a standalone graphics card, offering a complete system with a manufacturer's warranty."
+  ],
+  "caption": "A leaked video exposes industrial-scale Chinese factories dismantling thousands of brand-new GeForce RTX 5090s. These high-end gaming GPUs are being repurposed for AI servers.\n\nThe GeForce RTX 5090 has reportedly vanished from retail shelves, with a new leaked video exposing industrial-scale Chinese factories dismantling these GPUs. These operations are part of China's grey-market AI boom, repurposing high-end gaming cards for server use.\n\nThe leaked footage offers a glimpse inside these workshops, where skilled technicians meticulously desolder the pricey flagship's GB202 silicon and GDDR7 memory chips. This process extracts the core components from the consumer-grade graphics cards.\n\nThe salvaged components are then transplanted into a dual-slot blower design specifically tailored for server environments. These modified cards are destined for high-density server racks, forming the backbone of massive AI compute clusters.\n\nThe scale and efficiency of these operations are significant, with production lines converting shipments of brand-new GeForce RTX 5090 graphics cards daily. This includes both Nvidia's Founders Edition and custom partner models, indicating a broad sourcing effort.\n\nThis grey-market activity, coupled with Nvidia reportedly halting RTX 5090 production to prioritize professional GPUs, has led to extreme scarcity and inflated prices. Custom GeForce RTX 5090 cards now start at an eye-watering $8,500, making them largely inaccessible for gamers.\n\nA workaround has emerged for consumers: prebuilt gaming systems. Sometimes these systems, which include an RTX 5090, cost less than purchasing a standalone graphics card, offering a complete system with a manufacturer's warranty.\n\n#TechNews #Hardware #Tech #BitBarta\n\nSource: Tom's Hardware",
+  "tweet": "A leaked video reveals thousands of brand-new RTX 5090s are being dismantled in Chinese factories. These high-end gaming GPUs are repurposed for AI servers, driving up prices and scarcity for gamers. #RTX5090 #AI #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/gpus/leaked-video-exposes-how-chinese-factories-are-stripping-rtx-5090s-to-fuel-ai-custom-partner-cards-to-nvidia-founders-editions-on-the-chopping-block",
+  "image": "https://cdn.mos.cms.futurecdn.net/bBGEYE8htq38xZgt4xCdTQ-1920-80.jpg",
+  "orig_title": "Leaked video exposes how industrial-scale Chinese factories are dismantling RTX 5090s by the thousands to fuel AI servers",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/gpus/leaked-video-exposes-how-chinese-factories-are-stripping-rtx-5090s-to-fuel-ai-custom-partner-cards-to-nvidia-founders-editions-on-the-chopping-block"
+  ],
+  "cluster_titles": [
+   "Leaked video exposes how industrial-scale Chinese factories are dismantling RTX 5090s by the thousands to fuel AI servers"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261024-1906-1-thousands-of-rtx-5090s-are-being-dismantled-.png",
+   "20261024-1906-1-thousands-of-rtx-5090s-are-being-dismantled--d1.png",
+   "20261024-1906-1-thousands-of-rtx-5090s-are-being-dismantled--d2.png"
+  ]
+ }
+]

@@ -1,1 +1,95 @@
-[]
+[
+ {
+  "topic": "agents deploy code without human intervention",
+  "headline_marked": "[[LLM Eval Suites]] Have a Flake Rate: Gating Changes on Paired Tests",
+  "headline": "LLM Eval Suites Have a Flake Rate: Gating Changes on Paired Tests",
+  "summary": "Most LLM evaluation suites fail to detect crucial changes, leading to production issues. A simple statistical fix can improve reliability.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Many LLM evaluation suites report average scores that can be misleading, masking real regressions that only appear in production. This article highlights how teams can ship changes that appear to improve metrics but actually cause specific intents to fail later.",
+   "The core issue is that most eval suites cannot reliably detect the subtle changes made during prompt tuning or model swaps. This leads to a 'flake rate' where tests appear to pass, but the underlying performance degrades.",
+   "A statistical fix involves comparing paired results: run both the baseline and candidate configurations on the same set of examples and analyze the per-example differences. This method cancels out example difficulty and highlights actual regressions.",
+   "For instance, a prompt change that fixes one hard case but breaks another will now show up as a +1 and a -1, rather than being obscured by an aggregate score. This allows for more accurate assessment of changes.",
+   "The standard error of the mean difference in paired comparisons depends on the disagreement rate, not just the accuracy. With 200 paired examples, a 2-point bump might be invisible if the disagreement rate is high.",
+   "To detect a 5-point change, approximately 400 paired examples are needed, and for a 3-point change, around 1,100. These numbers are arithmetic and depend on the specific disagreement rate, which is often higher than expected for prompt changes.",
+   "The article advises against gating on raw averages. Instead, if the golden set is limited (e.g., 200 examples), the gate should focus on 'no regression beyond X' rather than requiring improvement.",
+   "Implementing this involves a short Python script (around thirty lines of stdlib code) to bootstrap paired differences, analyze the confidence interval, and only ship changes when the interval clears zero, ensuring greater stability."
+  ],
+  "caption": "Your LLM evaluation suite might be lying to you. Most can't detect real regressions, leading to production failures.\n\nMany LLM evaluation suites report average scores that can be misleading, masking real regressions that only appear in production. This article highlights how teams can ship changes that appear to improve metrics but actually cause specific intents to fail later.\n\nThe core issue is that most eval suites cannot reliably detect the subtle changes made during prompt tuning or model swaps. This leads to a 'flake rate' where tests appear to pass, but the underlying performance degrades.\n\nA statistical fix involves comparing paired results: run both the baseline and candidate configurations on the same set of examples and analyze the per-example differences. This method cancels out example difficulty and highlights actual regressions.\n\nFor instance, a prompt change that fixes one hard case but breaks another will now show up as a +1 and a -1, rather than being obscured by an aggregate score. This allows for more accurate assessment of changes.\n\nThe standard error of the mean difference in paired comparisons depends on the disagreement rate, not just the accuracy. With 200 paired examples, a 2-point bump might be invisible if the disagreement rate is high.\n\nTo detect a 5-point change, approximately 400 paired examples are needed, and for a 3-point change, around 1,100. These numbers are arithmetic and depend on the specific disagreement rate, which is often higher than expected for prompt changes.\n\nThe article advises against gating on raw averages. Instead, if the golden set is limited (e.g., 200 examples), the gate should focus on 'no regression beyond X' rather than requiring improvement.\n\nImplementing this involves a short Python script (around thirty lines of stdlib code) to bootstrap paired differences, analyze the confidence interval, and only ship changes when the interval clears zero, ensuring greater stability.\n\n#AI #LLMOps #MachineLearning #DevOps #LLM\n\nSource: DEV",
+  "tweet": "Your LLM eval suite has a flake rate! Most can't detect regressions, causing production issues. Learn how paired comparisons and statistical analysis can fix this. #AI #LLMOps #MachineLearning",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dima_kruglov_608741d9a416/your-eval-suite-has-a-flake-rate-gating-llm-changes-on-paired-powered-tests-j7p",
+  "image": "",
+  "orig_title": "Your Eval Suite Has a Flake Rate: Gating LLM Changes on Paired, Powered Tests",
+  "cluster_urls": [
+   "https://dev.to/dima_kruglov_608741d9a416/your-eval-suite-has-a-flake-rate-gating-llm-changes-on-paired-powered-tests-j7p",
+   "https://dev.to/onyedikachi_onwurah_00ba3/failure-detection-and-recovery-in-healthcare-agentic-workflows-21ni",
+   "https://dev.to/sharpvik/pure-cinema-66k",
+   "https://dev.to/sharpvik/leaving-railway-in-an-afternoon-2d4n",
+   "https://dev.to/sharpvik/assembly-required-2d75",
+   "https://dev.to/sharpvik/two-strangers-repos-deployed-by-agents-unaided-2n98",
+   "https://dev.to/sharpvik/a-database-two-services-and-an-address-in-five-commands-272f"
+  ],
+  "cluster_titles": [
+   "Your Eval Suite Has a Flake Rate: Gating LLM Changes on Paired, Powered Tests",
+   "Failure Detection and Recovery in Healthcare Agentic Workflows",
+   "Pure cinema",
+   "Leaving Railway in an afternoon",
+   "Assembly required",
+   "Two strangers' repos, deployed by agents, unaided",
+   "A database, two services and an address, in five commands"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261026-0408-0-llm-eval-suites-have-a-flake-rate-gating-cha.png",
+   "20261026-0408-0-llm-eval-suites-have-a-flake-rate-gating-cha-d1.png",
+   "20261026-0408-0-llm-eval-suites-have-a-flake-rate-gating-cha-d2.png",
+   "20261026-0408-0-llm-eval-suites-have-a-flake-rate-gating-cha-d3.png"
+  ]
+ },
+ {
+  "topic": "iphone duo cracking and screen failures",
+  "headline_marked": "iFixit: [[iPhone Duo hinge issues]] may explain broken screens",
+  "headline": "iFixit: iPhone Duo hinge issues may explain broken screens",
+  "summary": "The iPhone Duo is the most repairable foldable yet, but iFixit's teardown suggests a complex hinge and an accordion cable might be concentrating pressure, leading to cracked screens.",
+  "category": "HARDWARE",
+  "template": "terminal",
+  "details": [
+   "iFixit's latest teardown of the iPhone Duo reveals insights into its repairability and potential causes for reported screen and hinge failures. While scoring a 5/10 for repairability – the highest for a foldable yet – the device still presents significant challenges.",
+   "The internal screen features a matte nano-texture cover designed to scatter reflections and mask the crease. Under a microscope, oval-shaped subpixels were observed, further aiding in crease concealment. This outer layer is relatively easy to replace independently of the OLED panel.",
+   "However, repairing the main display remains an expensive and complex task. Dust ingress was noted in the USB-C port, speaker grills, and hinge, contributing to a 'crunchy' feel, though less dust entered than in some competing foldables.",
+   "iFixit suspects the complex hinge mechanism may not always descend properly. Additionally, an accordion cable positioned near the battery edge in the same area could be concentrating pressure, potentially causing the 'audible crack' reported by some users and leading to screen damage."
+  ],
+  "caption": "iPhone Duo screens cracking and hinges failing? iFixit's teardown points to a complex hinge mechanism and an accordion cable as potential culprits.\n\niFixit's latest teardown of the iPhone Duo reveals insights into its repairability and potential causes for reported screen and hinge failures. While scoring a 5/10 for repairability – the highest for a foldable yet – the device still presents significant challenges.\n\nThe internal screen features a matte nano-texture cover designed to scatter reflections and mask the crease. Under a microscope, oval-shaped subpixels were observed, further aiding in crease concealment. This outer layer is relatively easy to replace independently of the OLED panel.\n\nHowever, repairing the main display remains an expensive and complex task. Dust ingress was noted in the USB-C port, speaker grills, and hinge, contributing to a 'crunchy' feel, though less dust entered than in some competing foldables.\n\niFixit suspects the complex hinge mechanism may not always descend properly. Additionally, an accordion cable positioned near the battery edge in the same area could be concentrating pressure, potentially causing the 'audible crack' reported by some users and leading to screen damage.\n\n#iPhoneDuo #Apple #FoldablePhone #TechRepair #iFixit\n\nSource: The Verge, Engadget",
+  "tweet": "iPhone Duo screens cracking and hinges failing? iFixit's teardown points to a complex hinge mechanism and an accordion cable as potential culprits. #iPhoneDuo #Apple #TechRepair",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "The Verge, Engadget",
+  "url": "https://www.theverge.com/tech/1018233/ifixit-iphone-duo-teardown-repairability-hinge",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/10/iPhone-Duo-layout01.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "iFixit&#8217;s look inside the iPhone Duo may explain those broken screens and hinges",
+  "cluster_urls": [
+   "https://www.theverge.com/tech/1018233/ifixit-iphone-duo-teardown-repairability-hinge",
+   "https://www.engadget.com/2293248/how-much-playstation-plus-cost-2010-vs-2026/"
+  ],
+  "cluster_titles": [
+   "iFixit&#8217;s look inside the iPhone Duo may explain those broken screens and hinges",
+   "Here's how much PlayStation Plus cost in 2010 vs. 2026"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261026-0408-1-ifixit-iphone-duo-hinge-issues-may-explain-b.png",
+   "20261026-0408-1-ifixit-iphone-duo-hinge-issues-may-explain-b-d1.png",
+   "20261026-0408-1-ifixit-iphone-duo-hinge-issues-may-explain-b-d2.png"
+  ]
+ }
+]

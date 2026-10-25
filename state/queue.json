@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "morpho midnight smart contract rounding vulnerability",
+  "headline_marked": "[[High-severity rounding vulnerability]] found in Morpho Midnight's Tenor Labs protocol",
+  "headline": "High-severity rounding vulnerability found in Morpho Midnight's Tenor Labs protocol",
+  "summary": "A flaw in migration callbacks could allow attackers to inflate Loan-to-Value ratios to infinity, triggering immediate liquidation of user collateral in DeFi.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A high-severity rounding vulnerability was discovered in Tenor Labs' migration callbacks, a protocol extending Morpho Midnight. This flaw could allow attackers to artificially inflate a user's Loan-to-Value (LTV) ratio to infinity.",
+   "The vulnerability triggers an immediate liquidation of the user's pre-existing collateral. It stems from the `mulDivDown` function in `CollateralTransferLib.sol`, which always rounds down during collateral transfer calculations.",
+   "The issue arises when debt accrues interest, even by a tiny \"dust\" amount (e.g., 1 wei). If an attacker repays exactly this dust amount during migration, `mulDivDown` rounds the collateral to transfer down to zero.",
+   "This creates a scenario where a user's debt remains, but no collateral is transferred, effectively making the debt unbacked. Developers had noted this temporary LTV increase but underestimated its weaponization potential.",
+   "A Proof of Concept (PoC) using Foundry demonstrated the exploit, showing how a user with slightly more debt than collateral could have their LTV ratio manipulated. This leads to immediate liquidation.",
+   "To mitigate, the `transferCollaterals` function should enforce a minimum transfer amount. If the pro-rata calculation rounds to zero, the transaction should revert to prevent unbacked debt.",
+   "This case highlights the critical importance of rounding directions and edge cases in DeFi smart contract security. Even minor mathematical discrepancies can lead to significant financial vulnerabilities."
+  ],
+  "caption": "A rounding error in a DeFi smart contract could inflate LTVs to infinity. This high-severity vulnerability allows immediate liquidation of user collateral.\n\nA high-severity rounding vulnerability was discovered in Tenor Labs' migration callbacks, a protocol extending Morpho Midnight. This flaw could allow attackers to artificially inflate a user's Loan-to-Value (LTV) ratio to infinity.\n\nThe vulnerability triggers an immediate liquidation of the user's pre-existing collateral. It stems from the `mulDivDown` function in `CollateralTransferLib.sol`, which always rounds down during collateral transfer calculations.\n\nThe issue arises when debt accrues interest, even by a tiny \"dust\" amount (e.g., 1 wei). If an attacker repays exactly this dust amount during migration, `mulDivDown` rounds the collateral to transfer down to zero.\n\nThis creates a scenario where a user's debt remains, but no collateral is transferred, effectively making the debt unbacked. Developers had noted this temporary LTV increase but underestimated its weaponization potential.\n\nA Proof of Concept (PoC) using Foundry demonstrated the exploit, showing how a user with slightly more debt than collateral could have their LTV ratio manipulated. This leads to immediate liquidation.\n\nTo mitigate, the `transferCollaterals` function should enforce a minimum transfer amount. If the pro-rata calculation rounds to zero, the transaction should revert to prevent unbacked debt.\n\nThis case highlights the critical importance of rounding directions and edge cases in DeFi smart contract security. Even minor mathematical discrepancies can lead to significant financial vulnerabilities.\n\n#DeFi #SmartContracts #Security #Vulnerability #Crypto #Web3\n\nSource: DEV",
+  "tweet": "A rounding vulnerability in Tenor Labs' Morpho Midnight protocol could lead to infinite LTVs & immediate user collateral liquidation. Discovered during a bug bounty, it highlights critical DeFi security risks. #DeFi #Security #Crypto",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "tenorlabs.com",
+  "source": "DEV",
+  "url": "https://dev.to/vaultvult/how-i-found-a-high-severity-rounding-vulnerability-in-morpho-midnight-tenor-labs-35c2",
+  "image": "",
+  "orig_title": "How I Found a High-Severity Rounding Vulnerability in Morpho Midnight (Tenor Labs)",
+  "cluster_urls": [
+   "https://dev.to/vaultvult/how-i-found-a-high-severity-rounding-vulnerability-in-morpho-midnight-tenor-labs-35c2"
+  ],
+  "cluster_titles": [
+   "How I Found a High-Severity Rounding Vulnerability in Morpho Midnight (Tenor Labs)"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261025-0606-0-high-severity-rounding-vulnerability-found-i.png",
+   "20261025-0606-0-high-severity-rounding-vulnerability-found-i-d1.png",
+   "20261025-0606-0-high-severity-rounding-vulnerability-found-i-d2.png",
+   "20261025-0606-0-high-severity-rounding-vulnerability-found-i-d3.png"
+  ]
+ },
+ {
+  "topic": "laravel tokenguard auth bypass vulnerability",
+  "headline_marked": "Critical [[Laravel TokenGuard flaw allows account takeover]] (CVSS 9.2) in MySQL/MariaDB apps",
+  "headline": "Critical Laravel TokenGuard flaw allows account takeover (CVSS 9.2) in MySQL/MariaDB apps",
+  "summary": "This high-severity vulnerability, CVE-2026-114509, affects Laravel apps using the token driver with MySQL or MariaDB, allowing unauthenticated attackers to sign in as existing users.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "CVE-2026-114509 is a critical (CVSS 9.2) flaw in Laravel’s built-in token API guard. It allows an attacker with no account to sign in as an existing user without their token, affecting apps that authenticate API requests with the \"token\" driver and store users in MySQL or MariaDB.",
+   "The vulnerability stems from the TokenGuard's previous failure to check if an API token value was text. Attackers can send a specially crafted non-text value in a JSON request, which MySQL and MariaDB then compare in a way that can match an existing user.",
+   "This results in account takeover on any route protected by that guard, enabling attackers to read, change, or act as the user through the API. If the matched user is an administrator, the entire application's security is compromised.",
+   "Laravel has published an advisory and released fixes in `laravel/framework` versions 12.68.0 and 13.29.0. Apps using only Sanctum, Passport, or session logins are not affected.",
+   "Many older Laravel apps (Laravel 7 and earlier) shipped with the \"api\" guard using the token driver by default. Even after upgrading, some teams may have kept this guard for forgotten mobile or partner endpoints, making them vulnerable.",
+   "Site owners should check if `config/auth.php` defines a guard with `'driver' => 'token'`, if any routes use that guard, and if users are stored in MySQL or MariaDB. Updating `laravel/framework` to the patched versions is the primary solution.",
+   "For unsupported Laravel versions (10.x and older) or while awaiting an update, a temporary middleware can be implemented. This middleware should reject any token that is not a non-empty string, closing the vulnerability until a full framework update is possible.",
+   "As of October 24, 2026, there are no confirmed reports of attacks, but a proof of concept has been published on GitHub. With a working example circulating, automated scanning for exposed APIs is expected to follow, urging immediate patching."
+  ],
+  "caption": "A critical Laravel TokenGuard flaw (CVSS 9.2) allows unauthenticated attackers to take over user accounts. Are your MySQL/MariaDB apps at risk?\n\nCVE-2026-114509 is a critical (CVSS 9.2) flaw in Laravel’s built-in token API guard. It allows an attacker with no account to sign in as an existing user without their token, affecting apps that authenticate API requests with the \"token\" driver and store users in MySQL or MariaDB.\n\nThe vulnerability stems from the TokenGuard's previous failure to check if an API token value was text. Attackers can send a specially crafted non-text value in a JSON request, which MySQL and MariaDB then compare in a way that can match an existing user.\n\nThis results in account takeover on any route protected by that guard, enabling attackers to read, change, or act as the user through the API. If the matched user is an administrator, the entire application's security is compromised.\n\nLaravel has published an advisory and released fixes in `laravel/framework` versions 12.68.0 and 13.29.0. Apps using only Sanctum, Passport, or session logins are not affected.\n\nMany older Laravel apps (Laravel 7 and earlier) shipped with the \"api\" guard using the token driver by default. Even after upgrading, some teams may have kept this guard for forgotten mobile or partner endpoints, making them vulnerable.\n\nSite owners should check if `config/auth.php` defines a guard with `'driver' => 'token'`, if any routes use that guard, and if users are stored in MySQL or MariaDB. Updating `laravel/framework` to the patched versions is the primary solution.\n\nFor unsupported Laravel versions (10.x and older) or while awaiting an update, a temporary middleware can be implemented. This middleware should reject any token that is not a non-empty string, closing the vulnerability until a full framework update is possible.\n\n#Laravel #Security #Vulnerability #CVE #WebDev #PHP\n\nSource: DEV",
+  "tweet": "Critical Laravel TokenGuard flaw (CVSS 9.2) allows unauthenticated attackers to take over user accounts in MySQL/MariaDB apps. Patch immediately to laravel/framework 12.68.0 or 13.29.0. #Laravel #Security #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "laravel.com",
+  "source": "DEV",
+  "url": "https://dev.to/senthil_kr/laravel-tokenguard-auth-bypass-cve-2026-114509-what-site-owners-must-do-now-1l89",
+  "image": "",
+  "orig_title": "Laravel TokenGuard Auth Bypass (CVE-2026-114509): What Site Owners Must Do Now",
+  "cluster_urls": [
+   "https://dev.to/senthil_kr/laravel-tokenguard-auth-bypass-cve-2026-114509-what-site-owners-must-do-now-1l89"
+  ],
+  "cluster_titles": [
+   "Laravel TokenGuard Auth Bypass (CVE-2026-114509): What Site Owners Must Do Now"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261025-0606-1-critical-laravel-tokenguard-flaw-allows-acco.png",
+   "20261025-0606-1-critical-laravel-tokenguard-flaw-allows-acco-d1.png",
+   "20261025-0606-1-critical-laravel-tokenguard-flaw-allows-acco-d2.png",
+   "20261025-0606-1-critical-laravel-tokenguard-flaw-allows-acco-d3.png"
+  ]
+ }
+]

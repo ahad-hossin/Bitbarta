@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "php rce vulnerability and jitsi meet installation",
+  "headline_marked": "[[Jitsi Meet]] on Ubuntu 24.04: Self-Hosted Video Calls",
+  "headline": "Jitsi Meet on Ubuntu 24.04: Self-Hosted Video Calls",
+  "summary": "Run your own Jitsi Meet server for unlimited, account-free video calls. This guide covers setup on Ubuntu 24.04 with HTTPS and optional authentication.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Tired of Zoom's 40-minute limit or Google Meet's account requirement? Jitsi Meet offers a fully open-source, self-hosted alternative. You can install it on your own Ubuntu 24.04 server, eliminating artificial time limits and the need for guest accounts.",
+   "This guide details setting up a production-ready Jitsi Meet server. It includes securing your server with HTTPS and a locked-down firewall, and offers optional authentication to prevent unauthorized room creation.",
+   "The installation process is straightforward, leveraging Ubuntu's apt package manager for Jitsi's official packages. Key steps involve configuring DNS records, setting the server's fully qualified domain name, and adding upstream repositories for essential components like Prosody.",
+   "Proper network configuration is crucial. Ensure port 443 TCP and 10000 UDP are open and forwarded if behind a router. Many 'can't see or hear' issues stem from port 10000/UDP being blocked.",
+   "By default, anyone can create rooms. To enhance security, you can configure Jitsi to lock room creation to registered users while still allowing guests to join. This is done by modifying Prosody and Jicofo configurations.",
+   "For larger meetings, you might need to increase systemd resource limits for the videobridge. This ensures stability for calls exceeding 100 participants.",
+   "Once set up, you'll have a robust video conferencing service under your control. This self-hosted solution integrates well with other self-hosted services, further reducing reliance on third-party subscriptions."
+  ],
+  "caption": "Self-host your video calls with Jitsi Meet on Ubuntu 24.04. Enjoy unlimited, account-free meetings with full control over your data.\n\nTired of Zoom's 40-minute limit or Google Meet's account requirement? Jitsi Meet offers a fully open-source, self-hosted alternative. You can install it on your own Ubuntu 24.04 server, eliminating artificial time limits and the need for guest accounts.\n\nThis guide details setting up a production-ready Jitsi Meet server. It includes securing your server with HTTPS and a locked-down firewall, and offers optional authentication to prevent unauthorized room creation.\n\nThe installation process is straightforward, leveraging Ubuntu's apt package manager for Jitsi's official packages. Key steps involve configuring DNS records, setting the server's fully qualified domain name, and adding upstream repositories for essential components like Prosody.\n\nProper network configuration is crucial. Ensure port 443 TCP and 10000 UDP are open and forwarded if behind a router. Many 'can't see or hear' issues stem from port 10000/UDP being blocked.\n\nBy default, anyone can create rooms. To enhance security, you can configure Jitsi to lock room creation to registered users while still allowing guests to join. This is done by modifying Prosody and Jicofo configurations.\n\nFor larger meetings, you might need to increase systemd resource limits for the videobridge. This ensures stability for calls exceeding 100 participants.\n\nOnce set up, you'll have a robust video conferencing service under your control. This self-hosted solution integrates well with other self-hosted services, further reducing reliance on third-party subscriptions.\n\n#JitsiMeet #SelfHosting #Ubuntu #OpenSource #VideoConferencing\n\nSource: DEV",
+  "tweet": "Self-host your video calls with Jitsi Meet on Ubuntu 24.04! Enjoy unlimited, account-free meetings with full control. Guide covers setup, HTTPS, and security. #JitsiMeet #SelfHosting #Ubuntu",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/clinerds/how-to-install-jitsi-meet-on-ubuntu-2404-self-hosted-video-calls-1p86",
+  "image": "",
+  "orig_title": "How to Install Jitsi Meet on Ubuntu 24.04: Self-Hosted Video Calls",
+  "cluster_urls": [
+   "https://dev.to/clinerds/how-to-install-jitsi-meet-on-ubuntu-2404-self-hosted-video-calls-1p86",
+   "https://dev.to/hassanradwany/php-security-alert-mitigating-the-new-unpatched-rce-vulnerability-1lch"
+  ],
+  "cluster_titles": [
+   "How to Install Jitsi Meet on Ubuntu 24.04: Self-Hosted Video Calls",
+   "PHP Security Alert: Mitigating the New Unpatched RCE Vulnerability"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261026-0006-0-jitsi-meet-on-ubuntu-24-04-self-hosted-video.png",
+   "20261026-0006-0-jitsi-meet-on-ubuntu-24-04-self-hosted-video-d1.png",
+   "20261026-0006-0-jitsi-meet-on-ubuntu-24-04-self-hosted-video-d2.png",
+   "20261026-0006-0-jitsi-meet-on-ubuntu-24-04-self-hosted-video-d3.png"
+  ]
+ },
+ {
+  "topic": "ai delivers zero financial payoff to most companies",
+  "headline_marked": "[[AI delivers zero financial payoff]] to most companies outside tech, economist says",
+  "headline": "AI delivers zero financial payoff to most companies outside tech, economist says",
+  "summary": "Despite massive investments, AI has yielded no profit gains for corporate America outside the tech sector, according to Apollo Global Management's chief economist.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Artificial intelligence has not delivered any financial benefits to companies in corporate America outside of the tech industry, according to Torsten Slok, chief economist at Apollo Global Management.",
+   "Slok's analysis of the S&P 493 (S&P 500 companies excluding major tech firms) shows flat profit margins and revenue per worker, with no discernible productivity improvements attributed to AI.",
+   "\"Despite massive investments and widespread hype around artificial intelligence, the technology has delivered zero financial payoff to corporate America outside of tech,\" Slok stated.",
+   "He expressed skepticism about non-tech companies' ability to translate AI into higher revenue growth and profit margins, noting that AI excels at calculation but business intelligence often relies on judgment.",
+   "Slok further elaborated that AI lacks understanding of crucial business elements like accountability, trust, culture, unwritten rules, and ethical trade-offs, all of which significantly impact reputational risk and financial performance.",
+   "Recent studies also indicate that AI has not yet resulted in substantial productivity gains across various sectors."
+  ],
+  "caption": "AI is failing to boost profits for most companies outside of Big Tech, an economist says.\n\nArtificial intelligence has not delivered any financial benefits to companies in corporate America outside of the tech industry, according to Torsten Slok, chief economist at Apollo Global Management.\n\nSlok's analysis of the S&P 493 (S&P 500 companies excluding major tech firms) shows flat profit margins and revenue per worker, with no discernible productivity improvements attributed to AI.\n\n\"Despite massive investments and widespread hype around artificial intelligence, the technology has delivered zero financial payoff to corporate America outside of tech,\" Slok stated.\n\nHe expressed skepticism about non-tech companies' ability to translate AI into higher revenue growth and profit margins, noting that AI excels at calculation but business intelligence often relies on judgment.\n\nSlok further elaborated that AI lacks understanding of crucial business elements like accountability, trust, culture, unwritten rules, and ethical trade-offs, all of which significantly impact reputational risk and financial performance.\n\nRecent studies also indicate that AI has not yet resulted in substantial productivity gains across various sectors.\n\n#AI #ArtificialIntelligence #Business #Tech #Economics\n\nSource: TechCrunch, Hacker News",
+  "tweet": "AI has delivered \"zero financial payoff\" to corporate America outside of tech, according to Apollo Global Management's chief economist. Profit margins and revenue per worker remain flat. #AI #Business",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "TechCrunch, Hacker News",
+  "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+  "image": "",
+  "orig_title": "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/",
+   "https://bigwhalehunting.com/workforce/"
+  ],
+  "cluster_titles": [
+   "AI delivers ‘zero financial payoff’ to most companies, Apollo economist says",
+   "Show HN: I put employees inside S&P 500 market-cap bubbles"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20261026-0006-1-ai-delivers-zero-financial-payoff-to-most-co.png",
+   "20261026-0006-1-ai-delivers-zero-financial-payoff-to-most-co-d1.png",
+   "20261026-0006-1-ai-delivers-zero-financial-payoff-to-most-co-d2.png"
+  ]
+ }
+]

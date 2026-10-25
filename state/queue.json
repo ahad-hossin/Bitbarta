@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "opencode ai agent security breach",
+  "headline_marked": "OpenCode's Breach Shows [[What a Stored Provider Key Costs]]",
+  "headline": "OpenCode's Breach Shows What a Stored Provider Key Costs",
+  "summary": "OpenCode's recent security breach exposed third-party provider keys (e.g., OpenAI, Anthropic) saved by users in a legacy system. Affected users were urged to revoke and replace these keys to prevent unauthorized access and potential billing issues.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "OpenCode notified users on October 17 of a \"Potential provider key breach\" stemming from unauthorized access to a legacy system undergoing decommissioning. The breach specifically warned that \"Third party provider keys (eg OpenAI, Anthropic) saved in your workspace may have been exposed.\"",
+   "On October 18, OpenCode publicly confirmed the incident, labeling it a \"large scale distillation attack\" impacting 1.4% of its Console users who had linked external providers. The company stated it emailed all affected users and is collaborating with Anthropic, OpenAI, and Google on remediation efforts.",
+   "Several critical questions remain unanswered, including the precise number of accounts represented by 1.4%, the method of attacker entry, the duration of access, and whether all stored keys were compromised. The provided percentage measures neither the full exposure nor the actual data loss.",
+   "This incident underscores the inherent risks of decommissioning systems, as they can lose active monitoring while retaining critical access, making them vulnerable targets. Provider keys stored in a vendor's workspace ultimately belong to the customer's provider account, carrying their identity, quota, and payment information.",
+   "OpenCode's immediate remedy instructed affected users to \"revoke and replace those keys through the relevant provider's dashboard, update any applications using them, and review recent usage for unexpected activity.\" Crucially, every hour between the breach and a user's action meant their compromised credential remained fully functional.",
+   "The most common consequence of such breaches often manifests as unexpected invoices, with user reports detailing bills in the hundreds of dollars. To the provider's billing system, an attacker holding a valid key is indistinguishable from the legitimate customer, making unauthorized usage appear as valid activity."
+  ],
+  "caption": "OpenCode's breach exposed third-party provider keys for services like OpenAI and Anthropic, affecting 1.4% of its Console users. This incident highlights the critical risks of storing credentials in vendor workspaces.\n\nOpenCode notified users on October 17 of a \"Potential provider key breach\" stemming from unauthorized access to a legacy system undergoing decommissioning. The breach specifically warned that \"Third party provider keys (eg OpenAI, Anthropic) saved in your workspace may have been exposed.\"\n\nOn October 18, OpenCode publicly confirmed the incident, labeling it a \"large scale distillation attack\" impacting 1.4% of its Console users who had linked external providers. The company stated it emailed all affected users and is collaborating with Anthropic, OpenAI, and Google on remediation efforts.\n\nSeveral critical questions remain unanswered, including the precise number of accounts represented by 1.4%, the method of attacker entry, the duration of access, and whether all stored keys were compromised. The provided percentage measures neither the full exposure nor the actual data loss.\n\nThis incident underscores the inherent risks of decommissioning systems, as they can lose active monitoring while retaining critical access, making them vulnerable targets. Provider keys stored in a vendor's workspace ultimately belong to the customer's provider account, carrying their identity, quota, and payment information.\n\nOpenCode's immediate remedy instructed affected users to \"revoke and replace those keys through the relevant provider's dashboard, update any applications using them, and review recent usage for unexpected activity.\" Crucially, every hour between the breach and a user's action meant their compromised credential remained fully functional.\n\n#Cybersecurity #DataBreach #OpenCode #AI #Security #DeveloperTools\n\nSource: DEV",
+  "tweet": "OpenCode's breach exposed 3rd-party provider keys (OpenAI, Anthropic) for 1.4% of Console users. Affected users must revoke & replace keys immediately. This incident underscores the dangers of storing credentials in vendor workspaces. #Cybersecurity #DataBreach #OpenCode",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "opencode.ai",
+  "source": "DEV",
+  "url": "https://dev.to/neticslabs/opencodes-breach-shows-what-a-stored-provider-key-costs-jaf",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Faxtdw2vip4nmp4qzt4gu.png",
+  "orig_title": "OpenCode's Breach Shows What a Stored Provider Key Costs",
+  "cluster_urls": [
+   "https://dev.to/neticslabs/opencodes-breach-shows-what-a-stored-provider-key-costs-jaf"
+  ],
+  "cluster_titles": [
+   "OpenCode's Breach Shows What a Stored Provider Key Costs"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261025-2006-0-opencode-s-breach-shows-what-a-stored-provid.png",
+   "20261025-2006-0-opencode-s-breach-shows-what-a-stored-provid-d1.png",
+   "20261025-2006-0-opencode-s-breach-shows-what-a-stored-provid-d2.png",
+   "20261025-2006-0-opencode-s-breach-shows-what-a-stored-provid-d3.png"
+  ]
+ },
+ {
+  "topic": "r/opensource bans ai projects",
+  "headline_marked": "[[r/opensource bans AI, non-English speakers]] and new projects, sparking community revolt",
+  "headline": "r/opensource bans AI, non-English speakers and new projects, sparking community revolt",
+  "summary": "The opensource subreddit's new rules, including a ban on AI-related projects and non-English speakers, have ignited a major backlash from the community, leading to a rival sub.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "The moderators of r/opensource have implemented strict new submission rules, explicitly banning projects that use, are made by, or are intended for AI. Their statement claims AI, as it currently exists, is incongruent with the open-source community's values.",
+   "This decision has sparked a significant backlash in the comments, leading to the creation of a rival subreddit, r/trueopensource. While a moderator attempted to clarify that there's room for nuance, like incidental AI for accessibility, complaints about the rules being too broad and vague persist.",
+   "Critics point out that even the Linux kernel now contains some AI-generated code, potentially making projects using it subject to the ban. Beyond AI, the new rules also require projects to be at least one year old, actively maintained, and have multiple contributors, effectively barring new solo developers.",
+   "Furthermore, the mods have effectively banned non-English speaking members, stating they cannot distinguish between AI-written and AI-translated content. They argue that non-English speakers cannot verify translation accuracy, thus requiring them to find other communities."
+  ],
+  "caption": "r/opensource has enacted strict new rules, banning all AI-related projects, non-English speakers, and new solo developer projects, sparking a community revolt.\n\nThe moderators of r/opensource have implemented strict new submission rules, explicitly banning projects that use, are made by, or are intended for AI. Their statement claims AI, as it currently exists, is incongruent with the open-source community's values.\n\nThis decision has sparked a significant backlash in the comments, leading to the creation of a rival subreddit, r/trueopensource. While a moderator attempted to clarify that there's room for nuance, like incidental AI for accessibility, complaints about the rules being too broad and vague persist.\n\nCritics point out that even the Linux kernel now contains some AI-generated code, potentially making projects using it subject to the ban. Beyond AI, the new rules also require projects to be at least one year old, actively maintained, and have multiple contributors, effectively barring new solo developers.\n\nFurthermore, the mods have effectively banned non-English speaking members, stating they cannot distinguish between AI-written and AI-translated content. They argue that non-English speakers cannot verify translation accuracy, thus requiring them to find other communities.\n\n#OpenSource #Reddit #AI #Community #SoftwareDevelopment #TechNews\n\nSource: The Verge",
+  "tweet": "r/opensource has enacted strict new rules, banning all AI-related projects, non-English speakers, and new solo developer projects. The community is in revolt, leading to a rival sub. #OpenSource #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "reddit.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK115_Reddit_01.jpg.webp?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "r/opensource just banned AI, non-English speakers, and more",
+  "cluster_urls": [
+   "https://www.theverge.com/ai-artificial-intelligence/1018217/reddit-opensource-ai-ban"
+  ],
+  "cluster_titles": [
+   "r/opensource just banned AI, non-English speakers, and more"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261025-2006-1-r-opensource-bans-ai-non-english-speakers-an.png",
+   "20261025-2006-1-r-opensource-bans-ai-non-english-speakers-an-d1.png",
+   "20261025-2006-1-r-opensource-bans-ai-non-english-speakers-an-d2.png"
+  ]
+ }
+]

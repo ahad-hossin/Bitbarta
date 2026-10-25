@@ -1,1 +1,94 @@
-[]
+[
+ {
+  "topic": "ai art editable layers instantly",
+  "headline_marked": "AI art gets [[editable layers instantly]] with LayerEditor, cutting production time 56%",
+  "headline": "AI art gets editable layers instantly with LayerEditor, cutting production time 56%",
+  "summary": "LayerEditor is the first system to generate full RGBA layers for AI art in a single pass, enabling non-destructive editing and significant productivity gains for designers.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "LayerEditor, a unified framework announced on October 17, 2026, generates reusable RGBA layers for AI art while obeying natural-language instructions. This new system, powered by Compositional Edit-Prior Distillation (CEPD), slashes production time by 56% and boosts layer reuse by 90%.",
+   "For years, diffusion-based image editors created stunning visuals but forced designers to manually recreate masks or start over for tweaks. This process was time-consuming and inefficient, hindering creative workflows.",
+   "LayerEditor revolutionizes this by building layer-aware representations from the start. A single forward pass yields both the edited image and a set of clean, semantically meaningful masks, making layers a core output, not an afterthought.",
+   "The CEPD pipeline trains in two passes but collapses to a single pass at inference time. This efficiency avoids the costly test-time optimization loops that plagued earlier 'mask-after-edit' systems, ensuring rapid results.",
+   "An example use case showed an ad agency producing outdoor mockups: a designer could open a neon-sign layer, adjust its hue, and add animation without affecting other elements. The same layer was then reused across multiple city views, eliminating repetitive masking.",
+   "Benchmarks quantify LayerEditor's advantage, achieving 0.94 SSIM on the Precise Local Manipulation benchmark—a 12% jump over competitors. The Layer-Reuse test confirmed over 90% aesthetic quality retention when compositing layers across different domains.",
+   "The model's weights, inference script, and a Python SDK were released on Hugging Face on October 10, 2026. Within 48 hours, it amassed 1.4 million downloads and 12,000 unique API keys, with community-contributed plugins already emerging.",
+   "LayerEditor stands out as the only system that simultaneously learns to edit and produce full RGBA layers in a single forward pass. Competing solutions often sacrifice color fidelity, require extra post-processing, or are locked into proprietary UIs.",
+   "This launch marks the first practical realization of non-destructive AI editing at scale. Early adopters are expected to see a 30-40% reduction in average creative turnaround time across advertising, UI/UX, and gaming sectors by 2028."
+  ],
+  "caption": "AI art just got a massive upgrade: LayerEditor delivers instantly editable layers, slashing production time by 56% and boosting layer reuse by 90%.\n\nLayerEditor, a unified framework announced on October 17, 2026, generates reusable RGBA layers for AI art while obeying natural-language instructions. This new system, powered by Compositional Edit-Prior Distillation (CEPD), slashes production time by 56% and boosts layer reuse by 90%.\n\nFor years, diffusion-based image editors created stunning visuals but forced designers to manually recreate masks or start over for tweaks. This process was time-consuming and inefficient, hindering creative workflows.\n\nLayerEditor revolutionizes this by building layer-aware representations from the start. A single forward pass yields both the edited image and a set of clean, semantically meaningful masks, making layers a core output, not an afterthought.\n\nThe CEPD pipeline trains in two passes but collapses to a single pass at inference time. This efficiency avoids the costly test-time optimization loops that plagued earlier 'mask-after-edit' systems, ensuring rapid results.\n\nAn example use case showed an ad agency producing outdoor mockups: a designer could open a neon-sign layer, adjust its hue, and add animation without affecting other elements. The same layer was then reused across multiple city views, eliminating repetitive masking.\n\nBenchmarks quantify LayerEditor's advantage, achieving 0.94 SSIM on the Precise Local Manipulation benchmark—a 12% jump over competitors. The Layer-Reuse test confirmed over 90% aesthetic quality retention when compositing layers across different domains.\n\nThe model's weights, inference script, and a Python SDK were released on Hugging Face on October 10, 2026. Within 48 hours, it amassed 1.4 million downloads and 12,000 unique API keys, with community-contributed plugins already emerging.\n\n#AIArt #LayerEditor #GenerativeAI #CreativeTech #DesignTools #HuggingFace\n\nSource: DEV",
+  "tweet": "AI art just got a massive upgrade: LayerEditor delivers instantly editable layers, slashing production time by 56% and boosting layer reuse by 90%. This new framework enables non-destructive AI editing at scale. #AIArt #GenerativeAI #CreativeTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "huggingface.co",
+  "source": "DEV",
+  "url": "https://dev.to/amrithesh_dev/you-wont-believe-what-layereditor-can-do-with-your-ai-art-it-gives-you-editable-layers-instantly-375o",
+  "image": "",
+  "orig_title": "You Won’t Believe What LayerEditor Can Do With Your AI Art—It Gives You Editable Layers Instantly!",
+  "cluster_urls": [
+   "https://dev.to/amrithesh_dev/you-wont-believe-what-layereditor-can-do-with-your-ai-art-it-gives-you-editable-layers-instantly-375o"
+  ],
+  "cluster_titles": [
+   "You Won’t Believe What LayerEditor Can Do With Your AI Art—It Gives You Editable Layers Instantly!"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261025-1107-0-ai-art-gets-editable-layers-instantly-with-l.png",
+   "20261025-1107-0-ai-art-gets-editable-layers-instantly-with-l-d1.png",
+   "20261025-1107-0-ai-art-gets-editable-layers-instantly-with-l-d2.png",
+   "20261025-1107-0-ai-art-gets-editable-layers-instantly-with-l-d3.png"
+  ]
+ },
+ {
+  "topic": "claude ai api safety features",
+  "headline_marked": "[[Claude API now allows banning individual customers]] instead of your entire organization, but the webhook isn't live",
+  "headline": "Claude API now allows banning individual customers instead of your entire organization, but the webhook isn't live",
+  "summary": "Anthropic's new user profiles let SaaS apps and resellers manage individual customer enforcement actions, though the critical webhook for notifications is not yet functional.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Previously, a single end customer could trigger an enforcement action that applied to an entire organization using the Claude API. Anthropic shipped a fix on October 20, introducing user profiles to enable per-customer enforcement.",
+   "The update, which included `enforcement_status` and `enforcement_actions` fields on October 21, allows resellers to see if a specific customer has been restricted or banned. This prevents a single bad actor from impacting an entire service.",
+   "However, there's a catch: the webhook designed to notify users when a customer is banned exists and takes registrations, but it currently sends no events. Anthropic's documentation explicitly states, \"Event delivery isn't live.\"",
+   "To use the feature, developers create a profile once per end customer via `POST /v1/user_profiles`, receiving a `uprof_` ID. This ID must then be sent in the `anthropic-user-profile-id` header with every API request made for that customer.",
+   "This ensures that if a safety action is taken against that specific profile, the rest of the organization's traffic remains unaffected. The type of profile depends on the service: application profiles for signed-up users, and passthrough profiles for companies reselling API access.",
+   "The SDKs support passing the user profile ID as an argument, and the header also works for token counting, Message Batches, and OpenAI SDK compatibility endpoints. This granular control allows for targeted restrictions.",
+   "Several important caveats exist: profile creation is not idempotent, meaning each call creates a new profile, even if a `reference_id` matches an existing one. Additionally, an old beta header (`user-profiles-2026-09-04`) can hide the new ban fields, requiring its removal.",
+   "Furthermore, integrations with Amazon Bedrock and Google Cloud only check the ID's format, not if it matches an actual profile, and Claude Platform on AWS always reports `unrestricted` status for enforcement. The API also rejects null values when attempting to clear fields.",
+   "Profiles report `enforcement_status` as `unrestricted`, `restricted`, or `banned` (with `pending` for identity checks). While an action is open, Anthropic refuses some or all inference requests carrying that profile's ID.",
+   "Each entry in `enforcement_actions` details the type (restriction or ban), a reason (e.g., `fraud_or_abuse`), an optional action for the customer, and an `expires_at` time. Developers are advised to treat unknown statuses as `restricted` and unknown reasons as `unspecified`."
+  ],
+  "caption": "Anthropic's Claude API now allows individual customer bans, preventing a single user from taking down your entire organization.\n\nPreviously, a single end customer could trigger an enforcement action that applied to an entire organization using the Claude API. Anthropic shipped a fix on October 20, introducing user profiles to enable per-customer enforcement.\n\nThe update, which included `enforcement_status` and `enforcement_actions` fields on October 21, allows resellers to see if a specific customer has been restricted or banned. This prevents a single bad actor from impacting an entire service.\n\nHowever, there's a catch: the webhook designed to notify users when a customer is banned exists and takes registrations, but it currently sends no events. Anthropic's documentation explicitly states, \"Event delivery isn't live.\"\n\nTo use the feature, developers create a profile once per end customer via `POST /v1/user_profiles`, receiving a `uprof_` ID. This ID must then be sent in the `anthropic-user-profile-id` header with every API request made for that customer.\n\nThis ensures that if a safety action is taken against that specific profile, the rest of the organization's traffic remains unaffected. The type of profile depends on the service: application profiles for signed-up users, and passthrough profiles for companies reselling API access.\n\nThe SDKs support passing the user profile ID as an argument, and the header also works for token counting, Message Batches, and OpenAI SDK compatibility endpoints. This granular control allows for targeted restrictions.\n\nSeveral important caveats exist: profile creation is not idempotent, meaning each call creates a new profile, even if a `reference_id` matches an existing one. Additionally, an old beta header (`user-profiles-2026-09-04`) can hide the new ban fields, requiring its removal.\n\n#ClaudeAPI #Anthropic #AI #DeveloperTools #SaaS #TechNews\n\nSource: DEV",
+  "tweet": "Anthropic's Claude API now allows individual customer bans, preventing a single user from taking down your entire organization. New user profiles enable granular enforcement, but the notification webhook isn't live yet. #ClaudeAPI #AI #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/claudes-api-can-now-ban-one-customer-instead-of-your-whole-org-its-webhook-isnt-live-3mn0",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftytvwo1wx0ecuaccvfyc.png",
+  "orig_title": "Claude's API Can Now Ban One Customer Instead of Your Whole Org. Its Webhook Isn't Live",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/claudes-api-can-now-ban-one-customer-instead-of-your-whole-org-its-webhook-isnt-live-3mn0",
+   "https://dev.to/sungwoo_lee_e0f26be4a29fd/claude-code-automation-publish-gates-blocked-23-bad-posts-in-10-days-5fh3",
+   "https://dev.to/sungwoo_lee_e0f26be4a29fd/4474-of-5369-output-tokens-were-thinking-reading-claude-api-errors-490h"
+  ],
+  "cluster_titles": [
+   "Claude's API Can Now Ban One Customer Instead of Your Whole Org. Its Webhook Isn't Live",
+   "Claude Code Automation: Publish Gates Blocked 23 Bad Posts in 10 Days",
+   "4,474 of 5,369 Output Tokens Were Thinking: Reading Claude API Errors"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261025-1107-1-claude-api-now-allows-banning-individual-cus.png",
+   "20261025-1107-1-claude-api-now-allows-banning-individual-cus-d1.png",
+   "20261025-1107-1-claude-api-now-allows-banning-individual-cus-d2.png",
+   "20261025-1107-1-claude-api-now-allows-banning-individual-cus-d3.png",
+   "20261025-1107-1-claude-api-now-allows-banning-individual-cus-d4.png"
+  ]
+ }
+]

@@ -1,1 +1,108 @@
-[]
+[
+ {
+  "topic": "ai agent development and deployment challenges",
+  "headline_marked": "[[Cloudflare D1 Write Limit]] Nearly Broke Sanctions App; Here's How It Was Fixed",
+  "headline": "Cloudflare D1 Write Limit Nearly Broke Sanctions App; Here's How It Was Fixed",
+  "summary": "A developer's sanctions compliance app hit Cloudflare D1's 100,000 daily write limit. Learn the architecture changes and WHERE clause tricks that saved the day.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer built a sanctions compliance engine using Cloudflare Workers and D1, designed for speed and low cost. The app checks names against global sanctions lists, but quickly ran into a major roadblock: Cloudflare D1's free tier limit of 100,000 row writes per day.",
+   "The issue arose from a naive 'upsert' approach, where the developer assumed that `INSERT ... ON CONFLICT DO UPDATE` would only incur costs for actual changes. However, D1 charges for the `INSERT` attempt itself, leading to the daily limit being exhausted before lunch when processing large datasets like the UN consolidated list and GLEIF database.",
+   "To overcome this, a three-layer approach was implemented. The first fix involved optimizing the `ON CONFLICT DO UPDATE` statement with a `WHERE` clause. This ensures that a write operation only occurs if the data has actually changed, significantly reducing unnecessary writes for records that remain the same.",
+   "The second crucial change was implementing chunking and a `MAX_PAGES_PER_RUN` limit. Instead of ingesting massive datasets all at once, the process was broken down into smaller, manageable batches. This prevents hitting the daily quota in a single run and allows for incremental backfilling.",
+   "A third architectural adjustment involved decoupling the fetch and parse/ingest phases. Data is first downloaded to Cloudflare R2 object storage, which has a generous free tier. The parsing and ingestion into D1 then happens from R2. This separation ensures that if D1 hits a quota limit, the data fetch is still successful, and the ingest can be retried later.",
+   "The developer shared a practical tip for checking the database status before a heavy job: run `npx wrangler d1 execute compliance-db --remote --command=\"SELECT COUNT(*) FROM sanctions\"`. If the command fails with a 7500 or 7403 error code, it indicates the database is in read-only mode due to quota limits.",
+   "Ultimately, Cloudflare D1 is presented as an excellent choice for read-heavy edge applications but not for heavy ingestion pipelines. The key takeaway for developers using D1 for similar tasks is that idempotent upserts and strict batch sizes are essential for maintaining an operational application."
+  ],
+  "caption": "Cloudflare D1's free tier daily write limit of 100,000 rows nearly broke a sanctions app. Learn the clever fixes that saved it.\n\nA developer built a sanctions compliance engine using Cloudflare Workers and D1, designed for speed and low cost. The app checks names against global sanctions lists, but quickly ran into a major roadblock: Cloudflare D1's free tier limit of 100,000 row writes per day.\n\nThe issue arose from a naive 'upsert' approach, where the developer assumed that `INSERT ... ON CONFLICT DO UPDATE` would only incur costs for actual changes. However, D1 charges for the `INSERT` attempt itself, leading to the daily limit being exhausted before lunch when processing large datasets like the UN consolidated list and GLEIF database.\n\nTo overcome this, a three-layer approach was implemented. The first fix involved optimizing the `ON CONFLICT DO UPDATE` statement with a `WHERE` clause. This ensures that a write operation only occurs if the data has actually changed, significantly reducing unnecessary writes for records that remain the same.\n\nThe second crucial change was implementing chunking and a `MAX_PAGES_PER_RUN` limit. Instead of ingesting massive datasets all at once, the process was broken down into smaller, manageable batches. This prevents hitting the daily quota in a single run and allows for incremental backfilling.\n\nA third architectural adjustment involved decoupling the fetch and parse/ingest phases. Data is first downloaded to Cloudflare R2 object storage, which has a generous free tier. The parsing and ingestion into D1 then happens from R2. This separation ensures that if D1 hits a quota limit, the data fetch is still successful, and the ingest can be retried later.\n\nThe developer shared a practical tip for checking the database status before a heavy job: run `npx wrangler d1 execute compliance-db --remote --command=\"SELECT COUNT(*) FROM sanctions\"`. If the command fails with a 7500 or 7403 error code, it indicates the database is in read-only mode due to quota limits.\n\n#Cloudflare #D1 #DevOps #Database #CloudComputing\n\nSource: DEV",
+  "tweet": "Cloudflare D1's 100K daily write limit almost took down a sanctions app. Developer shares fixes: WHERE clause optimization, chunking, and R2 decoupling. Essential reading for D1 users! #Cloudflare #D1 #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "cloudflare.com",
+  "source": "DEV",
+  "url": "https://dev.to/alexcodebytes/how-cloudflare-d1s-daily-write-limit-almost-broke-my-sanctions-app-and-how-i-fixed-it-4b06",
+  "image": "",
+  "orig_title": "How Cloudflare D1's Daily Write Limit Almost Broke My Sanctions App (and How I Fixed It)",
+  "cluster_urls": [
+   "https://dev.to/alexcodebytes/how-cloudflare-d1s-daily-write-limit-almost-broke-my-sanctions-app-and-how-i-fixed-it-4b06",
+   "https://dev.to/almabear/selecting-precision-bearings-for-high-rpm-machinery-a-mechanical-engineers-guide-470d",
+   "https://dev.to/madhavsharma99/why-websites-should-be-printable-according-to-a-new-blog-post-1icf",
+   "https://dev.to/neolix/you-cant-teach-a-variable-with-a-maths-problem-161k",
+   "https://dev.to/bala_paranj_059d338e44e7e/generation-is-not-solved-what-googles-new-sdlc-paper-gets-wrong-about-ai-assisted-development-3gpp",
+   "https://dev.to/chiragagg5k/keeping-track-of-your-agents-work-1g28",
+   "https://dev.to/cevahir/any-update-we-read-2398-github-issues-to-see-who-gets-an-answer-2g2g",
+   "https://dev.to/paifamily/what-3-am-teaches-a-machine-432p",
+   "https://dev.to/yesorno_randomgenerator_1/how-to-build-a-fair-yesno-spinning-wheel-with-javascript-4715",
+   "https://dev.to/koda2026/day-6-of-building-hyna-stage-the-kavlr-chronicles-a-90-article-ai-constitution-built-on-a-150-14i1",
+   "https://dev.to/alifar/agentic-search-may-be-the-bigger-opportunity-than-geo-but-measurement-comes-first-h96",
+   "https://dev.to/ekocam/we-ran-an-ai-agent-swarm-on-claude-opus-for-98-a-single-25-cent-call-gave-the-same-forecast-1if7"
+  ],
+  "cluster_titles": [
+   "How Cloudflare D1's Daily Write Limit Almost Broke My Sanctions App (and How I Fixed It)",
+   "Selecting Precision Bearings for High-RPM Machinery: A Mechanical Engineer's Guide",
+   "Why Websites Should Be Printable, According to a New Blog Post",
+   "You can't teach a variable with a maths problem",
+   "Generation is Not Solved: What Google's New SDLC Paper Gets Wrong About AI-Assisted Development",
+   "Keeping track of your agent's work",
+   "\"Any Update?\" We Read 2,398 GitHub Issues to See Who Gets an Answer",
+   "What 3 A.M. Teaches a Machine",
+   "How to Build a Fair Yes/No Spinning Wheel with JavaScript",
+   "Day 6 of Building HYNA-Stage: The KAVLR Chronicles & A 90-Article AI Constitution Built on a $150 Phone 🐯🛡️",
+   "Agentic Search May Be the Bigger Opportunity Than GEO, but Measurement Comes First",
+   "We ran an AI agent swarm on Claude Opus for $98. A single 2.5-cent call gave the same forecast"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261026-1854-0-cloudflare-d1-write-limit-nearly-broke-sanct.png",
+   "20261026-1854-0-cloudflare-d1-write-limit-nearly-broke-sanct-d1.png",
+   "20261026-1854-0-cloudflare-d1-write-limit-nearly-broke-sanct-d2.png",
+   "20261026-1854-0-cloudflare-d1-write-limit-nearly-broke-sanct-d3.png",
+   "20261026-1854-0-cloudflare-d1-write-limit-nearly-broke-sanct-d4.png"
+  ]
+ },
+ {
+  "topic": "iphone duo cracking and screen failures",
+  "headline_marked": "[[iPhone Duo]] can run Shortcuts automations when opened or closed",
+  "headline": "iPhone Duo can run Shortcuts automations when opened or closed",
+  "summary": "New video shows the foldable iPhone's ability to trigger custom actions based on its physical state, adding a new layer of functionality.",
+  "category": "APPLE",
+  "template": "launch",
+  "details": [
+   "A new demonstration video reveals that the upcoming iPhone Duo can be programmed to execute specific automations through the Shortcuts app, depending on whether the device is opened or closed.",
+   "This feature allows users to set up custom actions, such as launching specific applications or triggering notifications, based on the phone's physical orientation.",
+   "The video showcases the setup process within the Shortcuts app, highlighting the 'When iPhone is Opened' or 'When iPhone is Closed' triggers.",
+   "This capability adds a dynamic layer of interaction to the foldable device, potentially enhancing user experience and multitasking efficiency.",
+   "While the iPhone Duo's durability and screen integrity have been questioned in teardown analyses, this new functionality demonstrates a unique software integration for foldable form factors."
+  ],
+  "caption": "The iPhone Duo is getting a new trick: it can run custom automations based on whether it's open or closed.\n\nA new demonstration video reveals that the upcoming iPhone Duo can be programmed to execute specific automations through the Shortcuts app, depending on whether the device is opened or closed.\n\nThis feature allows users to set up custom actions, such as launching specific applications or triggering notifications, based on the phone's physical orientation.\n\nThe video showcases the setup process within the Shortcuts app, highlighting the 'When iPhone is Opened' or 'When iPhone is Closed' triggers.\n\nThis capability adds a dynamic layer of interaction to the foldable device, potentially enhancing user experience and multitasking efficiency.\n\nWhile the iPhone Duo's durability and screen integrity have been questioned in teardown analyses, this new functionality demonstrates a unique software integration for foldable form factors.\n\n#iPhoneDuo #Apple #FoldablePhone #Shortcuts #TechNews\n\nSource: 9to5Mac, Engadget",
+  "tweet": "The iPhone Duo can now run custom Shortcuts automations when you open or close it! 🤯 This adds a new level of dynamic interaction to the foldable device. #iPhoneDuo #Apple #Shortcuts",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac, Engadget",
+  "url": "https://9to5mac.com/2026/10/26/watch-the-iphone-duo-run-a-shortcuts-automation-when-it-is-opened-or-closed-video/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/10/iPhone-Duo-allows-Shortcuts-automations-based-on-opening-or-closing-it.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Watch the iPhone Duo run a Shortcuts automation when it is opened or closed [Video]",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/10/26/watch-the-iphone-duo-run-a-shortcuts-automation-when-it-is-opened-or-closed-video/",
+   "https://www.engadget.com/2296498/ifixit-teardown-of-iphone-duo-shows-potential-causes-for-cracked-screens/",
+   "https://9to5mac.com/2026/10/26/iphone-duo-tested-to-destruction-including-removing-nanotexture-layer/"
+  ],
+  "cluster_titles": [
+   "Watch the iPhone Duo run a Shortcuts automation when it is opened or closed [Video]",
+   "iFixit's teardown of the iPhone Duo shows potential causes for cracked screens",
+   "iPhone Duo tested to destruction, including removing nanotexture layer"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20261026-1854-1-iphone-duo-can-run-shortcuts-automations-whe.png",
+   "20261026-1854-1-iphone-duo-can-run-shortcuts-automations-whe-d1.png",
+   "20261026-1854-1-iphone-duo-can-run-shortcuts-automations-whe-d2.png"
+  ]
+ }
+]

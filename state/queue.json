@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "nvidia gpus hacked to remove ai throttle",
+  "headline_marked": "[[Nvidia RTX GPUs]] hacked to remove AI speed limits",
+  "headline": "Nvidia RTX GPUs hacked to remove AI speed limits",
+  "summary": "Modders exploit a firmware vulnerability to unlock full AI performance on RTX 20, 30, and 40-series graphics cards, potentially doubling tensor rates.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A firmware exploit has been discovered by modders that allows for the removal of imposed half-speed AI performance limits on Nvidia RTX 20, 30, and 40-series GPUs. This unlock can potentially double the peak tensor rate on cards like the RTX 4090 and significantly improve matrix math performance on others.",
+   "Nvidia had implemented a limit across these GeForce generations, causing FP32-accumulate math to run at half the FP16-accumulate rate. This limitation did not apply to Nvidia's professional Quadro cards. The unlock restores native matrix-math throughput, which can accelerate AI tasks such as prompt processing and image generation.",
+   "Multiple projects are offering these unlocks, with unofficial Linux modules and experimental Windows builds available. The gpu-unlock project covers Ampere cards (RTX 30-series), while gpu-unlock-ada targets the RTX 4090 and some other 40-series models. The turing-unlock project is adapted for the RTX 2080 Ti.",
+   "While peak tensor rates can double, real-world application performance gains are less dramatic. For instance, chatbot token speeds remain largely unchanged as they are more dependent on memory bandwidth. However, benchmarks show significant improvements in matrix-multiply operations, with gains up to 80% or more reported on certain cards and configurations.",
+   "The exploit leverages a buffer overflow in Nvidia's signed SEC2 'Booter' firmware. This allows modders to run code in a secure mode, overriding the speed selector registers that enforce the AI performance limits. The process involves resetting the card before the official Nvidia driver binds to it.",
+   "Users should exercise extreme caution, as the modding process carries risks. Warnings indicate that it 'may damage your hardware,' potentially leading to hangs, boot failures, data corruption, or permanent damage to the GPU or host system."
+  ],
+  "caption": "Nvidia RTX 20, 30, and 40-series GPUs can now have their AI speed limits removed via a firmware exploit.\n\nA firmware exploit has been discovered by modders that allows for the removal of imposed half-speed AI performance limits on Nvidia RTX 20, 30, and 40-series GPUs. This unlock can potentially double the peak tensor rate on cards like the RTX 4090 and significantly improve matrix math performance on others.\n\nNvidia had implemented a limit across these GeForce generations, causing FP32-accumulate math to run at half the FP16-accumulate rate. This limitation did not apply to Nvidia's professional Quadro cards. The unlock restores native matrix-math throughput, which can accelerate AI tasks such as prompt processing and image generation.\n\nMultiple projects are offering these unlocks, with unofficial Linux modules and experimental Windows builds available. The gpu-unlock project covers Ampere cards (RTX 30-series), while gpu-unlock-ada targets the RTX 4090 and some other 40-series models. The turing-unlock project is adapted for the RTX 2080 Ti.\n\nWhile peak tensor rates can double, real-world application performance gains are less dramatic. For instance, chatbot token speeds remain largely unchanged as they are more dependent on memory bandwidth. However, benchmarks show significant improvements in matrix-multiply operations, with gains up to 80% or more reported on certain cards and configurations.\n\nThe exploit leverages a buffer overflow in Nvidia's signed SEC2 'Booter' firmware. This allows modders to run code in a secure mode, overriding the speed selector registers that enforce the AI performance limits. The process involves resetting the card before the official Nvidia driver binds to it.\n\nUsers should exercise extreme caution, as the modding process carries risks. Warnings indicate that it 'may damage your hardware,' potentially leading to hangs, boot failures, data corruption, or permanent damage to the GPU or host system.\n\n#Nvidia #RTX #AI #GPU #TechHacks\n\nSource: Tom's Hardware",
+  "tweet": "Nvidia RTX GPUs hacked to remove AI speed limits! Modders found a firmware exploit to unlock full AI performance on 20, 30, & 40-series cards, potentially doubling tensor rates. Proceed with caution! #Nvidia #RTX #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-20-30-and-40-series-gpus-hacked-to-remove-a-half-speed-ai-throttle-firmware-exploit-doubles-rtx-4090s-peak-tensor-rate-lifts-rtx-3090-ti-matrix-math-up-to-80-percent",
+  "image": "https://cdn.mos.cms.futurecdn.net/4Yvp7ck4v6d8JPBoNXVPfe-1920-80.jpg",
+  "orig_title": "Nvidia RTX 20, 30, and 40-series GPUs hacked to remove a half-speed AI throttle",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/gpus/nvidia-rtx-20-30-and-40-series-gpus-hacked-to-remove-a-half-speed-ai-throttle-firmware-exploit-doubles-rtx-4090s-peak-tensor-rate-lifts-rtx-3090-ti-matrix-math-up-to-80-percent"
+  ],
+  "cluster_titles": [
+   "Nvidia RTX 20, 30, and 40-series GPUs hacked to remove a half-speed AI throttle"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261026-1706-0-nvidia-rtx-gpus-hacked-to-remove-ai-speed-li.png",
+   "20261026-1706-0-nvidia-rtx-gpus-hacked-to-remove-ai-speed-li-d1.png",
+   "20261026-1706-0-nvidia-rtx-gpus-hacked-to-remove-ai-speed-li-d2.png",
+   "20261026-1706-0-nvidia-rtx-gpus-hacked-to-remove-ai-speed-li-d3.png"
+  ]
+ },
+ {
+  "topic": "local ai agent organizes downloads and creates social media content",
+  "headline_marked": "[[SlothSort]] AI agent organizes your local files offline",
+  "headline": "SlothSort AI agent organizes your local files offline",
+  "summary": "This open-source AI agent uses Gemma and Ollama to sort your downloads folder, suggesting filenames and moving files into sensible directories without uploading your data.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Tired of a cluttered Downloads folder filled with files like 'final_final_v2.zip' and 'IMG_8841.png'? A new open-source AI agent called SlothSort aims to solve this problem by automating file organization.",
+   "SlothSort is a local AI agent designed to read supported file contents, suggest meaningful filenames, and move files into sensible folders. Crucially, it never deletes files and logs every operation, allowing users to undo changes.",
+   "The agent is built using Python, Gemma via Ollama, and SQLite, with an optional PDF reader. By running Gemma locally through Ollama, SlothSort can process content on your machine without needing to upload private documents like resumes or financial records to cloud AI services.",
+   "This approach ensures greater data privacy and allows for offline operation once the model and dependencies are installed. Open-weight AI also provides the flexibility to experiment with different models and customize the workflow.",
+   "The developer highlights that reliable AI automation requires more than just a good prompt. SlothSort incorporates features like validating model output, previewing changes, and supporting undo functionality to enhance safety and usability.",
+   "The ultimate goal of SlothSort is to reduce the time spent on tedious file organization, allowing users to focus on more important tasks while the AI handles the 'boring stuff'."
+  ],
+  "caption": "Tired of messy downloads? This AI agent organizes your files locally, keeping your data private.\n\nTired of a cluttered Downloads folder filled with files like 'final_final_v2.zip' and 'IMG_8841.png'? A new open-source AI agent called SlothSort aims to solve this problem by automating file organization.\n\nSlothSort is a local AI agent designed to read supported file contents, suggest meaningful filenames, and move files into sensible folders. Crucially, it never deletes files and logs every operation, allowing users to undo changes.\n\nThe agent is built using Python, Gemma via Ollama, and SQLite, with an optional PDF reader. By running Gemma locally through Ollama, SlothSort can process content on your machine without needing to upload private documents like resumes or financial records to cloud AI services.\n\nThis approach ensures greater data privacy and allows for offline operation once the model and dependencies are installed. Open-weight AI also provides the flexibility to experiment with different models and customize the workflow.\n\nThe developer highlights that reliable AI automation requires more than just a good prompt. SlothSort incorporates features like validating model output, previewing changes, and supporting undo functionality to enhance safety and usability.\n\nThe ultimate goal of SlothSort is to reduce the time spent on tedious file organization, allowing users to focus on more important tasks while the AI handles the 'boring stuff'.\n\n#AI #OpenSource #DevTools #FileManagement #Gemma #Ollama\n\nSource: DEV",
+  "tweet": "Introducing SlothSort: a local AI agent that organizes your files offline! \n\nIt reads file contents, suggests filenames, and moves files into sensible folders, all while keeping your data private. Built with Python, Gemma, and Ollama. #AI #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ybrijwasi1010/slothsort-2efe",
+  "image": "",
+  "orig_title": "SlothSort",
+  "cluster_urls": [
+   "https://dev.to/ybrijwasi1010/slothsort-2efe",
+   "https://dev.to/mattiamaggioni/our-app-runs-its-own-instagram-accounts-how-the-autopilot-works-and-week-1s-real-numbers-264d"
+  ],
+  "cluster_titles": [
+   "SlothSort",
+   "Our app runs its own Instagram accounts: how the autopilot works, and week 1's real numbers"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261026-1706-1-slothsort-ai-agent-organizes-your-local-file.png",
+   "20261026-1706-1-slothsort-ai-agent-organizes-your-local-file-d1.png",
+   "20261026-1706-1-slothsort-ai-agent-organizes-your-local-file-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "docker push for ai agents",
+  "headline_marked": "[[Docker Agent]] lets you package & share AI agents as OCI artifacts",
+  "headline": "Docker Agent lets you package & share AI agents as OCI artifacts",
+  "summary": "Docker Agent, a new CLI plugin, allows developers to define, run, and share AI agents as OCI artifacts, leveraging the same lifecycle as container images for reproducibility and collaboration.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Docker Agent is a new CLI plugin that transforms AI agents into OCI artifacts. This allows agents to be defined in YAML, run with `docker agent run`, and then shared via `docker agent share push` to any OCI-compatible registry.",
+   "By using the OCI artifact format, agents gain the same lifecycle as container images, including push, pull, sign, and pin by digest. This directly addresses the \"snowflake agent\" problem, making agent setups reproducible and easily shareable across teams.",
+   "Developed by Docker Engineering, this open-source tool is described as an \"AI Agent Builder and Runtime.\" It integrates seamlessly into the existing Docker CLI, offering declarative YAML configuration, a rich tool ecosystem, and multi-agent orchestration capabilities.",
+   "The project is highly active, boasting over eleven thousand commits and 4.6k stars, with a rapid release cadence (e.g., v1.152.0 in late 2026). Installation is straightforward, requiring no complex setup as it's a Docker plugin.",
+   "Docker Agent supports a wide range of model providers, including OpenAI, Anthropic, Gemini, AWS Bedrock, Mistral, xAI, and Docker Model Runner for local models. It also allows custom OpenAI-compatible endpoints, requiring at least one API key or local endpoint to function.",
+   "Agents are defined by a model, a description, a system prompt, and toolsets (like DuckDuckGo search via `docker:duckduckgo`). The `docker agent run` command executes these agents, with options for selecting specific agents from multi-agent files or skipping the UI for scripting.",
+   "To overcome the limitations of single agents, Docker Agent supports multi-agent configurations. This enables complex tasks to be broken down, with a central coordinator delegating work to specialized agents.",
+   "Multi-agent setups can employ delegation, where a coordinator distributes tasks and synthesizes results, or handoffs, where the conversation flows sequentially through a chain of agents. Both approaches can be combined, and task transfers in delegation are automatically approved."
+  ],
+  "caption": "Docker Agent lets you package, share, and run AI agents just like container images. It solves the \"snowflake agent\" problem for good.\n\nDocker Agent is a new CLI plugin that transforms AI agents into OCI artifacts. This allows agents to be defined in YAML, run with `docker agent run`, and then shared via `docker agent share push` to any OCI-compatible registry.\n\nBy using the OCI artifact format, agents gain the same lifecycle as container images, including push, pull, sign, and pin by digest. This directly addresses the \"snowflake agent\" problem, making agent setups reproducible and easily shareable across teams.\n\nDeveloped by Docker Engineering, this open-source tool is described as an \"AI Agent Builder and Runtime.\" It integrates seamlessly into the existing Docker CLI, offering declarative YAML configuration, a rich tool ecosystem, and multi-agent orchestration capabilities.\n\nThe project is highly active, boasting over eleven thousand commits and 4.6k stars, with a rapid release cadence (e.g., v1.152.0 in late 2026). Installation is straightforward, requiring no complex setup as it's a Docker plugin.\n\nDocker Agent supports a wide range of model providers, including OpenAI, Anthropic, Gemini, AWS Bedrock, Mistral, xAI, and Docker Model Runner for local models. It also allows custom OpenAI-compatible endpoints, requiring at least one API key or local endpoint to function.\n\nAgents are defined by a model, a description, a system prompt, and toolsets (like DuckDuckGo search via `docker:duckduckgo`). The `docker agent run` command executes these agents, with options for selecting specific agents from multi-agent files or skipping the UI for scripting.\n\nTo overcome the limitations of single agents, Docker Agent supports multi-agent configurations. This enables complex tasks to be broken down, with a central coordinator delegating work to specialized agents.\n\n#Docker #AIAgents #Developers #Containerization #OpenSource #Tech\n\nSource: DEV",
+  "tweet": "Docker Agent is here! Package & share AI agents as OCI artifacts, just like container images. Define in YAML, run with `docker agent run`, and push to any OCI registry. Solves the \"snowflake agent\" problem for reproducible, shareable AI. #Docker #AIAgents #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "docker.com",
+  "source": "DEV",
+  "url": "https://dev.to/drdocker/docker-push-works-on-ai-agents-now-3k70",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbrsk2bj7ay7mi70xrntm.webp",
+  "orig_title": "`docker push` Works on AI Agents Now",
+  "cluster_urls": [
+   "https://dev.to/drdocker/docker-push-works-on-ai-agents-now-3k70"
+  ],
+  "cluster_titles": [
+   "`docker push` Works on AI Agents Now"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261026-1108-0-docker-agent-lets-you-package-share-ai-agent.png",
+   "20261026-1108-0-docker-agent-lets-you-package-share-ai-agent-d1.png",
+   "20261026-1108-0-docker-agent-lets-you-package-share-ai-agent-d2.png",
+   "20261026-1108-0-docker-agent-lets-you-package-share-ai-agent-d3.png"
+  ]
+ },
+ {
+  "topic": "ai agent bill of materials github",
+  "headline_marked": "[[Agent Bill of Materials]] crystallizes, GitHub trending repos show",
+  "headline": "Agent Bill of Materials crystallizes, GitHub trending repos show",
+  "summary": "The agent infrastructure stack has solidified into five core layers, with open-source projects now leading each. This 'Agent Bill of Materials' (ABOM) marks a shift from choosing frameworks to identifying missing components.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The theory phase for AI agents is over, with GitHub trending repositories revealing a crystallized five-layer 'Agent Bill of Materials' (ABOM). This framework enumerates essential components like models, memory, skills, sandboxing, and routing, with open-source projects now established incumbents in each layer.",
+   "An arXiv security survey first proposed the ABOM concept, but it has rapidly materialized into concrete tooling. Projects like Cloudflare's security-audit-skill, claude-mem for memory, NVIDIA's OpenShell for isolation, FreeLLMAPI for routing, and Hallmark for skill gating are leading their respective layers.",
+   "The ABOM framing is crucial, shifting the focus from 'which framework?' to 'which layers are we missing?' Teams neglecting essential infrastructure, such as a sandbox, are accumulating significant architectural debt, akin to shipping a web app without HTTPS.",
+   "While the model layer is understood, the real engineering challenge lies in the surrounding four layers. Cost compression in models means that memory, skills, sandboxing, and routing are becoming the key differentiators for production agents.",
+   "Agent memory, in particular, highlights the gap between demos and production. claude-mem has emerged as an open-source leader with 103K stars, offering persistent memory compression. However, the memory space is contested, with various benchmarks and abstraction debates ongoing.",
+   "The implication of commoditized models is clear: teams over-investing in model selection and under-investing in surrounding infrastructure are optimizing the wrong components. The architecture around the model is the true product."
+  ],
+  "caption": "The AI agent infrastructure stack has solidified into five core layers, with open-source projects now leading each. This 'Agent Bill of Materials' (ABOM) marks a shift from choosing frameworks to identifying missing components.\n\nThe theory phase for AI agents is over, with GitHub trending repositories revealing a crystallized five-layer 'Agent Bill of Materials' (ABOM). This framework enumerates essential components like models, memory, skills, sandboxing, and routing, with open-source projects now established incumbents in each layer.\n\nAn arXiv security survey first proposed the ABOM concept, but it has rapidly materialized into concrete tooling. Projects like Cloudflare's security-audit-skill, claude-mem for memory, NVIDIA's OpenShell for isolation, FreeLLMAPI for routing, and Hallmark for skill gating are leading their respective layers.\n\nThe ABOM framing is crucial, shifting the focus from 'which framework?' to 'which layers are we missing?' Teams neglecting essential infrastructure, such as a sandbox, are accumulating significant architectural debt, akin to shipping a web app without HTTPS.\n\nWhile the model layer is understood, the real engineering challenge lies in the surrounding four layers. Cost compression in models means that memory, skills, sandboxing, and routing are becoming the key differentiators for production agents.\n\nAgent memory, in particular, highlights the gap between demos and production. claude-mem has emerged as an open-source leader with 103K stars, offering persistent memory compression. However, the memory space is contested, with various benchmarks and abstraction debates ongoing.\n\nThe implication of commoditized models is clear: teams over-investing in model selection and under-investing in surrounding infrastructure are optimizing the wrong components. The architecture around the model is the true product.\n\n#AI #Agent #OpenSource #GitHub #LLM\n\nSource: DEV",
+  "tweet": "The AI agent infrastructure stack has solidified into five core layers, with open-source projects now leading each. This 'Agent Bill of Materials' (ABOM) marks a shift from choosing frameworks to identifying missing components. #AI #Agent #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/max_quimby/the-agent-bill-of-materials-is-on-github-right-now-2c9j",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F5k5gknl1vzez9rr3npk8.png",
+  "orig_title": "The Agent Bill of Materials Is on GitHub Right Now",
+  "cluster_urls": [
+   "https://dev.to/max_quimby/the-agent-bill-of-materials-is-on-github-right-now-2c9j"
+  ],
+  "cluster_titles": [
+   "The Agent Bill of Materials Is on GitHub Right Now"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261026-1108-1-agent-bill-of-materials-crystallizes-github-.png",
+   "20261026-1108-1-agent-bill-of-materials-crystallizes-github--d1.png",
+   "20261026-1108-1-agent-bill-of-materials-crystallizes-github--d2.png",
+   "20261026-1108-1-agent-bill-of-materials-crystallizes-github--d3.png"
+  ]
+ }
+]

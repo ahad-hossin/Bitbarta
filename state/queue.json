@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "how to merge pdf files offline",
+  "headline_marked": "[[Pin the Dataset]] and Rubric Before Grading",
+  "headline": "Pin the Dataset and Rubric Before Grading",
+  "summary": "A new workflow ensures benchmark reproducibility by hashing inputs and pre-registering agreement thresholds, preventing score manipulation.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Reproducible benchmarks are crucial for accurate AI model evaluation, but current methods often lack transparency. This article proposes a workflow that \"pins\" the dataset and rubric by hash before any grading begins, ensuring that the exact inputs used for evaluation are preserved and auditable.",
+   "By hashing the task file, rubric, and judge prompt, any changes to these critical components are immediately detectable. This prevents subtle shifts, like line endings or JSON key order, from artificially inflating benchmark scores and creating a false impression of progress.",
+   "The proposed method also includes pre-registering a minimum agreement threshold between graders. This practical step makes the re-run decision auditable by others, preventing analysts from selectively excluding ambiguous tasks after seeing them fail to improve scores.",
+   "The workflow utilizes only Python's standard library, making it accessible and free from network calls. It exits with specific error codes if hash drift or insufficient grader agreement is detected, providing clear feedback on failed runs.",
+   "This approach aims to provide a more honest and reliable method for evaluating AI models, moving beyond single-number scores to a process that accounts for the integrity of the data and the consistency of the evaluation itself.",
+   "MonkeyCode offers free model access and server options to facilitate running two independent grading passes, which is essential for measuring correctness rather than just style consistency. This lowers the barrier to entry for implementing the proposed harness and manifest system."
+  ],
+  "caption": "Benchmark scores can be misleading. Learn how to ensure reproducibility by pinning datasets and grading the graders themselves.\n\nReproducible benchmarks are crucial for accurate AI model evaluation, but current methods often lack transparency. This article proposes a workflow that \"pins\" the dataset and rubric by hash before any grading begins, ensuring that the exact inputs used for evaluation are preserved and auditable.\n\nBy hashing the task file, rubric, and judge prompt, any changes to these critical components are immediately detectable. This prevents subtle shifts, like line endings or JSON key order, from artificially inflating benchmark scores and creating a false impression of progress.\n\nThe proposed method also includes pre-registering a minimum agreement threshold between graders. This practical step makes the re-run decision auditable by others, preventing analysts from selectively excluding ambiguous tasks after seeing them fail to improve scores.\n\nThe workflow utilizes only Python's standard library, making it accessible and free from network calls. It exits with specific error codes if hash drift or insufficient grader agreement is detected, providing clear feedback on failed runs.\n\nThis approach aims to provide a more honest and reliable method for evaluating AI models, moving beyond single-number scores to a process that accounts for the integrity of the data and the consistency of the evaluation itself.\n\nMonkeyCode offers free model access and server options to facilitate running two independent grading passes, which is essential for measuring correctness rather than just style consistency. This lowers the barrier to entry for implementing the proposed harness and manifest system.\n\n#AI #MachineLearning #DataScience #SoftwareDevelopment #Benchmarks\n\nSource: DEV",
+  "tweet": "Benchmark scores can be misleading. Learn how to ensure reproducibility by pinning datasets and grading the graders themselves. #AI #MachineLearning #DataScience",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/apppro_5726/pin-the-dataset-then-grade-the-grader-23cc",
+  "image": "",
+  "orig_title": "Pin the Dataset, Then Grade the Grader",
+  "cluster_urls": [
+   "https://dev.to/apppro_5726/pin-the-dataset-then-grade-the-grader-23cc",
+   "https://dev.to/openpdfedit/how-to-compare-two-pdfs-and-see-what-changed-37nm",
+   "https://dev.to/openpdfedit/how-to-merge-pdf-files-offline-without-uploading-them-2k4e"
+  ],
+  "cluster_titles": [
+   "Pin the Dataset, Then Grade the Grader",
+   "How to compare two PDFs and see what changed",
+   "How to merge PDF files offline, without uploading them"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261026-1811-0-pin-the-dataset-and-rubric-before-grading.png",
+   "20261026-1811-0-pin-the-dataset-and-rubric-before-grading-d1.png",
+   "20261026-1811-0-pin-the-dataset-and-rubric-before-grading-d2.png",
+   "20261026-1811-0-pin-the-dataset-and-rubric-before-grading-d3.png"
+  ]
+ },
+ {
+  "topic": "elvis presley estate sues anthropic for copyright infringement",
+  "headline_marked": "Elvis Presley Estate [[Sues Anthropic]] Over AI Training Data",
+  "headline": "Elvis Presley Estate Sues Anthropic Over AI Training Data",
+  "summary": "The estate claims Anthropic's AI models were trained on over 250 Elvis songs, demanding $41 million in compensation.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "The estate of Elvis Presley has filed a lawsuit against AI company Anthropic, alleging copyright infringement.",
+   "According to court documents, Anthropic's AI models were allegedly trained on more than 250 Elvis Presley songs without proper authorization.",
+   "The lawsuit seeks $41 million in compensation for the alleged unauthorized use of the music.",
+   "This case highlights the growing concerns around the use of copyrighted material in the training of large language models."
+  ],
+  "caption": "The King of Rock and Roll's music is at the center of a new AI copyright battle.\n\nThe estate of Elvis Presley has filed a lawsuit against AI company Anthropic, alleging copyright infringement.\n\nAccording to court documents, Anthropic's AI models were allegedly trained on more than 250 Elvis Presley songs without proper authorization.\n\nThe lawsuit seeks $41 million in compensation for the alleged unauthorized use of the music.\n\nThis case highlights the growing concerns around the use of copyrighted material in the training of large language models.\n\n#AI #Copyright #ElvisPresley #Anthropic #Lawsuit\n\nSource: Engadget",
+  "tweet": "The Elvis Presley estate is suing AI firm Anthropic for allegedly training its models on over 250 songs without permission, demanding $41 million. #AI #Copyright #ElvisPresley",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2296535/elvis-presley-estate-suing-ai-company-for-copyright-infringement/",
+  "image": "https://www.engadget.com/img/gallery/elvis-presleys-estate-is-suing-anthropic-over-copyright-infringement/l-intro-1793013810.jpg",
+  "orig_title": "Elvis Presley's estate is suing Anthropic over copyright infringement",
+  "cluster_urls": [
+   "https://www.engadget.com/2296535/elvis-presley-estate-suing-ai-company-for-copyright-infringement/"
+  ],
+  "cluster_titles": [
+   "Elvis Presley's estate is suing Anthropic over copyright infringement"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20261026-1811-1-elvis-presley-estate-sues-anthropic-over-ai-.png",
+   "20261026-1811-1-elvis-presley-estate-sues-anthropic-over-ai--d1.png"
+  ]
+ }
+]

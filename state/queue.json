@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "black october security incidents highlight need for passkeys and 2fa",
+  "headline_marked": "[[Black October 2026 exposes critical vulnerabilities]], urging wider adoption of Passkeys and 2FA",
+  "headline": "Black October 2026 exposes critical vulnerabilities, urging wider adoption of Passkeys and 2FA",
+  "summary": "October 2026, dubbed \"Black October,\" saw major security incidents. Passkeys, offering a 93% sign-in success rate, are crucial for blocking common phishing attacks that traditional MFA often misses.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "October 2026, nicknamed \"Black October\" in infosec, was marked by several major incidents and vulnerability disclosures. These events underscore the urgent need for robust authentication methods like passkeys, which directly combat stolen, phished, and replayed passwords.",
+   "Passkeys function as per-site key pairs, with the private key securely stored on your device and only a public key on the server. This design makes them significantly harder to compromise than traditional passwords. The FIDO Alliance's 2026 index reported a 93% success rate for passkey sign-ins, compared to 78% for passwords and traditional MFA.",
+   "While 2FA is beneficial, not all forms offer equal protection; SMS-based codes are particularly vulnerable. These text-based codes can be easily phished or entered into malicious sites, as demonstrated by large campaigns like Mirage2FA and Kali365 in August 2026. Passkeys are designed to block these types of attacks.",
+   "A trade-off with passkeys is potential ecosystem lock-in, which users spanning multiple OS platforms should consider. Research presented at Black Hat, including SpecterOps' \"Pass-the-Passkey,\" highlighted over 20 techniques across various platforms, leading to patches like Microsoft's CVE-2026-34348. This indicates that while passkeys improve security by making attacks local and more expensive, they are not a complete solution on their own.",
+   "Black October coincided with Cybersecurity Awareness Month, which emphasized themes like \"Don't Make It Easy For Them\" and addressing AI-driven risks. It also occurred during Hacktoberfest 2026, now focused on open-source AI and useful contributions rather than pull request volume. The incidents in open-source projects like PHP, Node.js, GitLab, and LiteLLM highlight the ongoing need for community support and secure development practices."
+  ],
+  "caption": "Black October 2026 saw multiple major security incidents and vulnerability disclosures, underscoring the critical need for advanced authentication.\n\nOctober 2026, nicknamed \"Black October\" in infosec, was marked by several major incidents and vulnerability disclosures. These events underscore the urgent need for robust authentication methods like passkeys, which directly combat stolen, phished, and replayed passwords.\n\nPasskeys function as per-site key pairs, with the private key securely stored on your device and only a public key on the server. This design makes them significantly harder to compromise than traditional passwords. The FIDO Alliance's 2026 index reported a 93% success rate for passkey sign-ins, compared to 78% for passwords and traditional MFA.\n\nWhile 2FA is beneficial, not all forms offer equal protection; SMS-based codes are particularly vulnerable. These text-based codes can be easily phished or entered into malicious sites, as demonstrated by large campaigns like Mirage2FA and Kali365 in August 2026. Passkeys are designed to block these types of attacks.\n\nA trade-off with passkeys is potential ecosystem lock-in, which users spanning multiple OS platforms should consider. Research presented at Black Hat, including SpecterOps' \"Pass-the-Passkey,\" highlighted over 20 techniques across various platforms, leading to patches like Microsoft's CVE-2026-34348. This indicates that while passkeys improve security by making attacks local and more expensive, they are not a complete solution on their own.\n\nBlack October coincided with Cybersecurity Awareness Month, which emphasized themes like \"Don't Make It Easy For Them\" and addressing AI-driven risks. It also occurred during Hacktoberfest 2026, now focused on open-source AI and useful contributions rather than pull request volume. The incidents in open-source projects like PHP, Node.js, GitLab, and LiteLLM highlight the ongoing need for community support and secure development practices.\n\n#Cybersecurity #Passkeys #2FA #Infosec #SecurityAwareness #BlackOctober\n\nSource: DEV",
+  "tweet": "Black October 2026 highlighted major security flaws. Passkeys and robust 2FA are now more critical than ever, offering 93% sign-in success rates and blocking common phishing attacks. Protect your accounts. #Cybersecurity #Passkeys #Infosec",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hansel/black-october-is-a-good-reason-to-finally-use-passkeys-and-2fa-303j",
+  "image": "",
+  "orig_title": "Black October Is a Good Reason to Finally Use Passkeys and 2FA",
+  "cluster_urls": [
+   "https://dev.to/hansel/black-october-is-a-good-reason-to-finally-use-passkeys-and-2fa-303j"
+  ],
+  "cluster_titles": [
+   "Black October Is a Good Reason to Finally Use Passkeys and 2FA"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261026-0806-0-black-october-2026-exposes-critical-vulnerab.png",
+   "20261026-0806-0-black-october-2026-exposes-critical-vulnerab-d1.png",
+   "20261026-0806-0-black-october-2026-exposes-critical-vulnerab-d2.png",
+   "20261026-0806-0-black-october-2026-exposes-critical-vulnerab-d3.png"
+  ]
+ },
+ {
+  "topic": "windows SeBackupPrivilege allows privilege escalation",
+  "headline_marked": "[[SeBackupPrivilege reads any file and ignores the access control list]], making backup software a privilege-escalation target",
+  "headline": "SeBackupPrivilege reads any file and ignores the access control list, making backup software a privilege-escalation target",
+  "summary": "Windows' SeBackupPrivilege allows processes to bypass ACLs and read any file, including sensitive system data. This makes accounts with backup rights a significant privilege-escalation risk, often overlooked by defenders.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Windows' SeBackupPrivilege, documented as \"Back up files and directories,\" allows a process to traverse directories and read files regardless of their discretionary access control lists (ACLs). This mechanism grants read access that would otherwise be denied, intended for legitimate backup operations.",
+   "The consequence is that any process running with this privilege can read critical system data, including registry hives, the SAM database, local security authority secrets, and all user documents. This level of access is what backing up a system requires.",
+   "An account holding SeBackupPrivilege is more valuable than it appears. It enables privilege escalation paths, such as copying registry hives to extract local credential material offline or, with SeRestorePrivilege, dropping malicious binaries into protected directories.",
+   "These actions do not require a Windows vulnerability; they are documented behaviors of a legitimate capability. Defenders must recognize that the privilege can be granted via group membership, local security policy, Group Policy objects, or scheduled tasks, each with different owners and change processes.",
+   "Common review gaps include treating \"Backup Operators\" as a benign group, assuming service accounts only run backup software, and the lack of a distinct audit trail for file reads using backup semantics. The privilege does not leave a unique record.",
+   "To mitigate risks, limit privilege assignment to the smallest necessary account set, use dedicated accounts that cannot log on interactively, and employ backup products that don't require standing privileges. Alerting on privilege grants outside the change process is crucial.",
+   "SeRestorePrivilege, which allows writing to files regardless of ACLs, is considered the higher-risk counterpart. While reading files is disclosure, replacing them enables execution, making accounts with restore rights even more critical to secure."
+  ],
+  "caption": "Did you know a Windows backup privilege can bypass all file access controls? It grants access to registry hives, SAM database, and all user documents.\n\nWindows' SeBackupPrivilege, documented as \"Back up files and directories,\" allows a process to traverse directories and read files regardless of their discretionary access control lists (ACLs). This mechanism grants read access that would otherwise be denied, intended for legitimate backup operations.\n\nThe consequence is that any process running with this privilege can read critical system data, including registry hives, the SAM database, local security authority secrets, and all user documents. This level of access is what backing up a system requires.\n\nAn account holding SeBackupPrivilege is more valuable than it appears. It enables privilege escalation paths, such as copying registry hives to extract local credential material offline or, with SeRestorePrivilege, dropping malicious binaries into protected directories.\n\nThese actions do not require a Windows vulnerability; they are documented behaviors of a legitimate capability. Defenders must recognize that the privilege can be granted via group membership, local security policy, Group Policy objects, or scheduled tasks, each with different owners and change processes.\n\nCommon review gaps include treating \"Backup Operators\" as a benign group, assuming service accounts only run backup software, and the lack of a distinct audit trail for file reads using backup semantics. The privilege does not leave a unique record.\n\nTo mitigate risks, limit privilege assignment to the smallest necessary account set, use dedicated accounts that cannot log on interactively, and employ backup products that don't require standing privileges. Alerting on privilege grants outside the change process is crucial.\n\n#WindowsSecurity #Cybersecurity #PrivilegeEscalation #InfoSec #TechNews #SystemAdmin\n\nSource: DEV",
+  "tweet": "Windows' SeBackupPrivilege lets backup software read ANY file, ignoring ACLs. This makes accounts with backup rights a major privilege-escalation target, able to access sensitive system data. Defenders need to audit these assignments carefully. #WindowsSecurity #Cybersecurit",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/kozhevniko/sebackupprivilege-reads-any-file-and-ignores-the-access-control-list-which-is-why-backup-software-co3",
+  "image": "",
+  "orig_title": "SeBackupPrivilege reads any file and ignores the access control list, which is why backup software is a privilege-escalation target",
+  "cluster_urls": [
+   "https://dev.to/kozhevniko/sebackupprivilege-reads-any-file-and-ignores-the-access-control-list-which-is-why-backup-software-co3"
+  ],
+  "cluster_titles": [
+   "SeBackupPrivilege reads any file and ignores the access control list, which is why backup software is a privilege-escalation target"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261026-0806-1-sebackupprivilege-reads-any-file-and-ignores.png",
+   "20261026-0806-1-sebackupprivilege-reads-any-file-and-ignores-d1.png",
+   "20261026-0806-1-sebackupprivilege-reads-any-file-and-ignores-d2.png",
+   "20261026-0806-1-sebackupprivilege-reads-any-file-and-ignores-d3.png"
+  ]
+ }
+]

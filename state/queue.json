@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "microsoft launches qwen 9b ai model",
+  "headline_marked": "Microsoft launches [[Decision-1]] AI model that scores answers, not generates text",
+  "headline": "Microsoft launches Decision-1 AI model that scores answers, not generates text",
+  "summary": "Microsoft's new Qwen3.5-9B based AI model is designed for rapid decision scoring, not conversational tasks, aiming for efficiency in specific workflows.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Microsoft has introduced Decision-1, an AI model that deviates from the trend of generative AI. Instead of producing text, it scores a predefined list of answer options in a single pass, providing a confidence probability for each. This specialized approach is built on Alibaba's Qwen3.5-9B model and is available through Microsoft Foundry and OpenRouter.",
+   "The core functionality of Decision-1 is to perform rapid, low-latency decisions, making it ideal for tasks like routing support tickets, content moderation (yes/no calls), and verifying AI agent outputs. Microsoft highlights its use in incident response and scientific discovery, emphasizing its efficiency for high-volume, critical decisions.",
+   "Unlike general-purpose chatbots like GPT-6 Sol or Gemini 4 Argon, Decision-1's output is a probability distribution over user-defined options, eliminating the need for parsing and interpretation. This streamlined process is intended to be more cost-effective for production systems requiring frequent, specific judgments.",
+   "The choice of Qwen3.5-9B as the foundation model has drawn attention, with some reports suggesting Microsoft leveraged an open-weight release from a Chinese AI lab for speed to market. Microsoft has stated its intention to rebase Decision-1 on other models, including its own MAI and OpenAI's models, over time.",
+   "Microsoft's announcement acknowledges that Decision-1 is a starting point, with plans to integrate it with a variety of foundational models. This strategy suggests a focus on rapid deployment for specialized tasks, rather than a long-term commitment to the current underlying architecture.",
+   "Decision-1's specialized nature is highlighted by its performance, achieving high accuracy across 36 benchmarks and approximately 150,000 held-out questions. This extensive testing aims to demonstrate the model's breadth and reliability for its intended decision-scoring functions."
+  ],
+  "caption": "Microsoft unveils Decision-1, an AI model that doesn't chat or summarize. It's built to rapidly score answer options and report confidence levels.\n\nMicrosoft has introduced Decision-1, an AI model that deviates from the trend of generative AI. Instead of producing text, it scores a predefined list of answer options in a single pass, providing a confidence probability for each. This specialized approach is built on Alibaba's Qwen3.5-9B model and is available through Microsoft Foundry and OpenRouter.\n\nThe core functionality of Decision-1 is to perform rapid, low-latency decisions, making it ideal for tasks like routing support tickets, content moderation (yes/no calls), and verifying AI agent outputs. Microsoft highlights its use in incident response and scientific discovery, emphasizing its efficiency for high-volume, critical decisions.\n\nUnlike general-purpose chatbots like GPT-6 Sol or Gemini 4 Argon, Decision-1's output is a probability distribution over user-defined options, eliminating the need for parsing and interpretation. This streamlined process is intended to be more cost-effective for production systems requiring frequent, specific judgments.\n\nThe choice of Qwen3.5-9B as the foundation model has drawn attention, with some reports suggesting Microsoft leveraged an open-weight release from a Chinese AI lab for speed to market. Microsoft has stated its intention to rebase Decision-1 on other models, including its own MAI and OpenAI's models, over time.\n\nMicrosoft's announcement acknowledges that Decision-1 is a starting point, with plans to integrate it with a variety of foundational models. This strategy suggests a focus on rapid deployment for specialized tasks, rather than a long-term commitment to the current underlying architecture.\n\n#AI #Microsoft #LLM #Decision1 #Qwen3.5\n\nSource: Hacker News",
+  "tweet": "Microsoft launches Decision-1, an AI model that scores answer options instead of generating text. Built on Qwen3.5-9B, it's designed for rapid decision-making in workflows. #AI #Microsoft #LLM",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "microsoft.com",
+  "source": "Hacker News",
+  "url": "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/",
+  "image": "",
+  "orig_title": "Microsoft Decision-1: 9B Qwen Model Launch Explained",
+  "cluster_urls": [
+   "https://shattered.io/microsoft-decision-1-qwen3-5-9b-model-2026/"
+  ],
+  "cluster_titles": [
+   "Microsoft Decision-1: 9B Qwen Model Launch Explained"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261026-1306-0-microsoft-launches-decision-1-ai-model-that-.png",
+   "20261026-1306-0-microsoft-launches-decision-1-ai-model-that--d1.png",
+   "20261026-1306-0-microsoft-launches-decision-1-ai-model-that--d2.png",
+   "20261026-1306-0-microsoft-launches-decision-1-ai-model-that--d3.png"
+  ]
+ },
+ {
+  "topic": "blog removes nextjs for lighthouse score improvement",
+  "headline_marked": "[[Removing Next.js]] boosted blog to 100 on all Lighthouse scores",
+  "headline": "Removing Next.js boosted blog to 100 on all Lighthouse scores",
+  "summary": "A developer ditched the popular framework to achieve perfect performance metrics, sharing the painful but rewarding journey.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer has achieved a perfect 100 score across all Google Lighthouse performance categories for their blog, a feat that required removing the Next.js framework. The goal was to create a fast, clutter-free, and accessible blogging platform, which proved to be a tedious but ultimately successful endeavor.",
+   "Dissatisfied with existing platforms like Medium and Blogger for their bloat and performance issues, the developer sought a more streamlined solution. Alternatives like WordPress and Ghost also presented drawbacks, including plugin complexity, self-hosting hassles, and expensive plans, pushing the developer to build their own solution.",
+   "The journey involved optimizing caching and image delivery. While Next.js offers convenient caching features like ISR and fetch extensions, the developer found that relying on a global CDN like Cloudflare made Next.js's built-in caching redundant and complicated cache invalidation.",
+   "Furthermore, the developer identified that Next.js contributed a substantial amount of legacy JavaScript to the bundle, even on static, pre-rendered pages. This unnecessary code was a significant barrier to achieving the desired performance scores.",
+   "To address image optimization, which can significantly impact performance, the developer opted for Cloudflare's Image Transformations. This service, available even on the free tier, handles resizing and compression, simplifying the process compared to custom serverless solutions.",
+   "By removing Next.js and leveraging Cloudflare for CDN and image transformations, the developer was able to eliminate the framework's overhead. This allowed the blog to achieve a perfect 100 Lighthouse score, demonstrating the benefits of a leaner, more tailored approach to web development."
+  ],
+  "caption": "This developer achieved a perfect 100 on all Lighthouse performance scores by removing Next.js from their blog.\n\nA developer has achieved a perfect 100 score across all Google Lighthouse performance categories for their blog, a feat that required removing the Next.js framework. The goal was to create a fast, clutter-free, and accessible blogging platform, which proved to be a tedious but ultimately successful endeavor.\n\nDissatisfied with existing platforms like Medium and Blogger for their bloat and performance issues, the developer sought a more streamlined solution. Alternatives like WordPress and Ghost also presented drawbacks, including plugin complexity, self-hosting hassles, and expensive plans, pushing the developer to build their own solution.\n\nThe journey involved optimizing caching and image delivery. While Next.js offers convenient caching features like ISR and fetch extensions, the developer found that relying on a global CDN like Cloudflare made Next.js's built-in caching redundant and complicated cache invalidation.\n\nFurthermore, the developer identified that Next.js contributed a substantial amount of legacy JavaScript to the bundle, even on static, pre-rendered pages. This unnecessary code was a significant barrier to achieving the desired performance scores.\n\nTo address image optimization, which can significantly impact performance, the developer opted for Cloudflare's Image Transformations. This service, available even on the free tier, handles resizing and compression, simplifying the process compared to custom serverless solutions.\n\nBy removing Next.js and leveraging Cloudflare for CDN and image transformations, the developer was able to eliminate the framework's overhead. This allowed the blog to achieve a perfect 100 Lighthouse score, demonstrating the benefits of a leaner, more tailored approach to web development.\n\n#webdev #nextjs #performance #lighthouse #javascript\n\nSource: Hacker News",
+  "tweet": "This developer achieved a perfect 100 on all Lighthouse performance scores by removing Next.js from their blog. The journey involved ditching the framework's overhead and leveraging Cloudflare for caching and image optimization. #webdev #nextjs #performance",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category",
+  "image": "",
+  "orig_title": "Removing Next.js Got My Blog to 100 on Every Lighthouse Category",
+  "cluster_urls": [
+   "https://korindiehacker.bloffy.blog/en/removing-nextjs-got-my-blog-to-100-on-every-lighthouse-category"
+  ],
+  "cluster_titles": [
+   "Removing Next.js Got My Blog to 100 on Every Lighthouse Category"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261026-1306-1-removing-next-js-boosted-blog-to-100-on-all-.png",
+   "20261026-1306-1-removing-next-js-boosted-blog-to-100-on-all--d1.png",
+   "20261026-1306-1-removing-next-js-boosted-blog-to-100-on-all--d2.png",
+   "20261026-1306-1-removing-next-js-boosted-blog-to-100-on-all--d3.png"
+  ]
+ }
+]

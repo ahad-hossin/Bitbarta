@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "retrieval augmented generation explained",
+  "headline_marked": "[[RAG explained in plain English]]: How AI models use your data for better answers",
+  "headline": "RAG explained in plain English: How AI models use your data for better answers",
+  "summary": "RAG allows AI models to look up relevant documents from your private data, acting like an open-book exam rather than relying solely on memorized training data.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "RAG (retrieval-augmented generation) is a pattern where an AI model looks up relevant documents from your specific data before generating an answer. This approach is akin to an open-book exam, where the model consults external information rather than relying solely on its pre-trained knowledge.",
+   "This method is crucial because large language models (LLMs) do not inherently know about your internal wikis, latest pricing sheets, or recent support tickets. RAG bridges this information gap by feeding the model the correct context at query time, without the need for expensive model retraining.",
+   "However, RAG is not a default solution for all AI tasks. For pure reasoning, creative writing, or code generation that doesn't involve private data, RAG can introduce unnecessary latency and complexity without providing additional benefit.",
+   "Common pitfalls in RAG implementation include bad chunking, where documents are split in ways that break context, and retrieving irrelevant passages that can confuse the model. Skipping proper evaluation, relying only on",
+   "it looks right,",
+   "is another frequent mistake that can lead to unreliable systems.",
+   "A successful RAG system requires more than just retrieving information; the quality of retrieval directly impacts the final answer's accuracy. Effective chunking, metadata filtering, reranking, and thorough evaluation are essential for building reliable production-grade RAG systems that provide grounded, trustworthy answers."
+  ],
+  "caption": "Ever wonder how AI can answer questions using your company's private data without being retrained?\n\nRAG (retrieval-augmented generation) is a pattern where an AI model looks up relevant documents from your specific data before generating an answer. This approach is akin to an open-book exam, where the model consults external information rather than relying solely on its pre-trained knowledge.\n\nThis method is crucial because large language models (LLMs) do not inherently know about your internal wikis, latest pricing sheets, or recent support tickets. RAG bridges this information gap by feeding the model the correct context at query time, without the need for expensive model retraining.\n\nHowever, RAG is not a default solution for all AI tasks. For pure reasoning, creative writing, or code generation that doesn't involve private data, RAG can introduce unnecessary latency and complexity without providing additional benefit.\n\nCommon pitfalls in RAG implementation include bad chunking, where documents are split in ways that break context, and retrieving irrelevant passages that can confuse the model. Skipping proper evaluation, relying only on\n\nit looks right,\n\nis another frequent mistake that can lead to unreliable systems.\n\nA successful RAG system requires more than just retrieving information; the quality of retrieval directly impacts the final answer's accuracy. Effective chunking, metadata filtering, reranking, and thorough evaluation are essential for building reliable production-grade RAG systems that provide grounded, trustworthy answers.\n\n#AI #RAG #MachineLearning #LLMs #TechExplained #DataScience\n\nSource: DEV",
+  "tweet": "Ever wonder how AI can answer questions using your company's private data without being retrained? RAG (Retrieval-Augmented Generation) is the answer. It's like giving an AI an 'open-book exam' for better, more accurate responses. #AI #RAG #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ayraix.com",
+  "source": "DEV",
+  "url": "https://dev.to/ayraix/what-is-rag-in-plain-english-4dep",
+  "image": "",
+  "orig_title": "What is RAG, in plain English?",
+  "cluster_urls": [
+   "https://dev.to/ayraix/what-is-rag-in-plain-english-4dep"
+  ],
+  "cluster_titles": [
+   "What is RAG, in plain English?"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261026-0707-0-rag-explained-in-plain-english-how-ai-models.png",
+   "20261026-0707-0-rag-explained-in-plain-english-how-ai-models-d1.png",
+   "20261026-0707-0-rag-explained-in-plain-english-how-ai-models-d2.png"
+  ]
+ },
+ {
+  "topic": "new tools and methods for ai agents",
+  "headline_marked": "[[WebExtract API offers Markdown vs structured JSON]] for AI agents from any URL",
+  "headline": "WebExtract API offers Markdown vs structured JSON for AI agents from any URL",
+  "summary": "WebExtract's API provides both clean Markdown and fixed-schema JSON outputs from any URL, offering AI agents reliable, structured data for programmatic use.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "WebExtract offers a pay-per-call API to convert URLs into data, featuring two main endpoints: /v1/markdown for clean Markdown and /v1/extract for the same Markdown plus structured JSON fields. This allows AI agents to choose the optimal data format.",
+   "The /v1/markdown endpoint provides concise, readable text, suitable for models focused solely on reading page content. However, it can present challenges with HTML tables that lack explicit header rows, potentially misinterpreting data.",
+   "The /v1/extract endpoint enhances this by adding fixed-schema fields like product, tables, and metadata. This structured data allows for direct programmatic use, with fields like price as a number and currency as a code, eliminating the need for regex.",
+   "Crucially, the structured output includes evidence and warnings for heuristic-derived data, such as prices inferred from page content. This transparency helps agents verify data reliability before acting on it.",
+   "For tables, /v1/extract provides distinct tables objects, each with headers and checks, ensuring accurate parsing even when HTML tables lack proper structure. This avoids ambiguity found in raw Markdown where tables might blend.",
+   "If a page doesn't contain product information, the product field returns null with a product_unresolved reason, providing clear context instead of an empty object. A metadata object also offers details like description, authors, and dates.",
+   "The API has a free tier, allowing 20 calls per day per caller IP address without signup. Users can opt-in via an X-Billing: free header or ?free=1 query parameter, with failed fetches not being charged."
+  ],
+  "caption": "AI agents need reliable, structured data. WebExtract API converts any URL into both raw Markdown and fixed-schema JSON, simplifying data extraction for programmatic use.\n\nWebExtract offers a pay-per-call API to convert URLs into data, featuring two main endpoints: /v1/markdown for clean Markdown and /v1/extract for the same Markdown plus structured JSON fields. This allows AI agents to choose the optimal data format.\n\nThe /v1/markdown endpoint provides concise, readable text, suitable for models focused solely on reading page content. However, it can present challenges with HTML tables that lack explicit header rows, potentially misinterpreting data.\n\nThe /v1/extract endpoint enhances this by adding fixed-schema fields like product, tables, and metadata. This structured data allows for direct programmatic use, with fields like price as a number and currency as a code, eliminating the need for regex.\n\nCrucially, the structured output includes evidence and warnings for heuristic-derived data, such as prices inferred from page content. This transparency helps agents verify data reliability before acting on it.\n\nFor tables, /v1/extract provides distinct tables objects, each with headers and checks, ensuring accurate parsing even when HTML tables lack proper structure. This avoids ambiguity found in raw Markdown where tables might blend.\n\nIf a page doesn't contain product information, the product field returns null with a product_unresolved reason, providing clear context instead of an empty object. A metadata object also offers details like description, authors, and dates.\n\nThe API has a free tier, allowing 20 calls per day per caller IP address without signup. Users can opt-in via an X-Billing: free header or ?free=1 query parameter, with failed fetches not being charged.\n\n#AI #APIs #Developers #DataExtraction #WebScraping #Tech\n\nSource: DEV",
+  "tweet": "AI agents need reliable, structured data. WebExtract API converts any URL into both raw Markdown and fixed-schema JSON, simplifying data extraction for programmatic use. Get 20 free calls/day! #AI #APIs #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "webextract.com",
+  "source": "DEV",
+  "url": "https://dev.to/nyx464664816stack/same-page-two-outputs-markdown-vs-structured-json-for-ai-agents-4019",
+  "image": "",
+  "orig_title": "Same page, two outputs: Markdown vs structured JSON for AI agents",
+  "cluster_urls": [
+   "https://dev.to/nyx464664816stack/same-page-two-outputs-markdown-vs-structured-json-for-ai-agents-4019",
+   "https://dev.to/uniqornlabz/one-key-for-an-agents-name-inbox-and-dms-well-knownonline-d4e"
+  ],
+  "cluster_titles": [
+   "Same page, two outputs: Markdown vs structured JSON for AI agents",
+   "One key for an agent's name, inbox and DMs: well-known.online"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261026-0707-1-webextract-api-offers-markdown-vs-structured.png",
+   "20261026-0707-1-webextract-api-offers-markdown-vs-structured-d1.png",
+   "20261026-0707-1-webextract-api-offers-markdown-vs-structured-d2.png",
+   "20261026-0707-1-webextract-api-offers-markdown-vs-structured-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "trillion parameter ai model serving architecture",
+  "headline_marked": "[[Trillion-parameter models demand new serving architectures]] to overcome latency and data movement challenges",
+  "headline": "Trillion-parameter models demand new serving architectures to overcome latency and data movement challenges",
+  "summary": "Serving trillion-parameter AI models faces significant latency and data movement hurdles. New architectures, like Cerebras's wafer-scale hardware, are emerging to make these massive models usable in real-world applications.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Trillion-parameter models are not just larger checkpoints; they fundamentally change the engineering problem. The focus shifts from merely fitting a model on accelerators to efficiently moving, storing, scheduling, and decoding an enormous computation across a distributed system.",
+   "For practitioners, the primary issue is latency. A model that performs well in batch evaluation can become impractical in interactive applications like agent loops or code completion if each generated token requires synchronization across many devices.",
+   "Cerebras's deployment of trillion-parameter models directly targets this serving problem. The key is not just parameter count for better outputs, but a different compute architecture that makes models at this scale truly usable.",
+   "Large-model inference involves two distinct phases: prompt (prefill) and decode. The prefill phase processes many input tokens in parallel, while the decode phase generates one token at a time, repeatedly reading weights and the accumulated key-value cache.",
+   "Decode is particularly challenging to accelerate because each subsequent token depends on the previous one, preventing parallelization of the sequence. While batching requests can help, it increases memory pressure and may negatively impact the latency for interactive users.",
+   "Conventional deployments often spread model layers or tensor shards across multiple accelerator cards. As parameter counts increase, communication overhead, memory capacity, and weight movement between devices become as critical as arithmetic throughput.",
+   "Cerebras addresses this with wafer-scale hardware: a single, very large processor containing many compute cores and local memory on one wafer. A high-bandwidth on-wafer fabric connects these components, allowing for optimized data placement.",
+   "A specialized compiler partitions the model across these cores, placing tensor pieces and operations close to where they are consumed. This changes where coordination happens, moving much of the data movement through the wafer's internal interconnect rather than repeatedly crossing a conventional network between discrete cards.",
+   "This architectural shift is most relevant to autoregressive decoding, reducing inter-device overhead to minimize the time between generated tokens. It makes trillion-parameter models production-ready by organizing computation around efficient data movement and synchronization, not just peak matrix multiplication."
+  ],
+  "caption": "Trillion-parameter AI models are here, but serving them efficiently is a massive challenge. New architectures are critical to making them practical for real-time applications.\n\nTrillion-parameter models are not just larger checkpoints; they fundamentally change the engineering problem. The focus shifts from merely fitting a model on accelerators to efficiently moving, storing, scheduling, and decoding an enormous computation across a distributed system.\n\nFor practitioners, the primary issue is latency. A model that performs well in batch evaluation can become impractical in interactive applications like agent loops or code completion if each generated token requires synchronization across many devices.\n\nCerebras's deployment of trillion-parameter models directly targets this serving problem. The key is not just parameter count for better outputs, but a different compute architecture that makes models at this scale truly usable.\n\nLarge-model inference involves two distinct phases: prompt (prefill) and decode. The prefill phase processes many input tokens in parallel, while the decode phase generates one token at a time, repeatedly reading weights and the accumulated key-value cache.\n\nDecode is particularly challenging to accelerate because each subsequent token depends on the previous one, preventing parallelization of the sequence. While batching requests can help, it increases memory pressure and may negatively impact the latency for interactive users.\n\nConventional deployments often spread model layers or tensor shards across multiple accelerator cards. As parameter counts increase, communication overhead, memory capacity, and weight movement between devices become as critical as arithmetic throughput.\n\nCerebras addresses this with wafer-scale hardware: a single, very large processor containing many compute cores and local memory on one wafer. A high-bandwidth on-wafer fabric connects these components, allowing for optimized data placement.\n\n#AI #MachineLearning #DeepLearning #Tech #Hardware #Cerebras\n\nSource: DEV",
+  "tweet": "Trillion-parameter AI models are here, but serving them efficiently is a massive challenge. New architectures are critical to making them practical for real-time applications. Learn how Cerebras is tackling this with wafer-scale hardware. #AI #MachineLearning #Hardware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/vikassri/why-trillion-parameter-models-need-a-new-serving-architecture-6gk",
+  "image": "",
+  "orig_title": "Why Trillion-Parameter Models Need a New Serving Architecture",
+  "cluster_urls": [
+   "https://dev.to/vikassri/why-trillion-parameter-models-need-a-new-serving-architecture-6gk"
+  ],
+  "cluster_titles": [
+   "Why Trillion-Parameter Models Need a New Serving Architecture"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261026-0609-0-trillion-parameter-models-demand-new-serving.png",
+   "20261026-0609-0-trillion-parameter-models-demand-new-serving-d1.png",
+   "20261026-0609-0-trillion-parameter-models-demand-new-serving-d2.png",
+   "20261026-0609-0-trillion-parameter-models-demand-new-serving-d3.png",
+   "20261026-0609-0-trillion-parameter-models-demand-new-serving-d4.png"
+  ]
+ },
+ {
+  "topic": "llm context assembly prompt versioning",
+  "headline_marked": "[[Versioning the Prompt You Actually Send]] is crucial for LLMOps, not just the template",
+  "headline": "Versioning the Prompt You Actually Send is crucial for LLMOps, not just the template",
+  "summary": "LLM prompt templates are versioned, but dynamic context assembly means the actual prompt sent often isn't, leading to untraceable quality degradation. This article proposes a solution for robust LLMOps.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "When reviewing a 30-line template diff, production might send 40,000 tokens assembled from multiple sources, many of which changed without appearing in the pull request. The approved diff often doesn't reflect the actual change shipped to the LLM.",
+   "This discrepancy is a persistent challenge in LLMOps, even for teams with established evaluation, tracing, and gateway systems. While the prompt template itself is versioned in Git, the context is dynamically assembled by code paths not treated as release artifacts.",
+   "Dependencies like retrieved RAG chunks can change when reindexed, or tool schemas can be altered by backend engineers. Neither of these critical changes typically triggers a review of the actual prompt, leading to unexpected quality drops.",
+   "Consequently, when LLM quality degrades on a Tuesday with no new code deployed, there's no clear diff to examine, making incident diagnosis difficult. This lack of visibility into the true prompt is the core problem addressed.",
+   "The proposed solution involves computing a content hash over all inputs that can influence model behavior and logging this fingerprint with every trace. This small, cheap identifier quickly answers \"what changed\" during an incident.",
+   "It's crucial that the fingerprint only hashes parts affecting generation, not metadata like timestamps or request IDs. Hashing irrelevant metadata can lead to near-zero collision rates but zero diagnostic value, as it changes constantly without reflecting actual prompt content.",
+   "Effective context assembly requires three properties: each section needs a trust level and an eviction priority, and exceeding the budget on a pinned section should result in a hard error, not a silent trim.",
+   "Additionally, sections must render in their original insertion order, not priority order. Reordering identical content can alter model behavior, making it impossible to attribute changes in evaluation deltas accurately."
+  ],
+  "caption": "Your LLM prompt template is versioned, but what about the *actual* prompt sent to the model? Unversioned context assembly can lead to untraceable quality drops.\n\nWhen reviewing a 30-line template diff, production might send 40,000 tokens assembled from multiple sources, many of which changed without appearing in the pull request. The approved diff often doesn't reflect the actual change shipped to the LLM.\n\nThis discrepancy is a persistent challenge in LLMOps, even for teams with established evaluation, tracing, and gateway systems. While the prompt template itself is versioned in Git, the context is dynamically assembled by code paths not treated as release artifacts.\n\nDependencies like retrieved RAG chunks can change when reindexed, or tool schemas can be altered by backend engineers. Neither of these critical changes typically triggers a review of the actual prompt, leading to unexpected quality drops.\n\nConsequently, when LLM quality degrades on a Tuesday with no new code deployed, there's no clear diff to examine, making incident diagnosis difficult. This lack of visibility into the true prompt is the core problem addressed.\n\nThe proposed solution involves computing a content hash over all inputs that can influence model behavior and logging this fingerprint with every trace. This small, cheap identifier quickly answers \"what changed\" during an incident.\n\nIt's crucial that the fingerprint only hashes parts affecting generation, not metadata like timestamps or request IDs. Hashing irrelevant metadata can lead to near-zero collision rates but zero diagnostic value, as it changes constantly without reflecting actual prompt content.\n\nEffective context assembly requires three properties: each section needs a trust level and an eviction priority, and exceeding the budget on a pinned section should result in a hard error, not a silent trim.\n\n#LLMOps #AI #PromptEngineering #SoftwareDevelopment #DevOps #Tech\n\nSource: DEV",
+  "tweet": "Your LLM prompt template is versioned, but what about the *actual* prompt sent? Unversioned context assembly causes untraceable quality drops. Learn how to fingerprint your prompts for better debugging and reliability in LLMOps. #LLMOps #AI #PromptEngineering",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dima_kruglov_608741d9a416/context-assembly-is-a-build-step-versioning-the-prompt-you-actually-send-18od",
+  "image": "",
+  "orig_title": "Context Assembly Is a Build Step: Versioning the Prompt You Actually Send",
+  "cluster_urls": [
+   "https://dev.to/dima_kruglov_608741d9a416/context-assembly-is-a-build-step-versioning-the-prompt-you-actually-send-18od"
+  ],
+  "cluster_titles": [
+   "Context Assembly Is a Build Step: Versioning the Prompt You Actually Send"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261026-0609-1-versioning-the-prompt-you-actually-send-is-c.png",
+   "20261026-0609-1-versioning-the-prompt-you-actually-send-is-c-d1.png",
+   "20261026-0609-1-versioning-the-prompt-you-actually-send-is-c-d2.png",
+   "20261026-0609-1-versioning-the-prompt-you-actually-send-is-c-d3.png"
+  ]
+ }
+]

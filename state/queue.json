@@ -1,1 +1,44 @@
-[]
+[
+ {
+  "topic": "ai agents mimic human behavior online",
+  "headline_marked": "[[Most AI agents browsing websites look human]], making bot detection difficult",
+  "headline": "Most AI agents browsing websites look human, making bot detection difficult",
+  "summary": "A study sent 23 AI agents to a test site, finding that most mimic human browser behavior, including user agents and IP addresses, bypassing standard bot detection methods.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI assistants now browse websites for users, raising questions about how these visits appear to analytics tools. A recent study sent 23 AI agents, chatbots, and developer tools to a test site to observe their digital footprint.",
+   "The experiment tracked every request and click, comparing agent behavior to human interactions using various devices and accessibility tools. The goal was to determine if AI visits register as human, bot, or undetectable.",
+   "A key finding was that most browser-based AI agents appeared indistinguishable from human users. They reported no automation, sent normal Chrome user agents, and often originated from the researchers' home IP addresses.",
+   "Standard bot detection methods, which check for navigator.webdriver, bot-named user agents, or data center IPs, largely failed. For most agents, all three indicators returned negative.",
+   "Specific agents like ChatGPT Work, Claude in Chrome, and Comet mimicked human browsing closely. ChatGPT Work, for instance, ran a Chrome browser reporting webdriver: false and a normal user agent, with visits lasting 11-21 seconds.",
+   "Grok was an anomaly, reporting Linux on an x86 processor with no graphics card from the researchers' Apple Silicon Mac, yet still appearing as plain Linux Chrome from their connection. Claude's computer use model also reported webdriver: false.",
+   "While agent click duration didn't give them away, the precise path of the pointer to a button proved to be a consistent differentiator for every clicking agent tested. Only one agent, Manus, signed its requests for verification.",
+   "All agents that completed the task successfully extracted the requested information: a \n9 a month plan cost, no SSO, and the four fields of the contact form."
+  ],
+  "caption": "A study found that 23 AI agents browsing websites mostly looked human, bypassing standard bot detection. This makes it challenging to distinguish AI traffic from real users.\n\nAI assistants now browse websites for users, raising questions about how these visits appear to analytics tools. A recent study sent 23 AI agents, chatbots, and developer tools to a test site to observe their digital footprint.\n\nThe experiment tracked every request and click, comparing agent behavior to human interactions using various devices and accessibility tools. The goal was to determine if AI visits register as human, bot, or undetectable.\n\nA key finding was that most browser-based AI agents appeared indistinguishable from human users. They reported no automation, sent normal Chrome user agents, and often originated from the researchers' home IP addresses.\n\nStandard bot detection methods, which check for navigator.webdriver, bot-named user agents, or data center IPs, largely failed. For most agents, all three indicators returned negative.\n\nSpecific agents like ChatGPT Work, Claude in Chrome, and Comet mimicked human browsing closely. ChatGPT Work, for instance, ran a Chrome browser reporting webdriver: false and a normal user agent, with visits lasting 11-21 seconds.\n\nGrok was an anomaly, reporting Linux on an x86 processor with no graphics card from the researchers' Apple Silicon Mac, yet still appearing as plain Linux Chrome from their connection. Claude's computer use model also reported webdriver: false.\n\nWhile agent click duration didn't give them away, the precise path of the pointer to a button proved to be a consistent differentiator for every clicking agent tested. Only one agent, Manus, signed its requests for verification.\n\nAll agents that completed the task successfully extracted the requested information: a \n9 a month plan cost, no SSO, and the four fields of the contact form.\n\n#AI #BotDetection #WebAnalytics #GenerativeAI #TechNews #AIagents\n\nSource: DEV",
+  "tweet": "A new study reveals most AI agents browsing websites appear human, making them nearly undetectable by standard bot detection. They mimic Chrome user agents and home IPs. #AI #WebAnalytics",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "privatrak.com",
+  "source": "DEV",
+  "url": "https://dev.to/quentin_wendegass/we-sent-23-ai-agents-to-our-website-most-looked-human-3a7e",
+  "image": "",
+  "orig_title": "We sent 23 AI agents to our website. Most looked human",
+  "cluster_urls": [
+   "https://dev.to/quentin_wendegass/we-sent-23-ai-agents-to-our-website-most-looked-human-3a7e"
+  ],
+  "cluster_titles": [
+   "We sent 23 AI agents to our website. Most looked human"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261027-1406-0-most-ai-agents-browsing-websites-look-human-.png",
+   "20261027-1406-0-most-ai-agents-browsing-websites-look-human--d1.png",
+   "20261027-1406-0-most-ai-agents-browsing-websites-look-human--d2.png",
+   "20261027-1406-0-most-ai-agents-browsing-websites-look-human--d3.png"
+  ]
+ }
+]

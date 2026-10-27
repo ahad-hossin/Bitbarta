@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "banks restrict ai agent access for security",
+  "headline_marked": "[[Banks struggle to distinguish AI agents from customers]]; new scoped grant pattern proposed for secure access",
+  "headline": "Banks struggle to distinguish AI agents from customers; new scoped grant pattern proposed for secure access",
+  "summary": "Major US banks are restricting AI agents from customer accounts due to identity confusion, as agents using shared logins appear as the customer. A proposed 'scoped grant' pattern aims to fix this by separating agent and customer identities.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Major US banks are reportedly restricting outside AI agents from accessing customer accounts. This follows instances where AI tools, using shared customer usernames and passwords, performed actions not requested by the customer.",
+   "The core problem identified is that banks cannot differentiate between an AI agent and the actual human customer once the agent logs in with shared credentials. This collapses all actions under a single identity, making it impossible to track agent-specific activities.",
+   "To address this, a 'scoped grant' pattern has been sketched, proposing a method to distinguish agents from individuals. This pattern utilizes two distinct keys: one for the bank to sign grants and another for the customer's application to sign approvals.",
+   "Crucially, the AI agent itself holds neither of these keys. This design ensures that approvals are bound to specific grants, payees, and amounts, with a short expiration time, typically two minutes.",
+   "The system prioritizes checks for signature validity, expiry, revocation status, scope, and payment limits. All denied calls, including those with forged tokens, are logged for security and auditing purposes.",
+   "This approach aligns with regulations like India's DPDP Act, which mandates Data Fiduciaries to be responsible for personal data processing. The grant mechanism provides a clear record of who accessed data and on what basis, even when software is involved."
+  ],
+  "caption": "US banks are restricting AI agents from customer accounts because they can't tell the difference between an agent and the human customer.\n\nMajor US banks are reportedly restricting outside AI agents from accessing customer accounts. This follows instances where AI tools, using shared customer usernames and passwords, performed actions not requested by the customer.\n\nThe core problem identified is that banks cannot differentiate between an AI agent and the actual human customer once the agent logs in with shared credentials. This collapses all actions under a single identity, making it impossible to track agent-specific activities.\n\nTo address this, a 'scoped grant' pattern has been sketched, proposing a method to distinguish agents from individuals. This pattern utilizes two distinct keys: one for the bank to sign grants and another for the customer's application to sign approvals.\n\nCrucially, the AI agent itself holds neither of these keys. This design ensures that approvals are bound to specific grants, payees, and amounts, with a short expiration time, typically two minutes.\n\nThe system prioritizes checks for signature validity, expiry, revocation status, scope, and payment limits. All denied calls, including those with forged tokens, are logged for security and auditing purposes.\n\nThis approach aligns with regulations like India's DPDP Act, which mandates Data Fiduciaries to be responsible for personal data processing. The grant mechanism provides a clear record of who accessed data and on what basis, even when software is involved.\n\n#AI #Security #Fintech #Banking #Developer #Identity\n\nSource: DEV",
+  "tweet": "US banks are restricting AI agents from customer accounts due to identity confusion. A new 'scoped grant' pattern is proposed to differentiate agents from customers, using distinct keys for banks and customer apps to secure transactions. #AI #Security #Fintech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/chinmay_garg/agent-access-without-shared-passwords-a-scoped-grant-pattern-for-banks-and-fintech-930",
+  "image": "",
+  "orig_title": "Agent Access Without Shared Passwords: A Scoped Grant Pattern for Banks and Fintech",
+  "cluster_urls": [
+   "https://dev.to/chinmay_garg/agent-access-without-shared-passwords-a-scoped-grant-pattern-for-banks-and-fintech-930"
+  ],
+  "cluster_titles": [
+   "Agent Access Without Shared Passwords: A Scoped Grant Pattern for Banks and Fintech"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261027-1007-0-banks-struggle-to-distinguish-ai-agents-from.png",
+   "20261027-1007-0-banks-struggle-to-distinguish-ai-agents-from-d1.png",
+   "20261027-1007-0-banks-struggle-to-distinguish-ai-agents-from-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai agent rce vulnerabilities",
+  "headline_marked": "[[AI pentest tool Cairn exploited]] in attacks on 100+ companies; critical PHP RCEs also found",
+  "headline": "AI pentest tool Cairn exploited in attacks on 100+ companies; critical PHP RCEs also found",
+  "summary": "Criminals used open-source AI pentest system Cairn via 20+ exposed control panels to target over 100 companies, with 10% of attacks confirmed successful. Critical PHP RCEs also reported.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "NorForge discovered over 20 publicly exposed control panels for Cairn, an open-source AI pentest system. Criminals leveraged these to direct autonomous agents at e-commerce, payment, and pharmaceutical targets. These agents attempted attacks on over 1200 sites, reaching more than 100 companies, including Deere, SharkNinja, and Cummins.",
+   "Operators provided short instructions for agents to attempt code execution and plant web-shell uploaders. NorForge estimates 10% of these attacks were successful, with one large US retailer independently confirming compromise. One shell URL serving an uploader shell was also successful.",
+   "The exposed panels also leaked secrets, and some legitimate pentest firms had client data exposed. The maker of Cairn stated the tool was not designed for hacking, but attackers are exploiting legitimate tools for malicious purposes.",
+   "Separately, two critical Remote Code Execution (RCE) vulnerabilities, known as PHP2Shell, were found in PHP. These allowed unauthenticated attackers to remotely execute code on vulnerable web servers without credentials.",
+   "These vulnerabilities affected all PHP versions released over the last decade, back to version 5.4. According to Wiz, PHP powers 70% of the world's websites, including banking and government applications.",
+   "The vulnerability was leaked before the embargo was lifted, forcing PHP developers to rush disclosure and fixes. Researchers at Calif and Wiz used OpenAI models to discover these flaws, highlighting AI's role in finding vulnerabilities.",
+   "The article warns of increasing sophisticated rogue agent attacks using specialized frameworks. These incidents underscore the dangerous landscape where attackers can operate at machine speed.",
+   "No breaches related to PHP2Shell have been reported so far, but experts advise caution as attackers can lie dormant for months. This highlights the ongoing need for vigilance in cybersecurity."
+  ],
+  "caption": "AI pentest tool Cairn exploited by criminals to attack over 100 companies, with 10% success rate. Critical PHP RCEs also discovered, affecting 70% of websites.\n\nNorForge discovered over 20 publicly exposed control panels for Cairn, an open-source AI pentest system. Criminals leveraged these to direct autonomous agents at e-commerce, payment, and pharmaceutical targets. These agents attempted attacks on over 1200 sites, reaching more than 100 companies, including Deere, SharkNinja, and Cummins.\n\nOperators provided short instructions for agents to attempt code execution and plant web-shell uploaders. NorForge estimates 10% of these attacks were successful, with one large US retailer independently confirming compromise. One shell URL serving an uploader shell was also successful.\n\nThe exposed panels also leaked secrets, and some legitimate pentest firms had client data exposed. The maker of Cairn stated the tool was not designed for hacking, but attackers are exploiting legitimate tools for malicious purposes.\n\nSeparately, two critical Remote Code Execution (RCE) vulnerabilities, known as PHP2Shell, were found in PHP. These allowed unauthenticated attackers to remotely execute code on vulnerable web servers without credentials.\n\nThese vulnerabilities affected all PHP versions released over the last decade, back to version 5.4. According to Wiz, PHP powers 70% of the world's websites, including banking and government applications.\n\nThe vulnerability was leaked before the embargo was lifted, forcing PHP developers to rush disclosure and fixes. Researchers at Calif and Wiz used OpenAI models to discover these flaws, highlighting AI's role in finding vulnerabilities.\n\nThe article warns of increasing sophisticated rogue agent attacks using specialized frameworks. These incidents underscore the dangerous landscape where attackers can operate at machine speed.\n\n#Cybersecurity #AI #PHP #SecurityBreach #TechNews #Hacking\n\nSource: DEV",
+  "tweet": "Criminals exploited the AI pentest tool Cairn to attack over 100 companies, achieving a 10% success rate. Separately, critical PHP RCE vulnerabilities (PHP2Shell) affecting 70% of websites were found. Stay vigilant! #Cybersecurity #AI #PHP",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/willvelida/last-week-in-agent-security-update-4-cairnt-touch-this-3egm",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F075n0j43j59hnj89diu0.png",
+  "orig_title": "Last week in Agent Security Update 4: Cairn’t Touch This",
+  "cluster_urls": [
+   "https://dev.to/willvelida/last-week-in-agent-security-update-4-cairnt-touch-this-3egm"
+  ],
+  "cluster_titles": [
+   "Last week in Agent Security Update 4: Cairn’t Touch This"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261027-1306-0-ai-pentest-tool-cairn-exploited-in-attacks-o.png",
+   "20261027-1306-0-ai-pentest-tool-cairn-exploited-in-attacks-o-d1.png",
+   "20261027-1306-0-ai-pentest-tool-cairn-exploited-in-attacks-o-d2.png",
+   "20261027-1306-0-ai-pentest-tool-cairn-exploited-in-attacks-o-d3.png"
+  ]
+ },
+ {
+  "topic": "llm byteification improves letter counting reliability",
+  "headline_marked": "[[Byteification retrofits LLMs]] to count individual letters reliably",
+  "headline": "Byteification retrofits LLMs to count individual letters reliably",
+  "summary": "A new technique called byteification allows existing large language models to accurately process text at the individual-letter level, addressing a critical limitation for tasks like code, spelling, and structured text handling without requiring retraining.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Nature reported a technique called byteification that retrofits existing large language models (LLMs) to evaluate text at an individual-letter level. This addresses a common failure point for most models, such as accurately counting specific characters in a phrase like 'artificial intelligence'.",
+   "These letter-level failures currently limit the reliable deployment of LLMs in tasks involving code, precise spelling, and structured text handling. Byteification aims to fix these issues without the need for extensive retraining of the models.",
+   "The report emphasizes that byteification is a retrofitting method, not a new model, directly tackling a known tokenization blind spot in LLMs. If this byte-level access proves to generalize effectively, it could significantly enhance exact text manipulation capabilities.",
+   "However, the main uncertainty lies in whether these gains will persist across broader benchmarks and real-world applications, or if they will remain primarily limited to specific probes like character counting."
+  ],
+  "caption": "LLMs struggle with basic letter counting, limiting their use in code and precise text tasks. A new technique, Byteification, retrofits existing models to reliably process text at the individual-letter level.\n\nNature reported a technique called byteification that retrofits existing large language models (LLMs) to evaluate text at an individual-letter level. This addresses a common failure point for most models, such as accurately counting specific characters in a phrase like 'artificial intelligence'.\n\nThese letter-level failures currently limit the reliable deployment of LLMs in tasks involving code, precise spelling, and structured text handling. Byteification aims to fix these issues without the need for extensive retraining of the models.\n\nThe report emphasizes that byteification is a retrofitting method, not a new model, directly tackling a known tokenization blind spot in LLMs. If this byte-level access proves to generalize effectively, it could significantly enhance exact text manipulation capabilities.\n\nHowever, the main uncertainty lies in whether these gains will persist across broader benchmarks and real-world applications, or if they will remain primarily limited to specific probes like character counting.\n\n#AI #LLMs #MachineLearning #NLP #TechNews #Research\n\nSource: DEV",
+  "tweet": "LLMs struggle with basic letter counting, limiting their use in code and precise text tasks. New \"Byteification\" technique retrofits existing models to reliably process text at the individual-letter level, without retraining. #AI #LLMs #TechResearch",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/paragonaimag/byteification-retrofits-llms-to-count-individual-letters-reliably-i6o",
+  "image": "",
+  "orig_title": "Byteification retrofits LLMs to count individual letters reliably",
+  "cluster_urls": [
+   "https://dev.to/paragonaimag/byteification-retrofits-llms-to-count-individual-letters-reliably-i6o"
+  ],
+  "cluster_titles": [
+   "Byteification retrofits LLMs to count individual letters reliably"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261027-1306-1-byteification-retrofits-llms-to-count-indivi.png",
+   "20261027-1306-1-byteification-retrofits-llms-to-count-indivi-d1.png",
+   "20261027-1306-1-byteification-retrofits-llms-to-count-indivi-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,75 @@
-[]
+[
+ {
+  "topic": "ollama mac local text-to-speech",
+  "headline_marked": "[[Ollama for Mac gains support for local text-to-speech models]]",
+  "headline": "Ollama for Mac gains support for local text-to-speech models",
+  "summary": "Ollama, the popular app for running AI models locally, now allows Mac users to generate speech from text directly on their device, with Windows and Linux support coming soon.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Ollama, a popular app for running AI models locally, has officially added text-to-speech generation to its Mac application. This new feature allows users to convert text into spoken audio directly on their Apple devices.",
+   "The company has also confirmed that support for Windows and Linux platforms will be rolled out in the near future. This expansion will bring local text-to-speech capabilities to a wider user base across different operating systems."
+  ],
+  "caption": "Ollama for Mac now supports local text-to-speech models. Generate spoken audio directly on your device.\n\nOllama, a popular app for running AI models locally, has officially added text-to-speech generation to its Mac application. This new feature allows users to convert text into spoken audio directly on their Apple devices.\n\nThe company has also confirmed that support for Windows and Linux platforms will be rolled out in the near future. This expansion will bring local text-to-speech capabilities to a wider user base across different operating systems.\n\n#Ollama #TextToSpeech #AI #Mac #TechNews #LocalAI\n\nSource: 9to5Mac",
+  "tweet": "Ollama for Mac now supports local text-to-speech models, allowing users to generate spoken audio directly on their device. Windows & Linux support coming soon. #Ollama #AI #Mac",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ollama.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/10/26/ollama-for-mac-gains-support-for-local-text-to-speech-models/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/10/ollama-macos27.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Ollama for Mac gains support for local text-to-speech models",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/10/26/ollama-for-mac-gains-support-for-local-text-to-speech-models/"
+  ],
+  "cluster_titles": [
+   "Ollama for Mac gains support for local text-to-speech models"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20261027-0707-0-ollama-for-mac-gains-support-for-local-text-.png",
+   "20261027-0707-0-ollama-for-mac-gains-support-for-local-text--d1.png"
+  ]
+ },
+ {
+  "topic": "ai model kv cache security vulnerability",
+  "headline_marked": "[[Cloudflare's GLM-5.3 AI model exposed]] 155 customer responses to other users due to KV cache bug",
+  "headline": "Cloudflare's GLM-5.3 AI model exposed 155 customer responses to other users due to KV cache bug",
+  "summary": "Cloudflare disclosed a tenant isolation issue in its GLM-5.3 Workers AI model, where 155 responses contained data from other customers' requests for prompts over 681,280 tokens. The issue was present from August 27 to September 9, 2026.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Cloudflare has disclosed a tenant isolation issue affecting its GLM-5.3 Workers AI model, impacting 155 responses between August 27 and September 9, 2026. The vulnerability allowed responses to contain data from other customers' requests.",
+   "The issue specifically affected prompts longer than 681,280 tokens. Cloudflare found no evidence of deliberate exploitation, with affected requests consistent with ordinary long-context use.",
+   "The root cause was a combination of a misconfiguration in the open-source SGLang inference engine and a bug in SGLang's handling of over-length requests. The KV cache pool was too small for the declared context window.",
+   "When a prompt exceeded the pool size, SGLang would replace it with a placeholder but transfer stale KV cache data from previous requests to the decode node. This led to responses generating with unintended data.",
+   "Cloudflare remediated the issue by taking the model offline, adjusting the GLM 5.3 configuration to increase the prefill KV pool size to 2.04 million tokens, and patching the SGLang engine. This ensures prompts fit the pool and rejection paths are safe.",
+   "The fix prevents the bug from being exercised by ensuring valid requests always fit the cache pool. Additionally, the patched engine now retires requests with pending rejections before any cache transfer occurs, preventing similar issues."
+  ],
+  "caption": "Cloudflare's GLM-5.3 AI model briefly exposed 155 customer responses to other users. A KV cache bug allowed data leakage for very long prompts.\n\nCloudflare has disclosed a tenant isolation issue affecting its GLM-5.3 Workers AI model, impacting 155 responses between August 27 and September 9, 2026. The vulnerability allowed responses to contain data from other customers' requests.\n\nThe issue specifically affected prompts longer than 681,280 tokens. Cloudflare found no evidence of deliberate exploitation, with affected requests consistent with ordinary long-context use.\n\nThe root cause was a combination of a misconfiguration in the open-source SGLang inference engine and a bug in SGLang's handling of over-length requests. The KV cache pool was too small for the declared context window.\n\nWhen a prompt exceeded the pool size, SGLang would replace it with a placeholder but transfer stale KV cache data from previous requests to the decode node. This led to responses generating with unintended data.\n\nCloudflare remediated the issue by taking the model offline, adjusting the GLM 5.3 configuration to increase the prefill KV pool size to 2.04 million tokens, and patching the SGLang engine. This ensures prompts fit the pool and rejection paths are safe.\n\nThe fix prevents the bug from being exercised by ensuring valid requests always fit the cache pool. Additionally, the patched engine now retires requests with pending rejections before any cache transfer occurs, preventing similar issues.\n\n#Cloudflare #AI #Security #Vulnerability #WorkersAI #SGLang\n\nSource: Hacker News",
+  "tweet": "Cloudflare disclosed a KV cache exposure in its GLM-5.3 Workers AI model, affecting 155 responses. Data from other users' requests was briefly exposed for prompts over 681,280 tokens. The issue has been remediated. #Cloudflare #AI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "cloudflare.com",
+  "source": "Hacker News",
+  "url": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+  "image": "",
+  "orig_title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)",
+  "cluster_urls": [
+   "https://blog.cloudflare.com/kv-cache-exposure-remediation/"
+  ],
+  "cluster_titles": [
+   "Cross-request KV cache exposure in the GLM-5.3 Workers AI model (155 responses)"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261027-0707-1-cloudflare-s-glm-5-3-ai-model-exposed-155-cu.png",
+   "20261027-0707-1-cloudflare-s-glm-5-3-ai-model-exposed-155-cu-d1.png",
+   "20261027-0707-1-cloudflare-s-glm-5-3-ai-model-exposed-155-cu-d2.png"
+  ]
+ }
+]

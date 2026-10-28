@@ -1,1 +1,62 @@
-[]
+[
+ {
+  "topic": "dev and ai tools updates",
+  "headline_marked": "[[Transparent video]] can go opaque in a pipeline without any step failing",
+  "headline": "Transparent video can go opaque in a pipeline without any step failing",
+  "summary": "A developer details how a transparent WebM video unexpectedly turned opaque during conversion, with no errors reported by the pipeline steps.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A developer encountered a critical issue where a transparent WebM video, exported with VP9 alpha from ImgIng, became fully opaque after conversion to ProRes 4444. This occurred without any errors being reported by the conversion pipeline, making the problem difficult to detect.",
+   "The issue was traced by extracting the alpha plane of a specific frame and analyzing its transparency. While the default FFmpeg VP9 decoder reported an average alpha value of 46.76%, indicating significant transparency, the default path erroneously processed it as fully opaque (255, 255, 255).",
+   "To confirm the problem, the developer created test files and implemented three checks: a container probe using FFmpeg's `alpha_mode` tag (found unreliable), a decode probe to check alpha from a fixed frame, and an output probe after each conversion step to compare against a reference value.",
+   "The analysis revealed that the default FFmpeg VP9 decoder incorrectly handles alpha channels in certain conversions, leading to opaque output without error. Explicitly pinning the decoder and checking alpha values post-conversion is crucial for detecting such issues.",
+   "The developer recommends a practical check for anyone processing transparent videos: run a specific FFmpeg command on the source file to get a baseline alpha value, then run the same command on the output of each conversion step. Any significant deviation indicates a problem.",
+   "This issue highlights the importance of rigorous alpha channel verification in video processing pipelines, especially when dealing with formats like WebM and conversions to intermediate formats like ProRes 4444 or QuickTime Animation."
+  ],
+  "caption": "Transparent video unexpectedly turned opaque during conversion, with no errors reported by the pipeline. Developers must add alpha checks.\n\nA developer encountered a critical issue where a transparent WebM video, exported with VP9 alpha from ImgIng, became fully opaque after conversion to ProRes 4444. This occurred without any errors being reported by the conversion pipeline, making the problem difficult to detect.\n\nThe issue was traced by extracting the alpha plane of a specific frame and analyzing its transparency. While the default FFmpeg VP9 decoder reported an average alpha value of 46.76%, indicating significant transparency, the default path erroneously processed it as fully opaque (255, 255, 255).\n\nTo confirm the problem, the developer created test files and implemented three checks: a container probe using FFmpeg's `alpha_mode` tag (found unreliable), a decode probe to check alpha from a fixed frame, and an output probe after each conversion step to compare against a reference value.\n\nThe analysis revealed that the default FFmpeg VP9 decoder incorrectly handles alpha channels in certain conversions, leading to opaque output without error. Explicitly pinning the decoder and checking alpha values post-conversion is crucial for detecting such issues.\n\nThe developer recommends a practical check for anyone processing transparent videos: run a specific FFmpeg command on the source file to get a baseline alpha value, then run the same command on the output of each conversion step. Any significant deviation indicates a problem.\n\nThis issue highlights the importance of rigorous alpha channel verification in video processing pipelines, especially when dealing with formats like WebM and conversions to intermediate formats like ProRes 4444 or QuickTime Animation.\n\n#VideoProcessing #WebM #FFmpeg #AlphaChannel #Developer\n\nSource: DEV",
+  "tweet": "Transparent video can go opaque in a pipeline without any step failing. Developers need to add alpha checks to detect issues like this. #VideoProcessing #FFmpeg #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/pm_cheng_3f36acecfb9c59f5/a-transparent-video-went-opaque-with-no-error-put-an-alpha-check-after-every-hop-5592",
+  "image": "",
+  "orig_title": "A transparent video went opaque with no error: put an alpha check after every hop",
+  "cluster_urls": [
+   "https://dev.to/pm_cheng_3f36acecfb9c59f5/a-transparent-video-went-opaque-with-no-error-put-an-alpha-check-after-every-hop-5592",
+   "https://dev.to/rizwan_workspace_ed564bbe/why-your-website-loads-slowly-and-how-to-fix-it-gc2",
+   "https://dev.to/bar_dror_a3d32cb94b1/spring-boot-async-request-handling-with-deferredresult-timeouts-and-errors-5g9",
+   "https://dev.to/serhii_a9c08345ac360cf5c8/map-telegram-deep-link-payloads-to-mysql-entities-safely-in-php-5f6b",
+   "https://dev.to/saraebden/choosing-a-self-hosted-bug-tracker-a-practical-comparison-of-7-tools-bln",
+   "https://dev.to/ifeoma_nwafor/learn-how-to-create-configure-and-connect-to-your-first-linux-virtual-machine-in-microsoft-azure-4j4j",
+   "https://dev.to/facilishz/trusting-the-wrong-end-of-the-wire-on-path-abuse-of-cve-2026-44236-5hbe",
+   "https://dev.to/shogun_the_grt/a-ptx-compiler-in-python-and-the-kernel-that-hung-without-an-error-187h",
+   "https://dev.to/serdartavukcu/1-gunde-10-icerik-urettim-yapay-zeka-ve-veri-odakli-gelecek-4de3",
+   "https://dev.to/fathomnews/ai-chip-startup-tenstorrent-bags-15b-hits-62b-value-2e4f",
+   "https://dev.to/juanauriti/chatgpt-searched-the-web-only-144-of-the-time-across-666-million-responses-2p6l"
+  ],
+  "cluster_titles": [
+   "A transparent video went opaque with no error: put an alpha check after every hop",
+   "Why Your Website Loads Slowly (And How to Fix It)",
+   "Spring Boot Async Request Handling with DeferredResult: Timeouts and Errors",
+   "Map Telegram Deep-Link Payloads to MySQL Entities Safely in PHP",
+   "Choosing a Self-Hosted Bug Tracker: A Practical Comparison of 7 Tools",
+   "Learn how to create, configure, and connect to your first Linux virtual machine in Microsoft Azure through a practical, step-by-step tutorial.",
+   "Trusting the Wrong End of the Wire: On-Path Abuse of CVE-2026-44236",
+   "A PTX compiler in Python, and the kernel that hung without an error",
+   "1 Günde 10 İçerik Ürettim: Yapay Zeka ve Veri Odaklı Gelecek",
+   "AI Chip Startup Tenstorrent Bags $1.5B, Hits $6.2B Value",
+   "ChatGPT searched the web only 14.4% of the time across 66.6 million responses"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261028-1406-0-transparent-video-can-go-opaque-in-a-pipelin.png",
+   "20261028-1406-0-transparent-video-can-go-opaque-in-a-pipelin-d1.png",
+   "20261028-1406-0-transparent-video-can-go-opaque-in-a-pipelin-d2.png",
+   "20261028-1406-0-transparent-video-can-go-opaque-in-a-pipelin-d3.png"
+  ]
+ }
+]

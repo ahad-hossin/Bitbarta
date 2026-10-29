@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "ai model citation and brand mention comparison",
+  "headline_marked": "[[AI search engines disagree 62% of the time]] on brand recommendations; ChatGPT mentions 3.2x more than it cites.",
+  "headline": "AI search engines disagree 62% of the time on brand recommendations; ChatGPT mentions 3.2x more than it cites.",
+  "summary": "A new study reveals that ChatGPT, Google AI Overviews, and Google AI Mode contradict each other on brand recommendations 62% of the time, with only 17% agreement across all three platforms.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "A BrightEdge study using tens of thousands of identical prompts found that ChatGPT, Google AI Overviews, and Google AI Mode disagreed on brand recommendations 62% of the time. Across all three platforms, only 17% of queries produced the same brand recommendations. This highlights significant differences in how AI search operates.",
+   "ChatGPT functions primarily as a brand recommender, mentioning brands 3.2 times more often than it links to them. For example, it might suggest 'Notion' without providing a direct link to notion.com. Its recommendations rely heavily on its training data and established trust patterns.",
+   "Conversely, Google AI Overviews acts more as a citation engine, linking to 14.30 sources per query while only naming 6.02 brands. It prioritizes retrieving and linking source pages, even if those pages aren't always the brands it would explicitly recommend. This indicates a different underlying mechanism.",
+   "The core difference is that ChatGPT aims to be in the model's knowledge base for brand mentions. Google AI Overviews focuses on being in the retrieved source pool. Optimizing for 'AI search' requires understanding these distinct approaches.",
+   "The level of disagreement varies significantly by query type. Comparison queries, like 'X vs Y,' showed the most agreement across platforms. However, 'best' queries, such as 'best tool for X,' resulted in the least agreement, with platforms recommending different brands 77% of the time.",
+   "Industry also plays a role in this divergence. Healthcare queries exhibited the highest disagreement, while e-commerce queries had the lowest. Businesses in sectors like health or education cannot assume visibility on one AI platform translates to another, with a 60-68% chance of being wrong.",
+   "The practical implication for businesses is to test their visibility on each platform separately. Check if your brand is mentioned by ChatGPT for relevant queries and if it appears in the sources cited by Google AI Overviews. Different platforms will yield different answers.",
+   "Tools like geoready.dev can help determine if AI crawlers can reach your site, auditing against 27 different AI crawlers. However, being reachable does not guarantee recommendation, as these are distinct processes across the varied AI search landscape."
+  ],
+  "caption": "AI search isn't a single entity: a new study shows ChatGPT, Google AI Overviews, and Google AI Mode disagree 62% of the time on brand recommendations.\n\nA BrightEdge study using tens of thousands of identical prompts found that ChatGPT, Google AI Overviews, and Google AI Mode disagreed on brand recommendations 62% of the time. Across all three platforms, only 17% of queries produced the same brand recommendations. This highlights significant differences in how AI search operates.\n\nChatGPT functions primarily as a brand recommender, mentioning brands 3.2 times more often than it links to them. For example, it might suggest 'Notion' without providing a direct link to notion.com. Its recommendations rely heavily on its training data and established trust patterns.\n\nConversely, Google AI Overviews acts more as a citation engine, linking to 14.30 sources per query while only naming 6.02 brands. It prioritizes retrieving and linking source pages, even if those pages aren't always the brands it would explicitly recommend. This indicates a different underlying mechanism.\n\nThe core difference is that ChatGPT aims to be in the model's knowledge base for brand mentions. Google AI Overviews focuses on being in the retrieved source pool. Optimizing for 'AI search' requires understanding these distinct approaches.\n\nThe level of disagreement varies significantly by query type. Comparison queries, like 'X vs Y,' showed the most agreement across platforms. However, 'best' queries, such as 'best tool for X,' resulted in the least agreement, with platforms recommending different brands 77% of the time.\n\nIndustry also plays a role in this divergence. Healthcare queries exhibited the highest disagreement, while e-commerce queries had the lowest. Businesses in sectors like health or education cannot assume visibility on one AI platform translates to another, with a 60-68% chance of being wrong.\n\n#AI #TechNews #ChatGPT #GoogleAI #SearchEngine #DigitalMarketing\n\nSource: DEV",
+  "tweet": "AI search isn't a single entity. A new study reveals ChatGPT, Google AI Overviews, and Google AI Mode disagree 62% of the time on brand recommendations. Only 17% of queries get the same results across all three. #AI #SearchEngines",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/juanauriti/chatgpt-mentions-32x-more-brands-than-it-cites-google-cites-24x-more-than-it-mentions-they-3dia",
+  "image": "",
+  "orig_title": "ChatGPT mentions 3.2x more brands than it cites. Google cites 2.4x more than it mentions. They disagree 62% of the time.",
+  "cluster_urls": [
+   "https://dev.to/juanauriti/chatgpt-mentions-32x-more-brands-than-it-cites-google-cites-24x-more-than-it-mentions-they-3dia"
+  ],
+  "cluster_titles": [
+   "ChatGPT mentions 3.2x more brands than it cites. Google cites 2.4x more than it mentions. They disagree 62% of the time."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261029-1407-0-ai-search-engines-disagree-62-of-the-time-on.png",
+   "20261029-1407-0-ai-search-engines-disagree-62-of-the-time-on-d1.png",
+   "20261029-1407-0-ai-search-engines-disagree-62-of-the-time-on-d2.png",
+   "20261029-1407-0-ai-search-engines-disagree-62-of-the-time-on-d3.png"
+  ]
+ },
+ {
+  "topic": "zero click remote android dos vulnerability",
+  "headline_marked": "[[Zero-click, silent, remote Android DoS]] crashes phones, drops emergency calls",
+  "headline": "Zero-click, silent, remote Android DoS crashes phones, drops emergency calls",
+  "summary": "A single malformed SMS can persistently disable Android telephony, making emergency calls impossible. Recovery is difficult, often requiring a factory reset that may only temporarily fix the issue due to carrier re-sending the payload.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A newly disclosed Android vulnerability allows a single malformed WAP Push SMS to crash the com.android.phone process, immediately dropping active calls, including emergency ones. This occurs with zero interaction from the victim, exploiting a `NegativeArraySizeException` on the telephony main thread.",
+   "The malicious message is delivered as a data SMS, meaning it is never shown to the user and leaves no trace in the inbox, nor does it reveal the sender's number. The exploit boasts a 100% reproduction rate across various Android devices, including a Pixel 9 running April 2026 firmware and multiple Samsung Galaxy models.",
+   "While a single message causes a transient outage, sending approximately 30 payloads rapidly can corrupt the device's SQLite database that stores messages. Once corrupted, the com.android.phone process crashes immediately on every boot, rendering the phone persistently without telephony functionality.",
+   "Recovery from this persistent state is challenging. A factory reset only provides temporary relief because the carrier may re-send the unacknowledged malicious payload, re-triggering the crash. Full recovery often requires specific technical steps, which are significantly harder for non-technical users, especially those with eSIMs.",
+   "This vulnerability is classified as a remote, zero-click, persistent denial of service that directly impacts public safety by preventing access to emergency services. Australian regulations, for instance, mandate that carriers identify and potentially block devices unable to reach emergency numbers, creating a perverse outcome where the attack could lead to a device being barred from network service.",
+   "Despite being reported privately and held beyond the VRP's 90-day window, Google reportedly classified this issue as a non-security bug across three tickets and four engineers. The proposed fix is a simple range check before a cast operation in `WapPushOverSms.java`."
+  ],
+  "caption": "A zero-click Android vulnerability can remotely disable your phone's ability to make calls, including emergency services, with just a single hidden SMS.\n\nA newly disclosed Android vulnerability allows a single malformed WAP Push SMS to crash the com.android.phone process, immediately dropping active calls, including emergency ones. This occurs with zero interaction from the victim, exploiting a `NegativeArraySizeException` on the telephony main thread.\n\nThe malicious message is delivered as a data SMS, meaning it is never shown to the user and leaves no trace in the inbox, nor does it reveal the sender's number. The exploit boasts a 100% reproduction rate across various Android devices, including a Pixel 9 running April 2026 firmware and multiple Samsung Galaxy models.\n\nWhile a single message causes a transient outage, sending approximately 30 payloads rapidly can corrupt the device's SQLite database that stores messages. Once corrupted, the com.android.phone process crashes immediately on every boot, rendering the phone persistently without telephony functionality.\n\nRecovery from this persistent state is challenging. A factory reset only provides temporary relief because the carrier may re-send the unacknowledged malicious payload, re-triggering the crash. Full recovery often requires specific technical steps, which are significantly harder for non-technical users, especially those with eSIMs.\n\nThis vulnerability is classified as a remote, zero-click, persistent denial of service that directly impacts public safety by preventing access to emergency services. Australian regulations, for instance, mandate that carriers identify and potentially block devices unable to reach emergency numbers, creating a perverse outcome where the attack could lead to a device being barred from network service.\n\n#Android #Security #Vulnerability #DoS #TechNews #Cybersecurity\n\nSource: Hacker News",
+  "tweet": "A zero-click Android vulnerability can remotely disable your phone's ability to make calls, including emergency services, with just a single hidden SMS. This persistent DoS is triggered by a malformed WAP Push SMS and Google reportedly classified it as a non-security issue. ",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "android.com",
+  "source": "Hacker News",
+  "url": "https://smsofdeath.com/",
+  "image": "",
+  "orig_title": "Zero click, silent, remote Android DoS",
+  "cluster_urls": [
+   "https://smsofdeath.com/"
+  ],
+  "cluster_titles": [
+   "Zero click, silent, remote Android DoS"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261029-1407-1-zero-click-silent-remote-android-dos-crashes.png",
+   "20261029-1407-1-zero-click-silent-remote-android-dos-crashes-d1.png",
+   "20261029-1407-1-zero-click-silent-remote-android-dos-crashes-d2.png",
+   "20261029-1407-1-zero-click-silent-remote-android-dos-crashes-d3.png"
+  ]
+ }
+]

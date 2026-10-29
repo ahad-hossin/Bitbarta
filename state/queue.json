@@ -1,1 +1,45 @@
-[]
+[
+ {
+  "topic": "ai writes half our code now nobody taught us how to review it",
+  "headline_marked": "[[AI Writes Half Our Code Now]]. Nobody Taught Us How to Review It.",
+  "headline": "AI Writes Half Our Code Now. Nobody Taught Us How to Review It.",
+  "summary": "A recent survey reveals developers now report 54% of their code is AI-generated, up from 28% last year, highlighting a critical gap in code review skills.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A recent developer survey, 'The State of AI 2026', collected responses from 7,258 developers, finding that an average of 54% of their code is now AI-generated. This marks a significant increase from 28% just one year prior.",
+   "This rapid shift means AI has moved from assisting with boilerplate code to writing more than half of a developer's output. However, traditional coding education focuses heavily on writing code, not on efficiently reviewing code written by others, especially AI.",
+   "AI-generated code often presents a deceptive appearance: it's clean, confidently formatted, and uses good variable names. Yet, it can contain subtle bugs that do not immediately throw errors, making them difficult to spot.",
+   "One common AI bug involves `forEach` loops with `async` callbacks. The `forEach` method does not wait for promises to resolve, causing subsequent code to execute before asynchronous operations complete, leading to unexpected behavior.",
+   "Another frequent issue is the omission of `await` for promise-returning calls within `try` blocks. Without `await`, the function returns immediately, and any subsequent failure of the promise occurs outside the `try` block, preventing the `catch` block from handling the error.",
+   "AI also often misuses the `.sort()` method without a comparator function for non-string arrays. By default, `.sort()` converts elements to strings and sorts alphabetically, leading to incorrect numerical or date ordering.",
+   "In React, AI-generated code can create stale closures within `useEffect` hooks that use `setInterval`, `setTimeout`, or event listeners with an empty dependency array. This causes the callback to capture initial state values, preventing updates.",
+   "Finally, AI frequently generates code that directly mutates state arrays or objects obtained from `useState`. Since React compares object references, mutating the existing object instead of creating a new one prevents the UI from re-rendering.",
+   "As prompting tools improve, the ability to write prompts becomes less of a differentiator. The critical skill now is understanding core programming fundamentals like event loops, closures, references, and promises to identify when AI's confident code is subtly incorrect."
+  ],
+  "caption": "Developers now report that 54% of their code is AI-generated, a massive jump from 28% just one year ago. But are we equipped to review it?\n\nA recent developer survey, 'The State of AI 2026', collected responses from 7,258 developers, finding that an average of 54% of their code is now AI-generated. This marks a significant increase from 28% just one year prior.\n\nThis rapid shift means AI has moved from assisting with boilerplate code to writing more than half of a developer's output. However, traditional coding education focuses heavily on writing code, not on efficiently reviewing code written by others, especially AI.\n\nAI-generated code often presents a deceptive appearance: it's clean, confidently formatted, and uses good variable names. Yet, it can contain subtle bugs that do not immediately throw errors, making them difficult to spot.\n\nOne common AI bug involves `forEach` loops with `async` callbacks. The `forEach` method does not wait for promises to resolve, causing subsequent code to execute before asynchronous operations complete, leading to unexpected behavior.\n\nAnother frequent issue is the omission of `await` for promise-returning calls within `try` blocks. Without `await`, the function returns immediately, and any subsequent failure of the promise occurs outside the `try` block, preventing the `catch` block from handling the error.\n\nAI also often misuses the `.sort()` method without a comparator function for non-string arrays. By default, `.sort()` converts elements to strings and sorts alphabetically, leading to incorrect numerical or date ordering.\n\nIn React, AI-generated code can create stale closures within `useEffect` hooks that use `setInterval`, `setTimeout`, or event listeners with an empty dependency array. This causes the callback to capture initial state values, preventing updates.\n\n#AI #Coding #SoftwareDevelopment #CodeReview #DeveloperTools #TechNews\n\nSource: DEV",
+  "tweet": "Developers now report 54% of their code is AI-generated, up from 28% last year. The problem? Most aren't trained to review AI's subtly wrong, yet confidently formatted, code. Are you ready for this new challenge? #AICoding #CodeReview #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/javascriptmastery/ai-writes-half-our-code-now-nobody-taught-us-how-to-review-it-3h44",
+  "image": "",
+  "orig_title": "AI Writes Half Our Code Now. Nobody Taught Us How to Review It.",
+  "cluster_urls": [
+   "https://dev.to/javascriptmastery/ai-writes-half-our-code-now-nobody-taught-us-how-to-review-it-3h44"
+  ],
+  "cluster_titles": [
+   "AI Writes Half Our Code Now. Nobody Taught Us How to Review It."
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261029-1106-0-ai-writes-half-our-code-now-nobody-taught-us.png",
+   "20261029-1106-0-ai-writes-half-our-code-now-nobody-taught-us-d1.png",
+   "20261029-1106-0-ai-writes-half-our-code-now-nobody-taught-us-d2.png",
+   "20261029-1106-0-ai-writes-half-our-code-now-nobody-taught-us-d3.png"
+  ]
+ }
+]

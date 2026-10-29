@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "bernstein open source governance for ai agents",
+  "headline_marked": "[[Bernstein launches open-source governance layer for AI agents]] with deterministic scheduling and verifiable audit trails",
+  "headline": "Bernstein launches open-source governance layer for AI agents with deterministic scheduling and verifiable audit trails",
+  "summary": "Bernstein offers a deterministic Python scheduler for parallel AI agents, ensuring verifiable policy enforcement and byte-identical replays without model interference. It includes HMAC-signed audit chains and offline receipt verification.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Bernstein is an open-source governance layer for AI agents, featuring a deterministic Python scheduler that runs agents in parallel. Crucially, it operates with no model in the coordination loop, ensuring that the same plan replays byte-identically every time.",
+   "The system enforces policy as code, allowing developers to define rules that Bernstein then verifies and records. It generates a verifiable audit record through HMAC-chained event logs, which can be checked offline.",
+   "It supports orchestrating various CLI coding agents, including Claude Code, Codex, and Gemini CLI, within parallel git worktrees. Bernstein also offers experimental Cloudflare integration, utilizing Workers for agents and R2/D1 for workspace and metering state.",
+   "Currently in beta, Bernstein recently released v3.14.159, addressing initial setup issues by raising named errors for malformed fields. This update also streamlined commands, improved reference documentation, and added a Muse Code adapter and Agent Plugins v1.0.0 manifests.",
+   "For robust verification, Bernstein writes an HMAC-chained event log under .sdd/audit/, with each entry referencing the previous hash. This design ensures that any tampering breaks verification, and the data remains on your machine.",
+   "Users can configure a signing key to generate an ed25519-signed receipt, binding the journal and lineage heads. This receipt allows for offline verification of the audit chain without needing the HMAC key or rerunning the process, providing a strong provenance record."
+  ],
+  "caption": "Ensure deterministic execution and verifiable audit trails for your AI agents. Bernstein is an open-source governance layer designed for parallel agent orchestration.\n\nBernstein is an open-source governance layer for AI agents, featuring a deterministic Python scheduler that runs agents in parallel. Crucially, it operates with no model in the coordination loop, ensuring that the same plan replays byte-identically every time.\n\nThe system enforces policy as code, allowing developers to define rules that Bernstein then verifies and records. It generates a verifiable audit record through HMAC-chained event logs, which can be checked offline.\n\nIt supports orchestrating various CLI coding agents, including Claude Code, Codex, and Gemini CLI, within parallel git worktrees. Bernstein also offers experimental Cloudflare integration, utilizing Workers for agents and R2/D1 for workspace and metering state.\n\nCurrently in beta, Bernstein recently released v3.14.159, addressing initial setup issues by raising named errors for malformed fields. This update also streamlined commands, improved reference documentation, and added a Muse Code adapter and Agent Plugins v1.0.0 manifests.\n\nFor robust verification, Bernstein writes an HMAC-chained event log under .sdd/audit/, with each entry referencing the previous hash. This design ensures that any tampering breaks verification, and the data remains on your machine.\n\nUsers can configure a signing key to generate an ed25519-signed receipt, binding the journal and lineage heads. This receipt allows for offline verification of the audit chain without needing the HMAC key or rerunning the process, providing a strong provenance record.\n\n#AI #OpenSource #Developers #AgentAI #Tech #Governance\n\nSource: Hacker News",
+  "tweet": "Bernstein is an open-source governance layer for AI agents, offering deterministic scheduling & verifiable audit trails. Run agents in parallel with policy as code & HMAC-signed logs. Perfect for ensuring reliable AI workflows. #AI #OpenSource #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "bernstein.run",
+  "source": "Hacker News",
+  "url": "https://bernstein.run",
+  "image": "",
+  "orig_title": "Bernstein – open-source governance layer for AI agents",
+  "cluster_urls": [
+   "https://bernstein.run"
+  ],
+  "cluster_titles": [
+   "Bernstein – open-source governance layer for AI agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261029-1259-0-bernstein-launches-open-source-governance-la.png",
+   "20261029-1259-0-bernstein-launches-open-source-governance-la-d1.png",
+   "20261029-1259-0-bernstein-launches-open-source-governance-la-d2.png"
+  ]
+ },
+ {
+  "topic": "chrome autofill uses gemini to read gmail",
+  "headline_marked": "[[Chrome's smarter autofill reads your Gmail]] with Gemini Personal Intelligence, rolling out now",
+  "headline": "Chrome's smarter autofill reads your Gmail with Gemini Personal Intelligence, rolling out now",
+  "summary": "Google's enhanced autofill now pulls order numbers, tracking information, and flight bookings directly from your Gmail inbox for easier form completion.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "Google is rolling out an enhanced autofill feature in Chrome, powered by Gemini with Personal Intelligence. This new capability goes beyond traditional autofill, suggesting information directly from your Gmail inbox.",
+   "For example, when checking in for a flight, the browser will automatically pull in the booking code from your Gmail. This saves users from manually searching their emails for relevant details.",
+   "Google states that sensitive data is encrypted, and users have full control over the information shared. You can remove specific suggestions or turn off the enhanced autofill experience in Chrome's settings.",
+   "This feature is currently rolling out in the US on desktop, Android, and iPhone for Gemini in Chrome users aged 18 or older who have enabled Personal Intelligence. While initially tested with Google Photos integration, the public release is limited to Gmail as the source.",
+   "On Android, suggestions from Gmail carry a Gemini icon, and users can long-press a suggestion to view its source email or remove unwanted suggestions. This helps confirm accuracy and manage personal data effectively."
+  ],
+  "caption": "Chrome's new autofill uses Gemini to read your Gmail! It automatically pulls flight bookings, order numbers, and tracking info directly from your inbox.\n\nGoogle is rolling out an enhanced autofill feature in Chrome, powered by Gemini with Personal Intelligence. This new capability goes beyond traditional autofill, suggesting information directly from your Gmail inbox.\n\nFor example, when checking in for a flight, the browser will automatically pull in the booking code from your Gmail. This saves users from manually searching their emails for relevant details.\n\nGoogle states that sensitive data is encrypted, and users have full control over the information shared. You can remove specific suggestions or turn off the enhanced autofill experience in Chrome's settings.\n\nThis feature is currently rolling out in the US on desktop, Android, and iPhone for Gemini in Chrome users aged 18 or older who have enabled Personal Intelligence. While initially tested with Google Photos integration, the public release is limited to Gmail as the source.\n\nOn Android, suggestions from Gmail carry a Gemini icon, and users can long-press a suggestion to view its source email or remove unwanted suggestions. This helps confirm accuracy and manage personal data effectively.\n\n#Chrome #Autofill #Gemini #Google #TechNews #Productivity\n\nSource: Android Police",
+  "tweet": "Chrome's new autofill uses Gemini to read your Gmail! It automatically pulls flight bookings, order numbers, and tracking info directly from your inbox, saving you time. Rolling out now in the US. #Chrome #Gemini #Google",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/chromes-smarter-autofill-goes-beyond-passwords-reads-your-gmail/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/10/android-mascot-3d-google-chrome-1.jpg",
+  "orig_title": "Chrome's smarter autofill goes beyond passwords and reads your Gmail",
+  "cluster_urls": [
+   "https://www.androidpolice.com/chromes-smarter-autofill-goes-beyond-passwords-reads-your-gmail/"
+  ],
+  "cluster_titles": [
+   "Chrome's smarter autofill goes beyond passwords and reads your Gmail"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20261029-1259-1-chrome-s-smarter-autofill-reads-your-gmail-w.png",
+   "20261029-1259-1-chrome-s-smarter-autofill-reads-your-gmail-w-d1.png",
+   "20261029-1259-1-chrome-s-smarter-autofill-reads-your-gmail-w-d2.png"
+  ]
+ }
+]

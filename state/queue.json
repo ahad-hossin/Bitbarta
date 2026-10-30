@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "linux kernel tcp use after free vulnerability",
+  "headline_marked": "[[Linux TCP Use-After-Free Risk]] (CVE-2026-98432) identified, patch verified",
+  "headline": "Linux TCP Use-After-Free Risk (CVE-2026-98432) identified, patch verified",
+  "summary": "A critical use-after-free vulnerability (CVE-2026-98432) affecting Linux TCP has been identified. Security researchers have confirmed that a patch is available and verified.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A new critical vulnerability, identified as CVE-2026-98432, has been discovered in the Linux kernel's TCP implementation. This flaw is categorized as a Use-After-Free (UAF) bug affecting IPv4 TCP. UAF vulnerabilities can lead to arbitrary code execution or denial of service.",
+   "The vulnerability specifically impacts the Linux kernel, with evidence linking it to the Multipath TCP (MPTCP) component. Such flaws can allow attackers to gain unauthorized access or destabilize systems.",
+   "Security researchers, including Penligent Security Labs, have confirmed the existence of the vulnerability and, importantly, verified that a patch is available. This swift validation helps ensure system administrators can address the risk promptly.",
+   "Users running affected Linux systems are urged to apply the security updates as soon as they become available. Staying updated is crucial for maintaining system integrity and protecting against potential exploits."
+  ],
+  "caption": "A new critical vulnerability, CVE-2026-98432, has been found in Linux TCP. Good news: a patch is already verified.\n\nA new critical vulnerability, identified as CVE-2026-98432, has been discovered in the Linux kernel's TCP implementation. This flaw is categorized as a Use-After-Free (UAF) bug affecting IPv4 TCP. UAF vulnerabilities can lead to arbitrary code execution or denial of service.\n\nThe vulnerability specifically impacts the Linux kernel, with evidence linking it to the Multipath TCP (MPTCP) component. Such flaws can allow attackers to gain unauthorized access or destabilize systems.\n\nSecurity researchers, including Penligent Security Labs, have confirmed the existence of the vulnerability and, importantly, verified that a patch is available. This swift validation helps ensure system administrators can address the risk promptly.\n\nUsers running affected Linux systems are urged to apply the security updates as soon as they become available. Staying updated is crucial for maintaining system integrity and protecting against potential exploits.\n\n#Linux #Security #CVE #Vulnerability #TechNews #Cybersecurity\n\nSource: Hacker News",
+  "tweet": "A new critical vulnerability, CVE-2026-98432, has been found in Linux TCP, posing a use-after-free risk. The good news? A patch has already been verified by security researchers. #Linux #Security #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.penligent.ai/hackinglabs/cve-2026-98432/",
+  "image": "",
+  "orig_title": "CVE-2026-98432: Linux TCP Use-After-Free Risk and Patch Validation",
+  "cluster_urls": [
+   "https://www.penligent.ai/hackinglabs/cve-2026-98432/"
+  ],
+  "cluster_titles": [
+   "CVE-2026-98432: Linux TCP Use-After-Free Risk and Patch Validation"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261030-1006-0-linux-tcp-use-after-free-risk-cve-2026-98432.png",
+   "20261030-1006-0-linux-tcp-use-after-free-risk-cve-2026-98432-d1.png",
+   "20261030-1006-0-linux-tcp-use-after-free-risk-cve-2026-98432-d2.png"
+  ]
+ },
+ {
+  "topic": "hot wallet crypto security drains",
+  "headline_marked": "[[Wallet drains expose critical flaw]]: Authorization signatures are the real attack surface, not just where funds go.",
+  "headline": "Wallet drains expose critical flaw: Authorization signatures are the real attack surface, not just where funds go.",
+  "summary": "Recent hot wallet drains, including a $3.3B event, reveal a critical oversight: incident response focuses on tracing stolen funds, not verifying the authorization signatures that enable the theft.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Major hot wallet drain events, like the $1.5B Bybit incident and a recent $3.3B loss, consistently follow a pattern. Post-mortems focus on tracing where funds went, but largely ignore how the authorizing signature was produced. This reactive approach fails to address the root cause of the breaches.",
+   "Current incident response tooling is primarily built for tracing transactions, not for analyzing the authorization layer. This means teams can quickly identify where stolen funds landed, but struggle to provide verifiable evidence of what authorized the movement in the first place.",
+   "The activation of EIP-7702, enabling delegated execution where an EOA can temporarily act like a contract, further complicates matters. The delegation signature becomes the true root event, a critical detail almost no existing monitoring stack adequately addresses.",
+   "To prevent future multi-billion-dollar losses, the industry needs to adopt a minimal set of properties that any production hot-wallet authorization path should satisfy. This includes verifiable human or policy grants for any significant movement, ensuring independent confirmation of wallet instructions.",
+   "The shift must move beyond merely detecting a breach quickly to verifying that the signature authorizing a movement cannot exist without proper, auditable grants. Detection only tells you you're bleeding; verification is what prevents the bleed from starting.",
+   "Correctover is actively working on runtime verification for AI agent and wallet tool calls, focusing on structure, schema, identity, integrity, and security. Their IETF-draft-track design outlines scope, receipt, and handle patterns for robust authorization."
+  ],
+  "caption": "Billions lost in hot wallet drains: The real vulnerability isn't where the money goes, but how it's authorized.\n\nMajor hot wallet drain events, like the $1.5B Bybit incident and a recent $3.3B loss, consistently follow a pattern. Post-mortems focus on tracing where funds went, but largely ignore how the authorizing signature was produced. This reactive approach fails to address the root cause of the breaches.\n\nCurrent incident response tooling is primarily built for tracing transactions, not for analyzing the authorization layer. This means teams can quickly identify where stolen funds landed, but struggle to provide verifiable evidence of what authorized the movement in the first place.\n\nThe activation of EIP-7702, enabling delegated execution where an EOA can temporarily act like a contract, further complicates matters. The delegation signature becomes the true root event, a critical detail almost no existing monitoring stack adequately addresses.\n\nTo prevent future multi-billion-dollar losses, the industry needs to adopt a minimal set of properties that any production hot-wallet authorization path should satisfy. This includes verifiable human or policy grants for any significant movement, ensuring independent confirmation of wallet instructions.\n\nThe shift must move beyond merely detecting a breach quickly to verifying that the signature authorizing a movement cannot exist without proper, auditable grants. Detection only tells you you're bleeding; verification is what prevents the bleed from starting.\n\nCorrectover is actively working on runtime verification for AI agent and wallet tool calls, focusing on structure, schema, identity, integrity, and security. Their IETF-draft-track design outlines scope, receipt, and handle patterns for robust authorization.\n\n#CryptoSecurity #WalletSecurity #Blockchain #Cybersecurity #Web3 #IncidentResponse\n\nSource: DEV",
+  "tweet": "Billions lost in hot wallet drains: The real vulnerability isn't where the money goes, but how it's authorized. Incident response must shift from tracing funds to verifying authorization signatures to prevent future losses. #CryptoSecurity #Web3",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/correctover/hot-wallet-drains-in-2026-the-question-nobody-asks-5e05",
+  "image": "",
+  "orig_title": "Hot Wallet Drains in 2026: The Question Nobody Asks",
+  "cluster_urls": [
+   "https://dev.to/correctover/hot-wallet-drains-in-2026-the-question-nobody-asks-5e05"
+  ],
+  "cluster_titles": [
+   "Hot Wallet Drains in 2026: The Question Nobody Asks"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261030-1006-1-wallet-drains-expose-critical-flaw-authoriza.png",
+   "20261030-1006-1-wallet-drains-expose-critical-flaw-authoriza-d1.png",
+   "20261030-1006-1-wallet-drains-expose-critical-flaw-authoriza-d2.png",
+   "20261030-1006-1-wallet-drains-expose-critical-flaw-authoriza-d3.png"
+  ]
+ }
+]

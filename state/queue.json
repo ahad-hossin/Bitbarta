@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "doom transformer ai breakthrough",
+  "headline_marked": "[[DOOM now runs neural networks]]: 'Doomformer' compiles AI into game maps",
+  "headline": "DOOM now runs neural networks: 'Doomformer' compiles AI into game maps",
+  "summary": "Doomformer compiles integer neural networks into ZDoom maps, using in-game voodoo dolls for arithmetic and light levels for sums. It's 23,000 times slower than NumPy but achieves 97.16% accuracy on MNIST.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new project, Doomformer, allows integer neural networks to be compiled directly into ZDoom maps. It leverages the game's mechanics, using voodoo dolls (player copies) to perform arithmetic operations.",
+   "Sector light levels and plane heights within the DOOM map are utilized to hold the sums of these computations. Python then reads every exposed value from the running game and rigorously compares it against a NumPy integer reference, with zero tolerance for error.",
+   "While technically impressive, the process is significantly slow. It runs approximately 23,000 times slower than NumPy for a small Multi-Layer Perceptron (MLP) and takes 163 seconds of real-time DOOM to process a handwritten digit.",
+   "The setup requires standard developer tools like git, cmake, and a C compiler, and it supports Linux dynamic runtimes. A Colab notebook is also available, allowing users to draw digits on a browser canvas for processing within DOOM without local setup.",
+   "To input data, the marine 'inks' a 3x3 brush of floor cells. A 'READ' command then writes these 784 pixels into the network, with 1,355 voodoo dolls in the map computing the result.",
+   "The network processes 784 pixels into 64 hidden units, then 45 pairwise score comparisons, leading to 10 win counts. The digit that wins all nine of its comparisons triggers a doll to cross a line, lighting up the corresponding digit on the display.",
+   "Doomformer achieves high accuracy, reading 99 out of the first 100 MNIST test digits correctly and 966 out of 1,000 sampled from the full dataset. The underlying integer network scores 97.16% accuracy on all 10,000 MNIST digits.",
+   "A 'museum' map is also available, allowing users to play and interact with a small handwritten network without Python. This map demonstrates network mutation, where a single connection can be rewired within the running level, altering the network's behavior."
+  ],
+  "caption": "A developer has turned DOOM into a neural network processor! 'Doomformer' compiles AI into ZDoom maps.\n\nA new project, Doomformer, allows integer neural networks to be compiled directly into ZDoom maps. It leverages the game's mechanics, using voodoo dolls (player copies) to perform arithmetic operations.\n\nSector light levels and plane heights within the DOOM map are utilized to hold the sums of these computations. Python then reads every exposed value from the running game and rigorously compares it against a NumPy integer reference, with zero tolerance for error.\n\nWhile technically impressive, the process is significantly slow. It runs approximately 23,000 times slower than NumPy for a small Multi-Layer Perceptron (MLP) and takes 163 seconds of real-time DOOM to process a handwritten digit.\n\nThe setup requires standard developer tools like git, cmake, and a C compiler, and it supports Linux dynamic runtimes. A Colab notebook is also available, allowing users to draw digits on a browser canvas for processing within DOOM without local setup.\n\nTo input data, the marine 'inks' a 3x3 brush of floor cells. A 'READ' command then writes these 784 pixels into the network, with 1,355 voodoo dolls in the map computing the result.\n\nThe network processes 784 pixels into 64 hidden units, then 45 pairwise score comparisons, leading to 10 win counts. The digit that wins all nine of its comparisons triggers a doll to cross a line, lighting up the corresponding digit on the display.\n\nDoomformer achieves high accuracy, reading 99 out of the first 100 MNIST test digits correctly and 966 out of 1,000 sampled from the full dataset. The underlying integer network scores 97.16% accuracy on all 10,000 MNIST digits.\n\nA 'museum' map is also available, allowing users to play and interact with a small handwritten network without Python. This map demonstrates network mutation, where a single connection can be rewired within the running level, altering the network's behavior.\n\n#DOOM #AI #NeuralNetworks #Programming #RetroGaming #Tech\n\nSource: Hacker News",
+  "tweet": "A developer turned DOOM into a neural network processor! 'Doomformer' compiles AI into ZDoom maps, using voodoo dolls for arithmetic. It's 23,000x slower than NumPy but works, achieving 97.16% MNIST accuracy. #DOOM #AI #Programming",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/mottopanikeiku/doomformer",
+  "image": "",
+  "orig_title": "Show HN: I Turned DOOM into a Transformer",
+  "cluster_urls": [
+   "https://github.com/mottopanikeiku/doomformer"
+  ],
+  "cluster_titles": [
+   "Show HN: I Turned DOOM into a Transformer"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261030-0707-0-doom-now-runs-neural-networks-doomformer-com.png",
+   "20261030-0707-0-doom-now-runs-neural-networks-doomformer-com-d1.png",
+   "20261030-0707-0-doom-now-runs-neural-networks-doomformer-com-d2.png",
+   "20261030-0707-0-doom-now-runs-neural-networks-doomformer-com-d3.png"
+  ]
+ },
+ {
+  "topic": "elon musk putin starlink-like system",
+  "headline_marked": "[[Putin calls Elon Musk a 'genius']] and confirms 'close contact' on satellite internet",
+  "headline": "Putin calls Elon Musk a 'genius' and confirms 'close contact' on satellite internet",
+  "summary": "Russian President Vladimir Putin praised Elon Musk as a \"genius\" and confirmed \"close contact\" regarding Russia's Starlink competitor, Rassvet, amidst concerns over Starlink access in Ukraine.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Russian President Vladimir Putin lauded SpaceX CEO Elon Musk as \"truly a genius\" during the Russia-Africa Summit. Putin also confirmed that he and Musk are in \"close contact\" regarding Rassvet, Russia's developing internet satellite service, which aims to compete with Musk's Starlink.",
+   "Putin highlighted Musk's achievement of having over 5,000 satellites in orbit, contrasting it with Russia's early stages in developing its own constellation. This acknowledgment underscores the significant lead SpaceX holds in satellite internet technology.",
+   "The potential for a relationship between Putin and Musk raises concerns, particularly given Musk's recent frustrations with Ukrainian President Volodymyr Zelenskyy. Ukraine has relied heavily on Starshield, the military version of Starlink, since the 2022 Russian invasion.",
+   "Following the U.S. easing sanctions on Russia, Ukrainian officials worried about losing Starshield access. These concerns materialized when Ukrainian drones experienced frequent connectivity losses for about 10 days earlier this month.",
+   "Reports from the Wall Street Journal suggest Musk ordered SpaceX to limit Ukraine's Starlink access, though other sources point to an order from the White House. Musk himself stated on X that Ukraine violated Starlink's terms of service by using the technology for \"offensive drone strikes to kill people.\"",
+   "Musk emphasized the critical role of Starlink, writing on X, \"Were Starlink to be turned off, the Ukrainian front line would collapse immediately.\" He clarified this as a \"statement of fact\" rather than a threat. Starlink service in Ukraine appears to have since resumed normal operations."
+  ],
+  "caption": "Russian President Vladimir Putin has praised Elon Musk as a \"genius\" and confirmed \"close contact\" regarding Russia's Starlink competitor, Rassvet.\n\nRussian President Vladimir Putin lauded SpaceX CEO Elon Musk as \"truly a genius\" during the Russia-Africa Summit. Putin also confirmed that he and Musk are in \"close contact\" regarding Rassvet, Russia's developing internet satellite service, which aims to compete with Musk's Starlink.\n\nPutin highlighted Musk's achievement of having over 5,000 satellites in orbit, contrasting it with Russia's early stages in developing its own constellation. This acknowledgment underscores the significant lead SpaceX holds in satellite internet technology.\n\nThe potential for a relationship between Putin and Musk raises concerns, particularly given Musk's recent frustrations with Ukrainian President Volodymyr Zelenskyy. Ukraine has relied heavily on Starshield, the military version of Starlink, since the 2022 Russian invasion.\n\nFollowing the U.S. easing sanctions on Russia, Ukrainian officials worried about losing Starshield access. These concerns materialized when Ukrainian drones experienced frequent connectivity losses for about 10 days earlier this month.\n\nReports from the Wall Street Journal suggest Musk ordered SpaceX to limit Ukraine's Starlink access, though other sources point to an order from the White House. Musk himself stated on X that Ukraine violated Starlink's terms of service by using the technology for \"offensive drone strikes to kill people.\"\n\nMusk emphasized the critical role of Starlink, writing on X, \"Were Starlink to be turned off, the Ukrainian front line would collapse immediately.\" He clarified this as a \"statement of fact\" rather than a threat. Starlink service in Ukraine appears to have since resumed normal operations.\n\n#ElonMusk #VladimirPutin #Starlink #SpaceX #Geopolitics #TechNews\n\nSource: TechCrunch",
+  "tweet": "Vladimir Putin calls Elon Musk a \"genius\" and confirms \"close contact\" on Russia's Starlink rival, Rassvet. This comes amid past Starlink access issues in Ukraine. #ElonMusk #Putin #Starlink",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "spacex.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/10/29/elon-musk-is-truly-a-genius-says-vladimir-putin/",
+  "image": "",
+  "orig_title": "Elon Musk is ‘truly a genius,’ says Vladimir Putin",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/10/29/elon-musk-is-truly-a-genius-says-vladimir-putin/"
+  ],
+  "cluster_titles": [
+   "Elon Musk is ‘truly a genius,’ says Vladimir Putin"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20261030-0707-1-putin-calls-elon-musk-a-genius-and-confirms-.png",
+   "20261030-0707-1-putin-calls-elon-musk-a-genius-and-confirms--d1.png",
+   "20261030-0707-1-putin-calls-elon-musk-a-genius-and-confirms--d2.png"
+  ]
+ }
+]

@@ -1,1 +1,116 @@
-[]
+[
+ {
+  "topic": "dev tools and ai updates",
+  "headline_marked": "[[Forced SSH commands]] are not a complete authorization system",
+  "headline": "Forced SSH commands are not a complete authorization system",
+  "summary": "Learn how to properly secure your SSH connections by understanding the limitations of forced commands and implementing a complete security boundary.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "An authorized_keys entry can restrict a public key to a fixed command, disable terminal allocation, and turn off forwarding features. These options are useful for backup agents, deployment hooks, and narrow administrative paths, but they are not a complete authorization system by themselves. The command, the key's owner, the environment it inherits, and the server configuration all affect what the key can actually do.",
+   "The OpenSSH restrict option is a convenient starting point because it disables several interactive and forwarding features. A hard-coded command= option then supplies the command to run when the key authenticates. If the intended design needs to accept an original client request, the forced command receives it via SSH_ORIGINAL_COMMAND and must validate it with the same care as any untrusted input. Passing that value to a shell is usually a mistake.",
+   "A public key is an authentication factor, not a job title. The authorized_keys file should make the expected principal and purpose clear in comments and in the account design. Use a separate Unix account or service identity where the consequences of command execution differ. If two integrations need different file paths or different privilege levels, do not let them share one key because their command strings happen to look similar.",
+   "Review the account's shell and server-wide settings. A forced command may be superseded by a ForceCommand in sshd_config, and global forwarding or environment options can change the assumptions made by a key entry. Test the effective behavior from the server's configuration rather than reading only the line that was recently added.",
+   "The fixed command should use an absolute, trusted binary and explicit arguments. The binary should not read attacker-controlled configuration from the working directory. Set a controlled working directory, clear or replace risky environment variables, and avoid relying on the login shell's profile. If the command launches another process, the same rules apply to that child.",
+   "For an integration that accepts parameters, parse a narrow grammar instead of splitting a shell string. Allow exact subcommands and validated values. Reject newlines, shell metacharacters, path traversal, and unexpected options unless the program's interface requires them. Return a clear error without echoing secrets or full command lines.",
+   "Connect with the key and inspect whether the command and options behave as documented. Then try the things the policy is supposed to prevent. Repeat the test after an OpenSSH upgrade or a change to the account's groups. The key options and server configuration are versioned policy. A restriction that worked in a test container may behave differently on the production host.",
+   "Associate each key with an owner, purpose, creation date, expiry or review date, and the systems it can reach. Remove the key when the integration ends. Rotate it on a schedule that matches the risk, and immediately after a suspected compromise. Do not simply add a second key and leave the old one active.",
+   "Log authentication, forced command execution, and authorization failures without recording private key material or secrets. Alert on unexpected source addresses and repeated denied commands. Keep enough context to answer whether the key was used for the intended operation, from the expected host, at the expected time.",
+   "The powerful part of an SSH key is not its text. It is the account, command path, environment, and server policy that accept it. A forced command is a sound control when it is part of that complete boundary. A line copied into authorized_keys without tests and lifecycle ownership is only a hopeful restriction."
+  ],
+  "caption": "SSH forced commands offer a layer of security, but they are NOT a complete authorization system on their own.\n\nAn authorized_keys entry can restrict a public key to a fixed command, disable terminal allocation, and turn off forwarding features. These options are useful for backup agents, deployment hooks, and narrow administrative paths, but they are not a complete authorization system by themselves. The command, the key's owner, the environment it inherits, and the server configuration all affect what the key can actually do.\n\nThe OpenSSH restrict option is a convenient starting point because it disables several interactive and forwarding features. A hard-coded command= option then supplies the command to run when the key authenticates. If the intended design needs to accept an original client request, the forced command receives it via SSH_ORIGINAL_COMMAND and must validate it with the same care as any untrusted input. Passing that value to a shell is usually a mistake.\n\nA public key is an authentication factor, not a job title. The authorized_keys file should make the expected principal and purpose clear in comments and in the account design. Use a separate Unix account or service identity where the consequences of command execution differ. If two integrations need different file paths or different privilege levels, do not let them share one key because their command strings happen to look similar.\n\nReview the account's shell and server-wide settings. A forced command may be superseded by a ForceCommand in sshd_config, and global forwarding or environment options can change the assumptions made by a key entry. Test the effective behavior from the server's configuration rather than reading only the line that was recently added.\n\n#SSH #Security #Cybersecurity #DevOps #OpenSSH\n\nSource: DEV",
+  "tweet": "SSH forced commands can restrict keys but aren't a full authorization system. Learn how to properly secure your connections by understanding their limitations and implementing a complete security boundary. #SSH #Security #DevOps",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/eduardo_silva_231413/configurando-o-cenario-hibrido-com-azure-ad-connect-e-microsoft-entra-connect-44ng",
+  "image": "",
+  "orig_title": "Configurando o Cenário Híbrido com Azure AD Connect e Microsoft Entra Connect",
+  "cluster_urls": [
+   "https://dev.to/eduardo_silva_231413/configurando-o-cenario-hibrido-com-azure-ad-connect-e-microsoft-entra-connect-44ng",
+   "https://dev.to/jeffreyciend/forced-ssh-commands-still-need-a-complete-key-policy-282b",
+   "https://dev.to/umeshtharukaofficial/causal-discovery-why-conditional-independence-can-recover-a-graph-and-when-it-cannot-3g3d",
+   "https://dev.to/darshan_turakhia/how-an-eventually-consistent-dynamodb-gsi-let-mobile-retries-create-1400-duplicate-orders-50lg",
+   "https://dev.to/praveen_govi_ai/everyones-at-level-1-and-it-unlocks-nothing-54on",
+   "https://dev.to/iurii_rogulia/php2shell-two-critical-php-rce-flaws-and-what-to-do-in-the-first-hour-3cb6",
+   "https://dev.to/qnayds/understanding-penetration-testing-in-website-security-lo9",
+   "https://dev.to/iurii_rogulia/auto-insurance-claims-fraud-altered-estimates-and-reports-3lf0",
+   "https://dev.to/priyadharshiny13/building-an-ats-resume-scorer-api-with-fastapi-celery-and-docker-3e8k",
+   "https://dev.to/gatling/from-click-through-to-load-test-with-playwright-and-gatling-21d8",
+   "https://dev.to/wassim-azi/a-live-preview-terminal-ui-in-plain-nodejs-with-zero-dependencies-2pi8",
+   "https://dev.to/alexgeorgiev17/bun-144s-bun-fmt-checks-prettiers-own-repository-about-280-times-faster-than-prettier-gjj"
+  ],
+  "cluster_titles": [
+   "Configurando o Cenário Híbrido com Azure AD Connect e Microsoft Entra Connect",
+   "Forced SSH commands still need a complete key policy",
+   "Causal Discovery: Why Conditional Independence Can Recover a Graph - and When It Cannot",
+   "How an Eventually Consistent DynamoDB GSI Let Mobile Retries Create 1,400 Duplicate Orders",
+   "Everyone's at Level 1, and it unlocks nothing",
+   "PHP2Shell: Two Critical PHP RCE Flaws and What to Do in the First Hour",
+   "Understanding Penetration Testing in Website Security",
+   "Auto Insurance Claims Fraud: Altered Estimates and Reports",
+   "Building an ATS Resume Scorer API with FastAPI, Celery, and Docker",
+   "From click-through to load test with Playwright and Gatling",
+   "A live-preview terminal UI in plain Node.js, with zero dependencies",
+   "Bun 1.4.4's bun fmt checks Prettier's own repository about 280 times faster than Prettier"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261030-1706-0-forced-ssh-commands-are-not-a-complete-autho.png",
+   "20261030-1706-0-forced-ssh-commands-are-not-a-complete-autho-d1.png",
+   "20261030-1706-0-forced-ssh-commands-are-not-a-complete-autho-d2.png",
+   "20261030-1706-0-forced-ssh-commands-are-not-a-complete-autho-d3.png",
+   "20261030-1706-0-forced-ssh-commands-are-not-a-complete-autho-d4.png",
+   "20261030-1706-0-forced-ssh-commands-are-not-a-complete-autho-d5.png",
+   "20261030-1706-0-forced-ssh-commands-are-not-a-complete-autho-d6.png"
+  ]
+ },
+ {
+  "topic": "privacy and ai concerns",
+  "headline_marked": "This App [[Brutally Shames You]] by Tracking Lost Scrolling Hours",
+  "headline": "This App Brutally Shames You by Tracking Lost Scrolling Hours",
+  "summary": "Oh My Hours for iOS marks hours as 'lost' if you use distracting apps, offering a stark look at your phone habits. A free version is available, with premium features for $10/year.",
+  "category": "SOFTWARE",
+  "template": "neon",
+  "details": [
+   "Phone addiction is a growing concern, prompting even tech giants like Google and Apple to integrate time management tools into their devices. For those seeking more direct intervention, new apps are emerging to help cultivate healthier relationships with smartphones. Oh My Hours, an iOS-exclusive app, takes a uniquely harsh approach by simply dividing each day into hourly blocks that are marked as 'lost' if you engage with distracting applications.",
+   "The app's core functionality is straightforward: users designate apps or categories of apps as distractions. If any of these apps are used for a customizable duration within an hour, that entire hour is logged as 'lost.' The main interface presents a stark visual representation, with black circles indicating wasted time, offering a brutal yet effective overview of unproductive phone usage.",
+   "While a free version of Oh My Hours is available, unlocking its full potential requires a subscription. For $10 per year or a $20 lifetime payment, users can customize what constitutes a 'lost' hour or day, and gain access to monthly and yearly views for deeper insights into their phone habits. This premium tier also allows for more granular control over quiet hours and the threshold for marking an hour as lost.",
+   "Oh My Hours also offers a 'quiet hours' feature, where any use of a distracting app during designated times will mark all hours within that zone as lost, not just the specific hour of usage. For those who feel an hour was incorrectly marked, a reset option is available. The app also provides an export tool to generate a CSV file of your time statistics for further analysis."
+  ],
+  "caption": "Tired of endless scrolling? This new iOS app brutally marks every hour you waste on distracting apps.\n\nPhone addiction is a growing concern, prompting even tech giants like Google and Apple to integrate time management tools into their devices. For those seeking more direct intervention, new apps are emerging to help cultivate healthier relationships with smartphones. Oh My Hours, an iOS-exclusive app, takes a uniquely harsh approach by simply dividing each day into hourly blocks that are marked as 'lost' if you engage with distracting applications.\n\nThe app's core functionality is straightforward: users designate apps or categories of apps as distractions. If any of these apps are used for a customizable duration within an hour, that entire hour is logged as 'lost.' The main interface presents a stark visual representation, with black circles indicating wasted time, offering a brutal yet effective overview of unproductive phone usage.\n\nWhile a free version of Oh My Hours is available, unlocking its full potential requires a subscription. For $10 per year or a $20 lifetime payment, users can customize what constitutes a 'lost' hour or day, and gain access to monthly and yearly views for deeper insights into their phone habits. This premium tier also allows for more granular control over quiet hours and the threshold for marking an hour as lost.\n\nOh My Hours also offers a 'quiet hours' feature, where any use of a distracting app during designated times will mark all hours within that zone as lost, not just the specific hour of usage. For those who feel an hour was incorrectly marked, a reset option is available. The app also provides an export tool to generate a CSV file of your time statistics for further analysis.\n\n#DigitalWellbeing #ScreenTime #App #iOS #Productivity\n\nSource: Wired, Android Police, Engadget, Tom's Hardware",
+  "tweet": "This iOS app brutally marks hours as 'lost' if you use distracting apps. Oh My Hours offers a stark look at your phone habits. Free version available, premium features $10/year. #DigitalWellbeing #App",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Wired, Android Police, Engadget, Tom's Hardware",
+  "url": "https://www.wired.com/story/oh-my-hours-ios-app/",
+  "image": "https://media.wired.com/photos/6ae098c55eba24f851ec7cf8/master/pass/GettyImages-2240550047.jpg",
+  "orig_title": "This App Brutally Shames You by Tracking How Many Hours You’ve Lost to Scrolling",
+  "cluster_urls": [
+   "https://www.wired.com/story/oh-my-hours-ios-app/",
+   "https://www.androidpolice.com/galaxy-watch-8-sleep-tracking-fix/",
+   "https://www.engadget.com/2301968/senators-looking-into-serious-privacy-risks-with-meta-ai-glasses/",
+   "https://www.tomshardware.com/tech-industry/cyber-security/south-korea-clamps-down-on-tesla-drivers-for-unlocking-restricted-fsd-usd15-000-fines-and-prison-possible-sentences-suspects-imported-hardware-from-europe-and-china-then-traded-tips-on-concealing-activation-logs",
+   "https://www.wired.com/story/it-sure-looks-like-the-department-of-education-is-promoting-a-right-wing-harry-potter-meme/"
+  ],
+  "cluster_titles": [
+   "This App Brutally Shames You by Tracking How Many Hours You’ve Lost to Scrolling",
+   "I finally fixed my Galaxy Watch 8's broken sleep data by digging into Samsung's deepest menus",
+   "Senators are looking into 'serious privacy risks' with Meta's AI glasses",
+   "South Korea clamps down on Tesla drivers for unlocking restricted full self-driving feature, $15,000 fines and prison possible sentences — suspects imported hardware from Europe and China, then traded tips on concealing activation logs",
+   "It Sure Looks Like the Department of Education Is Promoting a Right-Wing ‘Harry Potter’ Meme"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20261030-1706-1-this-app-brutally-shames-you-by-tracking-los.png",
+   "20261030-1706-1-this-app-brutally-shames-you-by-tracking-los-d1.png",
+   "20261030-1706-1-this-app-brutally-shames-you-by-tracking-los-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "chatgpt account takeover",
+  "headline_marked": "Researchers [[took over ChatGPT accounts]] by simply sharing a malicious link",
+  "headline": "Researchers took over ChatGPT accounts by simply sharing a malicious link",
+  "summary": "A critical security flaw allowed arbitrary JavaScript execution within a victim's authenticated session, granting full access to their ChatGPT account just by opening a shared conversation.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A research team successfully bypassed ChatGPT's sandbox and content security policy, enabling them to take over any user's account. This was achieved simply by sending the victim a specially crafted link.",
+   "The vulnerability, discovered in October 2026, transformed an ordinary public ChatGPT share into attacker-controlled JavaScript. This code then ran inside the signed-in session of anyone who opened the link.",
+   "Once executed, the payload could enumerate the victim's conversation list and retrieve content from private conversations. It also allowed direct calls to ChatGPT's authenticated APIs, effectively giving attackers full control over the account.",
+   "Crucially, the victim did not need to install any apps, join projects, paste code, or use developer tools. The only action required was opening the malicious shared link.",
+   "OpenAI promptly addressed and fixed the issue on October 26, classifying the report as a P1 severity. The vulnerability stemmed from an unexpected interaction between ChatGPT's graph and HTML Preview features.",
+   "The chain of attack exploited how the HTML Preview, despite being sandboxed, could communicate with the main ChatGPT page. This communication channel was inadvertently opened through a math library called MathLive, used by the interactive graph.",
+   "MathLive's postMessage listener, which handles messages for its on-screen keyboard, lacked origin checks. This allowed the sandboxed Preview to inject arbitrary HTML into the main ChatGPT page by replacing a virtual keyboard layout.",
+   "Although script tags inserted via innerHTML don't auto-execute, the injected HTML included an iframe using srcdoc. This iframe, created by the main ChatGPT page, inherited the chatgpt.com web identity, enabling JavaScript execution with full access to the parent page."
+  ],
+  "caption": "Researchers bypassed ChatGPT's sandbox to take over user accounts with just a shared link.\n\nA research team successfully bypassed ChatGPT's sandbox and content security policy, enabling them to take over any user's account. This was achieved simply by sending the victim a specially crafted link.\n\nThe vulnerability, discovered in October 2026, transformed an ordinary public ChatGPT share into attacker-controlled JavaScript. This code then ran inside the signed-in session of anyone who opened the link.\n\nOnce executed, the payload could enumerate the victim's conversation list and retrieve content from private conversations. It also allowed direct calls to ChatGPT's authenticated APIs, effectively giving attackers full control over the account.\n\nCrucially, the victim did not need to install any apps, join projects, paste code, or use developer tools. The only action required was opening the malicious shared link.\n\nOpenAI promptly addressed and fixed the issue on October 26, classifying the report as a P1 severity. The vulnerability stemmed from an unexpected interaction between ChatGPT's graph and HTML Preview features.\n\nThe chain of attack exploited how the HTML Preview, despite being sandboxed, could communicate with the main ChatGPT page. This communication channel was inadvertently opened through a math library called MathLive, used by the interactive graph.\n\nMathLive's postMessage listener, which handles messages for its on-screen keyboard, lacked origin checks. This allowed the sandboxed Preview to inject arbitrary HTML into the main ChatGPT page by replacing a virtual keyboard layout.\n\nAlthough script tags inserted via innerHTML don't auto-execute, the injected HTML included an iframe using srcdoc. This iframe, created by the main ChatGPT page, inherited the chatgpt.com web identity, enabling JavaScript execution with full access to the parent page.\n\n#ChatGPT #Security #Vulnerability #OpenAI #Cybersecurity #TechNews\n\nSource: Hacker News",
+  "tweet": "Researchers bypassed ChatGPT's sandbox to take over user accounts with just a shared link. A critical flaw allowed full account access by simply opening a malicious shared conversation. OpenAI fixed the P1 issue on Oct 26. #ChatGPT #Security #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "openai.com",
+  "source": "Hacker News",
+  "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+  "image": "",
+  "orig_title": "We Took over ChatGPT Accounts",
+  "cluster_urls": [
+   "https://www.parameter.ai/labs/we-found-a-gap-at-openai"
+  ],
+  "cluster_titles": [
+   "We Took over ChatGPT Accounts"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261031-1906-0-researchers-took-over-chatgpt-accounts-by-si.png",
+   "20261031-1906-0-researchers-took-over-chatgpt-accounts-by-si-d1.png",
+   "20261031-1906-0-researchers-took-over-chatgpt-accounts-by-si-d2.png",
+   "20261031-1906-0-researchers-took-over-chatgpt-accounts-by-si-d3.png"
+  ]
+ },
+ {
+  "topic": "intel shifts cpu production to server for ai demand",
+  "headline_marked": "[[Intel shifts production from consumer to server CPUs]] amidst 'unprecedented' AI demand",
+  "headline": "Intel shifts production from consumer to server CPUs amidst 'unprecedented' AI demand",
+  "summary": "Facing 'one of the most significant supply shortages in history' for AI, Intel is reallocating capacity and accelerating fab expansions to boost Xeon production, despite a shrinking PC market.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Intel is strategically reallocating manufacturing capacity from consumer PC processors to server CPUs. This shift is driven by what the company calls 'unprecedented demand for Super Intelligence' from the AI industry, which is expected to offset declines in the client market.",
+   "The company's Data Center and AI (DCAI) business reported $7.3 billion in revenue in Q3 2026, marking a 17% sequential and nearly 80% year-over-year increase. Intel anticipates strong demand for data center CPUs through 2027-2028 as AI infrastructure expands with more CPU-intensive workloads.",
+   "A key priority is to increase output of Xeon 6 'Granite Rapids' processors, built on Intel 3 process technology. Production capacity at Fab 24 in Ireland is being expanded, with new capacity expected online by the end of 2027.",
+   "To further boost Intel 3 capacity, the company plans to convert some manufacturing resources in Oregon from Intel 18A. These resources were initially slated for Panther Lake client processors, but weaker PC demand allows prioritization of high-demand data center products, with additional capacity by H2 2027.",
+   "Intel is also accelerating the expansion of its leading-edge manufacturing in Arizona, ramping Intel 18A production at Fab 52 and installing equipment in Fab 62. These facilities will support future Intel 18A/18A-P-based products, including server CPUs, alongside efforts to gain client market share with Core Ultra 400-series 'Nova Lake' CPUs.",
+   "Despite expanding wafer production, Intel still faces challenges, particularly shortages of advanced organic substrates essential for packaging its multi-chiplet processors. The company is also working on improving manufacturing yields and reducing production cycle times to maximize output from existing capacity."
+  ],
+  "caption": "Intel is shifting manufacturing capacity from consumer to server CPUs. The move addresses 'unprecedented demand' from the AI industry, despite a shrinking PC market.\n\nIntel is strategically reallocating manufacturing capacity from consumer PC processors to server CPUs. This shift is driven by what the company calls 'unprecedented demand for Super Intelligence' from the AI industry, which is expected to offset declines in the client market.\n\nThe company's Data Center and AI (DCAI) business reported $7.3 billion in revenue in Q3 2026, marking a 17% sequential and nearly 80% year-over-year increase. Intel anticipates strong demand for data center CPUs through 2027-2028 as AI infrastructure expands with more CPU-intensive workloads.\n\nA key priority is to increase output of Xeon 6 'Granite Rapids' processors, built on Intel 3 process technology. Production capacity at Fab 24 in Ireland is being expanded, with new capacity expected online by the end of 2027.\n\nTo further boost Intel 3 capacity, the company plans to convert some manufacturing resources in Oregon from Intel 18A. These resources were initially slated for Panther Lake client processors, but weaker PC demand allows prioritization of high-demand data center products, with additional capacity by H2 2027.\n\nIntel is also accelerating the expansion of its leading-edge manufacturing in Arizona, ramping Intel 18A production at Fab 52 and installing equipment in Fab 62. These facilities will support future Intel 18A/18A-P-based products, including server CPUs, alongside efforts to gain client market share with Core Ultra 400-series 'Nova Lake' CPUs.\n\nDespite expanding wafer production, Intel still faces challenges, particularly shortages of advanced organic substrates essential for packaging its multi-chiplet processors. The company is also working on improving manufacturing yields and reducing production cycle times to maximize output from existing capacity.\n\n#Intel #AI #DataCenter #CPUs #TechNews #Semiconductors\n\nSource: Tom's Hardware",
+  "tweet": "Intel is reallocating production capacity from consumer to server CPUs to meet 'unprecedented demand' from the AI industry. The company's Data Center and AI business saw 80% YoY growth in Q3 2026. #Intel #AI #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "intel.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/cpus/intel-shifts-production-capacity-from-consumer-to-server-cpus-in-face-of-unprecedented-ai-demand-company-navigating-one-of-the-most-significant-supply-shortages-in-history",
+  "image": "https://cdn.mos.cms.futurecdn.net/rVargrx2PRrE3QdGAf22wX-1920-80.jpg",
+  "orig_title": "Intel shifts production capacity from consumer to server CPUs in face of 'unprecedented' AI demand — company navigating 'one of the most significant supply shortages in history'",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/cpus/intel-shifts-production-capacity-from-consumer-to-server-cpus-in-face-of-unprecedented-ai-demand-company-navigating-one-of-the-most-significant-supply-shortages-in-history"
+  ],
+  "cluster_titles": [
+   "Intel shifts production capacity from consumer to server CPUs in face of 'unprecedented' AI demand — company navigating 'one of the most significant supply shortages in history'"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261031-1906-1-intel-shifts-production-from-consumer-to-ser.png",
+   "20261031-1906-1-intel-shifts-production-from-consumer-to-ser-d1.png",
+   "20261031-1906-1-intel-shifts-production-from-consumer-to-ser-d2.png",
+   "20261031-1906-1-intel-shifts-production-from-consumer-to-ser-d3.png"
+  ]
+ }
+]

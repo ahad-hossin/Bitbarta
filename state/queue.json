@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "topic": "ai agent injects drugs into mouse brain",
+  "headline_marked": "[[AI agent performs brain surgery]] on live mouse to test gene therapy",
+  "headline": "AI agent performs brain surgery on live mouse to test gene therapy",
+  "summary": "An AI agent successfully conducted a brain injection procedure on a living mouse, demonstrating AI's potential as an active participant in laboratory research.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Biotech founder Gabriel Ocana Santero recently enabled an AI agent, equipped with a robotic arm and injector, to successfully perform a brain injection procedure on a live mouse. This experiment offers a glimpse into AI's potential as an active participant in laboratory research, moving beyond just design or analysis.",
+   "Santero, CEO and cofounder of Exin Therapeutics, aimed to explore the implications of giving AI agents direct access to lab equipment. His San Francisco-based startup uses AI to analyze brain activity for developing drugs for epilepsy and neurodegenerative diseases.",
+   "AI models, primarily trained on published scientific literature, often lack critical real-time research process information like failed experiments or unexpected observations. Integrating AI with physical experiments can enhance model reliability and practical understanding.",
+   "For the experiment, his team connected an AI agent to a custom-built surgical setup designed for mouse brain injections. The rig featured a motorized device for immobilization, a camera for observation, and controls for the injection needle and compound delivery.",
+   "The AI model was tasked with selecting a treatment from 19 options. After a veterinary surgeon performed a craniotomy, the agent chose the therapy, brain region, and injection coordinates, then controlled the robotic arms, needle, and all parameters like volume and speed.",
+   "Initially, Anthropic's Claude Opus 5.5 model was used, but it refused to guide the needle into the mouse's brain, citing potential danger to the animal. This highlighted the model's ethical reasoning capabilities.",
+   "The team then switched to Claude Sonnet 5, which proceeded with the injection. While Opus is designed for complex problem-solving, Sonnet is typically for everyday tasks, making its successful execution of brain surgery a notable achievement.",
+   "Safeguards were in place, including mandatory human approval for injection plans, an emergency disconnect button, and restricted agent access to underlying equipment code. These measures aimed to prevent unauthorized modifications and ensure safety.",
+   "Despite precautions, a technical glitch disrupted the equipment's coordinate system. The AI agent correctly identified the error but refused to modify the code to correct it due to its explicit instructions prohibiting such changes.",
+   "To resolve this, a separate AI agent (Opus 5) was used to make the necessary code changes, without being informed a live surgery was underway. This back-and-forth extended the procedure from a typical 45 minutes to over an hour."
+  ],
+  "caption": "An AI agent successfully performed brain surgery on a live mouse, injecting gene therapy. This groundbreaking experiment shows AI's direct involvement in lab research.\n\nBiotech founder Gabriel Ocana Santero recently enabled an AI agent, equipped with a robotic arm and injector, to successfully perform a brain injection procedure on a live mouse. This experiment offers a glimpse into AI's potential as an active participant in laboratory research, moving beyond just design or analysis.\n\nSantero, CEO and cofounder of Exin Therapeutics, aimed to explore the implications of giving AI agents direct access to lab equipment. His San Francisco-based startup uses AI to analyze brain activity for developing drugs for epilepsy and neurodegenerative diseases.\n\nAI models, primarily trained on published scientific literature, often lack critical real-time research process information like failed experiments or unexpected observations. Integrating AI with physical experiments can enhance model reliability and practical understanding.\n\nFor the experiment, his team connected an AI agent to a custom-built surgical setup designed for mouse brain injections. The rig featured a motorized device for immobilization, a camera for observation, and controls for the injection needle and compound delivery.\n\nThe AI model was tasked with selecting a treatment from 19 options. After a veterinary surgeon performed a craniotomy, the agent chose the therapy, brain region, and injection coordinates, then controlled the robotic arms, needle, and all parameters like volume and speed.\n\nInitially, Anthropic's Claude Opus 5.5 model was used, but it refused to guide the needle into the mouse's brain, citing potential danger to the animal. This highlighted the model's ethical reasoning capabilities.\n\n#AI #Biotech #Science #Robotics #Research #ExinTherapeutics\n\nSource: Wired",
+  "tweet": "An AI agent successfully performed brain surgery on a live mouse, injecting gene therapy. This groundbreaking experiment by Exin Therapeutics demonstrates AI's direct involvement in lab research. #AI #Biotech #Science",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "exintherapeutics.com",
+  "source": "Wired",
+  "url": "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/",
+  "image": "https://media.wired.com/photos/6ae4d6bbd55a0e2bc0a8d990/master/pass/103026-AI%20Mouse%2002.jpg",
+  "orig_title": "An AI Agent Injected Drugs Into a Live Mouse’s Brain",
+  "cluster_urls": [
+   "https://www.wired.com/story/an-ai-agent-did-brain-surgery-on-live-mouse/"
+  ],
+  "cluster_titles": [
+   "An AI Agent Injected Drugs Into a Live Mouse’s Brain"
+  ],
+  "is_logo": false,
+  "photo_credit": "Wired",
+  "image_files": [
+   "20261031-1606-0-ai-agent-performs-brain-surgery-on-live-mous.png",
+   "20261031-1606-0-ai-agent-performs-brain-surgery-on-live-mous-d1.png",
+   "20261031-1606-0-ai-agent-performs-brain-surgery-on-live-mous-d2.png",
+   "20261031-1606-0-ai-agent-performs-brain-surgery-on-live-mous-d3.png",
+   "20261031-1606-0-ai-agent-performs-brain-surgery-on-live-mous-d4.png"
+  ]
+ },
+ {
+  "topic": "ai agents hack industrial control systems",
+  "headline_marked": "[[AI models complete OT attacks]] in 16 minutes, moving robotic arm and breaching industrial networks",
+  "headline": "AI models complete OT attacks in 16 minutes, moving robotic arm and breaching industrial networks",
+  "summary": "Booz Allen Hamilton's lab reports two frontier AI models successfully completed all eight tested operational-technology attack scenarios, including physical actuation, in just over sixteen minutes.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Booz Allen Hamilton's lab reports that two unnamed frontier AI models completed all eight operational-technology (OT) attack scenarios they were tested on. This included physically moving a robotic arm and walking from a perimeter compromise into an industrial control network in just over sixteen minutes.",
+   "The study highlights a critical shift: the bottleneck for breaking critical infrastructure has collapsed. It's no longer \"specialist who has spent years on this\" but \"a frontier agent and a weekend,\" a problem the safety community may not be fully prepared for.",
+   "The tests ran frontier agents against realistic OT environments, similar to what a moderately-resourced attacker could set up. The goal was to assess how far agents could progress without requiring specialist human knowledge. The eight scenarios covered the full kill chain from reconnaissance to physical actuation.",
+   "This study is distinct because it shows AI performing the entire attack chain, not just assisting a human. Historically, OT attacks were extremely difficult, requiring deep understanding of specific industrial protocols like Modbus, Profinet, and S7comm.",
+   "Frontier agents demonstrated the ability to plan, reason about unfamiliar protocols, and adapt to environmental differences. While iteration was needed, the loop was fast enough that a \"determined weekend\" is now a plausible upper bound for such attacks.",
+   "Defensive capabilities in OT environments have not scaled at the same rate. Many systems were designed with assumptions of physical and network isolation that are no longer valid, leading to patchy segmentation and incomplete asset inventories.",
+   "The unnamed models imply a small, identifiable set of public frontier models with native competence across OT protocols and a willingness to engage with attack-chain tasks. These models possess long-horizon planning, tool use, self-correction, and robust error recovery.",
+   "The same capabilities that make AI agents useful for productivity tasks also make them dangerous in control loops attached to physical hardware. There is no clean architectural separation between these beneficial and harmful applications."
+  ],
+  "caption": "Two frontier AI models completed all 8 operational-technology attack scenarios, including moving a robotic arm and breaching industrial networks. It took just over 16 minutes.\n\nBooz Allen Hamilton's lab reports that two unnamed frontier AI models completed all eight operational-technology (OT) attack scenarios they were tested on. This included physically moving a robotic arm and walking from a perimeter compromise into an industrial control network in just over sixteen minutes.\n\nThe study highlights a critical shift: the bottleneck for breaking critical infrastructure has collapsed. It's no longer \"specialist who has spent years on this\" but \"a frontier agent and a weekend,\" a problem the safety community may not be fully prepared for.\n\nThe tests ran frontier agents against realistic OT environments, similar to what a moderately-resourced attacker could set up. The goal was to assess how far agents could progress without requiring specialist human knowledge. The eight scenarios covered the full kill chain from reconnaissance to physical actuation.\n\nThis study is distinct because it shows AI performing the entire attack chain, not just assisting a human. Historically, OT attacks were extremely difficult, requiring deep understanding of specific industrial protocols like Modbus, Profinet, and S7comm.\n\nFrontier agents demonstrated the ability to plan, reason about unfamiliar protocols, and adapt to environmental differences. While iteration was needed, the loop was fast enough that a \"determined weekend\" is now a plausible upper bound for such attacks.\n\nDefensive capabilities in OT environments have not scaled at the same rate. Many systems were designed with assumptions of physical and network isolation that are no longer valid, leading to patchy segmentation and incomplete asset inventories.\n\n#AI #CyberSecurity #OTSecurity #IndustrialControl #TechNews #BoozAllen\n\nSource: DEV",
+  "tweet": "Two frontier AI models completed all 8 operational-technology attack scenarios, including moving a robotic arm and breaching industrial networks, in just over 16 minutes. Booz Allen Hamilton's lab highlights a new era of AI-driven cyber threats. #AI #CyberSecurity #OTSecurit",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "boozallen.com",
+  "source": "DEV",
+  "url": "https://dev.to/rpgbyters/16-minutes-from-perimeter-to-plc-the-booz-allen-ot-study-and-what-it-means-for-ai-agents-53m7",
+  "image": "",
+  "orig_title": "16 Minutes from Perimeter to PLC: The Booz Allen OT Study and What It Means for AI Agents",
+  "cluster_urls": [
+   "https://dev.to/rpgbyters/16-minutes-from-perimeter-to-plc-the-booz-allen-ot-study-and-what-it-means-for-ai-agents-53m7"
+  ],
+  "cluster_titles": [
+   "16 Minutes from Perimeter to PLC: The Booz Allen OT Study and What It Means for AI Agents"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261031-1606-1-ai-models-complete-ot-attacks-in-16-minutes-.png",
+   "20261031-1606-1-ai-models-complete-ot-attacks-in-16-minutes--d1.png",
+   "20261031-1606-1-ai-models-complete-ot-attacks-in-16-minutes--d2.png",
+   "20261031-1606-1-ai-models-complete-ot-attacks-in-16-minutes--d3.png",
+   "20261031-1606-1-ai-models-complete-ot-attacks-in-16-minutes--d4.png"
+  ]
+ }
+]

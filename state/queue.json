@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "veteran microsoft engineer makes ram with ai",
+  "headline_marked": "Veteran Microsoft engineer [[makes his own RAM from scratch using AI]]",
+  "headline": "Veteran Microsoft engineer makes his own RAM from scratch using AI",
+  "summary": "Former Microsoft engineer Dave Plummer built a 4MB RAM board for his vintage 1970 PDP-11 using ChatGPT and EasyEDA, driven by the high cost of existing memory for the classic machine. He tackled complex retro-computing challenges during the project.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "Dave Plummer, known for his work on Task Manager and Windows Pinball, embarked on a new project after discovering the exorbitant cost of memory for his vintage PDP-11 computer. He decided to design and build a new RAM board himself, enlisting the help of AI tools like ChatGPT and the EasyEDA online circuit simulator.",
+   "The PDP-11, a machine from 1970, could support up to four megabytes of memory in later models. Plummer designed his custom RAM as a standalone Q-Bus card, which he then tested on a backplane alongside the system's M8190 CPU board.",
+   "His design incorporated a Lattice MachXO2 FPGA as a memory controller, connected to four ISSI 1 MB memory chips, along with a U2S I/O chip, DIP switches, and communication ports. Despite his extensive experience, Plummer faced initial hurdles, particularly with flash-programming the FPGA chip, which he eventually resolved.",
+   "A significant challenge arose from the PDP-11's unique memory bus design, which accesses entire two-byte words and uses the lowest bit as a byte lane selector. This meant his memory controller needed to return two bytes on reads and carefully update only the intended byte on writes, a detail he initially overlooked.",
+   "This design quirk led to his 4MB board effectively functioning as 2MB, as it only returned every second word. While not explicitly detailed, it's assumed he implemented a fix in his FPGA code after other commenters pointed out the issue.",
+   "Plummer had previously explored a software-based memory solution using a Raspberry Pi-like Beaglebone Black with a modern QBone DEC interface board. His current hardware project demonstrates a deeper dive into retro-computing engineering.",
+   "This endeavor highlights the potential of modern AI tools to assist in complex hardware design, even for vintage systems. It also showcases the dedication required to maintain and upgrade classic computer hardware.",
+   "Plummer's project provides valuable insights into the intricacies of early computer architectures and the creative problem-solving involved in retro-tech restoration. It serves as an inspiration for enthusiasts looking to push the boundaries of vintage hardware.",
+   "The project underscores the enduring appeal of classic computing and the community's passion for preserving and enhancing these historical machines. It also demonstrates how individual ingenuity can overcome significant technical and financial barriers."
+  ],
+  "caption": "A former Microsoft engineer built a 4MB RAM board for a 1970s PDP-11 from scratch. He used AI tools like ChatGPT to design the custom hardware, tackling a complex retro-tech challenge.\n\nDave Plummer, known for his work on Task Manager and Windows Pinball, embarked on a new project after discovering the exorbitant cost of memory for his vintage PDP-11 computer. He decided to design and build a new RAM board himself, enlisting the help of AI tools like ChatGPT and the EasyEDA online circuit simulator.\n\nThe PDP-11, a machine from 1970, could support up to four megabytes of memory in later models. Plummer designed his custom RAM as a standalone Q-Bus card, which he then tested on a backplane alongside the system's M8190 CPU board.\n\nHis design incorporated a Lattice MachXO2 FPGA as a memory controller, connected to four ISSI 1 MB memory chips, along with a U2S I/O chip, DIP switches, and communication ports. Despite his extensive experience, Plummer faced initial hurdles, particularly with flash-programming the FPGA chip, which he eventually resolved.\n\nA significant challenge arose from the PDP-11's unique memory bus design, which accesses entire two-byte words and uses the lowest bit as a byte lane selector. This meant his memory controller needed to return two bytes on reads and carefully update only the intended byte on writes, a detail he initially overlooked.\n\nThis design quirk led to his 4MB board effectively functioning as 2MB, as it only returned every second word. While not explicitly detailed, it's assumed he implemented a fix in his FPGA code after other commenters pointed out the issue.\n\nPlummer had previously explored a software-based memory solution using a Raspberry Pi-like Beaglebone Black with a modern QBone DEC interface board. His current hardware project demonstrates a deeper dive into retro-computing engineering.\n\n#Tech #Hardware #RetroTech #AI #Engineering #Microsoft\n\nSource: Tom's Hardware",
+  "tweet": "A former Microsoft engineer built a 4MB RAM board for a 1970s PDP-11 from scratch, using AI tools like ChatGPT for design. He overcame classic retro-computing challenges to bring vintage hardware back to life. #RetroTech #Hardware #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/ram/veteran-microsoft-engineer-makes-his-own-ram-from-scratch-using-ai-attempts-to-build-4mb-of-1970s-pdp-11-ram-from-scratch",
+  "image": "https://cdn.mos.cms.futurecdn.net/ZcWNV2jNQTywTDrpaAsqbL-1920-80.png",
+  "orig_title": "Veteran Microsoft engineer makes his own RAM from scratch using AI",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/ram/veteran-microsoft-engineer-makes-his-own-ram-from-scratch-using-ai-attempts-to-build-4mb-of-1970s-pdp-11-ram-from-scratch"
+  ],
+  "cluster_titles": [
+   "Veteran Microsoft engineer makes his own RAM from scratch using AI"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261031-1812-0-veteran-microsoft-engineer-makes-his-own-ram.png",
+   "20261031-1812-0-veteran-microsoft-engineer-makes-his-own-ram-d1.png",
+   "20261031-1812-0-veteran-microsoft-engineer-makes-his-own-ram-d2.png",
+   "20261031-1812-0-veteran-microsoft-engineer-makes-his-own-ram-d3.png",
+   "20261031-1812-0-veteran-microsoft-engineer-makes-his-own-ram-d4.png"
+  ]
+ },
+ {
+  "topic": "google deepmind releases global forest typology map",
+  "headline_marked": "[[Google DeepMind releases first global forest-typology map]] at 10-meter resolution with 90.2% accuracy",
+  "headline": "Google DeepMind releases first global forest-typology map at 10-meter resolution with 90.2% accuracy",
+  "summary": "Google DeepMind and WRI have released ForTy 2020, the first global map classifying land into six forest and land-use types at 10-meter resolution. It boasts 90.2% overall accuracy and is free on Google Earth Engine.",
+  "category": "SCIENCE",
+  "template": "launch",
+  "details": [
+   "Google DeepMind and WRI have launched Forest Typology 2020 (ForTy), the first global map classifying land into six forest and land-use types at an unprecedented 10-meter resolution. It achieves 90.2% overall accuracy across classes, with 94.8% on natural forest and 95.5% on forest versus non-forest.",
+   "The map uses a cascaded deep-learning pipeline, leveraging AlphaEarth Foundations embeddings from years of satellite observations for each 10-meter pixel. This allows it to identify subtle patterns like planting and harvest rhythms, distinguishing natural forests from timber plantations.",
+   "Validation against 8190 expert-labeled sites confirmed its high accuracy, outperforming the European Commission's comparable map on the same test data. The release also includes an early time series tracking forest changes from 2017 to 2025, including what replaced lost natural forest.",
+   "ForTy is freely available on Google Earth Engine under an open license. It was developed as a key reference layer for the EU Deforestation Regulation, aligning with its December 31, 2020 baseline cutoff and FAO definitions for forest data reporting.",
+   "This open-access 10-meter typology layer empowers geospatial engineers, conservation researchers, and supply-chain teams. It enables class-level forest monitoring without custom classification, providing per-class confidence scores for regional threshold tuning and immediate integration into Earth Engine pipelines."
+  ],
+  "caption": "Google DeepMind and WRI just released ForTy 2020, the first global forest-typology map at 10-meter resolution. It classifies 6 forest types with 90.2% accuracy, available free on Google Earth Engine.\n\nGoogle DeepMind and WRI have launched Forest Typology 2020 (ForTy), the first global map classifying land into six forest and land-use types at an unprecedented 10-meter resolution. It achieves 90.2% overall accuracy across classes, with 94.8% on natural forest and 95.5% on forest versus non-forest.\n\nThe map uses a cascaded deep-learning pipeline, leveraging AlphaEarth Foundations embeddings from years of satellite observations for each 10-meter pixel. This allows it to identify subtle patterns like planting and harvest rhythms, distinguishing natural forests from timber plantations.\n\nValidation against 8190 expert-labeled sites confirmed its high accuracy, outperforming the European Commission's comparable map on the same test data. The release also includes an early time series tracking forest changes from 2017 to 2025, including what replaced lost natural forest.\n\nForTy is freely available on Google Earth Engine under an open license. It was developed as a key reference layer for the EU Deforestation Regulation, aligning with its December 31, 2020 baseline cutoff and FAO definitions for forest data reporting.\n\nThis open-access 10-meter typology layer empowers geospatial engineers, conservation researchers, and supply-chain teams. It enables class-level forest monitoring without custom classification, providing per-class confidence scores for regional threshold tuning and immediate integration into Earth Engine pipelines.\n\n#AI #DeepMind #Forests #SatelliteData #Conservation #Tech\n\nSource: DEV",
+  "tweet": "Google DeepMind & WRI launched ForTy 2020: the first global forest-typology map at 10m resolution. It classifies 6 forest types with 90.2% accuracy, outperforming EU data. Free on Google Earth Engine for conservation & supply chain monitoring. #AI #Forests #DeepMind",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "deepmind.google",
+  "source": "DEV",
+  "url": "https://dev.to/delimitter/google-deepmind-and-wri-release-forty-2020-the-first-global-forest-typology-map-at-10-meter-1gg9",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fcdn.bsky.app%2Fimg%2Ffeed_fullsize%2Fplain%2Fdid%3Aplc%3Azl7pjaqajbk5mlwalj62hiz2%2Fbafkreihu5ovmld3ju2h474tnqf5xcapygw6kytc42tpsanoea25csvivpy",
+  "orig_title": "Google DeepMind and WRI release ForTy 2020: the first global forest-typology map at 10-meter resolution",
+  "cluster_urls": [
+   "https://dev.to/delimitter/google-deepmind-and-wri-release-forty-2020-the-first-global-forest-typology-map-at-10-meter-1gg9"
+  ],
+  "cluster_titles": [
+   "Google DeepMind and WRI release ForTy 2020: the first global forest-typology map at 10-meter resolution"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261031-1812-1-google-deepmind-releases-first-global-forest.png",
+   "20261031-1812-1-google-deepmind-releases-first-global-forest-d1.png",
+   "20261031-1812-1-google-deepmind-releases-first-global-forest-d2.png"
+  ]
+ }
+]

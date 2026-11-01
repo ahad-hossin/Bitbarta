@@ -1,1 +1,75 @@
-[]
+[
+ {
+  "topic": "android sms of death vulnerability",
+  "headline_marked": "[[Invisible 8-byte WAP Push message]] can crash Android phones, dropping calls",
+  "headline": "Invisible 8-byte WAP Push message can crash Android phones, dropping calls",
+  "summary": "A zero-click vulnerability, CVE-2026-58882, allows a malformed WAP Push message to crash the Android phone process, dropping active calls, including emergency ones. Repeated messages can force a device into reboot loops.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Researcher Mark Blaszczyk published a working exploit for CVE-2026-58882, an 8-byte malformed WAP Push message (port 2948). This message crashes Android's com.android.phone process, dropping active calls, including emergency calls. It requires zero clicks and is never seen by the user.",
+   "Sending around 20 such messages can force a phone into reboot loops. The bug affects Android 12 and newer. Google's fix was included in October updates for Android 14 through 17, but Android 12 and 13 devices received no patch.",
+   "No in-the-wild attacks have been confirmed, and the vulnerability results in availability loss rather than data theft. Users are advised to install the latest security updates, as there is no setting to block WAP Push messages."
+  ],
+  "caption": "An invisible 8-byte text message can crash your Android phone, dropping active calls without any interaction. This zero-click vulnerability affects Android 12 and newer.\n\nResearcher Mark Blaszczyk published a working exploit for CVE-2026-58882, an 8-byte malformed WAP Push message (port 2948). This message crashes Android's com.android.phone process, dropping active calls, including emergency calls. It requires zero clicks and is never seen by the user.\n\nSending around 20 such messages can force a phone into reboot loops. The bug affects Android 12 and newer. Google's fix was included in October updates for Android 14 through 17, but Android 12 and 13 devices received no patch.\n\nNo in-the-wild attacks have been confirmed, and the vulnerability results in availability loss rather than data theft. Users are advised to install the latest security updates, as there is no setting to block WAP Push messages.\n\n#Android #Security #Vulnerability #TechNews #Cybersecurity #WAPPush\n\nSource: DEV",
+  "tweet": "An invisible 8-byte text message can crash your Android phone, dropping active calls without any interaction. This zero-click vulnerability affects Android 12+. Google has patched it for Android 14-17, but older versions remain vulnerable. #Android #Security #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "android.com",
+  "source": "DEV",
+  "url": "https://dev.to/rohan_techofficial_81a0f/the-android-sms-of-death-is-real-one-invisible-text-can-drop-your-calls-4191",
+  "image": "",
+  "orig_title": "The Android \"SMS of Death\" Is Real: One Invisible Text Can Drop Your Calls",
+  "cluster_urls": [
+   "https://dev.to/rohan_techofficial_81a0f/the-android-sms-of-death-is-real-one-invisible-text-can-drop-your-calls-4191"
+  ],
+  "cluster_titles": [
+   "The Android \"SMS of Death\" Is Real: One Invisible Text Can Drop Your Calls"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261101-1107-0-invisible-8-byte-wap-push-message-can-crash-.png",
+   "20261101-1107-0-invisible-8-byte-wap-push-message-can-crash--d1.png"
+  ]
+ },
+ {
+  "topic": "xai grok bot with wallet shopping agent",
+  "headline_marked": "[[xAI's Grok Bot can now make purchases]] via Stripe Link, never seeing your card",
+  "headline": "xAI's Grok Bot can now make purchases via Stripe Link, never seeing your card",
+  "summary": "xAI's Grok Bot now uses Stripe Link for purchases, issuing a one-time virtual card after user approval. This system ensures the bot never directly accesses your payment details.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "xAI's Grok Bot has gained the ability to complete purchases through a connected Stripe Link wallet. A crucial security feature of this integration is that the bot itself never sees or stores your actual card information.",
+   "Instead, each purchase initiates an approval process where an approval card displays the merchant and amount. Only after the user explicitly approves the transaction does Stripe Link generate and issue a one-time-use virtual card for the payment.",
+   "Any unapproved purchase requests will automatically expire after approximately 10 minutes. Users are advised to disregard suggestions like Elon Musk's to photograph payment cards, as xAI's own terms warn against inputting personal information into prompts.",
+   "The underlying architecture, which relies on single-use tokens and per-purchase approval, represents a significant step in building trust infrastructure for future shopping agents. This design prioritizes user security and control over financial data.",
+   "Currently, specific details regarding supported countries, spending limits, and refund processes remain unclear. However, the core mechanism focuses on secure, user-approved transactions without direct card exposure to the AI."
+  ],
+  "caption": "xAI's Grok Bot can now make purchases using a connected Stripe Link wallet. The bot never sees your actual card details.\n\nxAI's Grok Bot has gained the ability to complete purchases through a connected Stripe Link wallet. A crucial security feature of this integration is that the bot itself never sees or stores your actual card information.\n\nInstead, each purchase initiates an approval process where an approval card displays the merchant and amount. Only after the user explicitly approves the transaction does Stripe Link generate and issue a one-time-use virtual card for the payment.\n\nAny unapproved purchase requests will automatically expire after approximately 10 minutes. Users are advised to disregard suggestions like Elon Musk's to photograph payment cards, as xAI's own terms warn against inputting personal information into prompts.\n\nThe underlying architecture, which relies on single-use tokens and per-purchase approval, represents a significant step in building trust infrastructure for future shopping agents. This design prioritizes user security and control over financial data.\n\nCurrently, specific details regarding supported countries, spending limits, and refund processes remain unclear. However, the core mechanism focuses on secure, user-approved transactions without direct card exposure to the AI.\n\n#xAI #Grok #AI #Stripe #TechNews #FinTech\n\nSource: DEV",
+  "tweet": "xAI's Grok Bot can now make purchases using a connected Stripe Link wallet. The bot never sees your actual card details, relying on a per-purchase approval system and one-time virtual cards. #xAI #Grok #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "x.ai",
+  "source": "DEV",
+  "url": "https://dev.to/rohan_techofficial_81a0f/grok-bot-got-a-wallet-what-xais-shopping-agent-actually-does-with-your-money-1n3g",
+  "image": "",
+  "orig_title": "Grok Bot Got a Wallet: What xAI's Shopping Agent Actually Does With Your Money",
+  "cluster_urls": [
+   "https://dev.to/rohan_techofficial_81a0f/grok-bot-got-a-wallet-what-xais-shopping-agent-actually-does-with-your-money-1n3g"
+  ],
+  "cluster_titles": [
+   "Grok Bot Got a Wallet: What xAI's Shopping Agent Actually Does With Your Money"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261101-1107-1-xai-s-grok-bot-can-now-make-purchases-via-st.png",
+   "20261101-1107-1-xai-s-grok-bot-can-now-make-purchases-via-st-d1.png",
+   "20261101-1107-1-xai-s-grok-bot-can-now-make-purchases-via-st-d2.png"
+  ]
+ }
+]

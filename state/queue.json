@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "Zendesk AI agents lose chats in Europe for five days",
+  "headline_marked": "[[Zendesk's AI Agents Lost Chats in Europe for Nearly Five Days]], per its own incident report",
+  "headline": "Zendesk's AI Agents Lost Chats in Europe for Nearly Five Days, per its own incident report",
+  "summary": "Zendesk's AI Agents Advanced product experienced a five-day outage in Europe, causing customer and agent messages to be delayed or lost. The company's incident report cites a capacity problem as the cause.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Zendesk's AI Agents Advanced product in Europe suffered a major incident from October 16 to 21, causing customer and agent messages to be delayed or entirely missing. This five-day disruption also impacted conversation histories and analytics for EU customers.",
+   "According to Zendesk's own incident report, a recovery attempt had to be paused to prevent further slowdowns in other parts of the service. The company identified a capacity problem as the root cause of the outage.",
+   "Zendesk has since confirmed that all affected messages have been restored. The incident highlights the challenges of maintaining robust infrastructure for AI-powered customer service solutions."
+  ],
+  "caption": "Zendesk's AI Agents in Europe lost customer chats for nearly five days. The company's own incident report details the outage.\n\nZendesk's AI Agents Advanced product in Europe suffered a major incident from October 16 to 21, causing customer and agent messages to be delayed or entirely missing. This five-day disruption also impacted conversation histories and analytics for EU customers.\n\nAccording to Zendesk's own incident report, a recovery attempt had to be paused to prevent further slowdowns in other parts of the service. The company identified a capacity problem as the root cause of the outage.\n\nZendesk has since confirmed that all affected messages have been restored. The incident highlights the challenges of maintaining robust infrastructure for AI-powered customer service solutions.\n\n#Zendesk #AIAgents #Outage #TechNews #CustomerService #AI\n\nSource: DEV",
+  "tweet": "Zendesk's AI Agents in Europe lost customer chats for nearly five days, impacting conversation histories and analytics. The company's incident report blames a capacity issue. All messages are reportedly restored. #Zendesk #AI #Outage",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "zendesk.com",
+  "source": "DEV",
+  "url": "https://dev.to/agenttmz/zendesks-ai-agents-lost-chats-in-europe-for-nearly-five-days-its-own-incident-report-shows-14kp",
+  "image": "",
+  "orig_title": "Zendesk's AI Agents Lost Chats in Europe for Nearly Five Days, Its Own Incident Report Shows",
+  "cluster_urls": [
+   "https://dev.to/agenttmz/zendesks-ai-agents-lost-chats-in-europe-for-nearly-five-days-its-own-incident-report-shows-14kp"
+  ],
+  "cluster_titles": [
+   "Zendesk's AI Agents Lost Chats in Europe for Nearly Five Days, Its Own Incident Report Shows"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261101-0700-0-zendesk-s-ai-agents-lost-chats-in-europe-for.png",
+   "20261101-0700-0-zendesk-s-ai-agents-lost-chats-in-europe-for-d1.png"
+  ]
+ },
+ {
+  "topic": "Hacktoberfest projects showcase local AI and open-source security",
+  "headline_marked": "[[Team builds local AI decision intelligence CLI]] at overnight Hacktoberfest hackathon",
+  "headline": "Team builds local AI decision intelligence CLI at overnight Hacktoberfest hackathon",
+  "summary": "IssueFlowP6 is a privacy-first CLI tool that uses a local Qwen 2.5 model via Ollama to extract and verify architectural decisions from developer chat logs, preventing AI hallucinations and proprietary code leaks.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An overnight Hacktoberfest hackathon challenged a team to solve a common engineering problem: lost context in architectural decisions. Critical choices made in chat threads are often forgotten, and standard cloud LLMs risk hallucinating facts or leaking proprietary code when summarizing them.",
+   "To address this, the team built IssueFlowP6, a completely offline Decision Intelligence CLI. This privacy-first tool extracts decisions locally and rigorously fact-checks them. It uses a local Qwen 2.5 model via Ollama to process raw developer chat logs.",
+   "The author focused on the extraction architecture, writing Python logic to feed chat logs into Qwen 2.5 and force a strict JSON schema output. This included the final decision, rejected alternatives, and verbatim supporting quotes. A mid-hackathon Git panic taught a valuable lesson on hard resets and branch isolation.",
+   "While the extraction was being built, another team member developed a deterministic verification engine to catch AI hallucinations. A third member wrapped all scripts into a clean command-line interface. The integrated pipeline successfully parsed text, intercepted two hallucinated quotes, and produced a perfectly verified JSON file.",
+   "The project, built from scratch in a single night, resulted in a fully functional, privacy-first local AI tool. This achievement was a significant win for the team, regardless of the final judging in the Hacktoberfest blog challenge."
+  ],
+  "caption": "Developers built IssueFlowP6, an offline AI tool that extracts and fact-checks critical architectural decisions from chat logs, preventing hallucinations and data leaks.\n\nAn overnight Hacktoberfest hackathon challenged a team to solve a common engineering problem: lost context in architectural decisions. Critical choices made in chat threads are often forgotten, and standard cloud LLMs risk hallucinating facts or leaking proprietary code when summarizing them.\n\nTo address this, the team built IssueFlowP6, a completely offline Decision Intelligence CLI. This privacy-first tool extracts decisions locally and rigorously fact-checks them. It uses a local Qwen 2.5 model via Ollama to process raw developer chat logs.\n\nThe author focused on the extraction architecture, writing Python logic to feed chat logs into Qwen 2.5 and force a strict JSON schema output. This included the final decision, rejected alternatives, and verbatim supporting quotes. A mid-hackathon Git panic taught a valuable lesson on hard resets and branch isolation.\n\nWhile the extraction was being built, another team member developed a deterministic verification engine to catch AI hallucinations. A third member wrapped all scripts into a clean command-line interface. The integrated pipeline successfully parsed text, intercepted two hallucinated quotes, and produced a perfectly verified JSON file.\n\nThe project, built from scratch in a single night, resulted in a fully functional, privacy-first local AI tool. This achievement was a significant win for the team, regardless of the final judging in the Hacktoberfest blog challenge.\n\n#Hackathon #AI #LocalAI #DeveloperTools #Privacy #OpenSource\n\nSource: DEV",
+  "tweet": "Developers built IssueFlowP6, an offline AI tool that extracts and fact-checks critical architectural decisions from chat logs, preventing hallucinations and data leaks. Created during an overnight hackathon, it uses local Qwen 2.5 for privacy. #AI #DeveloperTools #Hackathon",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/gagandeep25163/surviving-my-first-overnight-hackathon-local-ai-git-panics-and-zero-sleep-aaf",
+  "image": "",
+  "orig_title": "Surviving My First Overnight Hackathon: Local AI, Git Panics, and Zero Sleep",
+  "cluster_urls": [
+   "https://dev.to/gagandeep25163/surviving-my-first-overnight-hackathon-local-ai-git-panics-and-zero-sleep-aaf",
+   "https://dev.to/ansh_gupta_e75b0dd6d510d4/team-sipmap-hacktoberfest-hack-day-sonipat-31-oct-1-nov-2026-57i5",
+   "https://dev.to/arjun_singh_dfafb76f88def/12-hours-15-cves-5-that-mattered-building-trackback-at-hacktoberfest-hack-day-3lcg",
+   "https://dev.to/sambhavkumar20/trackback-finding-out-which-vulnerabilities-actually-matter-1pfg",
+   "https://dev.to/arnav_goyal_9fc2c4d6e4295/-216-tests-passed-but-our-github-build-failed-lessons-from-our-first-security-hackathon-359n",
+   "https://dev.to/asmi_mishra_0381f61b98620/12-hours-infinite-dependencies-how-team-commit-tee-built-pkgtruth-to-secure-the-open-source-3dh0"
+  ],
+  "cluster_titles": [
+   "Surviving My First Overnight Hackathon: Local AI, Git Panics, and Zero Sleep",
+   "Team Sipmap — Hacktoberfest Hack Day Sonipat, 31 Oct–1 Nov 2026",
+   "12 Hours, 15 CVEs, 5 That Mattered: Building TrackBack at Hacktoberfest Hack Day",
+   "TrackBack: Finding Out Which Vulnerabilities Actually Matter",
+   "# 216 Tests Passed, but Our GitHub Build Failed: Lessons From Our First Security Hackathon",
+   "12 Hours, Infinite Dependencies: How Team commit-tee Built pkgtruth. to Secure the Open Source Supply Chain"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261101-0700-1-team-builds-local-ai-decision-intelligence-c.png",
+   "20261101-0700-1-team-builds-local-ai-decision-intelligence-c-d1.png",
+   "20261101-0700-1-team-builds-local-ai-decision-intelligence-c-d2.png",
+   "20261101-0700-1-team-builds-local-ai-decision-intelligence-c-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "qwen3.8-27b ai models beat fable 5",
+  "headline_marked": "[[5 Qwen3.8-27B models beat Fable 5]] on LiveCodeBench Hard using Memdoor workflow",
+  "headline": "5 Qwen3.8-27B models beat Fable 5 on LiveCodeBench Hard using Memdoor workflow",
+  "summary": "A multi-agent system running five Qwen3.8-27B models achieved a mean score of 9.8 out of 10 on LiveCodeBench Hard problems, significantly outperforming Fable 5's 8.0 score.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A multi-agent harness called Memdoor, utilizing five Qwen3.8-27B models, has demonstrated superior performance on LiveCodeBench Hard problems. The system achieved a mean score of 9.8 out of 10 over five passes, compared to Fable 5's 8.0.",
+   "This Memdoor workflow replicates the GVS5H method, employing five distinct roles: a planner, two ideators, a solver, a manager, and a repair worker. Each agent operates from a fresh context, communicating exclusively through files on disk.",
+   "The system successfully solved 49 out of 50 problems across 50 runs, with the total cost amounting to $35.79 for 15.3M output tokens. Each run took a median of 40 minutes of model time, with the longest extending to 4 hours, costing approximately $0.39 per run.",
+   "It's noted that the contests date from March to April 2025, and potential data contamination from the models seeing these problems in training cannot be entirely ruled out. Fable 5's score was based on a single call per problem and was not run within this specific Memdoor harness.",
+   "The system was run on OpenRouter, utilizing a 128K reply cap and specific temperature settings (plan 0.3, ideation 0.4, manager/worker 0.2) with top_p 0.95 and top_k 20. It allowed for up to 10 rounds of interaction.",
+   "The Memdoor implementation required four specific changes to match the original GVS5H harness's problem text handling. This included allowing tasks to answer with model reasoning when no text was written, and implementing top_p/top_k on a model line.",
+   "The system twice encountered the same two gaps present in the authors' original loop, which led to losses. These issues are fixable without altering the core method, for example, by checking counterexamples or retaining the last program that passed samples.",
+   "For users to test their own problems, they can replace `task.md` and place paired `tests/N.in` / `tests/N.out` files alongside it. The program `solution.py` is read from stdin and compared to samples using `diff`.",
+   "The agents are designed to start with a \"fresh context\" and rely solely on file-based communication, avoiding chat-based dependencies. This \"ledger discipline\" is credited for the system's performance gains, with one repair round and no human intervention."
+  ],
+  "caption": "A new multi-agent AI system, Memdoor, has achieved a 9.8/10 score on LiveCodeBench Hard problems. It significantly outperforms Fable 5, which scored 8.0.\n\nA multi-agent harness called Memdoor, utilizing five Qwen3.8-27B models, has demonstrated superior performance on LiveCodeBench Hard problems. The system achieved a mean score of 9.8 out of 10 over five passes, compared to Fable 5's 8.0.\n\nThis Memdoor workflow replicates the GVS5H method, employing five distinct roles: a planner, two ideators, a solver, a manager, and a repair worker. Each agent operates from a fresh context, communicating exclusively through files on disk.\n\nThe system successfully solved 49 out of 50 problems across 50 runs, with the total cost amounting to $35.79 for 15.3M output tokens. Each run took a median of 40 minutes of model time, with the longest extending to 4 hours, costing approximately $0.39 per run.\n\nIt's noted that the contests date from March to April 2025, and potential data contamination from the models seeing these problems in training cannot be entirely ruled out. Fable 5's score was based on a single call per problem and was not run within this specific Memdoor harness.\n\nThe system was run on OpenRouter, utilizing a 128K reply cap and specific temperature settings (plan 0.3, ideation 0.4, manager/worker 0.2) with top_p 0.95 and top_k 20. It allowed for up to 10 rounds of interaction.\n\nThe Memdoor implementation required four specific changes to match the original GVS5H harness's problem text handling. This included allowing tasks to answer with model reasoning when no text was written, and implementing top_p/top_k on a model line.\n\nThe system twice encountered the same two gaps present in the authors' original loop, which led to losses. These issues are fixable without altering the core method, for example, by checking counterexamples or retaining the last program that passed samples.\n\n#AI #LLM #Coding #Programming #Memdoor #Tech\n\nSource: Hacker News",
+  "tweet": "A new multi-agent AI system, Memdoor, scored 9.8/10 on LiveCodeBench Hard problems, beating Fable 5's 8.0. Five Qwen3.8-27B models collaborate through files, showcasing advanced autonomous coding. #AI #LLM #Coding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "github.com",
+  "source": "Hacker News",
+  "url": "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve",
+  "image": "",
+  "orig_title": "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard",
+  "cluster_urls": [
+   "https://github.com/guregodevo/memdoor/tree/main/examples/workflows/team-solve"
+  ],
+  "cluster_titles": [
+   "Memdoor: A team of 5 Qwen3.8-27B models beats Fable 5 on LiveCodeBench Hard"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261101-0606-0-5-qwen3-8-27b-models-beat-fable-5-on-livecod.png",
+   "20261101-0606-0-5-qwen3-8-27b-models-beat-fable-5-on-livecod-d1.png",
+   "20261101-0606-0-5-qwen3-8-27b-models-beat-fable-5-on-livecod-d2.png",
+   "20261101-0606-0-5-qwen3-8-27b-models-beat-fable-5-on-livecod-d3.png"
+  ]
+ },
+ {
+  "topic": "electric pickup comparison slate vs ford fathom",
+  "headline_marked": "[[Ford Fathom includes CarPlay/Android Auto]], while Slate Truck requires your phone",
+  "headline": "Ford Fathom includes CarPlay/Android Auto, while Slate Truck requires your phone",
+  "summary": "Both Ford Fathom and Blank Slate Truck aim for under $30,000 EV pickups, but differ significantly on infotainment, with Ford offering built-in support and Slate relying on your smartphone.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "Both Ford and Blank Slate are targeting the sub-$30,000 electric pickup market. The Blank Slate Truck starts at $24,950, while the Ford Fathom begins at $28,350, plus destination charges for both.",
+   "A key difference lies in their infotainment systems. Ford's Fathom will feature a large touchscreen with Apple CarPlay and Android Auto built-in. Slate, however, omits a traditional system, instead providing a mount and charging for the owner's phone or tablet.",
+   "Slate's approach aims for simplicity and future-proofing, as the \"infotainment hardware\" in your pocket can be updated independently. However, a phone screen is smaller, and some prospective owners are already considering aftermarket solutions for CarPlay/Android Auto.",
+   "Ford's Fathom takes a more conventional route, offering a built-in display with CarPlay and Android Auto. It will also include a digital key, bidirectional power, and hardware for Ford's BlueCruise hands-free system, though range and towing specs are not yet announced.",
+   "This divergence reflects different strategies for building affordable EVs. Slate, starting from scratch, questions every inclusion, while Ford leverages over a century of vehicle manufacturing to simplify engineering and assembly while retaining familiar cabin features.",
+   "Ford is investing $2 billion to retool its Louisville Assembly Plant, aiming for a 20% reduction in parts and 15% faster assembly for its Universal EV Production System. This engineering effort focuses on cutting manufacturing costs without compromising the cabin experience.",
+   "Smartphone integration is a significant factor for buyers, with a Deloitte study finding 63% of US consumers consider CarPlay or Android Auto important in their next vehicle. This highlights the potential impact of Slate's minimalist approach.",
+   "Ultimately, Slate's two-door, electronics-light pickup may appeal to a niche seeking maximum simplicity and affordability. The five-seat Fathom, with its integrated tech, is positioned as a more conventional daily driver, catering to a broader market."
+  ],
+  "caption": "Ford's new Fathom EV pickup will include Apple CarPlay and Android Auto, but the Blank Slate Truck expects you to bring your own screen.\n\nBoth Ford and Blank Slate are targeting the sub-$30,000 electric pickup market. The Blank Slate Truck starts at $24,950, while the Ford Fathom begins at $28,350, plus destination charges for both.\n\nA key difference lies in their infotainment systems. Ford's Fathom will feature a large touchscreen with Apple CarPlay and Android Auto built-in. Slate, however, omits a traditional system, instead providing a mount and charging for the owner's phone or tablet.\n\nSlate's approach aims for simplicity and future-proofing, as the \"infotainment hardware\" in your pocket can be updated independently. However, a phone screen is smaller, and some prospective owners are already considering aftermarket solutions for CarPlay/Android Auto.\n\nFord's Fathom takes a more conventional route, offering a built-in display with CarPlay and Android Auto. It will also include a digital key, bidirectional power, and hardware for Ford's BlueCruise hands-free system, though range and towing specs are not yet announced.\n\nThis divergence reflects different strategies for building affordable EVs. Slate, starting from scratch, questions every inclusion, while Ford leverages over a century of vehicle manufacturing to simplify engineering and assembly while retaining familiar cabin features.\n\nFord is investing $2 billion to retool its Louisville Assembly Plant, aiming for a 20% reduction in parts and 15% faster assembly for its Universal EV Production System. This engineering effort focuses on cutting manufacturing costs without compromising the cabin experience.\n\nSmartphone integration is a significant factor for buyers, with a Deloitte study finding 63% of US consumers consider CarPlay or Android Auto important in their next vehicle. This highlights the potential impact of Slate's minimalist approach.\n\n#EV #ElectricVehicles #Ford #SlateTruck #CarPlay #AndroidAuto #Tech\n\nSource: Engadget",
+  "tweet": "Ford's Fathom EV pickup will feature built-in Apple CarPlay & Android Auto. The Blank Slate Truck, however, relies on your phone for infotainment. Which approach do you prefer for an affordable EV? #EVs #TechNews #CarTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "ford.com",
+  "source": "Engadget",
+  "url": "https://www.engadget.com/2300238/slate-vs-ford-fathom-android-auto-carplay-support/",
+  "image": "https://www.engadget.com/img/gallery/the-slate-vs-ford-fathom-debate-might-be-settled-by-this-one-key-tech-feature/l-intro-1793026890.jpg",
+  "orig_title": "The Slate vs Ford Fathom debate might be settled by this one key tech feature",
+  "cluster_urls": [
+   "https://www.engadget.com/2300238/slate-vs-ford-fathom-android-auto-carplay-support/"
+  ],
+  "cluster_titles": [
+   "The Slate vs Ford Fathom debate might be settled by this one key tech feature"
+  ],
+  "is_logo": false,
+  "photo_credit": "Engadget",
+  "image_files": [
+   "20261101-0606-1-ford-fathom-includes-carplay-android-auto-wh.png",
+   "20261101-0606-1-ford-fathom-includes-carplay-android-auto-wh-d1.png",
+   "20261101-0606-1-ford-fathom-includes-carplay-android-auto-wh-d2.png",
+   "20261101-0606-1-ford-fathom-includes-carplay-android-auto-wh-d3.png"
+  ]
+ }
+]

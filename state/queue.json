@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "open-source tool unlocks nvidia gpu ai limiter on windows",
+  "headline_marked": "[[Nvidia GPU AI Limiter Unlocked]] by open-source USB tool on Windows",
+  "headline": "Nvidia GPU AI Limiter Unlocked by open-source USB tool on Windows",
+  "summary": "New tool boots from USB to bypass Nvidia's tensor throttle, boosting FP16 math performance by up to 65% on RTX 20, 30, and 40-series cards.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A new open-source UEFI tool, dubbed \"nv-uefi-unlocker,\" allows users to bypass Nvidia's AI performance limiter on RTX 20, 30, and 40-series GPUs. The tool boots from a USB stick before Windows loads, eliminating the need for VBIOS flashes or patched drivers. In testing, a laptop RTX 4060 saw a 65% increase in FP16 math performance.",
+   "The unlocker works by tricking Nvidia's signed Booter firmware into opening write locks on speed-selector registers, enabling tensor units to run at full rate. This method is safer than previous experimental builds due to its read-back verification feature. The project rebuilds necessary firmware files locally using public Nvidia driver packages.",
+   "Previously, similar unlocks were primarily Linux-based or had experimental Windows support. This new tool offers a more streamlined experience for Windows users, significantly widening the accessibility of the hack. The process involves preparing a FAT32 USB stick with rebuilt files and then booting from it.",
+   "The unlocker operates at the firmware stage before the OS loads the Nvidia driver, meaning it does not persist through power loss and must be re-run on every boot. The system must be booted in UEFI mode with Secure Boot disabled or configured to trust a self-signed EFI. For RTX 20-series cards, an initial script run is required to switch the Windows Nvidia driver into GSP firmware mode.",
+   "Compatibility extends to most RTX 30-series and all tested RTX 40-series cards on both desktops and laptops. Some RTX 20-series models have known issues or fail at boot. The GTX 16 series is theoretically compatible, but verification is pending. Cards like the GA100 and pre-Turing are unsupported."
+  ],
+  "caption": "Unlock up to 65% more AI performance on your Nvidia RTX GPU.\nAn open-source USB tool bypasses the speed limiter without driver mods.\n\nA new open-source UEFI tool, dubbed \"nv-uefi-unlocker,\" allows users to bypass Nvidia's AI performance limiter on RTX 20, 30, and 40-series GPUs. The tool boots from a USB stick before Windows loads, eliminating the need for VBIOS flashes or patched drivers. In testing, a laptop RTX 4060 saw a 65% increase in FP16 math performance.\n\nThe unlocker works by tricking Nvidia's signed Booter firmware into opening write locks on speed-selector registers, enabling tensor units to run at full rate. This method is safer than previous experimental builds due to its read-back verification feature. The project rebuilds necessary firmware files locally using public Nvidia driver packages.\n\nPreviously, similar unlocks were primarily Linux-based or had experimental Windows support. This new tool offers a more streamlined experience for Windows users, significantly widening the accessibility of the hack. The process involves preparing a FAT32 USB stick with rebuilt files and then booting from it.\n\nThe unlocker operates at the firmware stage before the OS loads the Nvidia driver, meaning it does not persist through power loss and must be re-run on every boot. The system must be booted in UEFI mode with Secure Boot disabled or configured to trust a self-signed EFI. For RTX 20-series cards, an initial script run is required to switch the Windows Nvidia driver into GSP firmware mode.\n\nCompatibility extends to most RTX 30-series and all tested RTX 40-series cards on both desktops and laptops. Some RTX 20-series models have known issues or fail at boot. The GTX 16 series is theoretically compatible, but verification is pending. Cards like the GA100 and pre-Turing are unsupported.\n\n#Nvidia #GPU #AI #RTX #Tech\n\nSource: Tom's Hardware",
+  "tweet": "Unlock up to 65% more AI performance on your Nvidia RTX GPU!\n\nAn open-source USB tool bypasses the speed limiter without driver mods, booting from a USB stick to boost FP16 math on RTX 20, 30, and 40-series cards. #Nvidia #GPU #AI",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "nvidia.com",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/gpus/open-source-usb-tool-unlocks-nvidias-half-speed-gpu-ai-limiter-on-windows-lifts-gpus-fp16-math-performance-up-to-65-percent-uefi-unlocker-covers-rtx-20-30-and-40-series-desktops-and-laptops",
+  "image": "https://cdn.mos.cms.futurecdn.net/u2vby2U8BuWxjdFzkUxZg9-1920-80.jpg",
+  "orig_title": "Open-source USB tool unlocks Nvidia's half-speed GPU AI limiter on Windows — lifts GPU's FP16 math performance up to 65%, UEFI unlocker covers RTX 20, 30, and 40-series desktops and laptops",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/gpus/open-source-usb-tool-unlocks-nvidias-half-speed-gpu-ai-limiter-on-windows-lifts-gpus-fp16-math-performance-up-to-65-percent-uefi-unlocker-covers-rtx-20-30-and-40-series-desktops-and-laptops"
+  ],
+  "cluster_titles": [
+   "Open-source USB tool unlocks Nvidia's half-speed GPU AI limiter on Windows — lifts GPU's FP16 math performance up to 65%, UEFI unlocker covers RTX 20, 30, and 40-series desktops and laptops"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261101-2006-0-nvidia-gpu-ai-limiter-unlocked-by-open-sourc.png",
+   "20261101-2006-0-nvidia-gpu-ai-limiter-unlocked-by-open-sourc-d1.png",
+   "20261101-2006-0-nvidia-gpu-ai-limiter-unlocked-by-open-sourc-d2.png",
+   "20261101-2006-0-nvidia-gpu-ai-limiter-unlocked-by-open-sourc-d3.png"
+  ]
+ }
+]

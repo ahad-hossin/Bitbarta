@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai agent human approval for destructive actions",
+  "headline_marked": "[[Human approval now required for destructive AI agent tools]] via new MCP library",
+  "headline": "Human approval now required for destructive AI agent tools via new MCP library",
+  "summary": "A new TypeScript library, mcp-safe-actions, ensures AI agents cannot perform actions like deleting files or sending emails without explicit human consent, preventing prompt injection or confused model errors.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI agents should not autonomously delete files, send emails, or drop database tables. A \"please ask first\" prompt is insufficient for control; enforcement must be in code.",
+   "The `mcp-safe-actions` TypeScript library wraps dangerous tools, requiring human approval before execution. This prevents prompt-injected or confused models from performing unintended destructive actions.",
+   "The library splits dangerous tools into `preview` (describes action, changes nothing) and `execute` (runs after approval). Approval can be via client elicitation, where the server asks the human through the client UI, or a one-time token for headless servers.",
+   "The model never sees the approval step, preventing self-approval. If approval is declined, cancelled, timed out, or crashes, nothing runs. The token is single-use, expires, and is tied to the specific tool and arguments.",
+   "Future plans include approval channel hooks for headless servers (e.g., Slack), a policy mode for auto-approving low-risk calls, and a Python version for FastMCP servers. The developer welcomes community input on tools needing approval and desired workflows."
+  ],
+  "caption": "Stop your AI agents from deleting files or sending emails without permission. A new library enforces human approval for destructive actions.\n\nAI agents should not autonomously delete files, send emails, or drop database tables. A \"please ask first\" prompt is insufficient for control; enforcement must be in code.\n\nThe `mcp-safe-actions` TypeScript library wraps dangerous tools, requiring human approval before execution. This prevents prompt-injected or confused models from performing unintended destructive actions.\n\nThe library splits dangerous tools into `preview` (describes action, changes nothing) and `execute` (runs after approval). Approval can be via client elicitation, where the server asks the human through the client UI, or a one-time token for headless servers.\n\nThe model never sees the approval step, preventing self-approval. If approval is declined, cancelled, timed out, or crashes, nothing runs. The token is single-use, expires, and is tied to the specific tool and arguments.\n\nFuture plans include approval channel hooks for headless servers (e.g., Slack), a policy mode for auto-approving low-risk calls, and a Python version for FastMCP servers. The developer welcomes community input on tools needing approval and desired workflows.\n\n#AI #DeveloperTools #Security #TypeScript #MCP #AgentSafety\n\nSource: DEV",
+  "tweet": "AI agents making autonomous destructive decisions? A new TypeScript library, mcp-safe-actions, now enforces human approval for critical actions like file deletion or sending emails. Protect your systems from unintended AI actions. #AI #Security #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/saurabh_pathak394/stop-your-ai-agent-deleting-things-human-approval-for-destructive-mcp-tools-5ha9",
+  "image": "",
+  "orig_title": "Stop your AI agent deleting things: human approval for destructive MCP tools",
+  "cluster_urls": [
+   "https://dev.to/saurabh_pathak394/stop-your-ai-agent-deleting-things-human-approval-for-destructive-mcp-tools-5ha9"
+  ],
+  "cluster_titles": [
+   "Stop your AI agent deleting things: human approval for destructive MCP tools"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261101-0906-0-human-approval-now-required-for-destructive-.png",
+   "20261101-0906-0-human-approval-now-required-for-destructive--d1.png",
+   "20261101-0906-0-human-approval-now-required-for-destructive--d2.png"
+  ]
+ },
+ {
+  "topic": "claude ai agent safety telemetry audit",
+  "headline_marked": "[[Claude Code safety telemetry event lived six days]]. Audit your agents with Git.",
+  "headline": "Claude Code safety telemetry event lived six days. Audit your agents with Git.",
+  "summary": "Claude Code's claude_code.safety_event telemetry was active for only six days, from October 21 to 27. Its removal, coupled with outdated documentation, could lead to silent monitoring failures for developers relying on it.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "claude_code.safety_event, a critical telemetry event in Claude Code, was active for only six days, from its introduction on October 21 to its removal on October 27. This event was designed to log crucial security-related actions, such as tool calls, permission rules, and safety checks.",
+   "The event's discontinuation in version 2.1.312 meant that any dashboards or alerts configured to monitor it would silently cease receiving data. Instead of an error, monitoring panels would simply show zero, potentially misleading developers into believing everything was normal.",
+   "This issue highlights the challenge of relying solely on fast-moving vendor telemetry, which for Claude Code saw 13 versions released in just 14 days. Such rapid schema changes make it difficult to maintain consistent and reliable monitoring pipelines.",
+   "Compounding the problem, as of October 29, the official Claude Code monitoring documentation still prominently features the claude_code.safety_event with its detailed attributes. It even advises engineers to use this event for identifying which security checks refused a tool call.",
+   "Consequently, a diligent engineer following the current documentation would build queries for an event that no longer exists, yielding no results. This significant drift between documentation and actual code can lead to critical blind spots in security monitoring.",
+   "The article recommends that developers use their own controlled records, such as Git and custom hooks, as the primary source of truth for agent activity. This approach offers stability against frequent vendor telemetry changes and ensures data integrity.",
+   "Developers can leverage Claude Code's command hooks like PreToolUse, PermissionRequest, and PermissionDenied to capture essential tool call information. These hooks provide a user-owned contract for logging, allowing for more reliable and persistent auditing."
+  ],
+  "caption": "A key Claude Code safety telemetry event vanished after just six days. This silent removal could leave your security monitoring blind.\n\nclaude_code.safety_event, a critical telemetry event in Claude Code, was active for only six days, from its introduction on October 21 to its removal on October 27. This event was designed to log crucial security-related actions, such as tool calls, permission rules, and safety checks.\n\nThe event's discontinuation in version 2.1.312 meant that any dashboards or alerts configured to monitor it would silently cease receiving data. Instead of an error, monitoring panels would simply show zero, potentially misleading developers into believing everything was normal.\n\nThis issue highlights the challenge of relying solely on fast-moving vendor telemetry, which for Claude Code saw 13 versions released in just 14 days. Such rapid schema changes make it difficult to maintain consistent and reliable monitoring pipelines.\n\nCompounding the problem, as of October 29, the official Claude Code monitoring documentation still prominently features the claude_code.safety_event with its detailed attributes. It even advises engineers to use this event for identifying which security checks refused a tool call.\n\nConsequently, a diligent engineer following the current documentation would build queries for an event that no longer exists, yielding no results. This significant drift between documentation and actual code can lead to critical blind spots in security monitoring.\n\nThe article recommends that developers use their own controlled records, such as Git and custom hooks, as the primary source of truth for agent activity. This approach offers stability against frequent vendor telemetry changes and ensures data integrity.\n\n#ClaudeCode #Telemetry #Security #DevTools #OpenTelemetry #SoftwareDevelopment\n\nSource: DEV",
+  "tweet": "A key Claude Code safety telemetry event vanished after just six days. This silent removal could leave your security monitoring blind. Developers need to audit agents with Git, as vendor telemetry changes too fast. #ClaudeCode #Security #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/claude-codes-safety-telemetry-event-lived-six-days-audit-your-agents-with-git-13dp",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fkowq0gvkviovuxu8nib2.png",
+  "orig_title": "Claude Code's Safety Telemetry Event Lived Six Days. Audit Your Agents With Git",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/claude-codes-safety-telemetry-event-lived-six-days-audit-your-agents-with-git-13dp"
+  ],
+  "cluster_titles": [
+   "Claude Code's Safety Telemetry Event Lived Six Days. Audit Your Agents With Git"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261101-0906-1-claude-code-safety-telemetry-event-lived-six.png",
+   "20261101-0906-1-claude-code-safety-telemetry-event-lived-six-d1.png",
+   "20261101-0906-1-claude-code-safety-telemetry-event-lived-six-d2.png",
+   "20261101-0906-1-claude-code-safety-telemetry-event-lived-six-d3.png"
+  ]
+ }
+]

@@ -1,1 +1,61 @@
-[]
+[
+ {
+  "topic": "ai agent development and tooling",
+  "headline_marked": "[[Senior Engineer's API]] Follows Rules for Predictable URLs",
+  "headline": "Senior Engineer's API Follows Rules for Predictable URLs",
+  "summary": "Learn to design REST APIs with predictable URLs, using plural nouns, IDs, and resource-based actions for better maintainability.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Most initial APIs present a simple list of URLs, often one for each button. A senior engineer's approach, however, involves a set of core rules that make every address predictable and guessable.",
+   "Key principles include using a plural noun followed by an ID (e.g., GET /posts/42 instead of GET /getPost?id=42), as the HTTP method already conveys the verb. IDs are preferred over names for resources (e.g., /users/7 instead of /users/jane_old) because an ID-based link remains stable even if the resource's name changes.",
+   "Nesting is kept to a single level for clarity, such as /posts/42/comments to list comments for a specific post. Individual comments can be accessed directly at /comments/99. Actions are treated as resources, like POST /posts/42/likes for liking a post, and the corresponding unlike action would be a DELETE request to the same endpoint.",
+   "Verbs are reserved for actions that don't naturally fit a noun, such as POST /posts/42:archive for an action that results in no stored resource. While servers can be scaled up to handle traffic growth, APIs are more challenging to change because installed applications will continue to call the old structure for years."
+  ],
+  "caption": "Tired of guessing API endpoints? A senior engineer's guide to designing predictable REST APIs.\n\nMost initial APIs present a simple list of URLs, often one for each button. A senior engineer's approach, however, involves a set of core rules that make every address predictable and guessable.\n\nKey principles include using a plural noun followed by an ID (e.g., GET /posts/42 instead of GET /getPost?id=42), as the HTTP method already conveys the verb. IDs are preferred over names for resources (e.g., /users/7 instead of /users/jane_old) because an ID-based link remains stable even if the resource's name changes.\n\nNesting is kept to a single level for clarity, such as /posts/42/comments to list comments for a specific post. Individual comments can be accessed directly at /comments/99. Actions are treated as resources, like POST /posts/42/likes for liking a post, and the corresponding unlike action would be a DELETE request to the same endpoint.\n\nVerbs are reserved for actions that don't naturally fit a noun, such as POST /posts/42:archive for an action that results in no stored resource. While servers can be scaled up to handle traffic growth, APIs are more challenging to change because installed applications will continue to call the old structure for years.\n\n#API #REST #SoftwareDevelopment #Engineering #Programming\n\nSource: DEV",
+  "tweet": "Designing predictable REST APIs is crucial for long-term maintainability. Learn the rules senior engineers follow for URL structure, resource naming, and action handling. #API #REST",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/thejoud1997/rest-api-design-like-a-senior-engineer-rest-graphql-networking-pagination-auth-security-14in",
+  "image": "",
+  "orig_title": "REST API Design Like a Senior Engineer (REST, GraphQL, Networking, Pagination, Auth, Security)",
+  "cluster_urls": [
+   "https://dev.to/thejoud1997/rest-api-design-like-a-senior-engineer-rest-graphql-networking-pagination-auth-security-14in",
+   "https://dev.to/sherotree/feature-flag-ai-suggested-ui-before-it-hits-every-user-31e",
+   "https://dev.to/_f467169b51ec73738019e6/claude-desktop-vs-claude-code-cli-two-different-gateway-setups-74e",
+   "https://dev.to/alifar/shop-mcp-shows-why-ai-shopping-agents-may-choose-different-products-from-the-same-catalog-45k5",
+   "https://dev.to/siftingio/fix-fetch-race-conditions-in-a-market-price-widget-173h",
+   "https://dev.to/conorbronsdon/controls-to-add-before-an-ai-agent-takes-action-7dd",
+   "https://dev.to/iassets/why-ibird-settles-social-on-hcs-the-protocol-comparison-nostr-atproto-activitypub-31fd",
+   "https://dev.to/agentsearchhq/n8n-news-monitoring-workflow-build-a-free-daily-web-digest-17g0",
+   "https://dev.to/sportsapis/only-6-of-45-odds-apis-cover-all-8-big-us-sportsbooks-1jkj",
+   "https://dev.to/ai-ksk/minimax-h3-video-upscaling-in-comfyui-five-h3-routes-and-one-ltx-25-detailer-1co1",
+   "https://dev.to/sunspirevalerius59/building-a-custom-nodejs-service-for-secure-otp-validation-with-an-external-sms-api-1c21",
+   "https://dev.to/united_uav/ug25-vtol-log-validation-a-python-state-machine-that-keeps-data-gaps-visible-4hbl"
+  ],
+  "cluster_titles": [
+   "REST API Design Like a Senior Engineer (REST, GraphQL, Networking, Pagination, Auth, Security)",
+   "Feature-flag AI-suggested UI before it hits every user",
+   "Claude Desktop vs Claude Code CLI: Two Different Gateway Setups",
+   "Shop MCP Shows Why AI Shopping Agents May Choose Different Products From the Same Catalog",
+   "Fix Fetch Race Conditions in a Market Price Widget",
+   "Controls to add before an AI agent takes action",
+   "Why iBird Settles Social on HCS: The Protocol Comparison (Nostr, AtProto, ActivityPub)",
+   "n8n News Monitoring Workflow: Build a Free Daily Web Digest",
+   "Only 6 of 45 Odds APIs Cover All 8 Big US Sportsbooks",
+   "MiniMax H3 Video Upscaling in ComfyUI: Five H3 Routes and One LTX 2.5 Detailer",
+   "Building a Custom Node.js Service for Secure OTP Validation with an External SMS API",
+   "UG25 VTOL Log Validation: A Python State Machine That Keeps Data Gaps Visible"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261102-2136-0-senior-engineer-s-api-follows-rules-for-pred.png",
+   "20261102-2136-0-senior-engineer-s-api-follows-rules-for-pred-d1.png",
+   "20261102-2136-0-senior-engineer-s-api-follows-rules-for-pred-d2.png"
+  ]
+ }
+]

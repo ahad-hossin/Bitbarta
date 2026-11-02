@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "topic": "claude opus 5.5 prompt injection vulnerability",
+  "headline_marked": "[[Claude Opus 5.5 reduces successful boundary evasion attempts by 85%]]",
+  "headline": "Claude Opus 5.5 reduces successful boundary evasion attempts by 85%",
+  "summary": "Anthropic's latest model, Claude Opus 5.5, also boasts 40% lower execution costs and 30% faster output, but security experts caution against misinterpreting its new safety metric.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Anthropic launched Claude Opus 5.5 on September 22, 2026, featuring an 85% reduction in successful boundary evasion attempts. This new model also offers a 40% lower execution cost and 30% faster output compared to Opus 5.",
+   "However, security engineers are advised against interpreting the 85% figure as a definitive solution to prompt injection. The metric describes a property of the model itself, not a guarantee for the security of your API.",
+   "The 85% reduction is a relative figure, not an absolute one. It means the remaining failure rate is 15% of the previous baseline, indicating significant improvement but not zero risk.",
+   "Furthermore, this metric is measured on Anthropic's own testing harness, using their prompts and tool definitions. Your agent's unique system prompt, tools, and data sources mean your specific risk profile will differ.",
+   "The term \"boundary evasion\" is also broader than just prompt injection. It encompasses jailbreaks, instruction leakage, and models taking destructive actions, so the aggregate number doesn't isolate specific attack types.",
+   "Crucially, the model's security metric does not convey the radius of impact. While the model's robustness affects the probability of an incident, the design of your API dictates the potential consequences if an injection succeeds.",
+   "Two other improvements in Opus 5.5 introduce second-order effects that could increase risk. A 1M token context allows more untrusted material to reside, and an 18-hour task horizon means planted instructions can remain latent for extended periods."
+  ],
+  "caption": "Anthropic's Claude Opus 5.5 claims an 85% reduction in successful boundary evasion attempts. But this impressive figure doesn't mean prompt injection is solved for your API.\n\nAnthropic launched Claude Opus 5.5 on September 22, 2026, featuring an 85% reduction in successful boundary evasion attempts. This new model also offers a 40% lower execution cost and 30% faster output compared to Opus 5.\n\nHowever, security engineers are advised against interpreting the 85% figure as a definitive solution to prompt injection. The metric describes a property of the model itself, not a guarantee for the security of your API.\n\nThe 85% reduction is a relative figure, not an absolute one. It means the remaining failure rate is 15% of the previous baseline, indicating significant improvement but not zero risk.\n\nFurthermore, this metric is measured on Anthropic's own testing harness, using their prompts and tool definitions. Your agent's unique system prompt, tools, and data sources mean your specific risk profile will differ.\n\nThe term \"boundary evasion\" is also broader than just prompt injection. It encompasses jailbreaks, instruction leakage, and models taking destructive actions, so the aggregate number doesn't isolate specific attack types.\n\nCrucially, the model's security metric does not convey the radius of impact. While the model's robustness affects the probability of an incident, the design of your API dictates the potential consequences if an injection succeeds.\n\nTwo other improvements in Opus 5.5 introduce second-order effects that could increase risk. A 1M token context allows more untrusted material to reside, and an 18-hour task horizon means planted instructions can remain latent for extended periods.\n\n#AI #LLM #Security #PromptInjection #Anthropic #ClaudeOpus55\n\nSource: DEV",
+  "tweet": "Anthropic's Claude Opus 5.5 boasts an 85% reduction in successful boundary evasion. Developers, don't misinterpret this: it's a model property, not a guarantee for your API. Understand the nuances of prompt injection risk. #AI #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "DEV",
+  "url": "https://dev.to/roobia/inyeccion-de-prompt-en-claude-opus-55-interpretar-el-85-como-una-cifra-de-seguridad-api-26k1",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F2dbmmp5vdjv2orx85lwe.png",
+  "orig_title": "Inyección de prompt en Claude Opus 5.5: interpretar el 85 % como una cifra de seguridad API",
+  "cluster_urls": [
+   "https://dev.to/roobia/inyeccion-de-prompt-en-claude-opus-55-interpretar-el-85-como-una-cifra-de-seguridad-api-26k1",
+   "https://dev.to/emree_demir/claude-opus-55-prompt-injection-85-als-api-sicherheitskennzahl-interpretieren-3bob",
+   "https://dev.to/lucas_ferreira/injecao-de-prompt-no-claude-opus-55-interpretando-os-85-como-metrica-de-seguranca-de-api-a36",
+   "https://dev.to/walse/prompt-injection-claude-opus-55-membaca-85-sebagai-angka-keamanan-api-345j",
+   "https://dev.to/lucas_ferreira/migrando-do-claude-opus-5-para-o-opus-55-o-que-muda-para-quem-faz-chamadas-a-api-1pa3"
+  ],
+  "cluster_titles": [
+   "Inyección de prompt en Claude Opus 5.5: interpretar el 85 % como una cifra de seguridad API",
+   "Claude Opus 5.5 Prompt Injection: 85 % als API-Sicherheitskennzahl interpretieren",
+   "Injeção de prompt no Claude Opus 5.5: interpretando os 85% como métrica de segurança de API",
+   "Prompt Injection Claude Opus 5.5: Membaca 85% sebagai Angka Keamanan API",
+   "Migrando do Claude Opus 5 para o Opus 5.5: o que muda para quem faz chamadas à API"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261102-1406-0-claude-opus-5-5-reduces-successful-boundary-.png",
+   "20261102-1406-0-claude-opus-5-5-reduces-successful-boundary--d1.png",
+   "20261102-1406-0-claude-opus-5-5-reduces-successful-boundary--d2.png",
+   "20261102-1406-0-claude-opus-5-5-reduces-successful-boundary--d3.png"
+  ]
+ },
+ {
+  "topic": "china first frontier ai export controls",
+  "headline_marked": "[[China's First Frontier AI Export Controls]]: Mofcom Announcement No. 48",
+  "headline": "China's First Frontier AI Export Controls: Mofcom Announcement No. 48",
+  "summary": "China has announced its first-ever export controls on frontier AI technologies, detailed in Mofcom Announcement No. 48. This marks a significant move in global AI regulation, aiming to manage the outbound flow of advanced AI capabilities.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "China has officially unveiled its inaugural set of export controls targeting frontier artificial intelligence technologies. This significant policy, outlined in Mofcom Announcement No. 48, establishes new regulations for the outbound transfer of advanced AI capabilities.",
+   "These controls are designed to manage the proliferation of cutting-edge AI, including areas like advanced algorithms, high-performance computing, and specialized AI hardware. The move reflects a strategic effort to safeguard national interests concerning critical technological advancements.",
+   "The implementation of such controls could have broad implications for international collaboration in AI research and development. It may influence global supply chains for AI components and software, potentially prompting other nations to review their own tech export policies.",
+   "Mofcom, China's Ministry of Commerce, is the agency responsible for issuing these regulations. This announcement underscores a growing global trend among major powers to regulate emerging technologies, particularly those with dual-use potential.",
+   "The specific scope and enforcement mechanisms of Mofcom Announcement No. 48 will be crucial in determining its full impact. Businesses and researchers dealing with advanced AI technologies will need to carefully assess compliance with these new guidelines."
+  ],
+  "caption": "China has just enacted its first-ever export controls on frontier AI technologies. This landmark policy could reshape the global AI landscape.\n\nChina has officially unveiled its inaugural set of export controls targeting frontier artificial intelligence technologies. This significant policy, outlined in Mofcom Announcement No. 48, establishes new regulations for the outbound transfer of advanced AI capabilities.\n\nThese controls are designed to manage the proliferation of cutting-edge AI, including areas like advanced algorithms, high-performance computing, and specialized AI hardware. The move reflects a strategic effort to safeguard national interests concerning critical technological advancements.\n\nThe implementation of such controls could have broad implications for international collaboration in AI research and development. It may influence global supply chains for AI components and software, potentially prompting other nations to review their own tech export policies.\n\nMofcom, China's Ministry of Commerce, is the agency responsible for issuing these regulations. This announcement underscores a growing global trend among major powers to regulate emerging technologies, particularly those with dual-use potential.\n\nThe specific scope and enforcement mechanisms of Mofcom Announcement No. 48 will be crucial in determining its full impact. Businesses and researchers dealing with advanced AI technologies will need to carefully assess compliance with these new guidelines.\n\n#AI #China #ExportControl #TechPolicy #GlobalAI #Mofcom\n\nSource: Hacker News",
+  "tweet": "China announces its first frontier AI export controls via Mofcom Announcement No. 48. This new policy could significantly impact global AI development and tech trade. #AI #China #TechPolicy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/",
+  "image": "",
+  "orig_title": "China's First Frontier AI Export Controls: Mofcom Announcement No. 48",
+  "cluster_urls": [
+   "https://labs.cloudsecurityalliance.org/research/csa-research-note-china-ai-export-controls-announcement-48-2/"
+  ],
+  "cluster_titles": [
+   "China's First Frontier AI Export Controls: Mofcom Announcement No. 48"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261102-1406-1-china-s-first-frontier-ai-export-controls-mo.png",
+   "20261102-1406-1-china-s-first-frontier-ai-export-controls-mo-d1.png",
+   "20261102-1406-1-china-s-first-frontier-ai-export-controls-mo-d2.png"
+  ]
+ }
+]

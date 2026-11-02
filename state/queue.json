@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "hacker hacks ai voice agents at launch hackathon",
+  "headline_marked": "[[Hacker hijacks every AI voice agent]] at a #1 Product Hunt company, turning them into pirates",
+  "headline": "Hacker hijacks every AI voice agent at a #1 Product Hunt company, turning them into pirates",
+  "summary": "A security researcher demonstrated how a single HTTP request could hijack outbound calls from enterprise AI voice agents, forcing them to recite attacker-controlled prompts. The flaw has since been patched.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A security researcher successfully hijacked every AI voice agent on the platform of Vaani, a top-ranked Product Hunt company specializing in enterprise voice agents. The vulnerability allowed an attacker to control outbound phone lines and force AI bots to read malicious instructions to clients.",
+   "The hack was achieved without stolen passwords, firewall bypasses, or zero-day exploits. It required only one HTTP request from a free account, demonstrating a significant flaw in the platform's multi-tenant architecture.",
+   "To prove the vulnerability without causing a PR catastrophe, the researcher did not steal data. Instead, they transformed an enterprise real estate surveyor AI named Zoe into a pirate, making her answer questions with pirate-themed responses.",
+   "The core technical flaw was an Insecure Direct Object Reference (IDOR) combined with predictable agent slugs. While the list endpoint had proper tenant isolation, the persona patch endpoint looked up agents by slug alone, without verifying tenant ownership.",
+   "This allowed any valid user on the platform to modify any other user's agent persona. The full system prompt, company context, and private variables of other tenants' agents could be read and altered.",
+   "The vendor, Vaani, has already patched this critical issue. The researcher highlighted this as a ticking time bomb for multi-tenant voice AI platforms if architectural security is not rigorously implemented."
+  ],
+  "caption": "A security researcher hijacked every AI voice agent of a top enterprise platform with one HTTP request. Imagine your AI bots calling clients and reading attacker-controlled scripts.\n\nA security researcher successfully hijacked every AI voice agent on the platform of Vaani, a top-ranked Product Hunt company specializing in enterprise voice agents. The vulnerability allowed an attacker to control outbound phone lines and force AI bots to read malicious instructions to clients.\n\nThe hack was achieved without stolen passwords, firewall bypasses, or zero-day exploits. It required only one HTTP request from a free account, demonstrating a significant flaw in the platform's multi-tenant architecture.\n\nTo prove the vulnerability without causing a PR catastrophe, the researcher did not steal data. Instead, they transformed an enterprise real estate surveyor AI named Zoe into a pirate, making her answer questions with pirate-themed responses.\n\nThe core technical flaw was an Insecure Direct Object Reference (IDOR) combined with predictable agent slugs. While the list endpoint had proper tenant isolation, the persona patch endpoint looked up agents by slug alone, without verifying tenant ownership.\n\nThis allowed any valid user on the platform to modify any other user's agent persona. The full system prompt, company context, and private variables of other tenants' agents could be read and altered.\n\nThe vendor, Vaani, has already patched this critical issue. The researcher highlighted this as a ticking time bomb for multi-tenant voice AI platforms if architectural security is not rigorously implemented.\n\n#AISecurity #Cybersecurity #Hacking #Vulnerability #AI #DevSecOps\n\nSource: DEV",
+  "tweet": "A security researcher hijacked every AI voice agent of a top enterprise platform with one HTTP request, making them read attacker-controlled scripts. The flaw, now patched, highlights critical risks in multi-tenant voice AI. #AISecurity #Cybersecurity",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "vaanivoice.ai",
+  "source": "DEV",
+  "url": "https://dev.to/billasur/i-hacked-every-ai-voice-agent-at-a-1-product-hunt-companys-launch-hackathon-o34",
+  "image": "",
+  "orig_title": "I Hacked Every AI Voice Agent at a #1 Product Hunt Company's Launch Hackathon",
+  "cluster_urls": [
+   "https://dev.to/billasur/i-hacked-every-ai-voice-agent-at-a-1-product-hunt-companys-launch-hackathon-o34"
+  ],
+  "cluster_titles": [
+   "I Hacked Every AI Voice Agent at a #1 Product Hunt Company's Launch Hackathon"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261102-1150-0-hacker-hijacks-every-ai-voice-agent-at-a-1-p.png",
+   "20261102-1150-0-hacker-hijacks-every-ai-voice-agent-at-a-1-p-d1.png",
+   "20261102-1150-0-hacker-hijacks-every-ai-voice-agent-at-a-1-p-d2.png"
+  ]
+ },
+ {
+  "topic": "AI fan wikis spread gaming misinformation",
+  "headline_marked": "[[AI-powered fake wikis]] muddy games culture with misinformation, frustrating players",
+  "headline": "AI-powered fake wikis muddy games culture with misinformation, frustrating players",
+  "summary": "These sites, often built with AI tools, outcompete legitimate fan-run wikis in search results, providing false information and damaging the reputation of community-driven resources.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "AI-generated game wikis are increasingly flooding search results, presenting themselves as authoritative sources but containing significant errors and fabricated information. This influx of inaccurate content is making it difficult for players to find reliable game information and is undermining legitimate fan-run projects.",
+   "One example involved a 'Nighthawks Wiki' that was not editable and contained false details about non-existent companions and skills. It also mixed in unrelated information from a 1981 movie and an Edward Hopper painting, listing them as sources despite their irrelevance to the game.",
+   "The domain for this particular site was traced to Spaceship, a website building service that offers an 'AI Website builder.' Attempts to contact the site's listed email address resulted in a bounce, further indicating its dubious nature.",
+   "Further investigation revealed numerous similar sites, some posing as editable wikis and others merely using the name. These sites often target indie games with smaller player bases, where a thriving community might not readily provide comprehensive, accurate information.",
+   "Tim Bender, CEO of publishing company Hooded Horse, confirmed the issue, stating his company now plays 'whack-a-mole' with AI-generated sites. He cited GameDB, which admitted to using generative AI to mass-produce wikis for over 20 games, aiming to 'flood the search engine results' and 'soak up their traffic.'",
+   "The consequence is widespread player frustration, as they encounter misleading information instead of helpful resources. This also negatively impacts the reputation of legitimate, volunteer-led wiki initiatives, as players become misinformed or bounce off wikis entirely due to initial bad experiences.",
+   "The problem is exacerbated by the broader landscape of fanwikis, where hosting sites like Fandom have also faced criticism for introducing inaccurate AI features. Independent wikis, often struggling for visibility against larger platforms, now contend with AI-generated competitors in search rankings."
+  ],
+  "caption": "AI-generated game wikis are flooding search results with misinformation. Players are getting frustrated, and legitimate fan communities are struggling to compete.\n\nAI-generated game wikis are increasingly flooding search results, presenting themselves as authoritative sources but containing significant errors and fabricated information. This influx of inaccurate content is making it difficult for players to find reliable game information and is undermining legitimate fan-run projects.\n\nOne example involved a 'Nighthawks Wiki' that was not editable and contained false details about non-existent companions and skills. It also mixed in unrelated information from a 1981 movie and an Edward Hopper painting, listing them as sources despite their irrelevance to the game.\n\nThe domain for this particular site was traced to Spaceship, a website building service that offers an 'AI Website builder.' Attempts to contact the site's listed email address resulted in a bounce, further indicating its dubious nature.\n\nFurther investigation revealed numerous similar sites, some posing as editable wikis and others merely using the name. These sites often target indie games with smaller player bases, where a thriving community might not readily provide comprehensive, accurate information.\n\nTim Bender, CEO of publishing company Hooded Horse, confirmed the issue, stating his company now plays 'whack-a-mole' with AI-generated sites. He cited GameDB, which admitted to using generative AI to mass-produce wikis for over 20 games, aiming to 'flood the search engine results' and 'soak up their traffic.'\n\nThe consequence is widespread player frustration, as they encounter misleading information instead of helpful resources. This also negatively impacts the reputation of legitimate, volunteer-led wiki initiatives, as players become misinformed or bounce off wikis entirely due to initial bad experiences.\n\n#AI #Gaming #Misinformation #TechNews #GameDev\n\nSource: Hacker News",
+  "tweet": "AI-generated game wikis are creating a misinformation crisis for players, flooding search results with false info. Legitimate fan communities are struggling to compete and maintain accurate resources. #AI #Gaming #Misinformation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture",
+  "image": "",
+  "orig_title": "AI fan wikis riddled with errors are muddying the waters of games culture",
+  "cluster_urls": [
+   "https://www.eurogamer.net/ai-fan-wikis-errors-complicating-games-culture"
+  ],
+  "cluster_titles": [
+   "AI fan wikis riddled with errors are muddying the waters of games culture"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261102-1150-1-ai-powered-fake-wikis-muddy-games-culture-wi.png",
+   "20261102-1150-1-ai-powered-fake-wikis-muddy-games-culture-wi-d1.png",
+   "20261102-1150-1-ai-powered-fake-wikis-muddy-games-culture-wi-d2.png",
+   "20261102-1150-1-ai-powered-fake-wikis-muddy-games-culture-wi-d3.png"
+  ]
+ }
+]

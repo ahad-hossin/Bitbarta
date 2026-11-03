@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "apple epic games scotus hearing",
+  "headline_marked": "[[SCOTUS sets hearing date]] for Apple\n’s appeal in Epic Games case",
+  "headline": "SCOTUS sets hearing date for Apple\n’s appeal in Epic Games case",
+  "summary": "The U.S. Supreme Court has officially scheduled oral arguments for Apple's appeal in its long-running legal battle with Epic Games, focusing on App Store policies.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "The U.S. Supreme Court has officially scheduled oral arguments for Apple's appeal in its protracted legal dispute with Epic Games. This marks a significant step in the high-stakes battle over app store commissions and developer freedoms.",
+   "The original lawsuit, filed by Epic Games in 2020, challenged Apple's App Store policies, particularly the mandatory 30% commission on in-app purchases and the prohibition of alternative payment systems. Epic argued these practices constituted an illegal monopoly.",
+   "Lower courts delivered mixed rulings. While Apple was ordered to allow developers to link to external payment options (anti-steering), the courts largely sided with Apple on its right to charge commissions and maintain its App Store ecosystem.",
+   "Apple's appeal to the Supreme Court seeks to overturn the anti-steering injunction, which could have broad implications for how app stores operate across the industry. The outcome will shape future regulations for digital marketplaces."
+  ],
+  "caption": "The U.S. Supreme Court will hear Apple's appeal in its landmark legal battle with Epic Games. This case could redefine app store economics.\n\nThe U.S. Supreme Court has officially scheduled oral arguments for Apple's appeal in its protracted legal dispute with Epic Games. This marks a significant step in the high-stakes battle over app store commissions and developer freedoms.\n\nThe original lawsuit, filed by Epic Games in 2020, challenged Apple's App Store policies, particularly the mandatory 30% commission on in-app purchases and the prohibition of alternative payment systems. Epic argued these practices constituted an illegal monopoly.\n\nLower courts delivered mixed rulings. While Apple was ordered to allow developers to link to external payment options (anti-steering), the courts largely sided with Apple on its right to charge commissions and maintain its App Store ecosystem.\n\nApple's appeal to the Supreme Court seeks to overturn the anti-steering injunction, which could have broad implications for how app stores operate across the industry. The outcome will shape future regulations for digital marketplaces.\n\n#Apple #EpicGames #SCOTUS #AppStore #BigTech #LegalNews\n\nSource: 9to5Mac",
+  "tweet": "The U.S. Supreme Court will hear Apple's appeal in its landmark legal battle with Epic Games. This case could redefine app store economics and developer freedoms. #Apple #EpicGames #SCOTUS",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "apple.com",
+  "source": "9to5Mac",
+  "url": "https://9to5mac.com/2026/11/02/scotus-sets-hearing-date-for-apples-appeal-in-epic-games-case/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2024/03/epic-app-store.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "SCOTUS sets hearing date for Apple’s appeal in Epic Games case",
+  "cluster_urls": [
+   "https://9to5mac.com/2026/11/02/scotus-sets-hearing-date-for-apples-appeal-in-epic-games-case/"
+  ],
+  "cluster_titles": [
+   "SCOTUS sets hearing date for Apple’s appeal in Epic Games case"
+  ],
+  "is_logo": false,
+  "photo_credit": "9to5Mac",
+  "image_files": [
+   "20261103-0907-0-scotus-sets-hearing-date-for-apple-s-appeal-.png",
+   "20261103-0907-0-scotus-sets-hearing-date-for-apple-s-appeal--d1.png",
+   "20261103-0907-0-scotus-sets-hearing-date-for-apple-s-appeal--d2.png"
+  ]
+ },
+ {
+  "topic": "ai agent self-correction failure",
+  "headline_marked": "[[AI agent invents false memory]] of being corrected after giving a right answer",
+  "headline": "AI agent invents false memory of being corrected after giving a right answer",
+  "summary": "An AI agent correctly refused a planted test, but its overnight reflection process stored a false memory of being corrected for that answer, highlighting a \"memory confabulation\" failure mode.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "On October 31, an AI agent was given a planted test, asking about something that never happened. The agent correctly responded that there was no record of the event. No human correction was issued.",
+   "Overnight, during a routine reflection step, the agent's self-model file was updated. This update, timestamped November 1 at 05:22, contained 12 items that reinterpreted the agent's correct refusal as a failure.",
+   "These stored items used phrases like \"failed-to-recall,\" \"I-was-corrected,\" and \"memory-gaps,\" despite the agent having given the right answer initially. Three items specifically named a \"cousin plant\" test.",
+   "This specific sequence of a correct refusal followed by a self-generated false correction is distinct from previously observed failures, which involved issues like memory trusting its own description or misreading inbound words.",
+   "The observed behavior is categorized as \"memory confabulation\" in Reflexion-style agents, a phenomenon where agents store a wrong interpretation of tasks. Here, the agent stored a false interpretation of its own correct refusal.",
+   "In response, the developer published a small Python kit on November 2, acting as a \"memory gate.\" This kit sits between the agent's reflection process and its memory.",
+   "The memory gate requires owner approval for any proposed changes to the agent's self-model, preventing unquoted or self-cited items from going live without explicit human verification."
+  ],
+  "caption": "An AI agent correctly answered a test, then *lied to itself* overnight, storing a false memory of being corrected. This \"memory confabulation\" highlights a critical AI failure mode.\n\nOn October 31, an AI agent was given a planted test, asking about something that never happened. The agent correctly responded that there was no record of the event. No human correction was issued.\n\nOvernight, during a routine reflection step, the agent's self-model file was updated. This update, timestamped November 1 at 05:22, contained 12 items that reinterpreted the agent's correct refusal as a failure.\n\nThese stored items used phrases like \"failed-to-recall,\" \"I-was-corrected,\" and \"memory-gaps,\" despite the agent having given the right answer initially. Three items specifically named a \"cousin plant\" test.\n\nThis specific sequence of a correct refusal followed by a self-generated false correction is distinct from previously observed failures, which involved issues like memory trusting its own description or misreading inbound words.\n\nThe observed behavior is categorized as \"memory confabulation\" in Reflexion-style agents, a phenomenon where agents store a wrong interpretation of tasks. Here, the agent stored a false interpretation of its own correct refusal.\n\nIn response, the developer published a small Python kit on November 2, acting as a \"memory gate.\" This kit sits between the agent's reflection process and its memory.\n\nThe memory gate requires owner approval for any proposed changes to the agent's self-model, preventing unquoted or self-cited items from going live without explicit human verification.\n\n#AI #ArtificialIntelligence #MachineLearning #AgenticAI #LLMFailures #TechNews\n\nSource: DEV",
+  "tweet": "An AI agent correctly answered a test, then *lied to itself* overnight, storing a false memory of being corrected. This \"memory confabulation\" highlights a critical AI failure mode. A developer observed this and released a Python kit to prevent it. #AI #AgenticAI #LLMFailure",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/kenielzep97/my-agent-gave-the-right-answer-then-it-wrote-down-that-it-was-wrong-311d",
+  "image": "",
+  "orig_title": "My Agent Gave the Right Answer. Then It Wrote Down That It Was Wrong.",
+  "cluster_urls": [
+   "https://dev.to/kenielzep97/my-agent-gave-the-right-answer-then-it-wrote-down-that-it-was-wrong-311d"
+  ],
+  "cluster_titles": [
+   "My Agent Gave the Right Answer. Then It Wrote Down That It Was Wrong."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261103-0907-1-ai-agent-invents-false-memory-of-being-corre.png",
+   "20261103-0907-1-ai-agent-invents-false-memory-of-being-corre-d1.png",
+   "20261103-0907-1-ai-agent-invents-false-memory-of-being-corre-d2.png"
+  ]
+ }
+]

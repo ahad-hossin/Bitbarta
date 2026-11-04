@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "running 180b moe model on 8gb vram laptop",
+  "headline_marked": "[[VIDRAFT POCKET runs 180B MoE model]] on 8 GB VRAM laptops, with 3.15M downloads",
+  "headline": "VIDRAFT POCKET runs 180B MoE model on 8 GB VRAM laptops, with 3.15M downloads",
+  "summary": "The GGUF-formatted sparse Mixture-of-Experts models achieve 87.65% quality retention at 4-bit quantization, enabling powerful AI on consumer hardware without cloud dependency.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "VIDRAFT POCKET is a family of GGUF-format sparse Mixture-of-Experts models designed to run on consumer hardware, including CPU-only PCs and laptops with as little as 8 GB VRAM. The flagship POCKET-Darwin-180B achieves 87.65% quality retention at 4-bit quantization, matching its BF16 baseline, and has amassed over 3.15 million total Hugging Face downloads.",
+   "The core engineering insight is that sparse MoE models activate only a fraction of their total parameters per forward pass. This dramatically reduces the memory bandwidth and compute needed at inference time compared to dense models of equivalent parameter count.",
+   "POCKET packages these models as GGUF files, the standard interchange format for llama.cpp-based runtimes. GGUF supports mixed-precision quantization, allowing different layers or weight groups to be quantized at varying bit widths to maintain quality.",
+   "A key operational detail for CPU inference with llama-cli is to set the -t flag to the physical core count, not the logical thread count. Using all hyperthreaded logical cores can significantly decrease throughput, a common pitfall when tuning llama.cpp for multi-core CPUs.",
+   "POCKET models are publicly available on Hugging Face and load into any official llama.cpp-based runtime without modification. They are also compatible with Ollama, LM Studio, and PocketPal out of the box, with a browser-based option via POCKET Image Studio."
+  ],
+  "caption": "Run a 180B Mixture-of-Experts AI model on your laptop with just 8 GB VRAM. VIDRAFT POCKET makes powerful LLMs accessible on consumer hardware.\n\nVIDRAFT POCKET is a family of GGUF-format sparse Mixture-of-Experts models designed to run on consumer hardware, including CPU-only PCs and laptops with as little as 8 GB VRAM. The flagship POCKET-Darwin-180B achieves 87.65% quality retention at 4-bit quantization, matching its BF16 baseline, and has amassed over 3.15 million total Hugging Face downloads.\n\nThe core engineering insight is that sparse MoE models activate only a fraction of their total parameters per forward pass. This dramatically reduces the memory bandwidth and compute needed at inference time compared to dense models of equivalent parameter count.\n\nPOCKET packages these models as GGUF files, the standard interchange format for llama.cpp-based runtimes. GGUF supports mixed-precision quantization, allowing different layers or weight groups to be quantized at varying bit widths to maintain quality.\n\nA key operational detail for CPU inference with llama-cli is to set the -t flag to the physical core count, not the logical thread count. Using all hyperthreaded logical cores can significantly decrease throughput, a common pitfall when tuning llama.cpp for multi-core CPUs.\n\nPOCKET models are publicly available on Hugging Face and load into any official llama.cpp-based runtime without modification. They are also compatible with Ollama, LM Studio, and PocketPal out of the box, with a browser-based option via POCKET Image Studio.\n\n#AI #LLM #MachineLearning #GGUF #Tech #OpenSource\n\nSource: DEV",
+  "tweet": "Run a 180B Mixture-of-Experts AI model on your laptop with just 8 GB VRAM! VIDRAFT POCKET enables powerful LLMs on consumer hardware, with over 3.15M downloads. #AI #LLM #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ai_openfree_b23025ef075cf/vidraft-pocket-running-a-180b-moe-model-on-an-8-gb-vram-laptop-315m-downloads-and-counting-30l1",
+  "image": "",
+  "orig_title": "VIDRAFT POCKET: Running a 180B MoE Model on an 8 GB VRAM Laptop — 3.15M Downloads and Counting",
+  "cluster_urls": [
+   "https://dev.to/ai_openfree_b23025ef075cf/vidraft-pocket-running-a-180b-moe-model-on-an-8-gb-vram-laptop-315m-downloads-and-counting-30l1"
+  ],
+  "cluster_titles": [
+   "VIDRAFT POCKET: Running a 180B MoE Model on an 8 GB VRAM Laptop — 3.15M Downloads and Counting"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261104-1307-0-vidraft-pocket-runs-180b-moe-model-on-8-gb-v.png",
+   "20261104-1307-0-vidraft-pocket-runs-180b-moe-model-on-8-gb-v-d1.png",
+   "20261104-1307-0-vidraft-pocket-runs-180b-moe-model-on-8-gb-v-d2.png"
+  ]
+ },
+ {
+  "topic": "eloelo nabs 80m from nbcuniversal for microdrama market",
+  "headline_marked": "[[India's EloElo nabs $80M]] from NBCUniversal for microdrama market, valued at $500M",
+  "headline": "India's EloElo nabs $80M from NBCUniversal for microdrama market, valued at $500M",
+  "summary": "EloElo, with its Story TV app, has over 33 million active users watching microdramas monthly. This Series C round from Hornbill Capital and NBCUniversal values the company at $500 million.",
+  "category": "STARTUPS",
+  "template": "neon",
+  "details": [
+   "Indian microdrama platform EloElo has secured $80 million in Series C funding from Hornbill Capital and NBCUniversal. This latest round brings its total fundraising to $130 million, valuing the company at $500 million.",
+   "The investment highlights the rapid growth of India's microdrama market, where over 118 million users watch serialized short-form content monthly. EloElo's Story TV app is a leading player, boasting over 33 million active users.",
+   "Serialized vertical video content has gained significant traction globally, with celebrities and investors in the U.S. and China also backing the format. This trend reflects a shift in how audiences consume entertainment on mobile devices.",
+   "India, with its vast internet population, presents a substantial market opportunity for this content, with analysts projecting the industry to exceed $3-4 billion in annual revenue by 2030. Dedicated apps like Story TV were among the most downloaded video streaming apps in the country last year.",
+   "Founded in 2020 by former Flipkart executive Saurabh Pandey, Story TV offers a catalog of over 5,000 titles in six languages. Users spend an average of 95 minutes daily on the app across multiple sessions, drawn by the snackable content format.",
+   "Pandey believes the next generation of users will primarily consume entertainment on their phones, requiring content designed for short, frequent viewing slots. This contrasts with traditional appointment viewing and fills a gap not addressed by short clips alone.",
+   "EloElo faces competition from free platforms like YouTube and TikTok, where creators also post serialized content. The company aims to entice users through quality content and strategic partnerships, such as with Balaji Telefilms.",
+   "Monetization in India remains a challenge, despite various subscription options (monthly, quarterly, yearly) and ad-supported free content. While over 40 million have paid for microdrama at least once, only 15-17 million do so monthly.",
+   "Many microdrama platforms are exploring AI to enhance content creation and workflows. EloElo is developing its internal Dolphin AI platform, initially used for video creation, with plans to make it widely available.",
+   "Dolphin AI functions as an editor with templates and models for generating images, audio, and video. While human creativity remains paramount, AI tools are seen as powerful engines for steering content production and marketing campaigns."
+  ],
+  "caption": "India's microdrama market is booming, and EloElo just secured $80 million in Series C funding from NBCUniversal and Hornbill Capital. The company is now valued at $500 million.\n\nIndian microdrama platform EloElo has secured $80 million in Series C funding from Hornbill Capital and NBCUniversal. This latest round brings its total fundraising to $130 million, valuing the company at $500 million.\n\nThe investment highlights the rapid growth of India's microdrama market, where over 118 million users watch serialized short-form content monthly. EloElo's Story TV app is a leading player, boasting over 33 million active users.\n\nSerialized vertical video content has gained significant traction globally, with celebrities and investors in the U.S. and China also backing the format. This trend reflects a shift in how audiences consume entertainment on mobile devices.\n\nIndia, with its vast internet population, presents a substantial market opportunity for this content, with analysts projecting the industry to exceed $3-4 billion in annual revenue by 2030. Dedicated apps like Story TV were among the most downloaded video streaming apps in the country last year.\n\nFounded in 2020 by former Flipkart executive Saurabh Pandey, Story TV offers a catalog of over 5,000 titles in six languages. Users spend an average of 95 minutes daily on the app across multiple sessions, drawn by the snackable content format.\n\nPandey believes the next generation of users will primarily consume entertainment on their phones, requiring content designed for short, frequent viewing slots. This contrasts with traditional appointment viewing and fills a gap not addressed by short clips alone.\n\nEloElo faces competition from free platforms like YouTube and TikTok, where creators also post serialized content. The company aims to entice users through quality content and strategic partnerships, such as with Balaji Telefilms.\n\n#Tech #Startups #India #Microdrama #Funding #NBCUniversal\n\nSource: TechCrunch",
+  "tweet": "India's EloElo just raised $80M in Series C from NBCUniversal & Hornbill Capital, valuing the microdrama platform at $500M! Its Story TV app has 33M active users. The serialized vertical video market is booming. #Tech #India #Funding",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "eloelo.live",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/11/03/indias-eloelo-nabs-80m-from-nbc-universal-to-bet-on-the-countrys-rising-microdrama-market/",
+  "image": "",
+  "orig_title": "India’s EloElo nabs $80M from NBCUniversal to bet on the country’s rising microdrama market",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/11/03/indias-eloelo-nabs-80m-from-nbc-universal-to-bet-on-the-countrys-rising-microdrama-market/"
+  ],
+  "cluster_titles": [
+   "India’s EloElo nabs $80M from NBCUniversal to bet on the country’s rising microdrama market"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20261104-1307-1-india-s-eloelo-nabs-80m-from-nbcuniversal-fo.png",
+   "20261104-1307-1-india-s-eloelo-nabs-80m-from-nbcuniversal-fo-d1.png",
+   "20261104-1307-1-india-s-eloelo-nabs-80m-from-nbcuniversal-fo-d2.png",
+   "20261104-1307-1-india-s-eloelo-nabs-80m-from-nbcuniversal-fo-d3.png",
+   "20261104-1307-1-india-s-eloelo-nabs-80m-from-nbcuniversal-fo-d4.png"
+  ]
+ }
+]

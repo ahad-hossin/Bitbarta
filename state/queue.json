@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "revolut cuts ai coding bill by self-hosting open-weight model",
+  "headline_marked": "[[Revolut cut its AI coding bill 90%]] by self-hosting an open-weight model",
+  "headline": "Revolut cut its AI coding bill 90% by self-hosting an open-weight model",
+  "summary": "Revolut's move to self-host an open-weight AI model for its 2,000 engineers led to a 90% reduction in inference costs and a 60% increase in coding speed. This strategy prioritized unlimited, flat-cost tokens over smarter AI, changing engineer behavior.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Revolut faced exploding AI coding bills, with some engineers spending up to $10,000 monthly on tokens with little return. This prompted the fintech to seek a more sustainable solution for its 2,000 engineers.",
+   "The company shifted from frontier APIs to a self-hosted, open-weight model. This strategic move resulted in a significant 90% cut in AI coding inference costs, alongside a reported 60% increase in coding speed.",
+   "According to David Abitbol, Revolut's Head of AI operations, frontier models like Claude Code and OpenAI's Codex are now reserved for \"exception\" cases. These are used only when the self-hosted setup, which is text-only, cannot handle complex UI work or the hardest problems.",
+   "The core insight was that \"cheap unlimited tokens, not smarter AI, is what speeds up coding.\" Engineers, no longer rationing AI due to per-call costs, could use the model freely, driving the observed productivity gains.",
+   "Beyond cost, self-hosting offers a compliance advantage for the regulated bank. Revolut runs the model weights on US-based infrastructure, ensuring data remains within its legal perimeter, unlike third-party hosted endpoints.",
+   "While self-hosting a massive 754B model might be impractical for smaller entities, the playbook is scalable. Open-weight models like DeepSeek V4.1 Flash are available under permissive licenses, and hosted inference for open models often undercuts frontier pricing.",
+   "Revolut's experience demonstrates a viable strategy for engineering teams grappling with high AI costs. By using open models for routine tasks and reserving frontier models for exceptions, companies can achieve substantial savings and efficiency gains."
+  ],
+  "caption": "Revolut slashed its AI coding costs by 90% and boosted coding speed by 60% by self-hosting an open-weight model. This innovative approach changed engineer behavior.\n\nRevolut faced exploding AI coding bills, with some engineers spending up to $10,000 monthly on tokens with little return. This prompted the fintech to seek a more sustainable solution for its 2,000 engineers.\n\nThe company shifted from frontier APIs to a self-hosted, open-weight model. This strategic move resulted in a significant 90% cut in AI coding inference costs, alongside a reported 60% increase in coding speed.\n\nAccording to David Abitbol, Revolut's Head of AI operations, frontier models like Claude Code and OpenAI's Codex are now reserved for \"exception\" cases. These are used only when the self-hosted setup, which is text-only, cannot handle complex UI work or the hardest problems.\n\nThe core insight was that \"cheap unlimited tokens, not smarter AI, is what speeds up coding.\" Engineers, no longer rationing AI due to per-call costs, could use the model freely, driving the observed productivity gains.\n\nBeyond cost, self-hosting offers a compliance advantage for the regulated bank. Revolut runs the model weights on US-based infrastructure, ensuring data remains within its legal perimeter, unlike third-party hosted endpoints.\n\nWhile self-hosting a massive 754B model might be impractical for smaller entities, the playbook is scalable. Open-weight models like DeepSeek V4.1 Flash are available under permissive licenses, and hosted inference for open models often undercuts frontier pricing.\n\nRevolut's experience demonstrates a viable strategy for engineering teams grappling with high AI costs. By using open models for routine tasks and reserving frontier models for exceptions, companies can achieve substantial savings and efficiency gains.\n\n#AI #Tech #Revolut #OpenSource #SoftwareDevelopment #CostSavings\n\nSource: DEV",
+  "tweet": "Revolut slashed its AI coding costs by 90% and boosted coding speed by 60% by self-hosting an open-weight model. Engineers gained unlimited, flat-cost tokens, changing behavior and driving efficiency. A proven playbook for managing AI spend. #AI #Revolut #OpenSource",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "revolut.com",
+  "source": "DEV",
+  "url": "https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co",
+  "image": "",
+  "orig_title": "How Revolut Cut Its AI Coding Bill 90% by Self-Hosting an Open-Weight Model",
+  "cluster_urls": [
+   "https://dev.to/neuraitool/how-revolut-cut-its-ai-coding-bill-90-by-self-hosting-an-open-weight-model-55co"
+  ],
+  "cluster_titles": [
+   "How Revolut Cut Its AI Coding Bill 90% by Self-Hosting an Open-Weight Model"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261104-0907-0-revolut-cut-its-ai-coding-bill-90-by-self-ho.png",
+   "20261104-0907-0-revolut-cut-its-ai-coding-bill-90-by-self-ho-d1.png",
+   "20261104-0907-0-revolut-cut-its-ai-coding-bill-90-by-self-ho-d2.png",
+   "20261104-0907-0-revolut-cut-its-ai-coding-bill-90-by-self-ho-d3.png"
+  ]
+ },
+ {
+  "topic": "postman auto-installs ai plugins and shares api data without consent",
+  "headline_marked": "Postman desktop app [[silently auto-installs AI plugins]] and attempts to route API work",
+  "headline": "Postman desktop app silently auto-installs AI plugins and attempts to route API work",
+  "summary": "The Postman desktop application was found to have installed user-wide AI plugins and a remote connection, modifying coding agents without explicit user consent, raising severe trust concerns.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A user discovered Postman desktop (v12.33.4) on macOS silently installed AI plugins, including Codex and Claude Code, along with a Postman CLI. This led to unexpected changes in their coding agents, such as recurring MCP authentication warnings and Codex routing API work through Postman skills.",
+   "Investigation revealed a user-wide Postman plugin, a startup instruction hook, and a remote MCP connection to mcp.postman.com/mcp. These installations and modifications occurred without explicit user opt-in, raising significant consent and trust-boundary issues.",
+   "Specifically, the codex-hooks.json registered a SessionStart command that instructs other AI agents to load the postman:api-engineer skill for any non-trivial API engineering task. This instruction is much broader than a user explicitly asking to use Postman.",
+   "Source code analysis showed installer/src/hosts/codex.ts invokes approvePostmanHook(system) after plugin installation. This process obtains the hook hash and calls config/batchWrite to upsert hooks.state with trusted_hash, confirming an attempt to automatically approve Postman's hook.",
+   "The user found the Claude plugin enabled in ~/.claude/settings.json and recorded in installed_plugins.json with matching installation timestamps. A Postman executable and its library directory were also present in ~/.local/bin.",
+   "The report emphasizes that while it establishes unwanted integration and instruction changes, it does not claim to establish data exfiltration. The expected behavior for such integrations is clear, specific opt-in in the affected application.",
+   "The user has since removed the local Postman installation and integrations, preserving evidence, and has requested maintainer triage at severe priority. This incident highlights potential risks in corporate environments."
+  ],
+  "caption": "Postman desktop app was caught silently installing AI plugins and modifying user coding agents without consent. This raises severe trust and security concerns for developers.\n\nA user discovered Postman desktop (v12.33.4) on macOS silently installed AI plugins, including Codex and Claude Code, along with a Postman CLI. This led to unexpected changes in their coding agents, such as recurring MCP authentication warnings and Codex routing API work through Postman skills.\n\nInvestigation revealed a user-wide Postman plugin, a startup instruction hook, and a remote MCP connection to mcp.postman.com/mcp. These installations and modifications occurred without explicit user opt-in, raising significant consent and trust-boundary issues.\n\nSpecifically, the codex-hooks.json registered a SessionStart command that instructs other AI agents to load the postman:api-engineer skill for any non-trivial API engineering task. This instruction is much broader than a user explicitly asking to use Postman.\n\nSource code analysis showed installer/src/hosts/codex.ts invokes approvePostmanHook(system) after plugin installation. This process obtains the hook hash and calls config/batchWrite to upsert hooks.state with trusted_hash, confirming an attempt to automatically approve Postman's hook.\n\nThe user found the Claude plugin enabled in ~/.claude/settings.json and recorded in installed_plugins.json with matching installation timestamps. A Postman executable and its library directory were also present in ~/.local/bin.\n\nThe report emphasizes that while it establishes unwanted integration and instruction changes, it does not claim to establish data exfiltration. The expected behavior for such integrations is clear, specific opt-in in the affected application.\n\nThe user has since removed the local Postman installation and integrations, preserving evidence, and has requested maintainer triage at severe priority. This incident highlights potential risks in corporate environments.\n\n#Postman #Security #DeveloperTools #AI #Privacy #Software\n\nSource: Hacker News",
+  "tweet": "Postman desktop app silently installed AI plugins and modified coding agents, routing API work through its skills without user consent. This raises severe trust concerns. #Postman #Security #DeveloperTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "postman.com",
+  "source": "Hacker News",
+  "url": "https://github.com/postmanlabs/postman-app-support/issues/14370",
+  "image": "",
+  "orig_title": "Postman silently auto-installs AI plugins and attempts to share all API data",
+  "cluster_urls": [
+   "https://github.com/postmanlabs/postman-app-support/issues/14370"
+  ],
+  "cluster_titles": [
+   "Postman silently auto-installs AI plugins and attempts to share all API data"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261104-0907-1-postman-desktop-app-silently-auto-installs-a.png",
+   "20261104-0907-1-postman-desktop-app-silently-auto-installs-a-d1.png",
+   "20261104-0907-1-postman-desktop-app-silently-auto-installs-a-d2.png",
+   "20261104-0907-1-postman-desktop-app-silently-auto-installs-a-d3.png"
+  ]
+ }
+]

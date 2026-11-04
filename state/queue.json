@@ -1,1 +1,84 @@
-[]
+[
+ {
+  "topic": "litellm malware vulnerability",
+  "headline_marked": "[[LiteLLM shipped malware]] in v1.107.0 after unrevoked admin key led to compromise",
+  "headline": "LiteLLM shipped malware in v1.107.0 after unrevoked admin key led to compromise",
+  "summary": "A critical administrative key, left unrevoked for months, enabled attackers to inject credential-stealing malware into LiteLLM's v1.107.0 PyPI package and Docker image, downloaded approximately 49,000 times.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "On May 27, 2026, an administrative key for an internal LiteLLM Agent Platform deployment was committed to a public GitHub repository. Although the file was deleted three hours later, the key itself was never revoked, remaining active for over four months.",
+   "This unrevoked key became the initial link in a chain that led to a malicious `litellm==1.107.0` package being published on PyPI and a compromised Docker `latest` tag. The compromised artifacts were live for about two hours, during which Wiz estimates approximately 49,000 downloads occurred.",
+   "The malicious release contained compiled malware designed to steal credentials and load remote-code execution tools. Importantly, the official v1.107.0 source tag on GitHub never contained these malicious files, indicating a supply chain attack on the distribution channels.",
+   "The incident highlights a critical security oversight: deleting a file from a Git repository does not revoke the secret it contained. The old snapshot with the key remains reachable in Git history, accessible to anyone who cloned or forked the repository before history was rewritten.",
+   "GitHub's guide on removing sensitive data explicitly states that revoking or rotating the secret is the crucial first step. A revoked key in public history is harmless, but a live key whose file was merely deleted remains a significant vulnerability.",
+   "Coding agents can further complicate this issue, as they might add and remove config files within a single session. A pull request's final diff might not show the key, making it easy for reviewers to miss temporary exposures.",
+   "To prevent such incidents, secrets should always be referenced via environment variables or secure file paths, not hardcoded directly into configuration files. This ensures that sensitive information never enters the repository's history.",
+   "Developers can use `git log -S \"sk-\" --all -p` (adjusting the prefix) to search for commits that introduce or remove specific strings, helping to identify secrets lurking in repository history. This command can reveal config files that existed in history but are no longer in the current tree.",
+   "Following the incident, LiteLLM has updated its processes, mandating that secret scanning automatically opens tickets. These tickets are to remain open until the revocation of the identified secret is confirmed, reinforcing the importance of a robust secret management lifecycle."
+  ],
+  "caption": "A critical administrative key was exposed in a public GitHub repo for months. This unrevoked key led to LiteLLM's v1.107.0 package being poisoned with credential-stealing malware.\n\nOn May 27, 2026, an administrative key for an internal LiteLLM Agent Platform deployment was committed to a public GitHub repository. Although the file was deleted three hours later, the key itself was never revoked, remaining active for over four months.\n\nThis unrevoked key became the initial link in a chain that led to a malicious `litellm==1.107.0` package being published on PyPI and a compromised Docker `latest` tag. The compromised artifacts were live for about two hours, during which Wiz estimates approximately 49,000 downloads occurred.\n\nThe malicious release contained compiled malware designed to steal credentials and load remote-code execution tools. Importantly, the official v1.107.0 source tag on GitHub never contained these malicious files, indicating a supply chain attack on the distribution channels.\n\nThe incident highlights a critical security oversight: deleting a file from a Git repository does not revoke the secret it contained. The old snapshot with the key remains reachable in Git history, accessible to anyone who cloned or forked the repository before history was rewritten.\n\nGitHub's guide on removing sensitive data explicitly states that revoking or rotating the secret is the crucial first step. A revoked key in public history is harmless, but a live key whose file was merely deleted remains a significant vulnerability.\n\nCoding agents can further complicate this issue, as they might add and remove config files within a single session. A pull request's final diff might not show the key, making it easy for reviewers to miss temporary exposures.\n\n#Cybersecurity #Malware #SupplyChainAttack #InfoSec #LiteLLM #DeveloperSecurity\n\nSource: DEV",
+  "tweet": "A critical admin key, exposed & unrevoked for months, led to LiteLLM's v1.107.0 package being compromised with credential-stealing malware. Approximately 49,000 downloads occurred before detection. A stark reminder to revoke secrets immediately! #Cybersecurity #Malware",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "litellm.ai",
+  "source": "DEV",
+  "url": "https://dev.to/gabrielanhaia/deleting-the-file-didnt-revoke-the-key-how-litellm-11070-shipped-malware-1k3c",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F9o6agr46tmmnsybuwfzc.png",
+  "orig_title": "Deleting the File Didn't Revoke the Key: How LiteLLM 1.107.0 Shipped Malware",
+  "cluster_urls": [
+   "https://dev.to/gabrielanhaia/deleting-the-file-didnt-revoke-the-key-how-litellm-11070-shipped-malware-1k3c"
+  ],
+  "cluster_titles": [
+   "Deleting the File Didn't Revoke the Key: How LiteLLM 1.107.0 Shipped Malware"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261104-1106-0-litellm-shipped-malware-in-v1-107-0-after-un.png",
+   "20261104-1106-0-litellm-shipped-malware-in-v1-107-0-after-un-d1.png",
+   "20261104-1106-0-litellm-shipped-malware-in-v1-107-0-after-un-d2.png",
+   "20261104-1106-0-litellm-shipped-malware-in-v1-107-0-after-un-d3.png",
+   "20261104-1106-0-litellm-shipped-malware-in-v1-107-0-after-un-d4.png"
+  ]
+ },
+ {
+  "topic": "samsung galaxy s27 ultra privacy display",
+  "headline_marked": "[[Galaxy S27 Ultra may fix]] S26's privacy screen brightness flaw, leak suggests",
+  "headline": "Galaxy S27 Ultra may fix S26's privacy screen brightness flaw, leak suggests",
+  "summary": "The Galaxy S26 Ultra's Privacy Display suffered from reduced brightness and discoloration. The upcoming S27 Ultra is rumored to feature an upgraded, brighter panel, potentially addressing these issues.",
+  "category": "ANDROID",
+  "template": "leak",
+  "details": [
+   "The Samsung Galaxy S26 Ultra introduced a built-in Privacy Display, praised for its protection against shoulder surfing. However, users reported significant trade-offs, including reduced display legibility and brightness when the feature was enabled.",
+   "Samsung appears to have acknowledged these issues, with SamMobile reporting that the upcoming Galaxy S27 Ultra will feature an \"upgraded\" Privacy Display. This new panel is expected to be brighter than the Galaxy S26 Ultra's, aiming to resolve the current generation's image quality woes.",
+   "The Privacy Display feature is also rumored to extend to the Galaxy S27 Pro, marking its first appearance outside the Ultra range. It remains unclear if the Pro model will receive the same enhanced, brighter panel as the S27 Ultra.",
+   "The S27 Pro is anticipated to offer better hardware specs than non-Pro models, including more efficient LPDDR6 memory and configurations up to 1TB. Third-party renders suggest a new design with a rectangular camera island for both the Pro and Ultra models.",
+   "Samsung is expected to accelerate the launch of the Galaxy S27 series by about a month compared to its usual cadence. The flagship phones could be announced as early as late January or early February 2027."
+  ],
+  "caption": "Samsung's Galaxy S26 Ultra Privacy Display had a major flaw: reduced brightness. The S27 Ultra may finally fix it.\n\nThe Samsung Galaxy S26 Ultra introduced a built-in Privacy Display, praised for its protection against shoulder surfing. However, users reported significant trade-offs, including reduced display legibility and brightness when the feature was enabled.\n\nSamsung appears to have acknowledged these issues, with SamMobile reporting that the upcoming Galaxy S27 Ultra will feature an \"upgraded\" Privacy Display. This new panel is expected to be brighter than the Galaxy S26 Ultra's, aiming to resolve the current generation's image quality woes.\n\nThe Privacy Display feature is also rumored to extend to the Galaxy S27 Pro, marking its first appearance outside the Ultra range. It remains unclear if the Pro model will receive the same enhanced, brighter panel as the S27 Ultra.\n\nThe S27 Pro is anticipated to offer better hardware specs than non-Pro models, including more efficient LPDDR6 memory and configurations up to 1TB. Third-party renders suggest a new design with a rectangular camera island for both the Pro and Ultra models.\n\nSamsung is expected to accelerate the launch of the Galaxy S27 series by about a month compared to its usual cadence. The flagship phones could be announced as early as late January or early February 2027.\n\n#Samsung #GalaxyS27Ultra #PrivacyDisplay #TechLeaks #Android #Smartphones\n\nSource: Android Police",
+  "tweet": "Samsung's Galaxy S26 Ultra Privacy Display had a major flaw: reduced brightness. A new leak suggests the upcoming S27 Ultra will feature an upgraded, brighter panel to fix this. The S27 Pro may also get the feature. #Samsung #GalaxyS27Ultra #TechLeaks",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "samsung.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/samsung-galaxy-s27-ultra-could-fix-privacy-screen-brightness-flaw/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/03/a-hand-holding-a-galaxy-s26-ultra-with-a-dim-privacy-protected-screen-displaying-the-words-privacy-display-on-the-background.png",
+  "orig_title": "Samsung’s Galaxy S27 Ultra may fix the privacy screen brightness flaw",
+  "cluster_urls": [
+   "https://www.androidpolice.com/samsung-galaxy-s27-ultra-could-fix-privacy-screen-brightness-flaw/"
+  ],
+  "cluster_titles": [
+   "Samsung’s Galaxy S27 Ultra may fix the privacy screen brightness flaw"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20261104-1106-1-galaxy-s27-ultra-may-fix-s26-s-privacy-scree.png",
+   "20261104-1106-1-galaxy-s27-ultra-may-fix-s26-s-privacy-scree-d1.png",
+   "20261104-1106-1-galaxy-s27-ultra-may-fix-s26-s-privacy-scree-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,95 @@
-[]
+[
+ {
+  "topic": "building trustworthy ai agents and operations",
+  "headline_marked": "[[AI shopping agents need evidence contracts]] to manage unknown product facts",
+  "headline": "AI shopping agents need evidence contracts to manage unknown product facts",
+  "summary": "A new policy function helps AI shopping agents distinguish between supported, contradicted, and unknown claims, preventing them from making assumptions or discarding crucial information.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "AI shopping agents can read product listings for details like diameter and color, but often lack crucial information, such as whether a spool fits a specific automatic feeder. This gap can lead agents to invent evidence or discard useful facts, compromising accuracy.",
+   "The solution proposed is a claim-level evidence state, moving beyond a single overall product score. This involves an executable, scoped three-state policy designed to restrict claims affected by missing evidence without silencing the entire product explanation.",
+   "The policy utilizes three distinct states for each specific claim: supported, contradicted, and unknown. For instance, evidence for a seller stating \"X\" does not automatically prove a manufacturer certified \"X,\" and a missing shipping fee does not imply free shipping.",
+   "This policy function is deliberately small and illustrative, requiring the caller to construct the scope from trusted structured fields and select suitable authorities for each claim. It serves as a policy sketch, not a cryptographic verification, with basis labels from trusted adapters.",
+   "Agents should display confirmed listing details while explicitly stating when information, like feeder compatibility, is unknown. It is crucial for agents not to silently convert this unknown status into either a positive endorsement or a negative compatibility finding.",
+   "If a buyer explicitly requires a specific fit, the recommendation or purchase decision should be paused until that requirement is resolved. Agents should not substitute another variant merely because it shares the same price; if the buyer asks only what is listed, the answer should be limited to that narrow question.",
+   "Before finalizing payment, it is essential to obtain the current variant, quantity, destination, complete payable total, and the buyer's authorization. A successful catalog read alone does not establish any of these critical details.",
+   "The article includes local offline fixture checks covering 12 cases, such as absent/null evidence, explicit true/false, unknown values, and stale timestamps. All data used for these tests is synthetic, serving as a minimal executable check for developers.",
+   "For developers building shopping agents, the key question is how they currently manage \"unknown\" information and which actions are permitted when a required fact is missing. A minimal synthetic counterexample can be more valuable than production logs for addressing these challenges."
+  ],
+  "caption": "AI shopping agents often struggle with missing product information. A new 'evidence contract' helps them navigate unknown facts without making false assumptions.\n\nAI shopping agents can read product listings for details like diameter and color, but often lack crucial information, such as whether a spool fits a specific automatic feeder. This gap can lead agents to invent evidence or discard useful facts, compromising accuracy.\n\nThe solution proposed is a claim-level evidence state, moving beyond a single overall product score. This involves an executable, scoped three-state policy designed to restrict claims affected by missing evidence without silencing the entire product explanation.\n\nThe policy utilizes three distinct states for each specific claim: supported, contradicted, and unknown. For instance, evidence for a seller stating \"X\" does not automatically prove a manufacturer certified \"X,\" and a missing shipping fee does not imply free shipping.\n\nThis policy function is deliberately small and illustrative, requiring the caller to construct the scope from trusted structured fields and select suitable authorities for each claim. It serves as a policy sketch, not a cryptographic verification, with basis labels from trusted adapters.\n\nAgents should display confirmed listing details while explicitly stating when information, like feeder compatibility, is unknown. It is crucial for agents not to silently convert this unknown status into either a positive endorsement or a negative compatibility finding.\n\nIf a buyer explicitly requires a specific fit, the recommendation or purchase decision should be paused until that requirement is resolved. Agents should not substitute another variant merely because it shares the same price; if the buyer asks only what is listed, the answer should be limited to that narrow question.\n\n#AI #Agents #SoftwareDevelopment #TechNews #WebAZ #Developer\n\nSource: DEV",
+  "tweet": "AI shopping agents need to handle missing product info responsibly. A new 'evidence contract' policy helps them distinguish between supported, contradicted, and unknown claims, preventing false assumptions. #AI #Agents #DevTools",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "webaz.com",
+  "source": "DEV",
+  "url": "https://dev.to/seasonkoh/unknown-is-not-incompatible-a-small-evidence-contract-for-shopping-agents-ccc",
+  "image": "",
+  "orig_title": "Unknown Is Not Incompatible: A Small Evidence Contract for Shopping Agents",
+  "cluster_urls": [
+   "https://dev.to/seasonkoh/unknown-is-not-incompatible-a-small-evidence-contract-for-shopping-agents-ccc",
+   "https://dev.to/starebrain/building-an-android-ai-agent-part-14-when-the-agents-model-of-you-is-wrong-3dfp",
+   "https://dev.to/bonree-js/building-trustworthy-agentic-ai-operations-a-practical-roadmap-from-read-only-agents-to-bounded-55d9"
+  ],
+  "cluster_titles": [
+   "Unknown Is Not Incompatible: A Small Evidence Contract for Shopping Agents",
+   "Building an Android AI Agent, Part 14: When the Agent’s Model of You Is Wrong",
+   "Building Trustworthy Agentic AI Operations: A Practical Roadmap from Read-Only Agents to Bounded Autonomy"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261104-1006-0-ai-shopping-agents-need-evidence-contracts-t.png",
+   "20261104-1006-0-ai-shopping-agents-need-evidence-contracts-t-d1.png",
+   "20261104-1006-0-ai-shopping-agents-need-evidence-contracts-t-d2.png",
+   "20261104-1006-0-ai-shopping-agents-need-evidence-contracts-t-d3.png",
+   "20261104-1006-0-ai-shopping-agents-need-evidence-contracts-t-d4.png"
+  ]
+ },
+ {
+  "topic": "procedural gaussian splatting in houdini and unreal",
+  "headline_marked": "[[Houdini Erosion Mask tested in Unreal PCG]] for a 1,008m mountain river valley",
+  "headline": "Houdini Erosion Mask tested in Unreal PCG for a 1,008m mountain river valley",
+  "summary": "A new test demonstrates how a Houdini erosion mask can be effectively used in Unreal Engine 5.8.4's Procedural Content Generation (PCG) to define river corridors and flow layers for a 1,008m valley.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A 1,008m valley was simulated using a 512x512 Houdini HeightField, with a 1.96875m voxel spacing. Houdini's native erosion produced a flow layer, with elevation changes ranging from -28.35m to +10.77m relative to the authored surface.",
+   "Binary placement masks from Houdini were exported and imported into Unreal Engine 5.8.4. These masks were then used with Unreal's native PCG grid, testing channel-only and channel-plus-flow masks to reduce candidate placements.",
+   "The channel was defined by an 18m half-width and a centerline. An additional flow rule excluded pixels within 60m of the centerline when normalized native flow exceeded 0.45, making its contribution measurable without a full water simulation.",
+   "Houdini's voxel data was reordered and exported as a PNG, with the alpha channel carrying the allowed mask. A separate 505x505, 16-bit heightmap was also exported for future Landscape import, showing a maximum quantization error of 3.922mm.",
+   "The isolated Unreal map used a 62x62 point grid at 16m spacing for placement eligibility tests. Mask textures were imported with specific settings (sRGB disabled, no mipmaps, uncompressed) to ensure accurate sampling.",
+   "Each test case in Unreal returned consistent coordinates across multiple runs, confirming reliability. Initial graph generation took 424.2ms, with subsequent requests completing in 14.9-18.0ms, likely due to cached data.",
+   "This test focused on Unreal editor placement eligibility and did not involve Landscape import, terrain projection, foliage spawning, or game rendering. The channel mask alone was sufficient for excluding all in-channel points in this fixture."
+  ],
+  "caption": "See how Houdini's powerful erosion simulations can directly drive Unreal Engine's Procedural Content Generation. A 1,008m valley was sculpted and masked for precise asset placement.\n\nA 1,008m valley was simulated using a 512x512 Houdini HeightField, with a 1.96875m voxel spacing. Houdini's native erosion produced a flow layer, with elevation changes ranging from -28.35m to +10.77m relative to the authored surface.\n\nBinary placement masks from Houdini were exported and imported into Unreal Engine 5.8.4. These masks were then used with Unreal's native PCG grid, testing channel-only and channel-plus-flow masks to reduce candidate placements.\n\nThe channel was defined by an 18m half-width and a centerline. An additional flow rule excluded pixels within 60m of the centerline when normalized native flow exceeded 0.45, making its contribution measurable without a full water simulation.\n\nHoudini's voxel data was reordered and exported as a PNG, with the alpha channel carrying the allowed mask. A separate 505x505, 16-bit heightmap was also exported for future Landscape import, showing a maximum quantization error of 3.922mm.\n\nThe isolated Unreal map used a 62x62 point grid at 16m spacing for placement eligibility tests. Mask textures were imported with specific settings (sRGB disabled, no mipmaps, uncompressed) to ensure accurate sampling.\n\nEach test case in Unreal returned consistent coordinates across multiple runs, confirming reliability. Initial graph generation took 424.2ms, with subsequent requests completing in 14.9-18.0ms, likely due to cached data.\n\nThis test focused on Unreal editor placement eligibility and did not involve Landscape import, terrain projection, foliage spawning, or game rendering. The channel mask alone was sufficient for excluding all in-channel points in this fixture.\n\n#Houdini #UnrealEngine #PCG #ProceduralGeneration #GameDev #3DArt\n\nSource: DEV",
+  "tweet": "Houdini's erosion simulations can directly drive Unreal Engine's PCG! A 1,008m valley was sculpted and masked for precise asset placement, demonstrating powerful procedural content generation workflows. #Houdini #UnrealEngine #GameDev",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/alicia_lu/a-mountain-river-in-unreal-pcg-testing-a-houdini-erosion-mask-3kjn",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fok17xrcin21n3qoo3qys.png",
+  "orig_title": "A Mountain River in Unreal PCG: Testing a Houdini Erosion Mask",
+  "cluster_urls": [
+   "https://dev.to/alicia_lu/a-mountain-river-in-unreal-pcg-testing-a-houdini-erosion-mask-3kjn",
+   "https://dev.to/alicia_lu/procedural-gaussian-splatting-in-houdini-six-fits-without-photos-49ic",
+   "https://dev.to/alicia_lu/threejs-gaussian-splats-gaussian-splat-lite-spark-and-radix-on-one-desktop-3i35"
+  ],
+  "cluster_titles": [
+   "A Mountain River in Unreal PCG: Testing a Houdini Erosion Mask",
+   "Procedural Gaussian Splatting in Houdini: Six Fits Without Photos",
+   "Three.js Gaussian Splats: Gaussian-Splat-Lite, Spark and Radix on One Desktop"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261104-1006-1-houdini-erosion-mask-tested-in-unreal-pcg-fo.png",
+   "20261104-1006-1-houdini-erosion-mask-tested-in-unreal-pcg-fo-d1.png",
+   "20261104-1006-1-houdini-erosion-mask-tested-in-unreal-pcg-fo-d2.png",
+   "20261104-1006-1-houdini-erosion-mask-tested-in-unreal-pcg-fo-d3.png"
+  ]
+ }
+]

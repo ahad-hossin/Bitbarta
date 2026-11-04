@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "google suncatcher satellite ai workload in orbit",
+  "headline_marked": "Google's [[Suncatcher satellite]] runs AI workload in orbit",
+  "headline": "Google's Suncatcher satellite runs AI workload in orbit",
+  "summary": "The prototype satellite, launched on a SpaceX Falcon 9, successfully processed and transmitted AI data back to Earth.",
+  "category": "AI",
+  "template": "launch",
+  "details": [
+   "Google's experimental Project Suncatcher satellite has successfully run an AI task in orbit and transmitted data back to Earth. The prototype, named MVP, was launched on a SpaceX Falcon 9 rocket on October 1st as part of the Transporter-18 rideshare mission.",
+   "The spacecraft is equipped with four of Google's Tensor Processing Units (TPUs) designed for running AI models, and its systems are powered by solar panels providing up to one kilowatt of electricity. This satellite serves as a test platform for operating these processors in the harsh environment of space.",
+   "On October 30th, Google announced that its Gemma 4 model, pre-loaded onto the satellite, completed its first AI response by composing a haiku about space. Engineers also tested the model with limericks and prompts to report satellite telemetry, verifying its ability to generate and transmit responses.",
+   "Early tests indicate that the onboard AI accelerators can operate for limited durations, reportedly around 15-20 minutes before needing to cool down. Future tests will focus on the impact of thermal stress and radiation exposure on the processors.",
+   "Google plans to launch two interconnected satellites in 2027, aiming to demonstrate direct satellite-to-satellite optical communication and enhanced power capabilities. The long-term vision includes a cluster of up to 81 satellites for distributed computing.",
+   "Despite the technological advancements, the economics of orbital data centers remain a significant hurdle. Google estimates that space-based computing is up to 100 times more expensive than terrestrial data centers, with launch costs needing to fall substantially for orbital computing to become competitive."
+  ],
+  "caption": "Google's Suncatcher satellite has successfully run an AI workload in orbit, marking a step towards space-based computing.\n\nGoogle's experimental Project Suncatcher satellite has successfully run an AI task in orbit and transmitted data back to Earth. The prototype, named MVP, was launched on a SpaceX Falcon 9 rocket on October 1st as part of the Transporter-18 rideshare mission.\n\nThe spacecraft is equipped with four of Google's Tensor Processing Units (TPUs) designed for running AI models, and its systems are powered by solar panels providing up to one kilowatt of electricity. This satellite serves as a test platform for operating these processors in the harsh environment of space.\n\nOn October 30th, Google announced that its Gemma 4 model, pre-loaded onto the satellite, completed its first AI response by composing a haiku about space. Engineers also tested the model with limericks and prompts to report satellite telemetry, verifying its ability to generate and transmit responses.\n\nEarly tests indicate that the onboard AI accelerators can operate for limited durations, reportedly around 15-20 minutes before needing to cool down. Future tests will focus on the impact of thermal stress and radiation exposure on the processors.\n\nGoogle plans to launch two interconnected satellites in 2027, aiming to demonstrate direct satellite-to-satellite optical communication and enhanced power capabilities. The long-term vision includes a cluster of up to 81 satellites for distributed computing.\n\nDespite the technological advancements, the economics of orbital data centers remain a significant hurdle. Google estimates that space-based computing is up to 100 times more expensive than terrestrial data centers, with launch costs needing to fall substantially for orbital computing to become competitive.\n\n#AI #SpaceTech #Google #Satellite #AIinSpace\n\nSource: DEV",
+  "tweet": "Google's Suncatcher satellite is now running AI workloads in orbit! Launched on a SpaceX Falcon 9, the prototype successfully processed and sent AI data back to Earth. #AI #SpaceTech #Google",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "DEV",
+  "url": "https://dev.to/the_daily_flare/googles-first-suncatcher-satellite-runs-an-ai-workload-in-orbit-3g67",
+  "image": "",
+  "orig_title": "Google’s first Suncatcher satellite runs an AI workload in orbit",
+  "cluster_urls": [
+   "https://dev.to/the_daily_flare/googles-first-suncatcher-satellite-runs-an-ai-workload-in-orbit-3g67"
+  ],
+  "cluster_titles": [
+   "Google’s first Suncatcher satellite runs an AI workload in orbit"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261104-1209-0-google-s-suncatcher-satellite-runs-ai-worklo.png",
+   "20261104-1209-0-google-s-suncatcher-satellite-runs-ai-worklo-d1.png",
+   "20261104-1209-0-google-s-suncatcher-satellite-runs-ai-worklo-d2.png",
+   "20261104-1209-0-google-s-suncatcher-satellite-runs-ai-worklo-d3.png"
+  ]
+ },
+ {
+  "topic": "ai trope memory for coherent long-form stories",
+  "headline_marked": "[[AI story generation]] gets coherent with trope-based memory",
+  "headline": "AI story generation gets coherent with trope-based memory",
+  "summary": "New multi-agent system DraMaze cuts causal-pattern repetition by 32% and improves logic scores, potentially replacing monolithic generators.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Researchers have developed DraMaze, a novel multi-agent system that enhances AI-driven story generation by incorporating trope-based memory into an evolutionary tree search. This approach allows for the creation of narratives that are both diverse and logically coherent, overcoming limitations of previous single-LLM or simple retrieval methods.",
+   "Unlike earlier systems that tended to produce repetitive plotlines, DraMaze's backward narrative dependency structure enables stories to anticipate their future while exploring multiple causal paths. This results in more engaging and less predictable storytelling.",
+   "In tests with 60-episode scripts up to 60,000 words, DraMaze reduced causal-pattern repetition by 32.1%. It also achieved a Logic score of 82.5, outperforming the best baseline by 8.5 points.",
+   "The system's logical performance remains stable even for longer scripts, with its advantage over baselines growing as script length increases. Removing the future-aware narrative memory component significantly degrades performance, highlighting its critical role.",
+   "While DraMaze shows significant promise, it still relies on a curated trope repository and an expensive tree search. Future work will explore whether this approach can scale to open-world storytelling or real-time authoring.",
+   "The study suggests that modular multi-agent architectures like DraMaze should replace monolithic generators in production pipelines, and MiDramaBench should become the standard benchmark for AI-assisted drama tools."
+  ],
+  "caption": "AI can now write long, coherent stories with less repetition.\nNew system DraMaze cuts causal-pattern repetition by 32.1% and boosts logic scores.\n\nResearchers have developed DraMaze, a novel multi-agent system that enhances AI-driven story generation by incorporating trope-based memory into an evolutionary tree search. This approach allows for the creation of narratives that are both diverse and logically coherent, overcoming limitations of previous single-LLM or simple retrieval methods.\n\nUnlike earlier systems that tended to produce repetitive plotlines, DraMaze's backward narrative dependency structure enables stories to anticipate their future while exploring multiple causal paths. This results in more engaging and less predictable storytelling.\n\nIn tests with 60-episode scripts up to 60,000 words, DraMaze reduced causal-pattern repetition by 32.1%. It also achieved a Logic score of 82.5, outperforming the best baseline by 8.5 points.\n\nThe system's logical performance remains stable even for longer scripts, with its advantage over baselines growing as script length increases. Removing the future-aware narrative memory component significantly degrades performance, highlighting its critical role.\n\nWhile DraMaze shows significant promise, it still relies on a curated trope repository and an expensive tree search. Future work will explore whether this approach can scale to open-world storytelling or real-time authoring.\n\nThe study suggests that modular multi-agent architectures like DraMaze should replace monolithic generators in production pipelines, and MiDramaBench should become the standard benchmark for AI-assisted drama tools.\n\n#AI #LLM #Storytelling #GenerativeAI #Tech\n\nSource: DEV",
+  "tweet": "AI story generation just got a major upgrade! [[DraMaze]] uses trope-based memory and multi-agent pipelines to create diverse, logically tight narratives, cutting repetition by 32.1%. #AI #LLM #Storytelling",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/olaughter/trope-memory-powers-coherent-long-form-stories-1hg",
+  "image": "",
+  "orig_title": "Trope memory powers coherent long‑form stories",
+  "cluster_urls": [
+   "https://dev.to/olaughter/trope-memory-powers-coherent-long-form-stories-1hg"
+  ],
+  "cluster_titles": [
+   "Trope memory powers coherent long‑form stories"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261104-1209-1-ai-story-generation-gets-coherent-with-trope.png",
+   "20261104-1209-1-ai-story-generation-gets-coherent-with-trope-d1.png",
+   "20261104-1209-1-ai-story-generation-gets-coherent-with-trope-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "php2shell postmortem and vulnerability",
+  "headline_marked": "[[PHP2Shell vulnerability]] exploited in the wild 4 days before patch",
+  "headline": "PHP2Shell vulnerability exploited in the wild 4 days before patch",
+  "summary": "Pre-auth RCE affects WordPress, Drupal, Joomla. Attackers exploited it before patches were available.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical pre-authentication remote code execution vulnerability, dubbed PHP2Shell, has been actively exploited in the wild. The exploit targets a use-after-free flaw within the PHP runtime, allowing attackers to gain execution in the context of the web server user without any authentication. This bypasses common security measures like logins or session cookies.",
+   "The vulnerability affects a significant portion of the web, as it impacts major CMS platforms like WordPress, Drupal, and Joomla, which together power an estimated 70% of PHP-hosted content sites. Patches were released for supported PHP branches (8.5.12, 8.4.27, 8.3.36, 8.2.35), but older, end-of-life versions (5.x through 8.1) remain vulnerable and require a full upgrade.",
+   "AWS's MadPot honeypot detected the exploit on October 17, 2026, four days before the official patch release. The attacker's single, precisely crafted HTTP request indicates they knew the trigger pattern and memory layout, suggesting a sophisticated operation rather than random probing or fuzzing.",
+   "The CVE numbers for CVE-2026-109618 and CVE-2026-109619 leaked on Hacker News approximately 22 hours before the planned embargo lift. This early disclosure meant the exploit was already in circulation before most users could apply the fix, highlighting the risks of coordinated disclosure processes.",
+   "The timeline is critical for incident response. Compromise detection should begin from October 17th, the date of the first observed exploit, rather than October 21st, when the patches were released. Post-patch logs will show widespread scanning, a different signal from the targeted exploitation observed earlier."
+  ],
+  "caption": "PHP2Shell vulnerability actively exploited in the wild BEFORE patches were available. Major CMS platforms at risk.\n\nA critical pre-authentication remote code execution vulnerability, dubbed PHP2Shell, has been actively exploited in the wild. The exploit targets a use-after-free flaw within the PHP runtime, allowing attackers to gain execution in the context of the web server user without any authentication. This bypasses common security measures like logins or session cookies.\n\nThe vulnerability affects a significant portion of the web, as it impacts major CMS platforms like WordPress, Drupal, and Joomla, which together power an estimated 70% of PHP-hosted content sites. Patches were released for supported PHP branches (8.5.12, 8.4.27, 8.3.36, 8.2.35), but older, end-of-life versions (5.x through 8.1) remain vulnerable and require a full upgrade.\n\nAWS's MadPot honeypot detected the exploit on October 17, 2026, four days before the official patch release. The attacker's single, precisely crafted HTTP request indicates they knew the trigger pattern and memory layout, suggesting a sophisticated operation rather than random probing or fuzzing.\n\nThe CVE numbers for CVE-2026-109618 and CVE-2026-109619 leaked on Hacker News approximately 22 hours before the planned embargo lift. This early disclosure meant the exploit was already in circulation before most users could apply the fix, highlighting the risks of coordinated disclosure processes.\n\nThe timeline is critical for incident response. Compromise detection should begin from October 17th, the date of the first observed exploit, rather than October 21st, when the patches were released. Post-patch logs will show widespread scanning, a different signal from the targeted exploitation observed earlier.\n\n#PHP #CyberSecurity #Vulnerability #Exploit #RCE\n\nSource: DEV",
+  "tweet": "PHP2Shell vulnerability exploited in the wild 4 days before patch. Pre-auth RCE affects WordPress, Drupal, Joomla. Attackers knew the exploit pattern before fixes shipped. #PHP #CyberSecurity #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/the_dev_stack/the-php2shell-postmortem-what-cve-2026-109618-and-cve-2026-109619-actually-tell-us-10lp",
+  "image": "",
+  "orig_title": "The PHP2Shell Postmortem: What CVE-2026-109618 and CVE-2026-109619 Actually Tell Us",
+  "cluster_urls": [
+   "https://dev.to/the_dev_stack/the-php2shell-postmortem-what-cve-2026-109618-and-cve-2026-109619-actually-tell-us-10lp",
+   "https://dev.to/hisashispace/php2shell-your-host-patched-php-your-site-might-still-be-exposed-2cf6"
+  ],
+  "cluster_titles": [
+   "The PHP2Shell Postmortem: What CVE-2026-109618 and CVE-2026-109619 Actually Tell Us",
+   "PHP2Shell: Your Host Patched PHP. Your Site Might Still Be Exposed."
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261105-1907-0-php2shell-vulnerability-exploited-in-the-wil.png",
+   "20261105-1907-0-php2shell-vulnerability-exploited-in-the-wil-d1.png",
+   "20261105-1907-0-php2shell-vulnerability-exploited-in-the-wil-d2.png",
+   "20261105-1907-0-php2shell-vulnerability-exploited-in-the-wil-d3.png"
+  ]
+ },
+ {
+  "topic": "motorola launches $1600 signature phone",
+  "headline_marked": "Motorola Signature 27: [[Ultra-premium phone]] launches at $1,600",
+  "headline": "Motorola Signature 27: Ultra-premium phone launches at $1,600",
+  "summary": "Motorola's new flagship boasts a Snapdragon 8 Elite Extreme Gen 6, 7,000mAh battery, and a staggering 12,000 nits peak display brightness.",
+  "category": "GADGETS",
+  "template": "launch",
+  "details": [
+   "The Motorola Signature 27, a new ultra-premium smartphone, is set to launch in the US with a starting price of $1,600. Pre-orders begin November 19, with general availability on November 26.",
+   "This high-end device features the latest Qualcomm Snapdragon 8 Elite Extreme Gen 6 chip, 12GB of RAM, and 512GB of storage as standard. Its design is described as stunning, aiming to be one of the best-looking phones of the year.",
+   "Powering the Signature 27 is a massive 7,000mAh silicon-carbon battery, supported by 90W TurboPower wired charging. Motorola claims a day's worth of power can be achieved in just 12 minutes of charging, potentially eliminating the need for overnight charging.",
+   "The camera system is equally impressive, featuring a 50MP main lens, a 200MP periscope telephoto lens with 3x zoom, and a 50MP ultrawide lens. A dedicated 'Action Sensor' assists in capturing fast-moving subjects, while the front boasts a 50MP selfie camera.",
+   "The display is a 6.8-inch Extreme AMOLED Duo with a 120Hz refresh rate. Notably, it achieves a peak brightness of 12,000 nits, making it exceptionally visible even in bright outdoor conditions.",
+   "Customers can pre-order the Signature 27 from Motorola.com, Amazon.com, and BestBuy.com starting November 19. Those who purchase directly from Motorola.com will receive the new Moto Watch Ultra as a bundled gift.",
+   "Alongside the phone, Motorola is also releasing new accessories: the Moto Buds Ultra 27 wireless earbuds with Bose tuning and ANC, offering 45 hours of total battery life and live AI translation. The Moto Watch Fit 27 fitness tracker, featuring Polar's software and a 12-day battery life, will also be available in the coming months."
+  ],
+  "caption": "Motorola's ultra-premium Signature 27 smartphone is launching soon with a $1,600 price tag.\nIt packs a 7,000mAh battery and a display that reaches 12,000 nits.\n\nThe Motorola Signature 27, a new ultra-premium smartphone, is set to launch in the US with a starting price of $1,600. Pre-orders begin November 19, with general availability on November 26.\n\nThis high-end device features the latest Qualcomm Snapdragon 8 Elite Extreme Gen 6 chip, 12GB of RAM, and 512GB of storage as standard. Its design is described as stunning, aiming to be one of the best-looking phones of the year.\n\nPowering the Signature 27 is a massive 7,000mAh silicon-carbon battery, supported by 90W TurboPower wired charging. Motorola claims a day's worth of power can be achieved in just 12 minutes of charging, potentially eliminating the need for overnight charging.\n\nThe camera system is equally impressive, featuring a 50MP main lens, a 200MP periscope telephoto lens with 3x zoom, and a 50MP ultrawide lens. A dedicated 'Action Sensor' assists in capturing fast-moving subjects, while the front boasts a 50MP selfie camera.\n\nThe display is a 6.8-inch Extreme AMOLED Duo with a 120Hz refresh rate. Notably, it achieves a peak brightness of 12,000 nits, making it exceptionally visible even in bright outdoor conditions.\n\nCustomers can pre-order the Signature 27 from Motorola.com, Amazon.com, and BestBuy.com starting November 19. Those who purchase directly from Motorola.com will receive the new Moto Watch Ultra as a bundled gift.\n\nAlongside the phone, Motorola is also releasing new accessories: the Moto Buds Ultra 27 wireless earbuds with Bose tuning and ANC, offering 45 hours of total battery life and live AI translation. The Moto Watch Fit 27 fitness tracker, featuring Polar's software and a 12-day battery life, will also be available in the coming months.\n\n#Motorola #Signature27 #Android #Tech #Smartphone\n\nSource: Android Police, The Verge, Wired",
+  "tweet": "Motorola's ultra-premium Signature 27 is launching Nov 26 for $1,600. It boasts a Snapdragon 8 Elite Extreme Gen 6, 7,000mAh battery, and a 12,000-nit display. Pre-orders start Nov 19. #Motorola #Signature27",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "motorola.com",
+  "source": "Android Police, The Verge, Wired",
+  "url": "https://www.androidpolice.com/motorola-signature-27-us-release-date-revealed/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/2026/11/motorola-signature-in-hand.jpg",
+  "orig_title": "Motorola's gorgeous Signature 27 finally has a release date and a price",
+  "cluster_urls": [
+   "https://www.androidpolice.com/motorola-signature-27-us-release-date-revealed/",
+   "https://www.theverge.com/gadgets/1026643/motorola-signature-27-price-specs-availability",
+   "https://www.wired.com/story/motorola-wants-to-sell-you-a-1600-phone-that-doesnt-fold/"
+  ],
+  "cluster_titles": [
+   "Motorola's gorgeous Signature 27 finally has a release date and a price",
+   "Motorola is going ultra premium with its $1,600 ‘Signature’ phone",
+   "Motorola Wants to Sell You a $1,600 Phone That Doesn’t Fold"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261105-1907-1-motorola-signature-27-ultra-premium-phone-la.png",
+   "20261105-1907-1-motorola-signature-27-ultra-premium-phone-la-d1.png",
+   "20261105-1907-1-motorola-signature-27-ultra-premium-phone-la-d2.png",
+   "20261105-1907-1-motorola-signature-27-ultra-premium-phone-la-d3.png"
+  ]
+ }
+]

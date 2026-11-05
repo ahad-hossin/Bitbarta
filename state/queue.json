@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "topic": "apple bug from 18 months ago added to cisa exploited list",
+  "headline_marked": "[[CISA adds 18-month-old Apple bug]] to exploited list, used in active campaigns",
+  "headline": "CISA adds 18-month-old Apple bug to exploited list, used in active campaigns",
+  "summary": "A WebKit improper authentication vulnerability, patched by Apple in May 2024, is now being actively exploited in \"Poisoned Source\" campaigns targeting iOS and Android devices.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "On November 4, 2026, CISA added CVE-2024-27834, an \"Apple Multiple Products Improper Authentication Vulnerability,\" to its Known Exploited Vulnerabilities catalog. This bug was patched by Apple almost eighteen months prior, on May 13, 2024, across iOS 17.5, macOS Sonoma 14.5, and other platforms.",
+   "The vulnerability is an improper authentication issue in WebKit that allows an attacker with arbitrary read/write capabilities to bypass Pointer Authentication (PAC). This hardware-backed integrity check is designed to prevent memory corruption from leading to code execution.",
+   "While the bug's CVSS score is a \"medium\" 5.5 on its own, requiring another bug for initial read/write primitives, it serves as a critical link in exploit chains. It was demonstrated as a zero-day at Pwn2Own Vancouver in March 2024.",
+   "Its addition to the KEV catalog follows research by Sekoia, which uncovered a campaign called \"Poisoned Source\" in mid-October 2026. This campaign is attributed with moderate to high confidence to APT29, a group linked to Russia's Foreign Intelligence Service.",
+   "The \"Poisoned Source\" campaign turns legitimate websites into silent exploit delivery systems for unpatched iPhones and Android devices. It uses watering hole attacks, meaning simply opening a compromised page is enough to trigger the infection without user interaction.",
+   "Sekoia identified three classes of attacks. Class A targets iOS 16.7, combining the PAC bypass (CVE-2024-27834) with a WebKit RCE (CVE-2025-43529) to steal browser cookies. Class B targets iOS 18.5 with a five-CVE \"DarkSword\" chain for full device data theft, including messages, passwords, and photos.",
+   "Class C targets Android Chrome versions 139-145, deploying \"AndroSnitch\" to steal Chrome data and Wi-Fi passwords. All stolen data is sent to a telemetry endpoint. Notably, the Android chain aborts if the device is a Samsung Galaxy S25 Ultra.",
+   "The campaign highlights the current economics of exploitation: state actors reuse packaged n-day exploit chains from commercial surveillance vendors. This lowers the cost and skill required, as attackers don't need zero-days if many devices run outdated OS versions.",
+   "This also underscores that a \"medium\" severity bug, when chained with others, can be the difference between a browser crash and comprehensive data theft. Severity scores often describe bugs in isolation, but attackers use them in combination.",
+   "The core lesson is that a patch is only effective when installed. Leaving a vulnerability unpatched for eighteen months creates a significant window for exploitation, as demonstrated by this active campaign."
+  ],
+  "caption": "An Apple bug patched 18 months ago is now on CISA's exploited list. This \"medium\" severity flaw is a critical link in active campaigns stealing data from iPhones and Android devices.\n\nOn November 4, 2026, CISA added CVE-2024-27834, an \"Apple Multiple Products Improper Authentication Vulnerability,\" to its Known Exploited Vulnerabilities catalog. This bug was patched by Apple almost eighteen months prior, on May 13, 2024, across iOS 17.5, macOS Sonoma 14.5, and other platforms.\n\nThe vulnerability is an improper authentication issue in WebKit that allows an attacker with arbitrary read/write capabilities to bypass Pointer Authentication (PAC). This hardware-backed integrity check is designed to prevent memory corruption from leading to code execution.\n\nWhile the bug's CVSS score is a \"medium\" 5.5 on its own, requiring another bug for initial read/write primitives, it serves as a critical link in exploit chains. It was demonstrated as a zero-day at Pwn2Own Vancouver in March 2024.\n\nIts addition to the KEV catalog follows research by Sekoia, which uncovered a campaign called \"Poisoned Source\" in mid-October 2026. This campaign is attributed with moderate to high confidence to APT29, a group linked to Russia's Foreign Intelligence Service.\n\nThe \"Poisoned Source\" campaign turns legitimate websites into silent exploit delivery systems for unpatched iPhones and Android devices. It uses watering hole attacks, meaning simply opening a compromised page is enough to trigger the infection without user interaction.\n\nSekoia identified three classes of attacks. Class A targets iOS 16.7, combining the PAC bypass (CVE-2024-27834) with a WebKit RCE (CVE-2025-43529) to steal browser cookies. Class B targets iOS 18.5 with a five-CVE \"DarkSword\" chain for full device data theft, including messages, passwords, and photos.\n\n#CyberSecurity #Apple #Vulnerability #APT29 #WebKit #CISA\n\nSource: DEV",
+  "tweet": "An Apple bug patched 18 months ago is now on CISA's exploited list. This \"medium\" severity flaw is a critical link in active campaigns stealing data from iPhones & Android devices via watering hole attacks. Update your devices! #CyberSecurity #Apple #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "apple.com",
+  "source": "DEV",
+  "url": "https://dev.to/damiano_builds/the-bug-apple-patched-18-months-ago-is-now-on-cisas-exploited-list-3pgh",
+  "image": "",
+  "orig_title": "The Bug Apple Patched 18 Months Ago Is Now on CISA's Exploited List",
+  "cluster_urls": [
+   "https://dev.to/damiano_builds/the-bug-apple-patched-18-months-ago-is-now-on-cisas-exploited-list-3pgh"
+  ],
+  "cluster_titles": [
+   "The Bug Apple Patched 18 Months Ago Is Now on CISA's Exploited List"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261105-1606-0-cisa-adds-18-month-old-apple-bug-to-exploite.png",
+   "20261105-1606-0-cisa-adds-18-month-old-apple-bug-to-exploite-d1.png",
+   "20261105-1606-0-cisa-adds-18-month-old-apple-bug-to-exploite-d2.png",
+   "20261105-1606-0-cisa-adds-18-month-old-apple-bug-to-exploite-d3.png",
+   "20261105-1606-0-cisa-adds-18-month-old-apple-bug-to-exploite-d4.png"
+  ]
+ },
+ {
+  "topic": "ai agent permissions need history for safe sessions",
+  "headline_marked": "[[AI agents with multiple tool permissions pose critical security risk]], new TaintGuard mod offers a fix",
+  "headline": "AI agents with multiple tool permissions pose critical security risk, new TaintGuard mod offers a fix",
+  "summary": "Combining AI agent tools like Gmail access and Bash execution in a single session creates a \"lethal trifecta\" vulnerability, allowing untrusted input to exploit private data access. Existing permission systems fail to address this historical context.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Connecting AI agents to multiple tools, such as Gmail for inbox triage and Bash for code execution, creates a significant security vulnerability. While each tool is safe individually, their combination in a single session can allow malicious input to exploit private data access.",
+   "This scenario, dubbed the \"lethal trifecta\" by Simon Willison, describes an agent with access to private data, exposure to untrusted content, and external communication capabilities. An attacker can leverage untrusted content to trick the agent into exfiltrating private data.",
+   "A real-world example occurred in May 2025, where Invariant Labs demonstrated an attack through GitHub's MCP server. Injected text in a public issue led an agent to read a user's private repositories and publish the findings, despite all individual calls being permitted.",
+   "Meta's \"Agents Rule of Two\" suggests an agent should have at most two of these three properties: processing untrustworthy inputs, accessing sensitive data, or changing external state. Applying this rule is challenging with current tool-based permission controls.",
+   "Existing permission systems, like Docker's MCP Toolkit or Claude Code's rules, typically grant or deny access per tool, regardless of prior session activity. This leaves agents vulnerable when the risk depends on the sequence of actions.",
+   "To address this, TaintGuard, a mod for Claude Code, was developed. Inspired by Perl's taint mode, it records the type of content that has entered a session and restricts subsequent tool calls based on this history.",
+   "TaintGuard operates at the tool-call boundary, tracking when sensitive data enters the agent's context. This allows it to prevent tools like Bash from executing commands that could exfiltrate data after private information has been processed.",
+   "The approach has a cost: once sensitive data like an email is in context, every later outbound call is considered suspect, even if the data isn't directly used. This is a narrower, runtime application of the Rule of Two, aiming to keep tools usable while enhancing security."
+  ],
+  "caption": "AI agents with multiple tool permissions can be tricked into leaking your private data. A new mod, TaintGuard, addresses this critical security flaw.\n\nConnecting AI agents to multiple tools, such as Gmail for inbox triage and Bash for code execution, creates a significant security vulnerability. While each tool is safe individually, their combination in a single session can allow malicious input to exploit private data access.\n\nThis scenario, dubbed the \"lethal trifecta\" by Simon Willison, describes an agent with access to private data, exposure to untrusted content, and external communication capabilities. An attacker can leverage untrusted content to trick the agent into exfiltrating private data.\n\nA real-world example occurred in May 2025, where Invariant Labs demonstrated an attack through GitHub's MCP server. Injected text in a public issue led an agent to read a user's private repositories and publish the findings, despite all individual calls being permitted.\n\nMeta's \"Agents Rule of Two\" suggests an agent should have at most two of these three properties: processing untrustworthy inputs, accessing sensitive data, or changing external state. Applying this rule is challenging with current tool-based permission controls.\n\nExisting permission systems, like Docker's MCP Toolkit or Claude Code's rules, typically grant or deny access per tool, regardless of prior session activity. This leaves agents vulnerable when the risk depends on the sequence of actions.\n\nTo address this, TaintGuard, a mod for Claude Code, was developed. Inspired by Perl's taint mode, it records the type of content that has entered a session and restricts subsequent tool calls based on this history.\n\nTaintGuard operates at the tool-call boundary, tracking when sensitive data enters the agent's context. This allows it to prevent tools like Bash from executing commands that could exfiltrate data after private information has been processed.\n\n#AI #Security #DeveloperTools #LLMs #AgentSecurity #TaintGuard\n\nSource: DEV",
+  "tweet": "AI agents with multiple tool permissions can be tricked into leaking your private data. A new mod, TaintGuard, addresses this critical security flaw by tracking session history. Essential for safe AI agent deployment. #AI #Security #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/dortort/safe-tools-unsafe-session-why-agent-permissions-need-history-5ana",
+  "image": "",
+  "orig_title": "Safe Tools, Unsafe Session: Why Agent Permissions Need History",
+  "cluster_urls": [
+   "https://dev.to/dortort/safe-tools-unsafe-session-why-agent-permissions-need-history-5ana"
+  ],
+  "cluster_titles": [
+   "Safe Tools, Unsafe Session: Why Agent Permissions Need History"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261105-1606-1-ai-agents-with-multiple-tool-permissions-pos.png",
+   "20261105-1606-1-ai-agents-with-multiple-tool-permissions-pos-d1.png",
+   "20261105-1606-1-ai-agents-with-multiple-tool-permissions-pos-d2.png",
+   "20261105-1606-1-ai-agents-with-multiple-tool-permissions-pos-d3.png"
+  ]
+ }
+]

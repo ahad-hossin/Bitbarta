@@ -1,100 +1,85 @@
 [
  {
-  "topic": "developer tools and practices",
-  "headline_marked": "[[WhatsApp sender IDs]] normalized across Baileys and Cloud API to prevent duplicate users",
-  "headline": "WhatsApp sender IDs normalized across Baileys and Cloud API to prevent duplicate users",
-  "summary": "A bug in NanoClaw's WhatsApp integrations caused the same phone number to be treated as two distinct users, leading to broken permissions and roles.",
-  "category": "SOFTWARE",
-  "template": "terminal",
+  "topic": "airbnb launches ai travel agent, perplexity launches ai agents for work",
+  "headline_marked": "Airbnb [[launches AI travel agent]] in H1 2027",
+  "headline": "Airbnb launches AI travel agent in H1 2027",
+  "summary": "The company aims to build a custom-designed AI experience that goes beyond traditional chatbots, offering a personalized interface with maps, photos, and comparisons.",
+  "category": "AI",
+  "template": "launch",
   "details": [
-   "A critical bug in the NanoClaw system has been identified where the same WhatsApp sender can be recognized as two separate users due to inconsistencies between the Baileys integration and the WhatsApp Cloud API.",
-   "The Baileys integration identified senders using a JID format (e.g., 15551234567@s.whatsapp.net), while the Cloud API used a bare wa_id (e.g., 15551234567). This difference meant that permissions, roles, and group memberships assigned to one identity were not applied to the other.",
-   "This issue silently created duplicate user entries, making it appear to users that their settings were not working correctly. The problem arises when systems have multiple integration points for the same service, and these points do not resolve to a single, canonical identity.",
-   "The fix involves normalizing the sender handle at a single point and migrating existing data to merge these duplicate entries. This ensures that a user's identity and associated permissions remain consistent across all integration paths.",
-   "The developer emphasizes that any system with multiple communication channels, such as different messaging providers or web app vs. API access, must establish a canonical identity at the boundary to avoid such permission bugs.",
-   "This issue is particularly critical for agent platforms where identity directly dictates authorization for actions, highlighting the importance of robust identity management in complex software architectures."
+   "Airbnb has announced its AI travel agent will launch in the first half of 2027, moving beyond previous teasers. The company's CEO, Brian Chesky, believes traditional chatbots are not ideal for travel planning, which he describes as an aspirational and enjoyable process.",
+   "Chesky emphasized that people enjoy researching trips and comparing options, often with travel companions. He stated that general-purpose AI agents are not suited for this, leading Airbnb to develop its own specialized agent.",
+   "Airbnb's AI agent will feature a personalized interface designed specifically for travel. Instead of just text responses, it will utilize a library of travel-specific components like maps, photos, and calendars, composing them in real-time to match user needs.",
+   "The agent is expected to feel like 'generative UI,' offering the 'right interface at the right time' for each user's unique travel requirements. This approach leverages Airbnb's nearly 20 years of experience in connecting hosts and guests.",
+   "Beyond booking, the AI agent will assist travelers throughout their trip, handling tasks such as changing reservations, resolving payment issues, processing refunds, rebooking, and providing 24-hour safety support.",
+   "The company anticipates the agent will eventually extend its capabilities to include services and experiences, areas that have become a greater focus for Airbnb following a recent redesign.",
+   "This announcement coincided with strong third-quarter earnings, which saw revenue grow 19% to $4.87 billion, surpassing Wall Street estimates. Airbnb also raised its 2026 revenue growth forecast to the high teens."
   ],
-  "caption": "One phone number, two users. A critical bug in WhatsApp integrations caused duplicate identities, breaking permissions and roles.\n\nA critical bug in the NanoClaw system has been identified where the same WhatsApp sender can be recognized as two separate users due to inconsistencies between the Baileys integration and the WhatsApp Cloud API.\n\nThe Baileys integration identified senders using a JID format (e.g., 15551234567@s.whatsapp.net), while the Cloud API used a bare wa_id (e.g., 15551234567). This difference meant that permissions, roles, and group memberships assigned to one identity were not applied to the other.\n\nThis issue silently created duplicate user entries, making it appear to users that their settings were not working correctly. The problem arises when systems have multiple integration points for the same service, and these points do not resolve to a single, canonical identity.\n\nThe fix involves normalizing the sender handle at a single point and migrating existing data to merge these duplicate entries. This ensures that a user's identity and associated permissions remain consistent across all integration paths.\n\nThe developer emphasizes that any system with multiple communication channels, such as different messaging providers or web app vs. API access, must establish a canonical identity at the boundary to avoid such permission bugs.\n\nThis issue is particularly critical for agent platforms where identity directly dictates authorization for actions, highlighting the importance of robust identity management in complex software architectures.\n\n#WhatsApp #DevOps #SoftwareDevelopment #BugFix #IdentityManagement\n\nSource: DEV",
-  "tweet": "One phone number, two users: A critical bug in WhatsApp integrations caused duplicate identities, breaking permissions and roles. The fix normalizes sender IDs across Baileys and Cloud API. #WhatsApp #DevOps #BugFix",
+  "caption": "Airbnb is developing its own AI travel agent, set to launch in the first half of 2027. It aims to offer a personalized, visually rich experience beyond typical chatbots.\n\nAirbnb has announced its AI travel agent will launch in the first half of 2027, moving beyond previous teasers. The company's CEO, Brian Chesky, believes traditional chatbots are not ideal for travel planning, which he describes as an aspirational and enjoyable process.\n\nChesky emphasized that people enjoy researching trips and comparing options, often with travel companions. He stated that general-purpose AI agents are not suited for this, leading Airbnb to develop its own specialized agent.\n\nAirbnb's AI agent will feature a personalized interface designed specifically for travel. Instead of just text responses, it will utilize a library of travel-specific components like maps, photos, and calendars, composing them in real-time to match user needs.\n\nThe agent is expected to feel like 'generative UI,' offering the 'right interface at the right time' for each user's unique travel requirements. This approach leverages Airbnb's nearly 20 years of experience in connecting hosts and guests.\n\nBeyond booking, the AI agent will assist travelers throughout their trip, handling tasks such as changing reservations, resolving payment issues, processing refunds, rebooking, and providing 24-hour safety support.\n\nThe company anticipates the agent will eventually extend its capabilities to include services and experiences, areas that have become a greater focus for Airbnb following a recent redesign.\n\nThis announcement coincided with strong third-quarter earnings, which saw revenue grow 19% to $4.87 billion, surpassing Wall Street estimates. Airbnb also raised its 2026 revenue growth forecast to the high teens.\n\n#Airbnb #AI #TravelTech #ArtificialIntelligence #FutureOfTravel\n\nSource: TechCrunch, The Verge",
+  "tweet": "Airbnb is launching its own AI travel agent in H1 2027! Expect a personalized, visually rich experience with maps, photos, and comparisons, going beyond traditional chatbots. #Airbnb #AI #TravelTech",
   "story_risk": "clean",
   "image_safe": true,
   "image_good": false,
-  "brand_domain": "",
-  "source": "DEV",
-  "url": "https://dev.to/ali_ahmed_44ee99051e327ce/one-phone-number-two-users-normalising-whatsapp-sender-ids-across-baileys-and-the-cloud-api-3l3m",
+  "brand_domain": "airbnb.com",
+  "source": "TechCrunch, The Verge",
+  "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
   "image": "",
-  "orig_title": "One phone number, two users: normalising WhatsApp sender IDs across Baileys and the Cloud API",
+  "orig_title": "Airbnb says it’s launching an AI travel agent in the first half of 2027",
   "cluster_urls": [
-   "https://dev.to/ali_ahmed_44ee99051e327ce/one-phone-number-two-users-normalising-whatsapp-sender-ids-across-baileys-and-the-cloud-api-3l3m",
-   "https://dev.to/haseebthedev0/architecting-a-privacy-first-sound-automation-engine-for-android-7ha",
-   "https://dev.to/ali_ahmed_44ee99051e327ce/what-actually-gets-deployed-to-production-not-your-code-5d2j",
-   "https://dev.to/ashish_624379625242c5d263/hadoueanoshou-ming-ha-toreningunoshou-ming-demoaru-2n0e",
-   "https://dev.to/developerzai/automating-pr-based-development-with-claude-task-master-58aj",
-   "https://dev.to/swipeagain/grace-periods-are-a-product-decision-wearing-a-billing-costume-49kf",
-   "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-6-2026-openai-ships-gpt-6-cyber-meta-buys-conductor-anthropic-locks-1jij",
-   "https://dev.to/jun_liu_ca219b73a8f1489b5/cron-not-running-7-reasons-your-scheduled-jobs-fail-silently-5ap6",
-   "https://dev.to/mohsen_vaziri_1271f6973e0/before-the-304-site-study-i-scanned-57-agency-front-pages-here-is-what-one-scan-can-and-cant-2a95",
-   "https://dev.to/kallowaythayer/how-servicetitan-api-v2-rate-limits-and-webhooks-actually-break-during-ad-bursts-and-how-we-fixed-1jj6",
-   "https://dev.to/skyfall7/zoho-crm-data-sharing-rules-who-can-see-which-records-4d2g"
+   "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
+   "https://www.theverge.com/ai-artificial-intelligence/1028302/perplexity-teammates-ai-agents-work"
   ],
   "cluster_titles": [
-   "One phone number, two users: normalising WhatsApp sender IDs across Baileys and the Cloud API",
-   "Architecting a Privacy-First Sound Automation Engine for Android",
-   "What actually gets deployed to production? (Not your code)",
-   "ハードウェアの寿命は、トレーニングの寿命でもある",
-   "Automating PR-Based Development with Claude Task Master",
-   "Grace Periods Are a Product Decision Wearing a Billing Costume",
-   "AI Daily Digest November 6, 2026: OpenAI Ships GPT-6 Cyber, Meta Buys Conductor, Anthropic Locks Down Claude Enterprise",
-   "Cron Not Running? 7 Reasons Your Scheduled Jobs Fail Silently",
-   "Before the 304-site study, I scanned 57 agency front pages. Here is what one scan can and can't tell you.",
-   "How ServiceTitan API v2 Rate Limits and Webhooks Actually Break During Ad Bursts (And How We Fixed It)",
-   "Zoho CRM data sharing rules: who can see which records"
+   "Airbnb says it’s launching an AI travel agent in the first half of 2027",
+   "Perplexity launches its own take on AI agents for work"
   ],
-  "is_logo": false,
+  "is_logo": true,
   "photo_credit": "",
   "image_files": [
-   "20261106-0415-0-whatsapp-sender-ids-normalized-across-bailey.png",
-   "20261106-0415-0-whatsapp-sender-ids-normalized-across-bailey-d1.png",
-   "20261106-0415-0-whatsapp-sender-ids-normalized-across-bailey-d2.png"
+   "20261106-0506-0-airbnb-launches-ai-travel-agent-in-h1-2027.png",
+   "20261106-0506-0-airbnb-launches-ai-travel-agent-in-h1-2027-d1.png",
+   "20261106-0506-0-airbnb-launches-ai-travel-agent-in-h1-2027-d2.png",
+   "20261106-0506-0-airbnb-launches-ai-travel-agent-in-h1-2027-d3.png"
   ]
  },
  {
-  "topic": "salon shutting down after 31 years",
-  "headline_marked": "[[Salon is shutting down]] after 31 years as an online-only news magazine",
-  "headline": "Salon is shutting down after 31 years as an online-only news magazine",
-  "summary": "The pioneering digital journalism outlet announced its closure, citing unsustainable business realities for independent online publications.",
+  "topic": "apple captures half of smartphone revenue, us stocks drop, apple macbook pro oled review",
+  "headline_marked": "[[Apple captures half of global smartphone revenue]] in Q3",
+  "headline": "Apple captures half of global smartphone revenue in Q3",
+  "summary": "The tech giant's revenue share hit a new high, driven by strong sales of its latest iPhone models.",
   "category": "BIGTECH",
-  "template": "neon",
+  "template": "launch",
   "details": [
-   "Salon, one of the first online-only news magazines, has announced it is ceasing publication after 31 years. The outlet cited the \"business realities of independent digital journalism\" as unsustainable.",
-   "In an unsigned post, Salon stated that the digital media landscape has changed profoundly, making its publishing model no longer viable. While not explicitly detailed, this likely refers to challenges like \"Google Zero\" and the impact of AI on content.",
-   "Founded 31 years ago, Salon aimed to demonstrate what digital journalism could be. The company expressed hope that its legacy of journalism, ideas, and community will continue to matter.",
-   "The editorial archive is expected to remain live for now, according to Chief Content Officer Erin Keane. Salon was acquired by Find.co, a \"Performance Marketing Ecosystem,\" in 2023."
+   "Apple achieved a record-breaking Q3 for global smartphone revenue, capturing 50% of the market according to Counterpoint Research.",
+   "This significant market share highlights Apple's dominant position in the premium smartphone segment.",
+   "The strong performance is attributed to the continued popularity of its iPhone lineup, particularly the newest releases.",
+   "While specific sales figures for individual models were not disclosed, the overall revenue surge indicates robust consumer demand for Apple's devices."
   ],
-  "caption": "Salon, a pioneering online news magazine, is shutting down after 31 years.\n\nSalon, one of the first online-only news magazines, has announced it is ceasing publication after 31 years. The outlet cited the \"business realities of independent digital journalism\" as unsustainable.\n\nIn an unsigned post, Salon stated that the digital media landscape has changed profoundly, making its publishing model no longer viable. While not explicitly detailed, this likely refers to challenges like \"Google Zero\" and the impact of AI on content.\n\nFounded 31 years ago, Salon aimed to demonstrate what digital journalism could be. The company expressed hope that its legacy of journalism, ideas, and community will continue to matter.\n\nThe editorial archive is expected to remain live for now, according to Chief Content Officer Erin Keane. Salon was acquired by Find.co, a \"Performance Marketing Ecosystem,\" in 2023.\n\n#Salon #DigitalJournalism #Media #TechNews #Closure\n\nSource: The Verge, Hacker News",
-  "tweet": "Salon is shutting down after 31 years. The pioneering online news magazine cited unsustainable business realities for independent digital journalism. The archive is expected to remain live for now. #Salon #DigitalJournalism #Media",
+  "caption": "Apple just captured half of all global smartphone revenue in Q3, a new record for the company.\n\nApple achieved a record-breaking Q3 for global smartphone revenue, capturing 50% of the market according to Counterpoint Research.\n\nThis significant market share highlights Apple's dominant position in the premium smartphone segment.\n\nThe strong performance is attributed to the continued popularity of its iPhone lineup, particularly the newest releases.\n\nWhile specific sales figures for individual models were not disclosed, the overall revenue surge indicates robust consumer demand for Apple's devices.\n\n#Apple #iPhone #Tech #Smartphones #Revenue\n\nSource: 9to5Mac, Hacker News, Wired",
+  "tweet": "Apple just captured half of all global smartphone revenue in Q3, a new record for the company. The tech giant's market share hit a new high, driven by strong iPhone sales. #Apple #iPhone #Tech",
   "story_risk": "clean",
   "image_safe": true,
   "image_good": true,
-  "brand_domain": "",
-  "source": "The Verge, Hacker News",
-  "url": "https://www.theverge.com/news/1028281/salon-dot-com-shuts-down",
-  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Screenshot-2026-11-05-at-1.59.05-PM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
-  "orig_title": "Salon is shutting down after 31 years",
+  "brand_domain": "apple.com",
+  "source": "9to5Mac, Hacker News, Wired",
+  "url": "https://9to5mac.com/2026/11/05/report-apple-captured-half-of-global-smartphone-revenue-in-q3/",
+  "image": "https://9to5mac.com/wp-content/uploads/sites/6/2026/09/iphone-18-pro-glacier-apple-watch-airpods-5.jpg?quality=82&#038;strip=all&#038;w=1600",
+  "orig_title": "Report: Apple captured half of global smartphone revenue in Q3",
   "cluster_urls": [
-   "https://www.theverge.com/news/1028281/salon-dot-com-shuts-down",
-   "https://www.salon.com/2026/11/05/goodbye-from-salon/"
+   "https://9to5mac.com/2026/11/05/report-apple-captured-half-of-global-smartphone-revenue-in-q3/",
+   "https://finlaws.substack.com/p/25t-has-been-wiped-from-us-stocks",
+   "https://www.wired.com/review/apple-macbook-pro-oled-2026/"
   ],
   "cluster_titles": [
-   "Salon is shutting down after 31 years",
-   "Goodbye from Salon"
+   "Report: Apple captured half of global smartphone revenue in Q3",
+   "$2.5T has been wiped from US stocks",
+   "Apple MacBook Pro OLED (2026) Review: The Best Comes at a Cost"
   ],
   "is_logo": false,
-  "photo_credit": "The Verge",
+  "photo_credit": "Wired",
   "image_files": [
-   "20261106-0415-1-salon-is-shutting-down-after-31-years-as-an-.png",
-   "20261106-0415-1-salon-is-shutting-down-after-31-years-as-an--d1.png",
-   "20261106-0415-1-salon-is-shutting-down-after-31-years-as-an--d2.png"
+   "20261106-0506-1-apple-captures-half-of-global-smartphone-rev.png",
+   "20261106-0506-1-apple-captures-half-of-global-smartphone-rev-d1.png"
   ]
  }
 ]

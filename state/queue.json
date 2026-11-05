@@ -1,1 +1,100 @@
-[]
+[
+ {
+  "topic": "developer tools and practices",
+  "headline_marked": "[[WhatsApp sender IDs]] normalized across Baileys and Cloud API to prevent duplicate users",
+  "headline": "WhatsApp sender IDs normalized across Baileys and Cloud API to prevent duplicate users",
+  "summary": "A bug in NanoClaw's WhatsApp integrations caused the same phone number to be treated as two distinct users, leading to broken permissions and roles.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "A critical bug in the NanoClaw system has been identified where the same WhatsApp sender can be recognized as two separate users due to inconsistencies between the Baileys integration and the WhatsApp Cloud API.",
+   "The Baileys integration identified senders using a JID format (e.g., 15551234567@s.whatsapp.net), while the Cloud API used a bare wa_id (e.g., 15551234567). This difference meant that permissions, roles, and group memberships assigned to one identity were not applied to the other.",
+   "This issue silently created duplicate user entries, making it appear to users that their settings were not working correctly. The problem arises when systems have multiple integration points for the same service, and these points do not resolve to a single, canonical identity.",
+   "The fix involves normalizing the sender handle at a single point and migrating existing data to merge these duplicate entries. This ensures that a user's identity and associated permissions remain consistent across all integration paths.",
+   "The developer emphasizes that any system with multiple communication channels, such as different messaging providers or web app vs. API access, must establish a canonical identity at the boundary to avoid such permission bugs.",
+   "This issue is particularly critical for agent platforms where identity directly dictates authorization for actions, highlighting the importance of robust identity management in complex software architectures."
+  ],
+  "caption": "One phone number, two users. A critical bug in WhatsApp integrations caused duplicate identities, breaking permissions and roles.\n\nA critical bug in the NanoClaw system has been identified where the same WhatsApp sender can be recognized as two separate users due to inconsistencies between the Baileys integration and the WhatsApp Cloud API.\n\nThe Baileys integration identified senders using a JID format (e.g., 15551234567@s.whatsapp.net), while the Cloud API used a bare wa_id (e.g., 15551234567). This difference meant that permissions, roles, and group memberships assigned to one identity were not applied to the other.\n\nThis issue silently created duplicate user entries, making it appear to users that their settings were not working correctly. The problem arises when systems have multiple integration points for the same service, and these points do not resolve to a single, canonical identity.\n\nThe fix involves normalizing the sender handle at a single point and migrating existing data to merge these duplicate entries. This ensures that a user's identity and associated permissions remain consistent across all integration paths.\n\nThe developer emphasizes that any system with multiple communication channels, such as different messaging providers or web app vs. API access, must establish a canonical identity at the boundary to avoid such permission bugs.\n\nThis issue is particularly critical for agent platforms where identity directly dictates authorization for actions, highlighting the importance of robust identity management in complex software architectures.\n\n#WhatsApp #DevOps #SoftwareDevelopment #BugFix #IdentityManagement\n\nSource: DEV",
+  "tweet": "One phone number, two users: A critical bug in WhatsApp integrations caused duplicate identities, breaking permissions and roles. The fix normalizes sender IDs across Baileys and Cloud API. #WhatsApp #DevOps #BugFix",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/ali_ahmed_44ee99051e327ce/one-phone-number-two-users-normalising-whatsapp-sender-ids-across-baileys-and-the-cloud-api-3l3m",
+  "image": "",
+  "orig_title": "One phone number, two users: normalising WhatsApp sender IDs across Baileys and the Cloud API",
+  "cluster_urls": [
+   "https://dev.to/ali_ahmed_44ee99051e327ce/one-phone-number-two-users-normalising-whatsapp-sender-ids-across-baileys-and-the-cloud-api-3l3m",
+   "https://dev.to/haseebthedev0/architecting-a-privacy-first-sound-automation-engine-for-android-7ha",
+   "https://dev.to/ali_ahmed_44ee99051e327ce/what-actually-gets-deployed-to-production-not-your-code-5d2j",
+   "https://dev.to/ashish_624379625242c5d263/hadoueanoshou-ming-ha-toreningunoshou-ming-demoaru-2n0e",
+   "https://dev.to/developerzai/automating-pr-based-development-with-claude-task-master-58aj",
+   "https://dev.to/swipeagain/grace-periods-are-a-product-decision-wearing-a-billing-costume-49kf",
+   "https://dev.to/hiroki-ii-ai/ai-daily-digest-november-6-2026-openai-ships-gpt-6-cyber-meta-buys-conductor-anthropic-locks-1jij",
+   "https://dev.to/jun_liu_ca219b73a8f1489b5/cron-not-running-7-reasons-your-scheduled-jobs-fail-silently-5ap6",
+   "https://dev.to/mohsen_vaziri_1271f6973e0/before-the-304-site-study-i-scanned-57-agency-front-pages-here-is-what-one-scan-can-and-cant-2a95",
+   "https://dev.to/kallowaythayer/how-servicetitan-api-v2-rate-limits-and-webhooks-actually-break-during-ad-bursts-and-how-we-fixed-1jj6",
+   "https://dev.to/skyfall7/zoho-crm-data-sharing-rules-who-can-see-which-records-4d2g"
+  ],
+  "cluster_titles": [
+   "One phone number, two users: normalising WhatsApp sender IDs across Baileys and the Cloud API",
+   "Architecting a Privacy-First Sound Automation Engine for Android",
+   "What actually gets deployed to production? (Not your code)",
+   "ハードウェアの寿命は、トレーニングの寿命でもある",
+   "Automating PR-Based Development with Claude Task Master",
+   "Grace Periods Are a Product Decision Wearing a Billing Costume",
+   "AI Daily Digest November 6, 2026: OpenAI Ships GPT-6 Cyber, Meta Buys Conductor, Anthropic Locks Down Claude Enterprise",
+   "Cron Not Running? 7 Reasons Your Scheduled Jobs Fail Silently",
+   "Before the 304-site study, I scanned 57 agency front pages. Here is what one scan can and can't tell you.",
+   "How ServiceTitan API v2 Rate Limits and Webhooks Actually Break During Ad Bursts (And How We Fixed It)",
+   "Zoho CRM data sharing rules: who can see which records"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261106-0415-0-whatsapp-sender-ids-normalized-across-bailey.png",
+   "20261106-0415-0-whatsapp-sender-ids-normalized-across-bailey-d1.png",
+   "20261106-0415-0-whatsapp-sender-ids-normalized-across-bailey-d2.png"
+  ]
+ },
+ {
+  "topic": "salon shutting down after 31 years",
+  "headline_marked": "[[Salon is shutting down]] after 31 years as an online-only news magazine",
+  "headline": "Salon is shutting down after 31 years as an online-only news magazine",
+  "summary": "The pioneering digital journalism outlet announced its closure, citing unsustainable business realities for independent online publications.",
+  "category": "BIGTECH",
+  "template": "neon",
+  "details": [
+   "Salon, one of the first online-only news magazines, has announced it is ceasing publication after 31 years. The outlet cited the \"business realities of independent digital journalism\" as unsustainable.",
+   "In an unsigned post, Salon stated that the digital media landscape has changed profoundly, making its publishing model no longer viable. While not explicitly detailed, this likely refers to challenges like \"Google Zero\" and the impact of AI on content.",
+   "Founded 31 years ago, Salon aimed to demonstrate what digital journalism could be. The company expressed hope that its legacy of journalism, ideas, and community will continue to matter.",
+   "The editorial archive is expected to remain live for now, according to Chief Content Officer Erin Keane. Salon was acquired by Find.co, a \"Performance Marketing Ecosystem,\" in 2023."
+  ],
+  "caption": "Salon, a pioneering online news magazine, is shutting down after 31 years.\n\nSalon, one of the first online-only news magazines, has announced it is ceasing publication after 31 years. The outlet cited the \"business realities of independent digital journalism\" as unsustainable.\n\nIn an unsigned post, Salon stated that the digital media landscape has changed profoundly, making its publishing model no longer viable. While not explicitly detailed, this likely refers to challenges like \"Google Zero\" and the impact of AI on content.\n\nFounded 31 years ago, Salon aimed to demonstrate what digital journalism could be. The company expressed hope that its legacy of journalism, ideas, and community will continue to matter.\n\nThe editorial archive is expected to remain live for now, according to Chief Content Officer Erin Keane. Salon was acquired by Find.co, a \"Performance Marketing Ecosystem,\" in 2023.\n\n#Salon #DigitalJournalism #Media #TechNews #Closure\n\nSource: The Verge, Hacker News",
+  "tweet": "Salon is shutting down after 31 years. The pioneering online news magazine cited unsustainable business realities for independent digital journalism. The archive is expected to remain live for now. #Salon #DigitalJournalism #Media",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "The Verge, Hacker News",
+  "url": "https://www.theverge.com/news/1028281/salon-dot-com-shuts-down",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/11/Screenshot-2026-11-05-at-1.59.05-PM.png?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Salon is shutting down after 31 years",
+  "cluster_urls": [
+   "https://www.theverge.com/news/1028281/salon-dot-com-shuts-down",
+   "https://www.salon.com/2026/11/05/goodbye-from-salon/"
+  ],
+  "cluster_titles": [
+   "Salon is shutting down after 31 years",
+   "Goodbye from Salon"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261106-0415-1-salon-is-shutting-down-after-31-years-as-an-.png",
+   "20261106-0415-1-salon-is-shutting-down-after-31-years-as-an--d1.png",
+   "20261106-0415-1-salon-is-shutting-down-after-31-years-as-an--d2.png"
+  ]
+ }
+]

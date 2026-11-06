@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "ai generated code security flaws exploits",
+  "headline_marked": "[[AI-generated code passes tests]] but remains exploitable in 73% of cases, new benchmark shows",
+  "headline": "AI-generated code passes tests but remains exploitable in 73% of cases, new benchmark shows",
+  "summary": "A new benchmark, A.S.E 2.0, used 145 CVE-based tasks to evaluate LLM-generated code. It found that even when code passed functional tests, a high percentage was still vulnerable to exploits.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A new benchmark, A.S.E 2.0, posted to arXiv by Yu et al., challenges the assumption that passing functional tests ensures security in AI-generated code. It uses 145 tasks derived from real CVEs across 51 open-source projects.",
+   "Each task runs in Docker with functional tests and a validated proof-of-concept exploit. Code is only considered secure if it passes all functional tests AND the exploit fails.",
+   "Claude Code running Sonnet 4.5 passed functional tests on 74.0% of tasks, but only 18.4% of its output was truly secure. A significant 55.6% of its test-passing code was still vulnerable to a working exploit.",
+   "This pattern was consistent across all setups tested, including Claude Code, SWE-agent on Sonnet 4.5 or GPT-5.4, and plain retrieval. Between 73.2% and 77.3% of test-passing output was found to be exploitable.",
+   "Despite agents reading far more repository context than retrieval pipelines, they identified the relevant security safeguards (like existing validators or access policies) in only 27% to 36% of runs. Their search queries predominantly focused on functional aspects (71%) rather than security concepts (9%).",
+   "Feeding the models more repository context did not improve security; a truncated 128K-token repository even slightly reduced the secure rate. Inserting one insecure example increased correct-but-exploitable output by 6.3 points.",
+   "The agent loop, while costly at $1.41 per task compared to $0.09 for retrieval, and processing significantly more tokens (204K vs 7.2K), yielded only a marginal improvement in the secure rate (18.4% vs 17.9%).",
+   "The study's limitations include tasks being derived from known CVEs, testing older models (Sonnet 4.5 and GPT-5.4), and an exploit demonstrating a vulnerability but not excluding others. The full write-up is available in the AI-Generated Code Security Study 2026 on StackChief."
+  ],
+  "caption": "AI-generated code passes functional tests, but a new benchmark reveals a critical flaw: over 73% of it remains vulnerable to exploits.\n\nA new benchmark, A.S.E 2.0, posted to arXiv by Yu et al., challenges the assumption that passing functional tests ensures security in AI-generated code. It uses 145 tasks derived from real CVEs across 51 open-source projects.\n\nEach task runs in Docker with functional tests and a validated proof-of-concept exploit. Code is only considered secure if it passes all functional tests AND the exploit fails.\n\nClaude Code running Sonnet 4.5 passed functional tests on 74.0% of tasks, but only 18.4% of its output was truly secure. A significant 55.6% of its test-passing code was still vulnerable to a working exploit.\n\nThis pattern was consistent across all setups tested, including Claude Code, SWE-agent on Sonnet 4.5 or GPT-5.4, and plain retrieval. Between 73.2% and 77.3% of test-passing output was found to be exploitable.\n\nDespite agents reading far more repository context than retrieval pipelines, they identified the relevant security safeguards (like existing validators or access policies) in only 27% to 36% of runs. Their search queries predominantly focused on functional aspects (71%) rather than security concepts (9%).\n\nFeeding the models more repository context did not improve security; a truncated 128K-token repository even slightly reduced the secure rate. Inserting one insecure example increased correct-but-exploitable output by 6.3 points.\n\nThe agent loop, while costly at $1.41 per task compared to $0.09 for retrieval, and processing significantly more tokens (204K vs 7.2K), yielded only a marginal improvement in the secure rate (18.4% vs 17.9%).\n\nThe study's limitations include tasks being derived from known CVEs, testing older models (Sonnet 4.5 and GPT-5.4), and an exploit demonstrating a vulnerability but not excluding others. The full write-up is available in the AI-Generated Code Security Study 2026 on StackChief.\n\n#AI #CodeSecurity #LLMs #Vulnerability #DevSecOps #TechNews\n\nSource: DEV",
+  "tweet": "AI-generated code often passes tests but is still exploitable! A new benchmark (A.S.E 2.0) found that 73-77% of test-passing LLM code was vulnerable. Don't just trust the green checkmark. #CodeSecurity #AI #LLMs",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/stackchief/tests-pass-exploits-still-work-what-a-145-cve-benchmark-says-about-ai-generated-code-1a5k",
+  "image": "",
+  "orig_title": "Tests Pass, Exploits Still Work: What a 145-CVE Benchmark Says About AI-Generated Code",
+  "cluster_urls": [
+   "https://dev.to/stackchief/tests-pass-exploits-still-work-what-a-145-cve-benchmark-says-about-ai-generated-code-1a5k"
+  ],
+  "cluster_titles": [
+   "Tests Pass, Exploits Still Work: What a 145-CVE Benchmark Says About AI-Generated Code"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261106-2306-0-ai-generated-code-passes-tests-but-remains-e.png",
+   "20261106-2306-0-ai-generated-code-passes-tests-but-remains-e-d1.png",
+   "20261106-2306-0-ai-generated-code-passes-tests-but-remains-e-d2.png",
+   "20261106-2306-0-ai-generated-code-passes-tests-but-remains-e-d3.png"
+  ]
+ },
+ {
+  "topic": "future of free ai models business strategy",
+  "headline_marked": "[[Will free AI models stay free?]] Following the money behind Mistral, Qwen, DeepSeek and Llama",
+  "headline": "Will free AI models stay free? Following the money behind Mistral, Qwen, DeepSeek and Llama",
+  "summary": "Many \"free\" AI models require massive training costs. Understanding who funds these initiatives reveals whether they will remain free or if monetization strategies like APIs, cloud services, or ads will eventually dictate their accessibility.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "French AI company Mistral gave away one of the biggest AI models ever made, downloadable for free. Training such models, like DeepSeek's V3, costs millions for just the final run, with overall hardware spend potentially exceeding $500M.",
+   "The Red Hat model of selling support for free software doesn't fully cover these immense training costs. Instead, companies often monetize by charging for API access to run the large models themselves, as running them locally requires significant hardware.",
+   "Mistral, for example, generates over $400 million annually from API access, a chat app (Le Chat Pro), and custom deals for large enterprises. This shows a clear path to revenue despite the model being \"free\" to download.",
+   "Other companies, known as \"hosts\" like Fireworks, take these free models and offer them as a service, achieving annualized revenue run rates over $1 billion. The original labs ensure a cut through commercial licenses required for such model-as-a-service businesses.",
+   "Larger tech giants like Alibaba and Meta employ different strategies. Alibaba gives away its Qwen models but profits from its cloud services, where users run these models. Meta, with its Llama models, focuses on its core ad business, not direct model sales.",
+   "The \"free\" status can also be conditional or temporary. Mistral initially sold access to Large 4 before releasing it for free download weeks later. Alibaba still charges for its premium Qwen 3.7 Max model, even while offering others for free.",
+   "While free models offer cost advantages (e.g., OpenRouter shows them costing about a quarter of the others), their future \"freeness\" is decided one model at a time. Companies choose to give models away when it supports other revenue streams like APIs, cloud, or ads.",
+   "Building on free models remains viable due to lower operational costs. However, developers should maintain flexibility by having backup models ready to avoid being locked into a single provider's pricing changes."
+  ],
+  "caption": "Free AI models are a game-changer, but will they stay free? The business models behind Mistral, Qwen, DeepSeek, and Llama reveal the true cost.\n\nFrench AI company Mistral gave away one of the biggest AI models ever made, downloadable for free. Training such models, like DeepSeek's V3, costs millions for just the final run, with overall hardware spend potentially exceeding $500M.\n\nThe Red Hat model of selling support for free software doesn't fully cover these immense training costs. Instead, companies often monetize by charging for API access to run the large models themselves, as running them locally requires significant hardware.\n\nMistral, for example, generates over $400 million annually from API access, a chat app (Le Chat Pro), and custom deals for large enterprises. This shows a clear path to revenue despite the model being \"free\" to download.\n\nOther companies, known as \"hosts\" like Fireworks, take these free models and offer them as a service, achieving annualized revenue run rates over $1 billion. The original labs ensure a cut through commercial licenses required for such model-as-a-service businesses.\n\nLarger tech giants like Alibaba and Meta employ different strategies. Alibaba gives away its Qwen models but profits from its cloud services, where users run these models. Meta, with its Llama models, focuses on its core ad business, not direct model sales.\n\nThe \"free\" status can also be conditional or temporary. Mistral initially sold access to Large 4 before releasing it for free download weeks later. Alibaba still charges for its premium Qwen 3.7 Max model, even while offering others for free.\n\nWhile free models offer cost advantages (e.g., OpenRouter shows them costing about a quarter of the others), their future \"freeness\" is decided one model at a time. Companies choose to give models away when it supports other revenue streams like APIs, cloud, or ads.\n\n#AI #LLM #OpenSourceAI #TechBusiness #MistralAI #MetaAI\n\nSource: DEV",
+  "tweet": "Will 'free' AI models like Mistral and Llama truly remain free? The business models behind these powerful tools show that monetization often comes from APIs, cloud services, or ads, not direct sales. Developers should be prepared for potential changes. #AI #TechBusiness",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/cynxio/will-free-ai-models-stay-free-following-the-money-behind-mistral-qwen-deepseek-and-llama-4mb9",
+  "image": "",
+  "orig_title": "Will free AI models stay free? Following the money behind Mistral, Qwen, DeepSeek and Llama",
+  "cluster_urls": [
+   "https://dev.to/cynxio/will-free-ai-models-stay-free-following-the-money-behind-mistral-qwen-deepseek-and-llama-4mb9"
+  ],
+  "cluster_titles": [
+   "Will free AI models stay free? Following the money behind Mistral, Qwen, DeepSeek and Llama"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261106-2306-1-will-free-ai-models-stay-free-following-the-.png",
+   "20261106-2306-1-will-free-ai-models-stay-free-following-the--d1.png",
+   "20261106-2306-1-will-free-ai-models-stay-free-following-the--d2.png",
+   "20261106-2306-1-will-free-ai-models-stay-free-following-the--d3.png"
+  ]
+ }
+]

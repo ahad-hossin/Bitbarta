@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "facebook ai deepfake scam ads 16b fraud",
+  "headline_marked": "[[Facebook knowingly runs AI deepfake scam ads]], generating $16B in fraud revenue, Mark Cuban alleges",
+  "headline": "Facebook knowingly runs AI deepfake scam ads, generating $16B in fraud revenue, Mark Cuban alleges",
+  "summary": "Internal Meta documents reportedly show the company expected $16 billion, or 10% of its 2024 revenue, to come from ads pushing scams and prohibited products, despite Mark Cuban's public accusations.",
+  "category": "BIGTECH",
+  "template": "leak",
+  "details": [
+   "Billionaire investor Mark Cuban has publicly accused Meta (Facebook) of knowingly running AI deepfake scam ads that use his likeness without permission. He stated he regularly receives emails from people who have been defrauded by these ads, often for a fake $294 diabetes cure. Cuban called the platform \"the worst of the worst\" for allowing these scams to target vulnerable individuals.",
+   "Reuters reported on internal Meta documents from November 2025, revealing the company anticipated roughly $16 billion, or 10% of its 2024 revenue, would originate from ads promoting scams and prohibited products. These documents indicated users across Meta's apps were exposed to approximately 15 billion \"higher risk\" ads daily.",
+   "According to the internal documents, Meta's automated systems require an advertiser account to be at least 95% likely to be running a scam before a ban is issued. If the likelihood is below this threshold, the suspected scammer can continue advertising by simply paying a higher rate per ad.",
+   "Meta spokesman Andy Stone disputed the Reuters report, stating the documents presented \"a selective view that distorts Meta's approach to fraud and scams.\" He claimed user complaints about scam ads had decreased by 58% over 18 months and that Meta removed over 134 million scam ads in 2025. The same documents also note an SEC investigation into Meta regarding financial fraud advertising.",
+   "The FBI's 2025 Internet Crime Report highlighted that Americans aged 60 and older lost $7.7 billion to crime, a 59% increase from the previous year. Investment schemes accounted for $3.5 billion of these losses, with AI involved in over 3,100 complaints totaling more than $352 million in victim losses.",
+   "Experts advise users to assume any celebrity endorsement in their feed is fake, including those featuring Mark Cuban. It is recommended to search the product name alongside \"scam\" and to warn family members, especially older relatives, about these prevalent online frauds."
+  ],
+  "caption": "Meta reportedly expected $16 billion in 2024 revenue from scam ads, according to internal documents. Mark Cuban publicly accused Facebook of knowingly running AI deepfake scam ads.\n\nBillionaire investor Mark Cuban has publicly accused Meta (Facebook) of knowingly running AI deepfake scam ads that use his likeness without permission. He stated he regularly receives emails from people who have been defrauded by these ads, often for a fake $294 diabetes cure. Cuban called the platform \"the worst of the worst\" for allowing these scams to target vulnerable individuals.\n\nReuters reported on internal Meta documents from November 2025, revealing the company anticipated roughly $16 billion, or 10% of its 2024 revenue, would originate from ads promoting scams and prohibited products. These documents indicated users across Meta's apps were exposed to approximately 15 billion \"higher risk\" ads daily.\n\nAccording to the internal documents, Meta's automated systems require an advertiser account to be at least 95% likely to be running a scam before a ban is issued. If the likelihood is below this threshold, the suspected scammer can continue advertising by simply paying a higher rate per ad.\n\nMeta spokesman Andy Stone disputed the Reuters report, stating the documents presented \"a selective view that distorts Meta's approach to fraud and scams.\" He claimed user complaints about scam ads had decreased by 58% over 18 months and that Meta removed over 134 million scam ads in 2025. The same documents also note an SEC investigation into Meta regarding financial fraud advertising.\n\nThe FBI's 2025 Internet Crime Report highlighted that Americans aged 60 and older lost $7.7 billion to crime, a 59% increase from the previous year. Investment schemes accounted for $3.5 billion of these losses, with AI involved in over 3,100 complaints totaling more than $352 million in victim losses.\n\n#Meta #Facebook #AIScams #Deepfake #TechNews #OnlineSafety\n\nSource: Hacker News",
+  "tweet": "Meta reportedly expected $16 billion in 2024 revenue from scam ads, according to internal documents. Mark Cuban publicly accused Facebook of knowingly running AI deepfake scam ads, calling the platform \"the worst of the worst.\" #Meta #AIScams #TechNews",
+  "story_risk": "sensitive",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "meta.com",
+  "source": "Hacker News",
+  "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+  "image": "",
+  "orig_title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
+  "cluster_urls": [
+   "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html"
+  ],
+  "cluster_titles": [
+   "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261106-0708-0-facebook-knowingly-runs-ai-deepfake-scam-ads.png",
+   "20261106-0708-0-facebook-knowingly-runs-ai-deepfake-scam-ads-d1.png",
+   "20261106-0708-0-facebook-knowingly-runs-ai-deepfake-scam-ads-d2.png",
+   "20261106-0708-0-facebook-knowingly-runs-ai-deepfake-scam-ads-d3.png"
+  ]
+ },
+ {
+  "topic": "linux ssh vulnerability allows remote access",
+  "headline_marked": "[[*sshole vulnerability allows passwordless SSH login]] on Alpine Linux and other distros",
+  "headline": "*sshole vulnerability allows passwordless SSH login on Alpine Linux and other distros",
+  "summary": "A decade-old flaw in OpenSSH and musl-libc interaction lets attackers log into specific Alpine Linux configurations by inputting over 256 characters in the password field, bypassing authentication.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A decade-old vulnerability, dubbed \"*sshole,\" allows attackers to log into certain configurations of Alpine Linux and potentially other distributions without a password. This critical flaw exploits an interaction between OpenSSH and musl, a lightweight alternative to the standard libc library.",
+   "Successful exploitation requires specific conditions: OpenSSH must use musl without PAM (pluggable authentication modules), and the system must have at least one user account with a SHA256 or SHA512 hashed password. Crucially, the target account must be configured as passwordless, marked by a \"*\" in the /etc/shadow file.",
+   "Attackers can gain access to these passwordless accounts simply by inputting more than 256 characters into the password field during an SSH login attempt. Alpine maintainers confirmed the severity, stating, \"An attacker who can reach your SSH port can log in without knowing any password.\"",
+   "Despite the prerequisites, the *sshole vulnerability likely threatens a significant number of systems. Alpine Linux is widely used in Docker Hub base images (over 1 billion downloads), embedded devices like routers and smart TVs, and increasingly in desktops and servers.",
+   "The exact root cause is disputed, with OpenSSH attributing it outside its code and musl developers calling it an \"erroneous use by the caller.\" Both OpenSSH and Alpine have released updates to address the issue.",
+   "While OpenWRT, buildroot, and yocto packages are also mentioned as potentially affected, this remains unconfirmed. Users of Linux systems combining musl and OpenSSH are strongly advised to investigate their systems immediately and apply available patches."
+  ],
+  "caption": "A new vulnerability named \"*sshole\" allows attackers to log into Alpine Linux systems via SSH with *no password*. Just type over 256 characters in the password field.\n\nA decade-old vulnerability, dubbed \"*sshole,\" allows attackers to log into certain configurations of Alpine Linux and potentially other distributions without a password. This critical flaw exploits an interaction between OpenSSH and musl, a lightweight alternative to the standard libc library.\n\nSuccessful exploitation requires specific conditions: OpenSSH must use musl without PAM (pluggable authentication modules), and the system must have at least one user account with a SHA256 or SHA512 hashed password. Crucially, the target account must be configured as passwordless, marked by a \"*\" in the /etc/shadow file.\n\nAttackers can gain access to these passwordless accounts simply by inputting more than 256 characters into the password field during an SSH login attempt. Alpine maintainers confirmed the severity, stating, \"An attacker who can reach your SSH port can log in without knowing any password.\"\n\nDespite the prerequisites, the *sshole vulnerability likely threatens a significant number of systems. Alpine Linux is widely used in Docker Hub base images (over 1 billion downloads), embedded devices like routers and smart TVs, and increasingly in desktops and servers.\n\nThe exact root cause is disputed, with OpenSSH attributing it outside its code and musl developers calling it an \"erroneous use by the caller.\" Both OpenSSH and Alpine have released updates to address the issue.\n\nWhile OpenWRT, buildroot, and yocto packages are also mentioned as potentially affected, this remains unconfirmed. Users of Linux systems combining musl and OpenSSH are strongly advised to investigate their systems immediately and apply available patches.\n\n#Security #Linux #Vulnerability #OpenSSH #AlpineLinux #Cybersecurity\n\nSource: Ars Technica, Tom's Hardware, DEV",
+  "tweet": "A new vulnerability, \"*sshole\", lets attackers SSH into Alpine Linux systems without a password. Just type >256 chars in the password field. Patch immediately if you use OpenSSH with musl-libc. #Security #Linux #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Ars Technica, Tom's Hardware, DEV",
+  "url": "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+  "image": "https://cdn.arstechnica.net/wp-content/uploads/2017/05/getty-hacking-1152x648.jpg",
+  "orig_title": "Meet *sshole, the vulnerability that lets hackers SSH into Linux devices",
+  "cluster_urls": [
+   "https://arstechnica.com/security/2026/11/vulnerability-allows-attackers-to-log-into-some-linux-devices-sans-password/",
+   "https://www.tomshardware.com/tech-industry/cyber-security/combined-flaws-let-anyone-into-alpine-linux-and-other-distros-by-typing-anything-over-256-characters-as-a-password-emergency-fixes-for-openssh-and-musl-libc-issued-for-millions-of-systems-patch-immediately",
+   "https://dev.to/eme_gug_0821b41b948be6516/is-ssh-password-auth-really-off-on-your-server-hardening-sshdconfig-and-proving-it-from-the-2cdd"
+  ],
+  "cluster_titles": [
+   "Meet *sshole, the vulnerability that lets hackers SSH into Linux devices",
+   "Combined OpenSSH and musl-libc flaws let anyone into Alpine Linux and other distros by typing anything over 256 characters as a password",
+   "Is SSH Password Auth Really Off on Your Server? Hardening sshd_config and Proving It From the Outside"
+  ],
+  "is_logo": false,
+  "photo_credit": "Ars Technica",
+  "image_files": [
+   "20261106-0708-1-sshole-vulnerability-allows-passwordless-ssh.png",
+   "20261106-0708-1-sshole-vulnerability-allows-passwordless-ssh-d1.png",
+   "20261106-0708-1-sshole-vulnerability-allows-passwordless-ssh-d2.png",
+   "20261106-0708-1-sshole-vulnerability-allows-passwordless-ssh-d3.png"
+  ]
+ }
+]

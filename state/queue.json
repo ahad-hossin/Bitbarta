@@ -1,1 +1,82 @@
-[]
+[
+ {
+  "topic": "googlebook update 6gb memory boost chrome crashes",
+  "headline_marked": "Googlebooks' November update [[boosts memory by up to 6GB]] and fixes Chrome crashes",
+  "headline": "Googlebooks' November update boosts memory by up to 6GB and fixes Chrome crashes",
+  "summary": "Google's latest Googlebook update significantly improves performance by freeing up to 6GB of RAM and addresses critical issues like Chrome crashes, Bluetooth audio delays, and multi-monitor bugs.",
+  "category": "SOFTWARE",
+  "template": "launch",
+  "details": [
+   "Googlebooks faced initial challenges with incomplete features, but Google has been consistently rolling out updates to enhance the user experience. The latest November update brings a host of significant improvements.",
+   "Despite robust hardware, many Googlebook users reported performance bottlenecks, especially under heavy load. This update tackles these issues with under-the-hood optimizations, including refining on-device AI services.",
+   "A key improvement is the ability for the OS to reclaim more system memory when Chrome demands it, leading to a memory reduction of up to 6GB on Acer, Asus, and Lenovo Googlebook 14/15 models. This is achieved by updating the NPU driver's memory management.",
+   "The update also resolves an annoying Bluetooth lip-sync delay when watching videos with wireless earbuds on HP Googlebook 14 and Dell XPS Googlebook 13 devices. It now correctly routes audio to compatible Bluetooth hearing aids.",
+   "Multi-monitor setups see fixes for bugs that could hide the taskbar and desktop icons after disconnecting external displays. Another fix prevents Netflix videos from playing audio with a black screen on external monitors.",
+   "The Linux Terminal beta experience is made more reliable, ensuring active shell sessions remain connected after waking the laptop or switching tabs. SSH connections and forwarded ports are also more stable.",
+   "Further Terminal enhancements include preventing the Linux VM from shutting down when other windows are open, and preserving Linux files and custom SSH server settings during system updates. Keystrokes and console output are now excluded from system diagnostic logs.",
+   "The November update, build CL3B.260622.286.R2, is rolling out gradually and includes the November 1, 2026 Android security patch for all Googlebook models. Users can check for the update in their system settings."
+  ],
+  "caption": "Googlebooks just got a massive performance boost! The latest November update frees up to 6GB of RAM and fixes critical Chrome crashes.\n\nGooglebooks faced initial challenges with incomplete features, but Google has been consistently rolling out updates to enhance the user experience. The latest November update brings a host of significant improvements.\n\nDespite robust hardware, many Googlebook users reported performance bottlenecks, especially under heavy load. This update tackles these issues with under-the-hood optimizations, including refining on-device AI services.\n\nA key improvement is the ability for the OS to reclaim more system memory when Chrome demands it, leading to a memory reduction of up to 6GB on Acer, Asus, and Lenovo Googlebook 14/15 models. This is achieved by updating the NPU driver's memory management.\n\nThe update also resolves an annoying Bluetooth lip-sync delay when watching videos with wireless earbuds on HP Googlebook 14 and Dell XPS Googlebook 13 devices. It now correctly routes audio to compatible Bluetooth hearing aids.\n\nMulti-monitor setups see fixes for bugs that could hide the taskbar and desktop icons after disconnecting external displays. Another fix prevents Netflix videos from playing audio with a black screen on external monitors.\n\nThe Linux Terminal beta experience is made more reliable, ensuring active shell sessions remain connected after waking the laptop or switching tabs. SSH connections and forwarded ports are also more stable.\n\nFurther Terminal enhancements include preventing the Linux VM from shutting down when other windows are open, and preserving Linux files and custom SSH server settings during system updates. Keystrokes and console output are now excluded from system diagnostic logs.\n\nThe November update, build CL3B.260622.286.R2, is rolling out gradually and includes the November 1, 2026 Android security patch for all Googlebook models. Users can check for the update in their system settings.\n\n#Googlebooks #SoftwareUpdate #TechNews #PerformanceBoost #Android #Google\n\nSource: Android Police",
+  "tweet": "Googlebooks' November update is here! Get up to 6GB RAM freed up, smoother Chrome, and fixes for Bluetooth, multi-monitor, and Linux Terminal issues. Check for build CL3B.260622.286.R2 now! #Googlebooks #SoftwareUpdate #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "google.com",
+  "source": "Android Police",
+  "url": "https://www.androidpolice.com/googles-big-googlebook-update-brings-memory-boost-tackles-chrome-crashes/",
+  "image": "https://static0.anpoimages.com/wordpress/wp-content/uploads/wm/2026/09/googlebook-dell-side.JPG",
+  "orig_title": "Google’s big Googlebook update brings a 6GB memory boost and tackles Chrome crashes",
+  "cluster_urls": [
+   "https://www.androidpolice.com/googles-big-googlebook-update-brings-memory-boost-tackles-chrome-crashes/"
+  ],
+  "cluster_titles": [
+   "Google’s big Googlebook update brings a 6GB memory boost and tackles Chrome crashes"
+  ],
+  "is_logo": false,
+  "photo_credit": "Android Police",
+  "image_files": [
+   "20261106-1107-0-googlebooks-november-update-boosts-memory-by.png",
+   "20261106-1107-0-googlebooks-november-update-boosts-memory-by-d1.png",
+   "20261106-1107-0-googlebooks-november-update-boosts-memory-by-d2.png",
+   "20261106-1107-0-googlebooks-november-update-boosts-memory-by-d3.png"
+  ]
+ },
+ {
+  "topic": "claude ai sends user email addresses to websites",
+  "headline_marked": "[[Claude Code leaked user email addresses]] in web searches via User-Agent header, causing spam",
+  "headline": "Claude Code leaked user email addresses in web searches via User-Agent header, causing spam",
+  "summary": "Users of Anthropic's Claude Code reported a privacy violation where their email addresses were exposed in User-Agent headers during web searches, leading to a significant increase in spam emails.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Anthropic's AI coding assistant, Claude Code, was found to be exposing users' email addresses to third-party websites. This occurred during web searches, where the email was inadvertently included in the User-Agent request header.",
+   "Users reported a significant increase in spam emails, some receiving dozens daily, directly linking it to this privacy breach. The exposed email addresses became a \"goldmine for scammers,\" compromising user anonymity.",
+   "Anthropic had previously introduced a built-in privacy mod (cc-plugin-privacy) in v2.1.317 to block this behavior. However, some users on newer versions (e.g., v2.1.318) reported the mod was enabled but failed to prevent the email leakage.",
+   "An Anthropic representative confirmed the issue, stating they are removing the account email address from the context Claude Code provides to the model. This update is expected to roll out in the next release, anticipated early next week.",
+   "The email address was initially added to the model's context to prevent hallucinations when generating things like @author tags. However, the model sometimes inadvertently included this sensitive information in outbound requests."
+  ],
+  "caption": "Claude Code exposed user email addresses in web searches, leading to a massive influx of spam.\n\nAnthropic's AI coding assistant, Claude Code, was found to be exposing users' email addresses to third-party websites. This occurred during web searches, where the email was inadvertently included in the User-Agent request header.\n\nUsers reported a significant increase in spam emails, some receiving dozens daily, directly linking it to this privacy breach. The exposed email addresses became a \"goldmine for scammers,\" compromising user anonymity.\n\nAnthropic had previously introduced a built-in privacy mod (cc-plugin-privacy) in v2.1.317 to block this behavior. However, some users on newer versions (e.g., v2.1.318) reported the mod was enabled but failed to prevent the email leakage.\n\nAn Anthropic representative confirmed the issue, stating they are removing the account email address from the context Claude Code provides to the model. This update is expected to roll out in the next release, anticipated early next week.\n\nThe email address was initially added to the model's context to prevent hallucinations when generating things like @author tags. However, the model sometimes inadvertently included this sensitive information in outbound requests.\n\n#ClaudeCode #Privacy #DataLeak #AI #Security #Anthropic\n\nSource: Hacker News",
+  "tweet": "Claude Code exposed user email addresses in web searches, leading to a massive influx of spam. Anthropic confirms a fix is coming next week to remove emails from the model's context. #ClaudeCode #Privacy #Security",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "anthropic.com",
+  "source": "Hacker News",
+  "url": "https://github.com/anthropics/claude-code/issues/107757",
+  "image": "",
+  "orig_title": "Claude Code sends your email address to websites",
+  "cluster_urls": [
+   "https://github.com/anthropics/claude-code/issues/107757"
+  ],
+  "cluster_titles": [
+   "Claude Code sends your email address to websites"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261106-1107-1-claude-code-leaked-user-email-addresses-in-w.png",
+   "20261106-1107-1-claude-code-leaked-user-email-addresses-in-w-d1.png",
+   "20261106-1107-1-claude-code-leaked-user-email-addresses-in-w-d2.png"
+  ]
+ }
+]

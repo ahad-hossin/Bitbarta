@@ -1,1 +1,86 @@
-[]
+[
+ {
+  "topic": "palo alto networks in talks to acquire ai security startup clutch",
+  "headline_marked": "[[Palo Alto Networks in talks to buy Clutch]] for $500M cash, securing AI agents",
+  "headline": "Palo Alto Networks in talks to buy Clutch for $500M cash, securing AI agents",
+  "summary": "The deal, reportedly worth $500 million in cash plus milestones, values the AI agent security startup at approximately 50 times its current annual recurring revenue of nearly $10 million.",
+  "category": "SECURITY",
+  "template": "leak",
+  "details": [
+   "Palo Alto Networks is reportedly in discussions to acquire Clutch Security, a startup specializing in securing AI agents' access to corporate systems. The proposed deal is for $500 million in cash, with additional milestone-based payouts.",
+   "Clutch, a three-year-old company, was last valued at $85 million after a $20 million Series A round in January 2025. It currently generates nearly $10 million in annual recurring revenue (ARR), meaning the acquisition would value it at about 50 times its ARR.",
+   "Neither Palo Alto Networks nor Clutch Security have commented on the reported discussions, which were first broken by The Information. This high valuation reflects the increasing market demand for solutions to secure software against AI-driven cyber threats.",
+   "If completed, this would mark Palo Alto Networks' seventh acquisition this year, aligning with its strategy of acquiring innovative technologies rather than developing them in-house. The cybersecurity giant has accelerated its deal-making in response to a surge in AI-driven cyberattacks.",
+   "Other notable acquisitions by Palo Alto Networks this year include Console for $500 million, Embrace for $325 million, Chronosphere for $2.95 billion, and Koi for $231 million. These moves underscore the company's aggressive expansion in the cybersecurity landscape.",
+   "The AI agent security sector has seen other significant acquisitions recently. Cyera, valued at $12 billion, acquired Oasis Security for $1 billion, and Cisco purchased Astrix for approximately $400 million, highlighting the competitive nature of this specialized market."
+  ],
+  "caption": "Palo Alto Networks is reportedly in talks to acquire AI agent security startup Clutch for $500 million in cash.\n\nPalo Alto Networks is reportedly in discussions to acquire Clutch Security, a startup specializing in securing AI agents' access to corporate systems. The proposed deal is for $500 million in cash, with additional milestone-based payouts.\n\nClutch, a three-year-old company, was last valued at $85 million after a $20 million Series A round in January 2025. It currently generates nearly $10 million in annual recurring revenue (ARR), meaning the acquisition would value it at about 50 times its ARR.\n\nNeither Palo Alto Networks nor Clutch Security have commented on the reported discussions, which were first broken by The Information. This high valuation reflects the increasing market demand for solutions to secure software against AI-driven cyber threats.\n\nIf completed, this would mark Palo Alto Networks' seventh acquisition this year, aligning with its strategy of acquiring innovative technologies rather than developing them in-house. The cybersecurity giant has accelerated its deal-making in response to a surge in AI-driven cyberattacks.\n\nOther notable acquisitions by Palo Alto Networks this year include Console for $500 million, Embrace for $325 million, Chronosphere for $2.95 billion, and Koi for $231 million. These moves underscore the company's aggressive expansion in the cybersecurity landscape.\n\nThe AI agent security sector has seen other significant acquisitions recently. Cyera, valued at $12 billion, acquired Oasis Security for $1 billion, and Cisco purchased Astrix for approximately $400 million, highlighting the competitive nature of this specialized market.\n\n#Cybersecurity #AI #Acquisition #PaloAltoNetworks #TechNews #Security\n\nSource: TechCrunch",
+  "tweet": "Palo Alto Networks is reportedly in talks to acquire AI agent security startup Clutch for $500 million in cash. The deal would value the 3-year-old company at 50x its ARR, highlighting the intense focus on securing AI systems. #Cybersecurity #AI #Acquisition",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "paloaltonetworks.com",
+  "source": "TechCrunch",
+  "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
+  "image": "",
+  "orig_title": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
+  "cluster_urls": [
+   "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/"
+  ],
+  "cluster_titles": [
+   "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M"
+  ],
+  "is_logo": false,
+  "photo_credit": "TechCrunch",
+  "image_files": [
+   "20261106-1606-0-palo-alto-networks-in-talks-to-buy-clutch-fo.png",
+   "20261106-1606-0-palo-alto-networks-in-talks-to-buy-clutch-fo-d1.png",
+   "20261106-1606-0-palo-alto-networks-in-talks-to-buy-clutch-fo-d2.png"
+  ]
+ },
+ {
+  "topic": "streaming in nextjs makes ai chat feel faster",
+  "headline_marked": "[[Make your AI chat feel fast]] by streaming answers, even if the model takes 8 seconds to generate the full response",
+  "headline": "Make your AI chat feel fast by streaming answers, even if the model takes 8 seconds to generate the full response",
+  "summary": "AI models produce text piece by piece. Streaming leverages this to deliver responses instantly, masking the full generation time and significantly improving user experience.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "AI features often feel slow because users wait for the entire answer to be generated, which can take several seconds. Instead of a spinner, modern chat products stream responses, making the first words appear almost immediately.",
+   "Streaming is the process of sending text pieces as they are generated by the language model, rather than waiting for the complete response. This technique significantly improves the perceived speed of AI features, even if the underlying model's generation time remains the same.",
+   "One common pitfall in streaming is handling character encoding. A single character can span multiple bytes, and chunk boundaries can split these, leading to broken characters (e.g., '�') in the output, especially for emoji and non-English letters. Using `{ stream: true }` with a decoder helps by holding incomplete characters until the rest arrive.",
+   "Error handling in streaming requires careful implementation. Once the first bytes are sent, the HTTP status is 200, preventing a server-side 500 error if the model fails halfway. Developers must wrap the client-side `reader.read()` loop in a `try/catch` to manage stream errors and prevent incomplete answers.",
+   "Another critical aspect is managing client disconnections. If a user clicks 'Stop' or closes the tab, the browser stops reading, but the server might continue paying for the model's generation. Passing `req.signal` to the model call allows most SDKs to cancel the upstream request when the client disconnects.",
+   "Buffering issues can negate streaming benefits in deployed environments. While streaming works on localhost, reverse proxies, compression layers, or CDNs can buffer the entire response, causing the full answer to appear at once after a delay. Testing streaming on the actual deployment environment is crucial.",
+   "Serverless platforms impose runtime caps on functions, which long AI answers can exceed. Developers should check their hosting plan's allowed runtime and consider capping the model's output length to prevent functions from running indefinitely.",
+   "UI performance can also be affected by streaming. Updating React state on every tiny chunk can cause page stuttering, especially for long answers or when rendering Markdown. Optimizations include updating state at most once per animation frame and rendering plain text during streaming before switching to formatted Markdown at the end.",
+   "Ultimately, streaming is a cost-effective way to enhance the user experience of AI features by improving perceived speed. However, developers must proactively address production-specific challenges such as character decoding, error handling, client cancellation, buffering, and UI performance to ensure a robust implementation."
+  ],
+  "caption": "Your AI chat feels slow because you're waiting for the whole answer. Learn how streaming can make it feel instant, even if the model takes 8 seconds.\n\nAI features often feel slow because users wait for the entire answer to be generated, which can take several seconds. Instead of a spinner, modern chat products stream responses, making the first words appear almost immediately.\n\nStreaming is the process of sending text pieces as they are generated by the language model, rather than waiting for the complete response. This technique significantly improves the perceived speed of AI features, even if the underlying model's generation time remains the same.\n\nOne common pitfall in streaming is handling character encoding. A single character can span multiple bytes, and chunk boundaries can split these, leading to broken characters (e.g., '�') in the output, especially for emoji and non-English letters. Using `{ stream: true }` with a decoder helps by holding incomplete characters until the rest arrive.\n\nError handling in streaming requires careful implementation. Once the first bytes are sent, the HTTP status is 200, preventing a server-side 500 error if the model fails halfway. Developers must wrap the client-side `reader.read()` loop in a `try/catch` to manage stream errors and prevent incomplete answers.\n\nAnother critical aspect is managing client disconnections. If a user clicks 'Stop' or closes the tab, the browser stops reading, but the server might continue paying for the model's generation. Passing `req.signal` to the model call allows most SDKs to cancel the upstream request when the client disconnects.\n\nBuffering issues can negate streaming benefits in deployed environments. While streaming works on localhost, reverse proxies, compression layers, or CDNs can buffer the entire response, causing the full answer to appear at once after a delay. Testing streaming on the actual deployment environment is crucial.\n\n#AI #NextJS #Developer #WebDev #Streaming #Tech\n\nSource: DEV",
+  "tweet": "Your AI chat feels slow because you're waiting for the whole answer. Learn how streaming can make it feel instant, even if the model takes 8 seconds. This guide covers common pitfalls like buffering, error handling, and cancellation. #AI #NextJS #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/anas_sheikh_2/your-ai-chat-feels-slow-because-you-are-waiting-for-the-whole-answer-streaming-in-nextjs-43i9",
+  "image": "",
+  "orig_title": "Your AI Chat Feels Slow Because You Are Waiting for the Whole Answer: Streaming in Next.js",
+  "cluster_urls": [
+   "https://dev.to/anas_sheikh_2/your-ai-chat-feels-slow-because-you-are-waiting-for-the-whole-answer-streaming-in-nextjs-43i9"
+  ],
+  "cluster_titles": [
+   "Your AI Chat Feels Slow Because You Are Waiting for the Whole Answer: Streaming in Next.js"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261106-1606-1-make-your-ai-chat-feel-fast-by-streaming-ans.png",
+   "20261106-1606-1-make-your-ai-chat-feel-fast-by-streaming-ans-d1.png",
+   "20261106-1606-1-make-your-ai-chat-feel-fast-by-streaming-ans-d2.png",
+   "20261106-1606-1-make-your-ai-chat-feel-fast-by-streaming-ans-d3.png",
+   "20261106-1606-1-make-your-ai-chat-feel-fast-by-streaming-ans-d4.png",
+   "20261106-1606-1-make-your-ai-chat-feel-fast-by-streaming-ans-d5.png"
+  ]
+ }
+]

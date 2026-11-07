@@ -8312,8 +8312,13 @@
   "headline": "ChatGPT silently passes data between connectors, requiring user ID for bounty",
   "topic": "ChatGPT silently passes data between connectors",
   "source": "Hacker News",
-  "status": "queued",
-  "at": "2026-11-07T00:06:53Z"
+  "status": "failed",
+  "at": "2026-11-07T00:06:53Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  },
  {
   "title_hash": "6ff271ed66c1547e",
@@ -8321,7 +8326,12 @@
   "headline": "SpaceX plans to become a 'major' mobile carrier with Starlink Mobile, targeting 5G network rollout by 2027",
   "topic": "Starlink Mobile major carrier ambitions",
   "source": "The Verge",
-  "status": "queued",
-  "at": "2026-11-07T00:06:53Z"
+  "status": "failed",
+  "at": "2026-11-07T00:06:53Z",
+  "results": {
+   "facebook": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1164604223405813/photos :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "instagram": "error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841424355669319/media :: {\"error\":{\"message\":\"This Page access token belongs to",
+   "x": "dry-run"
+  }
  }
 ]

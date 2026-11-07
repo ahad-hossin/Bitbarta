@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "ai discovers php2shell vulnerability",
+  "headline_marked": "[[AI finds critical PHP flaws]], prompting emergency patches and government site shutdowns",
+  "headline": "AI finds critical PHP flaws, prompting emergency patches and government site shutdowns",
+  "summary": "The PHP Foundation released emergency patches for two unauthenticated remote code execution flaws, PHP2Shell, affecting all PHP versions. This incident highlights how AI can accelerate bug discovery, shifting the security bottleneck to human coordination and p",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "On October 21, 2026, the PHP Foundation released emergency patches for two unauthenticated remote code execution flaws, nicknamed PHP2Shell, affecting all PHP versions. Security agencies like the NSA, CISA, and NCSC advised taking unpatched sites offline, leading to hundreds of government sites in several countries going dark.",
+   "This incident serves as a crucial AI safety case study, demonstrating what happens when capable, widely available AI models accelerate one side of a security problem much faster than the other. It shows that the challenge shifts from finding vulnerabilities to managing the human coordination required for response.",
+   "The discovery of these flaws was fast, with AI-assisted work spread across several teams using commercially available models. This suggests that withholding a single frontier model may not contain such capabilities, as the diffusion of these tools is the key factor. The bottleneck moved from discovery to slower human processes like embargoes, leaked proofs of concept, and delays in patching millions of services.",
+   "This highlights AI as an amplifier, a different threat model from AI acting as an autonomous actor. While AI as an actor requires control and containment, AI as an amplifier necessitates ecosystem resilience through faster disclosure, patching, and verification. Both threat models are now real and require distinct approaches.",
+   "The lesson learned is that future safety-relevant failures may involve slow human processes wrapped around fast AI models. Capability evaluation needs a response path, not just a benchmark, with pre-agreed rules for disclosure, reproduction, triage, and containment when AI systems find severe flaws. This ensures operational risk doesn't shift from vulnerable software to the handling process itself."
+  ],
+  "caption": "AI-assisted tools helped discover critical PHP flaws, PHP2Shell, leading to emergency patches and government websites going offline. This incident reveals a new challenge for AI safety.\n\nOn October 21, 2026, the PHP Foundation released emergency patches for two unauthenticated remote code execution flaws, nicknamed PHP2Shell, affecting all PHP versions. Security agencies like the NSA, CISA, and NCSC advised taking unpatched sites offline, leading to hundreds of government sites in several countries going dark.\n\nThis incident serves as a crucial AI safety case study, demonstrating what happens when capable, widely available AI models accelerate one side of a security problem much faster than the other. It shows that the challenge shifts from finding vulnerabilities to managing the human coordination required for response.\n\nThe discovery of these flaws was fast, with AI-assisted work spread across several teams using commercially available models. This suggests that withholding a single frontier model may not contain such capabilities, as the diffusion of these tools is the key factor. The bottleneck moved from discovery to slower human processes like embargoes, leaked proofs of concept, and delays in patching millions of services.\n\nThis highlights AI as an amplifier, a different threat model from AI acting as an autonomous actor. While AI as an actor requires control and containment, AI as an amplifier necessitates ecosystem resilience through faster disclosure, patching, and verification. Both threat models are now real and require distinct approaches.\n\nThe lesson learned is that future safety-relevant failures may involve slow human processes wrapped around fast AI models. Capability evaluation needs a response path, not just a benchmark, with pre-agreed rules for disclosure, reproduction, triage, and containment when AI systems find severe flaws. This ensures operational risk doesn't shift from vulnerable software to the handling process itself.\n\n#AI #Cybersecurity #PHP #SecurityFlaws #TechNews #Developer\n\nSource: DEV",
+  "tweet": "AI-assisted tools uncovered critical PHP2Shell flaws, forcing emergency patches & government site shutdowns. This incident is a major AI safety case study, showing how AI can accelerate bug discovery faster than human response. #AI #Cybersecurity #PHP",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/farhansherief/when-ai-finds-the-bug-first-what-php2shell-tells-ai-safety-programmes-ijd",
+  "image": "",
+  "orig_title": "When AI finds the bug first: what PHP2Shell tells AI safety programmes",
+  "cluster_urls": [
+   "https://dev.to/farhansherief/when-ai-finds-the-bug-first-what-php2shell-tells-ai-safety-programmes-ijd"
+  ],
+  "cluster_titles": [
+   "When AI finds the bug first: what PHP2Shell tells AI safety programmes"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261107-0843-0-ai-finds-critical-php-flaws-prompting-emerge.png",
+   "20261107-0843-0-ai-finds-critical-php-flaws-prompting-emerge-d1.png",
+   "20261107-0843-0-ai-finds-critical-php-flaws-prompting-emerge-d2.png",
+   "20261107-0843-0-ai-finds-critical-php-flaws-prompting-emerge-d3.png"
+  ]
+ },
+ {
+  "topic": "voice cloning demo app deployment",
+  "headline_marked": "[[Deploy a voice cloning demo app]] from code to live website in an afternoon",
+  "headline": "Deploy a voice cloning demo app from code to live website in an afternoon",
+  "summary": "Learn how to quickly build and deploy a hyper-realistic voice cloning demo using ElevenLabs' API, Python Flask, and Bluehost's shared Linux hosting, with a free tier available for testing.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Voice cloning has evolved from generic text-to-speech to hyper-realistic, personalized audio, perfect for podcasts, audiobooks, and interactive assistants. This guide shows how to build and deploy a functional demo in a single afternoon. You can get it live with a reliable, affordable host.",
+   "The core technology for voice cloning comes from ElevenLabs, which offers an API for high-quality text-to-speech. A free tier is available, providing enough cloned speech minutes each month to test your demo application. Remember to store your API key securely as an environment variable.",
+   "For the application logic, the guide utilizes Python 3 and the lightweight Flask web framework, requiring only the `requests` library for API calls. A simple HTML page serves as the user interface, which Flask automatically discovers. Running `python app.py` locally spins up the demo.",
+   "Bluehost is recommended for hosting, offering shared Linux hosting with SSH access. This setup is ideal for Flask applications when paired with Passenger, a lightweight WSGI server. Bluehost provides an affordable and developer-friendly environment for such deployments.",
+   "Deployment involves placing the project files in a specific directory within Bluehost's File Manager, typically `public_html/voice-demo/`. The final step is to configure a subdomain's document root to point to this project folder, making the voice cloning UI accessible via a custom URL.",
+   "Both ElevenLabs and Bluehost prioritize developer productivity, handling the complexities of high-quality TTS and server management, respectively. This allows developers to focus on building and iterating on their applications. Future enhancements could include user authentication or a database for generated audio."
+  ],
+  "caption": "Build and deploy a hyper-realistic voice cloning demo in a single afternoon. Get it live using Python, Flask, ElevenLabs, and Bluehost.\n\nVoice cloning has evolved from generic text-to-speech to hyper-realistic, personalized audio, perfect for podcasts, audiobooks, and interactive assistants. This guide shows how to build and deploy a functional demo in a single afternoon. You can get it live with a reliable, affordable host.\n\nThe core technology for voice cloning comes from ElevenLabs, which offers an API for high-quality text-to-speech. A free tier is available, providing enough cloned speech minutes each month to test your demo application. Remember to store your API key securely as an environment variable.\n\nFor the application logic, the guide utilizes Python 3 and the lightweight Flask web framework, requiring only the `requests` library for API calls. A simple HTML page serves as the user interface, which Flask automatically discovers. Running `python app.py` locally spins up the demo.\n\nBluehost is recommended for hosting, offering shared Linux hosting with SSH access. This setup is ideal for Flask applications when paired with Passenger, a lightweight WSGI server. Bluehost provides an affordable and developer-friendly environment for such deployments.\n\nDeployment involves placing the project files in a specific directory within Bluehost's File Manager, typically `public_html/voice-demo/`. The final step is to configure a subdomain's document root to point to this project folder, making the voice cloning UI accessible via a custom URL.\n\nBoth ElevenLabs and Bluehost prioritize developer productivity, handling the complexities of high-quality TTS and server management, respectively. This allows developers to focus on building and iterating on their applications. Future enhancements could include user authentication or a database for generated audio.\n\n#VoiceCloning #AI #Developers #Python #Flask #WebDev\n\nSource: DEV",
+  "tweet": "Build and deploy your own hyper-realistic voice cloning demo in just an afternoon! This guide uses Python, Flask, ElevenLabs API (with a free tier), and Bluehost for easy deployment. #VoiceCloning #AI #Developers",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "elevenlabs.io",
+  "source": "DEV",
+  "url": "https://dev.to/voice_developer/deploy-a-voice-cloning-demo-app-from-code-to-live-website-53gc",
+  "image": "",
+  "orig_title": "Deploy a Voice Cloning Demo App: From Code to Live Website",
+  "cluster_urls": [
+   "https://dev.to/voice_developer/deploy-a-voice-cloning-demo-app-from-code-to-live-website-53gc"
+  ],
+  "cluster_titles": [
+   "Deploy a Voice Cloning Demo App: From Code to Live Website"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261107-0843-1-deploy-a-voice-cloning-demo-app-from-code-to.png",
+   "20261107-0843-1-deploy-a-voice-cloning-demo-app-from-code-to-d1.png",
+   "20261107-0843-1-deploy-a-voice-cloning-demo-app-from-code-to-d2.png",
+   "20261107-0843-1-deploy-a-voice-cloning-demo-app-from-code-to-d3.png"
+  ]
+ }
+]

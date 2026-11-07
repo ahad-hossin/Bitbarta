@@ -1,1 +1,80 @@
-[]
+[
+ {
+  "topic": "ChatGPT silently passes data between connectors",
+  "headline_marked": "[[ChatGPT silently passes data between connectors]], requiring user ID for bounty",
+  "headline": "ChatGPT silently passes data between connectors, requiring user ID for bounty",
+  "summary": "A bug in ChatGPT's connector system allows data to be silently transferred between different connectors without user consent, a finding that could have privacy implications. The bug bounty program for this issue reportedly requires biometric ID.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical vulnerability has been identified in ChatGPT's connector system, allowing data to be silently passed between different connectors without explicit user consent. This occurs when a follow-up tool call is routed through a different connector than the one that initiated the flow, carrying sensitive information like one-time confirmation codes.",
+   "The issue was discovered when a user, with two custom connectors enabled pointing to the same server but with separate OAuth clients, observed a confirmation code from Connector A being used by Connector B. Although the server rejected the call due to OAuth client binding, the silent data transfer between distinct applications without user knowledge is the core concern.",
+   "This silent switching could potentially pass data between different third-party providers if their connectors share a server URL, even if they represent separate entities or tenants. The crucial boundary for authorization is the connector with its unique OAuth client, not just the shared server URL.",
+   "Experts highlight that multi-step tool workflows should maintain the identity and authorization context of the originating connector throughout the operation. This prevents automatic connector switching and requires explicit user approval if a change is necessary.",
+   "The discoverer of the bug noted that OpenAI's vulnerability disclosure process for this issue reportedly requires personal data, including biometric identification and an ID card, which has raised concerns. This requirement could deter some researchers from reporting vulnerabilities."
+  ],
+  "caption": "ChatGPT has a critical bug that silently passes sensitive data between connectors without user consent. Reporting it for a bounty? OpenAI reportedly demands your biometric ID and an ID card.\n\nA critical vulnerability has been identified in ChatGPT's connector system, allowing data to be silently passed between different connectors without explicit user consent. This occurs when a follow-up tool call is routed through a different connector than the one that initiated the flow, carrying sensitive information like one-time confirmation codes.\n\nThe issue was discovered when a user, with two custom connectors enabled pointing to the same server but with separate OAuth clients, observed a confirmation code from Connector A being used by Connector B. Although the server rejected the call due to OAuth client binding, the silent data transfer between distinct applications without user knowledge is the core concern.\n\nThis silent switching could potentially pass data between different third-party providers if their connectors share a server URL, even if they represent separate entities or tenants. The crucial boundary for authorization is the connector with its unique OAuth client, not just the shared server URL.\n\nExperts highlight that multi-step tool workflows should maintain the identity and authorization context of the originating connector throughout the operation. This prevents automatic connector switching and requires explicit user approval if a change is necessary.\n\nThe discoverer of the bug noted that OpenAI's vulnerability disclosure process for this issue reportedly requires personal data, including biometric identification and an ID card, which has raised concerns. This requirement could deter some researchers from reporting vulnerabilities.\n\n#ChatGPT #OpenAI #SecurityVulnerability #Privacy #TechNews #BugBounty\n\nSource: Hacker News",
+  "tweet": "ChatGPT bug alert: Data is silently passed between connectors without user consent. The bug bounty program for this issue reportedly requires biometric ID and an ID card from researchers. #ChatGPT #Security #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "openai.com",
+  "source": "Hacker News",
+  "url": "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053",
+  "image": "",
+  "orig_title": "ChatGPT silently passes data between connectors and the bounty wants an ID card",
+  "cluster_urls": [
+   "https://community.openai.com/t/security-follow-up-tool-call-silently-routed-to-a-different-connector/1413053"
+  ],
+  "cluster_titles": [
+   "ChatGPT silently passes data between connectors and the bounty wants an ID card"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261107-0606-0-chatgpt-silently-passes-data-between-connect.png",
+   "20261107-0606-0-chatgpt-silently-passes-data-between-connect-d1.png",
+   "20261107-0606-0-chatgpt-silently-passes-data-between-connect-d2.png",
+   "20261107-0606-0-chatgpt-silently-passes-data-between-connect-d3.png"
+  ]
+ },
+ {
+  "topic": "Starlink Mobile major carrier ambitions",
+  "headline_marked": "[[SpaceX plans to become a 'major' mobile carrier]] with Starlink Mobile, targeting 5G network rollout by 2027",
+  "headline": "SpaceX plans to become a 'major' mobile carrier with Starlink Mobile, targeting 5G network rollout by 2027",
+  "summary": "SpaceX is reportedly in talks to acquire Boost Mobile and has partnered with Qualcomm to deploy 5G cellular technology across tens of thousands of cell sites starting in 2027.",
+  "category": "BIGTECH",
+  "template": "leak",
+  "details": [
+   "SpaceX is aiming to become a \"major\" mobile carrier in the US with its Starlink Mobile service. The company has already deployed thousands of direct-to-cell satellites and is now focused on building out a terrestrial 5G network.",
+   "To achieve this, SpaceX has partnered with Qualcomm to deploy its cellular technology across tens of thousands of 5G cell sites. The first deployments are slated to begin in 2027, directly competing with established carriers like AT&T, Verizon, and T-Mobile.",
+   "Reports suggest SpaceX is in discussions to acquire Boost Mobile, potentially allowing it to launch its service through the budget-friendly carrier. Elon Musk reportedly discussed this potential agreement with EchoStar chairman Charlie Ergen.",
+   "Furthermore, Bloomberg reports that SpaceX plans to access at least 80,000 cell sites across the US. This move would give them access to roughly half of the nation's operational cell towers, complementing their satellite constellation.",
+   "SpaceX has also acquired a portfolio of low-band spectrum licenses, including up to 14 megahertz in the 800 MHz band. These licenses, pending FCC approval, are crucial for enabling Starlink Mobile's signal to penetrate walls and buildings effectively.",
+   "The telecom industry is taking SpaceX's ambitions seriously; T-Mobile's parent company CEO estimates the undertaking could cost over $200 billion. SpaceX's goal is to combine its satellite-to-mobile constellation with a robust terrestrial network."
+  ],
+  "caption": "SpaceX is making a massive push to become a major US mobile carrier, aiming to rival AT&T, Verizon, and T-Mobile. They're building a hybrid 5G network and reportedly eyeing Boost Mobile.\n\nSpaceX is aiming to become a \"major\" mobile carrier in the US with its Starlink Mobile service. The company has already deployed thousands of direct-to-cell satellites and is now focused on building out a terrestrial 5G network.\n\nTo achieve this, SpaceX has partnered with Qualcomm to deploy its cellular technology across tens of thousands of 5G cell sites. The first deployments are slated to begin in 2027, directly competing with established carriers like AT&T, Verizon, and T-Mobile.\n\nReports suggest SpaceX is in discussions to acquire Boost Mobile, potentially allowing it to launch its service through the budget-friendly carrier. Elon Musk reportedly discussed this potential agreement with EchoStar chairman Charlie Ergen.\n\nFurthermore, Bloomberg reports that SpaceX plans to access at least 80,000 cell sites across the US. This move would give them access to roughly half of the nation's operational cell towers, complementing their satellite constellation.\n\nSpaceX has also acquired a portfolio of low-band spectrum licenses, including up to 14 megahertz in the 800 MHz band. These licenses, pending FCC approval, are crucial for enabling Starlink Mobile's signal to penetrate walls and buildings effectively.\n\nThe telecom industry is taking SpaceX's ambitions seriously; T-Mobile's parent company CEO estimates the undertaking could cost over $200 billion. SpaceX's goal is to combine its satellite-to-mobile constellation with a robust terrestrial network.\n\n#SpaceX #Starlink #5G #MobileNetwork #Telecom #BigTech\n\nSource: The Verge",
+  "tweet": "SpaceX aims to become a major US mobile carrier, rivaling AT&T, Verizon, and T-Mobile. They're building a hybrid 5G network with Qualcomm, deploying cell sites by 2027, and reportedly in talks to acquire Boost Mobile. #SpaceX #Starlink #5G",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "spacex.com",
+  "source": "The Verge",
+  "url": "https://www.theverge.com/science/1029162/spacex-starlink-mobile-elon-musk-news",
+  "image": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/05/STKB355_SPACEX_C.jpg?quality=90&#038;strip=all&#038;crop=0,0,100,100",
+  "orig_title": "Starlink Mobile: All the news on SpaceX&#8217;s major mobile carrier ambitions",
+  "cluster_urls": [
+   "https://www.theverge.com/science/1029162/spacex-starlink-mobile-elon-musk-news"
+  ],
+  "cluster_titles": [
+   "Starlink Mobile: All the news on SpaceX&#8217;s major mobile carrier ambitions"
+  ],
+  "is_logo": false,
+  "photo_credit": "The Verge",
+  "image_files": [
+   "20261107-0606-1-spacex-plans-to-become-a-major-mobile-carrie.png",
+   "20261107-0606-1-spacex-plans-to-become-a-major-mobile-carrie-d1.png",
+   "20261107-0606-1-spacex-plans-to-become-a-major-mobile-carrie-d2.png"
+  ]
+ }
+]

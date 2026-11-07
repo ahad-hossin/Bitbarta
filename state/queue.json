@@ -1,1 +1,78 @@
-[]
+[
+ {
+  "topic": "asahi linux progress linux 7.3 released",
+  "headline_marked": "Asahi Linux Progress Report: [[M3 GPU Support]] Now Generally Available",
+  "headline": "Asahi Linux Progress Report: M3 GPU Support Now Generally Available",
+  "summary": "Asahi Linux has made significant strides, bringing M3 GPU support to general availability and enabling new features like sleep and usable notch areas on MacBooks.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The latest Asahi Linux progress report highlights major advancements, including the upstreaming of two key drivers: macaudio and avd. The macaudio driver required substantial changes to the core ALSA subsystem to support Apple Silicon's unique audio setup, while the avd driver saw a remarkably short turnaround time for integration.",
+   "Initial DeviceTrees for M4 Pro, Max, and M5 devices have also been introduced, providing basic SoC booting capabilities. Asahi Linux is increasingly adopting an upstream-first approach, with recent work on TI USB-PD, SPMI, and Thunderbolt drivers developed directly in the upstream kernel.",
+   "Support for M3 series machines, previously behind an EXPERT flag, is now generally available. This update brings performance and battery life improvements, enables sleep functionality, and makes the area around the notch usable on MacBooks.",
+   "Reverse engineering efforts on M4 and M5 series machines have advanced with the successful virtualization of macOS, including its Exclaves and Secure Kernel, within m1n1. This allows for detailed analysis of macOS on newer Apple Silicon.",
+   "Significant progress has been made on reverse engineering the M3 GPU. Contributors have successfully initialized the GPU and drawn a triangle, marking a crucial step towards full GPU enablement for Linux on M3 Macs."
+  ],
+  "caption": "Asahi Linux announces general availability of M3 GPU support and major driver advancements for Apple Silicon.\n\nThe latest Asahi Linux progress report highlights major advancements, including the upstreaming of two key drivers: macaudio and avd. The macaudio driver required substantial changes to the core ALSA subsystem to support Apple Silicon's unique audio setup, while the avd driver saw a remarkably short turnaround time for integration.\n\nInitial DeviceTrees for M4 Pro, Max, and M5 devices have also been introduced, providing basic SoC booting capabilities. Asahi Linux is increasingly adopting an upstream-first approach, with recent work on TI USB-PD, SPMI, and Thunderbolt drivers developed directly in the upstream kernel.\n\nSupport for M3 series machines, previously behind an EXPERT flag, is now generally available. This update brings performance and battery life improvements, enables sleep functionality, and makes the area around the notch usable on MacBooks.\n\nReverse engineering efforts on M4 and M5 series machines have advanced with the successful virtualization of macOS, including its Exclaves and Secure Kernel, within m1n1. This allows for detailed analysis of macOS on newer Apple Silicon.\n\nSignificant progress has been made on reverse engineering the M3 GPU. Contributors have successfully initialized the GPU and drawn a triangle, marking a crucial step towards full GPU enablement for Linux on M3 Macs.\n\n#AsahiLinux #Linux #AppleSilicon #M3GPU #OpenSource\n\nSource: Hacker News",
+  "tweet": "Asahi Linux progress report: M3 GPU support is now generally available! Major driver advancements and reverse engineering efforts on M4/M5 continue. #AsahiLinux #Linux #AppleSilicon",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://asahilinux.org/2026/11/progress-report-7-3/",
+  "image": "",
+  "orig_title": "Asahi Linux Progress Linux 7.3",
+  "cluster_urls": [
+   "https://asahilinux.org/2026/11/progress-report-7-3/"
+  ],
+  "cluster_titles": [
+   "Asahi Linux Progress Linux 7.3"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261107-1506-0-asahi-linux-progress-report-m3-gpu-support-n.png",
+   "20261107-1506-0-asahi-linux-progress-report-m3-gpu-support-n-d1.png",
+   "20261107-1506-0-asahi-linux-progress-report-m3-gpu-support-n-d2.png"
+  ]
+ },
+ {
+  "topic": "components of agent memory explained",
+  "headline_marked": "[[AI Agents Learn]] by 'dreaming' to improve memory and fix mistakes",
+  "headline": "AI Agents Learn by 'dreaming' to improve memory and fix mistakes",
+  "summary": "Researchers are exploring 'sleep-time compute' for AI agents, inspired by the human brain's memory consolidation process during rest.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "Inspired by the human brain's ability to consolidate memories during sleep, researchers are developing 'dreaming' capabilities for AI agents. This process allows agents to use idle time to reorganize their experiences, fix mistakes, and distill information into long-term knowledge.",
+   "Agent memory refers to the knowledge an AI retains between sessions, gained from user interactions and assigned tasks. This differs from in-context learning (within a single conversation) or changes to the AI's core parameters (weights).",
+   "The concept draws parallels to the human hippocampus replaying experiences during offline periods to integrate them into the neocortex. Similarly, AI agents can reflect on logs and transcripts to improve their performance.",
+   "Researchers have found 'dreaming' to be a useful tool for enhancing AI memory. By tagging salient events and consolidating notes, agents can make better predictions and learn from past errors.",
+   "Evaluations using benchmarks like CL-Bench 1.0 show varying degrees of success. Different AI models, including Claude Opus and Sonnet, demonstrate progress in creating learning loops by analyzing mistakes and updating their knowledge base."
+  ],
+  "caption": "AI agents are now 'dreaming' to remember better and learn from their mistakes, mimicking the human brain's offline memory consolidation.\n\nInspired by the human brain's ability to consolidate memories during sleep, researchers are developing 'dreaming' capabilities for AI agents. This process allows agents to use idle time to reorganize their experiences, fix mistakes, and distill information into long-term knowledge.\n\nAgent memory refers to the knowledge an AI retains between sessions, gained from user interactions and assigned tasks. This differs from in-context learning (within a single conversation) or changes to the AI's core parameters (weights).\n\nThe concept draws parallels to the human hippocampus replaying experiences during offline periods to integrate them into the neocortex. Similarly, AI agents can reflect on logs and transcripts to improve their performance.\n\nResearchers have found 'dreaming' to be a useful tool for enhancing AI memory. By tagging salient events and consolidating notes, agents can make better predictions and learn from past errors.\n\nEvaluations using benchmarks like CL-Bench 1.0 show varying degrees of success. Different AI models, including Claude Opus and Sonnet, demonstrate progress in creating learning loops by analyzing mistakes and updating their knowledge base.\n\n#AI #ArtificialIntelligence #MachineLearning #AgentMemory #LLM\n\nSource: Hacker News",
+  "tweet": "AI agents are learning to 'dream' to improve memory and fix mistakes, inspired by the human brain's offline consolidation process. Researchers are exploring how this can enhance AI performance and knowledge retention. #AI #AgentMemory",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://www.anthropic.com/research/components-of-agent-memory",
+  "image": "",
+  "orig_title": "The Components of Agent Memory",
+  "cluster_urls": [
+   "https://www.anthropic.com/research/components-of-agent-memory"
+  ],
+  "cluster_titles": [
+   "The Components of Agent Memory"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261107-1506-1-ai-agents-learn-by-dreaming-to-improve-memor.png",
+   "20261107-1506-1-ai-agents-learn-by-dreaming-to-improve-memor-d1.png",
+   "20261107-1506-1-ai-agents-learn-by-dreaming-to-improve-memor-d2.png"
+  ]
+ }
+]

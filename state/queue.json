@@ -1,1 +1,87 @@
-[]
+[
+ {
+  "topic": "macOS hidden family file privacy concern",
+  "headline_marked": "[[Your Mac keeps a file on your family]], building a detailed relationship graph since macOS 13",
+  "headline": "Your Mac keeps a file on your family, building a detailed relationship graph since macOS 13",
+  "summary": "Since macOS 13, two undocumented daemons, knowledgeconstructiond and intelligenceplatformd, build a detailed graph of your life, relationships, and activities, stored in plaintext SQLite databases.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Since macOS 13 (2022), every Mac runs two daemons, knowledgeconstructiond and intelligenceplatformd, to build a comprehensive graph about the user. This graph details who you are, who you know, how you communicate, where you go, and what you do. Apple has only provided a two-sentence man page for these processes.",
+   "Security researchers \"The Bishop and The Knight\" published an analysis in October, revealing the graph's location at ~/Library/IntelligencePlatform. It consists of 51 plaintext SQLite databases, protected by macOS's Full Disk Access permission. The core graph.db is a triple store with 181 entity classes and 278 predicates, each with a confidence score.",
+   "The system ingests nearly everything the OS can access, including contacts, photos (with faces), calendar events, Family Sharing details (including member ages), Medical ID emergency contacts, and Siri Suggestions from mail and messages. It also logs communication patterns (without content), location, movement, and device signals like screen lock status, Wi-Fi, Bluetooth, and charging.",
+   "A key component is a pair of XGBoost classifiers, shipped as CoreML models, designed to determine family relationships. These models analyze 144 features daily, outputting a probability for 17 relationship columns per person. Features include identity (e.g., shared last name, iCloud Family flag), communication patterns, and photographic data.",
+   "One notable feature name is photosPersonPosteriorProbabilityGivenSaturdayNight, used to infer relationships like \"sister.\" The system can accurately deduce relationships without explicit user input; for example, a \"partner\" relationship was inferred with a high score based on nine independent signals, even when the owner had never labeled them as such.",
+   "The inferred relationships can reveal sensitive information, such as the age of a child, their daycare, family schedules, and even installed password managers. This demonstrates how the system can combine disparate data points to infer intelligence beyond the raw data.",
+   "Deletion does not fully remove all data; while the live graph drops a contact, a second table, expired_stable_graph, retains retracted rows with their confidence scores and sources for about 48 hours, or longer on some machines. The system continued to score two individuals daily, even after they were dropped from the main graph, based solely on a past calendar invitation.",
+   "Apple states that all processing occurs on-device, and the databases are protected by Full Disk Access, preventing unauthorized app access. Apple researchers also published a paper on these graph techniques in 2023, and a forensics tool called iLEAPP has been reading this data on iOS since September.",
+   "However, critics point out that the depth of inference is largely undocumented, and the kinship classifier is not mentioned anywhere by Apple. Furthermore, the graph includes data not just about the user, but also about anyone who has interacted with them via email, photos, or calendar events, without their explicit consent.",
+   "To allow users to examine their own data, the researchers open-sourced a dashboard called iKnow, which can read your Mac's graph locally."
+  ],
+  "caption": "Your Mac has been secretly building a detailed profile of you and your family since macOS 13. It knows who you are, who you know, and even infers family relationships without your input.\n\nSince macOS 13 (2022), every Mac runs two daemons, knowledgeconstructiond and intelligenceplatformd, to build a comprehensive graph about the user. This graph details who you are, who you know, how you communicate, where you go, and what you do. Apple has only provided a two-sentence man page for these processes.\n\nSecurity researchers \"The Bishop and The Knight\" published an analysis in October, revealing the graph's location at ~/Library/IntelligencePlatform. It consists of 51 plaintext SQLite databases, protected by macOS's Full Disk Access permission. The core graph.db is a triple store with 181 entity classes and 278 predicates, each with a confidence score.\n\nThe system ingests nearly everything the OS can access, including contacts, photos (with faces), calendar events, Family Sharing details (including member ages), Medical ID emergency contacts, and Siri Suggestions from mail and messages. It also logs communication patterns (without content), location, movement, and device signals like screen lock status, Wi-Fi, Bluetooth, and charging.\n\nA key component is a pair of XGBoost classifiers, shipped as CoreML models, designed to determine family relationships. These models analyze 144 features daily, outputting a probability for 17 relationship columns per person. Features include identity (e.g., shared last name, iCloud Family flag), communication patterns, and photographic data.\n\nOne notable feature name is photosPersonPosteriorProbabilityGivenSaturdayNight, used to infer relationships like \"sister.\" The system can accurately deduce relationships without explicit user input; for example, a \"partner\" relationship was inferred with a high score based on nine independent signals, even when the owner had never labeled them as such.\n\n#macOS #Apple #Privacy #Security #DataCollection #Tech\n\nSource: DEV",
+  "tweet": "Your Mac has been secretly building a detailed profile of you and your family since macOS 13. It knows who you are, who you know, and even infers family relationships without your input, storing it all in hidden databases. #macOS #Privacy #Apple",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "apple.com",
+  "source": "DEV",
+  "url": "https://dev.to/ming_ming_11212cd04685643/your-mac-has-been-keeping-a-file-on-your-family-3g7b",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2F69kjujla56fr9qxuyk3v.gif",
+  "orig_title": "Your Mac has been keeping a file on your family",
+  "cluster_urls": [
+   "https://dev.to/ming_ming_11212cd04685643/your-mac-has-been-keeping-a-file-on-your-family-3g7b"
+  ],
+  "cluster_titles": [
+   "Your Mac has been keeping a file on your family"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261108-2007-0-your-mac-keeps-a-file-on-your-family-buildin.png",
+   "20261108-2007-0-your-mac-keeps-a-file-on-your-family-buildin-d1.png",
+   "20261108-2007-0-your-mac-keeps-a-file-on-your-family-buildin-d2.png",
+   "20261108-2007-0-your-mac-keeps-a-file-on-your-family-buildin-d3.png",
+   "20261108-2007-0-your-mac-keeps-a-file-on-your-family-buildin-d4.png",
+   "20261108-2007-0-your-mac-keeps-a-file-on-your-family-buildin-d5.png"
+  ]
+ },
+ {
+  "topic": "AI demand causes PC RAM capacity to drop",
+  "headline_marked": "PC users [[drop 64GB RAM by 18%]] as memory prices soar due to AI demand",
+  "headline": "PC users drop 64GB RAM by 18% as memory prices soar due to AI demand",
+  "summary": "CPU-Z data reveals a significant drop in high-capacity RAM configurations, with 32GB down 2.5% and 64GB down 18% year-over-year, driven by rising DRAM costs fueled by the AI boom.",
+  "category": "HARDWARE",
+  "template": "neon",
+  "details": [
+   "New CPU-Z hardware survey data indicates a notable shift in PC memory configurations. 32GB setups decreased by 2.5% and 64GB configurations plummeted by 18% year-over-year among its active user base.",
+   "This decline is primarily attributed to soaring memory prices. The ongoing AI boom is consuming a significant portion of the global DRAM supply, making high-capacity RAM a luxury for many PC builders.",
+   "While 32GB remains the leading configuration at 37.2% and 16GB close behind at 33%, lower-capacity options are seeing a resurgence. 16GB configurations have rebounded by 12.9%, and 8GB setups, previously in sharp decline, grew by 5.5%.",
+   "Interestingly, 24GB configurations also saw a 19.7% increase. This capacity is emerging as a compromise for consumers needing more than 16GB without the premium cost of a 32GB kit.",
+   "Regarding memory types, DDR4 remains dominant at 54.5% of surveyed systems, while DDR5 is still in early adoption at 32.9%. The noticeable 6% growth in DDR4 and 2.9% decline in DDR5 suggests budget-conscious consumers are sticking with more affordable platforms.",
+   "Many consumers are opting for platforms that still support DDR4, such as AMD's Zen 3-powered Ryzen 5000 series or Intel's 13th Generation Raptor Lake processors. This trend is supported by companies re-releasing DDR4-compatible hardware."
+  ],
+  "caption": "High-capacity RAM is becoming a luxury. For the first time, CPU-Z data shows a decline in 32GB and 64GB memory configurations in PCs.\n\nNew CPU-Z hardware survey data indicates a notable shift in PC memory configurations. 32GB setups decreased by 2.5% and 64GB configurations plummeted by 18% year-over-year among its active user base.\n\nThis decline is primarily attributed to soaring memory prices. The ongoing AI boom is consuming a significant portion of the global DRAM supply, making high-capacity RAM a luxury for many PC builders.\n\nWhile 32GB remains the leading configuration at 37.2% and 16GB close behind at 33%, lower-capacity options are seeing a resurgence. 16GB configurations have rebounded by 12.9%, and 8GB setups, previously in sharp decline, grew by 5.5%.\n\nInterestingly, 24GB configurations also saw a 19.7% increase. This capacity is emerging as a compromise for consumers needing more than 16GB without the premium cost of a 32GB kit.\n\nRegarding memory types, DDR4 remains dominant at 54.5% of surveyed systems, while DDR5 is still in early adoption at 32.9%. The noticeable 6% growth in DDR4 and 2.9% decline in DDR5 suggests budget-conscious consumers are sticking with more affordable platforms.\n\nMany consumers are opting for platforms that still support DDR4, such as AMD's Zen 3-powered Ryzen 5000 series or Intel's 13th Generation Raptor Lake processors. This trend is supported by companies re-releasing DDR4-compatible hardware.\n\n#RAM #PCHardware #TechNews #DRAM #MemoryPrices #CPUZ\n\nSource: Tom's Hardware",
+  "tweet": "High-capacity RAM is becoming a luxury. CPU-Z data shows 64GB PC configurations dropped 18% and 32GB fell 2.5% year-over-year, as AI demand drives up memory prices. #PCHardware #RAM #Tech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Tom's Hardware",
+  "url": "https://www.tomshardware.com/pc-components/ram/pcs-with-64gb-of-ram-plummet-18-percent-as-memory-prices-soar-cpu-z-install-base-data-shows-ddr4-making-a-surprise-comeback",
+  "image": "https://cdn.mos.cms.futurecdn.net/vp5VEBetgZmgodQQoxWEvY-1920-80.jpg",
+  "orig_title": "PC's with 64GB of RAM plummet 18% as memory prices soar",
+  "cluster_urls": [
+   "https://www.tomshardware.com/pc-components/ram/pcs-with-64gb-of-ram-plummet-18-percent-as-memory-prices-soar-cpu-z-install-base-data-shows-ddr4-making-a-surprise-comeback"
+  ],
+  "cluster_titles": [
+   "PC's with 64GB of RAM plummet 18% as memory prices soar"
+  ],
+  "is_logo": false,
+  "photo_credit": "Tom's Hardware",
+  "image_files": [
+   "20261108-2007-1-pc-users-drop-64gb-ram-by-18-as-memory-price.png",
+   "20261108-2007-1-pc-users-drop-64gb-ram-by-18-as-memory-price-d1.png",
+   "20261108-2007-1-pc-users-drop-64gb-ram-by-18-as-memory-price-d2.png"
+  ]
+ }
+]

@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "developer builds 108 tools to fix ai agent memory loss",
+  "headline_marked": "[[Vaultic gives AI agents persistent memory]] with 108 tools, running fully offline",
+  "headline": "Vaultic gives AI agents persistent memory with 108 tools, running fully offline",
+  "summary": "Vaultic is a self-hosted MCP server providing AI agents with structured, encrypted, and persistent memory across sessions. It runs entirely offline and offers 108 tools for advanced recall and knowledge management.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "Vaultic, an MCP server, provides AI agents with persistent, structured memory, solving the problem of agents forgetting context after a single session. It comes with 108 tools to manage various types of data.",
+   "Traditional AI agents are limited by context window size, losing all learned information once a chat closes. Vaultic ensures agents remember past conversations, preferences, and commitments across all interactions.",
+   "Vaultic stores four data types: append-only Transcripts for raw conversation history, de-duplicated Memories for distilled facts, a Knowledge Graph for structured understanding of entities, and a Relationship Ledger for tracking beliefs and evidence.",
+   "To prevent context window bloat, Vaultic advertises 31 core tools by default, covering essential functions like recall and reflection. The remaining 77 tools, for advanced features like graph analysis and temporal queries, are accessible via a built-in menu tool.",
+   "Emphasizing privacy, Vaultic operates fully offline after initial installation, storing all data in a single encrypted SQLite file on your machine. It features AES-256-GCM encryption at rest, no cloud components, and a keyword search index that uses keyed fingerprints instead of plaintext.",
+   "Vaultic is a one-time purchase, self-hosted solution currently available for Linux, with Windows support planned. Installation involves pip and global registration in your MCP client, allowing all sessions to share the same memory space.",
+   "The purchase includes an Agent Manual detailing all 108 tools, rules, triggers, hooks, and skills, along with reference hooks for Claude Code. Recall claims have been tested against public benchmarks, with results available on the Vaultic site.",
+   "The developer created Vaultic to offer a truly structured, reasoning-capable memory for AI agents, distinct from simple RAG or cloud-hosted, subscription-based alternatives. It focuses on privacy, self-ownership, and comprehensive memory management."
+  ],
+  "caption": "Tired of your AI agent forgetting everything after one session? Vaultic offers persistent, encrypted memory with 108 tools, running entirely offline.\n\nVaultic, an MCP server, provides AI agents with persistent, structured memory, solving the problem of agents forgetting context after a single session. It comes with 108 tools to manage various types of data.\n\nTraditional AI agents are limited by context window size, losing all learned information once a chat closes. Vaultic ensures agents remember past conversations, preferences, and commitments across all interactions.\n\nVaultic stores four data types: append-only Transcripts for raw conversation history, de-duplicated Memories for distilled facts, a Knowledge Graph for structured understanding of entities, and a Relationship Ledger for tracking beliefs and evidence.\n\nTo prevent context window bloat, Vaultic advertises 31 core tools by default, covering essential functions like recall and reflection. The remaining 77 tools, for advanced features like graph analysis and temporal queries, are accessible via a built-in menu tool.\n\nEmphasizing privacy, Vaultic operates fully offline after initial installation, storing all data in a single encrypted SQLite file on your machine. It features AES-256-GCM encryption at rest, no cloud components, and a keyword search index that uses keyed fingerprints instead of plaintext.\n\nVaultic is a one-time purchase, self-hosted solution currently available for Linux, with Windows support planned. Installation involves pip and global registration in your MCP client, allowing all sessions to share the same memory space.\n\nThe purchase includes an Agent Manual detailing all 108 tools, rules, triggers, hooks, and skills, along with reference hooks for Claude Code. Recall claims have been tested against public benchmarks, with results available on the Vaultic site.\n\n#AI #AIAgent #DeveloperTools #Software #Privacy #TechNews\n\nSource: DEV",
+  "tweet": "Tired of your AI agent forgetting everything after one session? Vaultic offers persistent, encrypted memory with 108 tools, running entirely offline. This self-hosted MCP server ensures your agent remembers across contexts. #AI #AIAgent #Privacy",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/patrick_morrison_55a49e53/i-built-108-tools-so-my-ai-agent-would-stop-forgetting-me-16am",
+  "image": "",
+  "orig_title": "I built 108 tools so my AI agent would stop forgetting me",
+  "cluster_urls": [
+   "https://dev.to/patrick_morrison_55a49e53/i-built-108-tools-so-my-ai-agent-would-stop-forgetting-me-16am"
+  ],
+  "cluster_titles": [
+   "I built 108 tools so my AI agent would stop forgetting me"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261108-1506-0-vaultic-gives-ai-agents-persistent-memory-wi.png",
+   "20261108-1506-0-vaultic-gives-ai-agents-persistent-memory-wi-d1.png",
+   "20261108-1506-0-vaultic-gives-ai-agents-persistent-memory-wi-d2.png",
+   "20261108-1506-0-vaultic-gives-ai-agents-persistent-memory-wi-d3.png"
+  ]
+ },
+ {
+  "topic": "lxd client authentication bypass vulnerability",
+  "headline_marked": "[[Critical LXD vulnerability]] allows authentication bypass with public certificates, CVSS 10.0",
+  "headline": "Critical LXD vulnerability allows authentication bypass with public certificates, CVSS 10.0",
+  "summary": "A critical flaw (CVE-2026-112816) with a CVSS score of 10.0 in LXD's identity system allows attackers to impersonate any trusted user using only their public client certificate, potentially leading to root access.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "LXD, a hypervisor API, exposes its services over mutual TLS, using client certificates for identity. A critical flaw (CVE-2026-112816) with a CVSS score of 10.0 has been discovered in this identity system, present since its inception.",
+   "The vulnerability stems from the HTTPS listener requesting client certificates without verifying them. This means the TLS handshake only proves possession of the private key for the first certificate, while the rest of the chain is entirely client-controlled.",
+   "The authentication logic mistakenly compared every certificate in the presented chain against the trust store. An attacker could therefore authenticate as any trusted certificate by appending its public part to their own chain, without needing the corresponding private key.",
+   "Attackers can obtain public server certificates from routine TLS handshakes or client certificates from trusted clients via the certificates API. By appending these to their own chain, they can impersonate the identity.",
+   "This bypass grants access to the main API for cluster and instance control, the database gateway, and internal cluster access. It also affects certificate self-renewal/deletion, token-based enrollment, and host-VM connections.",
+   "Canonical's advisory confirms an attacker can gain trust with the daemon by impersonating another user with only their public client certificate. Depending on the victim's privilege, this could lead to root access on the host machine.",
+   "Affected LXD versions include 4.0.14, 5.0.10, and 5.21.8. Patched versions are 4.0.15, 5.0.11, 5.21.9, 6.10.0, and 6.10.1."
+  ],
+  "caption": "A critical vulnerability in LXD (CVE-2026-112816) with a CVSS score of 10.0 allows attackers to gain root access. It leverages unverified client certificate chains, enabling impersonation with just a public certificate.\n\nLXD, a hypervisor API, exposes its services over mutual TLS, using client certificates for identity. A critical flaw (CVE-2026-112816) with a CVSS score of 10.0 has been discovered in this identity system, present since its inception.\n\nThe vulnerability stems from the HTTPS listener requesting client certificates without verifying them. This means the TLS handshake only proves possession of the private key for the first certificate, while the rest of the chain is entirely client-controlled.\n\nThe authentication logic mistakenly compared every certificate in the presented chain against the trust store. An attacker could therefore authenticate as any trusted certificate by appending its public part to their own chain, without needing the corresponding private key.\n\nAttackers can obtain public server certificates from routine TLS handshakes or client certificates from trusted clients via the certificates API. By appending these to their own chain, they can impersonate the identity.\n\nThis bypass grants access to the main API for cluster and instance control, the database gateway, and internal cluster access. It also affects certificate self-renewal/deletion, token-based enrollment, and host-VM connections.\n\nCanonical's advisory confirms an attacker can gain trust with the daemon by impersonating another user with only their public client certificate. Depending on the victim's privilege, this could lead to root access on the host machine.\n\nAffected LXD versions include 4.0.14, 5.0.10, and 5.21.8. Patched versions are 4.0.15, 5.0.11, 5.21.9, 6.10.0, and 6.10.1.\n\n#LXD #Security #Vulnerability #CVE #Cybersecurity #Linux\n\nSource: DEV",
+  "tweet": "Critical LXD vulnerability (CVE-2026-112816) with CVSS 10.0 allows attackers to impersonate any trusted user with just a public certificate, potentially leading to root access. Patch immediately. #LXD #Security #CVE",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "canonical.com",
+  "source": "DEV",
+  "url": "https://dev.to/echakiri/a-trusted-public-certificate-authenticates-as-any-lxd-client-1ofd",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fbuyklanlphwc3fy5ow67.png",
+  "orig_title": "A Trusted Public Certificate Authenticates as Any LXD Client",
+  "cluster_urls": [
+   "https://dev.to/echakiri/a-trusted-public-certificate-authenticates-as-any-lxd-client-1ofd"
+  ],
+  "cluster_titles": [
+   "A Trusted Public Certificate Authenticates as Any LXD Client"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261108-1506-1-critical-lxd-vulnerability-allows-authentica.png",
+   "20261108-1506-1-critical-lxd-vulnerability-allows-authentica-d1.png",
+   "20261108-1506-1-critical-lxd-vulnerability-allows-authentica-d2.png",
+   "20261108-1506-1-critical-lxd-vulnerability-allows-authentica-d3.png"
+  ]
+ }
+]

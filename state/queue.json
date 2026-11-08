@@ -1,1 +1,83 @@
-[]
+[
+ {
+  "topic": "whatsapp ai human handoff testing",
+  "headline_marked": "[[16 tests for WhatsApp AI human handoff]] ensure bots stop sending when agents take over",
+  "headline": "16 tests for WhatsApp AI human handoff ensure bots stop sending when agents take over",
+  "summary": "A new protocol offers 16 synthetic test cases to verify that WhatsApp AI assistants properly hand off conversations to human agents, preventing bots from sending messages after an agent takes control. This ensures clear ownership and avoids customer confusion.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "A new protocol provides a 16-case synthetic matrix to test WhatsApp AI assistants for proper human handoff. This repeatable acceptance asset helps verify concurrency and ownership after a person takes over a conversation, crucial for reliable customer service.",
+   "A complete handoff means the conversation has one accountable owner, the bot cannot emit another reply, pending model work cannot leak into the thread, and the customer does not have to repeat context. Routing labels or silent bots are not sufficient on their own.",
+   "To approve a handoff, five invariants must be met: an explicit owner, a monotonically increasing ownership version, an atomic check before every send, idempotent handling of repeated delivery events, and a defined way for a human to resume automation.",
+   "A useful default is \"fail-closed\": once a human claims a conversation, the bot stops initiating customer-facing messages until deliberately released. If an agent cannot be reached, the system should acknowledge the request once, set a visible queue state, and state the expected next step, without improvising answers.",
+   "This is an operational recommendation, not a promise that specific WhatsApp products expose these controls. Verification is essential across different WhatsApp Business products, partner inboxes, custom Cloud API integrations, and third-party automation platforms.",
+   "Real deployments are asynchronous, involving webhooks, multiple workers, and model calls that can create race conditions not visible in chat transcripts. These complexities can lead to a bot sending messages after a human has taken over.",
+   "The key distinction is between an agent being notified and the bot no longer being authorized to send. A notification can fail or be late, and a human reply can be recorded while automation reads stale state. Control must sit at the last point where an outgoing message can be prevented.",
+   "Every customer-facing send should involve a permission check. The send worker must verify if the conversation is still bot-owned, if the ownership version is current, if the message is already sent, and if policy permits sending now. This check must be tied closely to the actual send operation.",
+   "This problem resembles a distributed-systems challenge more than a prompt-writing one. While prompts can tell a model to stop, they cannot cancel queued messages or revoke stale database snapshots. Enforcement must be implemented and tested in application logic."
+  ],
+  "caption": "Is your WhatsApp AI bot truly handing off conversations to humans? A new 16-test protocol ensures the bot stops sending messages when an agent takes over.\n\nA new protocol provides a 16-case synthetic matrix to test WhatsApp AI assistants for proper human handoff. This repeatable acceptance asset helps verify concurrency and ownership after a person takes over a conversation, crucial for reliable customer service.\n\nA complete handoff means the conversation has one accountable owner, the bot cannot emit another reply, pending model work cannot leak into the thread, and the customer does not have to repeat context. Routing labels or silent bots are not sufficient on their own.\n\nTo approve a handoff, five invariants must be met: an explicit owner, a monotonically increasing ownership version, an atomic check before every send, idempotent handling of repeated delivery events, and a defined way for a human to resume automation.\n\nA useful default is \"fail-closed\": once a human claims a conversation, the bot stops initiating customer-facing messages until deliberately released. If an agent cannot be reached, the system should acknowledge the request once, set a visible queue state, and state the expected next step, without improvising answers.\n\nThis is an operational recommendation, not a promise that specific WhatsApp products expose these controls. Verification is essential across different WhatsApp Business products, partner inboxes, custom Cloud API integrations, and third-party automation platforms.\n\nReal deployments are asynchronous, involving webhooks, multiple workers, and model calls that can create race conditions not visible in chat transcripts. These complexities can lead to a bot sending messages after a human has taken over.\n\n#WhatsAppAI #AI #CustomerService #TechNews #Automation #DeveloperTools\n\nSource: DEV",
+  "tweet": "Is your WhatsApp AI bot truly handing off conversations to humans? A new 16-test protocol ensures the bot stops sending messages when an agent takes over, preventing double replies and confusion. Essential for reliable AI customer service. #WhatsAppAI #AI #CustomerService",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "whatsapp.com",
+  "source": "DEV",
+  "url": "https://dev.to/isabelle_dubuis_d858453d7/whatsapp-ai-human-handoff-16-tests-to-check-the-bot-has-stopped-1pf8",
+  "image": "",
+  "orig_title": "WhatsApp AI Human Handoff: 16 Tests to Check the Bot Has Stopped",
+  "cluster_urls": [
+   "https://dev.to/isabelle_dubuis_d858453d7/whatsapp-ai-human-handoff-16-tests-to-check-the-bot-has-stopped-1pf8"
+  ],
+  "cluster_titles": [
+   "WhatsApp AI Human Handoff: 16 Tests to Check the Bot Has Stopped"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261108-1311-0-16-tests-for-whatsapp-ai-human-handoff-ensur.png",
+   "20261108-1311-0-16-tests-for-whatsapp-ai-human-handoff-ensur-d1.png",
+   "20261108-1311-0-16-tests-for-whatsapp-ai-human-handoff-ensur-d2.png",
+   "20261108-1311-0-16-tests-for-whatsapp-ai-human-handoff-ensur-d3.png",
+   "20261108-1311-0-16-tests-for-whatsapp-ai-human-handoff-ensur-d4.png"
+  ]
+ },
+ {
+  "topic": "indian android open world game small studio launch",
+  "headline_marked": "[[Small Indian studio launches open-world Android game]] Laila Majnu: Streets of Crime on Google Play",
+  "headline": "Small Indian studio launches open-world Android game Laila Majnu: Streets of Crime on Google Play",
+  "summary": "ITS A GAME Studio, a small Indian developer, has released \"Laila Majnu: Streets of Crime\" on Google Play, offering a case study on small-studio launches in the typically big-studio open-world genre.",
+  "category": "GAMING",
+  "template": "launch",
+  "details": [
+   "Open-world games are typically developed by large studios. \"Laila Majnu: Streets of Crime\" is a new Android title from ITS A GAME Studio, a small Indian developer. Its launch on Google Play provides insights into mobile game development for smaller teams.",
+   "The game is described as \"GTA-style,\" which refers to its open-city environment, missions, and drivable cars. It is important to note that the game is not affiliated with Rockstar Games or the Grand Theft Auto series.",
+   "The article, written by a gaming content creator, analyzes the public store listing and a personal playthrough. It serves as a case study for developers considering their own mobile game launches.",
+   "A key question for developers is whether to launch with a minimal feature set and a clear update roadmap, or to delay release until more content is available. This approach allows for community feedback and iterative development."
+  ],
+  "caption": "A small Indian studio just launched an open-world Android game, Laila Majnu: Streets of Crime. It's a rare move in a genre dominated by big developers.\n\nOpen-world games are typically developed by large studios. \"Laila Majnu: Streets of Crime\" is a new Android title from ITS A GAME Studio, a small Indian developer. Its launch on Google Play provides insights into mobile game development for smaller teams.\n\nThe game is described as \"GTA-style,\" which refers to its open-city environment, missions, and drivable cars. It is important to note that the game is not affiliated with Rockstar Games or the Grand Theft Auto series.\n\nThe article, written by a gaming content creator, analyzes the public store listing and a personal playthrough. It serves as a case study for developers considering their own mobile game launches.\n\nA key question for developers is whether to launch with a minimal feature set and a clear update roadmap, or to delay release until more content is available. This approach allows for community feedback and iterative development.\n\n#Gaming #MobileGames #AndroidGaming #IndieDev #GameLaunch #GooglePlay\n\nSource: DEV",
+  "tweet": "A small Indian studio, ITS A GAME Studio, just launched an open-world Android game, Laila Majnu: Streets of Crime, on Google Play. This launch offers a unique case study for indie mobile game developers. #MobileGaming #IndieDev #AndroidGames",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/trendzbetagames/laila-majnu-streets-of-crime-what-a-new-indian-android-open-world-game-shows-about-small-studio-ng4",
+  "image": "",
+  "orig_title": "Laila Majnu: Streets of Crime – What a New Indian Android Open World Game Shows About Small-Studio Launches",
+  "cluster_urls": [
+   "https://dev.to/trendzbetagames/laila-majnu-streets-of-crime-what-a-new-indian-android-open-world-game-shows-about-small-studio-ng4"
+  ],
+  "cluster_titles": [
+   "Laila Majnu: Streets of Crime – What a New Indian Android Open World Game Shows About Small-Studio Launches"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261108-1311-1-small-indian-studio-launches-open-world-andr.png",
+   "20261108-1311-1-small-indian-studio-launches-open-world-andr-d1.png",
+   "20261108-1311-1-small-indian-studio-launches-open-world-andr-d2.png"
+  ]
+ }
+]

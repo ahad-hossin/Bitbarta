@@ -1,1 +1,88 @@
-[]
+[
+ {
+  "topic": "ai agent for drug safety review",
+  "headline_marked": "[[AI agent TrialSleuth remembers past drug results]] to flag risks before first human trials",
+  "headline": "AI agent TrialSleuth remembers past drug results to flag risks before first human trials",
+  "summary": "TrialSleuth AI reviews new drugs by recalling every past drug outcome, identifying potential risks and suggesting changes before human trials begin, making drug development safer.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "TrialSleuth AI is an agent designed to review new drugs before their first human trial. It remembers every past drug result, getting smarter with each review to identify potential risks. This addresses the issue where past knowledge about drug safety is often scattered and overlooked.",
+   "The tool works by taking a description of a new drug, similar to a planning meeting. It then generates a report flagging known risks, such as liver exposure or heart issues, citing specific past cases (e.g., HB-02, PC-702). It never declares a drug \"safe,\" only highlights risks.",
+   "Unlike generic AI chatbots that forget previous interactions, TrialSleuth AI uses agent memory to learn and retain information. This allows it to recall what went wrong before and what fixed it, mimicking how a human safety expert would work.",
+   "The memory layer is built on Hindsight, an open-source agent memory system by Vectorize. Hindsight focuses on creating agents that learn over time, rather than just recalling conversation history, overcoming limitations of RAG and knowledge graphs.",
+   "Every memory in TrialSleuth has a unique ID, which the language model (Groq, running openai/gpt-oss-120b) cites for each claim. This ensures traceability, allowing reviewers to check the evidence in a side panel.",
+   "A demo with a fictional drug, HLV-772, showed how the system identified hidden problems. After teaching it one new result (PC-702, a sister drug affecting heart rhythm), subsequent reviews automatically flagged heart risks and suggested ECG monitoring.",
+   "Key learnings from building the system include prioritizing \"better memory over more memory\" by recalling only the most relevant records, and the importance of showing evidence for transparency. Honest framing, stating it flags risks rather than guaranteeing safety, builds trust."
+  ],
+  "caption": "An AI agent called TrialSleuth can now review new drugs before human trials. It remembers every past drug result, learning and getting smarter to flag risks.\n\nTrialSleuth AI is an agent designed to review new drugs before their first human trial. It remembers every past drug result, getting smarter with each review to identify potential risks. This addresses the issue where past knowledge about drug safety is often scattered and overlooked.\n\nThe tool works by taking a description of a new drug, similar to a planning meeting. It then generates a report flagging known risks, such as liver exposure or heart issues, citing specific past cases (e.g., HB-02, PC-702). It never declares a drug \"safe,\" only highlights risks.\n\nUnlike generic AI chatbots that forget previous interactions, TrialSleuth AI uses agent memory to learn and retain information. This allows it to recall what went wrong before and what fixed it, mimicking how a human safety expert would work.\n\nThe memory layer is built on Hindsight, an open-source agent memory system by Vectorize. Hindsight focuses on creating agents that learn over time, rather than just recalling conversation history, overcoming limitations of RAG and knowledge graphs.\n\nEvery memory in TrialSleuth has a unique ID, which the language model (Groq, running openai/gpt-oss-120b) cites for each claim. This ensures traceability, allowing reviewers to check the evidence in a side panel.\n\nA demo with a fictional drug, HLV-772, showed how the system identified hidden problems. After teaching it one new result (PC-702, a sister drug affecting heart rhythm), subsequent reviews automatically flagged heart risks and suggested ECG monitoring.\n\nKey learnings from building the system include prioritizing \"better memory over more memory\" by recalling only the most relevant records, and the importance of showing evidence for transparency. Honest framing, stating it flags risks rather than guaranteeing safety, builds trust.\n\n#TechNews #AI #Tech #BitBarta\n\nSource: DEV",
+  "tweet": "TrialSleuth AI reviews new drugs before human trials, learning from every past drug result to flag risks. Built with Hindsight, it ensures known issues are designed out, making drug development safer. #AI #DrugSafety #PharmaTech",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "vectorize.io",
+  "source": "DEV",
+  "url": "https://dev.to/sohapatel26/catch-the-risk-before-the-first-dose-building-an-ai-drug-safety-reviewer-that-remembers-npo",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Ftb1wey23nwnnt9a7hzwg.png",
+  "orig_title": "Catch the Risk Before the First Dose - Building an AI Drug Safety Reviewer That Remembers",
+  "cluster_urls": [
+   "https://dev.to/sohapatel26/catch-the-risk-before-the-first-dose-building-an-ai-drug-safety-reviewer-that-remembers-npo"
+  ],
+  "cluster_titles": [
+   "Catch the Risk Before the First Dose - Building an AI Drug Safety Reviewer That Remembers"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261108-1206-0-ai-agent-trialsleuth-remembers-past-drug-res.png",
+   "20261108-1206-0-ai-agent-trialsleuth-remembers-past-drug-res-d1.png",
+   "20261108-1206-0-ai-agent-trialsleuth-remembers-past-drug-res-d2.png",
+   "20261108-1206-0-ai-agent-trialsleuth-remembers-past-drug-res-d3.png"
+  ]
+ },
+ {
+  "topic": "messaging local ai agent from phone via telegram",
+  "headline_marked": "[[Message your laptop's AI agent from your phone]] using Telegram, with local processing and no webhooks",
+  "headline": "Message your laptop's AI agent from your phone using Telegram, with local processing and no webhooks",
+  "summary": "Control your laptop's AI agent remotely via Telegram, allowing it to access local files and tools without remote desktop or cloud solutions. This setup ensures local processing and no exposed webhooks for enhanced privacy.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "An AI agent on your laptop can access your files and tools, but typically only when you're at your desk. Remote desktop or cloud copies are common solutions, but they either mean tiny screens or moving your data off-device.",
+   "A simpler approach is to give your agent its own chat bot. You message the bot from your phone, the laptop processes the request locally, and the agent's response comes back as a reply, keeping your files on your machine.",
+   "To set this up, first create a new bot in Telegram by messaging @BotFather and sending /newbot. It will provide a unique token, which acts as the bot's password. Keep this token secure, as anyone with it can control your bot.",
+   "Next, in the osFoundry desktop app, go to Device > Background. Enable \"Keep agents running\" to ensure your agents continue working even when the app window is closed. Then, paste your Telegram bot's token into the \"Message agents from your phone\" field and click Connect.",
+   "The app stores the token securely in your operating system's keychain and never sends it to osFoundry. The laptop communicates with Telegram by asking for new messages, holding the request open for up to 25 seconds, eliminating the need for webhooks, open ports, or external servers.",
+   "To pair your phone with a specific channel in the app, open the channel, click Agents, and under \"Reach this channel from Telegram,\" click \"Pair a phone.\" The app will display a one-time code.",
+   "Send /pair followed by this code to your bot in a direct message from your phone. The bot will confirm the pairing. This pairing step is crucial for security, as the app will only respond to messages from the Telegram account that sent the valid pairing code.",
+   "Messages from any other account are dropped, making the bot appear inactive to strangers. Group chat pairing is also refused to prevent multiple users from controlling your agent. The pairing code expires after 10 minutes and can only be used once.",
+   "You can then message your bot as you would a person, for example, \"What did I save to Downloads today?\". The agent will process the request locally and send its answer back to your chat. To unpair, send /unpair from your phone or click the 'x' next to the paired name in the app.",
+   "Be aware of two limitations: input from your phone is treated as untrusted, similar to an incoming email. Also, tools requiring approval cannot prompt you while no window is open, so such calls are refused when running in the background."
+  ],
+  "caption": "Control your laptop's AI agent from anywhere using Telegram, with local processing and no exposed webhooks.\n\nAn AI agent on your laptop can access your files and tools, but typically only when you're at your desk. Remote desktop or cloud copies are common solutions, but they either mean tiny screens or moving your data off-device.\n\nA simpler approach is to give your agent its own chat bot. You message the bot from your phone, the laptop processes the request locally, and the agent's response comes back as a reply, keeping your files on your machine.\n\nTo set this up, first create a new bot in Telegram by messaging @BotFather and sending /newbot. It will provide a unique token, which acts as the bot's password. Keep this token secure, as anyone with it can control your bot.\n\nNext, in the osFoundry desktop app, go to Device > Background. Enable \"Keep agents running\" to ensure your agents continue working even when the app window is closed. Then, paste your Telegram bot's token into the \"Message agents from your phone\" field and click Connect.\n\nThe app stores the token securely in your operating system's keychain and never sends it to osFoundry. The laptop communicates with Telegram by asking for new messages, holding the request open for up to 25 seconds, eliminating the need for webhooks, open ports, or external servers.\n\nTo pair your phone with a specific channel in the app, open the channel, click Agents, and under \"Reach this channel from Telegram,\" click \"Pair a phone.\" The app will display a one-time code.\n\nSend /pair followed by this code to your bot in a direct message from your phone. The bot will confirm the pairing. This pairing step is crucial for security, as the app will only respond to messages from the Telegram account that sent the valid pairing code.\n\n#AI #Telegram #Tech #Developer #Privacy #osFoundry\n\nSource: DEV",
+  "tweet": "Control your laptop's AI agent from anywhere using Telegram! This guide shows how to set up local processing and secure messaging without webhooks or remote desktop. Keep your files private and your agent accessible. #AI #Telegram #Developer",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "osfoundry.com",
+  "source": "DEV",
+  "url": "https://dev.to/bestaitool/how-to-message-the-ai-agent-on-your-laptop-from-your-phone-with-telegram-194a",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fgwdnzod94t6kugndh74a.jpg",
+  "orig_title": "How to message the AI agent on your laptop from your phone with Telegram",
+  "cluster_urls": [
+   "https://dev.to/bestaitool/how-to-message-the-ai-agent-on-your-laptop-from-your-phone-with-telegram-194a"
+  ],
+  "cluster_titles": [
+   "How to message the AI agent on your laptop from your phone with Telegram"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261108-1206-1-message-your-laptop-s-ai-agent-from-your-pho.png",
+   "20261108-1206-1-message-your-laptop-s-ai-agent-from-your-pho-d1.png",
+   "20261108-1206-1-message-your-laptop-s-ai-agent-from-your-pho-d2.png",
+   "20261108-1206-1-message-your-laptop-s-ai-agent-from-your-pho-d3.png",
+   "20261108-1206-1-message-your-laptop-s-ai-agent-from-your-pho-d4.png"
+  ]
+ }
+]

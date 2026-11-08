@@ -1,1 +1,79 @@
-[]
+[
+ {
+  "topic": "running large llm on consumer hardware without gpu",
+  "headline_marked": "[[Run 284B DeepSeek on 64GB RAM]] with llama-modchip, no GPU required",
+  "headline": "Run 284B DeepSeek on 64GB RAM with llama-modchip, no GPU required",
+  "summary": "A new project, llama-modchip, enables running massive 284B Mixture-of-Experts models like DeepSeek-V4-Flash locally on standard CPU workstations with 64GB RAM, bypassing expensive GPU hardware.",
+  "category": "AI",
+  "template": "terminal",
+  "details": [
+   "The llama-modchip project allows users to run massive 284B Mixture-of-Experts (MoE) models, such as DeepSeek-V4-Flash, on standard CPU workstations. This is achieved using just 64GB of DDR5 RAM, completely eliminating the need for expensive multi-GPU setups.",
+   "It enables real-time frontier and agentic MoE inference directly on the CPU, operating entirely within RAM without relying on NVMe swap. This significantly reduces hardware requirements for local AI deployment.",
+   "The project also supports 30B Hybrid MoEs like Nemotron-3.5-30B-A3B, both running at a full 256K context. This capability is crucial for air-gapped enterprise code intelligence, security auditing, and autonomous agent fleets.",
+   "By leveraging existing multi-core CPUs and compact Mini-PCs, llama-modchip removes the need for $30,000+ multi-GPU hardware. This makes advanced AI inference accessible to a much broader range of users and organizations.",
+   "It utilizes custom block-64 BF16-scale Gray-coded tensors (GGML_TYPE_Q2_0) and custom deepseek4/Stockfish-PVS kernels. This means models must be opened using the provided `modchip` binary or standalone compiled binaries, as unpatched llama.cpp, Ollama, or LM Studio will fail.",
+   "A quickstart guide and pre-compiled binaries are available, allowing users to easily set up a Web Chat UI. The tool automatically detects CPU cores, free RAM, and GPU VRAM to compute optimal MoE splits.",
+   "Users can submit their terminal scorecards to a 1-Click GitHub Benchmark Issue to be added to an official community CPU leaderboard. Comprehensive optimization guides with mathematical proofs and latency breakdowns are also provided.",
+   "The team actively partners with hardware manufacturers, cloud silicon teams, and AI research labs. This collaboration aims to build and validate architecture-specific kernel patches for continued performance improvements and broader compatibility."
+  ],
+  "caption": "Run a 284B AI model on your CPU with just 64GB RAM? The llama-modchip project makes it possible, no GPU required.\n\nThe llama-modchip project allows users to run massive 284B Mixture-of-Experts (MoE) models, such as DeepSeek-V4-Flash, on standard CPU workstations. This is achieved using just 64GB of DDR5 RAM, completely eliminating the need for expensive multi-GPU setups.\n\nIt enables real-time frontier and agentic MoE inference directly on the CPU, operating entirely within RAM without relying on NVMe swap. This significantly reduces hardware requirements for local AI deployment.\n\nThe project also supports 30B Hybrid MoEs like Nemotron-3.5-30B-A3B, both running at a full 256K context. This capability is crucial for air-gapped enterprise code intelligence, security auditing, and autonomous agent fleets.\n\nBy leveraging existing multi-core CPUs and compact Mini-PCs, llama-modchip removes the need for $30,000+ multi-GPU hardware. This makes advanced AI inference accessible to a much broader range of users and organizations.\n\nIt utilizes custom block-64 BF16-scale Gray-coded tensors (GGML_TYPE_Q2_0) and custom deepseek4/Stockfish-PVS kernels. This means models must be opened using the provided `modchip` binary or standalone compiled binaries, as unpatched llama.cpp, Ollama, or LM Studio will fail.\n\nA quickstart guide and pre-compiled binaries are available, allowing users to easily set up a Web Chat UI. The tool automatically detects CPU cores, free RAM, and GPU VRAM to compute optimal MoE splits.\n\nUsers can submit their terminal scorecards to a 1-Click GitHub Benchmark Issue to be added to an official community CPU leaderboard. Comprehensive optimization guides with mathematical proofs and latency breakdowns are also provided.\n\nThe team actively partners with hardware manufacturers, cloud silicon teams, and AI research labs. This collaboration aims to build and validate architecture-specific kernel patches for continued performance improvements and broader compatibility.\n\n#AI #LLM #DeepSeek #CPURun #Tech\n\nSource: Hacker News",
+  "tweet": "Run a 284B AI model on your CPU with just 64GB RAM? The llama-modchip project makes it possible, eliminating $30,000+ GPU hardware for local inference. #AI #LLM #CPURun",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://github.com/synchopate/llama-modchip",
+  "image": "",
+  "orig_title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+  "cluster_urls": [
+   "https://github.com/synchopate/llama-modchip"
+  ],
+  "cluster_titles": [
+   "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU"
+  ],
+  "is_logo": false,
+  "photo_credit": "Hacker News",
+  "image_files": [
+   "20261108-1807-0-run-284b-deepseek-on-64gb-ram-with-llama-mod.png",
+   "20261108-1807-0-run-284b-deepseek-on-64gb-ram-with-llama-mod-d1.png",
+   "20261108-1807-0-run-284b-deepseek-on-64gb-ram-with-llama-mod-d2.png",
+   "20261108-1807-0-run-284b-deepseek-on-64gb-ram-with-llama-mod-d3.png"
+  ]
+ },
+ {
+  "topic": "ai live host from single photo",
+  "headline_marked": "[[TianDun creates AI live hosts]] from one photo for multi-platform use",
+  "headline": "TianDun creates AI live hosts from one photo for multi-platform use",
+  "summary": "TianDun allows creators and sellers to generate talking avatars, product clips, and live AI hosts from a single portrait photo and a short script. This streamlines content creation across multiple platforms.",
+  "category": "AI",
+  "template": "neon",
+  "details": [
+   "TianDun is a new tool that enables creators and sellers to transform a single clear portrait photo and a short script into various AI-powered content. This includes talking avatars, product clips, and full-fledged live AI hosts for multi-platform use.",
+   "The system aims to significantly streamline the content creation process, making it easier to produce dynamic and engaging visual content without extensive video production resources. It leverages AI to animate static images with spoken text.",
+   "Developed by Quanzhou TianDun Intelligent Things Tech Co., Ltd., the project is currently seeking feedback from users. This iterative development approach suggests ongoing improvements and feature expansions based on community input."
+  ],
+  "caption": "Generate a multi-platform AI live host, talking avatar, or product clip from just one photo and a script.\n\nTianDun is a new tool that enables creators and sellers to transform a single clear portrait photo and a short script into various AI-powered content. This includes talking avatars, product clips, and full-fledged live AI hosts for multi-platform use.\n\nThe system aims to significantly streamline the content creation process, making it easier to produce dynamic and engaging visual content without extensive video production resources. It leverages AI to animate static images with spoken text.\n\nDeveloped by Quanzhou TianDun Intelligent Things Tech Co., Ltd., the project is currently seeking feedback from users. This iterative development approach suggests ongoing improvements and feature expansions based on community input.\n\n#AI #AIHost #ContentCreation #TalkingAvatars #Tech #GenerativeAI\n\nSource: DEV",
+  "tweet": "Generate a multi-platform AI live host, talking avatar, or product clip from just one photo and a script with TianDun. Streamline content creation for creators and sellers. #AI #AIHost #ContentCreation",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/hhuo2833code/building-tiandun-one-photo-to-a-multi-platform-ai-live-host-42jd",
+  "image": "",
+  "orig_title": "Building TianDun — one photo to a multi-platform AI live host",
+  "cluster_urls": [
+   "https://dev.to/hhuo2833code/building-tiandun-one-photo-to-a-multi-platform-ai-live-host-42jd"
+  ],
+  "cluster_titles": [
+   "Building TianDun — one photo to a multi-platform AI live host"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261108-1807-1-tiandun-creates-ai-live-hosts-from-one-photo.png",
+   "20261108-1807-1-tiandun-creates-ai-live-hosts-from-one-photo-d1.png"
+  ]
+ }
+]

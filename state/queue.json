@@ -1,1 +1,81 @@
-[]
+[
+ {
+  "topic": "sonicwall cve saml mfa bypass vulnerability",
+  "headline_marked": "[[SonicWall flaw allows SAML and MFA bypass]] in SSL VPNs using valid alternative credentials",
+  "headline": "SonicWall flaw allows SAML and MFA bypass in SSL VPNs using valid alternative credentials",
+  "summary": "A critical authentication flaw (CVE-2026-19868) in SonicOS SSL VPNs allows attackers with valid credentials for another method to bypass SAML verification and MFA. CISA has added this vulnerability to its Known Exploited Vulnerabilities catalog.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A critical authentication flaw, CVE-2026-19868, has been identified in SonicOS SSL VPNs that utilize SAML login. This vulnerability allows an attacker, possessing valid credentials for an authentication method other than SAML, to bypass SAML verification and any Multi-Factor Authentication (MFA) enforced via SAML.",
+   "SonicWall is currently investigating reports of potential exploitation in the wild. The Cybersecurity and Infrastructure Security Agency (CISA) has already added this vulnerability to its Known Exploited Vulnerabilities (KEV) catalog, indicating active exploitation.",
+   "The confirmed exploit path involves leveraging valid non-SAML credentials to circumvent the SAML authentication process. While the specific requests and post-compromise actions used in actual attacks are not publicly disclosed, organizations are urged to patch immediately.",
+   "Even when SAML MFA is required for VPN access, a flaw in handling multiple authentication methods can lead to missed VPN connections. It is crucial to cross-reference SonicOS session records with Identity Provider (IdP) authentication results, looking for VPN connections without corresponding successful MFA events.",
+   "After applying updates, organizations should retroactively investigate sessions established during the pre-patch window. This proactive measure helps identify any unauthorized access that may have occurred before the fix was implemented."
+  ],
+  "caption": "A critical flaw (CVE-2026-19868) in SonicWall SSL VPNs allows SAML and MFA bypass using alternative credentials. CISA has added it to its KEV catalog.\n\nA critical authentication flaw, CVE-2026-19868, has been identified in SonicOS SSL VPNs that utilize SAML login. This vulnerability allows an attacker, possessing valid credentials for an authentication method other than SAML, to bypass SAML verification and any Multi-Factor Authentication (MFA) enforced via SAML.\n\nSonicWall is currently investigating reports of potential exploitation in the wild. The Cybersecurity and Infrastructure Security Agency (CISA) has already added this vulnerability to its Known Exploited Vulnerabilities (KEV) catalog, indicating active exploitation.\n\nThe confirmed exploit path involves leveraging valid non-SAML credentials to circumvent the SAML authentication process. While the specific requests and post-compromise actions used in actual attacks are not publicly disclosed, organizations are urged to patch immediately.\n\nEven when SAML MFA is required for VPN access, a flaw in handling multiple authentication methods can lead to missed VPN connections. It is crucial to cross-reference SonicOS session records with Identity Provider (IdP) authentication results, looking for VPN connections without corresponding successful MFA events.\n\nAfter applying updates, organizations should retroactively investigate sessions established during the pre-patch window. This proactive measure helps identify any unauthorized access that may have occurred before the fix was implemented.\n\n#SonicWall #Cybersecurity #Vulnerability #MFA #SAML #VPN\n\nSource: DEV",
+  "tweet": "Critical flaw (CVE-2026-19868) in SonicWall SSL VPNs allows SAML & MFA bypass with alternative credentials. CISA added it to KEV catalog, indicating active exploitation. Patch immediately & audit past sessions. #Cybersecurity #Vulnerability",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "sonicwall.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/sonicwall-cve-2026-19868-authentication-flaw-that-may-allow-saml-and-mfa-bypass-using-valid-4bdp",
+  "image": "",
+  "orig_title": "SonicWall CVE-2026-19868: Authentication Flaw That May Allow SAML and MFA Bypass Using Valid Credentials for Another Authentication Method",
+  "cluster_urls": [
+   "https://dev.to/anoymask/sonicwall-cve-2026-19868-authentication-flaw-that-may-allow-saml-and-mfa-bypass-using-valid-4bdp"
+  ],
+  "cluster_titles": [
+   "SonicWall CVE-2026-19868: Authentication Flaw That May Allow SAML and MFA Bypass Using Valid Credentials for Another Authentication Method"
+  ],
+  "is_logo": true,
+  "photo_credit": "",
+  "image_files": [
+   "20261108-0806-0-sonicwall-flaw-allows-saml-and-mfa-bypass-in.png",
+   "20261108-0806-0-sonicwall-flaw-allows-saml-and-mfa-bypass-in-d1.png",
+   "20261108-0806-0-sonicwall-flaw-allows-saml-and-mfa-bypass-in-d2.png",
+   "20261108-0806-0-sonicwall-flaw-allows-saml-and-mfa-bypass-in-d3.png"
+  ]
+ },
+ {
+  "topic": "credit mutuel arkea bank breach unauthorized transfers",
+  "headline_marked": "[[Crédit Mutuel Arkéa hit by breach]]: Unauthorized transfers from bank's own accounts via third-party",
+  "headline": "Crédit Mutuel Arkéa hit by breach: Unauthorized transfers from bank's own accounts via third-party",
+  "summary": "Crédit Mutuel Arkéa experienced a breach via a third-party provider, resulting in unauthorized transfers from its own accounts. The bank acknowledged the incident's scale but has not confirmed the reported €118 million figure.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "Attackers accessed Crédit Mutuel Arkéa via a third-party service provider platform, executing unauthorized transfers from the bank's own accounts, rather than customer accounts. The bank acknowledged the incident's scale but has not confirmed the reported €118 million figure as final.",
+   "Some of the transferred funds were intercepted, indicating partial success in mitigating the financial impact. The initial access vector used by the attackers remains under active investigation by the bank.",
+   "The authentication and connection methods employed in this incident, along with the specific logs collected, have not been publicly disclosed. These details are crucial for understanding the full scope and nature of the attack.",
+   "The incident highlights the critical risks associated with unconditionally trusting service provider connections as legitimate operational traffic. Organizations often overlook financial operations performed after initial authentication through these channels.",
+   "Experts recommend monitoring service provider identity usage in correlation with high-value transactions, new destinations, and changes in approval pathways. Implementing robust controls that prevent fund movements based solely on service provider privileges is also crucial.",
+   "Security Operations Centers (SOCs) should shift their focus to treating transactions executed on business systems as evidence of success, rather than solely concentrating on entry points. Incorporating fund-freezing communication procedures into incident response plans is also vital for rapid mitigation."
+  ],
+  "caption": "Crédit Mutuel Arkéa suffered a breach leading to unauthorized transfers from its *own* accounts. A reported €118 million was targeted, though the final amount is unconfirmed.\n\nAttackers accessed Crédit Mutuel Arkéa via a third-party service provider platform, executing unauthorized transfers from the bank's own accounts, rather than customer accounts. The bank acknowledged the incident's scale but has not confirmed the reported €118 million figure as final.\n\nSome of the transferred funds were intercepted, indicating partial success in mitigating the financial impact. The initial access vector used by the attackers remains under active investigation by the bank.\n\nThe authentication and connection methods employed in this incident, along with the specific logs collected, have not been publicly disclosed. These details are crucial for understanding the full scope and nature of the attack.\n\nThe incident highlights the critical risks associated with unconditionally trusting service provider connections as legitimate operational traffic. Organizations often overlook financial operations performed after initial authentication through these channels.\n\nExperts recommend monitoring service provider identity usage in correlation with high-value transactions, new destinations, and changes in approval pathways. Implementing robust controls that prevent fund movements based solely on service provider privileges is also crucial.\n\nSecurity Operations Centers (SOCs) should shift their focus to treating transactions executed on business systems as evidence of success, rather than solely concentrating on entry points. Incorporating fund-freezing communication procedures into incident response plans is also vital for rapid mitigation.\n\n#CyberSecurity #BankBreach #DataBreach #FinancialSecurity #ThirdPartyRisk #TechNews\n\nSource: DEV",
+  "tweet": "Crédit Mutuel Arkéa hit by a breach, with unauthorized transfers from the bank's own accounts via a third-party provider. A reported €118M was targeted, some funds intercepted. Investigation ongoing. #CyberSecurity #BankBreach",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": false,
+  "brand_domain": "creditmutuelarkea.com",
+  "source": "DEV",
+  "url": "https://dev.to/anoymask/credit-mutuel-arkea-breach-unauthorized-transfers-executed-from-banks-own-accounts-via-8l0",
+  "image": "",
+  "orig_title": "Crédit Mutuel Arkéa Breach: Unauthorized Transfers Executed from Bank's Own Accounts via Third-Party Provider Platform",
+  "cluster_urls": [
+   "https://dev.to/anoymask/credit-mutuel-arkea-breach-unauthorized-transfers-executed-from-banks-own-accounts-via-8l0"
+  ],
+  "cluster_titles": [
+   "Crédit Mutuel Arkéa Breach: Unauthorized Transfers Executed from Bank's Own Accounts via Third-Party Provider Platform"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261108-0806-1-cr-dit-mutuel-ark-a-hit-by-breach-unauthoriz.png",
+   "20261108-0806-1-cr-dit-mutuel-ark-a-hit-by-breach-unauthoriz-d1.png",
+   "20261108-0806-1-cr-dit-mutuel-ark-a-hit-by-breach-unauthoriz-d2.png",
+   "20261108-0806-1-cr-dit-mutuel-ark-a-hit-by-breach-unauthoriz-d3.png"
+  ]
+ }
+]

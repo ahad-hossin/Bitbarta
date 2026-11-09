@@ -1,1 +1,85 @@
-[]
+[
+ {
+  "topic": "ai agent persistent memory solution",
+  "headline_marked": "[[Autonomous agents can now use SQLite FTS5 to Cloud LibSQL]] for persistent, vectorized memory, boosting performance and cutting ",
+  "headline": "Autonomous agents can now use SQLite FTS5 to Cloud LibSQL for persistent, vectorized memory, boosting performance and cutting ",
+  "summary": "Autonomous agents often struggle with high latency and costs from external vector databases. A new approach leverages SQLite's FTS5 for local performance, scaling seamlessly to distributed LibSQL for robust, cost-effective, and deterministic memory.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "Many autonomous agent memory implementations face fundamental flaws, often wrapping external vector databases like Pinecone or Weaviate. This leads to p99 latency spiking to 800ms and ballooning infrastructure bills for storing static execution history.",
+   "For agents operating on-chain, such as monitoring DEX liquidity or executing treasury rebalancing, pure vector memory is a poor architectural choice. These applications demand determinism and strict SQL relations, combined with fast lexical search and semantic retrieval.",
+   "The pragmatic solution begins with local SQLite, utilizing FTS5 (Full-Text Search) and vector extensions. This setup can then scale out to distributed LibSQL (Turso) without altering the core database engine abstraction.",
+   "Cosine similarity alone often fails to distinguish transaction hashes or contract addresses that are semantically identical but lexically different. FTS5 handles precise string matching, while embeddings manage contextual reasoning and intent.",
+   "Locally, SQLite processes BM25 queries via FTS5 in under 1.2 milliseconds on a 100,000-row dataset, eliminating network roundtrips and serialization overhead. This provides significant performance gains for single-instance operations.",
+   "However, the single-file SQLite model breaks down with concurrent write locks (SQLITE_BUSY) when agents transition to multi-instance worker fleets. This is where LibSQL becomes crucial for scaling.",
+   "LibSQL maintains the SQLite C dialect but introduces embedded replicas and decentralized HTTP/WebSocket synchronization. This allows for robust scaling while preserving the familiar SQLite interface.",
+   "By storing vector state alongside EVM receipts in LibSQL, agents avoid repeating transaction failures because the LLM \"forgot\" past conditions like gas spikes. This ensures deterministic and reliable operation.",
+   "This approach eliminates fragile, separate vector database infrastructure, consolidating relational, FTS5, and vector storage directly within LibSQL. Agents can run faster, cheaper, and more reliably, especially during volatile market conditions."
+  ],
+  "caption": "Autonomous agents are plagued by slow, expensive memory solutions. A new architecture leverages SQLite FTS5 and LibSQL to deliver sub-2ms query times and cut infrastructure costs.\n\nMany autonomous agent memory implementations face fundamental flaws, often wrapping external vector databases like Pinecone or Weaviate. This leads to p99 latency spiking to 800ms and ballooning infrastructure bills for storing static execution history.\n\nFor agents operating on-chain, such as monitoring DEX liquidity or executing treasury rebalancing, pure vector memory is a poor architectural choice. These applications demand determinism and strict SQL relations, combined with fast lexical search and semantic retrieval.\n\nThe pragmatic solution begins with local SQLite, utilizing FTS5 (Full-Text Search) and vector extensions. This setup can then scale out to distributed LibSQL (Turso) without altering the core database engine abstraction.\n\nCosine similarity alone often fails to distinguish transaction hashes or contract addresses that are semantically identical but lexically different. FTS5 handles precise string matching, while embeddings manage contextual reasoning and intent.\n\nLocally, SQLite processes BM25 queries via FTS5 in under 1.2 milliseconds on a 100,000-row dataset, eliminating network roundtrips and serialization overhead. This provides significant performance gains for single-instance operations.\n\nHowever, the single-file SQLite model breaks down with concurrent write locks (SQLITE_BUSY) when agents transition to multi-instance worker fleets. This is where LibSQL becomes crucial for scaling.\n\nLibSQL maintains the SQLite C dialect but introduces embedded replicas and decentralized HTTP/WebSocket synchronization. This allows for robust scaling while preserving the familiar SQLite interface.\n\n#AI #SoftwareDevelopment #Databases #SQLite #LibSQL #AutonomousAgents\n\nSource: DEV",
+  "tweet": "Autonomous agents are getting a memory upgrade! A new architecture combines SQLite FTS5 for local speed with LibSQL for distributed scaling, slashing latency and costs. Perfect for on-chain operations needing determinism. #AI #Databases #Software",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "turso.com",
+  "source": "DEV",
+  "url": "https://dev.to/nindhita/persistent-vectorized-agent-memory-sqlite-fts5-to-cloud-libsql-m84",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fnwn49mktjcp08p06bss5.png",
+  "orig_title": "Persistent Vectorized Agent Memory: SQLite FTS5 to Cloud LibSQL",
+  "cluster_urls": [
+   "https://dev.to/nindhita/persistent-vectorized-agent-memory-sqlite-fts5-to-cloud-libsql-m84"
+  ],
+  "cluster_titles": [
+   "Persistent Vectorized Agent Memory: SQLite FTS5 to Cloud LibSQL"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261109-0806-0-autonomous-agents-can-now-use-sqlite-fts5-to.png",
+   "20261109-0806-0-autonomous-agents-can-now-use-sqlite-fts5-to-d1.png",
+   "20261109-0806-0-autonomous-agents-can-now-use-sqlite-fts5-to-d2.png",
+   "20261109-0806-0-autonomous-agents-can-now-use-sqlite-fts5-to-d3.png"
+  ]
+ },
+ {
+  "topic": "car hacking vulnerability widespread",
+  "headline_marked": "[[Critical vulnerability allows unlocking any car]] from a major automaker globally",
+  "headline": "Critical vulnerability allows unlocking any car from a major automaker globally",
+  "summary": "Researchers uncovered a critical flaw in a major automaker's connected car platform, allowing remote unlocking of vehicles worldwide through unauthenticated API access and publicly available vehicle data.",
+  "category": "SECURITY",
+  "template": "terminal",
+  "details": [
+   "A security researcher, in collaboration with Sam Curry, investigated the connected car platform of a major automaker. Their focus was on internet-facing web applications and infrastructure, rather than hardware. The researcher had previously owned several cars from this brand and was skeptical about the platform's security.",
+   "The investigation began by decompiling the mobile app's APK to reconstruct API requests. This led to the discovery of assets under *.redacted-telematics.com.au, which served as the primary point of contact for the consumer application.",
+   "Further reconnaissance revealed admintool.redacted-telematics.com.au, an unauthenticated \"TEST HARNESS\" login screen. Analysis of its JavaScript bundle exposed a rich API with hardcoded API keys, granting employees broad access to customer accounts and production vehicles.",
+   "Crucially, these APIs allowed lookup of user accounts by email. Combining this with publicly available VINs (from number plates) and subscriber GUIDs, researchers could link a vehicle's number plate to a user's personal identifiable information (PII), including their email, via the automaker's identity platform.",
+   "While the admin tool didn't offer direct remote control, it allowed provisioning features and generating remote access codes. The team then spent two weeks delving into the automaker's central identity system, command issuance, and consumer authentication flows.",
+   "The authentication process for the mobile app involved requests to login.redacted-identity.com.au. After an MFA flow, a consumer authentication token was issued, which was a key component in understanding how commands are sent to vehicles."
+  ],
+  "caption": "A critical flaw in a major automaker's connected car system allows remote unlocking of any vehicle worldwide. Researchers exploited unauthenticated APIs and public data to gain access.\n\nA security researcher, in collaboration with Sam Curry, investigated the connected car platform of a major automaker. Their focus was on internet-facing web applications and infrastructure, rather than hardware. The researcher had previously owned several cars from this brand and was skeptical about the platform's security.\n\nThe investigation began by decompiling the mobile app's APK to reconstruct API requests. This led to the discovery of assets under *.redacted-telematics.com.au, which served as the primary point of contact for the consumer application.\n\nFurther reconnaissance revealed admintool.redacted-telematics.com.au, an unauthenticated \"TEST HARNESS\" login screen. Analysis of its JavaScript bundle exposed a rich API with hardcoded API keys, granting employees broad access to customer accounts and production vehicles.\n\nCrucially, these APIs allowed lookup of user accounts by email. Combining this with publicly available VINs (from number plates) and subscriber GUIDs, researchers could link a vehicle's number plate to a user's personal identifiable information (PII), including their email, via the automaker's identity platform.\n\nWhile the admin tool didn't offer direct remote control, it allowed provisioning features and generating remote access codes. The team then spent two weeks delving into the automaker's central identity system, command issuance, and consumer authentication flows.\n\nThe authentication process for the mobile app involved requests to login.redacted-identity.com.au. After an MFA flow, a consumer authentication token was issued, which was a key component in understanding how commands are sent to vehicles.\n\n#Cybersecurity #CarHacking #Vulnerability #Automotive #TechSecurity #ZeroDay\n\nSource: Hacker News",
+  "tweet": "A critical flaw in a major automaker's connected car system allows remote unlocking of any vehicle worldwide. Researchers exploited unauthenticated APIs and public data to gain access. This highlights significant risks in connected vehicle security. #Cybersecurity #CarHackin",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "Hacker News",
+  "url": "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/",
+  "image": "",
+  "orig_title": "Unlocking any car from X brand in most of the world",
+  "cluster_urls": [
+   "https://shubs.io/unlocking-any-car-from-x-brand-in-most-of-the-world/"
+  ],
+  "cluster_titles": [
+   "Unlocking any car from X brand in most of the world"
+  ],
+  "is_logo": false,
+  "photo_credit": "",
+  "image_files": [
+   "20261109-0806-1-critical-vulnerability-allows-unlocking-any-.png",
+   "20261109-0806-1-critical-vulnerability-allows-unlocking-any--d1.png",
+   "20261109-0806-1-critical-vulnerability-allows-unlocking-any--d2.png",
+   "20261109-0806-1-critical-vulnerability-allows-unlocking-any--d3.png"
+  ]
+ }
+]

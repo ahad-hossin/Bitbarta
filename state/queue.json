@@ -1,1 +1,41 @@
-[]
+[
+ {
+  "topic": "deepseek harness agent can now drive its own browser",
+  "headline_marked": "DeepSeek Harness agent [[gets its own browser]] for web interaction",
+  "headline": "DeepSeek Harness agent gets its own browser for web interaction",
+  "summary": "Version 0.3.9 adds a Browser Agent to the desktop client, allowing it to navigate and interact with websites, but requires manual login and approval for actions.",
+  "category": "SOFTWARE",
+  "template": "terminal",
+  "details": [
+   "The latest update to the DeepSeek Harness (DSH) desktop client, version 0.3.9, introduces a Browser Agent that allows the AI to interact with the web. This new capability enables the agent to access dashboards, fill out forms, and gather information from multiple web pages, expanding its utility beyond local file editing.",
+   "The Browser Agent operates using a dedicated Chrome or Edge instance with a separate profile, ensuring persistent logins and avoiding conflicts with the user's primary browser. Users can trigger the agent by using browser-specific tools in a conversation or by Alt-clicking a link. The agent supports switching between Chrome and Edge, with running windows updating immediately.",
+   "Interaction with password-protected sites requires manual user intervention. When the agent encounters a login page, it pauses until the user signs in and clicks 'I'm done.' It does not bypass captchas. For consequential actions, such as form submissions or Alt-opening links, the agent prompts for approval, and screenshots or DOM data are not sent to telemetry.",
+   "Version 0.3.9 also includes a skills manager for installing plugins from GitHub or Zip files, MCP connectors for Stdio or Remote services, and a 'soft pause' feature that halts new model calls while allowing ongoing processes to complete. Run alerts notify users when tasks finish, await approval, or encounter errors.",
+   "The Browser Agent is disabled by default due to its high-risk nature. While it allows web interaction, it has limitations such as not bypassing login walls or captchas and requiring explicit approval for significant actions. The soft pause feature is also temporary, not surviving a client restart."
+  ],
+  "caption": "DeepSeek Harness agent now drives its own browser for web tasks, but requires manual logins and approval for actions.\n\nThe latest update to the DeepSeek Harness (DSH) desktop client, version 0.3.9, introduces a Browser Agent that allows the AI to interact with the web. This new capability enables the agent to access dashboards, fill out forms, and gather information from multiple web pages, expanding its utility beyond local file editing.\n\nThe Browser Agent operates using a dedicated Chrome or Edge instance with a separate profile, ensuring persistent logins and avoiding conflicts with the user's primary browser. Users can trigger the agent by using browser-specific tools in a conversation or by Alt-clicking a link. The agent supports switching between Chrome and Edge, with running windows updating immediately.\n\nInteraction with password-protected sites requires manual user intervention. When the agent encounters a login page, it pauses until the user signs in and clicks 'I'm done.' It does not bypass captchas. For consequential actions, such as form submissions or Alt-opening links, the agent prompts for approval, and screenshots or DOM data are not sent to telemetry.\n\nVersion 0.3.9 also includes a skills manager for installing plugins from GitHub or Zip files, MCP connectors for Stdio or Remote services, and a 'soft pause' feature that halts new model calls while allowing ongoing processes to complete. Run alerts notify users when tasks finish, await approval, or encounter errors.\n\nThe Browser Agent is disabled by default due to its high-risk nature. While it allows web interaction, it has limitations such as not bypassing login walls or captchas and requiring explicit approval for significant actions. The soft pause feature is also temporary, not surviving a client restart.\n\n#AI #DeepSeekHarness #Agent #LLM #Software\n\nSource: DEV",
+  "tweet": "DeepSeek Harness agent gets its own browser in v0.3.9! Interact with websites, but note: manual logins & approval needed for actions. #AI #DeepSeekHarness",
+  "story_risk": "clean",
+  "image_safe": true,
+  "image_good": true,
+  "brand_domain": "",
+  "source": "DEV",
+  "url": "https://dev.to/rebornace/dsh-agent-enhancer-039-the-agent-in-your-deepseek-harness-desktop-can-now-drive-its-own-browser-1n8m",
+  "image": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fpdi0w5ckiqc1ntdivac1.png",
+  "orig_title": "DSH Agent Enhancer 0.3.9: the agent in your DeepSeek Harness desktop can now drive its own browser",
+  "cluster_urls": [
+   "https://dev.to/rebornace/dsh-agent-enhancer-039-the-agent-in-your-deepseek-harness-desktop-can-now-drive-its-own-browser-1n8m"
+  ],
+  "cluster_titles": [
+   "DSH Agent Enhancer 0.3.9: the agent in your DeepSeek Harness desktop can now drive its own browser"
+  ],
+  "is_logo": false,
+  "photo_credit": "DEV",
+  "image_files": [
+   "20261109-1205-0-deepseek-harness-agent-gets-its-own-browser-.png",
+   "20261109-1205-0-deepseek-harness-agent-gets-its-own-browser--d1.png",
+   "20261109-1205-0-deepseek-harness-agent-gets-its-own-browser--d2.png",
+   "20261109-1205-0-deepseek-harness-agent-gets-its-own-browser--d3.png"
+  ]
+ }
+]
